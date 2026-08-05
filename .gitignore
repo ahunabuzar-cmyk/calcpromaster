@@ -1,0 +1,18 @@
+# ===== Freebuff desktop app data — NEVER commit or deploy =====
+.freebuff/
+
+# ===== Dependencies =====
+node_modules/
+
+# ===== Deploy output (assembled by build-deploy.js) =====
+deploy/
+
+# ===== Databases / local state =====
+*.db
+*.db-shm
+*.db-wal
+*.log
+
+# ===== Test output =====
+test-results/
+playwright-report/

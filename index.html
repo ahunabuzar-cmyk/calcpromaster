@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="/">
+  <!-- FILE:// SUPPORT (local testing only): <base href="/"> anchors every relative
+       URL (js/..., styles.css, manifest.json) to the site root. Over HTTP that is
+       correct (root = origin), but when the page is opened straight from disk the
+       'root' becomes the DRIVE root (C:\) — so every asset resolves to
+       file:///C:/js/... and 404s, which is the stuck-Loading the user kept seeing.
+       This zero-dependency script re-anchors base to the page's own folder when the
+       page runs under file://. Over HTTP/https it does nothing. -->
+  <script>
+    (function () {
+      try {
+        if (location.protocol !== 'file:') return;
+        var href = location.href;
+        var dir = href.substring(0, href.lastIndexOf('/') + 1);
+        var b = document.querySelector('base');
+        if (b) b.href = dir;
+      } catch (e) { /* never break the page */ }
+    })();
+  </script>
+  <!-- Security: Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://www.google-analytics.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://open.er-api.com https://api.frankfurter.app https://www.google-analytics.com https://region1.google-analytics.com; worker-src 'self' blob:; base-uri 'self'; form-action 'self'; object-src 'none'">
+  <!-- Note: frame-ancestors is only valid in HTTP headers (_headers / netlify.toml / vercel.json), not in a <meta> CSP — browsers ignore it there and log an error. -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <!-- Site config (domain / GSC / GA4) — SINGLE source of truth, load FIRST. -->
+  <!-- NOTE: gsc/ga4Id are intentionally empty until you paste your real codes below. -->
+  <script src="js/site-config.js"></script>
+  <title>CalcProMaster - 566+ Free Online Calculators</title>
+  <meta name="description" content="Free advanced online calculators for finance, health, math, science, business and more. Step-by-step solutions, charts, and smart features.">
+  <meta name="keywords" content="calculator, online calculator, free calculator, finance calculator, health calculator, math calculator">
+  <meta name="author" content="CalcProMaster">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4f46e5" id="meta-theme-color">
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png">
+  <meta property="og:title" content="CalcProMaster - 566+ Free Online Calculators">
+  <meta property="og:description" content="Free advanced online calculators with step-by-step solutions, charts, and smart features.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcpromaster.netlify.app/">
+  <meta property="og:image" content="https://calcpromaster.netlify.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://calcpromaster.netlify.app/og-image.png">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%234f46e5'/><stop offset='100%25' stop-color='%237c3aed'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='url(%23g)'/><rect x='18' y='14' width='64' height='26' rx='6' fill='white' opacity='.2'/><text x='74' y='33' font-size='16' text-anchor='end' fill='white' font-family='monospace' font-weight='600'>566%2B</text><rect x='18' y='46' width='13' height='10' rx='3' fill='white' opacity='.25'/><rect x='35' y='46' width='13' height='10' rx='3' fill='white' opacity='.25'/><rect x='52' y='46' width='13' height='10' rx='3' fill='white' opacity='.25'/><rect x='69' y='46' width='13' height='10' rx='3' fill='%2310b981' opacity='.7'/><rect x='18' y='60' width='13' height='10' rx='3' fill='white' opacity='.2'/><rect x='35' y='60' width='13' height='10' rx='3' fill='white' opacity='.2'/><rect x='52' y='60' width='13' height='10' rx='3' fill='white' opacity='.2'/><rect x='69' y='60' width='13' height='10' rx='3' fill='%23f59e0b' opacity='.6'/></svg>">
+  <!-- ====== ENHANCED JSON-LD SCHEMAS (SEO/AEO/GEO) ====== -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "CalcProMaster",
+      "url": "https://calcpromaster.netlify.app",
+      "description": "Free advanced online calculator platform with 566+ tools across 20 categories.",
+      "foundingDate": "2025",
+      "slogan": "566+ Free Online Calculators — Step-by-step solutions, charts, and smart features",
+      "knowsAbout": ["Finance", "Health", "Mathematics", "Science", "Engineering", "Construction", "Business", "Education", "Unit Conversion"],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "All calculators are completely free with no sign-up required"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "CalcProMaster",
+      "url": "https://calcpromaster.netlify.app",
+      "description": "566+ free online calculators with step-by-step solutions",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://calcpromaster.netlify.app/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "CalcProMaster",
+      "description": "566+ free advanced online calculators with step-by-step solutions, interactive SVG charts, scenario comparison, and offline PWA support. Covers finance, health, math, science, business, construction, conversion, education, and everyday calculators.",
+      "applicationCategory": "CalculatorApplication",
+      "operatingSystem": "Any modern web browser (Chrome, Firefox, Safari, Edge)",
+      "browserRequirements": "Requires JavaScript. Works on desktop and mobile.",
+      "softwareVersion": "2.0",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "featureList": [
+        "566+ calculators across 20 categories",
+        "Step-by-step solutions with formulas",
+        "Interactive SVG charts (bar, donut, line, gauge)",
+        "Dark mode and high-contrast accessibility mode",
+        "Offline PWA support — installable on mobile/desktop",
+        "Scenario comparison mode with side-by-side table + chart",
+        "Goal-Seek / Reverse Calculator (solve for any input)",
+        "QR code sharing for every calculation",
+        "Sensitivity analysis tables",
+        "What-If slider mode",
+        "Cross-calculator chaining (chain results between tools)",
+        "Custom presets and saved preferences",
+        "Multi-currency converter with live exchange rates",
+        "Batch/bulk calculation mode",
+        "Personal dashboard with usage history and trends"
+      ],
+      "screenshot": "https://calcpromaster.netlify.app/og-image.png"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "name": "Breadcrumb navigation for CalcProMaster",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Finance Calculators", "item": "https://calcpromaster.netlify.app/finance" },
+        { "@type": "ListItem", "position": 3, "name": "Health & Fitness Calculators", "item": "https://calcpromaster.netlify.app/health" },
+        { "@type": "ListItem", "position": 4, "name": "Math Calculators", "item": "https://calcpromaster.netlify.app/math" },
+        { "@type": "ListItem", "position": 5, "name": "Science Calculators", "item": "https://calcpromaster.netlify.app/science" },
+        { "@type": "ListItem", "position": 6, "name": "Engineering Calculators", "item": "https://calcpromaster.netlify.app/engineering" },
+        { "@type": "ListItem", "position": 7, "name": "Construction Calculators", "item": "https://calcpromaster.netlify.app/construction" },
+        { "@type": "ListItem", "position": 8, "name": "Conversion Calculators", "item": "https://calcpromaster.netlify.app/conversion" },
+        { "@type": "ListItem", "position": 9, "name": "Business Calculators", "item": "https://calcpromaster.netlify.app/business" },
+        { "@type": "ListItem", "position": 10, "name": "Education Calculators", "item": "https://calcpromaster.netlify.app/education" },
+        { "@type": "ListItem", "position": 11, "name": "Utility Calculators", "item": "https://calcpromaster.netlify.app/utilities" }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "All CalcProMaster Calculators",
+      "description": "Complete list of 566+ free calculators across all categories",
+      "numberOfItems": "566+",
+      "itemListOrder": "Category"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is CalcProMaster?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CalcProMaster is a free online calculator platform with 566+ tools covering finance, health, math, science, business, construction, conversion, education, food, fitness, auto, and everyday life. All calculations run in your browser with step-by-step solutions and interactive charts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is CalcProMaster free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, CalcProMaster is completely free. All 566+ calculators are available at no cost. No sign-up, registration, or payment is required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does CalcProMaster collect my data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. CalcProMaster does not collect or store any personal data on servers. All calculations happen locally in your browser. We only use localStorage to save your preferences, history, and favorites locally on your device."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does CalcProMaster work offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, CalcProMaster is a Progressive Web App (PWA) that can be installed on your device. Once loaded, the app works offline for most calculators. Only the currency converter requires an internet connection for live exchange rates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the calculator results accurate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CalcProMaster uses verified mathematical formulas for all calculations. Results are estimates for informational purposes only and should not be used as the sole basis for financial, medical, or legal decisions. Consult professionals for critical decisions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many calculators does CalcProMaster have?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CalcProMaster has 566+ calculators across 20 categories: finance, health, math, science, business, construction, conversion, education, everyday, utilities, lifestyle, regional, food, fitness, auto, career, home & garden, tech, parenting, and more. New calculators are added regularly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate my loan EMI on CalcProMaster?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the Loan EMI Calculator. Enter the loan amount, annual interest rate, and loan term in years. Select 'Payment' as the solve mode. Click Calculate to see your monthly payment, total payment, and total interest with a breakdown chart."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the formula for calculating BMI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BMI (Body Mass Index) is calculated as weight in kilograms divided by height in meters squared: BMI = weight(kg) / height(m)². A BMI between 18.5 and 24.9 is considered healthy for most adults."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I compare two loan options side by side?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, CalcProMaster offers a scenario comparison mode that lets you run the same calculator with 2-3 different input sets and compare results side by side in a table with charts. You can also pin results from different calculators for later comparison."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does CalcProMaster have a dark mode?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, CalcProMaster supports dark mode and a high-contrast accessibility mode. Click the moon/sun icon in the navigation bar to toggle between light and dark themes. Your preference is saved automatically."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I save or share my calculation results?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CalcProMaster offers multiple ways to share: click the Share button to get a shareable link with pre-filled values, a QR code, or export as image. You can also pin results for later reference or use the Print button for a formatted report."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What financial calculators are available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CalcProMaster offers 48+ financial calculators including: loan EMI, mortgage, auto loan, compound interest, simple interest, retirement planning, investment growth, tax, NPV, IRR, ROI, bond yield, inflation, amortization schedule, currency converter, and more."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use CalcProMaster on my mobile phone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, CalcProMaster is fully responsive and works on all mobile devices. You can also install it as a Progressive Web App (PWA) on your phone's home screen for quick access and offline use."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the goal-seek feature?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Goal-Seek feature (also called Reverse Calculator) lets you set your desired output value and automatically finds the required input. For example, you can ask 'What loan amount can I afford with a $500 monthly payment?' and the tool solves it for you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is CalcProMaster accessible for users with disabilities?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, CalcProMaster includes a high-contrast mode, ARIA labels, keyboard navigation, screen-reader-friendly result areas, and supports prefers-reduced-motion. We strive to make all calculators accessible to everyone."
+          }
+        }
+      ]
+    }
+  ]
+  </script>
+  <!-- ========== EARLY ERROR TRACKER (pre-Monitor crash safety net) ========== -->
+  <!-- Monitor (js/monitoring.js) owns window.onerror / unhandledrejection / calc:fatal_crash
+       and the calcpro_crash_logs buffer. This early hook only covers the window BEFORE
+       monitoring.js loads (parse-time errors in the data files). Monitor.init() removes
+       this early rejection listener and drains window._crashLogs — no double-capture. -->
+  <script>
+    window._crashLogs = [];
+    window._earlyRejHandler = function (e) {
+      var reason = e.reason || {};
+      try {
+        window._crashLogs.push({ ts: Date.now(), message: reason.message || String(reason), stack: reason.stack || '', context: 'unhandledrejection' });
+        window._crashLogs = window._crashLogs.slice(-50);
+        if (typeof App !== 'undefined' && App.showToast) App.showToast('Something went wrong. Our team has been notified.', 4000);
+        else window._pendingCrashToast = true;
+      } catch (e2) { /* silent */ }
+    };
+    window.onerror = function (msg, url, line, col, err) {
+      var er = err || new Error(String(msg));
+      // Delegate to Monitor when available (single onerror slot — no double-capture),
+      // otherwise buffer locally so a pre-Monitor crash is never lost.
+      if (typeof Monitor !== 'undefined' && Monitor.captureException) {
+        Monitor.captureException(er, 'url=' + url + ':' + line);
+      } else {
+        try {
+          window._crashLogs.push({ ts: Date.now(), message: er.message || String(msg), stack: er.stack || '', context: 'url=' + url + ':' + line });
+          window._crashLogs = window._crashLogs.slice(-50);
+          // NOTE: do NOT write localStorage here — Monitor.init() drains this memory
+          // buffer into calcpro_crash_logs; a direct write would duplicate every entry.
+          if (typeof App !== 'undefined' && App.showToast) App.showToast('Something went wrong. Our team has been notified.', 4000);
+          else window._pendingCrashToast = true;
+        } catch (e2) { /* silent */ }
+      }
+      return true;
+    };
+    window.addEventListener('unhandledrejection', window._earlyRejHandler);
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window._pendingCrashToast && typeof App !== 'undefined' && App.showToast) {
+        App.showToast('Something went wrong. Our team has been notified.', 4000);
+        window._pendingCrashToast = false;
+      }
+    });
+  </script>
+  <!-- ONE-TIME CACHE BUST: the stamp is DERIVED from the deployed sw.js CACHE_NAME, so
+       it changes automatically on every deploy — no manual bump to forget (the old
+       hardcoded-version drift was the root cause of this very bug). If a returning
+       browser still holds the OLD service worker + OLD cached shell (the exact 'stuck
+       Loading...' issue), this zero-dependency inline script unregisters the stale SW,
+       purges all calcpro-v2 caches, and reloads ONCE with the fresh files. localStorage
+       survives the SW unregister, so the next load sees the matching stamp and skips. -->
+  <script>
+    (function () {
+      try {
+        if (!window.navigator || !navigator.serviceWorker) return;
+        // Nonce (?cb=) defeats a stale SW's cache-first fetch handler: the cached
+        // copy lives under 'sw.js' without the query, so this request misses the
+        // SW cache and hits the network — guaranteeing the FRESH CACHE_NAME is read.
+        fetch('sw.js?cb=' + Date.now(), { cache: 'no-cache' }).then(function (r) { return r.text(); }).then(function (txt) {
+          try {
+            var m = txt.match(/CACHE_NAME\s*=\s*'([^']+)'/);
+            var stamp = (m && m[1]) ? m[1] : 'calcpro-shell-unknown';
+            var seen = null;
+            try { seen = localStorage.getItem('calcpro_shell_stamp'); } catch (e) {}
+            if (seen === stamp) return;
+            var needsReset = false;
+            // Write the stamp ONLY at the reload-decision point — never before the
+            // async cleanup. If cleanup fails, the stamp stays stale and the next
+            // visit retries; writing early would permanently skip self-healing.
+            var doReload = function () {
+              try { localStorage.setItem('calcpro_shell_stamp', stamp); } catch (e) {}
+              if (needsReset) location.reload();
+            };
+            navigator.serviceWorker.getRegistrations().then(function (regs) {
+              if (regs && regs.length) {
+                regs.forEach(function (r) { r.unregister(); });
+                needsReset = true;
+              }
+              if (window.caches && caches.keys) {
+                caches.keys().then(function (keys) {
+                  if (keys && keys.length) {
+                    keys.forEach(function (k) { if (k.indexOf('calcpro-v2') === 0) caches.delete(k); });
+                    needsReset = true;
+                  }
+                  doReload();
+                }).catch(doReload);
+              } else {
+                doReload();
+              }
+            }).catch(function () {});
+          } catch (e) {}
+        }).catch(function () {});
+      } catch (e) {}
+    })();
+    // Manual Hard Reset (recovery-card button): unregister ALL service workers,
+    // purge every calcpro-v2 cache, clear the shell stamp, then reload once.
+    // This defeats even a stubbornly stale SW that serves an old cached shell.
+    window.__calcproHardReset = function () {
+      try { localStorage.removeItem('calcpro_shell_stamp'); } catch (e) {}
+      var done = function () { location.reload(); };
+      var clean = function () {
+        if (window.caches && caches.keys) {
+          caches.keys().then(function (keys) {
+            if (keys && keys.length) {
+              keys.forEach(function (k) { if (k.indexOf('calcpro-v2') === 0) caches.delete(k); });
+            }
+            done();
+          }).catch(done);
+        } else {
+          done();
+        }
+      };
+      if (window.navigator && navigator.serviceWorker && navigator.serviceWorker.getRegistrations) {
+        navigator.serviceWorker.getRegistrations().then(function (regs) {
+          if (regs && regs.length) regs.forEach(function (r) { r.unregister(); });
+          clean();
+        }).catch(clean);
+      } else {
+        clean();
+      }
+    };
+  </script>
+  <script>
+    (function () {
+      function bootWatchdog() {
+        try {
+          // Gate: only fire after the document is fully loaded. Because the app
+          // scripts use defer, readyState stays 'loading' until they all execute —
+          // so a slow-but-working connection never false-fires this recovery card.
+          if (document.readyState !== 'complete') return;
+          var main = document.getElementById('mainContent');
+          if (!main) return;
+          var txt = (main.textContent || '').trim();
+          var stuck = main.children.length <= 2 && txt.indexOf('Loading') !== -1;
+          if (!stuck) return;
+          // Hardening: if the engine hasn't booted yet (data scripts still settling),
+          // give it ONE more 3s chance before showing the recovery card — but never
+          // give up permanently (a real 404 failure still gets the card).
+          if (!window.ALL_TOOLS && !window.__watchdogRetried) {
+            window.__watchdogRetried = true;
+            setTimeout(bootWatchdog, 3000);
+            return;
+          }
+          if (window.navigator && navigator.serviceWorker && navigator.serviceWorker.getRegistrations) {
+            navigator.serviceWorker.getRegistrations().then(function (regs) {
+              regs.forEach(function (r) { r.unregister(); });
+            }).catch(function () {});
+          }
+          if (window.caches && caches.keys) {
+            caches.keys().then(function (keys) {
+              keys.forEach(function (k) { if (k.indexOf('calcpro-v2') === 0) caches.delete(k); });
+            }).catch(function () {});
+          }
+          main.innerHTML = '<div style="text-align:center;padding:70px 20px">' +
+            '<h1 style="font-size:26px;margin-bottom:12px">🔄 Page took too long to load</h1>' +
+            '<p style="color:var(--text-light);max-width:460px;margin:0 auto 22px">Aapke browser mein purana cached version atka hua hai. Refresh dabayein — ek baar mein fix ho jayega.</p>' +
+            '<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:6px">' +
+            '<button onclick="location.reload()" style="padding:12px 30px;font-size:16px;border:none;border-radius:10px;background:#3b82f6;color:#fff;cursor:pointer;font-weight:600">🔄 Refresh Site</button>' +
+            '<button onclick="window.__calcproHardReset&&__calcproHardReset()" style="padding:12px 30px;font-size:16px;border:none;border-radius:10px;background:#ef4444;color:#fff;cursor:pointer;font-weight:600">🧹 Hard Reset</button>' +
+            '</div>' +
+            '<p style="margin-top:16px;font-size:13px;color:var(--text-light)">Hard Reset: purana cache + service worker delete karke fresh load karta hai. Agar phir bhi atke, to browser ka Data/Clear Site Data use karein.</p></div>';
+        } catch (e) {}
+      }
+      setTimeout(bootWatchdog, 7000);
+      // Re-arm: if readyState was still 'loading' at the first check (slow connection)
+      // and the page then finishes loading in a genuinely failed state, re-check so
+      // the recovery card always appears — the watchdog never gives up silently.
+      document.addEventListener('readystatechange', function () {
+        if (document.readyState === 'complete') bootWatchdog();
+      });
+      window.addEventListener('load', bootWatchdog);
+    })();
+  </script>
+  <!-- Preload critical scripts for early download (preload scanner discovers these immediately) -->
+  <!-- Note: preload hrefs must match the <script src> exactly (no ?v=) or the browser fetches both copies -->
+  <!-- Relative (no leading /) so preloads also resolve correctly when the page is
+       opened via file:// (with the base re-anchored above); over HTTP the base "/"
+       makes these resolve to the origin root exactly as before. -->
+  <link rel="preload" as="script" href="js/core.js">
+  <link rel="preload" as="script" href="js/data.js">
+  <link rel="preload" as="script" href="js/router.js">
+  <link rel="preload" as="script" href="js/app.js">
+  <!-- Google Search Console Verification — value js/site-config.js se aata hai (placeholder rahe to inject nahi hota).
+       NOTE: GSC verification ke liye raw HTML me tag hona zyada reliable hai. Best practice:
+       niche wala static tag uncomment karke apna REAL verification code paste karo:
+  <meta name="google-site-verification" content="YOUR_REAL_GSC_CODE"> -->
+  <!-- IndexNow (Bing) — key file site root par serve hoti hai (0e1100ec6bc9d4c2c6037d993fc2ba55.txt).
+       Ye link Bing ko key location jaldi discover karne deta hai. -->
+  <link rel="indexnow" href="/0e1100ec6bc9d4c2c6037d993fc2ba55.txt">
+  <script>
+    // GSC meta inject from config (only when real code set — placeholder ko skip)
+    (function () {
+      try {
+        var cfg = window.SITE_CONFIG || {};
+        if (cfg.gsc && cfg.gsc.indexOf('PLACEHOLDER') === -1 && cfg.gsc.indexOf('YOUR_REAL') === -1) {
+          var m = document.createElement('meta');
+          m.name = 'google-site-verification';
+          m.content = cfg.gsc;
+          document.head.appendChild(m);
+        }
+      } catch (e) { /* non-fatal */ }
+    })();
+  </script>
+  <!-- Google Analytics 4 with Consent Mode — sirf load hota hai jab js/site-config.js me REAL G-XXXX ID ho -->
+  <script>
+    if (window.SITE_GA4_READY) {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.SITE_CONFIG.ga4Id;
+      document.head.appendChild(s);
+    }
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    gtag('js', new Date());
+    if (window.SITE_GA4_READY) gtag('config', window.SITE_CONFIG.ga4Id);
+  </script>
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Load fonts non-blocking: text renders in fallback font immediately, swaps when loaded -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" fetchpriority="high" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"></noscript>
+
+  <!-- Critical CSS inline for instant first paint -->
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{--primary:#4f46e5;--primary-dark:#4338ca;--primary-light:#818cf8;--primary-gradient:linear-gradient(135deg,#4f46e5,#7c3aed);--primary-gradient-soft:linear-gradient(135deg,#6366f1,#a78bfa);--secondary:#10b981;--secondary-gradient:linear-gradient(135deg,#10b981,#34d399);--accent:#f59e0b;--bg:#f8fafc;--surface:#fff;--text:#1e293b;--text-light:#64748b;--border:#e2e8f0;--shadow:0 1px 3px rgba(0,0,0,.06);--shadow-md:0 4px 12px rgba(0,0,0,.08);--shadow-lg:0 10px 30px rgba(0,0,0,.1);--shadow-xl:0 20px 50px rgba(0,0,0,.12);--shadow-glow:0 0 20px rgba(79,70,229,.2);--radius:16px;--radius-sm:10px;--radius-xs:6px;--transition:0.3s cubic-bezier(.4,0,.2,1);--font-display:'Space Grotesk',-apple-system,BlinkMacSystemFont,sans-serif;--font-body:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--bg-pattern:radial-gradient(ellipse at 20% 50%,rgba(79,70,229,.04) 0%,transparent 50%),radial-gradient(ellipse at 80% 20%,rgba(16,185,129,.04) 0%,transparent 50%)}
+    .dark-theme{--primary:#6366f1;--primary-dark:#4f46e5;--primary-light:#818cf8;--primary-gradient:linear-gradient(135deg,#6366f1,#8b5cf6);--bg:#0f172a;--surface:#1e293b;--text:#f8fafc;--text-light:#94a3b8;--border:#334155;--shadow:0 1px 3px rgba(0,0,0,.15);--shadow-lg:0 10px 30px rgba(0,0,0,.3);--shadow-glow:0 0 20px rgba(99,102,241,.3);--bg-pattern:radial-gradient(ellipse at 20% 50%,rgba(99,102,241,.06) 0%,transparent 50%),radial-gradient(ellipse at 80% 20%,rgba(52,211,153,.06) 0%,transparent 50%)}
+    body{font-family:var(--font-body);background:var(--bg);background-image:var(--bg-pattern);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}
+    header{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:var(--shadow);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);background:rgba(255,255,255,.85)}
+    .dark-theme header{background:rgba(15,23,42,.85)}
+    .nav{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+    .logo{font-size:26px;font-weight:800;font-family:var(--font-display);background:var(--primary-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;cursor:pointer;text-decoration:none}
+    .nav-links{display:flex;gap:20px;align-items:center}
+    .nav-links a{color:var(--text);text-decoration:none;font-size:14px;font-weight:500}
+    .nav-links a:hover{color:var(--primary)}
+    .nav-search{width:250px;padding:8px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:14px;background:var(--surface);color:var(--text);font-family:var(--font-body)}
+    main{max-width:1200px;margin:0 auto;padding:24px 20px;min-height:50vh}
+    .hero{text-align:center;padding:60px 0 48px;position:relative}
+    .hero h1{font-size:42px;font-weight:800;font-family:var(--font-display);margin-bottom:12px;color:var(--text);letter-spacing:-.5px;line-height:1.2}
+    .hero h1 span.highlight{background:var(--primary-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero-desc{font-size:18px;color:var(--text-light);margin-bottom:32px;max-width:600px;margin-left:auto;margin-right:auto}
+    .search-box{max-width:520px;margin:0 auto;position:relative}
+    .search-box input{width:100%;padding:16px 24px;border:2px solid var(--border);border-radius:50px;font-size:16px;font-family:var(--font-body);background:var(--surface);color:var(--text);transition:all var(--transition);box-shadow:var(--shadow)}
+    .search-box input:focus{outline:none;border-color:var(--primary);box-shadow:var(--shadow-md),var(--shadow-glow);transform:translateY(-1px)}
+    .search-box input::placeholder{color:var(--text-light)}
+    .section-title{font-size:24px;font-weight:700;font-family:var(--font-display);margin:40px 0 20px;letter-spacing:-.3px}
+    .categories-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-bottom:32px}
+    .category-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px 20px;text-align:center;cursor:pointer;transition:all var(--transition);position:relative;overflow:hidden}
+    .cat-icon{font-size:42px;margin-bottom:12px;display:inline-block}
+    .category-card h3{font-size:16px;font-weight:700;font-family:var(--font-display);margin-bottom:4px}
+    .category-card p{font-size:13px;color:var(--text-light)}
+    .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+    .tool-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px;cursor:pointer;transition:all var(--transition);position:relative}
+    .tool-card h4{font-size:16px;font-weight:700;font-family:var(--font-display);margin-bottom:8px;color:var(--text)}
+    .tool-card p{font-size:13px;color:var(--text-light);line-height:1.5}
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:32px 20px;margin-top:40px}
+    .footer-content{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
+    .menu-btn{display:none;background:none;border:none;font-size:24px;cursor:pointer;color:var(--text);padding:4px}
+    @media(max-width:768px){.nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--surface);padding:20px;box-shadow:var(--shadow-md);border-bottom:1px solid var(--border)}.nav-links.active{display:flex}.nav-links a{width:100%;padding:10px 0;border-bottom:1px solid var(--border)}.nav-search{width:100%;margin-bottom:15px}.menu-btn{display:block;background:none;border:none;font-size:24px;cursor:pointer;color:var(--text)}}
+    .hero-cta{display:inline-block;background:var(--primary-gradient);color:#fff;padding:14px 32px;border-radius:50px;font-weight:600;text-decoration:none;margin-top:10px;box-shadow:var(--shadow-glow);transition:all var(--transition)}
+    .hero-cta:hover{transform:translateY(-2px);box-shadow:0 0 25px rgba(79,70,229,.4)}
+    .category-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-glow);border-color:var(--primary-light)}
+    .skeleton{background:linear-gradient(90deg,var(--surface) 25%,var(--bg) 50%,var(--surface) 75%);background-size:200% 100%;animation:shimmer 1.5s ease-in-out infinite;border-radius:var(--radius-xs)}
+    @keyframes scaleIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+    @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+  </style>
+  <!-- Full CSS loaded async (non-render-blocking) -->
+  <link rel="preload" href="styles.css" as="style" fetchpriority="high" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
+</head>
+<body>
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner" class="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:1px solid var(--border);padding:16px 20px;z-index:1000;box-shadow:var(--shadow-lg);max-width:1200px;margin:0 auto">
+    <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto">
+      <div style="flex:1;min-width:280px;font-size:14px;color:var(--text);line-height:1.5">
+        We use localStorage to save your preferences, history, and favorites. We do not use cookies. 
+        <span id="adsense-notice" style="display:none">With your consent, Google AdSense may use cookies for personalized ads.</span>
+        <span id="analytics-notice" style="display:none">With your consent, Google Analytics may use cookies for usage statistics.</span>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <!-- NOTE: handlers bound via addEventListener in App.init (js/app.js) — do NOT add
+             inline onclick here or handlers double-fire. -->
+        <button id="cookie-accept" class="action-btn" style="background:var(--primary);color:white;border-color:var(--primary)">Accept All</button>
+        <button id="cookie-reject" class="action-btn" style="background:var(--surface);color:var(--text);border-color:var(--border)">Reject Non-Essential</button>
+        <button id="cookie-settings" class="action-btn small-btn">Settings</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Granular consent settings modal -->
+  <div id="consent-settings-modal" class="consent-modal" style="display:none;position:fixed;inset:0;z-index:1100;background:rgba(0,0,0,.55);align-items:center;justify-content:center;padding:20px">
+    <div class="consent-modal-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;max-width:520px;width:100%;padding:26px;box-shadow:var(--shadow-lg)">
+      <h2 style="margin:0 0 6px;font-size:20px;font-weight:700">Cookie Settings</h2>
+      <p style="margin:0 0 18px;font-size:14px;color:var(--text-light);line-height:1.55">
+        CalcProMaster uses localStorage (not cookies) for essential features like preferences, history, and favorites. You can choose whether Google Analytics and AdSense may use cookies below.
+      </p>
+      <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:20px">
+        <label class="consent-toggle" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border:1px solid var(--border);border-radius:10px;cursor:pointer;font-size:14px">
+          <span><strong>Essential (localStorage)</strong><br><small style="color:var(--text-light)">Preferences, history, favorites — always on, no cookies.</small></span>
+          <input type="checkbox" checked disabled style="accent-color:var(--primary)">
+        </label>
+        <label class="consent-toggle" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border:1px solid var(--border);border-radius:10px;cursor:pointer;font-size:14px">
+          <span><strong>Google Analytics</strong><br><small style="color:var(--text-light)">Anonymous usage statistics (optional).</small></span>
+          <input type="checkbox" id="consent-toggle-analytics" style="accent-color:var(--primary)">
+        </label>
+        <label class="consent-toggle" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border:1px solid var(--border);border-radius:10px;cursor:pointer;font-size:14px">
+          <span><strong>Google AdSense</strong><br><small style="color:var(--text-light)">Personalized ads (optional).</small></span>
+          <input type="checkbox" id="consent-toggle-ads" style="accent-color:var(--primary)">
+        </label>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end">
+        <button class="action-btn small-btn" onclick="closeConsentSettings()">Cancel</button>
+        <button id="consent-save-btn" class="action-btn" style="background:var(--primary);color:white;border-color:var(--primary)">Save Preferences</button>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <nav class="nav">
+      <a href="/" class="logo" onclick="event.preventDefault();Router.navigate('/')" data-i18n="home.logo">CalcProMaster</a>
+      <div class="nav-links">
+        <a href="/favorites" onclick="event.preventDefault();Router.navigate('/favorites')" data-i18n="nav.favorites">★ Favorites</a>
+        <a href="/history" onclick="event.preventDefault();Router.navigate('/history')" data-i18n="nav.history">History</a>
+        <a href="/compare" onclick="event.preventDefault();Router.navigate('/compare')" data-i18n="nav.compare">Compare</a>
+        <a href="/about" onclick="event.preventDefault();Router.navigate('/about')" data-i18n="nav.about">About</a>
+        <input type="text" class="nav-search" placeholder="Search calculators..." data-i18n="nav.search" oninput="App.search(this.value)" onfocus="this.value=''">
+        <button id="user-dashboard-btn" onclick="UserDashboard.toggle()" title="My Dashboard" aria-label="Open your dashboard">📊</button>
+        <button id="theme-toggle" onclick="App.toggleThemeMenu(event)" title="Theme: Light / Dark / System" aria-label="Theme settings" aria-haspopup="true" aria-expanded="false">🌙</button>
+        <button class="small-btn" onclick="AdvancedFeatures.renderUnitsSettings()" title="Units & Precision" data-i18n="common.settings">⚙️</button>
+        <button class="menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('active')" aria-label="Toggle menu">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+    <div id="calc-of-day-spotlight" class="calc-of-day-spotlight" style="display:none;"></div>
+    <p data-i18n="common.loading">Loading...</p>
+  </main>
+
+  <!-- AdSense placeholder - below calculator results -->
+  <div id="ad-bottom" class="ad-placeholder" style="display:none;max-width:728px;margin:16px auto"></div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4 data-i18n="footer.brand">CalcProMaster</h4>
+        <p style="font-size:13px;color:var(--text-light)">566+ free advanced online calculators with step-by-step solutions across 20 categories.</p>
+      </div>
+      <div class="footer-section">
+        <h4 data-i18n="footer.categories">Categories</h4>
+        <a href="/finance" onclick="event.preventDefault();Router.navigate('/finance')" data-i18n="cat.finance">Finance</a>
+        <a href="/health" onclick="event.preventDefault();Router.navigate('/health')" data-i18n="cat.health">Health</a>
+        <a href="/math" onclick="event.preventDefault();Router.navigate('/math')" data-i18n="cat.math">Math</a>
+        <a href="/business" onclick="event.preventDefault();Router.navigate('/business')" data-i18n="cat.business">Business</a>
+        <a href="/science" onclick="event.preventDefault();Router.navigate('/science')" data-i18n="cat.science">Science</a>
+      </div>
+      <div class="footer-section">
+        <h4 data-i18n="footer.more">More</h4>
+        <a href="/engineering" onclick="event.preventDefault();Router.navigate('/engineering')" data-i18n="cat.engineering">Engineering</a>
+        <a href="/construction" onclick="event.preventDefault();Router.navigate('/construction')" data-i18n="cat.construction">Construction</a>
+        <a href="/conversion" onclick="event.preventDefault();Router.navigate('/conversion')" data-i18n="cat.conversion">Conversion</a>
+        <a href="/education" onclick="event.preventDefault();Router.navigate('/education')" data-i18n="cat.education">Education</a>
+        <a href="/utilities" onclick="event.preventDefault();Router.navigate('/utilities')" data-i18n="cat.utilities">Utilities</a>
+      </div>
+      <div class="footer-section">
+        <h4 data-i18n="footer.features">Features</h4>
+        <a href="/favorites" onclick="event.preventDefault();Router.navigate('/favorites')" data-i18n="nav.favorites">Favorites</a>
+        <a href="/history" onclick="event.preventDefault();Router.navigate('/history')" data-i18n="nav.history">History</a>
+        <a href="/compare" onclick="event.preventDefault();Router.navigate('/compare')" data-i18n="nav.compare">Compare</a>
+        <a href="/about" onclick="event.preventDefault();Router.navigate('/about')" data-i18n="nav.about">About</a>
+        <a href="/privacy" onclick="event.preventDefault();Router.navigate('/privacy')" data-i18n="legal.privacy">Privacy Policy</a>
+        <a href="/terms" onclick="event.preventDefault();Router.navigate('/terms')" data-i18n="legal.terms">Terms of Service</a>
+        <a href="/cookies" onclick="event.preventDefault();Router.navigate('/cookies')" data-i18n="legal.cookies">Cookie Policy</a>
+        <a href="/contact" onclick="event.preventDefault();Router.navigate('/contact')" data-i18n="legal.contact">Contact</a>
+      </div>
+      <div class="footer-section">
+        <h4 data-i18n="footer.disclaimers">Disclaimers</h4>
+        <a href="/disclaimer-general" onclick="event.preventDefault();Router.navigate('/disclaimer-general')" data-i18n="footer.disclaimer_general">General</a>
+        <a href="/disclaimer-finance" onclick="event.preventDefault();Router.navigate('/disclaimer-finance')" data-i18n="footer.disclaimer_finance">Financial</a>
+        <a href="/disclaimer-health" onclick="event.preventDefault();Router.navigate('/disclaimer-health')" data-i18n="footer.disclaimer_health">Health</a>
+      </div>
+      <div class="footer-section">
+        <h4 data-i18n="footer.settings">Settings</h4>
+        <a href="#" onclick="AdvancedFeatures.renderUnitsSettings()" data-i18n="adv.units_title">Units & Precision</a>
+        <a href="#" onclick="AdvancedFeatures.renderAchievements()" data-i18n="adv.achievements_title">Achievements</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-stats" id="social-proof-stats">
+        <span>⚡ 566+ calculators · 20 categories · 100% free</span>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2025–<span id="footer-year">2026</span> CalcProMaster. All calculations run in your browser. No data collected.
+      </div>
+      <script>try{document.getElementById('footer-year').textContent=new Date().getFullYear();}catch(e){}</script>
+    </div>
+  </footer>
+
+  <div class="cmd-palette-overlay" id="cmdPalette" onclick="if(event.target===this) App.closePalette()">
+    <div class="cmd-palette">
+      <input type="text" id="cmdInput" placeholder="Search all calculators…" autocomplete="off" oninput="App.paletteFilter(this.value)" onkeydown="App.paletteKey(event)">
+      <div class="cmd-results" id="cmdResults"></div>
+      <div class="cmd-hint"><span>↑ ↓ navigate</span><span>↵ open</span><span>esc close</span></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this) this.classList.remove('active')">
+    <div class="modal" id="modalContent">
+      <button class="modal-close" onclick="document.getElementById('modalOverlay').classList.remove('active')">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="compare-modal" onclick="if(event.target===this) AdvancedFeatures.closeCompare()">
+    <div class="modal">
+      <button class="modal-close" onclick="AdvancedFeatures.closeCompare()">×</button>
+      <h3>Compare Pinned Results</h3>
+      <div id="compare-content"></div>
+    </div>
+  </div>
+
+  <!-- Scripts: load in dependency order -->
+  <script defer src="js/core.js"></script>
+  <script defer src="js/calc-modes.js"></script>
+  <script defer src="js/advanced-features.js"></script>
+  <script defer src="js/data/finance.js"></script>
+  <script defer src="js/data/health.js"></script>
+  <script defer src="js/data/math.js"></script>
+  <script defer src="js/data/everyday.js"></script>
+  <script defer src="js/data/science.js"></script>
+  <script defer src="js/data/engineering.js"></script>
+  <script defer src="js/data/construction.js"></script>
+  <script defer src="js/data/conversion.js"></script>
+  <script defer src="js/data/business.js"></script>
+  <script defer src="js/data/education.js"></script>
+  <script defer src="js/data/utilities.js"></script>
+  <script defer src="js/data/lifestyle.js"></script>
+  <script defer src="js/data/regional.js"></script>
+  <script defer src="js/data/food-nutrition.js"></script>
+  <script defer src="js/data/fitness-exercise.js"></script>
+  <script defer src="js/data/auto-transport.js"></script>
+  <script defer src="js/data/career-freelance.js"></script>
+  <script defer src="js/data/home-garden.js"></script>
+  <script defer src="js/data/tech-digital.js"></script>
+  <script defer src="js/data/parenting-family.js"></script>
+  <script defer src="js/data.js"></script>
+  <!-- SEO content — per-category lazy chunks. The open tool's category file (~200-560KB)
+       is fetched ONLY when a tool page renders (see app.js renderTool), so first paint
+       never downloads the ~4.8MB monolithic bundle (js/seo-content.js stays as the source
+       of truth for regeneration via scripts/split-seo.cjs). -->
+  <script>
+  window._seoPromise = null;
+  window._seoKey = null;
+  window._seoCatsFailed = window._seoCatsFailed || {}; // cache failures to avoid repeat 404s
+  function _initSeo(catKey) {
+    catKey = catKey || '';
+    if (window._seoCatsFailed[catKey || '__full__']) return Promise.reject(new Error('seo-load-failed'));
+    if (window.TOOL_SEO && (!catKey || (window._seoCatsLoaded && window._seoCatsLoaded[catKey]))) {
+      return Promise.resolve(window.TOOL_SEO);
+    }
+    var key = catKey || '__full__';
+    if (window._seoPromise && window._seoKey === key) return window._seoPromise;
+    // IMPORTANT: never fetch the old monolithic js/seo-content.js (~4.8MB) at runtime —
+    // only per-category chunks exist on the server. Without a catKey, resolve with
+    // whatever is already loaded (callers handle missing SEO gracefully).
+    if (!catKey) {
+      window._seoPromise = Promise.resolve(window.TOOL_SEO || {});
+      window._seoKey = null;
+      return window._seoPromise;
+    }
+    window._seoKey = key;
+    // Unique per-tool intro paragraphs (js/tool-intros.js, generated by
+    // generate-intros.js) — small shared file, loaded ONCE in parallel with the
+    // category chunk so every tool page gets its unique ~100-word intro.
+    if (!window._introsLoading) {
+      window._introsLoading = true;
+      var ti = document.createElement('script');
+      ti.src = 'js/tool-intros.js';
+      ti.onload = ti.onerror = function () {
+        window._introsLoaded = true;
+        window.dispatchEvent(new CustomEvent('intros-loaded'));
+      };
+      document.body.appendChild(ti);
+    }
+    // Premium deep-dive content (js/seo-premium.js) — small, loaded ONCE in
+    // parallel; flagships get the full 30-section article when available.
+    if (!window._premiumLoading) {
+      window._premiumLoading = true;
+      var pm = document.createElement('script');
+      pm.src = 'js/seo-premium.js';
+      pm.onload = pm.onerror = function () {
+        window._premiumLoaded = true;
+        window.dispatchEvent(new CustomEvent('premium-loaded'));
+      };
+      document.body.appendChild(pm);
+    }
+    window._seoPromise = new Promise(function (res, rej) {
+      var s = document.createElement('script');
+      s.src = 'js/seo/' + catKey + '.js';
+      s.onload = function () {
+        res(window.TOOL_SEO);
+        window.dispatchEvent(new CustomEvent('seo-loaded', { detail: window.TOOL_SEO }));
+      };
+      s.onerror = function () {
+        window._seoPromise = null;
+        window._seoKey = null;
+        window._seoCatsFailed[key] = true;
+        rej(new Error('seo-load-failed'));
+      };
+      document.body.appendChild(s);
+    });
+    return window._seoPromise;
+  }
+  </script>
+  <script defer src="js/legal-pages.js"></script>
+  <script defer src="js/undo-redo.js"></script>
+  <script defer src="js/i18n.js"></script>
+  <script defer src="js/i18n-ui.js"></script>
+  <script defer src="js/prefetch.js"></script>
+  <script defer src="js/command-palette.js"></script>
+  <script defer src="js/timeline.js"></script>
+  <script defer src="js/which-option-wins.js"></script>
+  <script defer src="js/calculator-of-day.js"></script>
+  <script defer src="js/confidence-notes.js"></script>
+  <script defer src="js/category-hub.js"></script>
+  <script defer src="js/personal-dashboard.js"></script>
+  <script defer src="js/historical-rates.js"></script>
+  <!-- History API Router (load before App.js) -->
+  <script defer src="js/router.js"></script>
+  <!-- Lifecycle manager (zero-leak cleanup) + Monitoring (error boundary) + Hash worker wrapper -->
+  <script defer src="js/lifecycle.js"></script>
+  <script defer src="js/monitoring.js"></script>
+  <script defer src="js/hash-worker.js"></script>
+  <!-- Business + UX pillars: monetization, community/leads, retention dashboard, donation, URL state, a11y, ux utils -->
+  <script defer src="js/ux-utils.js"></script>
+  <script defer src="js/url-state.js"></script>
+  <script defer src="js/monetization.js"></script>
+  <script defer src="js/community.js"></script>
+  <script defer src="js/user-dashboard.js"></script>
+  <script defer src="js/donation.js"></script>
+  <script defer src="js/a11y.js"></script>
+  <!-- Haptics + ASMR micro-interactions (vibrate + WebAudio clicks) -->
+  <script defer src="js/feedback.js"></script>
+  <!-- Competitor-beating pillars: spreadsheet formulas + E-E-A-T trust badges -->
+  <script defer src="js/excel-formulas.js"></script>
+  <script defer src="js/trust-badges.js"></script>
+  <script defer src="js/app.js"></script>
+  <!-- Hero canvas animation: lightweight math-symbol particles (zero deps, pauses when hidden) -->
+  <script defer src="js/hero-canvas.js"></script>
+  <!-- Global click ripple: one delegated listener, CSS-driven ink, zero layout shift -->
+  <script defer src="js/ripple.js"></script>
+  <script defer src="js/zero-risk.js"></script>
+  <script>
+    // Register service worker for offline / installable PWA (only over http/https, not file://)
+    if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').catch(function () {});
+      });
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+    // Initialize Calculator of the Day
+    if (window.CalculatorOfTheDay) {
+      CalculatorOfTheDay.init();
+    }
+    // Initialize Confidence Notes auto-attach
+    if (window.ConfidenceNotes) {
+      ConfidenceNotes.init();
+    }
+    // Initialize Timeline
+    if (window.Timeline) {
+      Timeline.init();
+    }
+    // Initialize Category Hub
+    if (window.CategoryHub) {
+      CategoryHub.init();
+    }
+    // Initialize Personal Dashboard
+    if (window.PersonalDashboard) {
+      PersonalDashboard.init();
+    }
+    // Initialize Business & UX pillar modules (monetization, community, dashboard, donation, a11y)
+    if (window.MonetizationManager) { MonetizationManager.init(); }
+    if (window.CommunityGrowth) { CommunityGrowth.init(); }
+    if (window.UserDashboard) { UserDashboard.init(); }
+    if (window.DonationWidget) { DonationWidget.init(); }
+    if (window.A11y) { A11y.init(); }
+    // Initialize Historical Rate Context
+    if (window.HistoricalRateContext) {
+      HistoricalRateContext.init();
+    }
+    // Initialize Multi-language UI
+    if (window.I18nUI) {
+      I18nUI.init();
+    }
+    });
+  </script>
+  <!-- Back to Top Button -->
+  <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" style="position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;background:var(--primary-gradient);color:white;border:none;cursor:pointer;font-size:20px;box-shadow:var(--shadow-lg),var(--shadow-glow);opacity:0;transform:translateY(20px);transition:all 0.3s ease-out;z-index:999;display:flex;align-items:center;justify-content:center" title="Back to top">
+    ↑
+  </button>
+  <script>
+    // Back to top visibility
+    window.addEventListener('scroll', function() {
+      const btn = document.getElementById('back-to-top');
+      if (btn) {
+        if (window.scrollY > 400) {
+          btn.style.opacity = '1';
+          btn.style.transform = 'translateY(0)';
+          btn.style.pointerEvents = 'auto';
+        } else {
+          btn.style.opacity = '0';
+          btn.style.transform = 'translateY(20px)';
+          btn.style.pointerEvents = 'none';
+        }
+      }
+    }, { passive: true });
+    
+    // Keyboard shortcut: Escape closes everything, but also scrolls to top on double-Escape
+    let escapeCount = 0;
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        escapeCount++;
+        if (escapeCount === 2) {
+          window.scrollTo({top: 0, behavior: 'smooth'});
+          escapeCount = 0;
+        }
+        setTimeout(() => { escapeCount = 0; }, 500);
+      }
+    });
+  </script>
+</body>
+</html>

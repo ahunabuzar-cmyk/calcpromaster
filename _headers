@@ -1,0 +1,25 @@
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.g.doubleclick.net https://tpc.googlesyndication.com https://*.googlesyndication.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.googleapis.com; img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://*.g.doubleclick.net https://*.gstatic.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://open.er-api.com https://api.frankfurter.app https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.g.doubleclick.net; worker-src 'self' blob:; frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://*.googlesyndication.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  Cache-Control: public, max-age=86400, stale-while-revalidate=86400
+
+# JS data files (no content hash) — no-cache forces revalidation (304) after every deploy,
+# so returning visitors never see stale tool lists (new tool links would otherwise 404).
+/js/data/*.js
+  Cache-Control: no-cache
+
+# Top-level JS files (no content hash) — same revalidation strategy
+/js/*.js
+  Cache-Control: no-cache
+
+/sw.js
+  Cache-Control: no-cache
+
+# HTML shell must revalidate on EVERY visit so the one-time cache-bust + watchdog
+# above always reach returning browsers — a stale index.html is the stuck-Loading bug.
+/index.html
+  Cache-Control: no-cache

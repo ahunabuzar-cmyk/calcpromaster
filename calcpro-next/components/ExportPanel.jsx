@@ -1,0 +1,175 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+
+// ====== ExportPanel — Save / PDF / CSV / Embed (Step 5) ======
+//   💾 Save to History   — last 10 calcs in localStorage
+//   🖨️ Print / PDF       — window.print() with print stylesheet
+//   ⬇️ CSV               — inputs + result as a downloadable CSV
+//   🔗 Embed             — copy-paste iframe embed code for any site
+const HISTORY_KEY = 'calcpro_next_history';
+
+function readHistory() {
+  try { return JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]'); } catch { return []; }
+}
+
+export default function ExportPanel({ categoryKey, toolId, tool, values, result }) {
+  const [history, setHistory] = useState([]);
+  const [embedOpen, setEmbedOpen] = useState(false);
+  const [copied, setCopied] = useState('');
+
+  // Load history once
+  useEffect(() => { setHistory(readHistory()); }, []);
+
+  // Save the current calc to history (top-10)
+  const saveToHistory = () => {
+    const entry = {
+      toolId,
+      categoryKey,
+      toolName: tool.name,
+      values: Object.fromEntries(
+        (tool.inputs || [])
+          .filter((i) => values[i.id] !== '' && values[i.id] !== undefined)
+          .map((i) => [i.label || i.id, values[i.id]])
+      ),
+      result: result?.result ? String(result.result).replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim() : '',
+      ts: Date.now(),
+    };
+    const next = [entry, ...readHistory().filter((h) => h.toolId !== toolId)].slice(0, 10);
+    try { localStorage.setItem(HISTORY_KEY, JSON.stringify(next)); } catch (e) { /* private mode */ }
+    setHistory(next);
+    flash('Saved to history ✓');
+  };
+
+  const exportCsv = () => {
+    const rows = [
+      ['CalcPro', tool.name],
+      ['Date', new Date().toLocaleString()],
+      [],
+      ['Input', 'Value'],
+    ];
+    (tool.inputs || []).forEach((i) => {
+      if (values[i.id] !== '' && values[i.id] !== undefined) rows.push([i.label || i.id, String(values[i.id])]);
+    });
+    rows.push([], ['Result', result?.result ? String(result.result).replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim() : '']);
+    if (result?.extra) rows.push(['Details', String(result.extra).replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim()]);
+    const csv = rows.map((r) => r.map((c) => `"${String(c).replace(/"/g, '""')}"`).join(',')).join('\n');
+    const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `${tool.id || 'calcpro'}-result.csv`;
+    a.click();
+    URL.revokeObjectURL(a.href);
+    flash('CSV downloaded ⬇');
+  };
+
+  const printPdf = () => {
+    // Branded, print-optimized report window (zero-dependency; user saves as PDF
+    // from the print dialog). Mirrors the vanilla exportResultAsPdf() behavior.
+    const esc = (s) =>
+      String(s == null ? '' : s)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+    const rows = (tool.inputs || [])
+      .filter((i) => values[i.id] !== '' && values[i.id] !== undefined)
+      .map((i) => `<tr><td>${esc(i.label || i.id)}</td><td>${esc(String(values[i.id]))}</td></tr>`)
+      .join('');
+    const res = result?.result ? String(result.result).replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim() : '';
+    const extra = result?.extra ? String(result.extra).replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim() : '';
+    const w = window.open('', '_blank');
+    if (!w) { flash('Allow pop-ups to export PDF'); return; }
+    w.document.write(
+      `<!DOCTYPE html><html><head><meta charset="utf-8"><title>CalcPro — ${esc(tool.name)}</title>` +
+      `<style>body{font-family:Inter,Arial,sans-serif;max-width:720px;margin:32px auto;padding:0 20px;color:#1e293b}` +
+      `h1{font-size:22px;border-bottom:2px solid #4f46e5;padding-bottom:10px}` +
+      `table{border-collapse:collapse;width:100%;margin:16px 0}td,th{border:1px solid #e2e8f0;padding:8px 10px;font-size:13px;text-align:left}` +
+      `th{background:#f1f5f9}.result{font-size:20px;font-weight:700;color:#4f46e5;padding:12px;background:#eef2ff;border-radius:8px;margin:12px 0}` +
+      `.extra{color:#64748b;font-size:14px;margin:8px 0}.meta{color:#94a3b8;font-size:12px}.brand{color:#4f46e5;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}</style></head><body>` +
+      `<div class="brand">CalcPro</div>` +
+      `<h1>${esc(tool.name)}</h1>` +
+      `<div class="meta">Generated: ${esc(new Date().toLocaleString())}<br>URL: ${esc(window.location.href)}</div>` +
+      `<div class="result">${esc(res || '—')}</div>` +
+      (extra ? `<div class="extra">${esc(extra)}</div>` : '') +
+      `<h2>Inputs</h2><table><thead><tr><th>Input</th><th>Value</th></tr></thead><tbody>${rows || '<tr><td colspan="2">—</td></tr>'}</tbody></table>` +
+      `<p style="font-size:11px;color:#94a3b8;margin-top:24px">Generated by CalcPro — 566+ free calculators. Estimates only; verify independently. Your data never leaves your device.</p>` +
+      `</body></html>`
+    );
+    w.document.close();
+    setTimeout(() => { w.focus(); w.print(); }, 400);
+  };
+
+  const embedCode = () => {
+    const url = `${window.location.origin}/${categoryKey}/${toolId}`;
+    return `<iframe src="${url}" title="${tool.name}" width="100%" height="600" loading="lazy" style="border:1px solid #e2e8f0;border-radius:12px"></iframe>`;
+  };
+
+  const copyEmbed = async () => {
+    try {
+      await navigator.clipboard.writeText(embedCode());
+      flash('Embed code copied! Paste it on any site.');
+    } catch (e) { flash('Copy failed — select the code manually.'); }
+  };
+
+  const flash = (msg) => {
+    setCopied(msg);
+    setTimeout(() => setCopied(''), 2600);
+  };
+
+  const btnCls =
+    'rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-bold text-slate-600 shadow-sm transition hover:border-primary/50 hover:text-primary active:scale-[0.98]';
+
+  return (
+    <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <h3 className="flex items-center gap-2 text-base font-bold text-ink">
+          <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-primary/10 text-sm">💾</span>
+          Save &amp; Share
+        </h3>
+        <div className="flex flex-wrap items-center gap-2">
+          <button type="button" className={btnCls} onClick={saveToHistory}>💾 Save</button>
+          <button type="button" className={btnCls} onClick={printPdf}>🖨️ PDF</button>
+          <button type="button" className={btnCls} onClick={exportCsv}>⬇️ CSV</button>
+          <button type="button" className={btnCls} onClick={() => setEmbedOpen((o) => !o)}>🔗 Embed</button>
+        </div>
+      </div>
+
+      {copied && <p className="mt-2 text-xs font-semibold text-emerald-600">{copied}</p>}
+
+      {/* Embed code box */}
+      {embedOpen && (
+        <div className="mt-3 space-y-2">
+          <p className="text-xs text-slate-500">Paste this on any blog or site to embed the calculator:</p>
+          <pre className="overflow-x-auto rounded-lg bg-slate-900 p-3 text-[11px] leading-relaxed text-emerald-300">
+            {embedCode()}
+          </pre>
+          <button
+            type="button"
+            className="rounded-lg bg-primary px-3 py-1.5 text-xs font-bold text-white transition hover:bg-primary-dark"
+            onClick={copyEmbed}
+          >
+            📋 Copy embed code
+          </button>
+        </div>
+      )}
+
+      {/* Saved history */}
+      {history.length > 0 && (
+        <div className="mt-4 border-t border-slate-100 pt-3">
+          <p className="mb-2 text-[11px] font-bold uppercase tracking-wide text-slate-400">Recent saved calculations</p>
+          <div className="space-y-1.5">
+            {history.map((h) => (
+              <a
+                key={h.ts}
+                href={`/${h.categoryKey || categoryKey}/${h.toolId}`}
+                className="flex items-center justify-between gap-3 rounded-lg bg-slate-50 px-3 py-2 text-xs transition hover:bg-primary/5"
+              >
+                <span className="font-semibold text-ink">{h.toolName}</span>
+                <span className="truncate text-slate-500">{h.result}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}

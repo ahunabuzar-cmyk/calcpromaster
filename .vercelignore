@@ -1,0 +1,3 @@
+# The 4.8MB monolithic SEO bundle is only a regeneration source (scripts/split-seo.cjs).
+# Runtime serves per-category chunks from js/seo/. Never ship the monolith to Vercel.
+js/seo-content.js

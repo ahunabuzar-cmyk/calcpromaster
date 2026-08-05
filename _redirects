@@ -1,0 +1,53 @@
+# CalcPro — Netlify redirects (SPA fallback + soft-404 fix)
+# ORDER MATTERS: Netlify matches top-to-bottom, first match wins, and redirect
+# rules override static files — so real root files MUST come before the asset
+# wildcards below, or robots.txt/sitemap.xml/etc. would be 404'd by them.
+# 1) Real root files — never catch these with the asset-404 wildcards
+/robots.txt     /robots.txt     200
+/sitemap.xml    /sitemap.xml    200
+/llms.txt       /llms.txt       200
+/ads.txt        /ads.txt        200
+/manifest.json  /manifest.json  200
+/og-image.png   /og-image.png   200
+/og-image.html  /og-image.html  200
+/icon.svg       /icon.svg       200
+# 2) Static legal/About pages — separate standalone HTML for crawlers & no-JS users
+/about              /about.html             200
+/privacy            /privacy.html           200
+/terms              /terms.html             200
+/cookies            /cookies.html           200
+/contact            /contact.html           200
+/disclaimer-general /disclaimer-general.html 200
+/disclaimer-finance /disclaimer-finance.html 200
+/disclaimer-health  /disclaimer-health.html  200
+# 3) Renamed tools — permanent redirects from old URLs (preserves backlinks/bookmarks)
+/everyday/fuel-cost          /everyday/trip-fuel-cost           301
+/conversion/fuel-efficiency  /conversion/fuel-efficiency-converter 301
+/finance/ltv                 /finance/loan-to-value             301
+/career/freelance-rate       /career/freelance-hourly-rate      301
+/finance/net-worth           /finance/net-worth-calculator      301
+/tech/battery-life           /tech/battery-life-estimator       301
+/fitness/walking-steps       /fitness/steps-to-distance         301
+/food/water-intake           /food/daily-water-intake           301
+/health/water-intake         /health/water-intake-health        301
+/lifestyle/moving-cost       /lifestyle/relocation-cost         301
+/lifestyle/grocery-budget    /lifestyle/grocery-budget-optimizer 301
+/health/ideal-weight         /health/ideal-body-weight          301
+/family/pregnancy-weight     /family/pregnancy-weight-gain      301
+/regional/wedding-budget     /regional/wedding-budget-shaadi    301
+# 4) Missing assets (.js/.css/.png/.svg etc.) → true 404 (NOT index.html 200)
+/*.js    /404.html   404
+/*.css   /404.html   404
+/*.png   /404.html   404
+/*.jpg   /404.html   404
+/*.jpeg  /404.html   404
+/*.gif   /404.html   404
+/*.svg   /404.html   404
+/*.ico   /404.html   404
+/*.xml   /404.html   404
+/*.txt   /404.html   404
+/*.json  /404.html   404
+/*.webmanifest /404.html   404
+/*.woff2 /404.html   404
+# 5) Clean URL routes (extensionless) → SPA index.html with 200
+/*    /index.html   200

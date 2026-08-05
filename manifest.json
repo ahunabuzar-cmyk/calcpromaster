@@ -1,0 +1,57 @@
+{
+  "name": "CalcProMaster - 566+ Free Online Calculators",
+  "short_name": "CalcProMaster",
+  "description": "Free advanced online calculators for finance, health, math, science, business and more with step-by-step solutions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["utilities", "productivity", "education", "finance"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Loan Calculator",
+      "short_name": "Loan",
+      "description": "Calculate loan payments",
+      "url": "/finance/loan-emi",
+      "icons": [{ "src": "icon.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "BMI Calculator",
+      "short_name": "BMI",
+      "description": "Calculate Body Mass Index",
+      "url": "/health/bmi",
+      "icons": [{ "src": "icon.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Compound Interest",
+      "short_name": "Compound",
+      "description": "Investment growth calculator",
+      "url": "/finance/compound-interest",
+      "icons": [{ "src": "icon.svg", "sizes": "192x192" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

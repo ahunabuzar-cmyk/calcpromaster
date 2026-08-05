@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page Not Found | CalcProMaster</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{--bg:#f8fafc;--surface:#fff;--text:#1e293b;--text-light:#64748b;--border:#e2e8f0;--primary:#4f46e5}
+    @media (prefers-color-scheme: dark){
+      :root{--bg:#0f172a;--surface:#1e293b;--text:#f8fafc;--text-light:#94a3b8;--border:#334155}
+    }
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;line-height:1.6}
+    .card{max-width:540px;text-align:center;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:48px 40px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+    .icon{font-size:56px;margin-bottom:16px}
+    h1{font-size:28px;font-weight:800;margin-bottom:8px}
+    p{color:var(--text-light);font-size:15px;margin-bottom:24px}
+    .btn{display:inline-block;background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;text-decoration:none;font-weight:600;padding:12px 28px;border-radius:10px;margin:4px}
+    .btn.ghost{background:transparent;color:var(--text);border:1px solid var(--border)}
+    .btn:hover{opacity:.9}
+    .links{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+    .links a{color:var(--primary);font-size:13px;text-decoration:none}
+    .links a:hover{text-decoration:underline}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon">🔍</div>
+    <h1>404 — Page Not Found</h1>
+    <p>The page you're looking for doesn't exist, was moved, or the link is broken. Find the calculator you need instead.</p>
+    <a class="btn" href="/">🏠 Return to CalcProMaster</a>
+    <a class="btn ghost" href="/history">📜 My History</a>
+    <div class="links">
+      <a href="/finance">Finance</a><a href="/health">Health</a><a href="/math">Math</a><a href="/business">Business</a><a href="/conversion">Conversion</a><a href="/about">About</a>
+    </div>
+  </div>
+</body>
+</html>

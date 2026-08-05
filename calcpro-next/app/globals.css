@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+  --primary: #4f46e5; /* matches Tailwind primary DEFAULT — shared token for inline styles */
+  --primary-dark: #4338ca;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  @apply bg-slate-50 text-ink antialiased;
+}
+
+/* Range slider thumb polish (WebKit + Firefox) */
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 9999px;
+  background: var(--primary, #4f46e5);
+  border: 3px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+input[type='range']::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+input[type='range']::-moz-range-thumb {
+  height: 18px;
+  width: 18px;
+  border-radius: 9999px;
+  background: var(--primary, #4f46e5);
+  border: 3px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+input[type='range']::-moz-range-thumb:hover {
+  transform: scale(1.15);
+}
+
+/* Trusted chart SVGs from our own Charts module */
+.chart-area svg {
+  width: 100%;
+  height: auto;
+  max-height: 260px;
+}
+
+/* Result markdown-ish typography inside .result-main */
+.result-main p { margin: 4px 0; }
+
+/* ===== Long-form SEO article typography (.prose-seo) ===== */
+.prose-seo {
+  color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+.prose-seo h2 {
+  margin: 1.75rem 0 0.6rem;
+  font-family: var(--font-display, 'Space Grotesk', system-ui, sans-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+.prose-seo h2:first-child { margin-top: 0; }
+.prose-seo h3 {
+  margin: 1.25rem 0 0.4rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+.prose-seo p { margin: 0.65rem 0; }
+.prose-seo ul,
+.prose-seo ol { margin: 0.65rem 0; padding-left: 1.4rem; }
+.prose-seo ul { list-style: disc; }
+.prose-seo ol { list-style: decimal; }
+.prose-seo li { margin: 0.3rem 0; }
+.prose-seo li::marker { color: #4f46e5; font-weight: 600; }
+.prose-seo strong { color: #1e293b; font-weight: 600; }
+.prose-seo a { color: #4f46e5; text-decoration: underline; text-underline-offset: 2px; }
+.prose-seo code {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 1px 5px;
+  font-size: 0.85em;
+}
+
+/* ===== Unique ~100-word per-tool intro paragraph (js/tool-intros.js) ===== */
+.tool-intro {
+  border-left: 3px solid #4f46e5;
+  background: rgba(79, 70, 229, 0.05);
+  padding: 0.9rem 1.1rem;
+  border-radius: 0 10px 10px 0;
+}
+.dark .tool-intro { background: rgba(129, 140, 248, 0.08); }
+
+/* Dark mode refinement (class-based toggle) */
+.dark .prose-seo { color: #cbd5e1; }
+.dark .prose-seo h2,
+.dark .prose-seo h3,
+.dark .prose-seo strong { color: #f1f5f9; }
+.dark .prose-seo code { background: #1e293b; border-color: #334155; }
+
+/* ===== Print stylesheet — clean PDF export (Step 5) ===== */
+@media print {
+  header, footer, .no-print { display: none !important; }
+  body { background: #fff !important; }
+  main { max-width: 100% !important; padding: 0 !important; }
+  .shadow-sm, .shadow-md, .shadow-xl { box-shadow: none !important; }
+  .rounded-2xl, .rounded-xl, .rounded-lg { border-radius: 8px !important; }
+  details, .max-h-80 { max-height: none !important; overflow: visible !important; }
+  .max-h-80 { max-height: none !important; }
+  a { text-decoration: none; color: inherit; }
+}

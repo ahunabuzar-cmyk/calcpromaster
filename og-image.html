@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1200px; height: 630px; font-family: 'Segoe UI', Arial, sans-serif; background: #0f172a; display: flex; overflow: hidden; }
+  .card { width: 1200px; height: 630px; padding: 56px 64px; display: flex; flex-direction: column; justify-content: space-between; position: relative; }
+  .glow { position: absolute; width: 520px; height: 520px; border-radius: 50%; filter: blur(90px); opacity: .45; }
+  .glow1 { background: #4f46e5; top: -140px; right: -100px; }
+  .glow2 { background: #10b981; bottom: -160px; left: -80px; }
+  .top { display: flex; align-items: center; gap: 18px; position: relative; z-index: 1; }
+  .logo { width: 64px; height: 64px; border-radius: 16px; background: linear-gradient(135deg,#4f46e5,#7c3aed); display: flex; align-items: center; justify-content: center; font-size: 38px; font-weight: 800; color: #fff; }
+  .brand { font-size: 30px; font-weight: 800; color: #f8fafc; letter-spacing: -.5px; }
+  .brand small { display: block; font-size: 14px; color: #94a3b8; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; }
+  .hero { position: relative; z-index: 1; }
+  .hero h1 { font-size: 64px; font-weight: 800; color: #fff; line-height: 1.1; letter-spacing: -1.5px; max-width: 900px; }
+  .hero h1 span { background: linear-gradient(135deg,#818cf8,#34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .hero p { font-size: 24px; color: #cbd5e1; margin-top: 20px; max-width: 800px; line-height: 1.5; }
+  .chips { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
+  .chip { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); color: #e2e8f0; font-size: 17px; font-weight: 600; padding: 10px 20px; border-radius: 40px; }
+  .bottom { display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
+  .bottom .tag { font-size: 18px; color: #94a3b8; }
+  .bottom .url { font-size: 20px; font-weight: 700; color: #34d399; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="glow glow1"></div>
+    <div class="glow glow2"></div>
+    <div class="top">
+      <div class="logo">C</div>
+      <div class="brand">CalcPro<small>Free Online Calculators</small></div>
+    </div>
+    <div class="hero">
+      <h1>497+ Free Online<br><span>Calculators</span></h1>
+      <p>Step-by-step solutions, interactive charts, and smart tools for finance, health, math, science & more. 100% free — runs in your browser.</p>
+      <div class="chips">
+        <span class="chip">📊 Finance</span>
+        <span class="chip">❤️ Health</span>
+        <span class="chip">🔢 Math</span>
+        <span class="chip">🔬 Science</span>
+        <span class="chip">💼 Business</span>
+      </div>
+    </div>
+    <div class="bottom">
+      <span class="tag">No sign-up · No data collection · Works offline</span>
+      <span class="url">calcpromaster.netlify.app</span>
+    </div>
+  </div>
+</body>
+</html>

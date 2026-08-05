@@ -1,0 +1,76 @@
+# ====== CalcPro robots.txt ======
+# Allow all AI crawlers and search engines for maximum SEO/AEO/GEO/LLMO visibility
+# Generated: July 2026
+
+# --- Major Search Engines ---
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# --- AI / LLM Crawlers (explicitly allowed for LLMO visibility) ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# --- General rule for all other crawlers ---
+User-agent: *
+Allow: /
+
+# --- Sitemap (real domain — example.com placeholder broke indexing) ---
+Sitemap: https://calcpromaster.netlify.app/sitemap.xml
+
+# --- IndexNow (Bing) verification key location ---
+# Key file 0e1100ec6bc9d4c2c6037d993fc2ba55.txt is served from the site root.
+# Submitting URLs: node ping-indexnow.js (see package.json "indexnow" script).

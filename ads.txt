@@ -1,0 +1,4 @@
+# AdSense ads.txt — AdSense approval ke baad apna REAL Publisher ID uncomment karke
+# neeche daalo (pub-XXXXXXXXXXXXXX). Fake/placeholder publisher ID approve hone se
+# pehle crawlers ko confuse karta hai, isliye abhi line comment karke rakhi hai.
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

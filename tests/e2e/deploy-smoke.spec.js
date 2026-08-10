@@ -172,16 +172,20 @@ test.describe('deploy live smoke — 543 calculator routes (fast head-check)', (
     // Remote hosts are much slower than localhost: sequential GETs would
     // blow the default 60s, so batch at 20 concurrent (matches the standalone
     // live sweep) with a generous budget. Still fails fast on real 404s.
-    test.setTimeout(300000);
+    // Remote hosts (Netlify edge) throttle CI runner IPs on burst sweeps —
+    // locally this sweep takes ~1min, on CI it can be 5-6x slower. Budget
+    // generously (10min) so a slow-but-correct run never times out.
+    test.setTimeout(600000);
     const failed = [];
-    const CONCURRENCY = 10;
+    const CONCURRENCY = 12;
+    const BATCH_DELAY_MS = 150; // gentle spacing avoids edge throttling queues
     // Netlify's edge can reset connections (ECONNRESET) when a single IP
     // bursts hundreds of requests. Retry ONLY transient connection errors with
     // backoff — a real 404/non-HTML response still fails immediately.
     async function fetchOne(t) {
       const url = BASE + '/' + t.cat + '/' + t.id;
       let lastErr;
-      for (let attempt = 0; attempt < 3; attempt++) {
+      for (let attempt = 0; attempt < 4; attempt++) {
         try {
           const res = await request.get(url);
           if (res.status() !== 200) return url + ' → ' + res.status();
@@ -193,7 +197,7 @@ test.describe('deploy live smoke — 543 calculator routes (fast head-check)', (
           const msg = (e && e.message) || String(e);
           const transient = /ECONNRESET|ECONNREFUSED|ETIMEDOUT|EPIPE|socket hang up|Request context disposed/i.test(msg);
           if (!transient) return url + ' → ERR ' + msg.slice(0, 60);
-          await new Promise((r) => setTimeout(r, 750 * Math.pow(2, attempt)));
+          await new Promise((r) => setTimeout(r, 500 * Math.pow(2, attempt)));
         }
       }
       return url + ' → ERR ' + ((lastErr && lastErr.message) || lastErr).slice(0, 60);
@@ -202,6 +206,7 @@ test.describe('deploy live smoke — 543 calculator routes (fast head-check)', (
       const batch = routes.slice(i, i + CONCURRENCY);
       const results = await Promise.all(batch.map(fetchOne));
       for (const f of results) if (f) failed.push(f);
+      if (i + CONCURRENCY < routes.length) await new Promise((r) => setTimeout(r, BATCH_DELAY_MS));
     }
     expect(failed, 'broken routes:\n' + failed.join('\n')).toEqual([]);
   });

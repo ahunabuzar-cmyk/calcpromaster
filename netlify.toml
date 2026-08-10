@@ -9,13 +9,9 @@
 # missing assets → 404 → extensionless routes → index.html 200). A catch-all here in
 # netlify.toml would OVERRIDE those ordered rules (toml redirects take precedence over
 # the _redirects file), turning every missing .js/.css/.png into a 200 soft-404.
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.g.doubleclick.net https://tpc.googlesyndication.com https://*.googlesyndication.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.googleapis.com; img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://*.g.doubleclick.net https://*.gstatic.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://open.er-api.com https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.g.doubleclick.net; worker-src 'self' blob:; frame-src 'self' https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://*.googlesyndication.com; frame-ancestors https:; base-uri 'self'; form-action 'self'; object-src 'none'"
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+#
+# NOTE: all security/response headers (CSP, HSTS, cache rules) live ONLY in the
+# _headers file. A [[headers]] block here would override _headers for the same
+# paths (Netlify precedence), and the two copies previously drifted apart — the
+# netlify.toml copy went stale and blocked Google Fonts (connect-src missing
+# fonts.googleapis.com), breaking the accessibility audit. Single source: _headers.

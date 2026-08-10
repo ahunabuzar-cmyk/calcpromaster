@@ -10,7 +10,10 @@
 // ============================================================
 const { test, expect } = require('@playwright/test');
 
-const BASE = 'http://localhost:3100';
+// Respect PLAYWRIGHT_BASE_URL (set by the live-smoke job to the deployed URL)
+// so this suite runs against the live CDN in CI; local runs default to the
+// artifact server like the other deploy specs.
+const BASE = process.env.PLAYWRIGHT_BASE_URL || process.env.E2E_BASE || 'http://localhost:3100';
 
 function pdfReportText(page) {
   // Capture the REAL App.exportResultAsPdf() output without a popup/print

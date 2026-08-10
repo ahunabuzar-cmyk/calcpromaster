@@ -10,23 +10,23 @@ const CalculatorOfTheDay = (function () {
     { id: 'loan-emi', cat: 'finance', highlight: 'Payment Planner', reason: 'Know your exact monthly payments before borrowing' },
     { id: 'percentage', cat: 'math', highlight: 'Daily Essential', reason: 'Discounts, tips, markups - solved instantly' },
     { id: 'retirement', cat: 'finance', highlight: 'Future Planner', reason: 'Calculate when you can retire comfortably' },
-    { id: 'currency-converter', cat: 'conversion', highlight: 'Global Traveler', reason: 'Real-time exchange rates for 150+ currencies' },
+    { id: 'currency-converter', cat: 'finance', highlight: 'Global Traveler', reason: 'Real-time exchange rates for 150+ currencies' },
     { id: 'auto-loan', cat: 'finance', highlight: 'Car Buyer', reason: 'Smart financing before you visit the dealership' },
     { id: 'date-diff', cat: 'everyday', highlight: 'Time Tracker', reason: 'Exact days between any two dates' },
     { id: 'age', cat: 'everyday', highlight: 'Age Expert', reason: 'Precise age in years, months, and days' },
-    { id: 'tip', cat: 'everyday', highlight: 'Bill Splitter', reason: 'Fair tips and splits for group dining' },
+    { id: 'tip', cat: 'finance', highlight: 'Bill Splitter', reason: 'Fair tips and splits for group dining' },
     { id: 'quadratic', cat: 'math', highlight: 'Equation Solver', reason: 'Find roots of ax² + bx + c = 0 instantly' },
     { id: 'scientific', cat: 'math', highlight: 'Science Mode', reason: 'Full scientific calculator with 40+ functions' },
     { id: 'ohms-law', cat: 'science', highlight: 'Circuit Designer', reason: 'V = I × R for electrical calculations' },
     { id: 'ideal-gas', cat: 'science', highlight: 'Chemistry Lab', reason: 'PV = nRT for gas law problems' },
-    { id: 'concrete', cat: 'construction', highlight: 'Builder', reason: 'Yards of concrete for slabs, footings, walls' },
-    { id: 'roi', cat: 'business', highlight: 'Investor', reason: 'Return on investment percentage calculator' },
+    { id: 'concrete', cat: 'everyday', highlight: 'Builder', reason: 'Yards of concrete for slabs, footings, walls' },
+    { id: 'roi', cat: 'finance', highlight: 'Investor', reason: 'Return on investment percentage calculator' },
     { id: 'profit-margin', cat: 'business', highlight: 'Entrepreneur', reason: 'Margin vs markup - know your true profit' },
     { id: 'gpa', cat: 'education', highlight: 'Student', reason: 'Semester and cumulative GPA calculator' },
-    { id: 'final-grade', cat: 'education', highlight: 'Grade Planner', reason: 'What score do you need on the final?' },
-    { id: 'password-generator', cat: 'utilities', highlight: 'Security Pro', reason: 'Strong, memorable passwords instantly' },
-    { id: 'qr-code', cat: 'utilities', highlight: 'QR Creator', reason: 'Generate QR codes for links, text, WiFi' },
-    { id: 'unit-converter', cat: 'conversion', highlight: 'Unit Master', reason: 'Length, weight, volume, temperature, speed' },
+    { id: 'grade-needed', cat: 'education', highlight: 'Grade Planner', reason: 'What score do you need on the final?' },
+    { id: 'password-generator', cat: 'tech', highlight: 'Security Pro', reason: 'Strong, memorable passwords instantly' },
+    { id: 'qr-generator', cat: 'utilities', highlight: 'QR Creator', reason: 'Generate QR codes for links, text, WiFi' },
+    { id: 'unit-converter', cat: 'utilities', highlight: 'Unit Master', reason: 'Length, weight, volume, temperature, speed' },
     { id: 'trip-fuel-cost', cat: 'everyday', highlight: 'Road Tripper', reason: 'Gas cost calculator for any journey' }
   ];
   
@@ -55,15 +55,22 @@ function renderSpotlight(containerId) {
     const container = document.getElementById(containerId);
     if (!container) return;
     
+    container.style.display = 'block';
+    container.innerHTML = buildSpotlightHTML(containerId);
+  }
+
+  // Builds the spotlight card HTML as a pure string (no DOM write) so the home
+  // page can embed it in its SINGLE render pass — late injection of the card
+  // after mainContent.innerHTML is set causes layout shift (CLS) on mobile.
+  function buildSpotlightHTML(containerId) {
     const calc = getTodaysCalculator();
     const tool = getToolInfo(calc.id, calc.cat);
-    if (!tool) return;
+    if (!tool) return '';
     
     const usage = CalcAnalytics.getData().tools?.[calc.id]?.count || 0;
     const isFav = AdvancedFeatures.isFavorite ? AdvancedFeatures.isFavorite(calc.id) : false;
     
-    container.style.display = 'block';
-    container.innerHTML = `
+    return `
       <div class="calc-of-day-card">
         <div class="cod-badge">🌟 Calculator of the Day</div>
         <div class="cod-content">
@@ -149,6 +156,7 @@ function renderSpotlight(containerId) {
   return { 
     init, 
     renderSpotlight, 
+    buildSpotlightHTML,
     getTodaysCalc, 
     getAllRotation,
     shareCalcOfDay 

@@ -16,6 +16,12 @@
     "test:health": "playwright test tests/e2e/health-check.spec.js",
     "test:all": "npm run test:unit && npm run test:e2e",
     "check": "node scripts/check-all-tools.js && node scripts/run-all-tools.cjs",
+    "audit": "node scripts/audit-tools.cjs && node scripts/sync-counts.cjs --check",
+    "sync:counts": "node scripts/sync-counts.cjs",
+    "drift:check": "node scripts/drift-detector.cjs",
+    "check:counts": "node scripts/sync-counts.cjs --check",
+    "checklist": "node scripts/formula-review-checklist.cjs",
+    "lint:js": "node scripts/syntax-check.js",
     "serve": "node server.js",
     "deploy:build": "node build-deploy.js",
     "deploy": "npm run deploy:build && echo 'Upload the deploy/ folder to Netlify'",
@@ -26,10 +32,18 @@
     "indexnow:dry": "node ping-indexnow.js --dry-run",
     "index": "node ping-indexing.js",
     "index:dry": "node ping-indexing.js --dry-run",
-    "index:all": "node ping-indexnow.js && node ping-indexing.js"
+    "index:all": "node ping-indexnow.js && node ping-indexing.js",
+    "monitor:uptime": "node scripts/uptime-check.cjs",
+    "monitor:indexing": "node scripts/indexing-monitor.cjs",
+    "monitor:smoke": "node scripts/scheduled-smoke.cjs",
+    "monitor:test-alert": "node scripts/uptime-check.cjs --test-alert",
+    "dashboard": "node scripts/formula-review-checklist.cjs && node scripts/generate-qa-dashboard.cjs",
+    "monitor:ga4": "node scripts/ga4-events.cjs",
+    "monitor:gsc": "node scripts/gsc-indexing.cjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.48.0",
+    "axe-core": "^4.13.0",
     "vitest": "^2.1.0"
   },
   "main": "build-deploy.js",

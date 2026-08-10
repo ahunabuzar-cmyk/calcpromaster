@@ -25,12 +25,14 @@ function discoverToolRoutes() {
     if (!file.endsWith('.js')) continue;
     const src = fs.readFileSync(path.join(dataDir, file), 'utf8');
     const cat = catMap[file] || file.replace('.js', '');
-    // Tool-level objects start with "  { id: '...' " — matches BOTH single- and double-quoted ids
-    // (some data files declare { id: "random-generator", name: "..." } with double quotes)
-    const re = /^\s{2}\{\s*id:\s*['"]([^'"]+)['"]\s*,\s*name:\s*['"]([^'"]+)['"]/gm;
+    // Tool-level objects match `{ id: 'tool-id', ... }` (id may use single or double
+    // quotes, and `name:` is NOT required on the same line). Field definitions are
+    // written as `{id:'mode'` (no space after the brace), so requiring at least one
+    // space after `{` cleanly separates the 566 tools from the 87 field defs.
+    const re = /^[ \t]*\{[ \t]+id:[ \t]*['"]([^'"]+)['"]/gm;
     let m;
     while ((m = re.exec(src)) !== null) {
-      routes.push({ id: m[1], name: m[2], cat });
+      routes.push({ id: m[1], name: m[1], cat });
     }
   }
   return routes;
@@ -38,26 +40,37 @@ function discoverToolRoutes() {
 
 const TOOL_ROUTES = discoverToolRoutes();
 
-// Persist the route list for the health-check report
+// Persist the route list for the health-check report.
+// IMPORTANT: this file lives at the PROJECT ROOT, NOT inside test-results/ —
+// Playwright clears its output dir (test-results/) at run start, which used to
+// delete tool-routes.json right after the config wrote it, so the health-check
+// spec always saw an empty route list ("No tests found").
 if (!process.env.CI) {
   try {
-    const outDir = path.join(__dirname, 'test-results');
-    if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
-    fs.writeFileSync(path.join(outDir, 'tool-routes.json'), JSON.stringify(TOOL_ROUTES, null, 2));
+    fs.writeFileSync(path.join(__dirname, 'tool-routes.json'), JSON.stringify(TOOL_ROUTES, null, 2));
   } catch (e) { /* non-fatal */ }
 }
 
 module.exports = defineConfig({
+  // tests/unit/*.test.js are Vitest ESM specs — if Playwright scans them it
+  // errors out and aborts collection, so they are excluded here. e2e + visual
+  // Playwright suites both live under tests/ and run normally.
   testDir: './tests',
+  testIgnore: ['**/unit/**'],
   timeout: 60_000,
   expect: { timeout: 10_000 },
-  fullyParallel: false,
+  // fullyParallel lets the 566-tool spec file spread across all workers — with
+  // a single spec file, the default (false) queues every test on one worker and
+  // a full sweep can never finish inside a terminal time limit.
+  fullyParallel: true,
   workers: 4,
   retries: process.env.CI ? 2 : 0,
   reporter: [
     ['list'],
-    ['html', { outputFolder: 'test-results/playwright-report', open: 'never' }],
-    ['json', { outputFile: 'test-results/e2e-results.json' }]
+    // NOTE: reporter output folders MUST live OUTSIDE the test-results dir — Playwright
+    // clears its output dir (test-results/) at run start, so any reporter writing inside
+    // it (html or json) makes Playwright fail with ENOTEMPTY/"clashes" errors.
+    ['html', { outputFolder: 'playwright-report', open: 'never' }]
   ],
   use: {
     baseURL: 'http://localhost:3000',

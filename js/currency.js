@@ -10,34 +10,7 @@ const Currency = (function () {
   const CACHE_KEY = 'calcpro_currency_cache';
   const CACHE_TTL = 3600000; // 1 hour
 
-  const FALLBACK_RATES = {
-    USD: 1, EUR: 0.92, GBP: 0.79, JPY: 149.5, CNY: 7.24, INR: 83.2, PKR: 278.5,
-    CAD: 1.36, AUD: 1.52, CHF: 0.88, SGD: 1.34, HKD: 7.82, NZD: 1.64, SEK: 10.6,
-    NOK: 10.7, DKK: 6.9, KRW: 1330, MXN: 17.1, BRL: 4.97, RUB: 92.5, ZAR: 18.8,
-    TRY: 32.1, AED: 3.67, SAR: 3.75, THB: 35.8, IDR: 15700, MYR: 4.67, PHP: 56.2,
-    VND: 24500, PLN: 4.0, CZK: 23.2, HUF: 360, ILS: 3.7, EGP: 48.9, NGN: 1560,
-    KES: 149, MAD: 9.9, QAR: 3.64, KWD: 0.31, BHD: 0.376, OMR: 0.385, JOD: 0.709,
-    LKR: 325, BDT: 110, NPR: 133, AFN: 71, IRR: 42000, IQD: 1310, LBP: 89500,
-    SYP: 13000, YER: 530, PAB: 1, GTQ: 7.8, HNL: 24.6, NIO: 36.7, CRC: 530,
-    PAB: 1, DOP: 58.5, CUP: 240, JMD: 155, TTD: 6.8, BBD: 2, BSD: 1, BZD: 2,
-    XCD: 2.7, AWG: 1.8, ANG: 1.8, SRD: 38, GYD: 209, PYG: 7300, UYU: 39.5,
-    ARS: 1020, CLP: 950, BOB: 6.9, PEN: 3.75, COP: 3900, VEF: 36, GHS: 15.2,
-    XOF: 605, XAF: 605, XPF: 110, DJF: 178, KMF: 470, RWF: 1290, BIF: 2950,
-    ETB: 56, SLL: 23000, LRD: 190, GNF: 8600, MZN: 64, AOQ: 850, SDG: 600,
-    SOS: 570, ERN: 15, NAD: 18.8, BWP: 13.6, ZWL: 13.5, MUR: 46, MGA: 4700,
-    SCR: 14.5, CVE: 110, STN: 24, ZMW: 26, MWK: 1700, TND: 3.1, DZD: 134,
-    LYD: 4.85, TMT: 3.5, AMD: 390, AZN: 1.7, GEL: 2.7, UAH: 39.5, BYN: 3.2,
-    MDL: 17.5, RON: 4.6, BGN: 1.8, ALL: 94.5, RSD: 108, MKD: 58, BAM: 1.8,
-    HRK: 6.95, ISK: 138, FKP: 0.79, GIP: 0.79, SHP: 0.79, TJS: 11, KGS: 89,
-    UZS: 12500, AFN: 71, MNT: 3400, LAK: 21000, KHR: 4100, MMK: 2100, BTN: 83.2,
-    CDF: 2750, GMD: 66, SLL: 23000, TWD: 31.8, WST: 2.7, FJD: 2.2, TOP: 2.4,
-    PGK: 3.7, SBD: 8.5, VUV: 120, XPF: 110, TMT: 3.5, ETB: 56, MZN: 64,
-    BIF: 2950, KMF: 470, RWF: 1290, DJF: 178, GNF: 8600, SLL: 23000, LRD: 190,
-    ZWL: 13.5, ANG: 1.8, AWG: 1.8, XCD: 2.7, XOF: 605, XAF: 605, XPF: 110,
-    BTC: 0.0000166, ETH: 0.00034, XRP: 1.85, LTC: 0.012, DOGE: 12.5, ADA: 2.4,
-    TZS: 2650, UGX: 3820, MOP: 8.06, SZL: 18.9, LSL: 18.9, HTG: 131.5, BMD: 1,
-    KYD: 0.83, MVR: 15.4, BND: 1.34, XAU: 0.00043, XAG: 0.034,
-  };
+  const FALLBACK_RATES = { USD: 1, EUR: 0.92, GBP: 0.79, JPY: 149.5, CNY: 7.24, INR: 83.2, PKR: 278.5, CAD: 1.36, AUD: 1.52, CHF: 0.88, SGD: 1.34, HKD: 7.82, NZD: 1.64, SEK: 10.6, NOK: 10.7, DKK: 6.9, KRW: 1330, MXN: 17.1, BRL: 4.97, RUB: 92.5, ZAR: 18.8, TRY: 32.1, AED: 3.67, SAR: 3.75, THB: 35.8, IDR: 15700, MYR: 4.67, PHP: 56.2, VND: 24500, PLN: 4.0, CZK: 23.2, HUF: 360, ILS: 3.7, EGP: 48.9, NGN: 1560, KES: 149, MAD: 9.9, QAR: 3.64, KWD: 0.31, BHD: 0.376, OMR: 0.385, JOD: 0.709, LKR: 325, BDT: 110, NPR: 133, AFN: 71, IRR: 42000, IQD: 1310, LBP: 89500, SYP: 13000, YER: 530, PAB: 1, GTQ: 7.8, HNL: 24.6, NIO: 36.7, CRC: 530, DOP: 58.5, CUP: 240, JMD: 155, TTD: 6.8, BBD: 2, BSD: 1, BZD: 2, XCD: 2.7, AWG: 1.8, ANG: 1.8, SRD: 38, GYD: 209, PYG: 7300, UYU: 39.5, ARS: 1020, CLP: 950, BOB: 6.9, PEN: 3.75, COP: 3900, GHS: 15.2, XOF: 605, XAF: 605, XPF: 110, DJF: 178, KMF: 470, RWF: 1290, BIF: 2950, ETB: 56, SLL: 23000, LRD: 190, GNF: 8600, MZN: 64, SDG: 600, SOS: 570, ERN: 15, NAD: 18.8, BWP: 13.6, ZWL: 13.5, MUR: 46, MGA: 4700, SCR: 14.5, CVE: 110, STN: 24, ZMW: 26, MWK: 1700, TND: 3.1, DZD: 134, LYD: 4.85, TMT: 3.5, AMD: 390, AZN: 1.7, GEL: 2.7, UAH: 39.5, BYN: 3.2, MDL: 17.5, RON: 4.6, BGN: 1.8, ALL: 94.5, RSD: 108, MKD: 58, BAM: 1.8, HRK: 6.95, ISK: 138, FKP: 0.79, GIP: 0.79, SHP: 0.79, TJS: 11, KGS: 89, UZS: 12500, MNT: 3400, LAK: 21000, KHR: 4100, MMK: 2100, BTN: 83.2, TWD: 31.8, WST: 2.7, FJD: 2.2, TOP: 2.4, PGK: 3.7, SBD: 8.5, VUV: 120, BTC: 0.0000166, ETH: 0.00034, XRP: 1.85, LTC: 0.012, DOGE: 12.5, ADA: 2.4, TZS: 2650, UGX: 3820, MOP: 8.06, SZL: 18.9, LSL: 18.9, HTG: 131.5, BMD: 1, KYD: 0.83, MVR: 15.4, BND: 1.34, XAU: 0.00043, XAG: 0.034 };
 
   const CURRENCY_INFO = {
     USD: { name: 'US Dollar', symbol: '$' }, EUR: { name: 'Euro', symbol: '€' },
@@ -148,29 +121,7 @@ const Currency = (function () {
 
   // Multi-source resilience: try live APIs in order, then serve stale cache (up to 24h),
   // and only as a last resort the static snapshot. No single API can take the tools down.
-  const API_SOURCES = [
-    'https://open.er-api.com/v6/latest/USD',
-    'https://api.frankfurter.app/latest?from=USD'
-  ];
-  async function fetchLiveRates() {
-    let cached = null;
-    try { cached = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null'); } catch (e) { cached = null; }
-    if (cached && cached.rates && Date.now() - cached.ts < CACHE_TTL) return cached.rates;
-    for (const url of API_SOURCES) {
-      try {
-        const res = await fetch(url);
-        if (!res.ok) continue;
-        const data = await res.json();
-        if (data && data.rates) {
-          localStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), rates: data.rates }));
-          return data.rates;
-        }
-      } catch (e) { /* try next source */ }
-    }
-    // Stale-while-error: last-known rates (up to 24h) are better than a static snapshot
-    if (cached && cached.rates && Date.now() - cached.ts < 86400000) return cached.rates;
-    return FALLBACK_RATES;
-  }
+  async function fetchLiveRates() { let cached=null; try { cached = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null'); } catch(e) { cached=null; } if (cached && cached.rates && Date.now() - cached.ts < CACHE_TTL) return cached.rates; for (const url of ['https://open.er-api.com/v6/latest/USD','https://api.frankfurter.app/latest?from=USD']) { try { const res = await fetch(url); if (!res.ok) continue; const data = await res.json(); if (data && data.rates) { localStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), rates: data.rates })); return data.rates; } } catch (e) {} } if (cached && cached.rates && Date.now() - cached.ts < 86400000) return cached.rates; return FALLBACK_RATES; }
 
   async function convertCurrency(amount, from, to) {
     const rates = await fetchLiveRates();

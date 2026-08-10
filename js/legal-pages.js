@@ -331,7 +331,7 @@ const LegalPages = (function() {
            niche ek professional generic bio hai jo launch ke liye ready hai -->
       <p>CalcProMaster is built by a dedicated developer with a strong background in mathematics, software engineering, and data accuracy. What started as a small collection of personal calculation tools grew into a public library of <strong>566+ free online calculators</strong> spanning finance, health, science, engineering, education, and everyday life.</p>
       <p>Every calculator on this site is designed with the same standards: verified formulas, transparent step-by-step explanations, and rigorous testing against real-world scenarios. We believe a calculator is only as good as its accuracy — which is why each tool documents its assumptions and limitations openly, and why our finance and health calculators always carry clear disclaimers.</p>
-      <p>CalcProMaster runs entirely in your browser. No accounts, no data collection, no hidden costs — just fast, honest calculation tools that anyone can use, from students checking homework to families planning budgets.</p>
+      <p>CalcProMaster runs entirely in your browser. No accounts, no hidden costs — just fast, honest calculation tools that anyone can use, from students checking homework to families planning budgets. Calculations run locally; optional analytics and advertising only activate if you consent via our cookie banner.</p>
 
       <h2>Our Commitment to Quality</h2>
       <p>Every calculator on CalcProMaster is built with:</p>

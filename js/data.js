@@ -48,13 +48,14 @@ Object.values(CALC_DATA).forEach(cat => { cat.tools.forEach(t => ALL_TOOLS.push(
 const TOOL_MAP = {};
 ALL_TOOLS.forEach(t => { TOOL_MAP[t.id] = t; });
 
-const TOTAL_CALCULATORS = ALL_TOOLS.length;
+// Rebuildable live count — refreshCalcData() updates this as lazy categories load.
+let TOTAL_CALCULATORS = ALL_TOOLS.length;
 
 // Static pages
 const STATIC_PAGES = {
-  '': { title: 'CalcProMaster - 566+ Free Online Calculators', desc: 'Free advanced online calculators for finance, health, math, science, business and more. Step-by-step solutions, charts, and smart features.', type: 'home' },
-  'about': { title: 'About CalcProMaster', desc: 'Learn about CalcProMaster - your comprehensive calculator resource with 566+ tools across 20 categories.', type: 'about' },
-  'privacy': { title: 'Privacy Policy', desc: 'CalcProMaster privacy policy. All calculations run in your browser. No data collected.', type: 'privacy' },
+  '': { title: 'CalcProMaster - 543+ free online calculators', desc: 'Free advanced online calculators for finance, health, math, science, business and more. Step-by-step solutions, charts, and smart features.', type: 'home' },
+  'about': { title: 'About CalcProMaster', desc: 'Learn about CalcProMaster - your comprehensive calculator resource with 543+ tools across 20 categories.', type: 'about' },
+  'privacy': { title: 'Privacy Policy', desc: 'CalcProMaster privacy policy. Calculations run locally in your browser; optional analytics and advertising only with your consent.', type: 'privacy' },
   'terms': { title: 'Terms of Service', desc: 'CalcProMaster Terms of Service. Free calculator tools provided as-is without warranty.', type: 'terms' },
   'disclaimer-finance': { title: 'Financial Disclaimer', desc: 'CalcProMaster financial calculators are for educational purposes only. Not financial advice.', type: 'disclaimer' },
   'disclaimer-health': { title: 'Health Disclaimer', desc: 'CalcProMaster health calculators are for informational purposes only. Not medical advice.', type: 'disclaimer' },
@@ -91,6 +92,25 @@ const CATEGORY_META = {
   family: { title: 'Parenting & Family Calculators', desc: 'Child height prediction, family budget, college savings, childcare cost and estate planning.' },
 };
 
+// Rebuild the flattened lookup maps after a lazy category file hydrates.
+// Called by js/data-loader.js on script onload. ALL_TOOLS/TOOL_MAP are rebuilt
+// from the (now populated) CALC_DATA so search, TOOL_MAP lookups, related-tools
+// matching, and the live total count all see the new tools immediately.
+function refreshCalcData() {
+  ALL_TOOLS.length = 0;
+  Object.keys(CALC_DATA).forEach(function (key) {
+    CALC_DATA[key].tools.forEach(function (t) { ALL_TOOLS.push(t); });
+  });
+  Object.keys(TOOL_MAP).forEach(function (k) { delete TOOL_MAP[k]; });
+  ALL_TOOLS.forEach(function (t) { TOOL_MAP[t.id] = t; });
+  TOTAL_CALCULATORS = ALL_TOOLS.length;
+  if (typeof window !== 'undefined') {
+    window.ALL_TOOLS = ALL_TOOLS;
+    window.TOOL_MAP = TOOL_MAP;
+    window.TOTAL_CALCULATORS = TOTAL_CALCULATORS;
+  }
+}
+
 if (typeof window !== 'undefined') {
   window.CALC_DATA = CALC_DATA;
   window.ALL_TOOLS = ALL_TOOLS;
@@ -98,4 +118,5 @@ if (typeof window !== 'undefined') {
   window.TOTAL_CALCULATORS = TOTAL_CALCULATORS;
   window.STATIC_PAGES = STATIC_PAGES;
   window.CATEGORY_META = CATEGORY_META;
+  window.refreshCalcData = refreshCalcData;
 }

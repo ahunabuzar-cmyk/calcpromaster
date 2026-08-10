@@ -1,0 +1,116 @@
+name: CalcProMaster — Weekly GA4 + GSC Trackers
+
+# Runs weekly (Monday 07:30 UTC) + manual dispatch from the Actions tab.
+# Executes the two API trackers against the LIVE property:
+#   scripts/ga4-events.cjs  → GA4 Data API event counts (page_view, calculator_use, top tools)
+#   scripts/gsc-indexing.cjs → Search Console API index status + clicks/impressions/CTR
+#
+# REQUIRED repo secrets (Settings → Secrets and variables → Actions):
+#   SERVICE_ACCOUNT_B64  → base64 of your Google service-account JSON
+#                          (PowerShell:  [Convert]::ToBase64String([IO.File]::ReadAllBytes("service-account.json"))
+#                           or:          base64 -w0 service-account.json   on Linux/macOS/Git Bash)
+#   GA4_PROPERTY_ID      → numeric GA4 Property ID (NOT the G-XXXX measurement ID)
+# Optional repo variable:
+#   GSC_SITE_URL         → defaults to the site-config domain; override if you add a custom domain
+#
+# If the secrets are not set yet, both jobs are skipped cleanly (no failure).
+# Setup walkthrough: docs/api-credentials-setup.md §GitHub Actions.
+
+on:
+  schedule:
+    - cron: '30 7 * * 1'         # every Monday 07:30 UTC
+  workflow_dispatch:             # manual run from the Actions tab
+
+concurrency:
+  group: calcpro-trackers
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  issues: write                  # allow opening an alert issue on failure
+
+jobs:
+  # ----------------------------------------------------------
+  # GA4 event counts — needs GA4_PROPERTY_ID + SERVICE_ACCOUNT_B64
+  # ----------------------------------------------------------
+  ga4-events:
+    if: secrets.GA4_PROPERTY_ID != '' && secrets.SERVICE_ACCOUNT_B64 != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Write service account (from secret)
+        env:
+          SERVICE_ACCOUNT_B64: ${{ secrets.SERVICE_ACCOUNT_B64 }}
+        run: echo "$SERVICE_ACCOUNT_B64" | base64 -d > service-account.json
+      - name: Validate service account
+        run: node -e "const j=require('./service-account.json'); if(!j.client_email||!j.private_key) throw new Error('corrupt service account')"
+      - name: Run GA4 events tracker
+        env:
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+        run: node scripts/ga4-events.cjs --days 7
+      - name: Upload snapshot on success
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ga4-events-snapshot
+          path: data/ga4-events-snapshot.json
+          if-no-files-found: ignore
+      - name: Open alert issue on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '📊 GA4 tracker failed',
+              body: 'The weekly GA4 events check failed. Run locally: `GA4_PROPERTY_ID=... npm run monitor:ga4`. Check the service-account access in the GA4 property (Admin → Property access management → Viewer) and that the Google Analytics Data API is enabled.'
+            });
+
+  # ----------------------------------------------------------
+  # GSC indexing + performance — needs SERVICE_ACCOUNT_B64
+  # (site URL auto-detected from js/site-config.js)
+  # ----------------------------------------------------------
+  gsc-indexing:
+    if: secrets.SERVICE_ACCOUNT_B64 != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Write service account (from secret)
+        env:
+          SERVICE_ACCOUNT_B64: ${{ secrets.SERVICE_ACCOUNT_B64 }}
+        run: echo "$SERVICE_ACCOUNT_B64" | base64 -d > service-account.json
+      - name: Validate service account
+        run: node -e "const j=require('./service-account.json'); if(!j.client_email||!j.private_key) throw new Error('corrupt service account')"
+      - name: Run GSC indexing tracker
+        env:
+          GSC_SITE_URL: ${{ vars.GSC_SITE_URL || '' }}
+        run: node scripts/gsc-indexing.cjs --days 7
+      - name: Upload snapshot on success
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gsc-snapshot
+          path: data/gsc-snapshot.json
+          if-no-files-found: ignore
+      - name: Open alert issue on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '🔍 GSC tracker failed',
+              body: 'The weekly GSC indexing check failed. Run locally: `npm run monitor:gsc`. Check the service-account is added in Search Console (Settings → Users and permissions) and the Search Console API is enabled.'
+            });

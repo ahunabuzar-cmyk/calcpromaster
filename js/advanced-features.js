@@ -8,6 +8,51 @@ const AdvancedFeatures = (function () {
 
   // ---------- Favorites ----------
   function getFavorites() { return Security.safeGetItem(FAV_KEY, []); }
+  // Purge stored favorites/pins/chain/scenarios/presets whose tool id was
+  // merged or removed (SEO dedupe). Runs once at boot — never touches data
+  // that still exists. Returns total entries removed across all stores.
+  function purgeRemovedToolIds(ids) {
+    const set = ids instanceof Set ? ids : new Set(ids || []);
+    if (!set.size) return 0;
+    let removed = 0;
+    [FAV_KEY, PIN_KEY, CHAIN_KEY, SHARE_KEY].forEach(function (key) {
+      try {
+        const arr = Security.safeGetItem(key, []);
+        if (!Array.isArray(arr) || !arr.length) return;
+        const kept = arr.filter(function (x) {
+          return !(x && x.id && set.has(x.id));
+        });
+        if (kept.length !== arr.length) {
+          localStorage.setItem(key, JSON.stringify(kept));
+          removed += arr.length - kept.length;
+        }
+      } catch (e) { /* non-fatal */ }
+    });
+    // Comparison scenarios are persisted with a toolId field — purge stale ones
+    try {
+      const scen = JSON.parse(localStorage.getItem('calcpro_comparison_scenarios') || '[]');
+      if (Array.isArray(scen) && scen.length) {
+        const kept = scen.filter(function (s) { return !(s && s.toolId && set.has(s.toolId)); });
+        if (kept.length !== scen.length) {
+          localStorage.setItem('calcpro_comparison_scenarios', JSON.stringify(kept));
+          removed += scen.length - kept.length;
+        }
+      }
+    } catch (e) { /* non-fatal */ }
+    // Presets are stored as { toolId: [ {name, values, ts} ] } — drop whole keys
+    try {
+      const all = JSON.parse(localStorage.getItem(PRESET_KEY) || '{}');
+      const keys = Object.keys(all);
+      const keptKeys = keys.filter(function (k) { return !set.has(k); });
+      if (keptKeys.length !== keys.length) {
+        const keptObj = {};
+        keptKeys.forEach(function (k) { keptObj[k] = all[k]; });
+        localStorage.setItem(PRESET_KEY, JSON.stringify(keptObj));
+        removed += keys.length - keptKeys.length;
+      }
+    } catch (e) { /* non-fatal */ }
+    return removed;
+  }
   function toggleFavorite(toolId, toolName, catKey) {
     const favs = getFavorites();
     const idx = favs.findIndex(f => f.id === toolId);
@@ -52,7 +97,7 @@ const AdvancedFeatures = (function () {
     bar.style.display = 'flex';
     // XSS-hardening: pinned results are user-stored strings — escape before innerHTML
     bar.innerHTML = '<span class="pin-label">📌 Pinned:</span>' + pinned.map((p, i) =>
-      `<div class="pin-chip"><span class="pin-name">${Security.sanitizeHtml(p.name)}</span><span class="pin-result">${Security.sanitizeHtml((p.result || '').substring(0, 40))}</span><button class="pin-close" onclick="AdvancedFeatures.unpinResult(${i})">×</button></div>`
+      `<div class="pin-chip"><span class="pin-name">${Security.sanitizeHtml(p.name)}</span><span class="pin-result">${Security.sanitizeHtml(String(p.result == null ? '' : p.result).substring(0, 40))}</span><button class="pin-close" onclick="AdvancedFeatures.unpinResult(${i})">×</button></div>`
     ).join('') + '<button class="pin-compare-btn" onclick="AdvancedFeatures.openCompare()">Compare</button><button class="pin-clear" onclick="AdvancedFeatures.clearPinned()">Clear</button>';
   }
   function openCompare() {
@@ -63,7 +108,7 @@ const AdvancedFeatures = (function () {
     let html = '<table class="compare-table"><thead><tr><th>Calculator</th><th>Result</th><th>Details</th><th>Time</th></tr></thead><tbody>';
     pinned.forEach(p => {
       // XSS-hardening: pinned results are user-stored strings — escape before innerHTML
-      html += `<tr><td>${Security.sanitizeHtml(p.name)}</td><td class="cmp-result">${Security.sanitizeHtml((p.result || '').substring(0, 60))}</td><td>${Security.sanitizeHtml((p.extra || '').substring(0, 60))}</td><td>${new Date(p.ts).toLocaleTimeString()}</td></tr>`;
+      html += `<tr><td>${Security.sanitizeHtml(p.name)}</td><td class="cmp-result">${Security.sanitizeHtml(String(p.result == null ? '' : p.result).substring(0, 60))}</td><td>${Security.sanitizeHtml(String(p.extra == null ? '' : p.extra).substring(0, 60))}</td><td>${new Date(p.ts).toLocaleTimeString()}</td></tr>`;
     });
     html += '</tbody></table>';
     content.innerHTML = html;
@@ -92,7 +137,7 @@ function renderChainBar() {
   bar.style.display = 'flex';
   // XSS-hardening: chain entries carry calc results (can echo user input) — escape text + title attr
   bar.innerHTML = '<span class="chain-label">🔗 Recent Results (click to reuse):</span>' + chain.slice(0, 5).map((c, i) =>
-    `<button class="chain-chip" onclick="AdvancedFeatures.useChainValue(${i})" title="${Security.sanitizeHtml(c.name)}: ${Security.sanitizeHtml(c.result)}">${Security.sanitizeHtml(c.name)}: ${Security.sanitizeHtml((c.result || '').substring(0, 30))}</button>`
+    `<button class="chain-chip" onclick="AdvancedFeatures.useChainValue(${i})" title="${Security.sanitizeHtml(c.name)}: ${Security.sanitizeHtml(String(c.result == null ? '' : c.result))}">${Security.sanitizeHtml(c.name)}: ${Security.sanitizeHtml(String(c.result == null ? '' : c.result).substring(0, 30))}</button>`
   ).join('');
 }
 function useChainValue(idx) {
@@ -348,7 +393,7 @@ function runComparisonMode() {
             allVals[firstId] = values[index];
             const r = App._currentTool.tool.calc(allVals);
             // XSS-hardening: batch input values are raw user strings — escape
-            resultsHtml += `<tr><td>${Security.sanitizeHtml(values[index])}</td><td>${Security.sanitizeHtml((r.result || '').substring(0, 60))}</td></tr>`;
+            resultsHtml += `<tr><td>${Security.sanitizeHtml(values[index])}</td><td>${Security.sanitizeHtml(String(r.result == null ? '' : r.result).substring(0, 60))}</td></tr>`;
           } catch(e) { resultsHtml += `<tr><td>${Security.sanitizeHtml(values[index])}</td><td class="error">Error</td></tr>`; }
         }
         index++;
@@ -425,7 +470,14 @@ function runComparisonMode() {
     const steps = typeof tool.steps === 'function' ? tool.steps(values, result) : tool.steps;
     let html = '<details class="calc-collapsible steps-card" open><summary>📐 Formula & Step-by-Step Solution</summary><ol class="steps-list">';
     // XSS-hardening: step strings can echo user input values — escape each step
-    steps.forEach(s => { html += `<li>${Security.sanitizeHtml(s)}</li>`; });
+    // NaN guard: division-by-zero leaks "NaN" into step text; never show raw broken math.
+    steps.forEach(s => {
+      let stepStr = String(s == null ? '' : s);
+      if (/\bNaN\b|\bundefined\b/i.test(stepStr)) {
+        stepStr = stepStr.replace(/\bNaN\b|\bundefined\b/gi, '—');
+      }
+      html += `<li>${Security.sanitizeHtml(stepStr)}</li>`;
+    });
     html += '</ol></details>';
     area.innerHTML = html;
   }
@@ -740,6 +792,18 @@ function runComparisonMode() {
     });
   }
 
+  // ---------- 3D tilt for category/hub/tool cards (desktop/hover only) ----------
+  // Touch devices skip tilt entirely — no transform jank while scrolling.
+  function initCardTilt() {
+    var fine = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    if (!fine) return;
+    document.querySelectorAll('.tool-card, .hub-card').forEach(card => {
+      if (card.classList.contains('tilt-card')) return;
+      card.classList.add('tilt-card');
+    });
+    initTiltEffect('.tool-card, .hub-card');
+  }
+
   // ---------- Skeleton Loading (Fake loading state while switching calculators) ----------
   function showSkeleton() {
     const main = document.getElementById('mainContent');
@@ -842,6 +906,8 @@ function runComparisonMode() {
       card.classList.add('tilt-card');
     });
     initTiltEffect('.category-card');
+    // Tool cards also get the subtle 3D tilt on hover-capable devices
+    initCardTilt();
     
     // Add staggered animation to tool cards
     document.querySelectorAll('.tool-card').forEach((card, i) => {
@@ -981,20 +1047,40 @@ function runComparisonMode() {
     localStorage.setItem('calcpro_daily_tip', JSON.stringify({ date: today, tip }));
     return tip;
   }
-  function renderDailyTip() {
+  function buildDailyTipHTML() {
     const tip = getDailyTip();
+    return `<div style="background:linear-gradient(135deg,var(--primary),var(--secondary));color:white;padding:16px;border-radius:12px;margin-bottom:16px;font-size:14px;line-height:1.5"><strong>💡 Daily Tip:</strong> ${tip}</div>`;
+  }
+  function renderDailyTip() {
     const container = document.getElementById('daily-tip-widget');
-    if (container) container.innerHTML = `<div style="background:linear-gradient(135deg,var(--primary),var(--secondary));color:white;padding:16px;border-radius:12px;margin-bottom:16px;font-size:14px;line-height:1.5"><strong>💡 Daily Tip:</strong> ${tip}</div>`;
+    // Idempotent: renderHome() already inlines the tip in its SINGLE render pass;
+    // re-rendering here would swap the visible widget after first paint and add
+    // a layout shift (CLS). Only fill an empty container.
+    if (!container || container.children.length) return;
+    container.innerHTML = buildDailyTipHTML();
   }
 
   // ---------- Custom Units / Precision Control ----------
   const UNITS_KEY = 'calcpro_units_prefs';
   function getUnitsPrefs() {
     const d = Security.safeGetItem(UNITS_KEY, null);
-    return (d && typeof d.system === 'string') ? d : { system: 'metric', precision: 2 };
+    // numberLocale: 'intl' (1,000,000) or 'in' (10,00,000 lakh/crore) — auto-detects
+    // Indian subcontinent browsers, user can override in Display Preferences.
+    const base = (d && typeof d.system === 'string') ? d : { system: 'metric', precision: 2 };
+    if (typeof base.numberLocale === 'undefined') {
+      const autoIn = /\b(hi|mr|ta|te|kn|ml|gu|pa|bn|ur|sd)\b/.test((navigator.language || 'en').toLowerCase());
+      base.numberLocale = autoIn ? 'in' : 'intl';
+    }
+    return base;
   }
   function setUnitsPrefs(prefs) {
     localStorage.setItem(UNITS_KEY, JSON.stringify(prefs));
+  }
+  function setNumberLocale(locale) {
+    const prefs = getUnitsPrefs();
+    prefs.numberLocale = locale;
+    setUnitsPrefs(prefs);
+    App.showToast(locale === 'in' ? 'Indian format: 10,00,000 (Lakh)' : 'International format: 1,000,000');
   }
   function renderUnitsSettings() {
     const prefs = getUnitsPrefs();
@@ -1011,6 +1097,15 @@ function runComparisonMode() {
           </label>
           <label class="action-btn toggle" style="width:100%;justify-content:flex-start;margin-top:8px">
             <input type="radio" name="unit-system" value="imperial" ${prefs.system === 'imperial' ? 'checked' : ''} onchange="AdvancedFeatures.setUnitSystem('imperial')"> Imperial (lb, in, mi, gal)
+          </label>
+        </div>
+        <div>
+          <label style="display:block;font-weight:600;margin-bottom:8px">Number Format</label>
+          <label class="action-btn toggle" style="width:100%;justify-content:flex-start">
+            <input type="radio" name="number-locale" value="intl" ${prefs.numberLocale === 'intl' ? 'checked' : ''} onchange="AdvancedFeatures.setNumberLocale('intl')"> 🌍 International — 1,000,000
+          </label>
+          <label class="action-btn toggle" style="width:100%;justify-content:flex-start;margin-top:8px">
+            <input type="radio" name="number-locale" value="in" ${prefs.numberLocale === 'in' ? 'checked' : ''} onchange="AdvancedFeatures.setNumberLocale('in')"> 🇮🇳 Indian — 10,00,000 (Lakh)
           </label>
         </div>
         <div>
@@ -1035,7 +1130,8 @@ function runComparisonMode() {
   }
   function formatNumber(num, prefs) {
     if (!isFinite(num)) return String(num);
-    return num.toLocaleString(undefined, { minimumFractionDigits: prefs.precision, maximumFractionDigits: prefs.precision });
+    const locale = (prefs && prefs.numberLocale === 'in') ? 'en-IN' : undefined;
+    return num.toLocaleString(locale, { minimumFractionDigits: prefs.precision, maximumFractionDigits: prefs.precision });
   }
   function convertUnits(value, fromUnit, toUnit) {
     // Basic conversions - can be extended
@@ -1186,7 +1282,8 @@ function runComparisonMode() {
     ctx.font = '12px Arial, sans-serif';
     ctx.textAlign = 'left';
     ctx.fillText('Calculated with CalcProMaster • ' + new Date().toLocaleDateString(), 30, height - 20);
-    ctx.fillText('calcpromaster.netlify.app', width - 30 - ctx.measureText('calcpromaster.netlify.app').width, height - 20);
+    var _siteOrigin = (typeof window !== 'undefined' && window.SITE_CONFIG && window.SITE_CONFIG.domain) ? window.SITE_CONFIG.domain : 'calcpromaster.netlify.app';
+    ctx.fillText(_siteOrigin, width - 30 - ctx.measureText(_siteOrigin).width, height - 20);
     
     return canvas.toDataURL('image/png');
   }
@@ -1300,17 +1397,44 @@ function runComparisonMode() {
     const modal = document.getElementById('modalOverlay');
     const body = document.getElementById('modalBody');
     if (!modal || !body) return;
+    // Lazy iframe preview — loading the full SPA inside the modal on every open
+    // blocked the main thread (heavy). Now the iframe only mounts on demand.
     body.innerHTML = `
       <h3>Embed ${tool.name}</h3>
       <p style="color:var(--text-light);font-size:14px;margin-bottom:16px">Copy this iframe code to embed this calculator on your website:</p>
-      <textarea style="width:100%;height:120px;padding:12px;border:1px solid var(--border);border-radius:8px;font-family:monospace;font-size:12px" readonly onclick="this.select()">${code}</textarea>
+      <textarea style="width:100%;height:120px;padding:12px;border:1px solid var(--border);border-radius:8px;font-family:monospace;font-size:12px" readonly onclick="this.select()">${Security.sanitizeHtml(code)}</textarea>
       <div style="margin-top:12px;padding:12px;background:var(--bg);border-radius:8px;font-size:13px;color:var(--text-light)">
-        <strong>Preview:</strong><br>
-        ${code}
+        <strong>Live preview:</strong>
+        <button id="embed-preview-btn" class="action-btn" style="margin-top:8px" onclick="AdvancedFeatures.loadEmbedPreview()">▶ Load Preview</button>
+        <div id="embed-preview-area" style="margin-top:8px"></div>
       </div>
-      <button class="action-btn" onclick="navigator.clipboard.writeText(\`${code.replace(/`/g, '\\`')}\`); App.showToast('Embed code copied!')">Copy to Clipboard</button>
+      <button class="action-btn" id="embed-copy-btn">Copy to Clipboard</button>
     `;
+    // Copy button built with DOM API — the embed code contains double quotes
+    // that would break an inline onclick attribute (unterminated template literal).
+    var copyBtn = document.getElementById('embed-copy-btn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', function () {
+        navigator.clipboard.writeText(code).then(function () {
+          App.showToast('Embed code copied!');
+        }, function () {
+          var ta = body.querySelector('textarea');
+          if (ta) { ta.select(); document.execCommand('copy'); App.showToast('Embed code copied!'); }
+        });
+      });
+    }
     modal.classList.add('active');
+  }
+  // Mounts the embed iframe only when the user asks — keeps the main thread free.
+  function loadEmbedPreview() {
+    const area = document.getElementById('embed-preview-area');
+    const btn = document.getElementById('embed-preview-btn');
+    if (!area) return;
+    const cur = (window.App && App._currentTool && App._currentTool.tool) ? App._currentTool.tool : null;
+    const tool = cur ? (TOOL_MAP[cur.id] || cur) : null;
+    if (!tool) return;
+    area.innerHTML = generateEmbedCode(tool.id);
+    if (btn) btn.style.display = 'none';
   }
 
   // ---------- Goal-Seek / Reverse Calculator ----------
@@ -1422,7 +1546,7 @@ function runComparisonMode() {
   }
 
   return {
-    getFavorites, toggleFavorite, isFavorite, renderFavoritesBar,
+    getFavorites, toggleFavorite, isFavorite, renderFavoritesBar, purgeRemovedToolIds,
     getPinned, pinResult, unpinResult, clearPinned, renderPinBar, openCompare, closeCompare,
     getChain, addToChain, getChainValue, renderChainBar, useChainValue,
     saveScenario, getScenarios, clearScenarios, renderScenarioBar, loadScenario,
@@ -1435,23 +1559,23 @@ function runComparisonMode() {
     enableAutoCalc,
     initGlossaryTooltips,
     // Units / Precision
-    getUnitsPrefs, setUnitsPrefs, renderUnitsSettings, setUnitSystem, setPrecision, formatNumber, convertUnits,
+    getUnitsPrefs, setUnitsPrefs, renderUnitsSettings, setUnitSystem, setPrecision, setNumberLocale, formatNumber, convertUnits,
     // Achievements
     getAchievements, unlockAchievement, checkAchievements, renderAchievements,
     // Daily Tip
-    getDailyTip, renderDailyTip,
+    getDailyTip, buildDailyTipHTML, renderDailyTip,
     // Shareable result cards
     generateResultCard, exportResultAsImage, copyResultCard,
     // CSV export
     exportResultCSV, exportCurrentCSV,
     // Embed widget
-    generateEmbedCode, showEmbedModal,
+    generateEmbedCode, showEmbedModal, loadEmbedPreview,
     // Scenario comparison (localStorage-backed)
     getComparisonScenarios, saveComparisonScenario, clearComparisonScenarios,
     runComparison, renderComparisonBar, loadComparisonScenario, runComparisonMode,
     // Micro-interactions (Premium UI)
     animateResultNumber, showSuccessAnimation, initTiltEffect,
-    showSkeleton, hideSkeleton, animateCharts, initHomeAnimations,
+    showSkeleton, hideSkeleton, animateCharts, initHomeAnimations, initCardTilt,
     showGoalSeek, runGoalSeek,
   };
 })();

@@ -1,0 +1,152 @@
+{
+  "generated": "2026-08-09T06:24:06.367Z",
+  "total": 543,
+  "pass": 541,
+  "needsReview": 0,
+  "notApplicable": 2,
+  "reviewable": 541,
+  "progressPct": 100,
+  "remainingByCategory": [
+    {
+      "category": "Auto & Transport",
+      "total": 32,
+      "pass": 32,
+      "review": 0,
+      "na": 0
+    },
+    {
+      "category": "business",
+      "total": 21,
+      "pass": 21,
+      "review": 0,
+      "na": 0
+    },
+    {
+      "category": "Career & Freelance",
+      "total": 23,
+      "pass": 23,
+      "review": 0,
+      "na": 0
+    },
+    {
+      "category": "construction",
+      "total": 25,
+      "pass": 25,
+      "review": 0,
+      "na": 0
+    },
+    {
+      "category": "Conversion",
+      "total": 24,
+      "pass": 24,
+      "review": 0,
+      "na": 0
+    },
+    {
+      "category": "education",
+      "total": 23,
+      "pass": 23,
+      "review": 0,
+      "na": 0
+    },
+    {
+      "category": "engineering",
+      "total": 25,
+      "pass": 25,
+      "review": 0,
+      "na": 0
+    },
+    {
+      "category": "everyday",
+      "total": 25,
+      "pass": 25,
+      "review": 0,
+      "na": 0
+    },
+    {
+      "category": "finance",
+      "total": 62,
+      "pass": 61,
+      "review": 0,
+      "na": 1
+    },
+    {
+      "category": "Fitness & Exercise",
+      "total": 23,
+      "pass": 23,
+      "review": 0,
+      "na": 0
+    },
+    {
+      "category": "Food & Nutrition",
+      "total": 21,
+      "pass": 21,
+      "review": 0,
+      "na": 0
+    },
+    {
+      "category": "Health & Fitness",
+      "total": 22,
+      "pass": 22,
+      "review": 0,
+      "na": 0
+    },
+    {
+      "category": "Home & Garden",
+      "total": 35,
+      "pass": 35,
+      "review": 0,
+      "na": 0
+    },
+    {
+      "category": "Lifestyle & Home",
+      "total": 25,
+      "pass": 25,
+      "review": 0,
+      "na": 0
+    },
+    {
+      "category": "math",
+      "total": 26,
+      "pass": 25,
+      "review": 0,
+      "na": 1
+    },
+    {
+      "category": "Parenting & Family",
+      "total": 24,
+      "pass": 24,
+      "review": 0,
+      "na": 0
+    },
+    {
+      "category": "Regional (India/PK/UAE)",
+      "total": 21,
+      "pass": 21,
+      "review": 0,
+      "na": 0
+    },
+    {
+      "category": "science",
+      "total": 28,
+      "pass": 28,
+      "review": 0,
+      "na": 0
+    },
+    {
+      "category": "Tech & Digital",
+      "total": 40,
+      "pass": 40,
+      "review": 0,
+      "na": 0
+    },
+    {
+      "category": "utilities",
+      "total": 18,
+      "pass": 18,
+      "review": 0,
+      "na": 0
+    }
+  ],
+  "nextBatch": []
+}

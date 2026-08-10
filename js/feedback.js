@@ -8,6 +8,11 @@ const Feedback = (function () {
   let lastTick = 0;
   const PREF_KEY = 'calcpro_feedback_sound';
   const TICK_THROTTLE_MS = 60;
+  // navigator.vibrate() is user-activation-gated: calling it before the user has
+  // tapped/clicked/keyed logs a browser warning and does nothing. Track the first
+  // real gesture so haptics only fire when they can actually work (e.g. the
+  // auto-run success chime on URL deep-links never triggers the console warning).
+  let hasUserGesture = false;
 
   function loadPref() {
     try { soundEnabled = localStorage.getItem(PREF_KEY) !== 'off'; } catch (e) {}
@@ -49,16 +54,23 @@ const Feedback = (function () {
   }
   function vibrate(pattern) {
     if (reducedMotion()) return;
+    if (!hasUserGesture) return; // vibrate is a no-op pre-gesture anyway — skip the warning
     try { if (navigator.vibrate) navigator.vibrate(pattern); } catch (e) {}
   }
   const CLICKABLE = 'button, .btn, .action-btn, .small-btn, .tool-card, .category-card, .suggestion-card, .related-card, .lang-option, .lang-trigger, .cmd-item, .search-item, [role="menuitem"], input[type="checkbox"], input[type="radio"], input[type="range"], .toggle';
 
   function init() {
     loadPref();
-    // Unlock the AudioContext on the first user gesture (autoplay policy)
+    // Mark the first real user gesture (pointerdown/keydown) so vibrate() is gated
+    // behind it. Also unlocks the AudioContext on the same gesture (autoplay policy).
     document.addEventListener('pointerdown', function once() {
+      hasUserGesture = true;
       getCtx();
       document.removeEventListener('pointerdown', once);
+    });
+    document.addEventListener('keydown', function onceKey() {
+      hasUserGesture = true;
+      document.removeEventListener('keydown', onceKey);
     });
     // Clicks on interactive elements → tap (or toggle for checkboxes/radios)
     document.addEventListener('click', function (e) {

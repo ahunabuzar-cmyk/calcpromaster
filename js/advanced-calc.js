@@ -30,8 +30,15 @@ const AdvancedCalc = (function () {
   }
 
   function bmiSteps(weight, heightCm) {
+    // Guard: zero/negative height (or non-finite) would produce Infinity/NaN.
     const h = heightCm / 100;
+    if (!Number.isFinite(h) || h <= 0) {
+      return { bmi: '0.0', category: 'Invalid input (height must be > 0)' };
+    }
     const bmi = weight / (h * h);
+    if (!Number.isFinite(bmi)) {
+      return { bmi: '0.0', category: 'Invalid input' };
+    }
     let cat = 'Normal';
     if (bmi < 18.5) cat = 'Underweight';
     else if (bmi >= 25 && bmi < 30) cat = 'Overweight';
@@ -40,6 +47,10 @@ const AdvancedCalc = (function () {
   }
 
   function pctSteps(part, whole) {
+    // Guard: division by zero must never surface as "Infinity%" in the UI.
+    if (whole === 0 || !Number.isFinite(whole)) {
+      return { percent: '—', decimal: '—' };
+    }
     return { percent: (part / whole * 100).toFixed(2), decimal: (part / whole).toFixed(4) };
   }
 
@@ -113,16 +124,25 @@ const AdvancedCalc = (function () {
 const Charts = (function () {
   function bar(data, labels, opts) {
     opts = opts || {};
+    // Non-finite guard: NaN/Infinity from an upstream calc become 0 so the
+    // rect height is always a valid finite pixel value.
+    data = data.map(v => Number.isFinite(v) ? v : 0);
     const w = opts.width || 400, h = opts.height || 200, pad = 30;
+    // Negative-safe baseline: span includes 0 so NPV/IRR/timezone negatives
+    // render below a zero line (red) instead of an invalid negative rect height.
     const max = Math.max(...data, 0.001);
+    const min = Math.min(...data, 0);
+    const range = (max - min) || 1;
+    const zeroY = h - pad - ((0 - min) / range) * (h - pad * 2);
     const bw = (w - pad * 2) / data.length * 0.7;
     const gap = (w - pad * 2) / data.length * 0.3;
     let bars = '';
     data.forEach((v, i) => {
-      const bh = (v / max) * (h - pad * 2);
+      const bh = Math.abs(v / range) * (h - pad * 2);
       const x = pad + i * (bw + gap);
-      const y = h - pad - bh;
-      bars += `<rect x="${x}" y="${y}" width="${bw}" height="${bh}" fill="${opts.color || '#4f7cff'}" rx="4" role="img" aria-label="${labels[i]}: ${v.toFixed(2)}"><title>${labels[i]}: ${v.toFixed(2)}</title><desc>Bar chart value for ${labels[i]}: ${v.toFixed(2)}</desc></rect>`;
+      const y = v >= 0 ? zeroY - bh : zeroY;
+      const fill = v < 0 ? '#ef4444' : (opts.color || '#4f7cff');
+      bars += `<rect x="${x}" y="${y}" width="${bw}" height="${Math.max(bh, 0.5)}" fill="${fill}" rx="4" role="img" aria-label="${labels[i]}: ${v.toFixed(2)}"><title>${labels[i]}: ${v.toFixed(2)}</title><desc>Bar chart value for ${labels[i]}: ${v.toFixed(2)}</desc></rect>`;
       bars += `<text x="${x + bw / 2}" y="${h - pad + 15}" text-anchor="middle" font-size="10" fill="var(--text-muted)">${labels[i]}</text>`;
     });
     return `<svg viewBox="0 0 ${w} ${h}" class="chart" role="img" aria-label="Bar chart comparing ${labels.join(', ')}"><title>${opts.title || 'Bar chart'}</title><desc>${opts.desc || 'Bar chart showing values: ' + data.map((v,i)=>labels[i]+': '+v.toFixed(2)).join(', ')}</desc>${bars}</svg>`;

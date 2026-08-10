@@ -13,7 +13,7 @@
 //    a. https://analytics.google.com → Admin → Create Property → naam:
 //       "CalcProMaster" → Create
 //    b. Web data stream → copy the Measurement ID (starts with G-...)
-//    c. Niche `ga4Id:` mein paste karo, e.g.  ga4Id: 'G-AB12CD34EF5'
+//    c. Niche `ga4Id:` mein paste karo, e.g.  ga4Id: ''
 // 2) GOOGLE SEARCH CONSOLE (GSC):
 //    a. https://search.google.com/search-console → Add property →
 //       URL prefix → https://calcpromaster.netlify.app
@@ -27,8 +27,12 @@
 // =====================================================================
 window.SITE_CONFIG = {
   domain: 'calcpromaster.netlify.app',
-  gsc: '',
-  ga4Id: ''
+  gsc: 'googled1ac20b54b36e7cf',
+  ga4Id: 'G-8QCP0TP1TD',
+  // Build-time synced by scripts/sync-counts.cjs from the registry (js/data/*.js).
+  // Runtime ALL_TOOLS is lazy per-category on calculator pages, so user-facing
+  // counts must use this authoritative total instead of ALL_TOOLS.length.
+  totalCalculators: 543
 };
 
 // Helper: full origin ("https://domain") — sitemap/schema/canonical/og ke liye

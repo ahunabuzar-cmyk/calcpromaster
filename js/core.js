@@ -51,7 +51,7 @@ const SafeMathParser = (function () {
     function parseUnary() { if (peek() && peek().t === 'op' && peek().v === '-') { next(); return -parseUnary(); } if (peek() && peek().t === 'op' && peek().v === '+') { next(); return parseUnary(); } return parsePrimary(); }
     function parsePrimary() { const tk = peek(); if (!tk) throw new Error('Unexpected end'); if (tk.t === 'num') { next(); return tk.v; } if (tk.t === 'op' && tk.v === '(') { next(); const v = parseExpr(); eat(')'); return v; } if (tk.t === 'id') { next(); if (peek() && peek().t === 'op' && peek().v === '(') { next(); const arg = parseExpr(); eat(')'); if (FUNCS[tk.v]) return FUNCS[tk.v](arg); throw new Error('Unknown function: ' + tk.v); } if (CONSTS[tk.v] !== undefined) return CONSTS[tk.v]; throw new Error('Unknown identifier: ' + tk.v); } throw new Error('Unexpected token'); }
     this.parse = () => { const r = parseExpr(); if (pos < tokens.length) throw new Error('Unexpected token'); return r; }; }
-  function safeEval(expr) { try { const tokens = tokenize(String(expr).replace(/×/g, '*').replace(/÷/g, '/').replace(/−/g, '-')); return new Parser(tokens).parse(); } catch (e) { return NaN; } }
+  function safeEval(expr) { try { const tokens = tokenize(String(expr).replace(/×/g, '*').replace(/÷/g, '/').replace(/−/g, '-')); const raw = new Parser(tokens).parse(); return Number(raw.toFixed(10)); } catch (e) { return NaN; } }
   // evaluate() throws on invalid input (used by the Scientific Calculator UI which expects errors)
   function evaluate(expr) { const tokens = tokenize(String(expr).replace(/×/g, '*').replace(/÷/g, '/').replace(/−/g, '-')); const result = new Parser(tokens).parse(); if (typeof result !== 'number' || isNaN(result)) throw new Error('Invalid expression'); return result; }
   return { safeEval, evaluate };
@@ -95,6 +95,17 @@ const CalcHistory = (function () {
   function getAll() { return Security.safeGetItem(KEY, []); }
   function add(entry) { const items = getAll(); items.unshift({ ...entry, ts: Date.now(), time: entry.time || Date.now() }); if (items.length > MAX) items.length = MAX; localStorage.setItem(KEY, JSON.stringify(items)); }
   function remove(idx) { const items = getAll(); items.splice(idx, 1); localStorage.setItem(KEY, JSON.stringify(items)); }
+  // Purge entries whose toolId was merged/removed (SEO dedupe) so stale
+  // history never links to a deleted calculator. Returns count removed.
+  function purgeToolIds(ids) {
+    const set = ids instanceof Set ? ids : new Set(ids || []);
+    if (!set.size) return 0;
+    const items = getAll();
+    const kept = items.filter(it => !set.has(it.toolId));
+    if (kept.length === items.length) return 0;
+    localStorage.setItem(KEY, JSON.stringify(kept));
+    return items.length - kept.length;
+  }
   function clear() { localStorage.removeItem(KEY); }
   function exportJSON() { return JSON.stringify(getAll(), null, 2); }
   function importJSON(json) {
@@ -116,7 +127,7 @@ const CalcHistory = (function () {
   function toggle() { const panel = document.getElementById('history-panel'); if (!panel) return; panel.classList.toggle('open'); if (panel.classList.contains('open')) render(); }
   function render() { const list = document.getElementById('history-list'); if (!list) return; const items = getAll(); if (items.length === 0) { list.innerHTML = '<p style="padding:1rem;color:var(--text-muted)">No history yet</p>'; return; } // XSS-hardening: history results can hold HTML/crafted values from shared URLs — always escape
   list.innerHTML = items.map((it, i) => `<div class="history-item"><div class="history-tool">${Security.sanitizeHtml(it.tool || 'Calculator')}</div><div class="history-result">${Security.sanitizeHtml(it.result || '')}</div><div class="history-time">${new Date(it.ts).toLocaleString()}</div><button class="history-del" onclick="CalcHistory.remove(${i})">×</button></div>`).join(''); }
-  return { getAll, add, remove, clear, toggle, render, exportJSON, importJSON };
+  return { getAll, add, remove, clear, toggle, render, exportJSON, importJSON, purgeToolIds };
 })();
 if (typeof window !== 'undefined') window.CalcHistory = CalcHistory;
 
@@ -318,8 +329,8 @@ if (typeof window !== 'undefined') window.CalcAnalytics = CalcAnalytics;
 const AdvancedCalc = (function () {
   function generateAmortization(principal, annualRate, years, currency) { const r = annualRate / 100 / 12; const n = years * 12; const emi = r > 0 ? principal * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1) : principal / n; let bal = principal; const schedule = []; for (let i = 1; i <= n; i++) { const interest = bal * r; const payment = emi - interest; bal -= payment; schedule.push({ month: i, payment: emi, interest, principal: payment, balance: Math.max(0, bal) }); } const totalPayment = emi * n; const totalInterest = totalPayment - principal; return { emi, schedule, totalPayment, totalInterest, principal }; }
   function compoundSteps(principal, rate, years, freq) { const n = freq || 12; const r = rate / 100; const steps = []; for (let y = 0; y <= years; y++) { const amount = principal * Math.pow(1 + r / n, n * y); steps.push({ year: y, amount, interest: amount - principal }); } const final = principal * Math.pow(1 + r / n, n * years); return { final, interest: final - principal, steps }; }
-  function bmiSteps(weight, heightCm) { const h = heightCm / 100; const bmi = weight / (h * h); let cat = 'Normal'; if (bmi < 18.5) cat = 'Underweight'; else if (bmi >= 25 && bmi < 30) cat = 'Overweight'; else if (bmi >= 30) cat = 'Obese'; return { bmi: bmi.toFixed(1), category: cat }; }
-  function pctSteps(part, whole) { return { percent: (part / whole * 100).toFixed(2), decimal: (part / whole).toFixed(4) }; }
+  function bmiSteps(weight, heightCm) { const h = heightCm / 100; if (!Number.isFinite(h) || h <= 0) { return { bmi: '0.0', category: 'Invalid input (height must be > 0)' }; } const bmi = weight / (h * h); if (!Number.isFinite(bmi)) { return { bmi: '0.0', category: 'Invalid input' }; } let cat = 'Normal'; if (bmi < 18.5) cat = 'Underweight'; else if (bmi >= 25 && bmi < 30) cat = 'Overweight'; else if (bmi >= 30) cat = 'Obese'; return { bmi: bmi.toFixed(1), category: cat }; }
+  function pctSteps(part, whole) { if (whole === 0 || !Number.isFinite(whole)) { return { percent: '—', decimal: '—' }; } return { percent: (part / whole * 100).toFixed(2), decimal: (part / whole).toFixed(4) }; }
   function taxSteps(income, rate, deductions) { const taxable = Math.max(0, income - deductions); const tax = taxable * (rate / 100); return { taxableIncome: taxable, tax, netIncome: income - tax }; }
   function tipSteps(bill, tipPct, people) { const tip = bill * (tipPct / 100); const total = bill + tip; const perPerson = total / (people || 1); return { tip, total, perPerson }; }
   function gcd(a, b) { return b === 0 ? a : gcd(b, a % b); }
@@ -340,7 +351,13 @@ const Charts = (function () {
   function record(type, payload) {
     try { if (typeof window !== 'undefined') { window.__calcproChart = { type: type, data: payload.data, labels: payload.labels, value: payload.value, max: payload.max, opts: payload.opts || {}, ts: Date.now() }; } } catch (e) { /* non-fatal */ }
   }
-  function bar(data, labels, opts) { opts = opts || {}; record('bar', { data: data, labels: labels, opts: opts }); const w = opts.width || 400, h = opts.height || 200, pad = 30; const max = Math.max(...data, 0.001); const bw = (w - pad * 2) / data.length * 0.7; const gap = (w - pad * 2) / data.length * 0.3; let bars = ''; data.forEach((v, i) => { const bh = (v / max) * (h - pad * 2); const x = pad + i * (bw + gap); const y = h - pad - bh; bars += `<rect x="${x}" y="${y}" width="${bw}" height="${bh}" fill="${opts.color || '#4f7cff'}" rx="4" class="chart-bar" data-label="${labels[i]}" data-value="${v.toFixed(2)}"></rect>`; bars += `<text x="${x + bw / 2}" y="${h - pad + 15}" text-anchor="middle" font-size="10" fill="var(--text-light)">${labels[i]}</text>`; }); return `<svg viewBox="0 0 ${w} ${h}" class="chart" onmousemove="Charts.showTooltip(event)" onmouseleave="Charts.hideTooltip()">${bars}<rect id="chart-tooltip" x="0" y="0" width="0" height="0" fill="var(--surface)" stroke="var(--border)" rx="4" style="pointer-events:none;display:none;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.15))"></rect><text id="chart-tooltip-text" x="0" y="0" font-size="12" fill="var(--text)" style="pointer-events:none;display:none"></text></svg>`; }
+  function bar(data, labels, opts) { opts = opts || {}; record('bar', { data: data, labels: labels, opts: opts }); const w = opts.width || 400, h = opts.height || 200, pad = 30; // Negative-safe baseline: min/max span INCLUDES 0 so negative values
+  // (NPV/IRR cash flows, timezone offsets) render below a zero line instead
+  // of producing an invalid negative rect height (SVG console error).
+  // Non-finite guard: any NaN/Infinity from an upstream calc becomes 0 so
+  // the SVG rect never gets an invalid (NaN/Infinity) height.
+  data = data.map(function (v) { return Number.isFinite(v) ? v : 0; });
+  const max = Math.max(...data, 0.001); const min = Math.min(...data, 0); const range = (max - min) || 1; const zeroY = h - pad - ((0 - min) / range) * (h - pad * 2); const bw = (w - pad * 2) / data.length * 0.7; const gap = (w - pad * 2) / data.length * 0.3; let bars = ''; data.forEach((v, i) => { const bh = Math.abs(v / range) * (h - pad * 2); const x = pad + i * (bw + gap); const y = v >= 0 ? zeroY - bh : zeroY; const fill = v < 0 ? '#ef4444' : (opts.color || '#4f7cff'); bars += `<rect x="${x}" y="${y}" width="${bw}" height="${Math.max(bh, 0.5)}" fill="${fill}" rx="4" class="chart-bar" data-label="${labels[i]}" data-value="${v.toFixed(2)}"></rect>`; bars += `<text x="${x + bw / 2}" y="${h - pad + 15}" text-anchor="middle" font-size="10" fill="var(--text-light)">${labels[i]}</text>`; }); return `<svg viewBox="0 0 ${w} ${h}" class="chart" onmousemove="Charts.showTooltip(event)" onmouseleave="Charts.hideTooltip()">${bars}<rect id="chart-tooltip" x="0" y="0" width="0" height="0" fill="var(--surface)" stroke="var(--border)" rx="4" style="pointer-events:none;display:none;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.15))"></rect><text id="chart-tooltip-text" x="0" y="0" font-size="12" fill="var(--text)" style="pointer-events:none;display:none"></text></svg>`; }
   function donut(data, labels, opts) { opts = opts || {}; record('donut', { data: data, labels: labels, opts: opts }); const r = 80, cx = 100, cy = 100, sw = 30; const total = data.reduce((a, b) => a + b, 0) || 1; const colors = opts.colors || ['#4f7cff', '#2dd4bf', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899']; let angle = -Math.PI / 2; let arcs = ''; data.forEach((v, i) => { const frac = v / total; const end = angle + frac * Math.PI * 2; const x1 = cx + r * Math.cos(angle), y1 = cy + r * Math.sin(angle); const x2 = cx + r * Math.cos(end), y2 = cy + r * Math.sin(end); const large = frac > 0.5 ? 1 : 0; arcs += `<path d="M ${x1} ${y1} A ${r} ${r} 0 ${large} 1 ${x2} ${y2}" stroke="${colors[i % colors.length]}" stroke-width="${sw}" fill="none" stroke-linecap="round" class="chart-arc" data-label="${labels[i]}" data-value="${v.toFixed(2)}"></path>`; angle = end; }); const legend = labels.map((l, i) => `<div class="chart-legend-item"><span style="background:${colors[i % colors.length]}"></span>${l}: ${data[i].toFixed(2)}</div>`).join(''); return `<svg viewBox="0 0 200 200" class="chart" onmousemove="Charts.showTooltip(event)" onmouseleave="Charts.hideTooltip()">${arcs}<text x="100" y="105" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)">${opts.center || ''}</text><rect id="chart-tooltip" x="0" y="0" width="0" height="0" fill="var(--surface)" stroke="var(--border)" rx="4" style="pointer-events:none;display:none;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.15))"></rect><text id="chart-tooltip-text" x="0" y="0" font-size="12" fill="var(--text)" style="pointer-events:none;display:none"></text></svg><div class="chart-legend">${legend}</div>`; }
 function line(data, labels, opts) { 
     opts = opts || {}; record('line', { data: data, labels: labels, opts: opts }); 

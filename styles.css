@@ -194,9 +194,43 @@
     .nav-links a { color: var(--text); text-decoration: none; font-size: 14px; font-weight: 500; }
     .nav-links a:hover { color: var(--primary); }
     .nav-search { width: 250px; padding: 8px 12px; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 14px; }
-    @media (max-width: 768px) {
-      .nav-search { display: none; }
-      .nav-links a:not(.menu-btn) { display: none; }
+    /* Header nav collapse raised to 1024px — tablet sizes (768–1024px) previously
+       overflowed horizontally because .nav-links (≈806px wide with the language
+       selector) plus the logo exceeded the 984px nav row at 1024px. Now the whole
+       .nav-links dropdown (links + search + controls) collapses behind the
+       hamburger on anything narrower than a laptop, keeping the header to a single
+       row: logo + ☰. */
+    .nav-controls { display: flex; align-items: center; gap: 8px; }
+    .nav-controls button { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+    .menu-btn {
+      display: none; background: none; border: none; font-size: 26px;
+      cursor: pointer; color: var(--text); padding: 6px 8px; min-height: 44px;
+      border-radius: var(--radius-xs); transition: background var(--transition-fast);
+    }
+    .menu-btn:hover { background: var(--bg); }
+    .menu-btn:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+    @media (max-width: 1024px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: var(--surface);
+        padding: 12px 20px 20px;
+        box-shadow: var(--shadow-md);
+        border-bottom: 1px solid var(--border);
+        max-height: calc(100vh - 64px);
+        overflow-y: auto;
+        animation: scaleIn 0.18s ease-out;
+      }
+      .nav-links.active { display: flex; }
+      .nav-links a { width: 100%; padding: 11px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
+      .nav-links a:hover { color: var(--primary); }
+      .nav-search { width: 100%; margin: 12px 0; }
+      .nav-controls { width: 100%; margin-top: 12px; gap: 10px; }
+      .nav-controls .small-btn { padding: 8px 14px; }
+      .menu-btn { display: block; }
     }
     /* Main */
     main { max-width: 1200px; margin: 0 auto; padding: 24px 20px; }
@@ -409,6 +443,27 @@
       background: var(--surface-alt, rgba(79, 70, 229, 0.05));
       border-radius: 0 10px 10px 0;
     }
+    /* Unique per-tool cinematic hero image (/og/<toolId>.jpg) */
+    .tool-hero-wrap {
+      margin: 4px 0 18px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+      background: var(--bg);
+      animation: fadeIn 0.5s ease-out;
+    }
+    .tool-hero-img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 380px;
+      object-fit: cover;
+      object-position: center;
+    }
+    @media (max-width: 768px) {
+      .tool-hero-img { max-height: 220px; }
+    }
     .tool-actions { display: flex; flex-wrap: wrap; gap: 8px; }
     .action-btn { 
       padding: 9px 16px; 
@@ -423,6 +478,11 @@
       transition: all var(--transition);
       position: relative;
       overflow: hidden;
+      /* WCAG 2.5.8: 44px minimum tap target (mobile) */
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
     .action-btn:hover { 
       background: var(--primary); 
@@ -450,6 +510,7 @@
       border: 1px solid var(--border); 
       border-radius: var(--radius); 
       padding: 28px;
+      min-width: 0; /* grid item: allow shrink below min-content (mobile overflow fix) */
       transition: all var(--transition);
     }
     .calc-result-panel { 
@@ -457,6 +518,7 @@
       border: 1px solid var(--border); 
       border-radius: var(--radius); 
       padding: 28px;
+      min-width: 0; /* grid item: allow shrink below min-content (mobile overflow fix) */
       box-shadow: var(--shadow-md);
       transition: all var(--transition);
       position: relative;
@@ -471,7 +533,7 @@
     /* Inputs */
     .input-group { margin-bottom: 16px; }
     .input-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; color: var(--text); }
-    .input-group input, .input-group select, .input-group textarea { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 14px; font-family: inherit; transition: border-color 0.2s; }
+    .input-group input, .input-group select, .input-group textarea { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 14px; font-family: inherit; transition: border-color 0.2s; min-height: 44px; /* WCAG 2.5.8 tap target */ box-sizing: border-box; }
     .input-group input:focus, .input-group select:focus, .input-group textarea:focus { outline: none; border-color: var(--primary); }
     .input-group input[type="checkbox"] { width: auto; }
     .preset-bar { display: flex; gap: 8px; margin-bottom: 16px; }
@@ -529,6 +591,7 @@
     /* Semantic result table — AI-crawlable structured output (AEO) */
     .result-table {
       width: 100%;
+      max-width: 100%;
       border-collapse: collapse;
       margin: 4px 0 14px;
       font-size: 14px;
@@ -539,6 +602,7 @@
       border: 1px solid var(--border);
     }
     .result-table caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    .result-table th, .result-table td { overflow-wrap: break-word; word-break: break-word; }
     .result-table th, .result-table td {
       padding: 9px 12px;
       text-align: left;
@@ -628,7 +692,7 @@
       background: var(--bg); border: 1px solid var(--border); border-radius: 8px;
       padding: 8px 12px; flex: 1; min-width: 200px; color: #1d4ed8; word-break: break-all;
     }
-    .excel-hint { font-size: 12px; color: var(--text-light); margin: 8px 0 0; }
+    .excel-hint { font-size: 12px; color: #52616f; margin: 8px 0 0; }
     /* Inline unit select (Gap 3) + range slider (Gap 8) */
     .calc-unit {
       margin-left: 8px; padding: 7px 8px; border-radius: 8px;
@@ -841,6 +905,20 @@
       margin-bottom: 16px;
       border-radius: var(--radius);
     }
+    /* Above-the-fold skeleton mirrors the REAL homepage layout geometry EXACTLY
+       (hero + Calculator of the Day + Daily Tip + section title, NO gaps — the
+       real content has no margins between these sections). The skeleton->content
+       swap then replaces same-position blocks with real content → zero layout
+       shift (CLS) on every viewport, even when the skeleton paints on slow loads. */
+    .skeleton-hero { height: 320px; border-radius: var(--radius); }
+    .skeleton-cod  { height: 222px; border-radius: var(--radius); }
+    .skeleton-tip  { height: 53px;  border-radius: var(--radius); }
+    .skeleton-title{ height: 41px;  width: 55%; border-radius: var(--radius-sm); }
+    @media (max-width: 768px) {
+      .skeleton-hero { height: 258px; }
+      .skeleton-tip  { height: 74px; }
+      .skeleton-title{ height: 34px; }
+    }
     .skeleton-text {
       height: 16px;
       margin-bottom: 8px;
@@ -1022,6 +1100,9 @@
       body { background: #fff !important; color: #000 !important; }
       .calc-layout { display: block !important; }
       .calc-input-panel, .calc-result-panel { box-shadow: none !important; border: 1px solid #ccc !important; page-break-inside: avoid; }
+      /* Reset mobile table overrides so narrow-window printing keeps full content */
+      .result-table, .ref-table { table-layout: auto !important; }
+      .result-table th, .result-table td, .ref-table th, .ref-table td { overflow-wrap: normal !important; word-break: normal !important; }
       .tool-header h1 { font-size: 20pt; }
       .result-main { font-size: 18pt !important; }
       .calc-collapsible[open] > summary { font-weight: 700; }
@@ -1079,7 +1160,9 @@
     .footer-copyright {
       font-size: 12px;
       color: var(--text-light);
-      opacity: 0.8;
+      /* No opacity here — opacity<1 blends the color toward the background and
+         drops the contrast ratio below WCAG AA 4.5:1 (measured 3.24:1). Use a
+         darker slate that passes at full opacity instead. */
     }
 
     /* ===== EMPTY STATE ENHANCEMENTS ===== */
@@ -1210,7 +1293,7 @@
 }
 .mnet-cta:hover { filter: brightness(1.1); }
 .mnet-close {
-  position: absolute; top: 8px; right: 8px; width: 22px; height: 22px;
+  position: absolute; top: 4px; right: 4px; width: 44px; height: 44px; /* WCAG 2.5.8 tap target */
   border: none; background: transparent; color: var(--text-light);
   font-size: 16px; line-height: 1; cursor: pointer; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
@@ -1477,6 +1560,7 @@
 
 /* ---- YMYL tool disclaimers (every tool page) ---- */
 .tool-disclaimer {
+  color: #52616f;
   margin: 24px 0 8px;
   padding: 14px 16px;
   border: 1px solid var(--border);
@@ -1485,7 +1569,6 @@
   background: color-mix(in srgb, var(--surface) 92%, var(--accent) 8%);
   font-size: 13px;
   line-height: 1.6;
-  color: var(--text-light);
 }
 .tool-disclaimer.ymyl-finance { border-left-color: #0ea5e9; }
 .tool-disclaimer.ymyl-health { border-left-color: #f43f5e; }
@@ -1504,3 +1587,323 @@
 .history-actions { display: flex; gap: 6px; margin-top: 4px; }
 .history-actions .small-btn { background: var(--surface); }
 .history-actions .small-btn:hover { border-color: var(--primary); color: var(--primary); }
+
+/* ===== CATEGORY HUB PAGES (/hub/:cat) ===== */
+.cat-actions { margin: 14px 0 4px; display: flex; flex-wrap: wrap; gap: 10px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 20px; border-radius: var(--radius-sm);
+  font-size: 14px; font-weight: 600; cursor: pointer;
+  font-family: var(--font-body); border: 1px solid transparent;
+  transition: all var(--transition); position: relative; overflow: hidden;
+}
+.btn-outline {
+  background: var(--surface); color: var(--primary);
+  border-color: var(--primary-light);
+}
+.btn-outline:hover {
+  background: var(--primary-gradient); color: #fff; border-color: transparent;
+  transform: translateY(-2px); box-shadow: var(--shadow-md), var(--shadow-glow);
+}
+.btn-outline:active { transform: scale(0.97); }
+
+.category-hub { animation: fadeInUp 0.5s ease-out; }
+.hub-header {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px 28px 22px;
+  margin-bottom: 24px; box-shadow: var(--shadow); position: relative; overflow: hidden;
+}
+.hub-header::after {
+  content: ''; position: absolute; top: -60px; right: -60px;
+  width: 220px; height: 220px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(79,70,229,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hub-header h1 { font-size: 28px; font-weight: 800; font-family: var(--font-display); letter-spacing: -0.5px; margin-bottom: 6px; }
+.hub-desc { color: var(--text-light); font-size: 15px; line-height: 1.6; margin-bottom: 14px; }
+.hub-stats { display: flex; flex-wrap: wrap; gap: 10px; }
+.hub-stats span {
+  font-size: 12.5px; font-weight: 600; color: var(--text-light);
+  background: var(--bg); border: 1px solid var(--border);
+  padding: 5px 12px; border-radius: 999px;
+}
+
+.comparison-table-wrap {
+  overflow-x: auto; background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  box-shadow: var(--shadow); margin-bottom: 28px;
+  /* Keyboard focus for the horizontally scrollable region (a11y: scrollable-region-focusable) */
+}
+.comparison-table-wrap:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+.comparison-table { width: 100%; border-collapse: collapse; min-width: 640px; }
+.comparison-table th, .comparison-table td {
+  padding: 12px 16px; text-align: left; font-size: 13.5px;
+  border-bottom: 1px solid var(--border); vertical-align: top;
+}
+.comparison-table thead th {
+  font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em;
+  color: var(--text-light); background: var(--bg); font-weight: 700;
+  white-space: nowrap; position: sticky; top: 0;
+}
+.comparison-table thead th:first-child { color: var(--primary); }
+.comparison-table tbody tr { transition: background var(--transition-fast); }
+.comparison-table tbody tr:hover { background: rgba(79,70,229,0.04); }
+.comparison-table tbody tr:last-child td { border-bottom: none; }
+.comparison-table td.tool-name { font-weight: 600; white-space: nowrap; }
+.comparison-table td { color: var(--text); }
+
+.hub-tools-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px; margin-top: 8px;
+}
+.hub-card { display: flex; flex-direction: column; gap: 8px; }
+.hub-card .tool-icon { font-size: 30px; }
+.hub-card h3 { font-size: 15px; font-weight: 700; font-family: var(--font-display); color: var(--text); }
+.hub-card p { font-size: 12.5px; color: var(--text-light); line-height: 1.5; flex: 1; }
+.hub-card .tool-meta { display: flex; align-items: center; justify-content: space-between; font-size: 12px; }
+.hub-card .usage { color: var(--text-light); }
+.hub-card .go-btn {
+  font-size: 12px; font-weight: 700; color: var(--primary);
+  background: rgba(79,70,229,0.08); padding: 5px 12px; border-radius: 999px;
+  transition: all var(--transition-fast);
+}
+.hub-card:hover .go-btn { background: var(--primary); color: #fff; }
+.hub-error { text-align: center; padding: 60px 20px; color: var(--text-light); font-size: 15px; }
+
+/* =====================================================================
+   MOBILE & TOUCH POLISH (audit fixes)
+   ===================================================================== */
+
+/* No blue tap flash / grey highlight on tap (Android/iOS) */
+* { -webkit-tap-highlight-color: transparent; }
+button, a, input, select, .tool-card, .category-card, .hub-card { touch-action: manipulation; }
+
+/* Safe areas (iPhone notch / home bar) */
+header {
+  padding-left: max(20px, env(safe-area-inset-left));
+  padding-right: max(20px, env(safe-area-inset-right));
+}
+main {
+  padding-left: max(20px, env(safe-area-inset-left));
+  padding-right: max(20px, env(safe-area-inset-right));
+  padding-bottom: max(24px, env(safe-area-inset-bottom));
+}
+/* Boot skeleton: rendered as an ABSOLUTE overlay inside #mainContent (which
+   reserves min-height:100svh), so removing it when the real content renders has
+   ZERO layout impact — the visible fold never moves → no layout shift (CLS),
+   even when the skeleton paints first on slow connections. The blocks mirror
+   the real homepage above-the-fold geometry for a natural look. */
+#mainContent { position: relative; min-height: 100svh; }
+.boot-skeleton { position: absolute; top: 0; left: 0; right: 0; box-sizing: border-box; }
+footer {
+  padding-bottom: max(32px, env(safe-area-inset-bottom));
+}
+
+/* Tablet gap fix (768px–1024px): keep 2-col calc, tighter paddings */
+@media (max-width: 1024px) {
+  .nav { padding: 10px 16px; }
+  .hero { padding: 44px 0 36px; }
+  .hero h1 { font-size: 34px; }
+  .calc-input-panel, .calc-result-panel { padding: 22px; }
+  .categories-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+  .tool-header h1 { font-size: 26px; }
+}
+
+/* Small phones: compact sticky header, keep tools tappable */
+@media (max-width: 768px) {
+  header { position: sticky; }
+  .nav { padding: 8px 14px; }
+  .logo { font-size: 21px; }
+  .hero { padding: 34px 0 28px; }
+  .hero h1 { font-size: 26px; }
+  .hero-desc { font-size: 15px; margin-bottom: 22px; }
+  .search-box input { padding: 13px 18px; font-size: 15px; }
+  .section-title { font-size: 20px; margin: 28px 0 14px; }
+  .tool-card { padding: 16px; }
+  .tool-card h4 { font-size: 15px; }
+  .tool-card p { font-size: 12.5px; }
+  .calc-input-panel, .calc-result-panel { padding: 18px; }
+  .result-main { font-size: 22px; }
+  .tool-header h1 { font-size: 23px; }
+  .hub-header { padding: 20px 18px 16px; }
+  .hub-header h1 { font-size: 23px; }
+  .comparison-table th, .comparison-table td { padding: 9px 10px; font-size: 12.5px; }
+  .step-item, .steps-list li { font-size: 12px; }
+  /* Mobile: fixed table layout guarantees header/body column alignment and
+     lets long values wrap instead of blowing out the layout (no overflow). */
+  .result-table, .ref-table { table-layout: fixed; }
+  .result-table th, .result-table td, .ref-table th, .ref-table td { overflow-wrap: break-word; word-break: break-word; }
+}
+
+/* Touch devices: hover-only visual flourishes become tap-friendly */
+@media (hover: none), (pointer: coarse) {
+  .tool-card:hover, .category-card:hover, .hub-card:hover { transform: none; box-shadow: var(--shadow); }
+  .tool-card:active, .category-card:active { transform: scale(0.98); }
+  .action-btn:hover, .calc-btn:hover, .btn:hover, .suggestion-card:hover { transform: none; box-shadow: none; }
+  .action-btn:active, .calc-btn:active, .btn:active, .suggestion-card:active { transform: scale(0.97); }
+  .result-badge, .trust-badge, .zr-badge { min-height: 26px; display: inline-flex; align-items: center; }
+  /* Minimum comfortable tap targets — iOS HIG recommends 44px; some small
+     header/icon chips were ~32px. Bump every interactive micro-button to 44px
+     on touch devices (zero layout shift risk: these are inline-flex/flex chips). */
+  .fav-btn-small, .recent-chip, .fav-chip, .chain-chip, .scen-chip, .small-btn { min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  header button, .icon-btn, .nav-icon-btn, .topbar-btn, [class*="icon-btn"], .cod-fav-btn, .donation-close { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  /* Calculator-of-the-day buttons were unstyled (default ~19-21px browser buttons).
+     Now consistent surface buttons with 44px tap targets (WCAG 2.5.8). */
+  .cod-action-btn, .cod-share-btn { min-height: 44px; padding: 8px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); cursor: pointer; font-size: 13px; font-weight: 500; color: var(--text); font-family: var(--font-body); display: inline-flex; align-items: center; justify-content: center; transition: all var(--transition); }
+  .cod-action-btn { background: var(--primary); border-color: var(--primary); color: #fff; }
+  .cod-action-btn:hover, .cod-share-btn:hover { transform: translateY(-1px); box-shadow: 0 3px 10px rgba(0,0,0,0.12); }
+  .lang-trigger, .lang-option { min-height: 44px; }
+  button.small, .small-btn, .btn-sm { padding: 10px 14px; }
+  input[type="checkbox"], input[type="radio"] { min-width: 20px; min-height: 20px; }
+}
+
+/* ===== Category 'Show more' pagination ===== */
+.tool-card.hidden-tool { display: none !important; }
+.show-more-wrap { display: flex; justify-content: center; margin: 22px 0 6px; }
+.btn-show-more {
+  padding: 13px 34px; border-radius: 999px; font-size: 14px; font-weight: 700;
+  font-family: var(--font-body); cursor: pointer; color: var(--text);
+  background: var(--surface); border: 1.5px solid var(--primary-light);
+  transition: all var(--transition);
+}
+.btn-show-more:hover {
+  background: var(--primary-gradient); color: #fff; border-color: transparent;
+  transform: translateY(-2px); box-shadow: var(--shadow-md), var(--shadow-glow);
+}
+.btn-show-more:active { transform: scale(0.97); }
+.btn-show-more .sm-count { opacity: 0.75; font-weight: 600; }
+@media (hover: none) { .btn-show-more:hover { transform: none; box-shadow: none; } }
+
+/* ===== Scroll-reveal (respects reduced-motion) ===== */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.5s cubic-bezier(0.4,0,0.2,1), transform 0.5s cubic-bezier(0.4,0,0.2,1); will-change: opacity, transform; }
+.reveal.revealed { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ===== Swipe hint pill (tool pages, touch only) ===== */
+.swipe-hint {
+  display: none; align-items: center; justify-content: center; gap: 8px;
+  margin: 4px 0 18px; padding: 8px 16px; border-radius: 999px;
+  font-size: 12px; font-weight: 600; color: var(--text-light);
+  background: var(--surface); border: 1px solid var(--border);
+}
+.swipe-hint .swipe-arrow { display: inline-block; animation: swipeNudge 1.8s ease-in-out infinite; }
+.swipe-hint .swipe-arrow.left { animation-delay: 0.9s; }
+@keyframes swipeNudge {
+  0%, 100% { transform: translateX(0); opacity: 0.5; }
+  50% { transform: translateX(4px); opacity: 1; }
+}
+@media (hover: none), (pointer: coarse) {
+  .swipe-hint { display: flex; }
+}
+
+/* ---------- Scientific Calculator Keypad ---------- */
+.sci-calc { margin: 4px 0 16px; }
+.sci-display { position: relative; margin-bottom: 12px; }
+.sci-input {
+  width: 100%; padding: 14px 16px; font-size: 22px; font-weight: 600;
+  font-family: var(--font-mono, Consolas, monospace); text-align: right;
+  background: var(--bg); border: 1px solid var(--border); border-radius: 12px; color: var(--text);
+}
+.sci-input:focus { outline: 2px solid var(--primary); border-color: transparent; }
+.sci-preview { position: absolute; right: 16px; bottom: -18px; font-size: 12px; color: var(--primary); font-weight: 600; }
+.sci-rows { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+.sci-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.sci-key {
+  padding: 12px 4px; font-size: 15px; font-weight: 600; border-radius: 10px;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+  cursor: pointer; transition: transform 0.08s ease, background 0.15s ease, box-shadow 0.15s ease;
+  min-height: 44px;
+}
+.sci-key:hover { background: var(--bg); transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.sci-key:active { transform: scale(0.95); }
+.sci-fn { background: linear-gradient(135deg, var(--primary-light), transparent); color: var(--primary); }
+.sci-op { color: var(--secondary, #7c3aed); }
+.sci-eq { grid-column: span 3; background: linear-gradient(135deg, var(--primary), var(--secondary, #7c3aed)); color: #fff; border: none; font-size: 18px; }
+.sci-note { font-size: 12px; color: var(--text-light); margin-top: 4px; }
+
+/* ===== UX round 2: one-tap copy result ===== */
+.result-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.result-panel-head h3 { margin: 0; }
+/* UX Round 3: contextual unit badges under the result heading */
+.result-unit-badges { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 10px; min-height: 0; }
+.result-unit-badge {
+  font-size: 12px; font-weight: 600; letter-spacing: .02em;
+  color: var(--text, #1f2430); background: color-mix(in srgb, var(--accent, #7c3aed) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent, #7c3aed) 28%, transparent);
+  border-radius: 999px; padding: 3px 10px;
+}
+
+/* UX Round 3: actionable input validation — red ring + focus state */
+.calc-input.input-error {
+  border-color: #d33 !important;
+  box-shadow: 0 0 0 3px rgba(221, 51, 51, .18);
+  animation: error-pulse .5s ease;
+}
+@keyframes error-pulse { 0% { box-shadow: 0 0 0 0 rgba(221,51,51,.35); } 100% { box-shadow: 0 0 0 3px rgba(221,51,51,.18); } }
+
+/* UX Round 3: keyboard navigation highlight on live search results */
+.search-item.search-active {
+  background: color-mix(in srgb, var(--accent, #7c3aed) 10%, transparent);
+  outline: 2px solid color-mix(in srgb, var(--accent, #7c3aed) 45%, transparent);
+  outline-offset: -2px;
+}
+.search-item:focus-visible { outline: 2px solid var(--accent, #7c3aed); outline-offset: -2px; }
+
+.copy-result-btn {
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--font-body, inherit);
+  color: var(--primary, #4f46e5);
+  background: transparent;
+  border: 1px solid var(--border, #e2e8f0);
+  border-radius: 999px;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: all 0.15s ease;
+  min-height: 32px;
+}
+.copy-result-btn:hover { background: var(--primary, #4f46e5); color: #fff; border-color: var(--primary, #4f46e5); }
+.copy-result-btn:focus-visible { outline: 2px solid var(--primary, #4f46e5); outline-offset: 2px; }
+@media (hover: none), (pointer: coarse) { .copy-result-btn { min-height: 44px; padding: 6px 14px; } }
+
+/* ===== UX round 2: search intent chip ===== */
+.search-chip {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 8px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: var(--secondary, #7c3aed);
+  background: color-mix(in srgb, var(--secondary, #7c3aed) 12%, transparent);
+  border-radius: 999px;
+  vertical-align: middle;
+}
+
+/* ===== UX round 2: sticky result on mobile (Omni-style pinned answer) =====
+   Once a result exists, the result panel stays pinned near the top while the
+   user scrolls the long explanation/SEO content — the answer never leaves view. */
+@media (max-width: 768px) {
+  .calc-result-panel:has(.result-main) {
+    position: sticky;
+    top: 10px;
+    z-index: 4;
+    background: var(--surface, #fff);
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: var(--radius, 12px);
+    padding: 10px 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14);
+  }
+}

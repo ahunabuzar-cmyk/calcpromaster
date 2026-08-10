@@ -16,3 +16,28 @@ deploy/
 # ===== Test output =====
 test-results/
 playwright-report/
+
+# Generated route list for Playwright health-check (written by playwright.config.js)
+tool-routes.json
+
+# Local Netlify folder + auth token (NETLIFY_AUTH_TOKEN cache — NEVER commit)
+.netlify
+.netlify-token*
+*.tmp
+
+# Temp analysis dumps / scratch files in scripts/
+scripts/.*.json
+scripts/.*.txt
+scripts/kw-report.json
+scripts/kw-volume.csv
+scripts/kw-volume.json
+
+# ===== Google service-account credentials — NEVER commit or deploy =====
+service-account*.json
+*-service-account.json
+credentials.json
+google-creds*
+
+# Local analytics/GSC snapshots (tracking data, not part of the site)
+data/ga4-events-snapshot.json
+data/gsc-snapshot.json

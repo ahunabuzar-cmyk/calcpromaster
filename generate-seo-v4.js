@@ -264,7 +264,7 @@ function genMetaDesc(tool) {
   var full = 'Free ' + name + ' \u2014 ' + desc + tail;
   if (full.length >= 140 && full.length <= 155) return full;
   if (full.length > 155) { var head = full.substring(0, 155); var sp = head.lastIndexOf(' '); if (sp >= 140) return head.substring(0, sp); return full.substring(0, 152).replace(/[\s,.]+$/, ''); }
-  var pads = [' Try it now, 100% free forever.', ' No account, no data collection, ever.', ' Works on any device.'];
+  var pads = [' Try it now, 100% free forever.', ' No account needed, inputs stay on your device.', ' Works on any device.'];
   var i = 0;
   while (full.length < 140 && i < pads.length) { full += pads[i]; i++; }
   return full.length <= 155 ? full : full.substring(0, 152).replace(/[\s,.]+$/, '');
@@ -319,8 +319,8 @@ var PHIL_OPENERS = [
   function (t) { return '<p>' + t.name + ' is a privacy-first tool in a niche where that matters: people enter real numbers \u2014 real money, real measurements, real personal details. Every one of those entries is processed on your device and stays there.</p>'; }
 ];
 var PHIL_CORE = [
-  function (t) { return 'No analytics by default, no data collection, no server uploads. The code is open and readable, so you can verify exactly what ' + t.name + ' does with your inputs.'; },
-  function (t) { return 'The page never phones home. There is no hidden script, no telemetry, and no background requests \u2014 just the calculation ' + t.name + ' performs, computed where you are.'; },
+  function (t) { return 'Calculator inputs stay on your device, and no personal data is required to use ' + t.name + '. Any optional analytics or advertising on the site only runs after you give consent. The code is open and readable, so you can verify exactly what ' + t.name + ' does with your inputs.'; },
+  function (t) { return 'The page makes no hidden requests with your inputs, and no telemetry is collected before you consent. The calculation ' + t.name + ' performs is computed locally, where you are.'; },
   function (t) { return 'We believe a calculator should be a tool, not a data-collection point. That is why ' + t.name + ' works offline, runs locally, and asks nothing from you in return \u2014 including your ' + primaryMetric(t).toLowerCase() + '.'; },
   function (t) { return 'Every line of the formula on ' + t.name + ' is shown, every intermediate step is visible, and the result is yours to keep or discard. Transparency and privacy are the same promise here.'; },
   function (t) { return 'The default state of ' + t.name + ' is respect: respect for your time, your device, and your data. You will not be asked to enable anything, sign up for anything, or give away your ' + primaryMetric(t).toLowerCase() + '.'; },
@@ -478,7 +478,7 @@ function genComparison(tool, r) {
     '<li><strong>Step-by-step breakdown</strong> \u2014 see how the ' + pk + ' answer is derived on ' + tool.name + ', not just the final number.</li>' +
     '<li><strong>No account needed</strong> \u2014 open ' + tool.name + ' and use it. Nothing to sign up for, ever.</li>' +
     '<li><strong>Bulk comparison</strong> \u2014 ' + tool.name + ' runs several ' + m.toLowerCase() + ' scenarios side by side in one view and compares them directly.</li>' +
-    '<li><strong>Private by design</strong> \u2014 ' + tool.name + ' has no analytics by default, no data collection, and no server uploads.</li>\n</ul>';
+    '<li><strong>Private by design</strong> \u2014 ' + tool.name + ' keeps your inputs on your device; any optional analytics or advertising on the site is consent-gated.</li>\n</ul>';
   return html;
 }
 

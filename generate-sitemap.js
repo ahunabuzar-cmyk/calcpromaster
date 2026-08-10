@@ -190,9 +190,6 @@ const LONGTAIL = [
   ['finance', 'capital-gains', '50000'],
   ['finance', 'capital-gains', '100000'],
   ['finance', 'capital-gains', '150000'],
-  ['finance', 'dividend', '10000'],
-  ['finance', 'dividend', '50000'],
-  ['finance', 'dividend', '100000'],
   ['finance', 'break-even', '10000'],
   ['finance', 'break-even', '25000'],
   ['finance', 'break-even', '50000'],
@@ -208,9 +205,6 @@ const LONGTAIL = [
   ['finance', 'cash-flow', '5000'],
   ['finance', 'cash-flow', '10000'],
   ['finance', 'cash-flow', '25000'],
-  ['finance', 'net-worth-calculator', '100000'],
-  ['finance', 'net-worth-calculator', '250000'],
-  ['finance', 'net-worth-calculator', '500000'],
   ['finance', 'currency-converter', '500'],
   ['finance', 'currency-converter', '1000'],
   ['finance', 'currency-converter', '5000'],
@@ -222,12 +216,6 @@ const LONGTAIL = [
   ['business', 'profit-margin', '10000'],
   ['business', 'profit-margin', '25000'],
   ['business', 'profit-margin', '50000'],
-  ['business', 'cashflow', '5000'],
-  ['business', 'cashflow', '10000'],
-  ['business', 'cashflow', '25000'],
-  ['business', 'cac', '10000'],
-  ['business', 'cac', '50000'],
-  ['business', 'cac', '100000'],
   ['business', 'burn-rate', '5000'],
   ['business', 'burn-rate', '10000'],
   ['business', 'burn-rate', '25000'],
@@ -245,11 +233,6 @@ const LONGTAIL = [
   ['homegarden', 'solar-panel', '5000'],
   ['homegarden', 'solar-panel', '10000'],
   ['homegarden', 'solar-panel', '15000'],
-  ['homegarden', 'generator-size', '5000'],
-  ['homegarden', 'generator-size', '10000'],
-  ['education', 'college-cost-planner', '10000'],
-  ['education', 'college-cost-planner', '25000'],
-  ['education', 'college-cost-planner', '50000']
 ];
 
 function extractToolIds(filePath) {
@@ -296,6 +279,8 @@ function main() {
     if (ids.length === 0) return;
     totalTools += ids.length;
     urls.push({ loc: DOMAIN + '/' + catKey, freq: 'weekly', prio: '0.8' });
+    // Category Hub comparison page (/hub/<catKey>) — real URL, real content
+    urls.push({ loc: DOMAIN + '/hub/' + catKey, freq: 'weekly', prio: '0.7' });
     ids.forEach(id => {
       urls.push({ loc: DOMAIN + '/' + catKey + '/' + id, freq: 'monthly', prio: '0.9' });
     });

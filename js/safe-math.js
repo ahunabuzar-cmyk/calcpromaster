@@ -108,6 +108,8 @@ const SafeMathParser = (function () {
       return Number(raw.toFixed(10));
     } catch (e) { return NaN; }
   }
-  return { safeEval };
+  // evaluate() throws on invalid input (used by the Scientific Calculator UI which expects errors)
+  function evaluate(expr) { const tokens = tokenize(String(expr).replace(/×/g, '*').replace(/÷/g, '/').replace(/−/g, '-')); const result = new Parser(tokens).parse(); if (typeof result !== 'number' || isNaN(result)) throw new Error('Invalid expression'); return result; }
+  return { safeEval, evaluate };
 })();
-if (typeof window !== 'undefined') window.safeEval = SafeMathParser.safeEval;
+if (typeof window !== 'undefined') { window.safeEval = SafeMathParser.safeEval; window.SafeMathParser = SafeMathParser; }

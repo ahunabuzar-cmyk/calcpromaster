@@ -4,8 +4,10 @@ const fs = require('fs');
 const path = require('path');
 const zlib = require('zlib');
 
-const PORT = 3000;
-const ROOT = __dirname;
+// PORT/ROOT are env-overridable so the same server can serve the built deploy/ artifact
+// (scripts/serve-deploy.cjs launches it as PORT=3100 ROOT=deploy).
+const PORT = process.env.PORT || 3000;
+const ROOT = process.env.ROOT ? path.resolve(__dirname, process.env.ROOT) : __dirname;
 
 // gzip compressible text types — keeps the 1.3MB SEO bundle light (~150KB over the wire)
 const COMPRESSIBLE = ['.js', '.css', '.html', '.json', '.svg', '.xml', '.txt', '.webmanifest'];

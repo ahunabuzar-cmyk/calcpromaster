@@ -170,9 +170,9 @@ const SLOTS = {
     t => 'Great when you want certainty fast — no formulas to memorize, no apps to install.'
   ],
   privacy: [
-    t => 'Everything runs in your browser — nothing is uploaded, and it works offline after the first visit.',
-    t => 'Your numbers never leave your device: it is 100% client-side and private by design.',
-    t => 'No sign-up, no tracking, no server uploads — the math happens right on your device, even offline.',
+    t => 'Everything runs in your browser — your inputs are not sent to our servers, and it works offline after the first visit (currency conversion needs a live connection).',
+    t => 'Your inputs never leave your device: the calculation is fully client-side, and optional analytics/advertising only activate with your consent.',
+    t => 'No sign-up, no server storage — the math happens right on your device, and most tools work offline after the first visit.',
     t => 'Privacy-first: the calculation is local, your data stays yours, and the tool keeps working offline.'
   ],
   keywords: [

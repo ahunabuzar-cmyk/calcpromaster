@@ -1,9 +1,12 @@
 // Category Hub Pages with Comparison Tables
 const CategoryHub = (function () {
-  const STORAGE_KEY = 'calcpro_category_hubs';
+  // v2: schema changed to REAL computed values (was hardcoded mock data in v1).
+  // Bumped key so any stale v1 cache (fake numbers) is discarded immediately.
+  const STORAGE_KEY = 'calcpro_category_hubs_v2';
   const DAILY_KEY = 'calcpro_calc_of_day';
   
   let hubData = {};
+  let routesRegistered = false;
   
   function init() {
     loadHubData();
@@ -16,9 +19,16 @@ const CategoryHub = (function () {
     } catch (e) {
       hubData = {};
     }
-    if (!hubData.lastUpdated || Date.now() - hubData.lastUpdated > 86400000) {
-      generateHubData();
+    // Stale cache detection: too old OR tool counts don't match the live source
+    // (e.g. after adding new calculators). Mismatch = regenerate from real calc().
+    let stale = !hubData.lastUpdated || Date.now() - hubData.lastUpdated > 86400000;
+    if (!stale && hubData.categories) {
+      for (const [catKey, cat] of Object.entries(CALC_DATA)) {
+        const cached = hubData.categories[catKey];
+        if (!cached || cached.tools.length !== cat.tools.length) { stale = true; break; }
+      }
     }
+    if (stale) generateHubData();
   }
   
   function generateHubData() {
@@ -41,7 +51,7 @@ const CategoryHub = (function () {
         id: catKey,
         name: cat.name,
         icon: getCategoryIcon(catKey),
-        description: cat.desc || '',
+        description: cat.desc || (window.CATEGORY_META && CATEGORY_META[catKey] && CATEGORY_META[catKey].desc) || '',
         tools: tools,
         comparisonTable: generateComparisonTable(catKey, tools)
       };
@@ -59,6 +69,124 @@ const CategoryHub = (function () {
     return icons[catKey] || '📊';
   }
   
+  function findTool(toolId) {
+    for (const [k, cat] of Object.entries(CALC_DATA)) {
+      const t = cat.tools.find(x => x.id === toolId);
+      if (t) return t;
+    }
+    return null;
+  }
+
+  // Build the tool's default input values (same defaults the form pre-fills)
+  function buildDefaultValues(tool) {
+    const values = {};
+    (tool.inputs || []).forEach(inp => {
+      values[inp.id] = inp.type === 'checkbox' ? (inp.def === true || inp.def === 1 || inp.def === 'true') : inp.def;
+    });
+    return values;
+  }
+
+  // Run the tool's REAL calc with defaults and return a plain-text summary.
+  // Async tools (promise-returning) fall back to the desc — the comparison
+  // table is a static snapshot and must never show a promise as a value.
+  function computeToolResult(tool) {
+    if (!tool || typeof tool.calc !== 'function') return null;
+    try {
+      const values = buildDefaultValues(tool);
+      const raw = tool.calc(values);
+      if (raw && typeof raw.then === 'function') return null; // async tool
+      return raw || null;
+    } catch (e) { return null; }
+  }
+
+  function stripHtml(s) {
+    return String(s || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+  }
+
+  // Extract a CLEAN single value for a comparison field from the tool's REAL
+  // computed output. Works by matching labeled segments of the output text
+  // ("Payment: $2,051.65 / monthly", "Total Interest: $23,099.19"), then falls
+  // back to unit-pattern regexes for common computed concepts. Every number is
+  // produced live by the tool's calc() — never hardcoded.
+  function extractFromOutput(tool, field) {
+    const r = computeToolResult(tool);
+    if (!r) return null;
+    const text = stripHtml((r.result || '') + ' | ' + (r.extra || ''));
+    if (!text) return null;
+    const f = String(field || '').toLowerCase().trim();
+    if (!f || f === 'result') return null;
+
+    // 1) Labeled segment match — split on '|', check each "Label: value" segment
+    const segs = text.split('|');
+    const fWords = f.split(/\s+/).filter(w => w.length >= 3);
+    for (const seg of segs) {
+      const m = seg.match(/^\s*([^:]{2,40}?):\s*(.+?)\s*$/);
+      if (!m) continue;
+      const label = m[1].toLowerCase();
+      const hit = fWords.length > 0 && (fWords.every(w => label.indexOf(w) !== -1) ||
+        fWords.some(w => label.indexOf(w) !== -1 && label.length <= w.length + 6));
+      if (!hit) continue;
+      // Return the value part (strip leading punctuation, cap length, and drop
+      // redundant trailing " / monthly"-style unit noise)
+      return m[2].replace(/^[^\w$%.+-]+/, '').replace(/\s*\/\s*[^/]*$/, '').slice(0, 24);
+    }
+    // 2) Unit-pattern fallback for concepts without labeled output segments
+    const pats = {
+      'roi': /roi:?\s*\$?([-\d,]+(?:\.\d+)?)%?/i,
+      'volume': /(?:volume|concrete|excavat|gravel|soil|mulch):?\s*([\d,]+(?:\.\d+)?)\s*m³/i,
+      'power': /power:?\s*([\d,]+(?:\.\d+)?)/i,
+      'grade': /grade:?\s*([A-F][+-]?)/i,
+      'bmi': /bmi:?\s*([\d.]+)/i,
+      'percentage': /([\d.]+)%/i
+    };
+    for (const k in pats) {
+      if (f.indexOf(k) !== -1) {
+        const mm = text.match(pats[k]);
+        if (mm) return mm[1];
+      }
+    }
+    return null;
+  }
+
+  // Fields that represent COMPUTED output metrics. For these the value extracted
+  // from the tool's live result wins over any same-named input — a tool like
+  // Mortgage has a solve-mode "Monthly Payment" INPUT (a target, default 2000)
+  // but the comparison column should show the ACTUAL computed payment.
+  const OUTPUT_FIELDS = ['monthly payment', 'total interest', 'total payment', 'roi', 'volume', 'power', 'grade', 'bmi', 'percentage', 'output'];
+
+  // REAL value for a field: input label match or extraction from the tool's live
+  // computed output. No hardcoded/static mock data — every number is live.
+  function getFieldValue(tool, field) {
+    if (!tool) return '—';
+    const label = String(field || '').toLowerCase().trim();
+    // 0) Result column — the REAL computed output from default inputs
+    if (label === 'result') {
+      const r = computeToolResult(tool);
+      return r && r.result ? stripHtml(r.result) : '—';
+    }
+    // 1) Computed-output metrics: prefer the live computed value first
+    if (OUTPUT_FIELDS.indexOf(label) !== -1) {
+      const ov = extractFromOutput(tool, field);
+      if (ov !== null && ov !== undefined && ov !== '') return ov;
+    }
+    // 2) Input label match — show the tool's actual default input value
+    const inp = (tool.inputs || []).find(i => String(i.label || '').toLowerCase().indexOf(label) !== -1);
+    if (inp) {
+      const v = buildDefaultValues(tool)[inp.id];
+      if (inp.type === 'select') {
+        const opt = (inp.opts || []).find(o => String(o.v) === String(v));
+        return opt ? opt.l : String(v === undefined || v === null ? '' : v);
+      }
+      if (inp.type === 'checkbox') return v ? 'Yes' : 'No';
+      return String(v === undefined || v === null ? '' : v);
+    }
+    // 3) Labeled extraction from the REAL computed output (Payment, Total
+    // Interest, ROI...). '—' when this tool genuinely doesn't produce the field
+    // (never duplicated result blobs across columns).
+    const v = extractFromOutput(tool, field);
+    return v !== null && v !== undefined && v !== '' ? v : '—';
+  }
+
   function generateComparisonTable(catKey, tools) {
     if (tools.length < 2) return null;
     
@@ -67,11 +195,19 @@ const CategoryHub = (function () {
     
     return {
       headers: ['Calculator', ...commonFields],
-      rows: topTools.map(t => ({
-        name: t.name,
-        id: t.id,
-        values: commonFields.map(f => getFieldValue(t.id, f))
-      }))
+      rows: topTools.map(t => {
+        // Dedupe: a tool that doesn't own a field would otherwise repeat its whole
+        // result blob in every column. Keep the first occurrence, blank the rest.
+        const seen = {};
+        const values = commonFields.map(f => {
+          const v = getFieldValue(findTool(t.id), f);
+          if (v === '—') return v;
+          if (seen[v]) return '—';
+          seen[v] = true;
+          return v;
+        });
+        return { name: t.name, id: t.id, values };
+      })
     };
   }
   
@@ -90,17 +226,6 @@ const CategoryHub = (function () {
       utilities: ['Input', 'Format', 'Operation', 'Output']
     };
     return fields[catKey] || ['Input', 'Output'];
-  }
-  
-  function getFieldValue(toolId, field) {
-    const mockData = {
-      'mortgage': { 'Loan Amount': '$300,000', 'Interest Rate': '6.5%', 'Term': '30 years', 'Monthly Payment': '$1,896' },
-      'loan-emi': { 'Loan Amount': '$25,000', 'Interest Rate': '8%', 'Term': '5 years', 'Monthly Payment': '$507' },
-      'compound-interest': { 'Principal': '$10,000', 'Rate': '7%', 'Time': '10 years', 'Final Amount': '$20,096' },
-      'bmi': { 'Weight': '70 kg', 'Height': '175 cm', 'Age': '30', 'Result': '22.9 (Normal)' },
-      'calorie': { 'Weight': '70 kg', 'Height': '175 cm', 'Age': '30', 'Result': '2,000 cal/day' }
-    };
-    return mockData[toolId]?.[field] || '—';
   }
   
   function renderHubPage(catKey, attempt) {
@@ -151,7 +276,7 @@ const CategoryHub = (function () {
     html += '<div class="hub-tools-grid">';
     cat.tools.forEach(t => {
       html += `
-        <article class="tool-card hub-card" onclick="App.navigateToTool('${Security.sanitizeJsString(t.id)}', '${Security.sanitizeJsString(catKey)}')">
+        <article class="tool-card hub-card reveal" onclick="App.navigateToTool('${Security.sanitizeJsString(t.id)}', '${Security.sanitizeJsString(catKey)}')">
           <div class="tool-icon">${t.icon}</div>
           <h3>${Security.sanitizeHtml(t.name)}</h3>
           <p>${Security.sanitizeHtml(t.description)}</p>
@@ -168,7 +293,7 @@ const CategoryHub = (function () {
   }
   
   function renderComparisonTable(table) {
-    let html = '<div class="comparison-table-wrap"><table class="comparison-table"><thead><tr>';
+    let html = '<div class="comparison-table-wrap" role="region" tabindex="0" aria-label="Calculator comparison table (scrollable)"><table class="comparison-table"><thead><tr>';
     table.headers.forEach(h => html += `<th>${h}</th>`);
     html += '</tr></thead><tbody>';
     table.rows.forEach(row => {
@@ -182,7 +307,8 @@ const CategoryHub = (function () {
   }
   
   function registerHubRoutes() {
-    if (!window.App) return;
+    if (!window.App || routesRegistered) return;
+    routesRegistered = true;
     const originalNavigate = window.App.navigate;
     window.App.navigate = function(route) {
       if (route && route.startsWith('hub/')) {
@@ -200,12 +326,25 @@ const CategoryHub = (function () {
       main.innerHTML = renderHubPage(catKey);
       window.scrollTo(0, 0);
     }
+    // Scroll-reveal + 3D tilt for hub cards (skipped for reduced-motion/touch)
+    if (window.App && typeof App.initScrollReveal === 'function') {
+      try { App.initScrollReveal(); } catch (e) {}
+    }
+    if (window.AdvancedFeatures && typeof AdvancedFeatures.initCardTilt === 'function') {
+      try { AdvancedFeatures.initCardTilt(); } catch (e) {}
+    }
   }
   
   function getHubData() {
     return hubData;
   }
   
-  return { init, renderHubPage, renderCategoryHub, getHubData };
+  // Refresh the cached hub data against the CURRENT CALC_DATA (used after lazy
+  // category files hydrate — the init-time cache may have empty niche categories).
+  function refresh() {
+    loadHubData();
+  }
+
+  return { init, renderHubPage, renderCategoryHub, getHubData, refresh };
 })();
 if (typeof window !== 'undefined') window.CategoryHub = CategoryHub;

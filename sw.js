@@ -18,7 +18,7 @@
    index.html cache-bust script derives its stamp from the same line.
    IMPORTANT: keep exactly ONE such assignment in this file.
    ============================================================ */
-const CACHE_NAME = 'calcpro-v2.6.0-base';
+const CACHE_NAME = 'calcpro-v2.6.1-base';
 const VERSION = CACHE_NAME;
 
 // ---- Precache list (the app shell + core engine + tool data) ----
@@ -37,31 +37,24 @@ const SHELL = [
   './js/site-config.js',
   './js/core.js',
   './js/data.js',
+  './js/data-loader.js',
   './js/calc-modes.js',
   './js/advanced-features.js',
   './js/router.js',
   './js/app.js',
   './js/i18n.js',
-  './js/data/auto-transport.js',
-  './js/data/business.js',
-  './js/data/career-freelance.js',
-  './js/data/construction.js',
   './js/data/conversion.js',
-  './js/data/education.js',
   './js/data/engineering.js',
   './js/data/everyday.js',
   './js/data/finance.js',
-  './js/data/fitness-exercise.js',
-  './js/data/food-nutrition.js',
   './js/data/health.js',
-  './js/data/home-garden.js',
-  './js/data/lifestyle.js',
   './js/data/math.js',
-  './js/data/parenting-family.js',
-  './js/data/regional.js',
   './js/data/science.js',
-  './js/data/tech-digital.js',
-  './js/data/utilities.js'
+  // NOTE: the 13 niche category data files (construction, business, education,
+  // utilities, lifestyle, regional, food, fitness, auto, career, homegarden,
+  // tech, family) are intentionally NOT precached — they load on-demand via
+  // js/data-loader.js (network-first, runtime-cached on first use) so the
+  // service-worker install is lighter and first paint never waits on them.
 ];
 
 // ---- Install: populate the shell cache ----
@@ -127,20 +120,48 @@ self.addEventListener('fetch', function (event) {
   // Cross-origin (GA4, GTM, AdSense, fonts CDN, currency APIs): network only.
   if (!isSameOrigin(url)) return;
 
-  // Same-origin static assets: stale-while-revalidate.
+  // Same-origin static assets.
+  // EXECUTABLE CODE (js, css, data files): network-first with cache fallback.
+  // A stale/broken cached copy must NEVER be served — that was the root cause
+  // of the old 'stuck Loading' bug (a broken app.js served from cache). Online
+  // users always get the newest build; offline users fall back to the cached
+  // copy (PWA still works with no connection).
+  // IMAGES/FONTS (png, svg, ico, woff): stale-while-revalidate — cheap, and
+  // serving them from cache instantly is a pure win for repeat visits.
+  var urlPath = url.pathname;
+  var isImageOrFont = /\.(png|jpe?g|gif|webp|svg|ico|woff2?|ttf|otf)$/i.test(urlPath);
+  if (isImageOrFont) {
+    // stale-while-revalidate for images/fonts
+    event.respondWith(
+      caches.match(req).then(function (cached) {
+        var network = fetch(req)
+          .then(function (res) {
+            if (res && res.ok) {
+              var copy = res.clone();
+              caches.open(CACHE_NAME).then(function (cache) { cache.put(req, copy); });
+            }
+            return res;
+          })
+          .catch(function () { return cached; });
+        return cached || network;
+      })
+    );
+    return;
+  }
+  // Executable assets: network-first. Fallback is ONLY the matching cached copy
+  // (never index.html — serving HTML as a script would throw a parse error).
   event.respondWith(
-    caches.match(req).then(function (cached) {
-      var network = fetch(req)
-        .then(function (res) {
-          if (res && (res.ok || res.type === 'opaque')) {
-            var copy = res.clone();
-            caches.open(CACHE_NAME).then(function (cache) { cache.put(req, copy); });
-          }
-          return res;
-        })
-        .catch(function () { return cached; });
-      return cached || network;
-    })
+    fetch(req)
+      .then(function (res) {
+        if (res && (res.ok || res.type === 'opaque')) {
+          var copy = res.clone();
+          caches.open(CACHE_NAME).then(function (cache) { cache.put(req, copy); });
+        }
+        return res;
+      })
+      .catch(function () {
+        return caches.match(req);
+      })
   );
 });
 

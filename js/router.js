@@ -21,7 +21,11 @@ const Router = (function () {
       // is present — the hash-migration block below then routes normally.
       raw = '/';
     } else {
-      raw = window.location.pathname + window.location.search;
+      // IMPORTANT: use pathname ONLY. The query string carries calculator input
+      // STATE (share links like /finance/loan-emi?amount=100000&rate=8.5) and is
+      // restored by URLStateManager — it must NEVER be treated as part of the route
+      // path, or every share link falls through to the 404 page.
+      raw = window.location.pathname;
     }
     // Strip trailing slash (except for root)
     if (raw.length > 1 && raw.charAt(raw.length - 1) === '/') {
@@ -89,6 +93,9 @@ const Router = (function () {
   // Navigate to a clean URL via pushState — no page reload (locale-aware)
   function navigate(path, opts) {
     opts = opts || {};
+    // Defensive: never treat a query string or hash as part of the route path
+    // (share URLs carry input state; URLStateManager restores it separately).
+    path = String(path).split('?')[0].split('#')[0];
     path = localize(normalizePath(path));
 
     // Don't push duplicate of current path

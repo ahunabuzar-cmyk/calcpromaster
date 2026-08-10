@@ -71,10 +71,28 @@ const ZR = (function () {
   // ===================================================================
   function wireSliders(tool) {
     if (!tool || !tool.inputs) return;
-    const inputs = numericInputs(tool).slice(0, 8);
+    // Sliders on EVERY numeric input. Raised from 8 to 12 — only 2 tools in the
+    // whole platform have more than 12 numeric inputs, so coverage is now total.
+    const inputs = numericInputs(tool).slice(0, 12);
     if (inputs.length === 0) return;
 
+    // Round a slider bound to a clean value (2 significant digits) so money
+    // ranges read as 10,000–150,000 instead of 10,000.0001–150,000.3.
+    // Epsilon guards IEEE-754 artifacts (12*0.1 = 1.2000000000000002 would
+    // otherwise ceil to 1.3); final rounding kills the trailing FP noise.
+    function nice(v) {
+      if (v === 0) return 0;
+      const abs = Math.abs(v);
+      const exp = Math.floor(Math.log10(abs));
+      const mult = Math.pow(10, exp - 1);
+      const r = Math.ceil(v / mult - 1e-9) * mult;
+      return Number(r.toFixed(6));
+    }
+
     inputs.forEach(function (inp) {
+      // Inputs with an explicit slider:{min,max,step} schema already get a
+      // native range input in the tool form (app.js) — skip to avoid doubling.
+      if (inp.slider && inp.slider.min !== undefined && inp.slider.max !== undefined) return;
       const el = document.getElementById(inp.id);
       if (!el || el.type !== 'number') return;
       // skip already-wired
@@ -82,10 +100,17 @@ const ZR = (function () {
       el.dataset.zrSlider = '1';
 
       const wrap = el.parentNode;
-      const current = num(el.value, inp.def || 0);
-      const min = inp.min !== undefined ? num(inp.min) : (current !== 0 ? current * 0.1 : 0);
-      const max = inp.max !== undefined ? num(inp.max) : (current !== 0 ? current * 3 : 100);
-      const step = inp.step !== undefined ? num(inp.step) : (max - min) / 100 || 1;
+      const current = num(el.value, 0);
+      // Anchor on the tool's own default (inp.def) when the field is empty/0, so
+      // a fresh "Annual Salary" input gets a 100,000–300,000 slider instead of 0–100.
+      const anchor = current !== 0 ? current : num(inp.def, 0);
+      let min = inp.min !== undefined ? num(inp.min) : (anchor > 0 ? nice(anchor * 0.1) : 0);
+      let max = inp.max !== undefined ? num(inp.max) : (anchor > 0 ? nice(anchor * 3) : 100);
+      // Negative anchors would produce an inverted range (min > max) — swap and
+      // enforce a minimum span so the range input always renders valid.
+      if (min > max) { const tmp = min; min = max; max = tmp; }
+      if (max - min < 1 && max > 0) { max = min + 1; }
+      const step = inp.step !== undefined ? num(inp.step) : ((max - min) / 100 || 1);
 
       const slider = document.createElement('input');
       slider.type = 'range';
@@ -180,7 +205,7 @@ const ZR = (function () {
 
     let html = '<details class="calc-collapsible" open><summary>🔥 What-If Heatmap — ' +
       esc(a.label) + ' × ' + esc(b.label) + '</summary>';
-    html += '<div class="zr-heatmap-wrap">';
+    html += '<div class="zr-heatmap-wrap" tabindex="0" role="region" aria-label="What-if sensitivity heatmap (horizontally scrollable)">';
     html += '<table class="zr-heatmap" role="grid" aria-label="What-if sensitivity heatmap">';
     html += '<thead><tr><th></th>';
     pcts.forEach(function (pa) {
@@ -231,6 +256,7 @@ const ZR = (function () {
     function renderStep() {
       const m = getModal();
       if (!m.modal || !m.body) return;
+      m.modal.classList.add('active'); // Wizard was writing content but never showing the modal
       const pct = Math.round(((step + 1) / total) * 100);
 
       let html = '<div class="zr-wizard">';
@@ -574,9 +600,12 @@ const ZR = (function () {
     const rows = Object.entries(report.inputs || {})
       .map(function (kv) { return '<tr><td>' + esc(kv[0]) + '</td><td>' + esc(kv[1]) + '</td></tr>'; }).join('');
 
-    w.document.write(
-      '<!DOCTYPE html><html><head><meta charset="utf-8"><title>' + esc(site.name) + ' — ' + esc(report.tool || 'Report') + '</title>' +
-      '<style>body{font-family:Inter,Arial,sans-serif;max-width:740px;margin:32px auto;padding:0 20px;color:#0f172a}' +
+    // DOM API print document (no document.write — CSP-friendly)
+    var d = w.document;
+    d.open();
+    d.title = esc(site.name) + ' — ' + esc(report.tool || 'Report');
+    var st = d.createElement('style');
+    st.textContent = 'body{font-family:Inter,Arial,sans-serif;max-width:740px;margin:32px auto;padding:0 20px;color:#0f172a}' +
       '.wl-header{border-bottom:3px solid ' + site.accent + ';padding-bottom:14px;margin-bottom:18px}' +
       '.wl-logo{font-size:20px;font-weight:800;color:' + site.accent + '}.wl-tag{font-size:12px;color:#64748b;margin-top:4px}' +
       'h1{font-size:22px;margin:18px 0 6px}table{border-collapse:collapse;width:100%;margin:14px 0}' +
@@ -584,7 +613,9 @@ const ZR = (function () {
       '.result{font-size:22px;font-weight:800;color:' + site.accent + ';padding:14px;background:#eef2ff;border-radius:10px;margin:14px 0}' +
       '.extra{color:#475569;font-size:14px;margin:8px 0}.meta{color:#94a3b8;font-size:11px}' +
       '.wl-foot{margin-top:26px;border-top:1px solid #e2e8f0;padding-top:10px;font-size:11px;color:#94a3b8}' +
-      '@media print{body{margin:0}}</style></head><body>' +
+      '@media print{body{margin:0}}';
+    d.head.appendChild(st);
+    d.body.innerHTML =
       '<div class="wl-header"><div class="wl-logo">' + esc(site.name) + '</div><div class="wl-tag">' + esc(site.tagline) + '</div></div>' +
       '<h1>' + esc(report.tool || 'Calculation Report') + '</h1>' +
       '<div class="meta">Generated: ' + esc(report.ts) + '<br>URL: ' + esc(report.url) + '</div>' +
@@ -592,10 +623,8 @@ const ZR = (function () {
       (report.extra ? '<div class="extra">' + esc(report.extra) + '</div>' : '') +
       '<h2>Inputs</h2><table><thead><tr><th>Input</th><th>Value</th></tr></thead><tbody>' +
       (rows || '<tr><td colspan="2">—</td></tr>') + '</tbody></table>' +
-      '<div class="wl-foot">Generated with ' + esc(site.name) + ' — estimates only; verify independently before acting.</div>' +
-      '</body></html>'
-    );
-    w.document.close();
+      '<div class="wl-foot">Generated with ' + esc(site.name) + ' — estimates only; verify independently before acting.</div>';
+    d.close();
     setTimeout(function () { w.focus(); w.print(); }, 400);
   }
 

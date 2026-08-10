@@ -16,6 +16,14 @@ const path = require('path');
 const ROOT = __dirname;
 const OUT = path.join(ROOT, 'deploy');
 
+// Regenerate the Formula QA dashboard from current contracts/tracker so the
+// shipped snapshot is never stale (root qa-dashboard.html feeds FILES below).
+try {
+  require('./scripts/generate-qa-dashboard.cjs');
+} catch (e) {
+  console.log('  ! dashboard generator skipped: ' + e.message);
+}
+
 // --- Everything the live site needs. Whitelist, NOT blacklist:
 //     only files listed here ever reach the public internet. ---
 const FILES = [
@@ -30,6 +38,7 @@ const FILES = [
   'privacy.html',
   'terms.html',
   'og-image.html',
+  'qa-dashboard.html',
   'styles.css',
   'sw.js',
   'manifest.json',
@@ -38,15 +47,20 @@ const FILES = [
   'llms.txt',
   'ads.txt',
   'icon.svg',
+  'icon-192.png',
+  'icon-512.png',
   'og-image.png',
   '_redirects',
   '_headers',
   '.htaccess',
   // IndexNow verification key — MUST stay public so Bing can verify
   '0e1100ec6bc9d4c2c6037d993fc2ba55.txt',
+  // Google Search Console HTML verification file — MUST stay public so
+  // Google can confirm site ownership. Served byte-for-byte at site root.
+  'googled1ac20b54b36e7cf.html',
 ];
 
-const DIRS = ['js']; // copyDir('js') already recurses into data/ + workers/ subdirs
+const DIRS = ['js', 'og']; // copyDir('js') recurses into data/ + workers/; 'og' holds per-tool share cards
 
 // Safety guard: refuse to deploy if any private/dev folders leak into OUTPUT dir.
 const FORBIDDEN_IN_DEPLOY = ['.freebuff', 'node_modules', '.git', 'calcpro-next', 'tests', 'scripts', '.db', '.sqlite'];
@@ -69,7 +83,7 @@ function cleanDir(dir) {
 // Files that must NOT be deployed even though they live in js/
 // (seo-content.js is the 7.1MB monolithic SOURCE — the runtime only
 // fetches the small per-category chunks from js/seo/*.js, see index.html).
-const EXCLUDE_FILES = ['seo-content.js'];
+const EXCLUDE_FILES = ['seo-content.js', 'app.js.reconstructed', 'app.js.recovered-base'];
 
 function copyDir(src, dest) {
   if (!fs.existsSync(src)) return;
@@ -107,9 +121,46 @@ function validateJsonLd(htmlPath) {
   if (count > 0) console.log('  JSON-LD: ' + count + ' block(s) valid ✓');
 }
 
+// Read the production domain from js/site-config.js — the SINGLE source of
+// truth. When the user switches to a custom domain they edit ONE file;
+// this step rewrites every hardcoded calcpromaster.netlify.app reference in
+// deploy/ (index.html canonical/OG/schema, sitemap.xml, og-image.html) so
+// the shipped bundle is always domain-consistent (Phase 7 readiness).
+function substituteDomain() {
+  const cfgPath = path.join(ROOT, 'js', 'site-config.js');
+  let domain = null;
+  try {
+    const cfg = fs.readFileSync(cfgPath, 'utf8');
+    const m = cfg.match(/domain:\s*'([^']+)'/);
+    if (m && m[1]) domain = m[1];
+  } catch (e) { /* fall through */ }
+  if (!domain) { console.warn('  ! domain not found in site-config.js — using default'); return; }
+  // robots.txt's Sitemap: line is also domain-sensitive — a stale sitemap URL
+  // would make GSC fetch the wrong file after a custom-domain switch.
+  const targets = ['index.html', 'sitemap.xml', 'og-image.html', 'robots.txt'];
+  for (const f of targets) {
+    const p = path.join(OUT, f);
+    if (!fs.existsSync(p)) continue;
+    let html = fs.readFileSync(p, 'utf8');
+    const before = (html.match(/calcpromaster\.netlify\.app/g) || []).length;
+    if (before === 0) continue;
+    html = html.replace(/calcpromaster\.netlify\.app/g, domain);
+    fs.writeFileSync(p, html);
+    console.log('  domain: ' + f + ' → ' + domain + ' (' + before + ' refs rewritten)');
+  }
+}
+
 function main() {
   console.log('Building deploy/ ...');
   validateJsonLd(path.join(ROOT, 'index.html'));
+  // Phase 2: sync every hardcoded user-facing calculator count to the
+  // registry BEFORE copying, so deploy/ never advertises a stale number
+  // (index.html/ about.html/ og-image.html/ data.js/ tool-intros.js/ seo-*).
+  try {
+    require('./scripts/sync-counts.cjs');
+  } catch (e) {
+    console.warn('  ! count sync skipped: ' + e.message);
+  }
   cleanDir(OUT);
 
   let count = 0;
@@ -132,6 +183,9 @@ function main() {
     count++;
   }
 
+  // Rewrite hardcoded domains in deploy/ to the configured production domain.
+  substituteDomain();
+
   // Auto-bump service-worker cache version from content hash of deploy bundle.
   // Removes manual sw.js edit before every deploy (old process was error-prone).
   (function bumpSwVersion() {
@@ -139,10 +193,21 @@ function main() {
     if (!fs.existsSync(swPath)) return;
     const crypto = require('crypto');
     let hash = crypto.createHash('sha256');
+    // Hash root files + every file inside copied dirs (js/, og/, ...) so ANY
+    // code change bumps the cache version — previously JS-only edits left the
+    // SW version untouched (stale app.js lingered for returning visitors).
     for (const f of FILES) {
       const p = path.join(OUT, f);
       if (fs.existsSync(p)) hash.update(fs.readFileSync(p));
     }
+    (function walk(dir) {
+      if (!fs.existsSync(dir)) return;
+      for (const e of fs.readdirSync(dir)) {
+        const p = path.join(dir, e);
+        if (fs.statSync(p).isDirectory()) walk(p);
+        else hash.update(fs.readFileSync(p));
+      }
+    })(path.join(OUT, 'js'));
     const short = hash.digest('hex').slice(0, 10);
     let sw = fs.readFileSync(swPath, 'utf8');
     // Anchor to the CACHE_NAME assignment — an unanchored regex previously

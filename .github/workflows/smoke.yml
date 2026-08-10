@@ -1,0 +1,148 @@
+name: CalcProMaster — Scheduled Smoke, Uptime & Netlify Deploy
+
+# Runs:
+#  - daily at 07:00 UTC (uptime + local build smoke only — no deploy)
+#  - on every push to main AND manual workflow_dispatch (build smoke → Netlify
+#    deploy → live smoke against the deployed URL)
+# Both jobs fail loudly (exit 1) so GitHub notifies the owner; a webhook alert
+# is also sent when ALERT_WEBHOOK_URL is configured (repo secret).
+
+on:
+  schedule:
+    - cron: '0 7 * * *'          # daily 07:00 UTC
+  push:
+    branches: [main]
+  workflow_dispatch:             # manual run from the Actions tab
+
+# Prevent overlapping runs from rapid successive pushes (double deploys /
+# wasted CI minutes): cancel the in-progress run when a new one starts.
+concurrency:
+  group: calcpro-smoke
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  issues: write                  # allow opening an alert issue on failure
+
+jobs:
+  # Live-production uptime check. Runs on the daily schedule + manual dispatch
+  # only — NOT on push, because the push path is covered by the post-deploy
+  # live-smoke job, and checking the live URL mid-deploy would race the deploy
+  # job (false-positive alerts before the first-ever deploy).
+  uptime:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run production uptime check
+        env:
+          PROD_URL: ${{ vars.PROD_URL || 'https://calcpromaster.netlify.app' }}
+          ALERT_WEBHOOK_URL: ${{ secrets.ALERT_WEBHOOK_URL }}
+        run: node scripts/uptime-check.cjs
+      - name: Open alert issue on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '🚨 Uptime check failed',
+              body: 'The scheduled uptime check failed. Investigate: run `node scripts/uptime-check.cjs` locally and inspect the live site at `${{ vars.PROD_URL }}`.'
+            });
+
+  # Local pre-deploy gate: build the artifact and run every suite against it.
+  build-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install dependencies
+        run: npm ci || npm install
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+      - name: Build production artifact
+        run: node build-deploy.js
+      - name: Run scheduled smoke suites (deploy smoke + PDF/export/header + responsive + a11y)
+        env:
+          ALERT_WEBHOOK_URL: ${{ secrets.ALERT_WEBHOOK_URL }}
+        run: node scripts/scheduled-smoke.cjs
+      - name: Upload test artifacts on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: smoke-test-results
+          path: test-results/
+
+  # Netlify deploy from CI. Skip by setting the repo variable
+  # SKIP_NETLIFY_DEPLOY=true if you use Netlify's own Git integration instead
+  # (double deploy otherwise). Requires two secrets:
+  #   NETLIFY_AUTH_TOKEN  (Netlify → User settings → Applications → New access token)
+  #   NETLIFY_SITE_ID     (Netlify → Site → Site settings → Site details → Site ID)
+  deploy:
+    needs: build-smoke
+    if: github.event_name != 'schedule' && github.ref == 'refs/heads/main' && vars.SKIP_NETLIFY_DEPLOY != 'true'
+    runs-on: ubuntu-latest
+    outputs:
+      deploy-url: ${{ steps.netlify.outputs.deploy-url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Deploy deploy/ to Netlify (production)
+        id: netlify
+        uses: nwtgck/actions-netlify@v3
+        with:
+          publish-dir: deploy
+          deploy-message: 'Deploy from GitHub Actions — ${{ github.sha }}'
+          production-deploy: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          enable-commit-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      - name: Print deployed URL
+        run: |
+          echo "Deploy URL: ${{ steps.netlify.outputs.deploy-url }}"
+          echo "Netlify deploy URL: ${{ steps.netlify.outputs.netlify-deploy-url }}"
+
+  # Post-deploy gate: run the SAME e2e suites against the live deployed URL.
+  live-smoke:
+    needs: deploy
+    if: github.event_name != 'schedule' && github.ref == 'refs/heads/main' && vars.SKIP_NETLIFY_DEPLOY != 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install dependencies
+        run: npm ci || npm install
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+      - name: Uptime check against the fresh deploy
+        env:
+          PROD_URL: ${{ needs.deploy.outputs.deploy-url }}
+          ALERT_WEBHOOK_URL: ${{ secrets.ALERT_WEBHOOK_URL }}
+        run: node scripts/uptime-check.cjs
+      - name: Live smoke suites against the deployed URL
+        env:
+          PLAYWRIGHT_BASE_URL: ${{ needs.deploy.outputs.deploy-url }}
+        run: |
+          npx playwright test tests/e2e/deploy-smoke.spec.js -c playwright.deploy.config.js --project=deploy-chromium
+          npx playwright test tests/e2e/pdf-export-header.spec.js -c playwright.deploy.config.js --project=deploy-chromium
+          npx playwright test tests/e2e/accessibility.spec.js -c playwright.deploy.config.js --project=deploy-chromium
+      - name: Upload test artifacts on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-smoke-test-results
+          path: test-results/

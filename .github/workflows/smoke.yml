@@ -94,6 +94,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      # deploy/ is gitignored (built by build-deploy.js) — regenerate it in CI
+      - name: Build deploy/ folder
+        run: node build-deploy.js
+      - name: Verify deploy/ contains index.html
+        run: test -f deploy/index.html && echo "deploy/index.html present"
       - name: Deploy deploy/ to Netlify (production)
         id: netlify
         uses: nwtgck/actions-netlify@v3

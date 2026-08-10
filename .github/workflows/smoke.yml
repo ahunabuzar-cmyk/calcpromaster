@@ -137,6 +137,10 @@ jobs:
         run: npm ci || npm install
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
+      # deploy/ is gitignored — regenerate it here so the deploy-smoke suite
+      # can read the real _redirects artifact (its ENOENT failure otherwise)
+      - name: Build deploy/ folder (for artifact-verifying tests)
+        run: node build-deploy.js
       - name: Uptime check against the fresh deploy
         env:
           PROD_URL: ${{ needs.deploy.outputs.deploy-url }}

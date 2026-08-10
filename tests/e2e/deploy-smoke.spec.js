@@ -174,11 +174,14 @@ test.describe('deploy live smoke — 543 calculator routes (fast head-check)', (
     // live sweep) with a generous budget. Still fails fast on real 404s.
     test.setTimeout(300000);
     const failed = [];
-    const CONCURRENCY = 20;
-    for (let i = 0; i < routes.length; i += CONCURRENCY) {
-      const batch = routes.slice(i, i + CONCURRENCY);
-      const results = await Promise.all(batch.map(async (t) => {
-        const url = BASE + '/' + t.cat + '/' + t.id;
+    const CONCURRENCY = 10;
+    // Netlify's edge can reset connections (ECONNRESET) when a single IP
+    // bursts hundreds of requests. Retry ONLY transient connection errors with
+    // backoff — a real 404/non-HTML response still fails immediately.
+    async function fetchOne(t) {
+      const url = BASE + '/' + t.cat + '/' + t.id;
+      let lastErr;
+      for (let attempt = 0; attempt < 3; attempt++) {
         try {
           const res = await request.get(url);
           if (res.status() !== 200) return url + ' → ' + res.status();
@@ -186,9 +189,18 @@ test.describe('deploy live smoke — 543 calculator routes (fast head-check)', (
           if (!/text\/html/.test(ct)) return url + ' → content-type ' + ct;
           return null;
         } catch (e) {
-          return url + ' → ERR ' + e.message.slice(0, 60);
+          lastErr = e;
+          const msg = (e && e.message) || String(e);
+          const transient = /ECONNRESET|ECONNREFUSED|ETIMEDOUT|EPIPE|socket hang up|Request context disposed/i.test(msg);
+          if (!transient) return url + ' → ERR ' + msg.slice(0, 60);
+          await new Promise((r) => setTimeout(r, 750 * Math.pow(2, attempt)));
         }
-      }));
+      }
+      return url + ' → ERR ' + ((lastErr && lastErr.message) || lastErr).slice(0, 60);
+    }
+    for (let i = 0; i < routes.length; i += CONCURRENCY) {
+      const batch = routes.slice(i, i + CONCURRENCY);
+      const results = await Promise.all(batch.map(fetchOne));
       for (const f of results) if (f) failed.push(f);
     }
     expect(failed, 'broken routes:\n' + failed.join('\n')).toEqual([]);

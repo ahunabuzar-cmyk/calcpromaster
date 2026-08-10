@@ -16,22 +16,15 @@ const { test, expect } = require('@playwright/test');
 const BASE = process.env.PLAYWRIGHT_BASE_URL || process.env.E2E_BASE || 'http://localhost:3100';
 
 function pdfReportText(page) {
-  // Capture the REAL App.exportResultAsPdf() output without a popup/print
-  // dialog (headless window.print blocks): stub window.open with a fake
-  // document that mirrors what the function writes.
+  // Capture the REAL App.exportResultAsPdf() output without a print dialog
+  // (headless window.print blocks): the report is written into a hidden
+  // #pdf-print-frame iframe, so read that frame's rendered text.
   return page.evaluate(() => {
-    const d = {
-      open() {}, close() {}, title: '',
-      createElement: (t) => document.createElement(t),
-      head: document.createElement('head'),
-      body: document.createElement('body'),
-    };
-    const fake = { document: d, focus() {}, print() {} };
-    const orig = window.open;
-    window.open = () => fake;
     App.exportResultAsPdf();
-    window.open = orig;
-    return (d.body.textContent || '');
+    const f = document.getElementById('pdf-print-frame');
+    if (!f) return '';
+    const d = f.contentDocument || f.contentWindow.document;
+    return d && d.body ? (d.body.textContent || '') : '';
   });
 }
 

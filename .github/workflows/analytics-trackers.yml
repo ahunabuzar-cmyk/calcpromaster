@@ -32,36 +32,55 @@ permissions:
 jobs:
   # ----------------------------------------------------------
   # GA4 event counts — needs GA4_PROPERTY_ID + SERVICE_ACCOUNT_B64
+  #
+  # NOTE: job-level `if:` cannot read the `secrets` context, so the
+  # credential guard is a step-level gate (step `if:` supports secrets).
   # ----------------------------------------------------------
   ga4-events:
-    if: secrets.GA4_PROPERTY_ID != '' && secrets.SERVICE_ACCOUNT_B64 != ''
     runs-on: ubuntu-latest
     steps:
+      - name: Gate — GA4 credentials configured?
+        id: gate
+        env:
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          SA: ${{ secrets.SERVICE_ACCOUNT_B64 }}
+        run: |
+          if [ -n "$GA4_PROPERTY_ID" ] && [ -n "$SA" ]; then
+            echo "ready=1" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=0" >> "$GITHUB_OUTPUT"
+            echo "⏭ GA4 credentials not configured — skipping (see docs/api-credentials-setup.md)"
+          fi
       - name: Checkout
+        if: steps.gate.outputs.ready == '1'
         uses: actions/checkout@v4
       - name: Setup Node
+        if: steps.gate.outputs.ready == '1'
         uses: actions/setup-node@v4
         with:
           node-version: 20
       - name: Write service account (from secret)
+        if: steps.gate.outputs.ready == '1'
         env:
           SERVICE_ACCOUNT_B64: ${{ secrets.SERVICE_ACCOUNT_B64 }}
         run: echo "$SERVICE_ACCOUNT_B64" | base64 -d > service-account.json
       - name: Validate service account
+        if: steps.gate.outputs.ready == '1'
         run: node -e "const j=require('./service-account.json'); if(!j.client_email||!j.private_key) throw new Error('corrupt service account')"
       - name: Run GA4 events tracker
+        if: steps.gate.outputs.ready == '1'
         env:
           GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
         run: node scripts/ga4-events.cjs --days 7
       - name: Upload snapshot on success
-        if: success()
+        if: success() && steps.gate.outputs.ready == '1'
         uses: actions/upload-artifact@v4
         with:
           name: ga4-events-snapshot
           path: data/ga4-events-snapshot.json
           if-no-files-found: ignore
       - name: Open alert issue on failure
-        if: failure()
+        if: failure() && steps.gate.outputs.ready == '1'
         uses: actions/github-script@v7
         with:
           script: |
@@ -77,34 +96,49 @@ jobs:
   # (site URL auto-detected from js/site-config.js)
   # ----------------------------------------------------------
   gsc-indexing:
-    if: secrets.SERVICE_ACCOUNT_B64 != ''
     runs-on: ubuntu-latest
     steps:
+      - name: Gate — GSC credentials configured?
+        id: gate
+        env:
+          SA: ${{ secrets.SERVICE_ACCOUNT_B64 }}
+        run: |
+          if [ -n "$SA" ]; then
+            echo "ready=1" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=0" >> "$GITHUB_OUTPUT"
+            echo "⏭ GSC credentials not configured — skipping (see docs/api-credentials-setup.md)"
+          fi
       - name: Checkout
+        if: steps.gate.outputs.ready == '1'
         uses: actions/checkout@v4
       - name: Setup Node
+        if: steps.gate.outputs.ready == '1'
         uses: actions/setup-node@v4
         with:
           node-version: 20
       - name: Write service account (from secret)
+        if: steps.gate.outputs.ready == '1'
         env:
           SERVICE_ACCOUNT_B64: ${{ secrets.SERVICE_ACCOUNT_B64 }}
         run: echo "$SERVICE_ACCOUNT_B64" | base64 -d > service-account.json
       - name: Validate service account
+        if: steps.gate.outputs.ready == '1'
         run: node -e "const j=require('./service-account.json'); if(!j.client_email||!j.private_key) throw new Error('corrupt service account')"
       - name: Run GSC indexing tracker
+        if: steps.gate.outputs.ready == '1'
         env:
           GSC_SITE_URL: ${{ vars.GSC_SITE_URL || '' }}
         run: node scripts/gsc-indexing.cjs --days 7
       - name: Upload snapshot on success
-        if: success()
+        if: success() && steps.gate.outputs.ready == '1'
         uses: actions/upload-artifact@v4
         with:
           name: gsc-snapshot
           path: data/gsc-snapshot.json
           if-no-files-found: ignore
       - name: Open alert issue on failure
-        if: failure()
+        if: failure() && steps.gate.outputs.ready == '1'
         uses: actions/github-script@v7
         with:
           script: |

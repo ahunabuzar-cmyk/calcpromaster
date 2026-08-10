@@ -24,6 +24,33 @@ function productionOrigin() {
   return 'https://calcpromaster.netlify.app';
 }
 
+// Track page failures precisely. The site depends on third-party resources
+// (Google Fonts, AdSense, GA4/GTM, currency APIs) that legitimately block or
+// throttle datacenter CI runner IPs — a 403/block on one of those is NOT a
+// production defect. The real safety gate is: FIRST-PARTY (same-origin)
+// resources must never fail, and genuine page-JS exceptions must not occur.
+// `Failed to load resource` console messages carry no URL, so they are
+// delegated to the response/request checks below (which do).
+function trackFailures(page, origin) {
+  const firstParty = [];
+  page.on('response', (r) => {
+    if (r.status() >= 400 && r.url().startsWith(origin)) {
+      firstParty.push(r.status() + ' ' + r.url());
+    }
+  });
+  page.on('requestfailed', (r) => {
+    const f = r.failure();
+    if (r.url().startsWith(origin)) firstParty.push('FAILED ' + r.url() + ' ' + (f && f.errorText));
+  });
+  const consoleErrors = [];
+  page.on('console', (m) => {
+    if (m.type() !== 'error') return;
+    if (/Failed to load resource/i.test(m.text())) return; // covered above, with URL
+    consoleErrors.push(m.text());
+  });
+  return { firstParty, consoleErrors };
+}
+
 const STATUS_ROUTES = [
   ['homepage', '/'],
   ['calculator page', '/math/percentage'],
@@ -46,6 +73,9 @@ const STATUS_ROUTES = [
 ];
 
 test.describe('deploy live smoke — status + render', () => {
+  // Remote live runs hit CDN edge throttling on CI runner IPs; a single retry
+  // tolerates a transient slow load without weakening any assertion.
+  test.describe.configure({ retries: 1 });
   // Non-HTML artifacts (robots/sitemap/manifest/sw): HTTP-status + content only.
   const NON_HTML = ['/robots.txt', '/sitemap.xml', '/manifest.json', '/sw.js'];
   for (const [label, route] of STATUS_ROUTES) {
@@ -70,23 +100,26 @@ test.describe('deploy live smoke — status + render', () => {
 });
 
 test.describe('deploy live smoke — behavior', () => {
+  // Same reasoning as above: tolerate one transient CI-runner network flake.
+  test.describe.configure({ retries: 1 });
+
   test('homepage has 543+ header + category grid', async ({ page }) => {
-    const errors = [];
-    page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()); });
+    const t = trackFailures(page, BASE);
     await page.goto(BASE + '/', { waitUntil: 'domcontentloaded' });
     await expect(page.locator('main h1')).toContainText('543+', { timeout: 15000 });
     await expect(page.locator('main')).toContainText('Finance', { timeout: 15000 });
     await expect(page.locator('main')).toContainText('Math', { timeout: 15000 });
-    expect(errors.filter((e) => !/analytics/i.test(e)).length, `console errors: ${errors.join(' | ')}`).toBe(0);
+    expect(t.firstParty, `first-party resource failures: ${t.firstParty.join(' | ')}`).toEqual([]);
+    expect(t.consoleErrors.filter((e) => !/analytics/i.test(e)).length, `console errors: ${t.consoleErrors.join(' | ')}`).toBe(0);
   });
 
   test('loan-emi calculator computes 2051.65 for 100k@8.5% 5y', async ({ page }) => {
-    const errors = [];
-    page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()); });
+    const t = trackFailures(page, BASE);
     await page.goto(BASE + '/finance/loan-emi?amount=100000&rate=8.5&years=5', { waitUntil: 'domcontentloaded' });
     const result = page.locator('text=Payment: $2,051.65').first();
     await expect(result).toBeAttached({ timeout: 20000 });
-    expect(errors.filter((e) => !/analytics/i.test(e)).length, `console errors: ${errors.join(' | ')}`).toBe(0);
+    expect(t.firstParty, `first-party resource failures: ${t.firstParty.join(' | ')}`).toEqual([]);
+    expect(t.consoleErrors.filter((e) => !/analytics/i.test(e)).length, `console errors: ${t.consoleErrors.join(' | ')}`).toBe(0);
   });
 
   test('BMI calculator renders inputs + result area', async ({ page }) => {
@@ -145,6 +178,7 @@ test.describe('deploy live smoke — UX round 2 (copy + search chips)', () => {
 });
 
 test.describe('deploy live smoke — mobile + desktop', () => {
+  test.describe.configure({ retries: 1 });
   test.use({ viewport: { width: 375, height: 812 } });
   test('mobile 375px: no horizontal overflow on home + calculator', async ({ page }) => {
     for (const route of ['/', '/finance/loan-emi']) {
@@ -173,9 +207,10 @@ test.describe('deploy live smoke — 543 calculator routes (fast head-check)', (
     // blow the default 60s, so batch at 20 concurrent (matches the standalone
     // live sweep) with a generous budget. Still fails fast on real 404s.
     // Remote hosts (Netlify edge) throttle CI runner IPs on burst sweeps —
-    // locally this sweep takes ~1min, on CI it can be 5-6x slower. Budget
-    // generously (10min) so a slow-but-correct run never times out.
-    test.setTimeout(600000);
+    // locally this sweep takes ~1min, on CI it can be ~10x slower (observed
+    // ~11min). Budget generously (15min) so a slow-but-correct run never
+    // times out; it fails fast on any real non-200/non-HTML route.
+    test.setTimeout(900000);
     const failed = [];
     const CONCURRENCY = 12;
     const BATCH_DELAY_MS = 150; // gentle spacing avoids edge throttling queues

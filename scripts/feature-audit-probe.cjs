@@ -78,7 +78,8 @@ const results = { base: BASE };
     const pdfBtn = page.locator('.tool-actions .action-btn', { hasText: 'PDF' }).first();
     await pdfBtn.scrollIntoViewIfNeeded();
     await pdfBtn.click({ timeout: 8000 });
-    await page.waitForTimeout(900);
+    // Read before the 400ms print timer fires (headless afterprint removes the frame).
+    await page.waitForTimeout(120);
   } catch (e) { results.pdfClickError = String(e).slice(0, 250); }
   results.pdf = await page.evaluate(() => {
     const f = document.getElementById('pdf-print-frame');
@@ -197,7 +198,7 @@ const results = { base: BASE };
     const pb = mp.locator('.tool-actions .action-btn', { hasText: 'PDF' }).first();
     await pb.scrollIntoViewIfNeeded();
     await pb.click({ timeout: 8000 });
-    await mp.waitForTimeout(900);
+    await mp.waitForTimeout(120);
     results.mobilePdf = await mp.evaluate(() => {
       const f = document.getElementById('pdf-print-frame');
       if (!f) return { frame: 'NOT CREATED' };

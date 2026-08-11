@@ -94,6 +94,9 @@ Total time: ~30 minutes. Koi paid tool nahi chahiye.
    **Request indexing** → (agar "URL is on Google" dikhe to **Request indexing** button phir se).
    Homepage + 2-3 popular calculators ke liye karo — baaki 778 URLs sitemap se khud mil jayenge.
 
+> 📺 **Full click-by-click video-style guide:** `docs/gsc-sitemap-submit-guide.md`
+> (har screen, har button — PART A sitemap, PART B request indexing, PART C expectations).
+
 > Search mein aana shuru hone mein 2-4 hafte lagte hain (normal). GSC mein daily
 > "Queries / Impressions / Clicks" report ke liye minimum 1-2 hafte ka data chahiye.
 > Weekly technical health check: `node scripts/indexing-monitor.cjs` (see `docs/indexing-monitor.md`).
@@ -234,8 +237,8 @@ ALERT_WEBHOOK_URL="https://ntfy.sh/calcpro-alerts-xyz" npm run monitor:test-aler
 
 - [ ] GA4: analytics.google.com se `G-...` copy → `js/site-config.js` `ga4Id` → rebuild + deploy
 - [ ] GSC: **Add property → URL prefix → HTML file method → VERIFY** (file already live — `docs/owner-actions-step-by-step.md` §2 note) → `js/site-config.js` `gsc` (optional)
-- [ ] GSC → Sitemaps → `sitemap.xml` submit → Success
-- [ ] GSC → URL inspection → homepage + top-5 calculators → Request indexing
+- [ ] GSC → Sitemaps → `sitemap.xml` submit → Success (click-by-click: `docs/gsc-sitemap-submit-guide.md`)
+- [ ] GSC → URL inspection → homepage + top-5 calculators → Request indexing (guide PART B)
 - [ ] Uptime: `node scripts/uptime-check.cjs` → PASS (6/6)
 - [ ] Indexing health: `node scripts/indexing-monitor.cjs` → PASS (23 checks)
 - [ ] Alerts: ntfy/Slack webhook test → notification mila

@@ -55,6 +55,10 @@ const FILES = [
   '.htaccess',
   // IndexNow verification key — MUST stay public so Bing can verify
   '0e1100ec6bc9d4c2c6037d993fc2ba55.txt',
+  // Bing Webmaster XML verification file — MUST stay public so Bing can
+  // confirm site ownership. User downloads it from Bing and drops it in the
+  // repo root; build ships it byte-for-byte at site root.
+  'BingSiteAuth.xml',
   // Google Search Console HTML verification file — MUST stay public so
   // Google can confirm site ownership. Served byte-for-byte at site root.
   'googled1ac20b54b36e7cf.html',

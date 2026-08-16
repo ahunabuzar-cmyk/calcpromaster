@@ -64,7 +64,7 @@ const FILES = [
   'googled1ac20b54b36e7cf.html',
 ];
 
-const DIRS = ['js', 'og']; // copyDir('js') recurses into data/ + workers/; 'og' holds per-tool share cards
+const DIRS = ['js', 'og', 'fonts']; // copyDir('js') recurses into data/ + workers/; 'og' holds per-tool share cards; 'fonts' = self-hosted latin woff2 (no third-party font fetch)
 
 // Safety guard: refuse to deploy if any private/dev folders leak into OUTPUT dir.
 const FORBIDDEN_IN_DEPLOY = ['.freebuff', 'node_modules', '.git', 'calcpro-next', 'tests', 'scripts', '.db', '.sqlite'];
@@ -154,6 +154,60 @@ function substituteDomain() {
   }
 }
 
+// Inline js/site-config.js into deploy/index.html: the config script is needed by
+// every other script, but as an external render-blocking request it adds a full
+// round-trip to first paint on slow mobile. Inlining keeps the SINGLE source of
+// truth (js/site-config.js — edit it, rebuild, done) while removing the request
+// from the critical path. sw.js still precaches the standalone file (harmless).
+function inlineSiteConfig() {
+  const cfgPath = path.join(ROOT, 'js', 'site-config.js');
+  const htmlPath = path.join(OUT, 'index.html');
+  if (!fs.existsSync(cfgPath) || !fs.existsSync(htmlPath)) return;
+  const cfg = fs.readFileSync(cfgPath, 'utf8');
+  const html = fs.readFileSync(htmlPath, 'utf8');
+  const tag = '<script src="js/site-config.js"></script>';
+  if (!html.includes(tag)) {
+    console.warn('  ! site-config inline: script tag not found in deploy/index.html — skipping');
+    return;
+  }
+  if (cfg.includes('</script>')) {
+    console.error('  ✗ site-config.js contains </script> — refusing to inline');
+    process.exit(1);
+  }
+  const inline = '<script>\n' + cfg + '\n</script>';
+  fs.writeFileSync(htmlPath, html.split(tag).join(inline));
+  console.log('  site-config: inlined into index.html (' + cfg.length + ' bytes) ✓');
+}
+
+// Inline the FULL stylesheet into deploy/index.html (single-page app: every route
+// serves index.html, so the sheet is needed on every page anyway). Benefits:
+//  - zero CSS network request on the critical path (no render-blocking delay)
+//  - no async-CSS race: the whole sheet applies at parse time, so the JS-rendered
+//    widgets (spotlight, grids) are styled the instant they are appended (CLS ~0)
+//  - no duplicate source of truth: styles.css stays the single file — this step
+//    embeds its content at build time (like site-config).
+// Other pages (about.html, privacy.html, ...) keep their external <link>.
+function inlineFullCss() {
+  const htmlPath = path.join(OUT, 'index.html');
+  const cssPath = path.join(OUT, 'styles.css');
+  if (!fs.existsSync(htmlPath) || !fs.existsSync(cssPath)) return;
+  const css = fs.readFileSync(cssPath, 'utf8');
+  const html = fs.readFileSync(htmlPath, 'utf8');
+  const startMark = '<!-- Critical CSS inline for instant first paint -->';
+  const si = html.indexOf(startMark);
+  if (si < 0) { console.warn('  ! css inline: critical-CSS marker not found — skipping'); return; }
+  const endMark = '</noscript>';
+  const ei = html.indexOf(endMark, si);
+  if (ei < 0) { console.warn('  ! css inline: closing noscript not found — skipping'); return; }
+  const head = html.slice(0, si)
+    + '<!-- Critical CSS: FULL styles.css inlined at build (no external request on the\n'
+    + '     critical path, no async-CSS race — widgets are styled at append time). -->\n'
+    + '<style>\n' + css + '\n</style>\n'
+    + html.slice(ei + endMark.length);
+  fs.writeFileSync(htmlPath, head);
+  console.log('  css: styles.css inlined into index.html (' + css.length + ' bytes) ✓');
+}
+
 function main() {
   console.log('Building deploy/ ...');
   validateJsonLd(path.join(ROOT, 'index.html'));
@@ -186,6 +240,11 @@ function main() {
     copyDir(src, path.join(OUT, d));
     count++;
   }
+
+  // Inline the site config + full stylesheet (removes both render-blocking
+  // requests from the critical path and the async-CSS race).
+  inlineSiteConfig();
+  inlineFullCss();
 
   // Rewrite hardcoded domains in deploy/ to the configured production domain.
   substituteDomain();

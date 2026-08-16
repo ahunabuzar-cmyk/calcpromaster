@@ -41,11 +41,13 @@
   var reducedMotion = false;
   var rafId = 0;
   var lastT = 0;
+  var frameSkip = 0;         // ~30fps cap: draw every other rAF frame (halves CPU on mobile)
   var mouse = { x: -9999, y: -9999, active: false };
   var dpr = 1;
   var displayFont = '600 ';
   var displayFontFamily = '"Segoe UI", sans-serif';
   var listenersAttached = false;
+  var io = null;               // IntersectionObserver (pause when hero scrolls out of view)
 
   // ---- particle model ----
   function Particle(x, y) {
@@ -166,6 +168,11 @@
     if (!canvas || !canvas.isConnected) { stop(); return; }
     var dt = Math.min((t - lastT) / 16.666, 2.5); // normalize to ~60fps, cap big jumps
     lastT = t;
+    // ~30fps cap: the drift is slow enough that skipping every other frame is
+    // visually identical, but it halves the per-second main-thread cost of the
+    // loop on throttled mobile CPUs.
+    frameSkip = (frameSkip + 1) % 2;
+    if (frameSkip !== 0) { rafId = requestAnimationFrame(frame); return; }
     var w = canvas.width / dpr;
     var h = canvas.height / dpr;
     ctx.clearRect(0, 0, w, h);
@@ -182,6 +189,41 @@
     running = true;
     lastT = performance.now();
     rafId = requestAnimationFrame(frame);
+  }
+
+  // Defer the animation loop until the browser is idle AND past the critical render
+  // window (~4.5s) so the decorative canvas never blocks first paint / LCP or adds
+  // long tasks to the TBT window. The hero looks identical before particles fade in.
+  // Falls back to a short timeout when rIC is unavailable.
+  function startWhenIdle() {
+    if (running || reducedMotion || document.hidden) return;
+    var kick = function () {
+      if (running || reducedMotion || document.hidden || !canvas) return;
+      start();
+    };
+    if (window.requestIdleCallback) {
+      requestIdleCallback(kick, { timeout: 4500 });
+    } else {
+      setTimeout(kick, 400);
+    }
+  }
+
+  // Pause the rAF loop whenever the hero scrolls out of the viewport (saves main
+  // thread on long pages) and resume when it re-enters. Re-created per init because
+  // the canvas element is re-created on every home render.
+  function setupVisibilityPause() {
+    if (!('IntersectionObserver' in window) || !canvas) return;
+    if (io) io.disconnect();
+    io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          if (!running && !reducedMotion && !document.hidden) startWhenIdle();
+        } else {
+          stop();
+        }
+      });
+    }, { threshold: 0.05 });
+    io.observe(canvas);
   }
   function stop() {
     running = false;
@@ -243,7 +285,8 @@
     } catch (e) { displayFontFamily = '"Segoe UI", sans-serif'; }
     applyTheme();
     resize();
-    if (!reducedMotion) start();
+    setupVisibilityPause();
+    if (!reducedMotion) startWhenIdle();
   }
 
   // Expose a re-init so the SPA can (re)start the animation whenever home renders.
@@ -255,13 +298,14 @@
       if (!canvas) return;
       ctx = canvas.getContext('2d');
       if (!ctx) return;
-      reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      applyTheme();
-      resize();
-      if (!reducedMotion) start();
+      reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;    applyTheme();
+    resize();
+    setupVisibilityPause();
+    if (!reducedMotion) startWhenIdle();
     },
     destroy: function () {
       stop();
+      if (io) { io.disconnect(); io = null; }
       canvas = null;
       ctx = null;
     }

@@ -336,15 +336,24 @@ const App = (function () {
     
     // Hero with lightweight canvas particle animation behind content
     // (zero-dependency, pauses when hidden, honors reduced-motion).
-    let html = '<div class="hero" style="position:relative;overflow:hidden">';
-    html += '<canvas id="hero-canvas" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none"></canvas>';
-    html += '<div class="hero-content" style="position:relative;z-index:1">';
-    html += '<h1>CalcPro — <span class="highlight">' + getCalculatorCount() + '+</span> Free Online Calculators</h1>';
-    html += '<p class="hero-desc">Free, fast, and accurate calculators with step-by-step solutions, charts, and smart features.</p>';
-    html += '<div class="search-box">';
-    html += '<input type="text" id="home-search" placeholder="Search ' + getCalculatorCount() + '+ calculators…" oninput="App.homeSearch(this.value)" onkeydown="App.searchKeyNav(event)" autocomplete="off" role="combobox" aria-expanded="false" aria-label="Search calculators">';
-    html += '<div class="search-results" id="homeSearchResults"></div>';
-    html += '</div></div></div>';
+    // PERFORMANCE: if the static hero from index.html is still in the DOM (first
+    // home render right after boot), REUSE that node instead of rebuilding it —
+    // recreating the <h1> would start a NEW LCP candidate and push Largest
+    // Contentful Paint to the end of boot (~10s on throttled mobile). The static
+    // markup is byte-identical to this string.
+    const existingHero = main.querySelector('.hero');
+    let html = '';
+    if (!existingHero) {
+      html = '<div class="hero" style="position:relative;overflow:hidden">';
+      html += '<canvas id="hero-canvas" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none"></canvas>';
+      html += '<div class="hero-content" style="position:relative;z-index:1">';
+      html += '<h1>CalcPro — <span class="highlight">' + getCalculatorCount() + '+</span> Free Online Calculators</h1>';
+      html += '<p class="hero-desc">Free, fast, and accurate calculators with step-by-step solutions, charts, and smart features.</p>';
+      html += '<div class="search-box">';
+      html += '<input type="text" id="home-search" placeholder="Search ' + getCalculatorCount() + '+ calculators…" oninput="App.homeSearch(this.value)" onkeydown="App.searchKeyNav(event)" autocomplete="off" role="combobox" aria-expanded="false" aria-label="Search calculators">';
+      html += '<div class="search-results" id="homeSearchResults"></div>';
+      html += '</div></div></div>';
+    }
     
     // Calculator of the Day + Daily Tip — built INLINE (single render pass).
     // Late injection after mainContent.innerHTML would push the categories grid
@@ -405,7 +414,7 @@ const App = (function () {
       html += `<div class="category-card" onclick="Router.navigate('/${key}')" data-cat="${key}">
         <div class="cat-icon">${cat.icon}</div>
         <h3>${_t('cat.' + key, cat.name)}</h3>
-        <p class="cat-count" data-count-for="${key}">${_t('cat.count', cat.tools.length + ' calculators').replace('{count}', cat.tools.length)}</p>
+        <p class="cat-count" data-count-for="${key}">${_t('cat.count', ((window.SITE_CONFIG && window.SITE_CONFIG.catCounts && window.SITE_CONFIG.catCounts[key]) || cat.tools.length) + ' calculators').replace('{count}', (window.SITE_CONFIG && window.SITE_CONFIG.catCounts && window.SITE_CONFIG.catCounts[key]) || cat.tools.length)}</p>
       </div>`;
     });
     html += '</div>';
@@ -437,7 +446,30 @@ const App = (function () {
     });
     html += '</div>';
     
-    main.innerHTML = html;
+    if (existingHero) {
+      // REUSE the static hero WITHOUT ever detaching it — removing the LCP element
+      // from the DOM (even to re-insert it) discards its LCP entry and starts a new
+      // candidate at boot end (~10s throttled). So: keep the node in place, replace
+      // only what comes after it, then append the boot-rendered content.
+      // The static HTML also has an EMPTY placeholder spotlight BEFORE the hero
+      // (same id). It survives this swap, and spotlight code fills + unhides it
+      // LATER — which would push the hero down (CLS ~0.23). Drop it up front.
+      const staleSpot = main.querySelector('#calc-of-day-spotlight');
+      if (staleSpot) staleSpot.remove();
+      while (main.lastChild !== existingHero) main.removeChild(main.lastChild);
+      const wrap = document.createElement('div');
+      wrap.innerHTML = html; // spotlight + tip + favorites + grids (hero not included)
+      while (wrap.firstChild) main.appendChild(wrap.firstChild);
+      if (!existingHero.querySelector('canvas')) {
+        const cv = document.createElement('canvas');
+        cv.id = 'hero-canvas';
+        cv.setAttribute('aria-hidden', 'true');
+        cv.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;pointer-events:none';
+        existingHero.insertBefore(cv, existingHero.firstChild);
+      }
+    } else {
+      main.innerHTML = html;
+    }
     
     // Start the hero canvas animation AFTER the DOM is in place (idempotent;
     // re-runs every time home renders, rebinding to the fresh canvas element).
@@ -465,30 +497,44 @@ const App = (function () {
     // Social proof
     updateSocialProof();
 
-    // Warm the lazy niche categories in the background. When they arrive, refresh
-    // just the on-screen counts (no re-render, so the user's scroll position is
-    // never reset). loadAll() is idempotent — safe to call here + again later.
+    // Lazy niche-category data is warmed on FIRST USER INTERACTION, not at boot:
+    // loading all 13 chunks at boot saturates the throttled mobile pipe (~12s TTI).
+    // Counts on the cards are static (SITE_CONFIG.catCounts) so they are correct
+    // immediately; search kicks the same warm-up and re-runs on arrival.
     if (typeof window.DataLoader !== 'undefined') {
-      window.DataLoader.loadAll().then(function () {
-        if (_state.page !== 'home') return;
-        document.querySelectorAll('.cat-count[data-count-for]').forEach(function (el) {
-          var key = el.getAttribute('data-count-for');
-          var cat = CALC_DATA[key];
-          if (cat) el.textContent = cat.tools.length + ' calculators';
-        });
-        // Keep the hero + search placeholder totals live as lazy data arrives.
-        var total = getCalculatorCount();
-        var h1 = document.querySelector('.hero h1 .highlight');
-        if (h1) h1.textContent = total + '+';
-        var ph = document.getElementById('home-search');
-        if (ph && ph.placeholder) ph.placeholder = 'Search ' + total + '+ calculators…';
-        // Hub comparison tables were cached at init with empty niche categories —
-        // regenerate them against the now-hydrated CALC_DATA.
-        if (window.CategoryHub && typeof window.CategoryHub.refresh === 'function') {
-          try { window.CategoryHub.refresh(); } catch (e) {}
-        }
+      ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (ev) {
+        window.addEventListener(ev, warmLazyData, { once: true, passive: true });
       });
     }
+  }
+
+  // Load all lazy category data on the first real user interaction (then refresh
+  // on-screen counts + re-run an active search so lazy matches appear). Idempotent.
+  function warmLazyData() {
+    if (window.__lazyWarmed || typeof window.DataLoader === 'undefined') return;
+    window.__lazyWarmed = true;
+    window.DataLoader.loadAll().then(function () {
+      if (_state.page !== 'home') return;
+      document.querySelectorAll('.cat-count[data-count-for]').forEach(function (el) {
+        var key = el.getAttribute('data-count-for');
+        var cat = CALC_DATA[key];
+        if (cat) el.textContent = cat.tools.length + ' calculators';
+      });
+      // Keep the hero + search placeholder totals live as lazy data arrives.
+      var total = getCalculatorCount();
+      var h1 = document.querySelector('.hero h1 .highlight');
+      if (h1) h1.textContent = total + '+';
+      var ph = document.getElementById('home-search');
+      if (ph && ph.placeholder) ph.placeholder = 'Search ' + total + '+ calculators…';
+      // Hub comparison tables were cached at init with empty niche categories —
+      // regenerate them against the now-hydrated CALC_DATA.
+      if (window.CategoryHub && typeof window.CategoryHub.refresh === 'function') {
+        try { window.CategoryHub.refresh(); } catch (e) {}
+      }
+      // Re-run an active home search so lazy-category matches appear instantly.
+      var inp = document.getElementById('home-search');
+      if (inp && inp.value && typeof App.homeSearch === 'function') App.homeSearch(inp.value);
+    });
   }
 
   // ---------- Category ----------
@@ -2151,6 +2197,9 @@ const App = (function () {
     return [...results.values()].sort((a, b) => b.score - a.score).slice(0, 10);
   }
   function homeSearch(val) {
+    // First search keystroke also warms the lazy categories in the background, so
+    // results for niche calculators appear as the user keeps typing.
+    if (typeof warmLazyData === 'function') warmLazyData();
     const q = val.toLowerCase().trim();
     const results = document.getElementById('homeSearchResults');
     if (!results) return;

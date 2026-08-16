@@ -130,6 +130,43 @@ function main() {
     } else if (!isCheck) {
       console.log(`  ✓ js/site-config.js: totalCalculators consistent (${total})`);
     }
+
+    // Per-category counts: the homepage renders category-card counts from a
+    // STATIC map (window.CAT_COUNTS) so it never has to download the lazy
+    // category data files just to show "N calculators" — the 9MB background
+    // warm-up was pushing TTI to ~12s on throttled mobile. Registry = truth;
+    // data file name → category key (matches CALC_DATA + DataLoader.LAZY).
+    const FILE_TO_CAT = {
+      'finance.js': 'finance', 'health.js': 'health', 'math.js': 'math',
+      'everyday.js': 'everyday', 'science.js': 'science', 'engineering.js': 'engineering',
+      'construction.js': 'construction', 'conversion.js': 'conversion', 'business.js': 'business',
+      'education.js': 'education', 'utilities.js': 'utilities', 'lifestyle.js': 'lifestyle',
+      'regional.js': 'regional', 'food-nutrition.js': 'food', 'fitness-exercise.js': 'fitness',
+      'auto-transport.js': 'auto', 'career-freelance.js': 'career', 'home-garden.js': 'homegarden',
+      'tech-digital.js': 'tech', 'parenting-family.js': 'family'
+    };
+    const catCounts = {};
+    for (const [file, cat] of Object.entries(FILE_TO_CAT)) {
+      if (perFile[file] !== undefined) catCounts[cat] = perFile[file];
+    }
+    const ccRe = /catCounts:\s*\{[^}]*\}/;
+    const ccJson = JSON.stringify(catCounts).replace(/"([a-z]+)":/g, '$1:'); // unquoted keys, JS style
+    const ccStr = 'catCounts: ' + ccJson;
+    if (!cfgSrc.match(ccRe)) {
+      console.error('❌ site-config.js: catCounts field missing — add `catCounts: {}`.');
+      process.exit(1);
+    }
+    const ccMatched = cfgSrc.match(ccRe)[0];
+    if (ccMatched !== ccStr) {
+      drift++;
+      console.log(`  ✗ js/site-config.js: catCounts does NOT match registry`);
+      if (!isCheck) {
+        fs.writeFileSync(cfgPath, cfgSrc.replace(ccRe, ccStr), 'utf8');
+        console.log(`  ✓ js/site-config.js: catCounts synced (${Object.keys(catCounts).length} categories)`);
+      }
+    } else if (!isCheck) {
+      console.log(`  ✓ js/site-config.js: catCounts consistent (${Object.keys(catCounts).length} categories)`);
+    }
   }
 
   if (isCheck) {

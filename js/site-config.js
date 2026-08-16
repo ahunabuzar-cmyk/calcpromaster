@@ -32,7 +32,12 @@ window.SITE_CONFIG = {
   // Build-time synced by scripts/sync-counts.cjs from the registry (js/data/*.js).
   // Runtime ALL_TOOLS is lazy per-category on calculator pages, so user-facing
   // counts must use this authoritative total instead of ALL_TOOLS.length.
-  totalCalculators: 543
+  totalCalculators: 543,
+  // Build-time synced per-category counts (registry truth). The homepage renders
+  // category-card counts from this map so it never downloads the lazy category
+  // data files just to display "N calculators" (that background load pushed TTI
+  // to ~12s on throttled mobile).
+  catCounts: {finance:62,health:22,math:26,everyday:25,science:28,engineering:25,construction:25,conversion:24,business:21,education:23,utilities:18,lifestyle:25,regional:21,food:21,fitness:23,auto:32,career:23,homegarden:35,tech:40,family:24}
 };
 
 // Helper: full origin ("https://domain") — sitemap/schema/canonical/og ke liye

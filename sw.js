@@ -29,6 +29,8 @@ const SHELL = [
   './index.html',
   './404.html',
   './styles.css',
+  './fonts/space-grotesk-latin.woff2',
+  './fonts/inter-latin.woff2',
   './manifest.json',
   './icon.svg',
   './icon-192.png',

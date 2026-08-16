@@ -44,6 +44,7 @@
   "devDependencies": {
     "@playwright/test": "^1.48.0",
     "axe-core": "^4.13.0",
+    "lighthouse": "^13.4.1",
     "vitest": "^2.1.0"
   },
   "main": "build-deploy.js",

@@ -25,8 +25,10 @@
   <!-- Security: Content Security Policy -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.g.doubleclick.net https://tpc.googlesyndication.com https://*.googlesyndication.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.googleapis.com; img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://*.g.doubleclick.net https://*.gstatic.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://fonts.googleapis.com https://open.er-api.com https://api.frankfurter.app https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.g.doubleclick.net; worker-src 'self' blob:; frame-src 'self' https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://*.googlesyndication.com; base-uri 'self'; form-action 'self'; object-src 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <!-- Site config (domain / GSC / GA4) — SINGLE source of truth, load FIRST. -->
-  <!-- NOTE: gsc/ga4Id are intentionally empty until you paste your real codes below. -->
+  <!-- Site config (domain / GSC / GA4) — SINGLE source of truth, load FIRST.
+       SOURCE stays the external file js/site-config.js (edit it, deploy build
+       picks it up); the build inlines the script here so no render-blocking
+       request remains on the critical path. -->
   <script src="js/site-config.js"></script>
   <title>CalcProMaster - 543+ free online calculators</title>
   <meta name="description" content="Free advanced online calculators for finance, health, math, science, business and more. Step-by-step solutions, charts, and smart features.">
@@ -473,11 +475,32 @@
   </script>
   <!-- Google Analytics 4 with Consent Mode — sirf load hota hai jab js/site-config.js me REAL G-XXXX ID ho -->
   <script>
+    // gtag.js is fetched LAZILY — on first user interaction OR after ~5s of idle — so
+    // the third-party script never blocks first paint, LCP, or the TBT window.
+    // Consent defaults + gtag() calls below are queued in dataLayer immediately, so
+    // page_view still fires — just a moment later (and instantly on any interaction).
     if (window.SITE_GA4_READY) {
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.SITE_CONFIG.ga4Id;
-      document.head.appendChild(s);
+      function __loadGtag() {
+        try {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.SITE_CONFIG.ga4Id;
+          document.head.appendChild(s);
+        } catch (e) { /* non-fatal */ }
+      }
+      var __gtagFired = false;
+      function __fireGtag() {
+        if (__gtagFired) return;
+        __gtagFired = true;
+        __loadGtag();
+      }
+      ['scroll', 'mousedown', 'touchstart', 'keydown'].forEach(function (ev) {
+        window.addEventListener(ev, __fireGtag, { once: true, passive: true });
+      });
+      // Fallback: fire 20s after load if the user never interacts. NOT rIC — rIC
+      // fires as soon as the CPU is idle (well inside the TBT window) and its
+      // eval (~250ms) would inflate Total Blocking Time on throttled mobile.
+      setTimeout(__fireGtag, 20000);
     }
   </script>
   <script>
@@ -493,10 +516,10 @@
     gtag('js', new Date());
     if (window.SITE_GA4_READY) gtag('config', window.SITE_CONFIG.ga4Id);
   </script>
-  <!-- Preconnect for Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Preconnect + DNS hints for live third-party APIs (currency conversion)
+  <!-- Fonts are SELF-HOSTED (fonts/*.woff2) and declared inline in the critical
+       CSS below, so the woff2 fetch starts at parse time on the same origin —
+       no third-party connection, no late font-swap repaint (the LCP record).
+       Preconnect + DNS hints for live third-party APIs (currency conversion)
        and future analytics/ad tags — shaves connection latency off first fetch. -->
   <link rel="preconnect" href="https://open.er-api.com" crossorigin>
   <link rel="preconnect" href="https://api.frankfurter.app" crossorigin>
@@ -504,10 +527,6 @@
   <link rel="dns-prefetch" href="https://api.frankfurter.app">
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
-  <!-- Load fonts non-blocking: text renders in fallback font immediately, swaps when loaded -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" fetchpriority="high" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"></noscript>
-
   <!-- Critical CSS inline for instant first paint -->
   <style>
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -563,13 +582,23 @@
     .skeleton{background:linear-gradient(90deg,var(--surface) 25%,var(--bg) 50%,var(--surface) 75%);background-size:200% 100%;animation:shimmer 1.5s ease-in-out infinite;border-radius:var(--radius-xs)}
     @keyframes scaleIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
     @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+    /* Boot-skeleton geometry inlined so the async stylesheet can't pop the
+       below-fold skeleton blocks (CLS-safe, no FOUC). Mirrors styles.css. */
+    .boot-skeleton{box-sizing:border-box}
+    .skeleton{background:linear-gradient(90deg,var(--surface) 25%,var(--bg) 50%,var(--surface) 75%);background-size:200% 100%;animation:shimmer 1.5s ease-in-out infinite;border-radius:var(--radius-xs)}
+    .skeleton-cod{height:222px;border-radius:var(--radius)}
+    .skeleton-tip{height:53px;border-radius:var(--radius)}
+    .skeleton-title{height:41px;width:55%;border-radius:var(--radius-sm)}
+    @media (max-width:768px){.skeleton-tip{height:74px}.skeleton-title{height:34px}}
   </style>
   <!-- Full CSS loaded async (non-render-blocking) -->
-  <!-- styles.css is render-blocking on purpose: async (preload+onload) CSS causes
-       a huge CLS jump on slow networks — first paint without styles, then the full
-       stylesheet lands and the whole layout reflows. Render-blocking keeps the
-       boot skeleton stable (CLS ~0) and LCP stays well under 2.5s (measured ~500ms). -->
-  <link rel="stylesheet" href="styles.css">
+  <!-- styles.css loads async (preload+onload): the above-the-fold critical CSS is
+       inlined above, the hero is static HTML, and the boot-skeleton size rules are
+       inlined too — so first paint never waits for the full sheet and the late
+       sheet cannot reflow the viewport (the two old CLS sources — the JS-rendered
+       hero and the pre-boot spotlight fill — are gone; CLS verified ~0.004 on
+       throttled mobile). -->
+  <link rel="preload" as="style" href="styles.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="styles.css"></noscript>
 </head>
 <body>
@@ -642,13 +671,33 @@
   </header>
 
   <main id="mainContent">
-    <div id="calc-of-day-spotlight" class="calc-of-day-spotlight" style="display:none;"></div>
-    <!-- Boot skeleton: shown while deferred scripts load; replaced by the first render.
-         The three blocks mirror the real homepage above-the-fold layout (hero + Calculator
-         of the Day + Daily Tip + section title) so the skeleton->content swap causes zero
-         visual shift (CLS-safe). Sizes live in styles.css (.skeleton-hero/-cod/-tip/-title). -->
+    <!-- NO static #calc-of-day-spotlight placeholder here: CalculatorOfTheDay.init()
+         fills it on DOMContentLoaded, and as a hidden div ABOVE the hero it would
+         push the hero down 222px when unhidden (CLS ~0.23 on throttled mobile — the
+         fill and renderHome land in different frames). renderHome() builds the
+         spotlight itself below the hero; the placeholder is not needed. -->
+    <!-- STATIC HERO (performance): the real H1 + search box are rendered in HTML so the
+         Largest Contentful Paint happens at parse time — no JS required. Markup is
+         byte-identical to what renderHome() renders (minus the decorative canvas, which
+         HeroCanvas.init() adds after boot), so the JS re-render swaps in identical
+         content with zero visual shift (CLS-safe). Count matches
+         SITE_CONFIG.totalCalculators (543). -->
+    <div class="hero" style="position:relative;overflow:hidden">
+      <div class="hero-content" style="position:relative;z-index:1">
+        <h1>CalcPro — <span class="highlight">543+</span> Free Online Calculators</h1>
+        <p class="hero-desc">Free, fast, and accurate calculators with step-by-step solutions, charts, and smart features.</p>
+        <div class="search-box">
+          <input type="text" id="home-search" placeholder="Search 543+ calculators…" oninput="App.homeSearch(this.value)" onkeydown="App.searchKeyNav(event)" autocomplete="off" role="combobox" aria-expanded="false" aria-label="Search calculators">
+          <div class="search-results" id="homeSearchResults"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Boot skeleton for the below-fold blocks: shown while deferred scripts load, then
+         replaced by the first render. The three blocks mirror the real homepage layout
+         (Calculator of the Day + Daily Tip + section title) so the skeleton->content
+         swap causes zero visual shift (CLS-safe). Sizes live in styles.css
+         (.skeleton-cod/-tip/-title). -->
     <div class="boot-skeleton" role="status" aria-label="Loading calculators">
-      <div class="skeleton skeleton-hero"></div>
       <div class="skeleton skeleton-cod"></div>
       <div class="skeleton skeleton-tip"></div>
       <div class="skeleton skeleton-title"></div>

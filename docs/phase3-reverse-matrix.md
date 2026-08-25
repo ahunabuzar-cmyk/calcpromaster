@@ -40,6 +40,7 @@ Generated: 2026-08-25
 | temperature | Conversion | value | ENABLED (declared) | ENABLED |
 | payback | Business | cost,annual | ENABLED (declared) | ENABLED |
 | car-loan-emi | Auto Transport | amount,rate,months | ENABLED (declared) | ENABLED |
+| car-maintenance | Auto Transport | age,mileage | ENABLED (declared) | ENABLED |
 | car-depreciation | Auto Transport | purchasePrice,years,rate | ENABLED (declared) | ENABLED |
 | auto-fare | Auto Transport | distance,baseFare,perKm | ENABLED (declared) | ENABLED |
 | grade-needed | Education | currentGrade,currentWeight,targetGrade | ENABLED (declared) | ENABLED |
@@ -49,6 +50,8 @@ Generated: 2026-08-25
 | weight-loss-time | Food Nutrition | currentW,goalW,deficit | ENABLED (declared) | ENABLED |
 | cooking-time | Food Nutrition | weight,recipeWeight,recipeTime | ENABLED (declared) | ENABLED |
 | meal-prep | Food Nutrition | totalCost,servings | ENABLED (declared) | ENABLED |
+| keto-macro | Food Nutrition | weight,height,age | ENABLED (declared) | ENABLED |
+| intermittent-fasting | Food Nutrition | wakeTime | ENABLED (declared) | ENABLED |
 | sugar-intake | Food Nutrition | age,sugarGrams,weight | ENABLED (declared) | ENABLED |
 | crypto-tax | Career | buyPrice,sellPrice,income | ENABLED (declared) | ENABLED |
 | career-gap | Career | currentSalary,gapYears,growthRate | ENABLED (declared) | ENABLED |
@@ -288,7 +291,6 @@ Generated: 2026-08-25
 | ev-charging-cost | Auto Transport | batteryKwh,currentPct,targetPct,elecRate | F. Not suitable | NOT SUITABLE |
 | ev-vs-gas-petrol | Auto Transport | kmYearly,evKwh100,elecRate,petrolKmpl,petrolPrice | F. Not suitable | NOT SUITABLE |
 | ev-range | Auto Transport | batteryKwh,efficiency | F. Not suitable | NOT SUITABLE |
-| car-maintenance | Auto Transport | age,mileage | B. Numerical possible | NEEDS REVIEW |
 | tire-size | Auto Transport | oldWidth,oldProfile,oldRim,newWidth,newProfile,newRim | F. Not suitable | NOT SUITABLE |
 | oil-change | Auto Transport |  | F. Not suitable | NOT SUITABLE |
 | car-insurance | Auto Transport | age,carValue | F. Not suitable | NOT SUITABLE |
@@ -338,8 +340,6 @@ Generated: 2026-08-25
 | unit-converter-food | Food Nutrition | cups | F. Not suitable (lookup/discrete/random) | NOT SUITABLE |
 | eat-out-vs-cook | Food Nutrition | mealsOut,costOut,mealsHome,costHome | F. Not suitable | NOT SUITABLE |
 | fast-food-calories | Food Nutrition |  | F. Not suitable | NOT SUITABLE |
-| keto-macro | Food Nutrition | weight,height,age | B. Numerical possible | NEEDS REVIEW |
-| intermittent-fasting | Food Nutrition | wakeTime | B. Numerical possible | NEEDS REVIEW |
 | vegan-protein | Food Nutrition | weight | F. Not suitable (lookup/discrete/random) | NOT SUITABLE |
 | grocery-per-person | Food Nutrition | adults,children | F. Not suitable (lookup/discrete/random) | NOT SUITABLE |
 | baking-converter | Food Nutrition |  | F. Not suitable | NOT SUITABLE |
@@ -552,7 +552,7 @@ Generated: 2026-08-25
 
 | Class | Count |
 |---|---|
-| DECLARED (53) | 53 |
+| DECLARED (56) | 56 |
 | DOMAIN (28) | 28 |
 | NOT_SUITABLE (451) | 451 |
-| NUMERICAL (11) | 11 |
+| NUMERICAL (8) | 8 |

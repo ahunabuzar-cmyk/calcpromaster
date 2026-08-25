@@ -859,7 +859,18 @@ const App = (function () {
       } else {
         // Privacy: autocomplete="off" + autofill-sniffing guards on ALL inputs (never log sensitive values)
         const native = inp.type === 'number';
+        // Universal voice input: a mic button beside EVERY numeric input so the
+        // feature works on all 543 tools and all inputs — not just the first
+        // input of small tools (the old behavior hid the mic on >5-input tools).
+        // The input + mic are wrapped in a flex row so they share one line.
+        if (native) {
+          inputsHtml += '<div class="input-row">';
+        }
         inputsHtml += `<input type="${inp.type || 'number'}" id="${inp.id}" class="calc-input" value="${inp.def || ''}" ${native ? 'step="any"' : ''} maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" data-private="true" oninput="App.clearInputError('${inp.id}')">`;
+        if (native) {
+          inputsHtml += '<button type="button" class="voice-input-btn" onclick="AdvancedFeatures.voiceInput(\'' + inp.id + '\')" aria-label="Voice input for ' + inp.label + '" title="Speak a number">🎤</button>';
+          inputsHtml += '</div>';
+        }
         // Inline unit switching (Gap 3 — Omni/RapidTables style): a units array on the
         // input renders a compact unit select that scales the displayed value.
         if (native && Array.isArray(inp.units) && inp.units.length > 1) {
@@ -910,9 +921,6 @@ const App = (function () {
     html += '<button class="action-btn" onclick="AdvancedFeatures.toggleBatch()" id="batch-toggle-btn">📋 Batch</button>';
     html += '<button class="action-btn" onclick="App.shareTool(\'' + tool.id + '\')">🔗 Share</button>';
     html += '<button class="action-btn" onclick="AdvancedFeatures.showEmbedModal(\'' + tool.id + '\')">🔌 Embed</button>';
-    if (tool.inputs && tool.inputs.length <= 5) {
-      html += '<button class="action-btn" onclick="AdvancedFeatures.initVoice();AdvancedFeatures.startVoice(\'' + (tool.inputs[0]?.id || '') + '\')">🎤 Voice</button>';
-    }
     html += '</div></div>';
     
     // Chain Bar

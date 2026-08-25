@@ -411,6 +411,7 @@ function runComparisonMode() {
 
   // ---------- Voice Input ----------
   let recognition = null;
+  let _voiceActiveInput = null;
   function initVoice() {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SR) return false;
@@ -420,20 +421,35 @@ function runComparisonMode() {
     recognition.lang = 'en-US';
     return true;
   }
-  function startVoice(targetInputId) {
-    if (!recognition && !initVoice()) { App.showToast('Voice input not supported'); return; }
+  // Universal per-input voice: works on ANY numeric input of ANY tool (the old
+  // startVoice() only targeted the first input and the button was hidden on tools
+  // with >5 inputs). Kept as a thin wrapper for backward compat.
+  function voiceInput(targetInputId) {
+    if (!recognition && !initVoice()) { App.showToast('Voice input not supported in this browser'); return; }
     const input = document.getElementById(targetInputId);
-    if (!input) return;
+    if (!input) { App.showToast('Input not found'); return; }
+    _voiceActiveInput = targetInputId;
+    input.focus();
     recognition.onresult = function(e) {
       const transcript = e.results[0][0].transcript;
-      const numMatch = transcript.match(/-?\d+\.?\d*/);
-      if (numMatch) { input.value = numMatch[0]; input.dispatchEvent(new Event('input')); App.showToast('Voice: ' + numMatch[0]); }
-      else App.showToast('No number detected in: ' + transcript);
+      // Extract the first real number — handles "seventy five", "75", "12.5", "-3"
+      const numMatch = transcript.match(/-?\d+(?:\.\d+)?/);
+      const el = document.getElementById(_voiceActiveInput);
+      if (numMatch && el) {
+        el.value = numMatch[0];
+        el.dispatchEvent(new Event('input'));
+        el.dispatchEvent(new Event('change'));
+        App.showToast('Voice: ' + numMatch[0]);
+      } else {
+        App.showToast('No number detected in: "' + transcript + '"');
+      }
     };
-    recognition.onerror = function(e) { App.showToast('Voice error: ' + e.error); };
-    recognition.start();
-    App.showToast('Listening...');
+    recognition.onerror = function(e) { App.showToast('Voice error: ' + (e.error || 'unknown')); };
+    recognition.onend = function() { _voiceActiveInput = null; };
+    try { recognition.start(); } catch (e2) { App.showToast('Voice already listening — try again'); }
+    App.showToast('🎤 Listening...');
   }
+  function startVoice(targetInputId) { voiceInput(targetInputId); }
 
   // ---------- Shareable Links ----------
   function generateShareLink(tool, values) {
@@ -1625,7 +1641,7 @@ function runComparisonMode() {
     saveScenario, getScenarios, clearScenarios, renderScenarioBar, loadScenario,
     getPresets, savePreset, deletePreset, renderPresetDropdown, loadPreset,
     toggleBatch, runBatch,
-    initVoice, startVoice,
+    initVoice, startVoice, voiceInput,
     generateShareLink, loadFromUrl,
     renderSteps,
     getSmartSuggestions,

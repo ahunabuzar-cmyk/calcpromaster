@@ -54,3 +54,14 @@ jobs:
             node --check "$f" || exit 1
           done
           echo "deploy/js syntax OK ($(find deploy/js -name '*.js' | wc -l) files)"
+
+      - name: SEO indexing audit — every sitemap URL must be index-ready
+        run: |
+          node scripts/seo-indexing-audit.cjs
+          # Fail the build if any sitemap URL is not index-ready (P0/P1 gate).
+          if node -e "const r=require('./seo-indexing-audit.json').report; process.exit(r.summary.fail>0?1:0);"; then
+            echo "SEO indexing audit PASS — all URLs index-ready (fail: 0)"
+          else
+            echo "::error::SEO indexing audit FAILED — see seo-indexing-audit.json for details"
+            exit 1
+          fi

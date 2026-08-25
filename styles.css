@@ -970,6 +970,43 @@
       box-shadow: 0 0 0 3px rgba(79,70,229,0.1);
     }
 
+    /* ===== UNIVERSAL VOICE INPUT (per-input mic button) ===== */
+    /* The numeric input + mic sit on one line; the input shrinks to give the
+       button room instead of wrapping below it (mobile-safe). */
+    .input-group .input-row {
+      display: flex;
+      gap: 6px;
+      align-items: stretch;
+    }
+    .input-group .input-row .calc-input {
+      flex: 1;
+      min-width: 0;
+    }
+    .voice-input-btn {
+      flex: 0 0 auto;
+      width: 44px;
+      min-height: 44px; /* WCAG 2.5.8 tap target */
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+      font-size: 16px;
+      cursor: pointer;
+      transition: all var(--transition);
+      color: var(--text);
+    }
+    .voice-input-btn:hover {
+      border-color: var(--primary);
+      background: var(--primary-light);
+      transform: translateY(-1px);
+    }
+    .voice-input-btn:active {
+      transform: scale(0.96);
+    }
+    .voice-input-btn:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
     /* ===== RECENT CHIPS WITH ICON ===== */
     .recent-chip {
       transition: all var(--transition);

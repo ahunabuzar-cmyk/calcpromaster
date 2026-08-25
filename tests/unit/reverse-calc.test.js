@@ -562,6 +562,31 @@ describe('food-nutrition/cooking-time + meal-prep + sugar-intake — reverse', (
   });
 });
 
+describe('food-nutrition/keto-macro + intermittent-fasting + auto/car-maintenance — reverse', () => {
+  it('keto-macro solves weight for target TDEE → analytical', () => {
+    const t = tools['keto-macro'];
+    // TDEE male = (10w + 6.25×170 - 5×30 + 5) × 1.4 = 2264.5 cal/day for w=70
+    // → result shows Math.round → 2265 cal/day
+    const res = SolveFor.solve(t, {weight:70,height:170,age:30,gender:'male'}, 'weight', 2265);
+    expect(Math.abs(res.value - 70.04)).toBeLessThan(0.05);
+    expect(verifyRoundTrip(t, {weight:70,height:170,age:30,gender:'male'}, 'weight', 2265).ok).toBe(true);
+  });
+  it('intermittent-fasting solves wakeTime for target eat start → analytical', () => {
+    const t = tools['intermittent-fasting'];
+    // eatStart = (wake + 16) % 24 → 23 means wake = 7
+    const res = SolveFor.solve(t, {fastHours:'16',wakeTime:7}, 'wakeTime', 23);
+    expect(Math.abs(res.value - 7)).toBeLessThan(0.01);
+    expect(verifyRoundTrip(t, {fastHours:'16',wakeTime:7}, 'wakeTime', 23).ok).toBe(true);
+  });
+  it('car-maintenance solves mileage for target annual cost → analytical', () => {
+    const t = tools['car-maintenance'];
+    // 3-yr-old car: base 900 → $900/yr at 15000 km
+    const res = SolveFor.solve(t, {age:3,mileage:15000}, 'mileage', 900);
+    expect(Math.abs(res.value - 15000)).toBeLessThan(1);
+    expect(verifyRoundTrip(t, {age:3,mileage:15000}, 'mileage', 900).ok).toBe(true);
+  });
+});
+
 describe('SolveFor engine safety', () => {
   it('bisection terminates (bounded iterations) on an impossible target', () => {
     const res = SolveFor.solve(tools['loan-emi'], {amount:100000,rate:6,years:30,paymentFreq:12,mode:'payment'}, 'rate', 99999999);

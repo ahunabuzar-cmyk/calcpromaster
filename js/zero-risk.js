@@ -987,6 +987,11 @@ const ZR = (function () {
       '</div>' +
       (stepItems ? '<ol class="zr-voice-steps" id="zr-voice-steps">' + stepItems + '</ol>' : '<p class="zr-wizard-hint">No steps for this tool — the walkthrough will read inputs and the result.</p>') +
       '</details>';
+    // Re-attach the universal dictate button after the innerHTML reset
+    // (append-only + idempotent, defined in advanced-features.js).
+    if (window.AdvancedFeatures && typeof AdvancedFeatures.initVoiceArea === 'function') {
+      try { AdvancedFeatures.initVoiceArea(); } catch (e) { /* never break the walkthrough bar */ }
+    }
   }
 
   // ===================================================================

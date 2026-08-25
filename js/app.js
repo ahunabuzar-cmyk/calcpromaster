@@ -1040,6 +1040,11 @@ const App = (function () {
       try { ZR.init(tool, catKey); } catch (e) { /* never break tool render */ }
     }
     
+    // Voice dictation button (fills the whole form by voice — every tool)
+    if (window.AdvancedFeatures && typeof AdvancedFeatures.initVoiceArea === 'function') {
+      try { AdvancedFeatures.initVoiceArea(); } catch (e) { /* never break tool render */ }
+    }
+
     // Chain bar
     AdvancedFeatures.renderChainBar();
     AdvancedFeatures.renderPinBar();

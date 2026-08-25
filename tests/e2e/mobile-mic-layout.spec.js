@@ -31,7 +31,9 @@ test.describe('Voice mic buttons at 320px', () => {
 
       const state = await page.evaluate(() => {
         const numericInputs = Array.from(document.querySelectorAll('input[type="number"]'));
-        const mics = Array.from(document.querySelectorAll('.voice-input-btn'));
+        // Per-input mics only — the dedicated "Dictate all inputs" button also
+        // carries .voice-input-btn but is a form-level control, not an input mic.
+        const mics = Array.from(document.querySelectorAll('.voice-input-btn:not(.voice-dictate-btn)'));
         const overflowX = document.documentElement.scrollWidth > document.documentElement.clientWidth;
         // Every mic must sit fully inside the 320px viewport
         const outOfViewport = mics.filter(b => {
@@ -93,7 +95,7 @@ test.describe('Voice mic buttons at 320px', () => {
       App.showToast = (m) => { window.__toastCapture.push(String(m)); orig(m); };
     });
 
-    await page.click('.voice-input-btn');
+    await page.click('.voice-input-btn:not(.voice-dictate-btn)');
     await page.waitForTimeout(500);
     const msgs = await page.evaluate(() => window.__toastCapture || []);
     expect(msgs.some(m => m.includes('Voice input not supported'))).toBe(true);

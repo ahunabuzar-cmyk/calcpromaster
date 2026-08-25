@@ -1006,6 +1006,22 @@
       outline: 2px solid var(--primary);
       outline-offset: 2px;
     }
+    .voice-input-btn.voice-dictate-btn {
+      width: auto;
+      padding: 0 14px;
+      margin-top: 4px;
+      font-weight: 600;
+    }
+    .voice-input-btn.voice-dictate-btn.active {
+      border-color: var(--primary);
+      background: var(--primary);
+      color: #fff;
+      animation: voice-pulse 1.2s ease-in-out infinite;
+    }
+    @keyframes voice-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(79,70,229,0.35); }
+      50% { box-shadow: 0 0 0 8px rgba(79,70,229,0); }
+    }
 
     /* ===== RECENT CHIPS WITH ICON ===== */
     .recent-chip {

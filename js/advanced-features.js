@@ -451,6 +451,112 @@ function runComparisonMode() {
   }
   function startVoice(targetInputId) { voiceInput(targetInputId); }
 
+  // ---------- Voice Dictation (fill the whole form by voice) ----------
+  // "Dictate all inputs": one transcript with N numbers fills every numeric
+  // input in document order ("salary 60000, tax rate 12, years 5" -> first
+  // number to the first input, second to the second, ...). Falls back to
+  // number-first mapping when fewer numbers than inputs are spoken. Only
+  // targets the CURRENT tool's inputs (App._currentTool), never other tools.
+  let _dictateMode = false;
+  function setDictateMode(on) {
+    _dictateMode = !!on;
+    const btn = document.getElementById('voice-dictate-btn');
+    if (btn) {
+      btn.classList.toggle('active', _dictateMode);
+      btn.textContent = _dictateMode ? '🎤 Dictating — start speaking' : '🎤 Dictate all inputs';
+    }
+  }
+  function isDictateMode() { return _dictateMode; }
+
+  function getCurrentNumericInputs() {
+    const toolId = (window.App && App._currentToolId) || '';
+    // Prefer the current tool's form inputs, fall back to all visible ones.
+    const container = document.getElementById('calc-form') || document;
+    const ids = [];
+    const seen = new Set();
+    container.querySelectorAll('input[type="number"]').forEach(function (el) {
+      if (el.id && !seen.has(el.id)) { seen.add(el.id); ids.push(el.id); }
+    });
+    return ids;
+  }
+
+  function startDictation() {
+    if (!recognition && !initVoice()) { App.showToast('Voice input not supported in this browser'); return; }
+    recognition.continuous = false;
+    recognition.interimResults = false;
+    recognition.onresult = function (e) {
+      const transcript = e.results[0][0].transcript;
+      const nums = (transcript.match(/-?\d+(?:\.\d+)?/g) || []);
+      const inputs = voiceFillNumericInputs();
+      _voiceActiveInput = null;
+      if (nums.length === 0) { App.showToast('No numbers detected in: "' + transcript + '"'); return; }
+      if (inputs.length === 0) { App.showToast('No numeric inputs on this tool'); return; }
+      // Fill in order: first spoken number -> first empty (or first) input.
+      let filled = 0;
+      for (let i = 0; i < nums.length && i < inputs.length; i++) {
+        const el = document.getElementById(inputs[i]);
+        if (!el) continue;
+        el.value = nums[i];
+        el.dispatchEvent(new Event('input'));
+        el.dispatchEvent(new Event('change'));
+        filled++;
+      }
+      App.showToast('Voice dictation: filled ' + filled + ' input' + (filled === 1 ? '' : 's'));
+    };
+    recognition.onerror = function (e) { App.showToast('Voice error: ' + (e.error || 'unknown')); };
+    recognition.onend = function () { if (_dictateMode) setDictateMode(false); };
+    try { recognition.start(); } catch (e2) { App.showToast('Voice already listening — try again'); }
+    App.showToast('🎤 Dictating — speak the numbers');
+  }
+
+  // Fill the first N numeric inputs of the current tool with given values.
+  function voiceFillNumericInputs() {
+    const ids = getCurrentToolInputIds();
+    return ids;
+  }
+  // getCurrentToolInputIds: every numeric input id of the current tool (from
+  // App._currentTool.tool.inputs) — used by dictation to map spoken numbers to
+  // inputs in document order.
+  function getCurrentToolInputIds() {
+    const t = window.App && App._currentTool && App._currentTool.tool;
+    if (t && Array.isArray(t.inputs)) {
+      return t.inputs.filter(function (i) { return !i.type || i.type === 'number'; }).map(function (i) { return i.id; });
+    }
+    // Fallback: DOM scan of the form (works when App state is unavailable).
+    const container = document.getElementById('calc-form') || document;
+    const ids = [];
+    const seen = new Set();
+    container.querySelectorAll('input[type="number"]').forEach(function (el) {
+      if (el.id && !seen.has(el.id)) { seen.add(el.id); ids.push(el.id); }
+    });
+    return ids;
+  }
+
+  function initVoiceArea() {
+    // Attach a "Dictate all inputs" button for every tool page. ZR's post-calc
+    // renderVoiceBar() resets #zr-voice-area.innerHTML, so this is append-only
+    // and idempotent: it never wipes the walkthrough bar and re-attaches the
+    // button (called again after that render via ZR.afterCalc hook below).
+    const wrapper = document.getElementById('zr-voice-area');
+    if (!wrapper) return;
+    if (wrapper.querySelector('#voice-dictate-btn')) return;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'voice-input-btn voice-dictate-btn';
+    btn.id = 'voice-dictate-btn';
+    btn.textContent = '🎤 Dictate all inputs';
+    btn.title = 'Speak all input numbers in one go — the first number fills the first input, then the next, and so on.';
+    btn.setAttribute('aria-label', 'Dictate all input values by voice');
+    let listening = false;
+    btn.addEventListener('click', function () {
+      if (listening) { setDictateMode(false); listening = false; return; }
+      setDictateMode(true);
+      listening = true;
+      startDictation();
+    });
+    wrapper.appendChild(btn);
+  }
+
   // ---------- Shareable Links ----------
   function generateShareLink(tool, values) {
     const params = new URLSearchParams();
@@ -1641,8 +1747,7 @@ function runComparisonMode() {
     saveScenario, getScenarios, clearScenarios, renderScenarioBar, loadScenario,
     getPresets, savePreset, deletePreset, renderPresetDropdown, loadPreset,
     toggleBatch, runBatch,
-    initVoice, startVoice, voiceInput,
-    generateShareLink, loadFromUrl,
+    initVoice, startVoice, voiceInput, initVoiceArea, setDictateMode, isDictateMode,    generateShareLink, loadFromUrl,
     renderSteps,
     getSmartSuggestions,
     enableAutoCalc,

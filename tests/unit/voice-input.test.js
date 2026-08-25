@@ -43,7 +43,21 @@ function buildFakeInput(id) {
 
 function buildHarness({ supported = true, startThrows = false, inputId = 'loan-amount' } = {}) {
   const toasts = [];
-  const inputs = { 'loan-amount': buildFakeInput('loan-amount'), 'other-input': buildFakeInput('other-input') };
+  // Numeric inputs in document order (dictation fills these in order)
+  const inputs = {
+    'loan-amount': buildFakeInput('loan-amount'),
+    'rate': buildFakeInput('rate'),
+    'years': buildFakeInput('years'),
+    'other-input': buildFakeInput('other-input')
+  };
+  const order = ['loan-amount', 'rate', 'years'];
+  // Minimal DOM for initVoiceArea: a container with querySelector + appendChild
+  const voiceArea = {
+    children: [],
+    querySelector() { return this.children.find(c => c.id === 'voice-dictate-btn') || null; },
+    appendChild(el) { this.children.push(el); },
+    className: ''
+  };
 
   let recognitionInstance = null;
   const SpeechRecognitionStub = class SpeechRecognitionStub {
@@ -67,20 +81,51 @@ function buildHarness({ supported = true, startThrows = false, inputId = 'loan-a
     console,
     window: {},
     Security: { safeGetItem: () => [], safeSetItem: () => {}, safeRemoveItem: () => {} },
-    App: { showToast: (m) => toasts.push(String(m)) },
-    document: { getElementById: (id) => inputs[id] || null },
+    App: {
+      showToast: (m) => toasts.push(String(m)),
+      // Dictation needs the current tool to know input order
+      _currentTool: { tool: { inputs: [
+        { id: 'loan-amount', type: 'number' },
+        { id: 'rate', type: 'number' },
+        { id: 'years', type: 'number' },
+        { id: 'note', type: 'text' }
+      ] } }
+    },
+    document: {
+      getElementById: (id) => inputs[id] || (id === 'zr-voice-area' ? voiceArea : null),
+      createElement: (tag) => ({
+        tagName: tag.toUpperCase(),
+        id: '', className: '', textContent: '', title: '',
+        _handlers: {},
+        setAttribute() {},
+        addEventListener(type, fn) { this._handlers[type] = fn; },
+        appendChild(el) { voiceArea.appendChild(el); el.parentArea = voiceArea; },
+        classList: { toggle() {} },
+        click() { if (this._handlers.click) this._handlers.click(); }
+      })
+    },
     Event: class Event { constructor(type) { this.type = type; } },
     URLSearchParams
   };
   if (supported) sandbox.window.SpeechRecognition = SpeechRecognitionStub;
+  // The real app exposes App on window — mirror that so dictation's
+  // App._currentTool input-order lookup works (no DOM-scan fallback in tests).
+  sandbox.window.App = sandbox.App;
 
   vm.createContext(sandbox);
   vm.runInContext(SRC, sandbox, { filename: 'advanced-features.js' });
 
-  // The file checks `typeof window !== 'undefined'` (true in the sandbox) and
-  // attaches to window — expose what the app would call.
   const api = sandbox.window.AdvancedFeatures;
-  return { api, toasts, inputs, getRecognition: () => recognitionInstance };
+  return { api, toasts, inputs, voiceArea, getRecognition: () => recognitionInstance };
+}
+
+// Dictation tests: the sandbox above simulates a tool with inputs
+// loan-amount → rate → years (numeric) and note (text). A spoken transcript
+// with numbers fills the numeric inputs in that order.
+function dictationHarness({ supported = true } = {}) {
+  const h = buildHarness({ supported });
+  // dictation uses getCurrentToolInputIds() → App._currentTool.tool.inputs
+  return h;
 }
 
 describe('AdvancedFeatures voice input', () => {
@@ -162,5 +207,65 @@ describe('AdvancedFeatures voice input', () => {
     const h = buildHarness({ supported: true, startThrows: true });
     expect(() => h.api.voiceInput('loan-amount')).not.toThrow();
     expect(h.toasts.some(t => t.includes('already listening'))).toBe(true);
+  });
+});
+
+describe('Voice dictation (fill all inputs)', () => {
+  it('initVoiceArea renders the dictate button next to the walkthrough bar', () => {
+    const h = dictationHarness({ supported: true });
+    h.api.initVoiceArea();
+    expect(h.voiceArea.children.length).toBe(1);
+    expect(h.voiceArea.children[0].id).toBe('voice-dictate-btn');
+    expect(h.voiceArea.children[0].className).toContain('voice-dictate-btn');
+    // Idempotent: a second call must not add a duplicate button
+    h.api.initVoiceArea();
+    expect(h.voiceArea.children.length).toBe(1);
+  });
+
+  it('dictation fills every numeric input in document order, skipping non-numeric', () => {
+    const h = dictationHarness({ supported: true });
+    h.api.initVoiceArea();
+    const btn = h.voiceArea.children[0];
+    btn.click();
+    // The click starts recognition (browser stub) — drive its onresult
+    const rec = h.getRecognition();
+    expect(rec).not.toBeNull();
+    expect(rec.started).toBe(true);
+    rec.onresult({ results: [[{ transcript: 'loan amount 150000, rate 8.5, tenure 20 years' }]] });
+    expect(h.inputs['loan-amount'].value).toBe('150000');
+    expect(h.inputs['rate'].value).toBe('8.5');
+    expect(h.inputs['years'].value).toBe('20');
+    // input + change dispatched on every filled input (drives live calc)
+    expect(h.inputs['loan-amount'].eventTypes).toContain('input');
+    expect(h.inputs['loan-amount'].eventTypes).toContain('change');
+    expect(h.toasts.some(t => t.includes('filled 3 inputs'))).toBe(true);
+  });
+
+  it('dictation with fewer numbers than inputs fills only the first N', () => {
+    const h = dictationHarness({ supported: true });
+    h.api.initVoiceArea();
+    h.voiceArea.children[0].click();
+    h.getRecognition().onresult({ results: [[{ transcript: 'just the amount 60000' }]] });
+    expect(h.inputs['loan-amount'].value).toBe('60000');
+    expect(h.inputs['rate'].value).toBe('');
+    expect(h.inputs['years'].value).toBe('');
+    expect(h.toasts.some(t => t.includes('filled 1 input'))).toBe(true);
+  });
+
+  it('dictation with no numbers toasts and leaves inputs untouched', () => {
+    const h = dictationHarness({ supported: true });
+    h.api.initVoiceArea();
+    h.voiceArea.children[0].click();
+    h.getRecognition().onresult({ results: [[{ transcript: 'please say the numbers clearly' }]] });
+    expect(h.inputs['loan-amount'].value).toBe('');
+    expect(h.inputs['rate'].value).toBe('');
+    expect(h.toasts.some(t => t.includes('No numbers detected'))).toBe(true);
+  });
+
+  it('dictation unsupported browser — toast and no crash', () => {
+    const h = dictationHarness({ supported: false });
+    h.api.initVoiceArea();
+    h.voiceArea.children[0].click();
+    expect(h.toasts).toContain('Voice input not supported in this browser');
   });
 });

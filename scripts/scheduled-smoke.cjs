@@ -67,6 +67,7 @@ function waitForServer(url, tries = 20) {
     'tests/e2e/deploy-smoke.spec.js',
     'tests/e2e/pdf-export-header.spec.js',
     'tests/e2e/responsive.spec.js',
+    'tests/e2e/mobile-mic-layout.spec.js',
   ];
   let failed = 0;
   for (const spec of SPECS) {

@@ -158,9 +158,10 @@ jobs:
           npx playwright test tests/e2e/deploy-smoke.spec.js -c playwright.deploy.config.js --project=deploy-chromium; DS=$?
           npx playwright test tests/e2e/pdf-export-header.spec.js -c playwright.deploy.config.js --project=deploy-chromium; PF=$?
           npx playwright test tests/e2e/accessibility.spec.js -c playwright.deploy.config.js --project=deploy-chromium; AX=$?
+          npx playwright test tests/e2e/mobile-mic-layout.spec.js -c playwright.deploy.config.js --project=deploy-chromium; MM=$?
           set -e
-          if [ $DS -ne 0 ] || [ $PF -ne 0 ] || [ $AX -ne 0 ]; then
-            echo "❌ live smoke suites failed — deploy-smoke=$DS pdf-export=$PF a11y=$AX"
+          if [ $DS -ne 0 ] || [ $PF -ne 0 ] || [ $AX -ne 0 ] || [ $MM -ne 0 ]; then
+            echo "❌ live smoke suites failed — deploy-smoke=$DS pdf-export=$PF a11y=$AX mobile-mic=$MM"
             exit 1
           fi
       - name: Upload test artifacts on failure

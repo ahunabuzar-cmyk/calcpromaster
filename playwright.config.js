@@ -62,8 +62,10 @@ module.exports = defineConfig({
   // fullyParallel lets the 566-tool spec file spread across all workers — with
   // a single spec file, the default (false) queues every test on one worker and
   // a full sweep can never finish inside a terminal time limit.
+  // workers: 4 saturates the CPU on this machine (heavy chart pages) and causes
+  // spurious "Test timeout" / "Tearing down context" failures — 2 is stable.
   fullyParallel: true,
-  workers: 4,
+  workers: 2,
   retries: process.env.CI ? 2 : 0,
   reporter: [
     ['list'],
@@ -73,7 +75,7 @@ module.exports = defineConfig({
     ['html', { outputFolder: 'playwright-report', open: 'never' }]
   ],
   use: {
-    baseURL: 'http://localhost:3000',
+    baseURL: 'http://localhost:3100',
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
@@ -91,7 +93,7 @@ module.exports = defineConfig({
   ],
   webServer: {
     command: 'node server.js',
-    url: 'http://localhost:3000',
+    url: 'http://localhost:3100',
     reuseExistingServer: true,
     timeout: 30_000
   }

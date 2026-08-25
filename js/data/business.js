@@ -59,7 +59,12 @@ const BUSINESS_TOOLS = [
   { id: 'payback', name: 'Payback Period', desc: 'Calculate investment payback', kw: 'payback period calculator',
     inputs: [{id:'cost',label:'Initial Investment',type:'number',def:50000},{id:'annual',label:'Annual Cash Flow',type:'number',def:15000}],
     calc: function(v) { const years = v.cost / v.annual; return { result: 'Payback: ' + years.toFixed(2) + ' years', chart: Charts.gauge(years, 10), extra: 'Annual: $' + v.annual }; },
-    steps: function(v) { const y=v.cost/v.annual; return ['Formula: Payback = Initial Investment / Annual Cash Flow','Step 1: Payback = $'+v.cost+' / $'+v.annual,'Step 2: Payback = '+y.toFixed(2)+' years']; } },
+    steps: function(v) { const y=v.cost/v.annual; return ['Formula: Payback = Initial Investment / Annual Cash Flow','Step 1: Payback = $'+v.cost+' / $'+v.annual,'Step 2: Payback = '+y.toFixed(2)+' years']; },
+    // Reverse calc (target = payback years): years = cost/annual → cost, annual
+    reverse: { solveFor: { cost: 1, annual: 1 }, variables: {
+      cost: { analytical: function(o, target) { return target * o.annual; }, domain: [0, 1e12] },
+      annual: { analytical: function(o, target) { return o.cost / target; }, domain: [0, 1e9] }
+    } } },
   { id: 'depreciation', name: 'Depreciation Calculator', desc: 'Calculate straight-line depreciation', kw: 'free depreciation calculator',
     inputs: [{id:'cost',label:'Asset Cost',type:'number',def:50000},{id:'salvage',label:'Salvage Value',type:'number',def:5000},{id:'life',label:'Useful Life (years)',type:'number',def:5}],
     calc: function(v) { const annual = (v.cost - v.salvage) / v.life; return { result: 'Annual Depreciation: $' + annual.toFixed(2), chart: Charts.line([v.cost, v.cost - annual, v.cost - annual*2, v.cost - annual*3, v.salvage], ['Y0','Y1','Y2','Y3','Y5']), extra: 'Monthly: $' + (annual/12).toFixed(2) }; },

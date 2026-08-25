@@ -191,21 +191,26 @@
     rafId = requestAnimationFrame(frame);
   }
 
-  // Defer the animation loop until the browser is idle AND past the critical render
-  // window (~4.5s) so the decorative canvas never blocks first paint / LCP or adds
-  // long tasks to the TBT window. The hero looks identical before particles fade in.
-  // Falls back to a short timeout when rIC is unavailable.
+  // Defer the animation loop until past the critical render window. NOTE: rIC with
+  // a timeout only caps the MAXIMUM delay — on a fast machine it fires as soon as
+  // the CPU idles (~1s), putting the rAF loop inside the LCP/TBT window. So gate
+  // it behind a HARD 5s setTimeout first; only then fall through to rIC so the
+  // loop starts on the next idle (and never before ~5s). The hero looks identical
+  // before particles fade in.
   function startWhenIdle() {
     if (running || reducedMotion || document.hidden) return;
     var kick = function () {
       if (running || reducedMotion || document.hidden || !canvas) return;
       start();
     };
-    if (window.requestIdleCallback) {
-      requestIdleCallback(kick, { timeout: 4500 });
-    } else {
-      setTimeout(kick, 400);
-    }
+    setTimeout(function () {
+      if (running || reducedMotion || document.hidden || !canvas) return;
+      if (window.requestIdleCallback) {
+        requestIdleCallback(kick, { timeout: 1000 });
+      } else {
+        kick();
+      }
+    }, 5000);
   }
 
   // Pause the rAF loop whenever the hero scrolls out of the viewport (saves main

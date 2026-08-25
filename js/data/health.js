@@ -3,7 +3,12 @@ const HEALTH_TOOLS = [
   { id: 'bmi', name: 'BMI Calculator', desc: 'Calculate Body Mass Index with category', kw: 'bmi calculator for men and women, body mass index calculator with age, body mass index',
     inputs: [{id:'weight',label:'Weight (kg)',type:'number',def:70,units:[{l:'kg',f:1,sel:true},{l:'lb',f:2.20462}]},{id:'height',label:'Height (cm)',type:'number',def:170,units:[{l:'cm',f:1,sel:true},{l:'m',f:0.01}]}],
     calc: function(v) { const a = AdvancedCalc.bmiSteps(v.weight, v.height); return { result: 'BMI: ' + a.bmi, chart: Charts.gauge(parseFloat(a.bmi), 40, {center: a.category}), extra: 'Category: ' + a.category }; },
-    steps: function(v) { const h=v.height/100; const bmi=v.weight/(h*h); return ['Formula: BMI = weight(kg) / height(m)²','Step 1: Height in meters = '+v.height+'/100 = '+h+'m','Step 2: BMI = '+v.weight+' / '+h+'² = '+v.weight+' / '+(h*h).toFixed(4),'Step 3: BMI = '+bmi.toFixed(1),bmi<18.5?'Step 4: Underweight':bmi<25?'Step 4: Normal weight':bmi<30?'Step 4: Overweight':'Step 4: Obese']; } },
+    steps: function(v) { const h=v.height/100; const bmi=v.weight/(h*h); return ['Formula: BMI = weight(kg) / height(m)²','Step 1: Height in meters = '+v.height+'/100 = '+h+'m','Step 2: BMI = '+v.weight+' / '+h+'² = '+v.weight+' / '+(h*h).toFixed(4),'Step 3: BMI = '+bmi.toFixed(1),bmi<18.5?'Step 4: Underweight':bmi<25?'Step 4: Normal weight':bmi<30?'Step 4: Overweight':'Step 4: Obese']; },
+    // Reverse calc: BMI = w / (h/100)²  →  w = BMI·(h/100)²,  h = 100·√(w/BMI)
+    reverse: { solveFor: { weight: 1, height: 1 }, variables: {
+      weight: { analytical: function(o, target) { const h = o.height / 100; return target * h * h; }, domain: [0, 1000] },
+      height: { analytical: function(o, target) { return 100 * Math.sqrt(o.weight / target); }, domain: [0, 300] }
+    } } },
   { id: 'bmr', name: 'BMR Calculator', desc: 'Basal metabolic rate — 3 formulas: Mifflin-St Jeor, Harris-Benedict, Katch-McArdle', kw: 'bmr calculator for women over 50, calorie burn calculator at rest, basal metabolic rate',
     inputs: [
       {id:'formula',label:'Formula',type:'select',opts:[{v:'mifflin',l:'Mifflin-St Jeor'},{v:'harris',l:'Harris-Benedict'},{v:'katch',l:'Katch-McArdle (needs BF%)'}],def:'mifflin'},

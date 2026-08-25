@@ -4,11 +4,26 @@ const MATH_TOOLS = [
   { id: 'quadratic', name: 'Quadratic Equation Solver', desc: 'Solve ax²+bx+c=0 with steps', kw: 'quadratic equation solver with steps, solve quadratic equations by factoring calculator',
     inputs: [{id:'a',label:'a',type:'number',def:1},{id:'b',label:'b',type:'number',def:-5},{id:'c',label:'c',type:'number',def:6}],
     calc: function(v) { const d = v.b*v.b - 4*v.a*v.c; if (d < 0) return { result: 'Complex roots', chart: '', extra: 'Discriminant: ' + d }; const x1 = (-v.b + Math.sqrt(d))/(2*v.a); const x2 = (-v.b - Math.sqrt(d))/(2*v.a); return { result: 'x₁=' + x1.toFixed(4) + ', x₂=' + x2.toFixed(4), chart: Charts.bar([Math.abs(x1), Math.abs(x2)], ['x₁','x₂']), extra: 'Discriminant: ' + d.toFixed(2) }; },
-    steps: function(v) { const d=v.b*v.b-4*v.a*v.c; return ['Equation: '+v.a+'x² + '+v.b+'x + '+v.c+' = 0','Step 1: Discriminant D = b² - 4ac = '+v.b+'² - 4×'+v.a+'×'+v.c+' = '+d,d<0?'Step 2: D < 0, complex roots':'Step 2: D = '+d+' ≥ 0, real roots','Step 3: x = (-b ± √D) / 2a = ('+(-v.b)+' ± '+Math.sqrt(Math.abs(d)).toFixed(4)+') / '+2*v.a,d>=0?'Step 4: x₁ = '+((-v.b+Math.sqrt(d))/(2*v.a)).toFixed(4)+' | x₂ = '+((-v.b-Math.sqrt(d))/(2*v.a)).toFixed(4):'Step 4: Complex roots']; } },
+    steps: function(v) { const d=v.b*v.b-4*v.a*v.c; return ['Equation: '+v.a+'x² + '+v.b+'x + '+v.c+' = 0','Step 1: Discriminant D = b² - 4ac = '+v.b+'² - 4×'+v.a+'×'+v.c+' = '+d,d<0?'Step 2: D < 0, complex roots':'Step 2: D = '+d+' ≥ 0, real roots','Step 3: x = (-b ± √D) / 2a = ('+(-v.b)+' ± '+Math.sqrt(Math.abs(d)).toFixed(4)+') / '+2*v.a,d>=0?'Step 4: x₁ = '+((-v.b+Math.sqrt(d))/(2*v.a)).toFixed(4)+' | x₂ = '+((-v.b-Math.sqrt(d))/(2*v.a)).toFixed(4):'Step 4: Complex roots']; },
+    // Reverse calc (target = discriminant D): D = b² − 4ac → b = ±√(D + 4ac).
+    // TWO genuine solutions exist (both give the same discriminant) — the engine
+    // returns them all with status 'multiple' and the UI labels them clearly.
+    reverse: {
+      target: function(r) { const m = String(r.extra || '').match(/Discriminant:\s*(-?[\d.]+)/); return m ? parseFloat(m[1]) : NaN; },
+      solveFor: { b: 1 },
+      variables: {
+        b: { analytical: function(o, target) { const inside = target + 4 * o.a * o.c; if (inside < 0) return []; const s = Math.sqrt(inside); return [s, -s]; }, domain: [-1e9, 1e9] }
+      }
+    } },
   { id: 'percentage', name: 'Percentage Calculator', desc: 'Calculate percentages', kw: 'percentage increase calculator between two numbers, what is the percentage of a number calculator',
     inputs: [{id:'part',label:'Part',type:'number',def:25,slider:{min:0,max:1000,step:1}},{id:'whole',label:'Whole',type:'number',def:200,slider:{min:1,max:1000,step:1}}],
     calc: function(v) { const a = AdvancedCalc.pctSteps(v.part, v.whole); return { result: 'Percentage: ' + a.percent + '%', chart: Charts.donut([v.part, v.whole - v.part], ['Part','Remainder']), extra: 'Decimal: ' + a.decimal }; },
-    steps: function(v) { return ['Formula: Percentage = (Part / Whole) × 100','Step 1: '+v.part+' / '+v.whole+' = '+(v.part/v.whole).toFixed(4),'Step 2: × 100 = '+((v.part/v.whole)*100).toFixed(2)+'%']; } },
+    steps: function(v) { return ['Formula: Percentage = (Part / Whole) × 100','Step 1: '+v.part+' / '+v.whole+' = '+(v.part/v.whole).toFixed(4),'Step 2: × 100 = '+((v.part/v.whole)*100).toFixed(2)+'%']; },
+    // Reverse calc: pct = part/whole × 100 → part = whole·pct/100, whole = part·100/pct
+    reverse: { solveFor: { part: 1, whole: 1 }, variables: {
+      part: { analytical: function(o, target) { return o.whole * target / 100; } },
+      whole: { analytical: function(o, target) { return o.part * 100 / target; }, domain: [1e-9, 1e12] }
+    } } },
   { id: 'percent-change', name: 'Percentage Change', desc: 'Calculate percentage increase/decrease', kw: 'percentage change calculator',
     inputs: [{id:'old',label:'Old Value',type:'number',def:100,slider:{min:-1000,max:1000,step:10}},{id:'new',label:'New Value',type:'number',def:150,slider:{min:-1000,max:1000,step:10}}],
     calc: function(v) { const change = ((v.new - v.old) / Math.abs(v.old)) * 100; return { result: 'Change: ' + change.toFixed(2) + '%', chart: Charts.bar([v.old, v.new], ['Old','New']), extra: change > 0 ? 'Increase' : 'Decrease' }; },
@@ -24,15 +39,19 @@ const MATH_TOOLS = [
   { id: 'circle', name: 'Circle Calculator', desc: 'Calculate circle area and circumference', kw: 'area of circle',
     inputs: [{id:'r',label:'Radius',type:'number',def:5}],
     calc: function(v) { const area = Math.PI * v.r * v.r; const circ = 2 * Math.PI * v.r; return { result: 'Area: ' + area.toFixed(2), chart: Charts.donut([area, circ], ['Area','Circ']), extra: 'Circumference: ' + circ.toFixed(2) }; },
-    steps: function(v) { const area=Math.PI*v.r*v.r; const circ=2*Math.PI*v.r; return ['Formula: Area = πr², Circumference = 2πr','Step 1: Area = π × '+v.r+'² = π × '+v.r*v.r,'Step 2: Area = '+area.toFixed(2),'Step 3: Circumference = 2π × '+v.r+' = '+circ.toFixed(2)]; } },
+    steps: function(v) { const area=Math.PI*v.r*v.r; const circ=2*Math.PI*v.r; return ['Formula: Area = πr², Circumference = 2πr','Step 1: Area = π × '+v.r+'² = π × '+v.r*v.r,'Step 2: Area = '+area.toFixed(2),'Step 3: Circumference = 2π × '+v.r+' = '+circ.toFixed(2)]; },
+    // Reverse calc: Area = πr² → r = √(Area/π)
+    reverse: { solveFor: { r: 1 }, variables: {
+      r: { analytical: function(o, target) { return Math.sqrt(target / Math.PI); }, domain: [0, 1e7] }
+    } } },
   { id: 'statistics', name: 'Statistics Calculator', desc: 'Calculate mean, median, std dev', kw: 'mean median mode',
     inputs: [{id:'data',label:'Data (comma separated)',type:'text',def:'1,2,3,4,5,6,7,8,9,10'}],
     calc: function(v) { const arr = v.data.split(',').map(Number); const s = AdvancedCalc.stats(arr); return { result: 'Mean: ' + s.mean.toFixed(2) + ' | Median: ' + s.median.toFixed(2), chart: Charts.bar([s.mean, s.median, s.stdDev, s.min, s.max], ['Mean','Median','StdDev','Min','Max']), extra: 'StdDev: ' + s.stdDev.toFixed(2) }; },
     steps: function(v) { const arr=v.data.split(',').map(Number); const s=AdvancedCalc.stats(arr); return ['Step 1: Count n = '+arr.length,'Step 2: Sum = '+s.sum,'Step 3: Mean = '+s.sum+' / '+arr.length+' = '+s.mean.toFixed(2),'Step 4: Median = '+s.median.toFixed(2),'Step 5: Std Dev = '+s.stdDev.toFixed(2)]; } },
   { id: 'combinations', name: 'Combinations Calculator', desc: 'Calculate nCr and nPr', kw: 'free combinations calculator',
     inputs: [{id:'n',label:'n',type:'number',def:10},{id:'r',label:'r',type:'number',def:3}],
-    calc: function(v) { function fact(n) { let f = 1; for (let i = 2; i <= n; i++) f *= i; return f; } const c = fact(v.n) / (fact(v.r) * fact(v.n - v.r)); const p = fact(v.n) / fact(v.n - v.r); return { result: 'nCr = ' + c, chart: Charts.bar([c, p], ['C(n,r)','P(n,r)']), extra: 'nPr = ' + p }; },
-    steps: function(v) { function fact(n){let f=1;for(let i=2;i<=n;i++)f*=i;return f;} const c=fact(v.n)/(fact(v.r)*fact(v.n-v.r)); return ['Formula: C(n,r) = n! / (r! × (n-r)!)','Step 1: '+v.n+'! = '+fact(v.n),'Step 2: '+v.r+'! = '+fact(v.r)+' | '+v.n+'-'+v.r+'! = '+fact(v.n-v.r),'Step 3: C('+v.n+','+v.r+') = '+fact(v.n)+' / ('+fact(v.r)+' × '+fact(v.n-v.r)+') = '+c]; } },
+    calc: function(v) { function fact(n) { let f = 1; for (let i = 2; i <= Math.min(n, 170); i++) f *= i; return f; } const c = fact(v.n) / (fact(v.r) * fact(v.n - v.r)); const p = fact(v.n) / fact(v.n - v.r); return { result: 'nCr = ' + c, chart: Charts.bar([c, p], ['C(n,r)','P(n,r)']), extra: 'nPr = ' + p }; },
+    steps: function(v) { function fact(n){let f=1;for(let i=2;i<=Math.min(n,170);i++)f*=i;return f;} const c=fact(v.n)/(fact(v.r)*fact(v.n-v.r)); return ['Formula: C(n,r) = n! / (r! × (n-r)!)','Step 1: '+v.n+'! = '+fact(v.n),'Step 2: '+v.r+'! = '+fact(v.r)+' | '+v.n+'-'+v.r+'! = '+fact(v.n-v.r),'Step 3: C('+v.n+','+v.r+') = '+fact(v.n)+' / ('+fact(v.r)+' × '+fact(v.n-v.r)+') = '+c]; } },
   { id: 'lcm-gcd', name: 'LCM & GCD Calculator', desc: 'Calculate LCM and GCD', kw: 'greatest common divisor calculator with steps, least common multiple calculator of two numbers',
     inputs: [{id:'a',label:'Number 1',type:'number',def:12},{id:'b',label:'Number 2',type:'number',def:18}],
     calc: function(v) { const gcd = AdvancedCalc.gcd(v.a, v.b); const lcm = AdvancedCalc.lcm(v.a, v.b); return { result: 'GCD: ' + gcd + ' | LCM: ' + lcm, chart: Charts.bar([gcd, lcm], ['GCD','LCM']), extra: 'GCD × LCM = ' + (gcd * lcm) }; },
@@ -83,8 +102,8 @@ const MATH_TOOLS = [
     steps: function(v) { const m=(v.y2-v.y1)/(v.x2-v.x1); return ['Formula: m = (y₂-y₁) / (x₂-x₁)','Step 1: y₂-y₁ = '+v.y2+'-'+v.y1+' = '+(v.y2-v.y1),'Step 2: x₂-x₁ = '+v.x2+'-'+v.x1+' = '+(v.x2-v.x1),'Step 3: m = '+(v.y2-v.y1)+' / '+(v.x2-v.x1)+' = '+m.toFixed(4)]; } },
   { id: 'factorial', name: 'Factorial Calculator', desc: 'Calculate n!', kw: 'free factorial calculator',
     inputs: [{id:'n',label:'n',type:'number',def:10}],
-    calc: function(v) { let f = 1; for (let i = 2; i <= v.n; i++) f *= i; return { result: v.n + '! = ' + f, chart: Charts.gauge(f, 1000000), extra: v.n <= 170 ? 'Valid' : 'Overflow' }; },
-    steps: function(v) { let f=1; for(let i=2;i<=v.n;i++)f*=i; return ['Formula: n! = n × (n-1) × (n-2) × ... × 1','Step 1: '+v.n+'! = '+v.n+' × '+(v.n-1)+' × '+(v.n-2)+' × ... × 1','Step 2: '+v.n+'! = '+f]; } },
+    calc: function(v) { let f = 1; for (let i = 2; i <= Math.min(v.n, 170); i++) f *= i; return { result: v.n + '! = ' + f, chart: Charts.gauge(f, 1000000), extra: v.n <= 170 ? 'Valid' : 'Overflow' }; },
+    steps: function(v) { let f=1; for(let i=2;i<=Math.min(v.n,170);i++)f*=i; return ['Formula: n! = n × (n-1) × (n-2) × ... × 1','Step 1: '+v.n+'! = '+v.n+' × '+(v.n-1)+' × '+(v.n-2)+' × ... × 1','Step 2: '+v.n+'! = '+f]; } },
   { id: 'modular', name: 'Modular Arithmetic', desc: 'Calculate modulo operations', kw: 'modular arithmetic calculator',
     inputs: [{id:'a',label:'a',type:'number',def:17},{id:'b',label:'b',type:'number',def:5}],
     calc: function(v) { return { result: v.a + ' mod ' + v.b + ' = ' + (v.a % v.b), chart: Charts.gauge(v.a % v.b, v.b), extra: 'Quotient: ' + Math.floor(v.a / v.b) }; },

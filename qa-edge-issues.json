@@ -1,0 +1,4842 @@
+{
+  "total": 543,
+  "checked": 541,
+  "issues": [
+    {
+      "tool": "fuel-cost",
+      "cat": "auto-transport",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: $NaN | NaN L needed | Per km: $NaN"
+    },
+    {
+      "tool": "mileage-calculator",
+      "cat": "auto-transport",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN km/L | NaN MPG | NaN L/100km"
+    },
+    {
+      "tool": "fuel-price-compare",
+      "cat": "auto-transport",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: P:$NaN D:$NaN EV:$0 | Cheapest: EV | Save $NaN/yr"
+    },
+    {
+      "tool": "car-loan-emi",
+      "cat": "auto-transport",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: $NaN/mo | Total: $NaN | Interest: $NaN"
+    },
+    {
+      "tool": "car-loan-emi",
+      "cat": "auto-transport",
+      "kase": "huge",
+      "issue": "BAD VALUE: $NaN/mo | Total: $NaN | Interest: $NaN"
+    },
+    {
+      "tool": "car-loan-emi",
+      "cat": "auto-transport",
+      "kase": "tiny",
+      "issue": "BAD VALUE: $Infinity/mo | Total: $Infinity | Interest: $Infinity"
+    },
+    {
+      "tool": "car-affordability",
+      "cat": "auto-transport",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Max car: $NaN | Max loan: $NaN | Monthly: $0.00"
+    },
+    {
+      "tool": "car-affordability",
+      "cat": "auto-transport",
+      "kase": "huge",
+      "issue": "BAD VALUE: Max car: $NaN | Max loan: $NaN | Monthly: $0.00"
+    },
+    {
+      "tool": "lease-vs-buy",
+      "cat": "auto-transport",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Buy: $NaN | Lease: $0 | Buy monthly: $NaN | Lease monthly: $0.00"
+    },
+    {
+      "tool": "lease-vs-buy",
+      "cat": "auto-transport",
+      "kase": "huge",
+      "issue": "BAD VALUE: Buy: $NaN | Lease: $1.000000000000001e+30 | Buy monthly: $NaN | Lease monthly: $1000000000000000.00"
+    },
+    {
+      "tool": "lease-vs-buy",
+      "cat": "auto-transport",
+      "kase": "tiny",
+      "issue": "BAD VALUE: Buy: $NaN | Lease: $0 | Buy monthly: $NaN | Lease monthly: $0.00"
+    },
+    {
+      "tool": "lease-vs-buy",
+      "cat": "auto-transport",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "ev-vs-gas-petrol",
+      "cat": "auto-transport",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: EV: $0/yr | Petrol: $NaN/yr | Save $NaN/yr with EV"
+    },
+    {
+      "tool": "ev-range",
+      "cat": "auto-transport",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN km | Battery: 0 kWh | 0 Wh/km"
+    },
+    {
+      "tool": "car-maintenance",
+      "cat": "auto-transport",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+    },
+    {
+      "tool": "tire-size",
+      "cat": "auto-transport",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN% diameter change | Speedo at 100km/h: actual NaN km/h"
+    },
+    {
+      "tool": "car-insurance",
+      "cat": "auto-transport",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: $0/yr | Car value: $0 | Rate: ~NaN% of value"
+    },
+    {
+      "tool": "car-insurance",
+      "cat": "auto-transport",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+    },
+    {
+      "tool": "commute-cost",
+      "cat": "auto-transport",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: $NaN/day | Weekly: $NaN | Monthly: $NaN"
+    },
+    {
+      "tool": "ride-share-cost",
+      "cat": "auto-transport",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Car: $NaN vs Ride: $0.00/day | Ride-share cheaper by $NaN/day"
+    },
+    {
+      "tool": "public-transport",
+      "cat": "auto-transport",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: PT: $0 vs Car: $NaN/mo | Save $NaN/mo by driving"
+    },
+    {
+      "tool": "walking-transit",
+      "cat": "auto-transport",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Walk: NaN min vs Transit: 0 min | Transit is NaN min faster"
+    },
+    {
+      "tool": "trip-time",
+      "cat": "auto-transport",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaNh NaNm | Driving: NaNh | Breaks: NaN | Arrive ~NaN:00"
+    },
+    {
+      "tool": "speed-distance-time",
+      "cat": "auto-transport",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN km/h | Dist: 0 km, Time: 0h"
+    },
+    {
+      "tool": "car-depreciation",
+      "cat": "auto-transport",
+      "kase": "huge",
+      "issue": "BAD VALUE: Current: $Infinity | Lost: $-Infinity | 1000000000000000%/yr"
+    },
+    {
+      "tool": "trade-in-value",
+      "cat": "auto-transport",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: ~$0 | Age: 0 yrs | Depreciation: ~NaN%"
+    },
+    {
+      "tool": "bike-fuel",
+      "cat": "auto-transport",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: $NaN/mo | Yearly: $NaN | NaN L/mo"
+    },
+    {
+      "tool": "bike-loan",
+      "cat": "auto-transport",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: $NaN/mo | Total: $NaN | Interest: $NaN"
+    },
+    {
+      "tool": "bike-loan",
+      "cat": "auto-transport",
+      "kase": "huge",
+      "issue": "BAD VALUE: $NaN/mo | Total: $NaN | Interest: $NaN"
+    },
+    {
+      "tool": "bike-loan",
+      "cat": "auto-transport",
+      "kase": "tiny",
+      "issue": "BAD VALUE: $Infinity/mo | Total: $Infinity | Interest: $Infinity"
+    },
+    {
+      "tool": "fuel-efficiency",
+      "cat": "auto-transport",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Save $NaN/yr | Current: $NaN | Improved: $NaN | NaN% savings"
+    },
+    {
+      "tool": "delivery-cost",
+      "cat": "auto-transport",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Total: $0.00 | Per km: $NaN | 0 km"
+    },
+    {
+      "tool": "route-optimizer",
+      "cat": "auto-transport",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Total: $0.00 | Fuel: $0.00 | Time: 0.0h | Per stop: $NaN"
+    },
+    {
+      "tool": "carbon-footprint-car",
+      "cat": "auto-transport",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN kg CO2/yr | Fuel: NaN L/yr | NaN tonnes CO2"
+    },
+    {
+      "tool": "business-roi",
+      "cat": "business",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: ROI: NaN% | Profit: $0.00"
+    },
+    {
+      "tool": "business-roi",
+      "cat": "business",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "profit-margin",
+      "cat": "business",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Margin: NaN% | Profit: $0.00"
+    },
+    {
+      "tool": "profit-margin",
+      "cat": "business",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "cac",
+      "cat": "business",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: CAC: $NaN | Spend: $0"
+    },
+    {
+      "tool": "conversion-rate",
+      "cat": "business",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Conversion Rate: NaN% | 0 / 0"
+    },
+    {
+      "tool": "conversion-rate",
+      "cat": "business",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "churn",
+      "cat": "business",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Churn: NaN% | Retained: 0"
+    },
+    {
+      "tool": "churn",
+      "cat": "business",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "roas",
+      "cat": "business",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: ROAS: NaNx | Profit: $0.00"
+    },
+    {
+      "tool": "burn-rate",
+      "cat": "business",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Runway: NaN months | Monthly burn: $0"
+    },
+    {
+      "tool": "nps",
+      "cat": "business",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NPS: NaN | Needs improvement"
+    },
+    {
+      "tool": "nps",
+      "cat": "business",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "freelance-rate",
+      "cat": "business",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Hourly Rate: $NaN | Billable hours: 0"
+    },
+    {
+      "tool": "pricing",
+      "cat": "business",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "inventory",
+      "cat": "business",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Turnover: NaNx | Days in inventory: NaN"
+    },
+    {
+      "tool": "break-even-revenue",
+      "cat": "business",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Break-Even Revenue: $NaN | Margin: 0%"
+    },
+    {
+      "tool": "payback",
+      "cat": "business",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Payback: NaN years | Annual: $0"
+    },
+    {
+      "tool": "depreciation",
+      "cat": "business",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Annual Depreciation: $NaN | Monthly: $NaN"
+    },
+    {
+      "tool": "depreciation",
+      "cat": "business",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "discount-rate",
+      "cat": "business",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: WACC: NaN% | Total Capital: $0"
+    },
+    {
+      "tool": "discount-rate",
+      "cat": "business",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "saas-unit-metrics",
+      "cat": "business",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: LTV: $NaN | ARPU: $NaN | LTV/CAC: NaNx | ARPU: $NaN"
+    },
+    {
+      "tool": "break-even-point",
+      "cat": "business",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Break-even: NaN units | Revenue at BEP: $NaN | Contribution margin: $0.00/unit"
+    },
+    {
+      "tool": "break-even-point",
+      "cat": "business",
+      "kase": "huge",
+      "issue": "BAD VALUE: Break-even: Infinity units | Revenue at BEP: $Infinity | Contribution margin: $0.00/unit"
+    },
+    {
+      "tool": "break-even-point",
+      "cat": "business",
+      "kase": "tiny",
+      "issue": "BAD VALUE: Break-even: Infinity units | Revenue at BEP: $Infinity | Contribution margin: $0.00/unit"
+    },
+    {
+      "tool": "invoice-due-date",
+      "cat": "business",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "employee-cost",
+      "cat": "business",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Total cost: $0 | Benefits: $0 | Overhead: $0 | Bonus: $0 | NaN× salary"
+    },
+    {
+      "tool": "employee-cost",
+      "cat": "business",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "tax-bracket",
+      "cat": "career-freelance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: $0 tax | Effective rate: NaN% | Taxable: $0"
+    },
+    {
+      "tool": "pay-gap",
+      "cat": "career-freelance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Gap: $0 (NaN%) | B earns NaN% less | B would earn $0 at parity"
+    },
+    {
+      "tool": "stock-options",
+      "cat": "career-freelance",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+    },
+    {
+      "tool": "career-gap",
+      "cat": "career-freelance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Loss: $NaN | Lost salary: $0 | Growth: $NaN"
+    },
+    {
+      "tool": "remortgage-calc",
+      "cat": "career-freelance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Save $NaN over 0yrs | Old: $NaN/mo | New: $NaN/mo | Monthly save: $NaN"
+    },
+    {
+      "tool": "remortgage-calc",
+      "cat": "career-freelance",
+      "kase": "huge",
+      "issue": "BAD VALUE: Save $NaN over 1000000000000000yrs | Old: $NaN/mo | New: $NaN/mo | Monthly save: $NaN"
+    },
+    {
+      "tool": "remortgage-calc",
+      "cat": "career-freelance",
+      "kase": "tiny",
+      "issue": "BAD VALUE: Save $NaN over 1e-9yrs | Old: $Infinity/mo | New: $Infinity/mo | Monthly save: $NaN"
+    },
+    {
+      "tool": "mortgage-afford",
+      "cat": "career-freelance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Can afford: $NaN | Max loan: $NaN | Deposit: $0 | Max monthly: $0"
+    },
+    {
+      "tool": "mortgage-afford",
+      "cat": "career-freelance",
+      "kase": "huge",
+      "issue": "BAD VALUE: Can afford: $NaN | Max loan: $NaN | Deposit: $1,000,000,000,000,000 | Max monthly: $23333333333333"
+    },
+    {
+      "tool": "mortgage-afford",
+      "cat": "career-freelance",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+    },
+    {
+      "tool": "tax-refund",
+      "cat": "career-freelance",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+    },
+    {
+      "tool": "invoicing-calc",
+      "cat": "career-freelance",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "employment-status",
+      "cat": "career-freelance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: SE Tax: $0 | Income Tax: $0 | Profit: $0 | Total tax: $0 | Effective: NaN%"
+    },
+    {
+      "tool": "employment-status",
+      "cat": "career-freelance",
+      "kase": "huge",
+      "issue": "BAD VALUE: SE Tax: $0 | Income Tax: $0 | Profit: $0 | Total tax: $0 | Effective: NaN%"
+    },
+    {
+      "tool": "employment-status",
+      "cat": "career-freelance",
+      "kase": "tiny",
+      "issue": "BAD VALUE: SE Tax: $0 | Income Tax: $0 | Profit: $0 | Total tax: $0 | Effective: NaN%"
+    },
+    {
+      "tool": "freelance-budget",
+      "cat": "career-freelance",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "drywall",
+      "cat": "construction",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Sheets needed: NaN | Includes 10% waste"
+    },
+    {
+      "tool": "flooring",
+      "cat": "construction",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "insulation",
+      "cat": "construction",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Rolls needed: 0 | k-value: NaN W/m·K"
+    },
+    {
+      "tool": "stairs",
+      "cat": "construction",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Steps: NaN | Tread: 25cm | Total run: NaNm"
+    },
+    {
+      "tool": "wallpaper",
+      "cat": "construction",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Rolls: NaN | Includes 15% waste"
+    },
+    {
+      "tool": "bricks",
+      "cat": "construction",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Bricks: NaN | Includes 5% waste"
+    },
+    {
+      "tool": "fence",
+      "cat": "construction",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Posts: NaN | Rails: NaN | Fence length: 0m"
+    },
+    {
+      "tool": "tile-calculator",
+      "cat": "construction",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Tiles needed: NaN | Area: 0.00 m² | Tile: 0x0 cm | Waste: 0%"
+    },
+    {
+      "tool": "paint-quantity",
+      "cat": "construction",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Paint needed: NaN L | ≈ NaN tins (10L) or NaN tins (4L)"
+    },
+    {
+      "tool": "paint-quantity",
+      "cat": "construction",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "paver-calculator",
+      "cat": "construction",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Pavers: NaN | Covers NaN m² incl. 0% waste | Per m²: Infinity"
+    },
+    {
+      "tool": "deck-calculator",
+      "cat": "construction",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Boards: NaN | Total: NaN linear m | Each 0m × 0cm | Screws: ~NaN"
+    },
+    {
+      "tool": "fuel-efficiency-converter",
+      "cat": "conversion",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Infinity mpgus | 0 L100 = Infinity mpgus"
+    },
+    {
+      "tool": "gpa",
+      "cat": "education",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'split')"
+    },
+    {
+      "tool": "cgpa",
+      "cat": "education",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'split')"
+    },
+    {
+      "tool": "grade",
+      "cat": "education",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Need on final: NaN% | Not possible"
+    },
+    {
+      "tool": "study-time",
+      "cat": "education",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Study NaN hours/day | Total: 0h over 0 days"
+    },
+    {
+      "tool": "reading-speed",
+      "cat": "education",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Speed: NaN WPM | Average reader"
+    },
+    {
+      "tool": "test-score",
+      "cat": "education",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Score: NaN% (F) | 0/0"
+    },
+    {
+      "tool": "semester-gpa",
+      "cat": "education",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Projected GPA: NaN | Credits: 0 | Quality pts: 0.0"
+    },
+    {
+      "tool": "college-cost-planner",
+      "cat": "education",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+    },
+    {
+      "tool": "study-break",
+      "cat": "education",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'study')"
+    },
+    {
+      "tool": "flashcard-count",
+      "cat": "education",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN cards/day needed | Review: NaN/day | Spaced repetition: 0 max review/day"
+    },
+    {
+      "tool": "plagiarism-check",
+      "cat": "education",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Well-sourced (NaN per 1K words) | Words: 0 | Citations: 0 | Target: 2-4 per 1K words"
+    },
+    {
+      "tool": "exam-score-needed",
+      "cat": "education",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Need NaN% on final | Current: 0% | Weight: 0% | Goal: 0%"
+    },
+    {
+      "tool": "power-factor",
+      "cat": "engineering",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Power Factor: NaN | Reactive: 0.00 VAR"
+    },
+    {
+      "tool": "power-factor",
+      "cat": "engineering",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "led-resistor",
+      "cat": "engineering",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Resistor: NaN Ω | Power: 0.000 W"
+    },
+    {
+      "tool": "capacitor",
+      "cat": "engineering",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Capacitance: NaN μF | C = Q/V"
+    },
+    {
+      "tool": "battery-life",
+      "cat": "engineering",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Battery Life: NaN hours | ≈ NaN days"
+    },
+    {
+      "tool": "wire-gauge",
+      "cat": "engineering",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Recommended: AWG -Infinity | For 0A over 0m"
+    },
+    {
+      "tool": "wire-gauge",
+      "cat": "engineering",
+      "kase": "negatives",
+      "issue": "BAD VALUE: Recommended: AWG NaN | For -15A over -20m"
+    },
+    {
+      "tool": "inductor",
+      "cat": "engineering",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Inductance: NaN μH | L = μ₀N²A/l"
+    },
+    {
+      "tool": "impedance",
+      "cat": "engineering",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Impedance: 0.00 Ω | Phase: NaN°"
+    },
+    {
+      "tool": "impedance",
+      "cat": "engineering",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "beam-load",
+      "cat": "engineering",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Max Stress: NaN Pa | For simply supported beam"
+    },
+    {
+      "tool": "hydraulic",
+      "cat": "engineering",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Pressure: NaN kPa | P = F/A"
+    },
+    {
+      "tool": "kva-kw",
+      "cat": "engineering",
+      "kase": "huge",
+      "issue": "BAD VALUE: Real Power: 1e+30 kW | Reactive: NaN kVAR | kW = kVA × PF"
+    },
+    {
+      "tool": "belt-length",
+      "cat": "engineering",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Belt Length: NaN mm | ≈ NaN inches"
+    },
+    {
+      "tool": "sound-level",
+      "cat": "engineering",
+      "kase": "huge",
+      "issue": "BAD VALUE: Combined: Infinity dB | Average: Infinity dB | Δ: +Infinity dB"
+    },
+    {
+      "tool": "resonant-frequency",
+      "cat": "engineering",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Frequency: Infinity kHz | f = 1/(2π√(LC)) | Infinity Hz"
+    },
+    {
+      "tool": "transformer-ratio",
+      "cat": "engineering",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Secondary Turns: NaN | Ratio: NaN:1 | Step-up transformer"
+    },
+    {
+      "tool": "trip-fuel-cost",
+      "cat": "everyday",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Cost: $NaN | Fuel needed: NaN L"
+    },
+    {
+      "tool": "trip-fuel-cost",
+      "cat": "everyday",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "gst",
+      "cat": "everyday",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "garden",
+      "cat": "everyday",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Area: 0.0 m² | Plants: NaN | Spacing: 0m"
+    },
+    {
+      "tool": "timezone",
+      "cat": "everyday",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'split')"
+    },
+    {
+      "tool": "sleep-calc",
+      "cat": "everyday",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'split')"
+    },
+    {
+      "tool": "walking-steps",
+      "cat": "everyday",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+    },
+    {
+      "tool": "pet-age",
+      "cat": "everyday",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'startsWith')"
+    },
+    {
+      "tool": "blood-alcohol",
+      "cat": "everyday",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN% BAC | Above limit (0.08%) | 0 drinks in 0h"
+    },
+    {
+      "tool": "vacation-budget",
+      "cat": "everyday",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Total: $0 | Per day: $NaN | Flight: $0 | Hotel: $0 | Food: $0"
+    },
+    {
+      "tool": "grocery-budget",
+      "cat": "everyday",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Weekly: $0 | Monthly: $0 | Per person: $NaN/wk | 0 people"
+    },
+    {
+      "tool": "distance-pace",
+      "cat": "everyday",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN:NaN /km | Speed: NaN km/h | 0 km in 0m"
+    },
+    {
+      "tool": "loan-emi",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Payment: $NaN / monthly | Total Payment: $NaN | Total Interest: $NaN | DCC: Actual/365"
+    },
+    {
+      "tool": "loan-emi",
+      "cat": "finance",
+      "kase": "huge",
+      "issue": "BAD VALUE: Payment: $NaN / monthly | Total Payment: $NaN | Total Interest: $NaN | DCC: Actual/365"
+    },
+    {
+      "tool": "mortgage",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Payment: $NaN / monthly | Home: $0 | Loan: $0 | Total Interest: $NaN | DCC: Actual/365"
+    },
+    {
+      "tool": "mortgage",
+      "cat": "finance",
+      "kase": "huge",
+      "issue": "BAD VALUE: Payment: $NaN / monthly | Home: $1,000,000,000,000,000 | Loan: $0 | Total Interest: $NaN | DCC: Actual/365"
+    },
+    {
+      "tool": "mortgage",
+      "cat": "finance",
+      "kase": "tiny",
+      "issue": "BAD VALUE: Payment: $NaN / monthly | Home: $0 | Loan: $0 | Total Interest: $NaN | DCC: Actual/365"
+    },
+    {
+      "tool": "auto-loan",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Payment: $NaN / monthly | Loan Amount: $0 | Total: $NaN | DCC: Actual/365"
+    },
+    {
+      "tool": "auto-loan",
+      "cat": "finance",
+      "kase": "huge",
+      "issue": "BAD VALUE: Payment: $NaN / monthly | Loan Amount: $0 | Total: $NaN | DCC: Actual/365"
+    },
+    {
+      "tool": "auto-loan",
+      "cat": "finance",
+      "kase": "tiny",
+      "issue": "BAD VALUE: Payment: $NaN / monthly | Loan Amount: $0 | Total: $NaN | DCC: Actual/365"
+    },
+    {
+      "tool": "credit-card-payoff",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Payoff Time: NaN months | Total Paid: $NaN"
+    },
+    {
+      "tool": "retirement",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Retirement Fund: $NaN | Total Contributions: $0 | Interest: $NaN"
+    },
+    {
+      "tool": "investment",
+      "cat": "finance",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "savings-goal",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Monthly Saving: $NaN | Total Saved: $0 | Total Contributed: $NaN"
+    },
+    {
+      "tool": "sales-tax",
+      "cat": "finance",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "npv",
+      "cat": "finance",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'split')"
+    },
+    {
+      "tool": "irr",
+      "cat": "finance",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'split')"
+    },
+    {
+      "tool": "roi",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: ROI: NaN% | Profit: $0.00"
+    },
+    {
+      "tool": "tip",
+      "cat": "finance",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "annuity",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Monthly Payment: $NaN | Total: $NaN"
+    },
+    {
+      "tool": "annuity",
+      "cat": "finance",
+      "kase": "tiny",
+      "issue": "BAD VALUE: Monthly Payment: $Infinity | Total: $Infinity"
+    },
+    {
+      "tool": "annuity",
+      "cat": "finance",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "inflation",
+      "cat": "finance",
+      "kase": "huge",
+      "issue": "BAD VALUE: Future Value: $Infinity | Real Value: $0.00"
+    },
+    {
+      "tool": "inflation",
+      "cat": "finance",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "bonds",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: YTM: NaN% | Annual Coupon: $0.00"
+    },
+    {
+      "tool": "debt-ratio",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: DTI: NaN% | High risk"
+    },
+    {
+      "tool": "net-worth-calculator",
+      "cat": "finance",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "rent-vs-buy",
+      "cat": "finance",
+      "kase": "huge",
+      "issue": "BAD VALUE: Rent is better | Buy: $NaN | Rent: $1.2e+31"
+    },
+    {
+      "tool": "refinance",
+      "cat": "finance",
+      "kase": "huge",
+      "issue": "BAD VALUE: Monthly Savings: $NaN | Total Savings: $NaN"
+    },
+    {
+      "tool": "refinance",
+      "cat": "finance",
+      "kase": "tiny",
+      "issue": "BAD VALUE: Monthly Savings: $NaN | Total Savings: $NaN"
+    },
+    {
+      "tool": "home-afford",
+      "cat": "finance",
+      "kase": "huge",
+      "issue": "BAD VALUE: Max Home Price: $NaN | Max Loan: $NaN"
+    },
+    {
+      "tool": "loan-qualify",
+      "cat": "finance",
+      "kase": "huge",
+      "issue": "BAD VALUE: Max Loan: $NaN | Max Payment: $-570000000000000.00"
+    },
+    {
+      "tool": "paycheck",
+      "cat": "finance",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "break-even",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Break-Even: NaN units | Revenue: $NaN"
+    },
+    {
+      "tool": "break-even",
+      "cat": "finance",
+      "kase": "huge",
+      "issue": "BAD VALUE: Break-Even: Infinity units | Revenue: $Infinity"
+    },
+    {
+      "tool": "break-even",
+      "cat": "finance",
+      "kase": "tiny",
+      "issue": "BAD VALUE: Break-Even: Infinity units | Revenue: $Infinity"
+    },
+    {
+      "tool": "markup",
+      "cat": "finance",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "present-value",
+      "cat": "finance",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "future-value",
+      "cat": "finance",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "amortization",
+      "cat": "finance",
+      "kase": "huge",
+      "issue": "BAD VALUE: Monthly: $NaN | Total Interest: $NaN"
+    },
+    {
+      "tool": "amortization",
+      "cat": "finance",
+      "kase": "tiny",
+      "issue": "BAD VALUE: Monthly: $Infinity | Total Interest: $Infinity"
+    },
+    {
+      "tool": "loan-to-value",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: LTV: NaN% | High LTV - PMI needed"
+    },
+    {
+      "tool": "apr",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: APR: NaN% | Monthly: $NaN"
+    },
+    {
+      "tool": "apr",
+      "cat": "finance",
+      "kase": "huge",
+      "issue": "BAD VALUE: APR: NaN% | Monthly: $NaN"
+    },
+    {
+      "tool": "apr",
+      "cat": "finance",
+      "kase": "tiny",
+      "issue": "BAD VALUE: APR: Infinity% | Monthly: $Infinity"
+    },
+    {
+      "tool": "fire",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: FIRE Goal: $0.00 | Projected (20yr): $NaN"
+    },
+    {
+      "tool": "fire",
+      "cat": "finance",
+      "kase": "huge",
+      "issue": "BAD VALUE: FIRE Goal: $25000000000000000.00 | Projected (20yr): $Infinity"
+    },
+    {
+      "tool": "rental-yield",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Net Yield: NaN% | Gross Yield: NaN%"
+    },
+    {
+      "tool": "rental-yield",
+      "cat": "finance",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "loan-comparison",
+      "cat": "finance",
+      "kase": "huge",
+      "issue": "BAD VALUE: Offer 1: $NaN/mo | Offer 2: $NaN/mo | Offer 2 saves $NaN"
+    },
+    {
+      "tool": "loan-comparison",
+      "cat": "finance",
+      "kase": "tiny",
+      "issue": "BAD VALUE: Offer 1: $Infinity/mo | Offer 2: $Infinity/mo | Offer 2 saves $NaN"
+    },
+    {
+      "tool": "investment-growth",
+      "cat": "finance",
+      "kase": "huge",
+      "issue": "BAD VALUE: Conservative: $Infinity | Moderate: $Infinity | Aggressive: $Infinity | Difference: $NaN"
+    },
+    {
+      "tool": "savings-comparison",
+      "cat": "finance",
+      "kase": "huge",
+      "issue": "BAD VALUE: Bank 1: $Infinity | Bank 2: $Infinity | Bank 2 earns $NaN more"
+    },
+    {
+      "tool": "mortgage-payoff",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Payoff in NaN months (vs 0) | Save $NaN in interest"
+    },
+    {
+      "tool": "mortgage-payoff",
+      "cat": "finance",
+      "kase": "huge",
+      "issue": "BAD VALUE: Payoff in NaN months (vs 12000000000000000) | Save $NaN in interest"
+    },
+    {
+      "tool": "mortgage-payoff",
+      "cat": "finance",
+      "kase": "tiny",
+      "issue": "BAD VALUE: Payoff in 0 months (vs 1.2000000000000002e-8) | Save $NaN in interest"
+    },
+    {
+      "tool": "graduated-payment",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Year 1: $NaN/mo | Year 6+: $NaN/mo | Standard EMI would be $NaN"
+    },
+    {
+      "tool": "graduated-payment",
+      "cat": "finance",
+      "kase": "huge",
+      "issue": "BAD VALUE: Year 1: $NaN/mo | Year 6+: $NaN/mo | Standard EMI would be $NaN"
+    },
+    {
+      "tool": "graduated-payment",
+      "cat": "finance",
+      "kase": "tiny",
+      "issue": "BAD VALUE: Year 1: $Infinity/mo | Year 6+: $Infinity/mo | Standard EMI would be $Infinity"
+    },
+    {
+      "tool": "balloon-payment",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "THROW: Cannot read properties of undefined (reading 'balance')"
+    },
+    {
+      "tool": "balloon-payment",
+      "cat": "finance",
+      "kase": "negatives",
+      "issue": "THROW: Cannot read properties of undefined (reading 'balance')"
+    },
+    {
+      "tool": "balloon-payment",
+      "cat": "finance",
+      "kase": "huge",
+      "issue": "THROW: Cannot read properties of undefined (reading 'balance')"
+    },
+    {
+      "tool": "balloon-payment",
+      "cat": "finance",
+      "kase": "tiny",
+      "issue": "THROW: Cannot read properties of undefined (reading 'balance')"
+    },
+    {
+      "tool": "balloon-payment",
+      "cat": "finance",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'balance')"
+    },
+    {
+      "tool": "emergency-fund",
+      "cat": "finance",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+    },
+    {
+      "tool": "bond-yield",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: YTM: NaN% | Current Yield: NaN% | Annual Coupon: $0.00 | Maturity: $0"
+    },
+    {
+      "tool": "retirement-income",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Monthly Income: $NaN | At retirement: $NaN | Contributions: $0"
+    },
+    {
+      "tool": "retirement-income",
+      "cat": "finance",
+      "kase": "huge",
+      "issue": "BAD VALUE: Monthly Income: $NaN | At retirement: $Infinity | Contributions: $1.2e+31"
+    },
+    {
+      "tool": "retirement-income",
+      "cat": "finance",
+      "kase": "tiny",
+      "issue": "BAD VALUE: Monthly Income: $Infinity | At retirement: $0 | Contributions: $0"
+    },
+    {
+      "tool": "sip",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Future Value: $NaN | Invested: $0 | Returns: $NaN"
+    },
+    {
+      "tool": "sip",
+      "cat": "finance",
+      "kase": "huge",
+      "issue": "BAD VALUE: Future Value: $Infinity | Invested: $1.2e+31 | Returns: $Infinity"
+    },
+    {
+      "tool": "crypto-profit",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Profit: $0.00 | ROI: NaN% | Invested: $0.00"
+    },
+    {
+      "tool": "stock-profit",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Profit: $0.00 | Return: NaN%"
+    },
+    {
+      "tool": "dca",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: DCA: $NaN vs Lump: $0 | DCA loses by $NaN"
+    },
+    {
+      "tool": "dca",
+      "cat": "finance",
+      "kase": "huge",
+      "issue": "BAD VALUE: DCA: $Infinity vs Lump: $Infinity | DCA loses by $NaN"
+    },
+    {
+      "tool": "college-cost",
+      "cat": "finance",
+      "kase": "huge",
+      "issue": "BAD VALUE: Future Cost: $Infinity | Gap: $NaN"
+    },
+    {
+      "tool": "perpetuity",
+      "cat": "finance",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: PV: $NaN | Multiple: NaNx"
+    },
+    {
+      "tool": "perpetuity",
+      "cat": "finance",
+      "kase": "huge",
+      "issue": "BAD VALUE: PV: $Infinity | Multiple: Infinityx"
+    },
+    {
+      "tool": "perpetuity",
+      "cat": "finance",
+      "kase": "tiny",
+      "issue": "BAD VALUE: PV: $Infinity | Multiple: Infinityx"
+    },
+    {
+      "tool": "running-pace",
+      "cat": "fitness-exercise",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN:NaN /km | Speed: NaN km/h | 0 km in 0m 0s"
+    },
+    {
+      "tool": "race-predictor",
+      "cat": "fitness-exercise",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: 5K: NaN min | 10K: NaN min | HM: NaN min | Marathon: NaN min"
+    },
+    {
+      "tool": "race-predictor",
+      "cat": "fitness-exercise",
+      "kase": "negatives",
+      "issue": "BAD VALUE: 5K: NaN min | 10K: NaN min | HM: NaN min | Marathon: NaN min"
+    },
+    {
+      "tool": "vo2max",
+      "cat": "fitness-exercise",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Infinity ml/kg/min | Rating: Excellent | Resting HR method"
+    },
+    {
+      "tool": "weight-loss",
+      "cat": "fitness-exercise",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN weeks (NaN days) | Loss rate: 0.00 kg/wk | Deficit: 0 cal/day"
+    },
+    {
+      "tool": "squat-standards",
+      "cat": "fitness-exercise",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Untrained (NaNx BW) | Elite: 2.5x | Adv: 2.0x | Int: 1.6x | Novice: 1.2x | Beginner: 0.8x"
+    },
+    {
+      "tool": "bench-standards",
+      "cat": "fitness-exercise",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Untrained (NaNx BW) | Elite: 2.0x | Adv: 1.6x | Int: 1.2x | Novice: 0.8x"
+    },
+    {
+      "tool": "deadlift-standards",
+      "cat": "fitness-exercise",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Untrained (NaNx BW) | Elite: 3.0x | Adv: 2.5x | Int: 2.0x | Novice: 1.5x"
+    },
+    {
+      "tool": "overhead-standards",
+      "cat": "fitness-exercise",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Untrained (NaNx BW) | Elite: 1.5x | Adv: 1.2x | Int: 0.9x | Novice: 0.6x"
+    },
+    {
+      "tool": "weight-loss-time",
+      "cat": "food-nutrition",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN weeks | NaN days | NaN months | 0 kg to lose"
+    },
+    {
+      "tool": "recipe-scaler",
+      "cat": "food-nutrition",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Scale factor: NaNx | Multiply all ingredients by NaN | e.g., NaN cups instead of 0 cups"
+    },
+    {
+      "tool": "cooking-time",
+      "cat": "food-nutrition",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN min | Adjust by NaN min | Based on weight ratio"
+    },
+    {
+      "tool": "meal-prep",
+      "cat": "food-nutrition",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Per serving: $NaN | Total: $0 | 0 servings | Weekly: $NaN"
+    },
+    {
+      "tool": "body-fat",
+      "cat": "health",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Body Fat: NaN% | Above average"
+    },
+    {
+      "tool": "body-fat",
+      "cat": "health",
+      "kase": "negatives",
+      "issue": "BAD VALUE: Body Fat: NaN% | Above average"
+    },
+    {
+      "tool": "body-fat",
+      "cat": "health",
+      "kase": "huge",
+      "issue": "BAD VALUE: Body Fat: -Infinity% | Healthy"
+    },
+    {
+      "tool": "body-fat",
+      "cat": "health",
+      "kase": "tiny",
+      "issue": "BAD VALUE: Body Fat: -Infinity% | Healthy"
+    },
+    {
+      "tool": "waist-hip",
+      "cat": "health",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: WHR: NaN | High risk"
+    },
+    {
+      "tool": "blood-pressure",
+      "cat": "health",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "gfr",
+      "cat": "health",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: GFR: Infinity mL/min | Normal"
+    },
+    {
+      "tool": "gfr",
+      "cat": "health",
+      "kase": "negatives",
+      "issue": "BAD VALUE: GFR: NaN mL/min | Check with doctor"
+    },
+    {
+      "tool": "target-heart-rate",
+      "cat": "health",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading '0')"
+    },
+    {
+      "tool": "sleep-quality",
+      "cat": "health",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Quality Score: NaN/100 | Efficiency: NaN% Good quality"
+    },
+    {
+      "tool": "wallpaper-rolls",
+      "cat": "home-garden",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN rolls needed | Total area: 0 sq ft | Per roll: 0 sq ft | 0×0 room"
+    },
+    {
+      "tool": "fence-material",
+      "cat": "home-garden",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN posts needed | Pickets: NaN | Rails: NaN | Concrete: NaN bags"
+    },
+    {
+      "tool": "generator-size",
+      "cat": "home-garden",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "plant-spacing",
+      "cat": "home-garden",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN plants needed | Area: 0 sq ft | NaN × NaN grid | Spacing: 0\" | NaN plants/sqft"
+    },
+    {
+      "tool": "grass-seed",
+      "cat": "home-garden",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+    },
+    {
+      "tool": "fertilizer",
+      "cat": "home-garden",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'split')"
+    },
+    {
+      "tool": "rain-barrel",
+      "cat": "home-garden",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: 0 gal collected/month | Barrels needed: NaN (0gal each) | Daily: 0 gal | Yearly: 0 gal | Irrigates ~0 sqft garden"
+    },
+    {
+      "tool": "irrigation-flow",
+      "cat": "home-garden",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: 0.0 GPH flow needed | Water/day: 0 gal | Weekly: 0 gal | Monthly: 0 gal | Zones needed: ~Infinity"
+    },
+    {
+      "tool": "stair-calculator",
+      "cat": "home-garden",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN steps (riser: NaN\") | Riser: NaN\" | Tread: 0\" | Angle: NaN° | Stringer: NaN\" | Headroom: ~80\""
+    },
+    {
+      "tool": "light-bulb-save",
+      "cat": "home-garden",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Save $0.00/yr | kWh/yr: 0 → 0 | Payback: NaN months | CO₂: 0 kg/yr saved | Bulbs: 0"
+    },
+    {
+      "tool": "light-bulb-save",
+      "cat": "home-garden",
+      "kase": "huge",
+      "issue": "BAD VALUE: Save $0.00/yr | kWh/yr: 3.650000000000001e+44 → 3.650000000000001e+44 | Payback: Infinity months | CO₂: 0 kg/yr saved | "
+    },
+    {
+      "tool": "light-bulb-save",
+      "cat": "home-garden",
+      "kase": "tiny",
+      "issue": "BAD VALUE: Save $0.00/yr | kWh/yr: 0 → 0 | Payback: Infinity months | CO₂: 0 kg/yr saved | Bulbs: 1e-9"
+    },
+    {
+      "tool": "home-sqft",
+      "cat": "home-garden",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "kitchen-remodel",
+      "cat": "home-garden",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'undefined')"
+    },
+    {
+      "tool": "vinyl-flooring",
+      "cat": "home-garden",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN boxes needed | Covers: NaN sq ft | Cost: ~$NaN | Underlay: $0 | Standard waste"
+    },
+    {
+      "tool": "solar-panel",
+      "cat": "home-garden",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN kW system (NaN panels) | Yearly kWh: NaN | Savings: $NaN/yr | Cost: $NaN | Payback: NaN yr | CO₂: NaN kg/yr | ✗ Need"
+    },
+    {
+      "tool": "solar-battery",
+      "cat": "home-garden",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN battery(ies) needed | Usable per battery: 0.0 kWh | Backup: NaN hours | Cost: ~$NaN | DoD: 0%"
+    },
+    {
+      "tool": "ev-charger-home",
+      "cat": "home-garden",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "relocation-cost",
+      "cat": "lifestyle",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "food-delivery-vs-cooking",
+      "cat": "lifestyle",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Delivery: $0.00 | Markup: NaN% | Save NaN% by cooking | Time: 0 min"
+    },
+    {
+      "tool": "coffee-habit",
+      "cat": "lifestyle",
+      "kase": "huge",
+      "issue": "BAD VALUE: Annual: $5.2e+31 | Monthly: $4.33e+30 | 1000000000000000-year total: $5.2e+46 | If invested: $Infinity"
+    },
+    {
+      "tool": "road-trip-cost",
+      "cat": "lifestyle",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Total Trip: $NaN | Gas: $NaN | Per day: $NaN | 0 miles"
+    },
+    {
+      "tool": "road-trip-cost",
+      "cat": "lifestyle",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "flight-cost-per-hour",
+      "cat": "lifestyle",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: $NaN/flight hour | Total cost: $0.00 | Incl. airport: $NaN/hr"
+    },
+    {
+      "tool": "pet-cost",
+      "cat": "lifestyle",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "lawn-mowing",
+      "cat": "lifestyle",
+      "kase": "huge",
+      "issue": "BAD VALUE: Service: $1e+30/yr | DIY Year 2+: $1e+30/yr | Break-even: Infinity mows"
+    },
+    {
+      "tool": "lawn-mowing",
+      "cat": "lifestyle",
+      "kase": "tiny",
+      "issue": "BAD VALUE: Service: $0.00/yr | DIY Year 2+: $0.00/yr | Break-even: Infinity mows"
+    },
+    {
+      "tool": "gym-cost-per-visit",
+      "cat": "lifestyle",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: $NaN/visit | Total: $0.00 | 0 visits | 0×/week"
+    },
+    {
+      "tool": "vacation-savings",
+      "cat": "lifestyle",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Save $NaN/month | Weekly: $NaN | Total needed: $0.00 | 0 months"
+    },
+    {
+      "tool": "sale-savings",
+      "cat": "lifestyle",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: You Pay: $0.00 | Saved: $0.00 (NaN%) | Original: $0.00"
+    },
+    {
+      "tool": "sale-savings",
+      "cat": "lifestyle",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "resell-value",
+      "cat": "lifestyle",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Resell Value: $0.00 | Lost: $0.00 (NaN%) | Age: 0 years"
+    },
+    {
+      "tool": "subscription-audit",
+      "cat": "lifestyle",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "streaming-value",
+      "cat": "lifestyle",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: $NaN/hour | Cost/day: $0.00 | Ads cost: $NaN/mo in time"
+    },
+    {
+      "tool": "charging-time",
+      "cat": "lifestyle",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN minutes | From 0% to 0% | NaN hours | 0.0 Wh needed"
+    },
+    {
+      "tool": "gift-split",
+      "cat": "lifestyle",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Per Person: $NaN | Total: $0.00 | Tax: $0.00 | Split 0 ways"
+    },
+    {
+      "tool": "gift-split",
+      "cat": "lifestyle",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "pet-food-cost",
+      "cat": "lifestyle",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "quadratic",
+      "cat": "math",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: x₁=NaN, x₂=NaN | Discriminant: 0.00"
+    },
+    {
+      "tool": "percentage",
+      "cat": "math",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "percent-change",
+      "cat": "math",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Change: NaN% | Decrease"
+    },
+    {
+      "tool": "fraction",
+      "cat": "math",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN/NaN | Decimal: NaN"
+    },
+    {
+      "tool": "fraction",
+      "cat": "math",
+      "kase": "missing-fields",
+      "issue": "THROW: Maximum call stack size exceeded"
+    },
+    {
+      "tool": "statistics",
+      "cat": "math",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'split')"
+    },
+    {
+      "tool": "lcm-gcd",
+      "cat": "math",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: GCD: 0 | LCM: NaN | GCD × LCM = NaN"
+    },
+    {
+      "tool": "lcm-gcd",
+      "cat": "math",
+      "kase": "missing-fields",
+      "issue": "THROW: Maximum call stack size exceeded"
+    },
+    {
+      "tool": "logarithm",
+      "cat": "math",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: log(0)(0) = NaN | ln(0) = -Infinity"
+    },
+    {
+      "tool": "logarithm",
+      "cat": "math",
+      "kase": "negatives",
+      "issue": "BAD VALUE: log(-10)(-100) = NaN | ln(-100) = NaN"
+    },
+    {
+      "tool": "exponent",
+      "cat": "math",
+      "kase": "huge",
+      "issue": "BAD VALUE: 1000000000000000^1000000000000000 = Infinity | Scientific: Infinity"
+    },
+    {
+      "tool": "root",
+      "cat": "math",
+      "kase": "negatives",
+      "issue": "BAD VALUE: -3√-64 = NaN | Square root: NaN"
+    },
+    {
+      "tool": "ratio",
+      "cat": "math",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Ratio: NaN:NaN | Simplified from 0:0"
+    },
+    {
+      "tool": "ratio",
+      "cat": "math",
+      "kase": "missing-fields",
+      "issue": "THROW: Maximum call stack size exceeded"
+    },
+    {
+      "tool": "average",
+      "cat": "math",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'split')"
+    },
+    {
+      "tool": "slope",
+      "cat": "math",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Slope: NaN | y = NaNx + NaN"
+    },
+    {
+      "tool": "slope",
+      "cat": "math",
+      "kase": "huge",
+      "issue": "BAD VALUE: Slope: NaN | y = NaNx + NaN"
+    },
+    {
+      "tool": "slope",
+      "cat": "math",
+      "kase": "tiny",
+      "issue": "BAD VALUE: Slope: NaN | y = NaNx + NaN"
+    },
+    {
+      "tool": "modular",
+      "cat": "math",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: 0 mod 0 = NaN | Quotient: NaN"
+    },
+    {
+      "tool": "scientific-notation",
+      "cat": "math",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: 0 | Coefficient: 0 | Exponent: 10^NaN | Zero | Decimal: 0"
+    },
+    {
+      "tool": "baby-feeding",
+      "cat": "parenting-family",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN ml per feeding | Per day: 0 ml (0 oz) | Every Infinity hrs"
+    },
+    {
+      "tool": "child-bmi",
+      "cat": "parenting-family",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN (Normal) | Avg for age: 16 | 0 yrs, boy | Healthy range"
+    },
+    {
+      "tool": "family-budget",
+      "cat": "parenting-family",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Exp: $0 | Surplus: $0 | Savings rate: NaN% | Housing: NaN%"
+    },
+    {
+      "tool": "childcare-cost",
+      "cat": "parenting-family",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "college-savings",
+      "cat": "parenting-family",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Saved: $NaN | Cost: $0 | Coverage: NaN% | Years: 17 | Gap: $NaN"
+    },
+    {
+      "tool": "college-savings",
+      "cat": "parenting-family",
+      "kase": "huge",
+      "issue": "BAD VALUE: Saved: $-1,200 | Cost: $0 | Coverage: -Infinity% | Years: -999999999999983 | Gap: $1,200"
+    },
+    {
+      "tool": "life-insurance",
+      "cat": "parenting-family",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+    },
+    {
+      "tool": "home-buying",
+      "cat": "parenting-family",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Max price: $NaN | Max loan: $NaN | Monthly: $0.00 | Down: $0"
+    },
+    {
+      "tool": "home-buying",
+      "cat": "parenting-family",
+      "kase": "huge",
+      "issue": "BAD VALUE: Max price: $NaN | Max loan: $NaN | Monthly: $-976666666666666.63 | Down: $1,000,000,000,000,000"
+    },
+    {
+      "tool": "home-buying",
+      "cat": "parenting-family",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+    },
+    {
+      "tool": "wedding-budget",
+      "cat": "parenting-family",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+    },
+    {
+      "tool": "baby-name",
+      "cat": "parenting-family",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toLowerCase')"
+    },
+    {
+      "tool": "college-savings-monthly",
+      "cat": "parenting-family",
+      "kase": "huge",
+      "issue": "BAD VALUE: $NaN/month needed | Years to save: -999999999999982 | Total needed: $1,000,000,000,000,000,000,000,000,000,000 | Rate: 1"
+    },
+    {
+      "tool": "family-budget-simple",
+      "cat": "parenting-family",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Expenses: $0 | Balance: $0 | Savings rate: NaN% | Housing: NaN% | Deficit"
+    },
+    {
+      "tool": "maternity-leave-finance",
+      "cat": "parenting-family",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Received: $0 in 0 wks | Full pay: $0 | Paid: 0% | ~$NaN/wk"
+    },
+    {
+      "tool": "diaper-cost",
+      "cat": "parenting-family",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "fd-calculator",
+      "cat": "regional",
+      "kase": "huge",
+      "issue": "BAD VALUE: Maturity: ₹∞ | Interest: ₹∞ | TDS: ₹∞ | Effective: ₹NaN"
+    },
+    {
+      "tool": "rd-calculator",
+      "cat": "regional",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Maturity: ₹NaN | Deposited: ₹0 | Interest: ₹NaN"
+    },
+    {
+      "tool": "nps-calculator",
+      "cat": "regional",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Corpus: ₹NaN | Monthly Pension: ₹NaN | Lump Sum: ₹NaN"
+    },
+    {
+      "tool": "sip-return",
+      "cat": "regional",
+      "kase": "huge",
+      "issue": "BAD VALUE: Future Value: ₹∞ | Invested: ₹∞ | Returns: ₹NaN | XIRR: ~1000000000000000%"
+    },
+    {
+      "tool": "stamp-duty",
+      "cat": "regional",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "home-loan-emi-india",
+      "cat": "regional",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: EMI: ₹NaN | Total Interest: ₹NaN | Tax Saved: ₹NaN | Eff. EMI: ₹NaN"
+    },
+    {
+      "tool": "home-loan-emi-india",
+      "cat": "regional",
+      "kase": "huge",
+      "issue": "BAD VALUE: EMI: ₹NaN | Total Interest: ₹NaN | Tax Saved: ₹NaN | Eff. EMI: ₹NaN"
+    },
+    {
+      "tool": "gold-rate-pk",
+      "cat": "regional",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+    },
+    {
+      "tool": "electricity-bill-india",
+      "cat": "regional",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "lpg-cost",
+      "cat": "regional",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Per Day: ₹NaN | Per month: ₹NaN | Per meal: ₹NaN | Yearly: ₹0.00"
+    },
+    {
+      "tool": "wedding-budget-shaadi",
+      "cat": "regional",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "dubai-salary",
+      "cat": "regional",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Monthly Savings: AED 0.00 | Monthly income: AED 0.00 | Expenses: AED 0.00 | Saving rate: NaN% | Tax-free! ✓"
+    },
+    {
+      "tool": "gold-silver",
+      "cat": "regional",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Ratio: 1:NaN | Historical avg: ~1:60–70 | Normal range | ₹0 vs ₹0"
+    },
+    {
+      "tool": "chit-fund",
+      "cat": "regional",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Installment: ₹NaN | Total paid: ₹NaN | Dividends: ₹0 | Net: ₹0"
+    },
+    {
+      "tool": "ohms-law",
+      "cat": "science",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Resistance: NaN Ω | Power: 0.00 W | V = I × R"
+    },
+    {
+      "tool": "density",
+      "cat": "science",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Density: NaN kg/m³ | ρ = m/V"
+    },
+    {
+      "tool": "pressure",
+      "cat": "science",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Pressure: NaN Pa | P = F/A"
+    },
+    {
+      "tool": "ph",
+      "cat": "science",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: pH: Infinity (Basic) | pH = -log[H+]"
+    },
+    {
+      "tool": "ph",
+      "cat": "science",
+      "kase": "negatives",
+      "issue": "BAD VALUE: pH: NaN (Neutral) | pH = -log[H+]"
+    },
+    {
+      "tool": "ideal-gas",
+      "cat": "science",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Moles: NaN mol | PV = nRT"
+    },
+    {
+      "tool": "doppler",
+      "cat": "science",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Observed: NaN Hz | Shift: NaN Hz"
+    },
+    {
+      "tool": "doppler",
+      "cat": "science",
+      "kase": "huge",
+      "issue": "BAD VALUE: Observed: Infinity Hz | Shift: Infinity Hz"
+    },
+    {
+      "tool": "doppler",
+      "cat": "science",
+      "kase": "tiny",
+      "issue": "BAD VALUE: Observed: Infinity Hz | Shift: Infinity Hz"
+    },
+    {
+      "tool": "half-life",
+      "cat": "science",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Remaining: NaN | Decayed: NaN"
+    },
+    {
+      "tool": "wavelength",
+      "cat": "science",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Wavelength: NaN m | λ = v/f"
+    },
+    {
+      "tool": "acceleration",
+      "cat": "science",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Acceleration: NaN m/s² | a = Δv/t"
+    },
+    {
+      "tool": "power",
+      "cat": "science",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Power: NaN W | P = W/t"
+    },
+    {
+      "tool": "velocity",
+      "cat": "science",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Velocity: NaN m/s | v = d/t"
+    },
+    {
+      "tool": "free-fall",
+      "cat": "science",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Time: NaNs | Final Speed: NaN m/s | h = ½gt²"
+    },
+    {
+      "tool": "lens",
+      "cat": "science",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Image distance: NaN cm | Magnification: NaN | 1/f = 1/do + 1/di"
+    },
+    {
+      "tool": "lens",
+      "cat": "science",
+      "kase": "huge",
+      "issue": "BAD VALUE: Image distance: Infinity cm | Magnification: -Infinity | 1/f = 1/do + 1/di"
+    },
+    {
+      "tool": "lens",
+      "cat": "science",
+      "kase": "tiny",
+      "issue": "BAD VALUE: Image distance: Infinity cm | Magnification: -Infinity | 1/f = 1/do + 1/di"
+    },
+    {
+      "tool": "coulomb",
+      "cat": "science",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Force: NaN N | F = kq₁q₂/r²"
+    },
+    {
+      "tool": "frequency",
+      "cat": "science",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Frequency: Infinity Hz | f = 1/T"
+    },
+    {
+      "tool": "internet-speed",
+      "cat": "tech-digital",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaNm NaNs | 0 GB at 0 Mbps | NaN seconds total"
+    },
+    {
+      "tool": "ssd-vs-hdd",
+      "cat": "tech-digital",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: SSD: 0s | HDD: 0s | SSD: ~500 MB/s read | HDD: ~150 MB/s read | 0 GB file | SSD is NaNx faster"
+    },
+    {
+      "tool": "battery-life-estimator",
+      "cat": "tech-digital",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN hours | Battery: 0 mAh | Power: 0W | 0.0 Wh capacity"
+    },
+    {
+      "tool": "ppi-calc",
+      "cat": "tech-digital",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN PPI | Resolution: 0x0 | 0\" screen | Standard | Pixel pitch: NaN mm"
+    },
+    {
+      "tool": "password-time",
+      "cat": "tech-digital",
+      "kase": "huge",
+      "issue": "BAD VALUE: ∞ years | Entropy: 6569855608330948 bits | Combos: Infinity | Unbreakable by brute force ✓"
+    },
+    {
+      "tool": "image-file-size",
+      "cat": "tech-digital",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "device-charge-time",
+      "cat": "tech-digital",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: NaN hours | 0 mAh @ 0A | 0% eff | NaN minutes"
+    },
+    {
+      "tool": "data-transfer-cost",
+      "cat": "tech-digital",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "base64-encode",
+      "cat": "tech-digital",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'length')"
+    },
+    {
+      "tool": "color-picker",
+      "cat": "utilities",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'replace')"
+    },
+    {
+      "tool": "base-converter",
+      "cat": "utilities",
+      "kase": "negatives",
+      "issue": "BAD VALUE: Decimal: NaN<br>Binary: NaN<br>Hex: NAN<br>Octal: NaN | Base -10"
+    },
+    {
+      "tool": "base-converter",
+      "cat": "utilities",
+      "kase": "huge",
+      "issue": "BAD VALUE: Decimal: NaN<br>Binary: NaN<br>Hex: NAN<br>Octal: NaN | Base 1000000000000000"
+    },
+    {
+      "tool": "tip-split",
+      "cat": "utilities",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Per person: $NaN | Total: $0.00"
+    },
+    {
+      "tool": "tip-split",
+      "cat": "utilities",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    },
+    {
+      "tool": "salary-hourly",
+      "cat": "utilities",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: $NaN/hr | Monthly: $0 | Biweekly: $0"
+    },
+    {
+      "tool": "simple-tax",
+      "cat": "utilities",
+      "kase": "all-zero",
+      "issue": "BAD VALUE: Tax: $0 (Effective: NaN%) | Taxable: $0 | Take-home: $0"
+    },
+    {
+      "tool": "mileage-calc",
+      "cat": "utilities",
+      "kase": "missing-fields",
+      "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+    }
+  ],
+  "byTool": {
+    "fuel-cost": [
+      {
+        "tool": "fuel-cost",
+        "cat": "auto-transport",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: $NaN | NaN L needed | Per km: $NaN"
+      }
+    ],
+    "mileage-calculator": [
+      {
+        "tool": "mileage-calculator",
+        "cat": "auto-transport",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN km/L | NaN MPG | NaN L/100km"
+      }
+    ],
+    "fuel-price-compare": [
+      {
+        "tool": "fuel-price-compare",
+        "cat": "auto-transport",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: P:$NaN D:$NaN EV:$0 | Cheapest: EV | Save $NaN/yr"
+      }
+    ],
+    "car-loan-emi": [
+      {
+        "tool": "car-loan-emi",
+        "cat": "auto-transport",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: $NaN/mo | Total: $NaN | Interest: $NaN"
+      },
+      {
+        "tool": "car-loan-emi",
+        "cat": "auto-transport",
+        "kase": "huge",
+        "issue": "BAD VALUE: $NaN/mo | Total: $NaN | Interest: $NaN"
+      },
+      {
+        "tool": "car-loan-emi",
+        "cat": "auto-transport",
+        "kase": "tiny",
+        "issue": "BAD VALUE: $Infinity/mo | Total: $Infinity | Interest: $Infinity"
+      }
+    ],
+    "car-affordability": [
+      {
+        "tool": "car-affordability",
+        "cat": "auto-transport",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Max car: $NaN | Max loan: $NaN | Monthly: $0.00"
+      },
+      {
+        "tool": "car-affordability",
+        "cat": "auto-transport",
+        "kase": "huge",
+        "issue": "BAD VALUE: Max car: $NaN | Max loan: $NaN | Monthly: $0.00"
+      }
+    ],
+    "lease-vs-buy": [
+      {
+        "tool": "lease-vs-buy",
+        "cat": "auto-transport",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Buy: $NaN | Lease: $0 | Buy monthly: $NaN | Lease monthly: $0.00"
+      },
+      {
+        "tool": "lease-vs-buy",
+        "cat": "auto-transport",
+        "kase": "huge",
+        "issue": "BAD VALUE: Buy: $NaN | Lease: $1.000000000000001e+30 | Buy monthly: $NaN | Lease monthly: $1000000000000000.00"
+      },
+      {
+        "tool": "lease-vs-buy",
+        "cat": "auto-transport",
+        "kase": "tiny",
+        "issue": "BAD VALUE: Buy: $NaN | Lease: $0 | Buy monthly: $NaN | Lease monthly: $0.00"
+      },
+      {
+        "tool": "lease-vs-buy",
+        "cat": "auto-transport",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "ev-vs-gas-petrol": [
+      {
+        "tool": "ev-vs-gas-petrol",
+        "cat": "auto-transport",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: EV: $0/yr | Petrol: $NaN/yr | Save $NaN/yr with EV"
+      }
+    ],
+    "ev-range": [
+      {
+        "tool": "ev-range",
+        "cat": "auto-transport",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN km | Battery: 0 kWh | 0 Wh/km"
+      }
+    ],
+    "car-maintenance": [
+      {
+        "tool": "car-maintenance",
+        "cat": "auto-transport",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+      }
+    ],
+    "tire-size": [
+      {
+        "tool": "tire-size",
+        "cat": "auto-transport",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN% diameter change | Speedo at 100km/h: actual NaN km/h"
+      }
+    ],
+    "car-insurance": [
+      {
+        "tool": "car-insurance",
+        "cat": "auto-transport",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: $0/yr | Car value: $0 | Rate: ~NaN% of value"
+      },
+      {
+        "tool": "car-insurance",
+        "cat": "auto-transport",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+      }
+    ],
+    "commute-cost": [
+      {
+        "tool": "commute-cost",
+        "cat": "auto-transport",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: $NaN/day | Weekly: $NaN | Monthly: $NaN"
+      }
+    ],
+    "ride-share-cost": [
+      {
+        "tool": "ride-share-cost",
+        "cat": "auto-transport",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Car: $NaN vs Ride: $0.00/day | Ride-share cheaper by $NaN/day"
+      }
+    ],
+    "public-transport": [
+      {
+        "tool": "public-transport",
+        "cat": "auto-transport",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: PT: $0 vs Car: $NaN/mo | Save $NaN/mo by driving"
+      }
+    ],
+    "walking-transit": [
+      {
+        "tool": "walking-transit",
+        "cat": "auto-transport",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Walk: NaN min vs Transit: 0 min | Transit is NaN min faster"
+      }
+    ],
+    "trip-time": [
+      {
+        "tool": "trip-time",
+        "cat": "auto-transport",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaNh NaNm | Driving: NaNh | Breaks: NaN | Arrive ~NaN:00"
+      }
+    ],
+    "speed-distance-time": [
+      {
+        "tool": "speed-distance-time",
+        "cat": "auto-transport",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN km/h | Dist: 0 km, Time: 0h"
+      }
+    ],
+    "car-depreciation": [
+      {
+        "tool": "car-depreciation",
+        "cat": "auto-transport",
+        "kase": "huge",
+        "issue": "BAD VALUE: Current: $Infinity | Lost: $-Infinity | 1000000000000000%/yr"
+      }
+    ],
+    "trade-in-value": [
+      {
+        "tool": "trade-in-value",
+        "cat": "auto-transport",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: ~$0 | Age: 0 yrs | Depreciation: ~NaN%"
+      }
+    ],
+    "bike-fuel": [
+      {
+        "tool": "bike-fuel",
+        "cat": "auto-transport",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: $NaN/mo | Yearly: $NaN | NaN L/mo"
+      }
+    ],
+    "bike-loan": [
+      {
+        "tool": "bike-loan",
+        "cat": "auto-transport",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: $NaN/mo | Total: $NaN | Interest: $NaN"
+      },
+      {
+        "tool": "bike-loan",
+        "cat": "auto-transport",
+        "kase": "huge",
+        "issue": "BAD VALUE: $NaN/mo | Total: $NaN | Interest: $NaN"
+      },
+      {
+        "tool": "bike-loan",
+        "cat": "auto-transport",
+        "kase": "tiny",
+        "issue": "BAD VALUE: $Infinity/mo | Total: $Infinity | Interest: $Infinity"
+      }
+    ],
+    "fuel-efficiency": [
+      {
+        "tool": "fuel-efficiency",
+        "cat": "auto-transport",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Save $NaN/yr | Current: $NaN | Improved: $NaN | NaN% savings"
+      }
+    ],
+    "delivery-cost": [
+      {
+        "tool": "delivery-cost",
+        "cat": "auto-transport",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Total: $0.00 | Per km: $NaN | 0 km"
+      }
+    ],
+    "route-optimizer": [
+      {
+        "tool": "route-optimizer",
+        "cat": "auto-transport",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Total: $0.00 | Fuel: $0.00 | Time: 0.0h | Per stop: $NaN"
+      }
+    ],
+    "carbon-footprint-car": [
+      {
+        "tool": "carbon-footprint-car",
+        "cat": "auto-transport",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN kg CO2/yr | Fuel: NaN L/yr | NaN tonnes CO2"
+      }
+    ],
+    "business-roi": [
+      {
+        "tool": "business-roi",
+        "cat": "business",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: ROI: NaN% | Profit: $0.00"
+      },
+      {
+        "tool": "business-roi",
+        "cat": "business",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "profit-margin": [
+      {
+        "tool": "profit-margin",
+        "cat": "business",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Margin: NaN% | Profit: $0.00"
+      },
+      {
+        "tool": "profit-margin",
+        "cat": "business",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "cac": [
+      {
+        "tool": "cac",
+        "cat": "business",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: CAC: $NaN | Spend: $0"
+      }
+    ],
+    "conversion-rate": [
+      {
+        "tool": "conversion-rate",
+        "cat": "business",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Conversion Rate: NaN% | 0 / 0"
+      },
+      {
+        "tool": "conversion-rate",
+        "cat": "business",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "churn": [
+      {
+        "tool": "churn",
+        "cat": "business",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Churn: NaN% | Retained: 0"
+      },
+      {
+        "tool": "churn",
+        "cat": "business",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "roas": [
+      {
+        "tool": "roas",
+        "cat": "business",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: ROAS: NaNx | Profit: $0.00"
+      }
+    ],
+    "burn-rate": [
+      {
+        "tool": "burn-rate",
+        "cat": "business",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Runway: NaN months | Monthly burn: $0"
+      }
+    ],
+    "nps": [
+      {
+        "tool": "nps",
+        "cat": "business",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NPS: NaN | Needs improvement"
+      },
+      {
+        "tool": "nps",
+        "cat": "business",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "freelance-rate": [
+      {
+        "tool": "freelance-rate",
+        "cat": "business",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Hourly Rate: $NaN | Billable hours: 0"
+      }
+    ],
+    "pricing": [
+      {
+        "tool": "pricing",
+        "cat": "business",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "inventory": [
+      {
+        "tool": "inventory",
+        "cat": "business",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Turnover: NaNx | Days in inventory: NaN"
+      }
+    ],
+    "break-even-revenue": [
+      {
+        "tool": "break-even-revenue",
+        "cat": "business",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Break-Even Revenue: $NaN | Margin: 0%"
+      }
+    ],
+    "payback": [
+      {
+        "tool": "payback",
+        "cat": "business",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Payback: NaN years | Annual: $0"
+      }
+    ],
+    "depreciation": [
+      {
+        "tool": "depreciation",
+        "cat": "business",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Annual Depreciation: $NaN | Monthly: $NaN"
+      },
+      {
+        "tool": "depreciation",
+        "cat": "business",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "discount-rate": [
+      {
+        "tool": "discount-rate",
+        "cat": "business",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: WACC: NaN% | Total Capital: $0"
+      },
+      {
+        "tool": "discount-rate",
+        "cat": "business",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "saas-unit-metrics": [
+      {
+        "tool": "saas-unit-metrics",
+        "cat": "business",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: LTV: $NaN | ARPU: $NaN | LTV/CAC: NaNx | ARPU: $NaN"
+      }
+    ],
+    "break-even-point": [
+      {
+        "tool": "break-even-point",
+        "cat": "business",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Break-even: NaN units | Revenue at BEP: $NaN | Contribution margin: $0.00/unit"
+      },
+      {
+        "tool": "break-even-point",
+        "cat": "business",
+        "kase": "huge",
+        "issue": "BAD VALUE: Break-even: Infinity units | Revenue at BEP: $Infinity | Contribution margin: $0.00/unit"
+      },
+      {
+        "tool": "break-even-point",
+        "cat": "business",
+        "kase": "tiny",
+        "issue": "BAD VALUE: Break-even: Infinity units | Revenue at BEP: $Infinity | Contribution margin: $0.00/unit"
+      }
+    ],
+    "invoice-due-date": [
+      {
+        "tool": "invoice-due-date",
+        "cat": "business",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "employee-cost": [
+      {
+        "tool": "employee-cost",
+        "cat": "business",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Total cost: $0 | Benefits: $0 | Overhead: $0 | Bonus: $0 | NaN× salary"
+      },
+      {
+        "tool": "employee-cost",
+        "cat": "business",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "tax-bracket": [
+      {
+        "tool": "tax-bracket",
+        "cat": "career-freelance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: $0 tax | Effective rate: NaN% | Taxable: $0"
+      }
+    ],
+    "pay-gap": [
+      {
+        "tool": "pay-gap",
+        "cat": "career-freelance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Gap: $0 (NaN%) | B earns NaN% less | B would earn $0 at parity"
+      }
+    ],
+    "stock-options": [
+      {
+        "tool": "stock-options",
+        "cat": "career-freelance",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+      }
+    ],
+    "career-gap": [
+      {
+        "tool": "career-gap",
+        "cat": "career-freelance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Loss: $NaN | Lost salary: $0 | Growth: $NaN"
+      }
+    ],
+    "remortgage-calc": [
+      {
+        "tool": "remortgage-calc",
+        "cat": "career-freelance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Save $NaN over 0yrs | Old: $NaN/mo | New: $NaN/mo | Monthly save: $NaN"
+      },
+      {
+        "tool": "remortgage-calc",
+        "cat": "career-freelance",
+        "kase": "huge",
+        "issue": "BAD VALUE: Save $NaN over 1000000000000000yrs | Old: $NaN/mo | New: $NaN/mo | Monthly save: $NaN"
+      },
+      {
+        "tool": "remortgage-calc",
+        "cat": "career-freelance",
+        "kase": "tiny",
+        "issue": "BAD VALUE: Save $NaN over 1e-9yrs | Old: $Infinity/mo | New: $Infinity/mo | Monthly save: $NaN"
+      }
+    ],
+    "mortgage-afford": [
+      {
+        "tool": "mortgage-afford",
+        "cat": "career-freelance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Can afford: $NaN | Max loan: $NaN | Deposit: $0 | Max monthly: $0"
+      },
+      {
+        "tool": "mortgage-afford",
+        "cat": "career-freelance",
+        "kase": "huge",
+        "issue": "BAD VALUE: Can afford: $NaN | Max loan: $NaN | Deposit: $1,000,000,000,000,000 | Max monthly: $23333333333333"
+      },
+      {
+        "tool": "mortgage-afford",
+        "cat": "career-freelance",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+      }
+    ],
+    "tax-refund": [
+      {
+        "tool": "tax-refund",
+        "cat": "career-freelance",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+      }
+    ],
+    "invoicing-calc": [
+      {
+        "tool": "invoicing-calc",
+        "cat": "career-freelance",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "employment-status": [
+      {
+        "tool": "employment-status",
+        "cat": "career-freelance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: SE Tax: $0 | Income Tax: $0 | Profit: $0 | Total tax: $0 | Effective: NaN%"
+      },
+      {
+        "tool": "employment-status",
+        "cat": "career-freelance",
+        "kase": "huge",
+        "issue": "BAD VALUE: SE Tax: $0 | Income Tax: $0 | Profit: $0 | Total tax: $0 | Effective: NaN%"
+      },
+      {
+        "tool": "employment-status",
+        "cat": "career-freelance",
+        "kase": "tiny",
+        "issue": "BAD VALUE: SE Tax: $0 | Income Tax: $0 | Profit: $0 | Total tax: $0 | Effective: NaN%"
+      }
+    ],
+    "freelance-budget": [
+      {
+        "tool": "freelance-budget",
+        "cat": "career-freelance",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "drywall": [
+      {
+        "tool": "drywall",
+        "cat": "construction",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Sheets needed: NaN | Includes 10% waste"
+      }
+    ],
+    "flooring": [
+      {
+        "tool": "flooring",
+        "cat": "construction",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "insulation": [
+      {
+        "tool": "insulation",
+        "cat": "construction",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Rolls needed: 0 | k-value: NaN W/m·K"
+      }
+    ],
+    "stairs": [
+      {
+        "tool": "stairs",
+        "cat": "construction",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Steps: NaN | Tread: 25cm | Total run: NaNm"
+      }
+    ],
+    "wallpaper": [
+      {
+        "tool": "wallpaper",
+        "cat": "construction",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Rolls: NaN | Includes 15% waste"
+      }
+    ],
+    "bricks": [
+      {
+        "tool": "bricks",
+        "cat": "construction",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Bricks: NaN | Includes 5% waste"
+      }
+    ],
+    "fence": [
+      {
+        "tool": "fence",
+        "cat": "construction",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Posts: NaN | Rails: NaN | Fence length: 0m"
+      }
+    ],
+    "tile-calculator": [
+      {
+        "tool": "tile-calculator",
+        "cat": "construction",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Tiles needed: NaN | Area: 0.00 m² | Tile: 0x0 cm | Waste: 0%"
+      }
+    ],
+    "paint-quantity": [
+      {
+        "tool": "paint-quantity",
+        "cat": "construction",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Paint needed: NaN L | ≈ NaN tins (10L) or NaN tins (4L)"
+      },
+      {
+        "tool": "paint-quantity",
+        "cat": "construction",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "paver-calculator": [
+      {
+        "tool": "paver-calculator",
+        "cat": "construction",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Pavers: NaN | Covers NaN m² incl. 0% waste | Per m²: Infinity"
+      }
+    ],
+    "deck-calculator": [
+      {
+        "tool": "deck-calculator",
+        "cat": "construction",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Boards: NaN | Total: NaN linear m | Each 0m × 0cm | Screws: ~NaN"
+      }
+    ],
+    "fuel-efficiency-converter": [
+      {
+        "tool": "fuel-efficiency-converter",
+        "cat": "conversion",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Infinity mpgus | 0 L100 = Infinity mpgus"
+      }
+    ],
+    "gpa": [
+      {
+        "tool": "gpa",
+        "cat": "education",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'split')"
+      }
+    ],
+    "cgpa": [
+      {
+        "tool": "cgpa",
+        "cat": "education",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'split')"
+      }
+    ],
+    "grade": [
+      {
+        "tool": "grade",
+        "cat": "education",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Need on final: NaN% | Not possible"
+      }
+    ],
+    "study-time": [
+      {
+        "tool": "study-time",
+        "cat": "education",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Study NaN hours/day | Total: 0h over 0 days"
+      }
+    ],
+    "reading-speed": [
+      {
+        "tool": "reading-speed",
+        "cat": "education",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Speed: NaN WPM | Average reader"
+      }
+    ],
+    "test-score": [
+      {
+        "tool": "test-score",
+        "cat": "education",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Score: NaN% (F) | 0/0"
+      }
+    ],
+    "semester-gpa": [
+      {
+        "tool": "semester-gpa",
+        "cat": "education",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Projected GPA: NaN | Credits: 0 | Quality pts: 0.0"
+      }
+    ],
+    "college-cost-planner": [
+      {
+        "tool": "college-cost-planner",
+        "cat": "education",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+      }
+    ],
+    "study-break": [
+      {
+        "tool": "study-break",
+        "cat": "education",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'study')"
+      }
+    ],
+    "flashcard-count": [
+      {
+        "tool": "flashcard-count",
+        "cat": "education",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN cards/day needed | Review: NaN/day | Spaced repetition: 0 max review/day"
+      }
+    ],
+    "plagiarism-check": [
+      {
+        "tool": "plagiarism-check",
+        "cat": "education",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Well-sourced (NaN per 1K words) | Words: 0 | Citations: 0 | Target: 2-4 per 1K words"
+      }
+    ],
+    "exam-score-needed": [
+      {
+        "tool": "exam-score-needed",
+        "cat": "education",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Need NaN% on final | Current: 0% | Weight: 0% | Goal: 0%"
+      }
+    ],
+    "power-factor": [
+      {
+        "tool": "power-factor",
+        "cat": "engineering",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Power Factor: NaN | Reactive: 0.00 VAR"
+      },
+      {
+        "tool": "power-factor",
+        "cat": "engineering",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "led-resistor": [
+      {
+        "tool": "led-resistor",
+        "cat": "engineering",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Resistor: NaN Ω | Power: 0.000 W"
+      }
+    ],
+    "capacitor": [
+      {
+        "tool": "capacitor",
+        "cat": "engineering",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Capacitance: NaN μF | C = Q/V"
+      }
+    ],
+    "battery-life": [
+      {
+        "tool": "battery-life",
+        "cat": "engineering",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Battery Life: NaN hours | ≈ NaN days"
+      }
+    ],
+    "wire-gauge": [
+      {
+        "tool": "wire-gauge",
+        "cat": "engineering",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Recommended: AWG -Infinity | For 0A over 0m"
+      },
+      {
+        "tool": "wire-gauge",
+        "cat": "engineering",
+        "kase": "negatives",
+        "issue": "BAD VALUE: Recommended: AWG NaN | For -15A over -20m"
+      }
+    ],
+    "inductor": [
+      {
+        "tool": "inductor",
+        "cat": "engineering",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Inductance: NaN μH | L = μ₀N²A/l"
+      }
+    ],
+    "impedance": [
+      {
+        "tool": "impedance",
+        "cat": "engineering",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Impedance: 0.00 Ω | Phase: NaN°"
+      },
+      {
+        "tool": "impedance",
+        "cat": "engineering",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "beam-load": [
+      {
+        "tool": "beam-load",
+        "cat": "engineering",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Max Stress: NaN Pa | For simply supported beam"
+      }
+    ],
+    "hydraulic": [
+      {
+        "tool": "hydraulic",
+        "cat": "engineering",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Pressure: NaN kPa | P = F/A"
+      }
+    ],
+    "kva-kw": [
+      {
+        "tool": "kva-kw",
+        "cat": "engineering",
+        "kase": "huge",
+        "issue": "BAD VALUE: Real Power: 1e+30 kW | Reactive: NaN kVAR | kW = kVA × PF"
+      }
+    ],
+    "belt-length": [
+      {
+        "tool": "belt-length",
+        "cat": "engineering",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Belt Length: NaN mm | ≈ NaN inches"
+      }
+    ],
+    "sound-level": [
+      {
+        "tool": "sound-level",
+        "cat": "engineering",
+        "kase": "huge",
+        "issue": "BAD VALUE: Combined: Infinity dB | Average: Infinity dB | Δ: +Infinity dB"
+      }
+    ],
+    "resonant-frequency": [
+      {
+        "tool": "resonant-frequency",
+        "cat": "engineering",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Frequency: Infinity kHz | f = 1/(2π√(LC)) | Infinity Hz"
+      }
+    ],
+    "transformer-ratio": [
+      {
+        "tool": "transformer-ratio",
+        "cat": "engineering",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Secondary Turns: NaN | Ratio: NaN:1 | Step-up transformer"
+      }
+    ],
+    "trip-fuel-cost": [
+      {
+        "tool": "trip-fuel-cost",
+        "cat": "everyday",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Cost: $NaN | Fuel needed: NaN L"
+      },
+      {
+        "tool": "trip-fuel-cost",
+        "cat": "everyday",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "gst": [
+      {
+        "tool": "gst",
+        "cat": "everyday",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "garden": [
+      {
+        "tool": "garden",
+        "cat": "everyday",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Area: 0.0 m² | Plants: NaN | Spacing: 0m"
+      }
+    ],
+    "timezone": [
+      {
+        "tool": "timezone",
+        "cat": "everyday",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'split')"
+      }
+    ],
+    "sleep-calc": [
+      {
+        "tool": "sleep-calc",
+        "cat": "everyday",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'split')"
+      }
+    ],
+    "walking-steps": [
+      {
+        "tool": "walking-steps",
+        "cat": "everyday",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+      }
+    ],
+    "pet-age": [
+      {
+        "tool": "pet-age",
+        "cat": "everyday",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'startsWith')"
+      }
+    ],
+    "blood-alcohol": [
+      {
+        "tool": "blood-alcohol",
+        "cat": "everyday",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN% BAC | Above limit (0.08%) | 0 drinks in 0h"
+      }
+    ],
+    "vacation-budget": [
+      {
+        "tool": "vacation-budget",
+        "cat": "everyday",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Total: $0 | Per day: $NaN | Flight: $0 | Hotel: $0 | Food: $0"
+      }
+    ],
+    "grocery-budget": [
+      {
+        "tool": "grocery-budget",
+        "cat": "everyday",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Weekly: $0 | Monthly: $0 | Per person: $NaN/wk | 0 people"
+      }
+    ],
+    "distance-pace": [
+      {
+        "tool": "distance-pace",
+        "cat": "everyday",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN:NaN /km | Speed: NaN km/h | 0 km in 0m"
+      }
+    ],
+    "loan-emi": [
+      {
+        "tool": "loan-emi",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Payment: $NaN / monthly | Total Payment: $NaN | Total Interest: $NaN | DCC: Actual/365"
+      },
+      {
+        "tool": "loan-emi",
+        "cat": "finance",
+        "kase": "huge",
+        "issue": "BAD VALUE: Payment: $NaN / monthly | Total Payment: $NaN | Total Interest: $NaN | DCC: Actual/365"
+      }
+    ],
+    "mortgage": [
+      {
+        "tool": "mortgage",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Payment: $NaN / monthly | Home: $0 | Loan: $0 | Total Interest: $NaN | DCC: Actual/365"
+      },
+      {
+        "tool": "mortgage",
+        "cat": "finance",
+        "kase": "huge",
+        "issue": "BAD VALUE: Payment: $NaN / monthly | Home: $1,000,000,000,000,000 | Loan: $0 | Total Interest: $NaN | DCC: Actual/365"
+      },
+      {
+        "tool": "mortgage",
+        "cat": "finance",
+        "kase": "tiny",
+        "issue": "BAD VALUE: Payment: $NaN / monthly | Home: $0 | Loan: $0 | Total Interest: $NaN | DCC: Actual/365"
+      }
+    ],
+    "auto-loan": [
+      {
+        "tool": "auto-loan",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Payment: $NaN / monthly | Loan Amount: $0 | Total: $NaN | DCC: Actual/365"
+      },
+      {
+        "tool": "auto-loan",
+        "cat": "finance",
+        "kase": "huge",
+        "issue": "BAD VALUE: Payment: $NaN / monthly | Loan Amount: $0 | Total: $NaN | DCC: Actual/365"
+      },
+      {
+        "tool": "auto-loan",
+        "cat": "finance",
+        "kase": "tiny",
+        "issue": "BAD VALUE: Payment: $NaN / monthly | Loan Amount: $0 | Total: $NaN | DCC: Actual/365"
+      }
+    ],
+    "credit-card-payoff": [
+      {
+        "tool": "credit-card-payoff",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Payoff Time: NaN months | Total Paid: $NaN"
+      }
+    ],
+    "retirement": [
+      {
+        "tool": "retirement",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Retirement Fund: $NaN | Total Contributions: $0 | Interest: $NaN"
+      }
+    ],
+    "investment": [
+      {
+        "tool": "investment",
+        "cat": "finance",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "savings-goal": [
+      {
+        "tool": "savings-goal",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Monthly Saving: $NaN | Total Saved: $0 | Total Contributed: $NaN"
+      }
+    ],
+    "sales-tax": [
+      {
+        "tool": "sales-tax",
+        "cat": "finance",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "npv": [
+      {
+        "tool": "npv",
+        "cat": "finance",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'split')"
+      }
+    ],
+    "irr": [
+      {
+        "tool": "irr",
+        "cat": "finance",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'split')"
+      }
+    ],
+    "roi": [
+      {
+        "tool": "roi",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: ROI: NaN% | Profit: $0.00"
+      }
+    ],
+    "tip": [
+      {
+        "tool": "tip",
+        "cat": "finance",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "annuity": [
+      {
+        "tool": "annuity",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Monthly Payment: $NaN | Total: $NaN"
+      },
+      {
+        "tool": "annuity",
+        "cat": "finance",
+        "kase": "tiny",
+        "issue": "BAD VALUE: Monthly Payment: $Infinity | Total: $Infinity"
+      },
+      {
+        "tool": "annuity",
+        "cat": "finance",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "inflation": [
+      {
+        "tool": "inflation",
+        "cat": "finance",
+        "kase": "huge",
+        "issue": "BAD VALUE: Future Value: $Infinity | Real Value: $0.00"
+      },
+      {
+        "tool": "inflation",
+        "cat": "finance",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "bonds": [
+      {
+        "tool": "bonds",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: YTM: NaN% | Annual Coupon: $0.00"
+      }
+    ],
+    "debt-ratio": [
+      {
+        "tool": "debt-ratio",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: DTI: NaN% | High risk"
+      }
+    ],
+    "net-worth-calculator": [
+      {
+        "tool": "net-worth-calculator",
+        "cat": "finance",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "rent-vs-buy": [
+      {
+        "tool": "rent-vs-buy",
+        "cat": "finance",
+        "kase": "huge",
+        "issue": "BAD VALUE: Rent is better | Buy: $NaN | Rent: $1.2e+31"
+      }
+    ],
+    "refinance": [
+      {
+        "tool": "refinance",
+        "cat": "finance",
+        "kase": "huge",
+        "issue": "BAD VALUE: Monthly Savings: $NaN | Total Savings: $NaN"
+      },
+      {
+        "tool": "refinance",
+        "cat": "finance",
+        "kase": "tiny",
+        "issue": "BAD VALUE: Monthly Savings: $NaN | Total Savings: $NaN"
+      }
+    ],
+    "home-afford": [
+      {
+        "tool": "home-afford",
+        "cat": "finance",
+        "kase": "huge",
+        "issue": "BAD VALUE: Max Home Price: $NaN | Max Loan: $NaN"
+      }
+    ],
+    "loan-qualify": [
+      {
+        "tool": "loan-qualify",
+        "cat": "finance",
+        "kase": "huge",
+        "issue": "BAD VALUE: Max Loan: $NaN | Max Payment: $-570000000000000.00"
+      }
+    ],
+    "paycheck": [
+      {
+        "tool": "paycheck",
+        "cat": "finance",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "break-even": [
+      {
+        "tool": "break-even",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Break-Even: NaN units | Revenue: $NaN"
+      },
+      {
+        "tool": "break-even",
+        "cat": "finance",
+        "kase": "huge",
+        "issue": "BAD VALUE: Break-Even: Infinity units | Revenue: $Infinity"
+      },
+      {
+        "tool": "break-even",
+        "cat": "finance",
+        "kase": "tiny",
+        "issue": "BAD VALUE: Break-Even: Infinity units | Revenue: $Infinity"
+      }
+    ],
+    "markup": [
+      {
+        "tool": "markup",
+        "cat": "finance",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "present-value": [
+      {
+        "tool": "present-value",
+        "cat": "finance",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "future-value": [
+      {
+        "tool": "future-value",
+        "cat": "finance",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "amortization": [
+      {
+        "tool": "amortization",
+        "cat": "finance",
+        "kase": "huge",
+        "issue": "BAD VALUE: Monthly: $NaN | Total Interest: $NaN"
+      },
+      {
+        "tool": "amortization",
+        "cat": "finance",
+        "kase": "tiny",
+        "issue": "BAD VALUE: Monthly: $Infinity | Total Interest: $Infinity"
+      }
+    ],
+    "loan-to-value": [
+      {
+        "tool": "loan-to-value",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: LTV: NaN% | High LTV - PMI needed"
+      }
+    ],
+    "apr": [
+      {
+        "tool": "apr",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: APR: NaN% | Monthly: $NaN"
+      },
+      {
+        "tool": "apr",
+        "cat": "finance",
+        "kase": "huge",
+        "issue": "BAD VALUE: APR: NaN% | Monthly: $NaN"
+      },
+      {
+        "tool": "apr",
+        "cat": "finance",
+        "kase": "tiny",
+        "issue": "BAD VALUE: APR: Infinity% | Monthly: $Infinity"
+      }
+    ],
+    "fire": [
+      {
+        "tool": "fire",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: FIRE Goal: $0.00 | Projected (20yr): $NaN"
+      },
+      {
+        "tool": "fire",
+        "cat": "finance",
+        "kase": "huge",
+        "issue": "BAD VALUE: FIRE Goal: $25000000000000000.00 | Projected (20yr): $Infinity"
+      }
+    ],
+    "rental-yield": [
+      {
+        "tool": "rental-yield",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Net Yield: NaN% | Gross Yield: NaN%"
+      },
+      {
+        "tool": "rental-yield",
+        "cat": "finance",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "loan-comparison": [
+      {
+        "tool": "loan-comparison",
+        "cat": "finance",
+        "kase": "huge",
+        "issue": "BAD VALUE: Offer 1: $NaN/mo | Offer 2: $NaN/mo | Offer 2 saves $NaN"
+      },
+      {
+        "tool": "loan-comparison",
+        "cat": "finance",
+        "kase": "tiny",
+        "issue": "BAD VALUE: Offer 1: $Infinity/mo | Offer 2: $Infinity/mo | Offer 2 saves $NaN"
+      }
+    ],
+    "investment-growth": [
+      {
+        "tool": "investment-growth",
+        "cat": "finance",
+        "kase": "huge",
+        "issue": "BAD VALUE: Conservative: $Infinity | Moderate: $Infinity | Aggressive: $Infinity | Difference: $NaN"
+      }
+    ],
+    "savings-comparison": [
+      {
+        "tool": "savings-comparison",
+        "cat": "finance",
+        "kase": "huge",
+        "issue": "BAD VALUE: Bank 1: $Infinity | Bank 2: $Infinity | Bank 2 earns $NaN more"
+      }
+    ],
+    "mortgage-payoff": [
+      {
+        "tool": "mortgage-payoff",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Payoff in NaN months (vs 0) | Save $NaN in interest"
+      },
+      {
+        "tool": "mortgage-payoff",
+        "cat": "finance",
+        "kase": "huge",
+        "issue": "BAD VALUE: Payoff in NaN months (vs 12000000000000000) | Save $NaN in interest"
+      },
+      {
+        "tool": "mortgage-payoff",
+        "cat": "finance",
+        "kase": "tiny",
+        "issue": "BAD VALUE: Payoff in 0 months (vs 1.2000000000000002e-8) | Save $NaN in interest"
+      }
+    ],
+    "graduated-payment": [
+      {
+        "tool": "graduated-payment",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Year 1: $NaN/mo | Year 6+: $NaN/mo | Standard EMI would be $NaN"
+      },
+      {
+        "tool": "graduated-payment",
+        "cat": "finance",
+        "kase": "huge",
+        "issue": "BAD VALUE: Year 1: $NaN/mo | Year 6+: $NaN/mo | Standard EMI would be $NaN"
+      },
+      {
+        "tool": "graduated-payment",
+        "cat": "finance",
+        "kase": "tiny",
+        "issue": "BAD VALUE: Year 1: $Infinity/mo | Year 6+: $Infinity/mo | Standard EMI would be $Infinity"
+      }
+    ],
+    "balloon-payment": [
+      {
+        "tool": "balloon-payment",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "THROW: Cannot read properties of undefined (reading 'balance')"
+      },
+      {
+        "tool": "balloon-payment",
+        "cat": "finance",
+        "kase": "negatives",
+        "issue": "THROW: Cannot read properties of undefined (reading 'balance')"
+      },
+      {
+        "tool": "balloon-payment",
+        "cat": "finance",
+        "kase": "huge",
+        "issue": "THROW: Cannot read properties of undefined (reading 'balance')"
+      },
+      {
+        "tool": "balloon-payment",
+        "cat": "finance",
+        "kase": "tiny",
+        "issue": "THROW: Cannot read properties of undefined (reading 'balance')"
+      },
+      {
+        "tool": "balloon-payment",
+        "cat": "finance",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'balance')"
+      }
+    ],
+    "emergency-fund": [
+      {
+        "tool": "emergency-fund",
+        "cat": "finance",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+      }
+    ],
+    "bond-yield": [
+      {
+        "tool": "bond-yield",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: YTM: NaN% | Current Yield: NaN% | Annual Coupon: $0.00 | Maturity: $0"
+      }
+    ],
+    "retirement-income": [
+      {
+        "tool": "retirement-income",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Monthly Income: $NaN | At retirement: $NaN | Contributions: $0"
+      },
+      {
+        "tool": "retirement-income",
+        "cat": "finance",
+        "kase": "huge",
+        "issue": "BAD VALUE: Monthly Income: $NaN | At retirement: $Infinity | Contributions: $1.2e+31"
+      },
+      {
+        "tool": "retirement-income",
+        "cat": "finance",
+        "kase": "tiny",
+        "issue": "BAD VALUE: Monthly Income: $Infinity | At retirement: $0 | Contributions: $0"
+      }
+    ],
+    "sip": [
+      {
+        "tool": "sip",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Future Value: $NaN | Invested: $0 | Returns: $NaN"
+      },
+      {
+        "tool": "sip",
+        "cat": "finance",
+        "kase": "huge",
+        "issue": "BAD VALUE: Future Value: $Infinity | Invested: $1.2e+31 | Returns: $Infinity"
+      }
+    ],
+    "crypto-profit": [
+      {
+        "tool": "crypto-profit",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Profit: $0.00 | ROI: NaN% | Invested: $0.00"
+      }
+    ],
+    "stock-profit": [
+      {
+        "tool": "stock-profit",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Profit: $0.00 | Return: NaN%"
+      }
+    ],
+    "dca": [
+      {
+        "tool": "dca",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: DCA: $NaN vs Lump: $0 | DCA loses by $NaN"
+      },
+      {
+        "tool": "dca",
+        "cat": "finance",
+        "kase": "huge",
+        "issue": "BAD VALUE: DCA: $Infinity vs Lump: $Infinity | DCA loses by $NaN"
+      }
+    ],
+    "college-cost": [
+      {
+        "tool": "college-cost",
+        "cat": "finance",
+        "kase": "huge",
+        "issue": "BAD VALUE: Future Cost: $Infinity | Gap: $NaN"
+      }
+    ],
+    "perpetuity": [
+      {
+        "tool": "perpetuity",
+        "cat": "finance",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: PV: $NaN | Multiple: NaNx"
+      },
+      {
+        "tool": "perpetuity",
+        "cat": "finance",
+        "kase": "huge",
+        "issue": "BAD VALUE: PV: $Infinity | Multiple: Infinityx"
+      },
+      {
+        "tool": "perpetuity",
+        "cat": "finance",
+        "kase": "tiny",
+        "issue": "BAD VALUE: PV: $Infinity | Multiple: Infinityx"
+      }
+    ],
+    "running-pace": [
+      {
+        "tool": "running-pace",
+        "cat": "fitness-exercise",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN:NaN /km | Speed: NaN km/h | 0 km in 0m 0s"
+      }
+    ],
+    "race-predictor": [
+      {
+        "tool": "race-predictor",
+        "cat": "fitness-exercise",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: 5K: NaN min | 10K: NaN min | HM: NaN min | Marathon: NaN min"
+      },
+      {
+        "tool": "race-predictor",
+        "cat": "fitness-exercise",
+        "kase": "negatives",
+        "issue": "BAD VALUE: 5K: NaN min | 10K: NaN min | HM: NaN min | Marathon: NaN min"
+      }
+    ],
+    "vo2max": [
+      {
+        "tool": "vo2max",
+        "cat": "fitness-exercise",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Infinity ml/kg/min | Rating: Excellent | Resting HR method"
+      }
+    ],
+    "weight-loss": [
+      {
+        "tool": "weight-loss",
+        "cat": "fitness-exercise",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN weeks (NaN days) | Loss rate: 0.00 kg/wk | Deficit: 0 cal/day"
+      }
+    ],
+    "squat-standards": [
+      {
+        "tool": "squat-standards",
+        "cat": "fitness-exercise",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Untrained (NaNx BW) | Elite: 2.5x | Adv: 2.0x | Int: 1.6x | Novice: 1.2x | Beginner: 0.8x"
+      }
+    ],
+    "bench-standards": [
+      {
+        "tool": "bench-standards",
+        "cat": "fitness-exercise",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Untrained (NaNx BW) | Elite: 2.0x | Adv: 1.6x | Int: 1.2x | Novice: 0.8x"
+      }
+    ],
+    "deadlift-standards": [
+      {
+        "tool": "deadlift-standards",
+        "cat": "fitness-exercise",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Untrained (NaNx BW) | Elite: 3.0x | Adv: 2.5x | Int: 2.0x | Novice: 1.5x"
+      }
+    ],
+    "overhead-standards": [
+      {
+        "tool": "overhead-standards",
+        "cat": "fitness-exercise",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Untrained (NaNx BW) | Elite: 1.5x | Adv: 1.2x | Int: 0.9x | Novice: 0.6x"
+      }
+    ],
+    "weight-loss-time": [
+      {
+        "tool": "weight-loss-time",
+        "cat": "food-nutrition",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN weeks | NaN days | NaN months | 0 kg to lose"
+      }
+    ],
+    "recipe-scaler": [
+      {
+        "tool": "recipe-scaler",
+        "cat": "food-nutrition",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Scale factor: NaNx | Multiply all ingredients by NaN | e.g., NaN cups instead of 0 cups"
+      }
+    ],
+    "cooking-time": [
+      {
+        "tool": "cooking-time",
+        "cat": "food-nutrition",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN min | Adjust by NaN min | Based on weight ratio"
+      }
+    ],
+    "meal-prep": [
+      {
+        "tool": "meal-prep",
+        "cat": "food-nutrition",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Per serving: $NaN | Total: $0 | 0 servings | Weekly: $NaN"
+      }
+    ],
+    "body-fat": [
+      {
+        "tool": "body-fat",
+        "cat": "health",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Body Fat: NaN% | Above average"
+      },
+      {
+        "tool": "body-fat",
+        "cat": "health",
+        "kase": "negatives",
+        "issue": "BAD VALUE: Body Fat: NaN% | Above average"
+      },
+      {
+        "tool": "body-fat",
+        "cat": "health",
+        "kase": "huge",
+        "issue": "BAD VALUE: Body Fat: -Infinity% | Healthy"
+      },
+      {
+        "tool": "body-fat",
+        "cat": "health",
+        "kase": "tiny",
+        "issue": "BAD VALUE: Body Fat: -Infinity% | Healthy"
+      }
+    ],
+    "waist-hip": [
+      {
+        "tool": "waist-hip",
+        "cat": "health",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: WHR: NaN | High risk"
+      }
+    ],
+    "blood-pressure": [
+      {
+        "tool": "blood-pressure",
+        "cat": "health",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "gfr": [
+      {
+        "tool": "gfr",
+        "cat": "health",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: GFR: Infinity mL/min | Normal"
+      },
+      {
+        "tool": "gfr",
+        "cat": "health",
+        "kase": "negatives",
+        "issue": "BAD VALUE: GFR: NaN mL/min | Check with doctor"
+      }
+    ],
+    "target-heart-rate": [
+      {
+        "tool": "target-heart-rate",
+        "cat": "health",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading '0')"
+      }
+    ],
+    "sleep-quality": [
+      {
+        "tool": "sleep-quality",
+        "cat": "health",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Quality Score: NaN/100 | Efficiency: NaN% Good quality"
+      }
+    ],
+    "wallpaper-rolls": [
+      {
+        "tool": "wallpaper-rolls",
+        "cat": "home-garden",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN rolls needed | Total area: 0 sq ft | Per roll: 0 sq ft | 0×0 room"
+      }
+    ],
+    "fence-material": [
+      {
+        "tool": "fence-material",
+        "cat": "home-garden",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN posts needed | Pickets: NaN | Rails: NaN | Concrete: NaN bags"
+      }
+    ],
+    "generator-size": [
+      {
+        "tool": "generator-size",
+        "cat": "home-garden",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "plant-spacing": [
+      {
+        "tool": "plant-spacing",
+        "cat": "home-garden",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN plants needed | Area: 0 sq ft | NaN × NaN grid | Spacing: 0\" | NaN plants/sqft"
+      }
+    ],
+    "grass-seed": [
+      {
+        "tool": "grass-seed",
+        "cat": "home-garden",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+      }
+    ],
+    "fertilizer": [
+      {
+        "tool": "fertilizer",
+        "cat": "home-garden",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'split')"
+      }
+    ],
+    "rain-barrel": [
+      {
+        "tool": "rain-barrel",
+        "cat": "home-garden",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: 0 gal collected/month | Barrels needed: NaN (0gal each) | Daily: 0 gal | Yearly: 0 gal | Irrigates ~0 sqft garden"
+      }
+    ],
+    "irrigation-flow": [
+      {
+        "tool": "irrigation-flow",
+        "cat": "home-garden",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: 0.0 GPH flow needed | Water/day: 0 gal | Weekly: 0 gal | Monthly: 0 gal | Zones needed: ~Infinity"
+      }
+    ],
+    "stair-calculator": [
+      {
+        "tool": "stair-calculator",
+        "cat": "home-garden",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN steps (riser: NaN\") | Riser: NaN\" | Tread: 0\" | Angle: NaN° | Stringer: NaN\" | Headroom: ~80\""
+      }
+    ],
+    "light-bulb-save": [
+      {
+        "tool": "light-bulb-save",
+        "cat": "home-garden",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Save $0.00/yr | kWh/yr: 0 → 0 | Payback: NaN months | CO₂: 0 kg/yr saved | Bulbs: 0"
+      },
+      {
+        "tool": "light-bulb-save",
+        "cat": "home-garden",
+        "kase": "huge",
+        "issue": "BAD VALUE: Save $0.00/yr | kWh/yr: 3.650000000000001e+44 → 3.650000000000001e+44 | Payback: Infinity months | CO₂: 0 kg/yr saved | "
+      },
+      {
+        "tool": "light-bulb-save",
+        "cat": "home-garden",
+        "kase": "tiny",
+        "issue": "BAD VALUE: Save $0.00/yr | kWh/yr: 0 → 0 | Payback: Infinity months | CO₂: 0 kg/yr saved | Bulbs: 1e-9"
+      }
+    ],
+    "home-sqft": [
+      {
+        "tool": "home-sqft",
+        "cat": "home-garden",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "kitchen-remodel": [
+      {
+        "tool": "kitchen-remodel",
+        "cat": "home-garden",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'undefined')"
+      }
+    ],
+    "vinyl-flooring": [
+      {
+        "tool": "vinyl-flooring",
+        "cat": "home-garden",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN boxes needed | Covers: NaN sq ft | Cost: ~$NaN | Underlay: $0 | Standard waste"
+      }
+    ],
+    "solar-panel": [
+      {
+        "tool": "solar-panel",
+        "cat": "home-garden",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN kW system (NaN panels) | Yearly kWh: NaN | Savings: $NaN/yr | Cost: $NaN | Payback: NaN yr | CO₂: NaN kg/yr | ✗ Need"
+      }
+    ],
+    "solar-battery": [
+      {
+        "tool": "solar-battery",
+        "cat": "home-garden",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN battery(ies) needed | Usable per battery: 0.0 kWh | Backup: NaN hours | Cost: ~$NaN | DoD: 0%"
+      }
+    ],
+    "ev-charger-home": [
+      {
+        "tool": "ev-charger-home",
+        "cat": "home-garden",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "relocation-cost": [
+      {
+        "tool": "relocation-cost",
+        "cat": "lifestyle",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "food-delivery-vs-cooking": [
+      {
+        "tool": "food-delivery-vs-cooking",
+        "cat": "lifestyle",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Delivery: $0.00 | Markup: NaN% | Save NaN% by cooking | Time: 0 min"
+      }
+    ],
+    "coffee-habit": [
+      {
+        "tool": "coffee-habit",
+        "cat": "lifestyle",
+        "kase": "huge",
+        "issue": "BAD VALUE: Annual: $5.2e+31 | Monthly: $4.33e+30 | 1000000000000000-year total: $5.2e+46 | If invested: $Infinity"
+      }
+    ],
+    "road-trip-cost": [
+      {
+        "tool": "road-trip-cost",
+        "cat": "lifestyle",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Total Trip: $NaN | Gas: $NaN | Per day: $NaN | 0 miles"
+      },
+      {
+        "tool": "road-trip-cost",
+        "cat": "lifestyle",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "flight-cost-per-hour": [
+      {
+        "tool": "flight-cost-per-hour",
+        "cat": "lifestyle",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: $NaN/flight hour | Total cost: $0.00 | Incl. airport: $NaN/hr"
+      }
+    ],
+    "pet-cost": [
+      {
+        "tool": "pet-cost",
+        "cat": "lifestyle",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "lawn-mowing": [
+      {
+        "tool": "lawn-mowing",
+        "cat": "lifestyle",
+        "kase": "huge",
+        "issue": "BAD VALUE: Service: $1e+30/yr | DIY Year 2+: $1e+30/yr | Break-even: Infinity mows"
+      },
+      {
+        "tool": "lawn-mowing",
+        "cat": "lifestyle",
+        "kase": "tiny",
+        "issue": "BAD VALUE: Service: $0.00/yr | DIY Year 2+: $0.00/yr | Break-even: Infinity mows"
+      }
+    ],
+    "gym-cost-per-visit": [
+      {
+        "tool": "gym-cost-per-visit",
+        "cat": "lifestyle",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: $NaN/visit | Total: $0.00 | 0 visits | 0×/week"
+      }
+    ],
+    "vacation-savings": [
+      {
+        "tool": "vacation-savings",
+        "cat": "lifestyle",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Save $NaN/month | Weekly: $NaN | Total needed: $0.00 | 0 months"
+      }
+    ],
+    "sale-savings": [
+      {
+        "tool": "sale-savings",
+        "cat": "lifestyle",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: You Pay: $0.00 | Saved: $0.00 (NaN%) | Original: $0.00"
+      },
+      {
+        "tool": "sale-savings",
+        "cat": "lifestyle",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "resell-value": [
+      {
+        "tool": "resell-value",
+        "cat": "lifestyle",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Resell Value: $0.00 | Lost: $0.00 (NaN%) | Age: 0 years"
+      }
+    ],
+    "subscription-audit": [
+      {
+        "tool": "subscription-audit",
+        "cat": "lifestyle",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "streaming-value": [
+      {
+        "tool": "streaming-value",
+        "cat": "lifestyle",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: $NaN/hour | Cost/day: $0.00 | Ads cost: $NaN/mo in time"
+      }
+    ],
+    "charging-time": [
+      {
+        "tool": "charging-time",
+        "cat": "lifestyle",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN minutes | From 0% to 0% | NaN hours | 0.0 Wh needed"
+      }
+    ],
+    "gift-split": [
+      {
+        "tool": "gift-split",
+        "cat": "lifestyle",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Per Person: $NaN | Total: $0.00 | Tax: $0.00 | Split 0 ways"
+      },
+      {
+        "tool": "gift-split",
+        "cat": "lifestyle",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "pet-food-cost": [
+      {
+        "tool": "pet-food-cost",
+        "cat": "lifestyle",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "quadratic": [
+      {
+        "tool": "quadratic",
+        "cat": "math",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: x₁=NaN, x₂=NaN | Discriminant: 0.00"
+      }
+    ],
+    "percentage": [
+      {
+        "tool": "percentage",
+        "cat": "math",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "percent-change": [
+      {
+        "tool": "percent-change",
+        "cat": "math",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Change: NaN% | Decrease"
+      }
+    ],
+    "fraction": [
+      {
+        "tool": "fraction",
+        "cat": "math",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN/NaN | Decimal: NaN"
+      },
+      {
+        "tool": "fraction",
+        "cat": "math",
+        "kase": "missing-fields",
+        "issue": "THROW: Maximum call stack size exceeded"
+      }
+    ],
+    "statistics": [
+      {
+        "tool": "statistics",
+        "cat": "math",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'split')"
+      }
+    ],
+    "lcm-gcd": [
+      {
+        "tool": "lcm-gcd",
+        "cat": "math",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: GCD: 0 | LCM: NaN | GCD × LCM = NaN"
+      },
+      {
+        "tool": "lcm-gcd",
+        "cat": "math",
+        "kase": "missing-fields",
+        "issue": "THROW: Maximum call stack size exceeded"
+      }
+    ],
+    "logarithm": [
+      {
+        "tool": "logarithm",
+        "cat": "math",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: log(0)(0) = NaN | ln(0) = -Infinity"
+      },
+      {
+        "tool": "logarithm",
+        "cat": "math",
+        "kase": "negatives",
+        "issue": "BAD VALUE: log(-10)(-100) = NaN | ln(-100) = NaN"
+      }
+    ],
+    "exponent": [
+      {
+        "tool": "exponent",
+        "cat": "math",
+        "kase": "huge",
+        "issue": "BAD VALUE: 1000000000000000^1000000000000000 = Infinity | Scientific: Infinity"
+      }
+    ],
+    "root": [
+      {
+        "tool": "root",
+        "cat": "math",
+        "kase": "negatives",
+        "issue": "BAD VALUE: -3√-64 = NaN | Square root: NaN"
+      }
+    ],
+    "ratio": [
+      {
+        "tool": "ratio",
+        "cat": "math",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Ratio: NaN:NaN | Simplified from 0:0"
+      },
+      {
+        "tool": "ratio",
+        "cat": "math",
+        "kase": "missing-fields",
+        "issue": "THROW: Maximum call stack size exceeded"
+      }
+    ],
+    "average": [
+      {
+        "tool": "average",
+        "cat": "math",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'split')"
+      }
+    ],
+    "slope": [
+      {
+        "tool": "slope",
+        "cat": "math",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Slope: NaN | y = NaNx + NaN"
+      },
+      {
+        "tool": "slope",
+        "cat": "math",
+        "kase": "huge",
+        "issue": "BAD VALUE: Slope: NaN | y = NaNx + NaN"
+      },
+      {
+        "tool": "slope",
+        "cat": "math",
+        "kase": "tiny",
+        "issue": "BAD VALUE: Slope: NaN | y = NaNx + NaN"
+      }
+    ],
+    "modular": [
+      {
+        "tool": "modular",
+        "cat": "math",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: 0 mod 0 = NaN | Quotient: NaN"
+      }
+    ],
+    "scientific-notation": [
+      {
+        "tool": "scientific-notation",
+        "cat": "math",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: 0 | Coefficient: 0 | Exponent: 10^NaN | Zero | Decimal: 0"
+      }
+    ],
+    "baby-feeding": [
+      {
+        "tool": "baby-feeding",
+        "cat": "parenting-family",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN ml per feeding | Per day: 0 ml (0 oz) | Every Infinity hrs"
+      }
+    ],
+    "child-bmi": [
+      {
+        "tool": "child-bmi",
+        "cat": "parenting-family",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN (Normal) | Avg for age: 16 | 0 yrs, boy | Healthy range"
+      }
+    ],
+    "family-budget": [
+      {
+        "tool": "family-budget",
+        "cat": "parenting-family",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Exp: $0 | Surplus: $0 | Savings rate: NaN% | Housing: NaN%"
+      }
+    ],
+    "childcare-cost": [
+      {
+        "tool": "childcare-cost",
+        "cat": "parenting-family",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "college-savings": [
+      {
+        "tool": "college-savings",
+        "cat": "parenting-family",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Saved: $NaN | Cost: $0 | Coverage: NaN% | Years: 17 | Gap: $NaN"
+      },
+      {
+        "tool": "college-savings",
+        "cat": "parenting-family",
+        "kase": "huge",
+        "issue": "BAD VALUE: Saved: $-1,200 | Cost: $0 | Coverage: -Infinity% | Years: -999999999999983 | Gap: $1,200"
+      }
+    ],
+    "life-insurance": [
+      {
+        "tool": "life-insurance",
+        "cat": "parenting-family",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+      }
+    ],
+    "home-buying": [
+      {
+        "tool": "home-buying",
+        "cat": "parenting-family",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Max price: $NaN | Max loan: $NaN | Monthly: $0.00 | Down: $0"
+      },
+      {
+        "tool": "home-buying",
+        "cat": "parenting-family",
+        "kase": "huge",
+        "issue": "BAD VALUE: Max price: $NaN | Max loan: $NaN | Monthly: $-976666666666666.63 | Down: $1,000,000,000,000,000"
+      },
+      {
+        "tool": "home-buying",
+        "cat": "parenting-family",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+      }
+    ],
+    "wedding-budget": [
+      {
+        "tool": "wedding-budget",
+        "cat": "parenting-family",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+      }
+    ],
+    "baby-name": [
+      {
+        "tool": "baby-name",
+        "cat": "parenting-family",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toLowerCase')"
+      }
+    ],
+    "college-savings-monthly": [
+      {
+        "tool": "college-savings-monthly",
+        "cat": "parenting-family",
+        "kase": "huge",
+        "issue": "BAD VALUE: $NaN/month needed | Years to save: -999999999999982 | Total needed: $1,000,000,000,000,000,000,000,000,000,000 | Rate: 1"
+      }
+    ],
+    "family-budget-simple": [
+      {
+        "tool": "family-budget-simple",
+        "cat": "parenting-family",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Expenses: $0 | Balance: $0 | Savings rate: NaN% | Housing: NaN% | Deficit"
+      }
+    ],
+    "maternity-leave-finance": [
+      {
+        "tool": "maternity-leave-finance",
+        "cat": "parenting-family",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Received: $0 in 0 wks | Full pay: $0 | Paid: 0% | ~$NaN/wk"
+      }
+    ],
+    "diaper-cost": [
+      {
+        "tool": "diaper-cost",
+        "cat": "parenting-family",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "fd-calculator": [
+      {
+        "tool": "fd-calculator",
+        "cat": "regional",
+        "kase": "huge",
+        "issue": "BAD VALUE: Maturity: ₹∞ | Interest: ₹∞ | TDS: ₹∞ | Effective: ₹NaN"
+      }
+    ],
+    "rd-calculator": [
+      {
+        "tool": "rd-calculator",
+        "cat": "regional",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Maturity: ₹NaN | Deposited: ₹0 | Interest: ₹NaN"
+      }
+    ],
+    "nps-calculator": [
+      {
+        "tool": "nps-calculator",
+        "cat": "regional",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Corpus: ₹NaN | Monthly Pension: ₹NaN | Lump Sum: ₹NaN"
+      }
+    ],
+    "sip-return": [
+      {
+        "tool": "sip-return",
+        "cat": "regional",
+        "kase": "huge",
+        "issue": "BAD VALUE: Future Value: ₹∞ | Invested: ₹∞ | Returns: ₹NaN | XIRR: ~1000000000000000%"
+      }
+    ],
+    "stamp-duty": [
+      {
+        "tool": "stamp-duty",
+        "cat": "regional",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "home-loan-emi-india": [
+      {
+        "tool": "home-loan-emi-india",
+        "cat": "regional",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: EMI: ₹NaN | Total Interest: ₹NaN | Tax Saved: ₹NaN | Eff. EMI: ₹NaN"
+      },
+      {
+        "tool": "home-loan-emi-india",
+        "cat": "regional",
+        "kase": "huge",
+        "issue": "BAD VALUE: EMI: ₹NaN | Total Interest: ₹NaN | Tax Saved: ₹NaN | Eff. EMI: ₹NaN"
+      }
+    ],
+    "gold-rate-pk": [
+      {
+        "tool": "gold-rate-pk",
+        "cat": "regional",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toLocaleString')"
+      }
+    ],
+    "electricity-bill-india": [
+      {
+        "tool": "electricity-bill-india",
+        "cat": "regional",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "lpg-cost": [
+      {
+        "tool": "lpg-cost",
+        "cat": "regional",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Per Day: ₹NaN | Per month: ₹NaN | Per meal: ₹NaN | Yearly: ₹0.00"
+      }
+    ],
+    "wedding-budget-shaadi": [
+      {
+        "tool": "wedding-budget-shaadi",
+        "cat": "regional",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "dubai-salary": [
+      {
+        "tool": "dubai-salary",
+        "cat": "regional",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Monthly Savings: AED 0.00 | Monthly income: AED 0.00 | Expenses: AED 0.00 | Saving rate: NaN% | Tax-free! ✓"
+      }
+    ],
+    "gold-silver": [
+      {
+        "tool": "gold-silver",
+        "cat": "regional",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Ratio: 1:NaN | Historical avg: ~1:60–70 | Normal range | ₹0 vs ₹0"
+      }
+    ],
+    "chit-fund": [
+      {
+        "tool": "chit-fund",
+        "cat": "regional",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Installment: ₹NaN | Total paid: ₹NaN | Dividends: ₹0 | Net: ₹0"
+      }
+    ],
+    "ohms-law": [
+      {
+        "tool": "ohms-law",
+        "cat": "science",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Resistance: NaN Ω | Power: 0.00 W | V = I × R"
+      }
+    ],
+    "density": [
+      {
+        "tool": "density",
+        "cat": "science",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Density: NaN kg/m³ | ρ = m/V"
+      }
+    ],
+    "pressure": [
+      {
+        "tool": "pressure",
+        "cat": "science",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Pressure: NaN Pa | P = F/A"
+      }
+    ],
+    "ph": [
+      {
+        "tool": "ph",
+        "cat": "science",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: pH: Infinity (Basic) | pH = -log[H+]"
+      },
+      {
+        "tool": "ph",
+        "cat": "science",
+        "kase": "negatives",
+        "issue": "BAD VALUE: pH: NaN (Neutral) | pH = -log[H+]"
+      }
+    ],
+    "ideal-gas": [
+      {
+        "tool": "ideal-gas",
+        "cat": "science",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Moles: NaN mol | PV = nRT"
+      }
+    ],
+    "doppler": [
+      {
+        "tool": "doppler",
+        "cat": "science",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Observed: NaN Hz | Shift: NaN Hz"
+      },
+      {
+        "tool": "doppler",
+        "cat": "science",
+        "kase": "huge",
+        "issue": "BAD VALUE: Observed: Infinity Hz | Shift: Infinity Hz"
+      },
+      {
+        "tool": "doppler",
+        "cat": "science",
+        "kase": "tiny",
+        "issue": "BAD VALUE: Observed: Infinity Hz | Shift: Infinity Hz"
+      }
+    ],
+    "half-life": [
+      {
+        "tool": "half-life",
+        "cat": "science",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Remaining: NaN | Decayed: NaN"
+      }
+    ],
+    "wavelength": [
+      {
+        "tool": "wavelength",
+        "cat": "science",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Wavelength: NaN m | λ = v/f"
+      }
+    ],
+    "acceleration": [
+      {
+        "tool": "acceleration",
+        "cat": "science",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Acceleration: NaN m/s² | a = Δv/t"
+      }
+    ],
+    "power": [
+      {
+        "tool": "power",
+        "cat": "science",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Power: NaN W | P = W/t"
+      }
+    ],
+    "velocity": [
+      {
+        "tool": "velocity",
+        "cat": "science",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Velocity: NaN m/s | v = d/t"
+      }
+    ],
+    "free-fall": [
+      {
+        "tool": "free-fall",
+        "cat": "science",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Time: NaNs | Final Speed: NaN m/s | h = ½gt²"
+      }
+    ],
+    "lens": [
+      {
+        "tool": "lens",
+        "cat": "science",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Image distance: NaN cm | Magnification: NaN | 1/f = 1/do + 1/di"
+      },
+      {
+        "tool": "lens",
+        "cat": "science",
+        "kase": "huge",
+        "issue": "BAD VALUE: Image distance: Infinity cm | Magnification: -Infinity | 1/f = 1/do + 1/di"
+      },
+      {
+        "tool": "lens",
+        "cat": "science",
+        "kase": "tiny",
+        "issue": "BAD VALUE: Image distance: Infinity cm | Magnification: -Infinity | 1/f = 1/do + 1/di"
+      }
+    ],
+    "coulomb": [
+      {
+        "tool": "coulomb",
+        "cat": "science",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Force: NaN N | F = kq₁q₂/r²"
+      }
+    ],
+    "frequency": [
+      {
+        "tool": "frequency",
+        "cat": "science",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Frequency: Infinity Hz | f = 1/T"
+      }
+    ],
+    "internet-speed": [
+      {
+        "tool": "internet-speed",
+        "cat": "tech-digital",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaNm NaNs | 0 GB at 0 Mbps | NaN seconds total"
+      }
+    ],
+    "ssd-vs-hdd": [
+      {
+        "tool": "ssd-vs-hdd",
+        "cat": "tech-digital",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: SSD: 0s | HDD: 0s | SSD: ~500 MB/s read | HDD: ~150 MB/s read | 0 GB file | SSD is NaNx faster"
+      }
+    ],
+    "battery-life-estimator": [
+      {
+        "tool": "battery-life-estimator",
+        "cat": "tech-digital",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN hours | Battery: 0 mAh | Power: 0W | 0.0 Wh capacity"
+      }
+    ],
+    "ppi-calc": [
+      {
+        "tool": "ppi-calc",
+        "cat": "tech-digital",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN PPI | Resolution: 0x0 | 0\" screen | Standard | Pixel pitch: NaN mm"
+      }
+    ],
+    "password-time": [
+      {
+        "tool": "password-time",
+        "cat": "tech-digital",
+        "kase": "huge",
+        "issue": "BAD VALUE: ∞ years | Entropy: 6569855608330948 bits | Combos: Infinity | Unbreakable by brute force ✓"
+      }
+    ],
+    "image-file-size": [
+      {
+        "tool": "image-file-size",
+        "cat": "tech-digital",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "device-charge-time": [
+      {
+        "tool": "device-charge-time",
+        "cat": "tech-digital",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: NaN hours | 0 mAh @ 0A | 0% eff | NaN minutes"
+      }
+    ],
+    "data-transfer-cost": [
+      {
+        "tool": "data-transfer-cost",
+        "cat": "tech-digital",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "base64-encode": [
+      {
+        "tool": "base64-encode",
+        "cat": "tech-digital",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'length')"
+      }
+    ],
+    "color-picker": [
+      {
+        "tool": "color-picker",
+        "cat": "utilities",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'replace')"
+      }
+    ],
+    "base-converter": [
+      {
+        "tool": "base-converter",
+        "cat": "utilities",
+        "kase": "negatives",
+        "issue": "BAD VALUE: Decimal: NaN<br>Binary: NaN<br>Hex: NAN<br>Octal: NaN | Base -10"
+      },
+      {
+        "tool": "base-converter",
+        "cat": "utilities",
+        "kase": "huge",
+        "issue": "BAD VALUE: Decimal: NaN<br>Binary: NaN<br>Hex: NAN<br>Octal: NaN | Base 1000000000000000"
+      }
+    ],
+    "tip-split": [
+      {
+        "tool": "tip-split",
+        "cat": "utilities",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Per person: $NaN | Total: $0.00"
+      },
+      {
+        "tool": "tip-split",
+        "cat": "utilities",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ],
+    "salary-hourly": [
+      {
+        "tool": "salary-hourly",
+        "cat": "utilities",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: $NaN/hr | Monthly: $0 | Biweekly: $0"
+      }
+    ],
+    "simple-tax": [
+      {
+        "tool": "simple-tax",
+        "cat": "utilities",
+        "kase": "all-zero",
+        "issue": "BAD VALUE: Tax: $0 (Effective: NaN%) | Taxable: $0 | Take-home: $0"
+      }
+    ],
+    "mileage-calc": [
+      {
+        "tool": "mileage-calc",
+        "cat": "utilities",
+        "kase": "missing-fields",
+        "issue": "THROW: Cannot read properties of undefined (reading 'toFixed')"
+      }
+    ]
+  }
+}

@@ -3,15 +3,30 @@ const SCIENCE_TOOLS = [
   { id: 'ohms-law', name: "Ohm's Law Calculator", desc: 'Calculate voltage, current, resistance, power', kw: 'ohms law calculator voltage current resistance, free ohms law calculator',
     inputs: [{id:'voltage',label:'Voltage (V)',type:'number',def:12},{id:'current',label:'Current (A)',type:'number',def:2}],
     calc: function(v) { const resistance = v.voltage / v.current; const power = v.voltage * v.current; return { result: 'Resistance: ' + resistance.toFixed(2) + ' Ω | Power: ' + power.toFixed(2) + ' W', chart: Charts.bar([v.voltage, v.current, resistance, power], ['V','I','R','P']), extra: 'V = I × R' }; },
-    steps: function(v) { const r=v.voltage/v.current; const p=v.voltage*v.current; return ['Formula: V = I × R, P = V × I','Step 1: R = V / I = '+v.voltage+' / '+v.current+' = '+r.toFixed(2)+' Ω','Step 2: P = V × I = '+v.voltage+' × '+v.current+' = '+p.toFixed(2)+' W']; } },
+    steps: function(v) { const r=v.voltage/v.current; const p=v.voltage*v.current; return ['Formula: V = I × R, P = V × I','Step 1: R = V / I = '+v.voltage+' / '+v.current+' = '+r.toFixed(2)+' Ω','Step 2: P = V × I = '+v.voltage+' × '+v.current+' = '+p.toFixed(2)+' W']; },
+    // Reverse calc (target = resistance): R = V/I → I = V/R, V = I·R
+    reverse: { solveFor: { current: 1, voltage: 1 }, variables: {
+      current: { analytical: function(o, target) { return o.voltage / target; }, domain: [1e-12, 1e6] },
+      voltage: { analytical: function(o, target) { return o.current * target; }, domain: [0, 1e9] }
+    } } },
   { id: 'density', name: 'Density Calculator', desc: 'Calculate density from mass and volume', kw: 'density mass volume calculator with units',
     inputs: [{id:'mass',label:'Mass (kg)',type:'number',def:10,slider:{min:1,max:200,step:1}},{id:'volume',label:'Volume (m³)',type:'number',def:0.01,slider:{min:0.001,max:0.1,step:0.001}}],
     calc: function(v) { const d = v.mass / v.volume; return { result: 'Density: ' + d.toFixed(2) + ' kg/m³', chart: Charts.gauge(d, 10000), extra: 'ρ = m/V' }; },
-    steps: function(v) { const d=v.mass/v.volume; return ['Formula: ρ = m / V','Step 1: ρ = '+v.mass+' kg / '+v.volume+' m³','Step 2: ρ = '+d.toFixed(2)+' kg/m³']; } },
+    steps: function(v) { const d=v.mass/v.volume; return ['Formula: ρ = m / V','Step 1: ρ = '+v.mass+' kg / '+v.volume+' m³','Step 2: ρ = '+d.toFixed(2)+' kg/m³']; },
+    // Reverse calc (target = density): ρ = m/V → m = ρ·V, V = m/ρ
+    reverse: { solveFor: { mass: 1, volume: 1 }, variables: {
+      mass: { analytical: function(o, target) { return target * o.volume; }, domain: [0, 1e9] },
+      volume: { analytical: function(o, target) { return o.mass / target; }, domain: [1e-12, 1e9] }
+    } } },
   { id: 'force', name: 'Force Calculator', desc: 'Calculate force (F=ma)', kw: 'force mass acceleration calculator',
     inputs: [{id:'mass',label:'Mass (kg)',type:'number',def:10},{id:'accel',label:'Acceleration (m/s²)',type:'number',def:9.8}],
     calc: function(v) { const f = v.mass * v.accel; return { result: 'Force: ' + f.toFixed(2) + ' N', chart: Charts.gauge(f, 200), extra: 'F = m × a' }; },
-    steps: function(v) { const f=v.mass*v.accel; return ['Formula: F = m × a','Step 1: F = '+v.mass+' kg × '+v.accel+' m/s²','Step 2: F = '+f.toFixed(2)+' N']; } },
+    steps: function(v) { const f=v.mass*v.accel; return ['Formula: F = m × a','Step 1: F = '+v.mass+' kg × '+v.accel+' m/s²','Step 2: F = '+f.toFixed(2)+' N']; },
+    // Reverse calc (target = force): F = m·a → m = F/a, a = F/m
+    reverse: { solveFor: { mass: 1, accel: 1 }, variables: {
+      mass: { analytical: function(o, target) { return target / o.accel; }, domain: [0, 1e9] },
+      accel: { analytical: function(o, target) { return target / o.mass; }, domain: [0, 1e6] }
+    } } },
   { id: 'pressure', name: 'Pressure Calculator', desc: 'Calculate pressure', kw: 'free pressure calculator',
     inputs: [{id:'force',label:'Force (N)',type:'number',def:100},{id:'area',label:'Area (m²)',type:'number',def:0.5}],
     calc: function(v) { const p = v.force / v.area; return { result: 'Pressure: ' + p.toFixed(2) + ' Pa', chart: Charts.gauge(p, 1000), extra: 'P = F/A' }; },
@@ -19,7 +34,12 @@ const SCIENCE_TOOLS = [
   { id: 'kinetic-energy', name: 'Kinetic Energy Calculator', desc: 'Calculate kinetic energy', kw: 'kinetic energy calculator',
     inputs: [{id:'mass',label:'Mass (kg)',type:'number',def:5},{id:'velocity',label:'Velocity (m/s)',type:'number',def:10}],
     calc: function(v) { const ke = 0.5 * v.mass * v.velocity * v.velocity; return { result: 'KE: ' + ke.toFixed(2) + ' J', chart: Charts.gauge(ke, 1000), extra: 'KE = ½mv²' }; },
-    steps: function(v) { const ke=0.5*v.mass*v.velocity*v.velocity; return ['Formula: KE = ½ × m × v²','Step 1: v² = '+v.velocity+'² = '+v.velocity*v.velocity,'Step 2: KE = 0.5 × '+v.mass+' × '+v.velocity*v.velocity,'Step 3: KE = '+ke.toFixed(2)+' J']; } },
+    steps: function(v) { const ke=0.5*v.mass*v.velocity*v.velocity; return ['Formula: KE = ½ × m × v²','Step 1: v² = '+v.velocity+'² = '+v.velocity*v.velocity,'Step 2: KE = 0.5 × '+v.mass+' × '+v.velocity*v.velocity,'Step 3: KE = '+ke.toFixed(2)+' J']; },
+    // Reverse calc (target = KE): KE = ½mv² → m = 2KE/v², v = √(2KE/m)
+    reverse: { solveFor: { mass: 1, velocity: 1 }, variables: {
+      mass: { analytical: function(o, target) { return 2 * target / (o.velocity * o.velocity); }, domain: [0, 1e9] },
+      velocity: { analytical: function(o, target) { return Math.sqrt(2 * target / o.mass); }, domain: [0, 1e6] }
+    } } },
   { id: 'potential-energy', name: 'Potential Energy Calculator', desc: 'Calculate gravitational PE', kw: 'potential energy calculator',
     inputs: [{id:'mass',label:'Mass (kg)',type:'number',def:5},{id:'height',label:'Height (m)',type:'number',def:10},{id:'g',label:'Gravity (m/s²)',type:'number',def:9.8}],
     calc: function(v) { const pe = v.mass * v.g * v.height; return { result: 'PE: ' + pe.toFixed(2) + ' J', chart: Charts.gauge(pe, 1000), extra: 'PE = mgh' }; },
@@ -42,22 +62,44 @@ const SCIENCE_TOOLS = [
     steps: function(v) { const f=v.freq*(v.soundV+v.observerV)/(v.soundV-v.sourceV); return ['Formula: f\' = f × (v + vo) / (v - vs)','Step 1: f\' = '+v.freq+' × ('+v.soundV+' + '+v.observerV+') / ('+v.soundV+' - '+v.sourceV+')','Step 2: f\' = '+f.toFixed(2)+' Hz']; } },
   { id: 'half-life', name: 'Half-Life Calculator', desc: 'Calculate radioactive decay', kw: 'free half-life calculator',
     inputs: [{id:'initial',label:'Initial Amount',type:'number',def:100},{id:'halfLife',label:'Half-Life (years)',type:'number',def:5730},{id:'time',label:'Time Elapsed (years)',type:'number',def:1000}],
+    reverse: { solveFor: { initial: 1, halfLife: 1, time: 1 }, variables: {
+      initial: { analytical: function(o, target) { return target / Math.pow(0.5, o.time / o.halfLife); }, domain: [0, 1e12] },
+      halfLife: { analytical: function(o, target) { return o.time * Math.log(0.5) / Math.log(target / o.initial); }, domain: [0.01, 1e9] },
+      time: { analytical: function(o, target) { return o.halfLife * Math.log(target / o.initial) / Math.log(0.5); }, domain: [0, 1e9] }
+    } },
     calc: function(v) { const remaining = v.initial * Math.pow(0.5, v.time / v.halfLife); return { result: 'Remaining: ' + remaining.toFixed(2), chart: Charts.gauge(remaining, v.initial), extra: 'Decayed: ' + (v.initial - remaining).toFixed(2) }; },
     steps: function(v) { const r=v.initial*Math.pow(0.5,v.time/v.halfLife); return ['Formula: N = N₀ × (1/2)^(t/T)','Step 1: t/T = '+v.time+' / '+v.halfLife+' = '+(v.time/v.halfLife).toFixed(4),'Step 2: (1/2)^'+(v.time/v.halfLife).toFixed(4)+' = '+Math.pow(0.5,v.time/v.halfLife).toFixed(4),'Step 3: N = '+v.initial+' × '+Math.pow(0.5,v.time/v.halfLife).toFixed(4)+' = '+r.toFixed(2)]; } },
   { id: 'wavelength', name: 'Wavelength Calculator', desc: 'Calculate wavelength', kw: 'free wavelength calculator',
     inputs: [{id:'speed',label:'Wave Speed (m/s)',type:'number',def:343},{id:'freq',label:'Frequency (Hz)',type:'number',def:440}],
+    reverse: { solveFor: { speed: 1, freq: 1 }, variables: {
+      speed: { analytical: function(o, target) { return target * o.freq; }, domain: [0, 1e12] },
+      freq: { analytical: function(o, target) { return o.speed / target; }, domain: [0.0001, 1e12] }
+    } },
     calc: function(v) { const wl = v.speed / v.freq; return { result: 'Wavelength: ' + wl.toFixed(4) + ' m', chart: Charts.gauge(wl, 10), extra: 'λ = v/f' }; },
     steps: function(v) { const wl=v.speed/v.freq; return ['Formula: λ = v / f','Step 1: λ = '+v.speed+' / '+v.freq,'Step 2: λ = '+wl.toFixed(4)+' m']; } },
   { id: 'acceleration', name: 'Acceleration Calculator', desc: 'Calculate acceleration', kw: 'free acceleration calculator',
     inputs: [{id:'vi',label:'Initial Velocity (m/s)',type:'number',def:0},{id:'vf',label:'Final Velocity (m/s)',type:'number',def:20},{id:'time',label:'Time (s)',type:'number',def:5}],
+    reverse: { solveFor: { vi: 1, vf: 1, time: 1 }, variables: {
+      vi: { analytical: function(o, target) { return o.vf - target * o.time; }, domain: [-1e9, 1e9] },
+      vf: { analytical: function(o, target) { return o.vi + target * o.time; }, domain: [-1e9, 1e9] },
+      time: { analytical: function(o, target) { return (o.vf - o.vi) / target; }, domain: [0.0001, 1e9] }
+    } },
     calc: function(v) { const a = (v.vf - v.vi) / v.time; return { result: 'Acceleration: ' + a.toFixed(2) + ' m/s²', chart: Charts.gauge(a, 20), extra: 'a = Δv/t' }; },
     steps: function(v) { const a=(v.vf-v.vi)/v.time; return ['Formula: a = (vf - vi) / t','Step 1: Δv = '+v.vf+' - '+v.vi+' = '+(v.vf-v.vi),'Step 2: a = '+(v.vf-v.vi)+' / '+v.time+' = '+a.toFixed(2)+' m/s²']; } },
   { id: 'power', name: 'Power Calculator', desc: 'Calculate power (P=W/t)', kw: 'energy per time',
     inputs: [{id:'work',label:'Work (J)',type:'number',def:500},{id:'time',label:'Time (s)',type:'number',def:10}],
+    reverse: { solveFor: { work: 1, time: 1 }, variables: {
+      work: { analytical: function(o, target) { return target * o.time; }, domain: [0, 1e12] },
+      time: { analytical: function(o, target) { return o.work / target; }, domain: [0.0001, 1e12] }
+    } },
     calc: function(v) { const p = v.work / v.time; return { result: 'Power: ' + p.toFixed(2) + ' W', chart: Charts.gauge(p, 200), extra: 'P = W/t' }; },
     steps: function(v) { const p=v.work/v.time; return ['Formula: P = W / t','Step 1: P = '+v.work+' J / '+v.time+' s','Step 2: P = '+p.toFixed(2)+' W']; } },
   { id: 'velocity', name: 'Velocity Calculator', desc: 'Calculate velocity', kw: 'free velocity calculator',
     inputs: [{id:'distance',label:'Distance (m)',type:'number',def:100},{id:'time',label:'Time (s)',type:'number',def:10}],
+    reverse: { solveFor: { distance: 1, time: 1 }, variables: {
+      distance: { analytical: function(o, target) { return target * o.time; }, domain: [0, 1e12] },
+      time: { analytical: function(o, target) { return o.distance / target; }, domain: [0.0001, 1e12] }
+    } },
     calc: function(v) { const vel = v.distance / v.time; return { result: 'Velocity: ' + vel.toFixed(2) + ' m/s', chart: Charts.gauge(vel, 50), extra: 'v = d/t' }; },
     steps: function(v) { const vel=v.distance/v.time; return ['Formula: v = d / t','Step 1: v = '+v.distance+' m / '+v.time+' s','Step 2: v = '+vel.toFixed(2)+' m/s']; } },
   { id: 'free-fall', name: 'Free Fall Calculator', desc: 'Calculate falling time and speed', kw: 'free fall calculator',
@@ -70,7 +112,7 @@ const SCIENCE_TOOLS = [
     steps: function(v) { const q=v.mass*v.c*v.dt; return ['Formula: Q = m × c × ΔT','Step 1: Q = '+v.mass+' × '+v.c+' × '+v.dt,'Step 2: Q = '+q.toFixed(2)+' J']; } },
   { id: 'lens', name: 'Lens Calculator', desc: 'Calculate lens magnification', kw: 'free lens calculator',
     inputs: [{id:'f',label:'Focal Length (cm)',type:'number',def:10},{id:'do',label:'Object Distance (cm)',type:'number',def:30}],
-    calc: function(v) { const di = 1 / (1/v.f - 1/v.do); const m = -di / v.do; return { result: 'Image distance: ' + di.toFixed(2) + ' cm | Magnification: ' + m.toFixed(2), chart: Charts.bar([v.f, v.do, Math.abs(di)], ['f','do','di']), extra: '1/f = 1/do + 1/di' }; },
+    calc: function(v) { const denom = 1/v.f - 1/v.do; const di = denom === 0 || !Number.isFinite(denom) ? NaN : 1 / denom; const m = di / v.do; return { result: Number.isFinite(di) ? 'Image distance: ' + di.toFixed(2) + ' cm | Magnification: ' + (-m).toFixed(2) : '⚠️ Object at focal point — no real image forms (rays are parallel)', chart: Charts.bar([v.f, v.do, Number.isFinite(di) ? Math.abs(di) : 0], ['f','do','di']), extra: '1/f = 1/do + 1/di' }; },
     steps: function(v) { const di=1/(1/v.f-1/v.do); const m=-di/v.do; return ['Formula: 1/f = 1/do + 1/di','Step 1: 1/di = 1/f - 1/do = '+(1/v.f).toFixed(4)+' - '+(1/v.do).toFixed(4)+' = '+(1/v.f-1/v.do).toFixed(4),'Step 2: di = 1 / '+(1/v.f-1/v.do).toFixed(4)+' = '+di.toFixed(2)+' cm','Step 3: M = -di/do = -'+di.toFixed(2)+'/'+v.do+' = '+m.toFixed(2)]; } },
   { id: 'coulomb', name: "Coulomb's Law", desc: 'Calculate electric force', kw: 'coulombs law calculator electric force, free coulombs law calculator',
     inputs: [{id:'q1',label:'Charge 1 (μC)',type:'number',def:1},{id:'q2',label:'Charge 2 (μC)',type:'number',def:1},{id:'r',label:'Distance (m)',type:'number',def:1}],
@@ -78,7 +120,7 @@ const SCIENCE_TOOLS = [
     steps: function(v) { const k=9e9; const f=k*(v.q1*1e-6)*(v.q2*1e-6)/(v.r*v.r); return ['Formula: F = k × q₁ × q₂ / r²','Step 1: k = 9×10⁹ N·m²/C²','Step 2: q₁ = '+v.q1+' μC = '+(v.q1*1e-6)+' C','Step 3: F = 9×10⁹ × '+(v.q1*1e-6)+' × '+(v.q2*1e-6)+' / '+v.r+'²','Step 4: F = '+f.toFixed(6)+' N']; } },
   { id: 'frequency', name: 'Frequency Calculator', desc: 'Calculate frequency from period', kw: 'free frequency calculator',
     inputs: [{id:'period',label:'Period (s)',type:'number',def:0.5}],
-    calc: function(v) { const f = 1 / v.period; return { result: 'Frequency: ' + f.toFixed(2) + ' Hz', chart: Charts.gauge(f, 100), extra: 'f = 1/T' }; },
+    calc: function(v) { const f = v.period === 0 || !Number.isFinite(v.period) ? NaN : 1 / v.period; return { result: Number.isFinite(f) ? 'Frequency: ' + f.toFixed(2) + ' Hz' : '⚠️ Period must be > 0', chart: Charts.gauge(Number.isFinite(f) ? f : 0, 100), extra: 'f = 1/T' }; },
     steps: function(v) { const f=1/v.period; return ['Formula: f = 1 / T','Step 1: f = 1 / '+v.period,'Step 2: f = '+f.toFixed(2)+' Hz']; } },
   { id: 'energy-mass', name: 'Energy-Mass Equivalence', desc: 'E=mc² calculator', kw: 'energy-mass equivalence calculator',
     inputs: [{id:'mass',label:'Mass (kg)',type:'number',def:0.001}],

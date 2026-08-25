@@ -207,7 +207,35 @@ const FINANCE_TOOLS = [
       if (mode === 'amount') { const P=calcPrincipal(v.payment,r,n); return ['Solving for Loan Amount (DCC: '+dccLabel+')','Step 1: Rate per '+per+' = '+(r*100).toFixed(4)+'%','Step 2: Periods n = '+v.years+'×'+ppy+' = '+n,'Step 3: P = PMT × ((1+r)^n − 1) / (r×(1+r)^n)','Step 4: P = $'+P.toFixed(2)]; }
       if (mode === 'rate') { const rp=calcRate(v.amount,v.payment,n); return ['Solving for Interest Rate (numerical)','Step 1: Periods n = '+v.years+'×'+ppy+' = '+n,'Step 2: Rate per '+per+' ≈ '+(rp*100).toFixed(5)+'% (DCC: '+dccLabel+')','Step 3: Annual rate ≈ '+(rp*ppy*100).toFixed(3)+'%']; }
       if (mode === 'term') { const ns=calcTerm(v.amount,r,v.payment); return ['Solving for Loan Term (DCC: '+dccLabel+')','Step 1: Rate per '+per+' = '+(r*100).toFixed(4)+'%','Step 2: n = ln(PMT / (PMT − P×r)) / ln(1+r)','Step 3: n = '+(isFinite(ns)?ns.toFixed(2)+' periods = '+(ns/ppy).toFixed(2)+' years':'∞ (payment too low)')]; }
-      const emi=calcEMI(v.amount,r,n); return ['Solving for Payment (DCC: '+dccLabel+')','Step 1: Rate per '+per+' = '+v.rate+'% → '+(r*100).toFixed(4)+'% ('+dccLabel+')','Step 2: Periods n = '+v.years+'×'+ppy+' = '+n,'Step 3: PMT = P×r×(1+r)^n / ((1+r)^n − 1)','Step 4: PMT = $'+emi.toFixed(2)+' per '+per]; } },
+      const emi=calcEMI(v.amount,r,n); return ['Solving for Payment (DCC: '+dccLabel+')','Step 1: Rate per '+per+' = '+v.rate+'% → '+(r*100).toFixed(4)+'% ('+dccLabel+')','Step 2: Periods n = '+v.years+'×'+ppy+' = '+n,'Step 3: PMT = P×r×(1+r)^n / ((1+r)^n − 1)','Step 4: PMT = $'+emi.toFixed(2)+' per '+per]; },
+    // Reverse calc (goal-seek): target = the monthly payment, with mode forced to 'payment'.
+    // amount → analytical (LoanSolver.principal); rate/years → numeric via the loan formula
+    // (exact DCC handling by reusing the same per-period rate the forward calc uses).
+    reverse: {
+      fixed: { mode: 'payment' },
+      target: function(r) { const m = String(r.result || '').match(/Payment:\s*\$?(-?[\d,]+(?:\.\d+)?)/); return m ? parseFloat(m[1].replace(/,/g, '')) : NaN; },
+      solveFor: { amount: 1, rate: 1, years: 1 },
+      variables: {
+        amount: { analytical: function(o, target) {
+          const ppy = parseInt(o.paymentFreq) || 12;
+          const r = o.rate / 100 / ppy;
+          const n = o.years * ppy;
+          return LoanSolver.principal(target, r, n);
+        } },
+        rate: { fn: function(x, o) {
+          const ppy = parseInt(o.paymentFreq) || 12;
+          const r = x / 100 / ppy;
+          const n = o.years * ppy;
+          return LoanSolver.payment(o.amount, r, n);
+        }, domain: [0, 100] },
+        years: { fn: function(x, o) {
+          const ppy = parseInt(o.paymentFreq) || 12;
+          const r = o.rate / 100 / ppy;
+          const n = x * ppy;
+          return LoanSolver.payment(o.amount, r, n);
+        }, domain: [0.01, 100] }
+      }
+    } },
   { id: 'mortgage', name: 'Mortgage Calculator', desc: 'Mortgage — solve for payment, home price, rate or term — with interest-only mode & DCC', kw: 'fha vs conventional loan comparison calculator, home loan affordability calculator with property tax, mortgage payment calculator with pmi and taxes, interest only mortgage, day count convention',
     inputs: [
       {id:'mode',label:'Solve For',type:'select',opts:[{v:'payment',l:'Payment'},{v:'amount',l:'Home Price'},{v:'rate',l:'Interest Rate'},{v:'term',l:'Loan Term'},{v:'interest-only',l:'Interest-Only'}],def:'payment'},
@@ -729,17 +757,32 @@ const FINANCE_TOOLS = [
   { id: 'tip', name: 'Tip Calculator', desc: 'Calculate tip and split bill', kw: 'free tip calculator',
     inputs: [{id:'bill',label:'Bill Amount',type:'number',def:50,slider:{min:1,max:500,step:1}},{id:'tipPct',label:'Tip (%)',type:'number',def:15,slider:{min:0,max:50,step:0.5}},{id:'people',label:'Number of People',type:'number',def:2,slider:{min:1,max:20,step:1}}],
     calc: function(v) { const a = AdvancedCalc.tipSteps(v.bill, v.tipPct, v.people); return { result: 'Tip: $' + a.tip.toFixed(2), chart: Charts.donut([v.bill, a.tip], ['Bill','Tip']), extra: 'Per Person: $' + a.perPerson.toFixed(2) }; },
-    steps: function(v) { const tip=v.bill*v.tipPct/100; const total=v.bill+tip; const pp=total/v.people; return ['Step 1: Tip = $'+v.bill+' × '+v.tipPct+'% = $'+tip.toFixed(2),'Step 2: Total = $'+v.bill+' + $'+tip.toFixed(2)+' = $'+total.toFixed(2),'Step 3: Per person = $'+total.toFixed(2)+' / '+v.people+' = $'+pp.toFixed(2)]; } },
+    steps: function(v) { const tip=v.bill*v.tipPct/100; const total=v.bill+tip; const pp=total/v.people; return ['Step 1: Tip = $'+v.bill+' × '+v.tipPct+'% = $'+tip.toFixed(2),'Step 2: Total = $'+v.bill+' + $'+tip.toFixed(2)+' = $'+total.toFixed(2),'Step 3: Per person = $'+total.toFixed(2)+' / '+v.people+' = $'+pp.toFixed(2)]; },
+    // Reverse calc (target = tip amount): tip = bill × pct/100 → bill = tip×100/pct, pct = tip×100/bill
+    reverse: { solveFor: { bill: 1, tipPct: 1 }, variables: {
+      bill: { analytical: function(o, target) { return target * 100 / o.tipPct; }, domain: [0, 1e7] },
+      tipPct: { analytical: function(o, target) { return target * 100 / o.bill; }, domain: [0, 100] }
+    } } },
   { id: 'salary', name: 'Salary Calculator', desc: 'Calculate annual salary breakdown', kw: 'take home pay calculator with deductions, net salary calculator pakistan monthly, hourly to salary',
     inputs: [{id:'hourly',label:'Hourly Rate',type:'number',def:25},{id:'hours',label:'Hours/Week',type:'number',def:40},{id:'weeks',label:'Weeks/Year',type:'number',def:52}],
     calc: function(v) { const annual = v.hourly * v.hours * v.weeks; const monthly = annual / 12; return { result: 'Annual: $' + annual.toFixed(2), chart: Charts.bar([monthly, annual/4, annual/26, annual/52], ['Monthly','Quarterly','Biweekly','Weekly']), extra: 'Monthly: $' + monthly.toFixed(2) }; },
     steps: function(v) { const annual=v.hourly*v.hours*v.weeks; return ['Step 1: Annual = $'+v.hourly+'/hr × '+v.hours+'hrs × '+v.weeks+'weeks','Step 2: Annual = $'+annual.toFixed(2),'Step 3: Monthly = $'+(annual/12).toFixed(2),'Step 4: Weekly = $'+(annual/v.weeks).toFixed(2)]; } },
   { id: 'annuity', name: 'Annuity Calculator', desc: 'Calculate annuity payments', kw: 'future value annuity',
     inputs: [{id:'pv',label:'Present Value',type:'number',def:100000},{id:'rate',label:'Rate (%)',type:'number',def:5},{id:'years',label:'Years',type:'number',def:20}],
+    reverse: { solveFor: { pv: 1, rate: 1, years: 1 }, variables: {
+      pv: { analytical: function(o, target) { const r = o.rate/100/12; const n = o.years*12; return r > 0 ? target * (1 - Math.pow(1+r, -n)) / r : target * n; }, domain: [0, 1e9] },
+      rate: { fn: function(x, o) { const r = x/100/12; const n = o.years*12; return r > 0 ? o.pv * r / (1 - Math.pow(1+r, -n)) : o.pv / n; }, domain: [0, 100] },
+      years: { fn: function(x, o) { const r = o.rate/100/12; const n = x*12; return r > 0 ? o.pv * r / (1 - Math.pow(1+r, -n)) : o.pv / n; }, domain: [0.1, 100] }
+    } },
     calc: function(v) { const r = v.rate/100/12; const pmt = r > 0 ? v.pv * r / (1 - Math.pow(1+r, -v.years*12)) : v.pv / (v.years*12); return { result: 'Monthly Payment: $' + pmt.toFixed(2), chart: Charts.line([v.pv, v.pv*0.5, 0], ['Start','Mid','End']), extra: 'Total: $' + (pmt * v.years * 12).toFixed(2) }; },
     steps: function(v) { const r=v.rate/100/12; const pmt=r>0?v.pv*r/(1-Math.pow(1+r,-v.years*12)):v.pv/(v.years*12); return ['Formula: PMT = PV × r / (1 - (1+r)^-n)','Step 1: Monthly rate = '+(r*100).toFixed(4)+'%','Step 2: PMT = $'+v.pv+'×'+r.toFixed(6)+' / (1-(1+r)^-'+(v.years*12)+')','Step 3: PMT = $'+pmt.toFixed(2)+'/month']; } },
   { id: 'inflation', name: 'Inflation Calculator', desc: 'Calculate inflation impact on purchasing power', kw: 'free inflation calculator',
     inputs: [{id:'amount',label:'Amount',type:'number',def:1000},{id:'rate',label:'Inflation Rate (%)',type:'number',def:3},{id:'years',label:'Years',type:'number',def:10}],
+    reverse: { solveFor: { amount: 1, rate: 1, years: 1 }, variables: {
+      amount: { analytical: function(o, target) { return target / Math.pow(1 + o.rate/100, o.years); }, domain: [0, 1e12] },
+      rate: { analytical: function(o, target) { return (Math.pow(target / o.amount, 1 / Math.max(o.years, 1e-9)) - 1) * 100; }, domain: [0, 1000] },
+      years: { analytical: function(o, target) { return Math.log(target / o.amount) / Math.log(1 + o.rate/100); }, domain: [0, 1000] }
+    } },
     calc: function(v) { const fv = v.amount * Math.pow(1 + v.rate/100, v.years); const real = v.amount / Math.pow(1 + v.rate/100, v.years); return { result: 'Future Value: $' + fv.toFixed(2), chart: Charts.line([v.amount, fv*0.5, fv], ['Now','Mid','Future']), extra: 'Real Value: $' + real.toFixed(2) }; },
     steps: function(v) { const fv=v.amount*Math.pow(1+v.rate/100,v.years); return ['Step 1: Future value = $'+v.amount+'×(1+'+(v.rate/100)+')^'+v.years,'Step 2: FV = $'+fv.toFixed(2),'Step 3: Real purchasing power = $'+(v.amount/Math.pow(1+v.rate/100,v.years)).toFixed(2)]; } },
   { id: 'bonds', name: 'Bond Calculator', desc: 'Calculate bond yield to maturity', kw: 'bonds yield to maturity calculator, bond price calculator with coupon rate',
@@ -788,10 +831,20 @@ const FINANCE_TOOLS = [
   { id: 'markup', name: 'Markup Calculator', desc: 'Calculate price markup', kw: 'free markup calculator',
     inputs: [{id:'cost',label:'Cost',type:'number',def:20},{id:'markup',label:'Markup (%)',type:'number',def:50}],
     calc: function(v) { const price = v.cost * (1 + v.markup/100); const profit = price - v.cost; return { result: 'Selling Price: $' + price.toFixed(2), chart: Charts.donut([v.cost, profit], ['Cost','Profit']), extra: 'Profit: $' + profit.toFixed(2) }; },
-    steps: function(v) { const price=v.cost*(1+v.markup/100); return ['Step 1: Markup amount = $'+v.cost+' × '+v.markup+'% = $'+(v.cost*v.markup/100).toFixed(2),'Step 2: Selling price = $'+v.cost+' + $'+(v.cost*v.markup/100).toFixed(2)+' = $'+price.toFixed(2)]; } },
+    steps: function(v) { const price=v.cost*(1+v.markup/100); return ['Step 1: Markup amount = $'+v.cost+' × '+v.markup+'% = $'+(v.cost*v.markup/100).toFixed(2),'Step 2: Selling price = $'+v.cost+' + $'+(v.cost*v.markup/100).toFixed(2)+' = $'+price.toFixed(2)]; },
+    // Reverse calc (target = selling price): price = cost×(1+markup/100) → cost, markup
+    reverse: { solveFor: { cost: 1, markup: 1 }, variables: {
+      cost: { analytical: function(o, target) { return target / (1 + o.markup / 100); }, domain: [0, 1e9] },
+      markup: { analytical: function(o, target) { return (target / o.cost - 1) * 100; }, domain: [0, 10000] }
+    } } },
   { id: 'discount', name: 'Discount Calculator', desc: 'Calculate sale price after discount', kw: 'free discount calculator',
     inputs: [{id:'price',label:'Original Price',type:'number',def:100},{id:'discount',label:'Discount (%)',type:'number',def:20}],
     calc: function(v) { const save = v.price * v.discount / 100; const final = v.price - save; return { result: 'Final Price: $' + final.toFixed(2), chart: Charts.donut([final, save], ['Price','Discount']), extra: 'You Save: $' + save.toFixed(2) }; },
+    // Reverse calc (target = final price): final = price×(1−discount/100) → price, discount
+    reverse: { solveFor: { price: 1, discount: 1 }, variables: {
+      price: { analytical: function(o, target) { return target / (1 - o.discount / 100); }, domain: [0, 1e9] },
+      discount: { analytical: function(o, target) { return (1 - target / o.price) * 100; }, domain: [0, 100] }
+    } },
     steps: function(v) { const save=v.price*v.discount/100; return ['Step 1: Discount = $'+v.price+' × '+v.discount+'% = $'+save.toFixed(2),'Step 2: Final price = $'+v.price+' - $'+save.toFixed(2)+' = $'+(v.price-save).toFixed(2)]; } },
   { id: 'present-value', name: 'Present Value Calculator', desc: 'Present value — solve for present value, future value, discount rate, or time', kw: 'time value of money, solve for rate, solve for time',
     inputs: [
@@ -951,7 +1004,13 @@ const FINANCE_TOOLS = [
     steps: function(v) { const t=v.monthlyExpenses*v.months; const g=Math.max(0,t-v.currentSaved); return ['Step 1: Target = $'+v.monthlyExpenses.toLocaleString()+' × '+v.months+' = $'+t.toLocaleString(),'Step 2: Gap = $'+t.toLocaleString()+' − $'+v.currentSaved.toLocaleString()+' = $'+g.toLocaleString(),'Step 3: Months to fill = $'+g.toLocaleString()+' / $'+v.monthlyContribution.toLocaleString()+' = '+Math.ceil(g/v.monthlyContribution)]; } },
 { id: "bond-yield", name: "Bond Yield to Maturity", desc: "Calculate bond yield to maturity and current yield", kw: "bond yield, YTM, current yield, fixed income", inputs: [{id:"faceValue",label:"Face Value ($)",type:"number",def:1000},{id:"coupon",label:"Coupon Rate (%)",type:"number",def:5},{id:"currentPrice",label:"Current Price ($)",type:"number",def:950},{id:"years",label:"Years to Maturity",type:"number",def:10}], calc: function(v) { var ac=v.faceValue*v.coupon/100; var cy=ac/v.currentPrice*100; var ap=(v.faceValue+v.currentPrice)/2; var ytm=(ac+(v.faceValue-v.currentPrice)/v.years)/ap*100; return { result: "YTM: "+ytm.toFixed(2)+"% | Current Yield: "+cy.toFixed(2)+"%", chart: Charts.bar([ytm,cy],["YTM","Current Yield"]), extra: "Annual Coupon: $"+ac.toFixed(2)+" | Maturity: $"+v.faceValue }; }, steps: function(v) { var c=v.faceValue*v.coupon/100; var cy=c/v.currentPrice*100; var ap=(v.faceValue+v.currentPrice)/2; var y=(c+(v.faceValue-v.currentPrice)/v.years)/ap*100; return ["Step 1: Coupon = $"+v.faceValue+"x"+v.coupon+"% = $"+c.toFixed(2),"Step 2: Current yield = "+cy.toFixed(2)+"%","Step 3: YTM ~ "+y.toFixed(2)+"%"]; } },
 { id: "retirement-income", name: "Retirement Income Calculator", desc: "Estimate monthly retirement income from savings", kw: "retirement income, retirement planning, 401k, IRA", inputs: [{id:"savings",label:"Current Savings ($)",type:"number",def:500000},{id:"monthlyAdd",label:"Monthly Contribution ($)",type:"number",def:1000},{id:"returnRate",label:"Expected Return (%)",type:"number",def:7},{id:"yearsToRetire",label:"Years Until Retirement",type:"number",def:20},{id:"retireYears",label:"Retirement Duration (years)",type:"number",def:25}], calc: function(v) { var r=v.returnRate/100/12; var n=v.yearsToRetire*12; var fv=v.savings*Math.pow(1+r,n)+v.monthlyAdd*(Math.pow(1+r,n)-1)/r; var wr=v.returnRate/100/12; var wn=v.retireYears*12; var mi=fv*wr*Math.pow(1+wr,wn)/(Math.pow(1+wr,wn)-1); var tc=v.savings+v.monthlyAdd*n; return { result: "Monthly Income: $"+mi.toFixed(2), chart: Charts.bar([fv,tc,fv-tc],["Total","Contributions","Growth"]), extra: "At retirement: $"+fv.toFixed(0)+" | Contributions: $"+tc.toFixed(0) }; }, steps: function(v) { var r=v.returnRate/100/12; var n=v.yearsToRetire*12; var fv=v.savings*Math.pow(1+r,n)+v.monthlyAdd*(Math.pow(1+r,n)-1)/r; return ["Step 1: N = "+n+" months","Step 2: Future value = $"+fv.toFixed(0),"Step 3: Monthly income ~ $"+(fv*(r)).toFixed(2)]; } },
-{ id: "sip", name: "SIP Calculator (Systematic Investment Plan)", desc: "Calculate returns on regular mutual fund investments", kw: "sip calculator, mutual fund, systematic investment plan", inputs: [{id:"monthly",label:"Monthly Investment ($)",type:"number",def:500},{id:"returnRate",label:"Expected Annual Return (%)",type:"number",def:12},{id:"years",label:"Investment Period (years)",type:"number",def:10}], calc: function(v) { var r=v.returnRate/100/12; var n=v.years*12; var ti=v.monthly*n; var fv=v.monthly*((Math.pow(1+r,n)-1)/r)*(1+r); var ret=fv-ti; return { result: "Future Value: $"+fv.toFixed(0), chart: Charts.donut([ti,ret],["Invested","Returns"]), extra: "Invested: $"+ti.toFixed(0)+" | Returns: $"+ret.toFixed(0) }; }, steps: function(v) { var r=v.returnRate/100/12; var n=v.years*12; var ti=v.monthly*n; var fv=v.monthly*((Math.pow(1+r,n)-1)/r)*(1+r); return ["Step 1: "+v.years+" years = "+n+" months","Step 2: Total invested = $"+ti.toFixed(0),"Step 3: FV = $"+fv.toFixed(0)]; } },
+{ id: "sip", name: "SIP Calculator (Systematic Investment Plan)", desc: "Calculate returns on regular mutual fund investments", kw: "sip calculator, mutual fund, systematic investment plan", inputs: [{id:"monthly",label:"Monthly Investment ($)",type:"number",def:500},{id:"returnRate",label:"Expected Annual Return (%)",type:"number",def:12},{id:"years",label:"Investment Period (years)",type:"number",def:10}], calc: function(v) { var r=v.returnRate/100/12; var n=v.years*12; var ti=v.monthly*n; var fv=v.monthly*((Math.pow(1+r,n)-1)/r)*(1+r); var ret=fv-ti; return { result: "Future Value: $"+fv.toFixed(0), chart: Charts.donut([ti,ret],["Invested","Returns"]), extra: "Invested: $"+ti.toFixed(0)+" | Returns: $"+ret.toFixed(0) }; }, steps: function(v) { var r=v.returnRate/100/12; var n=v.years*12; var ti=v.monthly*n; var fv=v.monthly*((Math.pow(1+r,n)-1)/r)*(1+r); return ["Step 1: "+v.years+" years = "+n+" months","Step 2: Total invested = $"+ti.toFixed(0),"Step 3: FV = $"+fv.toFixed(0)]; },
+    // Reverse calc (target = future value): FV = M·((1+r)^n−1)/r·(1+r) → monthly analytical, rate/years numerical
+    reverse: { solveFor: { monthly: 1, returnRate: 1, years: 1 }, variables: {
+      monthly: { analytical: function(o, target) { var r=o.returnRate/100/12; var n=o.years*12; return target * r / ((Math.pow(1+r,n)-1) * (1+r)); }, domain: [0, 1e9] },
+      returnRate: { fn: function(x, o) { var r=x/100/12; var n=o.years*12; return o.monthly*((Math.pow(1+r,n)-1)/r)*(1+r); }, domain: [0, 100] },
+      years: { fn: function(x, o) { var r=o.returnRate/100/12; var n=x*12; return o.monthly*((Math.pow(1+r,n)-1)/r)*(1+r); }, domain: [0, 100] }
+    } } },
 { id: "crypto-profit", name: "Crypto Profit Calculator", desc: "Calculate profit/loss on cryptocurrency investments", kw: "crypto calculator, bitcoin profit, cryptocurrency gains", inputs: [{id:"buyPrice",label:"Buy Price ($)",type:"number",def:30000},{id:"sellPrice",label:"Sell Price ($)",type:"number",def:45000},{id:"quantity",label:"Quantity (coins)",type:"number",def:1},{id:"fees",label:"Total Fees ($)",type:"number",def:50}], calc: function(v) { var i=v.buyPrice*v.quantity; var p=v.sellPrice*v.quantity; var pf=p-i-v.fees; var roi=pf/(i+v.fees)*100; return { result: (pf>=0?"Profit: $":"Loss: $")+Math.abs(pf).toFixed(2), chart: Charts.bar([i,p],["Investment","Proceeds"]), extra: "ROI: "+roi.toFixed(2)+"% | Invested: $"+i.toFixed(2) }; }, steps: function(v) { var i=v.buyPrice*v.quantity; var p=v.sellPrice*v.quantity; var pf=p-i-v.fees; var r=pf/(i+v.fees)*100; return ["Step 1: Invested = $"+i,"Step 2: Proceeds = $"+p,"Step 3: Profit = $"+(pf<0?"":"+")+pf.toFixed(2),"Step 4: ROI = "+r.toFixed(2)+"%"]; } },
 { id: "stock-profit", name: "Stock Profit Calculator", desc: "Calculate profit/loss on stock trades including commissions", kw: "stock profit, stock calculator, capital gains", inputs: [{id:"shares",label:"Number of Shares",type:"number",def:100},{id:"buyPrice",label:"Buy Price ($)",type:"number",def:50},{id:"sellPrice",label:"Sell Price ($)",type:"number",def:75},{id:"commission",label:"Commission per Trade ($)",type:"number",def:10}], calc: function(v) { var b=v.shares*v.buyPrice+v.commission; var s=v.shares*v.sellPrice-v.commission; var p=s-b; var pc=p/b*100; return { result: (p>=0?"Profit: $":"Loss: $")+Math.abs(p).toFixed(2), chart: Charts.bar([b,s],["Cost Basis","Proceeds"]), extra: "Return: "+pc.toFixed(2)+"%" }; }, steps: function(v) { var b=v.shares*v.buyPrice+v.commission; var s=v.shares*v.sellPrice-v.commission; var p=s-b; return ["Step 1: Cost = $"+b,"Step 2: Proceeds = $"+s,"Step 3: Profit = $"+(p<0?"":"+")+p.toFixed(2)]; } },
 { id: "dca", name: "DCA Calculator (Dollar Cost Average)", desc: "Show benefits of dollar-cost averaging vs lump sum", kw: "dca calculator, dollar cost averaging, lump sum vs dca", inputs: [{id:"lumpSum",label:"Lump Sum ($)",type:"number",def:12000},{id:"monthly",label:"Monthly DCA ($)",type:"number",def:1000},{id:"periods",label:"Number of Months",type:"number",def:12},{id:"annualReturn",label:"Annual Return (%)",type:"number",def:10}], calc: function(v) { var r=v.annualReturn/100/12; var lfv=v.lumpSum*Math.pow(1+r,v.periods); var dfv=v.monthly*((Math.pow(1+r,v.periods)-1)/r)*(1+r); var adv=dfv-lfv; return { result: "DCA: $"+dfv.toFixed(0)+" vs Lump: $"+lfv.toFixed(0), chart: Charts.bar([lfv,dfv],["Lump Sum","DCA"]), extra: "DCA "+(adv>0?"wins by $":"loses by $")+Math.abs(adv).toFixed(2) }; }, steps: function(v) { var r=v.annualReturn/100/12; var lfv=v.lumpSum*Math.pow(1+r,v.periods); var dfv=v.monthly*((Math.pow(1+r,v.periods)-1)/r)*(1+r); return ["Step 1: Lump sum = $"+lfv.toFixed(0),"Step 2: DCA = $"+dfv.toFixed(0)]; } },

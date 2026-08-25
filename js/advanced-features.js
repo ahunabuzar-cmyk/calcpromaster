@@ -272,7 +272,7 @@ function runComparisonMode() {
   });
   
   html += '</tbody></table></div>';
-  
+
   if (content) {
     content.innerHTML = html;
     modal.classList.add('active');
@@ -661,9 +661,69 @@ function runComparisonMode() {
      }
      
      html += '</div>';
-     
+
+     // ---- Solve-for across scenarios (additive reverse comparison) ----
+     // Uses the shared verified SolveFor engine: for each scenario, find the
+     // input value that produces a SHARED target result with other inputs fixed.
+     const solvable = (typeof window.SolveFor === 'object' && SolveFor.solvableInputs)
+       ? SolveFor.solvableInputs(tool)
+       : [];
+     if (solvable.length > 0) {
+       html += '<div class="compare-solvefor" style="margin-top:18px;padding:14px;border:1px solid var(--border, #ddd);border-radius:10px">';
+       html += '<h4>🎯 Solve For (across scenarios)</h4>';
+       html += '<p style="font-size:13px;color:var(--text-light);margin-bottom:10px">Pick a variable and a target result. Each scenario shows the input value needed to hit that target with its other inputs held fixed — every answer is verified against the original formula.</p>';
+       html += '<div style="display:flex;gap:10px;flex-wrap:wrap;align-items:end">';
+       html += '<div class="input-group" style="min-width:180px"><label>Solve for:</label><select id="cmp-solve-var">';
+       solvable.forEach(inp => {
+         html += `<option value="${inp.id}">${inp.label}</option>`;
+       });
+       html += '</select></div>';
+       html += '<div class="input-group" style="min-width:160px"><label>Target result:</label><input type="number" id="cmp-solve-target" step="any" placeholder="e.g. 1000"></div>';
+       html += '<button class="calc-btn" id="cmp-solve-run" onclick="AdvancedFeatures.runCompareSolve()">Solve Scenarios</button>';
+       html += '</div>';
+       html += '<div id="cmp-solve-out" style="margin-top:12px"></div>';
+       html += '</div>';
+     }
+
      content.innerHTML = html;
      modal.classList.add('active');
+   }
+
+   function runCompareSolve() {
+     loadComparisonScenarios();
+     const out = document.getElementById('cmp-solve-out');
+     if (!out) return;
+     if (comparisonScenarios.length < 1) { out.innerHTML = '<div class="error">No scenarios to solve.</div>'; return; }
+     let tool = null;
+     for (const [key, cat] of Object.entries(CALC_DATA)) {
+       const found = cat.tools.find(t => t.id === comparisonScenarios[0].toolId);
+       if (found) { tool = found; break; }
+     }
+     if (!tool || typeof SolveFor.solve !== 'function') { out.innerHTML = '<div class="error">Cannot solve — engine or tool missing.</div>'; return; }
+     const varId = document.getElementById('cmp-solve-var').value;
+     const target = parseFloat(document.getElementById('cmp-solve-target').value);
+     if (isNaN(target)) { out.innerHTML = '<div class="error">Enter a valid numeric target.</div>'; return; }
+     const vLabel = (tool.inputs.find(i => i.id === varId) || {}).label || varId;
+     const rows = comparisonScenarios.map((s, i) => {
+       const res = SolveFor.solve(tool, Object.assign({}, s.values), varId, target);
+       let cell;
+       if (res.status === 'error' || res.status === 'none') {
+         cell = '<span class="error">' + (res.message || 'No solution') + '</span>';
+       } else {
+         const val = (typeof res.value === 'number' && isFinite(res.value))
+           ? res.value.toLocaleString('en-US', { maximumFractionDigits: 6 }) : String(res.value);
+         const tag = res.status === 'multiple' ? '⚠ multiple' : (res.status === 'exact' ? '✓ exact' : '≈ approx');
+         cell = `<strong>${val}</strong> <span style="font-size:12px;color:var(--text-light)">(${tag}${res.iterations ? ', ' + res.iterations + ' iters' : ''})</span>`;
+         if (res.status === 'multiple' && Array.isArray(res.values) && res.values.length > 1) {
+           cell += '<div style="font-size:12px;color:var(--text-light)">all: ' + res.values.map(v =>
+             (typeof v === 'number' && isFinite(v)) ? v.toLocaleString('en-US', { maximumFractionDigits: 4 }) : String(v)
+           ).join(', ') + '</div>';
+         }
+       }
+       return `<tr><td>${Security.sanitizeHtml(s.name || 'Scenario ' + (i + 1))}</td><td>${vLabel}</td><td>${cell}</td></tr>`;
+     });
+     out.innerHTML = '<table class="compare-table"><thead><tr><th>Scenario</th><th>Solve For</th><th>Required Value (target ' +
+       Security.sanitizeHtml(String(target)) + ')</th></tr></thead><tbody>' + rows.join('') + '</tbody></table>';
    }
 
   // ========== MICRO-INTERACTIONS (Premium UI) ==========
@@ -1446,20 +1506,24 @@ function runComparisonMode() {
     const body = document.getElementById('modalBody');
     if (!modal || !body) return;
     
-    const numInputs = tool.inputs.filter(i => i.type === 'number');
-    if (numInputs.length < 2) {
-      App.showToast('Goal Seek needs at least 2 numeric inputs');
+    // Respect declared solve-for set (reverse.solveFor) — falls back to all numeric
+    // inputs for tools without a declaration (generic numeric solve).
+    const solvable = (typeof window.SolveFor === 'object' && SolveFor.solvableInputs)
+      ? SolveFor.solvableInputs(tool)
+      : tool.inputs.filter(i => i.type === 'number');
+    if (solvable.length === 0) {
+      App.showToast('No numeric input can be solved for on this calculator');
       return;
     }
     
-    let html = '<h3>🎯 Goal Seek</h3>';
-    html += '<p style="font-size:14px;color:var(--text-light);margin-bottom:16px">Set your desired result, and we\'ll find the required input value.</p>';
+    let html = '<h3>🎯 Reverse Calculate (Solve For)</h3>';
+    html += '<p style="font-size:14px;color:var(--text-light);margin-bottom:16px">Keep the other inputs as-is, set your desired result, and we\'ll find the required value. Results are re-verified against the original formula.</p>';
     html += '<form onsubmit="AdvancedFeatures.runGoalSeek(event)">';
     html += '<input type="hidden" id="goal-seek-tool" value="' + toolId + '">';
     
     // Variable picker
-    html += '<div class="input-group"><label>Variable to solve for:</label><select id="goal-seek-variable" required>';
-    numInputs.forEach(inp => {
+    html += '<div class="input-group"><label>Solve for:</label><select id="goal-seek-variable" required>';
+    solvable.forEach(inp => {
       html += `<option value="${inp.id}">${inp.label}</option>`;
     });
     html += '</select></div>';
@@ -1487,67 +1551,76 @@ function runComparisonMode() {
     if (!tool) return;
     
     const resultDiv = document.getElementById('goal-seek-result');
+    if (!resultDiv) return;
     
-    // Get current values
+    // Get current values (other inputs stay fixed)
     const currentValues = App._collectValues();
     
-    // Binary search for the required input
-    let low = 0;
-    let high = 10000000; // 10 million upper bound
-    let iterations = 0;
-    const maxIter = 100;
-    let found = false;
-    let bestGuess = 0;
-    
-    while (low <= high && iterations < maxIter) {
-      const mid = (low + high) / 2;
-      const testValues = { ...currentValues, [variable]: mid };
-      
-      try {
-        const result = tool.calc(testValues);
-        const resultStr = result.result || '';
-        const resultNum = parseFloat(resultStr.replace(/[^0-9.-]/g, ''));
-        
-        if (isNaN(resultNum)) {
-          // Try extracting from extra
-          const extraNum = parseFloat((result.extra || '').replace(/[^0-9.-]/g, ''));
-          if (!isNaN(extraNum)) {
-            if (Math.abs(extraNum - target) < 0.01) { found = true; bestGuess = mid; break; }
-            if (extraNum < target) low = mid + 0.001; else high = mid - 0.001;
-          } else { break; }
-        } else {
-          if (Math.abs(resultNum - target) < 0.01) { found = true; bestGuess = mid; break; }
-          if (resultNum < target) low = mid + 0.001; else high = mid - 0.001;
-        }
-      } catch(e) {
-        break;
-      }
-      
-      bestGuess = mid;
-      iterations++;
+    // Delegate to the safe SolveFor engine (analytical first, then bisection,
+    // always verified by substituting back into the original calc).
+    if (typeof window.SolveFor !== 'object' || typeof SolveFor.solve !== 'function') {
+      resultDiv.innerHTML = '<div class="error">Reverse calculation engine not loaded.</div>';
+      return;
     }
+    
+    const res = SolveFor.solve(tool, currentValues, variable, target);
     
     const variableLabel = tool.inputs.find(i => i.id === variable)?.label || variable;
     
-    if (found || iterations > 0) {
-      const displayVal = bestGuess.toFixed(2);
-      resultDiv.innerHTML = `
-        <div class="explain-card">
-          <h4>🎯 Goal Seek Result</h4>
-          <p>To get a result of <strong>${target.toLocaleString()}</strong>, set <strong>${variableLabel}</strong> to approximately:</p>
-          <div style="font-size:24px;font-weight:800;margin:12px 0;background:var(--primary-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent">${displayVal}</div>
-          <p style="font-size:13px;color:var(--text-light)">Found after ${iterations} iterations. Click the button below to apply this value to the calculator.</p>
-          <button class="action-btn" onclick="document.getElementById('${variable}').value='${displayVal}';document.getElementById('${variable}').dispatchEvent(new Event('input'));document.getElementById('modalOverlay').classList.remove('active');App.executeCalc({preventDefault:()=>{}})">Apply Value & Calculate</button>
-        </div>
-      `;
-    } else {
-      resultDiv.innerHTML = '<div class="error">Could not find a solution. Try different inputs or change the target value.</div>';
+    if (res.status === 'error' || res.status === 'none') {
+      resultDiv.innerHTML = '<div class="error">' + (res.message || 'Could not find a solution. Try different inputs or change the target value.') + '</div>';
+      return;
     }
+    
+    const displayVal = (typeof res.value === 'number' && isFinite(res.value))
+      ? res.value.toLocaleString('en-US', { maximumFractionDigits: 6 })
+      : String(res.value);
+    
+    // Status badge: exact (analytical) vs approximate (numerical) vs multiple solutions
+    let badge = '';
+    if (res.status === 'multiple') {
+      badge = '<span style="display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:700;background:#fff3cd;color:#856404;margin-bottom:8px">⚠ Multiple valid solutions</span>';
+    } else if (res.status === 'exact') {
+      badge = '<span style="display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:700;background:#d4edda;color:#155724;margin-bottom:8px">✓ Exact solution (analytical)</span>';
+    } else {
+      badge = '<span style="display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:700;background:#fff3cd;color:#856404;margin-bottom:8px">≈ Approximate solution (numerical)</span>';
+    }
+    
+    // Verification line (Phase 10)
+    const vf = res.verification;
+    const verifyLine = (vf && vf.ok)
+      ? '<p style="font-size:13px;color:var(--text-light);margin-top:8px">✓ Verified: substituting back gives ' + (isFinite(vf.got) ? vf.got.toLocaleString('en-US', { maximumFractionDigits: 4 }) : 'n/a') + ' (target ' + target.toLocaleString() + ')</p>'
+      : '';
+    
+    // Multiple solutions listing
+    let multiHtml = '';
+    if (res.status === 'multiple' && Array.isArray(res.values) && res.values.length > 1) {
+      multiHtml = '<p style="font-size:13px;color:var(--text-light);margin-top:8px">All solutions: ' + res.values.map(v => (typeof v === 'number' && isFinite(v)) ? v.toLocaleString('en-US', { maximumFractionDigits: 6 }) : String(v)).join(', ') + '</p>';
+    }
+    
+    const safeDisplay = String(displayVal).replace(/[<>&'"]/g, '');
+    const safeVar = String(variable).replace(/[^a-zA-Z0-9_-]/g, '');
+    const safeTarget = String(target).replace(/[^0-9.eE+-]/g, '');
+    // Plain numeric value for the Apply button (HTML number inputs reject commas).
+    const applyVal = (typeof res.value === 'number' && isFinite(res.value)) ? res.value : '';
+    
+    resultDiv.innerHTML = `
+      <div class="explain-card">
+        <h4>🎯 Reverse Calculate Result</h4>
+        ${badge}
+        <p>To get a result of <strong>${safeTarget}</strong>, set <strong>${variableLabel}</strong> to:</p>
+        <div style="font-size:24px;font-weight:800;margin:12px 0;background:var(--primary-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent">${safeDisplay}</div>
+        ${verifyLine}
+        ${multiHtml}
+        <p style="font-size:13px;color:var(--text-light)">Method: ${res.method === 'analytical' ? 'exact formula inverse' : 'numerical solver'}${res.iterations ? ' · ' + res.iterations + ' iterations' : ''}. Click below to apply this value to the calculator.</p>
+        <button class="action-btn" onclick="document.getElementById('${safeVar}').value='${applyVal}';document.getElementById('${safeVar}').dispatchEvent(new Event('input'));document.getElementById('modalOverlay').classList.remove('active');App.executeCalc({preventDefault:()=>{}})">Apply Value & Calculate</button>
+      </div>
+    `;
   }
 
   return {
     getFavorites, toggleFavorite, isFavorite, renderFavoritesBar, purgeRemovedToolIds,
-    getPinned, pinResult, unpinResult, clearPinned, renderPinBar, openCompare, closeCompare,
+    getPinned, pinResult, unpinResult, clearPinned, renderPinBar, openCompare, closeCompare, runCompareSolve,
     getChain, addToChain, getChainValue, renderChainBar, useChainValue,
     saveScenario, getScenarios, clearScenarios, renderScenarioBar, loadScenario,
     getPresets, savePreset, deletePreset, renderPresetDropdown, loadPreset,
@@ -1572,7 +1645,7 @@ function runComparisonMode() {
     generateEmbedCode, showEmbedModal, loadEmbedPreview,
     // Scenario comparison (localStorage-backed)
     getComparisonScenarios, saveComparisonScenario, clearComparisonScenarios,
-    runComparison, renderComparisonBar, loadComparisonScenario, runComparisonMode,
+    runComparison, renderComparisonBar, loadComparisonScenario, runComparisonMode, runCompareSolve,
     // Micro-interactions (Premium UI)
     animateResultNumber, showSuccessAnimation, initTiltEffect,
     showSkeleton, hideSkeleton, animateCharts, initHomeAnimations, initCardTilt,

@@ -151,14 +151,18 @@ function prettyPhrase(k) {
     return capitalize(w);
   }).join(' ');
 }
+function normalizeName(n) { return String(n).toLowerCase().replace(/-/g, ' ').replace(/\([^)]*\)/g, ' ').replace(/calculator|calc|converter|tool|generator/gi, ' ').replace(/\s+/g, ' ').trim(); }
 function longTailPhrase(tool) {
   var kws = kwList(tool);
+  var nameN = normalizeName(tool.name);
   // Priority 1: a specific 2-3 word secondary keyword (best long-tail signal)
   var best = null;
   for (var i = 1; i < kws.length; i++) {
     var k = kws[i].replace(/calculator|calc|converter|tool|generator|encoder|decoder|formatter/gi, '').trim();
     var words = k.split(/\s+/).filter(Boolean);
-    if (words.length >= 2 && k.length >= 6 && k.length <= 30 && GENERIC_KW.indexOf(k.toLowerCase()) === -1) { best = prettyPhrase(k); break; }
+    var kN = normalizeName(k);
+    if (words.length >= 2 && k.length >= 6 && k.length <= 30 && GENERIC_KW.indexOf(k.toLowerCase()) === -1 &&
+        kN !== nameN && kN.indexOf(nameN) === -1 && nameN.indexOf(kN) === -1) { best = prettyPhrase(k); break; }
   }
   if (best) return best;
   // Priority 2: primary metric label(s) from the tool's own numeric inputs
@@ -169,14 +173,29 @@ function longTailPhrase(tool) {
     var l = String(i.label || '').replace(/\([^)]*\)/g, '').replace(/[\/*:]/g, ' ').replace(/\s+/g, ' ').trim().replace(/^(the|your|a|an)\s+/i, '');
     if (!l || l.length < 3 || l.length > 22) return;
     var key = l.toLowerCase();
+    var lN = normalizeName(l);
+    // Skip labels that just echo the tool name ("Class" on Class Rank, "Pet Age" on Pet Age)
+    if (lN === nameN || nameN.indexOf(lN) !== -1) return;
     if (used[key]) return;
     used[key] = true;
     labels.push(l);
   });
   if (labels.length >= 2) return labels.slice(0, labels.length - 1).join(', ') + ' & ' + labels[labels.length - 1];
+  if (labels.length === 1 && normalizeName(labels[0]) !== nameN) return labels[0];
+  // Priority 3: first keyword phrase. If it merely wraps the tool name
+  // ("Quadratic Equation Solver With Steps"), strip the name out and keep
+  // the distinctive tail ("With Steps") so the title is not repetitive.
+  if (kws.length) {
+    var p0 = prettyPhrase(kws[0]);
+    var pN = normalizeName(p0);
+    if (pN !== nameN && pN.indexOf(nameN) === -1 && nameN.indexOf(pN) === -1) return p0 || capitalize(kws[0]);
+    if (pN.indexOf(nameN) !== -1 && nameN.length >= 5) {
+      var tail = p0.replace(new RegExp(nameN.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i'), '').replace(/^\s*(of|for|with|to|in|by|and)\s+/i, '').trim();
+      if (tail.length >= 4) return tail;
+    }
+  }
+  // Priority 4: single input label
   if (labels.length === 1) return labels[0];
-  // Priority 3: first keyword phrase
-  if (kws.length) { var p = prettyPhrase(kws[0]); return p || capitalize(kws[0]); }
   return 'Instant Result';
 }
 function genTitle(tool, usedTitles) {
@@ -187,6 +206,9 @@ function genTitle(tool, usedTitles) {
   if (t.length > 60) {
     var words = phrase.split(' ');
     while (words.length > 1 && t.length > 60) { words.pop(); phrase = words.join(' '); t = name + ': ' + phrase + ' (2026)'; }
+    // Popping can leave a dangling connector ("A, B &"): strip trailing separators
+    phrase = phrase.replace(/[\s&,;:\u2014\u2013-]+$/g, '').trim();
+    t = name + ': ' + phrase + ' (2026)';
   }
   if (t.length > 60) t = name;
   // Uniqueness: alias tools (same tool present in 2 categories) get a category
@@ -208,7 +230,7 @@ function genTitle(tool, usedTitles) {
     } else {
       var words = noYear.split(' ');
       while (words.length > 1 && words.join(' ').length > 60) words.pop();
-      var joined = words.join(' ');
+      var joined = words.join(' ').replace(/[\s&,;:\u2014\u2013-]+$/g, '').trim();
       t = joined.length > 60 ? joined.substring(0, 57).replace(/\s+\S*$/, '') + '\u2026' : joined;
     }
   }
@@ -237,11 +259,18 @@ function genMetaDesc(tool) {
   var full = 'Free ' + name + ' \u2014 ' + desc + tail;
   if (full.length >= 140 && full.length <= 155) return full;
   if (full.length > 155) {
-    // cut at the last word boundary inside the first 155 chars
-    var head = full.substring(0, 155);
+    // Shrink the DESC words (never cut the tail mid-sentence) until it fits
+    var dwords = desc.split(' ');
+    while (dwords.length > 1 && full.length > 155) {
+      dwords.pop();
+      desc = dwords.join(' ');
+      full = 'Free ' + name + ' \u2014 ' + desc + tail;
+    }
+    if (full.length <= 155) return full;
+    // Extremely long tool name: hard cut at a word boundary, never mid-word
+    var head = full.substring(0, 152);
     var sp = head.lastIndexOf(' ');
-    if (sp >= 140) return head.substring(0, sp);
-    return full.substring(0, 152).replace(/[\s,.]+$/, '');
+    return head.substring(0, sp > 120 ? sp : 152).replace(/[\s,.]+$/, '');
   }
   // too short: pad until inside range
   var pads = [' Try it now, 100% free forever.', ' No account, no data collection, ever.', ' Works on any device.'];
@@ -397,25 +426,33 @@ function genFAQs(tool) {
   var catLower = (tool.catName || tool.catKey).toLowerCase();
   var pk = (kwList(tool)[0] || tool.name);
   var name = tool.name;
+  var metric = primaryMetric(tool);
+  var numInputs = (tool.inputs || []).filter(function (i) { return i.type === 'number'; });
+  var inputLabels = numInputs.slice(0, 3).map(function (i) { return i.label.toLowerCase(); }).join(', ');
+  var standard = CAT_STANDARDS[tool.catKey] || 'standard mathematical practice';
   var base = [
-    { q: 'Is this ' + name + ' really free?', a: 'Yes. This ' + name + ' is free forever \u2014 no hidden charges, no premium tier, no usage limits, and no locked features. The tool on this page is the complete tool, not a teaser, and it will stay that way. There is nothing to buy, subscribe to, or upgrade, now or later, and the same is true for all {TOTAL}+ calculators in the collection.' },
-    { q: 'Does ' + name + ' work offline?', a: 'Yes. After the first visit, the page caches locally through the service worker and ' + name + ' runs the full calculation without an internet connection. That makes it useful on commutes, flights, or anywhere with a spotty signal. Your previous inputs and results remain available too, and the tool behaves identically whether you are online or not.' },
+    // One shared platform FAQ is enough; everything else below is tool-specific.
+    { q: 'Is this ' + name + ' really free?', a: 'Yes. This ' + name + ' is free forever \u2014 no hidden charges, no premium tier, no usage limits, and no locked features. The tool on this page is the complete tool, not a teaser, and it will stay that way.' },
+    // Tool-specific: references the actual primary metric of THIS calculator.
+    { q: 'How is the ' + metric.toLowerCase() + ' calculated?', a: name + ' applies ' + standard + '. It reads the values you enter, runs the standard ' + (pk.split(' ')[0] || 'calculation') + ' formula in your browser, and shows every operation in the step-by-step breakdown under the result \u2014 so the answer is verifiable, not a black box.' },
+    { q: 'What do I need to use ' + name + '?', a: 'Just ' + (inputLabels || 'the values that match your situation') + '. The page loads with sensible defaults, so you can also press calculate immediately and adjust from there. No account, no sign-up, and nothing is uploaded \u2014 the calculation runs entirely on your device.' },
+    { q: 'What does the result from ' + name + ' mean?', a: 'The result is the ' + metric.toLowerCase() + ' derived from your inputs using the standard formula. Read the breakdown underneath to see each step with your actual numbers, then adjust one input at a time to see how the outcome moves \u2014 that is the fastest way to understand what drives the answer.' },
     { q: 'Do you save my data?', a: 'No. Everything runs in your browser, and that includes ' + name + '. Your inputs never reach a server, and nothing is logged or tracked by default. Local preferences such as theme, history, and pinned results stay on your own device and can be cleared at any time from your browser settings. There is no account to attach data to in the first place.' },
-    { q: 'Do I need to create an account?', a: 'No account required. Open the page and use ' + name + ' immediately. There is no sign-up, no email, no password, and no personal data is asked for at any point. This is true for every one of the {TOTAL}+ calculators on CalcPro \u2014 the tools are meant to be opened, used, and closed without friction.' },
-    { q: 'How accurate are the results?', a: name + ' uses standard mathematical formulas and keeps several decimal places internally before presenting a clean result. The step-by-step breakdown shows every operation, so you can verify the accuracy of each stage and repeat the calculation yourself if you want. Rounding follows standard conventions and only affects the final display, never the internal math.' },
-    { q: 'Can I share or export my result?', a: 'Yes. Copy the result from ' + name + ', download it as an image or CSV, or share a link with your input values pre-filled. The link works on any device without an account, which makes it easy to send a calculation to a colleague, client, or family member without them needing to re-enter anything.' }
+    { q: 'How accurate are the results?', a: name + ' uses standard mathematical formulas and keeps several decimal places internally before presenting a clean result. The step-by-step breakdown shows every operation, so you can verify the accuracy of each stage and repeat the calculation yourself if you want. Rounding follows standard conventions and only affects the final display, never the internal math.' }
   ];
   var extra = [
     { q: 'What if my input values seem unusual?', a: 'The calculator accepts the values you enter and applies the standard formula as-is. For extreme values the breakdown panel still shows each step, so you can see exactly where the number comes from and sanity-check it. If a value looks off, first verify the units you are entering, then re-check the breakdown \u2014 the steps always reveal where the math started to move.' },
     { q: 'Can I compare multiple scenarios at once?', a: 'Yes \u2014 open the batch or comparison mode and enter several sets of inputs. The tool calculates them side by side so you can compare outcomes on one screen, which is especially useful for planning, quoting, and decision-making. You can even save scenarios and revisit them later without retyping the numbers.' },
     { q: 'Does it work on my phone?', a: 'The layout adapts to any screen size and works on iOS Safari, Android Chrome, and desktop browsers. Inputs and results render identically on small screens, and the offline cache works the same way on mobile as on desktop, so the tool is just as useful on the go as it is at a desk.' },
     { q: 'Is this a substitute for professional advice?', a: 'No. This tool provides estimates for informational purposes and is not a replacement for professional judgment. For important financial, medical, legal, or structural decisions, consult a qualified professional who can assess your full situation. The calculator is a starting point for your own due diligence, not the final word.' },
-    { q: 'What is the difference between ' + pk + ' and similar tools?', a: 'Most online calculators return a number and stop. This one also shows the step-by-step derivation, runs entirely in your browser, works offline after the first visit, and never collects your data. The output follows the same standard formula you would find anywhere \u2014 the transparency and the privacy are what make it different.' },
+    { q: 'What makes this ' + pk + ' different?', a: name + ' shows the step-by-step derivation, runs entirely in your browser, works offline after the first visit, and never collects your data. The output follows the same standard formula you would find anywhere \u2014 the transparency and the privacy are what make it different.' },
     { q: 'How do I reset the calculator?', a: 'There is a reset button in the tool header that restores every input to its default value. You can also reload the page. Any inputs you have not saved will be cleared, and the calculator returns to its initial state instantly, ready for the next calculation.' }
   ];
-  var set = base.slice(0, 4);
+  // Always include the shared free FAQ + the 3 tool-specific ones (metric, inputs,
+  // result meaning) \u2014 they carry per-page uniqueness. Generic extras fill the rest.
+  var set = [base[0], base[1], base[2], base[3]];
   var pool = [base[4], base[5]].concat(extra);
-  var need = isYMYL ? 3 : (3 + (h % 1)); // always add 3 more => 7 total
+  var need = isYMYL ? 3 : 2 + (h % 2); // 6-7 total
   var used = {};
   var i = 0;
   while (set.length < 4 + need && i < 30) {

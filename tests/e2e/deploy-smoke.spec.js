@@ -169,6 +169,9 @@ test.describe('deploy live smoke — UX round 2 (copy + search chips)', () => {
   test('search "mortgage" shows via-chips; copy-result copies + toasts', async ({ page }) => {
     // Search intent chips
     await page.goto(BASE + '/', { waitUntil: 'domcontentloaded' });
+    // Cold-start hardening: wait until the search index is populated before typing,
+    // otherwise the fill can land before ALL_TOOLS is ready and no chips appear.
+    await page.waitForFunction(() => window.ALL_TOOLS && window.ALL_TOOLS.length >= 100, null, { timeout: 10000 });
     await page.fill('#home-search', 'mortgage');
     await page.waitForTimeout(500);
     await expect(page.locator('#homeSearchResults .search-chip').first()).toBeAttached({ timeout: 8000 });

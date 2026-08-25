@@ -17,20 +17,19 @@ const ROOT = __dirname;
 const DATA_DIR = path.join(ROOT, 'js', 'data');
 const OUT = path.join(ROOT, 'sitemap.xml');
 
-// Static pages (slug, changefreq, priority)
+// Static pages (slug, changefreq, priority).
+// NOTE: cookies/favorites/history/compare are NOINDEX (thin utility + user
+// dashboards — see scripts/ssg-pages.cjs + generate-static-pages.cjs) so they
+// are deliberately excluded here: noindex pages must not appear in the sitemap.
 const STATIC_PAGES = [
   ['', 'weekly', '1.0'],
   ['about', 'monthly', '0.5'],
   ['privacy', 'monthly', '0.5'],
   ['terms', 'monthly', '0.5'],
-  ['cookies', 'monthly', '0.5'],
   ['contact', 'monthly', '0.5'],
   ['disclaimer-general', 'monthly', '0.5'],
   ['disclaimer-finance', 'monthly', '0.5'],
-  ['disclaimer-health', 'monthly', '0.5'],
-  ['favorites', 'monthly', '0.5'],
-  ['history', 'monthly', '0.5'],
-  ['compare', 'monthly', '0.5']
+  ['disclaimer-health', 'monthly', '0.5']
 ];
 
 // Supported i18n locales (must match js/i18n.js getAvailableLocales)

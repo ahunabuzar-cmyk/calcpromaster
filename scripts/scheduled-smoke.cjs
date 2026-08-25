@@ -71,7 +71,12 @@ function waitForServer(url, tries = 20) {
   let failed = 0;
   for (const spec of SPECS) {
     console.log(`\n=== ${spec} ===`);
-    const r = spawnSync('npx', ['playwright', 'test', spec, '-c', 'playwright.deploy.config.js', '--project=deploy-chromium'], {
+    // Windows: bare 'npx' is not resolvable by spawnSync (it's npx.cmd, which
+    // needs a shell) and always returns a non-zero status, falsely failing the
+    // smoke. Invoke the Playwright CLI directly via the current node binary so
+    // it works identically on every platform with no shell or .cmd resolution.
+    const pwCli = path.join(ROOT, 'node_modules', '@playwright', 'test', 'cli.js');
+    const r = spawnSync(process.execPath, [pwCli, 'test', spec, '-c', 'playwright.deploy.config.js', '--project=deploy-chromium'], {
       cwd: ROOT, encoding: 'utf8', timeout: 600000, maxBuffer: 20 * 1024 * 1024,
     });
     const out = `${r.stdout || ''}\n${r.stderr || ''}`;

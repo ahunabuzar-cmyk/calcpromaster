@@ -1,0 +1,2742 @@
+{
+  "total": 543,
+  "byCat": {
+    "auto-transport": 32,
+    "business": 21,
+    "career-freelance": 23,
+    "construction": 25,
+    "conversion": 24,
+    "education": 23,
+    "engineering": 25,
+    "everyday": 25,
+    "finance": 62,
+    "fitness-exercise": 23,
+    "food-nutrition": 21,
+    "health": 22,
+    "home-garden": 35,
+    "lifestyle": 25,
+    "math": 26,
+    "parenting-family": 24,
+    "regional": 21,
+    "science": 28,
+    "tech-digital": 40,
+    "utilities": 18
+  },
+  "tools": [
+    {
+      "id": "fuel-cost",
+      "name": "Fuel Cost Calculator",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "mileage-calculator",
+      "name": "Mileage Calculator",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "fuel-price-compare",
+      "name": "Fuel Price Comparison",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "car-loan-emi",
+      "name": "Car Loan EMI Calculator",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "car-affordability",
+      "name": "Car Affordability",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "lease-vs-buy",
+      "name": "Lease vs Buy Car",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "ev-charging-cost",
+      "name": "EV Charging Cost",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "ev-vs-gas-petrol",
+      "name": "EV vs Petrol Cost",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "ev-range",
+      "name": "EV Range Estimator",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "car-maintenance",
+      "name": "Car Maintenance Cost",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "tire-size",
+      "name": "Tire Size Calculator",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "oil-change",
+      "name": "Oil Change Interval",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "car-insurance",
+      "name": "Car Insurance Cost",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "commute-cost",
+      "name": "Commute Cost Calculator",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "ride-share-cost",
+      "name": "Ride-Share vs Car Cost",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "public-transport",
+      "name": "Public Transport vs Car",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "walking-transit",
+      "name": "Walk vs Transit Time",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "trip-time",
+      "name": "Trip Time Calculator",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "speed-distance-time",
+      "name": "Speed Distance Time",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "parking-cost",
+      "name": "Parking Cost Calculator",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "car-depreciation",
+      "name": "Car Depreciation",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "trade-in-value",
+      "name": "Trade-In Value Estimator",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "bike-fuel",
+      "name": "Motorcycle Fuel Cost",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "bike-loan",
+      "name": "Motorcycle Loan EMI",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "stopping-distance",
+      "name": "Stopping Distance",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "fuel-efficiency",
+      "name": "Fuel Efficiency Savings",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "car-rental",
+      "name": "Car Rental Cost",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "taxi-fare",
+      "name": "Taxi Fare Estimator",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "auto-fare",
+      "name": "Auto-Rickshaw Fare",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "delivery-cost",
+      "name": "Delivery Cost Calculator",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "route-optimizer",
+      "name": "Multi-Stop Route Cost",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "carbon-footprint-car",
+      "name": "Car Carbon Footprint",
+      "cat": "auto-transport"
+    },
+    {
+      "id": "business-roi",
+      "name": "Business ROI",
+      "cat": "business"
+    },
+    {
+      "id": "profit-margin",
+      "name": "Profit Margin Calculator",
+      "cat": "business"
+    },
+    {
+      "id": "ltv",
+      "name": "Customer LTV",
+      "cat": "business"
+    },
+    {
+      "id": "cac",
+      "name": "CAC Calculator",
+      "cat": "business"
+    },
+    {
+      "id": "conversion-rate",
+      "name": "Conversion Rate",
+      "cat": "business"
+    },
+    {
+      "id": "churn",
+      "name": "Churn Rate Calculator",
+      "cat": "business"
+    },
+    {
+      "id": "roas",
+      "name": "ROAS Calculator",
+      "cat": "business"
+    },
+    {
+      "id": "burn-rate",
+      "name": "Burn Rate Calculator",
+      "cat": "business"
+    },
+    {
+      "id": "mrr",
+      "name": "MRR Calculator",
+      "cat": "business"
+    },
+    {
+      "id": "nps",
+      "name": "Net Promoter Score (NPS) Calculator",
+      "cat": "business"
+    },
+    {
+      "id": "freelance-rate",
+      "name": "Freelance Rate Calculator",
+      "cat": "business"
+    },
+    {
+      "id": "pricing",
+      "name": "Pricing Calculator",
+      "cat": "business"
+    },
+    {
+      "id": "inventory",
+      "name": "Inventory Turnover",
+      "cat": "business"
+    },
+    {
+      "id": "break-even-revenue",
+      "name": "Break-Even Revenue",
+      "cat": "business"
+    },
+    {
+      "id": "payback",
+      "name": "Payback Period",
+      "cat": "business"
+    },
+    {
+      "id": "depreciation",
+      "name": "Depreciation Calculator",
+      "cat": "business"
+    },
+    {
+      "id": "discount-rate",
+      "name": "Discount Rate Calculator",
+      "cat": "business"
+    },
+    {
+      "id": "saas-unit-metrics",
+      "name": "SaaS Unit Metrics Calculator",
+      "cat": "business"
+    },
+    {
+      "id": "break-even-point",
+      "name": "Break-Even Point Calculator",
+      "cat": "business"
+    },
+    {
+      "id": "invoice-due-date",
+      "name": "Invoice Due Date & Late Fee",
+      "cat": "business"
+    },
+    {
+      "id": "employee-cost",
+      "name": "True Employee Cost",
+      "cat": "business"
+    },
+    {
+      "id": "salary-converter",
+      "name": "Salary Converter",
+      "cat": "career-freelance"
+    },
+    {
+      "id": "salary-negotiation",
+      "name": "Salary Negotiation Calculator",
+      "cat": "career-freelance"
+    },
+    {
+      "id": "raise-calculator",
+      "name": "Pay Raise Calculator",
+      "cat": "career-freelance"
+    },
+    {
+      "id": "tax-bracket",
+      "name": "Income Tax Bracket Calculator",
+      "cat": "career-freelance"
+    },
+    {
+      "id": "freelance-hourly-rate",
+      "name": "Freelance Hourly Rate",
+      "cat": "career-freelance"
+    },
+    {
+      "id": "freelance-project",
+      "name": "Freelance Project Fee",
+      "cat": "career-freelance"
+    },
+    {
+      "id": "contractor-rate",
+      "name": "Contractor vs Employee Rate",
+      "cat": "career-freelance"
+    },
+    {
+      "id": "overtime-pay",
+      "name": "Overtime Pay Calculator",
+      "cat": "career-freelance"
+    },
+    {
+      "id": "bonus-calc",
+      "name": "Bonus & Commission Calculator",
+      "cat": "career-freelance"
+    },
+    {
+      "id": "pay-gap",
+      "name": "Gender Pay Gap Calculator",
+      "cat": "career-freelance"
+    },
+    {
+      "id": "401k-match",
+      "name": "401k Match Calculator",
+      "cat": "career-freelance"
+    },
+    {
+      "id": "stock-options",
+      "name": "Stock Options Value Calculator",
+      "cat": "career-freelance"
+    },
+    {
+      "id": "side-hustle",
+      "name": "Side Hustle Income Calculator",
+      "cat": "career-freelance"
+    },
+    {
+      "id": "crypto-tax",
+      "name": "Cryptocurrency Tax Calculator",
+      "cat": "career-freelance"
+    },
+    {
+      "id": "career-gap",
+      "name": "Career Gap Impact Calculator",
+      "cat": "career-freelance"
+    },
+    {
+      "id": "remortgage-calc",
+      "name": "Remortgage Savings Calculator",
+      "cat": "career-freelance"
+    },
+    {
+      "id": "mortgage-afford",
+      "name": "Mortgage Affordability Checker",
+      "cat": "career-freelance"
+    },
+    {
+      "id": "tax-refund",
+      "name": "Tax Refund Estimator",
+      "cat": "career-freelance"
+    },
+    {
+      "id": "invoicing-calc",
+      "name": "Invoice Total Calculator",
+      "cat": "career-freelance"
+    },
+    {
+      "id": "employment-status",
+      "name": "Self-Employed Tax Calculator",
+      "cat": "career-freelance"
+    },
+    {
+      "id": "commission-plan",
+      "name": "Sales Commission Calculator",
+      "cat": "career-freelance"
+    },
+    {
+      "id": "freelance-budget",
+      "name": "Freelance Monthly Budget",
+      "cat": "career-freelance"
+    },
+    {
+      "id": "redundancy-pay",
+      "name": "Redundancy Pay Calculator",
+      "cat": "career-freelance"
+    },
+    {
+      "id": "concrete-slab",
+      "name": "Concrete Slab Calculator",
+      "cat": "construction"
+    },
+    {
+      "id": "wall-area",
+      "name": "Wall Area Calculator",
+      "cat": "construction"
+    },
+    {
+      "id": "roofing",
+      "name": "Roofing Calculator",
+      "cat": "construction"
+    },
+    {
+      "id": "drywall",
+      "name": "Drywall Calculator",
+      "cat": "construction"
+    },
+    {
+      "id": "flooring",
+      "name": "Flooring Calculator",
+      "cat": "construction"
+    },
+    {
+      "id": "gravel",
+      "name": "Gravel Calculator",
+      "cat": "construction"
+    },
+    {
+      "id": "insulation",
+      "name": "Insulation Calculator",
+      "cat": "construction"
+    },
+    {
+      "id": "stairs",
+      "name": "Stair Calculator",
+      "cat": "construction"
+    },
+    {
+      "id": "wallpaper",
+      "name": "Wallpaper Calculator",
+      "cat": "construction"
+    },
+    {
+      "id": "carpet",
+      "name": "Carpet Calculator",
+      "cat": "construction"
+    },
+    {
+      "id": "mulch",
+      "name": "Mulch Calculator",
+      "cat": "construction"
+    },
+    {
+      "id": "soil",
+      "name": "Soil Calculator",
+      "cat": "construction"
+    },
+    {
+      "id": "bricks",
+      "name": "Brick Calculator",
+      "cat": "construction"
+    },
+    {
+      "id": "fence",
+      "name": "Fence Calculator",
+      "cat": "construction"
+    },
+    {
+      "id": "excavation",
+      "name": "Excavation Calculator",
+      "cat": "construction"
+    },
+    {
+      "id": "tile-calculator",
+      "name": "Tile Calculator",
+      "cat": "construction"
+    },
+    {
+      "id": "paint-quantity",
+      "name": "Paint Quantity Calculator",
+      "cat": "construction"
+    },
+    {
+      "id": "rebar-calculator",
+      "name": "Rebar Calculator",
+      "cat": "construction"
+    },
+    {
+      "id": "formwork",
+      "name": "Formwork Area Calculator",
+      "cat": "construction"
+    },
+    {
+      "id": "concrete-column",
+      "name": "Concrete Column Calculator",
+      "cat": "construction"
+    },
+    {
+      "id": "lumber-calculator",
+      "name": "Lumber Calculator (Board Feet)",
+      "cat": "construction"
+    },
+    {
+      "id": "paver-calculator",
+      "name": "Paver Calculator",
+      "cat": "construction"
+    },
+    {
+      "id": "water-tank",
+      "name": "Water Tank Capacity",
+      "cat": "construction"
+    },
+    {
+      "id": "roof-pitch",
+      "name": "Roof Pitch Calculator",
+      "cat": "construction"
+    },
+    {
+      "id": "deck-calculator",
+      "name": "Deck Board Calculator",
+      "cat": "construction"
+    },
+    {
+      "id": "length",
+      "name": "Length Converter",
+      "cat": "conversion"
+    },
+    {
+      "id": "weight",
+      "name": "Weight Converter",
+      "cat": "conversion"
+    },
+    {
+      "id": "volume",
+      "name": "Volume Converter",
+      "cat": "conversion"
+    },
+    {
+      "id": "area",
+      "name": "Area Converter",
+      "cat": "conversion"
+    },
+    {
+      "id": "speed",
+      "name": "Speed Converter",
+      "cat": "conversion"
+    },
+    {
+      "id": "data-storage",
+      "name": "Data Storage Converter",
+      "cat": "conversion"
+    },
+    {
+      "id": "angle",
+      "name": "Angle Converter",
+      "cat": "conversion"
+    },
+    {
+      "id": "energy",
+      "name": "Energy Converter",
+      "cat": "conversion"
+    },
+    {
+      "id": "pressure-conv",
+      "name": "Pressure Converter",
+      "cat": "conversion"
+    },
+    {
+      "id": "frequency-conv",
+      "name": "Frequency Converter",
+      "cat": "conversion"
+    },
+    {
+      "id": "temperature",
+      "name": "Temperature Converter",
+      "cat": "conversion"
+    },
+    {
+      "id": "time-conv",
+      "name": "Time Converter",
+      "cat": "conversion"
+    },
+    {
+      "id": "force-conv",
+      "name": "Force Converter",
+      "cat": "conversion"
+    },
+    {
+      "id": "fuel-efficiency-converter",
+      "name": "Fuel Efficiency Converter",
+      "cat": "conversion"
+    },
+    {
+      "id": "cooking-conv",
+      "name": "Cooking Measurement Converter",
+      "cat": "conversion"
+    },
+    {
+      "id": "clothing-size",
+      "name": "Clothing Size Converter",
+      "cat": "conversion"
+    },
+    {
+      "id": "shoe-size",
+      "name": "Shoe Size Converter",
+      "cat": "conversion"
+    },
+    {
+      "id": "currency-conv",
+      "name": "Currency Converter (Fixed Rate)",
+      "cat": "conversion"
+    },
+    {
+      "id": "torque-conv",
+      "name": "Torque Converter",
+      "cat": "conversion"
+    },
+    {
+      "id": "power-conv",
+      "name": "Power Converter",
+      "cat": "conversion"
+    },
+    {
+      "id": "voltage-conv",
+      "name": "Electrical Unit Converter",
+      "cat": "conversion"
+    },
+    {
+      "id": "radiation-conv",
+      "name": "Radiation Converter",
+      "cat": "conversion"
+    },
+    {
+      "id": "density-conv",
+      "name": "Density Converter",
+      "cat": "conversion"
+    },
+    {
+      "id": "viscosity-conv",
+      "name": "Viscosity Converter",
+      "cat": "conversion"
+    },
+    {
+      "id": "gpa",
+      "name": "GPA Calculator",
+      "cat": "education"
+    },
+    {
+      "id": "cgpa",
+      "name": "CGPA Calculator",
+      "cat": "education"
+    },
+    {
+      "id": "grade",
+      "name": "Grade Calculator",
+      "cat": "education"
+    },
+    {
+      "id": "study-time",
+      "name": "Study Time Planner",
+      "cat": "education"
+    },
+    {
+      "id": "reading-speed",
+      "name": "Reading Speed Calculator",
+      "cat": "education"
+    },
+    {
+      "id": "test-score",
+      "name": "Test Score Calculator",
+      "cat": "education"
+    },
+    {
+      "id": "exam-countdown",
+      "name": "Exam Countdown",
+      "cat": "education"
+    },
+    {
+      "id": "words-pages",
+      "name": "Words to Pages",
+      "cat": "education"
+    },
+    {
+      "id": "citation",
+      "name": "Citation Generator",
+      "cat": "education"
+    },
+    {
+      "id": "quiz-score",
+      "name": "Quiz Score Predictor",
+      "cat": "education"
+    },
+    {
+      "id": "semester-gpa",
+      "name": "Semester GPA Projector",
+      "cat": "education"
+    },
+    {
+      "id": "college-cost-planner",
+      "name": "College Cost Planner",
+      "cat": "education"
+    },
+    {
+      "id": "scholarship-calc",
+      "name": "Scholarship Need Calculator",
+      "cat": "education"
+    },
+    {
+      "id": "study-break",
+      "name": "Study Break Timer",
+      "cat": "education"
+    },
+    {
+      "id": "grade-needed",
+      "name": "Final Grade Needed (Weighted)",
+      "cat": "education"
+    },
+    {
+      "id": "class-rank",
+      "name": "Class Rank Calculator",
+      "cat": "education"
+    },
+    {
+      "id": "homework-time",
+      "name": "Homework Time Estimator",
+      "cat": "education"
+    },
+    {
+      "id": "flashcard-count",
+      "name": "Flashcard Review Planner",
+      "cat": "education"
+    },
+    {
+      "id": "plagiarism-check",
+      "name": "Citation Checker",
+      "cat": "education"
+    },
+    {
+      "id": "letter-grade",
+      "name": "Letter Grade Converter",
+      "cat": "education"
+    },
+    {
+      "id": "sat-score",
+      "name": "SAT Score Estimator",
+      "cat": "education"
+    },
+    {
+      "id": "act-score",
+      "name": "ACT Score Calculator",
+      "cat": "education"
+    },
+    {
+      "id": "exam-score-needed",
+      "name": "Final Exam Score Calculator",
+      "cat": "education"
+    },
+    {
+      "id": "voltage-drop",
+      "name": "Voltage Drop Calculator",
+      "cat": "engineering"
+    },
+    {
+      "id": "power-factor",
+      "name": "Power Factor Calculator",
+      "cat": "engineering"
+    },
+    {
+      "id": "gear-ratio",
+      "name": "Gear Ratio Calculator",
+      "cat": "engineering"
+    },
+    {
+      "id": "torque",
+      "name": "Torque Calculator",
+      "cat": "engineering"
+    },
+    {
+      "id": "led-resistor",
+      "name": "LED Resistor Calculator",
+      "cat": "engineering"
+    },
+    {
+      "id": "capacitor",
+      "name": "Capacitor Calculator",
+      "cat": "engineering"
+    },
+    {
+      "id": "battery-life",
+      "name": "Battery Life Calculator",
+      "cat": "engineering"
+    },
+    {
+      "id": "wire-gauge",
+      "name": "Wire Gauge Calculator",
+      "cat": "engineering"
+    },
+    {
+      "id": "rpm",
+      "name": "RPM Calculator",
+      "cat": "engineering"
+    },
+    {
+      "id": "horsepower",
+      "name": "Horsepower Calculator",
+      "cat": "engineering"
+    },
+    {
+      "id": "inductor",
+      "name": "Inductor Calculator",
+      "cat": "engineering"
+    },
+    {
+      "id": "impedance",
+      "name": "Impedance Calculator",
+      "cat": "engineering"
+    },
+    {
+      "id": "beam-load",
+      "name": "Beam Load Calculator",
+      "cat": "engineering"
+    },
+    {
+      "id": "hydraulic",
+      "name": "Hydraulic Calculator",
+      "cat": "engineering"
+    },
+    {
+      "id": "thermal",
+      "name": "Thermal Expansion",
+      "cat": "engineering"
+    },
+    {
+      "id": "kva-kw",
+      "name": "kVA to kW Converter",
+      "cat": "engineering"
+    },
+    {
+      "id": "belt-length",
+      "name": "Belt Length Calculator",
+      "cat": "engineering"
+    },
+    {
+      "id": "flow-rate",
+      "name": "Flow Rate Calculator",
+      "cat": "engineering"
+    },
+    {
+      "id": "sound-level",
+      "name": "Sound Level Addition",
+      "cat": "engineering"
+    },
+    {
+      "id": "shaft-power",
+      "name": "Shaft Power Calculator",
+      "cat": "engineering"
+    },
+    {
+      "id": "spring-rate",
+      "name": "Spring Rate Calculator",
+      "cat": "engineering"
+    },
+    {
+      "id": "resonant-frequency",
+      "name": "Resonant Frequency Calculator",
+      "cat": "engineering"
+    },
+    {
+      "id": "transformer-ratio",
+      "name": "Transformer Ratio Calculator",
+      "cat": "engineering"
+    },
+    {
+      "id": "hydraulic-power",
+      "name": "Hydraulic Power Calculator",
+      "cat": "engineering"
+    },
+    {
+      "id": "stress-strain",
+      "name": "Stress & Strain Calculator",
+      "cat": "engineering"
+    },
+    {
+      "id": "age",
+      "name": "Age Calculator",
+      "cat": "everyday"
+    },
+    {
+      "id": "date-diff",
+      "name": "Date Difference Calculator",
+      "cat": "everyday"
+    },
+    {
+      "id": "time-calc",
+      "name": "Time Calculator",
+      "cat": "everyday"
+    },
+    {
+      "id": "trip-fuel-cost",
+      "name": "Trip Fuel Cost Calculator",
+      "cat": "everyday"
+    },
+    {
+      "id": "electricity",
+      "name": "Electricity Bill Calculator",
+      "cat": "everyday"
+    },
+    {
+      "id": "carbon",
+      "name": "Carbon Footprint Calculator",
+      "cat": "everyday"
+    },
+    {
+      "id": "gst",
+      "name": "GST/VAT Calculator",
+      "cat": "everyday"
+    },
+    {
+      "id": "paint",
+      "name": "Paint Calculator",
+      "cat": "everyday"
+    },
+    {
+      "id": "concrete",
+      "name": "Concrete Calculator",
+      "cat": "everyday"
+    },
+    {
+      "id": "garden",
+      "name": "Garden Area Calculator",
+      "cat": "everyday"
+    },
+    {
+      "id": "cooking",
+      "name": "Cooking Converter",
+      "cat": "everyday"
+    },
+    {
+      "id": "weather",
+      "name": "Weather Index",
+      "cat": "everyday"
+    },
+    {
+      "id": "timezone",
+      "name": "Time Zone Converter",
+      "cat": "everyday"
+    },
+    {
+      "id": "calorie-counter",
+      "name": "Daily Calorie Counter",
+      "cat": "everyday"
+    },
+    {
+      "id": "currency-exchange",
+      "name": "Currency Exchange Rate",
+      "cat": "everyday"
+    },
+    {
+      "id": "sleep-calc",
+      "name": "Sleep Cycle Calculator",
+      "cat": "everyday"
+    },
+    {
+      "id": "walking-steps",
+      "name": "Walking Steps Tracker",
+      "cat": "everyday"
+    },
+    {
+      "id": "fitness-age",
+      "name": "Fitness Age Calculator",
+      "cat": "everyday"
+    },
+    {
+      "id": "pet-age",
+      "name": "Pet Age Calculator (Dog/Cat)",
+      "cat": "everyday"
+    },
+    {
+      "id": "blood-alcohol",
+      "name": "Blood Alcohol Content (BAC)",
+      "cat": "everyday"
+    },
+    {
+      "id": "vacation-budget",
+      "name": "Vacation Budget Planner",
+      "cat": "everyday"
+    },
+    {
+      "id": "laundry-cost",
+      "name": "Laundry Cost Calculator",
+      "cat": "everyday"
+    },
+    {
+      "id": "coffee-cost",
+      "name": "Coffee Habit Cost Calculator",
+      "cat": "everyday"
+    },
+    {
+      "id": "grocery-budget",
+      "name": "Grocery Budget Planner",
+      "cat": "everyday"
+    },
+    {
+      "id": "distance-pace",
+      "name": "Distance Pace Calculator",
+      "cat": "everyday"
+    },
+    {
+      "id": "loan-emi",
+      "name": "Loan EMI Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "mortgage",
+      "name": "Mortgage Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "compound-interest",
+      "name": "Compound Interest Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "simple-interest",
+      "name": "Simple Interest Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "auto-loan",
+      "name": "Auto Loan Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "credit-card-payoff",
+      "name": "Credit Card Payoff",
+      "cat": "finance"
+    },
+    {
+      "id": "retirement",
+      "name": "Retirement Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "investment",
+      "name": "Investment Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "savings-goal",
+      "name": "Savings Goal Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "tax",
+      "name": "Income Tax Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "sales-tax",
+      "name": "Sales Tax Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "npv",
+      "name": "NPV Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "irr",
+      "name": "IRR Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "roi",
+      "name": "ROI Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "tip",
+      "name": "Tip Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "salary",
+      "name": "Salary Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "annuity",
+      "name": "Annuity Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "inflation",
+      "name": "Inflation Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "bonds",
+      "name": "Bond Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "debt-ratio",
+      "name": "Debt-to-Income Ratio",
+      "cat": "finance"
+    },
+    {
+      "id": "net-worth-calculator",
+      "name": "Net Worth Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "rent-vs-buy",
+      "name": "Rent vs Buy Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "refinance",
+      "name": "Refinance Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "home-afford",
+      "name": "Home Affordability Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "currency-converter",
+      "name": "Currency Converter",
+      "cat": "finance"
+    },
+    {
+      "id": "loan-qualify",
+      "name": "Loan Qualification",
+      "cat": "finance"
+    },
+    {
+      "id": "paycheck",
+      "name": "Paycheck Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "break-even",
+      "name": "Break-Even Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "cash-flow",
+      "name": "Cash Flow Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "markup",
+      "name": "Markup Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "discount",
+      "name": "Discount Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "present-value",
+      "name": "Present Value Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "future-value",
+      "name": "Future Value Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "amortization",
+      "name": "Amortization Schedule",
+      "cat": "finance"
+    },
+    {
+      "id": "loan-to-value",
+      "name": "Loan-to-Value Ratio",
+      "cat": "finance"
+    },
+    {
+      "id": "apr",
+      "name": "APR Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "capital-gains",
+      "name": "Capital Gains Tax",
+      "cat": "finance"
+    },
+    {
+      "id": "dividend",
+      "name": "Dividend Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "fire",
+      "name": "FIRE Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "social-security",
+      "name": "Social Security Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "rental-yield",
+      "name": "Rental Yield Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "loan-comparison",
+      "name": "Loan Comparison",
+      "cat": "finance"
+    },
+    {
+      "id": "investment-growth",
+      "name": "Investment Growth Comparison",
+      "cat": "finance"
+    },
+    {
+      "id": "savings-comparison",
+      "name": "Savings Account Comparison",
+      "cat": "finance"
+    },
+    {
+      "id": "mortgage-payoff",
+      "name": "Mortgage Payoff Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "graduated-payment",
+      "name": "Graduated Payment Mortgage",
+      "cat": "finance"
+    },
+    {
+      "id": "balloon-payment",
+      "name": "Balloon Payment Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "interest-only",
+      "name": "Interest-Only Mortgage",
+      "cat": "finance"
+    },
+    {
+      "id": "emergency-fund",
+      "name": "Emergency Fund Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "bond-yield",
+      "name": "Bond Yield to Maturity",
+      "cat": "finance"
+    },
+    {
+      "id": "retirement-income",
+      "name": "Retirement Income Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "sip",
+      "name": "SIP Calculator (Systematic Investment Plan)",
+      "cat": "finance"
+    },
+    {
+      "id": "crypto-profit",
+      "name": "Crypto Profit Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "stock-profit",
+      "name": "Stock Profit Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "dca",
+      "name": "DCA Calculator (Dollar Cost Average)",
+      "cat": "finance"
+    },
+    {
+      "id": "college-cost",
+      "name": "College Cost Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "perpetuity",
+      "name": "Perpetuity Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "esop",
+      "name": "ESOP Calculator (Employee Stock Ownership)",
+      "cat": "finance"
+    },
+    {
+      "id": "us-income-tax",
+      "name": "US Federal Income Tax Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "uk-income-tax",
+      "name": "UK Income Tax Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "canada-income-tax",
+      "name": "Canada Income Tax Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "australia-income-tax",
+      "name": "Australia Income Tax Calculator",
+      "cat": "finance"
+    },
+    {
+      "id": "running-pace",
+      "name": "Running Pace Calculator",
+      "cat": "fitness-exercise"
+    },
+    {
+      "id": "race-predictor",
+      "name": "Race Time Predictor",
+      "cat": "fitness-exercise"
+    },
+    {
+      "id": "steps-to-distance",
+      "name": "Steps to Distance Calculator",
+      "cat": "fitness-exercise"
+    },
+    {
+      "id": "max-heart-rate",
+      "name": "Max Heart Rate Calculator",
+      "cat": "fitness-exercise"
+    },
+    {
+      "id": "recovery-hr",
+      "name": "Heart Rate Recovery",
+      "cat": "fitness-exercise"
+    },
+    {
+      "id": "vo2max",
+      "name": "VO2 Max Estimator",
+      "cat": "fitness-exercise"
+    },
+    {
+      "id": "calories-exercise",
+      "name": "Exercise Calorie Burn",
+      "cat": "fitness-exercise"
+    },
+    {
+      "id": "body-fat-fitness",
+      "name": "Body Fat % Estimator",
+      "cat": "fitness-exercise"
+    },
+    {
+      "id": "pullup-test",
+      "name": "Pull-Up Test Standards",
+      "cat": "fitness-exercise"
+    },
+    {
+      "id": "flexibility-score",
+      "name": "Sit & Reach Test",
+      "cat": "fitness-exercise"
+    },
+    {
+      "id": "sports-calories",
+      "name": "Sports Calorie Calculator",
+      "cat": "fitness-exercise"
+    },
+    {
+      "id": "calories-burned",
+      "name": "Calories Burned at Rest (BMR)",
+      "cat": "fitness-exercise"
+    },
+    {
+      "id": "one-rep-max",
+      "name": "One-Rep Max Calculator",
+      "cat": "fitness-exercise"
+    },
+    {
+      "id": "training-max",
+      "name": "Training Max Calculator",
+      "cat": "fitness-exercise"
+    },
+    {
+      "id": "weight-loss",
+      "name": "Weight Loss Pace Calculator",
+      "cat": "fitness-exercise"
+    },
+    {
+      "id": "muscle-gain",
+      "name": "Muscle Gain Calculator",
+      "cat": "fitness-exercise"
+    },
+    {
+      "id": "pushup-test",
+      "name": "Push-Up Test Standards",
+      "cat": "fitness-exercise"
+    },
+    {
+      "id": "squat-standards",
+      "name": "Squat Standards by Body Weight",
+      "cat": "fitness-exercise"
+    },
+    {
+      "id": "bench-standards",
+      "name": "Bench Press Standards",
+      "cat": "fitness-exercise"
+    },
+    {
+      "id": "deadlift-standards",
+      "name": "Deadlift Standards by Weight",
+      "cat": "fitness-exercise"
+    },
+    {
+      "id": "overhead-standards",
+      "name": "Overhead Press Standards",
+      "cat": "fitness-exercise"
+    },
+    {
+      "id": "plank-test",
+      "name": "Plank Hold Standards",
+      "cat": "fitness-exercise"
+    },
+    {
+      "id": "grip-strength",
+      "name": "Grip Strength Standards",
+      "cat": "fitness-exercise"
+    },
+    {
+      "id": "daily-calorie",
+      "name": "Daily Calorie Needs",
+      "cat": "food-nutrition"
+    },
+    {
+      "id": "macro-split",
+      "name": "Macro Split Calculator",
+      "cat": "food-nutrition"
+    },
+    {
+      "id": "protein-need",
+      "name": "Daily Protein Need",
+      "cat": "food-nutrition"
+    },
+    {
+      "id": "daily-water-intake",
+      "name": "Daily Water Intake",
+      "cat": "food-nutrition"
+    },
+    {
+      "id": "weight-loss-time",
+      "name": "Weight Loss Timeline",
+      "cat": "food-nutrition"
+    },
+    {
+      "id": "body-fat-food",
+      "name": "Body Fat % (US Navy)",
+      "cat": "food-nutrition"
+    },
+    {
+      "id": "calorie-burned",
+      "name": "Calories Burned (Activity)",
+      "cat": "food-nutrition"
+    },
+    {
+      "id": "recipe-scaler",
+      "name": "Recipe Scaler",
+      "cat": "food-nutrition"
+    },
+    {
+      "id": "cooking-time",
+      "name": "Cooking Time Adjuster",
+      "cat": "food-nutrition"
+    },
+    {
+      "id": "meal-prep",
+      "name": "Meal Prep Cost",
+      "cat": "food-nutrition"
+    },
+    {
+      "id": "unit-converter-food",
+      "name": "Food Unit Converter",
+      "cat": "food-nutrition"
+    },
+    {
+      "id": "eat-out-vs-cook",
+      "name": "Eating Out vs Cooking",
+      "cat": "food-nutrition"
+    },
+    {
+      "id": "fast-food-calories",
+      "name": "Fast Food Calories",
+      "cat": "food-nutrition"
+    },
+    {
+      "id": "keto-macro",
+      "name": "Keto Macro Calculator",
+      "cat": "food-nutrition"
+    },
+    {
+      "id": "intermittent-fasting",
+      "name": "IF Schedule Planner",
+      "cat": "food-nutrition"
+    },
+    {
+      "id": "vegan-protein",
+      "name": "Vegan Protein Sources",
+      "cat": "food-nutrition"
+    },
+    {
+      "id": "grocery-per-person",
+      "name": "Grocery Cost/Person",
+      "cat": "food-nutrition"
+    },
+    {
+      "id": "baking-converter",
+      "name": "Baking Substitution",
+      "cat": "food-nutrition"
+    },
+    {
+      "id": "coffee-cost-per-cup",
+      "name": "Coffee Cost per Cup",
+      "cat": "food-nutrition"
+    },
+    {
+      "id": "tea-vs-coffee",
+      "name": "Tea vs Coffee Cost",
+      "cat": "food-nutrition"
+    },
+    {
+      "id": "sugar-intake",
+      "name": "Daily Sugar Intake",
+      "cat": "food-nutrition"
+    },
+    {
+      "id": "bmi",
+      "name": "BMI Calculator",
+      "cat": "health"
+    },
+    {
+      "id": "bmr",
+      "name": "BMR Calculator",
+      "cat": "health"
+    },
+    {
+      "id": "calorie",
+      "name": "Calorie Calculator",
+      "cat": "health"
+    },
+    {
+      "id": "body-fat",
+      "name": "Body Fat Calculator",
+      "cat": "health"
+    },
+    {
+      "id": "water-intake-health",
+      "name": "Water Intake Calculator",
+      "cat": "health"
+    },
+    {
+      "id": "ideal-body-weight",
+      "name": "Ideal Weight Calculator",
+      "cat": "health"
+    },
+    {
+      "id": "heart-rate",
+      "name": "Heart Rate Zone Calculator",
+      "cat": "health"
+    },
+    {
+      "id": "pregnancy",
+      "name": "Pregnancy Due Date",
+      "cat": "health"
+    },
+    {
+      "id": "ovulation",
+      "name": "Ovulation Calculator",
+      "cat": "health"
+    },
+    {
+      "id": "macros",
+      "name": "Macronutrient Calculator",
+      "cat": "health"
+    },
+    {
+      "id": "lean-body-mass",
+      "name": "Lean Body Mass",
+      "cat": "health"
+    },
+    {
+      "id": "bsa",
+      "name": "Body Surface Area",
+      "cat": "health"
+    },
+    {
+      "id": "waist-hip",
+      "name": "Waist-to-Hip Ratio",
+      "cat": "health"
+    },
+    {
+      "id": "vo2-max",
+      "name": "VO2 Max Calculator",
+      "cat": "health"
+    },
+    {
+      "id": "pregnancy-weight",
+      "name": "Pregnancy Weight Gain",
+      "cat": "health"
+    },
+    {
+      "id": "blood-pressure",
+      "name": "Blood Pressure Category",
+      "cat": "health"
+    },
+    {
+      "id": "calorie-burn",
+      "name": "Calorie Burn Calculator",
+      "cat": "health"
+    },
+    {
+      "id": "sleep",
+      "name": "Sleep Calculator",
+      "cat": "health"
+    },
+    {
+      "id": "gfr",
+      "name": "GFR Calculator",
+      "cat": "health"
+    },
+    {
+      "id": "target-heart-rate",
+      "name": "Target Heart Rate Zones",
+      "cat": "health"
+    },
+    {
+      "id": "sleep-quality",
+      "name": "Sleep Quality Score",
+      "cat": "health"
+    },
+    {
+      "id": "fatigue-score",
+      "name": "Fatigue Score Calculator",
+      "cat": "health"
+    },
+    {
+      "id": "room-area",
+      "name": "Room Area & Flooring Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "wallpaper-rolls",
+      "name": "Wallpaper Rolls Needed Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "fence-material",
+      "name": "Fence Material Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "deck-stain",
+      "name": "Deck Stain & Sealant Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "curtain-length",
+      "name": "Curtain Length & Fabric Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "rug-size",
+      "name": "Rug Size & Room Fit Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "lighting-rooms",
+      "name": "Room Lighting Needs Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "paint-cost",
+      "name": "Paint Cost Estimator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "ac-size",
+      "name": "AC/BTU Size Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "water-heater",
+      "name": "Water Heater Size Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "generator-size",
+      "name": "Generator Size Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "garden-soil",
+      "name": "Garden Soil & Mulch Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "plant-spacing",
+      "name": "Plant Spacing & Quantity Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "grass-seed",
+      "name": "Grass Seed Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "fertilizer",
+      "name": "Fertilizer Application Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "compost",
+      "name": "Compost Bin Size Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "rain-barrel",
+      "name": "Rain Barrel / Rainwater Harvesting Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "irrigation-flow",
+      "name": "Garden Irrigation Flow Rate Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "pool-size",
+      "name": "Pool Water Volume Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "pool-chemicals",
+      "name": "Pool Chemical Balance Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "furniture-arrange",
+      "name": "Furniture Room Layout Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "tv-mount-height",
+      "name": "TV Mount Height Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "stair-calculator",
+      "name": "Staircase Dimensions Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "countertop-sqft",
+      "name": "Countertop Square Footage Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "closet-organizer",
+      "name": "Closet Organizer Size Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "cabinet-door",
+      "name": "Cabinet & Drawer Size Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "tile-grout",
+      "name": "Tile Grout & Mortar Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "light-bulb-save",
+      "name": "LED Bulb Savings Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "home-sqft",
+      "name": "Home Square Footage Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "kitchen-remodel",
+      "name": "Kitchen Remodel Budget Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "roof-sqft",
+      "name": "Roof Area Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "vinyl-flooring",
+      "name": "Vinyl / Laminate Flooring Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "solar-panel",
+      "name": "Solar Panel System Size Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "solar-battery",
+      "name": "Solar Battery / Home Battery Calculator",
+      "cat": "home-garden"
+    },
+    {
+      "id": "ev-charger-home",
+      "name": "Home EV Charger Installation Cost",
+      "cat": "home-garden"
+    },
+    {
+      "id": "relocation-cost",
+      "name": "Moving Cost Calculator",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "rental-deposit",
+      "name": "Rental Deposit Return Calculator",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "paint-coverage",
+      "name": "Paint Coverage Calculator",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "electricity-bill-saving",
+      "name": "Electricity Bill Savings Calculator",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "water-usage",
+      "name": "Water Usage & Cost Calculator",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "grocery-budget-optimizer",
+      "name": "Grocery Budget Optimizer",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "food-delivery-vs-cooking",
+      "name": "Food Delivery vs Cooking Cost",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "coffee-habit",
+      "name": "Coffee/Habit Cost Calculator",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "road-trip-cost",
+      "name": "Road Trip Cost Calculator",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "flight-cost-per-hour",
+      "name": "Flight Cost per Hour Calculator",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "baby-cost",
+      "name": "Baby Cost Calculator",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "parental-leave",
+      "name": "Parental Leave Pay Calculator",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "pet-cost",
+      "name": "Pet Yearly Cost Calculator",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "lawn-mowing",
+      "name": "Lawn Mowing Cost Calculator",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "gym-cost-per-visit",
+      "name": "Gym Cost per Visit Calculator",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "vacation-savings",
+      "name": "Vacation Savings Planner",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "sale-savings",
+      "name": "Sale Savings Calculator",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "resell-value",
+      "name": "Item Resell Value Estimator",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "subscription-audit",
+      "name": "Subscription Cost Auditor",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "streaming-value",
+      "name": "Streaming Service Value Calculator",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "charging-time",
+      "name": "Phone/Device Charging Time Calculator",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "gift-split",
+      "name": "Group Gift Cost Splitter",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "hourly-annual-salary",
+      "name": "Hourly to Annual Salary Converter",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "pet-food-cost",
+      "name": "Pet Food Cost Calculator",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "cleaning-time",
+      "name": "Cleaning Time Planner",
+      "cat": "lifestyle"
+    },
+    {
+      "id": "scientific",
+      "name": "Scientific Calculator",
+      "cat": "math"
+    },
+    {
+      "id": "quadratic",
+      "name": "Quadratic Equation Solver",
+      "cat": "math"
+    },
+    {
+      "id": "percentage",
+      "name": "Percentage Calculator",
+      "cat": "math"
+    },
+    {
+      "id": "percent-change",
+      "name": "Percentage Change",
+      "cat": "math"
+    },
+    {
+      "id": "fraction",
+      "name": "Fraction Calculator",
+      "cat": "math"
+    },
+    {
+      "id": "triangle",
+      "name": "Triangle Calculator",
+      "cat": "math"
+    },
+    {
+      "id": "circle",
+      "name": "Circle Calculator",
+      "cat": "math"
+    },
+    {
+      "id": "statistics",
+      "name": "Statistics Calculator",
+      "cat": "math"
+    },
+    {
+      "id": "combinations",
+      "name": "Combinations Calculator",
+      "cat": "math"
+    },
+    {
+      "id": "lcm-gcd",
+      "name": "LCM & GCD Calculator",
+      "cat": "math"
+    },
+    {
+      "id": "prime-factor",
+      "name": "Prime Factorization",
+      "cat": "math"
+    },
+    {
+      "id": "matrix-det",
+      "name": "Matrix Determinant",
+      "cat": "math"
+    },
+    {
+      "id": "logarithm",
+      "name": "Logarithm Calculator",
+      "cat": "math"
+    },
+    {
+      "id": "exponent",
+      "name": "Exponent Calculator",
+      "cat": "math"
+    },
+    {
+      "id": "root",
+      "name": "Root Calculator",
+      "cat": "math"
+    },
+    {
+      "id": "ratio",
+      "name": "Ratio Calculator",
+      "cat": "math"
+    },
+    {
+      "id": "average",
+      "name": "Average Calculator",
+      "cat": "math"
+    },
+    {
+      "id": "pythagorean",
+      "name": "Pythagorean Theorem",
+      "cat": "math"
+    },
+    {
+      "id": "trigonometry",
+      "name": "Trigonometry Calculator",
+      "cat": "math"
+    },
+    {
+      "id": "distance",
+      "name": "Distance Formula",
+      "cat": "math"
+    },
+    {
+      "id": "slope",
+      "name": "Slope Calculator",
+      "cat": "math"
+    },
+    {
+      "id": "factorial",
+      "name": "Factorial Calculator",
+      "cat": "math"
+    },
+    {
+      "id": "modular",
+      "name": "Modular Arithmetic",
+      "cat": "math"
+    },
+    {
+      "id": "complex",
+      "name": "Complex Number Calculator",
+      "cat": "math"
+    },
+    {
+      "id": "scientific-notation",
+      "name": "Scientific Notation Converter",
+      "cat": "math"
+    },
+    {
+      "id": "random-generator",
+      "name": "Random Number Generator",
+      "cat": "math"
+    },
+    {
+      "id": "baby-weight-gain",
+      "name": "Baby Weight Percentile",
+      "cat": "parenting-family"
+    },
+    {
+      "id": "baby-feeding",
+      "name": "Baby Feeding Schedule",
+      "cat": "parenting-family"
+    },
+    {
+      "id": "baby-sleep",
+      "name": "Baby Sleep Schedule",
+      "cat": "parenting-family"
+    },
+    {
+      "id": "child-height",
+      "name": "Child Height Predictor",
+      "cat": "parenting-family"
+    },
+    {
+      "id": "toddler-screen",
+      "name": "Screen Time Limits",
+      "cat": "parenting-family"
+    },
+    {
+      "id": "child-bmi",
+      "name": "Children BMI Percentile",
+      "cat": "parenting-family"
+    },
+    {
+      "id": "family-budget",
+      "name": "Family Monthly Budget",
+      "cat": "parenting-family"
+    },
+    {
+      "id": "childcare-cost",
+      "name": "Childcare Cost Comparison",
+      "cat": "parenting-family"
+    },
+    {
+      "id": "college-savings",
+      "name": "529 College Savings",
+      "cat": "parenting-family"
+    },
+    {
+      "id": "maternity-leave",
+      "name": "Maternity Leave Pay",
+      "cat": "parenting-family"
+    },
+    {
+      "id": "life-insurance",
+      "name": "Life Insurance Need",
+      "cat": "parenting-family"
+    },
+    {
+      "id": "home-buying",
+      "name": "Home Buying Budget",
+      "cat": "parenting-family"
+    },
+    {
+      "id": "wedding-budget",
+      "name": "Wedding Budget Planner",
+      "cat": "parenting-family"
+    },
+    {
+      "id": "baby-name",
+      "name": "Baby Name Popularity",
+      "cat": "parenting-family"
+    },
+    {
+      "id": "college-savings-monthly",
+      "name": "College Savings Calculator",
+      "cat": "parenting-family"
+    },
+    {
+      "id": "childcare-cost-annual",
+      "name": "Childcare Cost Calculator",
+      "cat": "parenting-family"
+    },
+    {
+      "id": "family-budget-simple",
+      "name": "Family Budget Calculator",
+      "cat": "parenting-family"
+    },
+    {
+      "id": "maternity-leave-finance",
+      "name": "Maternity Leave Calculator",
+      "cat": "parenting-family"
+    },
+    {
+      "id": "paternity-leave",
+      "name": "Paternity Leave Calculator",
+      "cat": "parenting-family"
+    },
+    {
+      "id": "kid-allowance",
+      "name": "Allowance Calculator",
+      "cat": "parenting-family"
+    },
+    {
+      "id": "babysitter-rate",
+      "name": "Babysitter Rate Calculator",
+      "cat": "parenting-family"
+    },
+    {
+      "id": "screen-time",
+      "name": "Screen Time Guidelines",
+      "cat": "parenting-family"
+    },
+    {
+      "id": "diaper-cost",
+      "name": "Diaper Cost Calculator",
+      "cat": "parenting-family"
+    },
+    {
+      "id": "vacation-with-kids",
+      "name": "Family Vacation Cost",
+      "cat": "parenting-family"
+    },
+    {
+      "id": "fd-calculator",
+      "name": "Fixed Deposit (FD) Calculator",
+      "cat": "regional"
+    },
+    {
+      "id": "rd-calculator",
+      "name": "Recurring Deposit (RD) Calculator",
+      "cat": "regional"
+    },
+    {
+      "id": "ppf-calculator",
+      "name": "PPF Calculator",
+      "cat": "regional"
+    },
+    {
+      "id": "nps-calculator",
+      "name": "National Pension System (NPS) Calculator",
+      "cat": "regional"
+    },
+    {
+      "id": "sip-return",
+      "name": "SIP Return Calculator",
+      "cat": "regional"
+    },
+    {
+      "id": "income-tax-india",
+      "name": "Income Tax Calculator India",
+      "cat": "regional"
+    },
+    {
+      "id": "gst-india",
+      "name": "GST Calculator India",
+      "cat": "regional"
+    },
+    {
+      "id": "stamp-duty",
+      "name": "Stamp Duty & Registration Calculator",
+      "cat": "regional"
+    },
+    {
+      "id": "home-loan-emi-india",
+      "name": "Home Loan EMI Calculator India",
+      "cat": "regional"
+    },
+    {
+      "id": "gold-rate",
+      "name": "Gold Rate Calculator",
+      "cat": "regional"
+    },
+    {
+      "id": "pk-salary",
+      "name": "Pakistan Salary Calculator",
+      "cat": "regional"
+    },
+    {
+      "id": "gold-rate-pk",
+      "name": "Gold Rate Calculator Pakistan",
+      "cat": "regional"
+    },
+    {
+      "id": "rickshaw-fare",
+      "name": "Rickshaw/Auto Fare Calculator",
+      "cat": "regional"
+    },
+    {
+      "id": "electricity-bill-india",
+      "name": "Electricity Bill Calculator India",
+      "cat": "regional"
+    },
+    {
+      "id": "lpg-cost",
+      "name": "LPG Cylinder Cost Calculator",
+      "cat": "regional"
+    },
+    {
+      "id": "wedding-budget-shaadi",
+      "name": "Wedding Budget Calculator (Shaadi)",
+      "cat": "regional"
+    },
+    {
+      "id": "dubai-salary",
+      "name": "Dubai/UAE Salary Calculator",
+      "cat": "regional"
+    },
+    {
+      "id": "gold-silver",
+      "name": "Gold to Silver Ratio",
+      "cat": "regional"
+    },
+    {
+      "id": "chit-fund",
+      "name": "Chit Fund Calculator",
+      "cat": "regional"
+    },
+    {
+      "id": "gratuity",
+      "name": "Gratuity Calculator",
+      "cat": "regional"
+    },
+    {
+      "id": "leave-encashment",
+      "name": "Leave Encashment Calculator",
+      "cat": "regional"
+    },
+    {
+      "id": "ohms-law",
+      "name": "Ohm's Law Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "density",
+      "name": "Density Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "force",
+      "name": "Force Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "pressure",
+      "name": "Pressure Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "kinetic-energy",
+      "name": "Kinetic Energy Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "potential-energy",
+      "name": "Potential Energy Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "ph",
+      "name": "pH Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "ideal-gas",
+      "name": "Ideal Gas Law",
+      "cat": "science"
+    },
+    {
+      "id": "momentum",
+      "name": "Momentum Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "doppler",
+      "name": "Doppler Effect Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "half-life",
+      "name": "Half-Life Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "wavelength",
+      "name": "Wavelength Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "acceleration",
+      "name": "Acceleration Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "power",
+      "name": "Power Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "velocity",
+      "name": "Velocity Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "free-fall",
+      "name": "Free Fall Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "specific-heat",
+      "name": "Specific Heat Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "lens",
+      "name": "Lens Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "coulomb",
+      "name": "Coulomb's Law",
+      "cat": "science"
+    },
+    {
+      "id": "frequency",
+      "name": "Frequency Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "energy-mass",
+      "name": "Energy-Mass Equivalence",
+      "cat": "science"
+    },
+    {
+      "id": "molar-mass",
+      "name": "Molar Mass Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "work-calculator",
+      "name": "Work Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "gravitational-force",
+      "name": "Gravitational Force Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "escape-velocity",
+      "name": "Escape Velocity Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "molarity",
+      "name": "Molarity Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "dilution",
+      "name": "Solution Dilution Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "electric-field",
+      "name": "Electric Field Calculator",
+      "cat": "science"
+    },
+    {
+      "id": "internet-speed",
+      "name": "Internet Download Time",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "bandwidth-calc",
+      "name": "Bandwidth Calculator",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "data-usage",
+      "name": "Data Usage Calculator",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "video-size",
+      "name": "Video File Size",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "monitor-distance",
+      "name": "Monitor Viewing Distance",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "wifi-channels",
+      "name": "WiFi Channel Finder",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "cloud-storage",
+      "name": "Cloud Storage Cost",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "website-cost",
+      "name": "Website Dev Cost",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "ssd-vs-hdd",
+      "name": "SSD vs HDD Speed",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "battery-life-estimator",
+      "name": "Battery Life Estimator",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "screen-resolution",
+      "name": "Screen Resolution Guide",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "cable-length",
+      "name": "Cable Length Calculator",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "ppi-calc",
+      "name": "PPI (Pixels Per Inch)",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "wattage-psu",
+      "name": "Power Supply Calculator",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "print-resolution",
+      "name": "Print Resolution Guide",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "password-time",
+      "name": "Password Crack Time",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "image-file-size",
+      "name": "Image File Size Estimator",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "hosting-cost",
+      "name": "Hosting Cost per Year",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "monitor-refresh",
+      "name": "Refresh Rate vs FPS",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "streaming-bitrate",
+      "name": "Streaming Bitrate Guide",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "raid-capacity",
+      "name": "RAID Capacity Calculator",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "uptime-calculator",
+      "name": "Uptime / Downtime Calculator",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "device-charge-time",
+      "name": "Device Charging Time",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "data-transfer-cost",
+      "name": "Cloud Data Transfer Cost",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "token-cost",
+      "name": "AI Token Cost Estimator",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "base64-encode",
+      "name": "Base64 Encoder",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "base64-decode",
+      "name": "Base64 Decoder",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "url-encoder",
+      "name": "URL Encoder / Decoder",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "json-formatter",
+      "name": "JSON Formatter",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "text-counter",
+      "name": "Word & Character Counter",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "case-converter",
+      "name": "Text Case Converter",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "hash-generator",
+      "name": "Hash Generator (MD5/SHA)",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "rgb-hex",
+      "name": "RGB ↔ Hex Converter",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "uuid-generator",
+      "name": "UUID v4 Generator",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "password-generator",
+      "name": "Strong Password Generator",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "ip-subnet",
+      "name": "IP Subnet Calculator",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "cron-validate",
+      "name": "Cron Expression Validator",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "resistor-color-code",
+      "name": "Resistor Color Code Calculator",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "ascii-table",
+      "name": "ASCII Table Reference",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "awg-reference",
+      "name": "Wire Gauge (AWG) Reference",
+      "cat": "tech-digital"
+    },
+    {
+      "id": "qr-generator",
+      "name": "QR Code Generator",
+      "cat": "utilities"
+    },
+    {
+      "id": "password-gen",
+      "name": "Password Generator",
+      "cat": "utilities"
+    },
+    {
+      "id": "color-picker",
+      "name": "Color Converter",
+      "cat": "utilities"
+    },
+    {
+      "id": "unit-converter",
+      "name": "Universal Unit Converter",
+      "cat": "utilities"
+    },
+    {
+      "id": "base-converter",
+      "name": "Number Base Converter",
+      "cat": "utilities"
+    },
+    {
+      "id": "hash-gen",
+      "name": "Hash Generator",
+      "cat": "utilities"
+    },
+    {
+      "id": "lorem-ipsum",
+      "name": "Lorem Ipsum Generator",
+      "cat": "utilities"
+    },
+    {
+      "id": "uuid-gen",
+      "name": "UUID Generator",
+      "cat": "utilities"
+    },
+    {
+      "id": "tip-split",
+      "name": "Bill Split & Tip",
+      "cat": "utilities"
+    },
+    {
+      "id": "timer-calc",
+      "name": "Countdown Timer Calculator",
+      "cat": "utilities"
+    },
+    {
+      "id": "file-size",
+      "name": "File Size Converter",
+      "cat": "utilities"
+    },
+    {
+      "id": "salary-hourly",
+      "name": "Salary to Hourly Converter",
+      "cat": "utilities"
+    },
+    {
+      "id": "area-calc",
+      "name": "Area Calculator",
+      "cat": "utilities"
+    },
+    {
+      "id": "volume-calc",
+      "name": "Volume Calculator",
+      "cat": "utilities"
+    },
+    {
+      "id": "shipping-cost",
+      "name": "Shipping Cost Calculator",
+      "cat": "utilities"
+    },
+    {
+      "id": "salary-biweekly",
+      "name": "Biweekly Pay Calculator",
+      "cat": "utilities"
+    },
+    {
+      "id": "simple-tax",
+      "name": "Simple Tax Calculator",
+      "cat": "utilities"
+    },
+    {
+      "id": "mileage-calc",
+      "name": "Mileage Reimbursement Calculator",
+      "cat": "utilities"
+    }
+  ]
+}

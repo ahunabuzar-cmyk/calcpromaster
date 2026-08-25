@@ -28,7 +28,6 @@ const SHELL = [
   './',
   './index.html',
   './404.html',
-  './styles.css',
   './fonts/space-grotesk-latin.woff2',
   './fonts/inter-latin.woff2',
   './manifest.json',
@@ -36,7 +35,11 @@ const SHELL = [
   './icon-192.png',
   './icon-512.png',
   './og-image.png',
-  './js/site-config.js',
+  // NOTE: ./styles.css + ./js/site-config.js are NOT precached — the build
+  // inlines BOTH into index.html (critical CSS + site-config), so no page
+  // requests them at runtime; precaching them only adds ~90KB of dead weight
+  // to the install fetch. The a11y test that fetches /styles.css directly
+  // still works (SW is network-first for same-origin static assets).
   './js/core.js',
   './js/data.js',
   './js/data-loader.js',

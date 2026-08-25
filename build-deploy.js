@@ -187,11 +187,84 @@ function inlineSiteConfig() {
 //  - no duplicate source of truth: styles.css stays the single file — this step
 //    embeds its content at build time (like site-config).
 // Other pages (about.html, privacy.html, ...) keep their external <link>.
+function minifyCss(css) {
+  // Conservative minifier: strips comments and collapses whitespace runs to a
+  // single space. Strings ('...' / "...") and url(...) blocks are preserved
+  // byte-for-byte (content:'▸ ' stays intact). Safe for the calc()/clamp()
+  // expressions in styles.css — spacing inside them is insignificant.
+  let out = '';
+  let i = 0;
+  const n = css.length;
+  while (i < n) {
+    const c = css[i];
+    if (c === '/' && css[i + 1] === '*') {
+      const end = css.indexOf('*/', i + 2);
+      if (end < 0) break; // unterminated comment — drop the tail
+      i = end + 2;
+      continue;
+    }
+    if (c === '\'' || c === '"') {
+      const q = c;
+      let j = i + 1;
+      while (j < n) {
+        if (css[j] === '\\') { j += 2; continue; }
+        if (css[j] === q) break;
+        j++;
+      }
+      out += css.slice(i, Math.min(j + 1, n));
+      i = Math.min(j + 1, n);
+      continue;
+    }
+    if (c === 'u' && css.slice(i, i + 4).toLowerCase() === 'url(') {
+      // Copy through the closing paren, tolerating quoted urls
+      let depth = 0;
+      let j = i;
+      let inStr = null;
+      while (j < n) {
+        const ch = css[j];
+        if (inStr) {
+          if (ch === '\\') { j += 2; continue; }
+          if (ch === inStr) inStr = null;
+        } else if (ch === '\'' || ch === '"') {
+          inStr = ch;
+        } else if (ch === '(') {
+          depth++;
+        } else if (ch === ')') {
+          depth--;
+          if (depth === 0) { j++; break; }
+        }
+        j++;
+      }
+      out += css.slice(i, j);
+      i = j;
+      continue;
+    }
+    if (/\s/.test(c)) {
+      // Collapse a whitespace run into a single space (or drop if adjacent to
+      // a structural char that already separates tokens).
+      while (i < n && /\s/.test(css[i])) i++;
+      const prev = out[out.length - 1];
+      const next = css[i] || '';
+      if (prev && next && !/[{};:,()]/.test(prev) && !/[{};:,()]/.test(next)) {
+        out += ' ';
+      }
+      continue;
+    }
+    out += c;
+    i++;
+  }
+  return out;
+}
+
+// Full styles.css inlined at build (no external request on the critical path, no
+// async-CSS race: widgets are styled at append time) and minified to cut HTML
+// parse cost on throttled mobile (~88KB -> ~70KB).
 function inlineFullCss() {
   const htmlPath = path.join(OUT, 'index.html');
   const cssPath = path.join(OUT, 'styles.css');
   if (!fs.existsSync(htmlPath) || !fs.existsSync(cssPath)) return;
-  const css = fs.readFileSync(cssPath, 'utf8');
+  const raw = fs.readFileSync(cssPath, 'utf8');
+  const css = minifyCss(raw);
   const html = fs.readFileSync(htmlPath, 'utf8');
   const startMark = '<!-- Critical CSS inline for instant first paint -->';
   const si = html.indexOf(startMark);
@@ -200,12 +273,12 @@ function inlineFullCss() {
   const ei = html.indexOf(endMark, si);
   if (ei < 0) { console.warn('  ! css inline: closing noscript not found — skipping'); return; }
   const head = html.slice(0, si)
-    + '<!-- Critical CSS: FULL styles.css inlined at build (no external request on the\n'
-    + '     critical path, no async-CSS race — widgets are styled at append time). -->\n'
+    + '<!-- Critical CSS: FULL styles.css inlined (minified) at build — no external\n'
+    + '     request on the critical path, no async-CSS race. -->\n'
     + '<style>\n' + css + '\n</style>\n'
     + html.slice(ei + endMark.length);
   fs.writeFileSync(htmlPath, head);
-  console.log('  css: styles.css inlined into index.html (' + css.length + ' bytes) ✓');
+  console.log('  css: styles.css inlined into index.html (' + raw.length + ' -> ' + css.length + ' bytes) ✓');
 }
 
 function main() {
@@ -218,6 +291,13 @@ function main() {
     require('./scripts/sync-counts.cjs');
   } catch (e) {
     console.warn('  ! count sync skipped: ' + e.message);
+  }
+  // Regenerate the standalone legal/E-E-A-T pages (about/privacy/terms/cookies/
+  // contact/disclaimers) BEFORE copying — cookies.html is NOINDEX (thin utility).
+  try {
+    require('./scripts/generate-static-pages.cjs');
+  } catch (e) {
+    console.warn('  ! static pages skipped: ' + e.message);
   }
   cleanDir(OUT);
 
@@ -248,6 +328,18 @@ function main() {
 
   // Rewrite hardcoded domains in deploy/ to the configured production domain.
   substituteDomain();
+
+  // Static Site Generation (SSG): prerender EVERY route in sitemap.xml as a
+  // real static HTML file (deploy/<cat>/<tool>/index.html etc.) with unique
+  // title/meta/canonical/JSON-LD + full crawlable content, using the built
+  // deploy/index.html as the hydrated SPA shell. Netlify's `/* /index.html 200`
+  // rewrite never shadows existing static files (documented Shadowing), so
+  // these pages win automatically with zero extra redirect rules.
+  try {
+    require('./scripts/ssg-pages.cjs');
+  } catch (e) {
+    console.warn('  ! SSG skipped: ' + e.message);
+  }
 
   // Auto-bump service-worker cache version from content hash of deploy bundle.
   // Removes manual sw.js edit before every deploy (old process was error-prone).

@@ -582,7 +582,7 @@ const ZR = (function () {
   // site-config — perfect for professionals embedding the platform.
   // ===================================================================
   function whiteLabelReport() {
-    let site = { name: 'CalcProMaster', tagline: '566+ free online calculators', accent: '#4f46e5' };
+    let site = { name: 'CalcProMaster', tagline: '543+ free online calculators', accent: '#4f46e5' };
     try {
       if (window.SITE_CONFIG && window.SITE_CONFIG.siteName) site.name = window.SITE_CONFIG.siteName;
       if (window.SITE_CONFIG && window.SITE_CONFIG.siteTagline) site.tagline = window.SITE_CONFIG.siteTagline;

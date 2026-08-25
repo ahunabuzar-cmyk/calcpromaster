@@ -15,7 +15,12 @@ const ENGINEERING_TOOLS = [
   { id: 'torque', name: 'Torque Calculator', desc: 'Calculate torque', kw: 'free torque calculator',
     inputs: [{id:'force',label:'Force (N)',type:'number',def:50},{id:'radius',label:'Radius (m)',type:'number',def:0.5}],
     calc: function(v) { const t = v.force * v.radius; return { result: 'Torque: ' + t.toFixed(2) + ' N·m', chart: Charts.gauge(t, 200), extra: 'τ = F × r' }; },
-    steps: function(v) { const t=v.force*v.radius; return ['Formula: τ = F × r','Step 1: τ = '+v.force+' N × '+v.radius+' m','Step 2: τ = '+t.toFixed(2)+' N·m']; } },
+    steps: function(v) { const t=v.force*v.radius; return ['Formula: τ = F × r','Step 1: τ = '+v.force+' N × '+v.radius+' m','Step 2: τ = '+t.toFixed(2)+' N·m']; },
+    // Reverse calc (target = torque): τ = F·r → F = τ/r, r = τ/F
+    reverse: { solveFor: { force: 1, radius: 1 }, variables: {
+      force: { analytical: function(o, target) { return target / o.radius; }, domain: [0, 1e9] },
+      radius: { analytical: function(o, target) { return target / o.force; }, domain: [1e-9, 1e9] }
+    } } },
   { id: 'led-resistor', name: 'LED Resistor Calculator', desc: 'Calculate LED series resistor', kw: 'led resistor calculator',
     inputs: [{id:'supply',label:'Supply Voltage (V)',type:'number',def:9},{id:'ledV',label:'LED Voltage (V)',type:'number',def:2},{id:'ledI',label:'LED Current (mA)',type:'number',def:20}],
     calc: function(v) { const r = (v.supply - v.ledV) / (v.ledI / 1000); return { result: 'Resistor: ' + r.toFixed(0) + ' Ω', chart: Charts.gauge(r, 1000), extra: 'Power: ' + ((v.supply - v.ledV) * v.ledI / 1000).toFixed(3) + ' W' }; },

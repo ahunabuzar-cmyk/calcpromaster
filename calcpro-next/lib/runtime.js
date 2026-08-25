@@ -7,6 +7,7 @@
 //
 // core.js never touches the DOM at module load, so SSR is safe too.
 import '@calcpro-js/core.js';
+import '@calcpro-js/calc-modes.js';
 import '@calcpro-js/qrcode.js';
 
 // No-op marker — importing this module guarantees the runtime is attached.

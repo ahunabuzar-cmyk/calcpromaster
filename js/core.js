@@ -327,8 +327,46 @@ if (typeof window !== 'undefined') window.CalcAnalytics = CalcAnalytics;
 
 // Advanced calculation helpers + SVG charts
 const AdvancedCalc = (function () {
-  function generateAmortization(principal, annualRate, years, currency) { const r = annualRate / 100 / 12; const n = years * 12; const emi = r > 0 ? principal * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1) : principal / n; let bal = principal; const schedule = []; for (let i = 1; i <= n; i++) { const interest = bal * r; const payment = emi - interest; bal -= payment; schedule.push({ month: i, payment: emi, interest, principal: payment, balance: Math.max(0, bal) }); } const totalPayment = emi * n; const totalInterest = totalPayment - principal; return { emi, schedule, totalPayment, totalInterest, principal }; }
-  function compoundSteps(principal, rate, years, freq) { const n = freq || 12; const r = rate / 100; const steps = []; for (let y = 0; y <= years; y++) { const amount = principal * Math.pow(1 + r / n, n * y); steps.push({ year: y, amount, interest: amount - principal }); } const final = principal * Math.pow(1 + r / n, n * years); return { final, interest: final - principal, steps }; }
+  function generateAmortization(principal, annualRate, years, currency) {
+    const r = annualRate / 100 / 12;
+    const rawN = years * 12;
+    const n = Number.isFinite(rawN) && rawN > 0 ? rawN : 0;
+    // Overflow-safe EMI: for absurd terms (n → 1e16) Math.pow(1+r,n) = Infinity,
+    // which would make emi NaN. Mathematically emi → P·r as n → ∞ (interest-only
+    // limit), so clamp to that when the compounding factor overflows.
+    const pow = Math.pow(1 + r, n);
+    const emi = r > 0 && n > 0 ? (Number.isFinite(pow) ? principal * r * pow / (pow - 1) : principal * r) : (n > 0 ? principal / n : 0);
+    // Safety cap: a full per-month schedule is only meaningful for real loan terms.
+    // Absurd inputs (years = 1e15) must never freeze the tab building billions of rows.
+    // Cap at 600 months (50 yrs) — beyond that the totals stay exact, the table just stops.
+    const maxRows = 600;
+    const rows = Math.min(n, maxRows);
+    let bal = principal;
+    const schedule = [];
+    for (let i = 1; i <= rows; i++) {
+      const interest = bal * r;
+      const payment = emi - interest;
+      bal -= payment;
+      schedule.push({ month: i, payment: emi, interest, principal: payment, balance: Math.max(0, bal) });
+    }
+    const totalPayment = emi * n;
+    const totalInterest = totalPayment - principal;
+    return { emi, schedule, totalPayment, totalInterest, principal, truncated: n > maxRows };
+  }
+  function compoundSteps(principal, rate, years, freq) {
+    const n = freq || 12;
+    const r = rate / 100;
+    // Safety cap: steps only make sense for realistic horizons; 1e15 years must not freeze the tab.
+    const maxSteps = 600;
+    const yMax = Number.isFinite(years) && years > 0 ? Math.min(years, maxSteps) : 0;
+    const steps = [];
+    for (let y = 0; y <= yMax; y++) {
+      const amount = principal * Math.pow(1 + r / n, n * y);
+      steps.push({ year: y, amount, interest: amount - principal });
+    }
+    const final = principal * Math.pow(1 + r / n, n * (years || 0));
+    return { final, interest: final - principal, steps };
+  }
   function bmiSteps(weight, heightCm) { const h = heightCm / 100; if (!Number.isFinite(h) || h <= 0) { return { bmi: '0.0', category: 'Invalid input (height must be > 0)' }; } const bmi = weight / (h * h); if (!Number.isFinite(bmi)) { return { bmi: '0.0', category: 'Invalid input' }; } let cat = 'Normal'; if (bmi < 18.5) cat = 'Underweight'; else if (bmi >= 25 && bmi < 30) cat = 'Overweight'; else if (bmi >= 30) cat = 'Obese'; return { bmi: bmi.toFixed(1), category: cat }; }
   function pctSteps(part, whole) { if (whole === 0 || !Number.isFinite(whole)) { return { percent: '—', decimal: '—' }; } return { percent: (part / whole * 100).toFixed(2), decimal: (part / whole).toFixed(4) }; }
   function taxSteps(income, rate, deductions) { const taxable = Math.max(0, income - deductions); const tax = taxable * (rate / 100); return { taxableIncome: taxable, tax, netIncome: income - tax }; }

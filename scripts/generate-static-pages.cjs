@@ -16,14 +16,14 @@ vm.runInContext(src, sandbox);
 const LegalPages = sandbox.window.LegalPages;
 
 const PAGES = {
-  'about': { title: 'About CalcProMaster', content: LegalPages.ABOUT_PAGE },
-  'privacy': { title: 'Privacy Policy', content: LegalPages.PRIVACY_POLICY },
-  'terms': { title: 'Terms of Service', content: LegalPages.TERMS_OF_SERVICE },
-  'cookies': { title: 'Cookie Policy', content: LegalPages.COOKIE_POLICY },
-  'contact': { title: 'Contact CalcProMaster', content: LegalPages.CONTACT_PAGE },
-  'disclaimer-general': { title: 'General Disclaimer', content: LegalPages.GENERAL_DISCLAIMER },
-  'disclaimer-finance': { title: 'Financial Disclaimer', content: LegalPages.FINANCIAL_DISCLAIMER },
-  'disclaimer-health': { title: 'Health Disclaimer', content: LegalPages.HEALTH_DISCLAIMER },
+  'about': { title: 'About CalcProMaster', desc: 'About CalcProMaster — a free collection of 543+ online calculators for finance, health, math, science and everyday life, all running in your browser.', content: LegalPages.ABOUT_PAGE },
+  'privacy': { title: 'Privacy Policy', desc: 'CalcProMaster privacy policy — we do not use cookies or track you. Preferences, history and favorites are stored only in your own browser via localStorage.', content: LegalPages.PRIVACY_POLICY },
+  'terms': { title: 'Terms of Service', desc: 'CalcProMaster terms of service — free use of all calculators, no warranty, and clear liability limits for financial, health and general tools.', content: LegalPages.TERMS_OF_SERVICE },
+  'cookies': { title: 'Cookie Policy', desc: 'CalcProMaster cookie policy — this site does not use cookies. Local storage is used only for your own saved preferences and history.', content: LegalPages.COOKIE_POLICY },
+  'contact': { title: 'Contact CalcProMaster', desc: 'Contact CalcProMaster — get help with a calculator, report a formula issue, or suggest a new tool. We respond to every message.', content: LegalPages.CONTACT_PAGE },
+  'disclaimer-general': { title: 'General Disclaimer', desc: 'CalcProMaster general disclaimer — calculators provide estimates for general information only and are not professional advice.', content: LegalPages.GENERAL_DISCLAIMER },
+  'disclaimer-finance': { title: 'Financial Disclaimer', desc: 'CalcProMaster financial disclaimer — results are illustrative estimates, not financial advice. Verify with a licensed professional before acting.', content: LegalPages.FINANCIAL_DISCLAIMER },
+  'disclaimer-health': { title: 'Health Disclaimer', desc: 'CalcProMaster health disclaimer — health and fitness calculators give general estimates only and are not medical advice.', content: LegalPages.HEALTH_DISCLAIMER },
 };
 
 // Static pages don't load the SPA's Router, so inline onclick handlers that call
@@ -37,15 +37,29 @@ function stripSpaHandlers(html) {
     .replace(/\sonclick="[^"]*"/g, '');
 }
 
-const SHELL = (title, body) => `<!DOCTYPE html>
+const DOMAIN = 'https://calcpromaster.netlify.app';
+
+const SHELL = (title, body, robots, desc, slug) => `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${title} | CalcProMaster</title>
-  <meta name="robots" content="index, follow">
+  <meta name="description" content="${desc}">
+  <meta name="robots" content="${robots || 'index, follow'}">
   <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="${DOMAIN}/${slug}">
   <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "${title}",
+    "url": "${DOMAIN}/${slug}",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "${DOMAIN}/" },
+    "inLanguage": "en"
+  }
+  </script>
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     :root{--bg:#f8fafc;--surface:#fff;--text:#1e293b;--text-light:#64748b;--border:#e2e8f0;--primary:#4f46e5;--radius:14px}
@@ -82,14 +96,19 @@ const SHELL = (title, body) => `<!DOCTYPE html>
   </header>
   <main>${body}</main>
   <footer>
-    <a href="/">CalcProMaster</a> · 524+ free online calculators · All calculations run in your browser
+    <a href="/">CalcProMaster</a> · 543+ free online calculators · All calculations run in your browser
     <br><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
   </footer>
 </body>
 </html>`;
 
 for (const [slug, page] of Object.entries(PAGES)) {
-  const html = SHELL(page.title, stripSpaHandlers(page.content));
+  // Cookie policy is a genuinely thin utility page (not needed for indexing) —
+  // noindex it so Google stops wasting crawl budget on a duplicate-signal page.
+  // All other legal/E-E-A-T pages stay indexable.
+  const robots = slug === 'cookies' ? 'noindex, follow' : 'index, follow';
+  const desc = page.desc || `${page.title} — CalcProMaster's ${page.title.toLowerCase().replace(/^calcpromaster's /, '')}. All calculators run 100% in your browser with step-by-step solutions.`;
+  const html = SHELL(page.title, stripSpaHandlers(page.content), robots, desc, slug);
   fs.writeFileSync(path.join(OUT, slug + '.html'), html);
   console.log('wrote', slug + '.html', '(' + (html.length / 1024).toFixed(1) + ' KB)');
 }

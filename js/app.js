@@ -1463,7 +1463,10 @@ const App = (function () {
       // downstream fields (extraHtml, isHtml, steps, units, chart) are preserved.
       if (result && result.result) {
         const resStr = String(result.result);
-        if (/\bNaN\b|\bundefined\b/i.test(resStr)) {
+        // NaN/undefined AND Infinity must never leak to the UI: a tool like the
+        // lens calculator returns "Infinity cm" when f == do (1/0), which is not
+        // a number a user can act on. Catch all three tokens here.
+        if (/\bNaN\b|\bundefined\b|Infinity/i.test(resStr)) {
           const broken = resStr;
           // Actionable error: name the fields that are empty/zero/invalid so the user
           // knows exactly WHAT to fix (instead of a vague "invalid input" message).
@@ -1471,15 +1474,15 @@ const App = (function () {
           result.result = badLabels.length
             ? '⚠️ Please check: ' + badLabels.join(', ') + ' — enter valid numbers (can\'t be empty or zero where division is needed).'
             : '⚠️ Please enter valid numbers (values can\'t be zero where division is needed).';
-          // Keep the raw broken math as diagnostic context, sanitized of NaN tokens.
-          result.extra = broken.replace(/\bNaN\b|\bundefined\b/gi, '—');
+          // Keep the raw broken math as diagnostic context, sanitized of NaN/Infinity tokens.
+          result.extra = broken.replace(/\bNaN\b|\bundefined\b|Infinity/gi, '—');
           result.isHtml = false; // friendly message is plain text
           // Red-flag the offending inputs on the form itself for quick visual fix
           _flagBadInputs();
         }
       }
-      if (result && result.extra && !result.extraHtml && /\bNaN\b|\bundefined\b/i.test(String(result.extra))) {
-        result.extra = String(result.extra).replace(/\bNaN\b|\bundefined\b/gi, '—');
+      if (result && result.extra && !result.extraHtml && /\bNaN\b|\bundefined\b|Infinity/i.test(String(result.extra))) {
+        result.extra = String(result.extra).replace(/\bNaN\b|\bundefined\b|Infinity/gi, '—');
       }
 
       // Semantic HTML result table — AI/answer-engine crawlers prioritize structured

@@ -68,8 +68,11 @@ test.describe('All calculators health check', () => {
 
       const form = page.locator('#calc-form');
       const inputs = form.locator('.calc-input, input, select');
-      const inputCount = await inputs.count().catch(() => 0);
-      expect(inputCount).toBeGreaterThan(0);
+      // Auto-retrying locator assertion (NOT a plain value assert): under load the
+      // h1 can render a beat before the form fields populate, and a one-shot
+      // count() then flakily reads 0. expect(locator).toBeVisible() retries until
+      // the form actually exists, so the sweep is stable under parallel workers.
+      await expect(inputs.first()).toBeVisible({ timeout: 15_000 });
 
       await inputs.first().focus().catch(() => {});
       const calcBtn = page.locator('#calc-form .calc-btn, #calc-form button[type=submit], #calc-form button');

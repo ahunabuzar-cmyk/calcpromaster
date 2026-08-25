@@ -2,11 +2,18 @@
 const AdvancedCalc = (function () {
   function generateAmortization(principal, annualRate, years, currency) {
     const r = annualRate / 100 / 12;
-    const n = years * 12;
-    const emi = r > 0 ? principal * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1) : principal / n;
+    const rawN = years * 12;
+    const n = Number.isFinite(rawN) && rawN > 0 ? rawN : 0;
+    // Overflow-safe EMI (mirrors core.js): when Math.pow(1+r,n) overflows to
+    // Infinity for absurd terms, emi → P·r (interest-only limit) — never NaN.
+    const pow = Math.pow(1 + r, n);
+    const emi = r > 0 && n > 0 ? (Number.isFinite(pow) ? principal * r * pow / (pow - 1) : principal * r) : (n > 0 ? principal / n : 0);
+    // Safety cap (mirrors core.js): absurd terms must never freeze the tab.
+    const maxRows = 600;
+    const rows = Math.min(n, maxRows);
     let bal = principal;
     const schedule = [];
-    for (let i = 1; i <= n; i++) {
+    for (let i = 1; i <= rows; i++) {
       const interest = bal * r;
       const payment = emi - interest;
       bal -= payment;
@@ -14,18 +21,21 @@ const AdvancedCalc = (function () {
     }
     const totalPayment = emi * n;
     const totalInterest = totalPayment - principal;
-    return { emi, schedule, totalPayment, totalInterest, principal };
+    return { emi, schedule, totalPayment, totalInterest, principal, truncated: n > maxRows };
   }
 
   function compoundSteps(principal, rate, years, freq) {
     const n = freq || 12;
     const r = rate / 100;
+    // Safety cap (mirrors core.js).
+    const maxSteps = 600;
+    const yMax = Number.isFinite(years) && years > 0 ? Math.min(years, maxSteps) : 0;
     const steps = [];
-    for (let y = 0; y <= years; y++) {
+    for (let y = 0; y <= yMax; y++) {
       const amount = principal * Math.pow(1 + r / n, n * y);
       steps.push({ year: y, amount, interest: amount - principal });
     }
-    const final = principal * Math.pow(1 + r / n, n * years);
+    const final = principal * Math.pow(1 + r / n, n * (years || 0));
     return { final, interest: final - principal, steps };
   }
 

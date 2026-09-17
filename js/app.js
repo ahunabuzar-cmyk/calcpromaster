@@ -222,6 +222,10 @@ const App = (function () {
     // Strip leading slash and split
     const cleanPath = path.replace(/^\//, '');
     const parts = cleanPath.split('/').filter(Boolean);
+    // Clear any variant robots lock carried from the previous route. Long-tail
+    // branches re-arm it via applyVariantSeo AFTER meta render, so post-calc
+    // updateMeta calls keep the variant noindex instead of resetting it.
+    try { document.documentElement.removeAttribute('data-robots-lock'); } catch (e) {}
 
     // DUPLICATE-MERGE REDIRECT: old tool URLs → canonical tool page.
     // Handles /cat/tool and /cat/tool/modifier (long-tail) both. Uses replace()
@@ -2835,10 +2839,17 @@ const App = (function () {
     // VARIANT GUARD: long-tail modifier routes RE-LOCK noindex after meta render
     // (applyVariantSeo sets <html data-robots-lock>). updateMeta clears the lock
     // here at the start of the next render so normal pages stay indexable.
+    // VARIANT LOCK: long-tail modifier pages stay noindex even when later
+    // updateMeta calls (e.g. post-calc result descriptions) re-run this reset.
+    // Lock is armed by applyVariantSeo and cleared at the top of navigate().
+    const robotsLocked = document.documentElement.hasAttribute('data-robots-lock');
     try {
-      document.documentElement.removeAttribute('data-robots-lock');
       const robots = document.querySelector('meta[name="robots"]');
-      if (robots && robots.content.indexOf('noindex') !== -1) robots.content = 'index, follow';
+      if (robotsLocked) {
+        robots.content = 'noindex, follow';
+      } else if (robots && robots.content.indexOf('noindex') !== -1) {
+        robots.content = 'index, follow';
+      }
     } catch (e) { /* non-fatal */ }
     // Generic OG/Twitter fallback for non-tool pages (home, category, hub, static,
     // 404). Per-tool cards override this in renderTool via setOgMeta(). This
@@ -2861,6 +2872,14 @@ const App = (function () {
       document.head.appendChild(canon);
     }
     canon.href = fullUrl;
+    if (robotsLocked) {
+      // Variant lock also pins the canonical to the BASE tool page, matching the
+      // static SSG output (updateMeta would otherwise self-canonicalize the URL).
+      try {
+        const segs = window.location.pathname.split('?')[0].split('#')[0].replace(/\/+$/, '').split('/').filter(Boolean);
+        if (segs.length >= 3) canon.href = window.location.origin + '/' + segs[0] + '/' + segs[1];
+      } catch (e) { /* non-fatal */ }
+    }
     
     // OG:title
     let ogTitle = document.querySelector('meta[property="og:title"]');

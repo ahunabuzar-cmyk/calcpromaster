@@ -354,6 +354,27 @@ test.describe('deploy live smoke — calculator routes (full artifact sweep + li
     expect(garbage.status(), 'unknown extensionless path must be 404').toBe(404);
     expect(garbage.headers()['content-type'] || '').toContain('text/html');
   });
+
+  test('bare URLs: /hub true-404, /es 200, deep garbage 404, real 404 page identity', async ({ request }) => {
+    // Bare /hub has NO prerendered index and the SPA itself 404s it in-browser
+    // (only /hub/<category> is a real route) — it must be a true 404, not a 200.
+    const hub = await request.get(BASE + '/hub');
+    expect(hub.status(), 'bare /hub must be a true 404 (no index, SPA 404s it too)').toBe(404);
+    expect((await hub.text()) || '').toContain('404');
+    // Bare /<locale> is written by the language switcher on the homepage and
+    // must keep its 200 fallback.
+    const es = await request.get(BASE + '/es');
+    expect(es.status(), 'bare /es must stay 200 (language-switcher URL)').toBe(200);
+    // Garbage DEEP path under a whitelisted prefix still 404s only when the
+    // prefix itself is unknown — deep whitelisted paths legitimately serve 200.
+    const deepGarbage = await request.get(BASE + '/garbage-not-a-section/deep/path');
+    expect(deepGarbage.status(), 'unknown deep path must be 404').toBe(404);
+    // The served 404 page must be the real custom 404 (not the SPA shell),
+    // so the title asserts page identity, not just status.
+    const notFound = await request.get(BASE + '/definitely-not-a-route-xyz');
+    expect(notFound.status()).toBe(404);
+    expect(await notFound.text()).toContain('404 — Page Not Found');
+  });
 });
 
 test.describe('deploy live smoke — SEO artifacts', () => {

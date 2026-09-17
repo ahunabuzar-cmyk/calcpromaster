@@ -55,6 +55,12 @@ jobs:
           done
           echo "deploy/js syntax OK ($(find deploy/js -name '*.js' | wc -l) files)"
 
+      - name: Sitemap coverage + 404-catch-all safety gate
+        run: |
+          # Every sitemap URL must be statically covered and no legit route may
+          # hit the hard-404 catch-all — fails with exit 1 on any drift.
+          node scripts/check-sitemap-coverage.cjs
+
       - name: SEO indexing audit — every sitemap URL must be index-ready
         run: |
           node scripts/seo-indexing-audit.cjs

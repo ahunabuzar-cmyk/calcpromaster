@@ -109,10 +109,10 @@ test.describe('deploy live smoke — behavior', () => {
   // Same reasoning as above: tolerate one transient CI-runner network flake.
   test.describe.configure({ retries: 1 });
 
-  test('homepage has 543+ header + category grid', async ({ page }) => {
+  test('homepage has 1201+ header + category grid', async ({ page }) => {
     const t = trackFailures(page, BASE);
     await page.goto(BASE + '/', { waitUntil: 'domcontentloaded' });
-    await expect(page.locator('main h1')).toContainText('543+', { timeout: 15000 });
+    await expect(page.locator('main h1')).toContainText('1201+', { timeout: 15000 });
     await expect(page.locator('main')).toContainText('Finance', { timeout: 15000 });
     await expect(page.locator('main')).toContainText('Math', { timeout: 15000 });
     expect(t.firstParty, `first-party resource failures: ${t.firstParty.join(' | ')}`).toEqual([]);
@@ -139,10 +139,10 @@ test.describe('deploy live smoke — behavior', () => {
     await expect(page.locator('main')).toContainText('32', { timeout: 15000 });
   });
 
-  test('deploy/_redirects returns true 404 for missing assets (Netlify rule)', async ({ request }) => {
+  test('deploy/_redirects: asset 404s, whitelist rewrites, hard-404 catch-all', async ({ request }) => {
     // `npx serve -s` locally soft-404s (SPA rewrite) and doesn't serve the
-    // _redirects file; Netlify honors the explicit asset wildcards — verify the
-    // deployed ARTIFACT carries them by reading the file from disk.
+    // _redirects file; Netlify honors the explicit rules — verify the deployed
+    // ARTIFACT carries them by reading the file from disk.
     // NOTE: Netlify rejects splats in the middle of a path segment, so the old
     // "/*.js /404.html 404" rules were silently ignored (soft-404s). Valid form
     // is a directory splat (/js/*) listed BEFORE the SPA catch-all.
@@ -151,7 +151,18 @@ test.describe('deploy live smoke — behavior', () => {
     const redirects = fs.readFileSync(path.join(__dirname, '..', '..', 'deploy', '_redirects'), 'utf8');
     expect(redirects).toMatch(/\/js\/\*\s+\/404\.html\s+404/);
     expect(redirects).toMatch(/\/og\/\*\s+\/404\.html\s+404/);
-    expect(redirects).toMatch(/\/\*\s+\/index\.html\s+200/);
+    // Soft-404 catch-all must be GONE (line-anchored: a bare "/*" rule only —
+    // prefix rewrites like "/finance/*  /index.html 200" legitimately end in /*); whitelisted prefixes rewrite to the SPA
+    // (category, app-route and locale-prefix samples of the full whitelist).
+    expect(redirects).not.toMatch(/^\/\*\s+\/index\.html\s+200/m);
+    expect(redirects).toMatch(/\/finance\/\*\s+\/index\.html\s+200/);
+    expect(redirects).toMatch(/\/hub\/\*\s+\/index\.html\s+200/);
+    expect(redirects).toMatch(/\/es\/\*\s+\/index\.html\s+200/);
+    // Hard-404 catch-all must be the LAST rule (unknown extensionless paths
+    // get the real 404 page, never a 200 home page).
+    const rules = redirects.split('\n').map((l) => l.replace(/\r$/, '').trim())
+      .filter((l) => l && !l.startsWith('#'));
+    expect(rules[rules.length - 1]).toMatch(/^\/\*\s+\/404\.html\s+404$/);
     // 404 page itself must exist and be servable
     const p404 = await request.get(BASE + '/404.html');
     expect(p404.status()).toBe(200);
@@ -320,19 +331,28 @@ test.describe('deploy live smoke — calculator routes (full artifact sweep + li
     expect(hash(norm(await live.body())), 'live sw.js must content-match deploy/sw.js (same build)').toBe(hash(norm(artifact)));
   });
 
-  // — Live CDN: routing rules (SPA fallback 200 vs true 404) —
-  test('SPA deep links 200 + missing assets true 404 (live edge rules)', async ({ request }) => {
-    test.skip(IS_LOCAL_ARTIFACT, 'Netlify _redirects rules only apply on the live edge (localhost server soft-404s)');
-    // Deep SPA URL is served index.html (200, text/html) via the catch-all.
+  // — Routing rules: whitelisted SPA fallback 200 vs true 404 —
+  // Runs BOTH locally (serve-deploy.cjs mirrors the _redirects contract) and
+  // against the live edge — the rules file is not readable over HTTP, so the
+  // behaviors are asserted instead.
+  test('SPA deep links 200 + missing assets true 404 (routing rules)', async ({ request }) => {
+    // Deep SPA URL is served index.html (200, text/html) via the whitelist rewrite.
     const deep = await request.get(BASE + '/finance/loan-emi/5-years-50000');
     expect(deep.status(), 'deep SPA route').toBe(200);
     expect(deep.headers()['content-type'] || '').toContain('text/html');
+    // Locale-prefixed deep links keep their 200 fallback (language-switcher URLs).
+    const locale = await request.get(BASE + '/es/finance/loan-emi');
+    expect(locale.status(), 'locale-prefixed SPA route').toBe(200);
     // Missing real assets hit the explicit /js/* and /og/* 404 rules (true 404,
     // never soft-200s) — validates the _redirects order in production.
     const missingJs = await request.get(BASE + '/js/does-not-exist-xyz.js');
     expect(missingJs.status(), '/js/* missing asset must be 404').toBe(404);
     const missingOg = await request.get(BASE + '/og/does-not-exist-xyz.png');
     expect(missingOg.status(), '/og/* missing asset must be 404').toBe(404);
+    // Unknown extensionless path hits the hard-404 catch-all (no more 200 home).
+    const garbage = await request.get(BASE + '/definitely-not-a-route-xyz');
+    expect(garbage.status(), 'unknown extensionless path must be 404').toBe(404);
+    expect(garbage.headers()['content-type'] || '').toContain('text/html');
   });
 });
 

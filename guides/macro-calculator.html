@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macro Calculator — Protein, Carb &amp; Fat Grams From Calories | CalcProMaster</title>
+  <meta name="description" content="How to convert daily calories into protein, carb and fat grams: the 4-4-9 calorie rule, a worked 2,400 kcal example, and how to sanity-check any macro split.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/macro-calculator">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Macro Calculator — Protein, Carb & Fat Grams From Calories | CalcProMaster",
+    "description": "How to convert daily calories into protein, carb and fat grams: the 4-4-9 calorie rule, a worked 2,400 kcal example, and how to sanity-check any macro split.",
+    "url": "https://calcpromaster.netlify.app/guides/macro-calculator",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "Macro Split", "item": "https://calcpromaster.netlify.app/guides/macro-calculator" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How do I calculate macros from calories?", "acceptedAnswer": { "@type": "Answer", "text": "Assign percentages to protein, carbs and fat, then divide: protein and carb grams = (calories × share) ÷ 4; fat grams = (calories × share) ÷ 9. Example: 2,400 kcal at 30/40/30 → 180 g protein, 240 g carbs, 80 g fat." } },
+        { "@type": "Question", "name": "What is the 4-4-9 rule?", "acceptedAnswer": { "@type": "Answer", "text": "The energy densities: 4 kcal per gram of protein, 4 per gram of carbohydrate, 9 per gram of fat. It is how nutrition labels convert grams to calories and how macro percentages become gram targets." } },
+        { "@type": "Question", "name": "What macro split should I use?", "acceptedAnswer": { "@type": "Answer", "text": "Start from a balanced 30/40/30 and adjust one variable at a time against your training and appetite. Keep protein at 1.2–2.2 g/kg body weight and fat above 0.5 g/kg regardless of style." } },
+        { "@type": "Question", "name": "Do macro grams or percentages matter more?", "acceptedAnswer": { "@type": "Answer", "text": "Percentages are the input; grams are the actionable output. Nobody weighs \"30%\" — you weigh 180 g of protein. Always convert the split into gram targets for your calorie level." } }
+      ]
+    }
+  }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.7; max-width: 760px; margin: 0 auto; padding: 16px; color: #1f2937; }
+    .crumb { font-size: 0.85rem; color: #6b7280; margin-bottom: 8px; }
+    .crumb a { color: #4f46e5; text-decoration: none; }
+    h1 { font-size: 1.65rem; line-height: 1.3; margin: 8px 0 4px; }
+    h2 { font-size: 1.25rem; margin-top: 2rem; border-top: 1px solid #e5e7eb; padding-top: 1.2rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.4rem; }
+    .answer { background: #eef2ff; border-left: 4px solid #4f46e5; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+    .formula { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 16px; font-family: ui-monospace, monospace; font-size: 0.95rem; overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.92rem; }
+    th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; }
+    th { background: #f9fafb; }
+    .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
+    .related a { color: #4f46e5; }
+    .updated { color: #6b7280; font-size: 0.85rem; }
+    .note { background: #fefce8; border-left: 4px solid #ca8a04; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+  </style>
+</head>
+<body>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Macro Split</p>
+  <h1>Macros: Calories → Grams With the 4-4-9 Rule</h1>
+  <p class="updated">Food & Nutrition · 5 min read · Last updated September 2026</p>
+
+  <div class="answer">
+    <strong>Quick answer:</strong> Protein and carbs carry 4 kcal per gram, fat carries 9. A 2,400 kcal day split 30/40/30 is <strong>180 g protein, 240 g carbs, 80 g fat</strong> — the percentages are the input, the grams are what you actually eat.
+  </div>
+
+  <h2>The rule</h2>
+  <div class="formula">Protein g = (calories × P%) ÷ 4<br>Carb g = (calories × C%) ÷ 4<br>Fat g = (calories × F%) ÷ 9</div>
+  <p>Worked example — 2,400 kcal, 30% protein / 40% carbs / 30% fat: protein 2,400 × 0.30 ÷ 4 = <strong>180 g</strong>; carbs 2,400 × 0.40 ÷ 4 = <strong>240 g</strong>; fat 2,400 × 0.30 ÷ 9 = <strong>80 g</strong>. Check: 180×4 + 240×4 + 80×9 = 720 + 960 + 720 = 2,400 ✓.</p>
+
+  <h2>Common splits and what they emphasize</h2>
+  <table>
+    <tr><th>Split (P/C/F)</th><th>2,400 kcal → grams</th><th>Character</th></tr>
+    <tr><td>30/40/30</td><td>180 / 240 / 80</td><td>Balanced default</td></tr>
+    <tr><td>35/20/45</td><td>210 / 120 / 120</td><td>Lower-carb</td></tr>
+    <tr><td>20/5/75</td><td>120 / 30 / 200</td><td>Keto-style</td></tr>
+  </table>
+
+  <h2>Sanity checks before trusting a split</h2>
+  <p>Protein below ~1.2 g/kg of body weight under-supports muscle retention on a deficit; fat below ~0.5 g/kg can affect hormone function over long stretches; carbs fueling hard training below ~3 g/kg makes heavy sessions feel flat. If a fashionable split violates these bands for your body weight, treat it skeptically. Set your calorie target first (see the <a href="/guides/calories">TDEE guide</a>), then split it — the <a href="/health/tdee-macro">TDEE & Macro Calculator</a> does both steps; <a href="/food/macro-split">Macro Split</a> and <a href="/food/protein-need">Daily Protein Need</a> cover the individual pieces.</p>
+
+  <div class="note"><strong>This is arithmetic, not a diet prescription.</strong> Medical conditions, pregnancy and eating-disorder history all change appropriate targets — use professionals for those conversations.</div>
+
+  <h2>Try the calculators</h2>
+  <p class="related">
+    <a href="/health/tdee-macro" class="cta">TDEE & Macro Calculator</a>
+    <a href="/food/macro-split" class="cta">Macro Split Calculator</a>
+    <a href="/food/protein-need" class="cta">Daily Protein Need</a>
+  </p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>How do I calculate macros from calories?</h3>
+  <p>Assign percentages to protein, carbs and fat, then divide: protein and carb grams = (calories × share) ÷ 4; fat grams = (calories × share) ÷ 9. Example: 2,400 kcal at 30/40/30 → 180 g protein, 240 g carbs, 80 g fat.</p>
+  <h3>What is the 4-4-9 rule?</h3>
+  <p>The energy densities: 4 kcal per gram of protein, 4 per gram of carbohydrate, 9 per gram of fat. It is how nutrition labels convert grams to calories and how macro percentages become gram targets.</p>
+  <h3>What macro split should I use?</h3>
+  <p>Start from a balanced 30/40/30 and adjust one variable at a time against your training and appetite. Keep protein at 1.2–2.2 g/kg body weight and fat above 0.5 g/kg regardless of style.</p>
+  <h3>Do macro grams or percentages matter more?</h3>
+  <p>Percentages are the input; grams are the actionable output. Nobody weighs "30%" — you weigh 180 g of protein. Always convert the split into gram targets for your calorie level.</p>
+
+  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

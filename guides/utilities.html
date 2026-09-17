@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Utilities &amp; Developer Tools Guides — Text, codes &amp; security | CalcProMaster</title>
+  <meta name="description" content="Utility tools deserve one explanation each: what a UUID actually guarantees, why password strength is entropy rather than length theatre, and when a hash i">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/utilities">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Utilities &amp; Developer Tools Guides",
+    "description": "Utility tools deserve one explanation each: what a UUID actually guarantees, why password strength is entropy rather than length theatre, and when a hash i",
+    "url": "https://calcpromaster.netlify.app/guides/utilities",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "Utilities &amp; Developer Tools", "item": "https://calcpromaster.netlify.app/guides/utilities" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Passwords Guide", "url": "https://calcpromaster.netlify.app/guides/passwords" },
+        { "@type": "ListItem", "position": 2, "name": "Random Numbers Guide", "url": "https://calcpromaster.netlify.app/guides/random-numbers" }
+      ]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What makes a generated password strong?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Entropy in bits: log₂(pool size) × length. A 16-character password from a 62-character pool carries about 95 bits — far beyond offline-cracking reach. The passwords guide shows the full table."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are UUIDs safe as unguessable IDs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Version-4 UUIDs carry 122 random bits, so guessing one is effectively impossible. But they are not secrets — anything that must resist guessing AND stay confidential still needs authentication on top."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.7; max-width: 760px; margin: 0 auto; padding: 16px; color: #1f2937; }
+    .crumb { font-size: 0.85rem; color: #6b7280; margin-bottom: 8px; }
+    .crumb a { color: #4f46e5; text-decoration: none; }
+    h1 { font-size: 1.65rem; line-height: 1.3; margin: 8px 0 4px; }
+    h2 { font-size: 1.25rem; margin-top: 2rem; border-top: 1px solid #e5e7eb; padding-top: 1.2rem; }
+    .cat-card { display: block; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px 18px; margin: 12px 0; text-decoration: none; color: inherit; }
+    .cat-card h2 { border: 0; margin: 0 0 6px; padding: 0; font-size: 1.1rem; color: #4f46e5; }
+    .cat-card p { margin: 0; color: #4b5563; font-size: 0.95rem; }
+    .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
+    .updated { color: #6b7280; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Utilities &amp; Developer Tools</p>
+  <h1>Utilities &amp; Developer Tools Guides</h1>
+  <p class="updated">Part of the CalcProMaster guides library · Text, codes &amp; security</p>
+
+  <p>Utility tools deserve one explanation each: what a UUID actually guarantees, why password strength is entropy rather than length theatre, and when a hash is a fingerprint versus a password. These guides cover the concepts the tools rely on.</p>
+
+  <h2>How the math works</h2>
+  <p>Security utilities are honest when the limits are stated. A random UUIDv4 carries 122 random bits — collision odds across a billion UUIDs are roughly one in a quintillion, so you will never see one. Password entropy is bits = log2(pool size) × length: 16 lowercase letters give about 75 bits; 8 characters from the full keyboard give about 52. Length wins because the formula multiplies, not adds.</p>
+  <p>Hashes are for verifying data, not for storing passwords: a hash is fast by design, which is exactly what an attacker wants. That is why the password tools generate client-side with cryptographically secure randomness and never transmit anything — the tool’s honesty is in what it refuses to do, not just what it computes.</p>
+
+  <div class="cat-card">
+    <h2><a href="/guides/passwords">Passwords Guide</a></h2>
+    <p>Entropy math, pool sizes and honest crack-time caveats.</p>
+  </div>
+
+  <div class="cat-card">
+    <h2><a href="/guides/random-numbers">Random Numbers Guide</a></h2>
+    <p>Pseudo-random generation — what “random” means in software.</p>
+  </div>
+
+  <h2>What makes a generated password strong?</h2>
+  <p>Entropy in bits: log₂(pool size) × length. A 16-character password from a 62-character pool carries about 95 bits — far beyond offline-cracking reach. The passwords guide shows the full table.</p>
+
+  <h2>Are UUIDs safe as unguessable IDs?</h2>
+  <p>Version-4 UUIDs carry 122 random bits, so guessing one is effectively impossible. But they are not secrets — anything that must resist guessing AND stay confidential still needs authentication on top.</p>
+
+  <h2>Try the matching calculators</h2>
+  <p>
+    <a href="/utilities/password-gen" class="cta">Password Generator</a>
+    <a href="/utilities/unit-converter" class="cta">Universal Unit Converter</a>
+    <a href="/utilities/qr-generator" class="cta">QR Code Generator</a>
+  </p>
+
+  <p><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

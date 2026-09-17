@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health &amp; Fitness Guides — BMI, Calories, Body Metrics | CalcProMaster</title>
+  <meta name="description" content="Health guides: how BMI is calculated and what it ignores, BMR and TDEE math, calorie deficit targets, and body metrics beyond the scale.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/health-fitness">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Health & Fitness Guides",
+    "description": "Health guides: how BMI is calculated and what it ignores, BMR and TDEE math, calorie deficit targets, and body metrics beyond the scale.",
+    "url": "https://calcpromaster.netlify.app/guides/health-fitness",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "Health & Fitness", "item": "https://calcpromaster.netlify.app/guides/health-fitness" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "How to Calculate BMI", "url": "https://calcpromaster.netlify.app/guides/bmi" },
+        { "@type": "ListItem", "position": 2, "name": "How to Calculate Calories (BMR & TDEE)", "url": "https://calcpromaster.netlify.app/guides/calories" }
+      ]
+    }
+  }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.7; max-width: 760px; margin: 0 auto; padding: 16px; color: #1f2937; }
+    .crumb { font-size: 0.85rem; color: #6b7280; margin-bottom: 8px; }
+    .crumb a { color: #4f46e5; text-decoration: none; }
+    h1 { font-size: 1.65rem; line-height: 1.3; margin: 8px 0 4px; }
+    h2 { font-size: 1.25rem; margin-top: 2rem; border-top: 1px solid #e5e7eb; padding-top: 1.2rem; }
+    .cat-card { display: block; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px 18px; margin: 12px 0; text-decoration: none; color: inherit; }
+    .cat-card h2 { border: 0; margin: 0 0 6px; padding: 0; font-size: 1.1rem; color: #4f46e5; }
+    .cat-card p { margin: 0; color: #4b5563; font-size: 0.95rem; }
+    .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
+    .updated { color: #6b7280; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Health &amp; Fitness</p>
+  <h1>Health &amp; Fitness Guides</h1>
+  <p class="updated">Part of the CalcProMaster guides library · Updated September 2026</p>
+
+  <p>Health metrics are only useful when you know what they measure, what they ignore, and when they don't apply. These guides cover both the formula and its limits.</p>
+
+  <h2>How the math works</h2>
+  <p>The two formulas here are simple; the honest part is what they assume. <strong>BMI</strong> = weight ÷ height² — a population-screening ratio that cannot distinguish muscle from fat. <strong>TDEE</strong> = BMR × activity multiplier — and the multiplier (1.2 sedentary to 1.9 very active) is the least precise number in the whole chain: two people with identical stats can differ by several hundred calories in reality. The <a href="/guides/calories">calories guide</a> shows how to pick a multiplier honestly and adjust from observed results instead of trusting the first estimate.</p>
+  <p>Every figure in this section is a <em>reference</em>, not a prescription. Formulas like Mifflin-St Jeor are population regressions — they're right on average and uncertain for any individual. That's why each guide ends by naming what the metric cannot see, and why the blog's <a href="/blog/bmi-honest-look">BMI explainer</a> pairs the formula with companion measurements rather than treating one number as a verdict.</p>
+  <p>For anyone changing weight or fitness, the working method is: compute a starting estimate, hold it for two to three weeks while recording actual outcomes, then adjust by observed reality — roughly 100–200 kcal at a time. That loop (estimate → observe → adjust) is more reliable than any formula refinement, because it uses your body's actual response instead of a population average. The calculators give you the honest starting point; the record-keeping makes it yours.</p>
+
+  <div class="cat-card">
+    <h2><a href="/guides/bmi">How to Calculate BMI</a></h2>
+    <p>The weight/height formula, BMI categories, what BMI ignores (muscle mass, age, ethnicity), and the honest limits of the metric.</p>
+  </div>
+
+  <div class="cat-card">
+    <h2><a href="/guides/calories">How to Calculate Calories (BMR &amp; TDEE)</a></h2>
+    <p>The Mifflin-St Jeor BMR formula, activity multipliers, realistic deficit targets, and how to read the scale honestly.</p>
+  </div>
+
+  <h2>Try the matching calculators</h2>
+  <p>
+    <a href="/health/bmi" class="cta">BMI Calculator</a>
+    <a href="/health/bmr" class="cta">BMR Calculator</a>
+    <a href="/health/calorie" class="cta">Calorie Calculator</a>
+    <a href="/health/ideal-weight" class="cta">Ideal Weight Calculator</a>
+  </p>
+
+  <p><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

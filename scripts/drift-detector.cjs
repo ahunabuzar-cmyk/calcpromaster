@@ -88,7 +88,7 @@ function loadModule(file, moduleName) {
 const PROBES = {
   QRCode: [
     ['generate', ['Hello']],
-    ['generate', ['CalcProMaster 543+ calculators']],
+    ['generate', ['CalcProMaster 1201+ calculators']],
   ],
   AdvancedCalc: [
     ['pctSteps', [25, 200]],

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Calculate Loan EMI — Formula &amp; Step-by-Step Example | CalcProMaster</title>
+  <meta name="description" content="How banks calculate your monthly loan payment: the EMI formula explained in plain words, a full worked example, and how interest rate and tenure change the payment.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/emi">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Calculate Loan EMI — Formula & Step-by-Step Example",
+    "description": "The EMI formula explained in plain words, a full worked example, and how interest rate and tenure change your monthly payment.",
+    "url": "https://calcpromaster.netlify.app/guides/emi",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "How to Calculate Loan EMI", "item": "https://calcpromaster.netlify.app/guides/emi" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the EMI formula?",
+          "acceptedAnswer": { "@type": "Answer", "text": "EMI = P × r × (1 + r)^n ÷ ((1 + r)^n − 1), where P is the loan amount, r is the monthly interest rate (annual rate ÷ 12 ÷ 100), and n is the number of monthly payments." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I convert an annual interest rate to monthly?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Divide the annual rate by 12 and then by 100. For example, 12% per year becomes 12 ÷ 12 ÷ 100 = 0.01 per month." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is my EMI lower with a longer tenure?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A longer tenure spreads the same principal over more payments, so each payment is smaller — but you pay more total interest over the life of the loan." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is EMI the same as total interest plus principal divided by months?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Because the principal is paid down gradually, simple division would ignore that you owe less interest each month. The EMI formula accounts for this compounding, which is why EMIs are smaller than the simple average." }
+        }
+      ]
+    }
+  }
+  </script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{--bg:#f8fafc;--surface:#fff;--text:#1e293b;--text-light:#64748b;--border:#e2e8f0;--primary:#4f46e5;--radius:14px}
+    @media (prefers-color-scheme: dark){:root{--bg:#0f172a;--surface:#1e293b;--text:#f8fafc;--text-light:#94a3b8;--border:#334155}}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;-webkit-font-smoothing:antialiased}
+    header{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .logo{font-size:20px;font-weight:800;background:linear-gradient(135deg,#4f46e5,#7c3aed);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
+    header a{color:var(--text-light);text-decoration:none;font-size:13px}
+    header a:hover{color:var(--primary)}
+    main{max-width:820px;margin:0 auto;padding:32px 24px 64px}
+    h1{font-size:30px;font-weight:800;margin-bottom:8px}
+    h2{font-size:20px;font-weight:700;margin:26px 0 10px}
+    h3{font-size:16px;font-weight:600;margin:18px 0 6px}
+    p{margin-bottom:10px;color:var(--text)}
+    ul,ol{margin:8px 0 14px 22px}
+    li{margin-bottom:4px}
+    .legal-meta{font-size:13px;color:var(--text-light);margin-bottom:18px}
+    .formula{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--primary);border-radius:8px;padding:12px 16px;margin:14px 0;font-family:ui-monospace,Consolas,monospace;font-size:15px}
+    .example{background:rgba(79,70,229,.07);border-left:4px solid var(--primary);padding:12px 16px;border-radius:8px;margin:14px 0}
+    .legal-warning{background:rgba(245,158,11,.12);border-left:4px solid #f59e0b;padding:12px 16px;border-radius:8px;margin:16px 0}
+    a{color:var(--primary)}
+    .related{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+    .related a{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:6px 14px;font-size:13px;text-decoration:none}
+    .related a:hover{border-color:var(--primary);color:var(--primary)}
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:18px 24px;text-align:center;font-size:13px;color:var(--text-light)}
+    footer a{color:var(--text-light);text-decoration:none;margin:0 8px}
+    footer a:hover{color:var(--primary)}
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">CalcProMaster</a>
+    <a href="/">Home</a>
+    <a href="/guides">Guides</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </header>
+  <main>
+    <div class="legal-page">
+      <p class="legal-meta"><a href="/guides">← All guides</a></p>
+      <h1>How to Calculate Loan EMI — Formula &amp; Step-by-Step Example</h1>
+      <p class="legal-meta">Finance · 6 min read · Last updated September 2026</p>
+
+      <h2>What is an EMI?</h2>
+      <p>EMI stands for <strong>Equated Monthly Installment</strong> — the fixed amount you pay every month to repay a loan. Each payment covers two parts: the interest that has accrued since your last payment, and a portion of the principal. Because the principal shrinks over time, the interest portion falls each month and the principal portion rises — but the total stays the same.</p>
+
+      <h2>The EMI formula</h2>
+      <div class="formula">EMI = P × r × (1 + r)<sup>n</sup> ÷ ((1 + r)<sup>n</sup> − 1)</div>
+      <p>Where:</p>
+      <ul>
+        <li><strong>P</strong> = loan amount (principal)</li>
+        <li><strong>r</strong> = monthly interest rate = annual rate ÷ 12 ÷ 100</li>
+        <li><strong>n</strong> = number of monthly payments (tenure in years × 12)</li>
+      </ul>
+
+      <h2>Worked example</h2>
+      <h3>Loan of $100,000 at 12% per year for 5 years</h3>
+      <div class="example">
+        <p><strong>Step 1 — monthly rate:</strong> r = 12 ÷ 12 ÷ 100 = <strong>0.01</strong></p>
+        <p><strong>Step 2 — number of payments:</strong> n = 5 × 12 = <strong>60</strong></p>
+        <p><strong>Step 3 — growth factor:</strong> (1 + 0.01)<sup>60</sup> = 1.01<sup>60</sup> ≈ <strong>1.8167</strong></p>
+        <p><strong>Step 4 — EMI:</strong> 100,000 × 0.01 × 1.8167 ÷ (1.8167 − 1) = 1,816.7 ÷ 0.8167 ≈ <strong>$2,224.45 per month</strong></p>
+        <p><strong>Total paid:</strong> 60 × $2,224.45 = $133,467 → <strong>total interest ≈ $33,467</strong></p>
+      </div>
+
+      <h2>How interest rate and tenure change your payment</h2>
+      <ul>
+        <li><strong>Lower rate → lower EMI:</strong> at 9% instead of 12%, the same loan drops to about $2,075/month.</li>
+        <li><strong>Longer tenure → lower EMI but more total interest:</strong> stretching the same 12% loan to 10 years cuts the EMI to about $1,435, but total interest nearly doubles to about $72,000.</li>
+        <li><strong>Shorter tenure → higher EMI, far less interest:</strong> a 3-year term raises the EMI to about $3,321 but total interest falls to about $19,500.</li>
+      </ul>
+
+      <h2>The amortization table: where your EMI actually goes</h2>
+      <p>The phrase "mostly interest at first" is easy to say and easy to disbelieve. Here is the actual amortization table for the example above — the same $100,000 loan at 12% for 5 years, $2,224.45/month:</p>
+      <table>
+        <thead><tr><th>Month</th><th>Interest part</th><th>Principal part</th><th>Balance after</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>$1,000.00</td><td>$1,224.45</td><td>$98,775.55</td></tr>
+          <tr><td>12</td><td>$858.37</td><td>$1,366.08</td><td>$84,470.91</td></tr>
+          <tr><td>24</td><td>$685.12</td><td>$1,539.33</td><td>$66,972.34</td></tr>
+          <tr><td>36</td><td>$489.89</td><td>$1,734.56</td><td>$47,254.52</td></tr>
+          <tr><td>60</td><td>$22.02</td><td>$2,202.43</td><td>$0.00</td></tr>
+        </tbody>
+      </table>
+      <p>In month 1, <strong>45% of your payment is interest</strong>; by the final payment it's 1%. The interest column falls every single month because it is charged on the shrinking balance — that is the entire mechanism of amortization. Note also what the table shows about halfway: at month 30 you have paid roughly $66,700 of EMIs but retired only about $33,000 of principal. Your loan statement and your intuition will disagree for years; the table is right.</p>
+
+      <h2>Prepayment: does one extra EMI a year actually matter?</h2>
+      <p>Run the same loan and add one extra EMI ($2,224.45) in month 12. The loan closes at <strong>month 59 instead of 60</strong>, and total interest drops from $33,467 to about <strong>$31,243 — a saving of one full EMI</strong>. That is the honest scale of the effect: one extra EMI per year removes roughly one month per year of tenure. On a 20-year home loan the compounding effect is much larger (early prepayments kill decades of future interest), on a 5-year loan it is modest but real. The <a href="/finance/amortization">amortization schedule calculator</a> lets you test your own loan's exact numbers.</p>
+
+      <h2>Why your lender's statement differs by a few rupees or cents</h2>
+      <ul>
+        <li><strong>Day-count conventions.</strong> This guide assumes each month is exactly 1/12 of a year. Many lenders instead charge interest on actual days: a 31-day month costs slightly more interest than a 30-day one. Your first EMI after a mid-month disbursement usually reflects this.</li>
+        <li><strong>Rounding.</strong> Lenders round the EMI to whole currency (and round each month's interest to 2 decimals), then adjust the final payment to true-up. Differences of a few cents by month 60 are normal.</li>
+        <li><strong>Floating rates.</strong> If your rate resets, the lender keeps your EMI constant and adjusts the tenure (or vice versa) — so the "same" loan can quietly become a 7-year loan on a rate rise. Watch the tenure, not just the EMI.</li>
+      </ul>
+
+      <div class="legal-warning">
+        <strong>Important:</strong> this guide is educational. Actual EMIs can differ because of processing fees, floating rates, prepayment, and lender-specific rounding. Always confirm figures with your lender. See our <a href="/disclaimer-finance">financial disclaimer</a>.
+      </div>
+
+      <h2>Floating rates: what happens when the rate resets</h2>
+      <p>Take the guide's $100,000 loan at 12% for 5 years, and suppose the rate jumps to 14% after month 24 — the balance is then $66,972.34. The lender recalculates over the remaining 36 months:</p>
+      <div class="example">
+        <p><strong>New EMI:</strong> 66,972.34 × (0.14/12) × (1 + 0.14/12)<sup>36</sup> ÷ ((1 + 0.14/12)<sup>36</sup> − 1) ≈ <strong>$2,288.96</strong> — about $64 more per month.</p>
+        <p><strong>Or, keeping the old EMI:</strong> the same $2,224.45 now needs <strong>38 months</strong> instead of 36 — the tenure absorbs the shock instead of the budget.</p>
+      </div>
+      <p>This is the decision every floating-rate borrower faces at reset: tenure up or EMI up. Neither is free — the 38-month route pays two extra months of interest on a larger remaining balance. If your loan agreement says the EMI stays constant on a rate rise, that's exactly what is happening silently: watch the remaining term on statements, not just the debit amount.</p>
+
+      <h2>APR: the number that catches hidden fees</h2>
+      <p>The interest rate and the <strong>APR</strong> are not the same number, and the gap is where processing fees hide. APR answers one question: <em>what rate would produce this same payment if the loan amount were smaller by the fees?</em> Worked example: the $100,000 loan charges a $2,000 processing fee, so you effectively receive $98,000 but repay the full EMI of $2,224.45 for 60 months. Solving for the rate that discounts those payments to $98,000 gives a monthly rate of about 1.0744% — an <strong>APR of ≈ 12.89%</strong>, against the nominal 12.00%.</p>
+      <p>That 0.89-point gap is the true annual cost of the fee, spread over the loan. Two lenders quoting 12% and 11.75% are not comparable until you compute both APRs — the lower-quote-with-bigger-fee pattern is common enough that regulators require APR disclosure. When comparing offers, match: same amount, same term, same fee assumptions, APR versus APR.</p>
+
+      <h2>Try it instantly</h2>
+      <p>Run the numbers with the <a href="/finance/loan-emi">Loan EMI Calculator</a> — it shows the full amortization breakdown and total interest. Related tools:</p>
+      <div class="related">
+        <a href="/finance/loan-emi">Loan EMI Calculator</a>
+        <a href="/finance/mortgage">Mortgage Calculator</a>
+        <a href="/finance/salary">Salary Calculator</a>
+        <a href="/guides">All Guides</a>
+      </div>
+
+      <h2>Frequently asked questions</h2>
+      <h3>What is the EMI formula?</h3>
+      <p>EMI = P × r × (1 + r)^n ÷ ((1 + r)^n − 1), where P is the loan amount, r is the monthly interest rate (annual rate ÷ 12 ÷ 100), and n is the number of monthly payments.</p>
+      <h3>How do I convert an annual interest rate to monthly?</h3>
+      <p>Divide the annual rate by 12 and then by 100. For example, 12% per year becomes 12 ÷ 12 ÷ 100 = 0.01 per month.</p>
+      <h3>Why is my EMI lower with a longer tenure?</h3>
+      <p>A longer tenure spreads the same principal over more payments, so each payment is smaller — but you pay more total interest over the life of the loan.</p>
+      <h3>Is EMI the same as (principal + interest) ÷ months?</h3>
+      <p>No. Because the principal is paid down gradually, simple division would ignore that you owe less interest each month. The EMI formula accounts for this, which is why EMIs are smaller than the simple average.</p>
+    </div>
+  </main>
+  <footer>
+    <a href="/">Home</a>
+    <a href="/guides">Guides</a>
+    <a href="/about">About</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+    <a href="/contact">Contact</a>
+  </footer>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

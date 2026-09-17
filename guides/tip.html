@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Calculate a Tip — Rates, Splitting the Bill &amp; Tipping Abroad | CalcProMaster</title>
+  <meta name="description" content="Standard tipping percentages by service, how to split a bill fairly, tip on tax or pre-tax, and how tipping norms change abroad — with worked examples.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/tip">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Calculate a Tip — Rates, Splitting the Bill & Tipping Abroad",
+    "description": "Standard tipping percentages by service, how to split a bill fairly, tip on tax or pre-tax, and how tipping norms change abroad — with worked examples.",
+    "url": "https://calcpromaster.netlify.app/guides/tip",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "How to Calculate a Tip", "item": "https://calcpromaster.netlify.app/guides/tip" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much should I tip at a restaurant?",
+          "acceptedAnswer": { "@type": "Answer", "text": "In the United States, 15–20% of the pre-tax bill is standard for table service, with 20% for excellent service. In many other countries service is included or tipping is modest — check local norms before applying US-style percentages." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate a 15% or 20% tip quickly?",
+          "acceptedAnswer": { "@type": "Answer", "text": "For 10%, move the decimal one place left. A 20% tip is 10% × 2; a 15% tip is 10% plus half of the 10% figure. On an $84 bill: 10% is $8.40, so 20% is $16.80 and 15% is $12.60." }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I tip on tax?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Tipping norms are based on the pre-tax subtotal. Tipping on the total including tax slightly over-tips; tipping on pre-tax is the conventional approach." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I split a bill with a tip among friends?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Add the tip to the total bill, then divide by the number of people. If people ordered very differently, divide the subtotal per person first, then apply the same tip percentage to each share." }
+        }      ]
+    }
+  }
+  </script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{--bg:#f8fafc;--surface:#fff;--text:#1e293b;--text-light:#64748b;--border:#e2e8f0;--primary:#4f46e5;--radius:14px}
+    @media (prefers-color-scheme: dark){:root{--bg:#0f172a;--surface:#1e293b;--text:#f8fafc;--text-light:#94a3b8;--border:#334155}}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;-webkit-font-smoothing:antialiased}
+    header{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .logo{font-size:20px;font-weight:800;background:linear-gradient(135deg,#4f46e5,#7c3aed);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
+    header a{color:var(--text-light);text-decoration:none;font-size:13px}
+    header a:hover{color:var(--primary)}
+    main{max-width:820px;margin:0 auto;padding:32px 24px 64px}
+    h1{font-size:30px;font-weight:800;margin-bottom:8px}
+    h2{font-size:20px;font-weight:700;margin:26px 0 10px}
+    h3{font-size:16px;font-weight:600;margin:18px 0 6px}
+    p{margin-bottom:10px;color:var(--text)}
+    ul,ol{margin:8px 0 14px 22px}
+    li{margin-bottom:4px}
+    table{border-collapse:collapse;margin:12px 0;width:100%}
+    th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;font-size:14px}
+    th{background:var(--surface);font-weight:700}
+    .legal-meta{font-size:13px;color:var(--text-light);margin-bottom:18px}
+    .formula{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--primary);border-radius:8px;padding:12px 16px;margin:14px 0;font-family:ui-monospace,Consolas,monospace;font-size:15px}
+    .example{background:rgba(79,70,229,.07);border-left:4px solid var(--primary);padding:12px 16px;border-radius:8px;margin:14px 0}
+    .legal-warning{background:rgba(245,158,11,.12);border-left:4px solid #f59e0b;padding:12px 16px;border-radius:8px;margin:16px 0}
+    a{color:var(--primary)}
+    .related{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+    .related a{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:6px 14px;font-size:13px;text-decoration:none}
+    .related a:hover{border-color:var(--primary);color:var(--primary)}
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:18px 24px;text-align:center;font-size:13px;color:var(--text-light)}
+    footer a{color:var(--text-light);text-decoration:none;margin:0 8px}
+    footer a:hover{color:var(--primary)}
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">CalcProMaster</a>
+    <a href="/">Home</a>
+    <a href="/guides">Guides</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </header>
+  <main>
+    <div class="legal-page">
+      <p class="legal-meta"><a href="/guides">← All guides</a></p>
+      <h1>How to Calculate a Tip — Rates, Splitting the Bill &amp; Tipping Abroad</h1>
+      <p class="legal-meta">Everyday Money · 4 min read · Last updated September 2026</p>
+
+      <h2>The tip formula</h2>
+      <div class="formula">Tip = Bill × Tip% ÷ 100<br>Total = Bill + Tip · Per person = Total ÷ Guests</div>
+
+      <h2>Mental math shortcuts</h2>
+      <ul>
+        <li><strong>10%</strong> = move the decimal one place left ($84 → $8.40)</li>
+        <li><strong>15%</strong> = 10% + half of 10% ($8.40 + $4.20 = $12.60)</li>
+        <li><strong>20%</strong> = 10% × 2 ($8.40 × 2 = $16.80)</li>
+      </ul>
+
+      <h2>Typical tipping ranges by service (US norms)</h2>
+      <table>
+        <tr><th>Service</th><th>Typical tip</th></tr>
+        <tr><td>Table service restaurant</td><td>15–20%</td></tr>
+        <tr><td>Food delivery</td><td>10–15% or flat minimum</td></tr>
+        <tr><td>Barista / counter service</td><td>Optional, often change or 10%</td></tr>
+        <tr><td>Taxi / rideshare</td><td>10–15%</td></tr>
+        <tr><td>Hairdresser</td><td>15–20%</td></tr>
+        <tr><td>Hotel housekeeping</td><td>$2–5 per night</td></tr>
+      </table>
+      <p>Outside the US, expectations differ widely: Japan often expects no tip, much of Europe rounds up or adds 5–10%, and service charges may already appear on the bill. Local norms beat any formula.</p>
+
+      <h2>Worked example: splitting dinner</h2>
+      <div class="example">
+        <p>Bill $124.50, tax included, 4 friends, 18% tip on pre-tax subtotal of $115.</p>
+        <p>Tip = 115 × 0.18 = <strong>$20.70</strong> → Total = $145.20 → Per person = <strong>$36.30</strong></p>
+      </div>
+
+      <h2>Common mistakes</h2>
+      <ul>
+        <li>Tip% applied after already generous rounding on the total.</li>
+        <li>Double-tipping when a service charge is already on the bill — read the receipt.</li>
+        <li>Forgetting per-person fairness when orders differ wildly — split orders first, then tip.</li>
+      </ul>
+
+      <h2>Splitting a bill fairly (worked example)</h2>
+      <p>Dinner for five comes to $184.65 pre-tax. At 18% the tip is $33.24, making the total $217.89 — <strong>$43.58 per person</strong> if everyone splits evenly. Two fairer options when orders differ: (1) each person tips on their own subtotal before splitting anything; (2) split food evenly, then divide drinks by actual consumption. Round per-person amounts up to the nearest dollar and the table usually lands within a few dollars of exact — cover the gap yourselves rather than shorting the tip.</p>
+
+      <h2>FAQ</h2>
+      <h3>Tip on pre-tax or total?</h3>
+      <p>Convention is pre-tax. The difference is small but real, and servers generally expect the pre-tax basis.</p>
+      <h3>Is tipping expected in Pakistan, India and the UAE?</h3>
+      <p>Modest tipping is appreciated but not obligatory in Pakistan and India; UAE restaurants often add a service charge where a small extra cash tip is still customary. Follow the bill's service-charge line first.</p>
+      <h3>Do I tip on discounted meals?</h3>
+      <p>Etiquette guides suggest tipping on the pre-discount value — the server did the same work regardless of the coupon.</p>
+    </div>
+  </main>
+  <footer>
+    <p>CalcProMaster — free online calculators.</p>
+    <p>
+      <a href="/guides">Guides</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a>
+    </p>
+  </footer>
+  <div class="related" style="max-width:820px;margin:0 auto 40px;padding:0 24px;">
+    <a href="/finance/tip">Tip Calculator</a>
+    <a href="/utilities/tip-split">Tip Split Calculator</a>
+    <a href="/finance/discount">Discount Calculator</a>
+    <a href="/guides">All Guides</a>
+  </div>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

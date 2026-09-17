@@ -114,10 +114,23 @@ describe('Titles', () => {
 });
 
 describe('Meta descriptions', () => {
-  it('all meta descriptions are 140-155 chars (no truncation)', () => {
+  // Band is 90-160: forcing a 140-char minimum manufactured filler ("... — standard,
+  // Instant, private..." splices). A natural one-to-two sentence description between
+  // 90 and 160 chars is the quality target; Google truncates around 155-160 anyway.
+  it('all meta descriptions are 90-160 chars (natural length, no filler splices)', () => {
     const bad = Object.entries(TOOL_SEO)
-      .filter(([, m]) => m.metaDesc.length < 140 || m.metaDesc.length > 155)
+      .filter(([, m]) => m.metaDesc.length < 90 || m.metaDesc.length > 160)
       .map(([id, m]) => `${id}(${m.metaDesc.length})`);
+    expect(bad).toEqual([]);
+  });
+
+  it('no value-prop splice artifacts in meta descriptions', () => {
+    const bad = Object.entries(TOOL_SEO)
+      .filter(([, m]) => {
+        const d = m.metaDesc;
+        return /\b\w+ \1\b/.test(d) || /\u2014\s*math/.test(d) || / using \w+\s+calculator /.test(d);
+      })
+      .map(([id]) => id);
     expect(bad).toEqual([]);
   });
 

@@ -108,10 +108,10 @@ const LegalPages = (function() {
       <h2>No Guarantee of Results</h2>
       <p>Past performance or calculated projections do not guarantee future results. Actual loan payments, investment returns, tax obligations, and other financial outcomes may differ significantly from calculator estimates.</p>
 
+      <h2>How Our Financial Calculations Work (Methodology)</h2>
+      <p>Every calculator shows its formula, a worked example with default inputs, and the assumptions behind the math — visible on the page, not hidden behind scripts. Results are computed in your browser from the values you enter, using standard published formulas (for example, standard amortization for loans and compound-interest math for savings). Where a real-world outcome depends on factors no calculator can know — your lender's exact fee schedule, your tax situation, market movements — the calculator's limitations section says so explicitly. Each calculator is covered by an automated formula QA contract with independently verified expected results before it is promoted into the sitemap.</p>
+
       <h2>Your Responsibility</h2>
-      <p>You are solely responsible for:</p>
-      <ul>
-        <li>Verifying calculation inputs and outputs</li>
         <li>Understanding the limitations of each calculator</li>
         <li>Seeking professional advice before acting on results</li>
         <li>Any financial decisions you make</li>
@@ -161,6 +161,9 @@ const LegalPages = (function() {
 
       <h2>Emergency Situations</h2>
       <p><strong>If you are experiencing a medical emergency, call emergency services immediately. Do not rely on any online calculator.</strong></p>
+
+      <h2>How Our Health Calculations Work (Methodology)</h2>
+      <p>Our health tools use formulas published in peer-reviewed research and clinical practice — for example, Mifflin-St Jeor for basal metabolic rate, the standard BMI weight/height ratio, and established heart-rate zone percentages. Each calculator displays its formula, a worked example, and its assumptions on the page, and states its limits: the population ranges a formula was derived from, what activity multipliers assume, and when a result should be discussed with a clinician. All calculations run entirely in your browser — no health data is sent anywhere.</p>
 
       <h2>Your Responsibility</h2>
       <p>You are solely responsible for:</p>
@@ -317,7 +320,7 @@ const LegalPages = (function() {
 
       <h2>What Makes CalcProMaster Different</h2>
       <ul>
-        <li><strong>543+ Calculators:</strong> From mortgages to BMI, loan payoffs to unit conversions—everything in one place</li>
+        <li><strong>1201+ calculators:</strong> From mortgages to BMI, loan payoffs to unit conversions—everything in one place</li>
         <li><strong>Step-by-Step Solutions:</strong> Understand the math behind the results</li>
         <li><strong>No Sign-Up Required:</strong> Use any calculator instantly, no account needed</li>
         <li><strong>Privacy-First:</strong> All calculations run in your browser, nothing stored on our servers</li>
@@ -329,7 +332,7 @@ const LegalPages = (function() {
       <h2>Who We Are</h2>
       <!-- MANUAL ACTION (optional): apna naam/credentials yahan add karo jab chaaho —
            niche ek professional generic bio hai jo launch ke liye ready hai -->
-      <p>CalcProMaster is built by a dedicated developer with a strong background in mathematics, software engineering, and data accuracy. What started as a small collection of personal calculation tools grew into a public library of <strong>543+ free online calculators</strong> spanning finance, health, science, engineering, education, and everyday life.</p>
+      <p>CalcProMaster is built by a dedicated developer with a strong background in mathematics, software engineering, and data accuracy. What started as a small collection of personal calculation tools grew into a public library of <strong>1201+ free online calculators</strong> spanning finance, health, science, engineering, education, and everyday life.</p>
       <p>Every calculator on this site is designed with the same standards: verified formulas, transparent step-by-step explanations, and rigorous testing against real-world scenarios. We believe a calculator is only as good as its accuracy — which is why each tool documents its assumptions and limitations openly, and why our finance and health calculators always carry clear disclaimers.</p>
       <p>CalcProMaster runs entirely in your browser. No accounts, no hidden costs — just fast, honest calculation tools that anyone can use, from students checking homework to families planning budgets. Calculations run locally; optional analytics and advertising only activate if you consent via our cookie banner.</p>
 

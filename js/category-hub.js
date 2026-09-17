@@ -273,6 +273,7 @@ const CategoryHub = (function () {
       html += renderComparisonTable(cat.comparisonTable);
     }
     
+    html += '<h2>' + Security.sanitizeHtml(cat.name) + ' Calculators</h2>';
     html += '<div class="hub-tools-grid">';
     cat.tools.forEach(t => {
       html += `

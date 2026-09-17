@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protein Intake Calculator — g/kg Targets &amp; Food Equivalents | CalcProMaster</title>
+  <meta name="description" content="How to calculate daily protein need: the g/kg bands by activity, a worked 70 kg example with real-food equivalents, and how to distribute grams across the day.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/protein-intake">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Protein Intake Calculator — g/kg Targets & Food Equivalents | CalcProMaster",
+    "description": "How to calculate daily protein need: the g/kg bands by activity, a worked 70 kg example with real-food equivalents, and how to distribute grams across the day.",
+    "url": "https://calcpromaster.netlify.app/guides/protein-intake",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "Protein Intake", "item": "https://calcpromaster.netlify.app/guides/protein-intake" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How much protein do I need per day?", "acceptedAnswer": { "@type": "Answer", "text": "Weight × activity factor: 0.8 g/kg sedentary, ~1.6 g/kg active, ~2.0 g/kg for heavy training. A 70 kg active person needs about 112 g/day." } },
+        { "@type": "Question", "name": "Is too much protein harmful?", "acceptedAnswer": { "@type": "Answer", "text": "For healthy people, intakes up to ~2 g/kg are well studied and safe. Existing kidney disease is the standard exception — those targets belong to a clinician." } },
+        { "@type": "Question", "name": "Can I eat all my protein in one meal?", "acceptedAnswer": { "@type": "Answer", "text": "You can, but spreading 20–40 g across 3–4 meals uses it more efficiently for muscle maintenance and satiety." } },
+        { "@type": "Question", "name": "What food equals 100 g of protein?", "acceptedAnswer": { "@type": "Answer", "text": "About 320 g of chicken breast, 16 eggs, or a mix: 200 g Greek yogurt (20 g) + 100 g lentils (9 g) + 150 g paneer (27 g) + 2 eggs (13 g) + whey scoop (25 g). The Protein per Dollar tool compares costs too." } }
+      ]
+    }
+  }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.7; max-width: 760px; margin: 0 auto; padding: 16px; color: #1f2937; }
+    .crumb { font-size: 0.85rem; color: #6b7280; margin-bottom: 8px; }
+    .crumb a { color: #4f46e5; text-decoration: none; }
+    h1 { font-size: 1.65rem; line-height: 1.3; margin: 8px 0 4px; }
+    h2 { font-size: 1.25rem; margin-top: 2rem; border-top: 1px solid #e5e7eb; padding-top: 1.2rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.4rem; }
+    .answer { background: #eef2ff; border-left: 4px solid #4f46e5; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+    .formula { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 16px; font-family: ui-monospace, monospace; font-size: 0.95rem; overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.92rem; }
+    th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; }
+    th { background: #f9fafb; }
+    .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
+    .related a { color: #4f46e5; }
+    .updated { color: #6b7280; font-size: 0.85rem; }
+    .note { background: #fefce8; border-left: 4px solid #ca8a04; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+  </style>
+</head>
+<body>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Protein Intake</p>
+  <h1>Protein Need: Grams per Kilogram, Then Real Food</h1>
+  <p class="updated">Food & Nutrition · 5 min read · Last updated September 2026</p>
+
+  <div class="answer">
+    <strong>Quick answer:</strong> Protein need = body weight (kg) × activity factor: 0.8 g/kg sedentary, ~1.6 g/kg active, up to 2.0+ for heavy training. A <strong>70 kg active person needs about 112 g/day</strong> — roughly 361 g of chicken breast or 18 eggs' worth (don't eat 18 eggs; distribute across foods).
+  </div>
+
+  <h2>The bands</h2>
+  <div class="formula">Protein (g) = weight (kg) × factor</div>
+  <table>
+    <tr><th>Profile</th><th>g/kg</th><th>70 kg person</th></tr>
+    <tr><td>Sedentary</td><td>0.8</td><td>56 g</td></tr>
+    <tr><td>Active / fitness</td><td>1.6</td><td>112 g</td></tr>
+    <tr><td>Athlete / muscle gain</td><td>2.0</td><td>140 g</td></tr>
+  </table>
+  <p>Worked example: 70 kg × 1.6 = <strong>112 g/day</strong>. In food: chicken breast ≈ 31 g/100 g → 361 g; eggs ≈ 6.3 g each → ~18; lentils ≈ 9 g per cooked cup → 12 cups (why plant-based eaters combine sources — the <a href="/food/vegan-protein">Vegan Protein</a> tool does that math).</p>
+
+  <h2>Distribution beats totals (slightly)</h2>
+  <p>Muscle protein synthesis responds per-meal; roughly 20–40 g per meal across 3–4 meals uses the day's total more effectively than one dinner-sized load. 112 g across four meals = 28 g each — a palm of chicken, a cup of dal plus yogurt, or a shake.</p>
+
+  <div class="note"><strong>Context:</strong> healthy kidneys handle high-protein diets fine, but pre-existing kidney disease changes targets — medical conditions deserve professional guidance, not calculator outputs.</div>
+
+  <h2>Try the calculators</h2>
+  <p class="related">
+    <a href="/food/protein-need" class="cta">Daily Protein Need</a>
+    <a href="/food/protein-per-dollar" class="cta">Protein per Dollar</a>
+    <a href="/food/vegan-protein" class="cta">Vegan Protein Sources</a>
+  </p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>How much protein do I need per day?</h3>
+  <p>Weight × activity factor: 0.8 g/kg sedentary, ~1.6 g/kg active, ~2.0 g/kg for heavy training. A 70 kg active person needs about 112 g/day.</p>
+  <h3>Is too much protein harmful?</h3>
+  <p>For healthy people, intakes up to ~2 g/kg are well studied and safe. Existing kidney disease is the standard exception — those targets belong to a clinician.</p>
+  <h3>Can I eat all my protein in one meal?</h3>
+  <p>You can, but spreading 20–40 g across 3–4 meals uses it more efficiently for muscle maintenance and satiety.</p>
+  <h3>What food equals 100 g of protein?</h3>
+  <p>About 320 g of chicken breast, 16 eggs, or a mix: 200 g Greek yogurt (20 g) + 100 g lentils (9 g) + 150 g paneer (27 g) + 2 eggs (13 g) + whey scoop (25 g). The Protein per Dollar tool compares costs too.</p>
+
+  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

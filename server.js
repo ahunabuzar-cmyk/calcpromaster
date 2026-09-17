@@ -9,6 +9,19 @@ const zlib = require('zlib');
 const PORT = process.env.PORT || 3000;
 const ROOT = process.env.ROOT ? path.resolve(__dirname, process.env.ROOT) : __dirname;
 
+// Route whitelist — mirror of deploy/_redirects (single source of truth:
+// scripts/route-whitelist.cjs, checked by scripts/check-sitemap-coverage.cjs).
+// Only whitelisted extensionless prefixes fall through to the SPA shell
+// (index.html); every OTHER extensionless path is a TRUE 404 — same behavior
+// as the Netlify _redirects catch-all '/* /404.html 404'. This kills the
+// soft-404 (garbage URL serving home with 200) that the E2E deploy-smoke
+// "missing assets true 404" test guards against.
+let SPA_PREFIXES = [];
+try {
+  ({ PREFIXES: SPA_PREFIXES } = require('./scripts/route-whitelist.cjs'));
+} catch (e) { SPA_PREFIXES = []; }
+const SPA_PREFIX_SET = new Set(SPA_PREFIXES);
+
 // gzip compressible text types — keeps the 1.3MB SEO bundle light (~150KB over the wire)
 const COMPRESSIBLE = ['.js', '.css', '.html', '.json', '.svg', '.xml', '.txt', '.webmanifest'];
 const GZIP_THRESHOLD = 1024; // only bother compressing files > 1KB
@@ -58,8 +71,25 @@ http.createServer((req, res) => {
   const ASSET_EXTS = ['.js', '.css', '.html', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.ico', '.xml', '.txt', '.json', '.webmanifest', '.woff', '.woff2', '.ttf', '.otf', '.eot', '.pdf', '.wasm', '.webp', '.avif', '.mp3', '.mp4', '.webm', '.map'];
   const ext = path.extname(urlPath);
   const isAsset = ASSET_EXTS.indexOf(ext) !== -1;
-  if (urlPath === '/' || !ext || ext === '' || !isAsset) {
+  if (urlPath === '/') {
     urlPath = '/index.html';
+  } else if (!isAsset) {
+    // Extensionless resolution order (Netlify _redirects parity):
+    //   1. exact static file  /about      → /about.html
+    //   2. prerendered page   /finance/mortgage → /finance/mortgage/index.html
+    //   3. whitelisted SPA route (unprerendered long-tails) → index.html
+    //   4. anything else → falls through to the true-404 branch below
+    const clean = urlPath.replace(/\/+$/, '');
+    const seg1 = clean.split('/')[1] || '';
+    const candidates = [clean + '.html', clean + '/index.html'];
+    let resolved = null;
+    for (const tp of candidates) {
+      const fp = path.join(ROOT, path.normalize(tp).replace(/^[\\/]+/, ''));
+      if (fp.startsWith(ROOT) && fs.existsSync(fp) && fs.statSync(fp).isFile()) { resolved = tp; break; }
+    }
+    if (resolved) urlPath = resolved;
+    else if (SPA_PREFIX_SET.has(seg1)) urlPath = '/index.html';
+    else urlPath = clean + '.html'; // nonexistent → true 404
   }
   
   // Security: prevent directory traversal
@@ -77,11 +107,15 @@ http.createServer((req, res) => {
   
   fs.readFile(filePath, (err, data) => {
     if (err) {
-      // Missing ASSET (known extension, e.g. .js/.css/.png) → true 404
-      // (SPA routes were already rewritten to /index.html above, so reaching here
-      //  means the browser asked for a real file that doesn't exist.)
-      res.writeHead(404, { 'Content-Type': 'text/plain', 'Cache-Control': 'no-store' });
-      res.end('Not Found');
+      // Missing ASSET (known extension, e.g. .js/.css/.png) → true 404.
+      // A NON-whitelisted extensionless route also lands here (its .html
+      // rewrite does not exist) — true 404, never a 200 soft-404.
+      res.writeHead(404, { 'Content-Type': 'text/html', 'Cache-Control': 'no-store' });
+      try {
+        res.end(fs.readFileSync(path.join(ROOT, '404.html')));
+      } catch (e2) {
+        res.end('Not Found');
+      }
       return;
     }
     const mimeType = MIME[path.extname(filePath)] || 'application/octet-stream';

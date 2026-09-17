@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Income Tax Is Calculated — Brackets, Marginal Rates &amp; Worked Examples | CalcProMaster</title>
+  <meta name="description" content="How progressive tax brackets actually work, with step-by-step calculation, worked examples for the US, UK, India and Pakistan, and the deductions most people miss.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/income-tax">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How Income Tax Is Calculated — Brackets, Marginal Rates & Worked Examples",
+    "description": "How progressive tax brackets actually work, with step-by-step calculation, worked examples for the US, UK, India and Pakistan, and the deductions most people miss.",
+    "url": "https://calcpromaster.netlify.app/guides/income-tax",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "How Income Tax Is Calculated", "item": "https://calcpromaster.netlify.app/guides/income-tax" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do tax brackets work?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Tax brackets are marginal: only the income falling inside each bracket is taxed at that bracket's rate. Earning more never makes your entire income move to a higher rate — it only raises the rate on the extra amount." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between marginal and effective tax rate?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Your marginal rate is the tax applied to your next unit of income (your top bracket). Your effective rate is total tax divided by total income, which is always lower than the marginal rate in a progressive system." }
+        },
+        {
+          "@type": "Question",
+          "name": "How is tax calculated on a salary?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Start from gross salary, subtract pre-tax deductions (retirement contributions, allowed expenses), apply the bracket rates to the remaining taxable income, then subtract any non-refundable credits. The result is annual tax; divide by pay periods for per-month figures." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do calculators use current-year tax rules?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A calculator is only as current as the bracket data built into it. CalcProMaster tools state which year's rules they use — always verify against your tax authority's latest published tables before filing." }
+        }
+      ]
+    }
+  }
+  </script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{--bg:#f8fafc;--surface:#fff;--text:#1e293b;--text-light:#64748b;--border:#e2e8f0;--primary:#4f46e5;--radius:14px}
+    @media (prefers-color-scheme: dark){:root{--bg:#0f172a;--surface:#1e293b;--text:#f8fafc;--text-light:#94a3b8;--border:#334155}}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;-webkit-font-smoothing:antialiased}
+    header{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .logo{font-size:20px;font-weight:800;background:linear-gradient(135deg,#4f46e5,#7c3aed);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
+    header a{color:var(--text-light);text-decoration:none;font-size:13px}
+    header a:hover{color:var(--primary)}
+    main{max-width:820px;margin:0 auto;padding:32px 24px 64px}
+    h1{font-size:30px;font-weight:800;margin-bottom:8px}
+    h2{font-size:20px;font-weight:700;margin:26px 0 10px}
+    h3{font-size:16px;font-weight:600;margin:18px 0 6px}
+    p{margin-bottom:10px;color:var(--text)}
+    ul,ol{margin:8px 0 14px 22px}
+    li{margin-bottom:4px}
+    table{border-collapse:collapse;margin:12px 0;width:100%}
+    th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;font-size:14px}
+    th{background:var(--surface);font-weight:700}
+    .legal-meta{font-size:13px;color:var(--text-light);margin-bottom:18px}
+    .formula{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--primary);border-radius:8px;padding:12px 16px;margin:14px 0;font-family:ui-monospace,Consolas,monospace;font-size:15px}
+    .example{background:rgba(79,70,229,.07);border-left:4px solid var(--primary);padding:12px 16px;border-radius:8px;margin:14px 0}
+    .legal-warning{background:rgba(245,158,11,.12);border-left:4px solid #f59e0b;padding:12px 16px;border-radius:8px;margin:16px 0}
+    a{color:var(--primary)}
+    .related{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+    .related a{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:6px 14px;font-size:13px;text-decoration:none}
+    .related a:hover{border-color:var(--primary);color:var(--primary)}
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:18px 24px;text-align:center;font-size:13px;color:var(--text-light)}
+    footer a{color:var(--text-light);text-decoration:none;margin:0 8px}
+    footer a:hover{color:var(--primary)}
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">CalcProMaster</a>
+    <a href="/">Home</a>
+    <a href="/guides">Guides</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </header>
+  <main>
+    <div class="legal-page">
+      <p class="legal-meta"><a href="/guides">← All guides</a></p>
+      <h1>How Income Tax Is Calculated — Brackets, Marginal Rates &amp; Worked Examples</h1>
+      <p class="legal-meta">Tax · 7 min read · Last updated September 2026</p>
+
+      <h2>How tax brackets actually work</h2>
+      <p>A progressive system divides your taxable income into layers. Each layer is taxed at its own rate; the rates never apply to your whole income. A common myth is that a raise "pushes all your income into a higher bracket" — it doesn't. Only the slice of income above the threshold is taxed at the higher rate.</p>
+
+      <h2>The general formula</h2>
+      <div class="formula">Tax = Σ (income in bracket i × rate i) − credits</div>
+      <p>Effective rate = Tax ÷ Taxable income. Marginal rate = the rate of your highest occupied bracket.</p>
+
+      <h2>Step-by-step example (illustrative brackets)</h2>
+      <p>Assume brackets of 0% up to 10,000 · 10% from 10,001–40,000 · 20% from 40,001–100,000 · 30% above 100,000, with taxable income of 72,000:</p>
+      <div class="example">
+        <p>First 10,000 → 0% → 0</p>
+        <p>Next 30,000 (10,001–40,000) → 10% → 3,000</p>
+        <p>Next 32,000 (40,001–72,000) → 20% → 6,400</p>
+        <p>Total tax = <strong>9,400</strong> · Effective rate = 9,400 ÷ 72,000 ≈ <strong>13.1%</strong> · Marginal rate = <strong>20%</strong></p>
+      </div>
+      <p>Even though the top bracket is 30%, none of this income reaches it.</p>
+
+      <h2>Country examples with official calculators</h2>
+      <ul>
+        <li><strong>Pakistan:</strong> annual taxable slabs with progressive rates; salaried and non-salaried schedules differ. Try the <a href="/regional/pk-income-tax">Pakistan Income Tax Calculator</a>.</li>
+        <li><strong>India:</strong> new vs old regime choice changes slabs and deductions. Try the <a href="/regional/income-tax-india">India Income Tax Calculator</a>.</li>
+        <li><strong>US:</strong> federal brackets plus state tax and standard vs itemized deductions. Try the <a href="/finance/us-income-tax">US Income Tax Calculator</a>.</li>
+        <li><strong>UK, Canada, Australia:</strong> country-specific tools with local rules — see the finance and regional categories.</li>
+      </ul>
+
+      <h2>Deductions people commonly miss</h2>
+      <ul>
+        <li>Retirement/pension contributions that reduce taxable income</li>
+        <li>Charitable donations eligible for credits or deductions</li>
+        <li>Professional expenses allowed as employment deductions</li>
+        <li>Family-related credits and rebates</li>
+        <li>Withholding vs final liability — a refund is not free money, it's your own overpayment</li>
+      </ul>
+
+      <h2>India new-regime slabs, worked (FY 2025-26 / AY 2026-27)</h2>
+      <p>India's default new-regime slabs for FY 2025-26, per the Income Tax Department's Budget 2025 announcement:</p>
+      <table>
+        <thead><tr><th>Annual income</th><th>Rate</th></tr></thead>
+        <tbody>
+          <tr><td>Up to ₹4,00,000</td><td>Nil</td></tr>
+          <tr><td>₹4,00,001 – ₹8,00,000</td><td>5%</td></tr>
+          <tr><td>₹8,00,001 – ₹12,00,000</td><td>10%</td></tr>
+          <tr><td>₹12,00,001 – ₹16,00,000</td><td>15%</td></tr>
+          <tr><td>₹16,00,001 – ₹20,00,000</td><td>20%</td></tr>
+          <tr><td>₹20,00,001 – ₹24,00,000</td><td>25%</td></tr>
+          <tr><td>Above ₹24,00,000</td><td>30%</td></tr>
+        </tbody>
+      </table>
+      <p>The Section 87A rebate makes this table friendlier than it looks: resident individuals with taxable income up to ₹12,00,000 pay <strong>zero tax</strong>, because the rebate (up to ₹60,000) wipes out the entire liability at that level. Salaried taxpayers also get a ₹75,000 standard deduction, which lifts the effective tax-free salary to about ₹12.75 lakh. Worked example — ₹16,00,000 salary:</p>
+      <div class="example">
+        <p>Less standard deduction ₹75,000 → taxable ≈ ₹15,25,000</p>
+        <p>Tax: 5% of 4,00,000 (₹20,000) + 10% of 4,00,000 (₹40,000) + 15% of 3,25,000 (₹48,750) = <strong>₹1,08,750</strong> before cess</p>
+        <p>Effective rate ≈ 7.1% — against a 15% marginal rate. The marginal-versus-effective gap is the bracket myth, paid off in rupees.</p>
+      </div>
+      <p><strong>New vs old regime</strong> is a genuine computation, not a preference: the old regime has lower exemption (₹2.5 lakh) and rates starting at 5% earlier, but allows deductions the new regime removes (80C investments, HRA, most others). Salaried filers run both with their actual deduction stack and keep the cheaper one — the <a href="/regional/income-tax-india">India income tax calculator</a> does this comparison. Rates above are as announced in Budget 2025; verify against the CBDT's current tables before filing.</p>
+
+      <div class="legal-warning">
+        <p><strong>Important:</strong> Tax rules change yearly and vary by personal situation. This guide explains mechanics, not advice for your specific case — confirm figures against your tax authority's official tables (IRS, HMRC, CBDT, FBR) before filing.</p>
+      </div>
+
+      <h2>FAQ</h2>
+      <h3>Why is my effective rate lower than my bracket rate?</h3>
+      <p>Because lower brackets are filled first at their lower rates, the blended average across all brackets is always below your top marginal rate.</p>
+      <h3>Are bonuses taxed at a higher rate?</h3>
+      <p>No — withholding on bonuses may be higher in some countries, but the final tax is calculated on total annual income. The extra withheld usually comes back as a refund.</p>
+      <h3>What is taxable income?</h3>
+      <p>Gross income minus allowed deductions and exemptions. It is the base the brackets apply to, and it is usually smaller than your gross salary.</p>
+      <h3>Is it worth contributing to retirement accounts for tax savings?</h3>
+      <p>For many earners yes, because contributions reduce taxable income today; the trade-off is locking funds until retirement. Rules and limits vary by country and plan type.</p>
+    </div>
+  </main>
+  <footer>
+    <p>CalcProMaster — free online calculators.</p>
+    <p>
+      <a href="/guides">Guides</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a>
+    </p>
+  </footer>
+  <div class="related" style="max-width:820px;margin:0 auto 40px;padding:0 24px;">
+    <a href="/regional/pk-income-tax">Pakistan Income Tax</a>
+    <a href="/regional/income-tax-india">India Income Tax</a>
+    <a href="/finance/us-income-tax">US Income Tax</a>
+    <a href="/finance/salary">Salary Calculator</a>
+    <a href="/guides">All Guides</a>
+  </div>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

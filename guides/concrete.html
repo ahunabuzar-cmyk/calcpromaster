@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Calculate Concrete in Cubic Yards — Slabs, Footings, Bags | CalcProMaster</title>
+  <meta name="description" content="The concrete volume formula for slabs and footings, the 10% waste rule, how many 80 lb bags you need per cubic yard, and a worked 20×20 patio example.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/concrete">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Calculate Concrete in Cubic Yards — Slabs, Footings, Bags",
+    "description": "The concrete volume formula for slabs and footings, the 10% waste rule, how many 80 lb bags you need per cubic yard, and a worked 20×20 patio example.",
+    "url": "https://calcpromaster.netlify.app/guides/concrete",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "How to Calculate Concrete", "item": "https://calcpromaster.netlify.app/guides/concrete" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How do I calculate concrete volume?", "acceptedAnswer": { "@type": "Answer", "text": "Multiply length × width × thickness, keeping all three in feet to get cubic feet, then divide by 27 to convert to cubic yards. For a slab: cu yd = (L ft × W ft × thickness in inches ÷ 12) ÷ 27." } },
+        { "@type": "Question", "name": "How many 80 lb bags of concrete are in a cubic yard?", "acceptedAnswer": { "@type": "Answer", "text": "About 45 bags. An 80 lb bag yields roughly 0.022 cubic yards (0.6 cu ft), and 1 ÷ 0.022 ≈ 45. A 60 lb bag yields about 0.017 cu yd, so you need roughly 60 of those per cubic yard." } },
+        { "@type": "Question", "name": "How much extra concrete should I order?", "acceptedAnswer": { "@type": "Answer", "text": "Add 5–10% for uneven subgrade, spillage and over-excavation. On irregular ground or hand-mixed pours, 10% is the safe choice. Readymix trucks often have minimum loads, so consolidating small jobs matters." } },
+        { "@type": "Question", "name": "How thick should a concrete slab be?", "acceptedAnswer": { "@type": "Answer", "text": "4 inches is standard for patios, walkways and residential driveways. 3–4 inches suits garden paths; 5–6 inches with rebar is typical for driveways carrying trucks or RVs." } },
+        { "@type": "Question", "name": "Is a 20x20 4-inch slab more than one truckload?", "acceptedAnswer": { "@type": "Answer", "text": "No — a 20×20 ft slab at 4 inches needs about 4.94 cubic yards, well within a single typical 8–10 cubic yard readymix truck." } }
+      ]
+    }
+  }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.7; max-width: 760px; margin: 0 auto; padding: 16px; color: #1f2937; }
+    .crumb { font-size: 0.85rem; color: #6b7280; margin-bottom: 8px; }
+    .crumb a { color: #4f46e5; text-decoration: none; }
+    h1 { font-size: 1.65rem; line-height: 1.3; margin: 8px 0 4px; }
+    h2 { font-size: 1.25rem; margin-top: 2rem; border-top: 1px solid #e5e7eb; padding-top: 1.2rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.4rem; }
+    .answer { background: #eef2ff; border-left: 4px solid #4f46e5; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+    .formula { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 16px; font-family: ui-monospace, monospace; font-size: 0.95rem; overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.92rem; }
+    th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; }
+    th { background: #f9fafb; }
+    .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
+    .related a { color: #4f46e5; }
+    .updated { color: #6b7280; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Concrete</p>
+  <h1>How to Calculate Concrete for Slabs, Footings and Pads</h1>
+  <p class="updated">Last updated: September 2026 · Independently QA-tested formulas</p>
+
+  <div class="answer">
+    <strong>Quick answer:</strong> Volume = length × width × thickness (all in feet) ÷ 27 = cubic yards. Then add 5–10% for waste. A 20×20 ft slab, 4 inches thick, needs about 4.9 cubic yards — roughly 222 bags of 80 lb mix if you're not ordering a truck.
+  </div>
+
+  <p>Concrete is the classic order-too-little-and-the-pour-fails, order-too-much-and-it-hardens-in-the-truck material. The math is simple; the expensive mistakes are unit mix-ups and forgetting waste. The <a href="/everyday/concrete">concrete calculator</a> handles both — here's the hand method so you can sanity-check any quote.</p>
+
+  <h2>The concrete volume formula</h2>
+  <div class="formula">cubic feet = L (ft) × W (ft) × T (in) ÷ 12<br>cubic yards = cubic feet ÷ 27</div>
+  <ul>
+    <li><strong>L, W</strong> — slab length and width in feet.</li>
+    <li><strong>T</strong> — thickness in <em>inches</em> (the ÷12 converts to feet).</li>
+    <li><strong>÷27</strong> — one cubic yard = 3×3×3 = 27 cubic feet.</li>
+  </ul>
+  <p>For footings, same formula with the trench's width and depth. For a round pad, use π × radius² × thickness.</p>
+
+  <h2>Worked example: 20×20 patio, 4 inches thick</h2>
+  <p>Step by step:</p>
+  <ol>
+    <li>Cubic feet: 20 × 20 × (4 ÷ 12) = 133.3 cu ft</li>
+    <li>Cubic yards: 133.3 ÷ 27 = <strong>4.94 cu yd</strong></li>
+    <li>Waste allowance at 10%: 4.94 × 1.10 = <strong>5.4 cu yd to order</strong></li>
+  </ol>
+  <p>Mixing bags instead? One 80 lb bag yields ≈ 0.022 cu yd → 4.94 ÷ 0.022 ≈ <strong>225 bags</strong> (round up to a full pallet — 5 bags of buffer included in the 10% rule).</p>
+
+  <h2>How many bags per cubic yard?</h2>
+  <table>
+    <tr><th>Bag size</th><th>Yield per bag</th><th>Bags per cubic yard</th></tr>
+    <tr><td>40 lb</td><td>≈ 0.011 cu yd (0.30 cu ft)</td><td>~90</td></tr>
+    <tr><td>60 lb</td><td>≈ 0.017 cu yd (0.45 cu ft)</td><td>~60</td></tr>
+    <tr><td>80 lb</td><td>≈ 0.022 cu yd (0.60 cu ft)</td><td>~45</td></tr>
+  </table>
+  <p>Yields vary slightly by brand; the bag print is authoritative for its mix.</p>
+
+  <h2>Standard thicknesses (avoid the classic mistake)</h2>
+  <table>
+    <tr><th>Application</th><th>Typical thickness</th></tr>
+    <tr><td>Garden walkway</td><td>3 in</td></tr>
+    <tr><td>Patio / shed pad</td><td>4 in</td></tr>
+    <tr><td>Residential driveway (cars)</td><td>4–5 in</td></tr>
+    <tr><td>Driveway with trucks/RV</td><td>5–6 in + rebar</td></tr>
+  </table>
+  <p>Entering 4 <em>feet</em> instead of 4 <em>inches</em> inflates your order 12× — always double-check the unit field.</p>
+
+  <h2>Waste, subgrade and real-world buffers</h2>
+  <p>Excavated soil is never perfectly flat, forms flex, and some mix always stays in the wheelbarrow. 5% covers a well-prepared base on a simple rectangle; 10% covers uneven ground, odd shapes and hand mixing. Over-ordering readymix by more than ~1 yard often triggers a short-load fee anyway, so consolidate pours where you can.</p>
+
+  <h2>Mix ratios and the water trap</h2>
+  <p>Nominal site mixes are specified by volume of cement : sand : gravel. Common grades: M10 ≈ 1:3:6, M15 ≈ 1:2:4, M20 ≈ 1:1.5:3, M25 ≈ 1:1:2 — higher cement share means higher strength. US bagged mixes are labeled in psi instead (e.g. 4,000 psi), so match the label to your project requirement rather than converting ratios on site.</p>
+  <p>Water is where DIY pours go wrong. A 0.5 water–cement ratio means about 25 litres per 50-kg bag; adding extra water makes the mix easier to pour but weakens the hardened paste. Use just enough for workability and compact instead.</p>
+  <table>
+    <tr><th>Bag size</th><th>Yield (approx.)</th><th>Bags per cubic yard</th></tr>
+    <tr><td>80 lb</td><td>0.60 cu ft</td><td>45</td></tr>
+    <tr><td>60 lb</td><td>0.45 cu ft</td><td>60</td></tr>
+    <tr><td>25 kg</td><td>≈11.6 L</td><td>≈87</td></tr>
+  </table>
+  <p>Yields assume typical bagged-mix density; your brand's calculator line on the bag wins over any table. And a 25-kg figure comes out to roughly 87 bags per yard — which is exactly why big pours use readymix.</p>
+
+  <h2>Frequently Asked Questions</h2>
+  <h3>How much does a cubic yard of concrete cover?</h3>
+  <p>At 4 inches thick, one cubic yard covers 81 sq ft (27 × 12 ÷ 4). At 3 inches, 108 sq ft; at 6 inches, 54 sq ft.</p>
+  <h3>How do I calculate concrete for footings?</h3>
+  <p>Trench length × width × depth, all in feet ÷ 27. A 40 ft × 1 ft × 1 ft trench = 1.48 cu yd; order 1.6 with waste.</p>
+  <h3>Is bagged concrete as strong as readymix?</h3>
+  <p>Quality mixes (e.g. 4000 psi blends) reach comparable strength when cured properly. The practical limits are batch consistency and fatigue — a 5-yard pour by hand is ~225 bags.</p>
+  <h3>Does rebar change the volume?</h3>
+  <p>Negligibly. Steel displaces some concrete, but the standard practice is to ignore it and let the waste allowance absorb the difference.</p>
+
+  <h2>Try the calculators</h2>
+  <p class="related">
+    <a href="/everyday/concrete" class="cta">Concrete Calculator</a>
+    <a href="/construction/concrete-slab" class="cta">Concrete Slab Calculator</a>
+    <a href="/construction/gravel" class="cta">Gravel Calculator</a>
+    <a href="/construction/bricks" class="cta">Brick Calculator</a>
+  </p>
+
+  <p><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/about">Methodology</a></p>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

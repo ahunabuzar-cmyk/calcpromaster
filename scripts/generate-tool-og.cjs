@@ -170,7 +170,12 @@ function cardHtml(t) {
   let done = 0, failed = 0;
   const t0 = Date.now();
   const limit = parseInt(process.env.LIMIT || '0', 10);
-  const list = limit > 0 ? tools.slice(0, limit) : tools;
+  let list = limit > 0 ? tools.slice(0, limit) : tools;
+  // SKIP_EXISTING=1: only generate cards that are missing (idempotent re-runs)
+  if (process.env.SKIP_EXISTING === '1') {
+    list = list.filter((t) => !fs.existsSync(path.join(OUT_DIR, t.id + '.jpg')));
+    console.log('SKIP_EXISTING: ' + list.length + ' cards missing out of ' + tools.length + ' tools');
+  }
   for (const t of list) {
     const out = path.join(OUT_DIR, t.id + '.jpg');
     try {

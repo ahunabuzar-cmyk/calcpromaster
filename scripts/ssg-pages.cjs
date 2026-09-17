@@ -3,8 +3,7 @@
  * ------------------------------------------------------------
  * Prerenders EVERY route in sitemap.xml as a real static HTML
  * file inside deploy/:
- *
- *   deploy/<cat>/<tool-id>/index.html      → 543 calculator pages
+ *  *   deploy/<cat>/<tool-id>/index.html      → 1201 calculator pages
  *   deploy/<cat>/index.html                → 20 category pages
  *   deploy/hub/<cat>/index.html            → 20 comparison hubs
  *   deploy/<cat>/<tool-id>/<modifier>/...  → long-tail virtual pages
@@ -30,7 +29,18 @@ const vm = require('vm');
 
 const ROOT = path.join(__dirname, '..');
 const DEPLOY = path.join(ROOT, 'deploy');
-const DOMAIN = 'https://calcpromaster.netlify.app';
+// Domain — SINGLE SOURCE OF TRUTH: js/site-config.js (`domain:` field).
+// Prerendered canonical/OG/schema URLs follow the configured domain, so a
+// custom-domain switch is one file edit + rebuild (no stale netlify.app refs).
+function readConfigDomain() {
+  try {
+    const cfg = fs.readFileSync(path.join(ROOT, 'js', 'site-config.js'), 'utf8');
+    const m = cfg.match(/domain:\s*'([^']+)'/);
+    if (m && m[1]) return m[1].replace(/^https?:\/\//, '');
+  } catch (e) { /* fall through to default */ }
+  return 'calcpromaster.netlify.app';
+}
+const DOMAIN = 'https://' + readConfigDomain();
 
 // ---------- 1. Load tool registry (same vm approach as qa-reverse-matrix) ----------
 const dataFiles = fs.readdirSync(path.join(ROOT, 'js', 'data'))
@@ -98,18 +108,18 @@ const CATEGORY_META = {
   finance: { title: 'Finance Calculators', desc: 'Free financial calculators for loans, mortgages, investments, taxes, retirement and more.' },
   health: { title: 'Health & Fitness Calculators', desc: 'Calculate BMI, BMR, calories, body fat, heart rate and other health metrics.' },
   math: { title: 'Math Calculators', desc: 'Scientific calculators, algebra, geometry, statistics and more math tools.' },
-  everyday: { title: 'Everyday Calculators', desc: 'Age, date, fuel cost, cooking and other everyday life calculators.' },
-  science: { title: 'Science Calculators', desc: 'Physics, chemistry and general science calculators.' },
-  engineering: { title: 'Engineering Calculators', desc: 'Electrical, mechanical and civil engineering calculators.' },
+  everyday: { title: 'Everyday Calculators', desc: 'Free everyday calculators — age, dates, fuel cost, cooking conversions, tips and time planning for daily life questions.' },
+  science: { title: 'Science Calculators', desc: 'Free science calculators for physics and chemistry — density, molarity, kinetic energy, wave speed and lab conversions.' },
+  engineering: { title: 'Engineering Calculators', desc: 'Free engineering calculators for electrical, mechanical and civil work — beam loads, wire gauge, Ohm law, torque and more.' },
   construction: { title: 'Construction Calculators', desc: 'Free construction calculators for concrete volume, rebar, roofing, flooring and building material estimates.' },
   conversion: { title: 'Unit Conversion Calculators', desc: 'Free unit conversion calculators — length, weight, volume, temperature, speed, area and more with instant results.' },
-  business: { title: 'Business Calculators', desc: 'ROI, profit margin, cash flow, CAC, LTV and other business metrics.' },
-  education: { title: 'Education Calculators', desc: 'GPA, test scores, study planners and other education tools.' },
-  utilities: { title: 'Utility Calculators', desc: 'QR codes, passwords, color converters and other handy tools.' },
-  lifestyle: { title: 'Lifestyle & Home Calculators', desc: 'Moving, rental, cooking, pet care and everyday home calculators.' },
-  regional: { title: 'Regional Calculators (India/PK/UAE)', desc: 'FD, RD, PPF, GST, income tax and regional finance calculators.' },
-  food: { title: 'Food & Nutrition Calculators', desc: 'Calories, macros, keto, BMI, meal planning and nutrition trackers.' },
-  fitness: { title: 'Fitness & Exercise Calculators', desc: 'Running pace, 1RM, heart rate, calories burned and workout planners.' },
+  business: { title: 'Business Calculators', desc: 'Free business calculators for ROI, profit margin, cash flow, break-even, CAC, LTV and markup — estimate any business metric in seconds.' },
+  education: { title: 'Education Calculators', desc: 'Free education calculators for GPA, final grades, test scores, study time and grade targets — plan your coursework with real numbers.' },
+  utilities: { title: 'Utility Calculators', desc: 'Free utility calculators — QR codes, password strength, color converters, unit helpers and other handy everyday tools.' },
+  lifestyle: { title: 'Lifestyle & Home Calculators', desc: 'Free lifestyle calculators for moving costs, rent splits, cooking conversions, pet care and everyday home decisions.' },
+  regional: { title: 'Regional Calculators (India/PK/UAE)', desc: 'Free regional calculators for India, Pakistan and UAE — FD, RD, PPF, GST, zakat, income tax and local salary math.' },
+  food: { title: 'Food & Nutrition Calculators', desc: 'Free food and nutrition calculators — calories, macros, keto limits, meal planning and recipe scaling with instant results.' },
+  fitness: { title: 'Fitness & Exercise Calculators', desc: 'Free fitness calculators for running pace, one-rep max, heart-rate zones, calories burned and workout planning.' },
   auto: { title: 'Auto & Transport Calculators', desc: 'Fuel cost, EV charging, car loan, depreciation and mileage calculators.' },
   career: { title: 'Career & Freelance Calculators', desc: 'Salary converter, freelance rate, job offer compare and side hustle profit.' },
   homegarden: { title: 'Home & Garden Calculators', desc: 'Paint, wallpaper, lighting, AC size, garden soil and DIY project calculators.' },
@@ -356,7 +366,7 @@ const writePage = function (relDir, html) {
   written++;
 };
 
-// 7a. Tool pages (543)
+// 7a. Tool pages (1201)
 for (const tool of tools) {
   const catKey = tool.cat;
   const seo = TOOL_SEO[tool.id] || {};
@@ -384,9 +394,35 @@ for (const catKey of Object.keys(CATEGORY_META)) {
 
   let content = '<div class="breadcrumb"><a href="/">Home</a> › ' + esc(CAT_NAME[catKey] || catKey) + '</div>';
   content += '<div class="tool-header"><h1>' + esc(title) + '</h1><p class="tool-desc">' + esc(desc) + '</p></div>';
+  // Unique crawlable intro per category (topical context + how to use the list)
+  const CAT_INTROS = {
+    finance: 'Loan payments, interest growth, tax brackets and investment returns all reduce to a handful of standard formulas. Each calculator below shows the formula, a worked example with default inputs, and the assumptions behind the result — so you can verify the math instead of trusting a bare number. Pick a tool, or start with the guides linked at the bottom of each page.',
+    health: 'Health metrics are useful when you know what they measure and what they ignore. Every calculator here states its formula (Mifflin-St Jeor for BMR, the standard BMI ratio, established zone percentages), a worked example, and its limits — including the population ranges each formula was derived from. Results are estimates to discuss with a clinician, not diagnoses.',
+    math: 'From percentages and fractions to statistics and number theory, these tools show every step of the working next to the result. Each calculator lists its formula and assumptions so you can check the arithmetic yourself, and most include boundary notes (zero, negatives, decimals) so edge cases behave the way the math says they should.',
+    everyday: 'The questions that come up between birthdays, bills and road trips — age in exact years and days, fuel costs for a journey, cooking conversions, tip splits. Each calculator runs entirely in your browser, remembers nothing, and shows the working so you can adapt it to your own numbers.',
+    science: 'Physics and chemistry calculations with the constants and units spelled out: which gas constant the ideal-gas tool assumes, which half-life convention the decay calculator uses, what density formula sits behind the result. Worked examples use real-world magnitudes so you can sanity-check your own inputs.',
+    engineering: 'Sizing, loads, currents and flows — the calculations engineers redo a dozen times a day. Each tool cites its governing formula (Darcy-Weisbach for pipe loss, Euler for buckling, standard wire-gauge tables) and states the safety margins it does NOT include, so a code check still belongs with a licensed engineer.',
+    construction: 'Material estimates decide whether a pour comes in on budget or needs an emergency re-order. Concrete volume, bag counts, brick quantities and paint coverage calculators all include the wastage buffer professionals add, and each shows the volume math so you can adjust for your own site conditions.',
+    conversion: 'Exact conversion factors — not rounded approximations — for length, weight, volume, temperature, speed and data. Each converter shows the factor it applies and the reverse direction, so a millimetre that matters stays precise instead of drifting through chained approximations.',
+    business: 'Margins, break-even, customer costs and return on spend. Each calculator separates fixed from variable costs, shows the formula with a worked example, and flags the assumptions (like constant unit economics) that small businesses most often get wrong.',
+    education: 'Grade math causes more arguments than it should: weighted categories, dropped scores, what a final exam can actually change. These calculators show the weighting math explicitly, with worked examples for common grading schemes, so you can check the arithmetic against your syllabus.',
+    utilities: 'Small tools that answer small questions fast — password entropy, QR codes, color conversions, unit helpers. Each one runs client-side, states exactly what it does and does not do, and never sends your input anywhere.',
+    lifestyle: 'Moving, renting, cooking, pets — the domestic math that has no spreadsheet when you need it. Every calculator shows its assumptions (per-person shares, average consumption rates) and the working, so the estimate matches your reality rather than an average.',
+    regional: 'Calculators localized for India, Pakistan and the UAE: income tax slabs, zakat nisab thresholds, GST/VAT rates and salary structures that differ from US defaults. Each tool states which country rules and tax year it applies, and links the official source where the numbers come from.',
+    food: 'Nutrition math from calories to macros: Mifflin-St Jeor BMR, activity multipliers, keto carb limits, recipe scaling. Each calculator shows its formula and the population range it was derived from, and reminds you where individual variation matters more than the formula.',
+    fitness: 'Training zones, paces, one-rep maxes and calorie burn — with the testing protocols spelled out (which formula, which heart-rate percentages, which MET values). Each tool explains what its estimate assumes about terrain, treadmill calibration and individual physiology.',
+    auto: 'Owning and driving costs more than the sticker price. Fuel cost, depreciation, insurance, lease-vs-buy and EV charging calculators all show the per-km or per-year math, state the default prices they assume, and let you replace every default with your own numbers.',
+    career: 'Rate math for people who sell their time: freelance hourly rates, salary conversions, job-offer comparison, side-hustle margins. Each calculator shows the overhead and utilization assumptions behind the numbers, because a rate that ignores unpaid admin is a pay cut.',
+    homegarden: 'Paint coverage, wallpaper rolls, AC sizing, soil volumes — the DIY estimates that get expensive when guessed. Each calculator uses standard coverage rates (and says what they are), shows the area math, and tells you when to add the professional buffer.',
+    tech: 'Download times, data usage, password strength, hosting costs — measured against real-world network speeds and current pricing assumptions, each stated on the page. Tools that estimate security margins (password entropy, crack time) show the math and the honest caveats.',
+    family: 'Parenting costs from diapers to college, plus the family-budget math that keeps the household honest. Each calculator shows its assumptions — regional cost averages, growth rates — and lets you replace them with your own family numbers.'
+  };
+  if (CAT_INTROS[catKey]) {
+    content += '<div class="cat-intro"><p>' + esc(CAT_INTROS[catKey]) + '</p></div>';
+  }
   content += '<div class="tools-grid">';
   catTools.slice(0, 48).forEach(t => {
-    content += '<div class="tool-card" data-tool-id="' + escAttr(t.id) + '"><h4><a href="/' + catKey + '/' + t.id + '">' + esc(t.name) + '</a></h4><p>' + esc(String(t.desc || '').substring(0, 100)) + '</p></div>';
+    content += '<div class="tool-card" data-tool-id="' + escAttr(t.id) + '"><h2><a href="/' + catKey + '/' + t.id + '">' + esc(t.name) + '</a></h2><p>' + esc(String(t.desc || '').substring(0, 100)) + '</p></div>';
   });
   content += '</div>';
 
@@ -418,6 +454,7 @@ for (const catKey of Object.keys(CATEGORY_META)) {
 
   let content = '<div class="breadcrumb"><a href="/">Home</a> › <a href="/' + catKey + '">' + esc(CAT_NAME[catKey]) + '</a> › Comparison</div>';
   content += '<div class="tool-header"><h1>' + esc(CAT_NAME[catKey]) + ' Calculators Comparison</h1><p class="tool-desc">' + esc(desc) + '</p></div>';
+  content += '<h2>' + esc(CAT_NAME[catKey]) + ' Calculators</h2>';
   content += '<div class="hub-tools-grid">';
   catTools.slice(0, 48).forEach(t => {
     content += '<div class="hub-card"><h3><a href="/' + catKey + '/' + t.id + '">' + esc(t.name) + '</a></h3><p>' + esc(String(t.desc || '').substring(0, 120)) + '</p></div>';
@@ -450,6 +487,16 @@ try {
   }
 } catch (e) { console.error('long-tail parse fail', e.message); }
 
+// LONG-TAIL NOINDEX GUARD (SEO consolidation, option a): ALL modifier variant
+// pages render the same calculator as their parent tool page with no genuinely
+// unique data (geo names are cosmetic; duration/amount only pre-fill inputs).
+// Each variant is therefore emitted with robots noindex + canonical pointing at
+// the PARENT tool page, and is excluded from the sitemap (generate-sitemap.js
+// mirrors this guard). The pages stay reachable so pre-filled deep links and
+// old backlinks still work — they just don't compete for indexation anymore.
+const GEO_WORDS = ['florida', 'texas', 'california', 'arizona', 'newyork', 'new-york', 'georgia', 'ohio', 'illinois', 'pennsylvania', 'michigan', 'virginia', 'washington', 'colorado', 'oregon', 'nevada'];
+const isGeoVariant = (modifier) => GEO_WORDS.some(g => String(modifier).toLowerCase().indexOf(g) !== -1);
+
 for (const [catKey, toolId, modifier] of LONGTAIL) {
   const tool = TOOL_MAP[toolId];
   if (!tool || tool.cat !== catKey) continue;
@@ -457,12 +504,20 @@ for (const [catKey, toolId, modifier] of LONGTAIL) {
   if (!parsed) continue;
   const canonPath = '/' + catKey + '/' + toolId + '/' + modifier;
   const title = parsed.title;
-  // Slice to 150 chars so HTML-entity escaping (& → &amp;) keeps the rendered
-  // meta description within the 165-char display limit.
-  const desc = String((tool.desc || '') + ' Calculate ' + parsed.ctx + ' instantly — free, private, step-by-step.').slice(0, 150);
+  // Word-boundary clip to 155 chars (with ellipsis) so HTML-entity escaping
+  // (& → &amp;) keeps the rendered meta description within the 165-char
+  // display limit WITHOUT cutting mid-word ("free, private, s" reads broken
+  // in the SERP and lowers CTR).
+  const rawDesc = String((tool.desc || '') + ' Calculate ' + parsed.ctx + ' instantly — free, private, step-by-step.');
+  const desc = rawDesc.length > 155
+    ? rawDesc.slice(0, 155).replace(/\s+\S*$/, '').trim() + '…'
+    : rawDesc;
   const ogImage = '/og/' + toolId + '.jpg';
 
   let page = rewriteHead(SHELL, { title, desc, canonical: canonPath, ogTitle: title, ogDesc: desc, ogImage });
+  // noindex EVERY long-tail variant; canonical consolidates to the base tool page.
+  page = page.replace(/<meta name="robots" content="[^"]*">/, '<meta name="robots" content="noindex, follow">');
+  page = page.replace(/<link rel="canonical" href="[^"]*">/, '<link rel="canonical" href="' + DOMAIN + '/' + catKey + '/' + toolId + '">');
   page = rewriteSchema(page, buildToolSchema(tool, catKey, canonPath));
   page = rewriteMain(page, buildToolContent(tool, catKey));
   writePage(path.join(catKey, toolId, modifier), page);
@@ -506,10 +561,10 @@ for (const slug of ['favorites', 'history', 'compare']) {
     '<h2 class="section-title">Why CalcProMaster</h2>' +
     '<p>Every calculator shows its formula, a step-by-step worked example, and the assumptions behind the result, so you can trust the numbers. Results are computed instantly in your browser and never leave your device.</p>';
   let page = rewriteHead(SHELL, {
-    title: 'CalcProMaster — 543+ Free Online Calculators',
-    desc: 'CalcProMaster — 543+ free calculators for finance, health, math, science, engineering and everyday life. Step-by-step solutions, formulas, charts. No sign-up.',
+    title: 'CalcProMaster — 1201+ Free Online Calculators',
+    desc: 'CalcProMaster — 1201+ free calculators for finance, health, math, science, engineering and everyday life. Step-by-step solutions, formulas, charts. No sign-up.',
     canonical: '/', ogTitle: 'CalcProMaster — Free Online Calculators',
-    ogDesc: '543+ free online calculators with step-by-step solutions, formulas and charts. No sign-up, no tracking.'
+    ogDesc: '1201+ free online calculators with step-by-step solutions, formulas and charts. No sign-up, no tracking.'
   });
   page = rewriteMainAppend(page, content);
   writePage('', page);

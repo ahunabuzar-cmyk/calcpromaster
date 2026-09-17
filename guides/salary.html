@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gross Salary vs In-Hand Salary — How to Calculate Take-Home Pay | CalcProMaster</title>
+  <meta name="description" content="Why your in-hand salary is smaller than the offer letter: the gross-to-net calculation step by step, what CTC really means, and a full worked example.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/salary">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Gross Salary vs In-Hand Salary — How to Calculate Take-Home Pay",
+    "description": "Why your in-hand salary is smaller than the offer letter: the gross-to-net calculation step by step, what CTC really means, and a full worked example.",
+    "url": "https://calcpromaster.netlify.app/guides/salary",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "Gross Salary vs In-Hand Salary", "item": "https://calcpromaster.netlify.app/guides/salary" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why is in-hand salary less than gross?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Gross salary is reduced by income tax, retirement-fund contributions, insurance premiums and other statutory or payroll deductions before it reaches your bank account. CTC is larger still because it counts employer-side contributions that never pass through your salary at all." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is CTC?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Cost to Company — the total annual expense a company incurs for employing you. It includes your gross salary plus employer contributions to retirement funds, insurance, and provisions like gratuity that you receive only under specific conditions." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate my monthly in-hand salary?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Start from gross annual salary, subtract pre-tax contributions, compute income tax on the rest using your country's brackets, subtract post-tax deductions, then divide by 12 (or your pay schedule). CalcProMaster's salary and income-tax calculators automate each step." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a higher CTC always better?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Not necessarily. Compare offers on estimated monthly in-hand using the same assumptions, and value non-cash components (insurance, employer retirement matching) separately at what they are actually worth to you." }
+        }
+      ]
+    }
+  }
+  </script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{--bg:#f8fafc;--surface:#fff;--text:#1e293b;--text-light:#64748b;--border:#e2e8f0;--primary:#4f46e5;--radius:14px}
+    @media (prefers-color-scheme: dark){:root{--bg:#0f172a;--surface:#1e293b;--text:#f8fafc;--text-light:#94a3b8;--border:#334155}}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;-webkit-font-smoothing:antialiased}
+    header{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .logo{font-size:20px;font-weight:800;background:linear-gradient(135deg,#4f46e5,#7c3aed);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
+    header a{color:var(--text-light);text-decoration:none;font-size:13px}
+    header a:hover{color:var(--primary)}
+    main{max-width:820px;margin:0 auto;padding:32px 24px 64px}
+    h1{font-size:30px;font-weight:800;margin-bottom:8px}
+    h2{font-size:20px;font-weight:700;margin:26px 0 10px}
+    h3{font-size:16px;font-weight:600;margin:18px 0 6px}
+    p{margin-bottom:10px;color:var(--text)}
+    ul,ol{margin:8px 0 14px 22px}
+    li{margin-bottom:4px}
+    table{border-collapse:collapse;margin:12px 0;width:100%}
+    th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;font-size:14px}
+    th{background:var(--surface);font-weight:700}
+    .legal-meta{font-size:13px;color:var(--text-light);margin-bottom:18px}
+    .formula{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--primary);border-radius:8px;padding:12px 16px;margin:14px 0;font-family:ui-monospace,Consolas,monospace;font-size:15px}
+    .example{background:rgba(79,70,229,.07);border-left:4px solid var(--primary);padding:12px 16px;border-radius:8px;margin:14px 0}
+    .legal-warning{background:rgba(245,158,11,.12);border-left:4px solid #f59e0b;padding:12px 16px;border-radius:8px;margin:16px 0}
+    a{color:var(--primary)}
+    .related{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+    .related a{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:6px 14px;font-size:13px;text-decoration:none}
+    .related a:hover{border-color:var(--primary);color:var(--primary)}
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:18px 24px;text-align:center;font-size:13px;color:var(--text-light)}
+    footer a{color:var(--text-light);text-decoration:none;margin:0 8px}
+    footer a:hover{color:var(--primary)}
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">CalcProMaster</a>
+    <a href="/">Home</a>
+    <a href="/guides">Guides</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </header>
+  <main>
+    <div class="legal-page">
+      <p class="legal-meta"><a href="/guides">← All guides</a></p>
+      <h1>Gross Salary vs In-Hand Salary — How to Calculate Take-Home Pay</h1>
+      <p class="legal-meta">Career &amp; Money · 6 min read · Last updated September 2026</p>
+
+      <h2>Gross vs net vs CTC</h2>
+      <ul>
+        <li><strong>Gross salary</strong> — total before any deductions (basic + allowances + bonuses).</li>
+        <li><strong>Net / in-hand salary</strong> — what actually reaches your bank account after tax and deductions.</li>
+        <li><strong>CTC (Cost to Company)</strong> — everything the employer spends on you, including contributions you never see in-hand (retirement funds, insurance premiums, gratuity provisions).</li>
+      </ul>
+      <p>Key insight: CTC ≠ gross ≠ net. The gap between the offer letter and the bank credit confuses almost everyone at first.</p>
+
+      <h2>The gross-to-net formula</h2>
+      <div class="formula">In-hand = Gross − Income tax − Retirement contribution − Insurance − Other deductions</div>
+
+      <h2>Step-by-step: estimate your in-hand salary</h2>
+      <ol>
+        <li><strong>Start from gross annual salary</strong> (or CTC minus employer-only contributions).</li>
+        <li><strong>Subtract pre-tax contributions</strong> — retirement fund (provident fund / 401(k) / NPS), health insurance where pre-tax.</li>
+        <li><strong>Compute income tax</strong> on the remaining taxable income using your country's brackets (see our <a href="/guides/income-tax">income tax guide</a>).</li>
+        <li><strong>Subtract post-tax deductions</strong> — professional tax, payroll-assigned loan EMIs, garnishments.</li>
+        <li><strong>Divide by pay periods</strong> — 12 for monthly, 24/26 for semi-monthly or biweekly schedules.</li>
+      </ol>
+
+      <h2>Worked example</h2>
+      <div class="example">
+        <p>CTC $30,000 includes $2,400 employer retirement contribution → gross = <strong>$27,600</strong></p>
+        <p>Own retirement contribution 5% of gross = $1,380 → taxable income = <strong>$26,220</strong></p>
+        <p>Illustrative tax on $26,220 ≈ $1,900</p>
+        <p>In-hand = 27,600 − 1,380 − 1,900 = <strong>$24,320/year ≈ $2,027/month</strong></p>
+      </div>
+
+      <h2>Where offers differ most</h2>
+      <table>
+        <tr><th>Component</th><th>Counted in CTC</th><th>Reaches in-hand?</th></tr>
+        <tr><td>Basic salary</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>House rent allowance</td><td>Yes</td><td>Yes (tax rules apply)</td></tr>
+        <tr><td>Employer retirement fund</td><td>Yes</td><td>No — matures at retirement/withdrawal</td></tr>
+        <tr><td>Gratuity provision</td><td>Yes</td><td>Only after qualifying service years</td></tr>
+        <tr><td>Insurance premiums</td><td>Yes</td><td>No — benefit, not cash</td></tr>
+        <tr><td>Performance bonus</td><td>Yes</td><td>Usually yes, when paid</td></tr>
+      </table>
+
+      <h2>Common mistakes</h2>
+      <ul>
+        <li>Comparing offers on CTC without normalizing employer-side contributions.</li>
+        <li>Assuming a 10% raise means 10% more in-hand — progressive tax shrinks the net gain.</li>
+        <li>Forgetting one-time components (joining bonus) that inflate year-1 CTC.</li>
+      </ul>
+
+      <h2>What a raise actually does to in-hand pay</h2>
+      <p>Raises are advertised in gross percentages but experienced in net rupees/dollars, and progressive tax shrinks the gap. Take a $27,600 gross (the worked example above) receiving a 10% raise to $30,360, with the same illustrative tax function: tax on $26,220 was ≈ $1,900; tax on the raised taxable income (30,360 − 1,518 contribution = $28,842) rises to roughly $2,300. In-hand moves from $24,320 to about $26,542 — a <strong>9.1% net gain</strong> on a 10% gross raise. Still good — but the marginal slice of the raise was taxed at the <em>top</em> rate, not the average one.</p>
+      <p>This is also why offer comparisons mislead: a higher CTC with a larger employer-only contribution can leave <em>less</em> in-hand than a smaller offer structured differently. The normalized comparison is always monthly in-hand under identical assumptions — the <a href="/finance/salary">salary calculator</a> computes gross-to-net for your inputs, and the <a href="/guides/income-tax">tax guide</a> explains why the marginal slice hurts.</p>
+      <p>Regional note for the three audiences this site serves most: in <strong>India</strong>, the new regime's ₹75,000 standard deduction and slab widths mean salaried net pay is now much closer to gross × 0.9 at median salaries than the old-regime folklore suggests; in <strong>Pakistan</strong>, salaried schedules differ from non-salaried rates and annual tax credits change the net materially; in the <strong>UAE</strong>, there is no personal income tax — the gross-to-net gap comes from end-of-service provisions and voluntary contributions, not withholding. The mechanics stay the same; the deduction lines change.</p>
+
+      <div class="legal-warning">
+        <p><strong>Note:</strong> Salary structures, contribution rates and tax rules differ by country and employer. This guide explains the mechanics; use your payslip's actual deduction lines for precise figures.</p>
+      </div>
+
+      <h2>FAQ</h2>
+      <h3>Why is my first month's salary different?</h3>
+      <p>Payroll often runs on a lag: your first credit may be a partial month or a shifted period. Deduction start dates can also differ from your joining date.</p>
+      <h3>How do I compare two offers fairly?</h3>
+      <p>Normalize both to monthly in-hand using the same assumptions (retirement contribution %, tax regime), then compare non-cash benefits separately.</p>
+      <h3>Do bonuses get taxed differently?</h3>
+      <p>They are income taxed at your marginal rate in most systems; some countries apply supplemental withholding at payout but true it up at filing.</p>
+    </div>
+  </main>
+  <footer>
+    <p>CalcProMaster — free online calculators.</p>
+    <p>
+      <a href="/guides">Guides</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a>
+    </p>
+  </footer>
+  <div class="related" style="max-width:820px;margin:0 auto 40px;padding:0 24px;">
+    <a href="/finance/salary">Salary Calculator</a>
+    <a href="/regional/pk-income-tax">Pakistan Income Tax</a>
+    <a href="/regional/income-tax-india">India Income Tax</a>
+    <a href="/finance/us-income-tax">US Income Tax</a>
+    <a href="/guides/income-tax">Income Tax Guide</a>
+    <a href="/guides">All Guides</a>
+  </div>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

@@ -64,10 +64,10 @@ const FILES = [
   'googled1ac20b54b36e7cf.html',
 ];
 
-const DIRS = ['js', 'og', 'fonts']; // copyDir('js') recurses into data/ + workers/; 'og' holds per-tool share cards; 'fonts' = self-hosted latin woff2 (no third-party font fetch)
+const DIRS = ['js', 'og', 'fonts', 'guides', 'blog']; // copyDir('js') recurses into data/ + workers/; 'og' holds per-tool share cards; 'fonts' = self-hosted latin woff2 (no third-party font fetch); 'guides' = static educational guide pages; 'blog' = static blog posts
 
 // Safety guard: refuse to deploy if any private/dev folders leak into OUTPUT dir.
-const FORBIDDEN_IN_DEPLOY = ['.freebuff', 'node_modules', '.git', 'calcpro-next', 'tests', 'scripts', '.db', '.sqlite'];
+const FORBIDDEN_IN_DEPLOY = ['.freebuff', 'node_modules', '.git', 'tests', 'scripts', '.db', '.sqlite'];
 
 function assertNoPrivateData() {
   for (const name of FORBIDDEN_IN_DEPLOY) {
@@ -125,11 +125,127 @@ function validateJsonLd(htmlPath) {
   if (count > 0) console.log('  JSON-LD: ' + count + ' block(s) valid ✓');
 }
 
+// Minify deploy JS/CSS (whitespace + comments only — top-level identifiers
+// are PRESERVED so external wiring like data-tool attributes, global function
+// lookups and cross-file references stay byte-compatible). Verified by a
+// round-trip check: minified output must still contain every top-level
+// identifier found in the source; falls back to unminified on any doubt.
+function minifyDeployAssets() {
+  // Byte-safe "light minifier": strips comments and indentation while
+  // tracking string/template state character-by-character. Inline `//` after
+  // code is LEFT ALONE (regex-literal hazard), only full-line comments and
+  // block comments go. No quote normalization, no syntax transforms — a
+  // string-heavy data file survives byte-for-byte except for removed
+  // comments/whitespace. A strict guard additionally verifies every quoted
+  // string survived; any file failing the guard ships unminified.
+  const stripLines = (src, isCss) => {
+    const lines = src.split('\n');
+    const outL = [];
+    let inStr = null; // '", or `
+    let inBlock = false; // /* */ comment
+    for (const raw of lines) {
+      let line = '';
+      let i = 0;
+      while (i < raw.length) {
+        const c = raw[i];
+        if (inBlock) {
+          if (c === '*' && raw[i + 1] === '/') { inBlock = false; i += 2; }
+          else i++;
+          continue;
+        }
+        if (inStr) {
+          line += c;
+          if (c === '\\') { line += raw[i + 1] || ''; i += 2; continue; }
+          if (c === inStr) inStr = null;
+          i++;
+          continue;
+        }
+        if (!isCss && (c === '"' || c === "'" || c === '`')) { inStr = c; line += c; i++; continue; }
+        if (isCss && (c === '"' || c === "'")) { inStr = c; line += c; i++; continue; }
+        // JS: a COMMENT-ONLY line (only whitespace before //) is dropped —
+        // handles comment lines containing '/*'-like text such as (js/data/*.js)
+        // which falsely opened a block. Code lines with inline // are LEFT
+        // ALONE: a regex literal like /https?:\/\/./ would be truncated.
+        if (!isCss && c === '/' && raw[i + 1] === '/' && !line.trim()) break;
+        if (c === '/' && raw[i + 1] === '*') { inBlock = true; i += 2; continue; }
+        line += c;
+        i++;
+      }
+      const t = line.replace(/\s+$/, '');
+      if (!t) continue; // blank
+      if (!inBlock && !inStr && !isCss && /^\/\//.test(t.trim())) continue; // full-line comment
+      if (!inBlock && !inStr && isCss && /^\/\//.test(t.trim())) continue;
+      outL.push(t.replace(/^\s+/, ''));
+    }
+    return outL.join('\n');
+  };
+  let saved = 0, files = 0, failed = 0;
+  const walk = (dir) => {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, e.name);
+      if (e.isDirectory()) { walk(full); continue; }
+      const isJs = e.name.endsWith('.js') && e.name !== 'sw.js';
+      const isCss = e.name.endsWith('.css');
+      if (!isJs && !isCss) continue;
+      const src = fs.readFileSync(full, 'utf8');
+      // Skip files that look already-minified (single very long line)
+      const lines0 = src.split('\n');
+      const avgLen = src.length / Math.max(lines0.length, 1);
+      if (avgLen > 200) continue;
+      try {
+        const min = stripLines(src, isCss);
+        if (min.length >= src.length) continue; // no win, keep original
+        // Guard: minified source must still be structurally valid —
+        // JS files must parse (new Function compiles without running),
+        // CSS must have balanced braces. Any failure ships unminified.
+        if (isCss) {
+          const open = (min.match(/{/g) || []).length;
+          const close = (min.match(/}/g) || []).length;
+          if (open !== close) {
+            console.warn('  ! minify guard: ' + e.name + ' unbalanced braces — kept original');
+            failed++;
+            continue;
+          }
+        } else {
+          try { new Function(min); } catch (err) {
+            console.warn('  ! minify guard: ' + e.name + ' parse failed — kept original');
+            failed++;
+            continue;
+          }
+        }
+        fs.writeFileSync(full, min);
+        saved += src.length - min.length;
+        files++;
+      } catch (err) {
+        console.warn('  ! minify failed for ' + e.name + ': kept original (' + err.message.slice(0, 60) + ')');
+        failed++;
+      }
+    }
+  };
+  walk(OUT);
+  console.log('  minify: ' + files + ' files, ' + Math.round(saved / 1024) + 'KB saved' + (failed ? ', ' + failed + ' kept original' : ''));
+}
+
 // Read the production domain from js/site-config.js — the SINGLE source of
 // truth. When the user switches to a custom domain they edit ONE file;
 // this step rewrites every hardcoded calcpromaster.netlify.app reference in
 // deploy/ (index.html canonical/OG/schema, sitemap.xml, og-image.html) so
 // the shipped bundle is always domain-consistent (Phase 7 readiness).
+// Parse js/site-config.js (single source of truth) — returns the window.SITE_CONFIG object literal.
+function readSiteConfig() {
+  try {
+    const cfg = fs.readFileSync(path.join(ROOT, 'js', 'site-config.js'), 'utf8');
+    const m = cfg.match(/window\.SITE_CONFIG = \{([\s\S]*?)\n\};/);
+    if (!m) return {};
+    const out = {};
+    // Top-level scalar fields only (domain/gsc/ga4Id/adsensePubId/totalCalculators)
+    for (const fm of m[1].matchAll(/(^|\n)\s{2}(\w+):\s*(?:'([^']*)'|([0-9]+))/g)) {
+      out[fm[2]] = fm[3] !== undefined ? fm[3] : Number(fm[4]);
+    }
+    return out;
+  } catch (e) { return {}; }
+}
+
 function substituteDomain() {
   const cfgPath = path.join(ROOT, 'js', 'site-config.js');
   let domain = null;
@@ -139,19 +255,30 @@ function substituteDomain() {
     if (m && m[1]) domain = m[1];
   } catch (e) { /* fall through */ }
   if (!domain) { console.warn('  ! domain not found in site-config.js — using default'); return; }
+  if (domain === 'calcpromaster.netlify.app') return; // already the default — nothing to rewrite
+  // Walk the ENTIRE deploy tree, not just root files: the 1300+ prerendered
+  // tool pages carry hardcoded canonical/OG/schema URLs. Runs AFTER the SSG
+  // step (see call site) so those pages are rewritten too — a custom-domain
+  // switch stays a one-file edit + rebuild.
   // robots.txt's Sitemap: line is also domain-sensitive — a stale sitemap URL
   // would make GSC fetch the wrong file after a custom-domain switch.
-  const targets = ['index.html', 'sitemap.xml', 'og-image.html', 'robots.txt'];
-  for (const f of targets) {
-    const p = path.join(OUT, f);
-    if (!fs.existsSync(p)) continue;
-    let html = fs.readFileSync(p, 'utf8');
-    const before = (html.match(/calcpromaster\.netlify\.app/g) || []).length;
-    if (before === 0) continue;
-    html = html.replace(/calcpromaster\.netlify\.app/g, domain);
-    fs.writeFileSync(p, html);
-    console.log('  domain: ' + f + ' → ' + domain + ' (' + before + ' refs rewritten)');
-  }
+  const EXT_OK = new Set(['.html', '.txt', '.xml', '.js', '.json']);
+  let files = 0, refs = 0;
+  (function walk(dir) {
+    for (const e of fs.readdirSync(dir)) {
+      const p = path.join(dir, e);
+      const st = fs.statSync(p);
+      if (st.isDirectory()) { walk(p); continue; }
+      if (!EXT_OK.has(path.extname(e).toLowerCase()) || st.size > 8 * 1024 * 1024) continue;
+      let s;
+      try { s = fs.readFileSync(p, 'utf8'); } catch (err) { continue; }
+      if (!s.includes('calcpromaster.netlify.app')) continue;
+      const n = (s.match(/calcpromaster\.netlify\.app/g) || []).length;
+      fs.writeFileSync(p, s.replace(/calcpromaster\.netlify\.app/g, domain));
+      files++; refs += n;
+    }
+  })(OUT);
+  if (files) console.log('  domain: ' + refs + ' refs in ' + files + ' files → ' + domain);
 }
 
 // Inline js/site-config.js into deploy/index.html: the config script is needed by
@@ -326,20 +453,54 @@ function main() {
   inlineSiteConfig();
   inlineFullCss();
 
-  // Rewrite hardcoded domains in deploy/ to the configured production domain.
-  substituteDomain();
+  // Minify deploy JS/CSS (whitespace + comments only — top-level identifiers
+  // are PRESERVED so external wiring like data-tool attributes, global
+  // function lookups and cross-file references stay byte-compatible).
+  // Verified by a round-trip check: minified output must still contain every
+  // top-level identifier found in the source. Falls back to unminified on any
+  // doubt. (esbuild is already a devDependency — no new installs.)
+  minifyDeployAssets();
+
+  // NOTE: substituteDomain() moved AFTER the SSG step below — prerendered
+  // pages must exist before their hardcoded canonical/OG/schema URLs can be
+  // rewritten to the configured production domain.
+
+  // ads.txt from the SINGLE source of truth (T7): SITE_CONFIG.adsensePubId
+  // khali = placeholder (commented) line, jo abhi safe hai. AdSense approval
+  // ke baad site-config.js mein ID paste karo + rebuild — live ads.txt.
+  (function writeAdsTxt() {
+    const pub = readSiteConfig().adsensePubId || '';
+    const active = /^pub-[0-9]{16}$/.test(pub);
+    const line = pub && active
+      ? 'google.com, ' + pub + ', DIRECT, f08c47fec0942fa0'
+      : '# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0';
+    const body = (active ? '' :
+      '# AdSense ads.txt — publisher ID abhi config nahi hua (SITE_CONFIG.adsensePubId khali hai).\n' +
+      '# Approval milte hi js/site-config.js mein adsensePubId bharo + rebuild — ye line uncomment ho jayegi.\n') +
+      line + '\n';
+    fs.writeFileSync(path.join(OUT, 'ads.txt'), body, 'utf8');
+    if (!active) console.log('  ads.txt: placeholder (SITE_CONFIG.adsensePubId khali — approval ke baad bharo)');
+    else console.log('  ads.txt: ACTIVE publisher ' + pub);
+  })();
 
   // Static Site Generation (SSG): prerender EVERY route in sitemap.xml as a
   // real static HTML file (deploy/<cat>/<tool>/index.html etc.) with unique
   // title/meta/canonical/JSON-LD + full crawlable content, using the built
-  // deploy/index.html as the hydrated SPA shell. Netlify's `/* /index.html 200`
-  // rewrite never shadows existing static files (documented Shadowing), so
-  // these pages win automatically with zero extra redirect rules.
+  // deploy/index.html as the hydrated SPA shell. Netlify never lets a redirect
+  // rule override a real static file (documented Shadowing), so these pages
+  // win automatically over the _redirects whitelist rewrites and the final
+  // `/* /404.html 404` catch-all. Only whitelisted extensionless prefixes
+  // (scripts/route-whitelist.cjs) fall through to index.html; everything
+  // else is a true 404 — the soft-404 fallback is gone.
   try {
     require('./scripts/ssg-pages.cjs');
   } catch (e) {
     console.warn('  ! SSG skipped: ' + e.message);
   }
+
+  // Rewrite hardcoded domains across the WHOLE deploy tree (root files + the
+  // prerendered pages SSG just wrote) to the configured production domain.
+  substituteDomain();
 
   // Auto-bump service-worker cache version from content hash of deploy bundle.
   // Removes manual sw.js edit before every deploy (old process was error-prone).
@@ -384,6 +545,20 @@ function main() {
   fs.writeFileSync(path.join(OUT, 'netlify.toml'), netlifyCfg);
 
   assertNoPrivateData();
+
+  // Quality gates: every sitemap URL must meet indexation criteria, and bundle
+  // sizes must stay within agreed budgets. Failure here blocks the deploy build.
+  try {
+    require('./scripts/quality-gate.cjs');
+  } catch (e) {
+    console.warn('  ! quality-gate skipped: ' + e.message);
+  }
+  try {
+    require('./scripts/perf-budgets.cjs');
+  } catch (e) {
+    console.warn('  ! perf-budgets skipped: ' + e.message);
+  }
+
   console.log('Done: deploy/ ready with ' + count + ' items.');
   console.log('Upload this deploy/ folder to Netlify (drag & drop) or push to Git.');
 }

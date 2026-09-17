@@ -11,8 +11,8 @@ const DOMAIN = 'calcpromaster.netlify.app'; // matches js/site-config.js (owner 
 const ORIGIN = 'https://' + DOMAIN;
 
 const PAGES = [
-  { file: 'about.html', slug: 'about', title: 'About CalcProMaster | CalcProMaster', desc: 'CalcProMaster is a free online platform with 543+ calculators across finance, health, math, science, construction, conversion, education and everyday life. No sign-ups, step-by-step solutions.' },
-  { file: 'contact.html', slug: 'contact', title: 'Contact CalcProMaster | CalcProMaster', desc: 'Contact CalcProMaster — send feedback, suggestions or bug reports about our 543+ free online calculators.' },
+  { file: 'about.html', slug: 'about', title: 'About CalcProMaster | CalcProMaster', desc: 'CalcProMaster is a free online platform with 1201+ calculators across finance, health, math, science, construction, conversion, education and everyday life. No sign-ups, step-by-step solutions.' },
+  { file: 'contact.html', slug: 'contact', title: 'Contact CalcProMaster | CalcProMaster', desc: 'Contact CalcProMaster — send feedback, suggestions or bug reports about our 1201+ free online calculators.' },
   { file: 'cookies.html', slug: 'cookies', title: 'Cookie Policy | CalcProMaster', desc: 'Cookie Policy for CalcProMaster — how optional consent-gated analytics and advertising cookies work on our free calculator website.' },
   { file: 'disclaimer-finance.html', slug: 'disclaimer-finance', title: 'Financial Disclaimer | CalcProMaster', desc: 'Financial disclaimer for CalcProMaster calculators. Results are educational estimates, not financial advice.' },
   { file: 'disclaimer-general.html', slug: 'disclaimer-general', title: 'General Disclaimer | CalcProMaster', desc: 'General disclaimer for CalcProMaster — calculator results are provided for general informational purposes only.' },

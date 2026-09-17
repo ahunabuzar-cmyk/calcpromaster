@@ -20,7 +20,7 @@
       --bg: #f8fafc;
       --surface: #ffffff;
       --text: #1e293b;
-      --text-light: #64748b;
+      --text-light: #475569;
       --border: #e2e8f0;
       --shadow: 0 1px 3px rgba(0,0,0,0.06);
       --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
@@ -183,6 +183,14 @@
       display: flex; align-items: center; justify-content: space-between;
       padding: 12px 20px;
     }
+    /* Skip-to-content link: invisible until keyboard focus, then the first
+       focusable element on the page (WCAG 2.4.1 Bypass Blocks). */
+    .skip-link {
+      position: absolute; top: -48px; left: 0; z-index: 10001;
+      background: var(--primary); color: #fff;
+      padding: 10px 18px; border-radius: 8px; font-weight: 700;
+    }
+    .skip-link:focus { top: 8px; }
     .logo { 
       font-size: 26px; 
       font-weight: 800; 
@@ -1438,7 +1446,7 @@
 .donation-sub { font-size: 11px; color: var(--text-light); }
 .donation-chev { color: var(--primary); font-size: 16px; font-weight: 700; }
 .donation-close {
-  position: absolute; top: -8px; right: -8px; width: 22px; height: 22px;
+  position: absolute; top: -8px; right: -8px; width: 26px; height: 26px;
   border: 1px solid var(--border); background: var(--surface); color: var(--text-light);
   border-radius: 50%; font-size: 13px; cursor: pointer; line-height: 1;
   display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow);

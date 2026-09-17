@@ -53,8 +53,8 @@ let TOTAL_CALCULATORS = ALL_TOOLS.length;
 
 // Static pages
 const STATIC_PAGES = {
-  '': { title: 'CalcProMaster - 543+ free online calculators', desc: 'Free advanced online calculators for finance, health, math, science, business and more. Step-by-step solutions, charts, and smart features.', type: 'home' },
-  'about': { title: 'About CalcProMaster', desc: 'Learn about CalcProMaster - your comprehensive calculator resource with 543+ tools across 20 categories.', type: 'about' },
+  '': { title: 'CalcProMaster - 1201+ free online calculators', desc: 'Free advanced online calculators for finance, health, math, science, business and more. Step-by-step solutions, charts, and smart features.', type: 'home' },
+  'about': { title: 'About CalcProMaster', desc: 'Learn about CalcProMaster - your comprehensive calculator resource with 1201+ tools across 20 categories.', type: 'about' },
   'privacy': { title: 'Privacy Policy', desc: 'CalcProMaster privacy policy. Calculations run locally in your browser; optional analytics and advertising only with your consent.', type: 'privacy' },
   'terms': { title: 'Terms of Service', desc: 'CalcProMaster Terms of Service. Free calculator tools provided as-is without warranty.', type: 'terms' },
   'disclaimer-finance': { title: 'Financial Disclaimer', desc: 'CalcProMaster financial calculators are for educational purposes only. Not financial advice.', type: 'disclaimer' },
@@ -62,6 +62,7 @@ const STATIC_PAGES = {
   'disclaimer-general': { title: 'General Disclaimer', desc: 'CalcProMaster provides calculators as-is. Results may not be accurate for all situations.', type: 'disclaimer' },
   'cookies': { title: 'Cookie Policy', desc: 'CalcProMaster cookie policy. We use minimal local storage, no tracking cookies.', type: 'cookies' },
   'contact': { title: 'Contact CalcProMaster', desc: 'Get in touch with the CalcProMaster team for questions, feedback, or bug reports.', type: 'contact' },
+  'guides': { title: 'Educational Guides & How-To Articles', desc: 'Free step-by-step guides explaining how common calculations work — percentages, loan EMIs, age, BMI and more — with formulas and worked examples.', type: 'guides' },
   'favorites': { title: 'Your Favorites', desc: 'Your saved favorite calculators on CalcProMaster.', type: 'favorites' },
   'history': { title: 'Calculation History', desc: 'View your past calculations on CalcProMaster.', type: 'history' },
   'compare': { title: 'Compare Results', desc: 'Compare your pinned calculation results side by side.', type: 'compare' },

@@ -11,15 +11,17 @@
 /og-image.png   /og-image.png   200
 /og-image.html  /og-image.html  200
 /icon.svg       /icon.svg       200
+/icon-192.png   /icon-192.png   200
+/icon-512.png   /icon-512.png   200
 # Google Search Console verification file — byte-for-byte at root (before the
 # catch-all below, otherwise the SPA fallback would serve index.html for it).
 /googled1ac20b54b36e7cf.html /googled1ac20b54b36e7cf.html 200
 # 2) Static legal/About pages — separate standalone HTML for crawlers & no-JS users
-/about              /about.html             200
-/privacy            /privacy.html           200
-/terms              /terms.html             200
-/cookies            /cookies.html           200
-/contact            /contact.html           200
+/about              /about.html              200
+/privacy            /privacy.html            200
+/terms              /terms.html              200
+/cookies            /cookies.html            200
+/contact            /contact.html            200
 /disclaimer-general /disclaimer-general.html 200
 /disclaimer-finance /disclaimer-finance.html 200
 /disclaimer-health  /disclaimer-health.html  200
@@ -35,8 +37,11 @@
 /health/water-intake         /health/water-intake-health        301
 /lifestyle/moving-cost       /lifestyle/relocation-cost         301
 /lifestyle/grocery-budget    /lifestyle/grocery-budget-optimizer 301
-/health/ideal-weight         /health/ideal-body-weight          301
-/family/pregnancy-weight     /family/pregnancy-weight-gain      301
+# NOTE: /health/ideal-weight is a REAL separate tool (multi-formula IBW:
+# Hamwi/Devine/Robinson) — do NOT redirect it to /health/ideal-body-weight.
+# NOTE: /family/pregnancy-weight was never a live tool route (the pregnancy
+# weight tool lives under /health) — point old links at the real tool page.
+/family/pregnancy-weight     /health/pregnancy-weight           301
 /regional/wedding-budget     /regional/wedding-budget-shaadi    301
 # 4a) Duplicate-tool merge (SEO cannibalization fix) — old URLs 301 → canonical page
 /utilities/bmi-calc          /health/bmi                        301
@@ -55,7 +60,8 @@
 /everyday/moving-cost        /lifestyle/relocation-cost         301
 /business/cashflow           /finance/cash-flow                 301
 /career/net-worth            /finance/net-worth-calculator      301
-/food/ideal-weight           /health/ideal-body-weight          301  /family/pregnancy-due        /health/pregnancy                  301
+/food/ideal-weight           /health/ideal-body-weight          301
+/family/pregnancy-due        /health/pregnancy                  301
 /family/child-bmi-guide      /family/child-bmi                  301
 /family/pregnancy-weight-gain /health/pregnancy-weight           301
 /health/pregnancy-due-date   /health/pregnancy                  301
@@ -65,9 +71,95 @@
 # NOTE: Netlify does NOT allow a splat in the middle of a path segment, so
 # extension rules like "/*.js /404.html 404" are INVALID and silently ignored.
 # Valid form: directory splats (asterisk at END of segment). The site only
-# serves assets from /js/ and /og/, and auto-404.html covers any other path
-# that is not matched below (missing root files, etc.).
+# serves assets from /js/ and /og/, and the 404 catch-all in (6) covers any
+# other path that is not matched above or whitelisted in (5).
 /js/*     /404.html   404
 /og/*     /404.html   404
-# 5) Clean URL routes (extensionless) → SPA index.html with 200
-/*    /index.html   200
+# 5) Extensionless route rewrites — the ONLY paths allowed to fall through to
+#     the SPA shell (index.html 200). Any extensionless path NOT matched here
+#     hits the hard-404 catch-all in (6) instead of a 200 soft-404.
+#     Keep this list in sync with scripts/route-whitelist.cjs —
+#     scripts/check-sitemap-coverage.cjs fails the build on drift.
+#     Why a whitelist: the SPA legitimately serves URLs that are NOT all
+#     prerendered (runtime tool-modifier long-tails like
+#     /finance/loan-emi/5-years-50000, locale-prefixed deep links /es/...
+#     written by the language switcher), and Netlify splats cannot exclude
+#     paths — only rule ordering can. 404-status rules respect shadowing, so
+#     real files (prerendered pages, /js/*, /og/*, root assets) always win
+#     even when they appear AFTER the whitelist below; the whitelist must
+#     precede the 404 catch-all.
+#     - 20 calculator categories (CALC_DATA keys: 7 eager + 13 lazy)
+/auto/*        /index.html   200
+/business/*        /index.html   200
+/construction/*        /index.html   200
+/conversion/*        /index.html   200
+/career/*        /index.html   200
+/education/*        /index.html   200
+/engineering/*        /index.html   200
+/everyday/*        /index.html   200
+/family/*        /index.html   200
+/finance/*        /index.html   200
+/fitness/*        /index.html   200
+/food/*        /index.html   200
+/health/*        /index.html   200
+/homegarden/*        /index.html   200
+/lifestyle/*        /index.html   200
+/math/*        /index.html   200
+/regional/*        /index.html   200
+/science/*        /index.html   200
+/tech/*        /index.html   200
+/utilities/*        /index.html   200
+#     - top-level app routes (bare /<name> hits its prerendered index.html
+#       first as a real file; the rewrite covers deep/unbuilt variants)
+/hub/*        /index.html   200
+/compare/*        /index.html   200
+/favorites/*        /index.html   200
+/guides/*        /index.html   200
+/blog/*        /index.html   200
+#     - locale prefixes (Router.syncUrl writes /xx/<path>; the 18 non-English
+#       TRANSLATIONS keys in js/i18n.js — checker enforces sync)
+#     Bare /<locale> rewrites: the language switcher writes bare "/es" on the
+#     homepage, and Netlify splats match "/es/..." but NOT bare "/es" (an
+#     undocumented edge observed on Netlify) — so each locale gets both forms.
+/es          /index.html   200
+/hi          /index.html   200
+/ur          /index.html   200
+/fr          /index.html   200
+/de          /index.html   200
+/pt          /index.html   200
+/ar          /index.html   200
+/ru          /index.html   200
+/ja          /index.html   200
+/zh          /index.html   200
+/ko          /index.html   200
+/it          /index.html   200
+/nl          /index.html   200
+/tr          /index.html   200
+/id          /index.html   200
+/vi          /index.html   200
+/th          /index.html   200
+/bn          /index.html   200
+/es/*        /index.html   200
+/hi/*        /index.html   200
+/ur/*        /index.html   200
+/fr/*        /index.html   200
+/de/*        /index.html   200
+/pt/*        /index.html   200
+/ar/*        /index.html   200
+/ru/*        /index.html   200
+/ja/*        /index.html   200
+/zh/*        /index.html   200
+/ko/*        /index.html   200
+/it/*        /index.html   200
+/nl/*        /index.html   200
+/tr/*        /index.html   200
+/id/*        /index.html   200
+/vi/*        /index.html   200
+/th/*        /index.html   200
+/bn/*        /index.html   200
+# 6) HARD 404 catch-all — everything extensionless not whitelisted above is a
+#    true 404 (custom 404 page), never a 200 soft-404. MUST stay LAST: first
+#    matching rule wins. Shadowing means this never outranks a real file or an
+#    earlier rule, so prerendered pages, /js/* + /og/* assets, root files and
+#    the legal pages above are all safe.
+/*    /404.html   404

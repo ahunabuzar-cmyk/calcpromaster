@@ -12,7 +12,18 @@
 const fs = require('fs');
 const path = require('path');
 
-const DOMAIN = 'https://calcpromaster.netlify.app';
+// Domain — SINGLE SOURCE OF TRUTH: js/site-config.js (`domain:` field).
+// Keeps the standalone sitemap in sync with build-deploy.js substituteDomain()
+// so a custom-domain switch stays a one-file edit + rebuild.
+function readConfigDomain() {
+  try {
+    const cfg = fs.readFileSync(path.join(__dirname, 'js', 'site-config.js'), 'utf8');
+    const m = cfg.match(/domain:\s*'([^']+)'/);
+    if (m && m[1]) return m[1].replace(/^https?:\/\//, '');
+  } catch (e) { /* fall through to default */ }
+  return 'calcpromaster.netlify.app';
+}
+const DOMAIN = 'https://' + readConfigDomain();
 const ROOT = __dirname;
 const DATA_DIR = path.join(ROOT, 'js', 'data');
 const OUT = path.join(ROOT, 'sitemap.xml');
@@ -29,7 +40,80 @@ const STATIC_PAGES = [
   ['contact', 'monthly', '0.5'],
   ['disclaimer-general', 'monthly', '0.5'],
   ['disclaimer-finance', 'monthly', '0.5'],
-  ['disclaimer-health', 'monthly', '0.5']
+  ['disclaimer-health', 'monthly', '0.5'],
+  // Educational guides (static pages under guides/)
+  ['guides', 'weekly', '0.6'],
+  ['guides/percentage', 'monthly', '0.7'],
+  ['guides/emi', 'monthly', '0.7'],
+  ['guides/age', 'monthly', '0.7'],
+  ['guides/bmi', 'monthly', '0.7'],
+  ['guides/compound-interest', 'monthly', '0.7'],
+  ['guides/mortgage', 'monthly', '0.7'],
+  ['guides/zakat', 'monthly', '0.7'],
+  ['guides/income-tax', 'monthly', '0.7'],
+  ['guides/currency-conversion', 'monthly', '0.7'],
+  ['guides/discount', 'monthly', '0.7'],
+  ['guides/tip', 'monthly', '0.7'],
+  ['guides/gst-sales-tax', 'monthly', '0.7'],
+  ['guides/glossary', 'monthly', '0.7'],
+  ['guides/inflation', 'monthly', '0.7'],
+  ['guides/salary', 'monthly', '0.7'],
+  ['guides/retirement', 'monthly', '0.7'],
+  ['guides/calories', 'monthly', '0.7'],
+  ['guides/debt-payoff', 'monthly', '0.7'],
+  ['guides/random-numbers', 'monthly', '0.7'],
+  ['guides/concrete', 'monthly', '0.7'],
+  ['guides/unit-conversion', 'monthly', '0.7'],
+  ['guides/gpa', 'monthly', '0.7'],
+  ['guides/break-even', 'monthly', '0.7'],
+  ['guides/passwords', 'monthly', '0.7'],
+  ['guides/baby-cost', 'monthly', '0.7'],
+  ['guides/ideal-weight', 'monthly', '0.7'],
+  ['guides/bmr', 'monthly', '0.7'],
+  ['guides/profit-margin', 'monthly', '0.7'],
+  ['guides/ohms-law', 'monthly', '0.7'],
+  ['guides/gear-ratio', 'monthly', '0.7'],
+  ['guides/fuel-cost', 'monthly', '0.7'],
+  ['guides/hourly-rate', 'monthly', '0.7'],
+  ['guides/paint-coverage', 'monthly', '0.7'],
+  ['guides/macro-calculator', 'monthly', '0.7'],
+  ['guides/sip', 'monthly', '0.7'],
+  ['guides/fd-ppf-sip', 'monthly', '0.7'],
+  ['guides/ev-vs-petrol', 'monthly', '0.7'],
+  ['guides/wedding-budget', 'monthly', '0.7'],
+  ['guides/freelance-rate-card', 'monthly', '0.7'],
+  ['guides/screen-time', 'monthly', '0.7'],
+  ['guides/electricity-bill', 'monthly', '0.7'],
+  ['guides/business-days', 'monthly', '0.7'],
+  ['guides/grade-needed', 'monthly', '0.7'],
+  ['guides/room-area', 'monthly', '0.7'],
+  ['guides/ac-size', 'monthly', '0.7'],
+  ['guides/protein-intake', 'monthly', '0.7'],
+  ['guides/loans-mortgages', 'monthly', '0.6'],
+  ['guides/tax-salary', 'monthly', '0.6'],
+  ['guides/health-fitness', 'monthly', '0.6'],
+  ['guides/math-statistics', 'monthly', '0.6'],
+  ['guides/business', 'monthly', '0.6'],
+  ['guides/construction', 'monthly', '0.6'],
+  ['guides/science', 'monthly', '0.6'],
+  ['guides/engineering', 'monthly', '0.6'],
+  ['guides/auto', 'monthly', '0.6'],
+  ['guides/career', 'monthly', '0.6'],
+  ['guides/homegarden', 'monthly', '0.6'],
+  ['guides/family', 'monthly', '0.6'],
+  ['guides/food', 'monthly', '0.6'],
+  ['guides/lifestyle', 'monthly', '0.6'],
+  ['guides/regional', 'monthly', '0.6'],
+  ['guides/everyday', 'monthly', '0.6'],
+  ['guides/utilities', 'monthly', '0.6'],
+  // Blog (static explainer posts under blog/)
+  ['blog', 'weekly', '0.6'],
+  ['blog/stacked-discounts', 'monthly', '0.6'],
+  ['blog/how-emi-works', 'monthly', '0.6'],
+  ['blog/bmi-honest-look', 'monthly', '0.6'],
+  ['blog/rule-of-72', 'monthly', '0.6'],
+  ['blog/concrete-patio-math', 'monthly', '0.6'],
+  ['blog/ev-vs-petrol-tco', 'monthly', '0.6']
 ];
 
 // Supported i18n locales (must match js/i18n.js getAvailableLocales)
@@ -286,14 +370,13 @@ function main() {
   });
 
   // Long-tail virtual landing pages (programmatic SEO)
-  // Each one is a real, unique URL that the modifier router in js/app.js
-  // renders with auto-filled inputs + unique title/meta/canonical.
+  // LONG-TAIL NOINDEX POLICY (option a): modifier variants render the same
+  // calculator as the parent tool page with no genuinely unique data, so NONE
+  // of them belong in the sitemap — the SSG emits them noindex with canonical
+  // → parent, and they are excluded here. Crawl budget stays on the 1201 real
+  // tool pages, category pages, hubs and guides.
   LONGTAIL.forEach(([catKey, toolId, modifier]) => {
-    urls.push({
-      loc: DOMAIN + '/' + catKey + '/' + toolId + '/' + modifier,
-      freq: 'monthly',
-      prio: '0.6'
-    });
+    void modifier; // all variants excluded — see policy note above
   });
 
   // Build XML

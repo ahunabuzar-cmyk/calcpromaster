@@ -1,149 +1,149 @@
 {
-  "generated": "2026-08-09T06:24:06.367Z",
-  "total": 543,
-  "pass": 541,
+  "generated": "2026-09-15T10:49:15.970Z",
+  "total": 1201,
+  "pass": 1199,
   "needsReview": 0,
   "notApplicable": 2,
-  "reviewable": 541,
+  "reviewable": 1199,
   "progressPct": 100,
   "remainingByCategory": [
     {
       "category": "Auto & Transport",
-      "total": 32,
-      "pass": 32,
+      "total": 46,
+      "pass": 46,
       "review": 0,
       "na": 0
     },
     {
       "category": "business",
-      "total": 21,
-      "pass": 21,
+      "total": 39,
+      "pass": 39,
       "review": 0,
       "na": 0
     },
     {
       "category": "Career & Freelance",
-      "total": 23,
-      "pass": 23,
+      "total": 39,
+      "pass": 39,
       "review": 0,
       "na": 0
     },
     {
       "category": "construction",
-      "total": 25,
-      "pass": 25,
+      "total": 53,
+      "pass": 53,
       "review": 0,
       "na": 0
     },
     {
       "category": "Conversion",
-      "total": 24,
-      "pass": 24,
+      "total": 36,
+      "pass": 36,
       "review": 0,
       "na": 0
     },
     {
       "category": "education",
-      "total": 23,
-      "pass": 23,
+      "total": 38,
+      "pass": 38,
       "review": 0,
       "na": 0
     },
     {
       "category": "engineering",
-      "total": 25,
-      "pass": 25,
+      "total": 65,
+      "pass": 65,
       "review": 0,
       "na": 0
     },
     {
       "category": "everyday",
-      "total": 25,
-      "pass": 25,
+      "total": 47,
+      "pass": 47,
       "review": 0,
       "na": 0
     },
     {
       "category": "finance",
-      "total": 62,
-      "pass": 61,
+      "total": 211,
+      "pass": 210,
       "review": 0,
       "na": 1
     },
     {
       "category": "Fitness & Exercise",
-      "total": 23,
-      "pass": 23,
+      "total": 42,
+      "pass": 42,
       "review": 0,
       "na": 0
     },
     {
       "category": "Food & Nutrition",
-      "total": 21,
-      "pass": 21,
+      "total": 37,
+      "pass": 37,
       "review": 0,
       "na": 0
     },
     {
       "category": "Health & Fitness",
-      "total": 22,
-      "pass": 22,
+      "total": 66,
+      "pass": 66,
       "review": 0,
       "na": 0
     },
     {
       "category": "Home & Garden",
-      "total": 35,
-      "pass": 35,
+      "total": 49,
+      "pass": 49,
       "review": 0,
       "na": 0
     },
     {
       "category": "Lifestyle & Home",
-      "total": 25,
-      "pass": 25,
+      "total": 47,
+      "pass": 47,
       "review": 0,
       "na": 0
     },
     {
       "category": "math",
-      "total": 26,
-      "pass": 25,
+      "total": 120,
+      "pass": 119,
       "review": 0,
       "na": 1
     },
     {
       "category": "Parenting & Family",
-      "total": 24,
-      "pass": 24,
+      "total": 38,
+      "pass": 38,
       "review": 0,
       "na": 0
     },
     {
       "category": "Regional (India/PK/UAE)",
-      "total": 21,
-      "pass": 21,
+      "total": 42,
+      "pass": 42,
       "review": 0,
       "na": 0
     },
     {
       "category": "science",
-      "total": 28,
-      "pass": 28,
+      "total": 82,
+      "pass": 82,
       "review": 0,
       "na": 0
     },
     {
       "category": "Tech & Digital",
-      "total": 40,
-      "pass": 40,
+      "total": 72,
+      "pass": 72,
       "review": 0,
       "na": 0
     },
     {
       "category": "utilities",
-      "total": 18,
-      "pass": 18,
+      "total": 32,
+      "pass": 32,
       "review": 0,
       "na": 0
     }

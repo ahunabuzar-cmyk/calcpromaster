@@ -10,7 +10,7 @@ const App = (function () {
         return window.SITE_CONFIG.totalCalculators;
       }
     } catch (e) {}
-    return (typeof ALL_TOOLS !== 'undefined' && ALL_TOOLS.length) || 543;
+    return (typeof ALL_TOOLS !== 'undefined' && ALL_TOOLS.length) || 1201;
   }
   // i18n-aware text helper: returns the translated string when I18n is available,
   // falls back to the English default otherwise. Used by dynamic renders (home,
@@ -185,6 +185,36 @@ const App = (function () {
 
   // ---------- Navigation (clean-path via History API) ----------
   function navigate(path) {
+    // SearchAction fulfillment: /?q=loan+calculator (the target advertised in the
+    // WebSite JSON-LD sitelinks searchbox) resolves to the best tool match. Runs
+    // inside navigate() so it fires on boot AND on every client route pass.
+    try {
+      const sq = new URLSearchParams(window.location.search).get('q');
+      if (sq && sq.trim()) {
+        const term = sq.trim().toLowerCase();
+        const scored = (typeof ALL_TOOLS !== 'undefined' ? ALL_TOOLS : [])
+          .map(t => {
+            const name = String(t.name || '').toLowerCase();
+            let s = 0;
+            if (name === term) s = 100;
+            else if (name.indexOf(term) !== -1) s = 60;
+            else if (term.split(/\s+/).every(w => name.indexOf(w) !== -1)) s = 40;
+            else if (String(t.desc || '').toLowerCase().indexOf(term) !== -1) s = 20;
+            return { t, s };
+          })
+          .filter(x => x.s > 0)
+          .sort((a, b) => b.s - a.s);
+        if (scored.length) {
+          const first = scored[0].t;
+          const catKey = Object.keys(CALC_DATA).find(k => CALC_DATA[k] && Array.isArray(CALC_DATA[k].tools) && CALC_DATA[k].tools.includes(first));
+          if (catKey) {
+            // Clean the URL (drop ?q=) and land on the tool page directly.
+            history.replaceState(null, '', '/' + catKey + '/' + first.id);
+            path = '/' + catKey + '/' + first.id;
+          }
+        }
+      }
+    } catch (e) { /* search resolution must never break navigation */ }
     // Zero-leak guarantee: destroy the previous tool's timers/listeners/workers/DOM refs
     if (typeof ToolLifecycle !== 'undefined' && typeof ToolLifecycle.destroy === 'function') {
       try { ToolLifecycle.destroy(); } catch (e) { /* never let cleanup break navigation */ }
@@ -323,6 +353,26 @@ const App = (function () {
   function renderHome() {
     _state.tool = null;
     _state.page = 'home'; // self-healing: language switcher re-render works no matter how we got here
+    // SearchAction deep-link support: /?q=loan arrives from the site's WebSite
+    // SearchAction markup (also powers browser/answer-engine site search boxes).
+    // Route it into the homepage search UI instead of ignoring the query.
+    try {
+      const qParam = new URLSearchParams(window.location.search).get('q');
+      if (qParam && String(qParam).trim()) {
+        const term = String(qParam).trim().slice(0, 100);
+        window.history.replaceState(null, '', window.location.pathname);
+        setTimeout(function () {
+          try {
+            const box = document.getElementById('home-search');
+            if (box) {
+              box.value = term;
+              box.focus();
+              if (typeof App !== 'undefined' && App.homeSearch) App.homeSearch(term);
+            }
+          } catch (e) { /* non-fatal */ }
+        }, 60);
+      }
+    } catch (e) { /* non-fatal */ }
     const main = document.getElementById('mainContent');
     if (!main) return;
     
@@ -860,7 +910,7 @@ const App = (function () {
         // Privacy: autocomplete="off" + autofill-sniffing guards on ALL inputs (never log sensitive values)
         const native = inp.type === 'number';
         // Universal voice input: a mic button beside EVERY numeric input so the
-        // feature works on all 543 tools and all inputs — not just the first
+        // feature works on all 1201 tools and all inputs — not just the first
         // input of small tools (the old behavior hid the mic on >5-input tools).
         // The input + mic are wrapped in a flex row so they share one line.
         if (native) {
@@ -1314,7 +1364,23 @@ const App = (function () {
       const fullPath = '/' + _state.cat + '/' + tool.id + '/' + modifier;
       _state.modifierPath = fullPath;
       document.title = tool.name + ': ' + ctx.join(' ') + ' - CalcProMaster';
-      updateMeta(tool.desc + ' Calculate ' + ctx.join(' ') + ' instantly — free, private, step-by-step.', fullPath);
+      // Word-boundary clip (155 + ellipsis) keeps the meta description inside
+      // the ~165-char SERP display limit without cutting mid-word.
+      const mDesc = tool.desc + ' Calculate ' + ctx.join(' ') + ' instantly — free, private, step-by-step.';
+      updateMeta(mDesc.length > 155 ? mDesc.slice(0, 155).replace(/\s+\S*$/, '').trim() + '…' : mDesc, fullPath);
+      // LONG-TAIL NOINDEX (SEO consolidation): every variant URL renders the
+      // same calculator as its parent tool page — no genuinely unique data —
+      // so the variant marks itself noindex and points its canonical at the
+      // PARENT tool page. updateMeta() would otherwise reset robots to
+      // indexable, so set it AFTER updateMeta. keepCanonicalHack: updateMeta
+      // builds the canonical from the full URL (variant path), so rewrite it
+      // to the base tool URL directly, matching the static SSG page output.
+      try {
+        const robots = document.querySelector('meta[name="robots"]');
+        if (robots) robots.content = 'noindex, follow';
+        const canon = document.querySelector('link[rel="canonical"]');
+        if (canon) canon.href = window.location.origin + '/' + _state.cat + '/' + tool.id;
+      } catch (e) { /* non-fatal */ }
       try { App.injectToolSchema(tool, _state.cat); } catch (e) {}
     }
 
@@ -1985,6 +2051,21 @@ const App = (function () {
     if (!main) return;
     document.title = page.title;
     updateMeta(page.desc, '/' + pageKey);
+    // SPA soft-404 guard: when a URL falls through to the 404 page, tell crawlers
+    // it is NOT indexable content (the 200 shell alone looks like a soft-404).
+    // Restored to index,follow as soon as any real page renders (see below).
+    if (page.type === '404') {
+      let robots = document.querySelector('meta[name="robots"]');
+      if (!robots) {
+        robots = document.createElement('meta');
+        robots.name = 'robots';
+        document.head.appendChild(robots);
+      }
+      robots.content = 'noindex, follow';
+    } else {
+      const robots = document.querySelector('meta[name="robots"]');
+      if (robots && robots.content.indexOf('noindex') !== -1) robots.content = 'index, follow';
+    }
     
     let html = '';
     
@@ -2114,6 +2195,96 @@ const App = (function () {
       }
       html += '<h2>Important Notes</h2>';
       html += '<ul><li>Always verify critical calculations with a professional</li><li>Results may differ from real-world outcomes</li><li>We are not liable for decisions based on these calculations</li></ul></div>';
+    } else if (pageKey === 'guides') {
+      // Educational guides hub — links to the static guide articles under /guides/
+      // (full page loads: the guides are standalone static HTML pages).
+      html = '<div class="legal-page"><h1>📚 Educational Guides &amp; How-To Articles</h1>';
+      html += '<p class="legal-meta">Free, step-by-step explanations of the calculations people search for most — formulas, worked examples, and links to the matching calculators.</p>';
+      html += '<h2 style="margin-top:22px">Browse by topic</h2>';
+      html += '<a href="/guides/loans-mortgages" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Loan &amp; Mortgage Guides</strong><br><span style="color:var(--text-light);font-size:13px">EMI, compound interest, mortgage payments — formulas and honest limits.</span></a>';
+      html += '<a href="/guides/tax-salary" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Tax &amp; Salary Guides</strong><br><span style="color:var(--text-light);font-size:13px">Income tax brackets, reverse GST, zakat, gross-to-net salary.</span></a>';
+      html += '<a href="/guides/health-fitness" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Health &amp; Fitness Guides</strong><br><span style="color:var(--text-light);font-size:13px">BMI and what it ignores, BMR/TDEE math, calorie deficits.</span></a>';
+      html += '<a href="/guides/math-statistics" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Math &amp; Statistics Guides</strong><br><span style="color:var(--text-light);font-size:13px">Percentage formulas, statistics basics, random number generators.</span></a>';
+      html += '<a href="/guides/business" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Business Guides</strong><br><span style="color:var(--text-light);font-size:13px">Break-even café example, margin vs markup, target profit.</span></a>';
+      html += '<a href="/guides/construction" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Construction Guides</strong><br><span style="color:var(--text-light);font-size:13px">Concrete volume and bags, the 10% wastage rule, unit conversions.</span></a>';
+      html += '<a href="/guides/science" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Science Guides</strong><br><span style="color:var(--text-light);font-size:13px">Ohm\u2019s law, density, force — physics formulas with worked numbers.</span></a>';
+      html += '<a href="/guides/engineering" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Engineering Guides</strong><br><span style="color:var(--text-light);font-size:13px">Voltage drop, gear ratios, torque — the assumptions behind the formulas.</span></a>';
+      html += '<a href="/guides/auto" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Auto &amp; Vehicle Guides</strong><br><span style="color:var(--text-light);font-size:13px">Fuel cost per km, car EMI, EV-vs-petrol decision.</span></a>';
+      html += '<a href="/guides/career" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Career &amp; Freelance Guides</strong><br><span style="color:var(--text-light);font-size:13px">Hourly conversion, freelance rates, overtime pay.</span></a>';
+      html += '<a href="/guides/homegarden" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Home &amp; Garden Guides</strong><br><span style="color:var(--text-light);font-size:13px">Room area, paint coverage, wallpaper rolls, AC sizing.</span></a>';
+      html += '<a href="/guides/family" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Family &amp; Parenting Guides</strong><br><span style="color:var(--text-light);font-size:13px">Family budgets, baby growth, college savings.</span></a>';
+      html += '<a href="/guides/food" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Food &amp; Nutrition Guides</strong><br><span style="color:var(--text-light);font-size:13px">Daily calories, macros, protein targets, recipe scaling.</span></a>';
+      html += '<a href="/guides/lifestyle" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Lifestyle Guides</strong><br><span style="color:var(--text-light);font-size:13px">Moving costs, deposits, true cost of daily habits.</span></a>';
+      html += '<a href="/guides/regional" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Regional Finance Guides</strong><br><span style="color:var(--text-light);font-size:13px">FD, PPF, SIP, GST — India-specific rules.</span></a>';
+      html += '<a href="/guides/everyday" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Everyday Guides</strong><br><span style="color:var(--text-light);font-size:13px">Exact age, date differences, electricity bills decoded.</span></a>';
+      html += '<a href="/guides/utilities" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Utilities Guides</strong><br><span style="color:var(--text-light);font-size:13px">Password entropy, UUID guarantees, tool concepts.</span></a>';
+      html += '<div style="margin-top:20px"><strong style="font-size:15px">From the blog</strong> — <a href="/blog" style="color:var(--primary)">all posts</a></div>';
+      html += '<a href="/blog/stacked-discounts" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>\u201cExtra 20% off\u201d is less than you think</strong><br><span style="color:var(--text-light);font-size:13px">Why 30% + 20% off is 44%, not 50% — stacked discount math with worked examples.</span></a>';
+      html += '<a href="/blog/how-emi-works" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>How banks calculate your EMI</strong><br><span style="color:var(--text-light);font-size:13px">Amortization demystified: the shifting interest/principal split, a real 36-month view, prepayment math.</span></a>';
+      html += '<a href="/blog/bmi-honest-look" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>BMI is a screening tool, not a diagnosis</strong><br><span style="color:var(--text-light);font-size:13px">What the formula can and cannot see — and which companion metrics fill the gaps.</span></a>';
+      html += '<div class="related-tools" style="display:flex;flex-direction:column;gap:14px;margin-top:8px">';
+      html += '<a href="/guides/percentage" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>How to Calculate Percentage — Formula, Examples &amp; Common Mistakes</strong><br><span style="color:var(--text-light);font-size:13px">The one formula behind every percentage problem, with worked examples and the mistakes to avoid.</span></a>';
+      html += '<a href="/guides/emi" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>How to Calculate Loan EMI — Formula &amp; Step-by-Step Example</strong><br><span style="color:var(--text-light);font-size:13px">How banks work out your monthly payment, with a full worked example.</span></a>';
+      html += '<a href="/guides/age" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>How to Calculate Your Exact Age in Years, Months &amp; Days</strong><br><span style="color:var(--text-light);font-size:13px">The manual method, step by step, and how leap years affect the total.</span></a>';
+      html += '<a href="/guides/bmi" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>How to Calculate BMI — Formula, Ranges &amp; What the Number Means</strong><br><span style="color:var(--text-light);font-size:13px">Metric and imperial formulas, the WHO ranges, and the honest limitations of BMI.</span></a>';
+      html += '<a href="/guides/compound-interest" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>How Compound Interest Works — Formula &amp; Growth Examples</strong><br><span style="color:var(--text-light);font-size:13px">Why compounding beats simple interest, with worked examples and the Rule of 72.</span></a>';
+      html += '<a href="/guides/mortgage" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>How Mortgage Payments Work — Principal, Interest &amp; Amortization</strong><br><span style="color:var(--text-light);font-size:13px">What PITI means, how amortization shifts your payment, and what LTV means for your rate.</span></a>';
+      html += '<a href="/guides/zakat" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>How to Calculate Zakat — Nisab, Rates &amp; Worked Examples</strong><br><span style="color:var(--text-light);font-size:13px">The 2.5% formula, zakatable wealth, and gold/silver nisab thresholds with a worked example.</span></a>';
+      html += '<a href="/guides/income-tax" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>How Income Tax Is Calculated — Brackets &amp; Marginal Rates</strong><br><span style="color:var(--text-light);font-size:13px">Marginal vs effective rate with worked examples and country-specific calculators.</span></a>';
+      html += '<a href="/guides/currency-conversion" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>How Currency Conversion Works — Rates, Spreads &amp; Hidden Fees</strong><br><span style="color:var(--text-light);font-size:13px">Mid-market rate, spreads, fixed fees, and why DCC at terminals costs 3–8%.</span></a>';
+      html += '<a href="/guides/discount" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>How to Calculate a Discount — Percent Off &amp; Stacked Discounts</strong><br><span style="color:var(--text-light);font-size:13px">The percent-off formula, reverse calculation, and the stacked-discount trap.</span></a>';
+      html += '<a href="/guides/tip" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>How to Calculate a Tip — Rates, Splitting &amp; Tipping Abroad</strong><br><span style="color:var(--text-light);font-size:13px">Mental-math shortcuts for 10/15/20%, rates by service, and fair bill splitting.</span></a>';
+      html += '<a href="/guides/gst-sales-tax" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>GST &amp; Sales Tax Explained — Adding, Removing &amp; Reverse Tax Math</strong><br><span style="color:var(--text-light);font-size:13px">Add or remove tax from any price, with country rates and the reverse-GST formula.</span></a>';
+      html += '<a href="/guides/glossary" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Calculator &amp; Finance Glossary — 36 Terms Explained</strong><br><span style="color:var(--text-light);font-size:13px">APR, EMI, CAGR, BMI, TDEE, LTV and more — plain-English definitions by category.</span></a>';
+      html += '<a href="/guides/inflation" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>How Inflation Is Calculated — CPI &amp; Purchasing Power</strong><br><span style="color:var(--text-light);font-size:13px">The cross-year money formula and what $100 becomes at 2%, 5% and 8% inflation.</span></a>';
+      html += '<a href="/guides/salary" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Gross Salary vs In-Hand Salary — Take-Home Pay Explained</strong><br><span style="color:var(--text-light);font-size:13px">Why CTC ≠ gross ≠ net, and the gross-to-net calculation step by step.</span></a>';
+      html += '<a href="/guides/retirement" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>How Much You Need to Retire — The 25x Rule Explained</strong><br><span style="color:var(--text-light);font-size:13px">Your retirement number, the limits of the 4% guideline, and the levers that move it most.</span></a>';
+      html += '<a href="/guides/calories" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>How to Calculate Calories — BMR, TDEE &amp; Deficit Math</strong><br><span style="color:var(--text-light);font-size:13px">Mifflin-St Jeor BMR, activity multipliers, and realistic deficit targets.</span></a>';
+      html += '<a href="/guides/debt-payoff" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Debt Snowball vs Avalanche — Which Pays Off Faster?</strong><br><span style="color:var(--text-light);font-size:13px">Both strategies on one debt list — interest saved vs motivation of quick wins.</span></a>';
+      html += '<a href="/guides/random-numbers" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>How Random Number Generators Work</strong><br><span style="color:var(--text-light);font-size:13px">Seeds, algorithms, and PRNG vs crypto-grade randomness.</span></a>';
+      html += '<a href="/guides/concrete" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>How to Calculate Concrete — Bags, Yards &amp; the 10% Rule</strong><br><span style="color:var(--text-light);font-size:13px">Volume formulas, mix ratios, and bag counts per pour.</span></a>';
+      html += '<a href="/guides/unit-conversion" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Metric to Imperial Conversion — Exact Factors</strong><br><span style="color:var(--text-light);font-size:13px">Exact factors for length, weight, volume, temperature and data.</span></a>';
+      html += '<a href="/guides/gpa" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>How GPA Is Calculated — Weighted &amp; Cumulative</strong><br><span style="color:var(--text-light);font-size:13px">Quality points, credit-hour weighting, and the 5.0 scale question.</span></a>';
+      html += '<a href="/guides/break-even" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Break-Even Analysis — Formula &amp; Margin of Safety</strong><br><span style="color:var(--text-light);font-size:13px">Contribution margin and a full café example with target profit.</span></a>';
+      html += '<a href="/guides/passwords" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Password Strength — Entropy &amp; Crack Time</strong><br><span style="color:var(--text-light);font-size:13px">Why length beats symbol swaps, and passphrase math that works.</span></a>';
+      html += '<a href="/guides/baby-cost" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Baby Cost — First-Year Budget</strong><br><span style="color:var(--text-light);font-size:13px">Gear + essentials + childcare: a computed example showing why care choice swings the total by $15,000.</span></a>';
+      html += '<a href="/guides/ideal-weight" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Ideal Weight — Devine vs BMI Range</strong><br><span style="color:var(--text-light);font-size:13px">Why one number and one range disagree, and which question each answers.</span></a>';
+      html += '<a href="/guides/bmr" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>BMR — Mifflin-St Jeor, Line by Line</strong><br><span style="color:var(--text-light);font-size:13px">Worked formula, TDEE multipliers, and why equations disagree by 74 kcal.</span></a>';
+      html += '<a href="/guides/profit-margin" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Profit Margin — and the Markup Trap</strong><br><span style="color:var(--text-light);font-size:13px">A 40% margin is a 66.7% markup — the mix-up that underprices businesses.</span></a>';
+      html += '<a href="/guides/ohms-law" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Ohm\'s Law — V = IR With Real Numbers</strong><br><span style="color:var(--text-light);font-size:13px">Series vs parallel circuits computed, power dissipation, linear limits.</span></a>';
+      html += '<a href="/guides/gear-ratio" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Gear Ratio — Speed for Torque</strong><br><span style="color:var(--text-light);font-size:13px">Driven÷driver formula, 1,500-rpm example, multi-stage multiplication.</span></a>';
+      html += '<a href="/guides/fuel-cost" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Fuel Cost — the Three-Variable Formula</strong><br><span style="color:var(--text-light);font-size:13px">Distance ÷ efficiency × price with a computed 15,000 km year.</span></a>';
+      html += '<a href="/guides/hourly-rate" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Freelance Rate — Income ÷ Billable Hours</strong><br><span style="color:var(--text-light);font-size:13px">The 60% utilization rule that fixes salary-÷-2,080 underpricing.</span></a>';
+      html += '<a href="/guides/paint-coverage" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Paint Coverage — Area × Coats ÷ Spread Rate</strong><br><span style="color:var(--text-light);font-size:13px">Wall area minus openings, two-coat rule, reality adjustments.</span></a>';
+      html += '<a href="/guides/macro-calculator" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Macros — the 4-4-9 Rule, Worked</strong><br><span style="color:var(--text-light);font-size:13px">Calories to grams with a checked 2,400 kcal example and sanity bands.</span></a>';
+      html += '<a href="/guides/sip" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>SIP Math — Where ₹5,000/Month Goes</strong><br><span style="color:var(--text-light);font-size:13px">Annuity FV formula and why the last years contribute most growth.</span></a>';
+      html += '<a href="/guides/fd-ppf-sip" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>FD vs PPF vs SIP — One Sum, Three Machines</strong><br><span style="color:var(--text-light);font-size:13px">₹1 lakh computed three ways, tax included, matched to goal dates.</span></a>';
+      html += '<a href="/guides/ev-vs-petrol" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>EV vs Petrol — the Per-KM Math</strong><br><span style="color:var(--text-light);font-size:13px">1.20 vs 6.67 per km computed, plus the five forgotten factors.</span></a>';
+      html += '<a href="/guides/wedding-budget" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Wedding Budget — Split, Then Guard</strong><br><span style="color:var(--text-light);font-size:13px">Category shares with a real buffer, and the guest-count lever.</span></a>';
+      html += '<a href="/guides/freelance-rate-card" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>The Rate Card — Floor, Project, Retainer</strong><br><span style="color:var(--text-light);font-size:13px">Three pricing modes from one floor rate, with a risk factor.</span></a>';
+      html += '<a href="/guides/screen-time" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Screen Time — Compounding Daily Hours</strong><br><span style="color:var(--text-light);font-size:13px">3 h/day = 45.6 full days a year: the table and the honest framing.</span></a>';
+      html += '<a href="/guides/electricity-bill" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Electricity Bill, Decoded</strong><br><span style="color:var(--text-light);font-size:13px">Watts × hours × rate on a fridge vs an AC, plus tiered slabs.</span></a>';
+      html += '<a href="/guides/business-days" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Business Days — the Math of Deadlines</strong><br><span style="color:var(--text-light);font-size:13px">A calendar month is only ~22 workdays; here is where counts break.</span></a>';
+      html += '<a href="/guides/grade-needed" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>What Do I Need on the Final?</strong><br><span style="color:var(--text-light);font-size:13px">The weighted formula, and reading impossible answers honestly.</span></a>';
+      html += '<a href="/guides/room-area" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Room Area — Shapes and the Waste Rule</strong><br><span style="color:var(--text-light);font-size:13px">L-shapes decomposed, plus the 10% that keeps orders complete.</span></a>';
+      html += '<a href="/guides/ac-size" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>AC Sizing — BTU and the Oversizing Trap</strong><br><span style="color:var(--text-light);font-size:13px">BTU/sq ft with climate adjustment, tonnage, why bigger cools worse.</span></a>';
+      html += '<a href="/guides/protein-intake" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Protein Need — g/kg, Then Real Food</strong><br><span style="color:var(--text-light);font-size:13px">0.8–2.0 g/kg bands with a 112 g worked day and food equivalents.</span></a>';
+      html += '</div>';
+      html += '<p style="margin-top:18px">Looking for a specific calculation? Try the <a href="/" onclick="event.preventDefault();Router.navigate(\'/\')">homepage search</a> — ' + getCalculatorCount() + '+ calculators across 20 categories.</p></div>';
+    } else if (pageKey === 'blog') {
+      // Blog hub — links to static explainer posts under /blog/ (full page loads,
+      // same pattern as the guides hub above).
+      html = '<div class="legal-page"><h1>CalcProMaster Blog</h1>';
+      html += '<p>Short, honest explainers on the math behind everyday decisions — the calculations that quietly cost people money, and the numbers behind the health metrics everyone quotes. Every post shows its working.</p>';
+      html += '<div class="related-tools" style="display:flex;flex-direction:column;gap:14px;margin-top:8px">';
+      html += '<a href="/blog/stacked-discounts" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>\u201cExtra 20% off\u201d is less than you think</strong><br><span style="color:var(--text-light);font-size:13px">Why 30% + 20% off is 44%, not 50% — stacked discount math with worked examples.</span></a>';
+      html += '<a href="/blog/how-emi-works" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>How banks calculate your EMI</strong><br><span style="color:var(--text-light);font-size:13px">Amortization demystified: the shifting interest/principal split and prepayment math.</span></a>';
+      html += '<a href="/blog/bmi-honest-look" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>BMI is a screening tool, not a diagnosis</strong><br><span style="color:var(--text-light);font-size:13px">What the formula can and cannot see — and which companion metrics fill the gaps.</span></a>';
+      html += '<a href="/blog/rule-of-72" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>The Rule of 72 — where doubling-time math bends</strong><br><span style="color:var(--text-light);font-size:13px">The exact error table: 2% off at 3%, 8% off at 24%, perfect at 9%.</span></a>';
+      html += '<a href="/blog/concrete-patio-math" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>The 4-inch mistake — concrete orders gone wrong</strong><br><span style="color:var(--text-light);font-size:13px">A 20×20 patio: 5.4 cubic yards, 222 bags, and the 12× unit trap.</span></a>';
+      html += '<a href="/blog/ev-vs-petrol-tco" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>EV vs petrol — the 5-year math nobody finishes</strong><br><span style="color:var(--text-light);font-size:13px">82,000/year energy savings vs the 4.9-year premium payback.</span></a>';
+      html += '</div>';
+      html += '<p style="margin-top:18px">Deeper step-by-step coverage lives in the <a href="/guides" onclick="event.preventDefault();Router.navigate(\'/guides\')">guides library</a> — 64 guides with formulas, worked examples and FAQs.</p></div>';
     } else if (pageKey === '404') {
       html = '<div class="legal-page"><div class="empty-state"><div class="empty-state-icon">🔍</div><h1>404 — Page Not Found</h1>';
       html += '<p>The page you\'re looking for doesn\'t exist. Let\'s find what you need instead.</p>';
@@ -2629,6 +2800,13 @@ const App = (function () {
       document.head.appendChild(meta);
     }
     meta.content = desc || 'Free advanced online calculators';
+    // Indexability reset: any real (non-404) page must always be indexable.
+    // The 404 renderer sets robots noindex; this guarantees every other route
+    // flips it back (covers SPA navigations that bypass renderStatic).
+    try {
+      const robots = document.querySelector('meta[name="robots"]');
+      if (robots && robots.content.indexOf('noindex') !== -1) robots.content = 'index, follow';
+    } catch (e) { /* non-fatal */ }
     // Generic OG/Twitter fallback for non-tool pages (home, category, hub, static,
     // 404). Per-tool cards override this in renderTool via setOgMeta(). This
     // guarantees shares NEVER carry a stale previous tool's title/image.
@@ -2695,43 +2873,6 @@ const App = (function () {
       document.head.appendChild(twDesc);
     }
     twDesc.content = desc || 'Free advanced online calculators';
-    
-    // i18n hreflang alternates (all 19 locales + x-default) — tells Google every
-    // localized version of this exact page exists → no duplicate-content flags.
-    injectHreflang();
-  }
-
-  // ---------- i18n hreflang injection ----------
-  // Adds <link rel="alternate" hreflang="xx" href="..."> for every supported locale
-  // plus x-default (English). Re-runs on every page render (home/category/tool/static).
-  function injectHreflang() {
-    try {
-      document.querySelectorAll('link[data-calcpro-hreflang]').forEach(function (l) { l.remove(); });
-      if (!window.I18n || typeof I18n.getAvailableLocales !== 'function') return;
-      const origin = window.SITE_ORIGIN || window.location.origin;
-      // Current logical path WITHOUT any locale prefix (English is the canonical base)
-      let p = window.location.pathname.split('?')[0].split('#')[0];
-      const first = p.replace(/^\//, '').split('/')[0];
-      if (first && I18n.getAvailableLocales().some(function (l) { return l.code === first; })) {
-        p = '/' + p.replace(/^\//, '').split('/').slice(1).join('/');
-      }
-      if (p !== '/') p = p.replace(/\/$/, '');
-      I18n.getAvailableLocales().forEach(function (l) {
-        const link = document.createElement('link');
-        link.rel = 'alternate';
-        link.hreflang = l.code;
-        link.href = origin + (l.code === 'en' ? p : '/' + l.code + p);
-        link.setAttribute('data-calcpro-hreflang', '1');
-        document.head.appendChild(link);
-      });
-      // x-default → English (recommended for crawlers that don't match a language)
-      const xd = document.createElement('link');
-      xd.rel = 'alternate';
-      xd.hreflang = 'x-default';
-      xd.href = origin + p;
-      xd.setAttribute('data-calcpro-hreflang', '1');
-      document.head.appendChild(xd);
-    } catch (e) { /* never break meta rendering */ }
   }
 
   // ---------- Global Keyboard Shortcuts ----------

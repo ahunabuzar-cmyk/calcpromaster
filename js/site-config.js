@@ -29,15 +29,19 @@ window.SITE_CONFIG = {
   domain: 'calcpromaster.netlify.app',
   gsc: 'googled1ac20b54b36e7cf',
   ga4Id: 'G-8QCP0TP1TD',
+  // AdSense publisher ID ("pub-" + 16 digits). Khali = ads.txt placeholder
+  // rahega. Approval milte hi yahan ID paste karo + rebuild — build-deploy.js
+  // deploy/ads.txt khud active line ke saath likh dega. (T7 config flag)
+  adsensePubId: '',
   // Build-time synced by scripts/sync-counts.cjs from the registry (js/data/*.js).
   // Runtime ALL_TOOLS is lazy per-category on calculator pages, so user-facing
   // counts must use this authoritative total instead of ALL_TOOLS.length.
-  totalCalculators: 543,
+  totalCalculators: 1201,
   // Build-time synced per-category counts (registry truth). The homepage renders
   // category-card counts from this map so it never downloads the lazy category
   // data files just to display "N calculators" (that background load pushed TTI
   // to ~12s on throttled mobile).
-  catCounts: {finance:62,health:22,math:26,everyday:25,science:28,engineering:25,construction:25,conversion:24,business:21,education:23,utilities:18,lifestyle:25,regional:21,food:21,fitness:23,auto:32,career:23,homegarden:35,tech:40,family:24}
+  catCounts: {finance:211,health:66,math:120,everyday:47,science:82,engineering:65,construction:53,conversion:36,business:39,education:38,utilities:32,lifestyle:47,regional:42,food:37,fitness:42,auto:46,career:39,homegarden:49,tech:72,family:38}
 };
 
 // Helper: full origin ("https://domain") — sitemap/schema/canonical/og ke liye

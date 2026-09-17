@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering Guides — Electrical, mechanical &amp; structural math | CalcProMaster</title>
+  <meta name="description" content="Engineering calculations punish small errors — a wrong voltage-drop figure means undersized cables, a wrong gear ratio means a drivetrain that never reache">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/engineering">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Engineering Guides",
+    "description": "Engineering calculations punish small errors — a wrong voltage-drop figure means undersized cables, a wrong gear ratio means a drivetrain that never reache",
+    "url": "https://calcpromaster.netlify.app/guides/engineering",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "Engineering", "item": "https://calcpromaster.netlify.app/guides/engineering" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Unit Conversion Guide", "url": "https://calcpromaster.netlify.app/guides/unit-conversion" },
+        { "@type": "ListItem", "position": 2, "name": "Concrete Guide", "url": "https://calcpromaster.netlify.app/guides/concrete" }
+      ]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is voltage drop calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "VD = 2 × L × I × R per conductor pair, where L is one-way cable length in metres, I the load current, and R the conductor resistance in ohms per metre. Keeping drop under 3% of supply voltage is the common design target for branch circuits."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does a gear ratio actually tell you?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It is driven-teeth ÷ driver-teeth: a 4:1 ratio cuts speed to a quarter while multiplying torque fourfold (minus friction losses). The gear ratio calculator converts ratio, RPM and torque in both directions."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.7; max-width: 760px; margin: 0 auto; padding: 16px; color: #1f2937; }
+    .crumb { font-size: 0.85rem; color: #6b7280; margin-bottom: 8px; }
+    .crumb a { color: #4f46e5; text-decoration: none; }
+    h1 { font-size: 1.65rem; line-height: 1.3; margin: 8px 0 4px; }
+    h2 { font-size: 1.25rem; margin-top: 2rem; border-top: 1px solid #e5e7eb; padding-top: 1.2rem; }
+    .cat-card { display: block; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px 18px; margin: 12px 0; text-decoration: none; color: inherit; }
+    .cat-card h2 { border: 0; margin: 0 0 6px; padding: 0; font-size: 1.1rem; color: #4f46e5; }
+    .cat-card p { margin: 0; color: #4b5563; font-size: 0.95rem; }
+    .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
+    .updated { color: #6b7280; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Engineering</p>
+  <h1>Engineering Guides</h1>
+  <p class="updated">Part of the CalcProMaster guides library · Electrical, mechanical &amp; structural math</p>
+
+  <p>Engineering calculations punish small errors — a wrong voltage-drop figure means undersized cables, a wrong gear ratio means a drivetrain that never reaches design speed. These guides show the formula, the assumptions behind it, and a worked example you can check by hand.</p>
+
+  <h2>How the math works</h2>
+  <p>Every engineering formula hides assumptions, and knowing them matters more than memorizing the algebra. Voltage drop = 2 × L × I × ρ ÷ A assumes a resistive load, a conductor at operating temperature, and length L counted along both conductors — hence the 2. Ignore any of these and the number is precise but wrong.</p>
+  <p>A worked check: 20 m run, 10 A load, 2.5 mm² copper (ρ ≈ 0.0175 Ω·mm²/m). Drop = 2 × 20 × 10 × 0.0175 ÷ 2.5 = 2.8 V — about 1.2% of a 230 V supply, comfortably inside the 3–5% usually tolerated. If your real circuit shows double that, the likely culprits are temperature-derated conductors or an undersized return path, not the formula.</p>
+
+  <div class="cat-card">
+    <h2><a href="/guides/unit-conversion">Unit Conversion Guide</a></h2>
+    <p>Awg, mm², psi, bar — converting the units engineering specs mix freely.</p>
+  </div>
+
+  <div class="cat-card">
+    <h2><a href="/guides/concrete">Concrete Guide</a></h2>
+    <p>Load-bearing material math for structural and civil work.</p>
+  </div>
+
+  <h2>How is voltage drop calculated?</h2>
+  <p>VD = 2 × L × I × R per conductor pair, where L is one-way cable length in metres, I the load current, and R the conductor resistance in ohms per metre. Keeping drop under 3% of supply voltage is the common design target for branch circuits.</p>
+
+  <h2>What does a gear ratio actually tell you?</h2>
+  <p>It is driven-teeth ÷ driver-teeth: a 4:1 ratio cuts speed to a quarter while multiplying torque fourfold (minus friction losses). The gear ratio calculator converts ratio, RPM and torque in both directions.</p>
+
+  <h2>Try the matching calculators</h2>
+  <p>
+    <a href="/engineering/voltage-drop" class="cta">Voltage Drop Calculator</a>
+    <a href="/engineering/gear-ratio" class="cta">Gear Ratio Calculator</a>
+    <a href="/engineering/torque" class="cta">Torque Calculator</a>
+  </p>
+
+  <p><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

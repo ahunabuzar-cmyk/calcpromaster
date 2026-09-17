@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metric to Imperial Conversion Guide — Exact Factors &amp; How to Convert | CalcProMaster</title>
+  <meta name="description" content="Exact metric-to-imperial conversion factors for length, weight, volume, temperature and data, the multiply-or-divide rule, and why precise factors beat memorized approximations.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/unit-conversion">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Metric to Imperial Conversion Guide — Exact Factors & How to Convert",
+    "description": "Exact metric-to-imperial conversion factors for length, weight, volume, temperature and data, the multiply-or-divide rule, and why precise factors beat memorized approximations.",
+    "url": "https://calcpromaster.netlify.app/guides/unit-conversion",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "Metric to Imperial Conversion", "item": "https://calcpromaster.netlify.app/guides/unit-conversion" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How do I convert metric to imperial?", "acceptedAnswer": { "@type": "Answer", "text": "Multiply the metric value by the exact conversion factor for the target unit — for example, centimeters to inches multiply by 0.393701, kilograms to pounds multiply by 2.20462. To go the other way, divide by the same factor." } },
+        { "@type": "Question", "name": "What is the exact cm to inches conversion?", "acceptedAnswer": { "@type": "Answer", "text": "1 inch = 2.54 centimeters exactly (defined since 1959). So cm→in: divide by 2.54. in→cm: multiply by 2.54. 10 cm = 3.937 inches." } },
+        { "@type": "Question", "name": "What is the fastest way to convert Celsius to Fahrenheit?", "acceptedAnswer": { "@type": "Answer", "text": "Exact: °F = °C × 9/5 + 32. Quick mental version: double the Celsius and add 30 — accurate within a few degrees near room temperature, but use the exact formula for cooking or science." } },
+        { "@type": "Question", "name": "Why do conversion results differ slightly between websites?", "acceptedAnswer": { "@type": "Answer", "text": "Some sites round factors (1 kg ≈ 2.2 lb) or chain through intermediate units, accumulating error. Exact standards — 2.54 cm per inch, 0.45359237 kg per pound — give identical results everywhere when used without premature rounding." } },
+        { "@type": "Question", "name": "Is a US gallon the same as an imperial gallon?", "acceptedAnswer": { "@type": "Answer", "text": "No. A US gallon is 3.785 liters; the imperial (UK) gallon is 4.546 liters — about 20% larger. Always check which gallon a recipe or fuel figure means." } }
+      ]
+    }
+  }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.7; max-width: 760px; margin: 0 auto; padding: 16px; color: #1f2937; }
+    .crumb { font-size: 0.85rem; color: #6b7280; margin-bottom: 8px; }
+    .crumb a { color: #4f46e5; text-decoration: none; }
+    h1 { font-size: 1.65rem; line-height: 1.3; margin: 8px 0 4px; }
+    h2 { font-size: 1.25rem; margin-top: 2rem; border-top: 1px solid #e5e7eb; padding-top: 1.2rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.4rem; }
+    .answer { background: #eef2ff; border-left: 4px solid #4f46e5; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+    .formula { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 16px; font-family: ui-monospace, monospace; font-size: 0.95rem; overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.92rem; }
+    th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; }
+    th { background: #f9fafb; }
+    .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
+    .related a { color: #4f46e5; }
+    .updated { color: #6b7280; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Unit Conversion</p>
+  <h1>Metric to Imperial Conversion: Exact Factors and How to Use Them</h1>
+  <p class="updated">Last updated: September 2026 · Independently QA-tested formulas</p>
+
+  <div class="answer">
+    <strong>Quick answer:</strong> To convert, multiply by the exact factor: cm→in ×0.393701, kg→lb ×2.20462, km→mi ×0.621371, l→gal(US) ×0.264172. To reverse, divide by the same factor. Temperature is different — it needs an offset formula, not a factor: °F = °C × 9/5 + 32.
+  </div>
+
+  <p>Most conversion mistakes aren't math mistakes — they're <em>factor</em> mistakes: using a rounded 2.2 for kg→lb on a 90 kg shipment, or confusing US and imperial gallons. The <a href="/conversion/length">unit converters</a> on CalcProMaster use exact standard factors; this guide gives you the same numbers for hand work.</p>
+
+  <h2>The one rule: multiply to convert, divide to reverse</h2>
+  <div class="formula">imperial value = metric value × factor<br>metric value = imperial value ÷ factor</div>
+  <p><em>Worked example:</em> 72 kg to pounds → 72 × 2.20462 = <strong>158.73 lb</strong>. Reverse check: 158.73 ÷ 2.20462 = 72.00 ✓ — if the round trip doesn't return your starting value, you used the wrong factor or divided when you should have multiplied.</p>
+
+  <h2>Exact conversion factors (standard tables)</h2>
+  <h3>Length</h3>
+  <table>
+    <tr><th>From → To</th><th>Factor</th><th>Reverse</th></tr>
+    <tr><td>cm → in</td><td>× 0.393701</td><td>1 in = 2.54 cm (exact)</td></tr>
+    <tr><td>m → ft</td><td>× 3.280840</td><td>1 ft = 0.3048 m (exact)</td></tr>
+    <tr><td>km → mi</td><td>× 0.621371</td><td>1 mi = 1.609344 km (exact)</td></tr>
+    <tr><td>mm → in</td><td>× 0.0393701</td><td>1 in = 25.4 mm</td></tr>
+  </table>
+  <h3>Mass &amp; weight</h3>
+  <table>
+    <tr><th>From → To</th><th>Factor</th><th>Reverse</th></tr>
+    <tr><td>kg → lb</td><td>× 2.20462</td><td>1 lb = 0.45359237 kg (exact)</td></tr>
+    <tr><td>g → oz</td><td>× 0.0352740</td><td>1 oz = 28.3495 g</td></tr>
+    <tr><td>kg → st (stone)</td><td>× 0.157473</td><td>1 st = 6.35029 kg</td></tr>
+  </table>
+  <h3>Volume (watch the gallon trap)</h3>
+  <table>
+    <tr><th>From → To</th><th>Factor</th><th>Note</th></tr>
+    <tr><td>l → gal (US)</td><td>× 0.264172</td><td>1 US gal = 3.78541 l</td></tr>
+    <tr><td>l → gal (imp)</td><td>× 0.219969</td><td>1 imp gal = 4.54609 l — 20% bigger!</td></tr>
+    <tr><td>ml → fl oz (US)</td><td>× 0.0338140</td><td>1 fl oz = 29.5735 ml</td></tr>
+  </table>
+  <h3>Data &amp; speed</h3>
+  <table>
+    <tr><th>From → To</th><th>Factor</th><th>Note</th></tr>
+    <tr><td>MB → GiB</td><td>÷ 1073.74</td><td>binary GiB = 1024³ bytes, decimal MB = 10⁶</td></tr>
+    <tr><td>km/h → mph</td><td>× 0.621371</td><td>same factor as km→mi</td></tr>
+    <tr><td>m/s → km/h</td><td>× 3.6</td><td>exact</td></tr>
+  </table>
+
+  <h2>Temperature: a formula, not a factor</h2>
+  <div class="formula">°F = °C × 9/5 + 32    ·    °C = (°F − 32) × 5/9    ·    K = °C + 273.15</div>
+  <p>Because the scales have different zero points, no single multiplier works. 37 °C → 37 × 1.8 + 32 = <strong>98.6 °F</strong>. −40 is the crossover: −40 °F = −40 °C exactly.</p>
+
+  <h2>Why "close enough" factors cost money</h2>
+  <p>Rounding 2.20462 → 2.2 is a 0.2% error — invisible on a gym scale, meaningful on a 2-ton freight quote (4 kg off) or repeated through a bill of materials. Precision costs nothing when a <a href="/conversion/weight">converter</a> does the work; keep 6 significant figures until the final display, then round once.</p>
+
+  <h2>Round-trip drift: a 10-second self-check</h2>
+  <p>The fastest way to catch a bad factor is to convert there and back. Convert 10 m to feet: 10 ÷ 0.3048 = 32.8084 ft. Convert back: 32.8084 × 0.3048 = 10.000000 m — exact, because the factor is defined. If your chain returns 9.97 or 10.03, an intermediate rounding (or a US-vs-imperial gallon mix-up) is eating precision. Run the round-trip whenever a spreadsheet someone else built produces numbers you can't reproduce.</p>
+
+  <h2>Frequently Asked Questions</h2>
+  <h3>Why are some factors "exact" and others not?</h3>
+  <p>Since 1959 the inch is <em>defined</em> as 2.54 cm and the pound as 0.45359237 kg, so those are exact by treaty. Factors like km→mi derive from the exact inch/metre definitions and are exact too (1 mi = 1609.344 m); approximations only creep in when someone rounds early.</p>
+  <h3>How many feet is 180 cm?</h3>
+  <p>180 × 0.393701 = 70.866 in = 5 ft 10.87 in — call it 5′11″. The <a href="/conversion/length">length converter</a> shows feet+inches directly.</p>
+  <h3>What's 100 km/h in mph?</h3>
+  <p>100 × 0.621371 = 62.14 mph — the origin of the "62 mph ≈ 100 km/h" highway rule of thumb.</p>
+  <h3>GB vs GiB — why does my 1 TB drive show 931 GB?</h3>
+  <p>Drive makers use decimal TB (10¹² bytes); operating systems display binary TiB (2⁴⁰ bytes). 10¹² ÷ 2⁴⁰ = 0.909 → a "1 TB" drive shows ≈ 909–931 "GB" depending on the OS's labeling. Nothing is missing.</p>
+
+  <h2>Try the calculators</h2>
+  <p class="related">
+    <a href="/conversion/length" class="cta">Length Converter</a>
+    <a href="/conversion/weight" class="cta">Weight Converter</a>
+    <a href="/conversion/volume" class="cta">Volume Converter</a>
+    <a href="/conversion/data-storage" class="cta">Data Storage Converter</a>
+    <a href="/conversion/temperature" class="cta">Temperature Converter</a>
+  </p>
+
+  <p><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/about">Methodology</a></p>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

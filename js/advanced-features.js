@@ -587,7 +587,7 @@ function runComparisonMode() {
   function renderSteps(tool, values, result) {
     const area = document.getElementById('steps-area');
     if (!area) return;
-    if (!tool.steps) { area.style.display = 'none'; return; }
+    if (!tool.steps) { renderStepsFallback(tool, values, result); return; }
     area.style.display = 'block';
     const steps = typeof tool.steps === 'function' ? tool.steps(values, result) : tool.steps;
     let html = '<details class="calc-collapsible steps-card" open><summary>📐 Formula & Step-by-Step Solution</summary><ol class="steps-list">';
@@ -601,6 +601,36 @@ function runComparisonMode() {
       html += `<li>${Security.sanitizeHtml(stepStr)}</li>`;
     });
     html += '</ol></details>';
+    area.innerHTML = html;
+  }
+
+  // Generic fallback for tools without a hand-written steps function: show the
+  // exact inputs used and the primary result (an honest "calculation summary" —
+  // never invented intermediate math). Keeps the steps card useful on every tool.
+  function renderStepsFallback(tool, values, result) {
+    const area = document.getElementById('steps-area');
+    if (!area) return;
+    const inputs = tool.inputs || [];
+    const hasValues = inputs.length > 0 && values && Object.keys(values).some(k => k in (values));
+    if (!result || !hasValues) { area.style.display = 'none'; return; }
+    area.style.display = 'block';
+    const labelFor = {};
+    inputs.forEach(i => { labelFor[i.id] = i.label || i.id; });
+    const resultText = String(result.result ?? result.value ?? '');
+    const items = inputs
+      .filter(i => values[i.id] !== undefined && values[i.id] !== '')
+      .map(i => {
+        let v = values[i.id];
+        if (i.opts) {
+          const o = i.opts.find(x => String(x.v) === String(v));
+          if (o) v = o.l;
+        }
+        return '<li>' + Security.sanitizeHtml(String(labelFor[i.id] || i.id)) + ' = <strong>' + Security.sanitizeHtml(String(v)) + '</strong></li>';
+      });
+    let html = '<details class="calc-collapsible steps-card" open><summary>📋 Calculation Summary</summary>';
+    if (items.length) html += '<ol class="steps-list">' + items.join('') + '</ol>';
+    if (resultText) html += '<p class="steps-result">Result: <strong>' + Security.sanitizeHtml(resultText) + '</strong></p>';
+    html += '</details>';
     area.innerHTML = html;
   }
 

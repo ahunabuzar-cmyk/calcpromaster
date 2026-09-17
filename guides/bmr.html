@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMR Calculator — Mifflin-St Jeor Formula, Worked Example &amp; Multipliers | CalcProMaster</title>
+  <meta name="description" content="How BMR is calculated: the Mifflin-St Jeor formula line by line, a worked example, why formulas disagree, and how activity multipliers turn BMR into daily calorie needs.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/bmr">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "BMR Calculator — Mifflin-St Jeor Formula, Worked Example & Multipliers | CalcProMaster",
+    "description": "How BMR is calculated: the Mifflin-St Jeor formula line by line, a worked example, why formulas disagree, and how activity multipliers turn BMR into daily calorie needs.",
+    "url": "https://calcpromaster.netlify.app/guides/bmr",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "BMR (Basal Metabolic Rate)", "item": "https://calcpromaster.netlify.app/guides/bmr" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How is BMR calculated?", "acceptedAnswer": { "@type": "Answer", "text": "The standard Mifflin-St Jeor formula: 10 × weight in kg + 6.25 × height in cm − 5 × age, plus 5 for men or minus 161 for women. For an 80 kg, 180 cm, 30-year-old man that is 1,780 kcal/day." } },
+        { "@type": "Question", "name": "What is a good BMR for my age?", "acceptedAnswer": { "@type": "Answer", "text": "BMR declines roughly 5 kcal per year of age in the formula (the −5 × age term). Typical adult values fall between about 1,200 and 1,900 kcal/day depending on size, sex and age — there is no single \"good\" number." } },
+        { "@type": "Question", "name": "Should I eat my BMR to lose weight?", "acceptedAnswer": { "@type": "Answer", "text": "No. BMR is your burn at complete rest; total daily needs (BMR × activity factor) are the relevant baseline. Eating at or below BMR while active creates an unnecessarily aggressive deficit for most people." } },
+        { "@type": "Question", "name": "Why do BMR and TDEE calculators give different numbers?", "acceptedAnswer": { "@type": "Answer", "text": "Different equations (Mifflin vs Harris-Benedict) and different activity multipliers. The multiplier choice usually moves the total more than the equation does — pick your activity level honestly." } }
+      ]
+    }
+  }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.7; max-width: 760px; margin: 0 auto; padding: 16px; color: #1f2937; }
+    .crumb { font-size: 0.85rem; color: #6b7280; margin-bottom: 8px; }
+    .crumb a { color: #4f46e5; text-decoration: none; }
+    h1 { font-size: 1.65rem; line-height: 1.3; margin: 8px 0 4px; }
+    h2 { font-size: 1.25rem; margin-top: 2rem; border-top: 1px solid #e5e7eb; padding-top: 1.2rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.4rem; }
+    .answer { background: #eef2ff; border-left: 4px solid #4f46e5; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+    .formula { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 16px; font-family: ui-monospace, monospace; font-size: 0.95rem; overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.92rem; }
+    th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; }
+    th { background: #f9fafb; }
+    .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
+    .related a { color: #4f46e5; }
+    .updated { color: #6b7280; font-size: 0.85rem; }
+    .note { background: #fefce8; border-left: 4px solid #ca8a04; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+  </style>
+</head>
+<body>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › BMR (Basal Metabolic Rate)</p>
+  <h1>BMR: The Formula Behind Your Resting Calorie Burn</h1>
+  <p class="updated">Health · 6 min read · Last updated September 2026</p>
+
+  <div class="answer">
+    <strong>Quick answer:</strong> BMR is the energy your body burns at complete rest. The standard estimate is Mifflin-St Jeor: for an 80 kg, 180 cm, 30-year-old man it gives <strong>1,780 kcal/day</strong> — before any activity. Multiply by an activity factor (1.2–1.9) to get total daily needs.
+  </div>
+
+  <h2>The Mifflin-St Jeor formula</h2>
+  <div class="formula">Men: 10 × weight(kg) + 6.25 × height(cm) − 5 × age + 5<br>Women: 10 × weight(kg) + 6.25 × height(cm) − 5 × age − 161</div>
+  <p>Worked example — 80 kg, 180 cm, 30-year-old male: 10 × 80 = 800; 6.25 × 180 = 1,125; 5 × 30 = 150. So 800 + 1,125 − 150 + 5 = <strong>1,780 kcal/day</strong>.</p>
+
+  <h2>From BMR to daily needs (TDEE)</h2>
+  <table>
+    <tr><th>Activity level</th><th>Multiplier</th><th>Same man's TDEE</th></tr>
+    <tr><td>Sedentary (desk job)</td><td>× 1.2</td><td>2,136 kcal</td></tr>
+    <tr><td>Lightly active</td><td>× 1.375</td><td>2,448 kcal</td></tr>
+    <tr><td>Moderately active</td><td>× 1.55</td><td>2,759 kcal</td></tr>
+    <tr><td>Very active</td><td>× 1.725</td><td>3,071 kcal</td></tr>
+  </table>
+  <p>The multiplier you pick moves the answer more than any formula choice — a sedentary vs very-active pick spans 900+ kcal. Calibrate honestly: most desk workers are 1.2–1.375 even with gym visits.</p>
+
+  <h2>Why BMR formulas disagree</h2>
+  <p>The older Harris-Benedict equation gives <strong>1,854 kcal</strong> for the same man — 74 kcal higher than Mifflin. Neither is "wrong": both are population regressions with real scatter (roughly ±200 kcal for any individual). Mifflin is preferred today because it tracks measured values somewhat better in modern populations.</p>
+
+  <div class="note"><strong>Limitations:</strong> formulas estimate population averages; measured calorimetry can differ substantially, and illness, medication and muscle mass all shift real BMR. Use the estimate as a starting point and adjust against 2–3 weeks of real-world weight data.</div>
+
+  <h2>Try the calculators</h2>
+  <p class="related">
+    <a href="/health/bmr" class="cta">BMR Calculator</a>
+    <a href="/health/bmr-mifflin" class="cta">Mifflin-St Jeor BMR</a>
+    <a href="/health/tdee-macro" class="cta">TDEE & Macro Calculator</a>
+  </p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>How is BMR calculated?</h3>
+  <p>The standard Mifflin-St Jeor formula: 10 × weight in kg + 6.25 × height in cm − 5 × age, plus 5 for men or minus 161 for women. For an 80 kg, 180 cm, 30-year-old man that is 1,780 kcal/day.</p>
+  <h3>What is a good BMR for my age?</h3>
+  <p>BMR declines roughly 5 kcal per year of age in the formula (the −5 × age term). Typical adult values fall between about 1,200 and 1,900 kcal/day depending on size, sex and age — there is no single "good" number.</p>
+  <h3>Should I eat my BMR to lose weight?</h3>
+  <p>No. BMR is your burn at complete rest; total daily needs (BMR × activity factor) are the relevant baseline. Eating at or below BMR while active creates an unnecessarily aggressive deficit for most people.</p>
+  <h3>Why do BMR and TDEE calculators give different numbers?</h3>
+  <p>Different equations (Mifflin vs Harris-Benedict) and different activity multipliers. The multiplier choice usually moves the total more than the equation does — pick your activity level honestly.</p>
+
+  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

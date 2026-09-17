@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Calculate Zakat — Nisab, Rates &amp; Worked Examples | CalcProMaster</title>
+  <meta name="description" content="The zakat formula step by step: what counts as zakatable wealth, today's nisab thresholds in gold and silver, the 2.5% rate, and worked examples.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/zakat">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Calculate Zakat — Nisab, Rates & Worked Examples",
+    "description": "The zakat formula step by step: what counts as zakatable wealth, today's nisab thresholds in gold and silver, the 2.5% rate, and worked examples.",
+    "url": "https://calcpromaster.netlify.app/guides/zakat",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "How to Calculate Zakat", "item": "https://calcpromaster.netlify.app/guides/zakat" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the zakat rate?",
+          "acceptedAnswer": { "@type": "Answer", "text": "For most forms of wealth (cash, gold, silver, business inventory, savings), the zakat rate is 2.5% (1/40) of the zakatable amount held for one lunar year." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the nisab for zakat?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nisab is the minimum wealth threshold above which zakat becomes due: 87.48 grams of gold or 612.36 grams of silver. Most scholars recommend using the silver nisab because it maximizes help to the poor, though the gold nisab is also widely accepted." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I pay zakat on my home or car?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Personal-use assets such as your primary home, personal car, clothing and household items are exempt. Zakat applies to wealth that grows or can grow: cash, savings, gold, silver, investments and business inventory. Property held for resale is zakatable; property held to rent is generally taxed on rental income saved over the year." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I deduct debts from zakatable wealth?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Short-term debts due within your zakat year can be subtracted from your zakatable assets. Long-term mortgage balances are treated differently by different scholars; many allow deducting only the installments due within the coming year." }
+        }
+      ]
+    }
+  }
+  </script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{--bg:#f8fafc;--surface:#fff;--text:#1e293b;--text-light:#64748b;--border:#e2e8f0;--primary:#4f46e5;--radius:14px}
+    @media (prefers-color-scheme: dark){:root{--bg:#0f172a;--surface:#1e293b;--text:#f8fafc;--text-light:#94a3b8;--border:#334155}}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;-webkit-font-smoothing:antialiased}
+    header{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .logo{font-size:20px;font-weight:800;background:linear-gradient(135deg,#4f46e5,#7c3aed);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
+    header a{color:var(--text-light);text-decoration:none;font-size:13px}
+    header a:hover{color:var(--primary)}
+    main{max-width:820px;margin:0 auto;padding:32px 24px 64px}
+    h1{font-size:30px;font-weight:800;margin-bottom:8px}
+    h2{font-size:20px;font-weight:700;margin:26px 0 10px}
+    h3{font-size:16px;font-weight:600;margin:18px 0 6px}
+    p{margin-bottom:10px;color:var(--text)}
+    ul,ol{margin:8px 0 14px 22px}
+    li{margin-bottom:4px}
+    table{border-collapse:collapse;margin:12px 0;width:100%}
+    th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;font-size:14px}
+    th{background:var(--surface);font-weight:700}
+    .legal-meta{font-size:13px;color:var(--text-light);margin-bottom:18px}
+    .formula{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--primary);border-radius:8px;padding:12px 16px;margin:14px 0;font-family:ui-monospace,Consolas,monospace;font-size:15px}
+    .example{background:rgba(79,70,229,.07);border-left:4px solid var(--primary);padding:12px 16px;border-radius:8px;margin:14px 0}
+    .legal-warning{background:rgba(245,158,11,.12);border-left:4px solid #f59e0b;padding:12px 16px;border-radius:8px;margin:16px 0}
+    a{color:var(--primary)}
+    .related{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+    .related a{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:6px 14px;font-size:13px;text-decoration:none}
+    .related a:hover{border-color:var(--primary);color:var(--primary)}
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:18px 24px;text-align:center;font-size:13px;color:var(--text-light)}
+    footer a{color:var(--text-light);text-decoration:none;margin:0 8px}
+    footer a:hover{color:var(--primary)}
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">CalcProMaster</a>
+    <a href="/">Home</a>
+    <a href="/guides">Guides</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </header>
+  <main>
+    <div class="legal-page">
+      <p class="legal-meta"><a href="/guides">← All guides</a></p>
+      <h1>How to Calculate Zakat — Nisab, Rates &amp; Worked Examples</h1>
+      <p class="legal-meta">Islamic Finance · 6 min read · Last updated September 2026</p>
+
+      <h2>What is zakat?</h2>
+      <p>Zakat is an obligatory annual payment in Islam: a fixed share of accumulated wealth given to eligible recipients. For most wealth types it is <strong>2.5%</strong> of what you own above the nisab threshold, held for one full lunar year (hawl).</p>
+
+      <h2>The zakat formula</h2>
+      <div class="formula">Zakat = (Zakatable assets − Immediate debts − Nisab) × 2.5%</div>
+      <p>If your net zakatable wealth is below the nisab, no zakat is due for that year.</p>
+
+      <h2>Step-by-step: how to calculate your zakat</h2>
+      <ol>
+        <li><strong>List your zakatable assets</strong> — cash at home and in bank accounts, gold and silver (jewelry included), investments, retirement funds you control, business inventory, and money lent to others that you expect back.</li>
+        <li><strong>Value them at today's prices</strong> — use the current market value of gold, silver and investments on your zakat date.</li>
+        <li><strong>Subtract immediate liabilities</strong> — bills, credit card balances and other debts due soon.</li>
+        <li><strong>Compare with nisab</strong> — the threshold is 87.48 g of gold or 612.36 g of silver, valued at today's prices.</li>
+        <li><strong>Multiply by 2.5%</strong> — apply the rate to the amount above nisab.</li>
+      </ol>
+
+      <h2>Worked example</h2>
+      <div class="example">
+        <p>Ayesha has: cash savings $8,000 · gold jewelry 40 g (≈ $3,400) · shares worth $2,600 · credit card balance $1,000.</p>
+        <p>Zakatable wealth = 8,000 + 3,400 + 2,600 − 1,000 = <strong>$13,000</strong></p>
+        <p>Silver nisab (612.36 g ≈ $700) — she is well above it.</p>
+        <p>Zakat = 13,000 × 2.5% = <strong>$325</strong></p>
+      </div>
+
+      <h2>What counts — and what doesn't</h2>
+      <table>
+        <tr><th>Zakatable (2.5%)</th><th>Exempt</th></tr>
+        <tr><td>Cash, bank balances</td><td>Your home you live in</td></tr>
+        <tr><td>Gold &amp; silver (any form)</td><td>Personal car, clothing, furniture</td></tr>
+        <tr><td>Stocks, mutual funds, crypto</td><td>Tools of your trade</td></tr>
+        <tr><td>Business inventory</td><td>Debts you owe others (deducted)</td></tr>
+        <tr><td>Money you lent to others</td><td>Basic living expenses already spent</td></tr>
+      </table>
+
+      <h2>Common mistakes</h2>
+      <ul>
+        <li>Using the gold nisab when wealth is mostly cash — the silver nisab (lower in most price environments) is the safer, more generous choice.</li>
+        <li>Forgetting forgotten savings accounts or dormant wallets.</li>
+        <li>Deducting a full year of mortgage payments when only the next installment is due — follow the scholarly opinion you trust consistently.</li>
+        <li>Changing the zakat date every year instead of keeping a fixed hawl.</li>
+      </ul>
+
+      <h2>The nisab thresholds in practice</h2>
+      <table>
+        <tr><th>Standard</th><th>Weight</th><th>Illustrative value</th></tr>
+        <tr><td>Gold nisab</td><td>85 g pure gold</td><td>$6,375 @ $75/g</td></tr>
+        <tr><td>Silver nisab</td><td>595 g pure silver</td><td>$624.75 @ $1.05/g</td></tr>
+      </table>
+      <p>The dollar figures are illustrative only — gold and silver prices move daily, so check today's rate when your zakat date arrives. Because the silver nisab is usually far lower in cash terms, more people cross it and pay earlier; that is why many scholars recommend it for cash-heavy wealth.</p>
+      <p>A quick worked example: cash $8,000 + gold jewellery worth $1,500 + shares worth $2,500 = $12,000 zakatable pool. Silver nisab ≈ $625 → you are well above it. Deduct $1,200 of short-term debts you must repay now → net $10,800. Zakat = 2.5% × 10,800 = <strong>$270</strong>.</p>
+
+      <div class="legal-warning">
+        <p><strong>Note:</strong> Zakat rulings have legitimate differences of opinion across schools of Islamic jurisprudence. This guide covers the mainstream method; for complex situations (business partnerships, agricultural produce at 5%/10%, livestock) consult a qualified scholar.</p>
+      </div>
+
+      <h2>FAQ</h2>
+      <h3>Is zakat due on retirement accounts?</h3>
+      <p>Scholars differ: many treat funds you can withdraw as zakatable at full value; others apply zakat only on accessible portions. Choose a consistent approach, ideally with scholarly guidance.</p>
+      <h3>Can zakat be paid in installments?</h3>
+      <p>Yes — spreading payment over the year is acceptable as long as the full amount reaches eligible recipients within a reasonable period.</p>
+      <h3>Who can receive zakat?</h3>
+      <p>The Quran (9:60) lists eight categories, including the poor, the needy, those in debt, and travellers in need. Family you already support (parents, children, spouse) cannot receive your zakat.</p>
+    </div>
+  </main>
+  <footer>
+    <p>CalcProMaster — free online calculators.</p>
+    <p>
+      <a href="/guides">Guides</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a>
+    </p>
+  </footer>
+  <div class="related" style="max-width:820px;margin:0 auto 40px;padding:0 24px;">
+    <a href="/regional/zakat-calculator">Zakat Calculator</a>
+    <a href="/regional/gold-rate-pk">Gold Rate PK</a>
+    <a href="/conversion/currency-conv">Currency Converter</a>
+    <a href="/guides">All Guides</a>
+  </div>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

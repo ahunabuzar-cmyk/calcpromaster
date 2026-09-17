@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electricity Bill Calculator — kWh Formula &amp; Appliance Costs | CalcProMaster</title>
+  <meta name="description" content="How electricity bills are built: the kWh formula, a worked appliance example, tiered slab pricing, and which appliances actually drive the bill.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/electricity-bill">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Electricity Bill Calculator — kWh Formula & Appliance Costs | CalcProMaster",
+    "description": "How electricity bills are built: the kWh formula, a worked appliance example, tiered slab pricing, and which appliances actually drive the bill.",
+    "url": "https://calcpromaster.netlify.app/guides/electricity-bill",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "Electricity Bill", "item": "https://calcpromaster.netlify.app/guides/electricity-bill" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How do I calculate my electricity bill?", "acceptedAnswer": { "@type": "Answer", "text": "For each appliance: watts × daily hours ÷ 1,000 = daily kWh. Multiply by 30 for monthly kWh, sum across appliances, then multiply by your rate (respecting slab tiers if your utility uses them)." } },
+        { "@type": "Question", "name": "How much does it cost to run an AC?", "acceptedAnswer": { "@type": "Answer", "text": "Wattage × hours × days × rate. A 1.5 kW split AC at 8 h/day and 8/unit: 1.5 × 8 × 30 = 360 kWh → 2,880 a month. Higher rates or longer runtimes scale it linearly." } },
+        { "@type": "Question", "name": "What uses the most electricity in a home?", "acceptedAnswer": { "@type": "Answer", "text": "Usually heating and cooling (AC, heaters), water heating and dryers — high wattage times long runtime. Always-on low-wattage devices like fridges matter, but chargers and idle electronics barely register." } },
+        { "@type": "Question", "name": "Why is my bill higher than my kWh math?", "acceptedAnswer": { "@type": "Answer", "text": "Slab pricing (later units cost more), fixed charges, taxes and fuel-adjustment surcharges sit on top of the energy line. Check the bill’s non-energy lines before blaming the appliances." } }
+      ]
+    }
+  }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.7; max-width: 760px; margin: 0 auto; padding: 16px; color: #1f2937; }
+    .crumb { font-size: 0.85rem; color: #6b7280; margin-bottom: 8px; }
+    .crumb a { color: #4f46e5; text-decoration: none; }
+    h1 { font-size: 1.65rem; line-height: 1.3; margin: 8px 0 4px; }
+    h2 { font-size: 1.25rem; margin-top: 2rem; border-top: 1px solid #e5e7eb; padding-top: 1.2rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.4rem; }
+    .answer { background: #eef2ff; border-left: 4px solid #4f46e5; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+    .formula { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 16px; font-family: ui-monospace, monospace; font-size: 0.95rem; overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.92rem; }
+    th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; }
+    th { background: #f9fafb; }
+    .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
+    .related a { color: #4f46e5; }
+    .updated { color: #6b7280; font-size: 0.85rem; }
+    .note { background: #fefce8; border-left: 4px solid #ca8a04; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+  </style>
+</head>
+<body>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Electricity Bill</p>
+  <h1>Your Electricity Bill, Decoded: Watts × Hours × Rate</h1>
+  <p class="updated">Everyday · 6 min read · Last updated September 2026</p>
+
+  <div class="answer">
+    <strong>Quick answer:</strong> Every line on the bill comes from one formula: <strong>kWh = watts × hours ÷ 1,000</strong>, then cost = kWh × rate. A 300 W fridge running 8 h/day uses 72 kWh a month — 576 at 8/unit. The 1.5 kW AC at 8 h/day uses 360 kWh — 2,880. One appliance dwarfs the other; the bill follows.
+  </div>
+
+  <h2>The formula</h2>
+  <div class="formula">kWh = watts × hours ÷ 1,000<br>Cost = kWh × price per unit</div>
+  <p>Worked example — a 300 W fridge compressor actually runs ~8 h/day: 300 × 8 ÷ 1,000 = 2.4 kWh/day → 72 kWh/month → <strong>576/month at 8 per unit</strong>. A 1.5 kW AC at 8 h/day: 1.5 × 8 × 30 = 360 kWh → <strong>2,880/month</strong>. Same formula, five-fold difference — appliance wattage × runtime is where bills are decided.</p>
+
+  <h2>Tiered slabs change the marginal cost</h2>
+  <p>Many utilities price in slabs: the first 100 kWh cheap, the next band pricier, and so on. Your <em>average</em> rate is not the rate for the next kWh — crossing into a higher slab makes every additional AC hour more expensive than your bill average suggests. Check your bill's slab structure before estimating savings; shaving consumption below a slab boundary saves at the higher marginal rate.</p>
+
+  <h2>Finding the big consumers</h2>
+  <p>Wattage × runtime ranks them honestly: ACs, water heaters and dryers dominate; fridges run constantly but at low power; phone chargers and idle electronics are rounding errors despite folklore. Measure suspects with the appliance's nameplate wattage and your usage pattern in the <a href="/everyday/electricity">Electricity Bill Calculator</a> — and compare appliance upgrades with the <a href="/homegarden/appliance-cost">Appliance Running Cost</a> tool.</p>
+
+  <h2>Try the calculators</h2>
+  <p class="related">
+    <a href="/everyday/electricity" class="cta">Electricity Bill Calculator</a>
+    <a href="/homegarden/appliance-cost" class="cta">Appliance Running Cost</a>
+    <a href="/guides/everyday" class="cta">Everyday Guides</a>
+  </p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>How do I calculate my electricity bill?</h3>
+  <p>For each appliance: watts × daily hours ÷ 1,000 = daily kWh. Multiply by 30 for monthly kWh, sum across appliances, then multiply by your rate (respecting slab tiers if your utility uses them).</p>
+  <h3>How much does it cost to run an AC?</h3>
+  <p>Wattage × hours × days × rate. A 1.5 kW split AC at 8 h/day and 8/unit: 1.5 × 8 × 30 = 360 kWh → 2,880 a month. Higher rates or longer runtimes scale it linearly.</p>
+  <h3>What uses the most electricity in a home?</h3>
+  <p>Usually heating and cooling (AC, heaters), water heating and dryers — high wattage times long runtime. Always-on low-wattage devices like fridges matter, but chargers and idle electronics barely register.</p>
+  <h3>Why is my bill higher than my kWh math?</h3>
+  <p>Slab pricing (later units cost more), fixed charges, taxes and fuel-adjustment surcharges sit on top of the energy line. Check the bill’s non-energy lines before blaming the appliances.</p>
+
+  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

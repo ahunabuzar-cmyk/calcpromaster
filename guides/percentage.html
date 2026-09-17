@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Calculate Percentage — Formula, Examples &amp; Common Mistakes | CalcProMaster</title>
+  <meta name="description" content="Learn how to calculate percentage step by step: the one formula behind every percentage problem, worked examples for increase, decrease and reverse percentage, and the mistakes to avoid.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/percentage">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Calculate Percentage — Formula, Examples & Common Mistakes",
+    "description": "The one formula behind every percentage problem, with worked examples for percentage increase, decrease and reverse percentage, and the mistakes to avoid.",
+    "url": "https://calcpromaster.netlify.app/guides/percentage",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "How to Calculate Percentage", "item": "https://calcpromaster.netlify.app/guides/percentage" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the formula for percentage?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Percentage = (Part ÷ Whole) × 100. For example, 25 out of 200 is (25 ÷ 200) × 100 = 12.5%." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate percentage increase?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Percentage increase = ((New value − Old value) ÷ Old value) × 100. If a price rises from $80 to $100, the increase is ((100 − 80) ÷ 80) × 100 = 25%." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I find a number when I know the percentage?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Divide the part by the percentage expressed as a decimal. If 30 is 15% of a number, the number is 30 ÷ 0.15 = 200." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the most common percentage mistake?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Adding percentages of different wholes. For example, a 50% increase followed by a 50% decrease does not return to the original value — it lands at 75% of it, because the second percentage applies to the already-changed amount." }
+        }
+      ]
+    }
+  }
+  </script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{--bg:#f8fafc;--surface:#fff;--text:#1e293b;--text-light:#64748b;--border:#e2e8f0;--primary:#4f46e5;--radius:14px}
+    @media (prefers-color-scheme: dark){:root{--bg:#0f172a;--surface:#1e293b;--text:#f8fafc;--text-light:#94a3b8;--border:#334155}}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;-webkit-font-smoothing:antialiased}
+    header{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .logo{font-size:20px;font-weight:800;background:linear-gradient(135deg,#4f46e5,#7c3aed);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
+    header a{color:var(--text-light);text-decoration:none;font-size:13px}
+    header a:hover{color:var(--primary)}
+    main{max-width:820px;margin:0 auto;padding:32px 24px 64px}
+    h1{font-size:30px;font-weight:800;margin-bottom:8px}
+    h2{font-size:20px;font-weight:700;margin:26px 0 10px}
+    h3{font-size:16px;font-weight:600;margin:18px 0 6px}
+    p{margin-bottom:10px;color:var(--text)}
+    ul,ol{margin:8px 0 14px 22px}
+    li{margin-bottom:4px}
+    .legal-meta{font-size:13px;color:var(--text-light);margin-bottom:18px}
+    .formula{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--primary);border-radius:8px;padding:12px 16px;margin:14px 0;font-family:ui-monospace,Consolas,monospace;font-size:15px}
+    .example{background:rgba(79,70,229,.07);border-left:4px solid var(--primary);padding:12px 16px;border-radius:8px;margin:14px 0}
+    .legal-warning{background:rgba(245,158,11,.12);border-left:4px solid #f59e0b;padding:12px 16px;border-radius:8px;margin:16px 0}
+    a{color:var(--primary)}
+    .related{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+    .related a{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:6px 14px;font-size:13px;text-decoration:none}
+    .related a:hover{border-color:var(--primary);color:var(--primary)}
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:18px 24px;text-align:center;font-size:13px;color:var(--text-light)}
+    footer a{color:var(--text-light);text-decoration:none;margin:0 8px}
+    footer a:hover{color:var(--primary)}
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">CalcProMaster</a>
+    <a href="/">Home</a>
+    <a href="/guides">Guides</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </header>
+  <main>
+    <div class="legal-page">
+      <p class="legal-meta"><a href="/guides">← All guides</a></p>
+      <h1>How to Calculate Percentage — Formula, Examples &amp; Common Mistakes</h1>
+      <p class="legal-meta">Math · 5 min read · Last updated September 2026</p>
+
+      <h2>What is a percentage?</h2>
+      <p>A percentage is simply a fraction expressed out of 100. The word comes from the Latin <em>per centum</em> — "out of a hundred". So 25% means 25 out of every 100, which is the same as the fraction 25/100 or the decimal 0.25.</p>
+
+      <h2>The one formula behind every percentage problem</h2>
+      <p>Every percentage calculation uses the same relationship:</p>
+      <div class="formula">Percentage = (Part ÷ Whole) × 100</div>
+      <p>Rearrange it and you can solve any percentage problem:</p>
+      <ul>
+        <li><strong>Find the percentage:</strong> Part ÷ Whole × 100</li>
+        <li><strong>Find the part:</strong> Whole × (Percentage ÷ 100)</li>
+        <li><strong>Find the whole:</strong> Part ÷ (Percentage ÷ 100)</li>
+      </ul>
+
+      <h2>Worked examples</h2>
+      <h3>Example 1 — What percentage is 25 of 200?</h3>
+      <div class="example">
+        <p>Percentage = (25 ÷ 200) × 100 = 0.125 × 100 = <strong>12.5%</strong></p>
+      </div>
+      <h3>Example 2 — What is 18% of 450?</h3>
+      <div class="example">
+        <p>Part = 450 × (18 ÷ 100) = 450 × 0.18 = <strong>81</strong></p>
+      </div>
+      <h3>Example 3 — Percentage increase (price rise)</h3>
+      <div class="example">
+        <p>A price rises from $80 to $100. Increase = ((100 − 80) ÷ 80) × 100 = (20 ÷ 80) × 100 = <strong>25%</strong>.</p>
+        <p>Note the increase is relative to the <em>old</em> value ($80), not the new one.</p>
+      </div>
+      <h3>Example 4 — Reverse percentage (find the whole)</h3>
+      <div class="example">
+        <p>30 is 15% of what number? Whole = 30 ÷ 0.15 = <strong>200</strong>.</p>
+      </div>
+
+      <h2>Common mistakes to avoid</h2>
+      <ul>
+        <li><strong>Adding percentages of different wholes:</strong> a 50% increase followed by a 50% decrease does <em>not</em> return to the original. $100 → $150 → $75. The second 50% applies to $150, not $100.</li>
+        <li><strong>Using the wrong base for increases:</strong> a price rise from $80 to $100 is a 25% increase of the old price, not 20%.</li>
+        <li><strong>Confusing percentage points with percent:</strong> an interest rate moving from 5% to 6% rose by 1 percentage point, but by 20% relative.</li>
+      </ul>
+
+      <h2>Reverse percentages: working backwards from the result</h2>
+      <p>The hardest percentage questions in exams and in shops are the ones where the percentage is applied to a number you don't know yet. Two patterns cover almost all of them:</p>
+      <ul>
+        <li><strong>Find the whole:</strong> "30 is 15% of what?" → whole = 30 ÷ 0.15 = <strong>200</strong>. Divide by the decimal form of the percentage.</li>
+        <li><strong>Undo a change:</strong> a shirt costs $45 after a 25% discount. The $45 is 75% of the original, so original = 45 ÷ 0.75 = <strong>$60</strong> — not 45 ÷ 0.25. A frequent exam trap is dividing by the percentage instead of by what's left.</li>
+        <li><strong>Selling price → profit margin:</strong> an item bought at $40 sold at $50 has markup of $10 (25% of cost) but margin of $10 ÷ $50 = 20% (fraction of the selling price). Same $10, two different bases — see the <a href="/business/profit-margin">margin vs markup calculator</a>.</li>
+        <li><strong>GST/VAT back-calculation:</strong> an invoice total of $115 at 15% GST means $100 + $15 tax, because the total is 115% of the base. Base = 115 ÷ 1.15 = <strong>$100</strong>. Our <a href="/finance/sales-tax">sales tax calculator</a> does the forward and reverse computation.</li>
+      </ul>
+
+      <h2>Where percentages appear in real decisions</h2>
+      <p>The same one formula powers a surprising range of everyday calculations — each link goes to a guide or calculator that shows the working:</p>
+      <ul>
+        <li><a href="/blog/stacked-discounts">Stacked discounts</a> — why 30% + 20% off is 44%, not 50% (the multiplication rule).</li>
+        <li><a href="/education/grade-percentage">Grades</a> — marks obtained ÷ total marks × 100, then mapped to a grade boundary.</li>
+        <li><a href="/finance/discount">Discounts</a> — final price = price × (1 − discount%).</li>
+        <li><a href="/finance/tip">Tipping</a> — bill × 15% (or 18/20%), split per person.</li>
+        <li><a href="/finance/salary">Salary changes</a> — a hike is computed on the <em>old</em> salary; a discount on the marked price.</li>
+      </ul>
+
+      <h2>Percentage points vs percent: the distinction that changes headlines</h2>
+      <p>A rate moving from 5% to 6% rose by <strong>1 percentage point</strong> but by <strong>20 percent</strong> (1 ÷ 5). Both statements are true; they answer different questions, and news headlines exploit the ambiguity in both directions. Bank keeps "just a 0.5-point hike" sounds small; "rates up 10%!" sounds alarming — they're describing the same move.</p>
+      <p>Three places the distinction costs real money:</p>
+      <ul>
+        <li><strong>Loan rates:</strong> refinancing from 12% to 11% saves far more than "1%" suggests on a large balance — on a $100,000 / 5-year loan, dropping the rate one point cuts total payments from $133,467 to $130,455 — a <strong>$3,012</strong> saving, about 3% of the borrowed amount, not 1% of anything.</li>
+        <li><strong>Surveys and margins:</strong> support moving from 40% to 44% is a 4-point gain and a 10% gain. Political coverage almost always says the bigger-sounding one.</li>
+        <li><strong>Compound context:</strong> a fund returning 8% after two years of 4% is <em>not</em> averaging 6% — 1.04 × 1.04 = 1.0816, so 4.08% per year. Percentage-point reasoning fails whenever the base compounds; the <a href="/guides/compound-interest">compound interest guide</a> shows why.</li>
+      </ul>
+      <p>Quick test before quoting any change: <em>is the base itself a percentage?</em> If yes, say "points" for the difference and "percent" for the ratio — and check which one the claimant is using.</p>
+
+      <h2>Try it instantly</h2>
+      <p>Check your working with the <a href="/math/percentage">Percentage Calculator</a> — it shows the step-by-step solution, not just the answer. Related tools:</p>
+      <div class="related">
+        <a href="/math/percentage">Percentage Calculator</a>
+        <a href="/education/grade-percentage">Grade Percentage Calculator</a>
+        <a href="/finance/salary">Salary Calculator</a>
+        <a href="/guides">All Guides</a>
+      </div>
+
+      <h2>Frequently asked questions</h2>
+      <h3>What is the formula for percentage?</h3>
+      <p>Percentage = (Part ÷ Whole) × 100. For example, 25 out of 200 is (25 ÷ 200) × 100 = 12.5%.</p>
+      <h3>How do I calculate percentage increase?</h3>
+      <p>Percentage increase = ((New value − Old value) ÷ Old value) × 100. If a price rises from $80 to $100, the increase is ((100 − 80) ÷ 80) × 100 = 25%.</p>
+      <h3>How do I find a number when I know the percentage?</h3>
+      <p>Divide the part by the percentage as a decimal. If 30 is 15% of a number, the number is 30 ÷ 0.15 = 200.</p>
+      <h3>What is the most common percentage mistake?</h3>
+      <p>Adding percentages of different wholes. A 50% increase followed by a 50% decrease lands at 75% of the original, because the second percentage applies to the already-changed amount.</p>
+    </div>
+  </main>
+  <footer>
+    <a href="/">Home</a>
+    <a href="/guides">Guides</a>
+    <a href="/about">About</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+    <a href="/contact">Contact</a>
+  </footer>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

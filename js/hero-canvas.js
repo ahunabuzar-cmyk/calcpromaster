@@ -20,6 +20,7 @@
   };
   var COLORS = PALETTES.light;
   var currentTheme = null;
+  var isToolPage = false; // set per-init from the current DOM (tool page = static frame)
 
   function detectTheme() {
     // Reads the body.dark-theme class used by App.toggleTheme (source of truth).
@@ -185,7 +186,7 @@
   }
 
   function start() {
-    if (running) return;
+    if (running || isToolPage) return;
     running = true;
     lastT = performance.now();
     rafId = requestAnimationFrame(frame);
@@ -280,6 +281,13 @@
     ctx = canvas.getContext('2d');
     if (!ctx) return;
 
+    // Calculator/tool pages keep a single static frame instead of the rAF loop:
+    // the animation is a branding backdrop, and running 60fps paint on every
+    // tool page costs main-thread time during the LCP/TBT window. Navigation
+    // back home re-runs init() and re-enables the loop (isToolPage is re-derived
+    // from the current DOM each time).
+    isToolPage = !!(document.getElementById('calc-form') || document.querySelector('[data-tool]'));
+
     reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     // Resolve the actual display font family once (canvas ctx.font cannot read CSS variables)
     try {
@@ -289,7 +297,8 @@
       displayFontFamily = fam;
     } catch (e) { displayFontFamily = '"Segoe UI", sans-serif'; }
     applyTheme();
-    resize();
+    resize(); // also draws the initial (static) frame
+    if (isToolPage) return; // static backdrop on calculator pages — no rAF loop
     setupVisibilityPause();
     if (!reducedMotion) startWhenIdle();
   }

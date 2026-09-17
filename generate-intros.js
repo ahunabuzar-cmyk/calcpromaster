@@ -177,7 +177,7 @@ const SLOTS = {
   ],
   keywords: [
     t => `It is part of the ${t.catName} collection on CalcProMaster, alongside ${kws(t)[0] || 'other tools'}, ${kws(t)[1] || 'free calculators'} and more.`,
-    t => `One of 500+ free CalcProMaster calculators covering ${kws(t)[0] || 'this topic'}, ${kws(t)[1] || 'related figures'} and similar everyday questions.`,
+    t => `One of ${t.total}+ free CalcProMaster calculators covering ${kws(t)[0] || 'this topic'}, ${kws(t)[1] || 'related figures'} and similar everyday questions.`,
     t => `Searching for ${kws(t)[0] || 'an exact figure'} or ${kws(t)[1] || 'a quick estimate'}? This tool covers it — free, fast, and private.`
   ],
   extra: [
@@ -223,6 +223,8 @@ function main() {
   const problems = [];
 
   tools.forEach(tool => {
+    // Expose the true registry size so count claims inside intros stay truthful.
+    tool.total = tools.length;
     // Deterministic base seed; bump until this tool's intro is unique.
     let base = hashStr(tool.id + '::' + tool.cat);
     let intro = buildIntro(tool, base);

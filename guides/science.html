@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Science Guides — Physics &amp; chemistry fundamentals | CalcProMaster</title>
+  <meta name="description" content="Science calculators look intimidating because textbooks bury the formula under notation. Each of these explainers strips a physical law down to its variabl">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/science">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Science Guides",
+    "description": "Science calculators look intimidating because textbooks bury the formula under notation. Each of these explainers strips a physical law down to its variabl",
+    "url": "https://calcpromaster.netlify.app/guides/science",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "Science", "item": "https://calcpromaster.netlify.app/guides/science" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Unit Conversion Guide", "url": "https://calcpromaster.netlify.app/guides/unit-conversion" },
+        { "@type": "ListItem", "position": 2, "name": "Random Numbers Guide", "url": "https://calcpromaster.netlify.app/guides/random-numbers" }
+      ]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why do my science calculator results look wrong?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Almost always a unit mismatch: grams fed into a kg-based formula, or kPa treated as Pa. Convert every input to the formula’s base units first — the unit conversion guide shows the exact factors."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which base units does SI use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Metre (length), kilogram (mass), second (time), ampere (current), kelvin (temperature), mole (amount), and candela (luminous intensity). Every derived unit — newtons, joules, pascals — is built from these."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.7; max-width: 760px; margin: 0 auto; padding: 16px; color: #1f2937; }
+    .crumb { font-size: 0.85rem; color: #6b7280; margin-bottom: 8px; }
+    .crumb a { color: #4f46e5; text-decoration: none; }
+    h1 { font-size: 1.65rem; line-height: 1.3; margin: 8px 0 4px; }
+    h2 { font-size: 1.25rem; margin-top: 2rem; border-top: 1px solid #e5e7eb; padding-top: 1.2rem; }
+    .cat-card { display: block; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px 18px; margin: 12px 0; text-decoration: none; color: inherit; }
+    .cat-card h2 { border: 0; margin: 0 0 6px; padding: 0; font-size: 1.1rem; color: #4f46e5; }
+    .cat-card p { margin: 0; color: #4b5563; font-size: 0.95rem; }
+    .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
+    .updated { color: #6b7280; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Science</p>
+  <h1>Science Guides</h1>
+  <p class="updated">Part of the CalcProMaster guides library · Physics &amp; chemistry fundamentals</p>
+
+  <p>Science calculators look intimidating because textbooks bury the formula under notation. Each of these explainers strips a physical law down to its variables, shows a worked number, and tells you which units must match before the answer means anything.</p>
+
+  <h2>How the math works</h2>
+  <p>Start every problem by writing the formula, then listing each variable with its unit. Density = mass ÷ volume: 27 g of aluminium occupying 10 cm³ gives 2.7 g/cm³ — the accepted value, which is how you know the units were right. Enter that mass in kilograms while volume stays in cm³ and the result is 0.0027, silently meaningless.</p>
+  <p>Two habits prevent most wrong answers. First, convert everything to the formula’s base units before calculating — the unit conversion guide lists the exact factors. Second, sanity-check the magnitude: a human body is roughly 1,000 kg/m³ (we barely float), the Earth about 5,500 kg/m³, sea-level air about 1.2 kg/m³. Results far outside familiar ranges usually mean a unit slipped, not that you discovered new physics.</p>
+
+  <div class="cat-card">
+    <h2><a href="/guides/unit-conversion">Unit Conversion Guide</a></h2>
+    <p>Exact metric-imperial factors for the SI units every physics problem uses.</p>
+  </div>
+
+  <div class="cat-card">
+    <h2><a href="/guides/random-numbers">Random Numbers Guide</a></h2>
+    <p>How pseudo-random generation works and when it matters for simulations.</p>
+  </div>
+
+  <h2>Why do my science calculator results look wrong?</h2>
+  <p>Almost always a unit mismatch: grams fed into a kg-based formula, or kPa treated as Pa. Convert every input to the formula’s base units first — the unit conversion guide shows the exact factors.</p>
+
+  <h2>Which base units does SI use?</h2>
+  <p>Metre (length), kilogram (mass), second (time), ampere (current), kelvin (temperature), mole (amount), and candela (luminous intensity). Every derived unit — newtons, joules, pascals — is built from these.</p>
+
+  <h2>Try the matching calculators</h2>
+  <p>
+    <a href="/science/ohms-law" class="cta">Ohm's Law Calculator</a>
+    <a href="/science/density" class="cta">Density Calculator</a>
+    <a href="/science/force" class="cta">Force Calculator</a>
+  </p>
+
+  <p><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Banks Calculate Your EMI — Amortization Demystified | CalcProMaster</title>
+  <meta name="description" content="The same payment every month hides a shifting split between interest and principal. See a real 36-month table, the EMI formula, and where refinancing actually helps.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/blog/how-emi-works">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How Banks Calculate Your EMI — Amortization Demystified",
+    "description": "The same payment every month hides a shifting split between interest and principal. See a real 36-month table, the EMI formula, and where refinancing actually helps.",
+    "url": "https://calcpromaster.netlify.app/blog/how-emi-works",
+    "datePublished": "2026-09-15",
+    "dateModified": "2026-09-15",
+    "author": { "@type": "Organization", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/about" },
+    "publisher": { "@type": "Organization", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "mainEntityOfPage": "https://calcpromaster.netlify.app/blog/how-emi-works"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://calcpromaster.netlify.app/blog" },
+      { "@type": "ListItem", "position": 3, "name": "How Banks Calculate Your EMI" }
+    ]
+  }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 760px; margin: 0 auto; padding: 1rem; line-height: 1.65; color: #1f2937; }
+    header { display: flex; gap: 1rem; flex-wrap: wrap; padding: .5rem 0; border-bottom: 1px solid #e5e7eb; }
+    header a { color: #4f46e5; text-decoration: none; }
+    .crumb { font-size: .875rem; color: #6b7280; }
+    .crumb a { color: #4f46e5; text-decoration: none; }
+    h1 { font-size: 1.75rem; line-height: 1.25; }
+    h2 { font-size: 1.25rem; margin-top: 2rem; border-bottom: 1px solid #e5e7eb; padding-bottom: .3rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.25rem; }
+    .answer { background: #eef2ff; border-left: 4px solid #4f46e5; padding: .75rem 1rem; border-radius: 0 .5rem .5rem 0; margin: 1rem 0; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .9rem; }
+    th, td { border: 1px solid #e5e7eb; padding: .4rem .6rem; text-align: right; }
+    th { background: #f9fafb; }
+    td:first-child, th:first-child { text-align: left; }
+    code { background: #f3f4f6; padding: .1rem .35rem; border-radius: .25rem; font-size: .9em; }
+    .formula { background: #f9fafb; border: 1px solid #e5e7eb; padding: .75rem 1rem; border-radius: .5rem; text-align: center; font-size: 1.05rem; margin: 1rem 0; overflow-x: auto; }
+    .cta { display: inline-block; background: #4f46e5; color: #fff; padding: .5rem 1rem; border-radius: .5rem; text-decoration: none; margin: .25rem .25rem .25rem 0; }
+    .cta:hover { background: #4338ca; }
+    .meta { color: #6b7280; font-size: .875rem; }
+    .tip { background: #fefce8; border-left: 4px solid #ca8a04; padding: .75rem 1rem; border-radius: 0 .5rem .5rem 0; margin: 1rem 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="/">Home</a>
+    <a href="/blog">Blog</a>
+    <a href="/guides">Guides</a>
+    <a href="/about">About</a>
+  </header>
+  <p class="crumb"><a href="/">Home</a> › <a href="/blog">Blog</a> › How EMI Works</p>
+  <h1>How Banks Calculate Your EMI — Amortization Demystified</h1>
+  <p class="meta">Sep 2026 · ~7 min read · Money</p>
+
+  <div class="answer">
+    <strong>Quick answer:</strong> An EMI (equated monthly installment) is one fixed payment that repays both interest and principal. The bank applies your annual rate as a <em>monthly</em> rate to the remaining balance each month — so early payments are mostly interest and later payments are mostly principal. Nothing about the payment changes; only the split does.
+  </div>
+
+  <h2>The EMI formula, and why it produces a constant payment</h2>
+  <div class="formula">
+    EMI = P × r × (1 + r)<sup>n</sup> / ((1 + r)<sup>n</sup> − 1)
+  </div>
+  <p>where <strong>P</strong> is the loan principal, <strong>r</strong> is the monthly interest rate (annual rate ÷ 12 ÷ 100), and <strong>n</strong> is the number of monthly payments.</p>
+  <p>This formula is the solution to one requirement: every payment for the whole term must leave the exact same remaining balance shrinking at the monthly rate, with the balance reaching exactly zero after payment <em>n</em>. There is only one payment size that satisfies that condition — that's the EMI. A lower payment never fully repays the loan; a higher one finishes it early.</p>
+
+  <h2>A worked example: ₹15,00,000 at 8.5% for 20 years</h2>
+  <p>Monthly rate r = 0.085 ÷ 12 ≈ 0.0070833. Term n = 240 months.</p>
+  <p>EMI = 1,500,000 × 0.0070833 × (1.0070833)<sup>240</sup> / ((1.0070833)<sup>240</sup> − 1) ≈ <strong>₹13,038</strong> per month.</p>
+  <p>Total paid over 20 years ≈ ₹31.3 lakh — of which about ₹16.3 lakh is interest. That's not a hidden fee; it's the arithmetic of spreading repayment over two decades. The calculator below shows this exact split for any loan you enter.</p>
+
+  <h2>The amortization schedule: where the money actually goes</h2>
+  <p>Each month the bank first charges interest on the <em>remaining</em> balance, then puts the rest of your EMI toward principal. Here is the actual split for the example above (₹13,038 EMI):</p>
+  <table>
+    <thead>
+      <tr><th>Month</th><th>Interest portion</th><th>Principal portion</th><th>Balance after</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>₹10,625</td><td>₹2,413</td><td>₹14,97,587</td></tr>
+      <tr><td>12</td><td>₹10,050</td><td>₹2,988</td><td>₹14,48,100</td></tr>
+      <tr><td>60</td><td>₹8,197</td><td>₹4,841</td><td>₹12,42,600</td></tr>
+      <tr><td>120</td><td>₹4,895</td><td>₹8,143</td><td>₹8,45,000</td></tr>
+      <tr><td>180</td><td>₹2,144</td><td>₹10,894</td><td>₹3,70,000</td></tr>
+      <tr><td>240</td><td>₹92</td><td>₹12,946</td><td>₹0</td></tr>
+    </tbody>
+  </table>
+  <p>Read that first row again: in month 1, <strong>81% of your payment is interest</strong>. By month 180 it's under 20%. This is why paying off a loan in year 2 saves far more interest than paying the same amount in year 15 — the balance the interest is computed on is what matters, and it's highest early on.</p>
+
+  <h2>Where prepayment actually helps (and where it doesn't)</h2>
+  <p>A prepayment reduces the balance directly, and every future interest charge is computed on that smaller balance. The effect is strongest when the remaining term is long:</p>
+  <ul>
+    <li><strong>Prepay ₹1,00,000 in month 12</strong> (balance ≈ ₹14.48 lakh) and you cut roughly ₹2.1–2.3 lakh of future interest over the full original term.</li>
+    <li><strong>Prepay the same ₹1,00,000 in month 180</strong> (balance ≈ ₹3.70 lakh) and the saving is roughly ₹45,000–50,000.</li>
+  </ul>
+  <p>The same rupee amount, at a different time, produces a very different result. There is no penalty for verifying this yourself: run your own numbers on the <a href="/finance/amortization">amortization schedule calculator</a>, which shows the month-by-month split.</p>
+  <div class="tip">
+    <strong>One honest caveat:</strong> compare prepaying against what the same money earns elsewhere. If your loan rate is 8.5% and a risk-free deposit pays 7.5% after tax, prepayment wins. If your investments reliably beat the loan rate after tax, they may win instead. The comparison — not the prepayment itself — is the decision.
+  </div>
+
+  <h2>Refinancing: the only three reasons it makes sense</h2>
+  <p>Refinancing replaces your loan with a new one. Ignore the marketing and check just three numbers:</p>
+  <ol>
+    <li><strong>Rate difference.</strong> A 0.25% drop rarely covers switching costs (processing fee ~0.5%, documentation, insurance re-covenants). A 1%+ drop often does on a large, young loan.</li>
+    <li><strong>Remaining term.</strong> Refinancing a loan you're 15 years into restarts the front-loaded interest phase — the new schedule's early payments are interest-heavy again.</li>
+    <li><strong>Total cost, not EMI.</strong> A "lower EMI" achieved by stretching the term almost always increases total interest. Compare lifetime totals, not monthly comfort.</li>
+  </ol>
+
+  <h2>Common misconceptions, checked against the math</h2>
+  <ul>
+    <li><em>"Paying EMI for half the term means half the loan is repaid."</em> No — at month 120 of 240 in the example, only about 44% of the principal is gone, because interest was front-loaded.</li>
+    <li><em>"Interest rate is the only thing that matters."</em> Term matters nearly as much: the same ₹15 lakh at the same 8.5% costs ₹7.1 lakh interest over 15 years but ₹16.3 lakh over 20.</li>
+    <li><em>"Prepayment saves interest equal to rate × amount × years."</em> No — it saves interest only for the remaining months, on the reduced balance, which is exactly what an amortization table computes.</li>
+  </ul>
+
+  <h2>Try it on your own loan</h2>
+  <p>The <a href="/finance/loan-emi">Loan EMI calculator</a> solves for payment, amount, rate, or term — including interest-only and day-count conventions that affect the first payment. The <a href="/finance/amortization">amortization schedule</a> shows your actual month-by-month split, which is where prepayment decisions come from.</p>
+  <p>
+    <a class="cta" href="/finance/loan-emi">Loan EMI Calculator</a>
+    <a class="cta" href="/finance/amortization">Amortization Schedule</a>
+  </p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>What does EMI stand for?</h3>
+  <p>Equated Monthly Installment — a fixed payment that covers both interest and principal every month for the full loan term.</p>
+  <h3>Why is my first EMI mostly interest?</h3>
+  <p>Because interest each month is charged on the outstanding balance, which is largest at the start. As the balance falls, the interest portion of the fixed EMI falls and the principal portion rises.</p>
+  <h3>Is it better to reduce EMI or reduce tenure after prepayment?</h3>
+  <p>Keeping the EMI the same and shortening the tenure saves more total interest, because the balance is repaid faster. Reducing the EMI keeps the loan alive longer, so interest accrues on the balance for more months.</p>
+
+  <p><a href="/blog">← All blog posts</a> · <a href="/guides">Step-by-step guides</a> · <a href="/guides/glossary">Glossary</a></p>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,6007 @@
+[
+ {
+  "id": "fuel-cost",
+  "name": "Fuel Cost Calculator",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "mileage-calculator",
+  "name": "Mileage Calculator",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "fuel-price-compare",
+  "name": "Fuel Price Comparison",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "car-loan-emi",
+  "name": "Car Loan EMI Calculator",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "car-affordability",
+  "name": "Car Affordability",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "lease-vs-buy",
+  "name": "Lease vs Buy Car",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "ev-charging-cost",
+  "name": "EV Charging Cost",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "ev-vs-gas-petrol",
+  "name": "EV vs Petrol Cost",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "ev-range",
+  "name": "EV Range Estimator",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "car-maintenance",
+  "name": "Car Maintenance Cost",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "tire-size",
+  "name": "Tire Size Calculator",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "oil-change",
+  "name": "Oil Change Interval",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "car-insurance",
+  "name": "Car Insurance Cost",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "commute-cost",
+  "name": "Commute Cost Calculator",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "ride-share-cost",
+  "name": "Ride-Share vs Car Cost",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "public-transport",
+  "name": "Public Transport vs Car",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "walking-transit",
+  "name": "Walk vs Transit Time",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "trip-time",
+  "name": "Trip Time Calculator",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "speed-distance-time",
+  "name": "Speed Distance Time",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "parking-cost",
+  "name": "Parking Cost Calculator",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "car-depreciation",
+  "name": "Car Depreciation",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "trade-in-value",
+  "name": "Trade-In Value Estimator",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "bike-fuel",
+  "name": "Motorcycle Fuel Cost",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "bike-loan",
+  "name": "Motorcycle Loan EMI",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "stopping-distance",
+  "name": "Stopping Distance",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "fuel-efficiency",
+  "name": "Fuel Efficiency Savings",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "car-rental",
+  "name": "Car Rental Cost",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "taxi-fare",
+  "name": "Taxi Fare Estimator",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "auto-fare",
+  "name": "Auto-Rickshaw Fare",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "delivery-cost",
+  "name": "Delivery Cost Calculator",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "route-optimizer",
+  "name": "Multi-Stop Route Cost",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "carbon-footprint-car",
+  "name": "Car Carbon Footprint",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "fuel-tank-range",
+  "name": "Fuel Tank Range Calculator",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "tow-capacity",
+  "name": "Tow Capacity Calculator",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "cargo-volume",
+  "name": "Cargo Volume Calculator",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "toll-cost",
+  "name": "Toll Cost Calculator",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "carpool-savings",
+  "name": "Carpool Savings Calculator",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "bus-vs-car",
+  "name": "Bus vs Car Cost",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "ebike-range",
+  "name": "E-Bike Range Calculator",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "scooter-cost",
+  "name": "Scooter Running Cost",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "registration-cost",
+  "name": "Vehicle Registration Cost",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "tire-replacement",
+  "name": "Tire Replacement Cost",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "speed-conv",
+  "name": "Speed Converter (Auto)",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "hybrid-savings",
+  "name": "Hybrid vs Gas Savings",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "power-to-weight",
+  "name": "Power-to-Weight Calculator",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "quarter-mile",
+  "name": "Quarter-Mile ET Calculator",
+  "file": "auto-transport.js"
+ },
+ {
+  "id": "business-roi",
+  "name": "Business ROI",
+  "file": "business.js"
+ },
+ {
+  "id": "profit-margin",
+  "name": "Profit Margin Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "ltv",
+  "name": "Customer LTV",
+  "file": "business.js"
+ },
+ {
+  "id": "cac",
+  "name": "CAC Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "conversion-rate",
+  "name": "Conversion Rate",
+  "file": "business.js"
+ },
+ {
+  "id": "churn",
+  "name": "Churn Rate Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "roas",
+  "name": "ROAS Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "burn-rate",
+  "name": "Burn Rate Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "mrr",
+  "name": "MRR Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "nps",
+  "name": "Net Promoter Score (NPS) Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "freelance-rate",
+  "name": "Freelance Rate Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "pricing",
+  "name": "Pricing Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "inventory",
+  "name": "Inventory Turnover",
+  "file": "business.js"
+ },
+ {
+  "id": "break-even-revenue",
+  "name": "Break-Even Revenue",
+  "file": "business.js"
+ },
+ {
+  "id": "payback",
+  "name": "Payback Period",
+  "file": "business.js"
+ },
+ {
+  "id": "depreciation",
+  "name": "Depreciation Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "discount-rate",
+  "name": "Discount Rate Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "saas-unit-metrics",
+  "name": "SaaS Unit Metrics Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "break-even-point",
+  "name": "Break-Even Point Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "invoice-due-date",
+  "name": "Invoice Due Date & Late Fee",
+  "file": "business.js"
+ },
+ {
+  "id": "employee-cost",
+  "name": "True Employee Cost",
+  "file": "business.js"
+ },
+ {
+  "id": "markup-margin",
+  "name": "Markup vs Margin",
+  "file": "business.js"
+ },
+ {
+  "id": "working-capital",
+  "name": "Working Capital Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "cash-flow-statement",
+  "name": "Cash Flow Statement Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "revenue-per-employee",
+  "name": "Revenue per Employee",
+  "file": "business.js"
+ },
+ {
+  "id": "cac-payback",
+  "name": "CAC Payback Period",
+  "file": "business.js"
+ },
+ {
+  "id": "business-valuation",
+  "name": "Business Valuation (Revenue Multiple)",
+  "file": "business.js"
+ },
+ {
+  "id": "gross-margin",
+  "name": "Gross Margin Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "goal-seek-price",
+  "name": "Target Price from Margin",
+  "file": "business.js"
+ },
+ {
+  "id": "subscription-ltv",
+  "name": "Subscription LTV Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "cash-conversion-cycle",
+  "name": "Cash Conversion Cycle Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "market-share",
+  "name": "Market Share Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "aov",
+  "name": "Average Order Value Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "customer-ltv",
+  "name": "Customer Lifetime Value Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "csat-score",
+  "name": "CSAT Score Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "conversion-funnel",
+  "name": "Conversion Funnel Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "ab-test-significance",
+  "name": "A/B Test Significance Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "project-bid",
+  "name": "Project Bid Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "retainer-value",
+  "name": "Retainer Value Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "salary-converter",
+  "name": "Salary Converter",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "salary-negotiation",
+  "name": "Salary Negotiation Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "raise-calculator",
+  "name": "Pay Raise Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "tax-bracket",
+  "name": "Income Tax Bracket Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "freelance-hourly-rate",
+  "name": "Freelance Hourly Rate",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "freelance-project",
+  "name": "Freelance Project Fee",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "contractor-rate",
+  "name": "Contractor vs Employee Rate",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "overtime-pay",
+  "name": "Overtime Pay Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "bonus-calc",
+  "name": "Bonus & Commission Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "pay-gap",
+  "name": "Gender Pay Gap Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "401k-match",
+  "name": "401k Match Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "stock-options",
+  "name": "Stock Options Value Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "side-hustle",
+  "name": "Side Hustle Income Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "crypto-tax",
+  "name": "Cryptocurrency Tax Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "career-gap",
+  "name": "Career Gap Impact Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "remortgage-calc",
+  "name": "Remortgage Savings Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "mortgage-afford",
+  "name": "Mortgage Affordability Checker",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "tax-refund",
+  "name": "Tax Refund Estimator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "invoicing-calc",
+  "name": "Invoice Total Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "employment-status",
+  "name": "Self-Employed Tax Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "commission-plan",
+  "name": "Sales Commission Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "freelance-budget",
+  "name": "Freelance Monthly Budget",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "redundancy-pay",
+  "name": "Redundancy Pay Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "self-employment-tax",
+  "name": "Self-Employment Tax",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "freelance-daily",
+  "name": "Freelance Daily Rate",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "monthly-goal",
+  "name": "Freelance Monthly Goal",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "retirement-contrib",
+  "name": "Retirement Contribution Impact",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "benefits-value",
+  "name": "Benefits Package Value",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "pto-calc",
+  "name": "PTO Accrual Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "job-offer-compare",
+  "name": "Job Offer Comparison",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "cost-living-adjustment",
+  "name": "Cost of Living Adjustment",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "severance-calc",
+  "name": "Severance Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "side-hustle-profit",
+  "name": "Side Hustle Profit",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "salary-raise-worth",
+  "name": "Salary Raise Worth",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "wfh-savings",
+  "name": "Work-from-Home Savings Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "stock-vesting",
+  "name": "Stock Vesting Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "vacation-days",
+  "name": "Vacation Accrual Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "timesheet-hours",
+  "name": "Timesheet Decimal Converter",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "shift-differential",
+  "name": "Shift Differential Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "concrete-slab",
+  "name": "Concrete Slab Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "wall-area",
+  "name": "Wall Area Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "roofing",
+  "name": "Roofing Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "drywall",
+  "name": "Drywall Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "flooring",
+  "name": "Flooring Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "gravel",
+  "name": "Gravel Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "insulation",
+  "name": "Insulation Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "stairs",
+  "name": "Stair Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "wallpaper",
+  "name": "Wallpaper Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "carpet",
+  "name": "Carpet Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "mulch",
+  "name": "Mulch Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "soil",
+  "name": "Soil Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "bricks",
+  "name": "Brick Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "fence",
+  "name": "Fence Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "excavation",
+  "name": "Excavation Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "tile-calculator",
+  "name": "Tile Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "paint-quantity",
+  "name": "Paint Quantity Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "rebar-calculator",
+  "name": "Rebar Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "formwork",
+  "name": "Formwork Area Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "concrete-column",
+  "name": "Concrete Column Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "lumber-calculator",
+  "name": "Lumber Calculator (Board Feet)",
+  "file": "construction.js"
+ },
+ {
+  "id": "paver-calculator",
+  "name": "Paver Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "water-tank",
+  "name": "Water Tank Capacity",
+  "file": "construction.js"
+ },
+ {
+  "id": "roof-pitch",
+  "name": "Roof Pitch Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "deck-calculator",
+  "name": "Deck Board Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "concrete-bags",
+  "name": "Concrete Bag Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "block-wall",
+  "name": "Concrete Block Wall",
+  "file": "construction.js"
+ },
+ {
+  "id": "rebar-calc",
+  "name": "Rebar Layout Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "footing-size",
+  "name": "Footing Size Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "gravel-tonnage",
+  "name": "Gravel Tonnage Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "asphalt-quantity",
+  "name": "Asphalt Quantity Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "mortar-mix",
+  "name": "Mortar Mix Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "drywall-screws",
+  "name": "Drywall Screw Count",
+  "file": "construction.js"
+ },
+ {
+  "id": "pipe-volume",
+  "name": "Pipe Volume Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "retaining-wall",
+  "name": "Retaining Wall Blocks",
+  "file": "construction.js"
+ },
+ {
+  "id": "scaffolding",
+  "name": "Scaffolding Estimate",
+  "file": "construction.js"
+ },
+ {
+  "id": "crown-molding",
+  "name": "Crown Molding Length",
+  "file": "construction.js"
+ },
+ {
+  "id": "septic-size",
+  "name": "Septic Tank Size",
+  "file": "construction.js"
+ },
+ {
+  "id": "plaster",
+  "name": "Plaster Quantity Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "gutter",
+  "name": "Gutter Length Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "sod",
+  "name": "Sod Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "ceiling-tile",
+  "name": "Ceiling Tile Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "stair-stringer",
+  "name": "Stair Stringer Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "siding-squares",
+  "name": "Siding Squares Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "soffit-area",
+  "name": "Soffit Area Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "post-hole-concrete",
+  "name": "Post Hole Concrete Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "fence-panel",
+  "name": "Fence Panel Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "gravel-driveway",
+  "name": "Gravel Driveway Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "insulation-batts",
+  "name": "Insulation Coverage Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "rafter-length",
+  "name": "Rafter Length Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "shingle-squares",
+  "name": "Shingle Squares Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "drywall-sheets",
+  "name": "Drywall Sheets Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "tile-boxes",
+  "name": "Tile Boxes Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "length",
+  "name": "Length Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "weight",
+  "name": "Weight Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "volume",
+  "name": "Volume Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "area",
+  "name": "Area Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "speed",
+  "name": "Speed Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "data-storage",
+  "name": "Data Storage Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "angle",
+  "name": "Angle Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "energy",
+  "name": "Energy Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "pressure-conv",
+  "name": "Pressure Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "frequency-conv",
+  "name": "Frequency Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "temperature",
+  "name": "Temperature Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "time-conv",
+  "name": "Time Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "force-conv",
+  "name": "Force Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "fuel-efficiency-converter",
+  "name": "Fuel Efficiency Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "cooking-conv",
+  "name": "Cooking Measurement Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "clothing-size",
+  "name": "Clothing Size Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "shoe-size",
+  "name": "Shoe Size Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "currency-conv",
+  "name": "Currency Converter (Fixed Rate)",
+  "file": "conversion.js"
+ },
+ {
+  "id": "torque-conv",
+  "name": "Torque Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "power-conv",
+  "name": "Power Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "voltage-conv",
+  "name": "Electrical Unit Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "radiation-conv",
+  "name": "Radiation Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "density-conv",
+  "name": "Density Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "viscosity-conv",
+  "name": "Viscosity Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "bit-rate-conv",
+  "name": "Bit Rate Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "luminance-conv",
+  "name": "Luminance Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "molarity-conv",
+  "name": "Molarity Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "flow-rate-conv",
+  "name": "Flow Rate Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "paper-size-conv",
+  "name": "Paper Size Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "fraction-percent",
+  "name": "Fraction ↔ Percent ↔ Decimal",
+  "file": "conversion.js"
+ },
+ {
+  "id": "roman-numeral",
+  "name": "Roman Numeral Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "ppm-conv",
+  "name": "PPM / Concentration Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "thermal-conductivity",
+  "name": "Thermal Conductivity Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "radiation-dose-conv",
+  "name": "Radiation Dose Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "wire-gauge-conv",
+  "name": "Wire Gauge (AWG) Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "acceleration-conv",
+  "name": "Acceleration Converter",
+  "file": "conversion.js"
+ },
+ {
+  "id": "gpa",
+  "name": "GPA Calculator",
+  "file": "education.js"
+ },
+ {
+  "id": "cgpa",
+  "name": "CGPA Calculator",
+  "file": "education.js"
+ },
+ {
+  "id": "grade",
+  "name": "Grade Calculator",
+  "file": "education.js"
+ },
+ {
+  "id": "study-time",
+  "name": "Study Time Planner",
+  "file": "education.js"
+ },
+ {
+  "id": "reading-speed",
+  "name": "Reading Speed Calculator",
+  "file": "education.js"
+ },
+ {
+  "id": "test-score",
+  "name": "Test Score Calculator",
+  "file": "education.js"
+ },
+ {
+  "id": "exam-countdown",
+  "name": "Exam Countdown",
+  "file": "education.js"
+ },
+ {
+  "id": "words-pages",
+  "name": "Words to Pages",
+  "file": "education.js"
+ },
+ {
+  "id": "citation",
+  "name": "Citation Generator",
+  "file": "education.js"
+ },
+ {
+  "id": "quiz-score",
+  "name": "Quiz Score Predictor",
+  "file": "education.js"
+ },
+ {
+  "id": "semester-gpa",
+  "name": "Semester GPA Projector",
+  "file": "education.js"
+ },
+ {
+  "id": "college-cost-planner",
+  "name": "College Cost Planner",
+  "file": "education.js"
+ },
+ {
+  "id": "scholarship-calc",
+  "name": "Scholarship Need Calculator",
+  "file": "education.js"
+ },
+ {
+  "id": "study-break",
+  "name": "Study Break Timer",
+  "file": "education.js"
+ },
+ {
+  "id": "grade-needed",
+  "name": "Final Grade Needed (Weighted)",
+  "file": "education.js"
+ },
+ {
+  "id": "class-rank",
+  "name": "Class Rank Calculator",
+  "file": "education.js"
+ },
+ {
+  "id": "homework-time",
+  "name": "Homework Time Estimator",
+  "file": "education.js"
+ },
+ {
+  "id": "flashcard-count",
+  "name": "Flashcard Review Planner",
+  "file": "education.js"
+ },
+ {
+  "id": "plagiarism-check",
+  "name": "Citation Checker",
+  "file": "education.js"
+ },
+ {
+  "id": "letter-grade",
+  "name": "Letter Grade Converter",
+  "file": "education.js"
+ },
+ {
+  "id": "sat-score",
+  "name": "SAT Score Estimator",
+  "file": "education.js"
+ },
+ {
+  "id": "act-score",
+  "name": "ACT Score Calculator",
+  "file": "education.js"
+ },
+ {
+  "id": "exam-score-needed",
+  "name": "Final Exam Score Calculator",
+  "file": "education.js"
+ },
+ {
+  "id": "attendance-rate",
+  "name": "Attendance Rate Calculator",
+  "file": "education.js"
+ },
+ {
+  "id": "study-hours",
+  "name": "Study Hours Planner",
+  "file": "education.js"
+ },
+ {
+  "id": "tuition-cost",
+  "name": "Tuition Cost Calculator",
+  "file": "education.js"
+ },
+ {
+  "id": "gpa-target",
+  "name": "GPA Target Calculator",
+  "file": "education.js"
+ },
+ {
+  "id": "reading-time",
+  "name": "Reading Time Calculator",
+  "file": "education.js"
+ },
+ {
+  "id": "presentation-time",
+  "name": "Presentation Time Calculator",
+  "file": "education.js"
+ },
+ {
+  "id": "test-average",
+  "name": "Test Score Average",
+  "file": "education.js"
+ },
+ {
+  "id": "grade-percentage",
+  "name": "Grade Percentage Calculator",
+  "file": "education.js"
+ },
+ {
+  "id": "graduation-date",
+  "name": "Graduation Date Calculator",
+  "file": "education.js"
+ },
+ {
+  "id": "course-load",
+  "name": "Course Load Calculator",
+  "file": "education.js"
+ },
+ {
+  "id": "financial-need",
+  "name": "Financial Need Calculator",
+  "file": "education.js"
+ },
+ {
+  "id": "percentile-rank",
+  "name": "Percentile Rank Calculator",
+  "file": "education.js"
+ },
+ {
+  "id": "act-sat-compare",
+  "name": "ACT to SAT Converter",
+  "file": "education.js"
+ },
+ {
+  "id": "assignment-split",
+  "name": "Grade Weighting Calculator",
+  "file": "education.js"
+ },
+ {
+  "id": "citation-count",
+  "name": "H-Index Calculator",
+  "file": "education.js"
+ },
+ {
+  "id": "voltage-drop",
+  "name": "Voltage Drop Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "power-factor",
+  "name": "Power Factor Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "gear-ratio",
+  "name": "Gear Ratio Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "torque",
+  "name": "Torque Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "led-resistor",
+  "name": "LED Resistor Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "capacitor",
+  "name": "Capacitor Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "battery-life",
+  "name": "Battery Life Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "wire-gauge",
+  "name": "Wire Gauge Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "rpm",
+  "name": "RPM Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "horsepower",
+  "name": "Horsepower Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "inductor",
+  "name": "Inductor Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "impedance",
+  "name": "Impedance Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "beam-load",
+  "name": "Beam Load Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "hydraulic",
+  "name": "Hydraulic Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "thermal",
+  "name": "Thermal Expansion",
+  "file": "engineering.js"
+ },
+ {
+  "id": "kva-kw",
+  "name": "kVA to kW Converter",
+  "file": "engineering.js"
+ },
+ {
+  "id": "belt-length",
+  "name": "Belt Length Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "flow-rate",
+  "name": "Flow Rate Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "sound-level",
+  "name": "Sound Level Addition",
+  "file": "engineering.js"
+ },
+ {
+  "id": "shaft-power",
+  "name": "Shaft Power Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "spring-rate",
+  "name": "Spring Rate Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "resonant-frequency",
+  "name": "Resonant Frequency Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "transformer-ratio",
+  "name": "Transformer Ratio Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "hydraulic-power",
+  "name": "Hydraulic Power Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "stress-strain",
+  "name": "Stress & Strain Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "beam-deflection",
+  "name": "Beam Deflection (Simply Supported)",
+  "file": "engineering.js"
+ },
+ {
+  "id": "column-buckling",
+  "name": "Euler Buckling Load",
+  "file": "engineering.js"
+ },
+ {
+  "id": "pipe-flow",
+  "name": "Pipe Flow Rate (Darcy-Weisbach)",
+  "file": "engineering.js"
+ },
+ {
+  "id": "steel-weight",
+  "name": "Steel Weight Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "concrete-mix",
+  "name": "Concrete Mix Design",
+  "file": "engineering.js"
+ },
+ {
+  "id": "structural-load",
+  "name": "Structural Load Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "electrical-energy",
+  "name": "Electrical Energy Cost",
+  "file": "engineering.js"
+ },
+ {
+  "id": "resistor-combination",
+  "name": "Resistor Combination",
+  "file": "engineering.js"
+ },
+ {
+  "id": "capacitor-energy",
+  "name": "Capacitor Energy",
+  "file": "engineering.js"
+ },
+ {
+  "id": "inductor-energy",
+  "name": "Inductor Energy",
+  "file": "engineering.js"
+ },
+ {
+  "id": "rc-time-constant",
+  "name": "RC Time Constant",
+  "file": "engineering.js"
+ },
+ {
+  "id": "cable-sizing",
+  "name": "Cable Sizing Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "ventilation-cfm",
+  "name": "Ventilation CFM Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "torque-wrench",
+  "name": "Torque Wrench Setting",
+  "file": "engineering.js"
+ },
+ {
+  "id": "bearing-load",
+  "name": "Bearing Load Rating",
+  "file": "engineering.js"
+ },
+ {
+  "id": "engine-efficiency",
+  "name": "Engine Efficiency Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "pump-power",
+  "name": "Pump Power Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "tank-volume",
+  "name": "Tank Volume Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "heat-exchanger",
+  "name": "Heat Exchanger (LMTD)",
+  "file": "engineering.js"
+ },
+ {
+  "id": "pcb-trace",
+  "name": "PCB Trace Width Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "bolt-torque",
+  "name": "Bolt Torque Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "pulley",
+  "name": "Pulley System Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "lever",
+  "name": "Lever Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "wind-load",
+  "name": "Wind Load Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "duct-size",
+  "name": "Duct Size Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "head-loss",
+  "name": "Pipe Head Loss Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "breaker-size",
+  "name": "Circuit Breaker Size Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "power-factor-correction",
+  "name": "Power Factor Correction Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "section-modulus",
+  "name": "Section Modulus Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "shaft-torsion",
+  "name": "Shaft Torsion Stress Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "pulley-speed",
+  "name": "Pulley Speed Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "manning-flow",
+  "name": "Manning Flow Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "orifice-flow",
+  "name": "Orifice Flow Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "three-phase-power",
+  "name": "Three Phase Power Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "ups-sizing",
+  "name": "UPS Battery Sizing Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "hydraulic-press",
+  "name": "Hydraulic Press Force Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "radiation-shielding",
+  "name": "Radiation Shielding Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "steam-consumption",
+  "name": "Steam Consumption Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "noise-level",
+  "name": "Combined Noise Level Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "rcf-gforce",
+  "name": "RCF (G-Force) Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "age",
+  "name": "Age Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "date-diff",
+  "name": "Date Difference Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "time-calc",
+  "name": "Time Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "trip-fuel-cost",
+  "name": "Trip Fuel Cost Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "electricity",
+  "name": "Electricity Bill Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "carbon",
+  "name": "Carbon Footprint Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "gst",
+  "name": "GST/VAT Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "paint",
+  "name": "Paint Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "concrete",
+  "name": "Concrete Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "garden",
+  "name": "Garden Area Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "cooking",
+  "name": "Cooking Converter",
+  "file": "everyday.js"
+ },
+ {
+  "id": "weather",
+  "name": "Weather Index",
+  "file": "everyday.js"
+ },
+ {
+  "id": "timezone",
+  "name": "Time Zone Converter",
+  "file": "everyday.js"
+ },
+ {
+  "id": "calorie-counter",
+  "name": "Daily Calorie Counter",
+  "file": "everyday.js"
+ },
+ {
+  "id": "currency-exchange",
+  "name": "Currency Exchange Fee Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "sleep-calc",
+  "name": "Sleep Cycle Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "walking-steps",
+  "name": "Walking Steps Tracker",
+  "file": "everyday.js"
+ },
+ {
+  "id": "fitness-age",
+  "name": "Fitness Age Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "pet-age",
+  "name": "Pet Age Calculator (Dog/Cat)",
+  "file": "everyday.js"
+ },
+ {
+  "id": "blood-alcohol",
+  "name": "Blood Alcohol Content (BAC)",
+  "file": "everyday.js"
+ },
+ {
+  "id": "vacation-budget",
+  "name": "Vacation Budget Planner",
+  "file": "everyday.js"
+ },
+ {
+  "id": "laundry-cost",
+  "name": "Laundry Cost Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "coffee-cost",
+  "name": "Coffee Habit Cost Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "grocery-budget",
+  "name": "Grocery Budget Planner",
+  "file": "everyday.js"
+ },
+ {
+  "id": "distance-pace",
+  "name": "Distance Pace Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "savings-goal-date",
+  "name": "Savings Goal Date",
+  "file": "everyday.js"
+ },
+ {
+  "id": "budget-allocator",
+  "name": "Monthly Budget Allocator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "event-countdown",
+  "name": "Event Countdown",
+  "file": "everyday.js"
+ },
+ {
+  "id": "work-hours-weekly",
+  "name": "Weekly Work Hours",
+  "file": "everyday.js"
+ },
+ {
+  "id": "days-between",
+  "name": "Days Between Dates",
+  "file": "everyday.js"
+ },
+ {
+  "id": "compound-savings",
+  "name": "Compound Savings Growth",
+  "file": "everyday.js"
+ },
+ {
+  "id": "business-days",
+  "name": "Business Days Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "week-number",
+  "name": "ISO Week Number Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "day-of-year",
+  "name": "Day of Year Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "leap-year",
+  "name": "Leap Year Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "lottery-odds",
+  "name": "Lottery Odds Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "poker-flush",
+  "name": "Poker Flush Odds Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "easter-date",
+  "name": "Easter Date Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "day-of-week",
+  "name": "Day of Week Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "moon-phase",
+  "name": "Moon Phase Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "meeting-cost",
+  "name": "Meeting Cost Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "sunrise-sunset-length",
+  "name": "Daylight Length Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "pomodoro-planner",
+  "name": "Pomodoro Planner",
+  "file": "everyday.js"
+ },
+ {
+  "id": "gift-wrap",
+  "name": "Gift Wrap Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "moving-truck",
+  "name": "Moving Truck Size Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "jet-lag",
+  "name": "Jet Lag Recovery Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "heat-pump-savings",
+  "name": "Heat Pump Savings Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "loan-emi",
+  "name": "Loan EMI Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "mortgage",
+  "name": "Mortgage Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "compound-interest",
+  "name": "Compound Interest Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "simple-interest",
+  "name": "Simple Interest Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "auto-loan",
+  "name": "Auto Loan Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "credit-card-payoff",
+  "name": "Credit Card Payoff",
+  "file": "finance.js"
+ },
+ {
+  "id": "retirement",
+  "name": "Retirement Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "investment",
+  "name": "Investment Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "savings-goal",
+  "name": "Savings Goal Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "tax",
+  "name": "Income Tax Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "sales-tax",
+  "name": "Sales Tax Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "npv",
+  "name": "NPV Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "irr",
+  "name": "IRR Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "roi",
+  "name": "ROI Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "tip",
+  "name": "Tip Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "salary",
+  "name": "Salary Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "annuity",
+  "name": "Annuity Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "inflation",
+  "name": "Inflation Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "bonds",
+  "name": "Bond Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "debt-ratio",
+  "name": "Debt-to-Income Ratio",
+  "file": "finance.js"
+ },
+ {
+  "id": "net-worth-calculator",
+  "name": "Net Worth Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "rent-vs-buy",
+  "name": "Rent vs Buy Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "refinance",
+  "name": "Refinance Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "home-afford",
+  "name": "Home Affordability Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "currency-converter",
+  "name": "Currency Converter",
+  "file": "finance.js"
+ },
+ {
+  "id": "loan-qualify",
+  "name": "Loan Qualification",
+  "file": "finance.js"
+ },
+ {
+  "id": "paycheck",
+  "name": "Paycheck Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "break-even",
+  "name": "Break-Even Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "cash-flow",
+  "name": "Cash Flow Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "markup",
+  "name": "Markup Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "discount",
+  "name": "Discount Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "present-value",
+  "name": "Present Value Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "future-value",
+  "name": "Future Value Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "amortization",
+  "name": "Amortization Schedule",
+  "file": "finance.js"
+ },
+ {
+  "id": "loan-to-value",
+  "name": "Loan-to-Value Ratio",
+  "file": "finance.js"
+ },
+ {
+  "id": "apr",
+  "name": "APR Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "capital-gains",
+  "name": "Capital Gains Tax",
+  "file": "finance.js"
+ },
+ {
+  "id": "dividend",
+  "name": "Dividend Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "fire",
+  "name": "FIRE Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "social-security",
+  "name": "Social Security Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "rental-yield",
+  "name": "Rental Yield Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "loan-comparison",
+  "name": "Loan Comparison",
+  "file": "finance.js"
+ },
+ {
+  "id": "investment-growth",
+  "name": "Investment Growth Comparison",
+  "file": "finance.js"
+ },
+ {
+  "id": "savings-comparison",
+  "name": "Savings Account Comparison",
+  "file": "finance.js"
+ },
+ {
+  "id": "mortgage-payoff",
+  "name": "Mortgage Payoff Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "graduated-payment",
+  "name": "Graduated Payment Mortgage",
+  "file": "finance.js"
+ },
+ {
+  "id": "balloon-payment",
+  "name": "Balloon Payment Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "interest-only",
+  "name": "Interest-Only Mortgage",
+  "file": "finance.js"
+ },
+ {
+  "id": "emergency-fund",
+  "name": "Emergency Fund Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "bond-yield",
+  "name": "Bond Yield to Maturity",
+  "file": "finance.js"
+ },
+ {
+  "id": "retirement-income",
+  "name": "Retirement Income Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "sip",
+  "name": "SIP Calculator (Systematic Investment Plan)",
+  "file": "finance.js"
+ },
+ {
+  "id": "crypto-profit",
+  "name": "Crypto Profit Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "stock-profit",
+  "name": "Stock Profit Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "dca",
+  "name": "DCA Calculator (Dollar Cost Average)",
+  "file": "finance.js"
+ },
+ {
+  "id": "college-cost",
+  "name": "College Cost Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "perpetuity",
+  "name": "Perpetuity Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "esop",
+  "name": "ESOP Calculator (Employee Stock Ownership)",
+  "file": "finance.js"
+ },
+ {
+  "id": "us-income-tax",
+  "name": "US Federal Income Tax Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "uk-income-tax",
+  "name": "UK Income Tax Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "canada-income-tax",
+  "name": "Canada Income Tax Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "australia-income-tax",
+  "name": "Australia Income Tax Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "bond-price",
+  "name": "Bond Price Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "cd-calculator",
+  "name": "CD Interest Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "annuity-payout",
+  "name": "Annuity Payout Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "dividend-yield",
+  "name": "Dividend Yield Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "rule-of-72",
+  "name": "Rule of 72 Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "loan-payoff",
+  "name": "Loan Payoff Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "retirement-withdrawal",
+  "name": "Retirement Withdrawal Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "inflation-adjusted",
+  "name": "Inflation Adjusted Return",
+  "file": "finance.js"
+ },
+ {
+  "id": "tax-equivalent-yield",
+  "name": "Tax Equivalent Yield",
+  "file": "finance.js"
+ },
+ {
+  "id": "529-plan",
+  "name": "529 Plan Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "times-interest-earned",
+  "name": "Times Interest Earned",
+  "file": "finance.js"
+ },
+ {
+  "id": "quick-ratio",
+  "name": "Quick Ratio Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "ebitda",
+  "name": "EBITDA Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "enterprise-value",
+  "name": "Enterprise Value Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "wacc",
+  "name": "WACC Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "sharpe-ratio",
+  "name": "Sharpe Ratio Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "geometric-mean",
+  "name": "Geometric Mean Return",
+  "file": "finance.js"
+ },
+ {
+  "id": "debt-snowball",
+  "name": "Debt Snowball Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "payday-loan-cost",
+  "name": "Payday Loan Cost Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "emergency-fund-rate",
+  "name": "Emergency Fund Growth",
+  "file": "finance.js"
+ },
+ {
+  "id": "property-tax",
+  "name": "Property Tax Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "closing-costs",
+  "name": "Closing Costs Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "cap-rate",
+  "name": "Cap Rate Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "student-loan-repayment",
+  "name": "Student Loan Repayment",
+  "file": "finance.js"
+ },
+ {
+  "id": "cost-of-debt",
+  "name": "Cost of Debt Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "fha-loan",
+  "name": "FHA Loan Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "va-loan",
+  "name": "VA Loan Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "reverse-mortgage",
+  "name": "Reverse Mortgage Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "house-affordability",
+  "name": "House Affordability Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "mortgage-refinance",
+  "name": "Mortgage Refinance Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "crypto-gains",
+  "name": "Crypto Gains Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "price-to-earnings",
+  "name": "P/E Ratio Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "dividend-discount",
+  "name": "Dividend Discount Model",
+  "file": "finance.js"
+ },
+ {
+  "id": "margin-call",
+  "name": "Margin Call Price Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "black-scholes",
+  "name": "Black-Scholes Option Pricing",
+  "file": "finance.js"
+ },
+ {
+  "id": "bond-duration",
+  "name": "Bond Duration Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "growing-perpetuity",
+  "name": "Growing Perpetuity Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "tax-loss-harvest",
+  "name": "Tax Loss Harvesting",
+  "file": "finance.js"
+ },
+ {
+  "id": "savings-rate",
+  "name": "Savings Rate Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "envelope-budget",
+  "name": "50/30/20 Budget Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "car-lease-calculator",
+  "name": "Car Lease Payment Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "cost-of-living",
+  "name": "Cost of Living Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "debt-consolidation",
+  "name": "Debt Consolidation Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "yield-to-maturity",
+  "name": "Yield to Maturity Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "gross-rent-multiplier",
+  "name": "Gross Rent Multiplier",
+  "file": "finance.js"
+ },
+ {
+  "id": "current-ratio-finance",
+  "name": "Current Ratio Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "accounts-receivable-turnover",
+  "name": "AR Turnover Ratio",
+  "file": "finance.js"
+ },
+ {
+  "id": "operating-margin",
+  "name": "Operating Margin Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "net-profit-margin",
+  "name": "Net Profit Margin",
+  "file": "finance.js"
+ },
+ {
+  "id": "coverage-ratio",
+  "name": "Debt Coverage Ratio",
+  "file": "finance.js"
+ },
+ {
+  "id": "home-equity",
+  "name": "Home Equity Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "cash-on-cash",
+  "name": "Cash-on-Cash Return",
+  "file": "finance.js"
+ },
+ {
+  "id": "loan-balance",
+  "name": "Loan Balance Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "price-to-rent",
+  "name": "Price-to-Rent Ratio",
+  "file": "finance.js"
+ },
+ {
+  "id": "fico-simulator",
+  "name": "Credit Score Simulator",
+  "file": "finance.js"
+ },
+ {
+  "id": "discounted-payback",
+  "name": "Discounted Payback Period",
+  "file": "finance.js"
+ },
+ {
+  "id": "portfolio-return",
+  "name": "Portfolio Return Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "payroll-tax",
+  "name": "Payroll Tax Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "standard-deduction",
+  "name": "Standard vs Itemized Deduction",
+  "file": "finance.js"
+ },
+ {
+  "id": "home-office-deduction",
+  "name": "Home Office Deduction",
+  "file": "finance.js"
+ },
+ {
+  "id": "estimated-tax",
+  "name": "Estimated Tax Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "diversification",
+  "name": "Portfolio Diversification",
+  "file": "finance.js"
+ },
+ {
+  "id": "forex-pip",
+  "name": "Forex Pip Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "currency-arbitrage",
+  "name": "Currency Arbitrage Detector",
+  "file": "finance.js"
+ },
+ {
+  "id": "payback-period",
+  "name": "Simple Payback Period",
+  "file": "finance.js"
+ },
+ {
+  "id": "t-bill",
+  "name": "T-Bill Calculator (Price & Yield)",
+  "file": "finance.js"
+ },
+ {
+  "id": "cagr",
+  "name": "CAGR Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "capm",
+  "name": "CAPM Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "dcf",
+  "name": "DCF Valuation Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "debt-to-equity",
+  "name": "Debt-to-Equity Ratio",
+  "file": "finance.js"
+ },
+ {
+  "id": "sip-step-up",
+  "name": "Step-Up SIP Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "fixed-deposit-vs-recurring",
+  "name": "FD vs RD Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "insurance-surrender-value",
+  "name": "Insurance Surrender Value",
+  "file": "finance.js"
+ },
+ {
+  "id": "espp",
+  "name": "ESPP Calculator (Stock Purchase Plan)",
+  "file": "finance.js"
+ },
+ {
+  "id": "roth-vs-traditional",
+  "name": "Roth vs Traditional 401(k)",
+  "file": "finance.js"
+ },
+ {
+  "id": "recast-mortgage",
+  "name": "Mortgage Recast Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "biweekly-mortgage",
+  "name": "Biweekly Mortgage Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "mortgage-points",
+  "name": "Mortgage Points Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "rent-affordability",
+  "name": "Rent Affordability Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "dividend-reinvestment",
+  "name": "Dividend Reinvestment Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "stock-split",
+  "name": "Stock Split Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "eps-calculator",
+  "name": "Earnings Per Share Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "book-value-share",
+  "name": "Book Value Per Share Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "net-operating-income",
+  "name": "NOI Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "credit-utilization",
+  "name": "Credit Utilization Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "apy-calculator",
+  "name": "APY Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "lump-sum-vs-sip",
+  "name": "Lump Sum vs SIP Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "pmi-calculator",
+  "name": "PMI Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "pension-lump-sum",
+  "name": "Pension Lump Sum vs Annuity Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "prorated-rent",
+  "name": "Prorated Rent Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "dso",
+  "name": "Days Sales Outstanding (DSO)",
+  "file": "finance.js"
+ },
+ {
+  "id": "payout-ratio",
+  "name": "Dividend Payout Ratio Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "market-cap",
+  "name": "Market Capitalization Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "sortino-ratio",
+  "name": "Sortino Ratio Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "max-drawdown",
+  "name": "Maximum Drawdown Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "zero-coupon-bond",
+  "name": "Zero Coupon Bond Value Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "cd-ladder",
+  "name": "CD Ladder Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "ibond-value",
+  "name": "I Bond Value Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "put-call-parity",
+  "name": "Put-Call Parity Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "risk-reward-ratio",
+  "name": "Risk-Reward Ratio Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "position-size",
+  "name": "Position Size Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "stop-loss",
+  "name": "Stop-Loss Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "cost-basis-avg",
+  "name": "Average Cost Basis Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "dca-calculator",
+  "name": "Dollar Cost Average Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "staking-rewards",
+  "name": "Staking Rewards Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "kelly-criterion",
+  "name": "Kelly Criterion Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "value-at-risk",
+  "name": "Value at Risk (VaR) Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "ev-ebitda",
+  "name": "EV/EBITDA Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "peg-ratio",
+  "name": "PEG Ratio Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "free-cash-flow",
+  "name": "Free Cash Flow Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "interest-coverage",
+  "name": "Interest Coverage Ratio Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "asset-turnover",
+  "name": "Asset Turnover Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "runway-months",
+  "name": "Runway Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "effective-tax-rate",
+  "name": "Effective Tax Rate Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "quarterly-tax",
+  "name": "Quarterly Estimated Tax Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "late-fee-interest",
+  "name": "Late Payment Interest Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "factoring-fee",
+  "name": "Invoice Factoring Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "royalty-payment",
+  "name": "Royalty Payment Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "franchise-cost",
+  "name": "Franchise Cost Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "food-cost-percent",
+  "name": "Food Cost Percentage Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "menu-price",
+  "name": "Menu Pricing Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "rmd",
+  "name": "Required Minimum Distribution Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "hsa-growth",
+  "name": "HSA Growth Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "safe-withdrawal",
+  "name": "Safe Withdrawal Rate Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "noi",
+  "name": "Net Operating Income Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "price-per-sqft",
+  "name": "Price per Square Foot Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "rent-increase",
+  "name": "Rent Increase Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "deposit-interest",
+  "name": "Security Deposit Interest Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "roommate-rent-split",
+  "name": "Roommate Rent Split Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "purchasing-power",
+  "name": "Purchasing Power Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "refinance-breakeven",
+  "name": "Refinance Break-Even Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "apr-annual",
+  "name": "Loan APR Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "auto-lease-vs-buy",
+  "name": "Lease vs Buy Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "heloc-payment",
+  "name": "HELOC Interest-Only Payment",
+  "file": "finance.js"
+ },
+ {
+  "id": "pmi-drop",
+  "name": "PMI Removal Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "escrow-analysis",
+  "name": "Escrow Payment Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "portfolio-beta",
+  "name": "Portfolio Beta Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "yield-to-worst",
+  "name": "Yield to Worst Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "coupon-payment",
+  "name": "Bond Coupon Payment Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "clean-dirty-price",
+  "name": "Clean vs Dirty Bond Price",
+  "file": "finance.js"
+ },
+ {
+  "id": "convexity",
+  "name": "Bond Convexity Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "duration-bond",
+  "name": "Modified Duration Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "appreciation-forecast",
+  "name": "Property Appreciation Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "rent-vs-sell",
+  "name": "Rent vs Sell Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "seller-net",
+  "name": "Seller Net Proceeds Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "points-breakeven",
+  "name": "Mortgage Points Break-Even",
+  "file": "finance.js"
+ },
+ {
+  "id": "cap-rate-conv",
+  "name": "Cap Rate to Value Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "rule-of-40",
+  "name": "Rule of 40 Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "cost-of-delay",
+  "name": "Cost of Delay Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "running-pace",
+  "name": "Running Pace & Split Times",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "race-predictor",
+  "name": "Race Time Predictor",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "steps-to-distance",
+  "name": "Steps to Distance Calculator",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "max-heart-rate",
+  "name": "Max Heart Rate Calculator",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "recovery-hr",
+  "name": "Heart Rate Recovery",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "vo2max",
+  "name": "VO2 Max Estimator",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "calories-exercise",
+  "name": "Exercise Calorie Burn",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "body-fat-fitness",
+  "name": "Body Fat % from BMI",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "pullup-test",
+  "name": "Pull-Up Test Standards",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "flexibility-score",
+  "name": "Sit & Reach Test",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "sports-calories",
+  "name": "Sports Calorie Calculator",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "calories-burned",
+  "name": "Calories Burned at Rest (BMR)",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "one-rep-max",
+  "name": "One-Rep Max Calculator",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "training-max",
+  "name": "Training Max Calculator",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "weight-loss",
+  "name": "Weight Loss Pace Calculator",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "muscle-gain",
+  "name": "Muscle Gain Calculator",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "pushup-test",
+  "name": "Push-Up Test Standards",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "squat-standards",
+  "name": "Squat Standards by Body Weight",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "bench-standards",
+  "name": "Bench Press Standards",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "deadlift-standards",
+  "name": "Deadlift Standards by Weight",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "overhead-standards",
+  "name": "Overhead Press Standards",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "plank-test",
+  "name": "Plank Hold Standards",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "grip-strength",
+  "name": "Grip Strength Standards",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "burpee-test",
+  "name": "Burpee Test Calculator",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "situp-test",
+  "name": "Sit-Up Test Calculator",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "row-standards",
+  "name": "Rowing Standards",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "swim-pace",
+  "name": "Swim Pace Calculator",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "cycling-speed",
+  "name": "Cycling Speed & Time",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "cadence-calc",
+  "name": "Cycling Cadence Calculator",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "stride-length",
+  "name": "Stride Length Calculator",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "training-volume",
+  "name": "Weekly Training Volume",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "vertical-jump",
+  "name": "Vertical Jump Power",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "beep-test",
+  "name": "Beep Test (VO2 Max) Estimator",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "bodyweight-ratio",
+  "name": "Bodyweight Strength Ratio",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "deload-week",
+  "name": "Deload Week Planner",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "workout-rest",
+  "name": "Workout Rest Timer",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "treadmill-pace",
+  "name": "Treadmill Incline Pace Calculator",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "rowing-split",
+  "name": "Rowing Split Calculator",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "sweat-rate",
+  "name": "Sweat Rate Calculator",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "rpe-load",
+  "name": "Training Load Calculator (sRPE)",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "vo2-beep",
+  "name": "Beep Test VO₂ Max Estimator",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "resting-metabolic",
+  "name": "Resting Metabolic Rate Calculator (Cunningham)",
+  "file": "fitness-exercise.js"
+ },
+ {
+  "id": "daily-calorie",
+  "name": "Daily Calorie Needs",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "macro-split",
+  "name": "Macro Split Calculator",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "protein-need",
+  "name": "Daily Protein Need",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "daily-water-intake",
+  "name": "Daily Water Intake",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "weight-loss-time",
+  "name": "Weight Loss Timeline",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "body-fat-food",
+  "name": "Body Fat % (US Navy)",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "calorie-burned",
+  "name": "Calories Burned (Activity)",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "recipe-scaler",
+  "name": "Recipe Scaler",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "cooking-time",
+  "name": "Cooking Time Adjuster",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "meal-prep",
+  "name": "Meal Prep Cost",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "unit-converter-food",
+  "name": "Food Unit Converter",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "eat-out-vs-cook",
+  "name": "Eating Out vs Cooking",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "fast-food-calories",
+  "name": "Fast Food Calories",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "keto-macro",
+  "name": "Keto Macro Calculator",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "intermittent-fasting",
+  "name": "IF Schedule Planner",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "vegan-protein",
+  "name": "Vegan Protein Sources",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "grocery-per-person",
+  "name": "Grocery Cost/Person",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "baking-converter",
+  "name": "Baking Substitution",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "coffee-cost-per-cup",
+  "name": "Coffee Cost per Cup",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "tea-vs-coffee",
+  "name": "Tea vs Coffee Cost",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "sugar-intake",
+  "name": "Daily Sugar Intake",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "carb-calculator",
+  "name": "Carb Calculator",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "fiber-need",
+  "name": "Daily Fiber Need",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "calorie-per-meal",
+  "name": "Calories per Meal",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "rice-water",
+  "name": "Rice Water Ratio",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "meat-cooking-time",
+  "name": "Meat Cooking Time",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "egg-boil",
+  "name": "Egg Boiling Time",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "smoothie-calories",
+  "name": "Smoothie Calories",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "protein-per-dollar",
+  "name": "Protein per Dollar",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "sodium-intake",
+  "name": "Sodium Intake Tracker",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "caffeine-daily",
+  "name": "Caffeine Calculator",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "pizza-slices",
+  "name": "Pizza Calculator",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "meal-prep-size",
+  "name": "Meal Prep Batch Size",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "sugar-limit",
+  "name": "Added Sugar Limit",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "alcohol-calories",
+  "name": "Alcohol Calorie Calculator",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "oven-conversion",
+  "name": "Oven Temperature Converter",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "homebrew-abv",
+  "name": "Homebrew ABV Calculator",
+  "file": "food-nutrition.js"
+ },
+ {
+  "id": "bmi",
+  "name": "BMI Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "bmr",
+  "name": "BMR Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "calorie",
+  "name": "Calorie Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "body-fat",
+  "name": "Body Fat Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "water-intake-health",
+  "name": "Water Intake Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "ideal-body-weight",
+  "name": "Ideal Weight Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "heart-rate",
+  "name": "Heart Rate Zone Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "pregnancy",
+  "name": "Pregnancy Due Date",
+  "file": "health.js"
+ },
+ {
+  "id": "ovulation",
+  "name": "Ovulation Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "macros",
+  "name": "Macronutrient Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "lean-body-mass",
+  "name": "Lean Body Mass",
+  "file": "health.js"
+ },
+ {
+  "id": "bsa",
+  "name": "Body Surface Area",
+  "file": "health.js"
+ },
+ {
+  "id": "waist-hip",
+  "name": "Waist-to-Hip Ratio",
+  "file": "health.js"
+ },
+ {
+  "id": "vo2-max",
+  "name": "VO2 Max Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "pregnancy-weight",
+  "name": "Pregnancy Weight Gain",
+  "file": "health.js"
+ },
+ {
+  "id": "blood-pressure",
+  "name": "Blood Pressure Category",
+  "file": "health.js"
+ },
+ {
+  "id": "calorie-burn",
+  "name": "Calorie Burn Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "sleep",
+  "name": "Sleep Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "gfr",
+  "name": "GFR Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "target-heart-rate",
+  "name": "Target Heart Rate Zones",
+  "file": "health.js"
+ },
+ {
+  "id": "sleep-quality",
+  "name": "Sleep Quality Score",
+  "file": "health.js"
+ },
+ {
+  "id": "fatigue-score",
+  "name": "Fatigue Score Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "body-fat-navy",
+  "name": "Navy Body Fat Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "calorie-deficit",
+  "name": "Calorie Deficit Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "heart-rate-zones",
+  "name": "Heart Rate Zones",
+  "file": "health.js"
+ },
+ {
+  "id": "ideal-weight",
+  "name": "Ideal Body Weight",
+  "file": "health.js"
+ },
+ {
+  "id": "fasting-calculator",
+  "name": "Fasting Timer Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "sleep-debt",
+  "name": "Sleep Debt Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "met-calories",
+  "name": "MET Value / Calories Burned",
+  "file": "health.js"
+ },
+ {
+  "id": "body-type",
+  "name": "Body Type Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "iron-intake",
+  "name": "Iron Intake Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "vitamin-d-dosage",
+  "name": "Vitamin D Dosage",
+  "file": "health.js"
+ },
+ {
+  "id": "calorie-goal",
+  "name": "Calorie Surplus/Deficit Goal",
+  "file": "health.js"
+ },
+ {
+  "id": "burn-severity",
+  "name": "Burn Severity Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "drug-dosage",
+  "name": "Drug Dosage Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "trimester-date",
+  "name": "Pregnancy Trimester Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "ovulation-calculator",
+  "name": "Ovulation & Fertile Window",
+  "file": "health.js"
+ },
+ {
+  "id": "cholesterol-ratio",
+  "name": "Cholesterol Ratio & LDL",
+  "file": "health.js"
+ },
+ {
+  "id": "nap-planner",
+  "name": "Nap Planner & Sleep Cycles",
+  "file": "health.js"
+ },
+ {
+  "id": "maffetone-hr",
+  "name": "MAF Heart Rate (Aerobic Base)",
+  "file": "health.js"
+ },
+ {
+  "id": "health-insurance-copay",
+  "name": "Health Insurance Cost Share",
+  "file": "health.js"
+ },
+ {
+  "id": "hba1c-eag",
+  "name": "HbA1c to eAG Converter",
+  "file": "health.js"
+ },
+ {
+  "id": "glycemic-load",
+  "name": "Glycemic Load Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "waist-height-ratio",
+  "name": "Waist-to-Height Ratio Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "map-calculator",
+  "name": "Mean Arterial Pressure Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "ldl-calculator",
+  "name": "LDL Cholesterol Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "iv-drip-rate",
+  "name": "IV Drip Rate Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "creatinine-clearance",
+  "name": "Creatinine Clearance Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "anion-gap",
+  "name": "Anion Gap Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "qtc",
+  "name": "QTc Calculator (Bazett)",
+  "file": "health.js"
+ },
+ {
+  "id": "ponderal-index",
+  "name": "Ponderal Index Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "bmr-mifflin",
+  "name": "Mifflin-St Jeor BMR Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "tdee-macro",
+  "name": "TDEE and Macro Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "gfr-estimate",
+  "name": "eGFR Calculator (CKD-EPI 2021)",
+  "file": "health.js"
+ },
+ {
+  "id": "chw",
+  "name": "Adjusted Body Weight Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "gcs",
+  "name": "Glasgow Coma Scale Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "apgar",
+  "name": "APGAR Score Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "vaccination-schedule",
+  "name": "Vaccination Due Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "pediatric-dose",
+  "name": "Pediatric Dose Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "corrected-calcium",
+  "name": "Corrected Calcium Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "winters-formula",
+  "name": "Winter's Formula Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "maintenance-fluids",
+  "name": "Maintenance Fluids Calculator (4-2-1)",
+  "file": "health.js"
+ },
+ {
+  "id": "free-water-deficit",
+  "name": "Free Water Deficit Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "serum-osmolality",
+  "name": "Serum Osmolality Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "total-body-water",
+  "name": "Total Body Water Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "pf-ratio",
+  "name": "P/F Ratio Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "room-area",
+  "name": "Room Area & Flooring Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "wallpaper-rolls",
+  "name": "Wallpaper Rolls Needed Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "fence-material",
+  "name": "Fence Material Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "deck-stain",
+  "name": "Deck Stain & Sealant Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "curtain-length",
+  "name": "Curtain Length & Fabric Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "rug-size",
+  "name": "Rug Size & Room Fit Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "lighting-rooms",
+  "name": "Room Lighting Needs Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "paint-cost",
+  "name": "Paint Cost Estimator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "ac-size",
+  "name": "AC/BTU Size Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "water-heater",
+  "name": "Water Heater Size Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "generator-size",
+  "name": "Generator Size Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "garden-soil",
+  "name": "Garden Soil & Mulch Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "plant-spacing",
+  "name": "Plant Spacing & Quantity Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "grass-seed",
+  "name": "Grass Seed Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "fertilizer",
+  "name": "Fertilizer Application Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "compost",
+  "name": "Compost Bin Size Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "rain-barrel",
+  "name": "Rain Barrel / Rainwater Harvesting Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "irrigation-flow",
+  "name": "Garden Irrigation Flow Rate Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "pool-size",
+  "name": "Pool Water Volume Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "pool-chemicals",
+  "name": "Pool Chemical Balance Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "furniture-arrange",
+  "name": "Furniture Room Layout Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "tv-mount-height",
+  "name": "TV Mount Height Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "stair-calculator",
+  "name": "Staircase Dimensions Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "countertop-sqft",
+  "name": "Countertop Square Footage Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "closet-organizer",
+  "name": "Closet Organizer Size Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "cabinet-door",
+  "name": "Cabinet & Drawer Size Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "tile-grout",
+  "name": "Tile Grout & Mortar Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "light-bulb-save",
+  "name": "LED Bulb Savings Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "home-sqft",
+  "name": "Home Square Footage Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "kitchen-remodel",
+  "name": "Kitchen Remodel Budget Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "roof-sqft",
+  "name": "Roof Area Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "vinyl-flooring",
+  "name": "Vinyl / Laminate Flooring Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "solar-panel",
+  "name": "Solar Panel System Size Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "solar-battery",
+  "name": "Solar Battery / Home Battery Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "ev-charger-home",
+  "name": "Home EV Charger Installation Cost",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "raised-bed-soil",
+  "name": "Raised Bed Soil Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "garden-fence",
+  "name": "Garden Fence Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "lawn-watering",
+  "name": "Lawn Watering Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "sprinkler-heads",
+  "name": "Sprinkler Head Count",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "compost-bin",
+  "name": "Compost Bin Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "firepit-size",
+  "name": "Firepit Size Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "deck-post",
+  "name": "Deck Post Spacing",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "porch-light",
+  "name": "Porch Light Size",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "ceiling-fan-size",
+  "name": "Ceiling Fan Size Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "humidifier-size",
+  "name": "Humidifier Size Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "tree-spacing",
+  "name": "Tree Spacing Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "grout-calc",
+  "name": "Tile Grout Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "appliance-cost",
+  "name": "Appliance Running Cost Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "firewood",
+  "name": "Firewood Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "relocation-cost",
+  "name": "Moving Cost Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "rental-deposit",
+  "name": "Rental Deposit Return Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "paint-coverage",
+  "name": "Paint Coverage Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "electricity-bill-saving",
+  "name": "Electricity Bill Savings Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "water-usage",
+  "name": "Water Usage & Cost Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "grocery-budget-optimizer",
+  "name": "Grocery Budget Optimizer",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "food-delivery-vs-cooking",
+  "name": "Food Delivery vs Cooking Cost",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "coffee-habit",
+  "name": "Habit Cost & Opportunity Cost",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "road-trip-cost",
+  "name": "Road Trip Cost Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "flight-cost-per-hour",
+  "name": "Flight Cost per Hour Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "baby-cost",
+  "name": "Baby Cost Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "parental-leave",
+  "name": "Parental Leave Pay Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "pet-cost",
+  "name": "Pet Yearly Cost Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "lawn-mowing",
+  "name": "Lawn Mowing Cost Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "gym-cost-per-visit",
+  "name": "Gym Cost per Visit Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "vacation-savings",
+  "name": "Vacation Savings Planner",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "sale-savings",
+  "name": "Sale Savings Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "resell-value",
+  "name": "Item Resell Value Estimator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "subscription-audit",
+  "name": "Subscription Cost Auditor",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "streaming-value",
+  "name": "Streaming Service Value Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "charging-time",
+  "name": "Phone/Device Charging Time Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "gift-split",
+  "name": "Group Gift Cost Splitter",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "hourly-annual-salary",
+  "name": "Hourly to Annual Salary Converter",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "pet-food-cost",
+  "name": "Pet Food Cost Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "cleaning-time",
+  "name": "Cleaning Time Planner",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "date-night-cost",
+  "name": "Date Night Cost Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "takeout-budget",
+  "name": "Takeout Budget Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "home-insurance",
+  "name": "Home Insurance Estimate",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "renters-insurance",
+  "name": "Renters Insurance Estimate",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "car-wash-annual",
+  "name": "Car Wash Cost Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "haircut-annual",
+  "name": "Haircut Annual Cost",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "party-cost",
+  "name": "Party Cost Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "gift-budget",
+  "name": "Gift Budget Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "hobby-cost",
+  "name": "Hobby Cost Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "travel-daily",
+  "name": "Travel Daily Budget",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "furniture-assembly",
+  "name": "Furniture Assembly Time",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "home-renovation",
+  "name": "Home Renovation Budget",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "cigarette-cost",
+  "name": "Smoking Cost Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "french-press-ratio",
+  "name": "French Press Ratio Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "cocktail-dilution",
+  "name": "Cocktail Dilution Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "wine-servings",
+  "name": "Wine Servings Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "baking-scale",
+  "name": "Recipe Scaling Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "sourdough-hydration",
+  "name": "Sourdough Hydration Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "lawn-fertilizer",
+  "name": "Lawn Fertilizer Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "candle-wax",
+  "name": "Candle Wax Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "knit-gauge",
+  "name": "Knitting Cast-On Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "quilt-fabric",
+  "name": "Quilt Backing Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "scientific",
+  "name": "Scientific Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "quadratic",
+  "name": "Quadratic Equation Solver",
+  "file": "math.js"
+ },
+ {
+  "id": "percentage",
+  "name": "Percentage Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "percent-change",
+  "name": "Percentage Change",
+  "file": "math.js"
+ },
+ {
+  "id": "fraction",
+  "name": "Fraction Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "triangle",
+  "name": "Triangle Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "circle",
+  "name": "Circle Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "statistics",
+  "name": "Statistics Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "combinations",
+  "name": "Combinations Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "lcm-gcd",
+  "name": "LCM & GCD Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "prime-factor",
+  "name": "Prime Factorization",
+  "file": "math.js"
+ },
+ {
+  "id": "matrix-det",
+  "name": "Matrix Determinant",
+  "file": "math.js"
+ },
+ {
+  "id": "logarithm",
+  "name": "Logarithm Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "exponent",
+  "name": "Exponent Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "root",
+  "name": "Root Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "ratio",
+  "name": "Ratio Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "average",
+  "name": "Average Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "pythagorean",
+  "name": "Pythagorean Theorem",
+  "file": "math.js"
+ },
+ {
+  "id": "trigonometry",
+  "name": "Trigonometry Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "distance",
+  "name": "Distance Formula",
+  "file": "math.js"
+ },
+ {
+  "id": "slope",
+  "name": "Slope Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "factorial",
+  "name": "Factorial Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "modular",
+  "name": "Modular Arithmetic",
+  "file": "math.js"
+ },
+ {
+  "id": "complex",
+  "name": "Complex Number Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "scientific-notation",
+  "name": "Scientific Notation Converter",
+  "file": "math.js"
+ },
+ {
+  "id": "random-generator",
+  "name": "Random Number Generator",
+  "file": "math.js"
+ },
+ {
+  "id": "cubic-equation",
+  "name": "Cubic Equation Solver",
+  "file": "math.js"
+ },
+ {
+  "id": "geometric-seq",
+  "name": "Geometric Sequence",
+  "file": "math.js"
+ },
+ {
+  "id": "arithmetic-seq",
+  "name": "Arithmetic Sequence",
+  "file": "math.js"
+ },
+ {
+  "id": "polar-rect",
+  "name": "Polar ↔ Rectangular",
+  "file": "math.js"
+ },
+ {
+  "id": "binomial-prob",
+  "name": "Binomial Probability",
+  "file": "math.js"
+ },
+ {
+  "id": "normal-dist",
+  "name": "Normal Distribution",
+  "file": "math.js"
+ },
+ {
+  "id": "taylor-series",
+  "name": "Taylor Series Approximation",
+  "file": "math.js"
+ },
+ {
+  "id": "continued-fraction",
+  "name": "Continued Fraction",
+  "file": "math.js"
+ },
+ {
+  "id": "linear-system",
+  "name": "System of Linear Equations",
+  "file": "math.js"
+ },
+ {
+  "id": "eigenvalue-2x2",
+  "name": "Eigenvalue Finder (2×2)",
+  "file": "math.js"
+ },
+ {
+  "id": "surface-area-3d",
+  "name": "Surface Area Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "complex-modulus",
+  "name": "Complex Number Operations",
+  "file": "math.js"
+ },
+ {
+  "id": "mean-median-mode",
+  "name": "Mean Median Mode Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "variance-sd",
+  "name": "Variance & Standard Deviation",
+  "file": "math.js"
+ },
+ {
+  "id": "permutation",
+  "name": "Permutation Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "binomial-theorem",
+  "name": "Binomial Expansion",
+  "file": "math.js"
+ },
+ {
+  "id": "golden-ratio",
+  "name": "Golden Ratio Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "checksum-luhn",
+  "name": "Luhn Algorithm / Checksum",
+  "file": "math.js"
+ },
+ {
+  "id": "run-length",
+  "name": "Run-Length Encoding",
+  "file": "math.js"
+ },
+ {
+  "id": "sieve-prime",
+  "name": "Sieve of Eratosthenes",
+  "file": "math.js"
+ },
+ {
+  "id": "fibonacci-seq",
+  "name": "Fibonacci Sequence",
+  "file": "math.js"
+ },
+ {
+  "id": "pascal-triangle",
+  "name": "Pascal's Triangle Row",
+  "file": "math.js"
+ },
+ {
+  "id": "collatz",
+  "name": "Collatz Sequence Length",
+  "file": "math.js"
+ },
+ {
+  "id": "modular-exp",
+  "name": "Modular Exponentiation",
+  "file": "math.js"
+ },
+ {
+  "id": "norm-dist-range",
+  "name": "Normal Distribution Range",
+  "file": "math.js"
+ },
+ {
+  "id": "dot-cross-product",
+  "name": "Dot & Cross Product",
+  "file": "math.js"
+ },
+ {
+  "id": "bayes-theorem",
+  "name": "Bayes Theorem Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "matrix-multiply",
+  "name": "Matrix Multiplication",
+  "file": "math.js"
+ },
+ {
+  "id": "distance-formula",
+  "name": "Distance Between Two Points",
+  "file": "math.js"
+ },
+ {
+  "id": "slope-intercept",
+  "name": "Slope-Intercept Form",
+  "file": "math.js"
+ },
+ {
+  "id": "zscore-calc",
+  "name": "Z-Score Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "linear-regression",
+  "name": "Linear Regression",
+  "file": "math.js"
+ },
+ {
+  "id": "pearson-correlation",
+  "name": "Pearson Correlation Coefficient",
+  "file": "math.js"
+ },
+ {
+  "id": "confidence-interval",
+  "name": "Confidence Interval for a Mean",
+  "file": "math.js"
+ },
+ {
+  "id": "sample-size",
+  "name": "Sample Size Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "poisson-probability",
+  "name": "Poisson Probability",
+  "file": "math.js"
+ },
+ {
+  "id": "harmonic-mean",
+  "name": "Harmonic Mean",
+  "file": "math.js"
+ },
+ {
+  "id": "moving-average",
+  "name": "Moving Average (SMA)",
+  "file": "math.js"
+ },
+ {
+  "id": "standard-error",
+  "name": "Standard Error of the Mean",
+  "file": "math.js"
+ },
+ {
+  "id": "chi-square",
+  "name": "Chi-Square Test",
+  "file": "math.js"
+ },
+ {
+  "id": "t-test",
+  "name": "Two-Sample T-Test",
+  "file": "math.js"
+ },
+ {
+  "id": "hypergeometric",
+  "name": "Hypergeometric Probability",
+  "file": "math.js"
+ },
+ {
+  "id": "significant-figures",
+  "name": "Significant Figures",
+  "file": "math.js"
+ },
+ {
+  "id": "matrix-inverse",
+  "name": "2×2 Matrix Inverse",
+  "file": "math.js"
+ },
+ {
+  "id": "midpoint",
+  "name": "Midpoint Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "trapezoid",
+  "name": "Trapezoid Area",
+  "file": "math.js"
+ },
+ {
+  "id": "sector-area",
+  "name": "Circle Sector Area",
+  "file": "math.js"
+ },
+ {
+  "id": "pyramid",
+  "name": "Square Pyramid Volume",
+  "file": "math.js"
+ },
+ {
+  "id": "vector-add",
+  "name": "Vector Addition Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "angle-between-vectors",
+  "name": "Angle Between Vectors Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "annulus-area",
+  "name": "Annulus (Ring) Area Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "hexagon-area",
+  "name": "Hexagon Area Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "parallelogram-area",
+  "name": "Parallelogram Area Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "ellipse-area",
+  "name": "Ellipse Area Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "law-of-sines",
+  "name": "Law of Sines Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "law-of-cosines",
+  "name": "Law of Cosines Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "weighted-average",
+  "name": "Weighted Average Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "coefficient-of-variation",
+  "name": "Coefficient of Variation Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "quartile",
+  "name": "Quartile & IQR Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "percent-error",
+  "name": "Percent Error Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "quartiles",
+  "name": "Quartile Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "rms",
+  "name": "Root Mean Square Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "covariance",
+  "name": "Covariance Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "exponential-prob",
+  "name": "Exponential Distribution Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "expected-value",
+  "name": "Expected Value Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "euler-totient",
+  "name": "Euler Totient Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "completing-square",
+  "name": "Completing the Square Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "partial-fractions",
+  "name": "Partial Fraction Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "direct-variation",
+  "name": "Direct Variation Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "inverse-variation",
+  "name": "Inverse Variation Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "spherical-cap",
+  "name": "Spherical Cap Volume Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "nth-root",
+  "name": "Nth Root Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "series-sum-ap",
+  "name": "Arithmetic Series Sum",
+  "file": "math.js"
+ },
+ {
+  "id": "sigma-notation",
+  "name": "Sum of Squares Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "combination-repeat",
+  "name": "Combinations with Repetition",
+  "file": "math.js"
+ },
+ {
+  "id": "permutation-repeat",
+  "name": "Permutations with Repetition",
+  "file": "math.js"
+ },
+ {
+  "id": "probability-odds",
+  "name": "Odds to Probability",
+  "file": "math.js"
+ },
+ {
+  "id": "negative-binomial",
+  "name": "Negative Binomial Probability",
+  "file": "math.js"
+ },
+ {
+  "id": "circle-through-points",
+  "name": "Circumradius Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "secant-tangent",
+  "name": "Secant-Tangent Length",
+  "file": "math.js"
+ },
+ {
+  "id": "inscribed-angle",
+  "name": "Inscribed Angle Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "sector-perimeter",
+  "name": "Sector Perimeter Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "ellipse-perimeter",
+  "name": "Ellipse Perimeter Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "rectangular-solid",
+  "name": "Box Diagonal Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "triangular-prism",
+  "name": "Triangular Prism Volume",
+  "file": "math.js"
+ },
+ {
+  "id": "octahedron-volume",
+  "name": "Octahedron Volume",
+  "file": "math.js"
+ },
+ {
+  "id": "icosahedron-volume",
+  "name": "Icosahedron Volume",
+  "file": "math.js"
+ },
+ {
+  "id": "bitwise-xor",
+  "name": "Bitwise XOR Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "shift-cipher",
+  "name": "Caesar Shift Cipher",
+  "file": "math.js"
+ },
+ {
+  "id": "units-per-person",
+  "name": "Per Person Split",
+  "file": "math.js"
+ },
+ {
+  "id": "rate-x-time",
+  "name": "Distance = Rate × Time",
+  "file": "math.js"
+ },
+ {
+  "id": "work-rate-together",
+  "name": "Combined Work Rate",
+  "file": "math.js"
+ },
+ {
+  "id": "digital-root",
+  "name": "Digital Root Calculator",
+  "file": "math.js"
+ },
+ {
+  "id": "mixture-percent",
+  "name": "Mixture Concentration",
+  "file": "math.js"
+ },
+ {
+  "id": "baby-weight-gain",
+  "name": "Baby Weight Percentile",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "baby-feeding",
+  "name": "Baby Feeding Schedule",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "baby-sleep",
+  "name": "Baby Sleep Schedule",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "child-height",
+  "name": "Child Height Predictor",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "toddler-screen",
+  "name": "Screen Time Limits",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "child-bmi",
+  "name": "Children BMI Percentile",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "family-budget",
+  "name": "Family Monthly Budget",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "childcare-cost",
+  "name": "Childcare Cost Comparison",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "college-savings",
+  "name": "529 College Savings",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "maternity-leave",
+  "name": "UK Statutory Maternity Pay",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "life-insurance",
+  "name": "Life Insurance Need",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "home-buying",
+  "name": "Home Buying Budget",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "wedding-budget",
+  "name": "Wedding Budget Planner",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "baby-name",
+  "name": "Baby Name Popularity",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "college-savings-monthly",
+  "name": "College Savings Calculator",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "childcare-cost-annual",
+  "name": "Childcare Cost Calculator",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "family-budget-simple",
+  "name": "Family Budget Calculator",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "maternity-leave-finance",
+  "name": "Maternity Leave Budget Planner",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "paternity-leave",
+  "name": "US Paid Family Leave Planner",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "kid-allowance",
+  "name": "Allowance Calculator",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "babysitter-rate",
+  "name": "Babysitter Rate Calculator",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "screen-time",
+  "name": "Screen Time Guidelines",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "diaper-cost",
+  "name": "Diaper Cost Calculator",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "vacation-with-kids",
+  "name": "Family Vacation Cost",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "baby-formula",
+  "name": "Baby Formula Amount",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "diaper-needs",
+  "name": "Diaper Needs Calculator",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "kids-shoe-size",
+  "name": "Kids Shoe Size Converter",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "family-meal-cost",
+  "name": "Family Meal Cost",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "school-supplies",
+  "name": "School Supplies Budget",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "birthday-party-cost",
+  "name": "Kids Birthday Party Cost",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "allowance-calc",
+  "name": "Child Allowance Calculator",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "teen-budget",
+  "name": "Teen Budget Calculator",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "inheritance-estate",
+  "name": "Estate Planning Calculator",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "sibling-age-gap",
+  "name": "Sibling Age Gap",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "childcare-weekly",
+  "name": "Childcare Weekly Cost",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "baby-milestones",
+  "name": "Baby Milestones Guide",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "child-support-split",
+  "name": "Child Support Split Calculator",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "family-tree-generation",
+  "name": "Ancestor Count Calculator",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "fd-calculator",
+  "name": "Fixed Deposit (FD) Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "rd-calculator",
+  "name": "Recurring Deposit (RD) Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "ppf-calculator",
+  "name": "PPF Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "nps-calculator",
+  "name": "National Pension System (NPS) Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "sip-return",
+  "name": "SIP Return Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "income-tax-india",
+  "name": "Income Tax Calculator India",
+  "file": "regional.js"
+ },
+ {
+  "id": "gst-india",
+  "name": "GST Calculator India",
+  "file": "regional.js"
+ },
+ {
+  "id": "stamp-duty",
+  "name": "Stamp Duty & Registration Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "home-loan-emi-india",
+  "name": "Home Loan EMI Calculator India",
+  "file": "regional.js"
+ },
+ {
+  "id": "gold-rate",
+  "name": "Gold Rate Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "pk-salary",
+  "name": "Pakistan Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "gold-rate-pk",
+  "name": "Gold Rate Calculator Pakistan",
+  "file": "regional.js"
+ },
+ {
+  "id": "rickshaw-fare",
+  "name": "Rickshaw/Auto Fare Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "electricity-bill-india",
+  "name": "Electricity Bill Calculator India",
+  "file": "regional.js"
+ },
+ {
+  "id": "lpg-cost",
+  "name": "LPG Cylinder Cost Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "wedding-budget-shaadi",
+  "name": "Wedding Budget Calculator (Shaadi)",
+  "file": "regional.js"
+ },
+ {
+  "id": "dubai-salary",
+  "name": "Dubai/UAE Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "gold-silver",
+  "name": "Gold to Silver Ratio",
+  "file": "regional.js"
+ },
+ {
+  "id": "chit-fund",
+  "name": "Chit Fund Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "gratuity",
+  "name": "Gratuity Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "leave-encashment",
+  "name": "Leave Encashment Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "epf-calculator",
+  "name": "EPF Calculator (India)",
+  "file": "regional.js"
+ },
+ {
+  "id": "esic-calculator",
+  "name": "ESIC Contribution Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "tds-calculator",
+  "name": "TDS Calculator (Salary)",
+  "file": "regional.js"
+ },
+ {
+  "id": "hra-exemption",
+  "name": "HRA Exemption Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "capital-gains-india",
+  "name": "Capital Gains Calculator (India)",
+  "file": "regional.js"
+ },
+ {
+  "id": "sukanya-samriddhi",
+  "name": "Sukanya Samriddhi Account",
+  "file": "regional.js"
+ },
+ {
+  "id": "nsc-interest",
+  "name": "NSC Interest Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "senior-savings-scheme",
+  "name": "Senior Citizens Savings Scheme",
+  "file": "regional.js"
+ },
+ {
+  "id": "post-office-savings",
+  "name": "Post Office Savings Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "uae-vat",
+  "name": "UAE VAT Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "zakat-calculator",
+  "name": "Zakat Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "pk-income-tax",
+  "name": "Pakistan Income Tax",
+  "file": "regional.js"
+ },
+ {
+  "id": "gold-silver-ratio",
+  "name": "Gold-Silver Ratio",
+  "file": "regional.js"
+ },
+ {
+  "id": "gratuity-calculator",
+  "name": "Gratuity Calculator (India)",
+  "file": "regional.js"
+ },
+ {
+  "id": "stamp-duty-india",
+  "name": "Stamp Duty & Registration (India)",
+  "file": "regional.js"
+ },
+ {
+  "id": "gst-calculator",
+  "name": "GST Payable (Input Tax Credit)",
+  "file": "regional.js"
+ },
+ {
+  "id": "uk-ni",
+  "name": "UK National Insurance Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "us-fica",
+  "name": "FICA Tax Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "canada-cpp",
+  "name": "Canada CPP Contribution Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "australia-super",
+  "name": "Australia Superannuation Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "singapore-cpf",
+  "name": "Singapore CPF Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "ohms-law",
+  "name": "Ohm's Law Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "density",
+  "name": "Density Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "force",
+  "name": "Force Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "pressure",
+  "name": "Pressure Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "kinetic-energy",
+  "name": "Kinetic Energy Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "potential-energy",
+  "name": "Potential Energy Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "ph",
+  "name": "pH Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "ideal-gas",
+  "name": "Ideal Gas Law",
+  "file": "science.js"
+ },
+ {
+  "id": "momentum",
+  "name": "Momentum Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "doppler",
+  "name": "Doppler Effect Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "half-life",
+  "name": "Half-Life Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "wavelength",
+  "name": "Wavelength Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "acceleration",
+  "name": "Acceleration Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "power",
+  "name": "Power Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "velocity",
+  "name": "Velocity Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "free-fall",
+  "name": "Free Fall Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "specific-heat",
+  "name": "Specific Heat Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "lens",
+  "name": "Lens Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "coulomb",
+  "name": "Coulomb's Law",
+  "file": "science.js"
+ },
+ {
+  "id": "frequency",
+  "name": "Frequency Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "energy-mass",
+  "name": "Energy-Mass Equivalence",
+  "file": "science.js"
+ },
+ {
+  "id": "molar-mass",
+  "name": "Molar Mass Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "work-calculator",
+  "name": "Work Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "gravitational-force",
+  "name": "Gravitational Force Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "escape-velocity",
+  "name": "Escape Velocity Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "molarity",
+  "name": "Molarity Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "dilution",
+  "name": "Solution Dilution Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "electric-field",
+  "name": "Electric Field Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "newtons-second",
+  "name": "Newton's Second Law",
+  "file": "science.js"
+ },
+ {
+  "id": "power-electrical",
+  "name": "Electrical Power",
+  "file": "science.js"
+ },
+ {
+  "id": "speed-of-sound",
+  "name": "Speed of Sound",
+  "file": "science.js"
+ },
+ {
+  "id": "wavelength-freq",
+  "name": "Wavelength ↔ Frequency",
+  "file": "science.js"
+ },
+ {
+  "id": "kepler-third",
+  "name": "Kepler's Third Law",
+  "file": "science.js"
+ },
+ {
+  "id": "radioactive-decay",
+  "name": "Radioactive Decay",
+  "file": "science.js"
+ },
+ {
+  "id": "spring-force",
+  "name": "Hooke's Law / Spring Force",
+  "file": "science.js"
+ },
+ {
+  "id": "centripetal",
+  "name": "Centripetal Acceleration",
+  "file": "science.js"
+ },
+ {
+  "id": "orbital-velocity",
+  "name": "Orbital Velocity",
+  "file": "science.js"
+ },
+ {
+  "id": "heat-transfer",
+  "name": "Heat Transfer Rate",
+  "file": "science.js"
+ },
+ {
+  "id": "boyle-law",
+  "name": "Boyle's Law",
+  "file": "science.js"
+ },
+ {
+  "id": "combined-gas-law",
+  "name": "Combined Gas Law",
+  "file": "science.js"
+ },
+ {
+  "id": "wave-speed",
+  "name": "Wave Speed Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "moment-of-inertia",
+  "name": "Moment of Inertia",
+  "file": "science.js"
+ },
+ {
+  "id": "buoyancy",
+  "name": "Buoyancy Force",
+  "file": "science.js"
+ },
+ {
+  "id": "hydrostatic-pressure",
+  "name": "Hydrostatic Pressure",
+  "file": "science.js"
+ },
+ {
+  "id": "solar-energy",
+  "name": "Solar Energy Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "reynolds-number",
+  "name": "Reynolds Number",
+  "file": "science.js"
+ },
+ {
+  "id": "bernoulli",
+  "name": "Bernoulli Equation",
+  "file": "science.js"
+ },
+ {
+  "id": "projectile",
+  "name": "Projectile Motion",
+  "file": "science.js"
+ },
+ {
+  "id": "pendulum",
+  "name": "Pendulum Period",
+  "file": "science.js"
+ },
+ {
+  "id": "molality",
+  "name": "Molality Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "percent-yield",
+  "name": "Percent Yield",
+  "file": "science.js"
+ },
+ {
+  "id": "latent-heat",
+  "name": "Latent Heat Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "friction",
+  "name": "Friction Force Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "inclined-plane",
+  "name": "Inclined Plane Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "impulse",
+  "name": "Impulse Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "terminal-velocity",
+  "name": "Terminal Velocity Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "snells-law",
+  "name": "Snell's Law Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "mirror-equation",
+  "name": "Mirror Equation Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "mole-conversion",
+  "name": "Mole Conversion Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "charles-law",
+  "name": "Charles's Law Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "hooke-law",
+  "name": "Hooke's Law Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "mach-number",
+  "name": "Mach Number Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "stefan-boltzmann",
+  "name": "Stefan-Boltzmann Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "coulomb-law",
+  "name": "Coulomb's Law Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "photon-energy",
+  "name": "Photon Energy Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "debroglie",
+  "name": "De Broglie Wavelength Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "rocket-equation",
+  "name": "Rocket Equation Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "carbon-dating",
+  "name": "Carbon Dating Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "calorimetry",
+  "name": "Heat Energy Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "freezing-depression",
+  "name": "Freezing Point Depression Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "air-density",
+  "name": "Air Density Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "angular-momentum",
+  "name": "Angular Momentum Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "bullet-drop",
+  "name": "Bullet Drop Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "redshift",
+  "name": "Redshift Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "buffer-ph",
+  "name": "Buffer pH Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "machine-efficiency",
+  "name": "Machine Efficiency Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "dew-point",
+  "name": "Dew Point Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "cloud-base-lcl",
+  "name": "Cloud Base Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "grahams-law",
+  "name": "Graham's Law Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "osmotic-pressure",
+  "name": "Osmotic Pressure Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "sound-intensity",
+  "name": "Sound Intensity Addition Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "angular-velocity",
+  "name": "Angular Velocity Calculator",
+  "file": "science.js"
+ },
+ {
+  "id": "internet-speed",
+  "name": "Internet Download Time",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "bandwidth-calc",
+  "name": "Bandwidth Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "data-usage",
+  "name": "Data Usage Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "video-size",
+  "name": "Video File Size",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "monitor-distance",
+  "name": "Monitor Viewing Distance",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "wifi-channels",
+  "name": "WiFi Channel Finder",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "cloud-storage",
+  "name": "Cloud Storage Cost",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "website-cost",
+  "name": "Website Dev Cost",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "ssd-vs-hdd",
+  "name": "SSD vs HDD Speed",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "battery-life-estimator",
+  "name": "Battery Life Estimator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "screen-resolution",
+  "name": "Screen Resolution Guide",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "cable-length",
+  "name": "Cable Length Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "ppi-calc",
+  "name": "PPI (Pixels Per Inch)",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "wattage-psu",
+  "name": "Power Supply Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "print-resolution",
+  "name": "Print Resolution Guide",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "password-time",
+  "name": "Password Crack Time",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "image-file-size",
+  "name": "Image File Size Estimator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "hosting-cost",
+  "name": "Hosting Cost per Year",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "monitor-refresh",
+  "name": "Refresh Rate vs FPS",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "streaming-bitrate",
+  "name": "Streaming Bitrate Guide",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "raid-capacity",
+  "name": "RAID Capacity Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "uptime-calculator",
+  "name": "Uptime / Downtime Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "device-charge-time",
+  "name": "Device Charging Time",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "data-transfer-cost",
+  "name": "Cloud Data Transfer Cost",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "token-cost",
+  "name": "AI Token Cost Estimator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "base64-encode",
+  "name": "Base64 Encoder",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "base64-decode",
+  "name": "Base64 Decoder",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "url-encoder",
+  "name": "URL Encoder / Decoder",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "json-formatter",
+  "name": "JSON Formatter",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "text-counter",
+  "name": "Word & Character Counter",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "case-converter",
+  "name": "Text Case Converter",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "hash-generator",
+  "name": "Hash Generator (MD5/SHA)",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "rgb-hex",
+  "name": "RGB ↔ Hex Converter",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "uuid-generator",
+  "name": "UUID v4 Generator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "password-generator",
+  "name": "Strong Password Generator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "ip-subnet",
+  "name": "IP Subnet Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "cron-validate",
+  "name": "Cron Expression Validator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "resistor-color-code",
+  "name": "Resistor Color Code Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "ascii-table",
+  "name": "ASCII Table Reference",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "awg-reference",
+  "name": "Wire Gauge (AWG) Reference",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "aspect-ratio",
+  "name": "Aspect Ratio Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "color-contrast",
+  "name": "Color Contrast Checker",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "read-time",
+  "name": "Reading Time (Web)",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "font-size-conv",
+  "name": "PX to REM/EM Converter",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "storage-need",
+  "name": "Storage Needs Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "latency-bandwidth",
+  "name": "Latency-Bandwidth Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "download-time",
+  "name": "Download Time Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "audio-file-size",
+  "name": "Audio File Size Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "backup-size",
+  "name": "Backup Size Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "screen-size",
+  "name": "TV Screen Size Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "streaming-quality",
+  "name": "Streaming Data Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "code-line-count",
+  "name": "Code Line Estimator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "dbm-watts",
+  "name": "dBm ↔ Watts Converter",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "api-cost",
+  "name": "API Cost Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "keyword-density",
+  "name": "Keyword Density Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "reading-grade",
+  "name": "Readability Score Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "typing-speed",
+  "name": "Typing Speed Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "ad-revenue",
+  "name": "Ad Revenue Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "click-through-rate",
+  "name": "Click-Through Rate Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "subnet-cidr",
+  "name": "Subnet Calculator (CIDR)",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "video-bitrate",
+  "name": "Video File Size Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "cidr-convert",
+  "name": "CIDR to Subnet Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "gpu-comparison-perf",
+  "name": "GPU Value Comparison",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "data-center-pue",
+  "name": "Data Center PUE Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "screen-ppi",
+  "name": "Screen PPI Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "hash-rate",
+  "name": "Mining Yield Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "storage-array",
+  "name": "RAID Usable Capacity Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "docker-resource",
+  "name": "Container Density Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "load-test-users",
+  "name": "Load Test VU Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "wifi-throughput",
+  "name": "Wi-Fi Real Throughput Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "data-usage-est",
+  "name": "Data Usage Estimator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "image-size-calc",
+  "name": "Uncompressed Image Size Calculator",
+  "file": "tech-digital.js"
+ },
+ {
+  "id": "qr-generator",
+  "name": "QR Code Generator",
+  "file": "utilities.js"
+ },
+ {
+  "id": "password-gen",
+  "name": "Password Generator",
+  "file": "utilities.js"
+ },
+ {
+  "id": "color-picker",
+  "name": "Color Converter",
+  "file": "utilities.js"
+ },
+ {
+  "id": "unit-converter",
+  "name": "Universal Unit Converter",
+  "file": "utilities.js"
+ },
+ {
+  "id": "base-converter",
+  "name": "Number Base Converter",
+  "file": "utilities.js"
+ },
+ {
+  "id": "hash-gen",
+  "name": "Hash Generator",
+  "file": "utilities.js"
+ },
+ {
+  "id": "lorem-ipsum",
+  "name": "Lorem Ipsum Generator",
+  "file": "utilities.js"
+ },
+ {
+  "id": "uuid-gen",
+  "name": "UUID Generator",
+  "file": "utilities.js"
+ },
+ {
+  "id": "tip-split",
+  "name": "Bill Split & Tip",
+  "file": "utilities.js"
+ },
+ {
+  "id": "timer-calc",
+  "name": "Countdown Timer Calculator",
+  "file": "utilities.js"
+ },
+ {
+  "id": "file-size",
+  "name": "File Size Converter",
+  "file": "utilities.js"
+ },
+ {
+  "id": "salary-hourly",
+  "name": "Salary to Hourly Converter",
+  "file": "utilities.js"
+ },
+ {
+  "id": "area-calc",
+  "name": "Area Calculator",
+  "file": "utilities.js"
+ },
+ {
+  "id": "volume-calc",
+  "name": "Volume Calculator",
+  "file": "utilities.js"
+ },
+ {
+  "id": "shipping-cost",
+  "name": "Shipping Cost Calculator",
+  "file": "utilities.js"
+ },
+ {
+  "id": "salary-biweekly",
+  "name": "Biweekly Pay Calculator",
+  "file": "utilities.js"
+ },
+ {
+  "id": "simple-tax",
+  "name": "Take-Home Pay Calculator",
+  "file": "utilities.js"
+ },
+ {
+  "id": "mileage-calc",
+  "name": "Mileage Reimbursement Calculator",
+  "file": "utilities.js"
+ },
+ {
+  "id": "ratio-simplifier",
+  "name": "Ratio Simplifier",
+  "file": "utilities.js"
+ },
+ {
+  "id": "gcd-lcm",
+  "name": "GCD & LCM Calculator",
+  "file": "utilities.js"
+ },
+ {
+  "id": "prime-check",
+  "name": "Prime Number Checker",
+  "file": "utilities.js"
+ },
+ {
+  "id": "rounding-calc",
+  "name": "Rounding Calculator",
+  "file": "utilities.js"
+ },
+ {
+  "id": "coin-flip",
+  "name": "Coin Flip Simulator",
+  "file": "utilities.js"
+ },
+ {
+  "id": "dice-roller",
+  "name": "Dice Roll Simulator",
+  "file": "utilities.js"
+ },
+ {
+  "id": "date-add",
+  "name": "Date Add/Subtract",
+  "file": "utilities.js"
+ },
+ {
+  "id": "age-exact",
+  "name": "Exact Age Calculator",
+  "file": "utilities.js"
+ },
+ {
+  "id": "units-per",
+  "name": "Price Per Unit Calculator",
+  "file": "utilities.js"
+ },
+ {
+  "id": "random-name",
+  "name": "Random Team Generator",
+  "file": "utilities.js"
+ },
+ {
+  "id": "password-entropy",
+  "name": "Password Entropy Calculator",
+  "file": "utilities.js"
+ },
+ {
+  "id": "speech-time",
+  "name": "Speech Time Calculator",
+  "file": "utilities.js"
+ },
+ {
+  "id": "qr-content-size",
+  "name": "QR Version Finder",
+  "file": "utilities.js"
+ },
+ {
+  "id": "timestamp-convert",
+  "name": "Unix Timestamp Converter",
+  "file": "utilities.js"
+ }
+]

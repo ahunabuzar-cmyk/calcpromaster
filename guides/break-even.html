@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Break-Even Analysis — Formula, Margin of Safety &amp; Worked Example | CalcProMaster</title>
+  <meta name="description" content="The break-even formula in units and revenue dollars, fixed vs variable costs, contribution margin, margin of safety, and a full café example with a target-profit extension.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/break-even">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Break-Even Analysis — Formula, Margin of Safety & Worked Example",
+    "description": "The break-even formula in units and revenue dollars, fixed vs variable costs, contribution margin, margin of safety, and a full café example with a target-profit extension.",
+    "url": "https://calcpromaster.netlify.app/guides/break-even",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "Break-Even Analysis", "item": "https://calcpromaster.netlify.app/guides/break-even" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "What is the break-even point formula?", "acceptedAnswer": { "@type": "Answer", "text": "Break-even units = Fixed costs ÷ (Price per unit − Variable cost per unit). The denominator is the contribution margin — what each sale adds toward covering fixed costs. In revenue dollars: Fixed costs ÷ contribution margin ratio." } },
+        { "@type": "Question", "name": "What is contribution margin?", "acceptedAnswer": { "@type": "Answer", "text": "The amount each unit sale contributes toward fixed costs and profit: selling price minus variable cost per unit. A $5 coffee with $1.50 of beans, cup and milk has a $3.50 contribution margin (70%)." } },
+        { "@type": "Question", "name": "What is a good margin of safety?", "acceptedAnswer": { "@type": "Answer", "text": "Margin of safety = (actual sales − break-even sales) ÷ actual sales. Above 20–30% is generally comfortable; below 10% means a modest demand dip pushes you into losses." } },
+        { "@type": "Question", "name": "How do I calculate break-even with a target profit?", "acceptedAnswer": { "@type": "Answer", "text": "Add the target profit to fixed costs: Units = (Fixed costs + Target profit) ÷ contribution margin. To earn $2,000 with $4,000 fixed costs and $3.50 margin: (4,000 + 2,000) ÷ 3.50 ≈ 1,715 units." } },
+        { "@type": "Question", "name": "Does break-even analysis work for service businesses?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — define the 'unit' as a billable hour, project or client. Fixed costs are rent, software and salaries; variable costs are per-job materials, contractor fees and payment processing." } }
+      ]
+    }
+  }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.7; max-width: 760px; margin: 0 auto; padding: 16px; color: #1f2937; }
+    .crumb { font-size: 0.85rem; color: #6b7280; margin-bottom: 8px; }
+    .crumb a { color: #4f46e5; text-decoration: none; }
+    h1 { font-size: 1.65rem; line-height: 1.3; margin: 8px 0 4px; }
+    h2 { font-size: 1.25rem; margin-top: 2rem; border-top: 1px solid #e5e7eb; padding-top: 1.2rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.4rem; }
+    .answer { background: #eef2ff; border-left: 4px solid #4f46e5; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+    .formula { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 16px; font-family: ui-monospace, monospace; font-size: 0.95rem; overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.92rem; }
+    th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; }
+    th { background: #f9fafb; }
+    .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
+    .related a { color: #4f46e5; }
+    .updated { color: #6b7280; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Break-Even</p>
+  <h1>Break-Even Analysis: How Many Sales Before You Make Money?</h1>
+  <p class="updated">Last updated: September 2026 · Independently QA-tested formulas</p>
+
+  <div class="answer">
+    <strong>Quick answer:</strong> Break-even units = Fixed costs ÷ (Price − Variable cost per unit). Every sale above that point earns profit equal to its contribution margin; every sale below it digs the hole deeper. The <a href="/finance/break-even">break-even calculator</a> returns this instantly with charts.
+  </div>
+
+  <p>Break-even is the first number every small business should know — and the one most often guessed. It answers "how much do I need to sell to stop losing money?" and, with one extension, "how much to hit my target income?"</p>
+
+  <h2>The two cost categories (get these right first)</h2>
+  <ul>
+    <li><strong>Fixed costs</strong> — the same whether you sell 10 or 10,000 units: rent, insurance, base salaries, software subscriptions, loan payments.</li>
+    <li><strong>Variable costs</strong> — scale with each unit sold: materials, packaging, per-transaction payment fees, shipping, per-job labor.</li>
+  </ul>
+  <p>Mixed costs (a phone plan with a base plus per-GB charges) split into their fixed base and variable per-unit part. Misclassifying these is the #1 source of wrong break-even numbers.</p>
+
+  <h2>The formulas</h2>
+  <div class="formula">Contribution margin (CM) = Price − Variable cost per unit<br>Break-even units = Fixed costs ÷ CM<br>Break-even revenue = Fixed costs ÷ (CM ÷ Price)<br>Target-profit units = (Fixed costs + Target profit) ÷ CM</div>
+
+  <h2>Worked example: a small café</h2>
+  <p>Monthly fixed costs: rent $2,400 + utilities $400 + insurance $250 + base staff $950 = <strong>$4,000</strong>. Average ticket: $5.00 coffee + pastry; variable cost per ticket (beans, milk, cup, food cost, fees): <strong>$1.50</strong>.</p>
+  <ol>
+    <li>CM = 5.00 − 1.50 = <strong>$3.50</strong> per ticket (70%)</li>
+    <li>Break-even units = 4,000 ÷ 3.50 = <strong>1,143 tickets/month</strong></li>
+    <li>Break-even revenue = 4,000 ÷ 0.70 = <strong>$5,714/month</strong> (≈ $190/day at 30 days)</li>
+  </ol>
+  <p>Target profit $2,000/month → (4,000 + 2,000) ÷ 3.50 = <strong>1,715 tickets</strong> (≈ $286/day).</p>
+
+  <h2>Margin of safety: how close to the cliff are you?</h2>
+  <div class="formula">Margin of safety = (Actual sales − Break-even sales) ÷ Actual sales</div>
+  <p>If the café averages $8,000/month: (8,000 − 5,714) ÷ 8,000 = <strong>28.6%</strong> — demand can fall by that much before losses start. Under 10% is a warning sign: one slow season or a new competitor wipes out the profit.</p>
+
+  <h2>What the analysis teaches (levers to pull)</h2>
+  <table>
+    <tr><th>Move</th><th>Effect on break-even</th></tr>
+    <tr><td>Raise price $0.50 (CM → $4.00)</td><td>4,000 ÷ 4.00 = 1,000 tickets (−143)</td></tr>
+    <td>Cut variable cost $0.25 (CM → $3.75)</td><td>4,000 ÷ 3.75 ≈ 1,067 (−76)</td></tr>
+    <tr><td>Cut fixed costs $500</td><td>3,500 ÷ 3.50 = 1,000 (−143)</td></tr>
+  </table>
+  <p>Small margin improvements compound quickly — a 10% price increase typically moves break-even far more than a 10% sales increase would.</p>
+
+  <h2>Frequently Asked Questions</h2>
+  <h3>Is break-even analysis useful for startups with no sales history?</h3>
+  <p>That's exactly when it matters most — it converts a business plan into a daily sales target before money is committed. Use conservative price and cost estimates, then re-run monthly with real data.</p>
+  <h3>What if I sell many products at different margins?</h3>
+  <p>Use a weighted-average CM based on your sales mix, or run the analysis per product line. A gym's break-even blending $900 memberships with $40 day passes needs the mix assumption explicit.</p>
+  <h3>Does break-even include owner salary?</h3>
+  <p>Only if you put it in fixed costs. For a true picture, include the salary you need to survive — otherwise you've calculated break-even for the business, not for you.</p>
+  <h3>What's the difference between break-even and payback period?</h3>
+  <p>Break-even is per-period (usually monthly) operating coverage. <a href="/finance/payback-period">Payback period</a> asks how long an upfront investment takes to recover from cumulative cash flows — related, different question.</p>
+
+  <h2>Try the calculators</h2>
+  <p class="related">
+    <a href="/finance/break-even" class="cta">Break-Even Calculator</a>
+    <a href="/business/gross-margin" class="cta">Gross Margin Calculator</a>
+    <a href="/finance/payback-period" class="cta">Payback Period</a>
+    <a href="/business/profit-margin" class="cta">Profit Margin (Business)</a>
+  </p>
+
+  <p><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/about">Methodology</a></p>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

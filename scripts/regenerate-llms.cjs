@@ -42,9 +42,13 @@ for (const [file, heading] of CATS) {
 const llmsPath = path.join(ROOT, 'llms.txt');
 let llms = fs.readFileSync(llmsPath, 'utf8');
 
-// Headline counts
-llms = llms.replace(/> 524\+ free online calculators/, `> ${total}+ free online calculators`);
-llms = llms.replace(/\*\*524\+ calculators\*\* across 20 categories/, `**${total}+ calculators** across 20 categories`);
+// Headline counts — count-agnostic (matches whatever stale number is there)
+llms = llms.replace(/> \d+\+ free online calculators/, `> ${total}+ free online calculators`);
+llms = llms.replace(/\*\*\d+\+ calculators\*\* across 20 categories/, `**${total}+ calculators** across 20 categories`);
+llms = llms.replace(/with \*\*\d+\+ calculators\*\*/, `with **${total}+ calculators**`);
+llms = llms.replace(/\d+\+ calculators\*\* across 20 categories\. Every tool/, `${total}+ calculators** across 20 categories. Every tool`);
+llms = llms.replace(/platform with \d+\+ calculators/, `platform with ${total}+ calculators`);
+llms = llms.replace(/Last updated: \d{4}-\d{2}-\d{2}/, `Last updated: ${new Date().toISOString().slice(0, 10)}`);
 
 // Replace everything between "## Calculator Categories" and "## Static Pages"
 const startMark = '## Calculator Categories';
@@ -58,8 +62,8 @@ if (sIdx === -1 || eIdx === -1 || eIdx <= sIdx) {
 const newMid = startMark + '\n' + sections.join('\n\n') + '\n\n';
 llms = llms.slice(0, sIdx) + newMid + llms.slice(eIdx);
 
-// Footer count
-llms = llms.replace(/CalcPro — 524\+ free calculators/, `CalcPro — ${total}+ free calculators`);
+// Footer count — count-agnostic
+llms = llms.replace(/CalcPro(Master)? — \d+\+ free calculators/, `CalcPro — ${total}+ free calculators`);
 
 fs.writeFileSync(llmsPath, llms);
 console.log(`llms.txt regenerated — ${total} calculators across ${CATS.length} categories.`);

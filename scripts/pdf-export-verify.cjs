@@ -42,7 +42,7 @@ const fs = require('fs');
     const body = f ? (((f.contentDocument || f.contentWindow.document).body || {}).textContent || '') : '';
     return {
       hasResultB: /1,521|1521/.test(body),
-      hasCount543: body.includes('543+'),
+      hasCount1201: body.includes('1201+'),
       hasInputsB: body.includes('50000'),
       notStaleA: !/100000/.test(body),
       branded: body.includes('CalcProMaster'),

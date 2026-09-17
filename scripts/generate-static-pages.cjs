@@ -16,7 +16,7 @@ vm.runInContext(src, sandbox);
 const LegalPages = sandbox.window.LegalPages;
 
 const PAGES = {
-  'about': { title: 'About CalcProMaster', desc: 'About CalcProMaster — a free collection of 543+ online calculators for finance, health, math, science and everyday life, all running in your browser.', content: LegalPages.ABOUT_PAGE },
+  'about': { title: 'About CalcProMaster', desc: 'About CalcProMaster — a free collection of 1201+ online calculators for finance, health, math, science and everyday life, all running in your browser.', content: LegalPages.ABOUT_PAGE },
   'privacy': { title: 'Privacy Policy', desc: 'CalcProMaster privacy policy — we do not use cookies or track you. Preferences, history and favorites are stored only in your own browser via localStorage.', content: LegalPages.PRIVACY_POLICY },
   'terms': { title: 'Terms of Service', desc: 'CalcProMaster terms of service — free use of all calculators, no warranty, and clear liability limits for financial, health and general tools.', content: LegalPages.TERMS_OF_SERVICE },
   'cookies': { title: 'Cookie Policy', desc: 'CalcProMaster cookie policy — this site does not use cookies. Local storage is used only for your own saved preferences and history.', content: LegalPages.COOKIE_POLICY },
@@ -96,7 +96,7 @@ const SHELL = (title, body, robots, desc, slug) => `<!DOCTYPE html>
   </header>
   <main>${body}</main>
   <footer>
-    <a href="/">CalcProMaster</a> · 543+ free online calculators · All calculations run in your browser
+    <a href="/">CalcProMaster</a> · 1201+ free online calculators · All calculations run in your browser
     <br><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
   </footer>
 </body>

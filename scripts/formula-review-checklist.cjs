@@ -79,7 +79,8 @@ function deepQACovered() {
   const props = src.match(/describe\('PROPERTY QA[\s\S]*?\n\}\);/);
   if (props) {
     for (const line of props[0].split('\n')) {
-      const m = line.match(/calcResult\('([a-z0-9-]+)', '([a-z0-9-]+)'/);
+      // matches calcResult(...) and calcFull(...) invocations
+      const m = line.match(/calc(?:Result|Full)\('([a-z0-9-]+)', '([a-z0-9-]+)'/);
       if (m) ids.add(m[2]);
     }
   }

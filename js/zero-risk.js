@@ -192,15 +192,16 @@ const ZR = (function () {
     function cellColor(n) {
       if (!isFinite(n)) return '#334155';
       const t = (n - minV) / span; // 0 = low (red), 1 = high (green)
-      const r = Math.round(239 - 189 * t);
-      const g = Math.round(68 + 124 * t);
-      const bb = Math.round(68 + 68 * t);
+      // Darker scale (red-700 -> green-800) so white cell text keeps
+      // >= 4.5:1 contrast on every cell (WCAG 2.2 AA).
+      const r = Math.round(185 - 163 * t);
+      const g = Math.round(28 + 73 * t);
+      const bb = Math.round(28 + 24 * t);
       return 'rgb(' + r + ',' + g + ',' + bb + ')';
     }
     function cellTextColor(n) {
       if (!isFinite(n)) return '#e2e8f0';
-      const t = (n - minV) / span;
-      return t > 0.55 ? '#0f172a' : '#ffffff';
+      return '#ffffff';
     }
 
     let html = '<details class="calc-collapsible" open><summary>🔥 What-If Heatmap — ' +
@@ -227,9 +228,9 @@ const ZR = (function () {
       html += '</tr>';
     });
     html += '</tbody></table>';
-    html += '<div class="zr-heatmap-legend"><span style="background:#ef4444"></span> Low' +
-      '<span style="background:#7fbf6f"></span> Mid' +
-      '<span style="background:#2e9e6b"></span> High' +
+    html += '<div class="zr-heatmap-legend"><span style="background:#b91c1c"></span> Low' +
+      '<span style="background:#684128"></span> Mid' +
+      '<span style="background:#166534"></span> High' +
       '<span class="zr-legend-note">Hover a cell for exact inputs</span></div>';
     html += '</div></details>';
 

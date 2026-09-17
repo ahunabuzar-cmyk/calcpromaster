@@ -153,10 +153,10 @@ describe('science — reverse calculation', () => {
 });
 
 describe('engineering/torque — reverse calculation', () => {
-  it('solves force for τ=25, r=0.5 → 50', () => {
+  it('solves force for τ=25, r=0.5 (angle 90°) → 50', () => {
     const t = tools['torque'];
-    expect(Math.abs(SolveFor.solve(t, {force:50,radius:0.5}, 'force', 25).value - 50)).toBeLessThan(0.01);
-    expect(verifyRoundTrip(t, {force:50,radius:0.5}, 'force', 25).ok).toBe(true);
+    expect(Math.abs(SolveFor.solve(t, {force:50,radius:0.5,angle:90}, 'force', 25).value - 50)).toBeLessThan(0.01);
+    expect(verifyRoundTrip(t, {force:50,radius:0.5,angle:90}, 'force', 25).ok).toBe(true);
   });
 });
 

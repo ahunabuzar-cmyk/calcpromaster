@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIP Calculator — The Future-Value Formula &amp; Compounding | CalcProMaster</title>
+  <meta name="description" content="How SIP returns are computed: the future-value-of-annuity formula, worked ₹5,000/month examples at 5 and 10 years, and why the last years do most of the work.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/sip">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "SIP Calculator — The Future-Value Formula & Compounding | CalcProMaster",
+    "description": "How SIP returns are computed: the future-value-of-annuity formula, worked ₹5,000/month examples at 5 and 10 years, and why the last years do most of the work.",
+    "url": "https://calcpromaster.netlify.app/guides/sip",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "SIP Returns", "item": "https://calcpromaster.netlify.app/guides/sip" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How is SIP return calculated?", "acceptedAnswer": { "@type": "Answer", "text": "As the future value of a monthly annuity: FV = P × [(1+i)ⁿ − 1] ÷ i × (1+i), with i as the monthly rate. ₹5,000/month at 12% for 5 years ≈ ₹4,12,432 against ₹3,00,000 invested." } },
+        { "@type": "Question", "name": "What will ₹5,000 a month for 10 years become?", "acceptedAnswer": { "@type": "Answer", "text": "At a constant 12% annual return: about ₹11,61,695 against ₹6,00,000 invested. The real figure depends on actual market returns, which arrive as a volatile path rather than a smooth 12%." } },
+        { "@type": "Question", "name": "Is a 12% SIP return guaranteed?", "acceptedAnswer": { "@type": "Answer", "text": "No. It is a planning assumption based on long-run equity history. Treat outputs as illustrations, and judge a SIP on 7–10+ year horizons where volatility averages out more." } },
+        { "@type": "Question", "name": "What is a step-up SIP?", "acceptedAnswer": { "@type": "Answer", "text": "One where the monthly amount rises each year, typically with your salary. Because later deposits are larger, step-up SIPs end substantially higher than flat SIPs at the same duration." } }
+      ]
+    }
+  }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.7; max-width: 760px; margin: 0 auto; padding: 16px; color: #1f2937; }
+    .crumb { font-size: 0.85rem; color: #6b7280; margin-bottom: 8px; }
+    .crumb a { color: #4f46e5; text-decoration: none; }
+    h1 { font-size: 1.65rem; line-height: 1.3; margin: 8px 0 4px; }
+    h2 { font-size: 1.25rem; margin-top: 2rem; border-top: 1px solid #e5e7eb; padding-top: 1.2rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.4rem; }
+    .answer { background: #eef2ff; border-left: 4px solid #4f46e5; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+    .formula { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 16px; font-family: ui-monospace, monospace; font-size: 0.95rem; overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.92rem; }
+    th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; }
+    th { background: #f9fafb; }
+    .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
+    .related a { color: #4f46e5; }
+    .updated { color: #6b7280; font-size: 0.85rem; }
+    .note { background: #fefce8; border-left: 4px solid #ca8a04; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+  </style>
+</head>
+<body>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › SIP Returns</p>
+  <h1>SIP Math: Where ₹5,000 a Month Actually Goes</h1>
+  <p class="updated">Regional Finance · 6 min read · Last updated September 2026</p>
+
+  <div class="answer">
+    <strong>Quick answer:</strong> A SIP is a monthly annuity: FV = P × [(1+i)ⁿ − 1] ÷ i × (1+i). At 12% annual (1% monthly), ₹5,000/month grows to <strong>₹4,12,432 in 5 years</strong> (₹3,00,000 invested) and <strong>₹11,61,695 in 10 years</strong> (₹6,00,000 invested) — the second decade earns more than the first.
+  </div>
+
+  <h2>The formula</h2>
+  <div class="formula">FV = P × [(1+i)ⁿ − 1] ÷ i × (1+i)</div>
+  <p>Where P is the monthly amount, i the monthly rate (annual ÷ 12) and n the number of months. Worked example: P = 5,000, i = 0.01 (12%/12), n = 60. (1.01⁶⁰ − 1) ÷ 0.01 = 81.670; × 1.01 = 82.486; × 5,000 = <strong>₹4,12,432</strong>. Invested principal: 5,000 × 60 = ₹3,00,000 — so ₹1,12,432 is growth.</p>
+
+  <h2>Why duration dominates</h2>
+  <table>
+    <tr><th>Duration</th><th>Invested</th><th>Value @12%</th><th>Growth</th></tr>
+    <tr><td>5 years</td><td>₹3,00,000</td><td>₹4,12,432</td><td>₹1,12,432</td></tr>
+    <tr><td>10 years</td><td>₹6,00,000</td><td>₹11,61,695</td><td>₹5,61,695</td></tr>
+  </table>
+  <p>Doubling the time invested 2× the money but produced <strong>5×</strong> the growth. Compounding is back-loaded: the final years contribute most of the gain, which is why interrupting a SIP at year 7 costs far more than the 7 years of deposits suggest.</p>
+
+  <h2>Assumptions to keep honest</h2>
+  <p>The 12% figure is an assumed constant annual return — real equity funds deliver it as a volatile path (−35% years happen), and the formula's smooth curve is a simplification, not a promise. Inflation also shrinks real value: ₹11.6 lakh in 10 years buys roughly what ₹6–7 lakh buys today at 5–6% inflation. Run your own numbers in the <a href="/finance/sip">SIP Calculator</a>; the <a href="/finance/sip-step-up">Step-up SIP</a> version models the annual increase most salaried investors actually do.</p>
+
+  <h2>Try the calculators</h2>
+  <p class="related">
+    <a href="/finance/sip" class="cta">SIP Calculator</a>
+    <a href="/finance/sip-step-up" class="cta">Step-up SIP</a>
+    <a href="/finance/currency-converter" class="cta">Currency Converter</a>
+  </p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>How is SIP return calculated?</h3>
+  <p>As the future value of a monthly annuity: FV = P × [(1+i)ⁿ − 1] ÷ i × (1+i), with i as the monthly rate. ₹5,000/month at 12% for 5 years ≈ ₹4,12,432 against ₹3,00,000 invested.</p>
+  <h3>What will ₹5,000 a month for 10 years become?</h3>
+  <p>At a constant 12% annual return: about ₹11,61,695 against ₹6,00,000 invested. The real figure depends on actual market returns, which arrive as a volatile path rather than a smooth 12%.</p>
+  <h3>Is a 12% SIP return guaranteed?</h3>
+  <p>No. It is a planning assumption based on long-run equity history. Treat outputs as illustrations, and judge a SIP on 7–10+ year horizons where volatility averages out more.</p>
+  <h3>What is a step-up SIP?</h3>
+  <p>One where the monthly amount rises each year, typically with your salary. Because later deposits are larger, step-up SIPs end substantially higher than flat SIPs at the same duration.</p>
+
+  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

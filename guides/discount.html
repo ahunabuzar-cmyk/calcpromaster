@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Calculate a Discount — Percent Off, Stacked Discounts &amp; Real Savings | CalcProMaster</title>
+  <meta name="description" content="The discount formula, how stacked discounts multiply instead of add, 'extra 20% off' math, and worked examples that show your true final price.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/discount">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Calculate a Discount — Percent Off, Stacked Discounts & Real Savings",
+    "description": "The discount formula, how stacked discounts multiply instead of add, 'extra 20% off' math, and worked examples that show your true final price.",
+    "url": "https://calcpromaster.netlify.app/guides/discount",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "How to Calculate a Discount", "item": "https://calcpromaster.netlify.app/guides/discount" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I calculate a discount?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Multiply the original price by the discount percentage, then subtract that amount from the original price. Equivalent shortcut: final price = original price × (1 − discount/100)." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is 20% + 30% off the same as 50% off?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Stacked discounts multiply: 20% off followed by 30% off leaves you paying 0.8 × 0.7 = 0.56 of the original price, i.e. an effective 44% discount, not 50%." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate the original price from a sale price?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Divide the sale price by (1 − discount/100). For example, if $64 is the price after 20% off, the original price was $64 ÷ 0.8 = $80." }
+        },
+        {
+          "@type": "Question",
+          "name": "How is 'extra 20% off already-reduced items' calculated?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The extra percentage applies to the already-reduced price, not the original tag. A $100 item at 30% off becomes $70, then an extra 20% applies to $70, giving a final price of $56." }
+        }
+      ]
+    }
+  }
+  </script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{--bg:#f8fafc;--surface:#fff;--text:#1e293b;--text-light:#64748b;--border:#e2e8f0;--primary:#4f46e5;--radius:14px}
+    @media (prefers-color-scheme: dark){:root{--bg:#0f172a;--surface:#1e293b;--text:#f8fafc;--text-light:#94a3b8;--border:#334155}}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;-webkit-font-smoothing:antialiased}
+    header{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .logo{font-size:20px;font-weight:800;background:linear-gradient(135deg,#4f46e5,#7c3aed);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
+    header a{color:var(--text-light);text-decoration:none;font-size:13px}
+    header a:hover{color:var(--primary)}
+    main{max-width:820px;margin:0 auto;padding:32px 24px 64px}
+    h1{font-size:30px;font-weight:800;margin-bottom:8px}
+    h2{font-size:20px;font-weight:700;margin:26px 0 10px}
+    h3{font-size:16px;font-weight:600;margin:18px 0 6px}
+    p{margin-bottom:10px;color:var(--text)}
+    ul,ol{margin:8px 0 14px 22px}
+    li{margin-bottom:4px}
+    table{border-collapse:collapse;margin:12px 0;width:100%}
+    th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;font-size:14px}
+    th{background:var(--surface);font-weight:700}
+    .legal-meta{font-size:13px;color:var(--text-light);margin-bottom:18px}
+    .formula{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--primary);border-radius:8px;padding:12px 16px;margin:14px 0;font-family:ui-monospace,Consolas,monospace;font-size:15px}
+    .example{background:rgba(79,70,229,.07);border-left:4px solid var(--primary);padding:12px 16px;border-radius:8px;margin:14px 0}
+    .legal-warning{background:rgba(245,158,11,.12);border-left:4px solid #f59e0b;padding:12px 16px;border-radius:8px;margin:16px 0}
+    a{color:var(--primary)}
+    .related{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+    .related a{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:6px 14px;font-size:13px;text-decoration:none}
+    .related a:hover{border-color:var(--primary);color:var(--primary)}
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:18px 24px;text-align:center;font-size:13px;color:var(--text-light)}
+    footer a{color:var(--text-light);text-decoration:none;margin:0 8px}
+    footer a:hover{color:var(--primary)}
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">CalcProMaster</a>
+    <a href="/">Home</a>
+    <a href="/guides">Guides</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </header>
+  <main>
+    <div class="legal-page">
+      <p class="legal-meta"><a href="/guides">← All guides</a></p>
+      <h1>How to Calculate a Discount — Percent Off, Stacked Discounts &amp; Real Savings</h1>
+      <p class="legal-meta">Shopping · 5 min read · Last updated September 2026</p>
+
+      <h2>The basic discount formula</h2>
+      <div class="formula">Final price = Original price × (1 − Discount% ÷ 100)<br>Savings = Original price − Final price</div>
+      <p>Shortcut for mental math: a 20% discount means you pay 80% of the price — move the decimal once and multiply.</p>
+
+      <h2>Worked examples</h2>
+      <div class="example">
+        <p><strong>Simple:</strong> $120 item at 25% off → 120 × 0.75 = <strong>$90</strong> (you save $30)</p>
+        <p><strong>Reverse:</strong> sale price $64 after 20% off → 64 ÷ 0.80 = <strong>$80 original</strong></p>
+      </div>
+
+      <h2>The stacked-discount trap</h2>
+      <p>"30% + 20% off" is <strong>not</strong> 50% off. The second percentage applies after the first one is already applied:</p>
+      <div class="formula">Effective total = 1 − (1 − d₁) × (1 − d₂)</div>
+      <div class="example">
+        <p>$100 at 30% off → $70. Extra 20% off applies to $70 → 70 × 0.80 = <strong>$56</strong>.</p>
+        <p>Effective discount = 44%, not 50%. The $6 difference is why stores love stacked offers.</p>
+      </div>
+
+      <h2>Quick stacked-discount table</h2>
+      <table>
+        <tr><th>Stack</th><th>Effective discount</th></tr>
+        <tr><td>10% + 10%</td><td>19%</td></tr>
+        <tr><td>20% + 20%</td><td>36%</td></tr>
+        <tr><td>30% + 20%</td><td>44%</td></tr>
+        <tr><td>50% + 20%</td><td>60%</td></tr>
+        <tr><td>50% + 50%</td><td>75%</td></tr>
+      </table>
+
+      <h2>Discount vs cashback vs coupon codes</h2>
+      <ul>
+        <li><strong>Instant discount</strong> reduces the price before tax — usually the most predictable saving.</li>
+        <li><strong>Cashback</strong> arrives later and may be capped or expire; treat as partial value.</li>
+        <li><strong>Loyalty points</strong> have uncertain value — compare offers on final cash price, not headline percentages.</li>
+      </ul>
+
+      <h2>Common mistakes</h2>
+      <ul>
+        <li>Adding stacked percentages instead of multiplying them.</li>
+        <li>Applying an "extra %" to the original price instead of the reduced price.</li>
+        <li>Comparing percentage-off across items with very different base prices — absolute savings matter too.</li>
+        <li>Forgetting that tax is applied to the discounted price in most jurisdictions.</li>
+      </ul>
+
+      <h2>The successive-discount formula</h2>
+      <p>Two stacked discounts combine by multiplication, not addition. The equivalent single discount is:</p>
+      <div class="formula">Total % off = 100 − (100 − a) × (100 − b) ÷ 100</div>
+      <p>Example: 30% plus 20% off gives 100 − (70 × 80) ÷ 100 = 100 − 56 = <strong>44%</strong>. On a $1,000 order that is $560 to pay, not the $500 that "50% off" suggests. The same formula works for three or more discounts — keep multiplying the remaining-price factors. Our <a href="/blog/stacked-discounts">stacked discounts explainer</a> walks through the checkout math step by step, and the <a href="/finance/discount">Discount Calculator</a> handles the arithmetic for any combination.</p>
+
+      <h2>FAQ</h2>
+      <h3>How do I calculate 15% off quickly?</h3>
+      <p>Take 10% (move the decimal one place left), halve it for 5%, and subtract both from the price. On $80: 10% is $8, 5% is $4, so $80 − $12 = $68.</p>
+      <h3>Is a bigger percentage always better?</h3>
+      <p>No — 50% off a $20 item saves $10, while 20% off a $200 item saves $40. Compare absolute savings and what you actually need.</p>
+      <h3>How does buy-one-get-one compare to percent off?</h3>
+      <p>BOGO on identical items equals 50% off per unit only if both items cost the same. On unequal prices it's usually worse.</p>
+    </div>
+  </main>
+  <footer>
+    <p>CalcProMaster — free online calculators.</p>
+    <p>
+      <a href="/guides">Guides</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a>
+    </p>
+  </footer>
+  <div class="related" style="max-width:820px;margin:0 auto 40px;padding:0 24px;">
+    <a href="/finance/discount">Discount Calculator</a>
+    <a href="/math/percentage">Percentage Calculator</a>
+    <a href="/everyday/gst">GST Calculator</a>
+    <a href="/finance/tip">Tip Calculator</a>
+    <a href="/guides">All Guides</a>
+  </div>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

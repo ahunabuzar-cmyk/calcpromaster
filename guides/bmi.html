@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Calculate BMI — Formula, Ranges &amp; What the Number Means | CalcProMaster</title>
+  <meta name="description" content="The BMI formula for metric and imperial units, the official weight ranges, worked examples, and the honest limitations of BMI as a health measure.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/bmi">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Calculate BMI — Formula, Ranges & What the Number Means",
+    "description": "The BMI formula for metric and imperial units, the official weight ranges, worked examples, and the honest limitations of BMI as a health measure.",
+    "url": "https://calcpromaster.netlify.app/guides/bmi",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "How to Calculate BMI", "item": "https://calcpromaster.netlify.app/guides/bmi" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the BMI formula?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Metric: BMI = weight (kg) ÷ height (m)². Imperial: BMI = 703 × weight (lb) ÷ height (in)²." }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the BMI ranges?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Below 18.5 is underweight, 18.5–24.9 is normal/healthy weight, 25–29.9 is overweight, and 30 or above is obese, according to the WHO classification used by most health authorities." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is BMI accurate for athletes?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. BMI cannot distinguish muscle from fat, so muscular athletes often score as 'overweight'. It is a population-level screening tool, not a body-composition measurement." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a healthy BMI?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The commonly used healthy range is 18.5 to 24.9. Ranges can differ slightly for children (percentile-based) and some regional guidelines." }
+        }
+      ]
+    }
+  }
+  </script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{--bg:#f8fafc;--surface:#fff;--text:#1e293b;--text-light:#64748b;--border:#e2e8f0;--primary:#4f46e5;--radius:14px}
+    @media (prefers-color-scheme: dark){:root{--bg:#0f172a;--surface:#1e293b;--text:#f8fafc;--text-light:#94a3b8;--border:#334155}}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;-webkit-font-smoothing:antialiased}
+    header{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .logo{font-size:20px;font-weight:800;background:linear-gradient(135deg,#4f46e5,#7c3aed);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
+    header a{color:var(--text-light);text-decoration:none;font-size:13px}
+    header a:hover{color:var(--primary)}
+    main{max-width:820px;margin:0 auto;padding:32px 24px 64px}
+    h1{font-size:30px;font-weight:800;margin-bottom:8px}
+    h2{font-size:20px;font-weight:700;margin:26px 0 10px}
+    h3{font-size:16px;font-weight:600;margin:18px 0 6px}
+    p{margin-bottom:10px;color:var(--text)}
+    ul,ol{margin:8px 0 14px 22px}
+    li{margin-bottom:4px}
+    table{border-collapse:collapse;margin:12px 0;width:100%}
+    th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;font-size:14px}
+    th{background:var(--surface);font-weight:700}
+    .legal-meta{font-size:13px;color:var(--text-light);margin-bottom:18px}
+    .formula{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--primary);border-radius:8px;padding:12px 16px;margin:14px 0;font-family:ui-monospace,Consolas,monospace;font-size:15px}
+    .example{background:rgba(79,70,229,.07);border-left:4px solid var(--primary);padding:12px 16px;border-radius:8px;margin:14px 0}
+    .legal-warning{background:rgba(245,158,11,.12);border-left:4px solid #f59e0b;padding:12px 16px;border-radius:8px;margin:16px 0}
+    a{color:var(--primary)}
+    .related{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+    .related a{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:6px 14px;font-size:13px;text-decoration:none}
+    .related a:hover{border-color:var(--primary);color:var(--primary)}
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:18px 24px;text-align:center;font-size:13px;color:var(--text-light)}
+    footer a{color:var(--text-light);text-decoration:none;margin:0 8px}
+    footer a:hover{color:var(--primary)}
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">CalcProMaster</a>
+    <a href="/">Home</a>
+    <a href="/guides">Guides</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </header>
+  <main>
+    <div class="legal-page">
+      <p class="legal-meta"><a href="/guides">← All guides</a></p>
+      <h1>How to Calculate BMI — Formula, Ranges &amp; What the Number Means</h1>
+      <p class="legal-meta">Health · 5 min read · Last updated September 2026</p>
+
+      <h2>What is BMI?</h2>
+      <p>BMI (Body Mass Index) is a screening number that relates your weight to your height. It was designed as a quick population-level tool to flag underweight, healthy, overweight and obese weight categories — not as a measure of body fat or health on its own.</p>
+
+      <h2>The BMI formula</h2>
+      <div class="formula">Metric: BMI = weight (kg) ÷ height (m)²<br>Imperial: BMI = 703 × weight (lb) ÷ height (in)²</div>
+
+      <h2>Worked examples</h2>
+      <h3>Metric — 70 kg at 1.75 m</h3>
+      <div class="example">
+        <p>BMI = 70 ÷ (1.75 × 1.75) = 70 ÷ 3.0625 = <strong>22.9</strong> → healthy weight range</p>
+      </div>
+      <h3>Imperial — 154 lb at 5 ft 9 in (69 in)</h3>
+      <div class="example">
+        <p>BMI = 703 × 154 ÷ (69 × 69) = 703 × 154 ÷ 4761 = 108,262 ÷ 4761 ≈ <strong>22.7</strong> → healthy weight range</p>
+      </div>
+
+      <h2>BMI ranges (WHO classification)</h2>
+      <table>
+        <tr><th>BMI</th><th>Category</th></tr>
+        <tr><td>Below 18.5</td><td>Underweight</td></tr>
+        <tr><td>18.5 – 24.9</td><td>Normal / healthy weight</td></tr>
+        <tr><td>25 – 29.9</td><td>Overweight</td></tr>
+        <tr><td>30 and above</td><td>Obese</td></tr>
+      </table>
+      <p class="legal-meta">Classification per the World Health Organization, as used by most health authorities. Children use age- and sex-specific percentile charts instead of these adult cut-offs.</p>
+
+      <h2>The honest limitations of BMI</h2>
+      <ul>
+        <li><strong>Muscle vs fat:</strong> BMI cannot tell them apart, so muscular athletes often score "overweight" despite low body fat.</li>
+        <li><strong>Age and sex:</strong> the same BMI can mean different things for different bodies.</li>
+        <li><strong>Distribution matters:</strong> where fat sits (e.g. waist circumference) is often more predictive of risk than BMI alone.</li>
+        <li><strong>It is a screen, not a diagnosis:</strong> BMI is a starting point — talk to a healthcare professional for a real assessment.</li>
+      </ul>
+
+      <div class="legal-warning">
+        <strong>Important:</strong> this guide is educational and not medical advice. See our <a href="/disclaimer-health">health disclaimer</a>.
+      </div>
+
+      <h2>Working the formula backwards: your healthy weight range</h2>
+      <p>The most useful way to use BMI is in reverse — instead of scoring your current weight, compute the weight range your height implies. Rearranged: healthy weight = BMI × height², using the range boundaries. For the 1.75 m example above:</p>
+      <div class="example">
+        <p>Lower bound: 18.5 × 3.0625 = <strong>56.7 kg</strong> · Upper bound: 24.9 × 3.0625 = <strong>76.3 kg</strong></p>
+        <p>So 1.75 m corresponds to a healthy range of roughly <strong>57–76 kg</strong> — a 19 kg spread, which is why a single "target weight" is less meaningful than the range.</p>
+      </div>
+      <p>The same rearrangement answers "what would I weigh at BMI 22?": 22 × 3.0625 ≈ 67.4 kg. This is exactly how the <a href="/health/ideal-weight">ideal weight calculator</a> works, except it draws from several published formulas that often disagree with each other — the disagreement itself is informative.</p>
+
+      <h2>Two refinements worth knowing</h2>
+      <ul>
+        <li><strong>BMI Prime</strong> — your BMI divided by 25 (the upper healthy limit). The 70 kg example scores 22.9 ÷ 25 = <strong>0.92</strong>; anything above 1.00 is by definition outside the WHO healthy band. It's the same information in a friendlier scale: how far above or below the ceiling you sit.</li>
+        <li><strong>Adjusted cut-offs for Asian populations.</strong> Several health authorities apply lower thresholds for some Asian populations — commonly overweight from 23 and obesity from 27.5 — following WHO expert consultations that found elevated health risk at lower BMIs in those groups. Check which standard your own health provider uses; the number 24.9 is not a universal constant.</li>
+      </ul>
+      <p>One more formula exists for extremes of height: the <strong>Ponderal index</strong> (mass ÷ height³) scales differently and is sometimes preferred for neonates and very tall or short adults — the 70 kg / 1.75 m example scores 13.06. For most adults BMI remains the standard first screen; the alternatives exist because height² is an approximation, not a law.</p>
+
+      <h2>Try it instantly</h2>
+      <p>Calculate your BMI with the <a href="/health/bmi">BMI Calculator</a> — it works in metric or imperial and shows your category. Related tools:</p>
+      <div class="related">
+        <a href="/health/bmi">BMI Calculator</a>
+        <a href="/health/ideal-weight">Ideal Weight Calculator</a>
+        <a href="/health/bmr">BMR Calculator</a>
+        <a href="/guides">All Guides</a>
+      </div>
+
+      <h2>Frequently asked questions</h2>
+      <h3>What is the BMI formula?</h3>
+      <p>Metric: BMI = weight (kg) ÷ height (m)². Imperial: BMI = 703 × weight (lb) ÷ height (in)².</p>
+      <h3>What are the BMI ranges?</h3>
+      <p>Below 18.5 is underweight, 18.5–24.9 is normal/healthy weight, 25–29.9 is overweight, and 30 or above is obese, according to the WHO classification used by most health authorities.</p>
+      <h3>Is BMI accurate for athletes?</h3>
+      <p>No. BMI cannot distinguish muscle from fat, so muscular athletes often score as "overweight". It is a population-level screening tool, not a body-composition measurement.</p>
+      <h3>What is a healthy BMI?</h3>
+      <p>The commonly used healthy range is 18.5 to 24.9. Ranges can differ slightly for children (percentile-based) and some regional guidelines.</p>
+    </div>
+  </main>
+  <footer>
+    <a href="/">Home</a>
+    <a href="/guides">Guides</a>
+    <a href="/about">About</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+    <a href="/contact">Contact</a>
+  </footer>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

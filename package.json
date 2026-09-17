@@ -1,7 +1,7 @@
 {
   "name": "calcpro",
   "version": "2.1.0",
-  "description": "CalcProMaster — 566+ free client-side calculators. Vanilla JS, zero framework, SEO-optimized static SPA.",
+  "description": "CalcProMaster — 1201+ free client-side calculators. Vanilla JS, zero framework, SEO-optimized static SPA.",
   "type": "commonjs",
   "private": true,
   "scripts": {

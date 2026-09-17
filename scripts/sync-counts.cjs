@@ -40,26 +40,33 @@ const FILES = [
   'index.html',
   'about.html',
   'og-image.html',
+  'contact.html',
+  'cookies.html',
+  'disclaimer-finance.html',
+  'disclaimer-health.html',
+  'disclaimer-general.html',
   'js/data.js',
   'js/tool-intros.js',
   'js/seo-content.js',
   'js/seo-premium.js',
+  'js/community.js',
+  'js/legal-pages.js',
 ];
 
 // Patterns that identify a user-facing count reference. The captured
 // number must equal the registry count. We only touch "5XX+" / "5XX "
 // references that appear next to calculator/tool words, never pixels,
 // years, or arbitrary numbers.
-const COUNT_RE = /(\b5\d{2}\+?\s*(calculators?|tools?|free\s+[\w\s]*?online\s+calculators?|calculators?[,\s]|tools?[,\s])|"numberOfItems":\s*"5\d{2}\+?")/gi;
+const COUNT_RE = /(\b[6-9]\d{2}\+?\s*(calculators?|tools?|free\s+[\w\s]*?online\s+calculators?|calculators?[,\s]|tools?[,\s])|"numberOfItems":\s*"[6-9]\d{2}\+?")/gi;
 
 // Extra targeted fixes for awkward phrasings not caught above.
 function fixKnownStrings(content, n) {
   return content
-    .replace(/\b5\d{2}\+?\s*calculators?/gi, n + '+ calculators')
-    .replace(/\b5\d{2}\+?\s*tools?/gi, n + '+ tools')
-    .replace(/\b5\d{2}\+?\s*free\s+[\w\s]*?online\s+calculators?/gi, n + '+ free online calculators')
-    .replace(/\b5\d{2}\+?\s*free\s+calculators?/gi, n + '+ free calculators')
-    .replace(/"numberOfItems":\s*"5\d{2}\+?"/g, '"numberOfItems": "' + n + '+"');
+    .replace(/\b[6-9]\d{2}\+?\s*calculators?/gi, n + '+ calculators')
+    .replace(/\b[6-9]\d{2}\+?\s*tools?/gi, n + '+ tools')
+    .replace(/\b[6-9]\d{2}\+?\s*free\s+[\w\s]*?online\s+calculators?/gi, n + '+ free online calculators')
+    .replace(/\b[6-9]\d{2}\+?\s*free\s+calculators?/gi, n + '+ free calculators')
+    .replace(/"numberOfItems":\s*"[6-9]\d{2}\+?"/g, '"numberOfItems": "' + n + '+"');
 }
 
 // ---- 3. Sync / check ----
@@ -73,7 +80,7 @@ function scanFile(rel) {
   while ((m = re.exec(original)) !== null) {
     // pull the actual 5XX number out of the raw match (works for
     // "544+ calculators" AND '"numberOfItems": "544+"').
-    const nm = m[0].match(/5\d{2}/);
+    const nm = m[0].match(/[6-9]\d{2}/);
     findings.push({ num: nm ? parseInt(nm[0], 10) : NaN, raw: m[0].trim().slice(0, 60) });
   }
   return { rel, abs, original, findings, missing: false };
@@ -84,6 +91,30 @@ function main() {
   const { total, perFile } = registryCount();
   console.log(`Registry: ${total} calculators across ${Object.keys(perFile).length} data files`);
   let drift = 0;
+
+  // ---- 0. Registry snapshot files (all-tool-ids.json / tool-inventory.txt) ----
+  // These derived snapshots drifted to 528/543 rows historically and made
+  // external audits report conflicting tool counts. Verify they match the
+  // registry; in write mode regenerate them automatically.
+  const SNAPSHOTS = ['all-tool-ids.json', 'tool-inventory.txt'];
+  const snapshotStale = SNAPSHOTS.some(f => {
+    const p = path.join(ROOT, f);
+    if (!fs.existsSync(p)) return true;
+    if (f === 'all-tool-ids.json') {
+      try { return JSON.parse(fs.readFileSync(p, 'utf8')).length !== total; } catch (e) { return true; }
+    }
+    return fs.readFileSync(p, 'utf8').split('\n').filter(Boolean).length !== total;
+  });
+  if (snapshotStale) {
+    drift++;
+    console.log(`  ✗ registry snapshot files disagree with registry (${total})`);
+    if (!isCheck) {
+      require('child_process').execFileSync(process.execPath, [path.join(__dirname, 'rebuild-registry-snapshots.cjs')], { stdio: 'inherit' });
+      console.log('  ✓ all-tool-ids.json + tool-inventory.txt rebuilt from registry');
+    }
+  } else {
+    console.log('  ✓ all-tool-ids.json + tool-inventory.txt consistent');
+  }
 
   for (const rel of FILES) {
     const res = scanFile(rel);

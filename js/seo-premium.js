@@ -330,9 +330,9 @@ var prem_mortgage = {
   "cat": "finance",
   "catName": "Finance",
   "lsi": [
-    "mortgage calculator",
-    "home loan",
-    "monthly mortgage",
+    "fha vs conventional loan comparison calculator",
+    "home loan affordability calculator with property tax",
+    "mortgage payment calculator with pmi and taxes",
     "interest only mortgage",
     "day count convention"
   ],
@@ -363,7 +363,7 @@ var prem_mortgage = {
     },
     {
       "q": "Is Mortgage Calculator really free?",
-      "a": "Yes — Mortgage Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 543+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
+      "a": "Yes — Mortgage Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1035+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
     },
     {
       "q": "Do my inputs get sent anywhere when I use Mortgage Calculator?",
@@ -374,7 +374,7 @@ var prem_mortgage = {
       "a": "The math is exact to the precision of your inputs, so the practical accuracy of the home price answer depends on how accurate your inputs are — use realistic values and the result will match the standard professional calculation."
     },
     {
-      "q": "Which inputs matter most for mortgage calculator?",
+      "q": "Which inputs matter most for fha vs conventional loan comparison calculator?",
       "a": "home price is usually the biggest driver of the result, followed by the other fields you enter. Try changing each one in turn — Mortgage Calculator recalculates instantly, so you can see exactly how much each input matters."
     },
     {
@@ -430,10 +430,9 @@ var prem_compound_interest = {
   "cat": "finance",
   "catName": "Finance",
   "lsi": [
-    "compound interest",
-    "investment growth",
-    "ci calculator",
-    "continuous compounding",
+    "compound interest calculator with monthly contribution in rupees",
+    "compound interest calculator with yearly deposits",
+    "investment growth calculator with monthly sip",
     "solve for rate"
   ],
   "h1": "Compound Interest Calculator",
@@ -463,7 +462,7 @@ var prem_compound_interest = {
     },
     {
       "q": "Is Compound Interest Calculator really free?",
-      "a": "Yes — Compound Interest Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 543+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
+      "a": "Yes — Compound Interest Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1035+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
     },
     {
       "q": "Do my inputs get sent anywhere when I use Compound Interest Calculator?",
@@ -474,7 +473,7 @@ var prem_compound_interest = {
       "a": "The math is exact to the precision of your inputs, so the practical accuracy of the principal amount answer depends on how accurate your inputs are — use realistic values and the result will match the standard professional calculation."
     },
     {
-      "q": "Which inputs matter most for compound interest?",
+      "q": "Which inputs matter most for compound interest calculator with monthly contribution in rupees?",
       "a": "principal amount is usually the biggest driver of the result, followed by the other fields you enter. Try changing each one in turn — Compound Interest Calculator recalculates instantly, so you can see exactly how much each input matters."
     },
     {
@@ -530,9 +529,9 @@ var prem_bmi = {
   "cat": "health",
   "catName": "Health",
   "lsi": [
-    "bmi calculator",
-    "body mass index",
-    "weight calculator"
+    "bmi calculator for men and women",
+    "body mass index calculator with age",
+    "body mass index"
   ],
   "h1": "BMI Calculator",
   "shortDesc": "Calculate Body Mass Index with category",
@@ -561,7 +560,7 @@ var prem_bmi = {
     },
     {
       "q": "Is BMI Calculator really free?",
-      "a": "Yes — BMI Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 543+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
+      "a": "Yes — BMI Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1035+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
     },
     {
       "q": "Do my inputs get sent anywhere when I use BMI Calculator?",
@@ -572,7 +571,7 @@ var prem_bmi = {
       "a": "The math is exact to the precision of your inputs, so the practical accuracy of the weight answer depends on how accurate your inputs are — use realistic values and the result will match the standard professional calculation."
     },
     {
-      "q": "Which inputs matter most for bmi calculator?",
+      "q": "Which inputs matter most for bmi calculator for men and women?",
       "a": "weight is usually the biggest driver of the result, followed by the other fields you enter. Try changing each one in turn — BMI Calculator recalculates instantly, so you can see exactly how much each input matters."
     },
     {
@@ -628,9 +627,8 @@ var prem_percentage = {
   "cat": "math",
   "catName": "Math",
   "lsi": [
-    "percentage calculator",
-    "percent",
-    "percentage"
+    "percentage increase calculator between two numbers",
+    "what is the percentage of a number calculator"
   ],
   "h1": "Percentage Calculator",
   "shortDesc": "Calculate percentages",
@@ -659,7 +657,7 @@ var prem_percentage = {
     },
     {
       "q": "Is Percentage Calculator really free?",
-      "a": "Yes — Percentage Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 543+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
+      "a": "Yes — Percentage Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1035+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
     },
     {
       "q": "Do my inputs get sent anywhere when I use Percentage Calculator?",
@@ -670,7 +668,7 @@ var prem_percentage = {
       "a": "The math is exact to the precision of your inputs, so the practical accuracy of the part answer depends on how accurate your inputs are — use realistic values and the result will match the standard professional calculation."
     },
     {
-      "q": "Which inputs matter most for percentage calculator?",
+      "q": "Which inputs matter most for percentage increase calculator between two numbers?",
       "a": "part is usually the biggest driver of the result, followed by the other fields you enter. Try changing each one in turn — Percentage Calculator recalculates instantly, so you can see exactly how much each input matters."
     },
     {
@@ -726,6 +724,9 @@ var prem_us_income_tax = {
   "cat": "finance",
   "catName": "Finance",
   "lsi": [
+    "salary income tax calculator pakistan fbr",
+    "take home pay calculator with tax deduction",
+    "pakistan income tax salary calculator",
     "us income tax",
     "federal tax calculator",
     "irs tax brackets",
@@ -734,17 +735,17 @@ var prem_us_income_tax = {
   "h1": "US Federal Income Tax Calculator",
   "shortDesc": "Estimate US federal income tax with marginal brackets (2026)",
   "intro": "<h2>What This Calculator Really Does</h2>\n<p>US Federal Income Tax Calculator turns a small set of inputs — Annual Income ($), Filing Status, Standard Deduction ($) — into a clear, checkable answer in seconds. Instead of juggling the math by hand or trusting a bank's quoted figure, you type your own numbers and see the result instantly, with the working shown so you can verify every step.</p>\n<p>The tool is built around the standard time-value-of-money conventions used by lenders and financial planners. That means the numbers it produces follow the same conventions a professional would use, which keeps the output realistic for real-world planning rather than a rough classroom estimate.</p>\n<p>Who should use it? Anyone making a decision that depends on annual income: shoppers comparing options, planners budgeting ahead, students learning the underlying math, and professionals who want a fast cross-check. When should you use it? Any time someone hands you a number you cannot verify by hand — run it here and the breakdown panel shows exactly how it was derived.</p>\n<p>Everything runs locally in your browser. No data is uploaded, nothing is tracked, and after the first visit the page works offline. The result is a precise calculation of what you entered — the accuracy of the real-world answer always depends on how accurate your inputs are.</p>",
-  "quickAnswer": "<div class=\"premium-answer\"><p><strong>Quick answer:</strong> with the default inputs, US Federal Income Tax Calculator returns <strong>Federal Tax: $8,341</strong>.</p></div>",
-  "formula": "<h2>The Math Behind the Result, Explained Plainly</h2>\n<p>US Federal Income Tax Calculator combines your inputs through a defined sequence of steps rather than a single black-box formula. Each input plays a specific role, and the engine applies them in the same order every time so the result is reproducible by hand.</p>\n<ul>\n<li><strong>Annual Income ($)</strong> — the value you supply for this field — the starting point of the calculation (default 75000).</li>\n<li><strong>Filing Status</strong> — a selector that switches the calculation mode or convention used (default Single).</li>\n<li><strong>Standard Deduction ($)</strong> — the value you supply for this field — the starting point of the calculation (default 14600).</li>\n</ul>\n<p><strong>Why the math works:</strong> the engine starts from your raw inputs, normalizes any units and periods, applies annual income through the standard finance conventions, and only then formats the result. That ordering is what makes the answer consistent — change one input and the whole chain re-runs, so you can see exactly how each field moves the outcome.</p>\n<p>The formula behind the result is: <strong>Step 1: Taxable income = $75,000 − $14,600 standard deduction</strong></p>",
-  "stepByStep": "<h2>Step-by-Step with Real Numbers</h2>\n<p>Here is how US Federal Income Tax Calculator turns the default inputs into its answer, step by step:</p>\n<ol>\n<li>Step 1: Taxable income = $75,000 − $14,600 standard deduction</li>\n<li>Step 2: Apply single marginal brackets</li>\n<li>Step 3: Sum each bracket portion × its rate = total federal tax</li>\n<li>Step 4: Effective rate = tax ÷ gross income × 100</li>\n</ol>",
-  "howToUse": "<h2>How to Use It — In Order</h2>\n<ol>\n<li><strong>Start with Annual Income ($).</strong> It's the first field for a reason — Enter your annual income the value you want to test.</li>\n<li><strong>Set Filing Status.</strong> Open the Filing Status dropdown and pick. The default (Single) is a sensible starting point.</li>\n<li><strong>Set Standard Deduction ($).</strong> Enter your standard deduction. The default (14600) is a sensible starting point.</li>\n<li><strong>Review the result panel.</strong> The main number is your answer; the details line adds the context you need to interpret it.</li>\n<li><strong>Open the step-by-step breakdown.</strong> Every stage of the math is shown so you can verify the result by hand.</li>\n<li><strong>Change one input at a time.</strong> Watch how the result moves — that is the fastest way to understand which factor drives your number most.</li>\n<li><strong>Compare scenarios.</strong> Use the batch mode or run two sets of inputs side by side to choose between options.</li>\n<li><strong>Export or share.</strong> Copy the result, download it as an image, CSV or PDF, or share a link pre-filled with your inputs.</li>\n</ol>",
-  "inputExplanation": "<h2>Every Input, Explained</h2>\n<ul>\n<li><strong>Annual Income ($)</strong> — the numeric value for this part of the calculation. Default is 75000.</li>\n<li><strong>Filing Status</strong> — picks which setting the calculation uses. Options: Single, Married Filing Jointly, Head of Household. Default is Single.</li>\n<li><strong>Standard Deduction ($)</strong> — the numeric value for this part of the calculation. Default is 14600.</li>\n</ul>",
-  "outputExplanation": "<h2>Reading the Results</h2>\n<ul>\n<li><strong>Main result</strong> — the answer to your annual income question, computed from your inputs (with the current values it reads: Federal Tax: $8,341).</li>\n<li><strong>Details line</strong> — Effective rate: 11.1% | Take-home: $66,659 | $0–$11,600 @ 10% → $1160 · $11,600–$47,150 @ 12% → $4266 · $47,150–$60,400 @ 22% → $2915.</li>\n<li><strong>Step-by-step panel</strong> — the exact arithmetic used, so you can cross-check the main number by hand.</li>\n</ul>",
-  "workedExample": "<h2>Worked Example: A Different Set of Numbers</h2>\n<p>To show how the tool behaves away from the defaults, try these adjusted inputs:</p>\n<ol>\n<li><strong>Annual Income ($)</strong> set to 112500 instead of the default.</li>\n<li><strong>Standard Deduction ($)</strong> set to 18250 instead of the default.</li>\n</ol>\n<p>The result becomes <strong>Federal Tax: $15,788</strong> — with detail: Effective rate: 14.0% | Take-home: $96,712 | $0–$11,600 @ 10% → $1160 · $11,600–$47,150 @ 12% → $4266 · $47,150–$94,250 @ 22% → $10362. This is the same engine, just different inputs: change the inputs and the answer re-derives from scratch every time.</p>",
+  "quickAnswer": "<div class=\"premium-answer\"><p><strong>Quick answer:</strong> with the default inputs, US Federal Income Tax Calculator returns <strong>Federal Tax: $7,670</strong>.</p></div>",
+  "formula": "<h2>The Math Behind the Result, Explained Plainly</h2>\n<p>US Federal Income Tax Calculator combines your inputs through a defined sequence of steps rather than a single black-box formula. Each input plays a specific role, and the engine applies them in the same order every time so the result is reproducible by hand.</p>\n<ul>\n<li><strong>Annual Income ($)</strong> — the value you supply for this field — the starting point of the calculation (default 75000).</li>\n<li><strong>Filing Status</strong> — a selector that switches the calculation mode or convention used (default Single).</li>\n<li><strong>Standard Deduction ($)</strong> — the value you supply for this field — the starting point of the calculation (default 16100).</li>\n</ul>\n<p><strong>Why the math works:</strong> the engine starts from your raw inputs, normalizes any units and periods, applies annual income through the standard finance conventions, and only then formats the result. That ordering is what makes the answer consistent — change one input and the whole chain re-runs, so you can see exactly how each field moves the outcome.</p>\n<p>The formula behind the result is: <strong>Step 1: Taxable income = $75,000 − $16,100 standard deduction</strong></p>",
+  "stepByStep": "<h2>Step-by-Step with Real Numbers</h2>\n<p>Here is how US Federal Income Tax Calculator turns the default inputs into its answer, step by step:</p>\n<ol>\n<li>Step 1: Taxable income = $75,000 − $16,100 standard deduction</li>\n<li>Step 2: Apply single marginal brackets</li>\n<li>Step 3: Sum each bracket portion × its rate = total federal tax</li>\n<li>Step 4: Effective rate = tax ÷ gross income × 100</li>\n</ol>",
+  "howToUse": "<h2>How to Use It — In Order</h2>\n<ol>\n<li><strong>Start with Annual Income ($).</strong> It's the first field for a reason — Enter your annual income the value you want to test.</li>\n<li><strong>Set Filing Status.</strong> Open the Filing Status dropdown and pick. The default (Single) is a sensible starting point.</li>\n<li><strong>Set Standard Deduction ($).</strong> Enter your standard deduction. The default (16100) is a sensible starting point.</li>\n<li><strong>Review the result panel.</strong> The main number is your answer; the details line adds the context you need to interpret it.</li>\n<li><strong>Open the step-by-step breakdown.</strong> Every stage of the math is shown so you can verify the result by hand.</li>\n<li><strong>Change one input at a time.</strong> Watch how the result moves — that is the fastest way to understand which factor drives your number most.</li>\n<li><strong>Compare scenarios.</strong> Use the batch mode or run two sets of inputs side by side to choose between options.</li>\n<li><strong>Export or share.</strong> Copy the result, download it as an image, CSV or PDF, or share a link pre-filled with your inputs.</li>\n</ol>",
+  "inputExplanation": "<h2>Every Input, Explained</h2>\n<ul>\n<li><strong>Annual Income ($)</strong> — the numeric value for this part of the calculation. Default is 75000.</li>\n<li><strong>Filing Status</strong> — picks which setting the calculation uses. Options: Single, Married Filing Jointly, Head of Household. Default is Single.</li>\n<li><strong>Standard Deduction ($)</strong> — the numeric value for this part of the calculation. Default is 16100.</li>\n</ul>",
+  "outputExplanation": "<h2>Reading the Results</h2>\n<ul>\n<li><strong>Main result</strong> — the answer to your annual income question, computed from your inputs (with the current values it reads: Federal Tax: $7,670).</li>\n<li><strong>Details line</strong> — Effective rate: 10.2% | Take-home: $67,330 | $0–$12,400 @ 10% → $1240 · $12,400–$50,400 @ 12% → $4560 · $50,400–$58,900 @ 22% → $1870.</li>\n<li><strong>Step-by-step panel</strong> — the exact arithmetic used, so you can cross-check the main number by hand.</li>\n</ul>",
+  "workedExample": "<h2>Worked Example: A Different Set of Numbers</h2>\n<p>To show how the tool behaves away from the defaults, try these adjusted inputs:</p>\n<ol>\n<li><strong>Annual Income ($)</strong> set to 112500 instead of the default.</li>\n<li><strong>Standard Deduction ($)</strong> set to 20125 instead of the default.</li>\n</ol>\n<p>The result becomes <strong>Federal Tax: $15,035</strong> — with detail: Effective rate: 13.4% | Take-home: $97,466 | $0–$12,400 @ 10% → $1240 · $12,400–$50,400 @ 12% → $4560 · $50,400–$92,375 @ 22% → $9235. This is the same engine, just different inputs: change the inputs and the answer re-derives from scratch every time.</p>",
   "applications": "<h2>Where You'll Actually Use This</h2><ul><li><strong>Personal</strong> — make everyday decisions that hinge on annual income with numbers you can verify yourself.</li><li><strong>Business</strong> — run quick what-if scenarios without waiting on a spreadsheet or a colleague.</li><li><strong>Education</strong> — see the working behind the answer, which makes us federal income tax calculator a practical study aid.</li><li><strong>Professional</strong> — use it as an independent cross-check before you commit to a decision or a quote.</li></ul>",
   "commonMistakes": "<h2>Common Mistakes to Avoid</h2><ul><li>Entering Annual Income in the wrong units — most errors trace back to a unit mismatch, so check the field label before you type.</li><li>Using a monthly rate where an annual one belongs, or the reverse — the tool expects the rate exactly as the label says.</li><li>Mixing up the order of inputs — US Federal Income Tax Calculator re-derives everything from scratch, so a swapped field gives a confident-looking wrong answer.</li><li>Typing commas or currency symbols into number fields — paste plain digits instead.</li><li>Ignoring the default values — they exist because they are realistic, so keep them unless you have a real number to replace them with.</li><li>Forgetting that the result is only as good as the inputs — garbage in, garbage out applies here as much as anywhere.</li><li>Rounding inputs aggressively — small rounding on Annual Income compounds through the calculation.</li><li>Assuming the output is a quote — the tool computes what you entered; it does not know your exact situation.</li></ul>",
   "tips": "<h2>Expert Tips for US Federal Income Tax Calculator</h2><ul><li>Start from the defaults — they are realistic, so the first result from US Federal Income Tax Calculator is always sensible.</li><li>Change one input at a time to see exactly how it moves annual income.</li><li>Double-check units on Annual Income before trusting the answer.</li><li>Use the step-by-step breakdown once to verify the math by hand.</li><li>Save or export results you plan to act on — links pre-filled with inputs are shareable.</li><li>Re-run after any change; the engine recalculates instantly, so the panel is never stale.</li><li>Compare at least two scenarios before committing to a decision.</li><li>Bookmark the tool — after the first visit it works offline too.</li><li>If a result looks surprising, re-check the input you are least sure about first.</li><li>Use the history feature to revisit calculations from previous sessions.</li></ul>",
-  "assumptions": "<h2>Assumptions Behind the Calculation</h2>\n<ul>\n<li>Inputs are used exactly as entered — US Federal Income Tax Calculator makes no hidden adjustments, fees, or assumptions beyond what you type.</li>\n<li>The default scenario used in the examples is income = 75000, filing = single, deduction = 14600.</li>\n<li>The math follows standard industry conventions; institutional rules can differ.</li>\n<li>All values are treated as constants for the calculation — no inflation or market movement is modeled.</li>\n</ul>",
+  "assumptions": "<h2>Assumptions Behind the Calculation</h2>\n<ul>\n<li>Inputs are used exactly as entered — US Federal Income Tax Calculator makes no hidden adjustments, fees, or assumptions beyond what you type.</li>\n<li>The default scenario used in the examples is income = 75000, filing = single, deduction = 16100.</li>\n<li>The math follows standard industry conventions; institutional rules can differ.</li>\n<li>All values are treated as constants for the calculation — no inflation or market movement is modeled.</li>\n</ul>",
   "limitations": "<h2>Limitations</h2><ul><li>US Federal Income Tax Calculator computes what you entered; it is not personalized advice for your specific situation.</li><li>Real-world outcomes depend on factors the tool cannot know (fees, market conditions, individual circumstances).</li><li>Annual income is estimated from the standard conventions; official numbers may differ slightly.</li><li>Very extreme input combinations may produce results that need professional interpretation.</li></ul>",
   "accuracy": "<h2>Expected Accuracy</h2><p>US Federal Income Tax Calculator performs the standard calculation to full floating-point precision and only rounds for display, so the arithmetic is exact to the precision of your inputs. The practical accuracy of the answer depends entirely on how accurately you enter annual income. If your inputs match reality, the result will match the standard calculation used by professionals in the field.</p>",
   "privacy": "<h2>Privacy — Your Data Never Leaves This Device</h2><p>Every calculation on the US Federal Income Tax Calculator page runs locally in your browser. Your inputs are never uploaded, stored on a server, or shared with anyone — there is no database, no account, and no tracking. You can verify this yourself: disconnect from the internet and the tool still works.</p>",
@@ -754,11 +755,11 @@ var prem_us_income_tax = {
   "faqs": [
     {
       "q": "What does US Federal Income Tax Calculator actually calculate?",
-      "a": "It takes the inputs you provide — Annual Income ($), Filing Status, Standard Deduction ($) — and computes the corresponding annual income using the standard finance conventions. With the default values it currently returns: Federal Tax: $8,341."
+      "a": "It takes the inputs you provide — Annual Income ($), Filing Status, Standard Deduction ($) — and computes the corresponding annual income using the standard finance conventions. With the default values it currently returns: Federal Tax: $7,670."
     },
     {
       "q": "Is US Federal Income Tax Calculator really free?",
-      "a": "Yes — US Federal Income Tax Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 543+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
+      "a": "Yes — US Federal Income Tax Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1035+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
     },
     {
       "q": "Do my inputs get sent anywhere when I use US Federal Income Tax Calculator?",
@@ -769,7 +770,7 @@ var prem_us_income_tax = {
       "a": "The math is exact to the precision of your inputs, so the practical accuracy of the annual income answer depends on how accurate your inputs are — use realistic values and the result will match the standard professional calculation."
     },
     {
-      "q": "Which inputs matter most for us income tax?",
+      "q": "Which inputs matter most for salary income tax calculator pakistan fbr?",
       "a": "annual income is usually the biggest driver of the result, followed by the other fields you enter. Try changing each one in turn — US Federal Income Tax Calculator recalculates instantly, so you can see exactly how much each input matters."
     },
     {
@@ -825,9 +826,9 @@ var prem_retirement = {
   "cat": "finance",
   "catName": "Finance",
   "lsi": [
-    "retirement calculator",
-    "retirement planning",
-    "401k",
+    "retirement savings calculator with monthly contribution",
+    "401k retirement calculator with employer match",
+    "retirement age calculator based on savings rate",
     "solve for time",
     "solve for contribution"
   ],
@@ -858,7 +859,7 @@ var prem_retirement = {
     },
     {
       "q": "Is Retirement Calculator really free?",
-      "a": "Yes — Retirement Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 543+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
+      "a": "Yes — Retirement Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1035+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
     },
     {
       "q": "Do my inputs get sent anywhere when I use Retirement Calculator?",
@@ -869,7 +870,7 @@ var prem_retirement = {
       "a": "The math is exact to the precision of your inputs, so the practical accuracy of the current savings answer depends on how accurate your inputs are — use realistic values and the result will match the standard professional calculation."
     },
     {
-      "q": "Which inputs matter most for retirement calculator?",
+      "q": "Which inputs matter most for retirement savings calculator with monthly contribution?",
       "a": "current savings is usually the biggest driver of the result, followed by the other fields you enter. Try changing each one in turn — Retirement Calculator recalculates instantly, so you can see exactly how much each input matters."
     },
     {
@@ -925,7 +926,6 @@ var prem_car_loan_emi = {
   "cat": "auto",
   "catName": "Auto & Transport",
   "lsi": [
-    "car loan",
     "auto loan EMI"
   ],
   "h1": "Car Loan EMI Calculator",
@@ -955,7 +955,7 @@ var prem_car_loan_emi = {
     },
     {
       "q": "Is Car Loan EMI Calculator really free?",
-      "a": "Yes — Car Loan EMI Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 543+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
+      "a": "Yes — Car Loan EMI Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1035+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
     },
     {
       "q": "Do my inputs get sent anywhere when I use Car Loan EMI Calculator?",
@@ -966,7 +966,7 @@ var prem_car_loan_emi = {
       "a": "The math is exact to the precision of your inputs, so the practical accuracy of the loan amount answer depends on how accurate your inputs are — use realistic values and the result will match the standard professional calculation."
     },
     {
-      "q": "Which inputs matter most for car loan?",
+      "q": "Which inputs matter most for auto loan EMI?",
       "a": "loan amount is usually the biggest driver of the result, followed by the other fields you enter. Try changing each one in turn — Car Loan EMI Calculator recalculates instantly, so you can see exactly how much each input matters."
     },
     {
@@ -1022,7 +1022,6 @@ var prem_salary_converter = {
   "cat": "career",
   "catName": "Career & Freelance",
   "lsi": [
-    "salary converter",
     "hourly to annual"
   ],
   "h1": "Salary Converter",
@@ -1052,7 +1051,7 @@ var prem_salary_converter = {
     },
     {
       "q": "Is Salary Converter really free?",
-      "a": "Yes — Salary Converter is 100% free, with no limits, no premium tiers, and no account required. Every one of the 543+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
+      "a": "Yes — Salary Converter is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1035+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
     },
     {
       "q": "Do my inputs get sent anywhere when I use Salary Converter?",
@@ -1063,7 +1062,7 @@ var prem_salary_converter = {
       "a": "The math is exact to the precision of your inputs, so the practical accuracy of the amount answer depends on how accurate your inputs are — use realistic values and the result will match the standard professional calculation."
     },
     {
-      "q": "Which inputs matter most for salary converter?",
+      "q": "Which inputs matter most for hourly to annual?",
       "a": "amount is usually the biggest driver of the result, followed by the other fields you enter. Try changing each one in turn — Salary Converter recalculates instantly, so you can see exactly how much each input matters."
     },
     {
@@ -1119,9 +1118,7 @@ var prem_fuel_cost = {
   "cat": "auto",
   "catName": "Auto & Transport",
   "lsi": [
-    "fuel cost",
-    "petrol cost",
-    "gas calculator"
+    "fuel cost calculator"
   ],
   "h1": "Fuel Cost Calculator",
   "shortDesc": "Calculate fuel cost for any trip",
@@ -1150,7 +1147,7 @@ var prem_fuel_cost = {
     },
     {
       "q": "Is Fuel Cost Calculator really free?",
-      "a": "Yes — Fuel Cost Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 543+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
+      "a": "Yes — Fuel Cost Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1035+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
     },
     {
       "q": "Do my inputs get sent anywhere when I use Fuel Cost Calculator?",
@@ -1161,7 +1158,7 @@ var prem_fuel_cost = {
       "a": "The math is exact to the precision of your inputs, so the practical accuracy of the distance answer depends on how accurate your inputs are — use realistic values and the result will match the standard professional calculation."
     },
     {
-      "q": "Which inputs matter most for fuel cost?",
+      "q": "Which inputs matter most for fuel cost calculator?",
       "a": "distance is usually the biggest driver of the result, followed by the other fields you enter. Try changing each one in turn — Fuel Cost Calculator recalculates instantly, so you can see exactly how much each input matters."
     },
     {
@@ -1217,8 +1214,9 @@ var prem_credit_card_payoff = {
   "cat": "finance",
   "catName": "Finance",
   "lsi": [
+    "credit card payoff calculator with extra payment",
+    "debt payoff calculator monthly payment plan",
     "credit card payoff",
-    "debt calculator",
     "solve for payment",
     "solve for time"
   ],
@@ -1249,7 +1247,7 @@ var prem_credit_card_payoff = {
     },
     {
       "q": "Is Credit Card Payoff really free?",
-      "a": "Yes — Credit Card Payoff is 100% free, with no limits, no premium tiers, and no account required. Every one of the 543+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
+      "a": "Yes — Credit Card Payoff is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1035+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
     },
     {
       "q": "Do my inputs get sent anywhere when I use Credit Card Payoff?",
@@ -1260,7 +1258,7 @@ var prem_credit_card_payoff = {
       "a": "The math is exact to the precision of your inputs, so the practical accuracy of the current balance answer depends on how accurate your inputs are — use realistic values and the result will match the standard professional calculation."
     },
     {
-      "q": "Which inputs matter most for credit card payoff?",
+      "q": "Which inputs matter most for credit card payoff calculator with extra payment?",
       "a": "current balance is usually the biggest driver of the result, followed by the other fields you enter. Try changing each one in turn — Credit Card Payoff recalculates instantly, so you can see exactly how much each input matters."
     },
     {

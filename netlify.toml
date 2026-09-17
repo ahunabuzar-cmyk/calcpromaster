@@ -4,11 +4,13 @@
   publish = "deploy"
   command = "npm run lint:js && npm run audit && node build-deploy.js"
 
-# SPA fallback + static pages + asset-404 rules all live in deploy/_redirects,
-# which Netlify processes in file order (real files → static pages → renamed 301s →
-# missing assets → 404 → extensionless routes → index.html 200). A catch-all here in
-# netlify.toml would OVERRIDE those ordered rules (toml redirects take precedence over
-# the _redirects file), turning every missing .js/.css/.png into a 200 soft-404.
+# SPA whitelist rewrites + static pages + asset-404 rules all live in
+# deploy/_redirects, which Netlify processes in file order (real files →
+# static pages → renamed 301s → missing assets → 404 → whitelisted
+# extensionless prefixes → index.html 200 → hard /* /404.html 404 LAST).
+# A catch-all here in netlify.toml would OVERRIDE those ordered rules (toml
+# redirects take precedence over the _redirects file), turning every missing
+# .js/.css/.png AND every unknown extensionless path into a 200 soft-404.
 #
 # NOTE: all security/response headers (CSP, HSTS, cache rules) live ONLY in the
 # _headers file. A [[headers]] block here would override _headers for the same

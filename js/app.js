@@ -320,6 +320,7 @@ const App = (function () {
           _state.page = 'tool';
           renderTool(catKey, tool);
           applyModifier(tool, modifier);
+          applyVariantSeo(catKey, toolId);
           return;
         }
       }
@@ -332,6 +333,34 @@ const App = (function () {
     if (!cleanPath || cleanPath === '' || path === '/') { _state.page = 'home'; renderHome(); return; }
     _state.page = 'static';
     renderStatic('404');
+  }
+
+  // ---------- Long-tail variant SEO guard ----------
+  // Modifier routes (/cat/tool/modifier — duration/amount/geo variants) carry
+  // templated, near-duplicate content. Prerendered variants ship static
+  // noindex + canonical→base, but the SPA must defend BOTH cases:
+  //  1) hydration of a prerendered variant (updateMeta's indexability reset
+  //     would otherwise flip it back to indexable), and
+  //  2) unbuilt variants served via the SPA shell (index, follow → bad).
+  // Runs LAST in the long-tail branch so it wins over renderTool/updateMeta.
+  function applyVariantSeo(catKey, toolId) {
+    try {
+      document.documentElement.setAttribute('data-robots-lock', '1');
+      let robots = document.querySelector('meta[name="robots"]');
+      if (!robots) {
+        robots = document.createElement('meta');
+        robots.setAttribute('name', 'robots');
+        document.head.appendChild(robots);
+      }
+      robots.setAttribute('content', 'noindex, follow');
+      let canon = document.querySelector('link[rel="canonical"]');
+      if (!canon) {
+        canon = document.createElement('link');
+        canon.setAttribute('rel', 'canonical');
+        document.head.appendChild(canon);
+      }
+      canon.setAttribute('href', window.location.origin + '/' + catKey + '/' + toolId);
+    } catch (e) { /* non-fatal */ }
   }
 
   function navigateToTool(toolId, catKey) {
@@ -2803,7 +2832,11 @@ const App = (function () {
     // Indexability reset: any real (non-404) page must always be indexable.
     // The 404 renderer sets robots noindex; this guarantees every other route
     // flips it back (covers SPA navigations that bypass renderStatic).
+    // VARIANT GUARD: long-tail modifier routes RE-LOCK noindex after meta render
+    // (applyVariantSeo sets <html data-robots-lock>). updateMeta clears the lock
+    // here at the start of the next render so normal pages stay indexable.
     try {
+      document.documentElement.removeAttribute('data-robots-lock');
       const robots = document.querySelector('meta[name="robots"]');
       if (robots && robots.content.indexOf('noindex') !== -1) robots.content = 'index, follow';
     } catch (e) { /* non-fatal */ }

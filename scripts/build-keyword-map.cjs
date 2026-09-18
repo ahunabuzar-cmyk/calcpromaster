@@ -19,6 +19,9 @@ const vm = require('vm');
 const ROOT = path.join(__dirname, '..');
 const DATA_DIR = path.join(ROOT, 'js', 'data');
 const OUT = path.join(ROOT, 'docs', 'KEYWORD-TARGETS.md');
+// Deterministic doc date: source-controlled mtime of sitemap.xml (UTC), so CI
+// (Linux) and local (Windows) builds produce byte-identical documents.
+const DOC_DATE = new Date(fs.statSync(path.join(ROOT, 'sitemap.xml')).mtimeMs).toISOString().slice(0, 10);
 
 // ---------- load per-page rows ----------
 const pages = fs.readFileSync(path.join(__dirname, '.keywords.jsonl'), 'utf8')
@@ -37,7 +40,7 @@ const fs2 = fs;
 const topDirs = fs2.readdirSync(path.join(ROOT, 'deploy'), { withFileTypes: true })
   .filter(d => d.isDirectory()).map(d => d.name);
 const dirOf = {};
-for (const f of fs.readdirSync(DATA_DIR).filter(f => f.endsWith('.js'))) {
+for (const f of fs.readdirSync(DATA_DIR).filter(f => f.endsWith('.js')).sort()) {
   const cat = f.replace(/\.js$/, '');
   const code = fs.readFileSync(path.join(DATA_DIR, f), 'utf8');
   const m = { exports: {} };
@@ -106,7 +109,7 @@ const L = [];
 const push = (s = '') => L.push(s);
 push('# Keyword Targeting Map — CalcProMaster (complete inventory)');
 push('');
-push('_Machine-extracted from the deploy tree + calculator data modules on ' + new Date().toISOString().slice(0, 10) + '. Nothing hand-added, nothing omitted._');
+push('_Machine-extracted from the deploy tree + calculator data modules on ' + DOC_DATE + '. Nothing hand-added, nothing omitted._');
 push('');
 push('**How to read this document**');
 push('');

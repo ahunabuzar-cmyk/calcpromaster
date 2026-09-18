@@ -24,6 +24,7 @@ function extractKw(html) {
 function walk(dir) {
   let entries;
   try { entries = fs.readdirSync(dir, { withFileTypes: true }); } catch (e) { return; }
+  entries.sort((a, b) => a.name.localeCompare(b.name)); // OS-independent order
   for (const ent of entries) {
     if (ent.name === 'node_modules' || ent.name === '.git') continue;
     const full = path.join(dir, ent.name);

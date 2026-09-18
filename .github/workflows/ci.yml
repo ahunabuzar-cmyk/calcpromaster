@@ -71,3 +71,10 @@ jobs:
             echo "::error::SEO indexing audit FAILED — see seo-indexing-audit.json for details"
             exit 1
           fi
+
+      - name: Keyword docs freshness gate (targets + audit must match deployed content)
+        run: |
+          # docs/KEYWORD-TARGETS.md + docs/KEYWORD-AUDIT.md are generated from the
+          # deploy tree + data modules. If regeneration produces a diff, the committed
+          # docs are stale → fail with instructions instead of letting them rot.
+          npm run keywords:check

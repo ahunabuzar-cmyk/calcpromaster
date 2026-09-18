@@ -278,3 +278,4 @@ const ENGINEERING_TOOLS = [
     steps: function(v){ return ['RCF = 1.118×10⁻⁵ × r × rpm²']; } },
 ];
 if (typeof module !== 'undefined') module.exports = ENGINEERING_TOOLS;
+if (typeof window !== 'undefined') window.ENGINEERING_TOOLS = ENGINEERING_TOOLS;

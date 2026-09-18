@@ -1,6 +1,6 @@
 // Business calculators (18)
 const BUSINESS_TOOLS = [
-  { id: 'business-roi', name: 'Business ROI', desc: 'Calculate return on investment', kw: 'marketing roi calculator with campaign cost, return on investment',
+  { id: 'business-roi', name: 'Business ROI', desc: 'Calculate return on investment', kw: 'marketing roi calculator with campaign cost',
     inputs: [{id:'revenue',label:'Revenue',type:'number',def:100000,slider:{min:10000,max:500000,step:5000}},{id:'cost',label:'Total Cost',type:'number',def:75000,slider:{min:5000,max:400000,step:5000}}],
     calc: function(v) { const profit = v.revenue - v.cost; const roi = profit / v.cost * 100; return { result: 'ROI: ' + roi.toFixed(2) + '%', chart: Charts.donut([v.cost, profit], ['Cost','Profit']), extra: 'Profit: $' + profit.toFixed(2) }; },
     steps: function(v) { const p=v.revenue-v.cost; const roi=p/v.cost*100; return ['Formula: ROI = (Revenue - Cost) / Cost × 100','Step 1: Profit = $'+v.revenue+' - $'+v.cost+' = $'+p.toFixed(2),'Step 2: ROI = $'+p.toFixed(2)+' / $'+v.cost+' × 100 = '+roi.toFixed(2)+'%']; } },
@@ -52,7 +52,7 @@ const BUSINESS_TOOLS = [
     inputs: [{id:'cogs',label:'Cost of Goods Sold',type:'number',def:200000},{id:'avgInventory',label:'Average Inventory',type:'number',def:50000}],
     calc: function(v) { const turnover = v.cogs / v.avgInventory; return { result: 'Turnover: ' + turnover.toFixed(2) + 'x', chart: Charts.gauge(turnover, 20), extra: 'Days in inventory: ' + (365 / turnover).toFixed(0) }; },
     steps: function(v) { const t=v.cogs/v.avgInventory; return ['Formula: Turnover = COGS / Average Inventory','Step 1: Turnover = $'+v.cogs+' / $'+v.avgInventory,'Step 2: Turnover = '+t.toFixed(2)+'x','Step 3: Days in inventory = 365 / '+t.toFixed(2)+' = '+(365/t).toFixed(0)+' days']; } },
-  { id: 'break-even-revenue', name: 'Break-Even Revenue', desc: 'Calculate break-even revenue', kw: 'break even point calculator with fixed costs, break even revenue',
+  { id: 'break-even-revenue', name: 'Break-Even Revenue', desc: 'Calculate break-even revenue', kw: 'break even revenue',
     inputs: [{id:'fixed',label:'Fixed Costs',type:'number',def:50000},{id:'cm',label:'Contribution Margin (%)',type:'number',def:40}],
     calc: function(v) { const be = v.fixed / (v.cm / 100); return { result: 'Break-Even Revenue: $' + be.toFixed(2), chart: Charts.gauge(be, 200000), extra: 'Margin: ' + v.cm + '%' }; },
     steps: function(v) { const be=v.fixed/(v.cm/100); return ['Formula: Break-Even Revenue = Fixed Costs / Contribution Margin%','Step 1: BE = $'+v.fixed+' / '+(v.cm/100),'Step 2: BE = $'+be.toFixed(2)]; } },

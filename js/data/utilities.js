@@ -20,7 +20,7 @@ const UTILITY_TOOLS = [
     inputs: [{id:'value',label:'Value',type:'text',def:'255'},{id:'fromBase',label:'From Base',type:'number',def:10}],
     calc: function(v) { const dec = parseInt(v.value, v.fromBase); return { result: 'Decimal: ' + dec + '<br>Binary: ' + dec.toString(2) + '<br>Hex: ' + dec.toString(16).toUpperCase() + '<br>Octal: ' + dec.toString(8), chart: '', extra: 'Base ' + v.fromBase, isHtml: true }; },
     steps: function(v) { const d=parseInt(v.value,v.fromBase); return ['Step 1: Parse "'+v.value+'" in base '+v.fromBase+' = '+d,'Step 2: Binary = '+d.toString(2),'Step 3: Hex = '+d.toString(16).toUpperCase(),'Step 4: Octal = '+d.toString(8)]; } },
-  { id: 'hash-gen', name: 'Hash Generator', desc: 'Generate SHA-256 hash', kw: 'hash generator calculator',
+  { id: 'hash-gen', name: 'Hash Generator', desc: 'Generate SHA-256 hash', kw: 'md5 sha256 hash generator online',
     inputs: [{id:'text',label:'Text to Hash',type:'textarea',def:'Hello World'}],
     calc: function(v) { return crypto.subtle.digest('SHA-256', new TextEncoder().encode(v.text)).then(buf => { const hex = Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join(''); return { result: '<code style="word-break:break-all">' + hex + '</code>', chart: '', extra: 'SHA-256', isHtml: true }; }); },
     steps: function(v) { return ['Step 1: Encode text to UTF-8','Step 2: Apply SHA-256 hash function','Step 3: Convert to hexadecimal']; } },

@@ -128,3 +128,4 @@ const CONVERSION_TOOLS = [
 
 ];
 if (typeof module !== 'undefined') module.exports = CONVERSION_TOOLS;
+if (typeof window !== 'undefined') window.CONVERSION_TOOLS = CONVERSION_TOOLS;

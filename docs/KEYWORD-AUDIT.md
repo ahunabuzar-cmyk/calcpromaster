@@ -2,60 +2,22 @@
 
 _Deterministic audit over the same extraction as docs/KEYWORD-TARGETS.md. Nothing hand-added. Re-run with: `npm run keywords:audit`._
 
-**Inventory:** 1333 indexable pages · 1201 tools · 1389 curated phrases.
+**Inventory:** 1333 indexable pages · 1201 tools · 1343 curated phrases.
 
 ## Verdict at a glance
 
 | Check | Finding |
 |---|---|
 | C1 · Title cannibalization | ✅ none |
-| C2 · Phrase cannibalization (2+ pages target same phrase) | ⚠️ 33 shared phrases |
+| C2 · Phrase cannibalization (2+ pages target same phrase) | ✅ none |
 | C3 · Duplicate phrase inside one tool | ✅ none |
 | Q1 · Year-stamped phrases | ⚠️ 2 |
 | Q2 · App/download-intent phrases on web tools | ✅ none |
-| Q3 · Phrases sharing no word with tool name | ℹ️ 107 (review, not always wrong) |
+| Q3 · Phrases sharing no word with tool name | ℹ️ 88 (review, not always wrong) |
 | S1 · Overlong phrases (>70 chars) | ℹ️ 65 |
 | S2 · Single generic word | ℹ️ 10 |
 
-**Modifier coverage:** 65 phrases use feature modifiers ("with …", "solve for …"), 57 carry locale/currency intent, 69 say "free".
-
-## C2 — One phrase, multiple targeting pages
-
-Each of these phrases is listed on 2+ tools. Google picks ONE page per query — the others waste their shot. Decide a primary page and remove the phrase from the rest (or differentiate the modifier).
-
-- **return on investment** → /business/business-roi, /finance/investment, /finance/roi
-- **break even point calculator with fixed costs** → /business/break-even-revenue, /business/break-even-point
-- **break even point** → /business/break-even-point, /finance/break-even
-- **tax refund estimator** → /career/tax-refund, /finance/us-income-tax
-- **concrete volume calculator in cubic yards** → /construction/concrete-slab, /construction/concrete-column
-- **how many bags of concrete do i need calculator** → /construction/concrete-slab, /construction/concrete-column
-- **roof pitch calculator with slope** → /construction/roofing, /construction/roof-pitch
-- **gpa calculator semester with credit hours** → /education/gpa, /education/cgpa, /education/semester-gpa
-- **final grade calculator with weightage** → /education/grade, /education/grade-needed, /education/letter-grade
-- **exact age calculator in years months days** → /everyday/age, /everyday/fitness-age, /everyday/pet-age
-- **day count convention** → /finance/loan-emi, /finance/mortgage, /finance/auto-loan
-- **fha vs conventional loan comparison calculator** → /finance/mortgage, /finance/mortgage-payoff
-- **home loan affordability calculator with property tax** → /finance/mortgage, /finance/mortgage-payoff
-- **mortgage payment calculator with pmi and taxes** → /finance/mortgage, /finance/mortgage-payoff
-- **interest only mortgage** → /finance/mortgage, /finance/interest-only
-- **solve for rate** → /finance/compound-interest, /finance/simple-interest, /finance/investment, /finance/savings-goal, /finance/present-value, /finance/future-value
-- **solve for time** → /finance/credit-card-payoff, /finance/retirement, /finance/investment, /finance/savings-goal, /finance/present-value, /finance/future-value
-- **roi calculator with annual returns** → /finance/investment, /finance/investment-growth
-- **cagr calculator with monthly contributions** → /finance/investment, /finance/investment-growth
-- **investment return calculator with inflation** → /finance/investment, /finance/investment-growth
-- **salary income tax calculator pakistan fbr** → /finance/tax, /finance/sales-tax, /finance/us-income-tax, /finance/uk-income-tax, /finance/canada-income-tax, /finance/australia-income-tax
-- **take home pay calculator with tax deduction** → /finance/tax, /finance/sales-tax, /finance/us-income-tax, /finance/uk-income-tax, /finance/canada-income-tax, /finance/australia-income-tax
-- **pakistan income tax salary calculator** → /finance/tax, /finance/sales-tax, /finance/us-income-tax, /finance/uk-income-tax, /finance/canada-income-tax, /finance/australia-income-tax
-- **vo2 max calculator** → /fitness/vo2max, /health/vo2-max
-- **daily calorie intake calculator to lose weight** → /health/calorie, /health/calorie-burn
-- **maintenance calorie calculator with activity level** → /health/calorie, /health/calorie-burn
-- **max heart rate calculator by age** → /health/heart-rate, /health/target-heart-rate
-- **target heart rate zone calculator** → /health/heart-rate, /health/target-heart-rate
-- **target heart rate** → /health/heart-rate, /health/target-heart-rate
-- **pregnancy due date calculator by last period** → /health/pregnancy, /health/pregnancy-weight
-- **pregnancy week calculator from conception** → /health/pregnancy, /health/pregnancy-weight
-- **force mass acceleration calculator** → /science/force, /science/gravitational-force
-- **hash generator calculator** → /tech/hash-generator, /utilities/hash-gen
+**Modifier coverage:** 39 phrases use feature modifiers ("with …", "solve for …"), 47 carry locale/currency intent, 69 say "free".
 
 ## Q1 — Year-stamped phrases (stale by next year)
 
@@ -73,7 +35,6 @@ Often legitimate (synonyms, problem-space queries like "how many bags of concret
 | Page | Phrase |
 |---|---|
 | `/auto/fuel-price-compare` | petrol vs diesel |
-| `/business/business-roi` | return on investment |
 | `/business/cac` | customer acquisition cost |
 | `/business/roas` | return on ad spend |
 | `/business/mrr` | monthly recurring revenue |
@@ -82,7 +43,6 @@ Often legitimate (synonyms, problem-space queries like "how many bags of concret
 | `/business/saas-unit-metrics` | LTV |
 | `/business/saas-unit-metrics` | CAC |
 | `/career/salary-converter` | hourly to annual |
-| `/construction/roofing` | roof pitch calculator with slope |
 | `/conversion/length` | meters to feet and inches converter |
 | `/conversion/pressure-conv` | pascal bar psi |
 | `/conversion/temperature` | celsius to fahrenheit |
@@ -97,7 +57,6 @@ Often legitimate (synonyms, problem-space queries like "how many bags of concret
 | `/conversion/voltage-conv` | volts amps watts |
 | `/conversion/density-conv` | kg/m3 to g/cm3 |
 | `/education/gpa` | grade point average |
-| `/education/cgpa` | gpa calculator semester with credit hours |
 | `/education/reading-speed` | words per minute |
 | `/everyday/age` | date of birth |
 | `/everyday/calorie-counter` | nutrition tracker |
@@ -105,24 +64,27 @@ Often legitimate (synonyms, problem-space queries like "how many bags of concret
 | `/finance/loan-emi` | day count convention |
 | `/finance/mortgage` | fha vs conventional loan comparison calculator |
 | `/finance/mortgage` | home loan affordability calculator with property tax |
-| `/finance/mortgage` | day count convention |
 | `/finance/compound-interest` | investment growth calculator with monthly sip |
 | `/finance/compound-interest` | solve for rate |
-| `/finance/simple-interest` | solve for rate |
-| `/finance/auto-loan` | day count convention |
 | `/finance/credit-card-payoff` | solve for payment |
-| `/finance/credit-card-payoff` | solve for time |
-| `/finance/retirement` | solve for time |
 | `/finance/retirement` | solve for contribution |
 | `/finance/investment` | roi calculator with annual returns |
-| `/finance/investment` | cagr calculator with monthly contributions |
-| `/finance/investment` | solve for rate |
-| `/finance/investment` | solve for time |
 | `/finance/savings-goal` | solve for time |
-| `/finance/savings-goal` | solve for rate |
 | `/finance/npv` | net present value |
 | `/finance/irr` | internal rate of return |
-| … | +57 more |
+| `/finance/roi` | return on investment |
+| `/finance/salary` | take home pay calculator with deductions |
+| `/finance/home-afford` | how much house can i afford calculator |
+| `/finance/home-afford` | how much house |
+| `/finance/currency-converter` | usd to pkr live exchange rate converter |
+| `/finance/currency-converter` | pkr to usd converter today |
+| `/finance/paycheck` | take home pay |
+| `/finance/apr` | annual percentage rate |
+| `/finance/investment-growth` | cagr calculator with monthly contributions |
+| `/finance/bond-yield` | YTM |
+| `/finance/bond-yield` | fixed income |
+| `/finance/retirement-income` | 401k |
+| … | +38 more |
 
 ## S1 — Overlong phrases (>70 chars)
 

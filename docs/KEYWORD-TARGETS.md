@@ -398,7 +398,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 
 **/business/business-roi — Business ROI**
 - Title: Business ROI: Revenue & Total Cost
-- Keywords: marketing roi calculator with campaign cost · return on investment
+- Keywords: marketing roi calculator with campaign cost
 
 **/business/profit-margin — Profit Margin Calculator**
 - Title: Profit Margin Calculator: Revenue & Cost
@@ -450,7 +450,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 
 **/business/break-even-revenue — Break-Even Revenue**
 - Title: Break-Even Revenue: Fixed Costs & Contribution Margin
-- Keywords: break even point calculator with fixed costs · break even revenue
+- Keywords: break even revenue
 
 **/business/payback — Payback Period**
 - Title: Payback Period: Initial Investment & Annual Cash Flow
@@ -722,7 +722,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 
 **/construction/roofing — Roofing Calculator**
 - Title: Roofing Calculator: Roof Length, Roof Width & Pitch
-- Keywords: roof pitch calculator with slope
+- Keywords: roofing calculator shingles area
 
 **/construction/drywall — Drywall Calculator**
 - Title: Drywall Calculator: Wall Area & Sheet Size
@@ -790,7 +790,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 
 **/construction/concrete-column — Concrete Column Calculator**
 - Title: Concrete Column Calculator: Column Height, Width & Depth
-- Keywords: concrete volume calculator in cubic yards · how many bags of concrete do i need calculator
+- Keywords: concrete column calculator circular
 
 **/construction/lumber-calculator — Lumber Calculator (Board Feet)**
 - Title: Lumber Calculator (Board Feet): Number of Pieces, Length
@@ -1074,11 +1074,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 
 **/education/gpa — GPA Calculator**
 - Title: GPA Calculator: Grades
-- Keywords: gpa calculator semester with credit hours · grade point average
+- Keywords: grade point average
 
 **/education/cgpa — CGPA Calculator**
 - Title: CGPA Calculator: Semester GPAs
-- Keywords: gpa calculator semester with credit hours · cgpa to percentage conversion calculator
+- Keywords: cgpa to percentage conversion calculator
 
 **/education/grade — Grade Calculator**
 - Title: Grade Calculator: Current Grade, Final Exam Weight
@@ -1130,7 +1130,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 
 **/education/grade-needed — Final Grade Needed (Weighted)**
 - Title: Final Grade Needed (Weighted): Current Grade
-- Keywords: final grade calculator with weightage · final grade needed weighted
+- Keywords: final grade needed weighted
 
 **/education/class-rank — Class Rank Calculator**
 - Title: Class Rank Calculator: Your GPA, Class Avg GPA & Class Size
@@ -1150,7 +1150,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 
 **/education/letter-grade — Letter Grade Converter**
 - Title: Letter Grade Converter: Percentage Score
-- Keywords: final grade calculator with weightage · letter grade converter
+- Keywords: letter grade converter
 
 **/education/sat-score — SAT Score Estimator**
 - Title: SAT Score Estimator: Math Section & Reading & Writing
@@ -1558,11 +1558,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 
 **/everyday/fitness-age — Fitness Age Calculator**
 - Title: Fitness Age Calculator: Actual Age, Resting Heart Rate
-- Keywords: exact age calculator in years months days · fitness age calculator
+- Keywords: fitness age calculator
 
 **/everyday/pet-age — Pet Age Calculator (Dog/Cat)**
 - Title: Pet Age Calculator (Dog/Cat): Human Years
-- Keywords: exact age calculator in years months days
+- Keywords: dog age to human years calculator
 
 **/everyday/blood-alcohol — Blood Alcohol Content (BAC)**
 - Title: Blood Alcohol Content (BAC): Number of Drinks, Weight
@@ -1684,7 +1684,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 
 **/finance/mortgage — Mortgage Calculator**
 - Title: Mortgage Calculator: Home Price, Down Payment
-- Keywords: fha vs conventional loan comparison calculator · home loan affordability calculator with property tax · mortgage payment calculator with pmi and taxes · interest only mortgage · day count convention
+- Keywords: fha vs conventional loan comparison calculator · home loan affordability calculator with property tax · mortgage payment calculator with pmi and taxes
 
 **/finance/compound-interest — Compound Interest Calculator**
 - Title: Compound Interest Calculator: Principal Amount, Annual
@@ -1692,27 +1692,27 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 
 **/finance/simple-interest — Simple Interest Calculator**
 - Title: Simple Interest Calculator: Principal, Rate & Time
-- Keywords: solve for rate
+- Keywords: simple interest calculator yearly
 
 **/finance/auto-loan — Auto Loan Calculator**
 - Title: Auto Loan Calculator: Vehicle Price, Down Payment & Rate
-- Keywords: day count convention
+- Keywords: auto loan calculator with sales tax
 
 **/finance/credit-card-payoff — Credit Card Payoff**
 - Title: Credit Card Payoff: Current Balance, APR & Monthly Payment
-- Keywords: credit card payoff calculator with extra payment · debt payoff calculator monthly payment plan · credit card payoff · solve for payment · solve for time
+- Keywords: credit card payoff calculator with extra payment · debt payoff calculator monthly payment plan · credit card payoff · solve for payment
 
 **/finance/retirement — Retirement Calculator**
 - Title: Retirement Calculator: Current Savings
-- Keywords: retirement savings calculator with monthly contribution · 401k retirement calculator with employer match · retirement age calculator based on savings rate · solve for time · solve for contribution
+- Keywords: retirement savings calculator with monthly contribution · 401k retirement calculator with employer match · retirement age calculator based on savings rate · solve for contribution
 
 **/finance/investment — Investment Calculator**
 - Title: Investment Calculator: Initial Investment, Annual Return
-- Keywords: roi calculator with annual returns · cagr calculator with monthly contributions · investment return calculator with inflation · return on investment · solve for rate · solve for time
+- Keywords: roi calculator with annual returns · investment return calculator with inflation
 
 **/finance/savings-goal — Savings Goal Calculator**
 - Title: Savings Goal Calculator: Savings Goal, Time & Annual Return
-- Keywords: solve for time · solve for rate
+- Keywords: solve for time
 
 **/finance/tax — Income Tax Calculator**
 - Title: Income Tax Calculator: Annual Income, Tax Rate & Deductions
@@ -1720,7 +1720,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 
 **/finance/sales-tax — Sales Tax Calculator**
 - Title: Sales Tax Calculator: Purchase Amount & Tax Rate
-- Keywords: salary income tax calculator pakistan fbr · take home pay calculator with tax deduction · pakistan income tax salary calculator · tax on purchase
+- Keywords: tax on purchase
 
 **/finance/npv — NPV Calculator**
 - Title: NPV Calculator: Discount Rate & Cash Flows
@@ -1788,7 +1788,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 
 **/finance/break-even — Break-Even Calculator**
 - Title: Break-Even Calculator: Fixed Costs, Price per Unit
-- Keywords: break even point
+- Keywords: break even analysis calculator units
 
 **/finance/cash-flow — Cash Flow Calculator**
 - Title: Cash Flow Calculator: Monthly Income, Monthly Expenses
@@ -1804,11 +1804,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 
 **/finance/present-value — Present Value Calculator**
 - Title: Present Value Calculator: Future Value, Discount Rate
-- Keywords: time value of money · solve for rate · solve for time
+- Keywords: time value of money
 
 **/finance/future-value — Future Value Calculator**
 - Title: Future Value Calculator: Present Value, Rate & Years
-- Keywords: solve for rate · solve for time
+- Keywords: future value calculator lump sum
 
 **/finance/amortization — Amortization Schedule**
 - Title: Amortization Schedule: Loan Amount, Rate & Years
@@ -1848,7 +1848,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 
 **/finance/investment-growth — Investment Growth Comparison**
 - Title: Investment Growth Comparison: Initial
-- Keywords: roi calculator with annual returns · cagr calculator with monthly contributions · investment return calculator with inflation
+- Keywords: cagr calculator with monthly contributions
 
 **/finance/savings-comparison — Savings Account Comparison**
 - Title: Savings Account Comparison: Deposit Amount, Bank 1 Rate
@@ -1856,7 +1856,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 
 **/finance/mortgage-payoff — Mortgage Payoff Calculator**
 - Title: Mortgage Payoff Calculator: Loan Amount, Rate
-- Keywords: fha vs conventional loan comparison calculator · home loan affordability calculator with property tax · mortgage payment calculator with pmi and taxes
+- Keywords: mortgage payoff calculator extra payments
 
 **/finance/graduated-payment — Graduated Payment Mortgage**
 - Title: Graduated Payment Mortgage: Loan Amount, Rate & Term
@@ -1912,19 +1912,19 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 
 **/finance/us-income-tax — US Federal Income Tax Calculator**
 - Title: US Federal Income Tax Calculator: Annual Income
-- Keywords: salary income tax calculator pakistan fbr · take home pay calculator with tax deduction · pakistan income tax salary calculator · us income tax · federal tax calculator · irs tax brackets · tax refund estimator
+- Keywords: us income tax · federal tax calculator · irs tax brackets
 
 **/finance/uk-income-tax — UK Income Tax Calculator**
 - Title: UK Income Tax Calculator: Annual Salary
-- Keywords: salary income tax calculator pakistan fbr · take home pay calculator with tax deduction · pakistan income tax salary calculator · uk income tax calculator · take home pay uk
+- Keywords: uk income tax calculator · take home pay uk
 
 **/finance/canada-income-tax — Canada Income Tax Calculator**
 - Title: Canada Income Tax Calculator: Annual Income
-- Keywords: salary income tax calculator pakistan fbr · take home pay calculator with tax deduction · pakistan income tax salary calculator · canada income tax · cra tax calculator · take home canada
+- Keywords: canada income tax · cra tax calculator · take home canada
 
 **/finance/australia-income-tax — Australia Income Tax Calculator**
 - Title: Australia Income Tax Calculator: Annual Income
-- Keywords: salary income tax calculator pakistan fbr · take home pay calculator with tax deduction · pakistan income tax salary calculator · australia tax calculator · take home australia
+- Keywords: australia tax calculator · take home australia
 
 **/finance/bond-price — Bond Price Calculator**
 - Title: Bond Price Calculator: Face Value, Coupon Rate
@@ -2870,7 +2870,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 
 **/health/heart-rate — Heart Rate Zone Calculator**
 - Title: Heart Rate Zone Calculator: Age
-- Keywords: max heart rate calculator by age · target heart rate zone calculator · target heart rate
+- Keywords: max heart rate calculator by age
 
 **/health/pregnancy — Pregnancy Due Date**
 - Title: Pregnancy Due Date: Last Menstrual Period
@@ -2898,11 +2898,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 
 **/health/vo2-max — VO2 Max Calculator**
 - Title: VO2 Max Calculator: 1.5 Mile Run & Age
-- Keywords: vo2 max calculator
+- Keywords: vo2 max estimation cooper test
 
 **/health/pregnancy-weight — Pregnancy Weight Gain**
 - Title: Pregnancy Weight Gain: Pre-pregnancy BMI
-- Keywords: pregnancy due date calculator by last period · pregnancy week calculator from conception · pregnancy weight gain
+- Keywords: pregnancy weight gain
 
 **/health/blood-pressure — Blood Pressure Category**
 - Title: Blood Pressure Category: Systolic & Diastolic
@@ -2910,7 +2910,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 
 **/health/calorie-burn — Calorie Burn Calculator**
 - Title: Calorie Burn Calculator: Weight, Activity & Duration
-- Keywords: daily calorie intake calculator to lose weight · maintenance calorie calculator with activity level
+- Keywords: calories burned calculator by activity
 
 **/health/sleep — Sleep Calculator**
 - Title: Sleep Calculator: Wake Up Time
@@ -2922,7 +2922,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 
 **/health/target-heart-rate — Target Heart Rate Zones**
 - Title: Target Heart Rate Zones: Age & Resting Heart Rate
-- Keywords: max heart rate calculator by age · target heart rate zone calculator · target heart rate · heart rate zones
+- Keywords: target heart rate zone calculator · target heart rate · heart rate zones
 
 **/health/sleep-quality — Sleep Quality Score**
 - Title: Sleep Quality Score: Hours in Bed, Hours Asleep
@@ -4398,7 +4398,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 
 **/science/gravitational-force — Gravitational Force Calculator**
 - Title: Gravitational Force Calculator: Mass 1, Mass 2 & Distance
-- Keywords: force mass acceleration calculator
+- Keywords: gravitational force calculator newtons
 
 **/science/escape-velocity — Escape Velocity Calculator**
 - Title: Escape Velocity Calculator: Planet Mass & Planet Radius
@@ -4946,7 +4946,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 
 **/utilities/hash-gen — Hash Generator**
 - Title: Hash Generator: Sha-256 Hash
-- Keywords: hash generator calculator
+- Keywords: md5 sha256 hash generator online
 
 **/utilities/lorem-ipsum — Lorem Ipsum Generator**
 - Title: Lorem Ipsum Generator: Number of Paragraphs

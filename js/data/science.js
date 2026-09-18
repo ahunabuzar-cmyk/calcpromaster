@@ -132,7 +132,7 @@ const SCIENCE_TOOLS = [
     inputs: [{id:'force',label:'Force (N)',type:'number',def:50},{id:'distance',label:'Distance (m)',type:'number',def:10}],
     calc: function(v) { const w = v.force * v.distance; return { result: 'Work: ' + w.toFixed(2) + ' J', chart: Charts.gauge(w, 1000), extra: 'W = F × d | ' + (w/1000).toFixed(3) + ' kJ' }; },
     steps: function(v) { const w=v.force*v.distance; return ['Formula: W = F × d','Step 1: W = '+v.force+' N × '+v.distance+' m','Step 2: W = '+w.toFixed(2)+' J']; } },
-  { id: 'gravitational-force', name: 'Gravitational Force Calculator', desc: 'Calculate gravitational attraction between masses', kw: 'force mass acceleration calculator',
+  { id: 'gravitational-force', name: 'Gravitational Force Calculator', desc: 'Calculate gravitational attraction between masses', kw: 'gravitational force calculator newtons',
     inputs: [{id:'m1',label:'Mass 1 (kg)',type:'number',def:5.97e24},{id:'m2',label:'Mass 2 (kg)',type:'number',def:1000},{id:'r',label:'Distance (m)',type:'number',def:6.37e6}],
     calc: function(v) { if (!v.r) return { result: 'Enter a distance > 0', chart: null, extra: 'F = Gm₁m₂/r²' }; const f = 6.674e-11 * v.m1 * v.m2 / (v.r * v.r); return { result: 'Force: ' + f.toExponential(2) + ' N', chart: Charts.gauge(Math.log10(f+1), 30), extra: 'F = Gm₁m₂/r² | G = 6.674×10⁻¹¹' }; },
     steps: function(v) { if (!v.r) return ['Enter a distance > 0']; const f=6.674e-11*v.m1*v.m2/(v.r*v.r); return ['Formula: F = G × m₁ × m₂ / r²','Step 1: F = 6.674×10⁻¹¹ × '+v.m1.toExponential(2)+' × '+v.m2.toExponential(2)+' / '+v.r.toExponential(2)+'²','Step 2: F = '+f.toExponential(2)+' N']; } },
@@ -383,3 +383,4 @@ const SCIENCE_TOOLS = [
     steps: function(v){ return ['ω (rad/s) = rpm × 2π / 60','f (Hz) = rpm / 60']; } },
 ];
 if (typeof module !== 'undefined') module.exports = SCIENCE_TOOLS;
+if (typeof window !== 'undefined') window.SCIENCE_TOOLS = SCIENCE_TOOLS;

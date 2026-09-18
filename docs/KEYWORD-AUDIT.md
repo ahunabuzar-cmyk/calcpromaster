@@ -2,7 +2,7 @@
 
 _Deterministic audit over the same extraction as docs/KEYWORD-TARGETS.md. Nothing hand-added. Re-run with: `npm run keywords:audit`._
 
-**Inventory:** 1333 indexable pages · 1201 tools · 1343 curated phrases.
+**Inventory:** 1334 indexable pages · 1201 tools · 1343 curated phrases.
 
 ## Verdict at a glance
 

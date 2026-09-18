@@ -7,9 +7,9 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 - **Primary keyword** = the page `<title>` (what Google shows; the exact-match anchor of every page).
 - **Secondary surface** = the `<meta description>` (long-tail + intent modifiers).
 - **Curated long-tail phrases** = the `kw` field in `js/data/*.js` — the specific queries each tool was built to rank for (feature + audience + locale modifiers). These are woven into page copy, FAQs and JSON-LD.
-- Indexable pages audited: **1333** (noindex variant pages excluded by design).
+- Indexable pages audited: **1334** (noindex variant pages excluded by design).
 
-**Totals:** 1201 calculator pages · 20 category hubs · 73 guides · 6 blog posts · 11 support/static pages.
+**Totals:** 1201 calculator pages · 20 category hubs · 73 guides · 6 blog posts · 12 support/static pages.
 
 **Honest scope note:** these are the keywords the site TARGETS (on-page). Whether the site RANKS for them is a different question — that requires Google Search Console data (see docs/SEO-AUDIT-2026-09-17.md: rankings/backlinks cannot be verified without GSC credentials).
 
@@ -111,6 +111,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 | `/disclaimer-general` | General Disclaimer |
 | `/disclaimer-health` | Health Disclaimer |
 | `/editorial-policy` | Editorial Policy |
+| `/embed` | Free Calculator Widgets for Your Website — Embed a Calculator |
 | `/googled1ac20b54b36e7cf` |  |
 | `/` | CalcProMaster — 1201+ Free Online Calculators |
 | `/og-image` |  |

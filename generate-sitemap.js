@@ -38,6 +38,7 @@ const STATIC_PAGES = [
   ['privacy', 'monthly', '0.5'],
   ['terms', 'monthly', '0.5'],
   ['contact', 'monthly', '0.5'],
+  ['editorial-policy', 'monthly', '0.5'],
   ['disclaimer-general', 'monthly', '0.5'],
   ['disclaimer-finance', 'monthly', '0.5'],
   ['disclaimer-health', 'monthly', '0.5'],
@@ -106,6 +107,19 @@ const STATIC_PAGES = [
   ['guides/regional', 'monthly', '0.6'],
   ['guides/everyday', 'monthly', '0.6'],
   ['guides/utilities', 'monthly', '0.6'],
+  // Batch-2 topic guides (scripts/build-topic-guides-batch2.cjs)
+  ['guides/cagr', 'monthly', '0.7'],
+  ['guides/body-fat', 'monthly', '0.7'],
+  ['guides/credit-card-minimum', 'monthly', '0.7'],
+  ['guides/debt-ratio', 'monthly', '0.7'],
+  ['guides/heart-rate-zones', 'monthly', '0.7'],
+  ['guides/net-worth', 'monthly', '0.7'],
+  ['guides/npv-vs-irr', 'monthly', '0.7'],
+  ['guides/rent-vs-buy', 'monthly', '0.7'],
+  ['guides/sleep-cycles', 'monthly', '0.7'],
+  ['guides/water-intake', 'monthly', '0.7'],
+  // Embeddable widget landing page (linkable-asset for natural backlinks)
+  ['embed', 'weekly', '0.6'],
   // Blog (static explainer posts under blog/)
   ['blog', 'weekly', '0.6'],
   ['blog/stacked-discounts', 'monthly', '0.6'],

@@ -1,0 +1,49 @@
+name: CalcProMaster — IndexNow resubmission
+
+# Bing/Yandex/Seznam/Naver pick up recrawls through IndexNow. Resubmit the full
+# sitemap automatically:
+#   1. after every successful production deploy (workflow_run trigger on the
+#      smoke/deploy workflow), and
+#   2. weekly as a safety net (cron) — also covers manual Netlify drag-and-drop
+#      deploys that bypass CI.
+# No secrets needed: the IndexNow key ships publicly as <hex>.txt at the site
+# root (ping-indexnow.js discovers it). Safe to re-run — IndexNow dedupes and
+# rate-limits server-side.
+
+on:
+  workflow_run:
+    workflows: ["CalcProMaster — Scheduled Smoke, Uptime & Netlify Deploy"]
+    types: [completed]
+    branches: [main]
+  schedule:
+    - cron: '30 7 * * 1'          # weekly Mon 07:30 UTC (after the daily smoke)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow-ping
+  cancel-in-progress: false
+
+jobs:
+  ping:
+    # workflow_run: only when the deploy workflow succeeded AND deploys are not
+    # disabled via SKIP_NETLIFY_DEPLOY. schedule/dispatch: always.
+    if: >-
+      (github.event_name == 'workflow_run' &&
+       github.event.workflow_run.conclusion == 'success' &&
+       vars.SKIP_NETLIFY_DEPLOY != 'true') ||
+      github.event_name != 'workflow_run'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Resubmit full sitemap to IndexNow
+        run: node ping-indexnow.js

@@ -41,3 +41,4 @@ google-creds*
 # Local analytics/GSC snapshots (tracking data, not part of the site)
 data/ga4-events-snapshot.json
 data/gsc-snapshot.json
+scripts/.keywords.jsonl

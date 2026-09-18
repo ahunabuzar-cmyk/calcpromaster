@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAGR Calculator — Compound Annual Growth Rate Formula &amp; Examples | CalcProMaster</title>
+  <meta name="description" content="What CAGR really measures, the exact formula, a worked 5-year investment example, and when CAGR misleads (volatility, negative years, short periods).">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="CalcProMaster">
+  <meta property="og:title" content="CAGR: The One Number That Smooths a Bumpy Investment">
+  <meta property="og:description" content="What CAGR really measures, the exact formula, a worked 5-year investment example, and when CAGR misleads (volatility, negative years, short periods).">
+  <meta property="og:url" content="https://calcpromaster.netlify.app/guides/cagr">
+  <meta property="og:image" content="https://calcpromaster.netlify.app/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://calcpromaster.netlify.app/og-image.png">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/cagr">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "CAGR Calculator — Compound Annual Growth Rate Formula & Examples | CalcProMaster",
+    "description": "What CAGR really measures, the exact formula, a worked 5-year investment example, and when CAGR misleads (volatility, negative years, short periods).",
+    "url": "https://calcpromaster.netlify.app/guides/cagr",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "CAGR", "item": "https://calcpromaster.netlify.app/guides/cagr" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "What is a good CAGR?", "acceptedAnswer": { "@type": "Answer", "text": "It depends entirely on the asset class and period. As a rough reference: long-run inflation is 2–4%, broad stock indices have historically annualized around 7–10% in many markets, and anything promising far more than that carries far more risk. Compare CAGR against a relevant benchmark, not a universal number." } },
+        { "@type": "Question", "name": "How do I calculate CAGR by hand?", "acceptedAnswer": { "@type": "Answer", "text": "Divide ending value by beginning value, take the n-th root of the ratio (n = years), then subtract 1 and multiply by 100. Example: 1.61051 over 5 years → fifth root ≈ 1.10 → CAGR ≈ 10%." } },
+        { "@type": "Question", "name": "Is CAGR the same as annualized return?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — CAGR is the standard way to annualize a single start-to-end growth figure. They differ from IRR, which handles multiple cash flows at different dates." } },
+        { "@type": "Question", "name": "Can CAGR be negative?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. If the ending value is lower than the beginning value, CAGR is negative and correctly shows a shrinking investment. It is undefined only when the ending value is zero or negative." } }
+      ]
+    }
+  }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.7; max-width: 760px; margin: 0 auto; padding: 16px; color: #1f2937; }
+    .crumb { font-size: 0.85rem; color: #6b7280; margin-bottom: 8px; }
+    .crumb a { color: #4f46e5; text-decoration: none; }
+    h1 { font-size: 1.65rem; line-height: 1.3; margin: 8px 0 4px; }
+    h2 { font-size: 1.25rem; margin-top: 2rem; border-top: 1px solid #e5e7eb; padding-top: 1.2rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.4rem; }
+    .answer { background: #eef2ff; border-left: 4px solid #4f46e5; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+    .formula { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 16px; font-family: ui-monospace, monospace; font-size: 0.95rem; overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.92rem; }
+    th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; }
+    th { background: #f9fafb; }
+    .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
+    .related a { color: #4f46e5; }
+    .updated { color: #6b7280; font-size: 0.85rem; }
+    .note { background: #fefce8; border-left: 4px solid #ca8a04; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+    .review-block { background: #f5f3ff; border-left: 4px solid #8b5cf6; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 18px 0; font-size: 0.88rem; color: #4b5563; }
+    .review-block a { color: #7c3aed; }
+  </style>
+</head>
+<body>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › CAGR</p>
+  <h1>CAGR: The One Number That Smooths a Bumpy Investment</h1>
+  <p class="updated">Finance · 6 min read · Last updated September 2026</p>
+
+  <div class="answer">
+    <strong>Quick answer:</strong> CAGR (Compound Annual Growth Rate) answers one question: <strong>what constant yearly rate would take this value to that value in N years?</strong> A ₹1,00,000 investment that becomes ₹1,61,051 in 5 years has a CAGR of 10% — even if the actual yearly returns were +25%, −8%, +12%, −3%, +40%.
+  </div>
+
+  <h2>The CAGR formula</h2>
+  <div class="formula">CAGR = (Ending value ÷ Beginning value)<sup>1/n</sup> − 1<br>where n = number of years</div>
+  <p>Worked example: ₹1,00,000 grows to ₹1,61,051 in 5 years. Ratio = 1.61051. Fifth root of 1.61051 = 1.10 (check: 1.10<sup>5</sup> = 1.61051). So CAGR = <strong>10.0% per year</strong>. The order of operations matters: divide first, take the n-th root second, subtract 1 last — reversing steps 2 and 3 is the most common hand-calculation error.</p>
+
+  <h2>Why CAGR beats the "average of yearly returns"</h2>
+  <p>Yearly returns of +50% and −50% average to 0%, but ₹100 becomes ₹150 then ₹75 — a real loss of 25%. The arithmetic average ignores compounding; CAGR does not: (75/100)<sup>1/2</sup> − 1 = −13.4% per year, which is the honest annualized truth. Whenever returns compound, use the geometric mean (CAGR), not the arithmetic one.</p>
+
+  <h2>Where CAGR misleads</h2>
+  <table>
+    <tr><th>Situation</th><th>What goes wrong</th></tr>
+    <tr><td>Short periods (1–2 years)</td><td>One lucky year annualizes into an unsustainable "rate"</td></tr>
+    <tr><td>Negative endpoint</td><td>If the ending value is below the start, CAGR is negative — fine — but if the ending value is ≤ 0 the formula is undefined</td></tr>
+    <tr><td>Uneven cash flows</td><td>CAGR assumes one deposit at the start and nothing after; SIP-style contributions need an IRR/XIRR calculation instead</td></tr>
+    <tr><td>Cherry-picked dates</td><td>Starting the clock after a crash (or before one) changes CAGR dramatically with zero change in the fund</td></tr>
+  </table>
+  <p>None of this makes CAGR wrong — it makes it a <em>summary</em>. Pair it with the underlying yearly numbers before drawing conclusions.</p>
+
+  <div class="note"><strong>Limitations:</strong> CAGR says nothing about the path taken, risk, or volatility. Two investments with identical CAGR can have wildly different drawdowns. For periodic contributions, use an IRR-based calculator, not CAGR.</div>
+
+  <h2>Try the calculators</h2>
+  <p class="related">
+    <a href="/finance/cagr-calculator" class="cta">CAGR Calculator</a>
+    <a href="/finance/investment" class="cta">Investment Return Calculator</a>
+    <a href="/finance/compound-interest" class="cta">Compound Interest Calculator</a>
+  </p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>What is a good CAGR?</h3>
+  <p>It depends entirely on the asset class and period. As a rough reference: long-run inflation is 2–4%, broad stock indices have historically annualized around 7–10% in many markets, and anything promising far more than that carries far more risk. Compare CAGR against a relevant benchmark, not a universal number.</p>
+  <h3>How do I calculate CAGR by hand?</h3>
+  <p>Divide ending value by beginning value, take the n-th root of the ratio (n = years), then subtract 1 and multiply by 100. Example: 1.61051 over 5 years → fifth root ≈ 1.10 → CAGR ≈ 10%.</p>
+  <h3>Is CAGR the same as annualized return?</h3>
+  <p>Yes — CAGR is the standard way to annualize a single start-to-end growth figure. They differ from IRR, which handles multiple cash flows at different dates.</p>
+  <h3>Can CAGR be negative?</h3>
+  <p>Yes. If the ending value is lower than the beginning value, CAGR is negative and correctly shows a shrinking investment. It is undefined only when the ending value is zero or negative.</p>
+
+<div class="review-block"><strong>About this guide:</strong> Written and maintained by CalcProMaster’s developer — an independent site, not a licensed financial advisor or medical professional. Every worked example below was computed by hand and cross-checked with the linked calculator; our <a href="/editorial-policy">editorial policy</a> explains how content is written, tested and corrected.</div>
+  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

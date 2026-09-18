@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Calculate Net Worth — Assets, Liabilities &amp; What Counts | CalcProMaster</title>
+  <meta name="description" content="The net worth formula, a fully worked example with real balance-sheet lines, what to include and exclude, and why the trend matters more than the number.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="CalcProMaster">
+  <meta property="og:title" content="Net Worth: One Subtraction That Orders Your Whole Balance Sheet">
+  <meta property="og:description" content="The net worth formula, a fully worked example with real balance-sheet lines, what to include and exclude, and why the trend matters more than the number.">
+  <meta property="og:url" content="https://calcpromaster.netlify.app/guides/net-worth">
+  <meta property="og:image" content="https://calcpromaster.netlify.app/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://calcpromaster.netlify.app/og-image.png">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/net-worth">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Calculate Net Worth — Assets, Liabilities & What Counts | CalcProMaster",
+    "description": "The net worth formula, a fully worked example with real balance-sheet lines, what to include and exclude, and why the trend matters more than the number.",
+    "url": "https://calcpromaster.netlify.app/guides/net-worth",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "Net Worth", "item": "https://calcpromaster.netlify.app/guides/net-worth" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Is my house part of my net worth?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, at a realistic resale value minus selling costs — but remember the attached mortgage is a liability, so early on the two largely cancel. Some people track net worth both with and without the home to see the liquid picture." } },
+        { "@type": "Question", "name": "Can net worth be negative?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — it just means liabilities exceed assets, which is common early in adult life with student loans or a new mortgage. The direction of travel over the following quarters is what matters." } },
+        { "@type": "Question", "name": "How often should I calculate net worth?", "acceptedAnswer": { "@type": "Answer", "text": "Quarterly is the sweet spot: often enough to catch trends, spaced enough that market noise does not dominate. Use the same valuation method every time." } },
+        { "@type": "Question", "name": "Do I count my car?", "acceptedAnswer": { "@type": "Answer", "text": "Count it at what you could actually sell it for today (check listings for your year and model), not what you paid. It will decline every year — that honesty is the point." } }
+      ]
+    }
+  }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.7; max-width: 760px; margin: 0 auto; padding: 16px; color: #1f2937; }
+    .crumb { font-size: 0.85rem; color: #6b7280; margin-bottom: 8px; }
+    .crumb a { color: #4f46e5; text-decoration: none; }
+    h1 { font-size: 1.65rem; line-height: 1.3; margin: 8px 0 4px; }
+    h2 { font-size: 1.25rem; margin-top: 2rem; border-top: 1px solid #e5e7eb; padding-top: 1.2rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.4rem; }
+    .answer { background: #eef2ff; border-left: 4px solid #4f46e5; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+    .formula { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 16px; font-family: ui-monospace, monospace; font-size: 0.95rem; overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.92rem; }
+    th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; }
+    th { background: #f9fafb; }
+    .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
+    .related a { color: #4f46e5; }
+    .updated { color: #6b7280; font-size: 0.85rem; }
+    .note { background: #fefce8; border-left: 4px solid #ca8a04; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+    .review-block { background: #f5f3ff; border-left: 4px solid #8b5cf6; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 18px 0; font-size: 0.88rem; color: #4b5563; }
+    .review-block a { color: #7c3aed; }
+  </style>
+</head>
+<body>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Net Worth</p>
+  <h1>Net Worth: One Subtraction That Orders Your Whole Balance Sheet</h1>
+  <p class="updated">Finance · 5 min read · Last updated September 2026</p>
+
+  <div class="answer">
+    <strong>Quick answer:</strong> Net worth = <strong>everything you own − everything you owe</strong>. Add up assets (cash, investments, retirement accounts, property at a conservative value) and subtract liabilities (mortgage, loans, credit-card balances). A ₹40 lakh home with a ₹30 lakh loan and ₹15 lakh in savings gives net worth ₹25 lakh — the house barely matters until the loan shrinks.
+  </div>
+
+  <h2>The formula and a full worked example</h2>
+  <div class="formula">Net worth = Total assets − Total liabilities</div>
+  <table>
+    <tr><th>Assets</th><th>Amount</th><th>Liabilities</th><th>Amount</th></tr>
+    <tr><td>Cash + savings</td><td>₹3,00,000</td><td>Home loan</td><td>₹28,00,000</td></tr>
+    <tr><td>Equity mutual funds</td><td>₹6,50,000</td><td>Car loan</td><td>₹3,20,000</td></tr>
+    <tr><td>Retirement (EPF/NPS)</td><td>₹9,00,000</td><td>Credit cards</td><td>₹60,000</td></tr>
+    <tr><td>Home (conservative value)</td><td>₹45,00,000</td><td>Student loan</td><td>₹2,50,000</td></tr>
+    <tr><td>Car (depreciated)</td><td>₹4,00,000</td><td><strong>Total</strong></td><td><strong>₹34,30,000</strong></td></tr>
+    <tr><td><strong>Total</strong></td><td><strong>₹67,50,000</strong></td><td colspan="2"></td></tr>
+  </table>
+  <p>Net worth = 67,50,000 − 34,30,000 = <strong>₹33,20,000</strong>. Note the home loan dominates liabilities while the home is the biggest asset — yet monthly progress on <em>either</em> side moves net worth the same way: paying the car loan or growing the fund both add to the bottom line.</p>
+
+  <h2>What to include — and what to leave out</h2>
+  <ul>
+    <li><strong>Include:</strong> cash, bank balances, invested money, retirement accounts, property (at what a quick sale would realistically fetch, not the emotional value), vehicles at resale value.</li>
+    <li><strong>Leave out:</strong> future salary, expected inheritance, the resale value of clothes and gadgets (depreciates to near zero), any asset you would not actually sell.</li>
+    <li><strong>Always include:</strong> every liability — the "I'll ignore the small card" habit is how negative net worth hides.</li>
+  </ul>
+
+  <h2>Why the trend beats the snapshot</h2>
+  <p>A single net worth number means little without context: age, income, and where the number is heading. The useful practice is a quarterly check with the <em>same</em> valuation rules each time. Consistency turns the figure from a vanity number into a direction indicator — and it exposes the two lines that actually move it: debt paydown and savings rate.</p>
+
+  <div class="note"><strong>Limitations:</strong> net worth is an estimate built on estimates — property and vehicle values especially. It is a planning snapshot, not a measure of financial health on its own; liquidity (how much is accessible) and income stability matter just as much.</div>
+
+  <h2>Try the calculators</h2>
+  <p class="related">
+    <a href="/finance/net-worth-calculator" class="cta">Net Worth Calculator</a>
+    <a href="/finance/debt-ratio" class="cta">Debt-to-Income Calculator</a>
+    <a href="/finance/savings-goal" class="cta">Savings Goal Calculator</a>
+  </p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>Is my house part of my net worth?</h3>
+  <p>Yes, at a realistic resale value minus selling costs — but remember the attached mortgage is a liability, so early on the two largely cancel. Some people track net worth both with and without the home to see the liquid picture.</p>
+  <h3>Can net worth be negative?</h3>
+  <p>Yes — it just means liabilities exceed assets, which is common early in adult life with student loans or a new mortgage. The direction of travel over the following quarters is what matters.</p>
+  <h3>How often should I calculate net worth?</h3>
+  <p>Quarterly is the sweet spot: often enough to catch trends, spaced enough that market noise does not dominate. Use the same valuation method every time.</p>
+  <h3>Do I count my car?</h3>
+  <p>Count it at what you could actually sell it for today (check listings for your year and model), not what you paid. It will decline every year — that honesty is the point.</p>
+
+<div class="review-block"><strong>About this guide:</strong> Written and maintained by CalcProMaster’s developer — an independent site, not a licensed financial advisor or medical professional. Every worked example below was computed by hand and cross-checked with the linked calculator; our <a href="/editorial-policy">editorial policy</a> explains how content is written, tested and corrected.</div>
+  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

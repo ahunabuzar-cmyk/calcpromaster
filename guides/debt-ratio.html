@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debt-to-Income Ratio — the 36/43 Rule &amp; Worked Example | CalcProMaster</title>
+  <meta name="description" content="How DTI is calculated front-end and back-end, a full worked monthly example, the 36/43 guideline lenders use, and what a good ratio hides.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="CalcProMaster">
+  <meta property="og:title" content="Debt-to-Income Ratio: The Number Lenders Read Before Your Credit Score">
+  <meta property="og:description" content="How DTI is calculated front-end and back-end, a full worked monthly example, the 36/43 guideline lenders use, and what a good ratio hides.">
+  <meta property="og:url" content="https://calcpromaster.netlify.app/guides/debt-ratio">
+  <meta property="og:image" content="https://calcpromaster.netlify.app/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://calcpromaster.netlify.app/og-image.png">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/debt-ratio">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Debt-to-Income Ratio — the 36/43 Rule & Worked Example | CalcProMaster",
+    "description": "How DTI is calculated front-end and back-end, a full worked monthly example, the 36/43 guideline lenders use, and what a good ratio hides.",
+    "url": "https://calcpromaster.netlify.app/guides/debt-ratio",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "Debt-to-Income Ratio", "item": "https://calcpromaster.netlify.app/guides/debt-ratio" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "What is a good debt-to-income ratio?", "acceptedAnswer": { "@type": "Answer", "text": "Under 36% back-end is the classic comfort zone; most mortgage programs cap around 43–45% with compensating strengths, and some allow more. Below 20% you have real flexibility to save, invest, or absorb shocks." } },
+        { "@type": "Question", "name": "Which payments count as debt?", "acceptedAnswer": { "@type": "Answer", "text": "Contractual monthly obligations: rent or mortgage, EMIs, car loans, student loans, and credit-card minimums. Utilities, phone plans and subscriptions are expenses, not debt — they hit your budget but not the lender’s ratio." } },
+        { "@type": "Question", "name": "Does DTI use gross or net income?", "acceptedAnswer": { "@type": "Answer", "text": "Lenders use gross (before deductions) because that is what they can document. For your own planning, compute it on net too — the net-income version tells you how the debt feels in real monthly life." } },
+        { "@type": "Question", "name": "How fast can I improve my DTI?", "acceptedAnswer": { "@type": "Answer", "text": "Paying off a consumer loan removes its payment entirely and usually moves the ratio within a statement cycle; a raise moves it at the next documented pay period. Paying more than the minimum on cards does not change DTI until the minimum recalculates — closing the debt does." } }
+      ]
+    }
+  }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.7; max-width: 760px; margin: 0 auto; padding: 16px; color: #1f2937; }
+    .crumb { font-size: 0.85rem; color: #6b7280; margin-bottom: 8px; }
+    .crumb a { color: #4f46e5; text-decoration: none; }
+    h1 { font-size: 1.65rem; line-height: 1.3; margin: 8px 0 4px; }
+    h2 { font-size: 1.25rem; margin-top: 2rem; border-top: 1px solid #e5e7eb; padding-top: 1.2rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.4rem; }
+    .answer { background: #eef2ff; border-left: 4px solid #4f46e5; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+    .formula { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 16px; font-family: ui-monospace, monospace; font-size: 0.95rem; overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.92rem; }
+    th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; }
+    th { background: #f9fafb; }
+    .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
+    .related a { color: #4f46e5; }
+    .updated { color: #6b7280; font-size: 0.85rem; }
+    .note { background: #fefce8; border-left: 4px solid #ca8a04; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+    .review-block { background: #f5f3ff; border-left: 4px solid #8b5cf6; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 18px 0; font-size: 0.88rem; color: #4b5563; }
+    .review-block a { color: #7c3aed; }
+  </style>
+</head>
+<body>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Debt-to-Income Ratio</p>
+  <h1>Debt-to-Income Ratio: The Number Lenders Read Before Your Credit Score</h1>
+  <p class="updated">Finance · 5 min read · Last updated September 2026</p>
+
+  <div class="answer">
+    <strong>Quick answer:</strong> DTI = <strong>monthly debt payments ÷ gross monthly income</strong>. The classic guideline: housing ≤ 28% (front-end) and all debts ≤ 36% (back-end), with many mortgage programs stretching to 43% or beyond. ₹60,000 gross income with ₹18,000 housing + ₹7,000 other debts = 30/42% — the back-end number is the one that will be questioned.
+  </div>
+
+  <h2>Front-end and back-end, worked</h2>
+  <div class="formula">Front-end DTI = housing cost ÷ gross income<br>Back-end DTI = (housing + all debt minimums) ÷ gross income</div>
+  <p>Example — ₹60,000/month gross: housing ₹18,000 → front-end = 18,000/60,000 = <strong>30%</strong>. Add car ₹4,500 and card minimums ₹2,500 → back-end = 25,000/60,000 = <strong>41.7%</strong>. Front-end passes comfortably; back-end sits above the classic 36% and below most 43% cutoffs — approvable, but with thinner margin. Note the trap: it is the <em>minimum</em> card payment that counts, not your balance or what you actually pay.</p>
+
+  <h2>The guideline thresholds</h2>
+  <table>
+    <tr><th>Back-end DTI</th><th>How lenders usually read it</th></tr>
+    <tr><td>≤ 36%</td><td>Comfortable — the traditional guideline</td></tr>
+    <tr><td>37–43%</td><td>Workable — common mortgage ceiling with compensating factors</td></tr>
+    <tr><td>44–50%</td><td>Stretched — approvals get selective, rates worse</td></tr>
+    <tr><td>&gt; 50%</td><td>Risk zone — little room for shocks</td></tr>
+  </table>
+
+  <h2>What a good ratio hides</h2>
+  <p>DTI uses gross income — before tax, insurance, childcare, or savings goals. Two households at 35% DTI can live radically different financial lives depending on rent vs ownership, dependents, and income stability. Treat DTI as the lender’s risk lens (it predicts repayment trouble), add your own budget for the lived-in truth, and improve it from the two ends it actually has: pay down consumer debt, or raise verified income.</p>
+
+  <div class="note"><strong>Limitations:</strong> DTI ignores expenses that are not debt, credits gross income, and moves seasonally for freelancers. A great DTI with zero emergency fund is still fragile; a 40% DTI with a stable business and large cash reserves can be sound.</div>
+
+  <h2>Try the calculators</h2>
+  <p class="related">
+    <a href="/finance/debt-ratio" class="cta">Debt-to-Income Calculator</a>
+    <a href="/finance/credit-card-payoff" class="cta">Credit Card Payoff Calculator</a>
+    <a href="/finance/loan-emi" class="cta">Loan EMI Calculator</a>
+  </p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>What is a good debt-to-income ratio?</h3>
+  <p>Under 36% back-end is the classic comfort zone; most mortgage programs cap around 43–45% with compensating strengths, and some allow more. Below 20% you have real flexibility to save, invest, or absorb shocks.</p>
+  <h3>Which payments count as debt?</h3>
+  <p>Contractual monthly obligations: rent or mortgage, EMIs, car loans, student loans, and credit-card minimums. Utilities, phone plans and subscriptions are expenses, not debt — they hit your budget but not the lender’s ratio.</p>
+  <h3>Does DTI use gross or net income?</h3>
+  <p>Lenders use gross (before deductions) because that is what they can document. For your own planning, compute it on net too — the net-income version tells you how the debt feels in real monthly life.</p>
+  <h3>How fast can I improve my DTI?</h3>
+  <p>Paying off a consumer loan removes its payment entirely and usually moves the ratio within a statement cycle; a raise moves it at the next documented pay period. Paying more than the minimum on cards does not change DTI until the minimum recalculates — closing the debt does.</p>
+
+<div class="review-block"><strong>About this guide:</strong> Written and maintained by CalcProMaster’s developer — an independent site, not a licensed financial advisor or medical professional. Every worked example below was computed by hand and cross-checked with the linked calculator; our <a href="/editorial-policy">editorial policy</a> explains how content is written, tested and corrected.</div>
+  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

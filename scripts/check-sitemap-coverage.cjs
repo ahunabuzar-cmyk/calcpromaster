@@ -28,10 +28,24 @@ const locs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
 
 // Root files that exist as deploy/<name> rather than <name>/index.html
 const ROOT_FILES = new Set(['robots.txt', 'sitemap.xml', 'llms.txt', 'ads.txt', 'manifest.json', 'og-image.png', 'og-image.html', 'icon.svg', '0e1100ec6bc9d4c2c6037d993fc2ba55.txt', '404.html', 'auto-404.html']);
-// Clean routes served by Netlify rewrite rules (deploy/<name>.html, status 200).
-// Nested static pages (guides/) are listed with their subpath so the checker
-// looks for deploy/guides/<name>.html.
-const REWRITE_PAGES = ['about', 'privacy', 'terms', 'contact', 'disclaimer-general', 'disclaimer-finance', 'disclaimer-health', 'guides/percentage', 'guides/emi', 'guides/age', 'guides/bmi', 'guides/compound-interest', 'guides/mortgage', 'guides/zakat', 'guides/income-tax', 'guides/currency-conversion', 'guides/discount', 'guides/tip', 'guides/gst-sales-tax', 'guides/glossary', 'guides/inflation', 'guides/salary', 'guides/retirement', 'guides/calories', 'guides/debt-payoff', 'guides/random-numbers', 'guides/concrete', 'guides/unit-conversion', 'guides/gpa', 'guides/break-even', 'guides/passwords', 'guides/baby-cost', 'guides/ideal-weight', 'guides/bmr', 'guides/profit-margin', 'guides/ohms-law', 'guides/gear-ratio', 'guides/fuel-cost', 'guides/hourly-rate', 'guides/paint-coverage', 'guides/macro-calculator', 'guides/sip', 'guides/fd-ppf-sip', 'guides/ev-vs-petrol', 'guides/wedding-budget', 'guides/freelance-rate-card', 'guides/screen-time', 'guides/electricity-bill', 'guides/business-days', 'guides/grade-needed', 'guides/room-area', 'guides/ac-size', 'guides/protein-intake', 'guides/loans-mortgages', 'guides/tax-salary', 'guides/health-fitness', 'guides/math-statistics', 'guides/business', 'guides/construction', 'guides/science', 'guides/engineering', 'guides/auto', 'guides/career', 'guides/homegarden', 'guides/family', 'guides/food', 'guides/lifestyle', 'guides/regional', 'guides/everyday', 'guides/utilities', 'blog', 'blog/stacked-discounts', 'blog/how-emi-works', 'blog/bmi-honest-look', 'blog/rule-of-72', 'blog/concrete-patio-math', 'blog/ev-vs-petrol-tco'];
+// Clean routes served as standalone flat files (deploy/<name>.html, reached
+// via bare-form rewrite rules or Netlify pretty-URLs). DISCOVERED from the
+// deploy tree on every run — never hardcoded, so a new static page cannot
+// drift out of the checker. Nested dirs (guides/, blog/) are included as
+// subpaths; root-level pages are additionally gated on having a bare rule
+// in _redirects (checked in section 2).
+const REWRITE_PAGES = (function discoverFlatPages() {
+  const found = [];
+  (function walk(dir, rel) {
+    for (const e of fs.readdirSync(dir)) {
+      const p = path.join(dir, e);
+      const r = rel ? rel + '/' + e : e;
+      if (fs.statSync(p).isDirectory()) walk(p, r);
+      else if (e.endsWith('.html') && e !== 'index.html') found.push(r.slice(0, -5));
+    }
+  })(DEPLOY, '');
+  return found;
+})();
 
 let missing = [];
 let covered = 0;
@@ -84,6 +98,19 @@ for (const prefix of PREFIXES) {
 }
 for (const l of ['es', 'hi']) {
   if (!rewriteFroms.has('/' + l)) warn('_redirects missing bare locale rewrite: /' + l);
+}
+// 2c-extra) Every ROOT-LEVEL flat static page must carry a bare rewrite rule
+// (/about /about.html 200). Without it the trailing /* 404 catch-all wins and
+// the page 404s on Netlify (deep flat files like guides/<slug>.html are fine —
+// the /guides/* SPA rewrite covers their URLs).
+const BARE_RULE_EXEMPT = new Set(['404', 'auto-404', 'og-image', 'googled1ac20b54b36e7cf']);
+for (const rp of REWRITE_PAGES) {
+  if (rp.includes('/')) continue; // nested flat files: covered by splat rules
+  if (BARE_RULE_EXEMPT.has(rp)) continue; // asset/404/verification files, never clean-URLs
+  const rule = rules.find(r => r[0] === '/' + rp);
+  if (!rule || rule[1] !== '/' + rp + '.html' || rule[2] !== '200') {
+    warn('_redirects missing bare rewrite for static page: /' + rp + ' → /' + rp + '.html 200');
+  }
 }
 // 2d) SPA rewrites must not reference anything outside the whitelist.
 const KNOWN = new Set([...PREFIXES]);

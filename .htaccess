@@ -8,14 +8,20 @@
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} \.(js|css|png|jpe?g|gif|svg|ico|xml|txt|json|webmanifest|woff2?)$
   RewriteRule . - [R=404,L]
-  # Whitelisted extensionless route prefixes → SPA index.html with 200.
-  # MUST mirror scripts/route-whitelist.cjs (20 categories + hub/compare/
-  # favorites/guides/blog + 18 locale prefixes) — scripts/check-sitemap-
-  # coverage.cjs fails the build when this list drifts. Netlify equivalent:
-  # the /<prefix>/* /index.html 200 rules in _redirects section (5).
+  # Bare static clean-URL pages → their standalone .html file
+  # (Netlify equivalent: the "/about /about.html 200" rules in _redirects section 2).
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_URI} ^/(auto|business|construction|conversion|career|education|engineering|everyday|family|finance|fitness|food|health|homegarden|lifestyle|math|regional|science|tech|utilities|hub|compare|favorites|guides|blog|es|hi|ur|fr|de|pt|ar|ru|ja|zh|ko|it|nl|tr|id|vi|th|bn)(/|$)
+  RewriteRule ^(about|privacy|terms|cookies|contact|disclaimer-general|disclaimer-finance|disclaimer-health|editorial-policy|qa-dashboard)/?$ $1.html [L]
+  # Whitelisted extensionless route prefixes → SPA index.html with 200.
+  # MUST mirror scripts/route-whitelist.cjs (20 categories + compare/
+  # favorites/guides/blog + 18 locale prefixes; 'hub' excluded — /hub/<cat>
+  # pages are prerendered static files and bare /hub is a true 404) —
+  # scripts/check-sitemap-coverage.cjs fails the build when this list drifts.
+  # Netlify equivalent: the /<prefix>/* /index.html 200 rules in _redirects section (5).
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} ^/(auto|business|construction|conversion|career|education|engineering|everyday|family|finance|fitness|food|health|homegarden|lifestyle|math|regional|science|tech|utilities|compare|favorites|guides|blog|es|hi|ur|fr|de|pt|ar|ru|ja|zh|ko|it|nl|tr|id|vi|th|bn)(/|$)
   RewriteRule . /index.html [L]
   # Hard 404 catch-all: every other extensionless path is a TRUE 404 (the
   # ErrorDocument below serves the custom 404 page), never a 200 soft-404.

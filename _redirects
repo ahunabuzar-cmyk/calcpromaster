@@ -25,6 +25,9 @@
 /disclaimer-general /disclaimer-general.html 200
 /disclaimer-finance /disclaimer-finance.html 200
 /disclaimer-health  /disclaimer-health.html  200
+/editorial-policy    /editorial-policy.html   200
+/editorial-policy   /editorial-policy.html   200
+/qa-dashboard       /qa-dashboard.html       200
 # 3) Renamed tools — permanent redirects from old URLs (preserves backlinks/bookmarks)
 /everyday/fuel-cost          /everyday/trip-fuel-cost           301
 /conversion/fuel-efficiency  /conversion/fuel-efficiency-converter 301
@@ -111,7 +114,9 @@
 /utilities/*        /index.html   200
 #     - top-level app routes (bare /<name> hits its prerendered index.html
 #       first as a real file; the rewrite covers deep/unbuilt variants)
-/hub/*        /index.html   200
+# NOTE: no /hub/* rule — /hub/<category> pages are all prerendered static
+# files (deploy/hub/<cat>/index.html), and bare /hub is a true 404 (the SPA
+# has no bare-hub renderer; pinned by tests/e2e/deploy-smoke.spec.js).
 /compare/*        /index.html   200
 /favorites/*        /index.html   200
 /guides/*        /index.html   200

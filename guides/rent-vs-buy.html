@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rent vs Buy — the Breakeven Math Most Comparisons Skip | CalcProMaster</title>
+  <meta name="description" content="The real comparison — not EMI vs rent but every cost line on both sides — with a worked 5-year example, the breakeven idea, and when renting wins on purpose.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="CalcProMaster">
+  <meta property="og:title" content="Rent vs Buy: Every Cost Line, Then the Verdict">
+  <meta property="og:description" content="The real comparison — not EMI vs rent but every cost line on both sides — with a worked 5-year example, the breakeven idea, and when renting wins on purpose.">
+  <meta property="og:url" content="https://calcpromaster.netlify.app/guides/rent-vs-buy">
+  <meta property="og:image" content="https://calcpromaster.netlify.app/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://calcpromaster.netlify.app/og-image.png">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/rent-vs-buy">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Rent vs Buy — the Breakeven Math Most Comparisons Skip | CalcProMaster",
+    "description": "The real comparison — not EMI vs rent but every cost line on both sides — with a worked 5-year example, the breakeven idea, and when renting wins on purpose.",
+    "url": "https://calcpromaster.netlify.app/guides/rent-vs-buy",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "Rent vs Buy", "item": "https://calcpromaster.netlify.app/guides/rent-vs-buy" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Is renting always throwing money away?", "acceptedAnswer": { "@type": "Answer", "text": "No — rent buys shelter with zero maintenance, tax and transaction costs, and it frees the down payment to earn returns elsewhere. Interest, maintenance and transaction costs are the \"thrown away\" parts of owning; every option has a sinking part." } },
+        { "@type": "Question", "name": "What is the 5% rule for renting vs buying?", "acceptedAnswer": { "@type": "Answer", "text": "A rough annual-cost heuristic: owning’s non-recoverable yearly costs ≈ 5% of home value (property tax + maintenance + financing cost), so renting is favorable when annual rent is under that — i.e., when price-to-rent exceeds ~20. It is a first filter, not a verdict." } },
+        { "@type": "Question", "name": "How many years should I stay for buying to make sense?", "acceptedAnswer": { "@type": "Answer", "text": "Commonly quoted breakevens run 5–7 years, driven by transaction costs and how early interest dominates EMIs. Short expected stays usually favor renting; long stays usually favor buying, if the other assumptions hold." } },
+        { "@type": "Question", "name": "Should I count my EMI’s principal part as a cost?", "acceptedAnswer": { "@type": "Answer", "text": "No — principal is forced savings that builds equity you recover on sale. Count interest, maintenance, tax and transaction costs; comparing only EMI vs rent (which counts principal as cost) overstates owning’s expense but also hides its savings discipline." } }
+      ]
+    }
+  }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.7; max-width: 760px; margin: 0 auto; padding: 16px; color: #1f2937; }
+    .crumb { font-size: 0.85rem; color: #6b7280; margin-bottom: 8px; }
+    .crumb a { color: #4f46e5; text-decoration: none; }
+    h1 { font-size: 1.65rem; line-height: 1.3; margin: 8px 0 4px; }
+    h2 { font-size: 1.25rem; margin-top: 2rem; border-top: 1px solid #e5e7eb; padding-top: 1.2rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.4rem; }
+    .answer { background: #eef2ff; border-left: 4px solid #4f46e5; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+    .formula { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 16px; font-family: ui-monospace, monospace; font-size: 0.95rem; overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.92rem; }
+    th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; }
+    th { background: #f9fafb; }
+    .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
+    .related a { color: #4f46e5; }
+    .updated { color: #6b7280; font-size: 0.85rem; }
+    .note { background: #fefce8; border-left: 4px solid #ca8a04; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+    .review-block { background: #f5f3ff; border-left: 4px solid #8b5cf6; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 18px 0; font-size: 0.88rem; color: #4b5563; }
+    .review-block a { color: #7c3aed; }
+  </style>
+</head>
+<body>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Rent vs Buy</p>
+  <h1>Rent vs Buy: Every Cost Line, Then the Verdict</h1>
+  <p class="updated">Finance · 7 min read · Last updated September 2026</p>
+
+  <div class="answer">
+    <strong>Quick answer:</strong> The honest comparison is <strong>total cost of owning vs total cost of renting — including what your down payment would have earned</strong>. Owning trades rent for EMI + maintenance (~1% of value/year) + property tax + transaction costs (~5–8% round trip). Neither side wins by slogan; price-to-rent ratio, holding period, and the invested-difference assumption decide it.
+  </div>
+
+  <h2>Both sides of the ledger, worked</h2>
+  <p>Example — ₹80 lakh home, ₹16 lakh down payment (20%), ₹64 lakh loan at 8.5% for 20 years (EMI ≈ ₹55,600), rent on the same home ₹30,000/month, investments earn 8%:</p>
+  <table>
+    <tr><th>Own (monthly, year 1)</th><th>Amount</th><th>Rent (monthly)</th><th>Amount</th></tr>
+    <tr><td>EMI</td><td>₹55,600</td><td>Rent</td><td>₹30,000</td></tr>
+    <tr><td>Maintenance + repairs (~1%/yr)</td><td>≈ ₹6,700</td><td>Renter’s insurance</td><td>≈ ₹500</td></tr>
+    <tr><td>Property tax</td><td>≈ ₹2,000</td><td>—</td><td>—</td></tr>
+    <tr><td>of which: interest (true cost)</td><td>≈ ₹44,900</td><td>Down payment invested at 8%</td><td>≈ ₹10,700/mo growth</td></tr>
+    <tr><td>of which: principal (forced savings)</td><td>≈ ₹10,700</td><td>—</td><td>—</td></tr>
+  </table>
+  <p>True first-year cost of owning ≈ interest + maintenance + tax ≈ <strong>₹53,600/month</strong>, but ₹10,700 of the EMI is forced savings you get back as equity. Renting costs ₹30,500 and leaves a ₹25,000 monthly difference that must actually be invested for renting to keep pace — at the same 8%, that invested difference is exactly what buying must beat through appreciation. This is the line most comparisons skip.</p>
+
+  <h2>The breakeven idea</h2>
+  <p>Transaction costs (stamp duty, registration, broker — easily 5–8% combined) are paid on entry and exit. Staying only ~3 years, those costs plus interest-heavy early EMIs usually make renting win; staying 7–10+ years, ownership’s frozen housing cost and forced savings usually win — provided home appreciation at least matches inflation and the invest-the-difference assumption held. Run your own numbers with the calculator; the breakeven moves a lot with local prices.</p>
+
+  <h2>When renting wins on purpose</h2>
+  <ul>
+    <li>Stay shorter than the breakeven horizon (job mobility, life uncertainty)</li>
+    <li>Price-to-rent ratio is high (expensive markets — renting is mathematically cheap there; the rough 5% rule says rent is favorable when annual rent is under ~5% of the home price)</li>
+    <li>You would buy more house than you need because "EMI ≈ rent" flattered the comparison</li>
+  </ul>
+
+  <div class="note"><strong>Limitations:</strong> this comparison is assumption-heavy — appreciation, rent inflation, investment returns and interest rates each move the verdict. It also prices money only: stability, control and flexibility are real utilities that belong in the decision even though no calculator can price them for you.</div>
+
+  <h2>Try the calculators</h2>
+  <p class="related">
+    <a href="/finance/rent-vs-buy" class="cta">Rent vs Buy Calculator</a>
+    <a href="/finance/mortgage" class="cta">Mortgage Calculator</a>
+    <a href="/finance/home-afford" class="cta">Home Affordability Calculator</a>
+  </p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>Is renting always throwing money away?</h3>
+  <p>No — rent buys shelter with zero maintenance, tax and transaction costs, and it frees the down payment to earn returns elsewhere. Interest, maintenance and transaction costs are the "thrown away" parts of owning; every option has a sinking part.</p>
+  <h3>What is the 5% rule for renting vs buying?</h3>
+  <p>A rough annual-cost heuristic: owning’s non-recoverable yearly costs ≈ 5% of home value (property tax + maintenance + financing cost), so renting is favorable when annual rent is under that — i.e., when price-to-rent exceeds ~20. It is a first filter, not a verdict.</p>
+  <h3>How many years should I stay for buying to make sense?</h3>
+  <p>Commonly quoted breakevens run 5–7 years, driven by transaction costs and how early interest dominates EMIs. Short expected stays usually favor renting; long stays usually favor buying, if the other assumptions hold.</p>
+  <h3>Should I count my EMI’s principal part as a cost?</h3>
+  <p>No — principal is forced savings that builds equity you recover on sale. Count interest, maintenance, tax and transaction costs; comparing only EMI vs rent (which counts principal as cost) overstates owning’s expense but also hides its savings discipline.</p>
+
+<div class="review-block"><strong>About this guide:</strong> Written and maintained by CalcProMaster’s developer — an independent site, not a licensed financial advisor or medical professional. Every worked example below was computed by hand and cross-checked with the linked calculator; our <a href="/editorial-policy">editorial policy</a> explains how content is written, tested and corrected.</div>
+  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

@@ -980,10 +980,13 @@ const App = (function () {
     html += '<h1>' + tool.name + '</h1>';
     html += '<p class="tool-desc">' + tool.desc + '</p>';
     // Unique per-tool cinematic hero image (generated at /og/<toolId>.jpg by
-    // scripts/generate-tool-og.cjs). Lazy-loaded + silent fallback so a missing
-    // image never breaks the page or paints a broken icon.
+    // scripts/generate-tool-og.cjs). This is the page's LCP element on tool
+    // routes, so it must be EAGER + high priority — lazy-loading the LCP
+    // element delays the largest paint by seconds on throttled networks.
+    // Silent fallback so a missing image never breaks the page or paints a
+    // broken icon.
     html += '<div class="tool-hero-wrap">' +
-      '<img class="tool-hero-img" src="/og/' + encodeURIComponent(tool.id) + '.jpg" alt="' + tool.name + ' calculator — free online tool" loading="lazy" decoding="async" width="1200" height="630" onerror="this.closest(\'.tool-hero-wrap\').style.display=\'none\'">' +
+      '<img class="tool-hero-img" src="/og/' + encodeURIComponent(tool.id) + '.jpg" alt="' + tool.name + ' calculator — free online tool" loading="eager" fetchpriority="high" decoding="async" width="1200" height="630" onerror="this.closest(\'.tool-hero-wrap\').style.display=\'none\'">' +
       '</div>';
     // Privacy-first visible badge — reassures users their data never leaves the device
     html += '<div class="privacy-badge" role="note" aria-label="Privacy">🔒 <span>Your data never leaves your device</span></div>';
@@ -1084,6 +1087,19 @@ const App = (function () {
     
     // Related
     html += '<div class="related-section" id="related-section"></div>';
+    
+    // E-E-A-T review block — must stay in sync with scripts/ssg-pages.cjs
+    // (static HTML ships the same block; re-emitting it on hydration keeps
+    // the visible page identical and the block survives SPA re-renders).
+    const YMYL_FINANCE_EEAT = ['finance', 'business', 'regional', 'career'];
+    const YMYL_HEALTH_EEAT = ['health', 'fitness', 'food', 'family'];
+    if (YMYL_FINANCE_EEAT.includes(catKey)) {
+      html += '<div class="tool-review-block"><strong>About this page:</strong> Built on standard financial formulas (the same conventions banks use), hand-checked against worked examples and covered by automated tests on every build. Maintained by CalcProMaster\'s developer — not a licensed financial advisor — so results are math education, not financial advice. Read our <a href="/editorial-policy" onclick="event.preventDefault();Router.navigate(\'/editorial-policy\')">editorial policy</a> for how content is written and verified.</div>';
+    } else if (YMYL_HEALTH_EEAT.includes(catKey)) {
+      html += '<div class="tool-review-block"><strong>About this page:</strong> Built on published, peer-reviewed formulas, hand-checked against worked examples and covered by automated tests on every build. Maintained by CalcProMaster\'s developer — not a medical professional — so results are health education, not medical advice. Read our <a href="/editorial-policy" onclick="event.preventDefault();Router.navigate(\'/editorial-policy\')">editorial policy</a>.</div>';
+    } else {
+      html += '<div class="tool-review-block"><strong>About this page:</strong> Built on documented public formulas, hand-checked against worked examples and covered by automated tests on every build. See our <a href="/editorial-policy" onclick="event.preventDefault();Router.navigate(\'/editorial-policy\')">editorial policy</a> for how content is written and verified.</div>';
+    }
     
     // YMYL disclaimer — every tool page carries a category-appropriate disclaimer at the bottom
     const YMYL_FINANCE = ['finance', 'business', 'regional', 'career'];
@@ -2116,6 +2132,13 @@ const App = (function () {
       html += '<h2>Contact</h2>';
       html += '<p>Have feedback, suggestions, or found a bug? <a href="/contact" onclick="event.preventDefault();Router.navigate(\'/contact\')">Contact us</a>.</p>';
       html += '</div>';
+    } else if (page.type === 'editorial-policy') {
+      // Single source of truth: the same content the static /editorial-policy
+      // page serves (js/legal-pages.js EDITORIAL_POLICY), rendered in-SPA.
+      const stripSpa = function (h) { return String(h).replace(/\sonclick="[^"]*"/g, ''); };
+      html = (typeof LegalPages !== 'undefined' && LegalPages.EDITORIAL_POLICY)
+        ? stripSpa(LegalPages.EDITORIAL_POLICY)
+        : '<h1>Editorial Policy</h1><p>How CalcProMaster content is written, verified and corrected: published formulas, hand-checked worked examples, and an automated QA contract on every build. Contact <a href="mailto:calpromaster@gmail.com">calpromaster@gmail.com</a> for corrections.</p>';
     } else if (page.type === 'privacy') {
       html = '<div class="legal-page"><h1>Privacy Policy</h1>';
       html += '<p class="legal-meta">Last updated: July 2026</p>';
@@ -3013,8 +3036,81 @@ const App = (function () {
     if (window.CategoryHub && typeof CategoryHub.init === 'function') {
       try { CategoryHub.init(); } catch (e) { /* hub is optional */ }
     }
+    // Idle-hydration: on a prerendered tool page the DOM is already on screen
+    // (LCP element baked in). The first navigate() would rebuild the identical
+    // markup, and on slow devices that synchronous rebuild (style+layout of the
+    // full tool article) blocks the main thread for seconds right at boot —
+    // which is exactly the LCP window. So defer that first rebuild to idle and
+    // flush it immediately on first interaction (pointer/key) so the very first
+    // tap on a control hits freshly-bound listeners instead of a no-op.
+    // Gate: only when the URL self-matches a prerendered canonical tool page
+    // (long-tail variants need their noindex/canonical guard applied, and
+    // non-tool routes genuinely need to re-render). Subsequent navigations
+    // (SPA clicks) are never deferred — they replace the page.
+    var _staticHydrationTimer = null;
+    function _flushStaticHydration() {
+      if (window.__staticHydrationDone) return;
+      window.__staticHydrationDone = true;
+      if (_staticHydrationTimer) { clearTimeout(_staticHydrationTimer); _staticHydrationTimer = null; }
+      ['pointerdown', 'keydown', 'touchstart'].forEach(function (ev) {
+        window.removeEventListener(ev, _flushStaticHydration);
+      });
+      if (_pendingStaticPath !== null) {
+        var p = _pendingStaticPath; _pendingStaticPath = null;
+        // Snapshot NOW (flush time) — anything the user typed into the static
+        // form before the rebuild is preserved across the rebuild.
+        var _preInputs = {};
+        try {
+          document.querySelectorAll('#tool-root input, #tool-root select, #tool-root textarea').forEach(function (el) {
+            var k = el.id || el.name; if (k) _preInputs[k] = el.value;
+          });
+        } catch (e) {}
+        window.__restoreStaticInputs = _preInputs;
+        // User may have already navigated elsewhere during the idle window —
+        // only hydrate if the URL still matches the page that's on screen.
+        if (window.location.pathname === p) {
+          try { navigate(p); } catch (e) { /* never break boot on hydration */ }
+        }
+      }
+    }
+    var _pendingStaticPath = null;
+    (function deferFirstNavigation() {
+      var canonical = document.querySelector('link[rel="canonical"]');
+      var canonicalHref = canonical ? canonical.getAttribute('href') : null;
+      var isSelfCanonical = canonicalHref && window.location.pathname === canonicalHref.replace(/^https?:\/\/[^/]+/, '');
+      var locked = document.documentElement.hasAttribute('data-robots-lock');
+      if (!window.__staticHydrationDone && isSelfCanonical && !locked &&
+          window.__PRERENDERED__ === true) {
+        _pendingStaticPath = window.location.pathname;
+        _staticHydrationTimer = setTimeout(function () {
+          _staticHydrationTimer = null;
+          try { requestIdleCallback ? requestIdleCallback(_flushStaticHydration, { timeout: 2000 }) : setTimeout(_flushStaticHydration, 200); }
+          catch (e) { _flushStaticHydration(); }
+        }, 120);
+        ['pointerdown', 'keydown', 'touchstart'].forEach(function (ev) {
+          window.addEventListener(ev, _flushStaticHydration, { passive: true });
+        });
+      } else {
+        // Not a self-canonical prerendered tool page: render immediately via
+        // Router.init's initial callback below (it calls navigate with the
+        // current path). Just make sure the flush state is settled.
+        _flushStaticHydration();
+      }
+    })();
     Router.init(function (path) {
-      navigate(path);
+      if (_pendingStaticPath === null) {
+        // Normal case: no deferred hydration (or already flushed) — render now.
+        navigate(path);
+      } else if (path !== _pendingStaticPath) {
+        // A DIFFERENT destination arrived while self-hydration was pending
+        // (SPA link click, popstate, ?q= resolve). Discard the pending
+        // self-hydration and render the new destination immediately.
+        _pendingStaticPath = null;
+        _flushStaticHydration();
+        navigate(path);
+      }
+      // else: same path as the pending self-hydration — the idle flush above
+      // will run navigate() with this exact path.
     });
     
     // Announce successful boot — the index.html watchdog listens for this and

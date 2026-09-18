@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Rate Training Zones — Formulas, Worked Numbers &amp; Sense-Check | CalcProMaster</title>
+  <meta name="description" content="Max heart rate formulas compared (220−age vs Tanaka), the five-zone model with a worked example, and why HRmax formulas have a built-in error band.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="CalcProMaster">
+  <meta property="og:title" content="Heart Rate Zones: Math for Training, With the Error Bars Shown">
+  <meta property="og:description" content="Max heart rate formulas compared (220−age vs Tanaka), the five-zone model with a worked example, and why HRmax formulas have a built-in error band.">
+  <meta property="og:url" content="https://calcpromaster.netlify.app/guides/heart-rate-zones">
+  <meta property="og:image" content="https://calcpromaster.netlify.app/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://calcpromaster.netlify.app/og-image.png">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/heart-rate-zones">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Heart Rate Training Zones — Formulas, Worked Numbers & Sense-Check | CalcProMaster",
+    "description": "Max heart rate formulas compared (220−age vs Tanaka), the five-zone model with a worked example, and why HRmax formulas have a built-in error band.",
+    "url": "https://calcpromaster.netlify.app/guides/heart-rate-zones",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "Heart Rate Zones", "item": "https://calcpromaster.netlify.app/guides/heart-rate-zones" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Which max heart rate formula should I use?", "acceptedAnswer": { "@type": "Answer", "text": "Tanaka (208 − 0.7×age) tracks measured maxima better than the classic 220 − age, especially over 40. Both carry roughly ±10–12 bpm error — treat the output as a starting band, then adjust with a field test or how effort actually feels." } },
+        { "@type": "Question", "name": "What is zone 2 and why is everyone talking about it?", "acceptedAnswer": { "@type": "Answer", "text": "Zone 2 is the intensity where you can hold a conversation with slightly longer breaths — roughly 60–70% of max heart rate. It builds aerobic base with low stress and is where most weekly endurance volume is best spent." } },
+        { "@type": "Question", "name": "Do beta-blockers change heart rate zones?", "acceptedAnswer": { "@type": "Answer", "text": "They lower both resting and maximum heart rate substantially, so percentage-of-max formulas computed from age alone will mislead. Anyone on such medication should set zones with their doctor or use perceived-exertion scales instead." } },
+        { "@type": "Question", "name": "Is a higher resting heart rate bad?", "acceptedAnswer": { "@type": "Answer", "text": "For adults, 60–100 bpm is the usual reference band, with well-trained people often in the 40s–50s. A sudden sustained rise from your own normal can signal illness, overtraining or dehydration — it is a trend worth watching, not a single reading." } }
+      ]
+    }
+  }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.7; max-width: 760px; margin: 0 auto; padding: 16px; color: #1f2937; }
+    .crumb { font-size: 0.85rem; color: #6b7280; margin-bottom: 8px; }
+    .crumb a { color: #4f46e5; text-decoration: none; }
+    h1 { font-size: 1.65rem; line-height: 1.3; margin: 8px 0 4px; }
+    h2 { font-size: 1.25rem; margin-top: 2rem; border-top: 1px solid #e5e7eb; padding-top: 1.2rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.4rem; }
+    .answer { background: #eef2ff; border-left: 4px solid #4f46e5; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+    .formula { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 16px; font-family: ui-monospace, monospace; font-size: 0.95rem; overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.92rem; }
+    th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; }
+    th { background: #f9fafb; }
+    .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
+    .related a { color: #4f46e5; }
+    .updated { color: #6b7280; font-size: 0.85rem; }
+    .note { background: #fefce8; border-left: 4px solid #ca8a04; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+    .review-block { background: #f5f3ff; border-left: 4px solid #8b5cf6; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 18px 0; font-size: 0.88rem; color: #4b5563; }
+    .review-block a { color: #7c3aed; }
+  </style>
+</head>
+<body>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Heart Rate Zones</p>
+  <h1>Heart Rate Zones: Math for Training, With the Error Bars Shown</h1>
+  <p class="updated">Health · 6 min read · Last updated September 2026</p>
+
+  <div class="answer">
+    <strong>Quick answer:</strong> Training zones are percentages of a reference heart rate. The classic estimate <strong>HRmax = 220 − age</strong> carries a standard deviation of ~10–12 bpm; the Tanaka formula (208 − 0.7×age) fits measured maxima better in adults. A 35-year-old with Tanaka max ≈ 183.5 bpm trains zone 2 (60–70%) at roughly 110–128 bpm.
+  </div>
+
+  <h2>Step 1: estimate your maximum heart rate</h2>
+  <div class="formula">Classic (Fox): HRmax = 220 − age<br>Tanaka: HRmax = 208 − 0.7 × age</div>
+  <p>Age 35: Fox gives 185, Tanaka gives 183.5 — close here. At age 60 they diverge: Fox 160, Tanaka 166. Fox's equation came from a scatter of studies and systematically underestimates HRmax in older adults; Tanaka was fitted on a larger measured sample. Neither beats an actual field test (a hard, properly warmed-up effort) or a lab test.</p>
+
+  <h2>Step 2: cut the range into five zones</h2>
+  <p>Using Tanaka 183.5 bpm for our 35-year-old (reserve method shown because it anchors zones to resting heart rate too: HRR = HRmax − HRrest; zones = HRrest + %×HRR, with HRrest = 60): HRR = 123.5.</p>
+  <table>
+    <tr><th>Zone</th><th>% of HRmax</th><th>Feel</th><th>Example bpm (max-%)</th></tr>
+    <tr><td>Z1 recovery</td><td>50–60%</td><td>Easy, conversational</td><td>92–110</td></tr>
+    <tr><td>Z2 aerobic</td><td>60–70%</td><td>Comfortably breathing harder</td><td>110–128</td></tr>
+    <tr><td>Z3 tempo</td><td>70–80%</td><td>"Comfortably hard"</td><td>128–147</td></tr>
+    <tr><td>Z4 threshold</td><td>80–90%</td><td>Hard, short phrases only</td><td>147–165</td></tr>
+    <tr><td>Z5 VO₂max</td><td>90–100%</td><td>All-out, minutes at most</td><td>165–183</td></tr>
+  </table>
+  <p>Most endurance training time belongs in Z1–Z2 — the "80/20" distribution popularized by polarized-training research. Zone 2 mislabeled as Z3 is the most common self-coaching error, and it usually comes from an HRmax formula that underestimates your true max.</p>
+
+  <div class="note"><strong>Limitations:</strong> a formula's ±10–12 bpm error can shift you a full zone. Medications (notably beta-blockers), heat, caffeine, stress and dehydration all move heart rate independently of effort. Calibrate zones against perceived effort and — if possible — a measured field test. Heart conditions need clinical guidance first.</div>
+
+  <h2>Try the calculators</h2>
+  <p class="related">
+    <a href="/health/target-heart-rate" class="cta">Target Heart Rate Calculator</a>
+    <a href="/health/heart-rate" class="cta">Heart Rate Calculator</a>
+    <a href="/health/calorie-burn" class="cta">Calorie Burn Calculator</a>
+  </p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>Which max heart rate formula should I use?</h3>
+  <p>Tanaka (208 − 0.7×age) tracks measured maxima better than the classic 220 − age, especially over 40. Both carry roughly ±10–12 bpm error — treat the output as a starting band, then adjust with a field test or how effort actually feels.</p>
+  <h3>What is zone 2 and why is everyone talking about it?</h3>
+  <p>Zone 2 is the intensity where you can hold a conversation with slightly longer breaths — roughly 60–70% of max heart rate. It builds aerobic base with low stress and is where most weekly endurance volume is best spent.</p>
+  <h3>Do beta-blockers change heart rate zones?</h3>
+  <p>They lower both resting and maximum heart rate substantially, so percentage-of-max formulas computed from age alone will mislead. Anyone on such medication should set zones with their doctor or use perceived-exertion scales instead.</p>
+  <h3>Is a higher resting heart rate bad?</h3>
+  <p>For adults, 60–100 bpm is the usual reference band, with well-trained people often in the 40s–50s. A sudden sustained rise from your own normal can signal illness, overtraining or dehydration — it is a trend worth watching, not a single reading.</p>
+
+<div class="review-block"><strong>About this guide:</strong> Written and maintained by CalcProMaster’s developer — an independent site, not a licensed financial advisor or medical professional. Every worked example below was computed by hand and cross-checked with the linked calculator; our <a href="/editorial-policy">editorial policy</a> explains how content is written, tested and corrected.</div>
+  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

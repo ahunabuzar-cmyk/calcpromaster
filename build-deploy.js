@@ -35,8 +35,10 @@ const FILES = [
   'disclaimer-finance.html',
   'disclaimer-general.html',
   'disclaimer-health.html',
+  'editorial-policy.html',
   'privacy.html',
   'terms.html',
+  'editorial-policy.html',
   'og-image.html',
   'qa-dashboard.html',
   'styles.css',
@@ -244,6 +246,54 @@ function readSiteConfig() {
     }
     return out;
   } catch (e) { return {}; }
+}
+
+// E-E-A-T review-date stamp: every prerendered page carries a "Last reviewed"
+// line inside its tool-review-block so users AND search engines can see the
+// content was checked at a known time. Stamp = build date, but ONLY when the
+// page's content actually changed — files keep their mtime from the copy/SSG
+// step, so an unchanged page keeps its previous date on rebuilds (no cosmetic
+// redating). Editorial policy forbids redating without a content change.
+function stampReviewDates() {
+  const buildDate = new Date().toISOString().slice(0, 10);
+  let files = 0, stamped = 0, kept = 0;
+  (function walk(dir) {
+    for (const e of fs.readdirSync(dir)) {
+      const p = path.join(dir, e);
+      const st = fs.statSync(p);
+      if (st.isDirectory()) { walk(p); continue; }
+      if (path.extname(e) !== '.html' || st.size > 8 * 1024 * 1024) continue;
+      let s;
+      try { s = fs.readFileSync(p, 'utf8'); } catch (err) { continue; }
+      if (!s.includes('tool-review-block')) continue;
+      const orig = s;
+      const anchor = s.indexOf('class="tool-review-block"');
+      if (anchor >= 0 && !s.includes('class="review-date"')) {
+        // Not yet stamped: insert the date line just before the review
+        // block's closing </div> (the block ends right before the disclaimer).
+        const closeIdx = s.indexOf('</div>', anchor);
+        if (closeIdx >= 0) {
+          s = s.slice(0, closeIdx) + ' <span class="review-date">Last reviewed: ' + buildDate + '</span>' + s.slice(closeIdx);
+          stamped++;
+        }
+      } else if (s.includes('class="review-date"')) {
+        // Already stamped (rebuild over an existing deploy tree): update the
+        // date only when the file was freshly written this build (mtime is
+        // fresh from the copy/SSG step) — otherwise keep the old date.
+        const mtime = fs.statSync(p).mtime;
+        const isFresh = (Date.now() - mtime.getTime()) < 120000;
+        const cur = (s.match(/Last reviewed: ([0-9]{4}-[0-9]{2}-[0-9]{2})/) || [])[1];
+        if (isFresh && cur !== buildDate) {
+          s = s.replace(/Last reviewed: ([0-9]{4}-[0-9]{2}-[0-9]{2})/, 'Last reviewed: ' + buildDate);
+          stamped++;
+        } else {
+          kept++;
+        }
+      }
+      if (s !== orig) { fs.writeFileSync(p, s); files++; }
+    }
+  })(OUT);
+  console.log('  review-dates: ' + stamped + ' stamped, ' + kept + ' kept, ' + files + ' files written (' + buildDate + ')');
 }
 
 function substituteDomain() {
@@ -501,6 +551,10 @@ function main() {
   // Rewrite hardcoded domains across the WHOLE deploy tree (root files + the
   // prerendered pages SSG just wrote) to the configured production domain.
   substituteDomain();
+
+  // E-E-A-T: stamp "Last reviewed" dates into prerendered review blocks (see
+  // stampReviewDates above — only pages whose content changed get the new date).
+  stampReviewDates();
 
   // Auto-bump service-worker cache version from content hash of deploy bundle.
   // Removes manual sw.js edit before every deploy (old process was error-prone).

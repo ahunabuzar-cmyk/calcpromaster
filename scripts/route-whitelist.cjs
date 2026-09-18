@@ -33,7 +33,11 @@ const CATEGORIES = [
 
 // Top-level (one-segment) app routes the SPA renders that have no dedicated
 // static file or directory-splat rule.
-const APP_ROUTES = ['hub', 'compare', 'favorites', 'guides', 'blog'];
+// NOTE: 'hub' is intentionally NOT here — /hub/<category> pages are all
+// prerendered static files (deploy/hub/<cat>/index.html), and bare /hub has
+// no renderer (the SPA only handles /hub/<cat>), so it must fall through to
+// the true-404 catch-all (pinned by tests/e2e/deploy-smoke.spec.js).
+const APP_ROUTES = ['compare', 'favorites', 'guides', 'blog'];
 
 // Locale prefixes written by the language switcher (Router.syncUrl → /xx/path)
 // via js/i18n.js. Kept EXPLICITLY in sync with the TRANSLATIONS keys there —
@@ -47,6 +51,7 @@ const LOCALES = [
 const STATIC_PAGES = [
   'about', 'privacy', 'terms', 'cookies', 'contact',
   'disclaimer-general', 'disclaimer-finance', 'disclaimer-health',
+  'editorial-policy', 'qa-dashboard',
 ];
 
 const PREFIXES = [...CATEGORIES, ...APP_ROUTES, ...LOCALES];

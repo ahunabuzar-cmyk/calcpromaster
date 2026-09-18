@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editorial Policy | CalcProMaster</title>
+  <meta name="description" content="How CalcProMaster content is written, verified and corrected: published formulas, hand-checked worked examples, and an automated QA contract on every build.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/editorial-policy">
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Editorial Policy",
+    "url": "https://calcpromaster.netlify.app/editorial-policy",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "inLanguage": "en"
+  }
+  </script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{--bg:#f8fafc;--surface:#fff;--text:#1e293b;--text-light:#64748b;--border:#e2e8f0;--primary:#4f46e5;--radius:14px}
+    @media (prefers-color-scheme: dark){:root{--bg:#0f172a;--surface:#1e293b;--text:#f8fafc;--text-light:#94a3b8;--border:#334155}}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;-webkit-font-smoothing:antialiased}
+    header{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .logo{font-size:20px;font-weight:800;background:linear-gradient(135deg,#4f46e5,#7c3aed);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
+    header a{color:var(--text-light);text-decoration:none;font-size:13px}
+    header a:hover{color:var(--primary)}
+    main{max-width:820px;margin:0 auto;padding:32px 24px 64px}
+    h1{font-size:30px;font-weight:800;margin-bottom:8px}
+    h2{font-size:20px;font-weight:700;margin:26px 0 10px}
+    h3{font-size:16px;font-weight:600;margin:18px 0 6px}
+    p{margin-bottom:10px;color:var(--text)}
+    ul{margin:8px 0 14px 22px}
+    li{margin-bottom:4px}
+    .legal-meta{font-size:13px;color:var(--text-light);margin-bottom:18px}
+    .legal-warning{background:rgba(245,158,11,.12);border-left:4px solid #f59e0b;padding:12px 16px;border-radius:8px;margin:16px 0}
+    .legal-note{font-size:12px;color:var(--text-light);margin-top:6px}
+    a{color:var(--primary)}
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:18px 24px;text-align:center;font-size:13px;color:var(--text-light)}
+    footer a{color:var(--text-light);text-decoration:none;margin:0 8px}
+    footer a:hover{color:var(--primary)}
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">CalcProMaster</a>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+    <a href="/contact">Contact</a>
+  </header>
+  <main>
+    <div class="legal-page">
+      <h1>Editorial Policy</h1>
+      <p class="legal-meta">Last updated: September 2026</p>
+
+      <h2>Scope</h2>
+      <p>This policy describes how calculator content on CalcProMaster is written, verified, and corrected. It applies to every calculator page, guide, and blog post on this site.</p>
+
+      <h2>How Content Is Written</h2>
+      <p>Each calculator page states the standard, publicly documented formula it implements, walks through a worked example with expected values, and explains the assumptions and limitations of the method. Financial, health, and regional-tax content follows conventions from authoritative sources — national statistical agencies, standards bodies, and published clinical or financial formulas — cited on the page where a specific source supports a specific figure.</p>
+
+      <h2>How Content Is Verified</h2>
+      <ol>
+        <li><strong>Formula check.</strong> The implemented formula is compared against its published definition before a calculator ships.</li>
+        <li><strong>Hand-verified examples.</strong> Each page's worked example is computed by hand and must reproduce exactly in the tool.</li>
+        <li><strong>Automated regression tests.</strong> Every calculator is covered by a QA contract with independently computed expected results; the suite runs on every build, and a failing tool is not promoted to the sitemap. The current matrix is public on the <a href="/qa-dashboard.html" target="_blank" rel="noopener">QA dashboard</a>.</li>
+      </ol>
+
+      <h2>Who Writes and Reviews It</h2>
+      <p>CalcProMaster is built and maintained by its developer, whose background spans mathematics and software engineering. Content is written and reviewed by the same person who maintains the calculation engine and its test suite — not by external contributors. The developer is not a licensed financial advisor or medical professional; finance and health pages carry explicit disclaimers stating this, and results are presented as math education, not professional advice.</p>
+
+      <h2>Corrections</h2>
+      <p>Found an error in a formula, example, or explanation? Email <a href="mailto:calpromaster@gmail.com">calpromaster@gmail.com</a> with the page URL and what you expected. Confirmed errors are fixed and re-tested before the next build; we aim to respond within 2-3 business days.</p>
+
+      <h2>Updates</h2>
+      <p>When a formula, default rate, or convention changes, the affected pages are regenerated and re-tested. Pages are not redated cosmetically — a page's review date changes only when its content actually changes.</p>
+
+      <h2>Advertising &amp; Independence</h2>
+      <p>Ads and affiliate links never determine calculation results, formulas, or recommendations. Any sponsored placement is labeled. See our <a href="/privacy">Privacy Policy</a> for data practices — calculations run entirely in your browser.</p>
+    </div>
+  </main>
+  <footer>
+    <a href="/">CalcProMaster</a> · 1201+ free online calculators · All calculations run in your browser
+    <br><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>

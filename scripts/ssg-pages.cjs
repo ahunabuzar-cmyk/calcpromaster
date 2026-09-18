@@ -174,6 +174,13 @@ function rewriteHead(html, opts) {
   out = out.replace(/<meta property="og:image" content="[^"]*">/, '<meta property="og:image" content="' + DOMAIN + ogImage + '">');
   out = out.replace(/<meta name="twitter:card" content="[^"]*">/, '<meta name="twitter:card" content="summary_large_image">');
   out = out.replace(/<meta name="twitter:image" content="[^"]*">/, '<meta name="twitter:image" content="' + DOMAIN + ogImage + '">');
+  // LCP preload: per-tool hero images (/og/<toolId>.jpg) are the LCP element on
+  // tool routes. Preloading them in <head> lets the browser start the fetch at
+  // HTML-parse time instead of waiting for hydration + renderTool() to inject
+  // the <img>. Non-tool pages keep the default (no preload).
+  if (opts.heroPreload) {
+    out = out.replace('<link rel="canonical"', '<link rel="preload" as="image" href="' + DOMAIN + opts.heroPreload + '" fetchpriority="high"><link rel="canonical"');
+  }
   return out;
 }
 
@@ -214,6 +221,11 @@ function buildToolContent(tool, catKey) {
   html += '<div class="tool-header">';
   html += '<h1>' + esc(tool.name) + '</h1>';
   html += '<p class="tool-desc">' + (tool.desc ? esc(tool.desc) : '') + '</p>';
+  // Hero image (the page's LCP element) — baked into the static HTML so the
+  // browser starts the fetch at parse time instead of waiting for hydration.
+  // renderTool() re-creates the identical <img> (eager + fetchpriority=high) on
+  // hydration — served from cache, no second request. Same onerror fallback.
+  html += '<div class="tool-hero-wrap"><img class="tool-hero-img" src="/og/' + encodeURIComponent(tool.id) + '.jpg" alt="' + escAttr(tool.name + ' calculator — free online tool') + '" loading="eager" fetchpriority="high" decoding="async" width="1200" height="630" onerror="this.closest(\'.tool-hero-wrap\').style.display=\'none\'"></div>';
   html += '<div class="privacy-badge" role="note" aria-label="Privacy">🔒 <span>Your data never leaves your device</span></div>';
   html += '</div>';
 
@@ -244,6 +256,20 @@ function buildToolContent(tool, catKey) {
     });
     html += '</div></div>';
   }
+
+  // E-E-A-T review block (YMYL pages get the full honest-authorship text).
+  // Must stay in sync with the identical block in js/app.js renderTool().
+  const YMYL_EEAT_FINANCE = ['finance', 'business', 'regional', 'career'];
+  const YMYL_EEAT_HEALTH = ['health', 'fitness', 'food', 'family'];
+  let reviewBlock;
+  if (YMYL_EEAT_FINANCE.includes(catKey)) {
+    reviewBlock = '<div class="tool-review-block"><strong>About this page:</strong> Built on standard financial formulas (the same conventions banks use), hand-checked against worked examples and covered by automated tests on every build. Maintained by CalcProMaster\'s developer — not a licensed financial advisor — so results are math education, not financial advice. Read our <a href="/editorial-policy">editorial policy</a> for how content is written and verified.</div>';
+  } else if (YMYL_EEAT_HEALTH.includes(catKey)) {
+    reviewBlock = '<div class="tool-review-block"><strong>About this page:</strong> Built on published, peer-reviewed formulas, hand-checked against worked examples and covered by automated tests on every build. Maintained by CalcProMaster\'s developer — not a medical professional — so results are health education, not medical advice. Read our <a href="/editorial-policy">editorial policy</a>.</div>';
+  } else {
+    reviewBlock = '<div class="tool-review-block"><strong>About this page:</strong> Built on documented public formulas, hand-checked against worked examples and covered by automated tests on every build. See our <a href="/editorial-policy">editorial policy</a> for how content is written and verified.</div>';
+  }
+  html += reviewBlock;
 
   // YMYL disclaimer
   const YMYL_FINANCE = ['finance', 'business', 'regional', 'career'];
@@ -377,7 +403,8 @@ for (const tool of tools) {
 
   let page = rewriteHead(SHELL, {
     title, desc, canonical: canonPath,
-    ogTitle: title, ogDesc: desc, ogImage
+    ogTitle: title, ogDesc: desc, ogImage,
+    heroPreload: ogImage
   });
   page = rewriteSchema(page, buildToolSchema(tool, catKey, canonPath));
   page = rewriteMain(page, buildToolContent(tool, catKey));
@@ -437,7 +464,14 @@ for (const catKey of Object.keys(CATEGORY_META)) {
   }, {
     '@context': 'https://schema.org', '@type': 'CollectionPage',
     name: title, description: desc, url: DOMAIN + canonPath,
-    mainEntity: { '@type': 'ItemList', numberOfItems: catTools.length }
+    // ItemList carries the ACTUAL item URLs (the 48 crawlable cards rendered
+    // below) — numberOfItems alone gives search engines nothing to walk.
+    mainEntity: {
+      '@type': 'ItemList', numberOfItems: catTools.length,
+      itemListElement: catTools.slice(0, 48).map((t, i) => ({
+        '@type': 'ListItem', position: i + 1, name: t.name, url: DOMAIN + '/' + catKey + '/' + t.id
+      }))
+    }
   }], null, 2);
   page = rewriteSchema(page, catSchema);
   page = rewriteMain(page, content);
@@ -514,7 +548,7 @@ for (const [catKey, toolId, modifier] of LONGTAIL) {
     : rawDesc;
   const ogImage = '/og/' + toolId + '.jpg';
 
-  let page = rewriteHead(SHELL, { title, desc, canonical: canonPath, ogTitle: title, ogDesc: desc, ogImage });
+  let page = rewriteHead(SHELL, { title, desc, canonical: canonPath, ogTitle: title, ogDesc: desc, ogImage, heroPreload: ogImage });
   // noindex EVERY long-tail variant; canonical consolidates to the base tool page.
   page = page.replace(/<meta name="robots" content="[^"]*">/, '<meta name="robots" content="noindex, follow">');
   page = page.replace(/<link rel="canonical" href="[^"]*">/, '<link rel="canonical" href="' + DOMAIN + '/' + catKey + '/' + toolId + '">');

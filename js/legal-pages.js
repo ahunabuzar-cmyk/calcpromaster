@@ -310,6 +310,40 @@ const LegalPages = (function() {
     </div>
   `;
 
+  // STEP 1F-a: Editorial Policy Page (E-E-A-T: linked from every tool page's
+  // review block — this page must exist or 1,300+ pages link to a 404)
+  const EDITORIAL_POLICY = `
+    <div class="legal-page">
+      <h1>Editorial Policy</h1>
+      <p class="legal-meta">Last updated: September 2026</p>
+
+      <h2>Scope</h2>
+      <p>This policy describes how calculator content on CalcProMaster is written, verified, and corrected. It applies to every calculator page, guide, and blog post on this site.</p>
+
+      <h2>How Content Is Written</h2>
+      <p>Each calculator page states the standard, publicly documented formula it implements, walks through a worked example with expected values, and explains the assumptions and limitations of the method. Financial, health, and regional-tax content follows conventions from authoritative sources — national statistical agencies, standards bodies, and published clinical or financial formulas — cited on the page where a specific source supports a specific figure.</p>
+
+      <h2>How Content Is Verified</h2>
+      <ol>
+        <li><strong>Formula check.</strong> The implemented formula is compared against its published definition before a calculator ships.</li>
+        <li><strong>Hand-verified examples.</strong> Each page's worked example is computed by hand and must reproduce exactly in the tool.</li>
+        <li><strong>Automated regression tests.</strong> Every calculator is covered by a QA contract with independently computed expected results; the suite runs on every build, and a failing tool is not promoted to the sitemap. The current matrix is public on the <a href="/qa-dashboard.html" target="_blank" rel="noopener">QA dashboard</a>.</li>
+      </ol>
+
+      <h2>Who Writes and Reviews It</h2>
+      <p>CalcProMaster is built and maintained by its developer, whose background spans mathematics and software engineering. Content is written and reviewed by the same person who maintains the calculation engine and its test suite — not by external contributors. The developer is not a licensed financial advisor or medical professional; finance and health pages carry explicit disclaimers stating this, and results are presented as math education, not professional advice.</p>
+
+      <h2>Corrections</h2>
+      <p>Found an error in a formula, example, or explanation? Email <a href="mailto:calpromaster@gmail.com">calpromaster@gmail.com</a> with the page URL and what you expected. Confirmed errors are fixed and re-tested before the next build; we aim to respond within 2-3 business days.</p>
+
+      <h2>Updates</h2>
+      <p>When a formula, default rate, or convention changes, the affected pages are regenerated and re-tested. Pages are not redated cosmetically — a page's review date changes only when its content actually changes.</p>
+
+      <h2>Advertising &amp; Independence</h2>
+      <p>Ads and affiliate links never determine calculation results, formulas, or recommendations. Any sponsored placement is labeled. See our <a href="/privacy">Privacy Policy</a> for data practices — calculations run entirely in your browser.</p>
+    </div>
+  `;
+
   // STEP 1F: About Page
   const ABOUT_PAGE = `
     <div class="legal-page">
@@ -344,6 +378,15 @@ const LegalPages = (function() {
         <li>Clear explanations of assumptions and limitations</li>
         <li>Regular updates to reflect changes in standards and regulations</li>
       </ul>
+
+      <h2>How We Verify Formulas</h2>
+      <p>Accuracy here is a process, not a claim. Three layers back every calculator:</p>
+      <ol>
+        <li><strong>Published formulas only.</strong> Each tool implements a standard, publicly documented formula — the amortization equation lenders use, Mifflin-St Jeor for basal metabolic rate, the Euclidean algorithm for GCD — and names it in the page's "How It Works" section.</li>
+        <li><strong>Hand-verified worked examples.</strong> Every page shows a worked example with expected values, checked by hand against the formula before it ships, so you can confirm the arithmetic yourself.</li>
+        <li><strong>Automated QA contract.</strong> Each calculator is covered by an automated test suite with independently computed expected results. The suite runs on every build; a tool that fails its formula contract is not promoted to the sitemap. The full matrix is public on our <a href="/qa-dashboard.html" target="_blank" rel="noopener">QA dashboard</a>.</li>
+      </ol>
+      <p>Where real-world outcomes depend on facts no formula can know — your lender's fee schedule, your tax situation, market movements — the calculator's limitations section says so explicitly. Read the full <a href="/editorial-policy">editorial policy</a> for how content is written, reviewed and corrected.</p>
 
       <h2>Transparency</h2>
       <p>CalcProMaster is supported by non-intrusive advertising (Google AdSense) and we may earn commissions from affiliate links. This does not affect our calculator results, which are always unbiased and algorithm-based.</p>
@@ -467,6 +510,7 @@ const LegalPages = (function() {
     ABOUT_PAGE,
     CONTACT_PAGE,
     COOKIE_POLICY,
+    EDITORIAL_POLICY,
 
     // Helper function to get content by page type
     getContent: function(pageType) {
@@ -479,6 +523,7 @@ const LegalPages = (function() {
         case 'cookies': return this.COOKIE_POLICY;
         case 'about': return this.ABOUT_PAGE;
         case 'contact': return this.CONTACT_PAGE;
+        case 'editorial-policy': return this.EDITORIAL_POLICY;
         default: return '<p>Page content not found.</p>';
       }
     }

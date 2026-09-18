@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NPV vs IRR — Which Investment Metric to Trust &amp; Why They Fight | CalcProMaster</title>
+  <meta name="description" content="The NPV and IRR formulas on one worked example, the reinvestment assumption that makes them disagree, and a decision rule for choosing between projects.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="CalcProMaster">
+  <meta property="og:title" content="NPV vs IRR: Two Ways to Judge the Same Investment — and Why They Disagree">
+  <meta property="og:description" content="The NPV and IRR formulas on one worked example, the reinvestment assumption that makes them disagree, and a decision rule for choosing between projects.">
+  <meta property="og:url" content="https://calcpromaster.netlify.app/guides/npv-vs-irr">
+  <meta property="og:image" content="https://calcpromaster.netlify.app/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://calcpromaster.netlify.app/og-image.png">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/guides/npv-vs-irr">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "NPV vs IRR — Which Investment Metric to Trust & Why They Fight | CalcProMaster",
+    "description": "The NPV and IRR formulas on one worked example, the reinvestment assumption that makes them disagree, and a decision rule for choosing between projects.",
+    "url": "https://calcpromaster.netlify.app/guides/npv-vs-irr",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://calcpromaster.netlify.app/guides" },
+        { "@type": "ListItem", "position": 3, "name": "NPV vs IRR", "item": "https://calcpromaster.netlify.app/guides/npv-vs-irr" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "What is the difference between NPV and IRR?", "acceptedAnswer": { "@type": "Answer", "text": "NPV converts all future cash flows into today’s money using your required return and answers in currency; IRR finds the discount rate that makes NPV exactly zero and answers in percent. They agree on accept/reject for a single conventional project but can rank projects differently." } },
+        { "@type": "Question", "name": "Why is NPV considered more reliable?", "acceptedAnswer": { "@type": "Answer", "text": "Because it uses your real, achievable reinvestment rate and measures absolute value created. IRR’s math implicitly reinvests intermediate cash flows at the IRR itself, which overstates projects with high rates and ignores project size entirely." } },
+        { "@type": "Question", "name": "What discount rate should I use?", "acceptedAnswer": { "@type": "Answer", "text": "Your opportunity cost: what the money could otherwise earn at comparable risk — commonly a benchmark return for investments, or a weighted cost of capital for businesses. It is an assumption worth stating, not a constant." } },
+        { "@type": "Question", "name": "Can IRR be negative or multiple?", "acceptedAnswer": { "@type": "Answer", "text": "Yes to both. A project that never recovers its cost has a negative IRR, and cash-flow patterns that switch sign more than once can have several IRRs — in those cases rely on NPV alone." } }
+      ]
+    }
+  }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.7; max-width: 760px; margin: 0 auto; padding: 16px; color: #1f2937; }
+    .crumb { font-size: 0.85rem; color: #6b7280; margin-bottom: 8px; }
+    .crumb a { color: #4f46e5; text-decoration: none; }
+    h1 { font-size: 1.65rem; line-height: 1.3; margin: 8px 0 4px; }
+    h2 { font-size: 1.25rem; margin-top: 2rem; border-top: 1px solid #e5e7eb; padding-top: 1.2rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.4rem; }
+    .answer { background: #eef2ff; border-left: 4px solid #4f46e5; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+    .formula { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 16px; font-family: ui-monospace, monospace; font-size: 0.95rem; overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.92rem; }
+    th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; }
+    th { background: #f9fafb; }
+    .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
+    .related a { color: #4f46e5; }
+    .updated { color: #6b7280; font-size: 0.85rem; }
+    .note { background: #fefce8; border-left: 4px solid #ca8a04; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+    .review-block { background: #f5f3ff; border-left: 4px solid #8b5cf6; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 18px 0; font-size: 0.88rem; color: #4b5563; }
+    .review-block a { color: #7c3aed; }
+  </style>
+</head>
+<body>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › NPV vs IRR</p>
+  <h1>NPV vs IRR: Two Ways to Judge the Same Investment — and Why They Disagree</h1>
+  <p class="updated">Finance · 7 min read · Last updated September 2026</p>
+
+  <div class="answer">
+    <strong>Quick answer:</strong> NPV asks "does this beat my required return, in today’s money?" and answers in <strong>currency</strong>; IRR asks "what return does this earn?" and answers in <strong>percent</strong>. On a single normal project they agree — but when they fight (different sizes, different timing), <strong>trust NPV</strong>, because IRR silently assumes you can reinvest cash flows at the IRR itself.
+  </div>
+
+  <h2>One project, both metrics</h2>
+  <p>Project: invest ₹5,00,000 today; receive ₹2,00,000 per year for 3 years. Required return (discount rate): 10%.</p>
+  <div class="formula">NPV = −500,000 + 200,000/1.1 + 200,000/1.1² + 200,000/1.1³<br>= −500,000 + 181,818 + 165,289 + 150,263<br>= −500,000 + 497,370 = <strong>−₹2,630</strong></div>
+  <p>This project <em>fails</em> a 10% hurdle. Lower the hurdle to 9% and NPV turns positive (+₹6,240), so IRR sits just under 10% — about 9.7%. That is exactly the relationship: <strong>IRR is the discount rate at which NPV = 0</strong>. The calculators compute both from your cash flows.</p>
+
+  <h2>Why they can disagree</h2>
+  <table>
+    <tr><th>Situation</th><th>NPV says</th><th>IRR says</th><th>Who is right</th></tr>
+    <tr><td>Small project, huge IRR</td><td>+₹5,000</td><td>60%</td><td>NPV — 60% on ₹8,333 is still just ₹5,000</td></tr>
+    <tr><td>Big project, modest IRR</td><td>+₹2,00,000</td><td>15%</td><td>NPV — scale beats rate when capital is available</td></tr>
+    <tr><td>Timing flipped</td><td>Depends on discount rate</td><td>Unchanged</td><td>NPV — only it knows your actual cost of capital</td></tr>
+  </table>
+  <p>The root cause: IRR mathematically assumes every intermediate cash flow is reinvested <em>at the IRR</em>. A project with a 60% IRR does not offer you 60% on its payouts — your real reinvestment rate is your savings or borrowing rate, which NPV prices honestly.</p>
+
+  <h2>The decision rule</h2>
+  <p>Use NPV for the decision; use IRR only as a communication shorthand ("this returns ~15%") or to sanity-check the NPV sign. If two mutually exclusive projects disagree, the higher-NPV one wins. If capital is truly rationed, rank by <em>profitability index</em> (NPV per rupee invested) instead of IRR.</p>
+
+  <div class="note"><strong>Limitations:</strong> both metrics are only as good as the cash-flow forecasts and the discount rate behind them — a 1% change in the hurdle rate can flip the answer on borderline projects. Non-conventional cash flows (costs after gains) can produce multiple IRRs; in that case IRR is meaningless and NPV still works.</div>
+
+  <h2>Try the calculators</h2>
+  <p class="related">
+    <a href="/finance/npv" class="cta">NPV Calculator</a>
+    <a href="/finance/irr" class="cta">IRR Calculator</a>
+    <a href="/finance/roi" class="cta">ROI Calculator</a>
+  </p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>What is the difference between NPV and IRR?</h3>
+  <p>NPV converts all future cash flows into today’s money using your required return and answers in currency; IRR finds the discount rate that makes NPV exactly zero and answers in percent. They agree on accept/reject for a single conventional project but can rank projects differently.</p>
+  <h3>Why is NPV considered more reliable?</h3>
+  <p>Because it uses your real, achievable reinvestment rate and measures absolute value created. IRR’s math implicitly reinvests intermediate cash flows at the IRR itself, which overstates projects with high rates and ignores project size entirely.</p>
+  <h3>What discount rate should I use?</h3>
+  <p>Your opportunity cost: what the money could otherwise earn at comparable risk — commonly a benchmark return for investments, or a weighted cost of capital for businesses. It is an assumption worth stating, not a constant.</p>
+  <h3>Can IRR be negative or multiple?</h3>
+  <p>Yes to both. A project that never recovers its cost has a negative IRR, and cash-flow patterns that switch sign more than once can have several IRRs — in those cases rely on NPV alone.</p>
+
+<div class="review-block"><strong>About this guide:</strong> Written and maintained by CalcProMaster’s developer — an independent site, not a licensed financial advisor or medical professional. Every worked example below was computed by hand and cross-checked with the linked calculator; our <a href="/editorial-policy">editorial policy</a> explains how content is written, tested and corrected.</div>
+  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <script src="/guides/glossary-tooltips.js" defer></script>
+</body>
+</html>

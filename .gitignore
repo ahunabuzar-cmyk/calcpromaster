@@ -36,6 +36,11 @@ scripts/kw-volume.json
 service-account*.json
 *-service-account.json
 credentials.json
+
+# ===== Plan B user-OAuth (client secret + refresh token) — same rule =====
+gsc-client-secret.json
+client-secret*.json
+gsc-refresh-token.json
 google-creds*
 
 # Local analytics/GSC snapshots (tracking data, not part of the site)

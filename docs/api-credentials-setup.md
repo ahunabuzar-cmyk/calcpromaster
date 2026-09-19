@@ -119,13 +119,68 @@ GA4_SERVICE_ACCOUNT=C:/path/to/service-account.json   # GA4 script ke liye
 GSC_SERVICE_ACCOUNT=C:/path/to/service-account.json   # GSC script ke liye
 ```
 
+## Plan B — bina service-account KEY ke (org policy block kare to)
+
+> **Kab:** Google Cloud par key download karte waqt ye error aaye:
+> `Service account key creation is disabled` —
+> `iam.disableServiceAccountKeyCreation` org policy enforced.
+> **Kyun kaam karta hai:** wo policy sirf service-account **keys** block karti hai,
+> OAuth **clients** nahi. Is path mein tumhare apne Google account se ek baar
+> browser consent hoti hai, script ek refresh-token save kar leti hai, aur dono
+> trackers (GSC + GA4) wahi se chalte hain. Policy ko touch nahi karna padta.
+
+### B-Step 1 — OAuth client banao (3 min)
+
+1. **APIs & Services → Credentials** (wahi page jahan service account bana tha).
+2. **+ Create Credentials → OAuth client ID**.
+3. **Application type: Web application** → naam `calcpro-local`.
+4. **Authorized redirect URIs** mein **exactly** ye add karo:
+   `http://localhost:3737/oauth2callback`
+5. **Create** → JSON **Download** karo.
+
+> Agar **OAuth consent screen** configure karne ko bole (User type **External**, apna
+> email test user mein add karo — 2 min, app sirf tumhari hai) — normal hai, kar do.
+> Agar **OAuth client banane par bhi org-policy error aaye** to mujhe batao — B-2
+> variant hai us case ke liye.
+
+### B-Step 2 — file rename + login (1 min)
+
+1. Downloaded file ko **`gsc-client-secret.json`** naam se **project root** mein
+   daalo (`package.json` wala folder). Git-ignored hai — commit nahi hogi.
+2. Terminal (project folder mein):
+
+```bash
+npm run gsc:login
+```
+
+Browser khul jayega (ya URL copy-paste karo) → Google account choose karo →
+**Allow**. "App hasn't been verified" warning normal hai — ye app sirf tumhare
+liye hai, **Continue** karke aage badho. Terminal mein `✅ Refresh token saved`
+aa jayega.
+
+### B-Step 3 — chalao (same as before)
+
+```bash
+npm run monitor:gsc     # GSC report — indexed pages, queries, positions
+```
+
+GA4 ke liye wahi purana command (`GA4_PROPERTY_ID=<numeric-id> node scripts/ga4-events.cjs`)
+— ab usko bhi refresh-token se chalega. GSC property mein service-account add
+karne ki **zaroorat nahi** (Step 5 skip) — tumhara Google account hi owner hai.
+
+Bas itna — ek baar login, token file save, phir hamesha ke liye kaam karta hai
+(token expire ho to dobara `npm run gsc:login`).
+
+---
+
 ## Troubleshooting
 
 | Error | Fix |
 |---|---|
 | `OAuth token exchange failed (403)` | Service account email ko GA4/GSC mein add nahi kiya (Step 4/5) |
 | `GA4 API HTTP 403` | Google Analytics Data API enable nahi (Step 2) — ya property mein Viewer nahi |
-| `GSC API HTTP 403` | Search Console API enable nahi — ya GSC property mein user nahi |
+| `GSC API HTTP 403` | Search Console API enable nahi — ya (Plan B) consent us Google account se diya jo GSC property ka owner nahi |
 | `GA4 API HTTP 404` | `GA4_PROPERTY_ID` galat — numeric ID chahiye, G- nahi |
-| `NO_CREDENTIALS` | `service-account.json` project root mein nahi hai |
+| `NO_CREDENTIALS` | Plan A: `service-account.json` root mein nahi · Plan B: pehle `npm run gsc:login` chalao |
+| `refresh-token exchange failed` | Token revoke/expired — dobara `npm run gsc:login` |
 | Script "0 events" | Normal — GA4 data 24-48h baad hi aata hai. Realtime abhi check karo. |

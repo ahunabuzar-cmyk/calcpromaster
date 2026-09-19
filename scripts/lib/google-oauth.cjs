@@ -1,17 +1,21 @@
 // ============================================================
-// CalcProMaster — Google Service-Account OAuth helper (shared)
+// CalcProMaster — Google OAuth helper (shared)
 // ------------------------------------------------------------
-// Zero-dependency OAuth2 access-token flow for server-to-server
-// Google APIs (GA4 Data API, Search Console API) using a Google
-// Cloud service account. Uses only Node built-ins (crypto RS256
-// JWT signing + https token exchange).
+// Zero-dependency OAuth2 access tokens for Google APIs (GA4 Data
+// API, Search Console API). TWO credential paths, checked in order:
 //
-// Credentials source (in priority order):
+//   Plan B  user-OAuth refresh token — one-time browser consent via
+//           scripts/gsc-oauth-login.cjs; stores gsc-refresh-token.json.
+//           Needed when the Google org blocks service-account KEY
+//           creation (org policy iam.disableServiceAccountKeyCreation).
+//   Plan A  service-account JSON key (JWT bearer flow).
+//
+// Service-account key sources (priority):
 //   1. env  GOOGLE_APPLICATION_CREDENTIALS  → path to service-account JSON
 //   2. env  GA4_SERVICE_ACCOUNT / GSC_SERVICE_ACCOUNT → path (alias)
 //   3. ./service-account.json (project root, git-ignored)
 //
-// Setup (one time, ~10 min): docs/api-credentials-setup.md
+// Setup: docs/api-credentials-setup.md (Plan A) · Plan B section same file
 // ============================================================
 'use strict';
 const crypto = require('crypto');
@@ -43,6 +47,47 @@ function loadCredentials() {
     const raw = JSON.parse(fs.readFileSync(p, 'utf8'));
     if (!raw.client_email || !raw.private_key) return null;
     return { path: p, clientEmail: raw.client_email, privateKey: raw.private_key };
+  } catch (e) {
+    return null;
+  }
+}
+
+// ---------- Plan B: user-OAuth (refresh token) ----------
+const REFRESH_TOKEN_FILE = path.join(__dirname, '..', '..', 'gsc-refresh-token.json');
+const OAUTH_REDIRECT_URI = 'http://localhost:3737/oauth2callback';
+
+// Finds the downloaded OAuth client-secret JSON ("Web application" type;
+// Google nests it under `installed` or `web`). No refresh-token requirement —
+// the login script calls this BEFORE any token exists.
+function loadOAuthClient() {
+  const candidates = [
+    process.env.GSC_OAUTH_CLIENT_SECRET,
+    path.join(__dirname, '..', '..', 'gsc-client-secret.json'),
+    path.join(__dirname, '..', '..', 'client-secret.json'),
+  ];
+  for (const p of candidates) {
+    if (!p || !fs.existsSync(p)) continue;
+    try {
+      const raw = JSON.parse(fs.readFileSync(p, 'utf8'));
+      const c = raw.installed || raw.web || raw;
+      if (c.client_id && c.client_secret) {
+        return { path: p, clientId: c.client_id, clientSecret: c.client_secret, redirectUri: OAUTH_REDIRECT_URI };
+      }
+    } catch (e) { /* try next candidate */ }
+  }
+  return null;
+}
+
+// Client + stored refresh token — the shape getAccessToken() needs.
+function loadRefreshCreds() {
+  const client = loadOAuthClient();
+  if (!client) return null;
+  const rtPath = process.env.GSC_REFRESH_TOKEN_FILE || REFRESH_TOKEN_FILE;
+  if (!fs.existsSync(rtPath)) return null;
+  try {
+    const rt = JSON.parse(fs.readFileSync(rtPath, 'utf8'));
+    if (!rt.refresh_token) return null;
+    return { ...client, refreshToken: rt.refresh_token, rtPath };
   } catch (e) {
     return null;
   }
@@ -81,13 +126,30 @@ function postForm(url, formBody) {
 
 // Returns { access_token, expires_in } for the given scope.
 async function getAccessToken(scope) {
+  // Plan B first: user-OAuth refresh token. Org policies commonly block
+  // service-account key creation outright; this path needs none.
+  const ro = loadRefreshCreds();
+  if (ro) {
+    const res = await postForm('https://oauth2.googleapis.com/token', {
+      grant_type: 'refresh_token',
+      refresh_token: ro.refreshToken,
+      client_id: ro.clientId,
+      client_secret: ro.clientSecret,
+    });
+    if (res.status === 200 && res.json.access_token) return res.json;
+    const err = new Error('OAuth refresh-token exchange failed (HTTP ' + res.status + '): ' + JSON.stringify(res.json).slice(0, 300));
+    err.hint = 'Refresh token expired/revoked — re-run: node scripts/gsc-oauth-login.cjs';
+    throw err;
+  }
+
   const cred = loadCredentials();
   if (!cred) {
     const err = new Error('NO_CREDENTIALS');
-    err.hint = 'Google service-account credentials not found.\n' +
-      '   Setup (one time): see docs/api-credentials-setup.md\n' +
-      '   Then point GOOGLE_APPLICATION_CREDENTIALS to the JSON file,\n' +
-      '   or save it as service-account.json in the project root (git-ignored).';
+    err.hint = 'No Google credentials found. Two supported paths:\n' +
+      '   Plan B (no key file needed): node scripts/gsc-oauth-login.cjs\n' +
+      '     — needs gsc-client-secret.json (OAuth client) in project root;\n' +
+      '     see docs/api-credentials-setup.md Plan B section.\n' +
+      '   Plan A: service-account.json in project root (or GOOGLE_APPLICATION_CREDENTIALS).';
     throw err;
   }
 
@@ -126,4 +188,4 @@ async function getAccessToken(scope) {
   return res.json;
 }
 
-module.exports = { getAccessToken, loadCredentials, findCredentialsPath };
+module.exports = { getAccessToken, loadCredentials, findCredentialsPath, loadOAuthClient, loadRefreshCreds, OAUTH_REDIRECT_URI, REFRESH_TOKEN_FILE };

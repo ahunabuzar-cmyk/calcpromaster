@@ -47,6 +47,7 @@
     "monitor:test-alert": "node scripts/uptime-check.cjs --test-alert",
     "dashboard": "node scripts/formula-review-checklist.cjs && node scripts/generate-qa-dashboard.cjs",
     "monitor:ga4": "node scripts/ga4-events.cjs",
+    "gsc:login": "node scripts/gsc-oauth-login.cjs",
     "monitor:gsc": "node scripts/gsc-indexing.cjs"
   },
   "devDependencies": {

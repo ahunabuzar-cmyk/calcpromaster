@@ -31,3 +31,14 @@
 
 /robots.txt
   Cache-Control: public, max-age=3600
+
+# /embed/* — linkable iframe widget pages. These MUST be frameable from other
+# sites (that's their whole purpose: natural backlinks). The global rule above
+# sets X-Frame-Options: DENY; this path-scoped rule overrides it, and CSP
+# frame-ancestors is fully open here (absence of the directive = allowed).
+# Note: modern browsers ignore X-Frame-Options when a CSP frame-ancestors
+# directive is present, so an explicit permissive frame-ancestors is required.
+/embed/*
+  X-Frame-Options: ALLOWALL
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; frame-ancestors https: http:
+  Cache-Control: public, max-age=86400

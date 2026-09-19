@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Iframe target only: this page is embeddable widget content, not a search landing page. -->
+<meta name="robots" content="noindex, follow">
+<title>Percentage Calculator Widget</title>
+<style>
+  :root { --primary:#4f46e5; --ink:#0f172a; --muted:#64748b; --line:#e2e8f0; --bg:#ffffff; --soft:#f1f5f9; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:var(--bg); padding:16px; line-height:1.45; }
+  .w-title { font-size:1.05rem; font-weight:700; margin-bottom:12px; }
+  .block { margin-bottom:14px; }
+  .q { font-size:.85rem; font-weight:600; color:var(--ink); margin-bottom:6px; }
+  .inline { display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+  input { width:88px; padding:8px 9px; border:1px solid var(--line); border-radius:8px; font-size:.95rem; color:var(--ink); background:#fff; }
+  input:focus { outline:2px solid var(--primary); outline-offset:1px; border-color:var(--primary); }
+  .op { font-size:.9rem; color:var(--muted); font-weight:600; }
+  .out { font-weight:800; color:var(--primary); font-size:1.05rem; min-width:70px; display:inline-block; }
+  .credit { margin-top:6px; font-size:.78rem; color:var(--muted); }
+  .credit a { color:var(--primary); font-weight:600; text-decoration:none; }
+  .credit a:hover, .credit a:focus { text-decoration:underline; }
+</style>
+</head>
+<body>
+  <p class="w-title">Percentage Calculator</p>
+
+  <div class="block">
+    <p class="q">What is <span class="op">X%</span> of <span class="op">Y</span>?</p>
+    <div class="inline">
+      <input id="p1-a" type="number" inputmode="decimal" step="any" aria-label="Percent" placeholder="%">
+      <span class="op">% of</span>
+      <input id="p1-b" type="number" inputmode="decimal" step="any" aria-label="Of value" placeholder="value">
+      <span class="op">=</span>
+      <span class="out" id="p1-out" aria-live="polite">—</span>
+    </div>
+  </div>
+
+  <div class="block">
+    <p class="q"><span class="op">X</span> is what percent of <span class="op">Y</span>?</p>
+    <div class="inline">
+      <input id="p2-a" type="number" inputmode="decimal" step="any" aria-label="Part value" placeholder="value">
+      <span class="op">is what % of</span>
+      <input id="p2-b" type="number" inputmode="decimal" step="any" aria-label="Whole value" placeholder="value">
+      <span class="op">=</span>
+      <span class="out" id="p2-out" aria-live="polite">—</span>
+    </div>
+  </div>
+
+  <div class="block">
+    <p class="q">Percent change from <span class="op">X</span> to <span class="op">Y</span></p>
+    <div class="inline">
+      <input id="p3-a" type="number" inputmode="decimal" step="any" aria-label="From value" placeholder="from">
+      <span class="op">→</span>
+      <input id="p3-b" type="number" inputmode="decimal" step="any" aria-label="To value" placeholder="to">
+      <span class="op">=</span>
+      <span class="out" id="p3-out" aria-live="polite">—</span>
+    </div>
+  </div>
+
+  <p class="credit">Powered by <a href="https://calcpromaster.netlify.app/math/percentage" target="_blank" rel="noopener">CalcProMaster — free online calculators</a></p>
+
+<script>
+(function () {
+  'use strict';
+  function $(id) { return document.getElementById(id); }
+  function bind(a, b, out, fn) {
+    function run() {
+      var x = parseFloat($(a).value), y = parseFloat($(b).value), r = fn(x, y);
+      // fn returns null for invalid input; otherwise it returns a display-ready string
+      $(out).textContent = (r === null) ? '—' : r;
+    }
+    [$(a), $(b)].forEach(function (el) {
+      el.addEventListener('input', run);
+      el.addEventListener('change', run);
+    });
+  }
+  function num(v) {
+    // show up to 4 decimals, trim trailing zeros
+    var s = (Math.round(v * 10000) / 10000).toString();
+    return s;
+  }
+  bind('p1-a', 'p1-b', 'p1-out', function (x, y) {
+    if (!isFinite(x) || !isFinite(y)) return null;
+    return num(x / 100 * y);
+  });
+  bind('p2-a', 'p2-b', 'p2-out', function (x, y) {
+    if (!isFinite(x) || !isFinite(y) || y === 0) return null;
+    return num(x / y * 100) + '%';
+  });
+  bind('p3-a', 'p3-b', 'p3-out', function (x, y) {
+    if (!isFinite(x) || !isFinite(y) || x === 0) return null;
+    var pct = (y - x) / Math.abs(x) * 100;
+    return (pct > 0 ? '+' : '') + num(pct) + '%';
+  });
+})();
+</script>
+</body>
+</html>

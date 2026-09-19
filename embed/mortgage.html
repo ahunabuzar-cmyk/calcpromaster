@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Iframe target only: this page is embeddable widget content, not a search landing page. -->
+<meta name="robots" content="noindex, follow">
+<title>Mortgage Calculator Widget</title>
+<style>
+  :root { --primary:#4f46e5; --ink:#0f172a; --muted:#64748b; --line:#e2e8f0; --bg:#ffffff; --soft:#f1f5f9; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:var(--bg); padding:16px; line-height:1.45; }
+  .w-title { font-size:1.05rem; font-weight:700; margin-bottom:12px; }
+  .row { margin-bottom:10px; }
+  label { display:block; font-size:.8rem; font-weight:600; color:var(--muted); margin-bottom:3px; }
+  input, select { width:100%; padding:9px 10px; border:1px solid var(--line); border-radius:8px; font-size:.95rem; color:var(--ink); background:#fff; }
+  input:focus, select:focus { outline:2px solid var(--primary); outline-offset:1px; border-color:var(--primary); }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .result { margin-top:14px; background:var(--soft); border-radius:10px; padding:14px; }
+  .pay { font-size:1.7rem; font-weight:800; color:var(--primary); }
+  .pay-label { font-size:.78rem; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; }
+  .sub { display:flex; justify-content:space-between; gap:8px; margin-top:10px; font-size:.85rem; color:var(--ink); }
+  .sub b { font-weight:700; }
+  .credit { margin-top:14px; font-size:.78rem; color:var(--muted); }
+  .credit a { color:var(--primary); font-weight:600; text-decoration:none; }
+  .credit a:hover, .credit a:focus { text-decoration:underline; }
+  .note { margin-top:8px; font-size:.72rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <p class="w-title">Mortgage Calculator</p>
+  <div class="grid">
+    <div class="row">
+      <label for="m-price">Home price</label>
+      <input id="m-price" type="number" inputmode="decimal" min="0" step="1000" value="350000">
+    </div>
+    <div class="row">
+      <label for="m-cur">Currency</label>
+      <select id="m-cur">
+        <option value="USD" selected>USD $</option>
+        <option value="EUR">EUR €</option>
+        <option value="GBP">GBP £</option>
+        <option value="CAD">CAD $</option>
+        <option value="AUD">AUD $</option>
+        <option value="INR">INR ₹</option>
+        <option value="PKR">PKR ₨</option>
+      </select>
+    </div>
+    <div class="row">
+      <label for="m-dp">Down payment (%)</label>
+      <input id="m-dp" type="number" inputmode="decimal" min="0" max="95" step="1" value="20">
+    </div>
+    <div class="row">
+      <label for="m-rate">Interest rate (% per year)</label>
+      <input id="m-rate" type="number" inputmode="decimal" min="0" max="100" step="0.05" value="6.5">
+    </div>
+    <div class="row">
+      <label for="m-yrs">Term (years)</label>
+      <input id="m-yrs" type="number" inputmode="decimal" min="1" max="40" step="1" value="30">
+    </div>
+  </div>
+
+  <div class="result" aria-live="polite">
+    <p class="pay-label">Monthly payment (principal &amp; interest)</p>
+    <p class="pay" id="m-pay">—</p>
+    <p class="sub"><span>Loan amount</span><b id="m-loan">—</b></p>
+    <p class="sub"><span>Total interest</span><b id="m-int">—</b></p>
+  </div>
+
+  <p class="note">Standard fixed-rate amortization: M = P·r·(1+r)ⁿ ÷ ((1+r)ⁿ − 1). Property tax, insurance, and HOA fees are not included.</p>
+
+  <p class="credit">Powered by <a href="https://calcpromaster.netlify.app/finance/mortgage" target="_blank" rel="noopener">CalcProMaster — free online calculators</a></p>
+
+<script>
+(function () {
+  'use strict';
+  var price = document.getElementById('m-price'),
+      dp = document.getElementById('m-dp'),
+      rate = document.getElementById('m-rate'),
+      yrs = document.getElementById('m-yrs'),
+      cur = document.getElementById('m-cur'),
+      outPay = document.getElementById('m-pay'),
+      outLoan = document.getElementById('m-loan'),
+      outInt = document.getElementById('m-int');
+
+  function fmt(n, code) {
+    try {
+      return new Intl.NumberFormat('en', { style: 'currency', currency: code, maximumFractionDigits: 0 }).format(n);
+    } catch (e) { /* unknown code fallback */
+      return code + ' ' + Math.round(n).toLocaleString('en');
+    }
+  }
+
+  function calc() {
+    var P0 = parseFloat(price.value), D = parseFloat(dp.value),
+        R = parseFloat(rate.value), Y = parseFloat(yrs.value), C = cur.value;
+    if (!(P0 > 0) || !(D >= 0) || !(R >= 0) || !(Y > 0) || D >= 100) {
+      outPay.textContent = '—'; outLoan.textContent = '—'; outInt.textContent = '—';
+      return;
+    }
+    var P = P0 * (1 - D / 100),
+        r = R / 12 / 100,
+        n = Math.round(Y * 12),
+        pay;
+    if (r === 0) { pay = P / n; }
+    else {
+      var f = Math.pow(1 + r, n);
+      pay = P * r * f / (f - 1);
+    }
+    outPay.textContent = fmt(pay, C);
+    outLoan.textContent = fmt(P, C);
+    outInt.textContent = fmt(pay * n - P, C);
+  }
+
+  ['input', 'change'].forEach(function (ev) {
+    [price, dp, rate, yrs, cur].forEach(function (el) { el.addEventListener(ev, calc); });
+  });
+  calc();
+})();
+</script>
+</body>
+</html>

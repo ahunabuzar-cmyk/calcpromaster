@@ -179,7 +179,11 @@ function rewriteHead(html, opts) {
   // HTML-parse time instead of waiting for hydration + renderTool() to inject
   // the <img>. Non-tool pages keep the default (no preload).
   if (opts.heroPreload) {
-    out = out.replace('<link rel="canonical"', '<link rel="preload" as="image" href="' + DOMAIN + opts.heroPreload + '" fetchpriority="high"><link rel="canonical"');
+    // Relative href on purpose: the <img> twin is relative, so the preload and
+    // the actual fetch match per spec. An absolute DOMAIN URL here would be
+    // cross-origin on any non-production origin (localhost dev, Playwright
+    // deploy server) and get blocked by CSP img-src 'self' → console error.
+    out = out.replace('<link rel="canonical"', '<link rel="preload" as="image" href="' + opts.heroPreload + '" fetchpriority="high"><link rel="canonical"');
   }
   return out;
 }

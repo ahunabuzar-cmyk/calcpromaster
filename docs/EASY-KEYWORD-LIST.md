@@ -35,7 +35,7 @@ rule ka seedha implementation.
 |---|---|---|---|
 | 1 | late payment interest calculator overdue invoice | **0** — sirf chhote SaaS/microsites + 2 gov pages | ✅ WIN |
 | 2 | speech time calculator words per minute | **1** — 6-7 microsites | ✅ WIN |
-| 3 | post hole concrete calculator fence posts | **2** — 6 chhoti DIY sites | ✅ WIN |
+| 3 | post hole concrete calculator fence posts | 3 (inchcalculator #1, omnicalculator #4, cement-australia) — **re-probe se downgrade** | ⚠️ BORDERLINE (2nd run) |
 | 4 | UPS battery sizing calculator ah runtime backup | **2-3 (Eaton/APC vendor pages)** — 6-7 microsites | ✅ WIN |
 | 5 | lawn fertilizer calculator nitrogen rate per 1000 sq ft | **0 commercial tools** — gov/edu extension pages rank karti hain = intent gap | ✅ WIN |
 | 6 | prorated rent calculator partial month | 2-3 (apartment/listing brands) | ⚠️ BORDERLINE |
@@ -58,6 +58,14 @@ rule ka seedha implementation.
 - **BORDERLINE:** chhaan-ne par winnable hain lekin pehle on-page gap dekhna hoga.
 - **BRAND WALL:** finance/YMYL heads + generic 2-3 shabd calculator queries — **abhi mat
   target karo** (ye wahi keywords hain jahan DR 80+ brands rank karti hain).
+
+> **Re-probe (same day, 2nd run, aaj ke fresh SERPs):** late-payment (0 strong brands —
+> sirf chhote SaaS + gov pages, omnicalculator/calculator.net gayab) ✅, speech-time (sirf
+> 1 strong: omnicalculator #3, baqi 8-9 microsites) ✅, ups-sizing (3 vendor pages Eaton/APC/
+> CyberPower lekin wo apne products ke tools hain, generic sizing intent chhod dete hain;
+> 6 microsites + **Reddit thread #3 par rank karti hai**) ✅, post-hole ❌ downgrade (inch-
+> calculator #1 + omnicalculator #4 ne top-4 pack kar liya). Reddit ka top-3 rank UPS query
+> par = BACKLINK-KIT.md ka Reddit playbook sirf backlink nahi, **SERP presence** bhi hai.
 
 ---
 

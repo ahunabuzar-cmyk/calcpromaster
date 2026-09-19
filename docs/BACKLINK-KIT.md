@@ -102,3 +102,35 @@ apni repo PR do. GitHub links **do** `/` index karwati hain (profile + site).
 **Sabse bada sach:** foundational links se *authority* banti hai, *traffic* nahi. Pehla real
 traffic Tier-A keywords (EASY-KEYWORD-LIST.md) se aayega jab Google naye titles recrawl kare
 — deploy push uska trigger hai.
+
+---
+
+## C. 2026 research update (19 Sept) — verified additions
+
+### Priority queue ab aise chalo (is order mein)
+1. **Twelve.Tools** — `twelve.tools/submit-your-tool` · DR 82, 1 dofollow, free (shart:
+   unka link humare footer mein — "Featured On" section deploy ke saath live hoga).
+   Fields ready: `docs/directory-submission-pack.md` §1.
+2. **AlternativeTo → SaaSHub → Slant** — packs ready (`docs/alternativeto-listing.md`,
+   `docs/directory-submission-pack.md` §2-3).
+3. Reddit threads (upar Section B) — apne established account se.
+
+### Naya verified lead (agle batches ke liye)
+- **altftool.com/backlinks** — "1,432 places to submit your product" ka curated list
+  (launch platforms, tool directories, AI listings). Isse next 10-15 targets nikaalo —
+  har target ke liye pehle check: kya listing page real hai (not a paywall), kya existing
+  calculator listings hain, kya link dofollow hai (view-source mein `rel="nofollow"`
+  check karo). **Velocity rule yaad rakho: max 2-3/week.**
+
+### ⚠️ Is se BACHO (2026 mein bhi yehi rules)
+- "Free backlink generator" tools (w3era type jo list banate hain) — ye auto-generated
+  spam links hain; Google is pattern ko 2026 mein bhi penalize karta hai. **Zero use.**
+- Link farms / PBN offers / "1000 backlinks $5" — same.
+- IndexNow sirf apne pages ke liye hai — kisi aur ki listing URL ping karna unki permission
+  ke bina nahi (aur zaroorat bhi nahi: directory ka apna crawl kaafi hota hai).
+
+### Profile-level link — 1 step bacha hai (tumhara)
+GitHub profile ka **blog field** abhi khali hai. Terminal mein chalao:
+`gh auth refresh -h github.com -s user` → browser mein device code confirm karo →
+phir mujhe bolna, main field set kar dunga. (Repo-level sab live hai: description,
+homepage URL, 8 topics — verify kiya 19 Sept ko.)

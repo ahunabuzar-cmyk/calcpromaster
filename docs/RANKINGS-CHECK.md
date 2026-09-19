@@ -51,3 +51,38 @@ not measurable this way. Treat this table as a snapshot, not a dashboard.
 - **Spot-check rerun:** re-run the same query set; note date; append rows.
 - **Target inventory refresh:** `npm run keywords:fresh` (regenerates
   KEYWORD-TARGETS.md + KEYWORD-AUDIT.md; CI fails if they go stale).
+
+---
+
+## Update — 2026-09-19 (live audit run)
+
+**Production state (curl-verified today):**
+- Homepage: correct 1201+ title/count, security headers ✓
+- Sitemap: 1,320 URLs — **purana deploy live hai**. Local build (1,332 + /embed +
+  cluster links + Featured-On footer) deploy-push ke baad replace hoga.
+  Widgets (/embed/*.html) production par abhi 404 hain — build mein ready.
+- Cluster links production par abhi 0 (expected — fix pending deploy).
+
+**Backlink/mention scan (Google, "calcpromaster"/"CalcProMaster"):**
+- External mentions: **0** — top results sab site ke apne pages + GitHub repo.
+- Ek unrelated lemon8 post (HP 50g calculator review) match hai, link nahi.
+- Cached snippets /about, /contact, /history, /compare abhi bhi purana "543+"
+  count dikhate hain → deploy ke baad GSC URL Inspection se in 4 ka re-index
+  request karna (owner, ~2 min).
+
+**Tier-A keyword pages (EASY-KEYWORD-LIST.md) — sab 5/5 exist + aligned:**
+| Keyword | Page | Status |
+|---|---|---|
+| late payment interest calculator overdue invoice | /finance/late-fee-interest | ✅ registry + deploy |
+| speech time calculator words per minute | /utilities/speech-time | ✅ |
+| post hole concrete calculator fence posts | /construction/post-hole-concrete | ✅ |
+| UPS battery sizing calculator ah runtime backup | /engineering/ups-sizing | ✅ |
+| lawn fertilizer calculator nitrogen rate per 1000 sq ft | /lifestyle/lawn-fertilizer | ✅ |
+
+In 5 ke liye content already hai; sirf **deploy + IndexNow ping + GSC re-index**
+trigger bacha hai (owner steps, BING-WEBMASTER-GUIDE.md Step 4 se IndexNow).
+
+**GSC report ka honest gap:** GSC API credentials abhi bhi unconfigured hain —
+positions/impressions ka real data sirf manual GSC dashboard se dekha ja sakta hai
+ya credentials set karke `scripts/gsc-indexing.cjs` chala kar. Ye doc replace
+hoga real data aane par.

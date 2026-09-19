@@ -69,7 +69,7 @@
     p{margin-bottom:10px;color:var(--text)}
     ul,ol{margin:8px 0 14px 22px}
     li{margin-bottom:4px}
-    table{border-collapse:collapse;margin:12px 0;width:100%}
+    .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}table{border-collapse:collapse;margin:12px 0;width:100%}
     th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;font-size:14px}
     th{background:var(--surface);font-weight:700}
     .legal-meta{font-size:13px;color:var(--text-light);margin-bottom:18px}
@@ -117,12 +117,12 @@
       </div>
 
       <h2>Price ladder at different rates</h2>
-      <table>
+      <div class="table-wrap"><table>
         <tr><th>Years</th><th>At 2%</th><th>At 5%</th><th>At 8%</th></tr>
         <tr><td>5</td><td>$110.41</td><td>$127.63</td><td>$146.93</td></tr>
         <tr><td>10</td><td>$121.90</td><td>$162.89</td><td>$215.89</td></tr>
         <tr><td>20</td><td>$148.59</td><td>$265.33</td><td>$466.10</td></tr>
-      </table>
+      </table></div>
       <p>(Cost today = $100, in future money)</p>
 
       <h2>Why it matters for every calculation</h2>

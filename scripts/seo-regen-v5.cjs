@@ -35,6 +35,21 @@ const OUT_INTROS = path.join(ROOT, 'js', 'tool-intros.js');
 // verify their length/uniqueness, while the premium copies had truncated metas.
 let PREMIUM = {};
 try { PREMIUM = require(path.join(ROOT, 'js', 'seo-premium.js')) || {}; } catch (e) { PREMIUM = {}; }
+// Batch-2 deep-dives live in their own file to keep both under transport limits;
+// merge with batch-1 (batch-2 wins on collision — none by design).
+try {
+  const B2 = require(path.join(ROOT, 'js', 'seo-premium-batch2.js')) || {};
+  PREMIUM = Object.assign({}, PREMIUM, B2);
+} catch (e) { console.error('WARN: seo-premium-batch2.js failed to load:', e.message); }
+// Batch-3/4 same pattern (batch-4 wins on collision — none by design).
+try {
+  const B3 = require(path.join(ROOT, 'js', 'seo-premium-batch3.js')) || {};
+  PREMIUM = Object.assign({}, PREMIUM, B3);
+} catch (e) { console.error('WARN: seo-premium-batch3.js failed to load:', e.message); }
+try {
+  const B4 = require(path.join(ROOT, 'js', 'seo-premium-batch4.js')) || {};
+  PREMIUM = Object.assign({}, PREMIUM, B4);
+} catch (e) { console.error('WARN: seo-premium-batch4.js failed to load:', e.message); }
 const premiumMerged = [];
 
 // ---------- load registry (module.exports arrays, same as sync-counts.cjs) ----------
@@ -265,11 +280,16 @@ function deriveBundle(tool) {
 
   // ---- use cases: natural frames only (legacy keyword-derived use cases removed:
   //      they surfaced technical jargon like "day count convention" as a use case) ----
+  // Fix 3: frames must not repeat the tool name — subject≈name and metricRef≈name
+  // for most tools, so "X planning … double-checking the X" stacked 3 mentions
+  // into one sentence. Planning frame comes from a hash-picked pool; the
+  // double-check frame uses metricRef only when it is not the name itself.
   const clipW = (max) => (s) => clip(s, max);
+  const PLANS = ['planning ahead', 'planning and budgeting', 'day-to-day planning', 'planning around a target figure', 'short-term planning'];
   const uses3 = [
-    subject + ' planning',
+    pick(PLANS, h, 13),
     'comparing scenarios side by side',
-    'double-checking the ' + metricRef
+    (metricRef && !lowerName.includes(metricRef)) ? 'double-checking the ' + metricRef : 'double-checking a figure before acting on it'
   ];
   const uses3Text = joinAnd(uses3.map(clipW(60)));
 
@@ -278,11 +298,22 @@ function deriveBundle(tool) {
   const verb = pick(VERBS, h, 11);
   const verb2 = pick(['feeds', 'supplies', 'gives', 'passes'], h, 12);
 
+  // Metric-vs-neutral rotation (Fix 3): for many tools the derived metric
+  // phrase equals the tool name, so reusing ${metricRef} in every sentence
+  // doubles name density (name ≈ metric double-counting). Each pool slot
+  // deterministically keeps the real metric some of the time and reads as a
+  // neutral reference otherwise — natural prose, same information.
+  const NEUTRALS = ['result', 'figure', 'output'];
+  const slotMetric = (slot, keepPct) => {
+    const mh = hash(tool.id + ':' + slot);
+    return (mh % 100 < keepPct) ? metricRef : NEUTRALS[mh % NEUTRALS.length];
+  };
+
   return {
     tool, h, id: tool.id, name, lowerName, bareName, lowerBare, catKey, catName,
     inputs, labeled, uiList, ui, ui2,
     calcOk, result, steps, resultMain, extraFacts, inputsUsed, exPhrase,
-    metric, metricRef,
+    metric, metricRef, slotMetric,
     subject, subjectWords, uses3Text, kwTokens, verb, verb2
   };
 }
@@ -304,81 +335,115 @@ const P = {
     (b) => `${b.name} substitutes the ${b.ui || 'inputs'} into the formula, evaluates it in the order shown in the steps panel, and reports the ${b.metricRef} rounded for readability.`,
     (b) => `The engine behind ${b.name} evaluates the inputs in a single pass — no hidden iterations or adjustments — so the ${b.metricRef} you see is exactly what the formula produces for the values you entered.`,
     (b) => `The relationship between the inputs is fixed by the formula, and ${b.name} makes each substitution explicit so nothing about the ${b.metricRef} is hidden.`,
-    (b) => `The formula operates on the values exactly as entered; keeping the units shown in each label is what makes the ${b.metricRef} from ${b.name} trustworthy.`,
-    (b) => `Precision is maintained through every intermediate step inside ${b.name}, and rounding is applied only when the final value is formatted.`,
+    (b) => `The formula operates on the values exactly as entered; keeping the units shown in each label is what makes the ${b.metricRef} trustworthy.`,
+    (b) => `Precision is maintained through every intermediate step, and rounding is applied only when the final value is formatted.`,
     (b) => `${b.name} lists every intermediate step in the result panel, so the derivation of the ${b.metricRef} can be checked line by line.`,
-    (b) => `Rounding in ${b.name} follows standard display conventions — the underlying math keeps several decimal places until the ${b.metricRef} is shown.`
+    (b) => `Rounding follows standard display conventions — the underlying math keeps several decimal places until the ${b.metricRef} is shown.`
   ],
   limit: [
     (b) => `Results from ${b.name} are estimates computed from the values entered; real-world outcomes can differ when fees, taxes, or conditions not modeled here apply.`,
     (b) => `${b.name} assumes the units shown in each label — entering values in different units will skew the ${b.metricRef} proportionally.`,
-    (b) => `Treat the ${b.metricRef} from ${b.name} as a planning figure rather than a binding quote, and confirm important decisions with the relevant professional.`,
+    (b) => `Treat the ${b.metricRef} as a planning figure rather than a binding quote, and confirm important decisions with the relevant professional.`,
     (b) => `The model behind ${b.name} covers the standard case; special cases, edge values, or jurisdiction-specific rules may need manual adjustment.`,
-    (b) => `Very large or very small inputs can push the ${b.metricRef} from ${b.name} beyond what is practically meaningful — sanity-check extreme values before relying on them.`,
-    (b) => `The ${b.metricRef} is only as complete as the inputs: anything ${b.name} does not ask for (fees, variability, local rules) sits outside the calculation.`,
-    (b) => `Inputs outside a reasonable range may produce a ${b.metricRef} that is mathematically correct but practically implausible; the steps panel in ${b.name} helps you spot that quickly.`
+    (b) => `Very large or very small inputs can push the ${b.metricRef} beyond what is practically meaningful — sanity-check extreme values before relying on them.`,
+    (b) => `The ${b.metricRef} is only as complete as the inputs: anything the page does not ask for (fees, variability, local rules) sits outside the calculation.`,
+    (b) => `Inputs outside a reasonable range may produce a ${b.metricRef} that is mathematically correct but practically implausible; the steps panel helps you spot that quickly.`
   ],
   why: [
     (b) => `Because the working is visible: ${b.name} shows each operation behind the ${b.metricRef} in the steps panel, so you can verify the result instead of trusting a black box.`,
     (b) => `Because it is fast and private — ${b.name} runs entirely in your browser, nothing is uploaded, and no account is needed.`,
-    (b) => `Because comparing scenarios takes seconds: change one input at a time in ${b.name} and watch the ${b.metricRef} move, which is the fastest way to understand what drives it.`,
-    (b) => `Because the ${b.metricRef} arrives with supporting figures and a full step list, ${b.name} gives you context rather than a single bare number.`,
+    (b) => `Because comparing scenarios takes seconds: change one input at a time and watch the ${b.metricRef} move, which is the fastest way to understand what drives it.`,
+    (b) => `Because the ${b.metricRef} arrives with supporting figures and a full step list, the page gives you context rather than a single bare number.`,
     (b) => `Because the page doubles as documentation: ${b.name} puts the formula, a worked example, and the assumptions right beside the calculator.`,
-    (b) => `Because ${b.name} works the same on phone and desktop, keeps working offline after the first visit, and never asks for sign-up.`
+    (b) => `Because it works the same on phone and desktop, keeps working offline after the first visit, and never asks for sign-up.`
   ],
   mistakes: [
     (b) => `The most common error with ${b.name} is a unit mismatch — one value entered in different units than its label assumes quietly skews the ${b.metricRef}. Check each label before typing.`,
     (b) => `Mixing up inputs with similar labels is the classic ${b.lowerBare} mistake; the steps panel is the quickest way to spot a value that landed in the wrong field.`,
-    (b) => `Copying the ${b.metricRef} without its assumptions is the frequent error — the number from ${b.name} is valid for exactly the inputs shown, so carry the context with it.`,
+    (b) => `Copying the ${b.metricRef} without its assumptions is the frequent error — the number is valid for exactly the inputs shown, so carry the context with it.`,
     (b) => `Rounding intermediate values by hand introduces error ${b.name} does not have; it keeps full precision internally, so trust the displayed ${b.metricRef} over mental arithmetic.`,
-    (b) => `Entering a rate or percentage in the wrong scale (5 versus 0.05, or the reverse) is a frequent trap — the labels in ${b.name} show the expected scale, and the steps reveal a misapplied value.`
+    (b) => `Entering a rate or percentage in the wrong scale (5 versus 0.05, or the reverse) is a frequent trap — the input labels show the expected scale, and the steps reveal a misapplied value.`
   ],
   tip: [
     (b) => `Run ${b.name} twice with deliberately low and high inputs; the spread tells you how sensitive the ${b.metricRef} is, which a single run never shows.`,
-    (b) => `The result is shareable — the link carries your inputs, so a colleague can open the same calculation in ${b.name} without retyping it.`,
-    (b) => `If the ${b.metricRef} looks wrong, read the steps panel before re-entering anything; it usually shows exactly where the number in ${b.name} departed from expectation.`,
-    (b) => `Bookmark ${b.lowerName} — after the first visit it works offline, so the ${b.metricRef} is one tap away even without a connection.`
+    (b) => `The result is shareable — the link carries your inputs, so a colleague can open the same calculation without retyping anything.`,
+    (b) => `If the ${b.metricRef} looks wrong, read the steps panel before re-entering anything; it usually shows exactly where the number departed from expectation.`,
+    (b) => `Bookmark this page — after the first visit it works offline, so the ${b.metricRef} is one tap away even without a connection.`
   ],
   meaning: [
-    (b) => `The ${b.metricRef} is the headline answer; the supporting figures beneath it and the step list in ${b.name} give the surrounding context needed to judge it.`,
-    (b) => `Read the ${b.metricRef} first, then the steps: together they show not just the value but why that value follows from your inputs in ${b.name}.`,
-    (b) => `The result panel in ${b.name} leads with the ${b.metricRef} and follows with intermediate values; if the headline surprises you, the steps usually reveal which input is responsible.`,
-    (b) => `Interpret the ${b.metricRef} against the inputs that produced it — the same number from different inputs can mean different things, which is why ${b.name} always shows the pairing.`
+    (b) => `The ${b.metricRef} is the headline answer; the supporting figures beneath it and the step list give the surrounding context needed to judge it.`,
+    (b) => `Read the ${b.metricRef} first, then the steps: together they show not just the value but why that value follows from your inputs.`,
+    (b) => `The result panel leads with the ${b.metricRef} and follows with intermediate values; if the headline surprises you, the steps usually reveal which input is responsible.`,
+    (b) => `Interpret the ${b.metricRef} against the inputs that produced it — the same number from different inputs can mean different things, which is why the pairing is always shown.`
   ],
   uses: [
     (b) => `Typical uses for ${b.name} include ${b.uses3Text} — anywhere the figure needs to be defensible rather than guessed.`,
     (b) => `${b.name} fits planning and checking: ${b.uses3Text}, or any moment when the ${b.metricRef} needs to be right the first time.`,
-    (b) => `Students, planners, and professionals use ${b.lowerName} for ${b.uses3Text}, and for sanity-checking numbers that arrived from somewhere else.`,
+    (b) => `Students, planners, and professionals use it for ${b.uses3Text}, and for sanity-checking numbers that arrived from somewhere else.`,
     (b) => `Common scenarios for ${b.name}: ${b.uses3Text}. The step list makes it equally useful for learning the method and for double-checking someone else's numbers.`
   ],
   read: [
-    (b) => `Read the result. The ${b.metricRef} appears immediately in ${b.lowerName}, with the step-by-step working underneath so you can verify every number.`,
-    (b) => `Check the result. The ${b.metricRef} is shown as soon as the inputs are valid, and the steps beneath it show exactly how ${b.lowerName} derived it.`,
-    (b) => `Review the output. Beyond the headline ${b.metricRef}, ${b.lowerName} lists the intermediate steps — useful for catching a mistyped input.`,
-    (b) => `Note the ${b.metricRef}. It updates as you type, and the worked steps below it in ${b.lowerName} make the arithmetic auditable.`
+    (b) => `Read the result. The ${b.metricRef} appears immediately, with the step-by-step working underneath so you can verify every number.`,
+    (b) => `Check the result. The ${b.metricRef} is shown as soon as the inputs are valid, and the steps beneath it show exactly how it was derived.`,
+    (b) => `Review the output. Beyond the headline ${b.metricRef}, the intermediate steps are listed — useful for catching a mistyped input.`,
+    (b) => `Note the ${b.metricRef}. It updates as you type, and the worked steps below it make the arithmetic auditable.`
   ],
   adjust: [
-    (b) => `Adjust and re-run. Change one input at a time to see how sensitive the ${b.metricRef} is to it — the fastest way to understand what ${b.lowerName} is doing.`,
-    (b) => `Compare scenarios. Rerun with different values, or use the batch mode, to line up several outcomes side by side in ${b.lowerName}.`,
-    (b) => `Explore. Each input change in ${b.lowerName} recalculates instantly; watching the ${b.metricRef} move tells you which factor dominates your case.`,
+    (b) => `Adjust and re-run. Change one input at a time to see how sensitive the ${b.metricRef} is to it — the fastest way to understand what the calculation is doing.`,
+    (b) => `Compare scenarios. Rerun with different values, or use the batch mode, to line up several outcomes side by side.`,
+    (b) => `Explore. Each input change recalculates instantly; watching the ${b.metricRef} move tells you which factor dominates your case.`,
     (b) => `Iterate. Vary the inputs one at a time; the movement in the ${b.metricRef} shows which lever matters most for your ${b.lowerBare} question.`
   ],
   step: [
-    (b) => `the value ${b.lowerName} feeds directly into its formula — match it to the scenario you are modeling before moving on.`,
-    (b) => `a core input ${b.lowerName} applies in the formula — keep the units consistent with the label.`,
-    (b) => `one of the values ${b.lowerName} builds the calculation from; the result reflects exactly what you type here.`,
-    (b) => `used in the first stage of the calculation in ${b.lowerName}, so entering it accurately matters more than any later refinement.`
+    (b) => `the value that feeds directly into the formula — match it to the scenario you are modeling before moving on.`,
+    (b) => `a core input the formula applies directly — keep the units consistent with the label.`,
+    (b) => `one of the values the calculation builds from; the result reflects exactly what you type here.`,
+    (b) => `used in the first stage of the calculation, so entering it accurately matters more than any later refinement.`
   ]
 };
 
 // ---------- global uniqueness registry ----------
 const seenSentences = new Set();
+const seenBy = new Map();
+function sentKey(s) { return String(s).replace(/\s+/g, ' ').trim().toLowerCase(); }
 function reg(s, ctx) {
-  const key = String(s).replace(/\s+/g, ' ').trim().toLowerCase();
-  if (seenSentences.has(key)) throw new Error('DUPLICATE SENTENCE [' + ctx + ']: ' + String(s).slice(0, 110));
+  const key = sentKey(s);
+  if (seenSentences.has(key)) throw new Error('DUPLICATE SENTENCE [' + ctx + ' — first used by ' + (seenBy.get(key) || '?') + ']: ' + String(s).slice(0, 110));
   seenSentences.add(key);
+  seenBy.set(key, ctx);
   return s;
 }
+
+// ---------- title overrides (hand-written differentiators) ----------
+// Input-label-derived tails collide for tool pairs that share the same fields
+// (e.g. bond-duration & bond-price both "Face Value, Coupon Rate"). These
+// hand-written titles differentiate the pairs by each tool's actual method.
+// All are <=60 chars; the global duplicate-title gate below still applies.
+const TITLE_OVERRIDES = {
+  'bond-duration': 'Bond Duration Calculator: Macaulay & Modified Duration',
+  'bond-price': 'Bond Price Calculator: Present Value From Market Yield',
+  'crypto-gains': 'Crypto Gains Calculator: Trade Profit, Loss & ROI',
+  'crypto-profit': 'Crypto Profit Calculator: Buy, Sell Price & Quantity',
+  'day-of-week': 'Day of Week Calculator: Weekday For Any Date',
+  'day-of-year': 'Day of Year Calculator: Ordinal Day Number',
+  'discounted-payback': 'Discounted Payback Period: NPV-Based Recovery Time',
+  'payback-period': 'Simple Payback Period: Years To Recover Investment',
+  'family-budget': 'Family Monthly Budget: Income, Housing & Food Plan',
+  'family-budget-simple': 'Family Budget Calculator: Quick Monthly Split',
+  'budget-allocator': 'Monthly Budget Allocator: Housing, Food & Savings %',
+  'frequency-conv': 'Frequency Converter: Hz, kHz, MHz & More Units',
+  'wavelength-freq': 'Wavelength ↔ Frequency: Light & Wave Physics',
+  'gravel-driveway': 'Gravel Driveway Calculator: Volume & Tons Needed',
+  'gravel-tonnage': 'Gravel Tonnage Calculator: Weight From Area',
+  'icosahedron-volume': 'Icosahedron Volume: Regular 20-Faced Solid',
+  'octahedron-volume': 'Octahedron Volume: Regular 8-Faced Solid',
+  'ideal-body-weight': 'Ideal Weight Calculator: Devine Formula',
+  'ideal-weight': 'Ideal Body Weight: Devine, Hamwi & Robinson',
+  'sleep-calc': 'Sleep Cycle Calculator: 90-Minute Cycle Bedtime',
+  'sleep': 'Sleep Calculator: Best Time To Wake Up',
+  'stamp-duty': 'Stamp Duty & Registration: Total Property Cost',
+  'stamp-duty-india': 'Stamp Duty (India): State-Wise Charges & Fees'
+};
 
 // ---------- build the entry ----------
 function buildEntry(b) {
@@ -422,6 +487,7 @@ function buildEntry(b) {
   let title = `${b.name}: ${phrase}`;
   if (title.length > 60) title = clip(title, 60).replace(/\s+\S*$/, '');
   title = title.replace(/[\s,;&:+\-|]+$/, '');
+  if (TITLE_OVERRIDES[b.id]) title = TITLE_OVERRIDES[b.id];
 
   function joinAndTitle(arr) {
     if (arr.length === 1) return arr[0];
@@ -450,38 +516,75 @@ function buildEntry(b) {
   const quick = b.exPhrase
     ? `With the default inputs (${b.inputsUsed}), ${b.lowerName} returns ${b.exPhrase}. Assumptions and limits are summarized below.`
     : `Enter ${inputsLi} and ${b.lowerName} shows the ${b.metricRef} immediately, with every step shown. Assumptions and limits are summarized below.`;
+  // Fix 3: headings + FAQ question stems rotate between the tool name and a
+  // neutral variant per tool (deterministic hash) — halves remaining name
+  // density in headings/questions without losing clarity anywhere.
+  const H = (nameVer, neutralVer) => (hash(b.id + ':h:' + nameVer) % 100 < 45 ? nameVer : neutralVer);
   const aeo =
-    `<h2>What does the ${b.name} do?</h2>\n<p>${reg(defSentence, b.id + ':def')}</p>` +
+    `<h2>What does the ${H(b.name, 'page calculator')} do?</h2>\n<p>${reg(defSentence, b.id + ':def')}</p>` +
     `<ul><li><strong>Inputs:</strong> ${inputsLi}.</li>` +
     `<li><strong>Output:</strong> the ${b.metricRef}${b.steps.length ? ', plus the intermediate steps behind it' : ''}.</li>` +
     `<li><strong>Method:</strong> the standard ${b.catName} formula, evaluated entirely in your browser.</li></ul>` +
     `<h3>Quick answer</h3>\n<p>${reg(quick, b.id + ':quick')}</p>` +
-    `<h2>How does the ${b.name} work?</h2>\n<p>${reg(ae2, b.id + ':ae2')}</p>`;
+    `<h2>${H('How does the ' + b.name + ' work?', 'How does it work?')}</h2>\n<p>${reg(ae2, b.id + ':ae2')}</p>`;
 
   // ===== GUIDE =====
-  const core = pick(P.core, h, 0);
-  const formula = pick(P.formula, h, 1);
-  const limit = pick(P.limit, h, 2);
-  const why = pick(P.why, h, 3);
-  const mistake = pick(P.mistakes, h, 4);
-  const tip = pick(P.tip, h, 5);
-  const meaning = pick(P.meaning, h, 6);
-  const uses = pick(P.uses, h, 7);
-  const read = pick(P.read, h, 9);
-  const adjust = pick(P.adjust, h, 10);
+  // Collision-aware sentence choice (Fix 3): some pool entries are
+  // intentionally generic (no tool name) to cut name-repetition density, so a
+  // hash slot can land on a sentence another page already used. pickU rotates
+  // through the pool to the first unused option and registers the chosen
+  // sentence immediately. Falls back to a name-bearing sentence (globally
+  // unique) when every option in the pool is already taken.
+  // Per-slot fallback templates: every one carries the tool name (globally
+  // unique), so even when a tool's whole pool is exhausted the fallback cannot
+  // collide with any other page — including the same tool's other slots.
+  const SLOT_FB = {
+    core: () => `On this page, ${b.lowerName} applies the standard ${b.catName} method to your inputs and lists every step of the working beside the result.`,
+    formula: () => `The formula section on this page spells out how ${b.lowerName} turns the ${b.ui || 'inputs'} into the ${b.metricRef}, one operation at a time.`,
+    limit: () => `The assumptions listed for ${b.lowerName} bound the estimate: inputs outside the labeled ranges can make the ${b.metricRef} mathematically valid but practically implausible.`,
+    why: () => `Choosing ${b.lowerName} comes down to transparency — the working stays visible, the math stays local, and the result is reproducible line by line.`,
+    mistake: () => `The classic error when using ${b.lowerName} is a mismatched unit or scale, and the steps panel surfaces it faster than re-reading the inputs.`,
+    tip: () => `A useful habit with ${b.lowerName}: vary one input at a time and note how far the ${b.metricRef} moves before trusting any single run.`,
+    meaning: () => `To interpret the result from ${b.lowerName}, read it together with the intermediate figures — the pairing is what makes the number auditable.`,
+    uses: () => `${b.name} earns its place in the ${b.catName} toolkit wherever the figure has to be explained, not just produced.`,
+    read: () => `The output panel in ${b.lowerName} leads with the headline result and follows with the steps behind it, so the value can be checked rather than assumed.`,
+    adjust: () => `When rerunning ${b.lowerName}, change a single input between attempts — the resulting spread shows which factor actually drives the ${b.metricRef}.`
+  };
+  const pickU = (pool, slot, tag, bctx) => {
+    const start = (h + slot) % pool.length;
+    for (let k = 0; k < pool.length; k++) {
+      const cand = pool[(start + k) % pool.length](bctx || b);
+      if (!seenSentences.has(sentKey(cand))) return reg(cand, tag);
+    }
+    const slotName = tag.split(':')[1] || 'core';
+    return reg((SLOT_FB[slotName] || SLOT_FB.core)(bctx || b), tag + ':fb');
+  };
+  // poolB: per-slot context where metricRef may read as a neutral word —
+  // keepPct = % of tools that keep the real metric in that slot.
+  const poolB = (slot, keepPct) => Object.assign({}, b, { metricRef: b.slotMetric(slot, keepPct) });
+  const core = pickU(P.core, 0, b.id + ':core', poolB('core', 45));
+  const formula = pickU(P.formula, 1, b.id + ':formula', poolB('formula', 40));
+  const limit = pickU(P.limit, 2, b.id + ':limit', poolB('limit', 30));
+  const why = pickU(P.why, 3, b.id + ':why', poolB('why', 30));
+  const mistake = pickU(P.mistakes, 4, b.id + ':mistake', poolB('mistake', 40));
+  const tip = pickU(P.tip, 5, b.id + ':tip', poolB('tip', 30));
+  const meaning = pickU(P.meaning, 6, b.id + ':meaning', poolB('meaning', 40));
+  const uses = pickU(P.uses, 7, b.id + ':uses', poolB('uses', 40));
+  const read = pickU(P.read, 9, b.id + ':read', poolB('read', 40));
+  const adjust = pickU(P.adjust, 10, b.id + ':adjust', poolB('adjust', 40));
 
   // worked example (computed, real)
   let worked = '';
   if (b.calcOk && b.resultMain) {
     const shownSteps = b.steps.length ? b.steps.slice(0, 4) : [];
-    worked = `<p><strong>Worked example:</strong> with ${b.inputsUsed}, ${b.lowerName} returns <strong>${escHtml(b.resultMain)}</strong>.` +
+    worked = `<p><strong>Worked example:</strong> with ${b.inputsUsed}, this ${b.lowerBare} calculation returns <strong>${escHtml(b.resultMain)}</strong>.` +
       (b.extraFacts ? ` The same run reports ${escHtml(b.extraFacts)}.` : '') + `</p>` +
       (shownSteps.length
         ? `<p>The steps it follows:</p><ul>${shownSteps.map(s => `<li>${escHtml(s.replace(/^Step\s+\d+:\s*/i, ''))}</li>`).join('')}</ul>`
         : '') +
       `<p>Substitute your own values and the same steps produce your answer — that is the point of a calculator that shows its working.</p>`;
   } else {
-    worked = `<p><strong>Worked example:</strong> enter your own ${b.ui || 'values'} and ${b.lowerName} shows the ${b.metricRef} together with every step used to reach it, so the example is always your own real case.</p>`;
+    worked = `<p><strong>Worked example:</strong> enter your own ${b.ui || 'values'} and the page shows the ${b.metricRef} together with every step used to reach it, so the example is always your own real case.</p>`;
   }
 
   // how-to list
@@ -490,31 +593,38 @@ function buildEntry(b) {
   const stepPoolIndex = h % P.step.length;
   for (let i = 0; i < nSteps; i++) {
     const label = b.uiList[i] || b.labeled[i].label;
-    const li = `<li><strong>${escHtml(label)}</strong> — ${P.step[(stepPoolIndex + i) % P.step.length](b)}</li>`;
-    stepBodies.push(reg(li, b.id + ':li' + i));
+    let li = null;
+    for (let k = 0; k < P.step.length && !li; k++) {
+      const cand = `<li><strong>${escHtml(label)}</strong> — ${P.step[(stepPoolIndex + i + k) % P.step.length](poolB('step' + i, 30))}</li>`;
+      if (!seenSentences.has(sentKey(cand))) li = reg(cand, b.id + ':li' + i);
+    }
+    if (!li) {
+      li = reg(`<li><strong>${escHtml(label)}</strong> — in ${b.lowerName}, this value feeds the formula directly, and the steps panel shows exactly where it enters the ${b.metricRef}.</li>`, b.id + ':li' + i + ':fb');
+    }
+    stepBodies.push(li);
   }
   if (!stepBodies.length) {
     stepBodies.push(reg(`<li><strong>Enter your values</strong> — the fields in ${b.lowerBare} accept your own numbers, and the result reflects exactly what you type here.</li>`, b.id + ':li0'));
   }
 
   const desc =
-    `<h2>How the ${b.name} works</h2>\n<p>${reg(core(b), b.id + ':core')}</p>\n` +
-    `<h2>Using the ${b.name}</h2>\n<ol>\n${stepBodies.join('\n')}\n` +
-    `<li>${reg(read(b), b.id + ':read')}</li>\n<li>${reg(adjust(b), b.id + ':adjust')}</li>\n</ol>\n` +
-    `<h2>The formula behind the result</h2>\n<p>${reg(formula(b), b.id + ':formula')}</p>\n${worked}\n` +
-    `<h2>Understanding the result</h2>\n<p>${reg(meaning(b), b.id + ':meaning')}</p>\n` +
-    `<h2>Where it helps</h2>\n<p>${reg(uses(b), b.id + ':uses')}</p>\n` +
-    `<h2>Common mistakes</h2>\n<p>${reg(mistake(b), b.id + ':mistake')}</p>\n<p><strong>Tip:</strong> ${reg(tip(b), b.id + ':tip')}</p>\n` +
-    `<h2>Assumptions and limitations</h2>\n<p>${reg(limit(b), b.id + ':limit')}</p>\n` +
-    `<h2>Why use this calculator</h2>\n<p>${reg(why(b), b.id + ':why')}</p>`;
+    `<h2>${H('How the ' + b.name + ' works', 'How it works')}</h2>\n<p>${core}</p>\n` +
+    `<h2>${H('Using the ' + b.name, 'How to use it')}</h2>\n<ol>\n${stepBodies.join('\n')}\n` +
+    `<li>${read}</li>\n<li>${adjust}</li>\n</ol>\n` +
+    `<h2>The formula behind the result</h2>\n<p>${formula}</p>\n${worked}\n` +
+    `<h2>Understanding the result</h2>\n<p>${meaning}</p>\n` +
+    `<h2>Where it helps</h2>\n<p>${uses}</p>\n` +
+    `<h2>Common mistakes</h2>\n<p>${mistake}</p>\n<p><strong>Tip:</strong> ${tip}</p>\n` +
+    `<h2>Assumptions and limitations</h2>\n<p>${limit}</p>\n` +
+    `<h2>Why use this calculator</h2>\n<p>${why}</p>`;
 
   // ===== FAQs =====
-  const coreFaq = pick(P.core, h, 2);
-  const formulaFaq = pick(P.formula, h, 3);
-  const limitFaq = pick(P.limit, h, 4);
-  const whyFaq = pick(P.why, h, 5);
-  const usesFaq = pick(P.uses, h, 6);
-  const tipFaq = pick(P.tip, h, 7);
+  const coreFaq = pickU(P.core, 2, b.id + ':faq1a', poolB('faq-core', 35));
+  const formulaFaq = pickU(P.formula, 3, b.id + ':faq2', poolB('faq-formula', 40));
+  const limitFaq = pickU(P.limit, 4, b.id + ':faq4b', poolB('faq-limit', 30));
+  const whyFaq = pickU(P.why, 5, b.id + ':faq1b', poolB('faq-why', 30));
+  const usesFaq = pickU(P.uses, 6, b.id + ':faq5a', poolB('faq-uses', 40));
+  const tipFaq = pickU(P.tip, 7, b.id + ':faq5b', poolB('faq-tip', 30));
 
   let vFormula = `${b.name} derives the ${b.metricRef} from the ${b.ui || 'inputs'} in a single pass, and the steps panel lists each operation`;
   // Only inject steps that look like computation lines (formula substitutions),
@@ -523,11 +633,11 @@ function buildEntry(b) {
   if (calcSteps.length) vFormula = `the first steps are ${calcSteps.slice(0, 2).map(s => s.replace(/^Step\s+\d+:\s*/i, '').toLowerCase()).join(', then ')}`;
 
   const faqs = [
-    { q: `What does the ${b.name} calculate?`, a: reg(coreFaq(b), b.id + ':faq1a') + ' ' + reg(whyFaq(b), b.id + ':faq1b') },
-    { q: `How is the ${b.metricRef} calculated?`, a: `${vFormula.charAt(0).toUpperCase() + vFormula.slice(1)}. ` + reg(formulaFaq(b), b.id + ':faq2') },
-    { q: `What do I need to use the ${b.name}?`, a: `${b.ui ? 'The ' + b.ui + ' that ' + b.lowerName + ' asks for' : 'The labeled inputs on the page'}, or the page defaults if you just want to see the calculation work. Each input maps directly to the formula, and changing any one of them recalculates the ${b.metricRef} instantly.` },
-    { q: `What does the result from the ${b.name} mean?`, a: reg(`The main number ${b.lowerName} returns is the ${b.metricRef} for your exact inputs, and the supporting figures and step list give it context.`, b.id + ':faq4a') + ' ' + reg(limitFaq(b), b.id + ':faq4b') },
-    { q: `When is the ${b.name} most useful?`, a: reg(usesFaq(b), b.id + ':faq5a') + ' ' + reg(tipFaq(b), b.id + ':faq5b') }
+    { q: `What does the ${H(b.name, 'tool')} calculate?`, a: coreFaq + ' ' + whyFaq },
+    { q: (b.metricRef && !b.lowerName.includes(b.metricRef)) ? `How is the ${b.metricRef} calculated?` : 'How is the result calculated?', a: `${vFormula.charAt(0).toUpperCase() + vFormula.slice(1)}. ` + formulaFaq },
+    { q: `What do I need to use the ${b.name}?`, a: `${b.ui ? 'The ' + b.ui + ' it asks for' : 'The labeled inputs on the page'}, or the page defaults if you just want to see the calculation work. Each input maps directly to the formula, and changing any one of them recalculates the ${b.metricRef} instantly.` },
+    { q: `What does the result from the ${H(b.name, 'tool')} mean?`, a: reg(`The main number the ${b.lowerName} returns is the ${b.metricRef} for your exact inputs, and the supporting figures and step list give it context.`, b.id + ':faq4a') + ' ' + limitFaq },
+    { q: `When is the ${H(b.name, 'page')} most useful?`, a: usesFaq + ' ' + tipFaq }
   ];
 
   // ===== LSI terms (keyword-variant coverage without stuffing prose) =====
@@ -637,6 +747,10 @@ if (failures.length) {
 
 // ---------- verification gates ----------
 let errs = [];
+for (const key of Object.keys(TITLE_OVERRIDES)) {
+  if (!SEO[key]) errs.push(`title override key ${key}: no such entry`);
+  else if (SEO[key].title !== TITLE_OVERRIDES[key]) errs.push(`title override ${key} NOT applied`);
+}
 const titles = new Set(), metas = new Set(), canons = new Set();
 for (const [id, m] of Object.entries(SEO)) {
   if (!m.title || m.title.length > 60) errs.push(`${id}: title len ${m.title.length}`);

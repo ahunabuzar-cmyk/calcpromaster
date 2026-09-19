@@ -262,6 +262,11 @@ const App = (function () {
       : (parts.length >= 2 && parts[0] === 'hub' ? parts[1] : null);
     if (lazyCatKey && typeof window.DataLoader !== 'undefined' &&
         window.DataLoader.isLazy(lazyCatKey) && !window.DataLoader.isLoaded(lazyCatKey)) {
+      // NOTE: isLazy() covers BOTH the 16 always-lazy categories AND eager categories
+      // whose <script> tag the build trimmed from this prerendered page. isLoaded()
+      // checks CALC_DATA directly, so a page that booted with its own category eager
+      // skips this branch, while a trimmed category is fetched here first (same lazy
+      // path), then this navigation re-runs once the data arrives.
       // RACE-CONDITION GUARD: snapshot the current URL BEFORE awaiting the load.
       // If the user navigates elsewhere while the lazy file downloads, do NOT
       // re-run this (stale) navigation when the promise resolves — it would
@@ -590,6 +595,23 @@ const App = (function () {
       });
     }
   }
+
+  // PRERENDERED TOOL PAGE: keep only this page's own category data eager so first
+  // paint downloads one chunk instead of four (finance alone is ~1.4MB decoded).
+  // The dropped eager categories become on-demand: navigation re-fetches them via
+  // the same lazy loader, and idle/first-interaction warms them back (search +
+  // category counts recover within seconds, without ever blocking the LCP window).
+  (function drainEagerChunks() {
+    if (!document.documentElement.getAttribute('data-prerendered')) return;
+    if (typeof window.DataLoader === 'undefined' || !window.DataLoader.isEager) return;
+    var seg = (window.location.pathname.split('/').filter(Boolean)[0] || '');
+    if (!seg || !window.DataLoader.isEager(seg)) return;
+    var others = ['finance', 'health', 'math', 'everyday'].filter(function (k) { return k !== seg; });
+    function warm() { others.forEach(function (k) { window.DataLoader.ensure(k); }); }
+    // Idle drain: requestIdleCallback keeps it out of the load window entirely.
+    if (typeof requestIdleCallback === 'function') requestIdleCallback(warm, { timeout: 6000 });
+    else setTimeout(warm, 2500);
+  })();
 
   // Load all lazy category data on the first real user interaction (then refresh
   // on-screen counts + re-run an active search so lazy matches appear). Idempotent.
@@ -1113,6 +1135,22 @@ const App = (function () {
     html += disclaimer;
     
     main.innerHTML = html;
+    
+    // Idle-hydration: restore values the user typed into the prerendered form
+    // before the deferred rebuild (one-shot snapshot taken at flush time). URL
+    // share-state below restores later and takes precedence over the snapshot.
+    if (window.__restoreStaticInputs) {
+      try {
+        var _snap = window.__restoreStaticInputs;
+        Object.keys(_snap).forEach(function (k) {
+          var el = document.getElementById(k) || document.querySelector('[name="' + k + '"]');
+          if (el) el.value = _snap[k];
+        });
+      } catch (e) { /* snapshot restore is best-effort */ }
+      // One-shot: without this, a stale snapshot would leak into the NEXT
+      // tool's form on a later SPA navigation.
+      delete window.__restoreStaticInputs;
+    }
     
     // Translate the calculator buttons/labels for the active locale — this is
     // what makes the WHOLE tool page (not just the header) switch language.
@@ -3061,7 +3099,7 @@ const App = (function () {
         // form before the rebuild is preserved across the rebuild.
         var _preInputs = {};
         try {
-          document.querySelectorAll('#tool-root input, #tool-root select, #tool-root textarea').forEach(function (el) {
+          document.querySelectorAll('#mainContent input, #mainContent select, #mainContent textarea').forEach(function (el) {
             var k = el.id || el.name; if (k) _preInputs[k] = el.value;
           });
         } catch (e) {}
@@ -3079,8 +3117,8 @@ const App = (function () {
       var canonicalHref = canonical ? canonical.getAttribute('href') : null;
       var isSelfCanonical = canonicalHref && window.location.pathname === canonicalHref.replace(/^https?:\/\/[^/]+/, '');
       var locked = document.documentElement.hasAttribute('data-robots-lock');
-      if (!window.__staticHydrationDone && isSelfCanonical && !locked &&
-          window.__PRERENDERED__ === true) {
+      if (document.documentElement.getAttribute('data-prerendered') === '1' &&
+          isSelfCanonical && !locked) {
         _pendingStaticPath = window.location.pathname;
         _staticHydrationTimer = setTimeout(function () {
           _staticHydrationTimer = null;

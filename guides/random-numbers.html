@@ -91,14 +91,14 @@
   <p>Yes — and they should. Independent draws mean yesterday's result has zero effect on today's. In a 1–10 range, a repeat appears within about 7 picks on average. That feels "unrandom" to humans (the gambler's fallacy) but is mathematically correct. Tools labeled "unique picks" or "no repeats" instead sample without replacement, like dealing cards.</p>
 
   <h2>Common uses and how to set them up</h2>
-  <table>
+  <div class="table-wrap"><table>
     <tr><th>Use case</th><th>Setup</th></tr>
     <tr><td>Raffle / giveaway winner</td><td>Number each entrant, generate one value from 1 to N</td></tr>
     <tr><td>Dice replacement</td><td>Min 1, max = sides; one draw per die</td></tr>
     <tr><td>Lottery-style pick</td><td>Use no-repeat mode with your game's range</td></tr>
     <tr><td>Prize draw with 3 winners</td><td>Generate 3 unique values from 1 to N (or re-roll duplicates)</td></tr>
     <tr><td>Sampling for a survey</td><td>Number the population, draw k unique values</td></tr>
-  </table>
+  </table></div>
 
   <h2>Uniform vs weighted: when equal odds are the wrong answer</h2>
   <p>Every tool on this page is a <em>uniform</em> generator: each number in the range has exactly the same chance. That is what raffles and dice need — but not everything. Some real picks are <strong>weighted</strong>:</p>
@@ -120,10 +120,10 @@
 
   <h2>The 2d6 curve: why some dice totals are rarer than others</h2>
   <p>One honest limitation of "pick a number from 1 to 36" for dice replacement: it gives a <em>flat</em> distribution, while real two-dice throws are peaked. Every one of the 36 (die, die) combinations is equally likely, but a total of 7 has six of them (1+6, 2+5, 3+4, 4+3, 5+2, 6+1) while 2 or 12 have one each:</p>
-  <table>
+  <div class="table-wrap"><table>
     <thead><tr><th>Total</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th></tr></thead>
     <tbody><tr><td>Ways out of 36</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr></tbody>
-  </table>
+  </table></div>
   <p>So 7 comes up about 16.7% of the time — six times as often as snake eyes. Board games that "feel wrong" are usually just revealing this curve. For a dice game where the <em>shape</em> of the distribution matters, roll two dice separately (the <a href="/utilities/dice-roller">dice roller</a> does independent draws) rather than one uniform pick from the summed range.</p>
 
   <h2>Unique picks: how the odds actually change</h2>

@@ -62,6 +62,7 @@ const STATIC_PAGES = {
   'disclaimer-general': { title: 'General Disclaimer', desc: 'CalcProMaster provides calculators as-is. Results may not be accurate for all situations.', type: 'disclaimer' },
   'cookies': { title: 'Cookie Policy', desc: 'CalcProMaster cookie policy. We use minimal local storage, no tracking cookies.', type: 'cookies' },
   'contact': { title: 'Contact CalcProMaster', desc: 'Get in touch with the CalcProMaster team for questions, feedback, or bug reports.', type: 'contact' },
+  'editorial-policy': { title: 'Editorial Policy', desc: 'How CalcProMaster content is written, verified and corrected — published formulas, hand-checked examples, automated QA on every build.', type: 'editorial-policy' },
   'guides': { title: 'Educational Guides & How-To Articles', desc: 'Free step-by-step guides explaining how common calculations work — percentages, loan EMIs, age, BMI and more — with formulas and worked examples.', type: 'guides' },
   'favorites': { title: 'Your Favorites', desc: 'Your saved favorite calculators on CalcProMaster.', type: 'favorites' },
   'history': { title: 'Calculation History', desc: 'View your past calculations on CalcProMaster.', type: 'history' },

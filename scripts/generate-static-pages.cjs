@@ -24,6 +24,7 @@ const PAGES = {
   'disclaimer-general': { title: 'General Disclaimer', desc: 'CalcProMaster general disclaimer — calculators provide estimates for general information only and are not professional advice.', content: LegalPages.GENERAL_DISCLAIMER },
   'disclaimer-finance': { title: 'Financial Disclaimer', desc: 'CalcProMaster financial disclaimer — results are illustrative estimates, not financial advice. Verify with a licensed professional before acting.', content: LegalPages.FINANCIAL_DISCLAIMER },
   'disclaimer-health': { title: 'Health Disclaimer', desc: 'CalcProMaster health disclaimer — health and fitness calculators give general estimates only and are not medical advice.', content: LegalPages.HEALTH_DISCLAIMER },
+  'editorial-policy': { title: 'Editorial Policy', desc: 'How CalcProMaster content is written, verified and corrected: published formulas, hand-checked worked examples, and an automated QA contract on every build.', content: LegalPages.EDITORIAL_POLICY },
 };
 
 // Static pages don't load the SPA's Router, so inline onclick handlers that call

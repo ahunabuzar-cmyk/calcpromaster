@@ -71,12 +71,12 @@
   <h2>Series and parallel (where intuition breaks)</h2>
   <p><strong>Series:</strong> resistances add. Two 5 Ω resistors in series = 10 Ω, so the same 12 V drives only 12 ÷ 10 = <strong>1.2 A</strong>.</p>
   <p><strong>Parallel:</strong> 1/R = 1/R₁ + 1/R₂. Two 5 Ω in parallel = 2.5 Ω, so 12 ÷ 2.5 = <strong>4.8 A</strong> — parallel paths increase total current because each path sees the full voltage.</p>
-  <table>
+  <div class="table-wrap"><table>
     <tr><th>Configuration</th><th>Total R</th><th>Current at 12 V</th><th>Power</th></tr>
     <tr><td>Single 4 Ω</td><td>4 Ω</td><td>3.0 A</td><td>36 W</td></tr>
     <tr><td>Two 5 Ω in series</td><td>10 Ω</td><td>1.2 A</td><td>14.4 W</td></tr>
     <tr><td>Two 5 Ω in parallel</td><td>2.5 Ω</td><td>4.8 A</td><td>57.6 W</td></tr>
-  </table>
+  </table></div>
 
   <h2>Practical uses</h2>
   <p>Choosing an LED series resistor (supply voltage minus LED drop, divided by desired current), checking whether a wire gauge can carry a motor's inrush current, or verifying a power-supply spec. The <a href="/science/ohms-law">Ohm's Law Calculator</a> solves any missing variable; the <a href="/tech/resistor-color-code">Resistor Color Code</a> tool decodes the bands on the part itself.</p>

@@ -8,13 +8,13 @@ const BASE = 'http://localhost:3100';
 const PAGES = [
   ['home', '/'],
   ['finance/loan-emi', '/finance/loan-emi'],
-  ['math/percentage-calculator', '/math/percentage-calculator'],
-  ['health/bmi-calculator', '/health/bmi-calculator'],
+  ['math/percentage', '/math/percentage'],
+  ['health/bmi', '/health/bmi'],
   ['science/kinetic-energy', '/science/kinetic-energy'],
   ['engineering/beam-deflection', '/engineering/beam-deflection'],
-  ['construction/concrete-calculator', '/construction/concrete-calculator'],
-  ['conversion/temperature-converter', '/conversion/temperature-converter'],
-  ['fitness/calorie-burned', '/fitness/calorie-burned'],
+  ['construction/concrete-slab', '/construction/concrete-slab'],
+  ['conversion/temperature', '/conversion/temperature'],
+  ['food/calorie-burned', '/food/calorie-burned'],
   ['business/profit-margin', '/business/profit-margin'],
 ];
 

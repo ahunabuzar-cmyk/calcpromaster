@@ -69,7 +69,7 @@
     p{margin-bottom:10px;color:var(--text)}
     ul,ol{margin:8px 0 14px 22px}
     li{margin-bottom:4px}
-    table{border-collapse:collapse;margin:12px 0;width:100%}
+    .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}table{border-collapse:collapse;margin:12px 0;width:100%}
     th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;font-size:14px}
     th{background:var(--surface);font-weight:700}
     .legal-meta{font-size:13px;color:var(--text-light);margin-bottom:18px}
@@ -116,13 +116,13 @@
       </div>
 
       <h2>BMI ranges (WHO classification)</h2>
-      <table>
+      <div class="table-wrap"><table>
         <tr><th>BMI</th><th>Category</th></tr>
         <tr><td>Below 18.5</td><td>Underweight</td></tr>
         <tr><td>18.5 – 24.9</td><td>Normal / healthy weight</td></tr>
         <tr><td>25 – 29.9</td><td>Overweight</td></tr>
         <tr><td>30 and above</td><td>Obese</td></tr>
-      </table>
+      </table></div>
       <p class="legal-meta">Classification per the World Health Organization, as used by most health authorities. Children use age- and sex-specific percentile charts instead of these adult cut-offs.</p>
 
       <h2>The honest limitations of BMI</h2>

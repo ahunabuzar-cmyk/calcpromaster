@@ -69,7 +69,7 @@
     p{margin-bottom:10px;color:var(--text)}
     ul,ol{margin:8px 0 14px 22px}
     li{margin-bottom:4px}
-    table{border-collapse:collapse;margin:12px 0;width:100%}
+    .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}table{border-collapse:collapse;margin:12px 0;width:100%}
     th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;font-size:14px}
     th{background:var(--surface);font-weight:700}
     .legal-meta{font-size:13px;color:var(--text-light);margin-bottom:18px}
@@ -132,12 +132,12 @@
       </ul>
 
       <h2>Levers that move the number most</h2>
-      <table>
+      <div class="table-wrap"><table>
         <tr><th>Lever</th><th>Effect</th></tr>
         <tr><td>Cut expenses by $5,000/yr</td><td>Target drops by ~$125,000 (25x)</td></tr>
         <tr><td>Retire 5 years later</td><td>Higher savings + fewer withdrawal years compound strongly</td></tr>
         <tr><td>Pay off home before retiring</td><td>Removes the biggest single expense line</td></tr>
-      </table>
+      </table></div>
 
       <h2>Why the 4% is a starting rate, not a flat amount</h2>
       <p>The guideline comes from historical simulations of balanced portfolios surviving 30-year retirements — it is evidence-based but not a guarantee. What it actually specifies is the <em>first-year</em> withdrawal; after that you raise the dollar amount with inflation. On a $1,000,000 portfolio with 3% inflation, the withdrawal path looks like: Year 1 $40,000 → Year 2 $41,200 → Year 3 $42,436 → Year 4 $43,709 → Year 5 $45,020. Same 4% start, growing dollars — which is why a portfolio that only yields 4% nominal cannot sustain it, and why real (after-inflation) returns are the number that matters. The <a href="/finance/retirement">Retirement Calculator</a> models this trajectory for your own numbers.</p>

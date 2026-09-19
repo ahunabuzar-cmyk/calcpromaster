@@ -69,7 +69,7 @@
     p{margin-bottom:10px;color:var(--text)}
     ul,ol{margin:8px 0 14px 22px}
     li{margin-bottom:4px}
-    table{border-collapse:collapse;margin:12px 0;width:100%}
+    .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}table{border-collapse:collapse;margin:12px 0;width:100%}
     th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;font-size:14px}
     th{background:var(--surface);font-weight:700}
     .legal-meta{font-size:13px;color:var(--text-light);margin-bottom:18px}
@@ -124,12 +124,12 @@
       </div>
 
       <h2>Which should you pick?</h2>
-      <table>
+      <div class="table-wrap"><table>
         <tr><th>Choose</th><th>If…</th></tr>
         <tr><td>Snowball</td><td>You need visible progress to stay motivated; several small balances feel overwhelming.</td></tr>
         <tr><td>Avalanche</td><td>You are numbers-driven and the highest-rate debt is also a large one.</td></tr>
         <tr><td>Hybrid</td><td>Kill one small balance first for a win, then switch to avalanche order.</td></tr>
-      </table>
+      </table></div>
 
       <h2>Frequently missed moves</h2>
       <ul>
@@ -151,11 +151,11 @@
 
       <h2>Snowball vs avalanche: the same scenario, both ways</h2>
       <p>Take three cards and a fixed $300 monthly budget: Card A $500 at 20% APR (min $25), Card B $2,000 at 12% (min $60), Card C $5,000 at 6% (min $100).</p>
-      <table>
+      <div class="table-wrap"><table>
         <tr><th>Strategy</th><th>Order</th><th>Debt-free in</th><th>Total interest</th></tr>
         <tr><td>Avalanche (highest rate first)</td><td>A → B → C</td><td>28 months</td><td>$644.57</td></tr>
         <tr><td>Snowball (smallest balance first)</td><td>C → B → A</td><td>28 months</td><td>$827.93</td></tr>
-      </table>
+      </table></div>
       <p>Avalanche saves about $183 in interest here. Snowball's advantage is behavioral: Card C's balance takes far longer to clear, so some people lose motivation before the finish. If you know you're the type who needs an early win, snowball's small premium is money well spent — the mathematically optimal plan you abandon loses to the imperfect one you finish. Model both with the <a href="/finance/debt-snowball">Debt Snowball Calculator</a> or the <a href="/finance/credit-card-payoff">Credit Card Payoff Calculator</a>.</p>
 
       <h2>FAQ</h2>

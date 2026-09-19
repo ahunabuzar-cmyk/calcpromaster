@@ -65,7 +65,17 @@ function renderSpotlight(containerId) {
   function buildSpotlightHTML(containerId) {
     const calc = getTodaysCalculator();
     const tool = getToolInfo(calc.id, calc.cat);
-    if (!tool) return '';
+    if (!tool) {
+      // Daily pick lives in a lazily-loaded category (science/tech/utilities/etc.)
+      // and its data hasn't arrived yet: load it on demand, then re-render the
+      // spotlight. First pass still returns '' so the home render stays pure.
+      if (window.DataLoader && DataLoader.isLazy(calc.cat) && !DataLoader.isLoaded(calc.cat)) {
+        DataLoader.ensure(calc.cat).then(function (ok) {
+          if (ok) renderSpotlight(containerId);
+        }).catch(function () {});
+      }
+      return '';
+    }
     
     const usage = CalcAnalytics.getData().tools?.[calc.id]?.count || 0;
     const isFav = AdvancedFeatures.isFavorite ? AdvancedFeatures.isFavorite(calc.id) : false;

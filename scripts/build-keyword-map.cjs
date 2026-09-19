@@ -15,6 +15,7 @@
 const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
+const { tier, score } = require('./keyword-difficulty.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const DATA_DIR = path.join(ROOT, 'js', 'data');
@@ -80,7 +81,9 @@ for (const [cat, arr] of Object.entries(toolsByCat)) {
     if (!ok) join.titleMismatch++;
     else join.matched++;
     const kws = (t.kw || '').split(',').map(s => s.trim()).filter(Boolean);
-    rows.push({ cat, url, name: t.name, title: titleClean, meta: page.meta, kws });
+    // difficulty per keyword (shared model with docs/KEYWORD-DIFFICULTY.md)
+    const kwTags = kws.map(k => k + ' [' + tier(k) + '/' + score(k) + ']');
+    rows.push({ cat, url, name: t.name, title: titleClean, meta: page.meta, kws: kwTags });
   }
 }
 
@@ -116,6 +119,7 @@ push('');
 push('- **Primary keyword** = the page `<title>` (what Google shows; the exact-match anchor of every page).');
 push('- **Secondary surface** = the `<meta description>` (long-tail + intent modifiers).');
 push('- **Curated long-tail phrases** = the `kw` field in `js/data/*.js` — the specific queries each tool was built to rank for (feature + audience + locale modifiers). These are woven into page copy, FAQs and JSON-LD.');
+push('- **Difficulty tag** on each keyword = `[TIER/score]` from `scripts/keyword-difficulty.cjs` — EASY (2) = 4+ word long-tail with intent qualifier (few strong brands in top-10 — go after), MEDIUM (3–4) = needs some links, HARD (5) = head term with brand-wall SERP (park until authority grows), BRAND (1) = own brand queries. Model + evidence: **docs/KEYWORD-DIFFICULTY.md**.');
 push('- Indexable pages audited: **' + pages.length + '** (noindex variant pages excluded by design).');
 push('');
 push('**Totals:** ' + rows.length + ' calculator pages · ' + hubRows.length + ' category hubs · ' + guideRows.length + ' guides · ' + blogRows.length + ' blog posts · ' + staticRows.length + ' support/static pages.');

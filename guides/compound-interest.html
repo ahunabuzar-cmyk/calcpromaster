@@ -69,7 +69,7 @@
     p{margin-bottom:10px;color:var(--text)}
     ul,ol{margin:8px 0 14px 22px}
     li{margin-bottom:4px}
-    table{border-collapse:collapse;margin:12px 0;width:100%}
+    .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}table{border-collapse:collapse;margin:12px 0;width:100%}
     th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;font-size:14px}
     th{background:var(--surface);font-weight:700}
     .legal-meta{font-size:13px;color:var(--text-light);margin-bottom:18px}
@@ -128,13 +128,13 @@
       </div>
 
       <h2>How compounding frequency changes the result</h2>
-      <table>
+      <div class="table-wrap"><table>
         <tr><th>Frequency</th><th>n</th><th>Balance after 10 yrs</th></tr>
         <tr><td>Annually</td><td>1</td><td>$21,589</td></tr>
         <tr><td>Quarterly</td><td>4</td><td>$22,080</td></tr>
         <tr><td>Monthly</td><td>12</td><td>$22,196</td></tr>
         <tr><td>Daily</td><td>365</td><td>$22,255</td></tr>
-      </table>
+      </table></div>
       <p>More frequent compounding always earns more, but the gains flatten out — daily adds little over monthly.</p>
 
       <h2>The Rule of 72 (quick mental math)</h2>
@@ -147,14 +147,14 @@
 
       <h2>The Rule of 72, tested against the exact math</h2>
       <p>The rule says doubling time ≈ 72 ÷ rate. At 8% that predicts 9 years; the exact answer from the formula is ln(2) ÷ ln(1.08) = <strong>9.006 years</strong> — off by about 2 days. That accuracy holds across the rates people actually meet:</p>
-      <table>
+      <div class="table-wrap"><table>
         <tr><th>Rate</th><th>Rule of 72</th><th>Exact years</th></tr>
         <tr><td>4%</td><td>18.0</td><td>17.67</td></tr>
         <tr><td>6%</td><td>12.0</td><td>11.90</td></tr>
         <tr><td>8%</td><td>9.0</td><td>9.01</td></tr>
         <tr><td>12%</td><td>6.0</td><td>6.12</td></tr>
         <tr><td>18%</td><td>4.0</td><td>4.19</td></tr>
-      </table>
+      </table></div>
       <p>The rule drifts high below ~8% and low above it (72 ÷ 3 = 24 vs the exact 23.4; credit-card debt at 36% doubles in 2.34 years, not 2). For 2–15% it is reliably within a few months — good enough for negotiation table arithmetic, which is its real job.</p>
       <p>The same doubling logic runs in reverse and that is its sharpest use: <strong>inflation is compounding too</strong>. At 6% inflation, prices double in ~12 years, halving your money's purchasing power in the same time. A savings account paying 4% while inflation runs 6% is a guaranteed-loss machine wearing a positive number — the <a href="/guides/inflation">inflation guide</a> works through that arithmetic.</p>
 

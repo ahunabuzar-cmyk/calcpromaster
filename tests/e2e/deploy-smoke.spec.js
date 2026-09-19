@@ -156,7 +156,10 @@ test.describe('deploy live smoke — behavior', () => {
     // (category, app-route and locale-prefix samples of the full whitelist).
     expect(redirects).not.toMatch(/^\/\*\s+\/index\.html\s+200/m);
     expect(redirects).toMatch(/\/finance\/\*\s+\/index\.html\s+200/);
-    expect(redirects).toMatch(/\/hub\/\*\s+\/index\.html\s+200/);
+    // /hub/* must NOT rewrite to the SPA: hub pages are prerendered static
+    // files (deploy/hub/<cat>/index.html) and bare /hub is a true 404 (the
+    // SPA has no bare-hub renderer) — the 404 contract pinned in "bare URLs".
+    expect(redirects).not.toMatch(/^\/hub\/\*\s+\/index\.html\s+200/m);
     expect(redirects).toMatch(/\/es\/\*\s+\/index\.html\s+200/);
     // Hard-404 catch-all must be the LAST rule (unknown extensionless paths
     // get the real 404 page, never a 200 home page).

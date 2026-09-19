@@ -406,6 +406,30 @@ for (const tool of tools) {
     ogTitle: title, ogDesc: desc, ogImage,
     heroPreload: ogImage
   });
+  // Mark the shell as carrying a prerendered tool article. app.js uses this
+  // (plus a self-canonical check) to defer the first identical rebuild to idle
+  // — the baked DOM is already on screen, so hydration right at boot would
+  // block the main thread inside the LCP window on slow devices.
+  page = page.replace('<html', '<html data-prerendered="1"');
+  // PER-PAGE DATA TRIM: the shell ships 4 eager category chunks (finance/health/
+  // math/everyday). A prerendered TOOL page only needs its OWN category to render
+  // the calculator — drop the other three <script defer> tags and their <link
+  // rel=preload> hints so first paint downloads one chunk instead of four
+  // (finance alone is ~1.4MB decoded). app.js + data-loader.js re-fetch the
+  // dropped chunks on demand (SPA navigation) or at idle, so search and category
+  // counts recover within seconds — outside the LCP window. Category/hub pages
+  // keep all four: their templates read counts across categories at boot.
+  const EAGER_DATA_TAGS = [
+    { cat: 'finance',  file: 'js/data/finance.js' },
+    { cat: 'health',   file: 'js/data/health.js' },
+    { cat: 'math',     file: 'js/data/math.js' },
+    { cat: 'everyday', file: 'js/data/everyday.js' }
+  ];
+  for (const t of EAGER_DATA_TAGS) {
+    if (t.cat === catKey) continue;
+    page = page.replace('<script defer src="' + t.file + '"></script>', '');
+    page = page.replace('<link rel="preload" as="script" href="' + t.file + '">', '');
+  }
   page = rewriteSchema(page, buildToolSchema(tool, catKey, canonPath));
   page = rewriteMain(page, buildToolContent(tool, catKey));
   writePage(path.join(catKey, tool.id), page);

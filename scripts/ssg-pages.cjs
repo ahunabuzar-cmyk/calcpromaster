@@ -283,6 +283,20 @@ function buildToolContent(tool, catKey) {
 }
 
 // Related calculators: same-category neighbors first, then keyword overlap, up to 6.
+// Cluster map (C1–C8): cross-category intent clusters that getRelated() pulls
+// up to 2 links from, so intent islands (e.g. /finance/loan-emi ↔
+// /auto/car-loan-emi) are visibly connected. Validated by
+// scripts/check-cluster-links.cjs against the sitemap.
+const CLUSTERS = require(path.join(ROOT, 'js', 'cluster-map.js'));
+const clusterByPage = (() => {
+  const m = new Map(); // 'cat/id' -> { cluster, isHub }
+  for (const c of CLUSTERS) {
+    m.set(c.hub, { cluster: c, isHub: true });
+    for (const s of c.spokes) if (!m.has(s)) m.set(s, { cluster: c, isHub: false });
+  }
+  return m;
+})();
+
 function getRelated(tool, catKey) {
   const rel = [];
   const seen = new Set([tool.id]);
@@ -298,6 +312,29 @@ function getRelated(tool, catKey) {
       if (rel.length >= 6) break;
       if (!seen.has(x.t.id)) { seen.add(x.t.id); rel.push(x.t); }
     }
+  }
+  // Cluster override: up to 2 links from this page's intent cluster first
+  // (hub first, then spokes) — cross- OR same-category, keeping the total at 6.
+  // Dedupe via `seen` prevents double links; single-category clusters (e.g.
+  // C3 tax, C7 crypto) rely on this to connect hub ↔ spokes at all. When the
+  // page IS the hub, link a couple of spokes (they already link back via the
+  // same rule, and the hub lists every tool in its own category anyway).
+  const pageKey = catKey + '/' + tool.id;
+  const entry = clusterByPage.get(pageKey);
+  if (entry) {
+    const c = entry.cluster;
+    const candidates = (entry.isHub ? c.spokes.slice() : [c.hub, ...c.spokes])
+      .map(k => { const i = k.indexOf('/'); return { cat: k.slice(0, i), id: k.slice(i + 1) }; })
+      .filter(k => k.cat !== catKey || k.id !== tool.id);
+    const picks = [];
+    for (const k of candidates) {
+      if (picks.length >= 2) break;
+      if (seen.has(k.id)) continue;
+      if (!tools.some(t => t.cat === k.cat && t.id === k.id)) continue; // safety: registry-only
+      picks.push(k); seen.add(k.id);
+    }
+    for (let i = picks.length - 1; i >= 0; i--) rel.unshift(picks[i]);
+    if (rel.length > 6) rel.length = 6;
   }
   return rel.slice(0, 6);
 }

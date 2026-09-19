@@ -1306,6 +1306,39 @@ const App = (function () {
       }
       related = related.slice(0, 6);
     }
+    // Cluster links (C1–C8): up to 2 links from this page's intent cluster,
+    // mirroring the build-time behavior in ssg-pages.cjs so prerendered and
+    // SPA-rendered pages never diverge. Cross- OR same-category (single-
+    // category clusters like C3 tax connect hub ↔ spokes only through this).
+    // Hub pages link spokes; spokes link the hub first.
+    const clusters = (typeof window !== 'undefined' && window.__CLUSTERS__) || [];
+    if (clusters.length) {
+      if (!renderRelated._idx) {
+        renderRelated._idx = new Map();
+        for (const c of clusters) {
+          renderRelated._idx.set(c.hub, { cluster: c, isHub: true });
+          for (const s of c.spokes) if (!renderRelated._idx.has(s)) renderRelated._idx.set(s, { cluster: c, isHub: false });
+        }
+      }
+      const pageKey = catKey + '/' + tool.id;
+      const entry = renderRelated._idx.get(pageKey);
+      if (entry) {
+        const c = entry.cluster;
+        const candidates = (entry.isHub ? c.spokes.slice() : [c.hub].concat(c.spokes))
+          .map(k => { const i = k.indexOf('/'); return { cat: k.slice(0, i), id: k.slice(i + 1) }; })
+          .filter(k => (k.cat !== catKey || k.id !== tool.id) && CALC_DATA[k.cat] && CALC_DATA[k.cat].tools.some(t => t.id === k.id));
+        const seen = new Set(related.map(t => t.id)); seen.add(tool.id);
+        const picks = [];
+        for (const k of candidates) {
+          if (picks.length >= 2) break;
+          if (seen.has(k.id)) continue;
+          const t = CALC_DATA[k.cat].tools.find(x => x.id === k.id);
+          if (t) { picks.push(t); seen.add(k.id); }
+        }
+        for (let i = picks.length - 1; i >= 0; i--) related.unshift(picks[i]);
+        related = related.slice(0, 6);
+      }
+    }
     if (related.length === 0) { area.style.display = 'none'; return; }
     // Remember the related order so touch swipe navigates through genuinely
     // similar tools (cross-category too) instead of raw category neighbors.

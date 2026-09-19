@@ -31,6 +31,7 @@
     "serve": "node server.js",
     "deploy:build": "node build-deploy.js",
     "deploy": "npm run deploy:build && echo 'Upload the deploy/ folder to Netlify'",
+    "cluster:check": "node scripts/check-cluster-links.cjs",
     "sitemap": "node generate-sitemap.js",
     "intros": "node generate-intros.js",
     "sitemap:i18n": "node generate-sitemap.js --i18n",

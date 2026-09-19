@@ -4165,7 +4165,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 - Keywords: gst calculator india calculator [EASY/2]
 
 **/regional/stamp-duty — Stamp Duty & Registration Calculator**
-- Title: Stamp Duty & Registration: Total Property Cost
+- Title: Stamp Duty & Registration Calculator: Total Cost
 - Keywords: stamp duty calculator [MEDIUM/3] · property cost india [MEDIUM/3]
 
 **/regional/home-loan-emi-india — Home Loan EMI Calculator India**
@@ -4277,7 +4277,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 - Keywords: gratuity calculator india payment of gratuity act [EASY/2]
 
 **/regional/stamp-duty-india — Stamp Duty & Registration (India)**
-- Title: Stamp Duty (India): State-Wise Charges & Fees
+- Title: Stamp Duty & Registration (India): State Charges
 - Keywords: stamp duty calculator india property registration charges [EASY/2]
 
 **/regional/gst-calculator — GST Payable (Input Tax Credit)**
@@ -5058,6 +5058,6 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-09-18.
 
 ## 6. Join-quality audit (extraction honesty)
 
-- Tool↔URL joins with matching title: **1199**
-- Joins where the title did not literally contain the tool name (renamed/rebranded tools — kept, flagged here): **2**
+- Tool↔URL joins with matching title: **1201**
+- Joins where the title did not literally contain the tool name (renamed/rebranded tools — kept, flagged here): **0**
 - Data entries with no matching indexable page: **0** (data-only tools, groups, or noindex variants)

@@ -441,8 +441,8 @@ const TITLE_OVERRIDES = {
   'ideal-weight': 'Ideal Body Weight: Devine, Hamwi & Robinson',
   'sleep-calc': 'Sleep Cycle Calculator: 90-Minute Cycle Bedtime',
   'sleep': 'Sleep Calculator: Best Time To Wake Up',
-  'stamp-duty': 'Stamp Duty & Registration: Total Property Cost',
-  'stamp-duty-india': 'Stamp Duty (India): State-Wise Charges & Fees'
+  'stamp-duty': 'Stamp Duty & Registration Calculator: Total Cost',
+  'stamp-duty-india': 'Stamp Duty & Registration (India): State Charges'
 };
 
 // ---------- build the entry ----------

@@ -35,7 +35,7 @@ hain — ek baar setup, phir kabhi kuch nahi karna.
 4. Download hua file rename kar do: **`service-account.json`**
    (ya koi bhi naam — bas `service-account` se shuru ho, git-ignored hai).
 5. File ko **project root** mein daal do (jahan `package.json` hai).
-   Final path: `C:\Users\ok\Documents\website\project\service-account.json`
+   Final path: `C:\Users\ok\Documents\Calculator\project\service-account.json`
 
 ## Step 4 — GA4 property mein access do (2 min)
 

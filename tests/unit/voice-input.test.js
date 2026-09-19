@@ -12,12 +12,16 @@
  *
  * Asserts the observable contract:
  *   - unsupported browser → toast + no crash
+ *   - iOS Safari (no SpeechRecognition) → honest browser-recommendation toast
  *   - number extraction from a spoken transcript ("my rent is 75.5" → 75.5)
+ *   - WORD numbers: "seventy five point five" → 75.5, "minus three" → -3,
+ *     "two thousand" → 2000, "one lakh" → 100000 (South-Asian usage)
  *   - value written into the TARGET input (not just the first one)
  *   - input + change events dispatched (drives live auto-calc)
  *   - non-numeric transcript → "No number detected" toast
  *   - missing input id → "Input not found" toast
- *   - recognition error → "Voice error: ..." toast
+ *   - recognition errors → friendly action-specific toasts ("not-allowed" no
+ *     longer shows the raw engine code)
  *   - start() throwing (already listening) → graceful toast
  */
 import { describe, it, expect } from 'vitest';
@@ -41,7 +45,7 @@ function buildFakeInput(id) {
   return obj;
 }
 
-function buildHarness({ supported = true, startThrows = false, inputId = 'loan-amount' } = {}) {
+function buildHarness({ supported = true, startThrows = false, inputId = 'loan-amount', ios = false } = {}) {
   const toasts = [];
   // Numeric inputs in document order (dictation fills these in order)
   const inputs = {
@@ -80,6 +84,13 @@ function buildHarness({ supported = true, startThrows = false, inputId = 'loan-a
   const sandbox = {
     console,
     window: {},
+    // watchdog + permission-guard use these (real timers in tests = no-op fine)
+    setTimeout: (fn) => setTimeout(fn, 0),
+    clearTimeout: (id) => clearTimeout(id),
+    // isIOS() reads navigator — absent in Node, present (iPhone) when ios:true
+    navigator: ios
+      ? { userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15', platform: 'iPhone', maxTouchPoints: 5, permissions: undefined }
+      : undefined,
     Security: { safeGetItem: () => [], safeSetItem: () => {}, safeRemoveItem: () => {} },
     App: {
       showToast: (m) => toasts.push(String(m)),
@@ -129,12 +140,19 @@ function dictationHarness({ supported = true } = {}) {
 }
 
 describe('AdvancedFeatures voice input', () => {
-  it('toasts "not supported" without crashing when SpeechRecognition is unavailable', () => {
+  it('toasts a Chrome/Edge recommendation without crashing when SpeechRecognition is unavailable', () => {
     const { api, toasts } = buildHarness({ supported: false });
     api.voiceInput('loan-amount');
-    expect(toasts).toContain('Voice input not supported in this browser');
+    expect(toasts[0]).toContain('not supported in this browser');
+    expect(toasts[0]).toContain('Chrome or Edge');
     // only one toast — the code paths must not fall through to others
     expect(toasts).toHaveLength(1);
+  });
+
+  it('gives iOS Safari users an honest browser recommendation (no SpeechRecognition there)', () => {
+    const { api, toasts } = buildHarness({ supported: false, ios: true });
+    api.voiceInput('loan-amount');
+    expect(toasts[0]).toContain('iOS Safari does not support it');
   });
 
   it('configures and starts recognition on a supported browser', () => {
@@ -186,11 +204,20 @@ describe('AdvancedFeatures voice input', () => {
     expect(toasts).toContain('Input not found');
   });
 
-  it('surfaces recognition errors via toast', () => {
+  it('maps engine errors to friendly, actionable toasts (not raw codes)', () => {
     const h = buildHarness({ supported: true });
     h.api.voiceInput('loan-amount');
     h.getRecognition().onerror({ error: 'not-allowed' });
-    expect(h.toasts).toContain('Voice error: not-allowed');
+    expect(h.toasts.some(t => t.includes('Mic blocked') && t.includes('Site settings'))).toBe(true);
+    expect(h.toasts.some(t => t.includes('Voice error: not-allowed'))).toBe(false);
+    // network errors also mapped
+    h.api.voiceInput('loan-amount');
+    h.getRecognition().onerror({ error: 'network' });
+    expect(h.toasts.some(t => t.includes('Speech service unreachable'))).toBe(true);
+    // unknown errors still surface
+    h.api.voiceInput('loan-amount');
+    h.getRecognition().onerror({ error: 'weird-engine-failure' });
+    expect(h.toasts.some(t => t.includes('Voice error: weird-engine-failure'))).toBe(true);
   });
 
   it('clears the active-input state after recognition ends', () => {
@@ -266,6 +293,37 @@ describe('Voice dictation (fill all inputs)', () => {
     const h = dictationHarness({ supported: false });
     h.api.initVoiceArea();
     h.voiceArea.children[0].click();
-    expect(h.toasts).toContain('Voice input not supported in this browser');
+    expect(h.toasts[0]).toContain('not supported in this browser');
+  });
+});
+
+describe('transcriptToNumber (spoken words → number)', () => {
+  const cases = [
+    ['75', 75],
+    ['12.5', 12.5],
+    ['-3', -3],
+    ['my rent is 75.5 dollars', 75.5],
+    ['seventy five', 75],
+    ['seventy five point five', 75.5],
+    ['minus three', -3],
+    ['negative twelve', -12],
+    ['two thousand', 2000],
+    ['one hundred twenty three', 123],
+    ['one lakh', 100000],
+    ['one lac fifty thousand', 150000],
+    ['rate is ten point two five percent', 10.25],
+    ['enter value seventy five', 75],
+    ['zero point five', 0.5],
+    ['hello world', null],
+    ['please check the fields', null]
+  ];
+  const h = buildHarness({ supported: true });
+  for (const [transcript, want] of cases) {
+    it(`"${transcript}" → ${want}`, () => {
+      expect(h.api.transcriptToNumber(transcript)).toBeCloseTo(want, 9);
+    });
+  }
+  it('null case returns exactly null (toBeCloseTo would fail on null)', () => {
+    expect(h.api.transcriptToNumber('hello world')).toBeNull();
   });
 });

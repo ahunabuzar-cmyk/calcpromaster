@@ -410,43 +410,203 @@ function runComparisonMode() {
   }
 
   // ---------- Voice Input ----------
+  // Chrome ships SpeechRecognition as a hosted service: start() can silently do
+  // NOTHING when the mic permission is blocked, the speech backend is
+  // unreachable, or the engine stalls. Those "silent start" cases used to leave
+  // the user staring at a forever-"Listening..." toast with zero feedback. So:
+  //  - every attempt uses a FRESH instance (a used/errored instance is dead —
+  //    calling start() on it throws InvalidStateError or just no-ops)
+  //  - a watchdog fires 'not-responding' if onstart/onresult/onerror never fire
+  //  - permission is pre-checked so we can say WHY nothing happened
+  //  - iOS Safari has no SpeechRecognition: honest unsupported message upfront
   let recognition = null;
   let _voiceActiveInput = null;
-  function initVoice() {
+  let _voiceWatchdog = null;
+  const _VOICE_WATCHDOG_MS = 6000;
+  function isIOS() {
+    if (typeof navigator === 'undefined') return false;
+    return /iP(hone|ad|od)/.test(navigator.userAgent) ||
+      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1); // iPadOS 13+
+  }
+  // Permission pre-check wrapper. With the Permissions API: async — a DENIED
+  // mic gets a friendly toast BEFORE start() (whose silence is otherwise
+  // indistinguishable from a stalled engine). Without it (old browsers,
+  // sandboxed tests): start synchronously — the onerror 'not-allowed' mapping
+  // is the safety net.
+  function _guardMicPermission(allowed) {
+    if (typeof navigator === 'undefined' || !navigator.permissions || !navigator.permissions.query) { allowed(); return; }
+    navigator.permissions.query({ name: 'microphone' }).then(
+      function (st) {
+        if (st.state === 'denied') {
+          App.showToast('Mic is blocked for this site — allow microphone (padlock icon → Site settings) and retry');
+          return;
+        }
+        allowed();
+      },
+      function () { allowed(); } // query unsupported → just try
+    );
+  }
+  function clearVoiceWatchdog() {
+    if (_voiceWatchdog) { clearTimeout(_voiceWatchdog); _voiceWatchdog = null; }
+  }
+  function armVoiceWatchdog() {
+    clearVoiceWatchdog();
+    _voiceWatchdog = setTimeout(function () {
+      // No start, no error, no result within the window: the engine is stalled
+      // (blocked permission handled elsewhere; this is the silent-service case).
+      try { recognition.stop(); } catch (e) { /* already dead */ }
+      App.showToast('Voice is not responding — check mic permission (site settings) or try Chrome');
+    }, _VOICE_WATCHDOG_MS);
+  }
+  // Fresh instance per attempt: webkitSpeechRecognition objects are single-use.
+  function freshRecognition() {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (!SR) return false;
+    if (!SR) return null;
     recognition = new SR();
     recognition.continuous = false;
     recognition.interimResults = false;
     recognition.lang = 'en-US';
-    return true;
+    return recognition;
   }
-  // Universal per-input voice: works on ANY numeric input of ANY tool (the old
-  // startVoice() only targeted the first input and the button was hidden on tools
-  // with >5 inputs). Kept as a thin wrapper for backward compat.
+  function initVoice() {
+    if (isIOS()) return false; // no SpeechRecognition on iOS Safari — honest early-out
+    return !!freshRecognition();
+  }
+  // "seventy five point five" -> "75.5". Chrome's en-US engine DOES return
+  // word-numbers for 0-20 and exact tens/hundreds; the old regex-only parser
+  // matched nothing on those transcripts ("No number detected").
+  const _NUM_WORDS = { zero: 0, one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, eleven: 11, twelve: 12, thirteen: 13, fourteen: 14, fifteen: 15, sixteen: 16, seventeen: 17, eighteen: 18, nineteen: 19, twenty: 20, thirty: 30, forty: 40, fourty: 40, fifty: 50, sixty: 60, seventy: 70, eighty: 80, ninety: 90, hundred: 100, thousand: 1000, million: 1000000, 'lac': 100000, 'lakh': 100000 };
+  function wordsToNumber(words) {
+    const parts = String(words).toLowerCase().replace(/-/g, ' ').split(/\s+/).filter(Boolean);
+    let total = 0, current = 0, seen = false;
+    for (const w of parts) {
+      if (w in _NUM_WORDS) {
+        seen = true;
+        const v = _NUM_WORDS[w];
+        if (v === 100 || v === 1000 || v === 100000 || v === 1000000) {
+          current = (current || 1) * v;
+          total += current;
+          current = 0;
+        } else {
+          current += v;
+        }
+      } else { break; }
+    }
+    if (!seen) return null;
+    return total + current;
+  }
+  // Extract the first number from a transcript: digits first, then word-numbers
+  // ("75", "12.5", "-3", "seventy five point five", "two thousand", "enter
+  // value seventy five" -> 75). Token-scan: skip filler words, find the first
+  // run of number-words, honor minus/negative and "point" decimals.
+  function transcriptToNumber(transcript) {
+    const t = String(transcript).toLowerCase().replace(/,/g, ' ');
+    const digit = t.match(/-?\d+(?:\.\d+)?/);
+    if (digit) {
+      const n = parseFloat(digit[0]);
+      if (isFinite(n)) return n;
+    }
+    const tokens = t.replace(/[^a-z\s-]/g, ' ').split(/\s+/).filter(Boolean);
+    let sign = 1;
+    for (let i = 0; i < tokens.length; i++) {
+      if (tokens[i] === 'minus' || tokens[i] === 'negative') { sign = -1; continue; }
+      if (tokens[i] === 'point' || !(tokens[i] in _NUM_WORDS)) continue;
+      // Consume the run of number-words starting here (+ optional "point" tail).
+      let j = i, total = 0, current = 0, seen = false, fracRun = null;
+      while (j < tokens.length) {
+        const w = tokens[j];
+        if (w === 'point' && seen && fracRun === null) { fracRun = []; j++; continue; }
+        if (fracRun !== null) {
+          if (w in _NUM_WORDS) { fracRun.push(w); j++; continue; }
+          break;
+        }
+        if (!(w in _NUM_WORDS)) break;
+        seen = true;
+        const v = _NUM_WORDS[w];
+        if (v === 100 || v === 1000 || v === 100000 || v === 1000000) {
+          current = (current || 1) * v;
+          total += current;
+          current = 0;
+        } else {
+          current += v;
+        }
+        j++;
+      }
+      if (seen) {
+        let n = total + current;
+        if (fracRun && fracRun.length) {
+          // Decimal tail: digit words are PLACE VALUES ("point two five" = .25),
+          // not addition (which would give .7). Non-digit words fall back to
+          // wordsToNumber (best effort).
+          const allDigits = fracRun.every(w => _NUM_WORDS[w] !== undefined && _NUM_WORDS[w] < 10);
+          if (allDigits) {
+            let scale = 1;
+            for (const w of fracRun) { scale *= 10; n += _NUM_WORDS[w] / scale; }
+          } else {
+            const fd = wordsToNumber(fracRun.join(' '));
+            if (fd != null) {
+              let div = 1, len = String(fd).length;
+              while (len-- > 0) div *= 10;
+              n += fd / div;
+            }
+          }
+        }
+        return isFinite(n) ? sign * n : null;
+      }
+    }
+    return null;
+  }
+  function _voiceCommonHandlers(targetInputId) {
+    clearVoiceWatchdog();
+    armVoiceWatchdog();
+    recognition.onstart = function () { clearVoiceWatchdog(); };
+    recognition.onaudiostart = function () { clearVoiceWatchdog(); };
+    recognition.onerror = function (e) {
+      clearVoiceWatchdog();
+      const map = {
+        'not-allowed': 'Mic blocked — allow microphone for this site (padlock icon → Site settings)',
+        'service-not-allowed': 'Speech service blocked — check browser settings or try Chrome',
+        'network': 'Speech service unreachable — check your connection',
+        'language-not-supported': 'Speech language not supported in this browser',
+        'audio-capture': 'No microphone found',
+        'aborted': null // user/initiated cancel — silent
+      };
+      if (e.error === 'no-speech') { App.showToast('No speech heard — try again'); return; }
+      const msg = map[e.error] !== undefined ? map[e.error] : ('Voice error: ' + (e.error || 'unknown'));
+      if (msg) App.showToast(msg);
+    };
+    recognition.onend = function () { clearVoiceWatchdog(); _voiceActiveInput = null; };
+  }
+  // Universal per-input voice: works on ANY numeric input of ANY tool.
   function voiceInput(targetInputId) {
-    if (!recognition && !initVoice()) { App.showToast('Voice input not supported in this browser'); return; }
+    if (isIOS()) { App.showToast('Voice input needs Chrome, Edge, or Samsung Internet (iOS Safari does not support it)'); return; }
+    if (!recognition && !initVoice()) { App.showToast('Voice input not supported in this browser — try Chrome or Edge'); return; }
+    const input = document.getElementById(targetInputId);
+    if (!input) { App.showToast('Input not found'); return; }
+    _guardMicPermission(function () { _startForInput(targetInputId); });
+  }
+  function _startForInput(targetInputId) {
+    freshRecognition(); // single-use: always a clean engine
     const input = document.getElementById(targetInputId);
     if (!input) { App.showToast('Input not found'); return; }
     _voiceActiveInput = targetInputId;
     input.focus();
-    recognition.onresult = function(e) {
+    _voiceCommonHandlers(targetInputId);
+    recognition.onresult = function (e) {
+      clearVoiceWatchdog();
       const transcript = e.results[0][0].transcript;
-      // Extract the first real number — handles "seventy five", "75", "12.5", "-3"
-      const numMatch = transcript.match(/-?\d+(?:\.\d+)?/);
+      const num = transcriptToNumber(transcript);
       const el = document.getElementById(_voiceActiveInput);
-      if (numMatch && el) {
-        el.value = numMatch[0];
+      if (num != null && el) {
+        el.value = String(num);
         el.dispatchEvent(new Event('input'));
         el.dispatchEvent(new Event('change'));
-        App.showToast('Voice: ' + numMatch[0]);
+        App.showToast('Voice: ' + num);
       } else {
         App.showToast('No number detected in: "' + transcript + '"');
       }
     };
-    recognition.onerror = function(e) { App.showToast('Voice error: ' + (e.error || 'unknown')); };
-    recognition.onend = function() { _voiceActiveInput = null; };
-    try { recognition.start(); } catch (e2) { App.showToast('Voice already listening — try again'); }
+    try { recognition.start(); } catch (e2) { clearVoiceWatchdog(); App.showToast('Voice already listening — try again in a second'); }
     App.showToast('🎤 Listening...');
   }
   function startVoice(targetInputId) { voiceInput(targetInputId); }
@@ -481,10 +641,14 @@ function runComparisonMode() {
   }
 
   function startDictation() {
-    if (!recognition && !initVoice()) { App.showToast('Voice input not supported in this browser'); return; }
-    recognition.continuous = false;
-    recognition.interimResults = false;
+    if (isIOS()) { App.showToast('Voice input needs Chrome, Edge, or Samsung Internet (iOS Safari does not support it)'); return; }
+    if (!recognition && !initVoice()) { App.showToast('Voice input not supported in this browser — try Chrome or Edge'); return; }
+    _guardMicPermission(_startDictationFresh);
+  }
+  function _startDictationFresh() {
+    freshRecognition(); // single-use engine, same as per-input voice
     recognition.onresult = function (e) {
+      clearVoiceWatchdog();
       const transcript = e.results[0][0].transcript;
       const nums = (transcript.match(/-?\d+(?:\.\d+)?/g) || []);
       const inputs = voiceFillNumericInputs();
@@ -503,9 +667,9 @@ function runComparisonMode() {
       }
       App.showToast('Voice dictation: filled ' + filled + ' input' + (filled === 1 ? '' : 's'));
     };
-    recognition.onerror = function (e) { App.showToast('Voice error: ' + (e.error || 'unknown')); };
-    recognition.onend = function () { if (_dictateMode) setDictateMode(false); };
-    try { recognition.start(); } catch (e2) { App.showToast('Voice already listening — try again'); }
+    _voiceCommonHandlers(null);
+    recognition.onend = (function (prev) { return function () { prev(); if (_dictateMode) setDictateMode(false); }; })(recognition.onend);
+    try { recognition.start(); } catch (e2) { clearVoiceWatchdog(); App.showToast('Voice already listening — try again in a second'); }
     App.showToast('🎤 Dictating — speak the numbers');
   }
 
@@ -1777,7 +1941,7 @@ function runComparisonMode() {
     saveScenario, getScenarios, clearScenarios, renderScenarioBar, loadScenario,
     getPresets, savePreset, deletePreset, renderPresetDropdown, loadPreset,
     toggleBatch, runBatch,
-    initVoice, startVoice, voiceInput, initVoiceArea, setDictateMode, isDictateMode,    generateShareLink, loadFromUrl,
+    initVoice, startVoice, voiceInput, initVoiceArea, setDictateMode, isDictateMode, transcriptToNumber, wordsToNumber,    generateShareLink, loadFromUrl,
     renderSteps,
     getSmartSuggestions,
     enableAutoCalc,

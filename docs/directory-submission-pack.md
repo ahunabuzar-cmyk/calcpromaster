@@ -71,6 +71,31 @@ CalcProMaster offers 1,201 free calculators across finance, health, math, constr
 
 ---
 
+## 4. AlternativeTo — PRIORITY 4 (next week — velocity rule: max 2/week)
+
+- **URL:** https://alternativeto.net/submit/ (account required, free)
+- **DR:** ~86 · **Link:** nofollow on the listing, but strong brand/discovery signal
+- **Note:** list CalcProMaster as an alternative to **WolframAlpha** and **Calculator.net** — existing-app alternative pages rank and get traffic; a fresh standalone listing does not.
+
+**Form fields (copy-paste):**
+
+- **Application name:** `CalcProMaster`
+- **Website URL:** `https://calcpromaster.netlify.app/`
+- **Category:** `Online Calculators` (or closest available)
+- **Short description (unique — do NOT reuse other listings' text):**
+
+```
+Browser-based calculator suite with 1,201 tools across finance, health, math, construction and unit conversion. Shows the formula and step-by-step working next to every result, works offline after first load, and needs no account. Embeddable widget versions available for popular tools.
+```
+
+- **Platforms:** `Web`
+- **Price:** `Free`
+- **Screenshot:** yes (same Loan EMI screenshot as Twelve.Tools)
+
+**After submit:** tracker row + watch for the "like" on your listing; engagement on AlternativeTo affects listing visibility.
+
+---
+
 ## After each submission
 
 1. Tracker row: platform, date, anchor/link type, listing URL.

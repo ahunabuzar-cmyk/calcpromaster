@@ -1488,6 +1488,32 @@ function runComparisonMode() {
           <label style="display:block;font-weight:600;margin-bottom:8px">Decimal Precision: <span id="precision-value">${prefs.precision}</span></label>
           <input type="range" id="precision-slider" min="0" max="6" value="${prefs.precision}" oninput="AdvancedFeatures.setPrecision(this.value)" style="width:100%;accent-color:var(--primary)">
         </div>
+        ${(typeof VisualPolish !== 'undefined' && typeof VisualPolish.renderAccentPicker === 'function') ? VisualPolish.renderAccentPicker() : ''}
+        <div>
+          <label style="display:block;font-weight:600;margin-bottom:8px">Text Size</label>
+          <div style="display:flex;gap:8px">
+            <button type="button" onclick="AdvancedFeatures.fontStep(-1)" aria-label="Smaller text" style="flex:1;padding:8px;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--text);cursor:pointer">A−</button>
+            <button type="button" onclick="AdvancedFeatures.fontStep(0)" aria-label="Reset text size" style="flex:1;padding:8px;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--text);cursor:pointer">Reset</button>
+            <button type="button" onclick="AdvancedFeatures.fontStep(1)" aria-label="Larger text" style="flex:1;padding:8px;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--text);cursor:pointer">A+</button>
+          </div>
+        </div>
+        <div>
+          <label style="display:block;font-weight:600;margin-bottom:8px" for="cb-mode">Colorblind palette</label>
+          <select id="cb-mode" onchange="AdvancedFeatures.setCbMode(this.value)" style="width:100%;padding:8px;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--text)">
+            <option value="none">Default</option>
+            <option value="protanopia">Protanopia-friendly</option>
+            <option value="deuteranopia">Deuteranopia-friendly</option>
+            <option value="tritanopia">Tritanopia-friendly</option>
+          </select>
+        </div>
+        <div>
+          <label style="display:block;font-weight:600;margin-bottom:8px" for="motion-override">Animations</label>
+          <select id="motion-override" onchange="AdvancedFeatures.setMotionPref(this.value)" style="width:100%;padding:8px;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--text)">
+            <option value="auto">System default</option>
+            <option value="on">Reduced (less motion)</option>
+            <option value="off">Full</option>
+          </select>
+        </div>
       </div>
     `;
     modal.classList.add('active');
@@ -1503,6 +1529,23 @@ function runComparisonMode() {
     prefs.precision = parseInt(val);
     setUnitsPrefs(prefs);
     document.getElementById('precision-value').textContent = val;
+  }
+  // S6 comfort handlers
+  function fontStep(dir) {
+    if (typeof Comfort === 'undefined') return;
+    if (dir === 0) { Comfort.applyFontScale(2); App.showToast('Text size reset'); }
+    else if (dir > 0) { Comfort.fontLarger(); App.showToast('Text size increased'); }
+    else { Comfort.fontSmaller(); App.showToast('Text size decreased'); }
+  }
+  function setCbMode(mode) {
+    if (typeof Comfort === 'undefined') return;
+    Comfort.applyCbMode(mode);
+    App.showToast(mode === 'none' ? 'Default colors' : mode + ' palette applied');
+  }
+  function setMotionPref(v) {
+    if (typeof Comfort === 'undefined') return;
+    Comfort.setMotionState(v);
+    App.showToast(v === 'on' ? 'Animations reduced' : v === 'off' ? 'Animations enabled' : 'Animations follow system');
   }
   function formatNumber(num, prefs) {
     if (!isFinite(num)) return String(num);
@@ -1662,6 +1705,50 @@ function runComparisonMode() {
     ctx.fillText(_siteOrigin, width - 30 - ctx.measureText(_siteOrigin).width, height - 20);
     
     return canvas.toDataURL('image/png');
+  }
+
+  // Story-format export (S4 #2): 1080x1920 (9:16) Instagram/Facebook story card.
+  // Same branding as the landscape card; async because fonts/layout settle best.
+  function exportStoryImage(toolName, result, extra) {
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    const width = 1080, height = 1920;
+    canvas.width = width; canvas.height = height;
+    const isDark = document.body.classList.contains('dark-theme');
+    // Background: brand gradient band + clean canvas
+    const bg = ctx.createLinearGradient(0, 0, width, height);
+    if (isDark) { bg.addColorStop(0, '#0f172a'); bg.addColorStop(1, '#1e293b'); }
+    else { bg.addColorStop(0, '#f8fafc'); bg.addColorStop(1, '#e2e8f0'); }
+    ctx.fillStyle = bg; ctx.fillRect(0, 0, width, height);
+    // Top accent band
+    ctx.fillStyle = isDark ? '#3b82f6' : '#2563eb';
+    ctx.fillRect(0, 0, width, 180);
+    ctx.fillStyle = '#ffffff';
+    ctx.font = 'bold 64px Arial, sans-serif';
+    ctx.textAlign = 'left';
+    ctx.fillText(String(toolName || 'CalcPro').slice(0, 26), 60, 110);
+    // Big result, centered
+    ctx.textAlign = 'center';
+    ctx.fillStyle = isDark ? '#f8fafc' : '#1e293b';
+    const resText = String(result || '');
+    ctx.font = 'bold ' + (resText.length > 16 ? 96 : 120) + 'px Arial, sans-serif';
+    ctx.fillText(resText.slice(0, 24), width / 2, height / 2 - 60);
+    if (extra) {
+      ctx.fillStyle = isDark ? '#94a3b8' : '#64748b';
+      ctx.font = '40px Arial, sans-serif';
+      ctx.fillText(String(extra).slice(0, 40), width / 2, height / 2 + 40);
+    }
+    // Footer branding
+    ctx.textAlign = 'center';
+    ctx.fillStyle = isDark ? '#64748b' : '#94a3b8';
+    ctx.font = '36px Arial, sans-serif';
+    var _siteOrigin = (typeof window !== 'undefined' && window.SITE_CONFIG && window.SITE_CONFIG.domain) ? window.SITE_CONFIG.domain : 'calcpromaster.netlify.app';
+    ctx.fillText('Calculated with CalcProMaster — ' + _siteOrigin, width / 2, height - 90);
+    const link = document.createElement('a');
+    link.download = String(toolName || 'calcpro').replace(/\s+/g, '-').toLowerCase() + '-story.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+    App.showToast('Story image saved (1080×1920)!');
   }
   
   function exportResultAsImage(toolName, result, extra) {
@@ -1947,13 +2034,13 @@ function runComparisonMode() {
     enableAutoCalc,
     initGlossaryTooltips,
     // Units / Precision
-    getUnitsPrefs, setUnitsPrefs, renderUnitsSettings, setUnitSystem, setPrecision, setNumberLocale, formatNumber, convertUnits,
+    getUnitsPrefs, setUnitsPrefs, renderUnitsSettings, setUnitSystem, setPrecision, setNumberLocale, formatNumber, convertUnits, fontStep, setCbMode, setMotionPref,
     // Achievements
     getAchievements, unlockAchievement, checkAchievements, renderAchievements,
     // Daily Tip
     getDailyTip, buildDailyTipHTML, renderDailyTip,
     // Shareable result cards
-    generateResultCard, exportResultAsImage, copyResultCard,
+    generateResultCard, exportResultAsImage, exportStoryImage, copyResultCard,
     // CSV export
     exportResultCSV, exportCurrentCSV,
     // Embed widget

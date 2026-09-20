@@ -1328,7 +1328,9 @@ function runComparisonMode() {
       'scenario-planner': { name: '📊 Scenario Planner', desc: 'Compare 5 scenarios', icon: '📊' },
       'streak-3': { name: '🔥 3-Day Streak', desc: 'Visit 3 days in a row', icon: '🔥' },
       'streak-7': { name: '🔥 7-Day Streak', desc: 'Visit 7 days in a row', icon: '🔥' },
-      'streak-30': { name: '🔥 30-Day Streak', desc: 'Visit 30 days in a row', icon: '🔥' }
+      'streak-30': { name: '🔥 30-Day Streak', desc: 'Visit 30 days in a row', icon: '🔥' },
+      'referral-1': { name: '📣 Spreader', desc: 'Share a result for the first time', icon: '📣' },
+      'referral-5': { name: '🚀 Super Sharer', desc: 'Share results 5 times', icon: '🚀' }
     };
     const unlocked = getAchievements();
     const modal = document.getElementById('modalOverlay');
@@ -1387,6 +1389,20 @@ function runComparisonMode() {
     if (streak >= 3) unlockAchievement('streak-3');
     if (streak >= 7) unlockAchievement('streak-7');
     if (streak >= 30) unlockAchievement('streak-30');
+    // S4 #33: referral/sharing badges — local share count (honest: counts
+    // share-modal opens, stored in the same achievements namespace pattern).
+    const shares = Security.safeGetItem('calcpro_share_count', 0);
+    if (shares >= 1) unlockAchievement('referral-1');
+    if (shares >= 5) unlockAchievement('referral-5');
+  }
+
+  // Count a share action (called from App.shareTool) and re-check badges.
+  function trackShare() {
+    try {
+      const n = (Security.safeGetItem('calcpro_share_count', 0) || 0) + 1;
+      localStorage.setItem('calcpro_share_count', String(n));
+      checkAchievements(null, null);
+    } catch (e) { /* never break sharing */ }
   }
   
   // ---------- Daily Financial Tip Widget ----------
@@ -2036,7 +2052,7 @@ function runComparisonMode() {
     // Units / Precision
     getUnitsPrefs, setUnitsPrefs, renderUnitsSettings, setUnitSystem, setPrecision, setNumberLocale, formatNumber, convertUnits, fontStep, setCbMode, setMotionPref,
     // Achievements
-    getAchievements, unlockAchievement, checkAchievements, renderAchievements,
+    getAchievements, unlockAchievement, checkAchievements, renderAchievements, trackShare,
     // Daily Tip
     getDailyTip, buildDailyTipHTML, renderDailyTip,
     // Shareable result cards

@@ -114,6 +114,13 @@ describe('S1: mapExtractedToInputs — field mapping', () => {
   });
 });
 
+describe('S1: OCR scan surface', () => {
+  it('scanPhoto and loadTesseract are exported for the browser wiring', () => {
+    expect(typeof SI.scanPhoto).toBe('function');
+    expect(typeof SI.loadTesseract).toBe('function');
+  });
+});
+
 describe('S1: presets — integrity', () => {
   it('every preset has label + non-empty fields object', () => {
     for (const [cat, list] of Object.entries(SI.PRESETS)) {

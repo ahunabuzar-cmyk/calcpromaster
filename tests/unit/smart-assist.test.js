@@ -123,3 +123,22 @@ describe('SmartAssist — reminder schedule math', () => {
     expect(store2.getItem('cpm_reminder_loan-emi')).toBeNull();
   });
 });
+
+describe('S3 #21: detectCurrency — locale → currency default', () => {
+  it('maps region subtags to currency codes', () => {
+    expect(SA.detectCurrency('en-PK')).toBe('PKR');
+    expect(SA.detectCurrency('hi-IN')).toBe('INR');
+    expect(SA.detectCurrency('en-US')).toBe('USD');
+    expect(SA.detectCurrency('ar-AE')).toBe('AED');
+    expect(SA.detectCurrency('fr-FR')).toBe('EUR');
+  });
+  it('falls back when region unknown or missing', () => {
+    expect(SA.detectCurrency('en', 'USD')).toBe('USD');
+    expect(SA.detectCurrency('xx-ZZ', 'USD')).toBe('USD');
+    expect(SA.detectCurrency('', 'USD')).toBe('USD');
+    expect(SA.detectCurrency('en-GB')).toBe('GBP');
+  });
+  it('returns null fallback when nothing matches', () => {
+    expect(SA.detectCurrency('xx-ZZ')).toBeNull();
+  });
+});

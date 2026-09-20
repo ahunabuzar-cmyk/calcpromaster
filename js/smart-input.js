@@ -167,6 +167,63 @@ const SmartInput = (function () {
     return mapExtractedToInputs(nums, inputs);
   }
 
+  // Lazy Tesseract.js loader (~2MB, CDN) — injected ONLY after the user clicks
+  // "Scan photo" and picks/takes a picture. That action IS the consent; the
+  // image is recognized fully in-browser and never uploaded anywhere.
+  function loadTesseract() {
+    return new Promise((resolve, reject) => {
+      if (typeof window === 'undefined') { reject(new Error('no-window')); return; }
+      if (window.Tesseract) { resolve(window.Tesseract); return; }
+      const s = document.createElement('script');
+      s.src = 'https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js';
+      s.async = true;
+      s.onload = () => { window.Tesseract ? resolve(window.Tesseract) : reject(new Error('ocr-load-failed')); };
+      s.onerror = () => reject(new Error('ocr-load-failed'));
+      document.head.appendChild(s);
+    });
+  }
+
+  // Camera/photo scan: file input (capture on mobile) → OCR → extract → fill.
+  function scanPhoto(catKey) {
+    if (typeof document === 'undefined') return;
+    let fi = document.getElementById('ocr-photo-input');
+    if (!fi) {
+      fi = document.createElement('input');
+      fi.type = 'file'; fi.id = 'ocr-photo-input'; fi.accept = 'image/*';
+      fi.setAttribute('capture', 'environment'); // rear camera on mobile
+      fi.style.display = 'none';
+      document.body.appendChild(fi);
+    }
+    fi.onchange = () => {
+      const file = fi.files && fi.files[0];
+      fi.value = ''; // allow re-picking the same photo
+      if (!file) return;
+      const note = document.getElementById('paste-parse-note');
+      if (!window.FileReader) { if (note) note.textContent = 'Photo scan is not supported in this browser — paste the text instead.'; return; }
+      if (note) note.textContent = '⏳ Reading photo… (first scan downloads the OCR engine, a few MB)';
+      const reader = new FileReader();
+      reader.onload = () => {
+        loadTesseract().then(T =>
+          T.recognize(reader.result, 'eng').then(r => {
+            const text = (r && r.data && r.data.text) || '';
+            if (!text.trim()) { if (note) note.textContent = 'Could not read any text from this photo — try better light, or paste the text instead.'; return; }
+            const toolInputs = (window._state && window._state.tool && window._state.tool.tool && window._state.tool.tool.inputs) || [];
+            const mapping = mapExtractedToInputs(extractNumbers(text), toolInputs);
+            let filled = 0;
+            Object.keys(mapping).forEach(id => {
+              const el = document.getElementById(id);
+              if (el && el.type === 'number') { el.value = mapping[id]; el.dispatchEvent(new Event('input', { bubbles: true })); filled++; }
+            });
+            if (note) note.textContent = filled ? ('✓ Scanned — filled ' + filled + ' field' + (filled > 1 ? 's' : '') + ' — please review.') : 'Text was read but no matching numbers found — paste the text instead.';
+          })
+        ).catch(() => { if (note) note.textContent = 'OCR engine could not load (offline?) — paste the text instead.'; });
+      };
+      reader.onerror = () => { if (note) note.textContent = 'Could not read that image file.'; };
+      reader.readAsDataURL(file);
+    };
+    fi.click();
+  }
+
   // ---------- DOM layer (browser only) ----------
   function renderPresets(catKey, toolInputs) {
     if (typeof document === 'undefined') return '';
@@ -272,6 +329,7 @@ const SmartInput = (function () {
       row.className = 'paste-parse-row';
       row.innerHTML =
         '<button type="button" class="action-btn paste-btn" aria-expanded="false" aria-controls="paste-parse-area" onclick="SmartInput.togglePasteArea()">📋 Paste bill/text</button>' +
+        '<button type="button" class="action-btn scan-btn" onclick="SmartInput.scanPhoto(\'' + catKey + '\')">📷 Scan photo</button>' +
         '<div id="paste-parse-area" class="paste-parse-area" hidden>' +
           '<label for="paste-parse-text" class="sr-only">Paste unstructured text</label>' +
           '<textarea id="paste-parse-text" class="calc-input" rows="3" placeholder="Paste any bill or text — numbers are detected and filled automatically"></textarea>' +
@@ -316,7 +374,7 @@ const SmartInput = (function () {
     parseUnitValue, extractNumbers, mapExtractedToInputs,
     ocrState, ocrExtractFromText,
     renderPresets, applyPreset, attachTypicalValues, wireUnitSuggest,
-    enhance, togglePasteArea, pasteParse
+    enhance, togglePasteArea, pasteParse, scanPhoto, loadTesseract
   };
 })();
 

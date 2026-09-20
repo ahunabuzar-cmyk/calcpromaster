@@ -219,10 +219,30 @@
     try { checkDueReminders(); } catch (e) { /* noop */ }
   }
 
+  // ---------- S3 #21: locale-based currency default ----------
+  // Maps navigator.language region → currency code (no IP, no API, no network).
+  // Manual override always wins if the calculator's select has a chosen value.
+  const CURRENCY_BY_REGION = {
+    PK: 'PKR', IN: 'INR', US: 'USD', GB: 'GBP', EU: 'EUR', BD: 'BDT', NG: 'NGN',
+    AE: 'AED', SA: 'SAR', CA: 'CAD', AU: 'AUD', ZA: 'ZAR', KE: 'KES', PH: 'PHP',
+    ID: 'IDR', MY: 'MYR', SG: 'SGD', LK: 'LKR', NP: 'NPR', TR: 'TRY', BR: 'BRL',
+    DE: 'EUR', FR: 'EUR', IT: 'EUR', ES: 'EUR', NL: 'EUR', IE: 'EUR', PT: 'EUR'
+  };
+  function detectCurrency(lang, fallback) {
+    var l = String(lang || '');
+    var m = l.match(/-([A-Za-z]{2})(?:[-_]|$)/);
+    if (m) {
+      var code = CURRENCY_BY_REGION[m[1].toUpperCase()];
+      if (code) return code;
+    }
+    return fallback || null;
+  }
+
   const SmartAssist = {
     RULES, plausibility, wirePlausibility,
     draftKey, saveDraft, loadDraft, clearDraft, collectFormValues, wireDrafts, clearDraftBar,
     nextDue, reminderState, setReminder, cancelReminder, checkDueReminders,
+    detectCurrency,
     enhance, init
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = SmartAssist;

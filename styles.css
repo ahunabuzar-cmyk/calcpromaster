@@ -2006,3 +2006,50 @@ footer {
   font-size: 12.5px;
   color: var(--text-light, #64748b);
 }
+
+/* ===== Manual reduced-motion override (comfort.js: data-reduced-motion="on") ===== */
+html[data-reduced-motion="on"] *,
+html[data-reduced-motion="on"] *::before,
+html[data-reduced-motion="on"] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+html[data-reduced-motion="on"] .reveal { opacity: 1; transform: none; transition: none; }
+html[data-reduced-motion="on"] .swipe-hint .swipe-arrow { animation: none; }
+
+/* ===== Colorblind-friendly palettes (comfort.js: data-cb) ===== */
+/* Protanopia / Deuteranopia — Okabe-Ito blue/orange axis (red-green safe) */
+html[data-cb="protanopia"],
+html[data-cb="deuteranopia"] {
+  --primary: #0072b2;
+  --primary-dark: #00558a;
+  --primary-light: #56b4e9;
+  --primary-gradient: linear-gradient(135deg, #0072b2, #00618f);
+  --primary-gradient-soft: linear-gradient(135deg, #56b4e9, #0072b2);
+  --secondary: #009e73;
+  --secondary-gradient: linear-gradient(135deg, #009e73, #27b98a);
+  --accent: #e69f00;
+  --accent-gradient: linear-gradient(135deg, #e69f00, #f0a500);
+  --success: #009e73;
+  --warning: #e69f00;
+  --error: #d55e00;
+  --shadow-glow: 0 0 20px rgba(0, 114, 178, 0.25);
+}
+/* Tritanopia — purple/teal/magenta axis (blue-yellow safe, lightness-separated) */
+html[data-cb="tritanopia"] {
+  --primary: #6a3d9a;
+  --primary-dark: #53307a;
+  --primary-light: #9e79c4;
+  --primary-gradient: linear-gradient(135deg, #6a3d9a, #53307a);
+  --primary-gradient-soft: linear-gradient(135deg, #9e79c4, #6a3d9a);
+  --secondary: #0e7c7b;
+  --secondary-gradient: linear-gradient(135deg, #0e7c7b, #129998);
+  --accent: #b8527a;
+  --accent-gradient: linear-gradient(135deg, #b8527a, #c9638b);
+  --success: #0e7c7b;
+  --warning: #8c6d1f;
+  --error: #b10f4f;
+  --shadow-glow: 0 0 20px rgba(106, 61, 154, 0.25);
+}

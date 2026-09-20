@@ -25,12 +25,12 @@ _Generated 2026-09-18 by `scripts/build-difficulty-report.cjs` (deterministic; r
 
 | Tier | Phrases | Meaning |
 |---|---|---|
-| **EASY** (go after now) | 409 | 4+ words with intent qualifier — few strong brands in top-10 |
-| **MEDIUM** (secondary) | 1468 | 3+ words — mixed SERPs, needs some links |
-| **HARD** (park) | 3 | head terms — brand wall (calculator.net, omnicalculator, Khan Academy…) |
+| **EASY** (go after now) | 1093 | 4+ words with intent qualifier — few strong brands in top-10 |
+| **MEDIUM** (secondary) | 1423 | 3+ words — mixed SERPs, needs some links |
+| **HARD** (park) | 0 | head terms — brand wall (calculator.net, omnicalculator, Khan Academy…) |
 | **BRAND** (own) | 0 | CalcProMaster brand queries — must own #1 |
 
-Total distinct targeted phrases: **1880** across 1334 indexable pages.
+Total distinct targeted phrases: **2516** across 1334 indexable pages.
 
 ## 3. GO list — highest-value EASY targets (difficulty 2, best-volume first, sample of 60)
 
@@ -46,58 +46,58 @@ These pass the <20-strong-brands rule with margin. Each already has a dedicated 
 | free gst/vat calculator | `/everyday/gst` | low-mid (50–500/mo est.) |
 | free half-life calculator | `/science/half-life` | low-mid (50–500/mo est.) |
 | free ohms law calculator | `/science/ohms-law` | low-mid (50–500/mo est.) |
-| gst calculator india calculator | `/regional/gst-india` | low-mid (50–500/mo est.) |
-| GST Calculator India: Amount | `/regional/gst-india` | low-mid (50–500/mo est.) |
-| income tax calculator india | `/regional/income-tax-india` | low-mid (50–500/mo est.) |
-| IRR Calculator: Cash Flows | `/finance/irr` | low-mid (50–500/mo est.) |
-| lump sum vs dca | `/finance/dca` | low-mid (50–500/mo est.) |
-| old vs new tax | `/regional/income-tax-india` | low-mid (50–500/mo est.) |
-| Percentage Calculator: Part & Whole | `/math/percentage` | low-mid (50–500/mo est.) |
-| pet yearly cost calculator | `/lifestyle/pet-cost` | low-mid (50–500/mo est.) |
-| Polar ↔ Rectangular: Between Polar | `/math/polar-rect` | low-mid (50–500/mo est.) |
-| simple interest calculator yearly | `/finance/simple-interest` | low-mid (50–500/mo est.) |
-| take home pay uk | `/finance/uk-income-tax` | low-mid (50–500/mo est.) |
-| UAE VAT Calculator: Amount | `/regional/uae-vat` | low-mid (50–500/mo est.) |
-| uk income tax calculator | `/finance/uk-income-tax` | low-mid (50–500/mo est.) |
-| 2×2 Matrix Inverse: Step-by-Step Calculator | `/math/matrix-inverse` | low (10–100/mo est.) |
-| 401k retirement calculator with employer match | `/finance/retirement` | low (10–100/mo est.) |
-| 50/30/20 Budget Calculator: Monthly Take-Home | `/finance/envelope-budget` | low (10–100/mo est.) |
-| 529 Plan Calculator: Current Balance, Monthly | `/finance/529-plan` | low (10–100/mo est.) |
-| adjusted body weight calculator amputee limb loss percentage | `/health/chw` | low (10–100/mo est.) |
-| Amortization Schedule: Loan Amount, Rate & Years | `/finance/amortization` | low (10–100/mo est.) |
-| angle between two vectors calculator dot product | `/math/angle-between-vectors` | low (10–100/mo est.) |
-| Angle Between Vectors Calculator: Step-by-Step Calculator | `/math/angle-between-vectors` | low (10–100/mo est.) |
-| angular velocity calculator rpm rad/s radians per second rotation frequency | `/science/angular-velocity` | low (10–100/mo est.) |
-| apr calculator loan fees true cost annual percentage rate | `/finance/apr-annual` | low (10–100/mo est.) |
-| apy calculator annual percentage yield compounding | `/finance/apy-calculator` | low (10–100/mo est.) |
-| AR Turnover Ratio: Net Credit Sales & Average Accounts | `/finance/accounts-receivable-turnover` | low (10–100/mo est.) |
-| asphalt quantity calculator tons paving | `/construction/asphalt-quantity` | low (10–100/mo est.) |
-| attendance calculator percentage classes required | `/education/attendance-rate` | low (10–100/mo est.) |
-| Australia Income Tax Calculator: Annual Income | `/finance/australia-income-tax` | low (10–100/mo est.) |
-| australia super calculator superannuation guarantee | `/regional/australia-super` | low (10–100/mo est.) |
-| Australia Superannuation Calculator: Annual Salary | `/regional/australia-super` | low (10–100/mo est.) |
-| auto loan calculator with sales tax | `/finance/auto-loan` | low (10–100/mo est.) |
-| Baby Cost Calculator: Diapers per Day, Cost per Diaper | `/lifestyle/baby-cost` | low (10–100/mo est.) |
-| Balloon Payment Calculator: Loan Amount, Rate & Amortization | `/finance/balloon-payment` | low (10–100/mo est.) |
-| beam deflection calculator with load | `/engineering/beam-load` | low (10–100/mo est.) |
-| bearing calculator load rating life l10 hours | `/engineering/bearing-load` | low (10–100/mo est.) |
-| bmi calculator for men and women | `/health/bmi` | low (10–100/mo est.) |
-| bmr calculator for women over 50 | `/health/bmr` | low (10–100/mo est.) |
-| body fat calculator with measurements | `/health/body-fat` | low (10–100/mo est.) |
-| body fat percentage navy method calculator | `/health/body-fat` | low (10–100/mo est.) |
-| body mass index calculator with age | `/health/bmi` | low (10–100/mo est.) |
-| bond duration calculator macaulay modified duration | `/finance/bond-duration` | low (10–100/mo est.) |
-| Bond Duration Calculator: Macaulay & Modified Duration | `/finance/bond-duration` | low (10–100/mo est.) |
-| bond price calculator with coupon rate | `/finance/bonds` | low (10–100/mo est.) |
-| Bond Price Calculator: Present Value From Market Yield | `/finance/bond-price` | low (10–100/mo est.) |
-| book value per share calculator bvps | `/finance/book-value-share` | low (10–100/mo est.) |
-| Book Value Per Share Calculator: Shareholders' | `/finance/book-value-share` | low (10–100/mo est.) |
-| break even point calculator with fixed costs | `/business/break-even-point` | low (10–100/mo est.) |
-| Break-Even Calculator: Fixed Costs, Price per Unit | `/finance/break-even` | low (10–100/mo est.) |
-| brick quantity calculator for wall construction | `/construction/bricks` | low (10–100/mo est.) |
-| budget calculator monthly allocation percentages | `/everyday/budget-allocator` | low (10–100/mo est.) |
-| Burn Rate Calculator: Cash Balance & Monthly Expenses | `/business/burn-rate` | low (10–100/mo est.) |
-| business days calculator working days weekdays between dates | `/everyday/business-days` | low (10–100/mo est.) |
+| free online Acceleration Calculator | `/science/acceleration` | low-mid (50–500/mo est.) |
+| free online Acceleration Converter | `/conversion/acceleration-conv` | low-mid (50–500/mo est.) |
+| free online Age Calculator | `/everyday/age` | low-mid (50–500/mo est.) |
+| free online Angle Converter | `/conversion/angle` | low-mid (50–500/mo est.) |
+| free online Annuity Calculator | `/finance/annuity` | low-mid (50–500/mo est.) |
+| free online APR Calculator | `/finance/apr` | low-mid (50–500/mo est.) |
+| free online Area Calculator | `/utilities/area-calc` | low-mid (50–500/mo est.) |
+| free online Area Converter | `/conversion/area` | low-mid (50–500/mo est.) |
+| free online Average Calculator | `/math/average` | low-mid (50–500/mo est.) |
+| free online CAC Calculator | `/business/cac` | low-mid (50–500/mo est.) |
+| free online Capacitor Calculator | `/engineering/capacitor` | low-mid (50–500/mo est.) |
+| free online CAPM Calculator | `/finance/capm` | low-mid (50–500/mo est.) |
+| free online Carpet Calculator | `/construction/carpet` | low-mid (50–500/mo est.) |
+| free online Circle Calculator | `/math/circle` | low-mid (50–500/mo est.) |
+| free online Circumradius Calculator | `/math/circle-through-points` | low-mid (50–500/mo est.) |
+| free online Color Converter | `/utilities/color-picker` | low-mid (50–500/mo est.) |
+| free online Combinations Calculator | `/math/combinations` | low-mid (50–500/mo est.) |
+| free online Concrete Calculator | `/everyday/concrete` | low-mid (50–500/mo est.) |
+| free online Cooking Converter | `/everyday/cooking` | low-mid (50–500/mo est.) |
+| free online Covariance Calculator | `/math/covariance` | low-mid (50–500/mo est.) |
+| free online Depreciation Calculator | `/business/depreciation` | low-mid (50–500/mo est.) |
+| free online Discount Calculator | `/finance/discount` | low-mid (50–500/mo est.) |
+| free online Dividend Calculator | `/finance/dividend` | low-mid (50–500/mo est.) |
+| free online Drywall Calculator | `/construction/drywall` | low-mid (50–500/mo est.) |
+| free online EBITDA Calculator | `/finance/ebitda` | low-mid (50–500/mo est.) |
+| free online Energy Converter | `/conversion/energy` | low-mid (50–500/mo est.) |
+| free online Excavation Calculator | `/construction/excavation` | low-mid (50–500/mo est.) |
+| free online Exponent Calculator | `/math/exponent` | low-mid (50–500/mo est.) |
+| free online Factorial Calculator | `/math/factorial` | low-mid (50–500/mo est.) |
+| free online Fence Calculator | `/construction/fence` | low-mid (50–500/mo est.) |
+| free online FIRE Calculator | `/finance/fire` | low-mid (50–500/mo est.) |
+| free online Flooring Calculator | `/construction/flooring` | low-mid (50–500/mo est.) |
+| free online Force Calculator | `/science/force` | low-mid (50–500/mo est.) |
+| free online Force Converter | `/conversion/force-conv` | low-mid (50–500/mo est.) |
+| free online Fraction Calculator | `/math/fraction` | low-mid (50–500/mo est.) |
+| free online Frequency Calculator | `/science/frequency` | low-mid (50–500/mo est.) |
+| free online Frequency Converter | `/conversion/frequency-conv` | low-mid (50–500/mo est.) |
+| free online GFR Calculator | `/health/gfr` | low-mid (50–500/mo est.) |
+| free online GPA Calculator | `/education/gpa` | low-mid (50–500/mo est.) |
+| free online Gratuity Calculator | `/regional/gratuity` | low-mid (50–500/mo est.) |
+| free online Gravel Calculator | `/construction/gravel` | low-mid (50–500/mo est.) |
+| free online Horsepower Calculator | `/engineering/horsepower` | low-mid (50–500/mo est.) |
+| free online Hydraulic Calculator | `/engineering/hydraulic` | low-mid (50–500/mo est.) |
+| free online Impedance Calculator | `/engineering/impedance` | low-mid (50–500/mo est.) |
+| free online Impulse Calculator | `/science/impulse` | low-mid (50–500/mo est.) |
+| free online Inductor Calculator | `/engineering/inductor` | low-mid (50–500/mo est.) |
+| free online Inflation Calculator | `/finance/inflation` | low-mid (50–500/mo est.) |
+| free online Insulation Calculator | `/construction/insulation` | low-mid (50–500/mo est.) |
+| free online IRR Calculator | `/finance/irr` | low-mid (50–500/mo est.) |
+| free online Lens Calculator | `/science/lens` | low-mid (50–500/mo est.) |
+| free online Lever Calculator | `/engineering/lever` | low-mid (50–500/mo est.) |
+| free online Logarithm Calculator | `/math/logarithm` | low-mid (50–500/mo est.) |
 
 ## 4. PARK list — head terms & brand-wall keywords (sample of 30)
 
@@ -105,17 +105,10 @@ Do **not** chase these with the current authority (zero/backlink-poor). Revisit 
 
 | Keyword | Best page | Volume proxy |
 |---|---|---|
-| bitcoin profit | `/finance/crypto-profit` | high (1k–50k+/mo est.) |
-| calorie calculator | `/everyday/calorie-counter` | high (1k–50k+/mo est.) |
-| crypto calculator | `/finance/crypto-profit` | high (1k–50k+/mo est.) |
-| 15 days salary | `/regional/gratuity` | mid (100–2k/mo est.) |
 | Adjusted Body Weight Calculator: Measured Weight | `/health/chw` | low (10–100/mo est.) |
 | after tax cost of debt calculator | `/finance/cost-of-debt` | low (10–100/mo est.) |
 | Age Calculator: Date of Birth | `/everyday/age` | low (10–100/mo est.) |
-| age in days | `/everyday/age` | mid (100–2k/mo est.) |
-| annual percentage rate | `/finance/apr` | mid (100–2k/mo est.) |
 | APR Calculator: Loan Amount, Fees & Nominal Rate | `/finance/apr` | low (10–100/mo est.) |
-| australia tax calculator | `/finance/australia-income-tax` | mid (100–2k/mo est.) |
 | Auto Loan Calculator: Vehicle Price, Down Payment & Rate | `/finance/auto-loan` | low (10–100/mo est.) |
 | bernoulli equation calculator fluid dynamics | `/science/bernoulli` | low (10–100/mo est.) |
 | Bernoulli Equation: ½ρV² ρGh Constant | `/science/bernoulli` | low (10–100/mo est.) |
@@ -129,12 +122,19 @@ Do **not** chase these with the current authority (zero/backlink-poor). Revisit 
 | BMI Calculator: Weight & Height | `/health/bmi` | low-mid (50–500/mo est.) |
 | BMR Calculator: Weight, Height & Age | `/health/bmr` | low (10–100/mo est.) |
 | Body Fat Calculator: Weight, Waist & Neck | `/health/body-fat` | low (10–100/mo est.) |
-| body fat percentage | `/health/body-fat` | mid (100–2k/mo est.) |
 | Body Surface Area: Weight & Height | `/health/bsa` | low (10–100/mo est.) |
 | bond coupon payment calculator semiannual interest face value | `/finance/coupon-payment` | low (10–100/mo est.) |
 | Business Days Calculator: Start Date & End Date | `/everyday/business-days` | low (10–100/mo est.) |
 | calorie burn calculator at rest | `/health/bmr` | low (10–100/mo est.) |
 | Calorie Burn Calculator: Weight, Activity & Duration | `/health/calorie-burn` | low (10–100/mo est.) |
+| Calorie Calculator: Weight, Height & Age | `/health/calorie` | low (10–100/mo est.) |
+| calorie deficit calculator weight loss | `/health/calorie-deficit` | low (10–100/mo est.) |
+| calorie surplus deficit goal calculator | `/health/calorie-goal` | low (10–100/mo est.) |
+| Calorie Surplus/Deficit Goal: TDEE & Weeks | `/health/calorie-goal` | low (10–100/mo est.) |
+| Capital Gains Tax: Purchase Price, Sale Price & Tax Rate | `/finance/capital-gains` | low (10–100/mo est.) |
+| Car Lease Payment Calculator: MSRP, Capitalized Cost | `/finance/car-lease-calculator` | low (10–100/mo est.) |
+| car wash cost calculator annual subscription | `/lifestyle/car-wash-annual` | low (10–100/mo est.) |
+| carbon dating calculator radiocarbon age c14 half life archaeology fossils | `/science/carbon-dating` | low (10–100/mo est.) |
 
 ## 5. What actually moves rankings from here (priority order)
 

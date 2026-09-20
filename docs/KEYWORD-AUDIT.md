@@ -2,7 +2,7 @@
 
 _Deterministic audit over the same extraction as docs/KEYWORD-TARGETS.md. Nothing hand-added. Re-run with: `npm run keywords:audit`._
 
-**Inventory:** 1334 indexable pages · 1201 tools · 1343 curated phrases.
+**Inventory:** 1334 indexable pages · 1201 tools · 2225 curated phrases.
 
 ## Verdict at a glance
 
@@ -11,13 +11,13 @@ _Deterministic audit over the same extraction as docs/KEYWORD-TARGETS.md. Nothin
 | C1 · Title cannibalization | ✅ none |
 | C2 · Phrase cannibalization (2+ pages target same phrase) | ✅ none |
 | C3 · Duplicate phrase inside one tool | ✅ none |
-| Q1 · Year-stamped phrases | ⚠️ 2 |
+| Q1 · Year-stamped phrases | ⚠️ 3 |
 | Q2 · App/download-intent phrases on web tools | ✅ none |
-| Q3 · Phrases sharing no word with tool name | ℹ️ 88 (review, not always wrong) |
+| Q3 · Phrases sharing no word with tool name | ℹ️ 82 (review, not always wrong) |
 | S1 · Overlong phrases (>70 chars) | ℹ️ 65 |
 | S2 · Single generic word | ℹ️ 10 |
 
-**Modifier coverage:** 39 phrases use feature modifiers ("with …", "solve for …"), 47 carry locale/currency intent, 69 say "free".
+**Modifier coverage:** 39 phrases use feature modifiers ("with …", "solve for …"), 48 carry locale/currency intent, 1016 say "free".
 
 ## Q1 — Year-stamped phrases (stale by next year)
 
@@ -27,6 +27,7 @@ Hard years inside evergreen keywords guarantee staleness. Drop the year — the 
 |---|---|
 | `/finance/standard-deduction` | standard deduction vs itemized deduction calculator 2026 |
 | `/health/gfr-estimate` | egfr calculator ckd-epi 2021 creatinine kidney function gfr |
+| `/health/gfr-estimate` | free online eGFR Calculator (CKD-EPI 2021) |
 
 ## Q3 — Phrases sharing no word with the tool name (review list)
 
@@ -56,9 +57,7 @@ Often legitimate (synonyms, problem-space queries like "how many bags of concret
 | `/conversion/power-conv` | watts to horsepower |
 | `/conversion/voltage-conv` | volts amps watts |
 | `/conversion/density-conv` | kg/m3 to g/cm3 |
-| `/education/gpa` | grade point average |
 | `/education/reading-speed` | words per minute |
-| `/everyday/age` | date of birth |
 | `/everyday/calorie-counter` | nutrition tracker |
 | `/everyday/calorie-counter` | diet plan |
 | `/finance/loan-emi` | day count convention |
@@ -78,13 +77,15 @@ Often legitimate (synonyms, problem-space queries like "how many bags of concret
 | `/finance/home-afford` | how much house |
 | `/finance/currency-converter` | usd to pkr live exchange rate converter |
 | `/finance/currency-converter` | pkr to usd converter today |
-| `/finance/paycheck` | take home pay |
-| `/finance/apr` | annual percentage rate |
 | `/finance/investment-growth` | cagr calculator with monthly contributions |
 | `/finance/bond-yield` | YTM |
 | `/finance/bond-yield` | fixed income |
 | `/finance/retirement-income` | 401k |
-| … | +38 more |
+| `/finance/retirement-income` | IRA |
+| `/finance/sip` | mutual fund |
+| `/finance/crypto-profit` | cryptocurrency gains |
+| `/finance/stock-profit` | capital gains |
+| … | +32 more |
 
 ## S1 — Overlong phrases (>70 chars)
 

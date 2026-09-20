@@ -192,26 +192,58 @@ const App = (function () {
       const sq = new URLSearchParams(window.location.search).get('q');
       if (sq && sq.trim()) {
         const term = sq.trim().toLowerCase();
-        const scored = (typeof ALL_TOOLS !== 'undefined' ? ALL_TOOLS : [])
-          .map(t => {
-            const name = String(t.name || '').toLowerCase();
-            let s = 0;
-            if (name === term) s = 100;
-            else if (name.indexOf(term) !== -1) s = 60;
-            else if (term.split(/\s+/).every(w => name.indexOf(w) !== -1)) s = 40;
-            else if (String(t.desc || '').toLowerCase().indexOf(term) !== -1) s = 20;
-            return { t, s };
-          })
-          .filter(x => x.s > 0)
-          .sort((a, b) => b.s - a.s);
-        if (scored.length) {
-          const first = scored[0].t;
-          const catKey = Object.keys(CALC_DATA).find(k => CALC_DATA[k] && Array.isArray(CALC_DATA[k].tools) && CALC_DATA[k].tools.includes(first));
-          if (catKey) {
-            // Clean the URL (drop ?q=) and land on the tool page directly.
-            history.replaceState(null, '', '/' + catKey + '/' + first.id);
-            path = '/' + catKey + '/' + first.id;
+        // S0: shared SmartSearch engine first (full registry + fuzzy + NL
+        // intents); naive scorer below stays as fallback while it loads / if failed.
+        let first = null;
+        let catKey = null;
+        const smart = ssRows(term, 1);
+        if (!smart && typeof ensureSmartSearch === 'function') {
+          // Engine still lazy-loading at boot: re-run this resolution once it
+          // arrives. The home renderer strips ?q= from the URL and fills the
+          // search box as its own fallback, so remember the term in _pendingQ
+          // and only auto-redirect if the user is still parked on home.
+          _pendingQ = term;
+          ensureSmartSearch().then(function (ok) {
+            if (!ok) { _pendingQ = null; return; }
+            if (_pendingQ && window.location.pathname === '/' && !window.location.search) {
+              const retry = ssRows(_pendingQ, 1);
+              _pendingQ = null;
+              if (retry && retry.length && retry[0].catKey) {
+                const dest = '/' + retry[0].catKey + '/' + retry[0].t.id;
+                history.replaceState(null, '', dest);
+                navigate(dest);
+              }
+            } else {
+              _pendingQ = null;
+            }
+          });
+        }
+        if (smart && smart.length) {
+          first = smart[0].t;
+          catKey = smart[0].catKey || null;
+        }
+        if (!first) {
+          const scored = (typeof ALL_TOOLS !== 'undefined' ? ALL_TOOLS : [])
+            .map(t => {
+              const name = String(t.name || '').toLowerCase();
+              let s = 0;
+              if (name === term) s = 100;
+              else if (name.indexOf(term) !== -1) s = 60;
+              else if (term.split(/\s+/).every(w => name.indexOf(w) !== -1)) s = 40;
+              else if (String(t.desc || '').toLowerCase().indexOf(term) !== -1) s = 20;
+              return { t, s };
+            })
+            .filter(x => x.s > 0)
+            .sort((a, b) => b.s - a.s);
+          if (scored.length) {
+            first = scored[0].t;
+            catKey = Object.keys(CALC_DATA).find(k => CALC_DATA[k] && Array.isArray(CALC_DATA[k].tools) && CALC_DATA[k].tools.includes(first));
           }
+        }
+        if (first && catKey) {
+          // Clean the URL (drop ?q=) and land on the tool page directly.
+          history.replaceState(null, '', '/' + catKey + '/' + first.id);
+          path = '/' + catKey + '/' + first.id;
         }
       }
     } catch (e) { /* search resolution must never break navigation */ }
@@ -1151,6 +1183,16 @@ const App = (function () {
       // tool's form on a later SPA navigation.
       delete window.__restoreStaticInputs;
     }
+    // Smart-input layer (S1): quick-fill presets, typical-value datalists,
+    // unit auto-suggest notes, and paste-and-parse — additive, never blocks
+    // calculation. Pure enhancement: failure is swallowed silently.
+    if (window.SmartInput && typeof SmartInput.enhance === 'function') {
+      try { SmartInput.enhance(catKey, tool); } catch (e) { /* best-effort */ }
+    }
+    // Smart-assist layer (S3): plausibility warnings + draft autosave — additive
+    if (window.SmartAssist && typeof SmartAssist.enhance === 'function') {
+      try { SmartAssist.enhance(tool); } catch (e) { /* best-effort */ }
+    }
     
     // Translate the calculator buttons/labels for the active locale — this is
     // what makes the WHOLE tool page (not just the header) switch language.
@@ -1748,6 +1790,38 @@ const App = (function () {
       if (window.ZR && typeof ZR.afterCalc === 'function') {
         try { ZR.afterCalc(tool, values, result); } catch (e) { /* never break result render */ }
       }
+      
+      // Visual polish post-calc (S2): what-if balance chart + result gauge — additive
+      if (window.VisualPolish && typeof VisualPolish.afterCalc === 'function') {
+        try { VisualPolish.afterCalc(tool, values, result); } catch (e) { /* never break result render */ }
+      }
+
+      // S7: contextual did-you-know fact under the result (deterministic per tool)
+      try {
+        if (window.Engagement && !resultArea.querySelector('.cp-funfact')) {
+          const factHtml = Engagement.renderFactPanel(tool.cat || '', tool.id);
+          if (factHtml) resultArea.insertAdjacentHTML('beforeend', factHtml);
+        }
+      } catch (e) { /* never break result render */ }
+
+      // S6: result read-aloud button (user-initiated TTS, not auto)
+      try {
+        const main = resultArea.querySelector('.result-main');
+        if (main && !document.getElementById('cp-speak-result')) {
+          const btn = document.createElement('button');
+          btn.id = 'cp-speak-result';
+          btn.type = 'button';
+          btn.textContent = '🔊 Listen';
+          btn.setAttribute('aria-label', 'Read the result aloud');
+          btn.style.cssText = 'margin:8px 0 0;padding:6px 12px;font-size:.85rem;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--text);cursor:pointer';
+          btn.addEventListener('click', function () {
+            if (window.Comfort) {
+              Comfort.speakResult(tool.name, main.textContent + '. ' + (resultArea.querySelector('.result-sub') ? resultArea.querySelector('.result-sub').textContent : ''));
+            }
+          });
+          main.insertAdjacentElement('afterend', btn);
+        }
+      } catch (e) { /* never break result render */ }
       
       // Animate charts
       setTimeout(() => { if (window.AdvancedFeatures) AdvancedFeatures.animateCharts(); }, 100);
@@ -2461,6 +2535,62 @@ const App = (function () {
     discount: ['discount', 'sales-tax', 'markup'],
     percentage: ['percentage', 'percent-change', 'fraction', 'ratio']
   };
+  // ---------- S0: shared SmartSearch engine (js/smart-search.js + js/tool-catalog.js) ----------
+  // ONE scoring core for every search surface: home/404 dropdown, nav search,
+  // ?q= SearchAction resolver, command palette. The engine + full registry
+  // catalog load lazily (first search interaction, or idle at ~2.5s) so they
+  // never touch the critical boot path; every surface falls back to its
+  // previous local logic until then (or if the load fails).
+  let _ssLoadPromise = null;
+  let _ssCatalog = null;
+  let _pendingQ = null; // ?q= term awaiting resolution while the engine lazy-loads
+  function ssAvailable() {
+    return typeof window.SmartSearch === 'object' && window.SmartSearch &&
+           Array.isArray(window.TOOL_CATALOG) && window.TOOL_CATALOG.length > 0;
+  }
+  function ssCatalog() {
+    if (!_ssCatalog && ssAvailable()) {
+      try { _ssCatalog = window.SmartSearch.buildCatalog(window.TOOL_CATALOG); } catch (e) { return null; }
+    }
+    return _ssCatalog;
+  }
+  function loadScriptOnce(src) {
+    return new Promise(function (res) {
+      var s = document.createElement('script');
+      s.src = src;
+      s.onload = function () { res(true); };
+      s.onerror = function () { res(false); };
+      document.head.appendChild(s);
+    });
+  }
+  function ensureSmartSearch() {
+    if (ssAvailable()) return Promise.resolve(true);
+    if (!_ssLoadPromise) {
+      _ssLoadPromise = loadScriptOnce('js/smart-search.js')
+        .then(function (ok) { return ok ? loadScriptOnce('js/tool-catalog.js') : false; })
+        .then(function (ok) { if (ok) ssCatalog(); return ssAvailable(); })
+        .catch(function () { return false; });
+    }
+    return _ssLoadPromise;
+  }
+  // Run the shared engine and map rows onto the {t, score, catKey, alias}
+  // shape the UI layers already consume. Returns null while the engine is
+  // unavailable (callers fall back to their legacy scorers).
+  function ssRows(q, limit) {
+    const cat = ssCatalog();
+    if (!cat || !window.SmartSearch) return null;
+    try {
+      return window.SmartSearch.search(q, cat, { limit: limit || 10 }).map(function (r) {
+        const bare = String(r.id || '').split('/').pop();
+        const t = TOOL_MAP[bare] || { id: bare, name: r.name, desc: r.desc, kw: '' };
+        return { t: t, score: r.score, catKey: r.cat, alias: (r.why === 'intent' || r.why === 'synonym') ? q : undefined };
+      });
+    } catch (e) { return null; }
+  }
+  // Warm the engine shortly after boot (mirrors the tool-intros idle pattern;
+  // never blocks paint or interaction).
+  setTimeout(function () { try { ensureSmartSearch(); } catch (e) { /* never break boot */ } }, 2500);
+
   function _searchScore(t, q) {
     const name = t.name.toLowerCase();
     const kw = (t.kw || '').toLowerCase();
@@ -2482,6 +2612,11 @@ const App = (function () {
     return best;
   }
   function _searchAll(q) {
+    // S0: shared SmartSearch engine first (full registry + fuzzy + synonyms +
+    // NL intents, incl. lazy categories not yet loaded). Legacy scorer below
+    // stays as fallback while the engine loads / if it fails.
+    const smart = ssRows(q, 10);
+    if (smart) return smart;
     const results = new Map(); // id -> {score, catKey}
     const add = (t, score) => {
       const cur = results.get(t.id);
@@ -2514,6 +2649,9 @@ const App = (function () {
     // First search keystroke also warms the lazy categories in the background, so
     // results for niche calculators appear as the user keeps typing.
     if (typeof warmLazyData === 'function') warmLazyData();
+    // First keystroke also lazy-loads the shared SmartSearch engine; until it
+    // arrives this keystroke uses the legacy scorer, the next one is smart.
+    ensureSmartSearch();
     const q = val.toLowerCase().trim();
     const results = document.getElementById('homeSearchResults');
     if (!results) return;
@@ -2569,9 +2707,17 @@ const App = (function () {
   }
 
   function search(val) {
-    // Nav search
+    // Nav search: jump straight to the best match. S0 shared engine first
+    // (fuzzy + synonyms + NL intents over the FULL registry, incl. lazy cats),
+    // legacy name-include fallback while it loads / if it failed.
     const q = val.toLowerCase().trim();
     if (!q) return;
+    const smart = ssRows(q, 1);
+    if (smart && smart.length && smart[0].catKey) {
+      Router.navigate('/' + smart[0].catKey + '/' + smart[0].t.id);
+      return;
+    }
+    ensureSmartSearch();
     const matches = ALL_TOOLS.filter(t => t.name.toLowerCase().includes(q)).slice(0, 5);
     if (matches.length === 0) return;
     const first = matches[0];
@@ -2600,7 +2746,17 @@ const App = (function () {
     
     let items = ALL_TOOLS;
     if (q) {
-      items = items.filter(t => t.name.toLowerCase().includes(q) || (t.desc && t.desc.toLowerCase().includes(q)));
+      // S0: shared SmartSearch engine ranks the palette too (fuzzy + synonyms
+      // + NL intents). Only tools already loaded (TOOL_MAP) are shown, same
+      // as before; legacy substring filter stays as fallback while it loads.
+      const smart = ssRows(q, 15);
+      if (smart) {
+        const mapped = smart.map(m => m.t).filter(t => TOOL_MAP[t.id]);
+        items = mapped.length ? mapped : items.filter(t => t.name.toLowerCase().includes(q) || (t.desc && t.desc.toLowerCase().includes(q)));
+      } else {
+        ensureSmartSearch();
+        items = items.filter(t => t.name.toLowerCase().includes(q) || (t.desc && t.desc.toLowerCase().includes(q)));
+      }
     } else {
       // Show recent/favorites first
       items = items.slice(0, 20);
@@ -2663,7 +2819,8 @@ const App = (function () {
       '<input type="text" class="share-link" value="' + shareUrl + '" readonly onclick="this.select()">' +
       '<div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">' +
       '<button class="action-btn" onclick="navigator.clipboard.writeText(\'' + shareUrl.replace(/'/g, "\\'") + '\');App.showToast(\'Link copied!\')">📋 Copy Link</button>' +
-      '<button class="action-btn" onclick="AdvancedFeatures.exportResultAsImage(\'' + (App._currentTool?.tool?.name || 'CalcPro') + '\',\'' + (document.querySelector('.result-main')?.textContent?.replace(/'/g, "\\'") || '') + '\',\'' + (document.querySelector('.result-extra')?.textContent?.replace(/'/g, "\\'") || '') + '\')">🖼️ Export Image</button>' +
+      '<button class="action-btn" onclick="AdvancedFeatures.exportResultAsImage(\'' + (App._currentTool?.tool?.name || 'CalcPro') + '\',\'' + (document.querySelector('.result-main')?.textContent?.replace(/'/g, "\\\\'") || '') + '\',\'' + (document.querySelector('.result-extra')?.textContent?.replace(/'/g, "\\\\'") || '') + '\')">🖼️ Export Image</button>' +
+      '<button class="action-btn" onclick="AdvancedFeatures.exportStoryImage(\'' + (App._currentTool?.tool?.name || 'CalcPro') + '\',\'' + (document.querySelector('.result-main')?.textContent?.replace(/'/g, "\\\\'") || '') + '\',\'' + (document.querySelector('.result-extra')?.textContent?.replace(/'/g, "\\\\'") || '') + '\')">📱 Story</button>' +
       // WhatsApp share — huge for India/Pakistan users. Packages the result
       // summary + shareable link into a wa.me deep link (no API, no tracking).
       '<button class="action-btn" style="background:#25D366;color:#fff;border-color:#1da851" onclick="window.open(\'https://wa.me/?text=' + encodeURIComponent((App._currentTool?.tool?.name || 'CalcPro') + ' result: ' + (document.querySelector('.result-main')?.textContent?.trim()?.slice(0, 200) || '') + ' — ' + shareUrl) + '\',\'_blank\',\'noopener\')">💬 WhatsApp</button>' +
@@ -3538,5 +3695,24 @@ if (typeof window !== 'undefined') {
   window.App = App;
   document.addEventListener('DOMContentLoaded', function () {
     App.init();
+    // S2 visual polish: saved accent color + first-visit onboarding tour
+    if (window.VisualPolish && typeof VisualPolish.init === 'function') {
+      try { VisualPolish.init(); } catch (e) { /* best-effort */ }
+    }
+    // S3 smart assist: fire any due opt-in reminders
+    if (window.SmartAssist && typeof SmartAssist.init === 'function') {
+      try { SmartAssist.init(); } catch (e) { /* best-effort */ }
+    }
+    // S5 power tools: shortcut cheat-sheet (?) + floating mini-calculator
+    if (window.PowerTools && typeof PowerTools.attachGlobalKeys === 'function') {
+      try { PowerTools.attachGlobalKeys(); } catch (e) { /* best-effort */ }
+    }
+    if (window.PowerTools && typeof PowerTools.initMiniCalc === 'function') {
+      try { PowerTools.initMiniCalc(); } catch (e) { /* best-effort */ }
+    }
+    // S6 comfort: persisted font scale + colorblind palette + motion override
+    if (window.Comfort && typeof Comfort.init === 'function') {
+      try { Comfort.init(); } catch (e) { /* best-effort */ }
+    }
   });
 }

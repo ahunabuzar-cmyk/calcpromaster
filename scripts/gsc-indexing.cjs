@@ -37,7 +37,7 @@ const DAYS = (() => {
 })();
 const SCOPE = 'https://www.googleapis.com/auth/webmasters.readonly';
 const API = 'searchconsole.googleapis.com';
-const V3 = '/v3';
+const V3 = '/webmasters/v3'; // real GSC REST root — bare /v3 returns the 404 HTML page
 
 let SITE_URL = (process.env.GSC_SITE_URL || '').replace(/\/+$/, '');
 if (!SITE_URL) {
@@ -51,13 +51,16 @@ if (!SITE_URL) {
 // Key URLs to inspect (index status)
 const KEY_URLS = ['/', '/finance/loan-emi', '/math/percentage', '/health/bmi', '/hub/finance', '/about'];
 
-function api(method, pathName, body, token) {
+function api(method, pathName, body, token, opts) {
+  const o = opts || {};
+  const host = o.host || API;
+  const root = o.root || V3;
   return new Promise((resolve, reject) => {
     const payload = body ? JSON.stringify(body) : null;
     const req = https.request(
       {
-        hostname: API,
-        path: V3 + pathName,
+        hostname: host,
+        path: root + pathName,
         method,
         headers: Object.assign(
           { Authorization: 'Bearer ' + token },
@@ -103,10 +106,13 @@ async function main() {
   for (const p of KEY_URLS) {
     try {
       const url = SITE_URL + (p === '/' ? '/' : p);
+      // URL Inspection API lives on v1 (not the /webmasters/v3 root).
+      // The property is registered WITH a trailing slash — inspect requires
+      // siteUrl to match the registered form exactly or it 403s.
       const res = await api('POST', '/urlInspection/index:inspect', {
         inspectionUrl: url,
-        siteUrl: SITE_URL,
-      }, token);
+        siteUrl: SITE_URL + '/',
+      }, token, { host: 'searchconsole.googleapis.com', root: '/v1' });
       const insp = (res.inspectionResult || {});
       const status = insp.indexStatusResult ? insp.indexStatusResult.coverageState : 'UNKNOWN';
       const verdict = insp.indexStatusResult ? insp.indexStatusResult.verdict : '?';

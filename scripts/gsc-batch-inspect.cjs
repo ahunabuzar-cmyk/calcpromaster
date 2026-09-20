@@ -10,7 +10,8 @@
 //   3. Writes data/gsc-inspect-batch.json + prints a verdict summary.
 //
 // Quota: URL Inspection API = 2000/day, 600/min → 100 URLs with 250ms gap is safe.
-// Usage: node scripts/gsc-batch-inspect.cjs [--limit 100]
+// Usage: node scripts/gsc-batch-inspect.cjs [--limit 100] [--skip 60]
+//   --skip N: skip the first N sitemap URLs (batch #2 starts at 60 — batch #1 covered them)
 // ============================================================
 'use strict';
 const https = require('https');
@@ -25,6 +26,11 @@ const LIMIT = (() => {
   const i = process.argv.indexOf('--limit');
   const v = i >= 0 ? parseInt(process.argv[i + 1], 10) : 100;
   return Number.isFinite(v) && v > 0 ? Math.min(v, 200) : 100;
+})();
+const SKIP = (() => {
+  const i = process.argv.indexOf('--skip');
+  const v = i >= 0 ? parseInt(process.argv[i + 1], 10) : 0;
+  return Number.isFinite(v) && v >= 0 ? v : 0;
 })();
 
 function req(method, urlPath, body, token) {
@@ -67,7 +73,7 @@ function fetchLiveSitemap() {
   });
 }
 
-function pickPriority(locs, limit) {
+function pickPriority(locs, limit, skip) {
   const always = locs.filter(u => u === SITE_URL + '/' || /\/(about|contact|privacy)\.?$/.test(u));
   const hubs = locs.filter(u => /\/hub\/[^/]+\/?$/.test(u));
   const tools = locs.filter(u => !always.includes(u) && !hubs.includes(u));
@@ -89,7 +95,9 @@ function pickPriority(locs, limit) {
     i++;
     if (i > limit * cats.length * 4) break; // safety
   }
-  return [...new Set([...always, ...hubs, ...picked])].slice(0, limit);
+  // --skip applies to the FINAL combined list so batches tile cleanly:
+  // batch #1 = first N, batch #2 = next N (--skip N), etc.
+  return [...new Set([...always, ...hubs, ...picked])].slice(0, limit + skip).slice(skip);
 }
 
 (async () => {
@@ -105,7 +113,7 @@ function pickPriority(locs, limit) {
   // [2/2] URL Inspection batch
   const locs = await fetchLiveSitemap();
   if (!locs.length) { console.error('live sitemap returned 0 URLs'); process.exit(1); }
-  const urls = pickPriority(locs, LIMIT);
+  const urls = pickPriority(locs, LIMIT, SKIP);
   console.log('[2/2] Inspecting ' + urls.length + ' URLs (live sitemap has ' + locs.length + ')...\n');
 
   const results = [];

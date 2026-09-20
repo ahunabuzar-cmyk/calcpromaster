@@ -268,12 +268,23 @@ function stampReviewDates() {
       if (!s.includes('tool-review-block')) continue;
       const orig = s;
       const anchor = s.indexOf('class="tool-review-block"');
+      // Schema freshness: keep ld+json WebApplication dateModified in lockstep
+      // with the visible review-date stamp — same build date, same change rules
+      // (no cosmetic redating without a content change). Search engines read
+      // dateModified for crawl scheduling and fresh-snippet eligibility.
+      const setSchemaDate = (str, d) => {
+        if (!str.includes('"@type":"WebApplication"')) return str;
+        const dm = '"dateModified":"' + d + '"';
+        if (str.includes('"dateModified"')) return str.replace(/"dateModified":"[^"]*"/, dm);
+        return str.replace('"@type":"WebApplication"', '"@type":"WebApplication",' + dm);
+      };
       if (anchor >= 0 && !s.includes('class="review-date"')) {
         // Not yet stamped: insert the date line just before the review
         // block's closing </div> (the block ends right before the disclaimer).
         const closeIdx = s.indexOf('</div>', anchor);
         if (closeIdx >= 0) {
           s = s.slice(0, closeIdx) + ' <span class="review-date">Last reviewed: ' + buildDate + '</span>' + s.slice(closeIdx);
+          s = setSchemaDate(s, buildDate);
           stamped++;
         }
       } else if (s.includes('class="review-date"')) {
@@ -285,6 +296,7 @@ function stampReviewDates() {
         const cur = (s.match(/Last reviewed: ([0-9]{4}-[0-9]{2}-[0-9]{2})/) || [])[1];
         if (isFresh && cur !== buildDate) {
           s = s.replace(/Last reviewed: ([0-9]{4}-[0-9]{2}-[0-9]{2})/, 'Last reviewed: ' + buildDate);
+          s = setSchemaDate(s, buildDate);
           stamped++;
         } else {
           kept++;

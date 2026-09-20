@@ -350,6 +350,17 @@ function main() {
   const withI18n = process.argv.includes('--i18n');
   const urls = [];
 
+  // Canonical form = trailing slash on extensionless pages. Netlify pretty-URLs
+  // 301s /a/b → /a/b/ (verified live), and GSC URL Inspection shows the /a/b/
+  // form is the indexed canonical. Submitting slash-less URLs makes Google burn
+  // a redirect hop on EVERY sitemap URL — on a zero-authority site that crawl
+  // waste matters. (Homepage '/'+slug cases keep their existing form.)
+  const canonical = (loc) => {
+    const p = loc.replace(/^https?:\/\/[^/]+/, '');
+    if (p === '/' || p === '' || /\.[a-z0-9]+$/i.test(p)) return loc;
+    return loc.replace(/\/?$/, '/');
+  };
+
   // Static pages
   STATIC_PAGES.forEach(([slug, freq, prio]) => {
     urls.push({ loc: DOMAIN + '/' + slug, freq: freq, prio: prio });
@@ -399,14 +410,15 @@ function main() {
   if (withI18n) xml += ' xmlns:xhtml="http://www.w3.org/1999/xhtml"';
   xml += '>\n';
   urls.forEach(u => {
+    const loc = canonical(u.loc);
     xml += '  <url>\n';
-    xml += '    <loc>' + u.loc + '</loc>\n';
+    xml += '    <loc>' + loc + '</loc>\n';
     xml += '    <lastmod>' + today + '</lastmod>\n';
     xml += '    <changefreq>' + u.freq + '</changefreq>\n';
     xml += '    <priority>' + u.prio + '</priority>\n';
     if (withI18n) {
       // One hreflang alternate per locale (English URL stays canonical/unprefixed)
-      const basePath = u.loc.replace(DOMAIN, '');
+      const basePath = loc.replace(DOMAIN, '');
       LOCALES.forEach(loc => {
         xml += '    <xhtml:link rel="alternate" hreflang="' + loc + '" href="' + DOMAIN + (loc === 'en' ? basePath : '/' + loc + basePath) + '"/>\n';
       });

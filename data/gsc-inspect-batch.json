@@ -1,0 +1,308 @@
+{
+  "ranAt": "2026-09-20T10:40:40.135Z",
+  "site": "https://calcpromaster.netlify.app",
+  "sitemapResubmit": 403,
+  "count": 60,
+  "results": [
+    {
+      "url": "https://calcpromaster.netlify.app/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/about",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/privacy",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/contact",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/hub/auto",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/hub/business",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/hub/career",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/hub/construction",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/hub/conversion",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/hub/education",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/hub/engineering",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/hub/everyday",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/hub/finance",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/hub/fitness",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/hub/food",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/hub/health",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/hub/homegarden",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/hub/lifestyle",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/hub/math",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/hub/family",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/hub/regional",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/hub/science",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/hub/tech",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/hub/utilities",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/auto",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/blog",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/business",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/career",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/construction",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/conversion",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/disclaimer-finance",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/disclaimer-general",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/disclaimer-health",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/education",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/engineering",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/everyday",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/family",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/finance",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/fitness",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/food",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/guides",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/health",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/homegarden",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/lifestyle",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/math",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/regional",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/science",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/tech",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/terms",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/utilities",
+      "verdict": "NEUTRAL",
+      "coverage": "Alternate page with proper canonical tag"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/auto/fuel-cost",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/blog/stacked-discounts",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/business/business-roi",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/career/salary-converter",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/construction/concrete-slab",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/conversion/length",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/education/gpa",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/engineering/voltage-drop",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/everyday/age",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.netlify.app/family/baby-weight-gain",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    }
+  ]
+}

@@ -490,6 +490,14 @@ const App = (function () {
     // Daily Tip
     html += '<div id="daily-tip-widget">' + _tipHTML + '</div>';
     
+    // S7: seasonal promotion banner (date-based config; empty off-season)
+    try {
+      if (window.Engagement) {
+        const banner = Engagement.renderSeasonalBanner();
+        if (banner) html += banner;
+      }
+    } catch (e) { /* non-fatal */ }
+    
     // Favorites bar
     if (favs.length > 0) {
       html += '<div class="favorites-bar" id="favorites-bar">';
@@ -982,7 +990,11 @@ const App = (function () {
         let selectedVal = inp.def || '';
         if (tool.id === 'currency-converter' && (inp.id === 'from' || inp.id === 'to') && _C && _C.getAllCurrencyCodes) {
           selectOpts = _C.getAllCurrencyCodes().map(c => ({ v: c, l: c + ' — ' + _C.getCurrencyName(c) }));
-          selectedVal = inp.id === 'from' ? 'USD' : 'EUR';
+          // S3 #21: pre-select From currency from the visitor's browser locale
+          // (no IP lookup, no network call). Falls back to USD if unknown.
+          var _detected = (window.SmartAssist && typeof SmartAssist.detectCurrency === 'function')
+            ? SmartAssist.detectCurrency(navigator.language, 'USD') : 'USD';
+          selectedVal = inp.id === 'from' ? _detected : 'EUR';
         }
         inputsHtml += `<select id="${inp.id}" class="calc-input">`;
         selectOpts.forEach(o => {
@@ -1189,6 +1201,51 @@ const App = (function () {
     if (window.SmartInput && typeof SmartInput.enhance === 'function') {
       try { SmartInput.enhance(catKey, tool); } catch (e) { /* best-effort */ }
     }
+    // S1#5: undo/redo stack wiring (existing module was previously unwired)
+    try {
+      if (window.UndoRedo) {
+        const urForm = document.getElementById('calc-form');
+        if (urForm) {
+          if (!document.getElementById('undo-redo-container')) {
+            const uc = document.createElement('div');
+            uc.id = 'undo-redo-container';
+            uc.style.margin = '0 0 8px';
+            urForm.parentNode.insertBefore(uc, urForm);
+          }
+          if (typeof UndoRedo.init === 'function') UndoRedo.init();
+          if (typeof UndoRedo.enableUndoRedoForTool === 'function') UndoRedo.enableUndoRedoForTool(tool.id);
+          // Apply restored states back to the form (module was stack-only before)
+          if (typeof UndoRedo.onRestore === 'function' && !window.UndoRedo.__appApplied) {
+            window.UndoRedo.__appApplied = true;
+            UndoRedo.onRestore(function (state) {
+              const f = document.getElementById('calc-form');
+              if (!f || !state || !state.input) return;
+              Object.keys(state.input).forEach(function (id) {
+                const el = document.getElementById(id);
+                if (!el) return;
+                if (el.type === 'checkbox') el.checked = state.input[id];
+                else el.value = state.input[id];
+              });
+              try { App.executeCalc({ preventDefault: function () {}, target: f }); } catch (e) { /* recalc best-effort */ }
+            });
+          }
+          // Snapshot on input (debounced 400ms); programmatic restore doesn't fire events, so no loop
+          if (urForm.__urSnap) urForm.removeEventListener('input', urForm.__urSnap);
+          let urT = null;
+          urForm.__urSnap = function () {
+            clearTimeout(urT);
+            urT = setTimeout(function () {
+              const data = {};
+              urForm.querySelectorAll('input, select, textarea').forEach(function (el) {
+                if (el.id && el.type !== 'file' && el.type !== 'password') data[el.id] = el.type === 'checkbox' ? el.checked : el.value;
+              });
+              UndoRedo.saveState(function () { return { input: data, toolId: tool.id }; });
+            }, 400);
+          };
+          urForm.addEventListener('input', urForm.__urSnap);
+        }
+      }
+    } catch (e) { /* undo/redo is best-effort */ }
     // Smart-assist layer (S3): plausibility warnings + draft autosave — additive
     if (window.SmartAssist && typeof SmartAssist.enhance === 'function') {
       try { SmartAssist.enhance(tool); } catch (e) { /* best-effort */ }
@@ -2805,6 +2862,7 @@ const App = (function () {
 
   // ---------- Share ----------
   function shareTool(toolId) {
+    if (typeof AdvancedFeatures.trackShare === 'function') { try { AdvancedFeatures.trackShare(); } catch (e) { /* never break share */ } }
     const url = window.location.href;
     const qr = QRCode.toDataURL(url, 6);
     const modal = document.getElementById('modalOverlay');
@@ -2824,8 +2882,47 @@ const App = (function () {
       // WhatsApp share — huge for India/Pakistan users. Packages the result
       // summary + shareable link into a wa.me deep link (no API, no tracking).
       '<button class="action-btn" style="background:#25D366;color:#fff;border-color:#1da851" onclick="window.open(\'https://wa.me/?text=' + encodeURIComponent((App._currentTool?.tool?.name || 'CalcPro') + ' result: ' + (document.querySelector('.result-main')?.textContent?.trim()?.slice(0, 200) || '') + ' — ' + shareUrl) + '\',\'_blank\',\'noopener\')">💬 WhatsApp</button>' +
+      // S4 #34: WhatsApp-ready formatted summary (emoji + line breaks), copied
+      // to clipboard — user pastes it straight into any chat app.
+      '<button class="action-btn" onclick="App.copyFormattedResult()">🧾 Formatted text</button>' +
       '</div>';
     modal.classList.add('active');
+  }
+
+  // ---------- S4 #34: WhatsApp-ready formatted result text ----------
+  // Pure builder (testable): takes tool name, main/extra result text, link.
+  // Returns emoji-formatted multi-line summary for chat apps.
+  function buildFormattedResult(toolName, main, extra, link) {
+    var lines = [];
+    var name = String(toolName || 'CalcPro').trim();
+    var m = String(main || '').replace(/\s+/g, ' ').trim();
+    if (!m) return null;
+    lines.push('🧮 ' + name + ' — Result');
+    lines.push('📊 ' + m);
+    var x = String(extra || '').replace(/\s+/g, ' ').trim();
+    if (x) lines.push('ℹ️ ' + x);
+    if (link) lines.push('🔗 ' + String(link));
+    lines.push('(via CalcProMaster)');
+    return lines.join('\n');
+  }
+  function copyFormattedResult() {
+    var ra = document.getElementById('result-area');
+    var mainEl = ra ? ra.querySelector('.result-main') : null;
+    var main = mainEl ? (mainEl.textContent || '').trim() : '';
+    if (!main || main.indexOf('Enter values') === 0) {
+      showToast('No result yet — press Calculate first', 1800);
+      return;
+    }
+    var extraEl = ra ? ra.querySelector('.result-extra') : null;
+    var extra = extraEl ? (extraEl.textContent || '').trim() : '';
+    var toolName = (App._currentTool && App._currentTool.tool && App._currentTool.tool.name) || 'CalcPro';
+    var text = buildFormattedResult(toolName, main, extra, window.location.href);
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { showToast('Formatted result copied ✓ — paste it anywhere', 2000); }).catch(function () { _legacyCopy(text); showToast('Formatted result copied ✓', 2000); });
+    } else {
+      _legacyCopy(text);
+      showToast('Formatted result copied ✓', 2000);
+    }
   }
 
   // ---------- Print ----------
@@ -3677,6 +3774,8 @@ const App = (function () {
     paletteFilter,
     paletteKey,
     shareTool,
+    buildFormattedResult,
+    copyFormattedResult,
     printReport,
     exportResultAsPdf,
     injectToolSchema,

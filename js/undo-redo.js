@@ -6,6 +6,17 @@ const UndoRedo = (function () {
   let stack = [];
   let index = -1;
   let savedData = {};
+  let onRestoreCb = null;
+
+  // Register a callback invoked with the restored state whenever undo()/redo()
+  // pops the stack. This is how the app applies the state back to the form —
+  // without it, undo/redo only moves the stack pointer without visible effect.
+  function onRestore(fn) { if (typeof fn === 'function') onRestoreCb = fn; }
+  function _emitRestore(result) {
+    if (onRestoreCb && result && result.input) {
+      try { onRestoreCb(result); } catch (e) { /* applying a state must never throw */ }
+    }
+  }
 
   function saveState(callback) {
     const result = callback();
@@ -45,6 +56,7 @@ const UndoRedo = (function () {
       ...state,
       undone: true
     };
+    _emitRestore(result);
     return result;
   }
 
@@ -56,6 +68,7 @@ const UndoRedo = (function () {
       ...state,
       redone: true
     };
+    _emitRestore(result);
     return result;
   }
 
@@ -98,6 +111,6 @@ const UndoRedo = (function () {
     document.addEventListener('keydown', onKeyDown);
   }
 
-  return { saveState, undo, redo, canUndo, canRedo, clear, getHistory, restoreState, enableUndoRedoForTool, init };
+  return { saveState, undo, redo, canUndo, canRedo, clear, getHistory, restoreState, enableUndoRedoForTool, init, onRestore };
 })();
 if (typeof window !== 'undefined') window.UndoRedo = UndoRedo;

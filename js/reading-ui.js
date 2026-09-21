@@ -40,6 +40,8 @@
       '<button type="button" data-act="ls" title="Letter spacing" aria-label="Adjust letter spacing">A⇔</button>' +
       '<button type="button" data-act="dys" role="switch" aria-checked="' + prefs.dyslexic + '" title="Dyslexia-friendly font" aria-label="Dyslexia-friendly font">Dys</button>' +
       '<button type="button" data-act="fmt" title="Number format: ' + prefs.numberFormat + '" aria-label="Number format">#,##0</button>' +
+      '<button type="button" data-act="collapse" aria-pressed="false" title="Collapse long sections" aria-label="Collapse long sections">⊟</button>' +
+      '<button type="button" data-act="tabs" aria-pressed="false" title="Organize sections as tabs" aria-label="Organize sections as tabs">▤ Tabs</button>' +
       '<button type="button" data-act="print" title="Print view" aria-label="Print this page">⎙</button>' +
       '<button type="button" data-act="zen" title="Distraction-free reading" aria-label="Distraction-free reading">Zen</button>';
     document.body.appendChild(bar);
@@ -60,6 +62,14 @@
         btn.title = 'Number format: ' + prefs.numberFormat;
         document.documentElement.setAttribute('data-numfmt', prefs.numberFormat);
         document.dispatchEvent(new CustomEvent('reading:numfmt', { detail: prefs.numberFormat }));
+      } else if (act === 'collapse') {
+        var wrapped = !document.body.hasAttribute('data-collapsed-sections');
+        applyCollapsibleSections(wrapped);
+        btn.setAttribute('aria-pressed', String(wrapped));
+      } else if (act === 'tabs') {
+        var tabbed = !document.body.hasAttribute('data-tabbed-sections');
+        applyTabbedSections(tabbed);
+        btn.setAttribute('aria-pressed', String(tabbed));
       } else if (act === 'print') {
         document.body.classList.add('print-view');
         window.print();
@@ -143,6 +153,7 @@
     if (tb) tb.hidden = !long;
     var jb = $('#jump-to-input');
     if (jb) jb.hidden = !(long && y > R.SCROLL_THRESHOLD);
+    syncStickyCalc();
     spyToc(y, vh);
   }
 
@@ -163,6 +174,177 @@
     });
   }
 
+  // ---------- #56 collapsible sections (user-optional, SEO-safe) ----------
+  // Wraps long .explain-card sections (skip FAQ+review) in <details open>:
+  // content stays in the DOM and crawlers see everything; the toggle only
+  // shortens the page on demand.
+  function applyCollapsibleSections(on) {
+    if (on) {
+      var cards = document.querySelectorAll('.explain-card.seo-guide');
+      var wrapped = 0;
+      cards.forEach(function (card) {
+        if (card.dataset.collapsibleDone || card.querySelector('.seo-faqs, .tool-review-block')) return;
+        var h2 = card.querySelector('h2');
+        var title = h2 ? h2.textContent : 'Section';
+        var details = document.createElement('details');
+        details.className = 'collapsible';
+        details.open = true;
+        var summary = document.createElement('summary');
+        summary.textContent = title;
+        details.appendChild(summary);
+        while (card.firstChild) details.appendChild(card.firstChild);
+        card.appendChild(details);
+        card.dataset.collapsibleDone = '1';
+        wrapped++;
+      });
+      if (wrapped) document.body.setAttribute('data-collapsed-sections', 'on');
+    } else {
+      document.querySelectorAll('details.collapsible').forEach(function (d) {
+        var card = d.closest('.explain-card');
+        if (card && card.dataset.collapsibleDone) {
+          while (d.firstChild) card.insertBefore(d.firstChild, d);
+          d.remove();
+          delete card.dataset.collapsibleDone;
+        }
+      });
+      document.body.removeAttribute('data-collapsed-sections');
+    }
+  }
+
+  // ---------- #57 tab organization (user-optional, SEO-safe) ----------
+  // Groups sibling .explain-card sections into an accessible tablist built by
+  // Reading.makeTabs. The prerendered HTML ships all sections visible; hiding
+  // only happens client-side on user request. Re-expanding restores the DOM.
+  function applyTabbedSections(on) {
+    var cards = Array.prototype.slice.call(document.querySelectorAll('.explain-card.seo-guide'));
+    if (on && cards.length >= 2) {
+      var anchorParent = cards[0].parentNode;
+      var anchorNext = cards[0];
+      var sections = cards.map(function (card) {
+        var h2 = card.querySelector('h2');
+        return { title: h2 ? h2.textContent : 'Section', card: card };
+      });
+      var html = R.makeTabs(sections.map(function (s) { return { title: s.title, html: '' }; }));
+      var holder = document.createElement('div');
+      holder.id = 'cpm-section-tabs';
+      holder.innerHTML = html;
+      var tablist = holder.querySelector('[role=tablist]');
+      var panels = holder.querySelectorAll('[role=tabpanel]');
+      anchorParent.insertBefore(holder, anchorNext); // insert BEFORE moving cards in
+      cards.forEach(function (card, i) {
+        var panel = panels[i];
+        if (!panel) return;
+        panel.appendChild(card);
+        if (i > 0) panel.hidden = true;
+        tablist.appendChild(holder.querySelector('#' + panel.id + '-tab'));
+      });
+      wireTabKeys(holder, sections.length);
+      document.body.setAttribute('data-tabbed-sections', 'on');
+    } else if (!on) {
+      var holderEl = document.getElementById('cpm-section-tabs');
+      if (holderEl) {
+        var parent = holderEl.parentNode;
+        Array.prototype.slice.call(holderEl.querySelectorAll('.explain-card')).forEach(function (card) {
+          parent.insertBefore(card, holderEl);
+          card.hidden = false;
+        });
+        holderEl.remove();
+      }
+      document.body.removeAttribute('data-tabbed-sections');
+    }
+  }
+
+  function wireTabKeys(holder, count) {
+    var tablist = holder.querySelector('[role=tablist]');
+    if (!tablist) return;
+    var tabs = tablist.querySelectorAll('[role=tab]');
+    tablist.addEventListener('keydown', function (e) {
+      var current = -1;
+      tabs.forEach(function (t, i) { if (t.getAttribute('tabindex') === '0') current = i; });
+      var dir = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!dir) return;
+      e.preventDefault();
+      var next = R.nextTabIndex(tabs.length, current, dir);
+      tabs.forEach(function (t, i) {
+        var on = i === next;
+        t.setAttribute('tabindex', on ? '0' : '-1');
+        t.setAttribute('aria-selected', String(on));
+        t.classList.toggle('tab-active', on);
+        var panel = document.getElementById(t.getAttribute('aria-controls'));
+        if (panel) panel.hidden = !on;
+      });
+      tabs[next].focus();
+    });
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () {
+        tabs.forEach(function (o) {
+          var on = o === t;
+          o.setAttribute('aria-selected', String(on));
+          o.setAttribute('tabindex', on ? '0' : '-1');
+          var panel = document.getElementById(o.getAttribute('aria-controls'));
+          if (panel) panel.hidden = !on;
+        });
+      });
+    });
+  }
+
+  // ---------- #58 sticky calculator bar (long calculator pages) ----------
+  // A compact bar showing the last result, fixed to the viewport bottom,
+  // appearing only after the real calculator has scrolled out of view.
+  function buildStickyCalc() {
+    if ($('#cpm-sticky-calc') || !document.getElementById('calc-form')) return;
+    var bar = document.createElement('div');
+    bar.id = 'cpm-sticky-calc';
+    bar.hidden = true;
+    bar.setAttribute('role', 'status');
+    bar.innerHTML =
+      '<span class="sc-result" aria-live="polite">—</span>' +
+      '<span class="sc-actions">' +
+      '<button type="button" data-act="edit">✏️ Edit inputs</button>' +
+      '<button type="button" data-act="share">🔗 Share</button>' +
+      '<button type="button" data-act="print">⎙</button>' +
+      '</span>';
+    document.body.appendChild(bar);
+    bar.addEventListener('click', function (e) {
+      var b = e.target.closest('button[data-act]');
+      if (!b) return;
+      var act = b.getAttribute('data-act');
+      if (act === 'edit') {
+        var f = document.getElementById('calc-form');
+        if (f) f.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else if (act === 'share') {
+        if (window.App && typeof App.shareTool === 'function') App.shareTool();
+      } else if (act === 'print') {
+        document.body.classList.add('print-view');
+        window.print();
+        setTimeout(function () { document.body.classList.remove('print-view'); }, 800);
+      }
+    });
+  }
+
+  function syncStickyCalc() {
+    var bar = $('#cpm-sticky-calc');
+    var form = document.getElementById('calc-form');
+    var res = document.querySelector('#result .result-main, .result-main');
+    if (!bar || !form) return;
+    var y = window.scrollY || 0;
+    var r = form.getBoundingClientRect();
+    var outOfView = r.bottom < 0;
+    bar.hidden = !outOfView;
+    if (outOfView && res) {
+      var txt = (res.textContent || '').trim();
+      if (txt) bar.querySelector('.sc-result').textContent = txt;
+    }
+  }
+
+  // ---------- #83 one-handed mode (phone: controls in thumb reach) ----------
+  function applyOneHanded(on) {
+    if (on) document.documentElement.setAttribute('data-one-handed', 'on');
+    else document.documentElement.removeAttribute('data-one-handed');
+    prefs.oneHanded = on;
+    R.savePrefs(prefs);
+  }
+
   // ---------- boot ----------
   function init() {
     var content = document.querySelector('.tool-content, article, main');
@@ -172,8 +354,26 @@
       buildProgress();
       buildJumpBtn();
       buildToc(content);
+      buildStickyCalc();
       window.addEventListener('scroll', requestAnimationFrameWrap(onScroll), { passive: true });
       onScroll();
+    }
+    // one-handed toggle (S11 #83): mobile only, persisted
+    if (window.matchMedia && window.matchMedia('(max-width: 640px)').matches && !$('#cpm-one-handed-toggle')) {
+      var oh = document.createElement('button');
+      oh.id = 'cpm-one-handed-toggle';
+      oh.type = 'button';
+      oh.textContent = '☝️';
+      oh.title = 'One-handed mode';
+      oh.setAttribute('aria-label', 'Toggle one-handed layout mode');
+      oh.setAttribute('aria-pressed', String(!!prefs.oneHanded));
+      oh.addEventListener('click', function () {
+        var on = !document.documentElement.hasAttribute('data-one-handed');
+        applyOneHanded(on);
+        oh.setAttribute('aria-pressed', String(on));
+      });
+      document.body.appendChild(oh);
+      if (prefs.oneHanded) applyOneHanded(true);
     }
     applyPrefs();
     uiBuilt = true;

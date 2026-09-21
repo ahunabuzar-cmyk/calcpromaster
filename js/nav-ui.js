@@ -291,6 +291,102 @@
     });
   }
 
+  // ---------- #82 pull-to-refresh (list pages only, via Decide gate) ----------
+  function wirePullToRefresh() {
+    var D = window.Decide;
+    if (!D || typeof D.pullToRefreshAllowed !== 'function') return;
+    if (!window.matchMedia || !window.matchMedia('(max-width: 640px)').matches) return; // touch/mobile context
+    var path = location.pathname;
+    var kind = path === '/' ? 'home' : path.indexOf('/guides') === 0 ? 'guides'
+      : /^\/[a-z0-9-]+\/?$/.test(path) ? 'category' : null;
+    if (!D.pullToRefreshAllowed(kind, 0)) return;
+    var startY = null, pulling = false;
+    var indicator = null;
+    function showIndicator(pct) {
+      if (!indicator) {
+        indicator = document.createElement('div');
+        indicator.id = 'cpm-ptr';
+        indicator.setAttribute('aria-hidden', 'true');
+        document.body.appendChild(indicator);
+      }
+      indicator.style.transform = 'translateY(' + Math.round(pct * 48) + 'px)';
+      indicator.style.opacity = pct > 0.15 ? '1' : '0';
+    }
+    document.addEventListener('touchstart', function (e) {
+      startY = (e.touches[0] && e.touches[0].clientY) || null;
+      pulling = (window.scrollY || 0) <= 0 && startY !== null;
+    }, { passive: true });
+    document.addEventListener('touchmove', function (e) {
+      if (!pulling) return;
+      var dy = (e.touches[0].clientY - startY);
+      if (dy <= 0) { showIndicator(0); return; }
+      showIndicator(Math.min(dy / 120, 1));
+    }, { passive: true });
+    document.addEventListener('touchend', function () {
+      if (pulling) showIndicator(0);
+      pulling = false;
+      startY = null;
+    }, { passive: true });
+  }
+
+  // ---------- #61 breadcrumb category switcher ----------
+  function wireCategorySwitcher() {
+    var N = window.NavComfort;
+    var meta = window.CATEGORY_META;
+    var crumb = document.querySelector('.breadcrumb');
+    if (!N || !meta || !crumb || document.getElementById('cpm-cat-switch')) return;
+    // current category = first crumb link that is a /category path
+    var currentKey = null;
+    crumb.querySelectorAll('a').forEach(function (a) {
+      var m = (a.getAttribute('href') || '').match(/^\/([a-z0-9-]+)\/?$/);
+      if (m && meta[m[1]]) currentKey = m[1];
+    });
+    if (!currentKey) return; // homepage/other pages keep plain breadcrumb
+    var named = {};
+    Object.keys(meta).forEach(function (k) { named[k] = { name: (meta[k] && meta[k].title) || k }; });
+    var opts = N.buildCategoryOptions(named, currentKey);
+    var sel = document.createElement('select');
+    sel.id = 'cpm-cat-switch';
+    sel.className = 'cpm-cat-switch';
+    sel.setAttribute('aria-label', 'Switch to another category');
+    sel.innerHTML = '<option value="" selected>📂 ' + currentKey + '</option>' +
+      opts.map(function (o) { return '<option value="/' + o.key + '">' + o.name + '</option>'; }).join('');
+    sel.addEventListener('change', function () { if (sel.value) location.assign(sel.value); });
+    crumb.appendChild(sel);
+  }
+
+  // ---------- #66 related-calculators carousel ----------
+  // ≥4 related cards: switch the grid to a swipeable scroll-snap row ordered
+  // by NavComfort.orderRelated. Fewer items stay a plain grid.
+  function enhanceRelatedCarousel() {
+    var N = window.NavComfort;
+    var grid = document.querySelector('.related-section .related-grid');
+    if (!N || !grid || grid.dataset.carouselDone) return;
+    var links = Array.prototype.slice.call(grid.querySelectorAll('a.related-card'));
+    if (links.length < 4) return;
+    var currentId = decodeURIComponent((location.pathname.split('/').pop() || '').replace(/\.html$/, ''));
+    var items = links.map(function (a) { return { id: (a.getAttribute('href') || '').split('/').pop(), el: a }; });
+    var ordered = N.orderRelated(items, currentId, 8);
+    grid.classList.add('related-carousel');
+    grid.dataset.carouselDone = '1';
+    ordered.forEach(function (r) { grid.appendChild(r.el); });
+  }
+
+  // ---------- #75 zoom-safety classes (desktop zoom heuristic) ----------
+  function applyZoomClass() {
+    var N = window.NavComfort;
+    if (!N) return;
+    var html = document.documentElement;
+    function upd() {
+      var z = (window.outerWidth && window.innerWidth) ? Math.round((window.outerWidth / window.innerWidth) * 100) : 100;
+      var cls = N.zoomClass(z);
+      html.classList.remove('zoom-150', 'zoom-200');
+      if (cls) html.classList.add(cls);
+    }
+    upd();
+    window.addEventListener('resize', upd);
+  }
+
   // ---------- boot ----------
   function init() {
     recordRecent();
@@ -300,6 +396,10 @@
     wireViewToggle();
     wireWizard();
     renderBottomNav();
+    wirePullToRefresh();
+    wireCategorySwitcher();
+    enhanceRelatedCarousel();
+    applyZoomClass();
     document.documentElement.setAttribute('data-navui', 'ready');
   }
 

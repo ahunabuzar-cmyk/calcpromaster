@@ -2276,3 +2276,64 @@ html[data-reduced-motion="on"] .cp-scale-dot, html[data-reduced-motion="on"] .cp
 .result-area .result-main.pulsing { animation: cp-result-pulse .7s ease-out 1; }
 @media (prefers-reduced-motion: reduce) { .result-main.pulsing { animation: none; } }
 html[data-reduced-motion="on"] .result-main.pulsing { animation: none; }
+
+/* ---------- S8 #58: sticky calculator bar ---------- */
+#cpm-sticky-calc {
+  position: fixed; left: 50%; transform: translateX(-50%);
+  bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+  max-width: min(680px, calc(100vw - 24px));
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 14px; border-radius: 14px;
+  background: var(--surface, #1e293b); color: var(--text, #f1f5f9);
+  box-shadow: 0 6px 24px rgb(0 0 0 / 0.25); z-index: 60;
+}
+#cpm-sticky-calc[hidden] { display: none; }
+#cpm-sticky-calc .sc-result { font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#cpm-sticky-calc .sc-actions { display: flex; gap: 6px; }
+#cpm-sticky-calc button { min-height: 44px; min-width: 44px; border: 1px solid var(--border, #334155); background: transparent; color: inherit; border-radius: 8px; cursor: pointer; }
+
+/* ---------- S11 #83: one-handed mode ---------- */
+#cpm-one-handed-toggle {
+  position: fixed; right: 12px; bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+  width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border, #334155);
+  background: var(--surface, #1e293b); color: var(--text, #f1f5f9); font-size: 18px;
+  z-index: 60; cursor: pointer;
+}
+html[data-one-handed="on"] #calc-form { max-width: 100% !important; margin: 0 !important; }
+html[data-one-handed="on"] .calc-btn { min-height: 52px; font-size: 1.05em; }
+html[data-one-handed="on"] .result-card { margin-bottom: 96px; }
+
+/* ---------- S11 #82: pull-to-refresh indicator ---------- */
+#cpm-ptr {
+  position: fixed; top: 0; left: 50%; margin-left: -16px;
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--accent, #f59e0b); opacity: 0;
+  transition: transform .15s ease-out, opacity .2s ease-out;
+  pointer-events: none; z-index: 70;
+}
+
+/* ---------- S8 #57: tab panels base ---------- */
+[role="tabpanel"][hidden] { display: none; }
+[role="tab"].tab-active { outline: 2px solid var(--accent, #f59e0b); outline-offset: 2px; }
+
+/* ---------- S9 #61: breadcrumb category switcher ---------- */
+.cpm-cat-switch {
+  margin-left: 8px; min-height: 32px; padding: 0 8px;
+  border: 1px solid var(--border, #e2e8f0); border-radius: 8px;
+  background: var(--surface, #fff); color: inherit; font: inherit; font-size: 0.9em;
+}
+
+/* ---------- S9 #66: related-calculators carousel ---------- */
+.related-grid.related-carousel {
+  display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; padding-bottom: 8px; gap: 12px;
+}
+.related-grid.related-carousel .related-card {
+  flex: 0 0 auto; min-width: 180px; scroll-snap-align: start;
+  display: flex; align-items: center; min-height: 44px;
+}
+
+/* ---------- S10 #75: zoom-safety classes ---------- */
+html.zoom-150 { font-size: 15px; }
+html.zoom-200 { font-size: 16px; }
+html.zoom-150 .calc-layout, html.zoom-200 .calc-layout { grid-template-columns: 1fr; }

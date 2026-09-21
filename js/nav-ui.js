@@ -1,0 +1,262 @@
+// ============================================================
+// Nav/Comfort/Decide UI wiring (S9-S12) — browser-side glue.
+//  - #62 Recently Viewed: records tool visits, renders widget on home
+//  - #63 scroll-to-top button (created lazily)
+//  - #64 mini-header shrink on scroll
+//  - #71 result pulse throttle
+//  - #74 grid/list toggle on category pages
+//  - #84 guided wizard ("Which calculator do I need?")
+//  - #87 one-line summary + #89 estimate note injection into result area
+// All deferred; Node-safe; only calcpro_* namespaced keys.
+// ============================================================
+(function () {
+  'use strict';
+  if (typeof document === 'undefined') return;
+
+  var N = window.NavComfort;
+  var D = window.Decide;
+  if (!N || !D) return;
+
+  function $(s, el) { return (el || document).querySelector(s); }
+
+  // ---------- #62 recently viewed ----------
+  var RECENT_KEY = N.KEYS.recent;
+
+  function recordRecent() {
+    var m = location.pathname.match(/^\/([a-z0-9-]+)\/([a-z0-9-]+)\/?$/i);
+    if (!m) return;
+    var id = m[2], cat = m[1];
+    var name = (document.title || '').split(/[:|—-]/)[0].trim() || id;
+    var list;
+    try { list = JSON.parse(localStorage.getItem(RECENT_KEY) || '[]'); } catch (e) { list = []; }
+    list = N.dedupeRecent(N.pushRecent(list, { id: id, cat: cat, name: name }), 30000, Date.now());
+    try { localStorage.setItem(RECENT_KEY, JSON.stringify(list)); } catch (e) { /* private mode */ }
+  }
+
+  function renderRecentWidget() {
+    var host = document.getElementById('recent-widget-host');
+    if (!host) return;
+    var list;
+    try { list = JSON.parse(localStorage.getItem(RECENT_KEY) || '[]'); } catch (e) { list = []; }
+    if (!list.length) {
+      var es = N.emptyState('recent');
+      host.innerHTML = '<div class="empty-state"><p><strong>' + es.title + '</strong></p><p>' + es.body + '</p></div>';
+      return;
+    }
+    var html = '<ul class="recent-list">';
+    for (var i = 0; i < Math.min(6, list.length); i++) {
+      var e = list[i];
+      html += '<li><a href="/' + e.cat + '/' + e.id + '">' + e.name + '</a></li>';
+    }
+    host.innerHTML = html + '</ul>';
+  }
+
+  // ---------- #63 scroll-to-top ----------
+  // NOTE: #63 already has a working controller in index.html (opacity-based).
+  // We do NOT bind a second one — two controllers would fight over the node.
+  function wireScrollTop() { /* handled by existing inline logic */ }
+
+  // ---------- #64 mini-header ----------
+  function wireMiniHeader() {
+    var hd = document.querySelector('header');
+    if (!hd) return;
+    var lastY = window.scrollY, tick = false;
+    window.addEventListener('scroll', function () {
+      if (tick) return;
+      tick = true;
+      requestAnimationFrame(function () {
+        tick = false;
+        var st = N.headerShrinkState(window.scrollY, lastY);
+        lastY = window.scrollY;
+        hd.classList.toggle('hdr-shrink', st.shrink && !st.hide);
+        hd.classList.toggle('hdr-hide', st.hide);
+      });
+    }, { passive: true });
+  }
+
+  // ---------- #71 result pulse ----------
+  var lastPulse = 0;
+  document.addEventListener('calcpro:result', function (e) {
+    var box = document.querySelector('.result-card, .result-box, #result');
+    if (!box) return;
+    var now = Date.now();
+    if (!N.shouldPulse(lastPulse, now)) return;
+    lastPulse = now;
+    box.classList.remove('result-pulse');
+    void box.offsetWidth; // restart animation
+    box.classList.add('result-pulse');
+    setTimeout(function () { box.classList.remove('result-pulse'); }, 1200);
+  });
+
+  // ---------- #74 grid/list toggle ----------
+  function wireViewToggle() {
+    var grid = document.getElementById('tools-grid') || document.querySelector('.category-grid');
+    if (!grid) return;
+    var mode = 'grid';
+    try { mode = N.normalizeViewMode(localStorage.getItem(N.KEYS.viewMode)); } catch (e) { /* default */ }
+    apply(mode);
+    var bar = document.createElement('div');
+    bar.className = 'view-toggle';
+    bar.innerHTML =
+      '<button type="button" data-mode="grid" aria-pressed="' + (mode === 'grid') + '" aria-label="Grid view">▦</button>' +
+      '<button type="button" data-mode="list" aria-pressed="' + (mode === 'list') + '" aria-label="List view">☰</button>';
+    grid.parentNode.insertBefore(bar, grid);
+    bar.addEventListener('click', function (e) {
+      var b = e.target.closest('button[data-mode]');
+      if (!b) return;
+      mode = b.getAttribute('data-mode');
+      try { localStorage.setItem(N.KEYS.viewMode, JSON.stringify(mode)); } catch (err) { /* private mode */ }
+      apply(mode);
+      bar.querySelectorAll('button').forEach(function (x) {
+        x.setAttribute('aria-pressed', String(x.getAttribute('data-mode') === mode));
+      });
+    });
+    function apply(m) {
+      grid.classList.toggle('as-list', m === 'list');
+    }
+  }
+
+  // ---------- #84 wizard ----------
+  var WIZARD_QS = [
+    {
+      q: 'What do you need to work out?',
+      key: 'task',
+      options: [
+        { label: '💰 Money — loan, EMI, savings, retirement', value: 'money' },
+        { label: '🫀 Health — weight, fitness, nutrition', value: 'health' },
+        { label: '📐 Math — percentages, geometry, statistics', value: 'math' },
+        { label: '🏗️ Build — concrete, paint, tiles', value: 'build' },
+        { label: '🔄 Convert units', value: 'convert' },
+        { label: '📅 Dates — age, deadlines, work days', value: 'date' },
+      ],
+    },
+    {
+      q: 'Which sounds closest?',
+      key: 'area',
+      optionsByTask: {
+        money: [
+          { label: 'Monthly loan/EMI payment', value: 'loan' },
+          { label: 'Saving toward a goal', value: 'save' },
+          { label: 'Retirement planning', value: 'plan' },
+        ],
+        health: [
+          { label: 'Healthy weight range', value: 'weight' },
+          { label: 'Calories burned', value: 'food' },
+          { label: 'Gym strength (1RM)', value: 'fitness' },
+        ],
+        math: [
+          { label: 'Percentages', value: 'algebra' },
+          { label: 'Areas & geometry', value: 'geometry' },
+          { label: 'Averages & statistics', value: 'stats' },
+        ],
+        build: [
+          { label: 'Concrete volume', value: 'material' },
+          { label: 'Paint coverage', value: 'area' },
+          { label: 'Tiles & flooring', value: 'cost' },
+        ],
+        convert: [
+          { label: 'Length & distance', value: 'length' },
+          { label: 'Weight & mass', value: 'weight' },
+          { label: 'Temperature', value: 'temp' },
+        ],
+        date: [
+          { label: 'Age calculator', value: 'age' },
+          { label: 'Days between dates', value: 'days' },
+          { label: 'Business days', value: 'work' },
+        ],
+      },
+    },
+  ];
+
+  function openWizard() {
+    var data = (window.CALC_DATA) || {};
+    var answers = {};
+    var overlay = document.createElement('div');
+    overlay.className = 'wizard-overlay';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('aria-label', 'Which calculator do I need?');
+    document.body.appendChild(overlay);
+
+    function step(i) {
+      var q = WIZARD_QS[i];
+      var opts = q.options || (q.optionsByTask && q.optionsByTask[answers.task]) || [];
+      var html = '<div class="wizard-card"><h2>' + q.q + '</h2><div class="wizard-opts">';
+      opts.forEach(function (o, oi) {
+        html += '<button type="button" data-v="' + o.value + '">' + o.label + '</button>';
+      });
+      html += '</div>';
+      if (i > 0) html += '<button type="button" class="wizard-back">← Back</button>';
+      html += '<button type="button" class="wizard-close" aria-label="Close">✕</button></div>';
+      overlay.innerHTML = html;
+
+      overlay.querySelectorAll('.wizard-opts button').forEach(function (b) {
+        b.addEventListener('click', function () {
+          answers[q.key] = b.getAttribute('data-v');
+          if (i + 1 < WIZARD_QS.length) step(i + 1);
+          else finish();
+        });
+      });
+      var back = overlay.querySelector('.wizard-back');
+      if (back) back.addEventListener('click', function () { step(i - 1); });
+      overlay.querySelector('.wizard-close').addEventListener('click', close);
+    }
+
+    function finish() {
+      var rec = D.recommend(data, answers);
+      if (rec && rec.cat && rec.id) {
+        overlay.innerHTML = '<div class="wizard-card"><h2>Recommended for you</h2><p><a class="wizard-go" href="/' + rec.cat + '/' + rec.id + '">' + rec.name + '</a></p><p class="wizard-note">Not quite? Use search (Ctrl+K) — it understands plain questions.</p><button type="button" class="wizard-close" aria-label="Close">✕</button></div>';
+        var go = overlay.querySelector('.wizard-go');
+        go.addEventListener('click', function (ev) {
+          ev.preventDefault();
+          close();
+          if (window.Router && window.Router.navigate) window.Router.navigate('/' + rec.cat + '/' + rec.id);
+          else location.href = go.getAttribute('href');
+        });
+      } else {
+        overlay.innerHTML = '<div class="wizard-card"><h2>Try search instead</h2><p>Describe what you need in the search box — it handles plain-language questions.</p><button type="button" class="wizard-close" aria-label="Close">✕</button></div>';
+      }
+      overlay.querySelector('.wizard-close').addEventListener('click', close);
+    }
+
+    function close() { overlay.remove(); }
+    overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
+    document.addEventListener('keydown', function esc(e) {
+      if (e.key === 'Escape') { close(); document.removeEventListener('keydown', esc); }
+    });
+    step(0);
+  }
+
+  // Global access for delegated triggers (home re-renders its hero, so a
+  // document-level listener is the only binding that survives re-renders).
+  window.openCalcWizard = openWizard;
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest('[data-open-wizard]');
+    if (t) { e.preventDefault(); openWizard(); }
+  });
+
+  function wireWizard() {
+    var host = document.getElementById('wizard-host');
+    if (!host) return;
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'wizard-trigger';
+    b.textContent = '🧭 Which calculator do I need?';
+    b.addEventListener('click', openWizard);
+    host.appendChild(b);
+  }
+
+  // ---------- boot ----------
+  function init() {
+    recordRecent();
+    wireScrollTop();
+    wireMiniHeader();
+    renderRecentWidget();
+    wireViewToggle();
+    wireWizard();
+    document.documentElement.setAttribute('data-navui', 'ready');
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();

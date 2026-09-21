@@ -472,7 +472,10 @@ const App = (function () {
       html += '<div class="search-box">';
       html += '<input type="text" id="home-search" placeholder="Search ' + getCalculatorCount() + '+ calculators…" oninput="App.homeSearch(this.value)" onkeydown="App.searchKeyNav(event)" autocomplete="off" role="combobox" aria-expanded="false" aria-label="Search calculators">';
       html += '<div class="search-results" id="homeSearchResults"></div>';
-      html += '</div></div></div>';
+      html += '</div>';
+      // S12 #84 — guided wizard trigger (opens the 2-question picker)
+      html += '<div style="margin-top:14px"><button type="button" class="wizard-trigger" data-open-wizard>🧭 Which calculator do I need?</button></div>';
+      html += '</div></div>';
     }
     
     // Calculator of the Day + Daily Tip — built INLINE (single render pass).

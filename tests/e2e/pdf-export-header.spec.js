@@ -2,7 +2,7 @@
 // PDF + EXPORT + MOBILE HEADER REGRESSION — production artifact
 // Verifies:
 //   1. PDF button exists and App.exportResultAsPdf() builds a report
-//      containing the CURRENT result (no stale data, count = 1201+).
+//      containing the CURRENT result (no stale data, count = 1206+).
 //   2. CSV export downloads the current result with A/B isolation.
 //   3. Mobile header (320-768): single-row logo+hamburger, controls
 //      hidden in dropdown, no horizontal overflow, menu toggles.
@@ -29,7 +29,7 @@ function pdfReportText(page) {
 }
 
 test.describe('PDF report', () => {
-  test('button exists and report contains current result + 1201+ count', async ({ page }) => {
+  test('button exists and report contains current result + 1206+ count', async ({ page }) => {
     await page.goto(BASE + '/finance/loan-emi?amount=50000&rate=6&years=3', { waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(2200);
     await expect(page.locator('button', { hasText: 'PDF' }).first()).toBeVisible();
@@ -37,7 +37,7 @@ test.describe('PDF report', () => {
     expect(txt).toContain('CalcProMaster');
     expect(txt).toMatch(/1,521|1521/);          // result B
     expect(txt).toContain('50000');             // input B
-    expect(txt).toContain('1201+');             // authoritative count
+    expect(txt).toContain('1206+');             // authoritative count
     expect(txt).not.toContain('100000');        // no stale input A
   });
 });

@@ -109,10 +109,10 @@ test.describe('deploy live smoke — behavior', () => {
   // Same reasoning as above: tolerate one transient CI-runner network flake.
   test.describe.configure({ retries: 1 });
 
-  test('homepage has 1201+ header + category grid', async ({ page }) => {
+  test('homepage has 1206+ header + category grid', async ({ page }) => {
     const t = trackFailures(page, BASE);
     await page.goto(BASE + '/', { waitUntil: 'domcontentloaded' });
-    await expect(page.locator('main h1')).toContainText('1201+', { timeout: 15000 });
+    await expect(page.locator('main h1')).toContainText('1206+', { timeout: 15000 });
     await expect(page.locator('main')).toContainText('Finance', { timeout: 15000 });
     await expect(page.locator('main')).toContainText('Math', { timeout: 15000 });
     expect(t.firstParty, `first-party resource failures: ${t.firstParty.join(' | ')}`).toEqual([]);

@@ -29,13 +29,13 @@ https://calcpromaster.netlify.app/
 
 ## 4. Short description (~300 chars — this is the one shown in lists)
 ```
-Free browser-based calculators for finance, health, math, construction and 16 other categories — 1,201 tools, no signup, no ads blocking the input. Each calculator explains its formula and shows a worked example, so you can verify the math instead of trusting a black box. Mobile-friendly.
+Free browser-based calculators for finance, health, math, construction and 16 other categories — 1,206 tools, no signup, no ads blocking the input. Each calculator explains its formula and shows a worked example, so you can verify the math instead of trusting a black box. Mobile-friendly.
 ```
 (296 characters ✓ under the ~300 limit. This is a re-edited version — the outreach pack's draft dropped "works offline-friendly", which overstated the service worker's scope.)
 
 ## 5. Full description (long form)
 ```
-CalcProMaster is a free suite of 1,201 online calculators covering money, health, math, construction, education and everyday conversions — all running instantly in the browser with no signup and no paywall.
+CalcProMaster is a free suite of 1,206 online calculators covering money, health, math, construction, education and everyday conversions — all running instantly in the browser with no signup and no paywall.
 
 Each tool is built around the actual question people bring to it: "Can I afford this mortgage?", "How much protein do I actually need?", "How many bags of concrete for this slab?" The page answers with the number, the formula behind it, and a plain-English explanation of what the result means for your decision.
 

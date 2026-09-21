@@ -16,11 +16,11 @@
 
 - **Website URL:** `https://calcpromaster.netlify.app/`
 - **Name:** `CalcProMaster`
-- **Tagline (short):** `1,201 free calculators with step-by-step solutions`
+- **Tagline (short):** `1,206 free calculators with step-by-step solutions`
 - **Description:**
 
 ```
-CalcProMaster is a browser-based collection of 1,201 calculators across 20 categories — finance, health, math, construction, conversion, business and more. Every tool shows its formula and the step-by-step working next to the result, so you can verify the arithmetic instead of trusting a bare number. Everything runs client-side: nothing you type is uploaded, and tools keep working offline after the first load. Handy extras include shareable result links, CSV export, and an embeddable widget version of popular tools like Loan EMI and BMI for blogs and course pages.
+CalcProMaster is a browser-based collection of 1,206 calculators across 20 categories — finance, health, math, construction, conversion, business and more. Every tool shows its formula and the step-by-step working next to the result, so you can verify the arithmetic instead of trusting a bare number. Everything runs client-side: nothing you type is uploaded, and tools keep working offline after the first load. Handy extras include shareable result links, CSV export, and an embeddable widget version of popular tools like Loan EMI and BMI for blogs and course pages.
 ```
 
 - **Category (if asked):** `Productivity` (twelve.tools ne Free Online Calc ko isi me rakha hai)
@@ -43,7 +43,7 @@ CalcProMaster is a browser-based collection of 1,201 calculators across 20 categ
 - **Full description (unique — do NOT reuse the Twelve.Tools text):**
 
 ```
-A free web suite of 1,201 calculators spanning personal finance (loan EMI, mortgage, tax brackets), health (BMI, BMR, calorie needs), construction estimators, unit conversion, and everyday math. CalcProMaster's differentiator is transparency: each result page shows the exact formula used, a worked example, and the assumptions behind the estimate. The tools run entirely in the browser with no account, and a formula QA dashboard documents how results are verified. Embeddable widget versions of popular calculators are available for blogs and educational pages.
+A free web suite of 1,206 calculators spanning personal finance (loan EMI, mortgage, tax brackets), health (BMI, BMR, calorie needs), construction estimators, unit conversion, and everyday math. CalcProMaster's differentiator is transparency: each result page shows the exact formula used, a worked example, and the assumptions behind the estimate. The tools run entirely in the browser with no account, and a formula QA dashboard documents how results are verified. Embeddable widget versions of popular calculators are available for blogs and educational pages.
 ```
 
 - **Categories:** `Calculators`, `Web Tools`, `Online Services`
@@ -66,7 +66,7 @@ A free web suite of 1,201 calculators spanning personal finance (loan EMI, mortg
 **Option description:**
 
 ```
-CalcProMaster offers 1,201 free calculators across finance, health, math, construction and more. Each tool shows the formula and step-by-step working beside the result, runs fully in the browser, and needs no sign-up. Popular tools also have embeddable widget versions.
+CalcProMaster offers 1,206 free calculators across finance, health, math, construction and more. Each tool shows the formula and step-by-step working beside the result, runs fully in the browser, and needs no sign-up. Popular tools also have embeddable widget versions.
 ```
 
 ---
@@ -85,7 +85,7 @@ CalcProMaster offers 1,201 free calculators across finance, health, math, constr
 - **Short description (unique — do NOT reuse other listings' text):**
 
 ```
-Browser-based calculator suite with 1,201 tools across finance, health, math, construction and unit conversion. Shows the formula and step-by-step working next to every result, works offline after first load, and needs no account. Embeddable widget versions available for popular tools.
+Browser-based calculator suite with 1,206 tools across finance, health, math, construction and unit conversion. Shows the formula and step-by-step working next to every result, works offline after first load, and needs no account. Embeddable widget versions available for popular tools.
 ```
 
 - **Platforms:** `Web`

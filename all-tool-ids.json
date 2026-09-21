@@ -5075,6 +5075,31 @@
   "file": "regional.js"
  },
  {
+  "id": "uk-take-home-salary",
+  "name": "UK Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "india-take-home-salary",
+  "name": "India Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "saudi-take-home-salary",
+  "name": "Saudi Arabia Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "canada-take-home-salary",
+  "name": "Canada (Ontario) Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "germany-take-home-salary",
+  "name": "Germany Take-Home Salary Calculator (Brutto-Netto)",
+  "file": "regional.js"
+ },
+ {
   "id": "ohms-law",
   "name": "Ohm's Law Calculator",
   "file": "science.js"

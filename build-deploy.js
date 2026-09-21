@@ -66,7 +66,7 @@ const FILES = [
   'googled1ac20b54b36e7cf.html',
 ];
 
-const DIRS = ['js', 'og', 'fonts', 'guides', 'blog', 'embed']; // copyDir('js') recurses into data/ + workers/; 'og' holds per-tool share cards; 'fonts' = self-hosted latin woff2 (no third-party font fetch); 'guides' = static educational guide pages; 'blog' = static blog posts; 'embed' = linkable iframe widget pages (frame-able via /embed/* header override)
+const DIRS = ['js', 'og', 'fonts', 'guides', 'blog', 'embed', 'icons']; // copyDir('js') recurses into data/ + workers/; 'og' holds per-tool share cards; 'fonts' = self-hosted latin woff2 (no third-party font fetch); 'guides' = static educational guide pages; 'blog' = static blog posts; 'embed' = linkable iframe widget pages (frame-able via /embed/* header override)
 
 // Safety guard: refuse to deploy if any private/dev folders leak into OUTPUT dir.
 const FORBIDDEN_IN_DEPLOY = ['.freebuff', 'node_modules', '.git', 'tests', 'scripts', '.db', '.sqlite'];

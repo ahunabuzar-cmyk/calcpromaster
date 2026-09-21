@@ -1013,6 +1013,11 @@ regional|us-fica|calc|wages,married
 regional|canada-cpp|calc|income
 regional|australia-super|calc|salary,rate
 regional|singapore-cpf|calc|salary,age
+regional|uk-take-home-salary|calc|salary,pension,student
+regional|india-take-home-salary|calc|ctc,epf
+regional|saudi-take-home-salary|calc|salary,saudi
+regional|canada-take-home-salary|calc|salary
+regional|germany-take-home-salary|calc|salary,class
 science|ohms-law|calc|voltage,current
 science|density|calc|mass,volume
 science|force|calc|mass,accel

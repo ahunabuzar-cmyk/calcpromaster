@@ -104,41 +104,52 @@ I'll fix it publicly.
 
 ---
 
-## 3) r/SideProject — copy-paste (TEXT POST best yahan)
+## 3) r/SideProject — ⚠️ PEHLA VERSION REMOVED BY FILTERS — ye REPLACEMENT use karo
 
-**Submit URL:** https://www.reddit.com/r/SideProject/submit
+**Kyun removal hua:** naya account + text post mein 2 links (site URL + sirf launch-frame) —
+Reddit ka spam-filter is pattern ko auto-flag karta hai. Account ko pehle thoda "human"
+banao, phir ye REPLACEMENT post (kam links, zyada story, koi tracking-word nahi):
 
-**Title:**
+**Submit URL:** https://www.reddit.com/r/SideProject/submit  · **Type:** Text post
+
+**REPLACEMENT Title:**
 ```
-Launched: 1200+ free calculators that show their work (formulas + step-by-step, no signup)
+I spent months building a calculator site where every tool shows its formula and steps. Finally launched.
 ```
 
-**Body:**
+**REPLACEMENT Body (sirf 1 link — story-first):**
 ```
-Hey! Over the last few months I built CalcProMaster — 1200+ calculators across finance,
-health, construction, math and everyday stuff.
+I kept running into the same problem: calculator sites give you a number but never show
+where it came from. So I built one where every tool states the exact formula it uses,
+shows the working from your inputs step by step, and lists what it deliberately does
+NOT model.
 
-The differentiator: every calculator shows its work. Formula, step-by-step derivation from
-your inputs, worked examples, and an honest "what this does NOT model" section (e.g. the
-German payroll tool says plainly it approximates the official Lohnsteuer formula).
+Took a few months of evenings. It's free, no account needed, everything runs in the
+browser.
 
-Stack: vanilla JS, no framework, static-site generator prerenders all 1300+ routes; the
-whole site is static files. Works offline after first load, no accounts, nothing tracked.
+Here it is: https://calcpromaster.netlify.app/
 
-URL: https://calcpromaster.netlify.app/
+Two things I'm genuinely unsure about:
+1. Does the step-by-step breakdown actually help, or do people just want the number?
+2. Which calculators would you actually use that are missing?
 
-What I'd love feedback on:
-1. Is the step-by-step breakdown useful or noise?
-2. Which calculators are missing that you'd actually use?
-
-Roast the formulas — verifiability is the whole point.
+Honest feedback welcome — especially if a formula looks wrong.
 ```
+
+**Agar ye bhi remove ho jaye:** r/SideProject mods ko modmail bhejo (sidebar → Message the
+mods): "Hi, my post was auto-removed by filters — it's a genuine show-off post for a free
+project, no monetization. Can you approve it?" — ye sub ke mods manually approve karte hain.
+
+**Aaj ka better play:** post mat karo — 30 min sirf comments karo 2–3 posts par
+(kal ya parso phir try karo). Naya account + din-1 post = filter trigger.
 
 ---
 
 ## 4) Niche answers (agle din — 2 minimum, copy-paste + 1 line customize)
 
-### r/personalfinance style answer (kisi "how much house can I afford" thread ke jawab mein)
+### r/personalfinance — COMMENT (post nahi) — thread dhoondne ka exact link:
+**Yahan click karo:** https://www.reddit.com/r/personalfinance/search/?q=how%20much%20house%20can%20i%20afford&sort=new&restrict_sr=1
+(list mein se koi bhi **24–48 ghante purana** thread kholo, direct wale par COMMENT paste karo — apna post kabhi banana nahi)
 
 ```
 When I ran the numbers, the down payment wasn't the binding constraint — it was the
@@ -147,9 +158,10 @@ that shows the full payment breakdown with the formula visible (no signup, runs 
 https://calcpromaster.netlify.app/mortgage/ — the steps panel shows exactly how PMI drops
 off once equity crosses 20%.
 ```
-*(Thread dhoondo: reddit.com/r/personalfinance/search/?q=how%20much%20house%20can%20i%20afford&sort=new)*
+*(Thread dhoondo: upar wala search link kholo, top recent thread uthao)*
 
-### r/math style answer (kisi "how do I compute X" thread mein)
+### r/math — COMMENT — thread search link:
+**Yahan click karo:** https://www.reddit.com/r/math/search/?q=least%20squares%20calculator&sort=new&restrict_sr=1
 
 ```
 Depends on your definition of least squares — if you want the slope/intercept/R² explicitly,
@@ -157,15 +169,22 @@ I keep a calculator that shows the normal-equation derivation step by step:
 https://calcpromaster.netlify.app/math/linear-regression/ (client-side, no signup). The
 steps panel prints XᵀX and Xᵀy so you can verify by hand.
 ```
-*(Thread dhoondo: reddit.com/r/math/search/?q=least%20squares%20calculator&sort=new&restrict_sr=1)*
+*(Thread dhoondo: upar wala search link kholo, koi recent thread uthao)*
 
-### r/Fitness style answer (TDEE/BMR threads)
+### r/Fitness — COMMENT — thread search link:
+**Yahan click karo:** https://www.reddit.com/r/Fitness/search/?q=TDEE%20calculator&sort=new&restrict_sr=1
 
 ```
 Formula matters more than the app here — most sites hide which equation they use. Mine
 states it (Mifflin-St Jeor, with the population limits it was derived from) and shows the
 math: https://calcpromaster.netlify.app/health/tdee-macro/ — no signup, runs locally.
-```
+```**⚠️ FILTER-SAFE COMMENT RULES (ye naye account ke liye critical hain):**
+- 3–5 din tak har comment mein **sirf 1 link max** — do links = instant removal
+- Comment post ke context ka jawab ho ("good question — depends on X") — seedha link dump nahi
+- Link ko text ke beech mein rakho, aakhri line par nahi (link-only ending = spam pattern)
+- Ek hi subreddit mein din mein 1 comment — 3 comments/day = filter flag
+- Agar comment bhi "removed" dikhe: mods ko modmail bhejo, re-post mat karo (re-posting
+  removed content = permanent ban risk)
 
 **Reddit golden rules:** comment pehle, link baad mein; ek thread mein sirf apna link NAHI;
 "check out my site" nahi — "here's the math, verify it" framing; 10 upvotes ka bhi jawab do.

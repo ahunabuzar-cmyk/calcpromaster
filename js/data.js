@@ -66,7 +66,7 @@ const STATIC_PAGES = {
   'guides': { title: 'Educational Guides & How-To Articles', desc: 'Free step-by-step guides explaining how common calculations work — percentages, loan EMIs, age, BMI and more — with formulas and worked examples.', type: 'guides' },
   'favorites': { title: 'Your Favorites', desc: 'Your saved favorite calculators on CalcProMaster.', type: 'favorites' },
   'history': { title: 'Calculation History', desc: 'View your past calculations on CalcProMaster.', type: 'history' },
-  'compare': { title: 'Compare Results', desc: 'Compare your pinned calculation results side by side.', type: 'compare' },
+  'compare': { title: 'Compare Calculator Results Side by Side', desc: 'Pin any calculator results and compare them side by side — numbers, units and assumptions in one view.', type: 'compare' },
   '404': { title: 'Page Not Found', desc: 'The page you are looking for does not exist.', type: '404' },
 };
 

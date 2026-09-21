@@ -2053,3 +2053,71 @@ html[data-cb="tritanopia"] {
   --error: #b10f4f;
   --shadow-glow: 0 0 20px rgba(106, 61, 154, 0.25);
 }
+
+/* ============================================================
+   S8 — Reading & Content Layout (#51-60)
+   ============================================================ */
+:root { --reading-lh: 1.5; --reading-ls: normal; }
+
+/* #54 line-height/letter-spacing on reading surfaces */
+main, article, .tool-content, .guide-body { line-height: var(--reading-lh); letter-spacing: var(--reading-ls); }
+
+/* #55 dyslexia-friendly font — Arial Rounded fallback chain, no external font */
+html[data-dyslexic="on"] main,
+html[data-dyslexic="on"] article,
+html[data-dyslexic="on"] .tool-content,
+html[data-dyslexic="on"] p, html[data-dyslexic="on"] li, html[data-dyslexic="on"] td {
+  font-family: "Comic Sans MS", "Chalkboard SE", "Arial Rounded MT Bold", Verdana, sans-serif;
+  letter-spacing: 0.05em;
+  word-spacing: 0.12em;
+}
+
+/* #53 reading progress bar */
+#reading-progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 1200; pointer-events: none; background: transparent; }
+#reading-progress .rp-fill { height: 100%; width: 0; background: var(--accent); transition: width 80ms linear; }
+
+/* floating reading toolbar */
+#reading-toolbar { position: fixed; bottom: 84px; left: 14px; z-index: 1100; display: flex; gap: 4px; padding: 4px; border-radius: 12px; background: var(--card-bg, #fff); box-shadow: 0 4px 16px rgba(0,0,0,.16); border: 1px solid var(--border, #e2e8f0); }
+#reading-toolbar button { min-width: 44px; min-height: 44px; border: 0; background: transparent; border-radius: 8px; cursor: pointer; font-size: 14px; color: var(--text, #1e293b); }
+#reading-toolbar button:hover { background: rgba(127,127,127,.14); }
+
+/* #52 TOC sidebar */
+#toc-sidebar { display: none; }
+@media (min-width: 1180px) {
+  #toc-sidebar { display: block; position: sticky; top: 76px; float: right; width: 230px; margin: 0 -250px 16px 16px; max-height: 78vh; overflow: auto; font-size: 13px; border-left: 2px solid var(--border, #e2e8f0); padding-left: 12px; }
+  #toc-sidebar h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; opacity: .7; }
+  #toc-sidebar ul { list-style: none; margin: 0; padding: 0; }
+  #toc-sidebar .toc-h3 { padding-left: 12px; opacity: .85; }
+  #toc-sidebar a { display: block; padding: 3px 6px; border-radius: 6px; color: inherit; text-decoration: none; }
+  #toc-sidebar a.toc-active { background: rgba(127,127,127,.14); font-weight: 600; }
+}
+
+/* #58 jump-to-input */
+#jump-to-input { position: fixed; bottom: 84px; right: 14px; z-index: 1100; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--border, #e2e8f0); background: var(--card-bg, #fff); color: var(--text, #1e293b); box-shadow: 0 4px 16px rgba(0,0,0,.16); cursor: pointer; }
+@media (max-width: 720px) { #jump-to-input { bottom: 74px; } }
+
+/* #51 distraction-free ("Zen") reading mode */
+body[data-reading-mode="on"] header,
+body[data-reading-mode="on"] footer,
+body[data-reading-mode="on"] nav,
+body[data-reading-mode="on"] #reading-toolbar,
+body[data-reading-mode="on"] #toc-sidebar,
+body[data-reading-mode="on"] #back-to-top,
+body[data-reading-mode="on"] #cookie-banner,
+body[data-reading-mode="on"] .related-section,
+body[data-reading-mode="on"] .sidebar,
+body[data-reading-mode="on"] aside { display: none !important; }
+body[data-reading-mode="on"] main, body[data-reading-mode="on"] article { max-width: 46rem; margin: 0 auto; padding: 24px 18px 96px; }
+
+/* #56 collapsible sections */
+details.collapsible > summary { cursor: pointer; list-style: revert; min-height: 44px; display: flex; align-items: center; font-weight: 600; }
+details.collapsible > summary::-webkit-details-marker { display: revert; }
+
+/* #57 tabs (progressive enhancement; content ships in DOM) */
+.tabs { display: flex; flex-wrap: wrap; gap: 4px; margin: 12px 0; }
+.tabs [role="tab"] { min-height: 44px; padding: 0 14px; border: 1px solid var(--border, #e2e8f0); border-radius: 8px 8px 0 0; background: transparent; cursor: pointer; color: inherit; }
+.tabs [role="tab"][aria-selected="true"] { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+/* #60 print view — mirrors @media print defaults, class-triggered too */
+@media print { header, footer, nav, aside, .related-section, .share-bar, #cookie-banner, #reading-toolbar, #toc-sidebar, #jump-to-input, #reading-progress, #back-to-top { display: none !important; } }
+body.print-view header, body.print-view footer, body.print-view nav, body.print-view aside, body.print-view .related-section, body.print-view .share-bar, body.print-view #cookie-banner, body.print-view #reading-toolbar, body.print-view #toc-sidebar, body.print-view #jump-to-input, body.print-view #reading-progress { display: none !important; }

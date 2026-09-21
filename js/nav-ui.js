@@ -246,6 +246,51 @@
     host.appendChild(b);
   }
 
+  // ---------- S11 #68: mobile bottom navigation bar ----------
+  // Thumb-reachable persistent bar (Home | Search | Favorites | History | Settings).
+  // Adds page context via aria-current; hidden site-wide via CSS on desktop and
+  // when the viewport exceeds 820px. All actions are real navigation/APIs —
+  // no dead buttons.
+  function renderBottomNav() {
+    if (document.getElementById('cpm-bottom-nav')) return;
+    var nav = document.createElement('nav');
+    nav.id = 'cpm-bottom-nav';
+    nav.className = 'cpm-bottom-nav';
+    nav.setAttribute('aria-label', 'Mobile navigation');
+    var items = [
+      { href: '/', icon: '⌂', label: 'Home', key: 'home' },
+      { act: 'search', icon: '🔍', label: 'Search', key: 'search' },
+      { href: '/favorites', icon: '★', label: 'Favorites', key: 'favorites' },
+      { href: '/history', icon: '🕘', label: 'History', key: 'history' },
+      { act: 'settings', icon: '⚙', label: 'Settings', key: 'settings' }
+    ];
+    var path = window.location.pathname.replace(/\/+$/, '') || '/';
+    nav.innerHTML = items.map(function (it) {
+      var current = it.href && (it.href === '/' ? path === '/' : path.indexOf(it.href) === 0);
+      var inner = '<span class="bn-icon" aria-hidden="true">' + it.icon + '</span><span class="bn-label">' + it.label + '</span>';
+      if (it.act === 'search') {
+        return '<button type="button" class="bn-item" data-bn-act="search" aria-label="Search calculators">' + inner + '</button>';
+      }
+      if (it.act === 'settings') {
+        return '<button type="button" class="bn-item" data-bn-act="settings" aria-label="Display preferences">' + inner + '</button>';
+      }
+      return '<a class="bn-item" href="' + it.href + '"' + (current ? ' aria-current="page"' : '') + '>' + inner + '</a>';
+    }).join('');
+    document.body.appendChild(nav);
+    nav.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-bn-act]');
+      if (!b) return;
+      e.preventDefault();
+      if (b.getAttribute('data-bn-act') === 'search') {
+        var searchInput = document.getElementById('tool-search') || document.querySelector('input[type="search"]');
+        if (searchInput) { searchInput.focus(); searchInput.scrollIntoView({ block: 'center', behavior: 'smooth' }); }
+        else if (window.App && typeof App.openPalette === 'function') App.openPalette();
+      } else if (b.getAttribute('data-bn-act') === 'settings') {
+        if (window.AdvancedFeatures && typeof AdvancedFeatures.renderUnitsSettings === 'function') AdvancedFeatures.renderUnitsSettings();
+      }
+    });
+  }
+
   // ---------- boot ----------
   function init() {
     recordRecent();
@@ -254,6 +299,7 @@
     renderRecentWidget();
     wireViewToggle();
     wireWizard();
+    renderBottomNav();
     document.documentElement.setAttribute('data-navui', 'ready');
   }
 

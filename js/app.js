@@ -471,6 +471,7 @@ const App = (function () {
       html += '<p class="hero-desc">Free, fast, and accurate calculators with step-by-step solutions, charts, and smart features.</p>';
       html += '<div class="search-box">';
       html += '<input type="text" id="home-search" placeholder="Search ' + getCalculatorCount() + '+ calculators…" oninput="App.homeSearch(this.value)" onkeydown="App.searchKeyNav(event)" autocomplete="off" role="combobox" aria-expanded="false" aria-label="Search calculators">';
+      html += '<div id="search-skeleton" class="search-skeleton" hidden aria-hidden="true"><span class="sk-line"></span><span class="sk-line"></span><span class="sk-line"></span></div>';
       html += '<div class="search-results" id="homeSearchResults"></div>';
       html += '</div>';
       // S12 #84 — guided wizard trigger (opens the 2-question picker)
@@ -1104,6 +1105,8 @@ const App = (function () {
     html += '</div>';
     html += '<div class="calc-result-panel">';      // Header row keeps the Copy action OUT of the heading (cleaner a11y semantics)
     html += '<div class="result-panel-head"><h3>📊 ' + _t('tool.result', 'Result') + '</h3><button type="button" id="copy-result-btn" class="copy-result-btn" onclick="App.copyResult()" title="Copy result to clipboard" aria-label="Copy result">📋 Copy</button></div>';
+    // S12 #85: before-you-calculate checklist (collapsed by default, additive)
+    html += (window.DecideUI && typeof DecideUI.renderChecklist === 'function') ? DecideUI.renderChecklist(tool) : '';
     // UX Round 3: contextual unit badge strip — filled by executeCalc with the tool's units.
     html += '<div class="result-unit-badges" id="result-unit-badges" role="group" aria-label="Result units"></div>';
     html += '<div class="result-area" id="result-area" data-tool-id="' + tool.id + '" aria-live="polite" aria-atomic="true" role="status">';
@@ -1864,6 +1867,13 @@ const App = (function () {
         }
       } catch (e) { /* never break result render */ }
 
+      // S12: one-line summary, interpretation scale, estimate note, payoff timeline (#87/#86/#89/#90)
+      try {
+        if (window.DecideUI && typeof DecideUI.afterCalc === 'function') {
+          DecideUI.afterCalc(tool, values, resultArea);
+        }
+      } catch (e) { /* never break result render */ }
+
       // S6: result read-aloud button (user-initiated TTS, not auto)
       try {
         const main = resultArea.querySelector('.result-main');
@@ -1889,6 +1899,10 @@ const App = (function () {
       // Animate number count-up on result
       const resultMain = resultArea.querySelector('.result-main');
       if (resultMain) {
+        // S10 #71: one-shot highlight pulse (re-added each calc; harmless if reduced-motion)
+        resultMain.classList.remove('pulsing');
+        void resultMain.offsetWidth; // restart animation
+        resultMain.classList.add('pulsing');
         setTimeout(() => {
           if (typeof AdvancedFeatures.animateResultNumber === 'function') {
             AdvancedFeatures.animateResultNumber(resultMain, resultMain.textContent);
@@ -2717,6 +2731,12 @@ const App = (function () {
     if (!results) return;
     const input = document.getElementById('home-search') || document.getElementById('search-404-input');
     if (!q) { results.style.display = 'none'; if (input) input.setAttribute('aria-expanded', 'false'); return; }
+    // #70 skeleton placeholder: while the SmartSearch engine is still lazy-loading,
+    // show pulsing lines instead of an ambiguous pause (legacy scorer still fills
+    // results underneath; the skeleton is removed as soon as results render).
+    const skel = document.getElementById('search-skeleton');
+    if (skel) { skel.hidden = false; }
+    setTimeout(function () { const s = document.getElementById('search-skeleton'); if (s) s.hidden = true; }, 700);
     
     const matches = _searchAll(q);
     _searchItems = matches;

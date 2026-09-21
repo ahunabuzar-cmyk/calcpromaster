@@ -66,22 +66,34 @@ function registry() {
 // Covers BOTH the deterministic CASES matrix and the structural
 // PROPERTY QA block (non-deterministic tools like random generators).
 function deepQACovered() {
-  const src = fs.readFileSync(path.join(ROOT, 'tests', 'unit', 'formula-qa-full.test.js'), 'utf8');
+  const files = [
+    path.join(ROOT, 'tests', 'unit', 'formula-qa-full.test.js'),
+    path.join(ROOT, 'tests', 'unit', 'regional-takehome-qa.test.js'),
+  ];
   const ids = new Set();
-  const block = src.match(/const CASES = \[([\s\S]*?)\n\];/);
-  if (block) {
-    for (const line of block[1].split('\n')) {
-      // matches both single- and double-quoted entries
-      const m = line.match(/\[["']([a-z0-9-]+)["'],\s*["']([a-z0-9-]+)["']/);
-      if (m) ids.add(m[2]);
+  for (const f of files) {
+    const src = fs.readFileSync(f, 'utf8');
+    // known-answer CASES entries
+    const block = src.match(/const CASES = \[([\s\S]*?)\n\];/);
+    if (block) {
+      for (const line of block[1].split('\n')) {
+        // matches both single- and double-quoted entries
+        const m = line.match(/\[["']([a-z0-9-]+)["'],\s*["']([a-z0-9-]+)["']/);
+        if (m) ids.add(m[2]);
+      }
     }
-  }
-  const props = src.match(/describe\('PROPERTY QA[\s\S]*?\n\}\);/);
-  if (props) {
-    for (const line of props[0].split('\n')) {
-      // matches calcResult(...) and calcFull(...) invocations
-      const m = line.match(/calc(?:Result|Full)\('([a-z0-9-]+)', '([a-z0-9-]+)'/);
-      if (m) ids.add(m[2]);
+    // run('<tool-id>', ...) helper calls (loop-style reference-model tests)
+    for (const line of src.split('\n')) {
+      const m = line.match(/\brun\(['"]([a-z0-9-]+)['"]/);
+      if (m) ids.add(m[1]);
+    }
+    // PROPERTY-QA calcResult/calcFull calls (only meaningful in the full file)
+    const props = src.match(/describe\('PROPERTY QA[\s\S]*?\n\}\);/);
+    if (props) {
+      for (const line of props[0].split('\n')) {
+        const m = line.match(/calc(?:Result|Full)\('([a-z0-9-]+)', '([a-z0-9-]+)'/);
+        if (m) ids.add(m[2]);
+      }
     }
   }
   return ids;

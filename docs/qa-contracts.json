@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-15T10:49:15.964Z",
-  "count": 1201,
+  "generated": "2026-09-21T14:27:29.973Z",
+  "count": 1206,
   "contracts": [
     {
       "calculatorId": "auto-fare",
@@ -11667,6 +11667,18 @@
       "notes": ""
     },
     {
+      "calculatorId": "canada-take-home-salary",
+      "name": "Canada (Ontario) Take-Home Salary Calculator",
+      "category": "Regional (India/PK/UAE)",
+      "route": "/regional/canada-take-home-salary",
+      "inputs": "Annual Salary (C$) (number)",
+      "formula": "function(v) { var taxable = Math.max(0, v.salary - 16198); var fed = taxable <= 57375 ? taxable*0.15 : taxable <= 114750 ? 8606.25 + (taxabl",
+      "verificationStatus": "PASS",
+      "knownAnswerTestCases": "SEE tests/unit/formula-qa-full.test.js",
+      "reviewer": null,
+      "notes": ""
+    },
+    {
       "calculatorId": "canada-cpp",
       "name": "Canada CPP Contribution Calculator",
       "category": "Regional (India/PK/UAE)",
@@ -11769,6 +11781,18 @@
       "route": "/regional/fd-calculator",
       "inputs": "Deposit Amount (₹) (number [slider 1000–10000000]); Interest Rate (%) (number [slider 0–15]); Tenure (years) (number [slider 1–30]); TDS Rate (%) (number [slider 0–30]); Senior Citizen (checkbox)",
       "formula": "function(v) { const r = v.senior ? v.rate + 0.5 : v.rate; const n = 4 * v.years; const perRate = r/100/4; const maturity = v.amount * Math.p",
+      "verificationStatus": "PASS",
+      "knownAnswerTestCases": "SEE tests/unit/formula-qa-full.test.js",
+      "reviewer": null,
+      "notes": ""
+    },
+    {
+      "calculatorId": "germany-take-home-salary",
+      "name": "Germany Take-Home Salary Calculator (Brutto-Netto)",
+      "category": "Regional (India/PK/UAE)",
+      "route": "/regional/germany-take-home-salary",
+      "inputs": "Gross Annual Salary (€) (number); Tax Class (select)",
+      "formula": "function(v) { var rate = v.class === 'III' ? 0.18 : 0.24; var slope = v.class === 'III' ? 0.30 : 0.36; var taxable = Math.max(0, v.salary - ",
       "verificationStatus": "PASS",
       "knownAnswerTestCases": "SEE tests/unit/formula-qa-full.test.js",
       "reviewer": null,
@@ -11907,6 +11931,18 @@
       "notes": ""
     },
     {
+      "calculatorId": "india-take-home-salary",
+      "name": "India Take-Home Salary Calculator",
+      "category": "Regional (India/PK/UAE)",
+      "route": "/regional/india-take-home-salary",
+      "inputs": "Annual CTC (₹) (number); Employee EPF (%) (number)",
+      "formula": "function(v) { var base = v.ctc * 0.85; var epf = Math.min(base * v.epf/100, 150000); var taxable = Math.max(0, base - 75000 - epf); var t = ",
+      "verificationStatus": "PASS",
+      "knownAnswerTestCases": "SEE tests/unit/formula-qa-full.test.js",
+      "reviewer": null,
+      "notes": ""
+    },
+    {
       "calculatorId": "leave-encashment",
       "name": "Leave Encashment Calculator",
       "category": "Regional (India/PK/UAE)",
@@ -12027,6 +12063,18 @@
       "notes": ""
     },
     {
+      "calculatorId": "saudi-take-home-salary",
+      "name": "Saudi Arabia Take-Home Salary Calculator",
+      "category": "Regional (India/PK/UAE)",
+      "route": "/regional/saudi-take-home-salary",
+      "inputs": "Monthly Salary (SAR) (number); Saudi national? (select)",
+      "formula": "function(v) { var gosi = v.saudi === 'Yes' ? v.salary * 0.0975 : v.salary * 0.02; var hazard = v.saudi === 'Yes' ? v.salary * 0.02 : 0; var ",
+      "verificationStatus": "PASS",
+      "knownAnswerTestCases": "SEE tests/unit/formula-qa-full.test.js",
+      "reviewer": null,
+      "notes": ""
+    },
+    {
       "calculatorId": "senior-savings-scheme",
       "name": "Senior Citizens Savings Scheme",
       "category": "Regional (India/PK/UAE)",
@@ -12129,6 +12177,18 @@
       "route": "/regional/uk-ni",
       "inputs": "Annual Salary (£) (number); Self-Employed (Class 4) (select)",
       "formula": "function(v){ var primary=12570, upper=50270; var ni=0; if(v.selfEmployed==='1'){ if(v.salary>primary) ni=(Math.min(v.salary,upper)-primary)*",
+      "verificationStatus": "PASS",
+      "knownAnswerTestCases": "SEE tests/unit/formula-qa-full.test.js",
+      "reviewer": null,
+      "notes": ""
+    },
+    {
+      "calculatorId": "uk-take-home-salary",
+      "name": "UK Take-Home Salary Calculator",
+      "category": "Regional (India/PK/UAE)",
+      "route": "/regional/uk-take-home-salary",
+      "inputs": "Annual Salary (£) (number); Pension Contribution (%) (number); Student Loan Plan (select)",
+      "formula": "function(v) { var pension = v.salary * v.pension/100; var netPay = v.salary - pension; var taxable = Math.max(0, netPay - 12570); var tax = ",
       "verificationStatus": "PASS",
       "knownAnswerTestCases": "SEE tests/unit/formula-qa-full.test.js",
       "reviewer": null,

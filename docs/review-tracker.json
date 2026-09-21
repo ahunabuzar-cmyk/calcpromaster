@@ -1,10 +1,10 @@
 {
-  "generated": "2026-09-15T10:49:15.970Z",
-  "total": 1201,
-  "pass": 1199,
+  "generated": "2026-09-21T14:27:29.980Z",
+  "total": 1206,
+  "pass": 1204,
   "needsReview": 0,
   "notApplicable": 2,
-  "reviewable": 1199,
+  "reviewable": 1204,
   "progressPct": 100,
   "remainingByCategory": [
     {
@@ -121,8 +121,8 @@
     },
     {
       "category": "Regional (India/PK/UAE)",
-      "total": 42,
-      "pass": 42,
+      "total": 47,
+      "pass": 47,
       "review": 0,
       "na": 0
     },

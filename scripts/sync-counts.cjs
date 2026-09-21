@@ -54,19 +54,20 @@ const FILES = [
 ];
 
 // Patterns that identify a user-facing count reference. The captured
-// number must equal the registry count. We only touch "5XX+" / "5XX "
-// references that appear next to calculator/tool words, never pixels,
-// years, or arbitrary numbers.
-const COUNT_RE = /(\b[6-9]\d{2}\+?\s*(calculators?|tools?|free\s+[\w\s]*?online\s+calculators?|calculators?[,\s]|tools?[,\s])|"numberOfItems":\s*"[6-9]\d{2}\+?")/gi;
+// number must equal the registry count. Matches 3-digit (497..999) AND
+// 4-digit (1000..9999) counts next to calculator/tool words — older regex
+// only caught 6XX–9XX, which let stale counts like "497+" and "1201+"
+// survive while the registry moved to 1206.
+const COUNT_RE = /(\b\d{3,4}\+?\s*(calculators?|tools?|free\s+[\w\s]*?online\s+calculators?|calculators?[,\s]|tools?[,\s])|"numberOfItems":\s*"\d{3,4}\+?")/gi;
 
 // Extra targeted fixes for awkward phrasings not caught above.
 function fixKnownStrings(content, n) {
   return content
-    .replace(/\b[6-9]\d{2}\+?\s*calculators?/gi, n + '+ calculators')
-    .replace(/\b[6-9]\d{2}\+?\s*tools?/gi, n + '+ tools')
-    .replace(/\b[6-9]\d{2}\+?\s*free\s+[\w\s]*?online\s+calculators?/gi, n + '+ free online calculators')
-    .replace(/\b[6-9]\d{2}\+?\s*free\s+calculators?/gi, n + '+ free calculators')
-    .replace(/"numberOfItems":\s*"[6-9]\d{2}\+?"/g, '"numberOfItems": "' + n + '+"');
+    .replace(/\b\d{3,4}\+?\s*calculators?/gi, n + '+ calculators')
+    .replace(/\b\d{3,4}\+?\s*tools?/gi, n + '+ tools')
+    .replace(/\b\d{3,4}\+?\s*free\s+[\w\s]*?online\s+calculators?/gi, n + '+ free online calculators')
+    .replace(/\b\d{3,4}\+?\s*free\s+calculators?/gi, n + '+ free calculators')
+    .replace(/"numberOfItems":\s*"\d{3,4}\+?"/g, '"numberOfItems": "' + n + '+"');
 }
 
 // ---- 3. Sync / check ----
@@ -78,9 +79,12 @@ function scanFile(rel) {
   let m;
   const re = new RegExp(COUNT_RE.source, COUNT_RE.flags);
   while ((m = re.exec(original)) !== null) {
-    // pull the actual 5XX number out of the raw match (works for
-    // "544+ calculators" AND '"numberOfItems": "544+"').
-    const nm = m[0].match(/[6-9]\d{2}/);
+    // pull the actual number out of the raw match (works for
+    // "544+ calculators", "1206+ free online calculators" AND
+    // '"numberOfItems": "1206+"'). [6-9]\d{2} broke once the registry
+    // crossed 999 — every 4-digit count read as NaN and the gate
+    // failed permanently.
+    const nm = m[0].match(/\d{3,4}/);
     findings.push({ num: nm ? parseInt(nm[0], 10) : NaN, raw: m[0].trim().slice(0, 60) });
   }
   return { rel, abs, original, findings, missing: false };

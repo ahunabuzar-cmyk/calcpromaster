@@ -105,16 +105,16 @@ try {
 
 // ---------- 3. Category metadata ----------
 const CATEGORY_META = {
-  finance: { title: 'Finance Calculators', desc: 'Free financial calculators for loans, mortgages, investments, taxes, retirement and more.' },
+  finance: { title: 'Finance Calculators — Loan, EMI, Tax & SIP Tools', desc: 'Free financial calculators for loans, mortgages, investments, taxes, retirement and more.' },
   health: { title: 'Health & Fitness Calculators', desc: 'Calculate BMI, BMR, calories, body fat, heart rate and other health metrics.' },
-  math: { title: 'Math Calculators', desc: 'Scientific calculators, algebra, geometry, statistics and more math tools.' },
+  math: { title: 'Math Calculators — Percentage, Fraction & Algebra Tools', desc: 'Scientific calculators, algebra, geometry, statistics and more math tools.' },
   everyday: { title: 'Everyday Calculators', desc: 'Free everyday calculators — age, dates, fuel cost, cooking conversions, tips and time planning for daily life questions.' },
-  science: { title: 'Science Calculators', desc: 'Free science calculators for physics and chemistry — density, molarity, kinetic energy, wave speed and lab conversions.' },
-  engineering: { title: 'Engineering Calculators', desc: 'Free engineering calculators for electrical, mechanical and civil work — beam loads, wire gauge, Ohm law, torque and more.' },
-  construction: { title: 'Construction Calculators', desc: 'Free construction calculators for concrete volume, rebar, roofing, flooring and building material estimates.' },
+  science: { title: 'Science Calculators — Physics & Chemistry Formulas', desc: 'Free science calculators for physics and chemistry — density, molarity, kinetic energy, wave speed and lab conversions.' },
+  engineering: { title: 'Engineering Calculators — Electrical, Mechanical & Civil', desc: 'Free engineering calculators for electrical, mechanical and civil work — beam loads, wire gauge, Ohm law, torque and more.' },
+  construction: { title: 'Construction Calculators — Concrete, Rebar & Roofing', desc: 'Free construction calculators for concrete volume, rebar, roofing, flooring and building material estimates.' },
   conversion: { title: 'Unit Conversion Calculators', desc: 'Free unit conversion calculators — length, weight, volume, temperature, speed, area and more with instant results.' },
   business: { title: 'Business Calculators', desc: 'Free business calculators for ROI, profit margin, cash flow, break-even, CAC, LTV and markup — estimate any business metric in seconds.' },
-  education: { title: 'Education Calculators', desc: 'Free education calculators for GPA, final grades, test scores, study time and grade targets — plan your coursework with real numbers.' },
+  education: { title: 'Education Calculators — GPA, Final Grade & Test Scores', desc: 'Free education calculators for GPA, final grades, test scores, study time and grade targets — plan your coursework with real numbers.' },
   utilities: { title: 'Utility Calculators', desc: 'Free utility calculators — QR codes, password strength, color converters, unit helpers and other handy everyday tools.' },
   lifestyle: { title: 'Lifestyle & Home Calculators', desc: 'Free lifestyle calculators for moving costs, rent splits, cooking conversions, pet care and everyday home decisions.' },
   regional: { title: 'Regional Calculators (India/PK/UAE)', desc: 'Free regional calculators for India, Pakistan and UAE — FD, RD, PPF, GST, zakat, income tax and local salary math.' },

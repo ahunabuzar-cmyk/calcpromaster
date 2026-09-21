@@ -1,0 +1,13 @@
+{
+  "url": "http://localhost:3210/ deploy (mobile emulation)",
+  "perfScore": 80,
+  "fcp": "2.4 s",
+  "lcp": "3.4 s",
+  "tbt": "360 ms",
+  "cls": "0",
+  "si": "2.4 s",
+  "tti": "5.9 s",
+  "totalBytes": "Total size was 493 KiB",
+  "mainthreadWork": "3.1 s",
+  "bootJsTime": "0.4 s"
+}

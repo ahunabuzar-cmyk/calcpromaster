@@ -19,8 +19,16 @@ const STOP = new Set(('the a an of for to in on with and or best free online cal
   ' it that this from by at as per into out up down more less').split(' '));
 
 function tokens(s) {
-  return String(s || '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9\s-]/g, ' ')
-    .split(/[\s-]+/).filter((t) => t.length > 2 && !STOP.has(t) && !/^\d+$/.test(t));
+  return String(s || '').toLowerCase()
+    .replace(/\u00b2/g, '2').replace(/\u00b3/g, '3').replace(/\u2070|\u00b9/g, '1') // superscripts: kg/m³ -> kg/m3
+    .replace(/&/g, ' and ').replace(/[^a-z0-9\s-]/g, ' ')
+    .split(/[\s-]+/).map((t) => {
+      if (t.length > 4 && t.endsWith('ing')) t = t.slice(0, -3);      // eating -> eat, cooking -> cook
+      else if (t.length > 3 && t.endsWith('ed')) t = t.slice(0, -2);  // invested -> invest
+      else if (t.length > 3 && t.endsWith('s') && !t.endsWith('ss')) t = t.slice(0, -1); // savings -> saving
+      return t;
+    })
+    .filter((t) => t.length >= 2 && !STOP.has(t) && !/^\d+$/.test(t)); // keep fd/rd/ph/m3/q1 (2+ chars)
 }
 
 function loadSeo() {

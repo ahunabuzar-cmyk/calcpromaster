@@ -112,7 +112,7 @@ const FOOD_NUTRITION_TOOLS = [
     calc: function(v){ var setTemp=v.mode==='fan'?v.temp-20:v.temp; var adjTime=v.mode==='fan'?Math.round(v.time*0.9):v.time; return{result:'Set oven: '+setTemp+'°C ('+(v.mode==='fan'?'fan':'conventional')+')',chart:Charts.bar([v.temp,setTemp],['Recipe','Your oven']),extra:'Recipe is written for a conventional oven at '+v.temp+'°C | Time: '+adjTime+' min (fan cooks ~10% faster)'};},
     steps: function(v){ var setTemp=v.mode==='fan'?v.temp-20:v.temp; var adjTime=v.mode==='fan'?Math.round(v.time*0.9):v.time; return['Rule: fan oven = conventional − 20°C','Step 1: '+v.temp+'°C recipe → '+(v.mode==='fan'?'set '+setTemp+'°C on your fan oven':'keep '+setTemp+'°C on your conventional oven'),'Step 2: '+(v.mode==='fan'?'Fan time = '+v.time+' × 0.9 = '+adjTime+' min':'Time stays '+adjTime+' min'),'Step 3: Check food 5 min early — ovens vary'];} },
 
-  { id: 'homebrew-abv', name: 'Homebrew ABV Calculator', desc: 'Alcohol by volume from original and final gravity', kw: 'homebrew abv calculator original gravity final gravity beer alcohol brewing, free online Homebrew ABV Calculator',
+  { id: 'homebrew-abv', name: 'Homebrew ABV Calculator', desc: 'Alcohol by volume from original and final gravity', kw: 'homebrew abv calculator original gravity final gravity beer alcohol, free online Homebrew ABV Calculator',
     inputs: [{id:'og',label:'Original Gravity (SG)',type:'number',def:1.05},{id:'fg',label:'Final Gravity (SG)',type:'number',def:1.01}],
     calc: function(v){ const abv=(v.og-v.fg)*131.25; return { result: abv.toFixed(2)+'%', chart: null, extra: 'ABV ≈ (OG − FG) × 131.25 — the standard homebrewing approximation' }; },
     steps: function(v){ return ['ABV = (OG − FG) × 131.25']; } },

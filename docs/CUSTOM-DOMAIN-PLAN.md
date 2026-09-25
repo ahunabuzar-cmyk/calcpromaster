@@ -68,3 +68,28 @@ The netlify.app subdomain is the #2 SEO blocker (after backlinks): it caps brand
 - Domain name: `calcpromaster.com` vs `.app`/`.io`?
 - Canonical host: www or apex (pick one, 301 the other)?
 - Registrar / DNS provider (plain DNS or Cloudflare)?
+
+---
+
+## ✅ MIGRATION COMPLETED — 2026-09-25 (calcpromaster.com LIVE)
+
+| Step | Status |
+|------|--------|
+| `js/site-config.js` domain flip + rebuild (1,534 files, 0 netlify refs) | ✅ commit f89afee |
+| Spaceship DNS: apex A → 75.2.60.5, www CNAME → netlify | ✅ live (verified 8.8.8.8) |
+| Netlify SSL (Let's Encrypt) | ✅ issued, https://calcpromaster.com 200 |
+| Deploy (digest API method — zip backslash paths failed, `.htaccess` unuploadable) | ✅ 2,862 files, deploy 6ab665fe2c3c60ef89b0d2b0 |
+| Primary domain set (API PATCH) | ✅ netlify.app now redirects |
+| www → apex 301 | ✅ verified |
+| Tool page: title + self-canonical + trailing-slash 301 | ✅ verified |
+| True 404 contract | ✅ /garbage-url → 404 |
+| Homepage: H1 "1206+", canonical .com, fazier link | ✅ verified |
+| IndexNow re-ping on new host | ✅ 1337/1337 submitted |
+| Root sitemap.xml regenerated (.com) | ✅ commit 7ed97b5 |
+
+### Remaining (user actions)
+1. **GSC**: add `https://calcpromaster.com` URL-prefix property → verify (meta tag `googled1ac20b54b36e7cf` already live) → submit sitemap `sitemap.xml` → **Settings → Change of address** (from netlify property → new property). Bing Webmaster: same.
+2. **Product Hunt gallery**: delete old "497+" image, upload `project/og-image.png` + 2 screenshots.
+3. **Resubmit with .com URL**: SaaSHub (was rejected on subdomain policy), Fazier, Launching Next.
+4. **Revoke the Netlify personal access token** (User settings → Applications) — deploy work finished.
+5. GitHub repo About → website URL: `https://calcpromaster.com`.

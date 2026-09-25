@@ -21,7 +21,18 @@
 const fs = require('fs');
 const path = require('path');
 
-const DOMAIN = 'calcpromaster.netlify.app'; // keep in sync with js/site-config.js
+// Domain — SINGLE SOURCE OF TRUTH: js/site-config.js (`domain:` field).
+// Reads the same config the build uses, so a custom-domain switch stays a
+// one-file edit (no stale host in the IndexNow keyLocation/urlList).
+function readConfigDomain() {
+  try {
+    const cfg = fs.readFileSync(path.join(__dirname, 'js', 'site-config.js'), 'utf8');
+    const m = cfg.match(/domain:\s*'([^']+)'/);
+    if (m && m[1]) return m[1].replace(/^https?:\/\//, '');
+  } catch (e) { /* fall through to default */ }
+  return 'calcpromaster.netlify.app';
+}
+const DOMAIN = readConfigDomain();
 // KEY is NOT hardcoded — it is discovered from the shipped <hex>.txt verification file
 // at the site root, so regenerating the key only requires replacing that one file.
 // .sort()[0] keeps selection deterministic (readdir order is OS-dependent)

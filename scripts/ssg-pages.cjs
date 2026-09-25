@@ -661,9 +661,9 @@ for (const slug of ['favorites', 'history', 'compare']) {
     '<p>Every calculator shows its formula, a step-by-step worked example, and the assumptions behind the result, so you can trust the numbers. Results are computed instantly in your browser and never leave your device.</p>';
   let page = rewriteHead(SHELL, {
     title: 'CalcProMaster — 1206+ Free Online Calculators',
-    desc: 'CalcProMaster — 1201+ free calculators for finance, health, math, science, engineering and everyday life. Step-by-step solutions, formulas, charts. No sign-up.',
+    desc: 'CalcProMaster — 1206+ free calculators for finance, health, math, science, engineering and everyday life. Step-by-step solutions, formulas, charts. No sign-up.',
     canonical: '/', ogTitle: 'CalcProMaster — Free Online Calculators',
-    ogDesc: '1201+ free online calculators with step-by-step solutions, formulas and charts. No sign-up, no tracking.'
+    ogDesc: '1206+ free online calculators with step-by-step solutions, formulas and charts. No sign-up, no tracking.'
   });
   page = rewriteMainAppend(page, content);
   writePage('', page);

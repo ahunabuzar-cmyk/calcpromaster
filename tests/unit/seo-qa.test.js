@@ -19,6 +19,18 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..', '..');
 
+// Site origin follows js/site-config.js (`domain:` field — single source of
+// truth) so tests survive the documented custom-domain switch.
+function readConfigOrigin() {
+  try {
+    const cfg = fs.readFileSync(path.join(ROOT, 'js', 'site-config.js'), 'utf8');
+    const m = cfg.match(/domain:\s*'([^']+)'/);
+    if (m && m[1]) return 'https://' + m[1].replace(/^https?:\/\//, '');
+  } catch (e) { /* fall through */ }
+  return 'https://calcpromaster.netlify.app';
+}
+const SITE_ORIGIN = readConfigOrigin();
+
 let TOOL_SEO;
 let registryIds;
 
@@ -301,7 +313,7 @@ describe('SSG static pages (deploy/)', () => {
     const schemas = extractJsonLd(readPage(path.join('finance', 'loan-emi', 'index.html')));
     const bc = schemas.find((s) => s['@type'] === 'BreadcrumbList');
     expect(bc.itemListElement).toHaveLength(4);
-    expect(bc.itemListElement[3].item).toBe('https://calcpromaster.netlify.app/finance/loan-emi');
+    expect(bc.itemListElement[3].item).toBe(SITE_ORIGIN + '/finance/loan-emi');
   });
 
   it('FAQPage schema mirrors visible FAQs (5+ questions with answers)', () => {

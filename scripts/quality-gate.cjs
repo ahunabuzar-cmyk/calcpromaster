@@ -57,7 +57,16 @@ function collect(dir, base, files) {
 // 1. Load sitemap URLs
 const sitemap = fs.readFileSync(path.join(DEPLOY, 'sitemap.xml'), 'utf8');
 const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
-const BASE = 'https://calcpromaster.netlify.app';
+// Domain — SINGLE SOURCE OF TRUTH: js/site-config.js (`domain:` field), same
+// approach as scripts/ssg-pages.cjs. Keeps the gate working after a custom-
+// domain switch (a pinned literal here made every URL "fail" post-flip).
+let CONFIGURED_BASE = 'https://calcpromaster.netlify.app';
+try {
+  const cfg = fs.readFileSync(path.join(ROOT, 'js', 'site-config.js'), 'utf8');
+  const m = cfg.match(/domain:\s*'([^']+)'/);
+  if (m && m[1]) CONFIGURED_BASE = 'https://' + m[1].replace(/^https?:\/\//, '');
+} catch (e) { /* fall back to default literal */ }
+const BASE = CONFIGURED_BASE;
 const sitemapPaths = new Set(sitemapUrls.map(u => u.replace(BASE, '').replace(/\/$/, '') || '/'));
 
 // 2. Load QA contracts

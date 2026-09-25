@@ -1,6 +1,6 @@
 // ====== CalcProMaster Site Config — SINGLE SOURCE OF TRUTH ======
 // Deploy ke baad sirf yahan values change karo:
-//   - domain:      aapka asli domain (abhi Netlify default: calcpromaster.netlify.app)
+//   - domain:      aapka asli domain (custom domain live: calcpromaster.com)
 //   - gsc:         Google Search Console verification code (Search Console → Settings → Verification → paste the content= value)
 //   - ga4Id:       Google Analytics 4 Measurement ID (begins with G-)
 // NOTE: gsc/ga4Id ko EMPTY rakha gaya hai taaki koi placeholder value HTML me leak na
@@ -26,7 +26,7 @@
 //       data tab tak nahi milega.
 // =====================================================================
 window.SITE_CONFIG = {
-  domain: 'calcpromaster.netlify.app',
+  domain: 'calcpromaster.com',
   gsc: 'googled1ac20b54b36e7cf',
   ga4Id: 'G-8QCP0TP1TD',
   // AdSense publisher ID ("pub-" + 16 digits). Khali = ads.txt placeholder

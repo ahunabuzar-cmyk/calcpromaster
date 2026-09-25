@@ -1,13 +1,13 @@
 # CalcProMaster
 
-> 1201+ free online calculators with step-by-step solutions, interactive charts, and smart comparison features.
+> 1206+ free online calculators with step-by-step solutions, interactive charts, and smart comparison features.
 > All tools run 100% in your browser — no sign-up, no tracking, no data collection. Works offline as a PWA.
 
 Last updated: 2026-09-15
 
 ## What is CalcProMaster?
 
-CalcProMaster is a free, serverless calculator platform with **1201+ calculators** across 20 categories. Every tool provides step-by-step solutions, interactive SVG charts, scenario comparison, and privacy-first calculation (all data stays on the device).
+CalcProMaster is a free, serverless calculator platform with **1206+ calculators** across 20 categories. Every tool provides step-by-step solutions, interactive SVG charts, scenario comparison, and privacy-first calculation (all data stays on the device).
 
 ## Calculator Categories
 ### Finance (211 calculators)

@@ -156,7 +156,7 @@ function cardHtml(t) {
         <h1>${esc(t.name)}</h1>
         <p>${esc(t.desc)}</p>
       </div>
-      <div class="bottom"><span class="tag">100% free · Step-by-step solutions · No sign-up · Runs in your browser</span><span class="url">calcpromaster.netlify.app</span></div>
+      <div class="bottom"><span class="tag">100% free · Step-by-step solutions · No sign-up · Runs in your browser</span><span class="url">calcpromaster.com</span></div>
     </div>
   </div>
   </body></html>`;
@@ -175,6 +175,18 @@ function cardHtml(t) {
   if (process.env.SKIP_EXISTING === '1') {
     list = list.filter((t) => !fs.existsSync(path.join(OUT_DIR, t.id + '.jpg')));
     console.log('SKIP_EXISTING: ' + list.length + ' cards missing out of ' + tools.length + ' tools');
+  }
+  // STALE_OLDER_THAN=<file>: only regenerate cards OLDER than this marker file
+  // (used to re-stamp the domain watermark across the whole set in one pass).
+  const marker = process.env.STALE_OLDER_THAN;
+  if (marker) {
+    const mtime = fs.statSync(path.resolve(marker)).mtimeMs;
+    const before = list.length;
+    list = list.filter((t) => {
+      const f = path.join(OUT_DIR, t.id + '.jpg');
+      return !fs.existsSync(f) || fs.statSync(f).mtimeMs < mtime;
+    });
+    console.log('STALE filter: ' + list.length + ' / ' + before + ' cards older than marker');
   }
   for (const t of list) {
     const out = path.join(OUT_DIR, t.id + '.jpg');

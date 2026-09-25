@@ -2,6 +2,12 @@
 # ORDER MATTERS: Netlify matches top-to-bottom, first match wins, and redirect
 # rules override static files — so real root files MUST come before the asset
 # wildcards below, or robots.txt/sitemap.xml/etc. would be 404'd by them.
+# 0) Canonical-host force redirect (GSC Change-of-Address requirement).
+#    Netlify normally auto-301s the *.netlify.app subdomain once the custom
+#    domain is primary, but that setting is UI-side; this rule makes the old
+#    host 301 to the apex regardless. Must stay ABOVE every other rule.
+http://calcpromaster.netlify.app/*   https://calcpromaster.com/:splat   301!
+https://calcpromaster.netlify.app/*  https://calcpromaster.com/:splat   301!
 # 1) Real root files — never catch these with the asset-404 wildcards
 /robots.txt     /robots.txt     200
 /sitemap.xml    /sitemap.xml    200

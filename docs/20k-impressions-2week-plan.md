@@ -126,3 +126,35 @@ impressions ≈ indexed pages × avg impressions per page per week × 2 weeks
 - **Small-sample CTR noise** → polish only pages with ≥50 impressions
 - **Zero cannibalization risk** → verified (C1/C2/C3 all zero)
 - **Netlify subdomain trust ceiling** → custom domain decision reserved for Day 14+
+
+---
+
+## ✅ Day-6 Checkpoint (2026-09-25) — CUSTOM DOMAIN MIGRATION COMPLETE (Ahead of schedule)
+
+The biggest lever landed on Day 4–6, not Day 14: **calcpromaster.com is LIVE** (DNS + SSL + primary domain + 301s verified; see CUSTOM-DOMAIN-PLAN.md completion table).
+
+### Current trajectory (GSC, old property — 7d rolling)
+| Date | 7d impr | 28d impr | 7d pos |
+|------|---------|----------|--------|
+| 20 Sep | 135 | 597 | 31.5 |
+| 22 Sep | 146 | 618 | 34.5 |
+| **25 Sep** | **194 (+33% WoW)** | 678 | 33.7 |
+
+Top query shifted to "random number calculator" (higher-volume head term entering top position).
+
+### New-domain status (verified via GSC API)
+- Property `https://calcpromaster.com/` VERIFIED (siteOwner)
+- Sitemap submitted: 1,337 URLs, 0 errors, not pending
+- IndexNow: 1,337/1,337 re-pinged on the new host
+- New property impressions: 0 (expected — GSC lag 2–3 days + migration was today)
+
+### UPDATED projection (from 25 Sep, domain-live era)
+| Checkpoint | Date | Expected (new property, cumulative 7d impr) |
+|------------|------|---------------------------------------------|
+| Day 3 | 28 Sep | First new-domain impressions appear (old property decays) |
+| Day 7 | 2 Oct | 1,500–4,000 (CoA + 301 consolidation + IndexNow wave) |
+| Day 14 | 9 Oct | 8,000–16,000 (directories approved + PH fix) |
+| **20k** | **~14–18 Oct (week 3)** | ~90% confidence if directories + PH land |
+
+### Pivot rule (updated)
+If by **2 Oct** the new property shows < 1,000 impressions → escalate: Product Hunt launch (gallery fix FIRST), HN Show post via modmail path, and double the directory queue (SaaSHub + AlternativeTo + Slant same week).

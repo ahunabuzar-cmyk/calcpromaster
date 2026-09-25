@@ -2,7 +2,7 @@
 
 **Rule #1 before using anything in this file:** every description, post, and answer below is a STARTING DRAFT. Personalize it for the platform and the moment. Never paste the same text in two places — platforms and users both recognize copy-paste, and duplicate descriptions weaken each listing.
 
-**Rule #2:** no fabricated claims. Everything here describes real site features: 1,201 calculators, 20 categories, works in-browser, mobile-friendly, free, no signup. If a platform needs a number we don't have (users, ratings), omit it — do not invent it.
+**Rule #2:** no fabricated claims. Everything here describes real site features: 1,206 calculators, 20 categories, works in-browser, mobile-friendly, free, no signup. If a platform needs a number we don't have (users, ratings), omit it — do not invent it.
 
 **Rule #3:** anchor-text rotation table lives in `docs/backlink-action-plan.md`. Never use the same anchor twice in a row.
 
@@ -12,61 +12,61 @@
 
 ### 1.1 Product Hunt (launch-day tagline + description)
 
-**Tagline (60 chars max):** "1,201 free calculators that run right in your browser"
+**Tagline (60 chars max):** "1,206 free calculators that run right in your browser"
 
 **Description:**
-CalcProMaster is a free suite of 1,201 online calculators covering money, health, math, construction, and everyday conversions — all running instantly in the browser with no signup and no paywall. Each tool is built around the actual question people bring to it: "Can I afford this mortgage?", "How much protein do I actually need?", "What will this concrete slab cost?" The site answers with the number, the formula behind it, and a plain-English explanation of what the result means. Financial and health tools carry a clear methodology note and a review date, so you can see when the math was last checked. There's nothing to install — open a tool, enter your values, get your answer. Built by a small team that keeps adding tools based on what visitors ask for.
+CalcProMaster is a free suite of 1,206 online calculators covering money, health, math, construction, and everyday conversions — all running instantly in the browser with no signup and no paywall. Each tool is built around the actual question people bring to it: "Can I afford this mortgage?", "How much protein do I actually need?", "What will this concrete slab cost?" The site answers with the number, the formula behind it, and a plain-English explanation of what the result means. Financial and health tools carry a clear methodology note and a review date, so you can see when the math was last checked. There's nothing to install — open a tool, enter your values, get your answer. Built by a small team that keeps adding tools based on what visitors ask for.
 
 ### 1.2 AlternativeTo (as an alternative to WolframAlpha / Calculator.net)
 
 **Listed as alternative to:** WolframAlpha, Calculator.net, Omni Calculator
 
 **Description (~300 chars, platform limit):**
-Free browser-based calculators for finance, health, math, construction and 16 other categories — 1,201 tools, no signup, no ads blocking the input. Each calculator explains its formula and shows a worked example, so you can verify the math instead of trusting a black box. Mobile-friendly and works offline-friendly in one visit.
+Free browser-based calculators for finance, health, math, construction and 16 other categories — 1,206 tools, no signup, no ads blocking the input. Each calculator explains its formula and shows a worked example, so you can verify the math instead of trusting a black box. Mobile-friendly and works offline-friendly in one visit.
 
 ### 1.3 SaaSHub
 
 **Category:** Calculators / Web Tools
 
 **Description:**
-CalcProMaster is a free web-based calculator suite: 1,201 tools across 20 categories including finance (mortgage, EMI, tax), health (BMI, calories, pregnancy), construction (concrete, tiles, paint), and unit conversion. Tools load instantly, run entirely in the browser, and require no account. Every calculator page documents its formula, inputs, assumptions, and limitations, with a "last reviewed" date on financial and health tools. The site earns revenue from non-intrusive ads rather than subscriptions, so all calculators stay free. Useful for quick personal decisions (loan comparisons, calorie targets) and for professionals who need a fast sanity check (contractors estimating materials, freelancers pricing hourly rates).
+CalcProMaster is a free web-based calculator suite: 1,206 tools across 20 categories including finance (mortgage, EMI, tax), health (BMI, calories, pregnancy), construction (concrete, tiles, paint), and unit conversion. Tools load instantly, run entirely in the browser, and require no account. Every calculator page documents its formula, inputs, assumptions, and limitations, with a "last reviewed" date on financial and health tools. The site earns revenue from non-intrusive ads rather than subscriptions, so all calculators stay free. Useful for quick personal decisions (loan comparisons, calorie targets) and for professionals who need a fast sanity check (contractors estimating materials, freelancers pricing hourly rates).
 
 ### 1.4 BetaList
 
 **Description:**
-We're building CalcProMaster — a free calculator library for the questions search engines answer badly: where the result comes with its formula, a worked example, and an honest note about what the calculation does and doesn't include. 1,201 calculators are live across finance, health, construction, and everyday math. The current focus is deepening the most-used tools: more real-world worked examples, transparent methodology, and embeddable widgets so bloggers can put a working calculator inside their own articles. No signup walls, no "premium calculator" upsell — the whole library is free, funded by unobtrusive ads.
+We're building CalcProMaster — a free calculator library for the questions search engines answer badly: where the result comes with its formula, a worked example, and an honest note about what the calculation does and doesn't include. 1,206 calculators are live across finance, health, construction, and everyday math. The current focus is deepening the most-used tools: more real-world worked examples, transparent methodology, and embeddable widgets so bloggers can put a working calculator inside their own articles. No signup walls, no "premium calculator" upsell — the whole library is free, funded by unobtrusive ads.
 
 ### 1.5 Fazier
 
 **Description (short form):**
-CalcProMaster — 1,201 free online calculators in 20 categories: loans, mortgage, BMI, calories, concrete, unit conversion, and more. Everything runs in your browser, no account needed. Each tool shows the formula it uses and explains the result in plain language. Mobile-friendly, fast, and free.
+CalcProMaster — 1,206 free online calculators in 20 categories: loans, mortgage, BMI, calories, concrete, unit conversion, and more. Everything runs in your browser, no account needed. Each tool shows the formula it uses and explains the result in plain language. Mobile-friendly, fast, and free.
 
 ### 1.6 Slant.co (answer-style, topic: "What are the best free online calculator websites?")
 
 **Answer draft:**
-CalcProMaster stands out for three reasons. First, breadth: 1,201 calculators across 20 categories, from mortgage math to concrete volume to GPA, all under one consistent interface. Second, transparency: each tool states the formula it uses, walks through an example, and flags assumptions — most free calculators just spit out a number and hope you don't ask questions. Third, practical content: pages explain what the result actually means for your decision (what a 43% debt-to-income ratio implies for a mortgage application, for example), not just the arithmetic. Trade-offs: it's a generalist site, so for highly specialized domains (actuarial tables, circuit simulation) a dedicated tool may go deeper. But for everyday financial, health, and construction math it covers more ground than any single-purpose site. Free, no signup, works on mobile.
+CalcProMaster stands out for three reasons. First, breadth: 1,206 calculators across 20 categories, from mortgage math to concrete volume to GPA, all under one consistent interface. Second, transparency: each tool states the formula it uses, walks through an example, and flags assumptions — most free calculators just spit out a number and hope you don't ask questions. Third, practical content: pages explain what the result actually means for your decision (what a 43% debt-to-income ratio implies for a mortgage application, for example), not just the arithmetic. Trade-offs: it's a generalist site, so for highly specialized domains (actuarial tables, circuit simulation) a dedicated tool may go deeper. But for everyday financial, health, and construction math it covers more ground than any single-purpose site. Free, no signup, works on mobile.
 
 ### 1.7 Indie Hackers (build-in-public post draft)
 
-**Title:** "1,201 calculators, zero funding, one maintainer — what I learned shipping a free tool library"
+**Title:** "1,206 calculators, zero funding, one maintainer — what I learned shipping a free tool library"
 
 **Post draft (short version — expand with real numbers before posting):**
-I run CalcProMaster, a free calculator site with 1,201 tools across 20 categories. No funding, no team. What I've learned: (1) Depth beats count — the 30 tools with real worked examples and honest limitation notes get returning visitors; thin pages don't. (2) Formula transparency is a moat people underrate — showing *how* a number is computed builds trust that generic aggregators can't fake. (3) The embeddable calculator widget (an iframe any blogger can paste) generates more natural links than any outreach I've done. Numbers and tech stack in the comments. Happy to answer questions about building content at this scale — the QA pipeline (1,563 automated tests, formula review dashboard) ended up being the most interesting engineering problem.
+I run CalcProMaster, a free calculator site with 1,206 tools across 20 categories. No funding, no team. What I've learned: (1) Depth beats count — the 30 tools with real worked examples and honest limitation notes get returning visitors; thin pages don't. (2) Formula transparency is a moat people underrate — showing *how* a number is computed builds trust that generic aggregators can't fake. (3) The embeddable calculator widget (an iframe any blogger can paste) generates more natural links than any outreach I've done. Numbers and tech stack in the comments. Happy to answer questions about building content at this scale — the QA pipeline (1,563 automated tests, formula review dashboard) ended up being the most interesting engineering problem.
 
 ### 1.8 Uneed
 
 **Description:**
-CalcProMaster — free, instant calculators for real decisions. 1,201 tools: mortgage & EMI, taxes, BMI & calories, concrete & paint coverage, unit conversions, GPA, and 19 more categories. No signup, no paywall, no waiting. Every calculator explains its formula, shows a worked example, and states its assumptions. Mobile-first, fast on slow connections.
+CalcProMaster — free, instant calculators for real decisions. 1,206 tools: mortgage & EMI, taxes, BMI & calories, concrete & paint coverage, unit conversions, GPA, and 19 more categories. No signup, no paywall, no waiting. Every calculator explains its formula, shows a worked example, and states its assumptions. Mobile-first, fast on slow connections.
 
 ### 1.9 Launching Next
 
 **Description:**
-CalcProMaster launched as a free alternative to ad-bloated calculator sites: 1,201 browser-based tools across finance, health, construction, education, and daily conversions. Each page pairs the calculator with its formula, a worked example, and a plain-English explanation of the result. Financial and health tools include review dates and disclaimers. No account, no install — pick a tool, enter values, get an answer you can trust and understand.
+CalcProMaster launched as a free alternative to ad-bloated calculator sites: 1,206 browser-based tools across finance, health, construction, education, and daily conversions. Each page pairs the calculator with its formula, a worked example, and a plain-English explanation of the result. Financial and health tools include review dates and disclaimers. No account, no install — pick a tool, enter values, get an answer you can trust and understand.
 
 ### 1.10 GitHub (Awesome Lists PR body)
 
 **Suggested list entry (for awesome-calculators or similar):**
-- [CalcProMaster](https://calcpromaster.com/) — 1,201 free browser calculators (finance, health, construction, math) with documented formulas and worked examples
+- [CalcProMaster](https://calcpromaster.com/) — 1,206 free browser calculators (finance, health, construction, math) with documented formulas and worked examples
 
 **PR note to maintainer:** "Adding CalcProMaster — a free, no-signup calculator suite. Relevant to this list because every tool documents its formula and assumptions (most online calculators don't), and the whole library runs client-side. Happy to adjust the description to fit list conventions."
 
@@ -200,7 +200,7 @@ Hi [Name],
 
 I came across your [page name] while looking for [genuine reason — e.g. "tools teachers recommend for practice with percentages"]. The [specific thing you liked — e.g. "section on classroom-ready math tools"] is genuinely useful — I've bookmarked it.
 
-I maintain CalcProMaster, a free library of 1,201 calculators (finance, health, math, construction) — no signup, no ads blocking the inputs, and every tool documents the formula it uses plus a worked example. Several teachers use the percentage and GPA tools directly in class for that reason.
+I maintain CalcProMaster, a free library of 1,206 calculators (finance, health, math, construction) — no signup, no ads blocking the inputs, and every tool documents the formula it uses plus a worked example. Several teachers use the percentage and GPA tools directly in class for that reason.
 
 If you think it fits your page, here's the link: https://calcpromaster.com/
 

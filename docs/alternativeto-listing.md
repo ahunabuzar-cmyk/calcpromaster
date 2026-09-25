@@ -23,7 +23,7 @@ Omni Calculator
 
 ## 3. Website URL
 ```
-https://calcpromaster.netlify.app/
+https://calcpromaster.com/
 ```
 > Do NOT deep-link a calculator. When the custom domain migrates, the homepage 301-redirects automatically and this listing keeps working — but only if you submitted the root.
 

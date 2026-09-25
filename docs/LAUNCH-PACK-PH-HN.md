@@ -29,7 +29,7 @@ CalcProMaster — 1200+ Free Calculators
 
 **Website URL:**
 ```
-https://calcpromaster.netlify.app/
+https://calcpromaster.com/
 ```
 
 **Description (260 chars max):**
@@ -80,7 +80,7 @@ front-page activity peak hoti hai.
 Show HN: CalcProMaster – 1200 calculators that show their work (formulas + steps)
 ```
 
-**URL field:** `https://calcpromaster.netlify.app/`
+**URL field:** `https://calcpromaster.com/`
 (Ask HN style text-post nahi — direct URL post karo)
 
 **First comment (aap khud turant post karo):**

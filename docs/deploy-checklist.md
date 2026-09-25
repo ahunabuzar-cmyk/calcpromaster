@@ -37,9 +37,9 @@ secret is set.
 
 ```bash
 # Every route must now serve UNIQUE HTML (not the shared SPA shell)
-curl -sL https://calcpromaster.netlify.app/finance/loan-emi | grep -o "<title>[^<]*</title>"
+curl -sL https://calcpromaster.com/finance/loan-emi | grep -o "<title>[^<]*</title>"
 #   → must show "Loan EMI Calculator – Monthly Payment & Interest"
-curl -sL https://calcpromaster.netlify.app/health/bmi | grep -o "<title>[^<]*</title>"
+curl -sL https://calcpromaster.com/health/bmi | grep -o "<title>[^<]*</title>"
 #   → must show the BMI-specific title
 
 # Full 774-URL audit against the LIVE site
@@ -48,7 +48,7 @@ node scripts/seo-indexing-audit.cjs --live
 ```
 
 Also verify:
-- `/robots.txt` → 200, `Allow: /`, `Sitemap: https://calcpromaster.netlify.app/sitemap.xml`
+- `/robots.txt` → 200, `Allow: /`, `Sitemap: https://calcpromaster.com/sitemap.xml`
 - `/sitemap.xml` → 200, valid XML, 774 URLs
 - `/cookies` → **noindex** (intentional — thin compliance page)
 - `/favicon.ico`, `/manifest.webmanifest`, `/sw.js` → all 200
@@ -77,7 +77,7 @@ https://www.bing.com/webmasters → URL Submission.
    - `/health/bmi`
    - `/math/percentage`
    - `/conversion/length`
-4. In **Sitemaps**, re-submit `https://calcpromaster.netlify.app/sitemap.xml`.
+4. In **Sitemaps**, re-submit `https://calcpromaster.com/sitemap.xml`.
 
 ## STEP 6 — Monitor indexing recovery (1–4 weeks)
 

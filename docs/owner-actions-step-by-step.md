@@ -1,6 +1,6 @@
 # CalcProMaster — LIVE SETUP GUIDE (Owner Actions)
 
-Site already live: **https://calcpromaster.netlify.app** — 543 calculators public access par hain.
+Site already live: **https://calcpromaster.com** — 543 calculators public access par hain.
 Ye guide sirf **business config** hai (code ready hai — bas real IDs paste karni hain).
 Total time: ~30 minutes. Koi paid tool nahi chahiye.
 
@@ -18,7 +18,7 @@ Total time: ~30 minutes. Koi paid tool nahi chahiye.
 2. Niche left corner → **Admin** (⚙️ icon) → **Create Property**.
 3. Property name: `CalcProMaster` → Reporting timezone: apna → Currency: apna → **Create**.
 4. "Business information" screen → **Next** (koi bhi industry select kar lo) → **Create**.
-5. **Data streams** screen → **Web** → Website URL: `https://calcpromaster.netlify.app` →
+5. **Data streams** screen → **Web** → Website URL: `https://calcpromaster.com` →
    Stream name: `CalcProMaster Web` → **Create stream**.
 6. Stream page pe **Measurement ID** dikhega — format `G-AB12CD34EF5` (G- se shuru).
    Usse **copy** karo.
@@ -48,7 +48,7 @@ Total time: ~30 minutes. Koi paid tool nahi chahiye.
 1. Browser mein kholo: **https://search.google.com/search-console** → **Start now** (login).
 2. **Add property** → **URL prefix** tab select karo → paste karo:
    ```
-   https://calcpromaster.netlify.app
+   https://calcpromaster.com
    ```
    → **Continue**.
 3. Verification methods list mein **HTML tag** select karo.
@@ -69,10 +69,10 @@ Total time: ~30 minutes. Koi paid tool nahi chahiye.
 7. ✅ **Verified** dikhna chahiye.
 
 > 🟢 **ALREADY DONE — abhi live hai:** HTML file verification method bhi active hai
-> (`https://calcpromaster.netlify.app/googled1ac20b54b36e7cf.html` — byte-for-byte exact) aur
+> (`https://calcpromaster.com/googled1ac20b54b36e7cf.html` — byte-for-byte exact) aur
 > homepage par static meta tag `<meta name="google-site-verification"
 > content="googled1ac20b54b36e7cf">` bhi live hai. GSC mein **Add property → URL prefix
-> → https://calcpromaster.netlify.app → HTML file method → bas VERIFY dabao** — file already
+> → https://calcpromaster.com → HTML file method → bas VERIFY dabao** — file already
 > uploaded hai, verify turant confirm hoga. (HTML tag method bhi chala sakte ho — dono
 > independently work karte hain.)
 
@@ -90,7 +90,7 @@ Total time: ~30 minutes. Koi paid tool nahi chahiye.
 4. ~1-2 din baad **Pages** report mein URL count dikhne lagega (543 calculators + 20 hubs +
    static pages + long-tail variants — total ~778 URLs).
 5. **Request Indexing** (recommended, top-5 calculators ke liye): GSC → **URL inspection** →
-   paste koi calculator URL jaise `https://calcpromaster.netlify.app/finance/loan-emi` →
+   paste koi calculator URL jaise `https://calcpromaster.com/finance/loan-emi` →
    **Request indexing** → (agar "URL is on Google" dikhe to **Request indexing** button phir se).
    Homepage + 2-3 popular calculators ke liye karo — baaki 778 URLs sitemap se khud mil jayenge.
 

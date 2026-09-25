@@ -1,12 +1,12 @@
 Platform Name,URL,DR,Status,Date Submitted,Anchor Text Used,Notes
 Product Hunt,https://www.producthunt.com,90,Pending,,,Launch day: Tue/Wed 00:01 PT. Prepare gallery assets + first comment (maker comment). Do NOT post more than once per 6 months for same product.
-AlternativeTo,https://alternativeto.net,85,Pending,,,List as alternative to WolframAlpha/Calculator.net. Use site description word count limit (~300 chars). Category: Online Tools.
-SaaSHub,https://www.saashub.com,70,Pending,,,Submit under "Calculators" + "Web Tools" categories. Free listings accepted; screenshot required.
+AlternativeTo,https://alternativeto.net,85,READY,,,Custom domain LIVE 2026-09-25 - subdomain rejection no longer applies - submit with https://calcpromaster.com. List as alternative to WolframAlpha/Calculator.net. Use site description word count limit (~300 chars). Category: Online Tools.
+SaaSHub,https://www.saashub.com,70,READY,,,Domain policy FIXED: calcpromaster.com LIVE 2026-09-25 - submit NOW. Submit under "Calculators" + "Web Tools" categories. Free listings accepted; screenshot required.
 BetaList,https://betalist.com,75,Pending,,,Needs a "coming soon"/early angle. Best if submitted before full launch messaging.
-Fazier,https://fazier.com,55,READY,2026-09-22,Footer link added to index.html - submit AFTER next Netlify deploy (they check footer). Free Basic plan; paste-form ready.
+Fazier,https://fazier.com,55,READY,2026-09-22,Footer link LIVE on https://calcpromaster.com (verified 2026-09-25) - SUBMIT NOW. Free Basic plan; paste-form ready.
 Slant.co,https://www.slant.co,70,Pending,,,Answer "What are the best free online calculator sites?" style topics. Write a genuine comparison (not spam) with pros/cons.
 Indie Hackers,https://www.indiehackers.com,80,Pending,,,Post build-log/milestone story (e.g. "1,200 calculators, zero funding"). Link in profile + one contextual link max.
 Uneed,https://www.uneed.best,74,Pending,,,IMPORTANT: free launch queue closed Aug 2026 — paid launch now $14.99/$29.99. Decide if worth paying; otherwise skip and rely on community posts. Clean screenshot + real description; they reject thin submissions.
-Launching Next,https://www.launchingnext.com,55,READY,2026-09-22,No footer requirement - can submit today. Unique description ready.
-Twelve.Tools,https://twelve.tools,82,LIVE,2026-09-22,Approved+Verified. Listing: https://twelve.tools/calcpromaster-netlify-app (edit-hash nj8tsuizv5f5c6swun37 - KEEP SAFE). DR82 dofollow earned.
+Launching Next,https://www.launchingnext.com,55,READY,2026-09-22,No footer requirement - submit NOW with https://calcpromaster.com. Unique description ready.
+Twelve.Tools,https://twelve.tools,82,LIVE,2026-09-22,Approved+Verified. Listing: https://twelve.tools/calcpromaster-netlify-app (edit-hash nj8tsuizv5f5c6swun37 - KEEP SAFE). DR82 dofollow earned. NEW DOMAIN LIVE 2026-09-25: next edit par listing URL https://calcpromaster.com karo (same hash).
 GitHub Awesome Lists,https://github.com/topics/awesome,95,Pending,,,Target: awesome-calculators / awesome-finance-tools style repos. Contribute via PR with a one-line useful description; only where genuinely on-topic.

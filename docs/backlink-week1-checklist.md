@@ -2,7 +2,7 @@
 
 **Goal for Week 1: 1–2 live links, maximum.** This is deliberate — a brand-new domain that gains 20 links in a week looks manipulated. Slow and boring wins.
 
-**Site:** https://calcpromaster.netlify.app/ · Tracker: `docs/backlink-tracker.csv` · Descriptions: `docs/backlink-outreach-content.md`
+**Site:** https://calcpromaster.com/ · Tracker: `docs/backlink-tracker.csv` · Descriptions: `docs/backlink-outreach-content.md`
 
 ---
 
@@ -40,7 +40,7 @@ Have these ready in a folder — every platform will ask for some subset:
 
 - [ ] Set up a **GitHub issue template** on your repo so Awesome-list PRs later have a one-line description + URL format ready
 - [ ] Draft your **Indie Hackers build-log post** (don't post yet — that's Week 3): "How I built 1,201 calculators with zero funding" angle from the outreach pack
-- [ ] Verify the **embed landing page** loads and the four widgets work: https://calcpromaster.netlify.app/embed/ — this is your best natural-link asset; every blogger who embeds creates a link you never asked for
+- [ ] Verify the **embed landing page** loads and the four widgets work: https://calcpromaster.com/embed/ — this is your best natural-link asset; every blogger who embeds creates a link you never asked for
 
 ---
 

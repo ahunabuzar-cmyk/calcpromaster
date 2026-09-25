@@ -66,7 +66,7 @@ CalcProMaster launched as a free alternative to ad-bloated calculator sites: 1,2
 ### 1.10 GitHub (Awesome Lists PR body)
 
 **Suggested list entry (for awesome-calculators or similar):**
-- [CalcProMaster](https://calcpromaster.netlify.app/) — 1,201 free browser calculators (finance, health, construction, math) with documented formulas and worked examples
+- [CalcProMaster](https://calcpromaster.com/) — 1,201 free browser calculators (finance, health, construction, math) with documented formulas and worked examples
 
 **PR note to maintainer:** "Adding CalcProMaster — a free, no-signup calculator suite. Relevant to this list because every tool documents its formula and assumptions (most online calculators don't), and the whole library runs client-side. Happy to adjust the description to fit list conventions."
 
@@ -202,7 +202,7 @@ I came across your [page name] while looking for [genuine reason — e.g. "tools
 
 I maintain CalcProMaster, a free library of 1,201 calculators (finance, health, math, construction) — no signup, no ads blocking the inputs, and every tool documents the formula it uses plus a worked example. Several teachers use the percentage and GPA tools directly in class for that reason.
 
-If you think it fits your page, here's the link: https://calcpromaster.netlify.app/
+If you think it fits your page, here's the link: https://calcpromaster.com/
 
 Either way, thanks for maintaining the list — resources like yours are how people find trustworthy tools.
 

@@ -11,10 +11,10 @@
 1. Browser kholo → **https://search.google.com/search-console**
 2. Google account se login (wohi account jisme website hai — koi bhi chalega).
 3. Agar pehli baar hai: **Start now** dabao.
-4. Dashboard pe **property list** — `https://calcpromaster.netlify.app` **dikhta hai to skip** (property already verified). Niche ka Step 0 chhodo, seedha **PART A** pe jao.
+4. Dashboard pe **property list** — `https://calcpromaster.com` **dikhta hai to skip** (property already verified). Niche ka Step 0 chhodo, seedha **PART A** pe jao.
 5. Agar nahi dikhta → **Add property** → **URL prefix** tab → paste:
    ```
-   https://calcpromaster.netlify.app
+   https://calcpromaster.com
    ```
    → **Continue**.
 6. Verification screen pe → **HTML file** method select karo.
@@ -36,7 +36,7 @@
    ```
    sitemap.xml
    ```
-   - *Domain `https://calcpromaster.netlify.app` pehle se grey mein dikhega — usse mat chhedo.*
+   - *Domain `https://calcpromaster.com` pehle se grey mein dikhega — usse mat chhedo.*
 3. **Submit** button dabao (green button).
 
 ### Step A3 — Result check (kya dikhna chahiye)
@@ -63,7 +63,7 @@ Isi page ko chhodo, ab **PART B** karo.
    - *Top pe search bar bhi hai — wahan bhi URL paste kar sakte ho.*
 2. Ye URL paste karo (pehla):
    ```
-   https://calcpromaster.netlify.app/
+   https://calcpromaster.com/
    ```
 3. **Enter** dabao.
 
@@ -76,11 +76,11 @@ Isi page ko chhodo, ab **PART B** karo.
 ### Step B3 — Baaki 5 URLs (repeat)
 URL inspection ke search box mein dobara paste karo + **Request indexing**:
 
-1. `https://calcpromaster.netlify.app/finance/loan-emi`
-2. `https://calcpromaster.netlify.app/math/percentage`
-3. `https://calcpromaster.netlify.app/health/bmi`
-4. `https://calcpromaster.netlify.app/conversion/unit-converter` *(jo bhi popular ho — sitemap se koi bhi 2-3 aur)*
-5. `https://calcpromaster.netlify.app/engineering/beam-deflection` *(example — apni top calculators chuno)*
+1. `https://calcpromaster.com/finance/loan-emi`
+2. `https://calcpromaster.com/math/percentage`
+3. `https://calcpromaster.com/health/bmi`
+4. `https://calcpromaster.com/conversion/unit-converter` *(jo bhi popular ho — sitemap se koi bhi 2-3 aur)*
+5. `https://calcpromaster.com/engineering/beam-deflection` *(example — apni top calculators chuno)*
 
 > Tip: Kaunse calculators popular hain wo dekhne ke liye `sitemap.xml` kholo aur jo top pe
 > lag rahe hain unhe request karo. Homepage + finance + math + health + conversion — ye mix
@@ -127,7 +127,7 @@ GSC mein hafte mein ek baar:
 | Sitemap errors > 0 | Sitemap mein 404 URL | `node scripts/indexing-monitor.cjs` se check, mujhe report karo |
 | Request indexing button disabled | Behtareen recently request kia | 2-3 din wait karo, dobara try |
 | "URL is on Google" nahi dikhta | Abhi index nahi hua | Normal — request karo, wait karo |
-| Verification screen pe file nahi | Site pe file missing | File live hai — URL bar mein manually kholo: `https://calcpromaster.netlify.app/googled1ac20b54b36e7cf.html` → 200 aaye to GSC pe VERIFY dobara |
+| Verification screen pe file nahi | Site pe file missing | File live hai — URL bar mein manually kholo: `https://calcpromaster.com/googled1ac20b54b36e7cf.html` → 200 aaye to GSC pe VERIFY dobara |
 
 ---
 

@@ -14,7 +14,7 @@
 
 **Form fields (copy-paste):**
 
-- **Website URL:** `https://calcpromaster.netlify.app/`
+- **Website URL:** `https://calcpromaster.com/`
 - **Name:** `CalcProMaster`
 - **Tagline (short):** `1,206 free calculators with step-by-step solutions`
 - **Description:**
@@ -38,7 +38,7 @@ CalcProMaster is a browser-based collection of 1,206 calculators across 20 categ
 **Fields:**
 
 - **Service name:** `CalcProMaster`
-- **URL:** `https://calcpromaster.netlify.app/`
+- **URL:** `https://calcpromaster.com/`
 - **One-liner:** `Free online calculators with visible formulas and step-by-step solutions.`
 - **Full description (unique — do NOT reuse the Twelve.Tools text):**
 
@@ -80,7 +80,7 @@ CalcProMaster offers 1,206 free calculators across finance, health, math, constr
 **Form fields (copy-paste):**
 
 - **Application name:** `CalcProMaster`
-- **Website URL:** `https://calcpromaster.netlify.app/`
+- **Website URL:** `https://calcpromaster.com/`
 - **Category:** `Online Calculators` (or closest available)
 - **Short description (unique — do NOT reuse other listings' text):**
 

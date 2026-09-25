@@ -1,6 +1,6 @@
 # CalcProMaster — AdSense Setup Guide (exact steps)
 
-Site: **https://calcpromaster.netlify.app** — ad slots code mein ready hain (`#ad-bottom`
+Site: **https://calcpromaster.com** — ad slots code mein ready hain (`#ad-bottom`
 placeholder + consent notice). Sirf **approval + real Publisher ID** chahiye.
 AdSense application ka result 1-2 hafte ka hota hai, isliye **aaj hi apply kar do**.
 
@@ -9,7 +9,7 @@ AdSense application ka result 1-2 hafte ka hota hai, isliye **aaj hi apply kar d
 ## STEP 1 — Apply (Google account chahiye)
 
 1. Kholo: **https://adsense.google.com/start** → **Sign up** (Google account se login).
-2. **Site URL**: `https://calcpromaster.netlify.app` (ya apna custom domain jab aaye).
+2. **Site URL**: `https://calcpromaster.com` (ya apna custom domain jab aaye).
 3. **Email preferences**: koi bhi → **Submit**.
 4. Application review mein **1-2 hafte** lag sakte hain. Tab tak **kuch mat badlo** site pe
    (traffic + content stable rakho).
@@ -72,7 +72,7 @@ node build-deploy.js        # ads.txt + site-config deploy/ mein copy hota hai
 
 ## STEP 6 — Verify
 
-1. Live URL kholo: `https://calcpromaster.netlify.app/ads.txt` → tumhara `pub-...` line
+1. Live URL kholo: `https://calcpromaster.com/ads.txt` → tumhara `pub-...` line
    dikhna chahiye (uncommented).
 2. AdSense dashboard → **Sites** → site status **"Getting ready"** / **"Active"**.
 3. Pehla traffic aane ke baad (GSC + GA4 laga lo), 24-48h mein ad serving shuru hogi.
@@ -89,10 +89,10 @@ node build-deploy.js        # ads.txt + site-config deploy/ mein copy hota hai
 
 ## CHECKLIST
 
-- [ ] adsense.google.com pe apply (site URL: https://calcpromaster.netlify.app)
+- [ ] adsense.google.com pe apply (site URL: https://calcpromaster.com)
 - [ ] Approval ka intezar (1-2 hafte) — beech mein site stable rakho
 - [ ] Publisher ID (`pub-...`) copy
 - [ ] `ads.txt` uncomment + real ID
 - [ ] `node build-deploy.js` + deploy
-- [ ] `https://calcpromaster.netlify.app/ads.txt` verify
+- [ ] `https://calcpromaster.com/ads.txt` verify
 - [ ] AdSense → Sites → status check

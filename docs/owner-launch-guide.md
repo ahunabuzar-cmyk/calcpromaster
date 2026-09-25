@@ -4,7 +4,7 @@ Everything below is a **business/owner action** — the code is already producti
 gate-locked so that empty or placeholder values never leak broken scripts. Complete these in
 order. No paid tools are required for any of this.
 
-> 📌 **Site already live:** https://calcpromaster.netlify.app — ye guide sirf business config
+> 📌 **Site already live:** https://calcpromaster.com — ye guide sirf business config
 > hai. **Exact click-by-click steps (GA4 + GSC + sitemap + scheduled monitoring):**
 > [`docs/owner-actions-step-by-step.md`](owner-actions-step-by-step.md) — isse kholo aur order
 > mein follow karo.
@@ -117,7 +117,7 @@ once HTTPS is active.
 **Config location:** `js/site-config.js` → `gsc`
 
 1. https://search.google.com/search-console → **Add property → URL prefix** →
-   `https://calcpromaster.netlify.app` (or your custom domain).
+   `https://calcpromaster.com` (or your custom domain).
 2. Verification method: **HTML tag** → copy the `content="..."` value only.
 3. Paste into `gsc: ''` in `js/site-config.js` (just the value, not the tag).
 4. `node build-deploy.js` + upload. The `<meta name="google-site-verification" ...>`

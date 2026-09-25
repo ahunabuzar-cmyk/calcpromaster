@@ -1,6 +1,6 @@
 # CalcProMaster — White-Hat Backlink Action Plan
 
-**Site:** https://calcpromaster.netlify.app/ · **Goal:** earn real, Google-safe backlinks for a new/low-authority site — and keep every one of them when the custom-domain migration happens.
+**Site:** https://calcpromaster.com/ · **Goal:** earn real, Google-safe backlinks for a new/low-authority site — and keep every one of them when the custom-domain migration happens.
 
 **Files in this plan:**
 
@@ -40,7 +40,7 @@ Google's spam systems look for **link velocity that doesn't match a site's age, 
 |---|---|---|
 | Brand / site name | ~40% | "CalcProMaster", "calcpromaster.netlify.app", "CalcProMaster calculators" |
 | Partial-match / natural phrase | ~35% | "this free EMI calculator", "their concrete calculator", "a calculator that shows the formula" |
-| Naked URL | ~15% | "https://calcpromaster.netlify.app/" |
+| Naked URL | ~15% | "https://calcpromaster.com/" |
 | Generic | ~10% | "this site", "here", "free online calculators" |
 
 Never exact-match keyword anchors ("loan EMI calculator") more than ~10% of the time, and never the same exact anchor twice in any 10 links. Log every anchor in the tracker CSV as you use it.
@@ -69,8 +69,8 @@ Never exact-match keyword anchors ("loan EMI calculator") more than ~10% of the 
 ## Step 5 — Linkable assets (what attracts links on its own)
 
 **Tier 1 (live now): the embeddable calculator widget**
-- Landing page: `https://calcpromaster.netlify.app/embed` — demo, copy-paste iframe snippet, fair-use rules
-- Widget: `https://calcpromaster.netlify.app/embed/loan-emi.html` — standalone, zero-dependency Loan EMI calculator with a "Powered by CalcProMaster" attribution link
+- Landing page: `https://calcpromaster.com/embed` — demo, copy-paste iframe snippet, fair-use rules
+- Widget: `https://calcpromaster.com/embed/loan-emi.html` — standalone, zero-dependency Loan EMI calculator with a "Powered by CalcProMaster" attribution link
 
 Why widgets earn links: every blogger who embeds it creates a natural, editorial, topically-relevant backlink — the exact kind Google weights most. One placement in a widely-read personal finance post can produce dozens of secondary embeds.
 
@@ -107,7 +107,7 @@ Why widgets earn links: every blogger who embeds it creates a natural, editorial
 - [ ] Full rebuild run: `npm run deploy:build` — 0 gate failures
 - [ ] Spot-check deploy output: canonical tags, `robots.txt` Sitemap line, `sitemap.xml` `<loc>`s, OG urls — all show the new domain
 - [ ] Smoke suite green: `npx playwright test tests/e2e/deploy-smoke.spec.js`
-- [ ] Netlify: custom domain set as primary; netlify.app subdomain redirecting (verify `curl -sI https://calcpromaster.netlify.app/finance/loan-emi | head` shows `301`/`308` + new location)
+- [ ] Netlify: custom domain set as primary; netlify.app subdomain redirecting (verify `curl -sI https://calcpromaster.com/finance/loan-emi | head` shows `301`/`308` + new location)
 - [ ] No redirect chains: old URL → new URL in ONE hop (check 5 URLs manually)
 - [ ] Sitemap submitted in GSC from the NEW domain property
 - [ ] Change of Address requested in GSC (old property → new property)

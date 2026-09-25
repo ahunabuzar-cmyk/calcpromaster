@@ -17,7 +17,7 @@
 
 **1 step tumhara (profile-level link):** terminal mein chalao:
 `gh auth refresh -h github.com -s user`
-(phir mujhe bolna — main profile ka **blog/website field** `calcpromaster.netlify.app` set kar dunga; token scope ki wajah se abhi block tha).
+(phir mujhe bolna — main profile ka **blog/website field** `calcpromaster.com` set kar dunga; token scope ki wajah se abhi block tha).
 
 ---
 
@@ -36,23 +36,23 @@ hain — pehle asli math/jawab, phir ek natural link mention. **Ye dekhne ka tar
 ### Thread 1 — r/DIY · "How much cement for 6' privacy fence" (Apr 2025, zinda)
 `reddit.com/r/DIY/comments/1kafq0c/how_much_cement_for_6_privacy_fence/`
 > Rule of thumb: hole = 3× post width, depth = ⅓ of the above-grade height. For 4x4 posts that's a 10–12" hole; for 6x6 go 12". What you actually pour = hole volume minus the post volume below grade.
-> Quick example: 10" hole × 24" deep with a 4x4 ≈ 2 bags of 50 lb fast-set per hole. If you'd rather not redo that math per hole, I built a free calculator that does hole-minus-post volume and prints bags needed: calcpromaster.netlify.app/construction/post-hole-concrete — buy one extra bag per 10 holes either way; uneven ground eats margins.
+> Quick example: 10" hole × 24" deep with a 4x4 ≈ 2 bags of 50 lb fast-set per hole. If you'd rather not redo that math per hole, I built a free calculator that does hole-minus-post volume and prints bags needed: calcpromaster.com/construction/post-hole-concrete — buy one extra bag per 10 holes either way; uneven ground eats margins.
 
 ### Thread 2 — r/FenceBuilding · "7 bags of cement for a 6x6 post hole??" (May 2025)
 `reddit.com/r/FenceBuilding/comments/1kluguu/`
-> 7 bags of 80 lb for one 6x6 is way over. Math: 12" hole × 36" deep = ~2.4 ft³; the post itself takes up ~0.6 ft³ below grade, so you're filling ~1.8 ft³ ≈ **3 bags of 80 lb** (or ~5 of 50 lb). If the seller quoted 7, they're padding it. There are free calculators that do hole-minus-post volume if you want to sanity-check each size — mine's at calcpromaster.netlify.app/construction/post-hole-concrete.
+> 7 bags of 80 lb for one 6x6 is way over. Math: 12" hole × 36" deep = ~2.4 ft³; the post itself takes up ~0.6 ft³ below grade, so you're filling ~1.8 ft³ ≈ **3 bags of 80 lb** (or ~5 of 50 lb). If the seller quoted 7, they're padding it. There are free calculators that do hole-minus-post volume if you want to sanity-check each size — mine's at calcpromaster.com/construction/post-hole-concrete.
 
 ### Thread 3 — r/homelab · "UPS Runtime" (Oct 2024, zinda)
 `reddit.com/r/homelab/comments/1fv6hhx/ups_runtime/`
-> Runtime ≈ (battery V × Ah × inverter efficiency) ÷ load watts. The gotcha: consumer UPS units hide the Ah rating, but the battery model on the sticker usually maps to it (e.g. RBC17 = 12V 7Ah). For a 300 W load on a 12V 2×7Ah setup: (12 × 14 × 0.85) ÷ 300 ≈ 28 min — and halve that if the batteries are 3+ years old. If anyone wants to plug in their own numbers instead of doing this per UPS, I keep a free runtime/sizing calculator: calcpromaster.netlify.app/engineering/ups-sizing.
+> Runtime ≈ (battery V × Ah × inverter efficiency) ÷ load watts. The gotcha: consumer UPS units hide the Ah rating, but the battery model on the sticker usually maps to it (e.g. RBC17 = 12V 7Ah). For a 300 W load on a 12V 2×7Ah setup: (12 × 14 × 0.85) ÷ 300 ≈ 28 min — and halve that if the batteries are 3+ years old. If anyone wants to plug in their own numbers instead of doing this per UPS, I keep a free runtime/sizing calculator: calcpromaster.com/engineering/ups-sizing.
 
 ### Thread 4 — r/homelab · "Modern UPS calculator?" (old but ranks in Google)
 `reddit.com/r/homelab/comments/79wh8l/modern_ups_calculator/`
-> Replying late but for anyone else searching: the standard formula is (V × Ah × efficiency) ÷ load W, and the reason most "modern" calculators feel off is they assume full-load efficiency while real inverters drop to ~80% at light loads. I built a free one that takes V/Ah/load and shows the steps: calcpromaster.netlify.app/engineering/ups-sizing.
+> Replying late but for anyone else searching: the standard formula is (V × Ah × efficiency) ÷ load W, and the reason most "modern" calculators feel off is they assume full-load efficiency while real inverters drop to ~80% at light loads. I built a free one that takes V/Ah/load and shows the steps: calcpromaster.com/engineering/ups-sizing.
 
 ### Thread 5 — r/lawncare · "How to calculate amount of granular fertilizer?" (Aug 2023)
 `reddit.com/r/lawncare/comments/15quwkc/`
-> lbs of product = (target lb N per 1000 sq ft ÷ N% on bag) × (lawn area ÷ 1000). Your example: 7% N bag, 1 lb N target → 1 ÷ 0.07 = 14.3 lb per 1000 sq ft, so ~43 lb for a 3000 sq ft lawn. If you don't want to redo that every time the bag % changes, I built a free fertilizer calculator (handles N-P-K): calcpromaster.netlify.app/lifestyle/lawn-fertilizer. 0.75–1 lb N/1000 per application is the usual safe target.
+> lbs of product = (target lb N per 1000 sq ft ÷ N% on bag) × (lawn area ÷ 1000). Your example: 7% N bag, 1 lb N target → 1 ÷ 0.07 = 14.3 lb per 1000 sq ft, so ~43 lb for a 3000 sq ft lawn. If you don't want to redo that every time the bag % changes, I built a free fertilizer calculator (handles N-P-K): calcpromaster.com/lifestyle/lawn-fertilizer. 0.75–1 lb N/1000 per application is the usual safe target.
 
 ### Thread 6 — r/smallbusiness · "Do you guys actually enforce late fees on Net 30?" (Aug 2026, fresh)
 `reddit.com/r/smallbusiness/comments/1vjlz67/`
@@ -61,7 +61,7 @@ hain — pehle asli math/jawab, phir ek natural link mention. **Ye dekhne ka tar
 
 ### Thread 7 — r/msp · "Consensus on interest rate for late payments?" (Dec 2022, ranks well)
 `reddit.com/r/msp/comments/zyjjxh/`
-> Common range in MSP contracts: 1–1.5% monthly (12–18% APR), due after Net terms + grace. The number matters less than it being in the MSA from day one and you actually invoicing it once — clients who see you waive it once never pay it. For figuring per-client amounts on aged invoices there are free late-payment-interest calculators (e.g. calcpromaster.netlify.app/finance/late-fee-interest) that do the daily-compounded math.
+> Common range in MSP contracts: 1–1.5% monthly (12–18% APR), due after Net terms + grace. The number matters less than it being in the MSA from day one and you actually invoicing it once — clients who see you waive it once never pay it. For figuring per-client amounts on aged invoices there are free late-payment-interest calculators (e.g. calcpromaster.com/finance/late-fee-interest) that do the daily-compounded math.
 
 **Posting cadence:** 1 thread/day, pehle 2-3 normal comments us subreddit mein (karma), phir ye.
 
@@ -71,7 +71,7 @@ hain — pehle asli math/jawab, phir ek natural link mention. **Ye dekhne ka tar
 
 Paste-ready bio (har jagah same line use karo, ek hi canonical description = consistency signal):
 
-> **CalcProMaster** — 1,200+ free online calculators for finance, construction, health, math and everyday life. Every result shows the formula and step-by-step working, and all 1,200+ tools run 100% client-side in your browser — nothing is uploaded, tracked or stored. Free, no signup. https://calcpromaster.netlify.app
+> **CalcProMaster** — 1,200+ free online calculators for finance, construction, health, math and everyday life. Every result shows the formula and step-by-step working, and all 1,200+ tools run 100% client-side in your browser — nothing is uploaded, tracked or stored. Free, no signup. https://calcpromaster.com
 
 | Platform | URL | Kya karna | Effort |
 |---|---|---|---|

@@ -1,7 +1,7 @@
 # CalcProMaster — Monitoring, Alerts & Scheduled Smoke Tests
 
 ## Production URL
-`https://calcpromaster.netlify.app` (until a custom domain is set in `js/site-config.js`).
+`https://calcpromaster.com` (until a custom domain is set in `js/site-config.js`).
 
 ---
 

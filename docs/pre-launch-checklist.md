@@ -24,12 +24,12 @@
 
 - [ ] **Netlify upload:** deploy/ folder drag-and-drop karo ya Git push (agar Git integration set hai)
 - [ ] **Live spot-checks (browser me, deploy ke turant baad):**
-  - `https://calcpromaster.netlify.app/` — homepage loads
-  - `https://calcpromaster.netlify.app/health/bmi` — ek calculator works (input daal ke result check karo)
-  - `https://calcpromaster.netlify.app/guides/ohms-law` — nayi guide loads
-  - `https://calcpromaster.netlify.app/blog/rule-of-72` — naya post loads
-  - `https://calcpromaster.netlify.app/sitemap.xml` — browser me XML dikhna chahiye (raw XML, error nahi)
-  - `https://calcpromaster.netlify.app/robots.txt` — "Sitemap:" line dikhni chahiye
+  - `https://calcpromaster.com/` — homepage loads
+  - `https://calcpromaster.com/health/bmi` — ek calculator works (input daal ke result check karo)
+  - `https://calcpromaster.com/guides/ohms-law` — nayi guide loads
+  - `https://calcpromaster.com/blog/rule-of-72` — naya post loads
+  - `https://calcpromaster.com/sitemap.xml` — browser me XML dikhna chahiye (raw XML, error nahi)
+  - `https://calcpromaster.com/robots.txt` — "Sitemap:" line dikhni chahiye
   - Ek random purana URL bhi kholo — kuch break nahi hua?
 
 ## Phase 2 — GSC (Search Console) — deploy ke turant baad

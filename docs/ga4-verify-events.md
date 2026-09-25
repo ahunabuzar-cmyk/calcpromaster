@@ -4,7 +4,7 @@ GA4 wiring ke baad (Measurement ID set + deploy), ye check karta hai ki events *
 
 ## Method 1 — Browser Network tab (2 min, sabse reliable)
 
-1. Live site kholo: https://calcpromaster.netlify.app
+1. Live site kholo: https://calcpromaster.com
 2. **F12** → **Network** tab
 3. Filter box mein likho: `collect` (ya `gtag`)
 4. Page refresh karo → `googletagmanager.com/gtag/js?id=G-...` (HTTP 200) dikhna chahiye
@@ -31,11 +31,11 @@ GA4 wiring ke baad (Measurement ID set + deploy), ye check karta hai ki events *
 
 ```bash
 # app.js mein event code present hai?
-curl -s https://calcpromaster.netlify.app/js/app.js | grep -c calculator_use
+curl -s https://calcpromaster.com/js/app.js | grep -c calculator_use
 # → 1 aaye = event deployed
 
 # gtag loader live hai?
-curl -s https://calcpromaster.netlify.app/js/site-config.js | grep -o "ga4Id: '[^']*'"
+curl -s https://calcpromaster.com/js/site-config.js | grep -o "ga4Id: '[^']*'"
 # → ga4Id: 'G-XXXX' (real ID) aaye = config deployed
 ```
 

@@ -5,13 +5,13 @@
 ## Step 1 — Deploy push (precondition)
 
 Bing verification file live URL par honi chahiye:
-`https://calcpromaster.netlify.app/BingSiteAuth.xml` → deploy push ke baad ye 200 dega.
+`https://calcpromaster.com/BingSiteAuth.xml` → deploy push ke baad ye 200 dega.
 (Abhi tak deploy nahi hua — isliye pehle Netlify par push karo.)
 
 ## Step 2 — Bing Webmaster signup + verify
 
 1. https://www.bing.com/webmasters kholo → **Sign in** (Microsoft/Google/GitHub account chalega)
-2. **Add site** → URL type karo: `https://calcpromaster.netlify.app`
+2. **Add site** → URL type karo: `https://calcpromaster.com`
 3. Verification method: **XML file** chuno → Bing `BingSiteAuth.xml` maangta hai →
    kyunki file already root par deploy ho chuki hai, bas **Verify** dabao → green.
    - (Backup method: CNAME bhi hai, par XML wala zero-effort hai.)
@@ -19,7 +19,7 @@ Bing verification file live URL par honi chahiye:
 ## Step 3 — Sitemap submit
 
 1. Dashboard → **Sitemaps** → **Submit sitemap**
-2. URL: `https://calcpromaster.netlify.app/sitemap.xml` → Submit
+2. URL: `https://calcpromaster.com/sitemap.xml` → Submit
 3. Status "Processing" se "Success" hone mein 1-3 din.
 
 ## Step 4 — IndexNow connect (already built!)

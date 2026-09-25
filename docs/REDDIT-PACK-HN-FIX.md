@@ -26,7 +26,7 @@ jaise free-hosting domains par submissions se rokta hai (spam-control). Confirm 
 
      What I want to post (Show HN):
      Title: Show HN: CalcProMaster – 1200 calculators that show their work (formulas + steps)
-     URL: https://calcpromaster.netlify.app/
+     URL: https://calcpromaster.com/
 
      It's a free, no-signup library of 1200+ client-side calculators where every
      tool states its formula, shows a step-by-step derivation from your inputs,
@@ -73,7 +73,7 @@ jaise free-hosting domains par submissions se rokta hai (spam-control). Confirm 
 ## 2) r/InternetIsBeautiful — copy-paste (LINK POST)
 
 **Submit URL:** https://www.reddit.com/r/InternetIsBeautiful/submit
-**Type:** Link · **URL field:** `https://calcpromaster.netlify.app/`
+**Type:** Link · **URL field:** `https://calcpromaster.com/`
 
 **Title (copy-paste):**
 ```
@@ -92,9 +92,9 @@ first load. There's also a public QA dashboard that tracks the verification stat
 calculator's math.
 
 Examples to try:
-- Loan EMI: https://calcpromaster.netlify.app/finance/loan-emi/
-- BMI (with the formula + zone breakdown): https://calcpromaster.netlify.app/health/bmi/
-- Concrete slab (bags + wastage buffer): https://calcpromaster.netlify.app/construction/concrete-slab/
+- Loan EMI: https://calcpromaster.com/finance/loan-emi/
+- BMI (with the formula + zone breakdown): https://calcpromaster.com/health/bmi/
+- Concrete slab (bags + wastage buffer): https://calcpromaster.com/construction/concrete-slab/
 
 Happy to take requests — if a calculator is missing or a formula looks wrong, tell me and
 I'll fix it publicly.
@@ -127,7 +127,7 @@ NOT model.
 Took a few months of evenings. It's free, no account needed, everything runs in the
 browser.
 
-Here it is: https://calcpromaster.netlify.app/
+Here it is: https://calcpromaster.com/
 
 Two things I'm genuinely unsure about:
 1. Does the step-by-step breakdown actually help, or do people just want the number?
@@ -155,7 +155,7 @@ project, no monetization. Can you approve it?" — ye sub ke mods manually appro
 When I ran the numbers, the down payment wasn't the binding constraint — it was the
 PMI + property-tax stack. If you want to check your own case, I built a free calculator
 that shows the full payment breakdown with the formula visible (no signup, runs in browser):
-https://calcpromaster.netlify.app/mortgage/ — the steps panel shows exactly how PMI drops
+https://calcpromaster.com/mortgage/ — the steps panel shows exactly how PMI drops
 off once equity crosses 20%.
 ```
 *(Thread dhoondo: upar wala search link kholo, top recent thread uthao)*
@@ -166,7 +166,7 @@ off once equity crosses 20%.
 ```
 Depends on your definition of least squares — if you want the slope/intercept/R² explicitly,
 I keep a calculator that shows the normal-equation derivation step by step:
-https://calcpromaster.netlify.app/math/linear-regression/ (client-side, no signup). The
+https://calcpromaster.com/math/linear-regression/ (client-side, no signup). The
 steps panel prints XᵀX and Xᵀy so you can verify by hand.
 ```
 *(Thread dhoondo: upar wala search link kholo, koi recent thread uthao)*
@@ -177,7 +177,7 @@ steps panel prints XᵀX and Xᵀy so you can verify by hand.
 ```
 Formula matters more than the app here — most sites hide which equation they use. Mine
 states it (Mifflin-St Jeor, with the population limits it was derived from) and shows the
-math: https://calcpromaster.netlify.app/health/tdee-macro/ — no signup, runs locally.
+math: https://calcpromaster.com/health/tdee-macro/ — no signup, runs locally.
 ```**⚠️ FILTER-SAFE COMMENT RULES (ye naye account ke liye critical hain):**
 - 3–5 din tak har comment mein **sirf 1 link max** — do links = instant removal
 - Comment post ke context ka jawab ho ("good question — depends on X") — seedha link dump nahi

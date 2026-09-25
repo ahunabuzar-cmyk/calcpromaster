@@ -18,7 +18,7 @@ Measurement ID (`G-XXXX`) chahiye jo aapke Google account se banta hai. Ye guide
 2. Niche left corner → **Admin** (⚙️) → **Create property** → naame: `CalcProMaster`.
 3. Reporting timezone → apna (e.g. `(GMT+05:00) Asia/Karachi`) → currency → **Create**.
 4. Industry → koi bhi → **Create**. (Business details skip ho sakti hain.)
-5. **Data streams** → **Add stream** → **Web** → Website URL: `https://calcpromaster.netlify.app` →
+5. **Data streams** → **Add stream** → **Web** → Website URL: `https://calcpromaster.com` →
    Stream name: `CalcProMaster Web` → **Create stream**.
 6. **Measurement ID** screen pe dikhega: `G-XXXXXXXXXX` → **copy**.
 
@@ -50,7 +50,7 @@ Manual alternative: `js/site-config.js` mein `ga4Id: 'G-XXXXXXXXXX'` paste karo 
 
 ```bash
 # Deployed app.js mein event present? (2 min quick check)
-curl -s https://calcpromaster.netlify.app/js/app.js | grep -c calculator_use
+curl -s https://calcpromaster.com/js/app.js | grep -c calculator_use
 ```
 
 `1` aaye = event deployed. (Fire hone ka confirmation browser/GA4 Realtime mein hota hai.)

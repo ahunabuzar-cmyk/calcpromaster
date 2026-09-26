@@ -5125,6 +5125,31 @@
   "file": "regional.js"
  },
  {
+  "id": "switzerland-take-home-salary",
+  "name": "Switzerland Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "netherlands-take-home-salary",
+  "name": "Netherlands Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "malaysia-take-home-salary",
+  "name": "Malaysia Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "hongkong-take-home-salary",
+  "name": "Hong Kong Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "uae-gratuity-calculator",
+  "name": "UAE Gratuity Calculator",
+  "file": "regional.js"
+ },
+ {
   "id": "ohms-law",
   "name": "Ohm's Law Calculator",
   "file": "science.js"

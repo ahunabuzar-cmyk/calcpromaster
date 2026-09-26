@@ -354,7 +354,7 @@ const LegalPages = (function() {
 
       <h2>What Makes CalcProMaster Different</h2>
       <ul>
-        <li><strong>1211+ calculators:</strong> From mortgages to BMI, loan payoffs to unit conversions—everything in one place</li>
+        <li><strong>1216+ calculators:</strong> From mortgages to BMI, loan payoffs to unit conversions—everything in one place</li>
         <li><strong>Step-by-Step Solutions:</strong> Understand the math behind the results</li>
         <li><strong>No Sign-Up Required:</strong> Use any calculator instantly, no account needed</li>
         <li><strong>Privacy-First:</strong> All calculations run in your browser, nothing stored on our servers</li>
@@ -366,7 +366,7 @@ const LegalPages = (function() {
       <h2>Who We Are</h2>
       <!-- MANUAL ACTION (optional): apna naam/credentials yahan add karo jab chaaho —
            niche ek professional generic bio hai jo launch ke liye ready hai -->
-      <p>CalcProMaster is built by a dedicated developer with a strong background in mathematics, software engineering, and data accuracy. What started as a small collection of personal calculation tools grew into a public library of <strong>1211+ free online calculators</strong> spanning finance, health, science, engineering, education, and everyday life.</p>\n      <p>Every calculator page is held to a documented standard: the formula, a worked example, and the assumptions appear beside each result. Our <a href=\"/editorial-policy\">editorial policy</a> governs how content is written and corrected, each page carries a visible <em>Last reviewed</em> stamp showing when its formulas and explanations were last verified, and a public formula QA dashboard documents how results are tested. Found an error? The <a href=\"/contact\">contact page</a> reaches the maintainer directly — corrections are applied and re-reviewed, not just acknowledged.</p>
+      <p>CalcProMaster is built by a dedicated developer with a strong background in mathematics, software engineering, and data accuracy. What started as a small collection of personal calculation tools grew into a public library of <strong>1216+ free online calculators</strong> spanning finance, health, science, engineering, education, and everyday life.</p>\n      <p>Every calculator page is held to a documented standard: the formula, a worked example, and the assumptions appear beside each result. Our <a href=\"/editorial-policy\">editorial policy</a> governs how content is written and corrected, each page carries a visible <em>Last reviewed</em> stamp showing when its formulas and explanations were last verified, and a public formula QA dashboard documents how results are tested. Found an error? The <a href=\"/contact\">contact page</a> reaches the maintainer directly — corrections are applied and re-reviewed, not just acknowledged.</p>
       <p>Every calculator on this site is designed with the same standards: verified formulas, transparent step-by-step explanations, and rigorous testing against real-world scenarios. We believe a calculator is only as good as its accuracy — which is why each tool documents its assumptions and limitations openly, and why our finance and health calculators always carry clear disclaimers.</p>
       <p>CalcProMaster runs entirely in your browser. No accounts, no hidden costs — just fast, honest calculation tools that anyone can use, from students checking homework to families planning budgets. Calculations run locally; optional analytics and advertising only activate if you consent via our cookie banner.</p>
 

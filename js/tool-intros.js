@@ -1,5 +1,5 @@
 // Auto-generated unique intro paragraphs for all CalcProMaster tools (Step 3)
-// Generated: 2026-09-21 — 1211+ tools, all unique
+// Generated: 2026-09-21 — 1216+ tools, all unique
 // Regenerate with: node generate-intros.js
 // Consumed by the vanilla site (browser global TOOL_INTROS) AND calcpro-next/
 // (CommonJS export) so both codebases render identical unique intros.

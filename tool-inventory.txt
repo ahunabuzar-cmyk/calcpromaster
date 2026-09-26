@@ -1023,6 +1023,11 @@ regional|singapore-take-home-salary|calc|salary,status
 regional|qatar-take-home-salary|calc|basic,allow
 regional|abuDhabi-cost-living|calc|salary,rent,school,transport,utilities
 regional|japan-take-home-salary|calc|salary
+regional|switzerland-take-home-salary|calc|salary,cantonal
+regional|netherlands-take-home-salary|calc|salary,ruling
+regional|malaysia-take-home-salary|calc|salary,epf
+regional|hongkong-take-home-salary|calc|salary
+regional|uae-gratuity-calculator|calc|basic,years
 science|ohms-law|calc|voltage,current
 science|density|calc|mass,volume
 science|force|calc|mass,accel

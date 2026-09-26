@@ -20,7 +20,7 @@ const path = require('path');
 const { getAccessToken } = require('./lib/google-oauth.cjs');
 
 const API = 'searchconsole.googleapis.com';
-const SITE_URL = 'https://calcpromaster.netlify.app';
+const SITE_URL = (process.env.GSC_SITE_URL || 'https://calcpromaster.netlify.app').replace(/[\\/]+$/, '');
 const SITEMAP_URL = SITE_URL + '/sitemap.xml';
 const LIMIT = (() => {
   const i = process.argv.indexOf('--limit');

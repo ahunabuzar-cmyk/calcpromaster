@@ -1018,6 +1018,11 @@ regional|india-take-home-salary|calc|ctc,epf
 regional|saudi-take-home-salary|calc|salary,saudi
 regional|canada-take-home-salary|calc|salary
 regional|germany-take-home-salary|calc|salary,class
+regional|australia-take-home-salary|calc|salary,super
+regional|singapore-take-home-salary|calc|salary,status
+regional|qatar-take-home-salary|calc|basic,allow
+regional|abuDhabi-cost-living|calc|salary,rent,school,transport,utilities
+regional|japan-take-home-salary|calc|salary
 science|ohms-law|calc|voltage,current
 science|density|calc|mass,volume
 science|force|calc|mass,accel

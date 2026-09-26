@@ -363,7 +363,7 @@ var prem_mortgage = {
     },
     {
       "q": "Is Mortgage Calculator really free?",
-      "a": "Yes — Mortgage Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1206+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
+      "a": "Yes — Mortgage Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1211+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
     },
     {
       "q": "Do my inputs get sent anywhere when I use Mortgage Calculator?",
@@ -462,7 +462,7 @@ var prem_compound_interest = {
     },
     {
       "q": "Is Compound Interest Calculator really free?",
-      "a": "Yes — Compound Interest Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1206+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
+      "a": "Yes — Compound Interest Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1211+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
     },
     {
       "q": "Do my inputs get sent anywhere when I use Compound Interest Calculator?",
@@ -560,7 +560,7 @@ var prem_bmi = {
     },
     {
       "q": "Is BMI Calculator really free?",
-      "a": "Yes — BMI Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1206+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
+      "a": "Yes — BMI Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1211+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
     },
     {
       "q": "Do my inputs get sent anywhere when I use BMI Calculator?",
@@ -657,7 +657,7 @@ var prem_percentage = {
     },
     {
       "q": "Is Percentage Calculator really free?",
-      "a": "Yes — Percentage Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1206+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
+      "a": "Yes — Percentage Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1211+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
     },
     {
       "q": "Do my inputs get sent anywhere when I use Percentage Calculator?",
@@ -759,7 +759,7 @@ var prem_us_income_tax = {
     },
     {
       "q": "Is US Federal Income Tax Calculator really free?",
-      "a": "Yes — US Federal Income Tax Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1206+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
+      "a": "Yes — US Federal Income Tax Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1211+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
     },
     {
       "q": "Do my inputs get sent anywhere when I use US Federal Income Tax Calculator?",
@@ -859,7 +859,7 @@ var prem_retirement = {
     },
     {
       "q": "Is Retirement Calculator really free?",
-      "a": "Yes — Retirement Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1206+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
+      "a": "Yes — Retirement Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1211+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
     },
     {
       "q": "Do my inputs get sent anywhere when I use Retirement Calculator?",
@@ -955,7 +955,7 @@ var prem_car_loan_emi = {
     },
     {
       "q": "Is Car Loan EMI Calculator really free?",
-      "a": "Yes — Car Loan EMI Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1206+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
+      "a": "Yes — Car Loan EMI Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1211+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
     },
     {
       "q": "Do my inputs get sent anywhere when I use Car Loan EMI Calculator?",
@@ -1051,7 +1051,7 @@ var prem_salary_converter = {
     },
     {
       "q": "Is Salary Converter really free?",
-      "a": "Yes — Salary Converter is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1206+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
+      "a": "Yes — Salary Converter is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1211+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
     },
     {
       "q": "Do my inputs get sent anywhere when I use Salary Converter?",
@@ -1147,7 +1147,7 @@ var prem_fuel_cost = {
     },
     {
       "q": "Is Fuel Cost Calculator really free?",
-      "a": "Yes — Fuel Cost Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1206+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
+      "a": "Yes — Fuel Cost Calculator is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1211+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
     },
     {
       "q": "Do my inputs get sent anywhere when I use Fuel Cost Calculator?",
@@ -1247,7 +1247,7 @@ var prem_credit_card_payoff = {
     },
     {
       "q": "Is Credit Card Payoff really free?",
-      "a": "Yes — Credit Card Payoff is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1206+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
+      "a": "Yes — Credit Card Payoff is 100% free, with no limits, no premium tiers, and no account required. Every one of the 1211+ calculators on CalcPro follows the same rule: open, use, close. Nothing is locked away."
     },
     {
       "q": "Do my inputs get sent anywhere when I use Credit Card Payoff?",

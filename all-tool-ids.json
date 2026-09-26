@@ -5100,6 +5100,31 @@
   "file": "regional.js"
  },
  {
+  "id": "australia-take-home-salary",
+  "name": "Australia Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "singapore-take-home-salary",
+  "name": "Singapore Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "qatar-take-home-salary",
+  "name": "Qatar Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "abuDhabi-cost-living",
+  "name": "Abu Dhabi Cost of Living Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "japan-take-home-salary",
+  "name": "Japan Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
   "id": "ohms-law",
   "name": "Ohm's Law Calculator",
   "file": "science.js"

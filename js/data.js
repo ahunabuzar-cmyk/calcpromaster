@@ -53,8 +53,8 @@ let TOTAL_CALCULATORS = ALL_TOOLS.length;
 
 // Static pages
 const STATIC_PAGES = {
-  '': { title: 'CalcProMaster - 1206+ free online calculators', desc: 'Free advanced online calculators for finance, health, math, science, business and more. Step-by-step solutions, charts, and smart features.', type: 'home' },
-  'about': { title: 'About CalcProMaster', desc: 'Learn about CalcProMaster - your comprehensive calculator resource with 1206+ tools across 20 categories.', type: 'about' },
+  '': { title: 'CalcProMaster - 1211+ free online calculators', desc: 'Free advanced online calculators for finance, health, math, science, business and more. Step-by-step solutions, charts, and smart features.', type: 'home' },
+  'about': { title: 'About CalcProMaster', desc: 'Learn about CalcProMaster - your comprehensive calculator resource with 1211+ tools across 20 categories.', type: 'about' },
   'privacy': { title: 'Privacy Policy', desc: 'CalcProMaster privacy policy. Calculations run locally in your browser; optional analytics and advertising only with your consent.', type: 'privacy' },
   'terms': { title: 'Terms of Service', desc: 'CalcProMaster Terms of Service. Free calculator tools provided as-is without warranty.', type: 'terms' },
   'disclaimer-finance': { title: 'Financial Disclaimer', desc: 'CalcProMaster financial calculators are for educational purposes only. Not financial advice.', type: 'disclaimer' },

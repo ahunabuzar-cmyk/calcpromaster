@@ -350,14 +350,20 @@ function main() {
   const withI18n = process.argv.includes('--i18n');
   const urls = [];
 
-  // Canonical form = trailing slash on extensionless pages. Netlify pretty-URLs
-  // 301s /a/b → /a/b/ (verified live), and GSC URL Inspection shows the /a/b/
-  // form is the indexed canonical. Submitting slash-less URLs makes Google burn
-  // a redirect hop on EVERY sitemap URL — on a zero-authority site that crawl
-  // waste matters. (Homepage '/'+slug cases keep their existing form.)
+  // Canonical form = the URL form that actually serves HTTP 200 (no redirect
+  // hop for crawlers). Two layouts exist in deploy/:
+  //   • directory pages (deploy/<path>/index.html) → 200 at /path/ (Netlify
+  //     pretty-URLs /path → /path/), so they get the trailing slash;
+  //   • flat files (deploy/about.html, guides/*.html, blog/*.html, legal) →
+  //     200 at /path (the slash form 301s BACK to non-slash), so they must
+  //     stay slash-less in the sitemap. Submitting the redirecting form made
+  //     GSC report "Page with redirect" + burn a hop on every such URL.
   const canonical = (loc) => {
     const p = loc.replace(/^https?:\/\/[^/]+/, '');
     if (p === '/' || p === '' || /\.[a-z0-9]+$/i.test(p)) return loc;
+    const clean = p.replace(/\/+$/, '');
+    if (fs.existsSync(path.join(ROOT, clean, 'index.html'))) return loc.replace(/\/?$/, '/');
+    if (fs.existsSync(path.join(ROOT, clean + '.html'))) return loc.replace(/\/+$/, '');
     return loc.replace(/\/?$/, '/');
   };
 

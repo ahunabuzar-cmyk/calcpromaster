@@ -427,6 +427,20 @@ function parseModifierTitle(tool, modifier) {
 // ---------- 7. Generate all pages ----------
 let written = 0;
 const writePage = function (relDir, html) {
+  // Directory-style pages serve their 200 at /path/ (Netlify pretty-URLs the
+  // non-slash form → /path/). Point canonical + og:url at the SLASH form so
+  // the canonical never references a redirecting URL — that mismatch is what
+  // produced GSC's "Page with redirect" / "Alternate page with canonical"
+  // rows. Root ('/') already carries the slash; file-like paths are skipped.
+  const toSlashForm = (u) => {
+    const m = String(u).match(/^(https:\/\/[^/]+)(\/[^["?#]*)?$/);
+    if (!m) return u;
+    const p = m[2] || '/';
+    if (p === '/' || /\/[^/]*\.[a-z0-9]+$/i.test(p)) return u;
+    return m[1] + p.replace(/\/+$/, '') + '/';
+  };
+  html = html.replace(/(<link rel="canonical" href=")([^"]+)(")/g, (s, a, u, c) => a + toSlashForm(u) + c);
+  html = html.replace(/(<meta property="og:url" content=")([^"]+)(")/g, (s, a, u, c) => a + toSlashForm(u) + c);
   const dir = path.join(DEPLOY, relDir);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), html);

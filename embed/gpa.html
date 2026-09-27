@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Iframe target only: this page is embeddable widget content, not a search landing page. -->
+<meta name="robots" content="noindex, follow">
+<title>GPA Calculator Widget</title>
+<style>
+  :root { --primary:#4f46e5; --ink:#0f172a; --muted:#64748b; --line:#e2e8f0; --bg:#ffffff; --soft:#f1f5f9; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:var(--bg); padding:16px; line-height:1.45; }
+  .w-title { font-size:1.05rem; font-weight:700; margin-bottom:12px; }
+  .row { margin-bottom:10px; }
+  label { display:block; font-size:.8rem; font-weight:600; color:var(--muted); margin-bottom:3px; }
+  input, select { width:100%; padding:9px 10px; border:1px solid var(--line); border-radius:8px; font-size:.95rem; color:var(--ink); background:#fff; }
+  input:focus, select:focus { outline:2px solid var(--primary); outline-offset:1px; border-color:var(--primary); }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .result { margin-top:14px; background:var(--soft); border-radius:10px; padding:14px; }
+  .big { font-size:1.7rem; font-weight:800; color:var(--primary); }
+  .big-label { font-size:.78rem; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; }
+  .sub { display:flex; justify-content:space-between; gap:8px; margin-top:10px; font-size:.85rem; color:var(--ink); }
+  .sub b { font-weight:700; }
+  .credit { margin-top:14px; font-size:.78rem; color:var(--muted); }
+  .credit a { color:var(--primary); font-weight:600; text-decoration:none; }
+  .credit a:hover, .credit a:focus { text-decoration:underline; }
+  .note { margin-top:8px; font-size:.72rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <p class="w-title">GPA Calculator</p>
+  <div class="grid">
+    <div class="row">
+      <label for="g-1">Course 1 — grade</label>
+      <select id="g-1">
+        <option value="4">A</option><option value="3.5">B+</option><option value="3">B</option>
+        <option value="2.5">C+</option><option value="2">C</option><option value="1">D</option><option value="0">F</option>
+      </select>
+    </div>
+    <div class="row">
+      <label for="c-1">Credits</label>
+      <input id="c-1" type="number" inputmode="decimal" min="0" max="10" step="0.5" value="3">
+    </div>
+    <div class="row">
+      <label for="g-2">Course 2 — grade</label>
+      <select id="g-2">
+        <option value="4">A</option><option value="3.5">B+</option><option value="3" selected>B</option>
+        <option value="2.5">C+</option><option value="2">C</option><option value="1">D</option><option value="0">F</option>
+      </select>
+    </div>
+    <div class="row">
+      <label for="c-2">Credits</label>
+      <input id="c-2" type="number" inputmode="decimal" min="0" max="10" step="0.5" value="3">
+    </div>
+    <div class="row">
+      <label for="g-3">Course 3 — grade</label>
+      <select id="g-3">
+        <option value="4">A</option><option value="3.5">B+</option><option value="3">B</option>
+        <option value="2.5">C+</option><option value="2" selected>C</option><option value="1">D</option><option value="0">F</option>
+      </select>
+    </div>
+    <div class="row">
+      <label for="c-3">Credits</label>
+      <input id="c-3" type="number" inputmode="decimal" min="0" max="10" step="0.5" value="3">
+    </div>
+  </div>
+
+  <div class="result" aria-live="polite">
+    <p class="big-label">Semester GPA</p>
+    <p class="big" id="g-gpa">—</p>
+    <p class="sub"><span>Grade points earned</span><b id="g-pts">—</b></p>
+    <p class="sub"><span>Credits counted</span><b id="g-crd">—</b></p>
+  </div>
+
+  <p class="note">GPA = Σ(grade points × credits) ÷ Σ(credits). 4.0 A-scale. Set credits to 0 to skip a course; full multi-semester version on our site.</p>
+
+  <p class="credit">Powered by <a href="https://calcpromaster.netlify.app/education/gpa" target="_blank" rel="noopener">CalcProMaster — free online calculators</a></p>
+
+<script>
+(function () {
+  'use strict';
+  var rows = [['g-1', 'c-1'], ['g-2', 'c-2'], ['g-3', 'c-3']],
+      outGpa = document.getElementById('g-gpa'),
+      outPts = document.getElementById('g-pts'),
+      outCrd = document.getElementById('g-crd');
+
+  function calc() {
+    var pts = 0, crd = 0;
+    rows.forEach(function (pair) {
+      var g = parseFloat(document.getElementById(pair[0]).value);
+      var c = parseFloat(document.getElementById(pair[1]).value);
+      if (g >= 0 && c > 0) { pts += g * c; crd += c; }
+    });
+    if (crd === 0) {
+      outGpa.textContent = '—'; outPts.textContent = '—'; outCrd.textContent = '—';
+      return;
+    }
+    outGpa.textContent = (pts / crd).toFixed(2);
+    outPts.textContent = pts.toFixed(1);
+    outCrd.textContent = crd;
+  }
+
+  ['input', 'change'].forEach(function (ev) {
+    rows.forEach(function (pair) {
+      pair.forEach(function (id) { document.getElementById(id).addEventListener(ev, calc); });
+    });
+  });
+  calc();
+})();
+</script>
+</body>
+</html>

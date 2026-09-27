@@ -1,7 +1,7 @@
 # Outreach Emails — READY TO SEND (2026-09-27)
 
 > Har email: 1 link max, personalized pehla line, follow-up +4 din.
-> **Embed widgets (live, verified):** `/embed/loan-emi.html`, `/embed/mortgage.html`, `/embed/bmi.html`, `/embed/percentage.html`
+> **Embed widgets (live, verified, math-tested):** `/embed/loan-emi.html`, `/embed/mortgage.html`, `/embed/bmi.html`, `/embed/percentage.html`, **NEW:** `/embed/cagr.html`, `/embed/sip.html`, `/embed/calorie-deficit.html`, `/embed/gpa.html`, `/embed/dubai-salary.html` — sab ka index: `/embed`
 > Baaki tools ke liye full-page link bhejo (iframe bhi chal jata hai).
 > Sign-off naam: **Abuzar** (apna surname add kar lena).
 
@@ -86,7 +86,7 @@ https://calcpromaster.com/regional/dubai-salary
 
 Embed it free if you like (no attribution required):
 
-`<iframe src="https://calcpromaster.com/regional/dubai-salary" width="100%" height="640" style="border:0" loading="lazy"></iframe>`
+`<iframe src="https://calcpromaster.com/embed/dubai-salary.html" style="width:100%;max-width:420px;height:560px;border:0;border-radius:12px" title="Dubai salary calculator by CalcProMaster" loading="lazy"></iframe>`
 
 Great content — keep it coming.
 
@@ -141,7 +141,7 @@ Your CAGR explainer is clean — most posts either dump the formula or skip it; 
 If you want readers to *play* with the numbers instead of just reading them, our CAGR calculator is free to embed (client-side, no sign-up, shows the working):
 
 Tool: https://calcpromaster.com/finance/cagr
-Widget: `<iframe src="https://calcpromaster.com/finance/cagr" width="100%" height="640" style="border:0" loading="lazy"></iframe>`
+Widget: `<iframe src="https://calcpromaster.com/embed/cagr.html" style="width:100%;max-width:420px;height:560px;border:0;border-radius:12px" title="CAGR calculator by CalcProMaster" loading="lazy"></iframe>`
 
 (CalcProMaster — 1,216+ free calculators, no attribution required.)
 
@@ -159,9 +159,8 @@ Your mutual fund return calculator guide is thorough — the SIP-vs-lumpsum deci
 
 We built a dedicated SIP vs lump-sum comparison tool (free, browser-based) that would slot straight into that post:
 
-https://calcpromaster.com/finance/sip
-
-Embed code available if you want it interactive on-page. Free, no attribution needed. (CalcProMaster — 1,216+ calculators.)
+Tool: https://calcpromaster.com/finance/sip
+Widget: `<iframe src="https://calcpromaster.com/embed/sip.html" style="width:100%;max-width:420px;height:560px;border:0;border-radius:12px" title="SIP calculator by CalcProMaster" loading="lazy"></iframe>`
 
 Abuzar · CalcProMaster
 
@@ -179,6 +178,7 @@ Two free tools from our library that fit that guide (both run in-browser, no sig
 
 - GPA calculator: https://calcpromaster.com/education/gpa
 - GPA target (what you need to hit your goal): https://calcpromaster.com/education/gpa-target
+- GPA widget (embed-ready): `<iframe src="https://calcpromaster.com/embed/gpa.html" style="width:100%;max-width:420px;height:600px;border:0;border-radius:12px" title="GPA calculator by CalcProMaster" loading="lazy"></iframe>`
 
 Feel free to add either to the resource — free, no attribution required. Embed snippets on request.
 

@@ -563,6 +563,9 @@ function main() {
   // Rewrite hardcoded domains across the WHOLE deploy tree (root files + the
   // prerendered pages SSG just wrote) to the configured production domain.
   substituteDomain();
+  // Build-time SEO fixer (idempotent): inject OG/Twitter into static pages
+  // missing them, noindex junk utility pages, sync legal-footer count.
+  try { require('./scripts/fix-deploy-seo.cjs'); } catch (e) { console.warn('  ! fix-deploy-seo failed: ' + e.message); }
 
   // E-E-A-T: stamp "Last reviewed" dates into prerendered review blocks (see
   // stampReviewDates above — only pages whose content changed get the new date).

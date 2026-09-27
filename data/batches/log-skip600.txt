@@ -1,0 +1,73 @@
+🔍 GSC Batch Inspection — https://calcpromaster.com (limit 100)
+
+[1/2] Sitemap resubmit: HTTP 403
+[2/2] Inspecting 100 URLs (live sitemap has 1337)...
+
+  ⚠ /business/business-valuation/ → URL is unknown to Google
+  ⚠ /career/retirement-contrib/ → URL is unknown to Google
+  ⚠ /conversion/luminance-conv/ → Discovered - currently not indexed
+  ⚠ /engineering/hydraulic-power/ → URL is unknown to Google
+  ⚠ /family/diaper-needs/ → URL is unknown to Google
+  ⚠ /finance/loan-qualify/ → Discovered - currently not indexed
+  ⚠ /food/smoothie-calories/ → Discovered - currently not indexed
+  ⚠ /guides/profit-margin/ → Discovered - currently not indexed
+  ⚠ /math/geometric-seq/ → Discovered - currently not indexed
+  ⚠ /science/dilution/ → Discovered - currently not indexed
+  ⚠ /utilities/units-per/ → Discovered - currently not indexed
+  ⚠ /business/gross-margin/ → Discovered - currently not indexed
+  ⚠ /career/benefits-value/ → Discovered - currently not indexed
+  ⚠ /construction/rebar-calc/ → Discovered - currently not indexed
+  ⚠ /conversion/molarity-conv/ → Discovered - currently not indexed
+  ⚠ /education/study-hours/ → URL is unknown to Google
+  ⚠ /engineering/stress-strain/ → URL is unknown to Google
+  ⚠ /family/kids-shoe-size/ → URL is unknown to Google
+  ⚠ /finance/paycheck/ → URL is unknown to Google
+  ⚠ /fitness/cadence-calc/ → URL is unknown to Google
+  ⚠ /food/protein-per-dollar/ → URL is unknown to Google
+  ⚠ /guides/ohms-law/ → Discovered - currently not indexed
+  ⚠ /health/met-calories/ → URL is unknown to Google
+  ⚠ /math/arithmetic-seq/ → Discovered - currently not indexed
+  ⚠ /tech/json-formatter/ → Discovered - currently not indexed
+  ⚠ /utilities/random-name/ → URL is unknown to Google
+  ⚠ /business/goal-seek-price/ → URL is unknown to Google
+  ⚠ /career/pto-calc/ → Discovered - currently not indexed
+  ⚠ /construction/footing-size/ → Discovered - currently not indexed
+  ⚠ /conversion/flow-rate-conv/ → URL is unknown to Google
+  ⚠ /engineering/beam-deflection/ → Discovered - currently not indexed
+  ⚠ /finance/break-even/ → Discovered - currently not indexed
+  ⚠ /fitness/stride-length/ → URL is unknown to Google
+  ⚠ /food/sodium-intake/ → URL is unknown to Google
+  ⚠ /guides/gear-ratio/ → URL is unknown to Google
+  ⚠ /health/body-type/ → URL is unknown to Google
+  ⚠ /lifestyle/car-wash-annual/ → URL is unknown to Google
+  ⚠ /math/polar-rect/ → URL is unknown to Google
+  ⚠ /tech/text-counter/ → URL is unknown to Google
+  ⚠ /utilities/password-entropy/ → URL is unknown to Google
+  ⚠ /business/subscription-ltv/ → Discovered - currently not indexed
+  ⚠ /career/job-offer-compare/ → URL is unknown to Google
+  ⚠ /construction/gravel-tonnage/ → URL is unknown to Google
+  ⚠ /conversion/paper-size-conv/ → URL is unknown to Google
+  ⚠ /education/gpa-target/ → Discovered - currently not indexed
+  ⚠ /engineering/column-buckling/ → URL is unknown to Google
+  ⚠ /family/school-supplies/ → URL is unknown to Google
+  ⚠ /finance/cash-flow/ → URL is unknown to Google
+  ⚠ /food/caffeine-daily/ → Discovered - currently not indexed
+  ⚠ /guides/fuel-cost/ → Discovered - currently not indexed
+  ⚠ /science/power-electrical/ → Discovered - currently not indexed
+  ⚠ /utilities/speech-time/ → URL is unknown to Google
+  ⚠ /business/cash-conversion-cycle/ → URL is unknown to Google
+  ⚠ /career/cost-living-adjustment/ → URL is unknown to Google
+  ⚠ /conversion/fraction-percent/ → Discovered - currently not indexed
+  ⚠ /engineering/pipe-flow/ → Discovered - currently not indexed
+  ⚠ /family/birthday-party-cost/ → URL is unknown to Google
+  ⚠ /finance/markup/ → Discovered - currently not indexed
+  ⚠ /fitness/vertical-jump/ → URL is unknown to Google
+  ⚠ /food/pizza-slices/ → URL is unknown to Google
+  ⚠ /guides/hourly-rate/ → Discovered - currently not indexed
+  ⚠ /math/normal-dist/ → Discovered - currently not indexed
+
+=== Coverage tally (live URLs) ===
+  38	Submitted and indexed
+  34	URL is unknown to Google
+  28	Discovered - currently not indexed
+💾 data/batches/batch-skip600.json

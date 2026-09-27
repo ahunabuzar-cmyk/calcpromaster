@@ -1,0 +1,69 @@
+🔍 GSC Batch Inspection — https://calcpromaster.com (limit 100)
+
+[1/2] Sitemap resubmit: HTTP 403
+[2/2] Inspecting 100 URLs (live sitemap has 1337)...
+
+  ⚠ /guides/debt-payoff/ → URL is unknown to Google
+  ⚠ /math/pythagorean/ → URL is unknown to Google
+  ⚠ /tech/hosting-cost/ → URL is unknown to Google
+  ⚠ /auto/walking-transit/ → Discovered - currently not indexed
+  ⚠ /business/saas-unit-metrics/ → Discovered - currently not indexed
+  ⚠ /career/tax-refund/ → Discovered - currently not indexed
+  ⚠ /construction/rebar-calculator/ → Discovered - currently not indexed
+  ⚠ /family/family-budget-simple/ → Discovered - currently not indexed
+  ⚠ /finance/annuity/ → URL is unknown to Google
+  ⚠ /food/coffee-cost-per-cup/ → Discovered - currently not indexed
+  ⚠ /guides/random-numbers/ → URL is unknown to Google
+  ⚠ /health/gfr/ → URL is unknown to Google
+  ⚠ /homegarden/pool-size/ → URL is unknown to Google
+  ⚠ /lifestyle/subscription-audit/ → URL is unknown to Google
+  ⚠ /science/lens/ → URL is unknown to Google
+  ⚠ /utilities/mileage-calc/ → URL is unknown to Google
+  ⚠ /business/break-even-point/ → Discovered - currently not indexed
+  ⚠ /career/invoicing-calc/ → URL is unknown to Google
+  ⚠ /conversion/currency-conv/ → Discovered - currently not indexed
+  ⚠ /everyday/sleep-calc/ → Discovered - currently not indexed
+  ⚠ /family/maternity-leave-finance/ → Discovered - currently not indexed
+  ⚠ /finance/inflation/ → Discovered - currently not indexed
+  ⚠ /fitness/deadlift-standards/ → URL is unknown to Google
+  ⚠ /food/tea-vs-coffee/ → URL is unknown to Google
+  ⚠ /guides/concrete/ → Discovered - currently not indexed
+  ⚠ /health/target-heart-rate/ → Discovered - currently not indexed
+  ⚠ /homegarden/pool-chemicals/ → URL is unknown to Google
+  ⚠ /math/distance/ → URL is unknown to Google
+  ⚠ /science/coulomb/ → URL is unknown to Google
+  ⚠ /tech/streaming-bitrate/ → Discovered - currently not indexed
+  ⚠ /utilities/ratio-simplifier/ → URL is unknown to Google
+  ⚠ /auto/speed-distance-time/ → URL is unknown to Google
+  ⚠ /business/invoice-due-date/ → URL is unknown to Google
+  ⚠ /career/employment-status/ → Discovered - currently not indexed
+  ⚠ /conversion/torque-conv/ → Discovered - currently not indexed
+  ⚠ /education/homework-time/ → URL is unknown to Google
+  ⚠ /engineering/belt-length/ → Discovered - currently not indexed
+  ⚠ /family/paternity-leave/ → URL is unknown to Google
+  ⚠ /finance/bonds/ → URL is unknown to Google
+  ⚠ /food/sugar-intake/ → Discovered - currently not indexed
+  ⚠ /guides/unit-conversion/ → URL is unknown to Google
+  ⚠ /math/slope/ → URL is unknown to Google
+  ⚠ /science/frequency/ → URL is unknown to Google
+  ⚠ /utilities/gcd-lcm/ → Discovered - currently not indexed
+  ⚠ /career/commission-plan/ → URL is unknown to Google
+  ⚠ /conversion/power-conv/ → URL is unknown to Google
+  ⚠ /engineering/flow-rate/ → URL is unknown to Google
+  ⚠ /family/kid-allowance/ → URL is unknown to Google
+  ⚠ /food/carb-calculator/ → Alternate page with proper canonical tag
+  ⚠ /guides/gpa/ → Discovered - currently not indexed
+  ⚠ /health/fatigue-score/ → URL is unknown to Google
+  ⚠ /regional/leave-encashment/ → Discovered - currently not indexed
+  ⚠ /utilities/prime-check/ → URL is unknown to Google
+  ⚠ /business/markup-margin/ → Discovered - currently not indexed
+  ⚠ /career/freelance-budget/ → URL is unknown to Google
+  ⚠ /construction/paver-calculator/ → URL is unknown to Google
+  ⚠ /conversion/voltage-conv/ → Discovered - currently not indexed
+
+=== Coverage tally (live URLs) ===
+  43	Submitted and indexed
+  33	URL is unknown to Google
+  23	Discovered - currently not indexed
+  1	Alternate page with proper canonical tag
+💾 data/batches/batch-skip400.json

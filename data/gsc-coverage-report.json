@@ -1,0 +1,5934 @@
+{
+  "ranAt": "2026-09-27T14:13:59.921Z",
+  "site": "https://calcpromaster.com",
+  "batches": [
+    {
+      "name": "git-887a883",
+      "count": 9,
+      "ranAt": "2026-09-26T12:18:36.155Z"
+    },
+    {
+      "name": "git-3be1923",
+      "count": 21,
+      "ranAt": "2026-09-27T10:24:25.720Z"
+    },
+    {
+      "name": "batch-skip200",
+      "count": 100,
+      "ranAt": "2026-09-27T12:31:53.203Z"
+    },
+    {
+      "name": "batch-skip300",
+      "count": 100,
+      "ranAt": "2026-09-27T12:32:01.785Z"
+    },
+    {
+      "name": "batch-skip400",
+      "count": 100,
+      "ranAt": "2026-09-27T12:31:56.483Z"
+    },
+    {
+      "name": "batch-skip500",
+      "count": 100,
+      "ranAt": "2026-09-27T12:31:53.723Z"
+    },
+    {
+      "name": "batch-skip600",
+      "count": 100,
+      "ranAt": "2026-09-27T12:43:35.475Z"
+    },
+    {
+      "name": "batch-skip700",
+      "count": 100,
+      "ranAt": "2026-09-27T12:43:43.508Z"
+    },
+    {
+      "name": "batch-skip800",
+      "count": 100,
+      "ranAt": "2026-09-27T12:43:38.232Z"
+    },
+    {
+      "name": "batch-skip900",
+      "count": 100,
+      "ranAt": "2026-09-27T12:43:36.510Z"
+    },
+    {
+      "name": "batch-skip1000",
+      "count": 100,
+      "ranAt": "2026-09-27T12:55:16.094Z"
+    },
+    {
+      "name": "batch-skip1100",
+      "count": 100,
+      "ranAt": "2026-09-27T12:55:18.110Z"
+    },
+    {
+      "name": "batch-skip1200",
+      "count": 100,
+      "ranAt": "2026-09-27T12:55:12.497Z"
+    },
+    {
+      "name": "batch-skip1300",
+      "count": 37,
+      "ranAt": "2026-09-27T12:47:55.389Z"
+    }
+  ],
+  "uniqueUrls": 1167,
+  "tally": {
+    "INDEXED": 375,
+    "OTHER": 3,
+    "UNKNOWN": 445,
+    "DISCOVERED": 339,
+    "CANONICAL": 3,
+    "REDIRECT": 2
+  },
+  "lists": {
+    "INDEXED": [
+      {
+        "url": "/family/baby-weight-gain/",
+        "coverage": "Submitted and indexed",
+        "batch": "git-887a883"
+      },
+      {
+        "url": "/homegarden/room-area/",
+        "coverage": "Submitted and indexed",
+        "batch": "git-887a883"
+      },
+      {
+        "url": "/lifestyle/relocation-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "git-887a883"
+      },
+      {
+        "url": "/regional/rd-calculator/",
+        "coverage": "Submitted and indexed",
+        "batch": "git-3be1923"
+      },
+      {
+        "url": "/auto/mileage-calculator/",
+        "coverage": "Submitted and indexed",
+        "batch": "git-3be1923"
+      },
+      {
+        "url": "/construction/drywall/",
+        "coverage": "Submitted and indexed",
+        "batch": "git-3be1923"
+      },
+      {
+        "url": "/fitness/max-heart-rate/",
+        "coverage": "Submitted and indexed",
+        "batch": "git-3be1923"
+      },
+      {
+        "url": "/homegarden/deck-stain/",
+        "coverage": "Submitted and indexed",
+        "batch": "git-3be1923"
+      },
+      {
+        "url": "/lifestyle/electricity-bill-saving/",
+        "coverage": "Submitted and indexed",
+        "batch": "git-3be1923"
+      },
+      {
+        "url": "/regional/ppf-calculator/",
+        "coverage": "Submitted and indexed",
+        "batch": "git-3be1923"
+      },
+      {
+        "url": "/auto/ev-charging-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/education/reading-speed/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/everyday/electricity/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/family/family-budget/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/fitness/pullup-test/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/health/ovulation/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/lifestyle/road-trip-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/regional/stamp-duty/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/science/ideal-gas/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/tech/ssd-vs-hdd/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/conversion/energy/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/everyday/carbon/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/family/childcare-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/fitness/flexibility-score/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/homegarden/water-heater/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/utilities/tip-split/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/auto/ev-range/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/construction/carpet/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/everyday/gst/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/fitness/sports-calories/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/food/unit-converter-food/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/health/lean-body-mass/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/lifestyle/baby-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/math/prime-factor/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/regional/gold-rate/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/utilities/timer-calc/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/fitness/calories-burned/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/homegarden/garden-soil/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/math/matrix-det/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/regional/pk-salary/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/science/half-life/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/everyday/concrete/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/fitness/one-rep-max/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/health/waist-hip/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/homegarden/plant-spacing/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/lifestyle/pet-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/math/logarithm/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/regional/gold-rate-pk/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/science/wavelength/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/education/quiz-score/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/everyday/garden/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/family/home-buying/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/fitness/training-max/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/lifestyle/lawn-mowing/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/regional/rickshaw-fare/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/tech/wattage-psu/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/construction/fence/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/education/semester-gpa/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/engineering/inductor/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/everyday/cooking/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/family/wedding-budget/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/food/intermittent-fasting/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/homegarden/fertilizer/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/lifestyle/gym-cost-per-visit/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/math/root/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/regional/electricity-bill-india/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/science/power/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/tech/print-resolution/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/auto/commute-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/business/payback/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/education/college-cost-planner/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/everyday/weather/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/family/baby-name/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/fitness/muscle-gain/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/lifestyle/vacation-savings/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/math/ratio/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/regional/lpg-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/tech/password-time/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/auto/ride-share-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/business/depreciation/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/everyday/timezone/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/fitness/pushup-test/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/guides/calories/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/health/calorie-burn/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/homegarden/rain-barrel/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/lifestyle/sale-savings/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/auto/public-transport/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/education/study-break/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/everyday/calorie-counter/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/fitness/squat-standards/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/food/baking-converter/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/health/sleep/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/homegarden/irrigation-flow/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/lifestyle/resell-value/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/regional/dubai-salary/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/science/specific-heat/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/utilities/simple-tax/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/conversion/shoe-size/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/education/grade-needed/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/engineering/thermal/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/everyday/currency-exchange/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/fitness/bench-standards/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/math/trigonometry/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/regional/gold-silver/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/tech/monitor-refresh/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/auto/trip-time/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/construction/formwork/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/education/class-rank/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/engineering/kva-kw/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/lifestyle/streaming-value/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/regional/chit-fund/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/construction/concrete-column/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/everyday/walking-steps/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/fitness/overhead-standards/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/health/sleep-quality/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/homegarden/furniture-arrange/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/lifestyle/charging-time/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/regional/gratuity/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/tech/raid-capacity/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/auto/parking-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/business/employee-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/construction/lumber-calculator/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/education/flashcard-count/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/everyday/fitness-age/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/finance/debt-ratio/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/fitness/plank-test/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/homegarden/tv-mount-height/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/lifestyle/gift-split/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/math/factorial/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/science/energy-mass/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/tech/uptime-calculator/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/auto/car-depreciation/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/education/plagiarism-check/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/everyday/pet-age/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/fitness/grip-strength/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/food/fiber-need/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/guides/break-even/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/lifestyle/hourly-annual-salary/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/regional/epf-calculator/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/tech/device-charge-time/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/auto/trade-in-value/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/construction/water-tank/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/everyday/blood-alcohol/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/homegarden/countertop-sqft/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/science/work-calculator/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/tech/data-transfer-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/construction/roof-pitch/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/education/sat-score/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/everyday/vacation-budget/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/family/diaper-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/fitness/situp-test/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/health/heart-rate-zones/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/lifestyle/cleaning-time/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/math/scientific-notation/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/regional/tds-calculator/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/tech/token-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/utilities/dice-roller/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/auto/bike-loan/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/education/act-score/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/everyday/laundry-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/family/vacation-with-kids/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/food/meat-cooking-time/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/health/ideal-weight/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/homegarden/cabinet-door/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/lifestyle/date-night-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/math/random-generator/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/regional/hra-exemption/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/science/escape-velocity/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/business/cac-payback/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/education/exam-score-needed/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/everyday/coffee-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/family/baby-formula/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/fitness/swim-pace/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/homegarden/tile-grout/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/lifestyle/takeout-budget/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/math/cubic-equation/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/regional/capital-gains-india/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/construction/block-wall/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/education/attendance-rate/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/everyday/grocery-budget/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/fitness/cycling-speed/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/health/sleep-debt/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/homegarden/light-bulb-save/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/lifestyle/home-insurance/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/regional/sukanya-samriddhi/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/tech/url-encoder/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/auto/car-rental/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/everyday/distance-pace/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/homegarden/home-sqft/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/lifestyle/renters-insurance/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/regional/nsc-interest/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/science/electric-field/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/auto/taxi-fare/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/education/tuition-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/everyday/savings-goal-date/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/family/family-meal-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/homegarden/kitchen-remodel/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/regional/senior-savings-scheme/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/science/newtons-second/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/auto/auto-fare/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/everyday/budget-allocator/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/fitness/training-volume/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/health/iron-intake/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/homegarden/roof-sqft/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/lifestyle/haircut-annual/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/math/binomial-prob/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/regional/post-office-savings/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/tech/case-converter/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/auto/delivery-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/construction/asphalt-quantity/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/education/reading-time/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/everyday/event-countdown/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/health/vitamin-d-dosage/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/homegarden/vinyl-flooring/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/lifestyle/party-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/science/speed-of-sound/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/utilities/qr-content-size/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/education/presentation-time/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/engineering/steel-weight/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/family/allowance-calc/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/fitness/beep-test/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/lifestyle/gift-budget/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/regional/zakat-calculator/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/science/wavelength-freq/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/construction/drywall-screws/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/everyday/days-between/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/homegarden/solar-battery/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/lifestyle/hobby-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/regional/pk-income-tax/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/science/kepler-third/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/tech/uuid-generator/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/lifestyle/travel-daily/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/math/linear-system/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/regional/gold-silver-ratio/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/science/radioactive-decay/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/auto/fuel-tank-range/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/construction/pipe-volume/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/fitness/deload-week/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/food/alcohol-calories/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/health/drug-dosage/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/homegarden/ev-charger-home/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/regional/gratuity-calculator/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/tech/ip-subnet/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/auto/tow-capacity/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/construction/retaining-wall/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/conversion/radiation-dose-conv/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/education/graduation-date/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/everyday/business-days/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/finance/amortization/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/fitness/workout-rest/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/health/trimester-date/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/homegarden/raised-bed-soil/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/lifestyle/home-renovation/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/regional/stamp-duty-india/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/science/centripetal/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/construction/scaffolding/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/conversion/wire-gauge-conv/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/education/course-load/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/fitness/treadmill-pace/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/homegarden/garden-fence/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/lifestyle/cigarette-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/science/orbital-velocity/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/tech/resistor-color-code/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/construction/crown-molding/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/education/financial-need/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/everyday/day-of-year/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/fitness/rowing-split/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/lifestyle/french-press-ratio/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/auto/carpool-savings/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/business/project-bid/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/homegarden/lawn-watering/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/lifestyle/cocktail-dilution/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/math/variance-sd/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/regional/us-fica/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/engineering/inductor-energy/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/everyday/leap-year/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/family/child-support-split/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/homegarden/sprinkler-heads/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/lifestyle/wine-servings/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/math/permutation/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/tech/color-contrast/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/auto/scooter-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/fitness/rpe-load/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/health/nap-planner/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/lifestyle/baking-scale/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/math/binomial-theorem/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/regional/australia-super/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/tech/read-time/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/auto/registration-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/construction/gutter/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/education/act-sat-compare/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/everyday/poker-flush/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/auto/tire-replacement/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/construction/sod/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/education/assignment-split/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/everyday/easter-date/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/fitness/vo2-beep/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/health/maffetone-hr/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/regional/singapore-cpf/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/science/buoyancy/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/auto/speed-conv/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/education/citation-count/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/everyday/day-of-week/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/finance/social-security/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/fitness/resting-metabolic/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/health/health-insurance-copay/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/homegarden/deck-post/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/regional/uk-take-home-salary/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/tech/storage-need/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/auto/hybrid-savings/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/homegarden/porch-light/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/lifestyle/candle-wax/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/science/solar-energy/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/tech/latency-bandwidth/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/construction/siding-squares/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/everyday/moon-phase/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/math/sieve-prime/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/regional/saudi-take-home-salary/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/auto/quarter-mile/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/everyday/meeting-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/guides/business-days/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/health/waist-height-ratio/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/homegarden/humidifier-size/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/lifestyle/quilt-fabric/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/math/fibonacci-seq/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/regional/canada-take-home-salary/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/science/bernoulli/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/science/projectile/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/construction/post-hole-concrete/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/engineering/pump-power/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/everyday/pomodoro-planner/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/health/ldl-calculator/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/regional/germany-take-home-salary/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/everyday/gift-wrap/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/homegarden/appliance-cost/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/homegarden/firewood/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/everyday/moving-truck/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/everyday/jet-lag/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/science/latent-heat/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/science/friction/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/health/bmr-mifflin/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/tech/reading-grade/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/tech/typing-speed/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/math/linear-regression/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/science/hooke-law/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/math/harmonic-mean/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/health/maintenance-fluids/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/health/free-water-deficit/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/health/total-body-water/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/engineering/ups-sizing/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/health/pf-ratio/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/science/carbon-dating/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/matrix-inverse/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/science/freezing-depression/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/529-plan/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/science/cloud-base-lcl/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/guides/water-intake/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/law-of-cosines/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/coefficient-of-variation/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/property-tax/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/cost-of-debt/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/inverse-variation/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/nth-root/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/margin-call/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/math/circle-through-points/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/currency-arbitrage/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/insurance-surrender-value/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/prorated-rent/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/market-cap/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/risk-reward-ratio/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/safe-withdrawal/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/rent-increase/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/roommate-rent-split/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/refinance-breakeven/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/auto-lease-vs-buy/",
+        "coverage": "Submitted and indexed",
+        "batch": "batch-skip1300"
+      }
+    ],
+    "OTHER": [
+      {
+        "url": "/finance/loan-emi/",
+        "coverage": "Excluded by ‘noindex’ tag",
+        "batch": "git-887a883"
+      },
+      {
+        "url": "/education/letter-grade/",
+        "coverage": "Excluded by ‘noindex’ tag",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/finance/capital-gains/",
+        "coverage": "Excluded by ‘noindex’ tag",
+        "batch": "batch-skip800"
+      }
+    ],
+    "UNKNOWN": [
+      {
+        "url": "/fitness/running-pace/",
+        "coverage": "URL is unknown to Google",
+        "batch": "git-887a883"
+      },
+      {
+        "url": "/food/daily-calorie/",
+        "coverage": "URL is unknown to Google",
+        "batch": "git-887a883"
+      },
+      {
+        "url": "/guides/percentage/",
+        "coverage": "URL is unknown to Google",
+        "batch": "git-887a883"
+      },
+      {
+        "url": "/science/density/",
+        "coverage": "URL is unknown to Google",
+        "batch": "git-3be1923"
+      },
+      {
+        "url": "/tech/data-usage/",
+        "coverage": "URL is unknown to Google",
+        "batch": "git-3be1923"
+      },
+      {
+        "url": "/utilities/password-gen/",
+        "coverage": "URL is unknown to Google",
+        "batch": "git-3be1923"
+      },
+      {
+        "url": "/business/cac/",
+        "coverage": "URL is unknown to Google",
+        "batch": "git-3be1923"
+      },
+      {
+        "url": "/career/overtime-pay/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/construction/stairs/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/conversion/angle/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/engineering/led-resistor/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/food/cooking-time/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/guides/currency-conversion/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/auto/ev-vs-gas-petrol/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/business/mrr/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/construction/wallpaper/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/engineering/capacitor/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/finance/investment/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/guides/discount/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/lifestyle/flight-cost-per-hour/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/math/lcm-gcd/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/regional/home-loan-emi-india/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/business/nps/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/career/pay-gap/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/education/exam-countdown/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/engineering/battery-life/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/family/college-savings/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/finance/savings-goal/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/guides/tip/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/science/doppler/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/construction/mulch/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/education/words-pages/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/finance/tax/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/food/eat-out-vs-cook/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/guides/gst-sales-tax/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/health/bsa/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/lifestyle/parental-leave/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/tech/cable-length/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/utilities/file-size/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/auto/tire-size/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/business/pricing/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/career/stock-options/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/construction/soil/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/conversion/temperature/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/education/citation/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/engineering/rpm/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/finance/sales-tax/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/food/fast-food-calories/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/guides/glossary/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/tech/ppi-calc/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/utilities/salary-hourly/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/auto/oil-change/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/business/inventory/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/career/side-hustle/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/construction/bricks/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/conversion/time-conv/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/engineering/horsepower/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/finance/npv/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/food/keto-macro/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/guides/inflation/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/health/vo2-max/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/utilities/area-calc/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/business/break-even-revenue/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/career/crypto-tax/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/fitness/weight-loss/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/guides/salary/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/utilities/volume-calc/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/construction/excavation/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/conversion/fuel-efficiency-converter/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/finance/roi/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/food/vegan-protein/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/health/blood-pressure/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/homegarden/compost/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/science/velocity/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/utilities/shipping-cost/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/career/remortgage-calc/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/conversion/cooking-conv/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/finance/tip/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/math/average/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/regional/wedding-budget-shaadi/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/science/free-fall/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/utilities/salary-biweekly/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/business/discount-rate/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/construction/paint-quantity/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/conversion/clothing-size/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/engineering/hydraulic/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/finance/salary/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/guides/debt-payoff/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/math/pythagorean/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/tech/hosting-cost/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/finance/annuity/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/guides/random-numbers/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/health/gfr/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/homegarden/pool-size/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/lifestyle/subscription-audit/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/science/lens/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/utilities/mileage-calc/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/career/invoicing-calc/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/fitness/deadlift-standards/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/food/tea-vs-coffee/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/homegarden/pool-chemicals/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/math/distance/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/science/coulomb/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/utilities/ratio-simplifier/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/auto/speed-distance-time/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/business/invoice-due-date/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/education/homework-time/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/family/paternity-leave/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/finance/bonds/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/guides/unit-conversion/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/math/slope/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/science/frequency/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/career/commission-plan/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/conversion/power-conv/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/engineering/flow-rate/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/family/kid-allowance/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/health/fatigue-score/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/utilities/prime-check/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/career/freelance-budget/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/construction/paver-calculator/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/finance/net-worth-calculator/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/health/body-fat-navy/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/homegarden/stair-calculator/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/science/molar-mass/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/utilities/rounding-calc/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/career/redundancy-pay/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/engineering/shaft-power/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/family/screen-time/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/finance/rent-vs-buy/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/food/calorie-per-meal/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/math/complex/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/utilities/coin-flip/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/business/cash-flow-statement/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/conversion/density-conv/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/engineering/spring-rate/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/finance/refinance/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/food/rice-water/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/guides/baby-cost/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/science/gravitational-force/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/business/revenue-per-employee/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/construction/deck-calculator/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/conversion/viscosity-conv/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/engineering/resonant-frequency/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/fitness/row-standards/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/tech/base64-encode/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/utilities/date-add/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/auto/stopping-distance/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/career/monthly-goal/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/finance/currency-converter/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/food/egg-boil/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/health/fasting-calculator/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/science/molarity/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/tech/base64-decode/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/utilities/age-exact/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/auto/fuel-efficiency/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/business/business-valuation/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/career/retirement-contrib/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/engineering/hydraulic-power/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/family/diaper-needs/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/education/study-hours/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/engineering/stress-strain/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/family/kids-shoe-size/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/finance/paycheck/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/fitness/cadence-calc/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/food/protein-per-dollar/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/health/met-calories/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/utilities/random-name/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/business/goal-seek-price/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/conversion/flow-rate-conv/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/fitness/stride-length/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/food/sodium-intake/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/guides/gear-ratio/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/health/body-type/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/lifestyle/car-wash-annual/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/math/polar-rect/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/tech/text-counter/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/utilities/password-entropy/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/career/job-offer-compare/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/construction/gravel-tonnage/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/conversion/paper-size-conv/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/engineering/column-buckling/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/family/school-supplies/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/finance/cash-flow/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/utilities/speech-time/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/business/cash-conversion-cycle/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/career/cost-living-adjustment/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/family/birthday-party-cost/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/fitness/vertical-jump/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/food/pizza-slices/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/regional/uae-vat/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/tech/hash-generator/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/career/severance-calc/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/health/calorie-goal/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/homegarden/solar-panel/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/math/taylor-series/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/tech/rgb-hex/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/utilities/timestamp-convert/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/business/aov/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/conversion/ppm-conv/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/education/test-average/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/family/teen-budget/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/finance/present-value/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/fitness/bodyweight-ratio/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/math/continued-fraction/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/tech/password-generator/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/career/salary-raise-worth/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/education/grade-percentage/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/engineering/structural-load/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/family/inheritance-estate/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/guides/sip/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/lifestyle/furniture-assembly/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/science/spring-force/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/business/csat-score/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/career/wfh-savings/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/engineering/electrical-energy/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/family/sibling-age-gap/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/math/surface-area-3d/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/auto/cargo-volume/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/business/conversion-funnel/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/engineering/resistor-combination/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/finance/loan-to-value/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/guides/ev-vs-petrol/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/health/ovulation-calculator/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/math/complex-modulus/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/auto/toll-cost/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/business/ab-test-significance/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/career/vacation-days/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/conversion/acceleration-conv/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/engineering/capacitor-energy/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/family/baby-milestones/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/finance/apr/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/regional/uk-ni/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/science/heat-transfer/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/construction/septic-size/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/science/boyle-law/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/construction/plaster/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/education/percentile-rank/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/guides/wedding-budget/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/health/cholesterol-ratio/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/regional/canada-cpp/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/science/combined-gas-law/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/tech/aspect-ratio/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/auto/ebike-range/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/science/wave-speed/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/everyday/lottery-odds/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/family/family-tree-generation/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/guides/freelance-rate-card/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/science/moment-of-inertia/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/homegarden/firepit-size/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/lifestyle/sourdough-hydration/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/math/golden-ratio/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/tech/font-size-conv/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/construction/ceiling-tile/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/engineering/ventilation-cfm/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/guides/electricity-bill/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/lifestyle/lawn-fertilizer/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/science/hydrostatic-pressure/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/construction/stair-stringer/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/health/hba1c-eag/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/math/run-length/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/regional/india-take-home-salary/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/auto/power-to-weight/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/engineering/torque-wrench/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/homegarden/ceiling-fan-size/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/lifestyle/knit-gauge/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/science/reynolds-number/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/finance/loan-comparison/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/tech/audio-file-size/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/engineering/engine-efficiency/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/guides/grade-needed/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/health/map-calculator/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/homegarden/tree-spacing/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/homegarden/grout-calc/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/math/pascal-triangle/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/science/pendulum/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/tech/screen-size/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/finance/mortgage-payoff/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/health/iv-drip-rate/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/math/collatz/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/tech/streaming-quality/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/construction/gravel-driveway/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/finance/graduated-payment/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/health/anion-gap/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/math/norm-dist-range/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/science/percent-yield/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/tech/code-line-count/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/engineering/pcb-trace/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/finance/balloon-payment/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/guides/loans-mortgages/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/health/qtc/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/engineering/bolt-torque/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/guides/tax-salary/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/health/ponderal-index/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/tech/api-cost/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/construction/shingle-squares/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/engineering/pulley/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/math/matrix-multiply/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/tech/keyword-density/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/guides/math-statistics/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/math/distance-formula/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/health/gfr-estimate/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/health/chw/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/science/snells-law/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/tech/ad-revenue/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/engineering/duct-size/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/finance/sip/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/science/mirror-equation/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/tech/click-through-rate/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/finance/crypto-profit/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/health/apgar/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/math/pearson-correlation/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/tech/subnet-cidr/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/engineering/breaker-size/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/finance/stock-profit/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/guides/engineering/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/tech/video-bitrate/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/finance/dca/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/engineering/section-modulus/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/math/poisson-probability/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/tech/gpu-comparison-perf/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/finance/perpetuity/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/tech/data-center-pue/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/finance/esop/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/guides/family/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/finance/us-income-tax/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/tech/hash-rate/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/engineering/three-phase-power/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/guides/regional/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/math/t-test/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/science/rocket-equation/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/guides/everyday/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/math/hypergeometric/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/engineering/hydraulic-press/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/engineering/radiation-shielding/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/cd-calculator/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/science/calorimetry/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/tech/wifi-throughput/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/engineering/steam-consumption/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/engineering/noise-level/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/dividend-yield/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/guides/credit-card-minimum/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/engineering/rcf-gforce/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/science/bullet-drop/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/loan-payoff/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/guides/heart-rate-zones/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/science/redshift/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/pyramid/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/guides/npv-vs-irr/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/vector-add/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/science/machine-efficiency/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/tax-equivalent-yield/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/guides/rent-vs-buy/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/angle-between-vectors/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/science/dew-point/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/guides/sleep-cycles/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/science/grahams-law/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/quick-ratio/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/science/osmotic-pressure/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/ellipse-area/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/science/angular-velocity/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/wacc/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/weighted-average/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/sharpe-ratio/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/geometric-mean/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/quartile/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/debt-snowball/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/payday-loan-cost/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/quartiles/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/emergency-fund-rate/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/rms/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/closing-costs/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/cap-rate/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/expected-value/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/student-loan-repayment/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/partial-fractions/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/reverse-mortgage/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/mortgage-refinance/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/series-sum-ap/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/sigma-notation/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/permutation-repeat/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/black-scholes/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/math/probability-odds/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/bond-duration/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/growing-perpetuity/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/math/secant-tangent/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/math/inscribed-angle/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/math/sector-perimeter/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/cost-of-living/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/math/rectangular-solid/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/yield-to-maturity/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/math/octahedron-volume/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/math/bitwise-xor/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/accounts-receivable-turnover/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/operating-margin/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/math/digital-root/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/loan-balance/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/price-to-rent/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/fico-simulator/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/discounted-payback/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/portfolio-return/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/payroll-tax/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/estimated-tax/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/t-bill/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/dcf/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/debt-to-equity/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/sip-step-up/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/fixed-deposit-vs-recurring/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/recast-mortgage/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/mortgage-points/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/dividend-reinvestment/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/eps-calculator/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/credit-utilization/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/apy-calculator/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/lump-sum-vs-sip/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/pmi-calculator/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/pension-lump-sum/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/zero-coupon-bond/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/ibond-value/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/kelly-criterion/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/peg-ratio/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/free-cash-flow/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/interest-coverage/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/asset-turnover/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/runway-months/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/quarterly-tax/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/late-fee-interest/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/factoring-fee/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/royalty-payment/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/franchise-cost/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/food-cost-percent/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/hsa-growth/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/noi/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/price-per-sqft/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/deposit-interest/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/purchasing-power/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/escrow-analysis/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/yield-to-worst/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/coupon-payment/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/clean-dirty-price/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/duration-bond/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/appreciation-forecast/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/seller-net/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/points-breakeven/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/rule-of-40/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/cost-of-delay/",
+        "coverage": "URL is unknown to Google",
+        "batch": "batch-skip1300"
+      }
+    ],
+    "DISCOVERED": [
+      {
+        "url": "/health/bmi/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "git-887a883"
+      },
+      {
+        "url": "/math/scientific/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "git-887a883"
+      },
+      {
+        "url": "/math/percentage/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "git-3be1923"
+      },
+      {
+        "url": "/blog/bmi-honest-look/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "git-3be1923"
+      },
+      {
+        "url": "/career/tax-bracket/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "git-3be1923"
+      },
+      {
+        "url": "/conversion/volume/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "git-3be1923"
+      },
+      {
+        "url": "/food/daily-water-intake/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "git-3be1923"
+      },
+      {
+        "url": "/guides/bmi/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "git-3be1923"
+      },
+      {
+        "url": "/health/body-fat/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "git-3be1923"
+      },
+      {
+        "url": "/math/percent-change/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "git-3be1923"
+      },
+      {
+        "url": "/science/force/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "git-3be1923"
+      },
+      {
+        "url": "/tech/video-size/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "git-3be1923"
+      },
+      {
+        "url": "/business/burn-rate/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/finance/retirement/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/homegarden/ac-size/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/math/combinations/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/utilities/uuid-gen/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/career/bonus-calc/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/education/test-score/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/food/meal-prep/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/health/macros/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/science/momentum/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/tech/battery-life-estimator/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/conversion/pressure-conv/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/homegarden/generator-size/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/tech/screen-resolution/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/auto/car-maintenance/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/business/freelance-rate/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/career/401k-match/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/conversion/frequency-conv/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/engineering/wire-gauge/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/everyday/paint/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/family/maternity-leave/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/family/life-insurance/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip200"
+      },
+      {
+        "url": "/homegarden/grass-seed/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/math/exponent/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/science/acceleration/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/auto/car-insurance/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/conversion/force-conv/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/finance/irr/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/health/pregnancy-weight/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/career/career-gap/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/engineering/impedance/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/guides/retirement/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/construction/tile-calculator/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/education/scholarship-calc/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/engineering/beam-load/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/family/college-savings-monthly/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/food/grocery-per-person/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/tech/image-file-size/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/career/mortgage-afford/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/family/childcare-cost-annual/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip300"
+      },
+      {
+        "url": "/auto/walking-transit/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/business/saas-unit-metrics/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/career/tax-refund/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/construction/rebar-calculator/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/family/family-budget-simple/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/food/coffee-cost-per-cup/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/business/break-even-point/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/conversion/currency-conv/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/everyday/sleep-calc/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/family/maternity-leave-finance/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/finance/inflation/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/guides/concrete/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/health/target-heart-rate/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/tech/streaming-bitrate/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/career/employment-status/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/conversion/torque-conv/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/engineering/belt-length/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/food/sugar-intake/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/utilities/gcd-lcm/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/guides/gpa/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/regional/leave-encashment/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/business/markup-margin/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/conversion/voltage-conv/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/engineering/sound-level/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/family/babysitter-rate/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/math/modular/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/business/working-capital/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/conversion/radiation-conv/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/fitness/burpee-test/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/guides/passwords/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/health/calorie-deficit/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/lifestyle/pet-food-cost/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/regional/esic-calculator/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/auto/bike-fuel/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/career/self-employment-tax/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/homegarden/closet-organizer/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/career/freelance-daily/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/finance/home-afford/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/guides/ideal-weight/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/construction/concrete-bags/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/conversion/bit-rate-conv/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/engineering/transformer-ratio/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/guides/bmr/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip500"
+      },
+      {
+        "url": "/conversion/luminance-conv/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/finance/loan-qualify/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/food/smoothie-calories/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/guides/profit-margin/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/math/geometric-seq/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/science/dilution/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/utilities/units-per/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/business/gross-margin/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/career/benefits-value/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/construction/rebar-calc/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/conversion/molarity-conv/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/guides/ohms-law/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/math/arithmetic-seq/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/tech/json-formatter/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/career/pto-calc/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/construction/footing-size/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/engineering/beam-deflection/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/finance/break-even/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/business/subscription-ltv/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/education/gpa-target/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/food/caffeine-daily/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/guides/fuel-cost/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/science/power-electrical/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/conversion/fraction-percent/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/engineering/pipe-flow/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/finance/markup/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/guides/hourly-rate/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/math/normal-dist/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip600"
+      },
+      {
+        "url": "/auto/route-optimizer/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/business/market-share/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/construction/mortar-mix/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/conversion/roman-numeral/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/everyday/work-hours-weekly/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/finance/discount/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/food/meal-prep-size/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/guides/paint-coverage/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/auto/carbon-footprint-car/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/career/side-hustle-profit/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/engineering/concrete-mix/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/food/sugar-limit/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/guides/macro-calculator/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/health/burn-severity/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/business/customer-ltv/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/conversion/thermal-conductivity/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/everyday/compound-savings/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/finance/future-value/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/math/eigenvalue-2x2/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/food/oven-conversion/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/guides/fd-ppf-sip/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/tech/cron-validate/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/career/stock-vesting/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/everyday/week-number/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/family/childcare-weekly/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip700"
+      },
+      {
+        "url": "/food/homebrew-abv/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/math/mean-median-mode/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/tech/ascii-table/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/career/timesheet-hours/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/tech/awg-reference/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/auto/bus-vs-car/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/business/retainer-value/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/career/shift-differential/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/fitness/sweat-rate/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/finance/dividend/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/homegarden/compost-bin/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/engineering/rc-time-constant/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/engineering/cable-sizing/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/finance/fire/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/guides/screen-time/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/math/checksum-luhn/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/finance/rental-yield/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/health/glycemic-load/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/tech/download-time/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/construction/soffit-area/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/engineering/bearing-load/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/everyday/sunrise-sunset-length/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/finance/investment-growth/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/tech/backup-size/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/finance/savings-comparison/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/guides/room-area/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/construction/fence-panel/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/engineering/tank-volume/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/guides/ac-size/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/math/modular-exp/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/science/molality/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/engineering/heat-exchanger/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/guides/protein-intake/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/health/creatinine-clearance/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/construction/insulation-batts/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/math/dot-cross-product/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/tech/dbm-watts/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/construction/rafter-length/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/everyday/heat-pump-savings/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/finance/interest-only/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/math/bayes-theorem/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip900"
+      },
+      {
+        "url": "/finance/emergency-fund/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/guides/health-fitness/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/science/inclined-plane/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/construction/drywall-sheets/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/engineering/lever/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/finance/bond-yield/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/health/tdee-macro/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/science/impulse/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/construction/tile-boxes/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/engineering/wind-load/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/finance/retirement-income/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/guides/business/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/math/slope-intercept/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/science/terminal-velocity/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/math/zscore-calc/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/guides/construction/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/health/gcs/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/engineering/head-loss/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/guides/science/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/science/mole-conversion/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/health/vaccination-schedule/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/math/confidence-interval/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/science/charles-law/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/engineering/power-factor-correction/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/guides/auto/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/health/pediatric-dose/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/math/sample-size/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/tech/cidr-convert/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/finance/college-cost/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/guides/career/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/health/corrected-calcium/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/science/mach-number/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/engineering/shaft-torsion/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/guides/homegarden/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/health/winters-formula/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/science/stefan-boltzmann/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/engineering/pulley-speed/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/math/moving-average/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/science/coulomb-law/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/tech/screen-ppi/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/engineering/manning-flow/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/guides/food/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/math/standard-error/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/science/photon-energy/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/engineering/orifice-flow/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/finance/uk-income-tax/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/guides/lifestyle/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/health/serum-osmolality/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/math/chi-square/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/science/debroglie/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/tech/storage-array/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/finance/canada-income-tax/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/tech/docker-resource/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/finance/australia-income-tax/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1000"
+      },
+      {
+        "url": "/tech/load-test-users/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/bond-price/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/guides/utilities/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/guides/cagr/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/significant-figures/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/annuity-payout/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/tech/data-usage-est/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/midpoint/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/science/air-density/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/tech/image-size-calc/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/rule-of-72/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/trapezoid/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/science/angular-momentum/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/sector-area/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/retirement-withdrawal/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/guides/net-worth/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/science/buffer-ph/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/inflation-adjusted/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/annulus-area/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/times-interest-earned/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/parallelogram-area/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/ebitda/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/science/sound-intensity/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/enterprise-value/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/law-of-sines/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/percent-error/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/covariance/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/exponential-prob/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/euler-totient/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/completing-square/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/fha-loan/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/va-loan/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/direct-variation/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/house-affordability/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/math/spherical-cap/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/crypto-gains/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/price-to-earnings/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/finance/dividend-discount/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/math/combination-repeat/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/math/negative-binomial/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/tax-loss-harvest/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/savings-rate/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/envelope-budget/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/car-lease-calculator/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/math/ellipse-perimeter/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/debt-consolidation/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/math/triangular-prism/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/gross-rent-multiplier/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/math/icosahedron-volume/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/current-ratio-finance/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/math/shift-cipher/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/math/units-per-person/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/net-profit-margin/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/math/rate-x-time/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/coverage-ratio/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/math/work-rate-together/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/home-equity/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/cash-on-cash/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/math/mixture-percent/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/standard-deduction/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/home-office-deduction/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/diversification/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/forex-pip/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/payback-period/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/cagr/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/capm/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/espp/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/roth-vs-traditional/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/biweekly-mortgage/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/rent-affordability/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/stock-split/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/book-value-share/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/net-operating-income/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/dso/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/payout-ratio/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/sortino-ratio/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/max-drawdown/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/cd-ladder/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/put-call-parity/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/position-size/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/stop-loss/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/cost-basis-avg/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/dca-calculator/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/staking-rewards/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/value-at-risk/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/ev-ebitda/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1200"
+      },
+      {
+        "url": "/finance/effective-tax-rate/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/menu-price/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/rmd/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/apr-annual/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/heloc-payment/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/pmi-drop/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/portfolio-beta/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/convexity/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/rent-vs-sell/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1300"
+      },
+      {
+        "url": "/finance/cap-rate-conv/",
+        "coverage": "Discovered - currently not indexed",
+        "batch": "batch-skip1300"
+      }
+    ],
+    "CANONICAL": [
+      {
+        "url": "/food/carb-calculator/",
+        "coverage": "Alternate page with proper canonical tag",
+        "batch": "batch-skip400"
+      },
+      {
+        "url": "/regional/gst-calculator/",
+        "coverage": "Alternate page with proper canonical tag",
+        "batch": "batch-skip800"
+      },
+      {
+        "url": "/math/hexagon-area/",
+        "coverage": "Alternate page with proper canonical tag",
+        "batch": "batch-skip1100"
+      }
+    ],
+    "REDIRECT": [
+      {
+        "url": "/guides/body-fat/",
+        "coverage": "Page with redirect",
+        "batch": "batch-skip1100"
+      },
+      {
+        "url": "/guides/debt-ratio/",
+        "coverage": "Page with redirect",
+        "batch": "batch-skip1100"
+      }
+    ]
+  }
+}

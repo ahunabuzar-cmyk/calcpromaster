@@ -1,0 +1,100 @@
+🔍 GSC Batch Inspection — https://calcpromaster.com (limit 100)
+
+[1/2] Sitemap resubmit: HTTP 403
+[2/2] Inspecting 100 URLs (live sitemap has 1337)...
+
+  ⚠ /finance/emergency-fund/ → Discovered - currently not indexed
+  ⚠ /guides/health-fitness/ → Discovered - currently not indexed
+  ⚠ /math/matrix-multiply/ → URL is unknown to Google
+  ⚠ /science/inclined-plane/ → Discovered - currently not indexed
+  ⚠ /tech/keyword-density/ → URL is unknown to Google
+  ⚠ /construction/drywall-sheets/ → Discovered - currently not indexed
+  ⚠ /engineering/lever/ → Discovered - currently not indexed
+  ⚠ /finance/bond-yield/ → Discovered - currently not indexed
+  ⚠ /guides/math-statistics/ → URL is unknown to Google
+  ⚠ /health/tdee-macro/ → Discovered - currently not indexed
+  ⚠ /math/distance-formula/ → URL is unknown to Google
+  ⚠ /science/impulse/ → Discovered - currently not indexed
+  ⚠ /construction/tile-boxes/ → Discovered - currently not indexed
+  ⚠ /engineering/wind-load/ → Discovered - currently not indexed
+  ⚠ /finance/retirement-income/ → Discovered - currently not indexed
+  ⚠ /guides/business/ → Discovered - currently not indexed
+  ⚠ /health/gfr-estimate/ → URL is unknown to Google
+  ⚠ /math/slope-intercept/ → Discovered - currently not indexed
+  ⚠ /science/terminal-velocity/ → Discovered - currently not indexed
+  ⚠ /health/chw/ → URL is unknown to Google
+  ⚠ /math/zscore-calc/ → Discovered - currently not indexed
+  ⚠ /science/snells-law/ → URL is unknown to Google
+  ⚠ /tech/ad-revenue/ → URL is unknown to Google
+  ⚠ /engineering/duct-size/ → URL is unknown to Google
+  ⚠ /finance/sip/ → URL is unknown to Google
+  ⚠ /guides/construction/ → Discovered - currently not indexed
+  ⚠ /health/gcs/ → Discovered - currently not indexed
+  ⚠ /science/mirror-equation/ → URL is unknown to Google
+  ⚠ /tech/click-through-rate/ → URL is unknown to Google
+  ⚠ /engineering/head-loss/ → Discovered - currently not indexed
+  ⚠ /finance/crypto-profit/ → URL is unknown to Google
+  ⚠ /guides/science/ → Discovered - currently not indexed
+  ⚠ /health/apgar/ → URL is unknown to Google
+  ⚠ /math/pearson-correlation/ → URL is unknown to Google
+  ⚠ /science/mole-conversion/ → Discovered - currently not indexed
+  ⚠ /tech/subnet-cidr/ → URL is unknown to Google
+  ⚠ /engineering/breaker-size/ → URL is unknown to Google
+  ⚠ /finance/stock-profit/ → URL is unknown to Google
+  ⚠ /guides/engineering/ → URL is unknown to Google
+  ⚠ /health/vaccination-schedule/ → Discovered - currently not indexed
+  ⚠ /math/confidence-interval/ → Discovered - currently not indexed
+  ⚠ /science/charles-law/ → Discovered - currently not indexed
+  ⚠ /tech/video-bitrate/ → URL is unknown to Google
+  ⚠ /engineering/power-factor-correction/ → Discovered - currently not indexed
+  ⚠ /finance/dca/ → URL is unknown to Google
+  ⚠ /guides/auto/ → Discovered - currently not indexed
+  ⚠ /health/pediatric-dose/ → Discovered - currently not indexed
+  ⚠ /math/sample-size/ → Discovered - currently not indexed
+  ⚠ /tech/cidr-convert/ → Discovered - currently not indexed
+  ⚠ /engineering/section-modulus/ → URL is unknown to Google
+  ⚠ /finance/college-cost/ → Discovered - currently not indexed
+  ⚠ /guides/career/ → Discovered - currently not indexed
+  ⚠ /health/corrected-calcium/ → Discovered - currently not indexed
+  ⚠ /math/poisson-probability/ → URL is unknown to Google
+  ⚠ /science/mach-number/ → Discovered - currently not indexed
+  ⚠ /tech/gpu-comparison-perf/ → URL is unknown to Google
+  ⚠ /engineering/shaft-torsion/ → Discovered - currently not indexed
+  ⚠ /finance/perpetuity/ → URL is unknown to Google
+  ⚠ /guides/homegarden/ → Discovered - currently not indexed
+  ⚠ /health/winters-formula/ → Discovered - currently not indexed
+  ⚠ /science/stefan-boltzmann/ → Discovered - currently not indexed
+  ⚠ /tech/data-center-pue/ → URL is unknown to Google
+  ⚠ /engineering/pulley-speed/ → Discovered - currently not indexed
+  ⚠ /finance/esop/ → URL is unknown to Google
+  ⚠ /guides/family/ → URL is unknown to Google
+  ⚠ /math/moving-average/ → Discovered - currently not indexed
+  ⚠ /science/coulomb-law/ → Discovered - currently not indexed
+  ⚠ /tech/screen-ppi/ → Discovered - currently not indexed
+  ⚠ /engineering/manning-flow/ → Discovered - currently not indexed
+  ⚠ /finance/us-income-tax/ → URL is unknown to Google
+  ⚠ /guides/food/ → Discovered - currently not indexed
+  ⚠ /math/standard-error/ → Discovered - currently not indexed
+  ⚠ /science/photon-energy/ → Discovered - currently not indexed
+  ⚠ /tech/hash-rate/ → URL is unknown to Google
+  ⚠ /engineering/orifice-flow/ → Discovered - currently not indexed
+  ⚠ /finance/uk-income-tax/ → Discovered - currently not indexed
+  ⚠ /guides/lifestyle/ → Discovered - currently not indexed
+  ⚠ /health/serum-osmolality/ → Discovered - currently not indexed
+  ⚠ /math/chi-square/ → Discovered - currently not indexed
+  ⚠ /science/debroglie/ → Discovered - currently not indexed
+  ⚠ /tech/storage-array/ → Discovered - currently not indexed
+  ⚠ /engineering/three-phase-power/ → URL is unknown to Google
+  ⚠ /finance/canada-income-tax/ → Discovered - currently not indexed
+  ⚠ /guides/regional/ → URL is unknown to Google
+  ⚠ /math/t-test/ → URL is unknown to Google
+  ⚠ /science/rocket-equation/ → URL is unknown to Google
+  ⚠ /tech/docker-resource/ → Discovered - currently not indexed
+  ⚠ /finance/australia-income-tax/ → Discovered - currently not indexed
+  ⚠ /guides/everyday/ → URL is unknown to Google
+
+=== Coverage tally (live URLs) ===
+  54	Discovered - currently not indexed
+  35	URL is unknown to Google
+  11	Submitted and indexed
+💾 data/batches/batch-skip1000.json

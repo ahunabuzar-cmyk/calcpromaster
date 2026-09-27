@@ -1,0 +1,134 @@
+🔍 GSC Batch Inspection — https://calcpromaster.com (limit 100)
+
+[1/2] Sitemap resubmit: HTTP 403
+[2/2] Inspecting 100 URLs (live sitemap has 1337)...
+
+  ⚠ /business/burn-rate/ → URL is unknown to Google
+  ⚠ /career/overtime-pay/ → Discovered - currently not indexed
+  ⚠ /construction/stairs/ → URL is unknown to Google
+  ⚠ /conversion/angle/ → URL is unknown to Google
+  ⚠ /engineering/led-resistor/ → Discovered - currently not indexed
+  ⚠ /finance/retirement/ → Discovered - currently not indexed
+  ⚠ /food/cooking-time/ → URL is unknown to Google
+  ⚠ /guides/currency-conversion/ → Discovered - currently not indexed
+  ⚠ /homegarden/ac-size/ → URL is unknown to Google
+  ⚠ /math/combinations/ → URL is unknown to Google
+  ⚠ /utilities/uuid-gen/ → URL is unknown to Google
+  ⚠ /auto/ev-vs-gas-petrol/ → Discovered - currently not indexed
+  ⚠ /business/mrr/ → URL is unknown to Google
+  ⚠ /career/bonus-calc/ → URL is unknown to Google
+  ⚠ /construction/wallpaper/ → URL is unknown to Google
+  ⚠ /education/test-score/ → URL is unknown to Google
+  ⚠ /engineering/capacitor/ → Discovered - currently not indexed
+  ⚠ /finance/investment/ → Discovered - currently not indexed
+  ⚠ /food/meal-prep/ → URL is unknown to Google
+  ⚠ /guides/discount/ → URL is unknown to Google
+  ⚠ /health/macros/ → URL is unknown to Google
+  ⚠ /lifestyle/flight-cost-per-hour/ → URL is unknown to Google
+  ⚠ /math/lcm-gcd/ → Discovered - currently not indexed
+  ⚠ /regional/home-loan-emi-india/ → URL is unknown to Google
+  ⚠ /science/momentum/ → Discovered - currently not indexed
+  ⚠ /tech/battery-life-estimator/ → URL is unknown to Google
+  ⚠ /business/nps/ → Discovered - currently not indexed
+  ⚠ /career/pay-gap/ → URL is unknown to Google
+  ⚠ /conversion/pressure-conv/ → URL is unknown to Google
+  ⚠ /education/exam-countdown/ → Discovered - currently not indexed
+  ⚠ /engineering/battery-life/ → URL is unknown to Google
+  ⚠ /family/college-savings/ → URL is unknown to Google
+  ⚠ /finance/savings-goal/ → Discovered - currently not indexed
+  ⚠ /guides/tip/ → URL is unknown to Google
+  ⚠ /homegarden/generator-size/ → URL is unknown to Google
+  ⚠ /science/doppler/ → URL is unknown to Google
+  ⚠ /tech/screen-resolution/ → Discovered - currently not indexed
+  ⚠ /auto/car-maintenance/ → Discovered - currently not indexed
+  ⚠ /business/freelance-rate/ → URL is unknown to Google
+  ⚠ /career/401k-match/ → URL is unknown to Google
+  ⚠ /construction/mulch/ → URL is unknown to Google
+  ⚠ /conversion/frequency-conv/ → URL is unknown to Google
+  ⚠ /education/words-pages/ → URL is unknown to Google
+  ⚠ /engineering/wire-gauge/ → URL is unknown to Google
+  ⚠ /everyday/paint/ → URL is unknown to Google
+  ⚠ /family/maternity-leave/ → URL is unknown to Google
+  ⚠ /finance/tax/ → URL is unknown to Google
+  ⚠ /food/eat-out-vs-cook/ → URL is unknown to Google
+  ⚠ /guides/gst-sales-tax/ → URL is unknown to Google
+  ⚠ /health/bsa/ → Discovered - currently not indexed
+  ⚠ /lifestyle/parental-leave/ → URL is unknown to Google
+  ⚠ /tech/cable-length/ → URL is unknown to Google
+  ⚠ /utilities/file-size/ → URL is unknown to Google
+  ⚠ /auto/tire-size/ → Discovered - currently not indexed
+🔍 GSC Batch Inspection — https://calcpromaster.com (limit 100)
+
+[1/2] Sitemap resubmit: HTTP 403
+[2/2] Inspecting 100 URLs (live sitemap has 1337)...
+
+  ⚠ /business/burn-rate/ → Discovered - currently not indexed
+  ⚠ /career/overtime-pay/ → URL is unknown to Google
+  ⚠ /construction/stairs/ → URL is unknown to Google
+  ⚠ /conversion/angle/ → URL is unknown to Google
+  ⚠ /engineering/led-resistor/ → URL is unknown to Google
+  ⚠ /finance/retirement/ → Discovered - currently not indexed
+  ⚠ /food/cooking-time/ → URL is unknown to Google
+  ⚠ /guides/currency-conversion/ → URL is unknown to Google
+  ⚠ /homegarden/ac-size/ → Discovered - currently not indexed
+  ⚠ /math/combinations/ → Discovered - currently not indexed
+  ⚠ /utilities/uuid-gen/ → Discovered - currently not indexed
+  ⚠ /auto/ev-vs-gas-petrol/ → URL is unknown to Google
+  ⚠ /business/mrr/ → URL is unknown to Google
+  ⚠ /career/bonus-calc/ → Discovered - currently not indexed
+  ⚠ /construction/wallpaper/ → URL is unknown to Google
+  ⚠ /education/test-score/ → Discovered - currently not indexed
+  ⚠ /engineering/capacitor/ → URL is unknown to Google
+  ⚠ /finance/investment/ → URL is unknown to Google
+  ⚠ /food/meal-prep/ → Discovered - currently not indexed
+  ⚠ /guides/discount/ → URL is unknown to Google
+  ⚠ /health/macros/ → Discovered - currently not indexed
+  ⚠ /lifestyle/flight-cost-per-hour/ → URL is unknown to Google
+  ⚠ /math/lcm-gcd/ → URL is unknown to Google
+  ⚠ /regional/home-loan-emi-india/ → URL is unknown to Google
+  ⚠ /science/momentum/ → Discovered - currently not indexed
+  ⚠ /tech/battery-life-estimator/ → Discovered - currently not indexed
+  ⚠ /business/nps/ → URL is unknown to Google
+  ⚠ /career/pay-gap/ → URL is unknown to Google
+  ⚠ /conversion/pressure-conv/ → Discovered - currently not indexed
+  ⚠ /education/exam-countdown/ → URL is unknown to Google
+  ⚠ /engineering/battery-life/ → URL is unknown to Google
+  ⚠ /family/college-savings/ → URL is unknown to Google
+  ⚠ /finance/savings-goal/ → URL is unknown to Google
+  ⚠ /guides/tip/ → URL is unknown to Google
+  ⚠ /homegarden/generator-size/ → Discovered - currently not indexed
+  ⚠ /science/doppler/ → URL is unknown to Google
+  ⚠ /tech/screen-resolution/ → Discovered - currently not indexed
+  ⚠ /auto/car-maintenance/ → Discovered - currently not indexed
+  ⚠ /business/freelance-rate/ → Discovered - currently not indexed
+  ⚠ /career/401k-match/ → Discovered - currently not indexed
+  ⚠ /construction/mulch/ → URL is unknown to Google
+  ⚠ /conversion/frequency-conv/ → Discovered - currently not indexed
+  ⚠ /education/words-pages/ → URL is unknown to Google
+  ⚠ /engineering/wire-gauge/ → Discovered - currently not indexed
+  ⚠ /everyday/paint/ → Discovered - currently not indexed
+  ⚠ /family/maternity-leave/ → Discovered - currently not indexed
+  ⚠ /finance/tax/ → URL is unknown to Google
+  ⚠ /food/eat-out-vs-cook/ → URL is unknown to Google
+  ⚠ /guides/gst-sales-tax/ → URL is unknown to Google
+  ⚠ /health/bsa/ → URL is unknown to Google
+  ⚠ /lifestyle/parental-leave/ → URL is unknown to Google
+  ⚠ /tech/cable-length/ → URL is unknown to Google
+  ⚠ /utilities/file-size/ → URL is unknown to Google
+  ⚠ /auto/tire-size/ → URL is unknown to Google
+  ⚠ /business/pricing/ → URL is unknown to Google
+  ⚠ /career/stock-options/ → URL is unknown to Google
+  ⚠ /construction/soil/ → URL is unknown to Google
+  ⚠ /conversion/temperature/ → URL is unknown to Google
+  ⚠ /education/citation/ → URL is unknown to Google
+  ⚠ /engineering/rpm/ → URL is unknown to Google
+  ⚠ /family/life-insurance/ → Discovered - currently not indexed
+  ⚠ /finance/sales-tax/ → URL is unknown to Google
+  ⚠ /food/fast-food-calories/ → URL is unknown to Google
+  ⚠ /guides/glossary/ → URL is unknown to Google
+
+=== Coverage tally (live URLs) ===
+  42	URL is unknown to Google
+  36	Submitted and indexed
+  22	Discovered - currently not indexed
+💾 data/batches/batch-skip200.json

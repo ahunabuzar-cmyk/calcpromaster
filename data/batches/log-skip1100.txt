@@ -1,0 +1,101 @@
+🔍 GSC Batch Inspection — https://calcpromaster.com (limit 100)
+
+[1/2] Sitemap resubmit: HTTP 403
+[2/2] Inspecting 100 URLs (live sitemap has 1337)...
+
+  ⚠ /math/hypergeometric/ → URL is unknown to Google
+  ⚠ /tech/load-test-users/ → Discovered - currently not indexed
+  ⚠ /engineering/hydraulic-press/ → URL is unknown to Google
+  ⚠ /finance/bond-price/ → Discovered - currently not indexed
+  ⚠ /guides/utilities/ → Discovered - currently not indexed
+  ⚠ /engineering/radiation-shielding/ → URL is unknown to Google
+  ⚠ /finance/cd-calculator/ → URL is unknown to Google
+  ⚠ /guides/cagr/ → Discovered - currently not indexed
+  ⚠ /math/significant-figures/ → Discovered - currently not indexed
+  ⚠ /science/calorimetry/ → URL is unknown to Google
+  ⚠ /tech/wifi-throughput/ → URL is unknown to Google
+  ⚠ /engineering/steam-consumption/ → URL is unknown to Google
+  ⚠ /finance/annuity-payout/ → Discovered - currently not indexed
+  ⚠ /guides/body-fat/ → Page with redirect
+  ⚠ /tech/data-usage-est/ → Discovered - currently not indexed
+  ⚠ /engineering/noise-level/ → URL is unknown to Google
+  ⚠ /finance/dividend-yield/ → URL is unknown to Google
+  ⚠ /guides/credit-card-minimum/ → URL is unknown to Google
+  ⚠ /math/midpoint/ → Discovered - currently not indexed
+  ⚠ /science/air-density/ → Discovered - currently not indexed
+  ⚠ /tech/image-size-calc/ → Discovered - currently not indexed
+  ⚠ /engineering/rcf-gforce/ → URL is unknown to Google
+  ⚠ /finance/rule-of-72/ → Discovered - currently not indexed
+  ⚠ /guides/debt-ratio/ → Page with redirect
+  ⚠ /math/trapezoid/ → Discovered - currently not indexed
+  ⚠ /science/angular-momentum/ → Discovered - currently not indexed
+  ⚠ /science/bullet-drop/ → URL is unknown to Google
+  ⚠ /finance/loan-payoff/ → URL is unknown to Google
+  ⚠ /guides/heart-rate-zones/ → URL is unknown to Google
+  ⚠ /math/sector-area/ → Discovered - currently not indexed
+  ⚠ /science/redshift/ → URL is unknown to Google
+  ⚠ /finance/retirement-withdrawal/ → Discovered - currently not indexed
+  ⚠ /guides/net-worth/ → Discovered - currently not indexed
+  ⚠ /math/pyramid/ → URL is unknown to Google
+  ⚠ /science/buffer-ph/ → Discovered - currently not indexed
+  ⚠ /finance/inflation-adjusted/ → Discovered - currently not indexed
+  ⚠ /guides/npv-vs-irr/ → URL is unknown to Google
+  ⚠ /math/vector-add/ → URL is unknown to Google
+  ⚠ /science/machine-efficiency/ → URL is unknown to Google
+  ⚠ /finance/tax-equivalent-yield/ → URL is unknown to Google
+  ⚠ /guides/rent-vs-buy/ → URL is unknown to Google
+  ⚠ /math/angle-between-vectors/ → URL is unknown to Google
+  ⚠ /science/dew-point/ → URL is unknown to Google
+  ⚠ /guides/sleep-cycles/ → URL is unknown to Google
+  ⚠ /math/annulus-area/ → Discovered - currently not indexed
+  ⚠ /finance/times-interest-earned/ → Discovered - currently not indexed
+  ⚠ /math/hexagon-area/ → Alternate page with proper canonical tag
+  ⚠ /science/grahams-law/ → URL is unknown to Google
+  ⚠ /finance/quick-ratio/ → URL is unknown to Google
+  ⚠ /math/parallelogram-area/ → Discovered - currently not indexed
+  ⚠ /science/osmotic-pressure/ → URL is unknown to Google
+  ⚠ /finance/ebitda/ → Discovered - currently not indexed
+  ⚠ /math/ellipse-area/ → URL is unknown to Google
+  ⚠ /science/sound-intensity/ → Discovered - currently not indexed
+  ⚠ /finance/enterprise-value/ → Discovered - currently not indexed
+  ⚠ /math/law-of-sines/ → Discovered - currently not indexed
+  ⚠ /science/angular-velocity/ → URL is unknown to Google
+  ⚠ /finance/wacc/ → URL is unknown to Google
+  ⚠ /math/weighted-average/ → URL is unknown to Google
+  ⚠ /finance/sharpe-ratio/ → URL is unknown to Google
+  ⚠ /finance/geometric-mean/ → URL is unknown to Google
+  ⚠ /math/quartile/ → URL is unknown to Google
+  ⚠ /finance/debt-snowball/ → URL is unknown to Google
+  ⚠ /math/percent-error/ → Discovered - currently not indexed
+  ⚠ /finance/payday-loan-cost/ → URL is unknown to Google
+  ⚠ /math/quartiles/ → URL is unknown to Google
+  ⚠ /finance/emergency-fund-rate/ → URL is unknown to Google
+  ⚠ /math/rms/ → URL is unknown to Google
+  ⚠ /math/covariance/ → Discovered - currently not indexed
+  ⚠ /finance/closing-costs/ → URL is unknown to Google
+  ⚠ /math/exponential-prob/ → Discovered - currently not indexed
+  ⚠ /finance/cap-rate/ → URL is unknown to Google
+  ⚠ /math/expected-value/ → URL is unknown to Google
+  ⚠ /finance/student-loan-repayment/ → URL is unknown to Google
+  ⚠ /math/euler-totient/ → Discovered - currently not indexed
+  ⚠ /math/completing-square/ → Discovered - currently not indexed
+  ⚠ /finance/fha-loan/ → Discovered - currently not indexed
+  ⚠ /math/partial-fractions/ → URL is unknown to Google
+  ⚠ /finance/va-loan/ → Discovered - currently not indexed
+  ⚠ /math/direct-variation/ → Discovered - currently not indexed
+  ⚠ /finance/reverse-mortgage/ → URL is unknown to Google
+  ⚠ /finance/house-affordability/ → Discovered - currently not indexed
+  ⚠ /math/spherical-cap/ → Discovered - currently not indexed
+  ⚠ /finance/mortgage-refinance/ → URL is unknown to Google
+  ⚠ /finance/crypto-gains/ → Discovered - currently not indexed
+  ⚠ /math/series-sum-ap/ → URL is unknown to Google
+  ⚠ /finance/price-to-earnings/ → Discovered - currently not indexed
+  ⚠ /math/sigma-notation/ → URL is unknown to Google
+
+=== Coverage tally (live URLs) ===
+  48	URL is unknown to Google
+  37	Discovered - currently not indexed
+  12	Submitted and indexed
+  2	Page with redirect
+  1	Alternate page with proper canonical tag
+💾 data/batches/batch-skip1100.json

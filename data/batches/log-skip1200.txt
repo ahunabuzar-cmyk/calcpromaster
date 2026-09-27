@@ -1,0 +1,104 @@
+🔍 GSC Batch Inspection — https://calcpromaster.com (limit 100)
+
+[1/2] Sitemap resubmit: HTTP 403
+[2/2] Inspecting 100 URLs (live sitemap has 1337)...
+
+  ⚠ /finance/dividend-discount/ → Discovered - currently not indexed
+  ⚠ /math/combination-repeat/ → Discovered - currently not indexed
+  ⚠ /math/permutation-repeat/ → URL is unknown to Google
+  ⚠ /finance/black-scholes/ → URL is unknown to Google
+  ⚠ /math/probability-odds/ → URL is unknown to Google
+  ⚠ /finance/bond-duration/ → URL is unknown to Google
+  ⚠ /math/negative-binomial/ → Discovered - currently not indexed
+  ⚠ /finance/growing-perpetuity/ → URL is unknown to Google
+  ⚠ /finance/tax-loss-harvest/ → Discovered - currently not indexed
+  ⚠ /math/secant-tangent/ → URL is unknown to Google
+  ⚠ /finance/savings-rate/ → Discovered - currently not indexed
+  ⚠ /math/inscribed-angle/ → URL is unknown to Google
+  ⚠ /finance/envelope-budget/ → Discovered - currently not indexed
+  ⚠ /math/sector-perimeter/ → URL is unknown to Google
+  ⚠ /finance/car-lease-calculator/ → Discovered - currently not indexed
+  ⚠ /math/ellipse-perimeter/ → Discovered - currently not indexed
+  ⚠ /finance/cost-of-living/ → URL is unknown to Google
+  ⚠ /math/rectangular-solid/ → URL is unknown to Google
+  ⚠ /finance/debt-consolidation/ → Discovered - currently not indexed
+  ⚠ /math/triangular-prism/ → Discovered - currently not indexed
+  ⚠ /finance/yield-to-maturity/ → URL is unknown to Google
+  ⚠ /math/octahedron-volume/ → URL is unknown to Google
+  ⚠ /finance/gross-rent-multiplier/ → Discovered - currently not indexed
+  ⚠ /math/icosahedron-volume/ → Discovered - currently not indexed
+  ⚠ /finance/current-ratio-finance/ → Discovered - currently not indexed
+  ⚠ /math/bitwise-xor/ → URL is unknown to Google
+  ⚠ /finance/accounts-receivable-turnover/ → URL is unknown to Google
+  ⚠ /math/shift-cipher/ → Discovered - currently not indexed
+  ⚠ /finance/operating-margin/ → URL is unknown to Google
+  ⚠ /math/units-per-person/ → Discovered - currently not indexed
+  ⚠ /finance/net-profit-margin/ → Discovered - currently not indexed
+  ⚠ /math/rate-x-time/ → Discovered - currently not indexed
+  ⚠ /finance/coverage-ratio/ → Discovered - currently not indexed
+  ⚠ /math/work-rate-together/ → Discovered - currently not indexed
+  ⚠ /finance/home-equity/ → Discovered - currently not indexed
+  ⚠ /math/digital-root/ → URL is unknown to Google
+  ⚠ /finance/cash-on-cash/ → Discovered - currently not indexed
+  ⚠ /math/mixture-percent/ → Discovered - currently not indexed
+  ⚠ /finance/loan-balance/ → URL is unknown to Google
+  ⚠ /finance/price-to-rent/ → URL is unknown to Google
+  ⚠ /finance/fico-simulator/ → URL is unknown to Google
+  ⚠ /finance/discounted-payback/ → URL is unknown to Google
+  ⚠ /finance/portfolio-return/ → URL is unknown to Google
+  ⚠ /finance/payroll-tax/ → URL is unknown to Google
+  ⚠ /finance/standard-deduction/ → Discovered - currently not indexed
+  ⚠ /finance/home-office-deduction/ → Discovered - currently not indexed
+  ⚠ /finance/estimated-tax/ → URL is unknown to Google
+  ⚠ /finance/diversification/ → Discovered - currently not indexed
+  ⚠ /finance/forex-pip/ → Discovered - currently not indexed
+  ⚠ /finance/payback-period/ → Discovered - currently not indexed
+  ⚠ /finance/t-bill/ → URL is unknown to Google
+  ⚠ /finance/cagr/ → Discovered - currently not indexed
+  ⚠ /finance/capm/ → Discovered - currently not indexed
+  ⚠ /finance/dcf/ → URL is unknown to Google
+  ⚠ /finance/debt-to-equity/ → URL is unknown to Google
+  ⚠ /finance/sip-step-up/ → URL is unknown to Google
+  ⚠ /finance/fixed-deposit-vs-recurring/ → URL is unknown to Google
+  ⚠ /finance/espp/ → Discovered - currently not indexed
+  ⚠ /finance/roth-vs-traditional/ → Discovered - currently not indexed
+  ⚠ /finance/recast-mortgage/ → URL is unknown to Google
+  ⚠ /finance/biweekly-mortgage/ → Discovered - currently not indexed
+  ⚠ /finance/mortgage-points/ → URL is unknown to Google
+  ⚠ /finance/rent-affordability/ → Discovered - currently not indexed
+  ⚠ /finance/dividend-reinvestment/ → URL is unknown to Google
+  ⚠ /finance/stock-split/ → Discovered - currently not indexed
+  ⚠ /finance/eps-calculator/ → URL is unknown to Google
+  ⚠ /finance/book-value-share/ → Discovered - currently not indexed
+  ⚠ /finance/net-operating-income/ → Discovered - currently not indexed
+  ⚠ /finance/credit-utilization/ → URL is unknown to Google
+  ⚠ /finance/apy-calculator/ → URL is unknown to Google
+  ⚠ /finance/lump-sum-vs-sip/ → URL is unknown to Google
+  ⚠ /finance/pmi-calculator/ → URL is unknown to Google
+  ⚠ /finance/pension-lump-sum/ → URL is unknown to Google
+  ⚠ /finance/dso/ → Discovered - currently not indexed
+  ⚠ /finance/payout-ratio/ → Discovered - currently not indexed
+  ⚠ /finance/sortino-ratio/ → Discovered - currently not indexed
+  ⚠ /finance/max-drawdown/ → Discovered - currently not indexed
+  ⚠ /finance/zero-coupon-bond/ → URL is unknown to Google
+  ⚠ /finance/cd-ladder/ → Discovered - currently not indexed
+  ⚠ /finance/ibond-value/ → URL is unknown to Google
+  ⚠ /finance/put-call-parity/ → Discovered - currently not indexed
+  ⚠ /finance/position-size/ → Discovered - currently not indexed
+  ⚠ /finance/stop-loss/ → Discovered - currently not indexed
+  ⚠ /finance/cost-basis-avg/ → Discovered - currently not indexed
+  ⚠ /finance/dca-calculator/ → Discovered - currently not indexed
+  ⚠ /finance/staking-rewards/ → Discovered - currently not indexed
+  ⚠ /finance/kelly-criterion/ → URL is unknown to Google
+  ⚠ /finance/value-at-risk/ → Discovered - currently not indexed
+  ⚠ /finance/ev-ebitda/ → Discovered - currently not indexed
+  ⚠ /finance/peg-ratio/ → URL is unknown to Google
+  ⚠ /finance/free-cash-flow/ → URL is unknown to Google
+  ⚠ /finance/interest-coverage/ → URL is unknown to Google
+  ⚠ /finance/asset-turnover/ → URL is unknown to Google
+
+=== Coverage tally (live URLs) ===
+  49	Discovered - currently not indexed
+  44	URL is unknown to Google
+  7	Submitted and indexed
+💾 data/batches/batch-skip1200.json

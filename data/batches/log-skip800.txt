@@ -1,0 +1,64 @@
+🔍 GSC Batch Inspection — https://calcpromaster.com (limit 100)
+
+[1/2] Sitemap resubmit: HTTP 403
+[2/2] Inspecting 100 URLs (live sitemap has 1337)...
+
+  ⚠ /food/homebrew-abv/ → Discovered - currently not indexed
+  ⚠ /guides/ev-vs-petrol/ → URL is unknown to Google
+  ⚠ /health/ovulation-calculator/ → URL is unknown to Google
+  ⚠ /math/complex-modulus/ → URL is unknown to Google
+  ⚠ /regional/gst-calculator/ → Alternate page with proper canonical tag
+  ⚠ /auto/toll-cost/ → URL is unknown to Google
+  ⚠ /business/ab-test-significance/ → URL is unknown to Google
+  ⚠ /career/vacation-days/ → URL is unknown to Google
+  ⚠ /conversion/acceleration-conv/ → URL is unknown to Google
+  ⚠ /engineering/capacitor-energy/ → URL is unknown to Google
+  ⚠ /family/baby-milestones/ → URL is unknown to Google
+  ⚠ /finance/apr/ → URL is unknown to Google
+  ⚠ /math/mean-median-mode/ → Discovered - currently not indexed
+  ⚠ /regional/uk-ni/ → URL is unknown to Google
+  ⚠ /science/heat-transfer/ → URL is unknown to Google
+  ⚠ /tech/ascii-table/ → Discovered - currently not indexed
+  ⚠ /career/timesheet-hours/ → Discovered - currently not indexed
+  ⚠ /construction/septic-size/ → URL is unknown to Google
+  ⚠ /science/boyle-law/ → URL is unknown to Google
+  ⚠ /tech/awg-reference/ → Discovered - currently not indexed
+  ⚠ /auto/bus-vs-car/ → Discovered - currently not indexed
+  ⚠ /business/retainer-value/ → Discovered - currently not indexed
+  ⚠ /career/shift-differential/ → Discovered - currently not indexed
+  ⚠ /construction/plaster/ → URL is unknown to Google
+  ⚠ /education/percentile-rank/ → URL is unknown to Google
+  ⚠ /finance/capital-gains/ → Excluded by ‘noindex’ tag
+  ⚠ /fitness/sweat-rate/ → Discovered - currently not indexed
+  ⚠ /guides/wedding-budget/ → URL is unknown to Google
+  ⚠ /health/cholesterol-ratio/ → URL is unknown to Google
+  ⚠ /regional/canada-cpp/ → URL is unknown to Google
+  ⚠ /science/combined-gas-law/ → URL is unknown to Google
+  ⚠ /tech/aspect-ratio/ → URL is unknown to Google
+  ⚠ /auto/ebike-range/ → URL is unknown to Google
+  ⚠ /science/wave-speed/ → URL is unknown to Google
+  ⚠ /everyday/lottery-odds/ → URL is unknown to Google
+  ⚠ /family/family-tree-generation/ → URL is unknown to Google
+  ⚠ /finance/dividend/ → Discovered - currently not indexed
+  ⚠ /guides/freelance-rate-card/ → URL is unknown to Google
+  ⚠ /homegarden/compost-bin/ → Discovered - currently not indexed
+  ⚠ /science/moment-of-inertia/ → URL is unknown to Google
+  ⚠ /engineering/rc-time-constant/ → Discovered - currently not indexed
+  ⚠ /engineering/cable-sizing/ → Discovered - currently not indexed
+  ⚠ /finance/fire/ → Discovered - currently not indexed
+  ⚠ /guides/screen-time/ → Discovered - currently not indexed
+  ⚠ /homegarden/firepit-size/ → URL is unknown to Google
+  ⚠ /lifestyle/sourdough-hydration/ → URL is unknown to Google
+  ⚠ /math/golden-ratio/ → URL is unknown to Google
+  ⚠ /tech/font-size-conv/ → URL is unknown to Google
+  ⚠ /construction/ceiling-tile/ → URL is unknown to Google
+  ⚠ /engineering/ventilation-cfm/ → URL is unknown to Google
+  ⚠ /guides/electricity-bill/ → URL is unknown to Google
+
+=== Coverage tally (live URLs) ===
+  49	Submitted and indexed
+  34	URL is unknown to Google
+  15	Discovered - currently not indexed
+  1	Alternate page with proper canonical tag
+  1	Excluded by ‘noindex’ tag
+💾 data/batches/batch-skip800.json

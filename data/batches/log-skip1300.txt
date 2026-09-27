@@ -1,0 +1,43 @@
+🔍 GSC Batch Inspection — https://calcpromaster.com (limit 100)
+
+[1/2] Sitemap resubmit: HTTP 403
+[2/2] Inspecting 37 URLs (live sitemap has 1337)...
+
+  ⚠ /finance/runway-months/ → URL is unknown to Google
+  ⚠ /finance/effective-tax-rate/ → Discovered - currently not indexed
+  ⚠ /finance/quarterly-tax/ → URL is unknown to Google
+  ⚠ /finance/late-fee-interest/ → URL is unknown to Google
+  ⚠ /finance/factoring-fee/ → URL is unknown to Google
+  ⚠ /finance/royalty-payment/ → URL is unknown to Google
+  ⚠ /finance/franchise-cost/ → URL is unknown to Google
+  ⚠ /finance/food-cost-percent/ → URL is unknown to Google
+  ⚠ /finance/menu-price/ → Discovered - currently not indexed
+  ⚠ /finance/rmd/ → Discovered - currently not indexed
+  ⚠ /finance/hsa-growth/ → URL is unknown to Google
+  ⚠ /finance/noi/ → URL is unknown to Google
+  ⚠ /finance/price-per-sqft/ → URL is unknown to Google
+  ⚠ /finance/deposit-interest/ → URL is unknown to Google
+  ⚠ /finance/purchasing-power/ → URL is unknown to Google
+  ⚠ /finance/apr-annual/ → Discovered - currently not indexed
+  ⚠ /finance/heloc-payment/ → Discovered - currently not indexed
+  ⚠ /finance/pmi-drop/ → Discovered - currently not indexed
+  ⚠ /finance/escrow-analysis/ → URL is unknown to Google
+  ⚠ /finance/portfolio-beta/ → Discovered - currently not indexed
+  ⚠ /finance/yield-to-worst/ → URL is unknown to Google
+  ⚠ /finance/coupon-payment/ → URL is unknown to Google
+  ⚠ /finance/clean-dirty-price/ → URL is unknown to Google
+  ⚠ /finance/convexity/ → Discovered - currently not indexed
+  ⚠ /finance/duration-bond/ → URL is unknown to Google
+  ⚠ /finance/appreciation-forecast/ → URL is unknown to Google
+  ⚠ /finance/rent-vs-sell/ → Discovered - currently not indexed
+  ⚠ /finance/seller-net/ → URL is unknown to Google
+  ⚠ /finance/points-breakeven/ → URL is unknown to Google
+  ⚠ /finance/cap-rate-conv/ → Discovered - currently not indexed
+  ⚠ /finance/rule-of-40/ → URL is unknown to Google
+  ⚠ /finance/cost-of-delay/ → URL is unknown to Google
+
+=== Coverage tally (live URLs) ===
+  22	URL is unknown to Google
+  10	Discovered - currently not indexed
+  5	Submitted and indexed
+💾 data/batches/batch-skip1300.json

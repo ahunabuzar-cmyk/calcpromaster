@@ -1,0 +1,68 @@
+🔍 GSC Batch Inspection — https://calcpromaster.com (limit 100)
+
+[1/2] Sitemap resubmit: HTTP 403
+[2/2] Inspecting 100 URLs (live sitemap has 1337)...
+
+  ⚠ /engineering/sound-level/ → Discovered - currently not indexed
+  ⚠ /family/babysitter-rate/ → Discovered - currently not indexed
+  ⚠ /finance/net-worth-calculator/ → URL is unknown to Google
+  ⚠ /health/body-fat-navy/ → URL is unknown to Google
+  ⚠ /homegarden/stair-calculator/ → URL is unknown to Google
+  ⚠ /math/modular/ → Discovered - currently not indexed
+  ⚠ /science/molar-mass/ → URL is unknown to Google
+  ⚠ /utilities/rounding-calc/ → URL is unknown to Google
+  ⚠ /business/working-capital/ → Discovered - currently not indexed
+  ⚠ /career/redundancy-pay/ → URL is unknown to Google
+  ⚠ /conversion/radiation-conv/ → Discovered - currently not indexed
+  ⚠ /education/letter-grade/ → Excluded by ‘noindex’ tag
+  ⚠ /engineering/shaft-power/ → URL is unknown to Google
+  ⚠ /family/screen-time/ → URL is unknown to Google
+  ⚠ /finance/rent-vs-buy/ → URL is unknown to Google
+  ⚠ /fitness/burpee-test/ → Discovered - currently not indexed
+  ⚠ /food/calorie-per-meal/ → URL is unknown to Google
+  ⚠ /guides/passwords/ → Discovered - currently not indexed
+  ⚠ /health/calorie-deficit/ → Discovered - currently not indexed
+  ⚠ /lifestyle/pet-food-cost/ → Discovered - currently not indexed
+  ⚠ /math/complex/ → URL is unknown to Google
+  ⚠ /regional/esic-calculator/ → Discovered - currently not indexed
+  ⚠ /utilities/coin-flip/ → URL is unknown to Google
+  ⚠ /auto/bike-fuel/ → Discovered - currently not indexed
+  ⚠ /business/cash-flow-statement/ → URL is unknown to Google
+  ⚠ /career/self-employment-tax/ → Discovered - currently not indexed
+  ⚠ /conversion/density-conv/ → URL is unknown to Google
+  ⚠ /engineering/spring-rate/ → URL is unknown to Google
+  ⚠ /finance/refinance/ → URL is unknown to Google
+  ⚠ /food/rice-water/ → URL is unknown to Google
+  ⚠ /guides/baby-cost/ → URL is unknown to Google
+  ⚠ /homegarden/closet-organizer/ → Discovered - currently not indexed
+  ⚠ /science/gravitational-force/ → URL is unknown to Google
+  ⚠ /business/revenue-per-employee/ → URL is unknown to Google
+  ⚠ /career/freelance-daily/ → Discovered - currently not indexed
+  ⚠ /construction/deck-calculator/ → URL is unknown to Google
+  ⚠ /conversion/viscosity-conv/ → URL is unknown to Google
+  ⚠ /engineering/resonant-frequency/ → URL is unknown to Google
+  ⚠ /finance/home-afford/ → Discovered - currently not indexed
+  ⚠ /fitness/row-standards/ → URL is unknown to Google
+  ⚠ /guides/ideal-weight/ → Discovered - currently not indexed
+  ⚠ /tech/base64-encode/ → URL is unknown to Google
+  ⚠ /utilities/date-add/ → URL is unknown to Google
+  ⚠ /auto/stopping-distance/ → URL is unknown to Google
+  ⚠ /career/monthly-goal/ → URL is unknown to Google
+  ⚠ /construction/concrete-bags/ → Discovered - currently not indexed
+  ⚠ /conversion/bit-rate-conv/ → Discovered - currently not indexed
+  ⚠ /engineering/transformer-ratio/ → Discovered - currently not indexed
+  ⚠ /finance/currency-converter/ → URL is unknown to Google
+  ⚠ /food/egg-boil/ → URL is unknown to Google
+  ⚠ /guides/bmr/ → Discovered - currently not indexed
+  ⚠ /health/fasting-calculator/ → URL is unknown to Google
+  ⚠ /science/molarity/ → URL is unknown to Google
+  ⚠ /tech/base64-decode/ → URL is unknown to Google
+  ⚠ /utilities/age-exact/ → URL is unknown to Google
+  ⚠ /auto/fuel-efficiency/ → URL is unknown to Google
+
+=== Coverage tally (live URLs) ===
+  44	Submitted and indexed
+  35	URL is unknown to Google
+  20	Discovered - currently not indexed
+  1	Excluded by ‘noindex’ tag
+💾 data/batches/batch-skip500.json

@@ -10,8 +10,9 @@
 //   3. Writes data/gsc-inspect-batch.json + prints a verdict summary.
 //
 // Quota: URL Inspection API = 2000/day, 600/min → 100 URLs with 250ms gap is safe.
-// Usage: node scripts/gsc-batch-inspect.cjs [--limit 100] [--skip 60]
+// Usage: node scripts/gsc-batch-inspect.cjs [--limit 100] [--skip 60] [--out data/x.json]
 //   --skip N: skip the first N sitemap URLs (batch #2 starts at 60 — batch #1 covered them)
+//   --out: output JSON path (default data/gsc-inspect-batch.json) — lets batches run in parallel
 // ============================================================
 'use strict';
 const https = require('https');
@@ -31,6 +32,11 @@ const SKIP = (() => {
   const i = process.argv.indexOf('--skip');
   const v = i >= 0 ? parseInt(process.argv[i + 1], 10) : 0;
   return Number.isFinite(v) && v >= 0 ? v : 0;
+})();
+const OUT = (() => {
+  const i = process.argv.indexOf('--out');
+  const v = i >= 0 ? process.argv[i + 1] : null;
+  return (v && v.trim()) || path.join(__dirname, '..', 'data', 'gsc-inspect-batch.json');
 })();
 
 function req(method, urlPath, body, token) {
@@ -85,15 +91,18 @@ function pickPriority(locs, limit, skip) {
     byCat.get(cat).push(u);
   }
   const cats = [...byCat.keys()].sort();
+  const catsTotal = cats.length;
   const picked = [];
   let i = 0;
-  while (picked.length < limit && cats.length) {
+  // Fill up to limit + skip so that later batches (--skip N) still get URLs:
+  // the combined list must be stable across runs for batches to tile cleanly.
+  while (picked.length < limit + skip && cats.length) {
     const cat = cats[i % cats.length];
     const arr = byCat.get(cat);
     if (arr.length) picked.push(arr.shift());
     else cats.splice(i % cats.length, 1);
     i++;
-    if (i > limit * cats.length * 4) break; // safety
+    if (i > (limit + skip) * (catsTotal + 1) * 2) break; // safety
   }
   // --skip applies to the FINAL combined list so batches tile cleanly:
   // batch #1 = first N, batch #2 = next N (--skip N), etc.
@@ -118,6 +127,11 @@ function pickPriority(locs, limit, skip) {
 
   const results = [];
   const tally = {};
+  const out = OUT;
+  const save = () => {
+    fs.mkdirSync(path.dirname(out), { recursive: true });
+    fs.writeFileSync(out, JSON.stringify({ ranAt: new Date().toISOString(), site: SITE_URL, sitemapResubmit: sm.status, count: results.length, results }, null, 2));
+  };
   for (let i = 0; i < urls.length; i++) {
     const u = urls[i];
     // URL Inspection API lives on the /v1 root (not /webmasters/v3) and the
@@ -139,18 +153,13 @@ function pickPriority(locs, limit, skip) {
     results.push({ url: u, verdict, coverage });
     const short = u.replace(SITE_URL, '') || '/';
     if (verdict !== 'PASS') console.log('  ⚠ ' + short + ' → ' + coverage);
+    if ((i + 1) % 10 === 0) save(); // survive interruptions
     await wait(250);
   }
 
   console.log('\n=== Coverage tally (live URLs) ===');
   for (const [k, v] of Object.entries(tally).sort((a, b) => b[1] - a[1])) console.log('  ' + v + '\t' + k);
 
-  const out = path.join(__dirname, '..', 'data', 'gsc-inspect-batch.json');
-  const save = () => {
-    fs.mkdirSync(path.dirname(out), { recursive: true });
-    fs.writeFileSync(out, JSON.stringify({ ranAt: new Date().toISOString(), site: SITE_URL, sitemapResubmit: sm.status, count: results.length, results }, null, 2));
-  };
-  if (results.length % 20 === 0) save(); // survive interruptions
   save();
   console.log('💾 ' + out);
 })().catch(e => { console.error('FAIL', e.message); process.exit(1); });

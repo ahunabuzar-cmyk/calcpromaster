@@ -1,0 +1,78 @@
+🔍 GSC Batch Inspection — https://calcpromaster.com (limit 100)
+
+[1/2] Sitemap resubmit: HTTP 403
+[2/2] Inspecting 100 URLs (live sitemap has 1337)...
+
+  ⚠ /lifestyle/lawn-fertilizer/ → URL is unknown to Google
+  ⚠ /math/checksum-luhn/ → Discovered - currently not indexed
+  ⚠ /science/hydrostatic-pressure/ → URL is unknown to Google
+  ⚠ /construction/stair-stringer/ → URL is unknown to Google
+  ⚠ /health/hba1c-eag/ → URL is unknown to Google
+  ⚠ /math/run-length/ → URL is unknown to Google
+  ⚠ /regional/india-take-home-salary/ → URL is unknown to Google
+  ⚠ /auto/power-to-weight/ → URL is unknown to Google
+  ⚠ /engineering/torque-wrench/ → URL is unknown to Google
+  ⚠ /finance/rental-yield/ → Discovered - currently not indexed
+  ⚠ /health/glycemic-load/ → Discovered - currently not indexed
+  ⚠ /homegarden/ceiling-fan-size/ → URL is unknown to Google
+  ⚠ /lifestyle/knit-gauge/ → URL is unknown to Google
+  ⚠ /science/reynolds-number/ → URL is unknown to Google
+  ⚠ /tech/download-time/ → Discovered - currently not indexed
+  ⚠ /construction/soffit-area/ → Discovered - currently not indexed
+  ⚠ /engineering/bearing-load/ → Discovered - currently not indexed
+  ⚠ /finance/loan-comparison/ → URL is unknown to Google
+  ⚠ /tech/audio-file-size/ → URL is unknown to Google
+  ⚠ /engineering/engine-efficiency/ → URL is unknown to Google
+  ⚠ /everyday/sunrise-sunset-length/ → Discovered - currently not indexed
+  ⚠ /finance/investment-growth/ → Discovered - currently not indexed
+  ⚠ /guides/grade-needed/ → URL is unknown to Google
+  ⚠ /health/map-calculator/ → URL is unknown to Google
+  ⚠ /homegarden/tree-spacing/ → URL is unknown to Google
+  ⚠ /tech/backup-size/ → Discovered - currently not indexed
+  ⚠ /finance/savings-comparison/ → Discovered - currently not indexed
+  ⚠ /guides/room-area/ → Discovered - currently not indexed
+  ⚠ /homegarden/grout-calc/ → URL is unknown to Google
+  ⚠ /math/pascal-triangle/ → URL is unknown to Google
+  ⚠ /science/pendulum/ → URL is unknown to Google
+  ⚠ /tech/screen-size/ → URL is unknown to Google
+  ⚠ /construction/fence-panel/ → Discovered - currently not indexed
+  ⚠ /engineering/tank-volume/ → Discovered - currently not indexed
+  ⚠ /finance/mortgage-payoff/ → URL is unknown to Google
+  ⚠ /guides/ac-size/ → Discovered - currently not indexed
+  ⚠ /health/iv-drip-rate/ → URL is unknown to Google
+  ⚠ /math/collatz/ → URL is unknown to Google
+  ⚠ /math/modular-exp/ → Discovered - currently not indexed
+  ⚠ /science/molality/ → Discovered - currently not indexed
+  ⚠ /tech/streaming-quality/ → URL is unknown to Google
+  ⚠ /construction/gravel-driveway/ → URL is unknown to Google
+  ⚠ /engineering/heat-exchanger/ → Discovered - currently not indexed
+  ⚠ /finance/graduated-payment/ → URL is unknown to Google
+  ⚠ /guides/protein-intake/ → Discovered - currently not indexed
+  ⚠ /health/creatinine-clearance/ → Discovered - currently not indexed
+  ⚠ /health/anion-gap/ → URL is unknown to Google
+  ⚠ /math/norm-dist-range/ → URL is unknown to Google
+  ⚠ /science/percent-yield/ → URL is unknown to Google
+  ⚠ /tech/code-line-count/ → URL is unknown to Google
+  ⚠ /construction/insulation-batts/ → Discovered - currently not indexed
+  ⚠ /engineering/pcb-trace/ → URL is unknown to Google
+  ⚠ /finance/balloon-payment/ → URL is unknown to Google
+  ⚠ /guides/loans-mortgages/ → URL is unknown to Google
+  ⚠ /health/qtc/ → URL is unknown to Google
+  ⚠ /math/dot-cross-product/ → Discovered - currently not indexed
+  ⚠ /tech/dbm-watts/ → Discovered - currently not indexed
+  ⚠ /construction/rafter-length/ → Discovered - currently not indexed
+  ⚠ /engineering/bolt-torque/ → URL is unknown to Google
+  ⚠ /everyday/heat-pump-savings/ → Discovered - currently not indexed
+  ⚠ /finance/interest-only/ → Discovered - currently not indexed
+  ⚠ /guides/tax-salary/ → URL is unknown to Google
+  ⚠ /health/ponderal-index/ → URL is unknown to Google
+  ⚠ /math/bayes-theorem/ → Discovered - currently not indexed
+  ⚠ /tech/api-cost/ → URL is unknown to Google
+  ⚠ /construction/shingle-squares/ → URL is unknown to Google
+  ⚠ /engineering/pulley/ → URL is unknown to Google
+
+=== Coverage tally (live URLs) ===
+  41	URL is unknown to Google
+  33	Submitted and indexed
+  26	Discovered - currently not indexed
+💾 data/batches/batch-skip900.json

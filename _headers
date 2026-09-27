@@ -13,6 +13,18 @@
 /js/data/*.js
   Cache-Control: no-cache
 
+# Immutable static assets: fonts and per-tool OG images are content-hashed at build
+# (or effectively never change) — a 1-year immutable lifetime kills repeat-visit
+# re-downloads (PageSpeed "efficient cache lifetimes" opportunity).
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/og/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/icons/*
+  Cache-Control: public, max-age=31536000, immutable
+
 # Top-level JS files (no content hash) — same revalidation strategy
 /js/*.js
   Cache-Control: no-cache

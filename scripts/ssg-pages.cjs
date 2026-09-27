@@ -669,17 +669,35 @@ for (const slug of ['favorites', 'history', 'compare']) {
   // the LCP-optimized hero and the CLS-safe skeleton that renderHome() reuses).
   // The SPA replaces #mainContent on boot anyway; this static block gives crawlers
   // a real crawl path to every category and hub without touching the hero.
-  const content = '<h2 class="section-title">All Categories</h2><div class="home-cat-links">' + catLinks + '</div>' +
-    '<h2 class="section-title">Category Comparisons</h2><div class="home-cat-links">' + hubLinks + '</div>' +
-    '<h2 class="section-title">Why CalcProMaster</h2>' +
-    '<p>Every calculator shows its formula, a step-by-step worked example, and the assumptions behind the result, so you can trust the numbers. Results are computed instantly in your browser and never leave your device.</p>';
+  // FAQ block (GEO/answer-alignment): real Q&A content crawlers + LLMs can read,
+  // mirrored by FAQPage JSON-LD below.
+  const faq = [
+    ['Are all calculators on CalcProMaster free?', 'Yes — all 1216+ calculators are completely free with no sign-up, no paywall and no usage limits. The site is supported by non-intrusive ads only.'],
+    ['Do I need to create an account or install anything?', 'No. Every calculator runs instantly in your browser — nothing to install, nothing to sign up for. Your history and favorites are stored only on your own device.'],
+    ['How accurate are the results?', 'Every calculator shows the exact formula it uses, a worked example and its assumptions. Results are computed in JavaScript with well-tested math libraries, and each page carries a "Last reviewed" date plus a public formula QA dashboard documenting the tests behind it.'],
+    ['Can I use these calculators offline?', 'Yes. CalcProMaster is a progressive web app (PWA): after your first visit the core calculators keep working without an internet connection.'],
+    ['How do I find the right calculator?', 'Use the search box at the top (it suggests tools as you type), browse the 20 category pages below, or start from a comparison hub that lines up similar calculators side by side.']
+  ];
+  const faqHtml = '<h2 class="section-title">Frequently Asked Questions</h2>' +
+    faq.map(([q, a]) => '<div class="home-faq-item"><h3>' + esc(q) + '</h3><p>' + esc(a) + '</p></div>').join('\n    ');
+  const faqLd = JSON.stringify({
+    '@context': 'https://schema.org', '@type': 'FAQPage',
+    mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } }))
+  }, null, 1);
+  const content = '<h2 class="section-title">All Calculator Categories</h2><div class="home-cat-links">' + catLinks + '</div>' +
+    '<h2 class="section-title">Calculator Category Comparisons</h2><div class="home-cat-links">' + hubLinks + '</div>' +
+    '<h2 class="section-title">Why Use CalcProMaster Calculators</h2>' +
+    '<p>Every calculator shows its formula, a step-by-step worked example, and the assumptions behind the result, so you can trust the numbers. Results are computed instantly in your browser and never leave your device.</p>' +
+    '\n    ' + faqHtml;
   let page = rewriteHead(SHELL, {
-    title: 'CalcProMaster — 1206+ Free Online Calculators',
-    desc: 'CalcProMaster — 1206+ free calculators for finance, health, math, science, engineering and everyday life. Step-by-step solutions, formulas, charts. No sign-up.',
-    canonical: '/', ogTitle: 'CalcProMaster — Free Online Calculators',
-    ogDesc: '1206+ free online calculators with step-by-step solutions, formulas and charts. No sign-up, no tracking.'
+    title: 'CalcProMaster — 1216+ Free Online Calculators for Finance, Health, Math & More',
+    desc: 'CalcProMaster — 1216+ free online calculators: loan EMI, mortgage, BMI, percentage, unit conversion and more across 20 categories. Step-by-step solutions, formulas and charts — no sign-up.',
+    canonical: '/', ogTitle: 'CalcProMaster — 1216+ Free Online Calculators',
+    ogDesc: '1216+ free online calculators with step-by-step solutions, formulas and charts. No sign-up, no tracking.'
   });
   page = rewriteMainAppend(page, content);
+  // Append the FAQPage schema as its own ld+json block before </body>.
+  page = page.replace('</body>', '  <script type="application/ld+json">\n  ' + faqLd + '\n  </script>\n</body>');
   writePage('', page);
 }
 

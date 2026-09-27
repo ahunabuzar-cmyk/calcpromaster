@@ -1,51 +1,111 @@
 {
-  "ranAt": "2026-09-26T12:18:36.155Z",
+  "ranAt": "2026-09-27T10:24:25.720Z",
   "site": "https://calcpromaster.com",
   "sitemapResubmit": 403,
-  "count": 9,
+  "count": 21,
   "results": [
     {
-      "url": "https://calcpromaster.com/family/baby-weight-gain/",
-      "verdict": "PASS",
-      "coverage": "Submitted and indexed"
-    },
-    {
-      "url": "https://calcpromaster.com/finance/loan-emi/",
-      "verdict": "NEUTRAL",
-      "coverage": "Excluded by ‘noindex’ tag"
-    },
-    {
-      "url": "https://calcpromaster.com/fitness/running-pace/",
-      "verdict": "NEUTRAL",
-      "coverage": "URL is unknown to Google"
-    },
-    {
-      "url": "https://calcpromaster.com/food/daily-calorie/",
-      "verdict": "NEUTRAL",
-      "coverage": "URL is unknown to Google"
-    },
-    {
-      "url": "https://calcpromaster.com/guides/percentage/",
-      "verdict": "NEUTRAL",
-      "coverage": "URL is unknown to Google"
-    },
-    {
-      "url": "https://calcpromaster.com/health/bmi/",
+      "url": "https://calcpromaster.com/math/percentage/",
       "verdict": "NEUTRAL",
       "coverage": "Discovered - currently not indexed"
     },
     {
-      "url": "https://calcpromaster.com/homegarden/room-area/",
+      "url": "https://calcpromaster.com/regional/rd-calculator/",
       "verdict": "PASS",
       "coverage": "Submitted and indexed"
     },
     {
-      "url": "https://calcpromaster.com/lifestyle/relocation-cost/",
+      "url": "https://calcpromaster.com/science/density/",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.com/tech/data-usage/",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.com/utilities/password-gen/",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.com/auto/mileage-calculator/",
       "verdict": "PASS",
       "coverage": "Submitted and indexed"
     },
     {
-      "url": "https://calcpromaster.com/math/scientific/",
+      "url": "https://calcpromaster.com/blog/bmi-honest-look/",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/business/cac/",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.com/career/tax-bracket/",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/construction/drywall/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/conversion/volume/",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/fitness/max-heart-rate/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/food/daily-water-intake/",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/guides/bmi/",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/health/body-fat/",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/homegarden/deck-stain/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/lifestyle/electricity-bill-saving/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/math/percent-change/",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/regional/ppf-calculator/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/science/force/",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/tech/video-size/",
       "verdict": "NEUTRAL",
       "coverage": "Discovered - currently not indexed"
     }

@@ -50,3 +50,18 @@ Sab free tier. Har ek ke liye: `docs/LINK-BUILDING-CHECKLIST.md` ka copy-paste b
 - Approval email: inbox + SPAM dono check (SaaSHub wale jaisa)
 - Jo listing LIVE ho: tracker mein Status=LIVE + date + anchor note
 - Kisi bhi site par "paid fast-track" mat lo — sab free tier se ho raha hai
+
+---
+
+## Peerlist Profile Bio (2026-09-28 — 3 options, sab 120+ chars, sab sach)
+
+**Option 1 (maker, recommended):**
+Building CalcProMaster — 1,216+ free online calculators that show the formula and a worked example behind every result. 100% client-side, no sign-up, works offline. Open source on GitHub. I care about honest math, fast pages and shipping weekly.
+
+**Option 2 (growth/SEO angle):**
+Maker of CalcProMaster — 1,216+ free calculators, each showing its formula and worked example. Open source, 100% client-side, works offline. Currently growing it organically: SEO, internal linking, and shipping something new every week.
+
+**Option 3 (freelance/collab angle):**
+Full-stack developer and maker. Building CalcProMaster: 1,216+ free online calculators, open source and 100% client-side. I obsess over page speed, honest UX and documenting the math behind every tool. Open to freelance and collabs.
+
+Profile tips: real photo (logo nahi), website link add karna (backlink yahi se aata hai), username ahunabuzar OK. Profile complete → phir LaunchPad submission (upar steps).

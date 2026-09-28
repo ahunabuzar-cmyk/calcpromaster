@@ -86,3 +86,5 @@ CalcProMaster — 1,200+ free online calculators for finance, health, math, scie
 
 **Features (semicolon-separated, REQUIRED — paste ye):**
 Loan EMI, mortgage, compound interest and retirement calculators; BMI, BMR, calorie and macro tools; percentage, fraction and statistics calculators; 20 categories with 1,200+ tools; formulas and worked examples on every page; interactive charts and visualizations; works offline as a PWA; no sign-up required, completely free
+
+> ⚠️ **UPDATE 2026-09-28:** 1000.tools ne REJECT kar diya — "focus on developer tools, SaaS products, and technology platforms". CalcProMaster unki categories mein fit nahi. Ye site ab target NAHI — steps upar sirf record ke liye. Iski jagah: Hacker News (Show HN), Slant.co answer, Indie Hackers post — ye teeno tracker mein pehle se hain.

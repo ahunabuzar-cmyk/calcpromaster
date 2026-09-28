@@ -14593,6 +14593,42 @@
    "knownAnswerTestCases": "SEE tests/unit/regional-takehome-batch23-qa.test.js",
    "reviewer": null,
    "notes": "Independent known-answer tests (no shared code) - batch #3"
+  },
+  {
+   "calculatorId": "ireland-take-home-salary",
+   "name": "Ireland Take-Home Salary Calculator",
+   "category": "regional",
+   "route": "/regional/ireland-take-home-salary",
+   "inputs": "Gross Annual Salary (EUR) (number); Tax Band Status (select Single vs Married one-income)",
+   "formula": "PAYE 2025: 20% up to 44,000 single (53,000 married one-income), 40% above, minus 4,000 standard credits (clamped at 0); USC 0.5% to 12,012, 2% to 27,382, 3% to 70,044, 8% above; PRSI 4.1% of gross; take-home = gross - PAYE - USC - PRSI",
+   "verificationStatus": "PASS",
+   "knownAnswerTestCases": "SEE tests/unit/regional-takehome-batch4-qa.test.js",
+   "reviewer": null,
+   "notes": "Independent known-answer tests (no shared code) - batch #4"
+  },
+  {
+   "calculatorId": "new-zealand-take-home-salary",
+   "name": "New Zealand Take-Home Salary Calculator",
+   "category": "regional",
+   "route": "/regional/new-zealand-take-home-salary",
+   "inputs": "Annual Salary (NZD) (number); KiwiSaver Rate (%) (number)",
+   "formula": "PAYE 2025-26 bands: 10.5% to 15,600, 17.5% to 53,500, 30% to 78,100, 33% to 180,000, 39% above; ACC earners levy 1.67% capped at 152,790; KiwiSaver employee rate (default 3%); take-home = gross - tax - ACC - KiwiSaver",
+   "verificationStatus": "PASS",
+   "knownAnswerTestCases": "SEE tests/unit/regional-takehome-batch4-qa.test.js",
+   "reviewer": null,
+   "notes": "Independent known-answer tests (no shared code) - batch #4"
+  },
+  {
+   "calculatorId": "south-africa-take-home-salary",
+   "name": "South Africa Take-Home Salary Calculator",
+   "category": "regional",
+   "route": "/regional/south-africa-take-home-salary",
+   "inputs": "Monthly Salary (ZAR) (number); Age Band (select Under 65 / 65+ / 75+)",
+   "formula": "SARS 2025-26 annual brackets 18/26/31/36/39/41/45% with cumulative constants (primary rebate built in); secondary rebate 9,444 from 65, tertiary +3,145 more at 75; UIF 1% of monthly salary capped at 177.12; take-home = monthly - annual tax/12 - UIF",
+   "verificationStatus": "PASS",
+   "knownAnswerTestCases": "SEE tests/unit/regional-takehome-batch4-qa.test.js",
+   "reviewer": null,
+   "notes": "Independent known-answer tests (no shared code) - batch #4"
   }
  ]
 }

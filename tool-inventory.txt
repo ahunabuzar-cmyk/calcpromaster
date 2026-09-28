@@ -1028,6 +1028,9 @@ regional|netherlands-take-home-salary|calc|salary,ruling
 regional|malaysia-take-home-salary|calc|salary,epf
 regional|hongkong-take-home-salary|calc|salary
 regional|uae-gratuity-calculator|calc|basic,years
+regional|ireland-take-home-salary|calc|salary,status
+regional|new-zealand-take-home-salary|calc|salary,ks
+regional|south-africa-take-home-salary|calc|salary,age
 science|ohms-law|calc|voltage,current
 science|density|calc|mass,volume
 science|force|calc|mass,accel

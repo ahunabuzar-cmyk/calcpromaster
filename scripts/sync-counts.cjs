@@ -147,7 +147,10 @@ function main() {
   // ---- 3. site-config runtime total (lazy ALL_TOOLS on calc pages) ----
   const cfgPath = path.join(ROOT, 'js', 'site-config.js');
   if (fs.existsSync(cfgPath)) {
-    const cfgSrc = fs.readFileSync(cfgPath, 'utf8');
+    let cfgSrc = fs.readFileSync(cfgPath, 'utf8');
+    let cfgDirty = false; // BOTH site-config fixes below must land in ONE write —
+    // the catCounts regex does not cover totalCalculators, so two separate
+    // writes made the second overwrite the first and drift survived syncs.
     const cfgRe = /(totalCalculators:\s*)\d+/;
     const cfgMatched = cfgSrc.match(cfgRe);
     if (!cfgMatched) {
@@ -159,7 +162,8 @@ function main() {
       drift++;
       console.log(`  ✗ js/site-config.js: totalCalculators=${cfgNum} does NOT match registry ${total}`);
       if (!isCheck) {
-        fs.writeFileSync(cfgPath, cfgSrc.replace(cfgRe, `$1${total}`), 'utf8');
+        cfgSrc = cfgSrc.replace(cfgRe, `$1${total}`);
+        cfgDirty = true;
         console.log(`  ✓ js/site-config.js: totalCalculators synced to ${total}`);
       }
     } else if (!isCheck) {
@@ -196,12 +200,14 @@ function main() {
       drift++;
       console.log(`  ✗ js/site-config.js: catCounts does NOT match registry`);
       if (!isCheck) {
-        fs.writeFileSync(cfgPath, cfgSrc.replace(ccRe, ccStr), 'utf8');
+        cfgSrc = cfgSrc.replace(ccRe, ccStr);
+        cfgDirty = true;
         console.log(`  ✓ js/site-config.js: catCounts synced (${Object.keys(catCounts).length} categories)`);
       }
     } else if (!isCheck) {
       console.log(`  ✓ js/site-config.js: catCounts consistent (${Object.keys(catCounts).length} categories)`);
     }
+    if (cfgDirty) fs.writeFileSync(cfgPath, cfgSrc, 'utf8');
   }
 
   if (isCheck) {

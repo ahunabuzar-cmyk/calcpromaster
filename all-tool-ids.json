@@ -5150,6 +5150,21 @@
   "file": "regional.js"
  },
  {
+  "id": "ireland-take-home-salary",
+  "name": "Ireland Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "new-zealand-take-home-salary",
+  "name": "New Zealand Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "south-africa-take-home-salary",
+  "name": "South Africa Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
   "id": "ohms-law",
   "name": "Ohm's Law Calculator",
   "file": "science.js"

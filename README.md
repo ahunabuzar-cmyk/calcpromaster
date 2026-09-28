@@ -4,7 +4,7 @@
 
 **Live site: https://calcpromaster.com**
 
-CalcProMaster is a free online calculator suite — **1,216+ calculators** across 20
+CalcProMaster is a free online calculator suite — **1,219+ calculators** across 20
 categories, every page server-rendered with step-by-step results, FAQ schema, and
 a mobile-first SPA shell.
 
@@ -26,7 +26,7 @@ hard-404 contract (unknown URLs return a real 404 — no soft-404 SEO leakage).
 ## Repo layout
 
 ```
-index.html, js/, styles.css   # SPA shell + 1,216 tool definitions (js/data/*.js)
+index.html, js/, styles.css   # SPA shell + 1,219 tool definitions (js/data/*.js)
 guides/, blog/                # static content pages (hand-written)
 scripts/                      # build & QA pipeline (see below)
 build-deploy.js               # → builds the deploy/ artifact (prerender + sitemap)

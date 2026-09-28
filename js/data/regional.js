@@ -258,6 +258,123 @@ const REGIONAL_TOOLS = [
     inputs: [{id:'basic',label:'Monthly Basic Salary (AED)',type:'number',def:10000},{id:'years',label:'Years of Service',type:'number',def:4}],
     calc: function (v) {       var first5 = Math.min(v.years, 5);       var rest = Math.max(0, v.years - 5);       var daily = v.basic * 12 / 365;       var grat = daily * 21 * first5 + daily * 30 * rest;       var cap = v.basic * 24;       var capped = grat > cap;       grat = Math.min(grat, cap);       return {         result: 'Est. gratuity: AED ' + grat.toFixed(0),         chart: Charts.donut([daily * 21 * first5, daily * 30 * rest || 0.0001], ['First 5 yrs (21 d/yr)', 'After 5 yrs (30 d/yr)']),         extra: 'Daily wage: AED ' + daily.toFixed(2) + ' (basic × 12 ÷ 365) | Eligibility: 1+ year of service | ' + (capped ? 'Capped at 2 years of wages' : 'Under the 2-year cap') + ' | New Labour Law (2022) rules'       };     },
     steps: function (v) {       var daily = v.basic * 12 / 365;       var first5 = Math.min(v.years, 5);       var rest = Math.max(0, v.years - 5);       return [         'Step 1: Daily wage = monthly basic × 12 ÷ 365 = AED ' + daily.toFixed(2) + ' (allowances excluded by law)',         'Step 2: First 5 years: 21 days of basic per year = AED ' + (daily * 21 * first5).toFixed(0),         rest > 0 ? 'Step 3: After 5 years: 30 days of basic per year = AED ' + (daily * 30 * rest).toFixed(0) : 'Step 3: Service under 5 years — the 30-day tier does not apply yet',         'Step 4: Total, capped at 2 years of total wages. Less than 1 year of service = no gratuity'       ];     } }
+,
+  {
+    id: 'ireland-take-home-salary',
+    name: 'Ireland Take-Home Salary Calculator',
+    desc: 'Free Ireland take-home pay calculator: net salary after PAYE income tax, USC and PRSI, 2025 rates, every step shown.',
+    kw: 'ireland take home salary calculator, irish salary after tax calculator, payslip calculator ireland',
+    inputs: [
+      { id: 'salary', label: 'Gross Annual Salary (€)', type: 'number', def: 50000 },
+      { id: 'status', label: 'Tax Band Status', type: 'select', options: ['Single', 'Married (one income)'], def: 'Single' }
+    ],
+    calc: function (v) {
+      var band = v.status === 'Married (one income)' ? 53000 : 44000;
+      var paye = v.salary <= band ? v.salary * 0.20 : band * 0.20 + (v.salary - band) * 0.40;
+      paye = Math.max(0, paye - 4000);
+      var u1 = Math.min(v.salary, 12012) * 0.005;
+      var u2 = Math.min(Math.max(v.salary - 12012, 0), 15370) * 0.02;
+      var u3 = Math.min(Math.max(v.salary - 27382, 0), 42662) * 0.03;
+      var u4 = Math.max(v.salary - 70044, 0) * 0.08;
+      var usc = u1 + u2 + u3 + u4;
+      var prsi = v.salary * 0.041;
+      var take = v.salary - paye - usc - prsi;
+      return {
+        result: 'Take-home: ' + String.fromCharCode(8364) + (take / 12).toFixed(0) + '/mo',
+        chart: Charts.donut([paye, usc, prsi, take], ['PAYE (after credits)', 'USC', 'PRSI', 'Take-home']),
+        extra: 'Annual net: ' + String.fromCharCode(8364) + take.toFixed(0) + ' | PAYE: ' + String.fromCharCode(8364) + paye.toFixed(0) + ' | USC: ' + String.fromCharCode(8364) + usc.toFixed(0) + ' | PRSI: ' + String.fromCharCode(8364) + prsi.toFixed(0) + ' (4.1%) | 2025 rates'
+      };
+    },
+    steps: function (v) {
+      var band = v.status === 'Married (one income)' ? 53000 : 44000;
+      var paye = Math.max(0, (v.salary <= band ? v.salary * 0.20 : band * 0.20 + (v.salary - band) * 0.40) - 4000);
+      return [
+        'Step 1: PAYE = 20% of the first ' + String.fromCharCode(8364) + band.toLocaleString() + ', 40% above = ' + String.fromCharCode(8364) + (v.salary <= band ? v.salary * 0.20 : band * 0.20 + (v.salary - band) * 0.40).toFixed(0),
+        'Step 2: Less standard credits (personal 2,000 + employee 2,000) = PAYE ' + String.fromCharCode(8364) + paye.toFixed(0),
+        'Step 3: USC = 0.5% to ' + String.fromCharCode(8364) + ' 12,012, 2% to ' + String.fromCharCode(8364) + ' 27,382, 3% to ' + String.fromCharCode(8364) + ' 70,044, 8% above',
+        'Step 4: PRSI = 4.1% of gross salary',
+        'Step 5: Take-home = salary − PAYE − USC − PRSI, divided by 12'
+      ];
+    }
+  },
+  {
+    id: 'new-zealand-take-home-salary',
+    name: 'New Zealand Take-Home Salary Calculator',
+    desc: 'Free New Zealand take-home pay calculator: net salary after income tax, the ACC levy and KiwiSaver, 2025-26 rates, every step shown.',
+    kw: 'new zealand take home salary calculator, nz salary after tax calculator, paye calculator new zealand',
+    inputs: [
+      { id: 'salary', label: 'Annual Salary (NZ$)', type: 'number', def: 80000 },
+      { id: 'ks', label: 'KiwiSaver Rate (%)', type: 'number', def: 3 }
+    ],
+    calc: function (v) {
+      var s = v.salary;
+      var tax = Math.min(s, 15600) * 0.105
+        + Math.min(Math.max(s - 15600, 0), 37900) * 0.175
+        + Math.min(Math.max(s - 53500, 0), 24600) * 0.30
+        + Math.min(Math.max(s - 78100, 0), 101900) * 0.33
+        + Math.max(s - 180000, 0) * 0.39;
+      var acc = Math.min(s, 152790) * 0.0167;
+      var ks = s * v.ks / 100;
+      var take = s - tax - acc - ks;
+      return {
+        result: 'Take-home: NZ' + String.fromCharCode(36) + (take / 12).toFixed(0) + '/mo',
+        chart: Charts.donut([tax, acc, ks, take], ['PAYE income tax', 'ACC levy', 'KiwiSaver', 'Take-home']),
+        extra: 'Annual net: NZ' + String.fromCharCode(36) + take.toFixed(0) + ' | Tax: NZ' + String.fromCharCode(36) + tax.toFixed(0) + ' | ACC: NZ' + String.fromCharCode(36) + acc.toFixed(0) + ' | KiwiSaver: NZ' + String.fromCharCode(36) + ks.toFixed(0) + ' (stays yours) | 2025-26 bands'
+      };
+    },
+    steps: function (v) {
+      var s = v.salary;
+      var tax = Math.min(s, 15600) * 0.105 + Math.min(Math.max(s - 15600, 0), 37900) * 0.175 + Math.min(Math.max(s - 53500, 0), 24600) * 0.30 + Math.min(Math.max(s - 78100, 0), 101900) * 0.33 + Math.max(s - 180000, 0) * 0.39;
+      return [
+        'Step 1: PAYE bands 2025-26 = 10.5% to NZ' + String.fromCharCode(36) + ' 15,600, 17.5% to NZ' + String.fromCharCode(36) + ' 53,500, 30% to NZ' + String.fromCharCode(36) + ' 78,100, 33% to NZ' + String.fromCharCode(36) + ' 180,000, 39% above',
+        'Step 2: Income tax total = NZ' + String.fromCharCode(36) + tax.toFixed(0),
+        'Step 3: ACC earners levy = 1.67% on covered earnings (cap NZ' + String.fromCharCode(36) + ' 152,790)',
+        'Step 4: KiwiSaver = ' + v.ks + '% employee share (employer adds at least 3% on top)',
+        'Step 5: Take-home = salary − tax − ACC − KiwiSaver, divided by 12'
+      ];
+    }
+  },
+  {
+    id: 'south-africa-take-home-salary',
+    name: 'South Africa Take-Home Salary Calculator',
+    desc: 'Free South Africa take-home salary calculator: net pay after SARS PAYE brackets, age rebates and UIF, 2025-26 tables, every step shown.',
+    kw: 'south africa take home salary calculator, sars paye calculator, salary after tax south africa',
+    inputs: [
+      { id: 'salary', label: 'Monthly Salary (ZAR)', type: 'number', def: 50000 },
+      { id: 'age', label: 'Age Band', type: 'select', options: ['Under 65', '65+', '75+'], def: 'Under 65' }
+    ],
+    calc: function (v) {
+      var annual = v.salary * 12;
+      var tax = annual <= 237100 ? annual * 0.18
+        : annual <= 370500 ? 42678 + (annual - 237100) * 0.26
+        : annual <= 512800 ? 77362 + (annual - 370500) * 0.31
+        : annual <= 673000 ? 121475 + (annual - 512800) * 0.36
+        : annual <= 857900 ? 179147 + (annual - 673000) * 0.39
+        : annual <= 1817000 ? 251258 + (annual - 857900) * 0.41
+        : 644489 + (annual - 1817000) * 0.45;
+      var rebate = v.age === '75+' ? 12589 : v.age === '65+' ? 9444 : 0;
+      tax = Math.max(0, tax - rebate);
+      var uif = Math.min(v.salary, 177.12);
+      var take = v.salary - tax / 12 - uif;
+      return {
+        result: 'Take-home: R ' + take.toFixed(0) + '/mo',
+        chart: Charts.donut([tax / 12, uif, take], ['PAYE (SARS)', 'UIF', 'Take-home']),
+        extra: 'Annual net: R ' + (take * 12).toFixed(0) + ' | PAYE: R ' + tax.toFixed(0) + '/yr | UIF: R ' + (uif * 12).toFixed(0) + '/yr (1%, capped) | ' + v.age + ' rebates applied | 2025-26 tables'
+      };
+    },
+    steps: function (v) {
+      var annual = v.salary * 12;
+      var tax = annual <= 237100 ? annual * 0.18 : annual <= 370500 ? 42678 + (annual - 237100) * 0.26 : annual <= 512800 ? 77362 + (annual - 370500) * 0.31 : annual <= 673000 ? 121475 + (annual - 512800) * 0.36 : annual <= 857900 ? 179147 + (annual - 673000) * 0.39 : annual <= 1817000 ? 251258 + (annual - 857900) * 0.41 : 644489 + (annual - 1817000) * 0.45;
+      var rebate = v.age === '75+' ? 12589 : v.age === '65+' ? 9444 : 0;
+      return [
+        'Step 1: Annualise salary = R ' + v.salary + ' × 12 = R ' + annual.toLocaleString(),
+        'Step 2: SARS 2025-26 brackets: 18% to R 237,100, 26% to R 370,500, 31% to R 512,800, 36% to R 673,000, 39% to R 857,900, 41% to R 1,817,000, 45% above',
+        'Step 3: Less age rebate (primary R 17,235 is built in; + R 9,444 at 65+, + R 3,145 more at 75+) = PAYE R ' + Math.max(0, tax - rebate).toFixed(0) + '/yr',
+        'Step 4: UIF = 1% of monthly salary, capped at R 177.12',
+        'Step 5: Take-home = monthly salary − PAYE ÷ 12 − UIF'
+      ];
+    }
+  }
 ];
 
 if (typeof module !== 'undefined') module.exports = REGIONAL_TOOLS;

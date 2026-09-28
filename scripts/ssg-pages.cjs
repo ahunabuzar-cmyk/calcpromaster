@@ -29,6 +29,22 @@ const vm = require('vm');
 
 const ROOT = path.join(__dirname, '..');
 const DEPLOY = path.join(ROOT, 'deploy');
+
+// Registry count — SINGLE SOURCE OF TRUTH (same approach as sync-counts.cjs).
+// Hardcoding "1216+" here made the prerendered homepage title/desc/OG go stale
+// every time the registry moved (1219 batch #4 proved it). Read it live instead.
+function registryCount() {
+  try {
+    let total = 0;
+    for (const f of fs.readdirSync(path.join(ROOT, 'js', 'data')).filter((x) => x.endsWith('.js'))) {
+      const mod = require(path.join(ROOT, 'js', 'data', f));
+      if (Array.isArray(mod)) total += mod.length;
+    }
+    return total;
+  } catch (e) { return 1219; }
+}
+const TOTAL = registryCount();
+const TOTAL_PLUS = TOTAL + '+';
 // Domain — SINGLE SOURCE OF TRUTH: js/site-config.js (`domain:` field).
 // Prerendered canonical/OG/schema URLs follow the configured domain, so a
 // custom-domain switch is one file edit + rebuild (no stale netlify.app refs).
@@ -733,7 +749,7 @@ for (const slug of ['favorites', 'history', 'compare']) {
   // FAQ block (GEO/answer-alignment): real Q&A content crawlers + LLMs can read,
   // mirrored by FAQPage JSON-LD below.
   const faq = [
-    ['Are all calculators on CalcProMaster free?', 'Yes — all 1216+ calculators are completely free with no sign-up, no paywall and no usage limits. The site is supported by non-intrusive ads only.'],
+    ['Are all calculators on CalcProMaster free?', 'Yes — all ' + TOTAL_PLUS + ' calculators are completely free with no sign-up, no paywall and no usage limits. The site is supported by non-intrusive ads only.'],
     ['Do I need to create an account or install anything?', 'No. Every calculator runs instantly in your browser — nothing to install, nothing to sign up for. Your history and favorites are stored only on your own device.'],
     ['How accurate are the results?', 'Every calculator shows the exact formula it uses, a worked example and its assumptions. Results are computed in JavaScript with well-tested math libraries, and each page carries a "Last reviewed" date plus a public formula QA dashboard documenting the tests behind it.'],
     ['Can I use these calculators offline?', 'Yes. CalcProMaster is a progressive web app (PWA): after your first visit the core calculators keep working without an internet connection.'],
@@ -751,10 +767,10 @@ for (const slug of ['favorites', 'history', 'compare']) {
     '<p>Every calculator shows its formula, a step-by-step worked example, and the assumptions behind the result, so you can trust the numbers. Results are computed instantly in your browser and never leave your device.</p>' +
     '\n    ' + faqHtml;
   let page = rewriteHead(SHELL, {
-    title: 'CalcProMaster — 1216+ Free Online Calculators for Finance, Health, Math & More',
-    desc: 'CalcProMaster — 1216+ free online calculators: loan EMI, mortgage, BMI, percentage, unit conversion and more across 20 categories. Step-by-step solutions, formulas and charts — no sign-up.',
-    canonical: '/', ogTitle: 'CalcProMaster — 1216+ Free Online Calculators',
-    ogDesc: '1216+ free online calculators with step-by-step solutions, formulas and charts. No sign-up, no tracking.'
+    title: 'CalcProMaster — ' + TOTAL_PLUS + ' Free Online Calculators for Finance, Health, Math & More',
+    desc: 'CalcProMaster — ' + TOTAL_PLUS + ' free online calculators: loan EMI, mortgage, BMI, percentage, unit conversion and more across 20 categories. Step-by-step solutions, formulas and charts — no sign-up.',
+    canonical: '/', ogTitle: 'CalcProMaster — ' + TOTAL_PLUS + ' Free Online Calculators',
+    ogDesc: TOTAL_PLUS + ' free online calculators with step-by-step solutions, formulas and charts. No sign-up, no tracking.'
   });
   page = rewriteMainAppend(page, content);
   // Append the FAQPage schema as its own ld+json block before </body>.

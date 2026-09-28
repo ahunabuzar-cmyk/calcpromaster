@@ -15,8 +15,22 @@ vm.createContext(sandbox);
 vm.runInContext(src, sandbox);
 const LegalPages = sandbox.window.LegalPages;
 
+// Registry count — SINGLE SOURCE OF TRUTH (same approach as sync-counts.cjs).
+// Hardcoded counts went stale on every registry move (1216 during batch #4).
+function registryCount() {
+  try {
+    let total = 0;
+    for (const f of fs.readdirSync(path.join(__dirname, '..', 'js', 'data')).filter((x) => x.endsWith('.js'))) {
+      const mod = require(path.join(__dirname, '..', 'js', 'data', f));
+      if (Array.isArray(mod)) total += mod.length;
+    }
+    return total;
+  } catch (e) { return 1219; }
+}
+const TOTAL_PLUS = registryCount() + '+';
+
 const PAGES = {
-  'about': { title: 'About CalcProMaster', desc: 'About CalcProMaster — a free collection of 1216+ online calculators for finance, health, math, science and everyday life, all running in your browser.', content: LegalPages.ABOUT_PAGE },
+  'about': { title: 'About CalcProMaster', desc: 'About CalcProMaster — a free collection of ' + TOTAL_PLUS + ' online calculators for finance, health, math, science and everyday life, all running in your browser.', content: LegalPages.ABOUT_PAGE },
   'privacy': { title: 'Privacy Policy', desc: 'CalcProMaster privacy policy — we do not use cookies or track you. Preferences, history and favorites are stored only in your own browser via localStorage.', content: LegalPages.PRIVACY_POLICY },
   'terms': { title: 'Terms of Service', desc: 'CalcProMaster terms of service — free use of all calculators, no warranty, and clear liability limits for financial, health and general tools.', content: LegalPages.TERMS_OF_SERVICE },
   'cookies': { title: 'Cookie Policy', desc: 'CalcProMaster cookie policy — this site does not use cookies. Local storage is used only for your own saved preferences and history.', content: LegalPages.COOKIE_POLICY },

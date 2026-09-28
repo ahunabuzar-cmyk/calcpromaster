@@ -65,3 +65,24 @@ Maker of CalcProMaster — 1,216+ free calculators, each showing its formula and
 Full-stack developer and maker. Building CalcProMaster: 1,216+ free online calculators, open source and 100% client-side. I obsess over page speed, honest UX and documenting the math behind every tool. Open to freelance and collabs.
 
 Profile tips: real photo (logo nahi), website link add karna (backlink yahi se aata hai), username ahunabuzar OK. Profile complete → phir LaunchPad submission (upar steps).
+
+---
+
+## 1000.tools Form Content (2026-09-28 — paste-ready)
+
+**Logo (Square, Required):** site ka square logo/icon mark (512×512) — wahi jo Product Hunt par use hua. Text-heavy screenshot NAHI.
+
+**Name:**
+CalcProMaster
+
+**Tagline (agar short field ho):**
+1,200+ Free Online Calculators — Formulas Included
+
+**Website URL:** https://calcpromaster.com/
+**Secondary URL (agar optional ho):** https://calcpromaster.com/guides — YA khali chhodo
+
+**Description (purani "1206+" GHALTAT se theek kiya — safe honest count 1,200+):**
+CalcProMaster — 1,200+ free online calculators for finance, health, math, science, engineering and everyday life. Every calculator shows its formula and a worked example so you can verify the math. Charts, step-by-step solutions. No sign-up, no paywall.
+
+**Features (semicolon-separated, REQUIRED — paste ye):**
+Loan EMI, mortgage, compound interest and retirement calculators; BMI, BMR, calorie and macro tools; percentage, fraction and statistics calculators; 20 categories with 1,200+ tools; formulas and worked examples on every page; interactive charts and visualizations; works offline as a PWA; no sign-up required, completely free

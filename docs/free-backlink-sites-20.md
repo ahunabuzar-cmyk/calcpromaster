@@ -27,7 +27,7 @@ screenshots + pehle din 2-3 genuine comments/queries — spam na ho to approval 
 ### Directory / startup listing (sabse asaan, sab free)
 1. **There's An AI For That** — theresanaiforthat.com — Submit tool (free "community" listing)
 2. **AI Tool Directory** — aitoolsdirectory.com — free submit form
-3. **Futurepedia** — futurepedia.io — "Suggest a tool" free
+3. **Twiny (Steal Our Tools)** — twinybots.com — free tool embed + dofollow backlink (NOTE: Futurepedia drop kiya — sirf paid $497 listing hai)
 4. **ToolPilot** — toolpilot.ai — free submit
 5. **TopTools** — toptools.ai — free listing
 6. **OpenAlternative** — openalternative.co — open/free tools directory, GitHub PR se bhi hota hai

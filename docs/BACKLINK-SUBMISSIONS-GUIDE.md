@@ -30,6 +30,8 @@ Sab free tier. Har ek ke liye: `docs/LINK-BUILDING-CHECKLIST.md` ka copy-paste b
 4. Launch date: aaj se ~6 mahine baad ka pick karo (queue honest hai — 2026 guide: avg 6 months free)
 5. Submit — queue mein number mil jayega, tracker mein note
 
+> **UPDATE 2026-09-28 (browser-verified):** Listing already live hai (devhunt.org/tool/calcpromaster). Agent ne description clean+save kiya (confirmed). **Category Other se nahi badlegi** — DevHunt ka open-source PATCH handler moderation=`not_a_fit` tools ko sirf "Other" par lock karta hai (server-side skip). **Launch date fix = $49 "Pay to edit"** (earliest: Sep 29-Oct 5, 2026). User decision pending: $49 invest karna hai ya nahi.
+
 ## 5. Peerlist LaunchPad — peerlist.io — 15 min
 1. **peerlist.io** → sign up (LinkedIn-style profile banao — abuzar ka personal profile)
 2. **peerlist.io/launchpad** → **Start a launch**

@@ -126,6 +126,18 @@ const CATEGORY_META = {
   tech: { title: 'Tech & Digital Calculators', desc: 'Download time, data usage, password strength, domain value and tech ROI.' },
   family: { title: 'Parenting & Family Calculators', desc: 'Child height prediction, family budget, college savings, childcare cost and estate planning.' },
 };
+// Category → category-hub guide (/guides/<name>, sitemap form = no trailing
+// slash). In hubs ke static inlinks sirf 1-2 the (audit: weak) — ab har tool
+// page + category page unko link karta hai (~700 inlinks/hub, depth-2 boost).
+const GUIDE_HUB = {
+  finance: '/guides/loans-mortgages', health: '/guides/health-fitness', math: '/guides/math-statistics',
+  everyday: '/guides/everyday', science: '/guides/science', engineering: '/guides/engineering',
+  construction: '/guides/construction', conversion: '/guides/unit-conversion', business: '/guides/business',
+  auto: '/guides/auto', education: '/guides/education', food: '/guides/food', career: '/guides/career',
+  regional: '/guides/regional', fitness: '/guides/health-fitness', homegarden: '/guides/homegarden',
+  lifestyle: '/guides/lifestyle', family: '/guides/family', tech: '/guides/utilities', utilities: '/guides/utilities'
+};
+
 const CAT_NAME = {
   finance: 'Finance', health: 'Health', math: 'Math', everyday: 'Everyday', science: 'Science',
   engineering: 'Engineering', construction: 'Construction', conversion: 'Conversion', business: 'Business',
@@ -522,8 +534,12 @@ for (const tool of tools) {
       picks.push(sibs[idx]);
     }
     if (picks.length) {
+      // Depth-2: last link = category guide-hub (no-slash, sitemap form) — weak
+      // hub-guides ko har tool page se ek inlink milta hai.
+      const hub = GUIDE_HUB[catKey];
       const more = '<div class="tool-more-links"><h2>More ' + esc(CAT_NAME[catKey] || catKey) + ' Calculators</h2>' +
-        '<p>' + picks.map(x => '<a href="/' + catKey + '/' + x.id + '/">' + esc(x.name) + '</a>').join(' · ') + '</p></div>';
+        '<p>' + picks.map(x => '<a href="/' + catKey + '/' + x.id + '/">' + esc(x.name) + '</a>').join(' · ') +
+        (hub ? ' · <a href="' + hub + '">' + esc(CAT_NAME[catKey] || catKey) + ' Guides</a>' : '') + '</p></div>';
       page = rewriteMainAppend(page, more);
     }
   }
@@ -571,6 +587,11 @@ for (const catKey of Object.keys(CATEGORY_META)) {
     content += '<div class="tool-card" data-tool-id="' + escAttr(t.id) + '"><h2><a href="/' + catKey + '/' + t.id + '">' + esc(t.name) + '</a></h2><p>' + esc(String(t.desc || '').substring(0, 100)) + '</p></div>';
   });
   content += '</div>';
+  // DEPTH-2 INLINK BOOST: category-hub guides sirf 1-2 inlinks se weak the —
+  // category page khud apne hub ko link karta hai (no-slash = sitemap form).
+  if (GUIDE_HUB[catKey]) {
+    content += '<div class="cat-guide-link"><p>Formulas, worked examples aur edge cases ke liye: <a href="' + GUIDE_HUB[catKey] + '">' + esc(CAT_NAME[catKey] || catKey) + ' guides</a></p></div>';
+  }
 
   let page = rewriteHead(SHELL, { title, desc, canonical: canonPath, ogTitle: title, ogDesc: desc });
   // Category schema: keep a minimal BreadcrumbList instead of the home array

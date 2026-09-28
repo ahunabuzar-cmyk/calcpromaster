@@ -139,7 +139,8 @@ const CATS = [
     guides: [
       ['Inflation Guide', '/guides/inflation', 'What last year\u2019s money buys this year \u2014 the habit-cost time machine.'],
       ['Debt Payoff Guide', '/guides/debt-payoff', 'Snowball vs avalanche when lifestyle spending created the debt.'],
-      ['Discount Guide', '/guides/discount', 'Sale math that survives a shopping trip.']
+      ['Discount Guide', '/guides/discount', 'Sale math that survives a shopping trip.'],
+      ['Rent vs Buy Guide', '/guides/rent-vs-buy', 'Every cost line of owning vs renting \u2014 the breakeven math most comparisons skip.']
     ],
     ctas: [['Moving Cost Calculator', '/lifestyle/relocation-cost'], ['Rental Deposit Return', '/lifestyle/rental-deposit'], ['Habit Cost & Opportunity Cost', '/lifestyle/coffee-habit']],
     faq: [

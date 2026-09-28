@@ -2343,3 +2343,14 @@ html.zoom-150 .calc-layout, html.zoom-200 .calc-layout { grid-template-columns: 
 .home-faq-item h3 { font-size: 1.02rem; margin: 0 0 4px; color: var(--text); }
 .home-faq-item p { margin: 0; font-size: 0.92rem; color: var(--text-light); line-height: 1.55; }
 .consent-modal-title { font-weight: 700; color: var(--text); }
+
+/* ---------- Depth-2 internal-link blocks (More calculators + category guides) ---------- */
+.tool-more-links { margin: 22px 0 0; padding: 14px 16px; border: 1px solid var(--border); border-radius: 10px; background: rgba(255,255,255,0.03); }
+.tool-more-links h2 { font-size: 1.02rem; margin: 0 0 8px; color: var(--text); }
+.tool-more-links p { margin: 0; font-size: 0.92rem; line-height: 1.7; color: var(--text-light); }
+.tool-more-links a { color: var(--primary); text-decoration: none; }
+.tool-more-links a:hover { text-decoration: underline; }
+.cat-guide-link { margin: 18px 0 0; padding: 12px 16px; border-left: 3px solid var(--primary); background: rgba(255,255,255,0.03); }
+.cat-guide-link p { margin: 0; font-size: 0.92rem; color: var(--text-light); }
+.cat-guide-link a { color: var(--primary); font-weight: 600; text-decoration: none; }
+.cat-guide-link a:hover { text-decoration: underline; }

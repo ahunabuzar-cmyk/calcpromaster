@@ -49,9 +49,14 @@ const linkersByTool = new Map();
 const hrefRe = /href="(\/[a-z0-9-]+\/[a-z0-9-]+\/?)"/g;
 for (const p of pages) {
   const html = fs.readFileSync(p.file, 'utf8');
-  const m = html.matchAll(hrefRe);
-  for (const h of m) {
-    const target = h[1];
+  // PAGE-LEVEL DEDUPE + normalized keys (no trailing slash): pehle slash/no-slash
+  // alag keys ban rahe the — no-slash (category/hub) slash (More-block) ko shadow
+  // karta tha aur count galat 2 par ruk jata tha. Ek page = ek inlink.
+  const seen = new Set();
+  for (const h of html.matchAll(hrefRe)) {
+    const target = h[1].replace(/\/$/, '');
+    if (seen.has(target)) continue;
+    seen.add(target);
     linkIndex.set(target, (linkIndex.get(target) || 0) + 1);
     if (!linkersByTool.has(target)) linkersByTool.set(target, []);
     if (linkersByTool.get(target).length < 5) linkersByTool.get(target).push(p.rel || '/');
@@ -70,9 +75,9 @@ const CAT_GUIDE = {
 
 const results = { orphan: [], weak: [], ok: [] };
 for (const t of targets) {
-  const clean = t.replace(/\/$/, '') + '/';
-  const n = linkIndex.get(t.replace(/\/$/, '')) || linkIndex.get(t) || linkIndex.get(clean) || 0;
-  const item = { url: t, inlinks: n, linkedFrom: linkersByTool.get(t.replace(/\/$/, '')) || linkersByTool.get(t) || [] };
+  const key = t.replace(/\/$/, '');
+  const n = linkIndex.get(key) || 0;
+  const item = { url: t, inlinks: n, linkedFrom: linkersByTool.get(key) || [] };
   const cat = t.split('/')[1];
   item.recommendedGuide = CAT_GUIDE[cat] || null;
   if (n === 0) results.orphan.push(item);

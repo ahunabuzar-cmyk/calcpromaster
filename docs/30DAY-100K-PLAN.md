@@ -8,6 +8,27 @@
 
 ---
 
+## 🟢 MASTER STATUS (2026-09-28 — agent-run, har section ke saath update hota hai)
+
+**Progress doc:** `docs/GSC-PROGRESS.md` (weekly tracker) · **Report tool:** `node scripts/weekly-gsc-report.cjs <gsc-export.csv>`
+
+| Section | Status | Blocking trigger |
+|---|---|---|
+| **A. No-dependency** | ✅ DONE (2026-09-28): AlternativeTo+LN verified (pending review), Slant=site-down, IH=live-needs-user-edit, MicroLaunch/ToolFinder=paid-dropped; 11-email follow-up templates ready; RANKINGS-CHECK refreshed (brand #1, prod 1206-stale) | — |
+| **B. 10 stars → OpenAlternative** | ⏸️ Stars 3/10 | 7 stars (user WhatsApp/LinkedIn plan chala raha hai) |
+| **C. Post-deploy batch** | ⏸️ READY (sab content/scripts taiyar) | **Netlify drag-drop of deploy/** — MASTER blocker |
+| **D. Approval/launch-ke-baad** | ⏸️ WAITING | StartupBase approval, Peerlist Launch click, DevHunt $49, SaaSHub/Twelve.Tools email clicks |
+| **E. 30-din monitoring** | ✅ STARTED — GSC-PROGRESS.md + weekly report script live | Weekly (har Monday GSC CSV) |
+
+**Deployment ke baad ka C-batch order (jaisa hi user bolega "deploy ho gaya"):**
+1. Live verify (sitemap 1,347, title 1,216+, FAQ, internal links)
+2. IndexNow 1,347-URL ping (`npm run indexnow`)
+3. GSC top-20 request-indexing (docs/REQUEST-INDEXING-TOP20.md — user clicks, exact order ready)
+4. Sitemap resubmit verification
+5. HN Show HN + Reddit r/SideProject timing (Tue–Thu morning PT)
+
+---
+
 ## 1. Math — 100k kahan se aayega
 
 ```

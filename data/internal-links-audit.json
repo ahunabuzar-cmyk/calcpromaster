@@ -1,0 +1,6426 @@
+{
+  "ranAt": "2026-09-27T16:35:32.330Z",
+  "targets": 784,
+  "orphan": [
+    {
+      "url": "/tech/backup-size/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/math/modular-exp/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/science/molality/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/construction/insulation-batts/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/math/dot-cross-product/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/tech/dbm-watts/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/construction/rafter-length/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/math/bayes-theorem/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/emergency-fund/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/science/inclined-plane/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/construction/drywall-sheets/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/finance/bond-yield/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/science/impulse/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/construction/tile-boxes/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/engineering/wind-load/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/finance/retirement-income/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/slope-intercept/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/science/terminal-velocity/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/math/zscore-calc/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/health/gcs/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/engineering/head-loss/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/science/mole-conversion/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/health/vaccination-schedule/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/math/confidence-interval/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/science/charles-law/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/engineering/power-factor-correction/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/health/pediatric-dose/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/math/sample-size/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/tech/cidr-convert/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/finance/college-cost/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/health/corrected-calcium/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/science/mach-number/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/engineering/shaft-torsion/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/health/winters-formula/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/science/stefan-boltzmann/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/engineering/pulley-speed/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/math/moving-average/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/science/coulomb-law/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/tech/screen-ppi/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/engineering/manning-flow/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/math/standard-error/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/science/photon-energy/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/engineering/orifice-flow/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/health/serum-osmolality/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/math/chi-square/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/science/debroglie/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/tech/storage-array/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/finance/canada-income-tax/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/tech/docker-resource/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/finance/australia-income-tax/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/tech/load-test-users/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/finance/bond-price/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/significant-figures/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/annuity-payout/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/tech/data-usage-est/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/math/midpoint/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/science/air-density/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/tech/image-size-calc/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/finance/rule-of-72/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/trapezoid/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/science/angular-momentum/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/math/sector-area/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/retirement-withdrawal/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/science/buffer-ph/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/math/annulus-area/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/times-interest-earned/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/parallelogram-area/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/ebitda/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/science/sound-intensity/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/finance/enterprise-value/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/law-of-sines/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/math/percent-error/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/math/covariance/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/math/exponential-prob/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/math/euler-totient/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/math/completing-square/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/fha-loan/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/va-loan/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/direct-variation/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/house-affordability/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/spherical-cap/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/price-to-earnings/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/dividend-discount/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/combination-repeat/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/math/negative-binomial/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/tax-loss-harvest/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/savings-rate/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/car-lease-calculator/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/ellipse-perimeter/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/debt-consolidation/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/triangular-prism/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/gross-rent-multiplier/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/icosahedron-volume/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/current-ratio-finance/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/shift-cipher/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/math/units-per-person/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/net-profit-margin/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/rate-x-time/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/coverage-ratio/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/work-rate-together/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/cash-on-cash/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/mixture-percent/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/standard-deduction/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/home-office-deduction/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/diversification/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/forex-pip/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/cagr/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/capm/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/espp/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/roth-vs-traditional/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/biweekly-mortgage/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/rent-affordability/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/stock-split/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/book-value-share/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/net-operating-income/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/dso/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/payout-ratio/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/sortino-ratio/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/max-drawdown/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/cd-ladder/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/put-call-parity/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/position-size/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/stop-loss/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/cost-basis-avg/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/dca-calculator/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/staking-rewards/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/value-at-risk/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/ev-ebitda/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/effective-tax-rate/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/menu-price/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/rmd/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/apr-annual/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/heloc-payment/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/portfolio-beta/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/convexity/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/rent-vs-sell/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/cap-rate-conv/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/science/pendulum/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/tech/screen-size/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/math/collatz/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/tech/streaming-quality/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/health/anion-gap/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/math/norm-dist-range/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/science/percent-yield/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/tech/code-line-count/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/health/qtc/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/health/ponderal-index/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/tech/api-cost/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/construction/shingle-squares/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/math/matrix-multiply/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/tech/keyword-density/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/math/distance-formula/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/health/gfr-estimate/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/health/chw/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/science/snells-law/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/tech/ad-revenue/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/engineering/duct-size/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/science/mirror-equation/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/tech/click-through-rate/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/health/apgar/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/math/pearson-correlation/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/tech/subnet-cidr/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/engineering/breaker-size/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/finance/stock-profit/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/tech/video-bitrate/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/finance/dca/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/engineering/section-modulus/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/math/poisson-probability/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/tech/gpu-comparison-perf/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/finance/perpetuity/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/tech/data-center-pue/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/finance/esop/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/tech/hash-rate/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/engineering/three-phase-power/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/math/t-test/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/science/rocket-equation/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/math/hypergeometric/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/engineering/hydraulic-press/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/engineering/radiation-shielding/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/finance/cd-calculator/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/science/calorimetry/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/tech/wifi-throughput/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/engineering/steam-consumption/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/engineering/noise-level/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/finance/dividend-yield/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/engineering/rcf-gforce/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/science/bullet-drop/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/science/redshift/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/math/pyramid/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/math/vector-add/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/science/machine-efficiency/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/finance/tax-equivalent-yield/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/angle-between-vectors/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/science/dew-point/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/science/grahams-law/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/finance/quick-ratio/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/science/osmotic-pressure/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/math/ellipse-area/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/science/angular-velocity/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/finance/wacc/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/sharpe-ratio/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/geometric-mean/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/quartile/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/payday-loan-cost/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/quartiles/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/emergency-fund-rate/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/rms/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/closing-costs/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/cap-rate/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/expected-value/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/student-loan-repayment/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/partial-fractions/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/reverse-mortgage/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/mortgage-refinance/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/series-sum-ap/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/math/sigma-notation/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/math/permutation-repeat/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/black-scholes/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/probability-odds/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/bond-duration/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/growing-perpetuity/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/secant-tangent/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/math/inscribed-angle/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/math/sector-perimeter/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/cost-of-living/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/rectangular-solid/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/yield-to-maturity/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/octahedron-volume/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/math/bitwise-xor/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/accounts-receivable-turnover/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/operating-margin/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/digital-root/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/loan-balance/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/price-to-rent/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/fico-simulator/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/discounted-payback/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/portfolio-return/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/payroll-tax/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/estimated-tax/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/t-bill/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/dcf/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/debt-to-equity/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/fixed-deposit-vs-recurring/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/recast-mortgage/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/mortgage-points/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/dividend-reinvestment/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/eps-calculator/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/credit-utilization/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/apy-calculator/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/pension-lump-sum/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/zero-coupon-bond/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/ibond-value/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/kelly-criterion/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/peg-ratio/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/free-cash-flow/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/interest-coverage/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/asset-turnover/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/runway-months/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/quarterly-tax/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/late-fee-interest/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/factoring-fee/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/royalty-payment/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/franchise-cost/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/food-cost-percent/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/hsa-growth/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/noi/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/price-per-sqft/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/deposit-interest/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/purchasing-power/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/escrow-analysis/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/yield-to-worst/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/coupon-payment/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/clean-dirty-price/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/duration-bond/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/appreciation-forecast/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/seller-net/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/points-breakeven/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/rule-of-40/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/cost-of-delay/",
+      "inlinks": 0,
+      "linkedFrom": [],
+      "recommendedGuide": "guides/loans-mortgages"
+    }
+  ],
+  "weak": [
+    {
+      "url": "/blog/bmi-honest-look/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/blog",
+        "/guides/health-fitness.html"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/business/burn-rate/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/math/combinations/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/math",
+        "/math"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/utilities/uuid-gen/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/utilities",
+        "/utilities"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/career/bonus-calc/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/food/meal-prep/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/food",
+        "/hub/food"
+      ],
+      "recommendedGuide": "guides/food"
+    },
+    {
+      "url": "/health/macros/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/health",
+        "/hub/health"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/science/momentum/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/science",
+        "/science"
+      ],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/tech/battery-life-estimator/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/tech",
+        "/tech"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/conversion/pressure-conv/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/conversion",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/homegarden/generator-size/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/homegarden",
+        "/hub/homegarden"
+      ],
+      "recommendedGuide": "guides/homegarden"
+    },
+    {
+      "url": "/tech/screen-resolution/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/tech",
+        "/tech"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/auto/car-maintenance/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/auto",
+        "/hub/auto"
+      ],
+      "recommendedGuide": "guides/auto"
+    },
+    {
+      "url": "/business/freelance-rate/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/career/401k-match/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/conversion/frequency-conv/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/conversion",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/engineering/wire-gauge/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/family/maternity-leave/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/family",
+        "/hub/family"
+      ],
+      "recommendedGuide": "guides/family"
+    },
+    {
+      "url": "/family/life-insurance/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/family",
+        "/hub/family"
+      ],
+      "recommendedGuide": "guides/family"
+    },
+    {
+      "url": "/homegarden/grass-seed/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/homegarden",
+        "/hub/homegarden"
+      ],
+      "recommendedGuide": "guides/homegarden"
+    },
+    {
+      "url": "/math/exponent/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/math",
+        "/math"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/science/acceleration/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/science",
+        "/science"
+      ],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/auto/car-insurance/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/auto",
+        "/hub/auto"
+      ],
+      "recommendedGuide": "guides/auto"
+    },
+    {
+      "url": "/conversion/force-conv/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/conversion",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/health/pregnancy-weight/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/health",
+        "/hub/health"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/career/career-gap/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/engineering/impedance/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/guides/retirement/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/construction/tile-calculator/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/construction",
+        "/hub/construction"
+      ],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/education/scholarship-calc/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/education",
+        "/hub/education"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/engineering/beam-load/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/family/college-savings-monthly/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/family",
+        "/hub/family"
+      ],
+      "recommendedGuide": "guides/family"
+    },
+    {
+      "url": "/food/grocery-per-person/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/food",
+        "/hub/food"
+      ],
+      "recommendedGuide": "guides/food"
+    },
+    {
+      "url": "/tech/image-file-size/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/tech",
+        "/tech"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/career/mortgage-afford/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/family/childcare-cost-annual/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/family",
+        "/hub/family"
+      ],
+      "recommendedGuide": "guides/family"
+    },
+    {
+      "url": "/auto/walking-transit/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/auto",
+        "/hub/auto"
+      ],
+      "recommendedGuide": "guides/auto"
+    },
+    {
+      "url": "/business/saas-unit-metrics/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/career/tax-refund/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/construction/rebar-calculator/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/construction",
+        "/hub/construction"
+      ],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/food/coffee-cost-per-cup/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/food",
+        "/hub/food"
+      ],
+      "recommendedGuide": "guides/food"
+    },
+    {
+      "url": "/business/break-even-point/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/everyday/sleep-calc/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/everyday",
+        "/hub/everyday"
+      ],
+      "recommendedGuide": "guides/everyday"
+    },
+    {
+      "url": "/family/maternity-leave-finance/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/family",
+        "/hub/family"
+      ],
+      "recommendedGuide": "guides/family"
+    },
+    {
+      "url": "/tech/streaming-bitrate/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/tech",
+        "/tech"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/career/employment-status/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/conversion/torque-conv/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/conversion",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/engineering/belt-length/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/food/sugar-intake/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/food",
+        "/hub/food"
+      ],
+      "recommendedGuide": "guides/food"
+    },
+    {
+      "url": "/utilities/gcd-lcm/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/utilities",
+        "/utilities"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/regional/leave-encashment/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/regional",
+        "/regional"
+      ],
+      "recommendedGuide": "guides/regional"
+    },
+    {
+      "url": "/conversion/voltage-conv/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/conversion",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/engineering/sound-level/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/family/babysitter-rate/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/family",
+        "/hub/family"
+      ],
+      "recommendedGuide": "guides/family"
+    },
+    {
+      "url": "/math/modular/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/math",
+        "/math"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/business/working-capital/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/conversion/radiation-conv/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/conversion",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/fitness/burpee-test/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/fitness",
+        "/hub/fitness"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/lifestyle/pet-food-cost/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/lifestyle",
+        "/lifestyle"
+      ],
+      "recommendedGuide": "guides/lifestyle"
+    },
+    {
+      "url": "/regional/esic-calculator/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/regional",
+        "/regional"
+      ],
+      "recommendedGuide": "guides/regional"
+    },
+    {
+      "url": "/auto/bike-fuel/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/auto",
+        "/hub/auto"
+      ],
+      "recommendedGuide": "guides/auto"
+    },
+    {
+      "url": "/career/self-employment-tax/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/homegarden/closet-organizer/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/homegarden",
+        "/hub/homegarden"
+      ],
+      "recommendedGuide": "guides/homegarden"
+    },
+    {
+      "url": "/career/freelance-daily/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/guides/ideal-weight/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/guides/bmr.html",
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/conversion/bit-rate-conv/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/conversion",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/engineering/transformer-ratio/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/guides/bmr/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/conversion/luminance-conv/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/conversion",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/finance/loan-qualify/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/finance",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/food/smoothie-calories/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/food",
+        "/hub/food"
+      ],
+      "recommendedGuide": "guides/food"
+    },
+    {
+      "url": "/math/geometric-seq/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/math",
+        "/math"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/science/dilution/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/science",
+        "/science"
+      ],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/utilities/units-per/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/utilities",
+        "/utilities"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/career/benefits-value/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/construction/rebar-calc/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/construction",
+        "/hub/construction"
+      ],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/conversion/molarity-conv/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/conversion",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/guides/ohms-law/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/guides",
+        "/science/ohms-law"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/math/arithmetic-seq/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/math",
+        "/math"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/tech/json-formatter/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/tech",
+        "/tech"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/career/pto-calc/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/construction/footing-size/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/construction",
+        "/hub/construction"
+      ],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/engineering/beam-deflection/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/business/subscription-ltv/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/food/caffeine-daily/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/food",
+        "/hub/food"
+      ],
+      "recommendedGuide": "guides/food"
+    },
+    {
+      "url": "/guides/fuel-cost/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/science/power-electrical/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/science",
+        "/science"
+      ],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/conversion/fraction-percent/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/conversion",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/engineering/pipe-flow/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/guides/hourly-rate/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/math/normal-dist/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/math",
+        "/math"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/auto/route-optimizer/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/auto",
+        "/hub/auto"
+      ],
+      "recommendedGuide": "guides/auto"
+    },
+    {
+      "url": "/business/market-share/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/construction/mortar-mix/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/construction",
+        "/hub/construction"
+      ],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/conversion/roman-numeral/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/conversion",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/everyday/work-hours-weekly/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/everyday",
+        "/hub/everyday"
+      ],
+      "recommendedGuide": "guides/everyday"
+    },
+    {
+      "url": "/food/meal-prep-size/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/food",
+        "/hub/food"
+      ],
+      "recommendedGuide": "guides/food"
+    },
+    {
+      "url": "/guides/paint-coverage/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/auto/carbon-footprint-car/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/auto",
+        "/hub/auto"
+      ],
+      "recommendedGuide": "guides/auto"
+    },
+    {
+      "url": "/career/side-hustle-profit/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/engineering/concrete-mix/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/food/sugar-limit/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/food",
+        "/hub/food"
+      ],
+      "recommendedGuide": "guides/food"
+    },
+    {
+      "url": "/guides/macro-calculator/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/health/burn-severity/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/health",
+        "/hub/health"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/business/customer-ltv/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/conversion/thermal-conductivity/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/conversion",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/everyday/compound-savings/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/everyday",
+        "/hub/everyday"
+      ],
+      "recommendedGuide": "guides/everyday"
+    },
+    {
+      "url": "/finance/future-value/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/finance",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/eigenvalue-2x2/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/math",
+        "/math"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/food/oven-conversion/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/food",
+        "/hub/food"
+      ],
+      "recommendedGuide": "guides/food"
+    },
+    {
+      "url": "/guides/fd-ppf-sip/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/tech/cron-validate/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/tech",
+        "/tech"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/career/stock-vesting/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/everyday/week-number/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/everyday",
+        "/hub/everyday"
+      ],
+      "recommendedGuide": "guides/everyday"
+    },
+    {
+      "url": "/family/childcare-weekly/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/family",
+        "/hub/family"
+      ],
+      "recommendedGuide": "guides/family"
+    },
+    {
+      "url": "/food/homebrew-abv/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/food",
+        "/hub/food"
+      ],
+      "recommendedGuide": "guides/food"
+    },
+    {
+      "url": "/tech/ascii-table/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/tech",
+        "/tech"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/career/timesheet-hours/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/tech/awg-reference/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/tech",
+        "/tech"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/auto/bus-vs-car/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/auto",
+        "/hub/auto"
+      ],
+      "recommendedGuide": "guides/auto"
+    },
+    {
+      "url": "/business/retainer-value/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/career/shift-differential/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/fitness/sweat-rate/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/fitness",
+        "/hub/fitness"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/finance/dividend/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/finance",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/homegarden/compost-bin/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/homegarden",
+        "/hub/homegarden"
+      ],
+      "recommendedGuide": "guides/homegarden"
+    },
+    {
+      "url": "/engineering/rc-time-constant/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/engineering/cable-sizing/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/guides/screen-time/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/math/checksum-luhn/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/math",
+        "/math"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/rental-yield/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/finance",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/health/glycemic-load/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/health",
+        "/hub/health"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/tech/download-time/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/tech",
+        "/tech"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/construction/soffit-area/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/construction",
+        "/hub/construction"
+      ],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/engineering/bearing-load/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/everyday/sunrise-sunset-length/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/everyday",
+        "/hub/everyday"
+      ],
+      "recommendedGuide": "guides/everyday"
+    },
+    {
+      "url": "/finance/investment-growth/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/finance",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/savings-comparison/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/finance",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/guides/room-area/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/construction/fence-panel/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/construction",
+        "/hub/construction"
+      ],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/engineering/tank-volume/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/guides/ac-size/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/engineering/heat-exchanger/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/guides/protein-intake/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/health/creatinine-clearance/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/health",
+        "/hub/health"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/everyday/heat-pump-savings/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/everyday",
+        "/hub/everyday"
+      ],
+      "recommendedGuide": "guides/everyday"
+    },
+    {
+      "url": "/finance/interest-only/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/finance",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/guides/health-fitness/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/engineering/lever/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/guides/business/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/guides/construction/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/guides/science/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/guides",
+        "/guides/ohms-law.html"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/guides/auto/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/guides/fuel-cost.html",
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/guides/career/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/guides/food/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/guides/lifestyle/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/guides/utilities/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/guides/cagr/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/guides/net-worth/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/finance/crypto-gains/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/finance/crypto-profit"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/payback-period/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/guides/break-even.html",
+        "/guides/break-even.html"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/construction/stairs/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/construction",
+        "/hub/construction"
+      ],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/food/cooking-time/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/food",
+        "/hub/food"
+      ],
+      "recommendedGuide": "guides/food"
+    },
+    {
+      "url": "/guides/currency-conversion/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/business/mrr/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/construction/wallpaper/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/construction",
+        "/hub/construction"
+      ],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/lifestyle/flight-cost-per-hour/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/lifestyle",
+        "/lifestyle"
+      ],
+      "recommendedGuide": "guides/lifestyle"
+    },
+    {
+      "url": "/regional/home-loan-emi-india/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/regional",
+        "/regional"
+      ],
+      "recommendedGuide": "guides/regional"
+    },
+    {
+      "url": "/business/nps/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/career/pay-gap/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/guides/tip/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/guides/everyday.html",
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/science/doppler/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/science",
+        "/science"
+      ],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/construction/mulch/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/construction",
+        "/hub/construction"
+      ],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/education/words-pages/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/education",
+        "/hub/education"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/food/eat-out-vs-cook/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/food",
+        "/hub/food"
+      ],
+      "recommendedGuide": "guides/food"
+    },
+    {
+      "url": "/health/bsa/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/health",
+        "/hub/health"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/lifestyle/parental-leave/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/lifestyle",
+        "/lifestyle"
+      ],
+      "recommendedGuide": "guides/lifestyle"
+    },
+    {
+      "url": "/tech/cable-length/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/tech",
+        "/tech"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/utilities/file-size/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/utilities",
+        "/utilities"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/auto/tire-size/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/auto",
+        "/hub/auto"
+      ],
+      "recommendedGuide": "guides/auto"
+    },
+    {
+      "url": "/business/pricing/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/career/stock-options/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/construction/soil/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/construction",
+        "/hub/construction"
+      ],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/education/citation/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/education",
+        "/hub/education"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/engineering/rpm/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/food/fast-food-calories/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/food",
+        "/hub/food"
+      ],
+      "recommendedGuide": "guides/food"
+    },
+    {
+      "url": "/tech/ppi-calc/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/tech",
+        "/tech"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/utilities/salary-hourly/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/utilities",
+        "/utilities"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/auto/oil-change/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/auto",
+        "/hub/auto"
+      ],
+      "recommendedGuide": "guides/auto"
+    },
+    {
+      "url": "/business/inventory/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/career/side-hustle/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/conversion/time-conv/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/conversion",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/engineering/horsepower/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/food/keto-macro/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/food",
+        "/hub/food"
+      ],
+      "recommendedGuide": "guides/food"
+    },
+    {
+      "url": "/health/vo2-max/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/health",
+        "/hub/health"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/utilities/area-calc/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/utilities",
+        "/utilities"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/business/break-even-revenue/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/career/crypto-tax/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/fitness/weight-loss/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/fitness",
+        "/hub/fitness"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/utilities/volume-calc/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/utilities",
+        "/utilities"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/conversion/fuel-efficiency-converter/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/conversion",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/health/blood-pressure/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/health",
+        "/hub/health"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/homegarden/compost/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/homegarden",
+        "/hub/homegarden"
+      ],
+      "recommendedGuide": "guides/homegarden"
+    },
+    {
+      "url": "/science/velocity/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/science",
+        "/science"
+      ],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/utilities/shipping-cost/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/utilities",
+        "/utilities"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/career/remortgage-calc/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/conversion/cooking-conv/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/conversion",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/science/free-fall/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/science",
+        "/science"
+      ],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/utilities/salary-biweekly/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/utilities",
+        "/utilities"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/business/discount-rate/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/construction/paint-quantity/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/construction",
+        "/hub/construction"
+      ],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/conversion/clothing-size/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/conversion",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/engineering/hydraulic/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/guides/debt-payoff/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/guides",
+        "/guides/lifestyle.html"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/math/pythagorean/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/math",
+        "/math"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/tech/hosting-cost/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/tech",
+        "/tech"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/finance/annuity/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/finance",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/health/gfr/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/health",
+        "/hub/health"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/homegarden/pool-size/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/homegarden",
+        "/hub/homegarden"
+      ],
+      "recommendedGuide": "guides/homegarden"
+    },
+    {
+      "url": "/lifestyle/subscription-audit/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/lifestyle",
+        "/lifestyle"
+      ],
+      "recommendedGuide": "guides/lifestyle"
+    },
+    {
+      "url": "/science/lens/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/science",
+        "/science"
+      ],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/utilities/mileage-calc/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/utilities",
+        "/utilities"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/career/invoicing-calc/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/fitness/deadlift-standards/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/fitness",
+        "/hub/fitness"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/food/tea-vs-coffee/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/food",
+        "/hub/food"
+      ],
+      "recommendedGuide": "guides/food"
+    },
+    {
+      "url": "/homegarden/pool-chemicals/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/homegarden",
+        "/hub/homegarden"
+      ],
+      "recommendedGuide": "guides/homegarden"
+    },
+    {
+      "url": "/math/distance/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/math",
+        "/math"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/science/coulomb/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/science",
+        "/science"
+      ],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/auto/speed-distance-time/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/auto",
+        "/hub/auto"
+      ],
+      "recommendedGuide": "guides/auto"
+    },
+    {
+      "url": "/business/invoice-due-date/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/education/homework-time/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/education",
+        "/hub/education"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/family/paternity-leave/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/family",
+        "/hub/family"
+      ],
+      "recommendedGuide": "guides/family"
+    },
+    {
+      "url": "/finance/bonds/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/finance",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/slope/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/math",
+        "/math"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/science/frequency/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/science",
+        "/science"
+      ],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/career/commission-plan/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/conversion/power-conv/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/conversion",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/engineering/flow-rate/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/family/kid-allowance/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/family",
+        "/hub/family"
+      ],
+      "recommendedGuide": "guides/family"
+    },
+    {
+      "url": "/health/fatigue-score/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/health",
+        "/hub/health"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/utilities/prime-check/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/utilities",
+        "/utilities"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/career/freelance-budget/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/construction/paver-calculator/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/construction",
+        "/hub/construction"
+      ],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/health/body-fat-navy/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/health",
+        "/hub/health"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/homegarden/stair-calculator/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/homegarden",
+        "/hub/homegarden"
+      ],
+      "recommendedGuide": "guides/homegarden"
+    },
+    {
+      "url": "/science/molar-mass/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/science",
+        "/science"
+      ],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/utilities/rounding-calc/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/utilities",
+        "/utilities"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/career/redundancy-pay/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/engineering/shaft-power/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/food/calorie-per-meal/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/food",
+        "/hub/food"
+      ],
+      "recommendedGuide": "guides/food"
+    },
+    {
+      "url": "/math/complex/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/math",
+        "/math"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/business/cash-flow-statement/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/conversion/density-conv/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/conversion",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/engineering/spring-rate/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/food/rice-water/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/food",
+        "/hub/food"
+      ],
+      "recommendedGuide": "guides/food"
+    },
+    {
+      "url": "/guides/baby-cost/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/science/gravitational-force/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/science",
+        "/science"
+      ],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/business/revenue-per-employee/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/construction/deck-calculator/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/construction",
+        "/hub/construction"
+      ],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/conversion/viscosity-conv/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/conversion",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/engineering/resonant-frequency/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/fitness/row-standards/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/fitness",
+        "/hub/fitness"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/tech/base64-encode/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/tech",
+        "/tech"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/utilities/date-add/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/utilities",
+        "/utilities"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/food/egg-boil/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/food",
+        "/hub/food"
+      ],
+      "recommendedGuide": "guides/food"
+    },
+    {
+      "url": "/health/fasting-calculator/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/health",
+        "/hub/health"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/science/molarity/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/science",
+        "/science"
+      ],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/tech/base64-decode/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/tech",
+        "/tech"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/utilities/age-exact/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/utilities",
+        "/utilities"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/business/business-valuation/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/career/retirement-contrib/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/engineering/hydraulic-power/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/family/diaper-needs/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/family",
+        "/hub/family"
+      ],
+      "recommendedGuide": "guides/family"
+    },
+    {
+      "url": "/education/study-hours/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/education",
+        "/hub/education"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/engineering/stress-strain/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/family/kids-shoe-size/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/family",
+        "/hub/family"
+      ],
+      "recommendedGuide": "guides/family"
+    },
+    {
+      "url": "/finance/paycheck/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/finance",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/fitness/cadence-calc/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/fitness",
+        "/hub/fitness"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/health/met-calories/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/health",
+        "/hub/health"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/business/goal-seek-price/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/conversion/flow-rate-conv/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/conversion",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/fitness/stride-length/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/fitness",
+        "/hub/fitness"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/food/sodium-intake/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/food",
+        "/hub/food"
+      ],
+      "recommendedGuide": "guides/food"
+    },
+    {
+      "url": "/guides/gear-ratio/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/health/body-type/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/health",
+        "/hub/health"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/lifestyle/car-wash-annual/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/lifestyle",
+        "/lifestyle"
+      ],
+      "recommendedGuide": "guides/lifestyle"
+    },
+    {
+      "url": "/math/polar-rect/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/math",
+        "/math"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/tech/text-counter/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/tech",
+        "/tech"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/career/job-offer-compare/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/construction/gravel-tonnage/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/construction",
+        "/hub/construction"
+      ],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/conversion/paper-size-conv/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/conversion",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/engineering/column-buckling/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/family/school-supplies/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/family",
+        "/hub/family"
+      ],
+      "recommendedGuide": "guides/family"
+    },
+    {
+      "url": "/finance/cash-flow/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/finance",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/utilities/speech-time/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/utilities",
+        "/utilities"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/business/cash-conversion-cycle/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/career/cost-living-adjustment/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/family/birthday-party-cost/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/family",
+        "/hub/family"
+      ],
+      "recommendedGuide": "guides/family"
+    },
+    {
+      "url": "/fitness/vertical-jump/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/fitness",
+        "/hub/fitness"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/food/pizza-slices/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/food",
+        "/hub/food"
+      ],
+      "recommendedGuide": "guides/food"
+    },
+    {
+      "url": "/tech/hash-generator/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/tech",
+        "/tech"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/career/severance-calc/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/health/calorie-goal/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/health",
+        "/hub/health"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/homegarden/solar-panel/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/homegarden",
+        "/hub/homegarden"
+      ],
+      "recommendedGuide": "guides/homegarden"
+    },
+    {
+      "url": "/math/taylor-series/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/math",
+        "/math"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/tech/rgb-hex/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/tech",
+        "/tech"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/utilities/timestamp-convert/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/utilities",
+        "/utilities"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/business/aov/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/conversion/ppm-conv/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/conversion",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/education/test-average/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/education",
+        "/hub/education"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/family/teen-budget/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/family",
+        "/hub/family"
+      ],
+      "recommendedGuide": "guides/family"
+    },
+    {
+      "url": "/finance/present-value/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/finance",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/fitness/bodyweight-ratio/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/fitness",
+        "/hub/fitness"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/math/continued-fraction/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/math",
+        "/math"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/career/salary-raise-worth/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/engineering/structural-load/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/family/inheritance-estate/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/family",
+        "/hub/family"
+      ],
+      "recommendedGuide": "guides/family"
+    },
+    {
+      "url": "/guides/sip/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/finance/sip",
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/lifestyle/furniture-assembly/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/lifestyle",
+        "/lifestyle"
+      ],
+      "recommendedGuide": "guides/lifestyle"
+    },
+    {
+      "url": "/science/spring-force/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/science",
+        "/science"
+      ],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/business/csat-score/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/career/wfh-savings/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/engineering/electrical-energy/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/family/sibling-age-gap/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/family",
+        "/hub/family"
+      ],
+      "recommendedGuide": "guides/family"
+    },
+    {
+      "url": "/math/surface-area-3d/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/math",
+        "/math"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/auto/cargo-volume/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/auto",
+        "/hub/auto"
+      ],
+      "recommendedGuide": "guides/auto"
+    },
+    {
+      "url": "/business/conversion-funnel/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/engineering/resistor-combination/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/finance/loan-to-value/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/finance",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/guides/ev-vs-petrol/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/blog/ev-vs-petrol-tco.html",
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/health/ovulation-calculator/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/health",
+        "/hub/health"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/math/complex-modulus/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/math",
+        "/math"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/auto/toll-cost/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/auto",
+        "/hub/auto"
+      ],
+      "recommendedGuide": "guides/auto"
+    },
+    {
+      "url": "/business/ab-test-significance/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/business",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/career/vacation-days/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/career",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/conversion/acceleration-conv/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/conversion",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/engineering/capacitor-energy/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/family/baby-milestones/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/family",
+        "/hub/family"
+      ],
+      "recommendedGuide": "guides/family"
+    },
+    {
+      "url": "/regional/uk-ni/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/regional",
+        "/regional"
+      ],
+      "recommendedGuide": "guides/regional"
+    },
+    {
+      "url": "/science/heat-transfer/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/science",
+        "/science"
+      ],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/construction/septic-size/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/construction",
+        "/hub/construction"
+      ],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/science/boyle-law/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/science",
+        "/science"
+      ],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/construction/plaster/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/construction",
+        "/hub/construction"
+      ],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/education/percentile-rank/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/education",
+        "/hub/education"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/guides/wedding-budget/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/health/cholesterol-ratio/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/health",
+        "/hub/health"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/regional/canada-cpp/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/regional",
+        "/regional"
+      ],
+      "recommendedGuide": "guides/regional"
+    },
+    {
+      "url": "/science/combined-gas-law/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/science",
+        "/science"
+      ],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/tech/aspect-ratio/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/tech",
+        "/tech"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/auto/ebike-range/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/auto",
+        "/hub/auto"
+      ],
+      "recommendedGuide": "guides/auto"
+    },
+    {
+      "url": "/science/wave-speed/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/science",
+        "/science"
+      ],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/everyday/lottery-odds/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/everyday",
+        "/hub/everyday"
+      ],
+      "recommendedGuide": "guides/everyday"
+    },
+    {
+      "url": "/family/family-tree-generation/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/family",
+        "/hub/family"
+      ],
+      "recommendedGuide": "guides/family"
+    },
+    {
+      "url": "/guides/freelance-rate-card/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/science/moment-of-inertia/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/science",
+        "/science"
+      ],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/homegarden/firepit-size/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/homegarden",
+        "/hub/homegarden"
+      ],
+      "recommendedGuide": "guides/homegarden"
+    },
+    {
+      "url": "/lifestyle/sourdough-hydration/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/lifestyle",
+        "/lifestyle"
+      ],
+      "recommendedGuide": "guides/lifestyle"
+    },
+    {
+      "url": "/math/golden-ratio/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/math",
+        "/math"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/tech/font-size-conv/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/tech",
+        "/tech"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/construction/ceiling-tile/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/construction",
+        "/hub/construction"
+      ],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/engineering/ventilation-cfm/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/guides/electricity-bill/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/lifestyle/lawn-fertilizer/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/lifestyle",
+        "/lifestyle"
+      ],
+      "recommendedGuide": "guides/lifestyle"
+    },
+    {
+      "url": "/science/hydrostatic-pressure/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/science",
+        "/science"
+      ],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/construction/stair-stringer/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/construction",
+        "/hub/construction"
+      ],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/health/hba1c-eag/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/health",
+        "/hub/health"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/math/run-length/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/math",
+        "/math"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/regional/india-take-home-salary/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/regional",
+        "/regional"
+      ],
+      "recommendedGuide": "guides/regional"
+    },
+    {
+      "url": "/auto/power-to-weight/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/auto",
+        "/hub/auto"
+      ],
+      "recommendedGuide": "guides/auto"
+    },
+    {
+      "url": "/engineering/torque-wrench/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/homegarden/ceiling-fan-size/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/homegarden",
+        "/hub/homegarden"
+      ],
+      "recommendedGuide": "guides/homegarden"
+    },
+    {
+      "url": "/lifestyle/knit-gauge/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/lifestyle",
+        "/lifestyle"
+      ],
+      "recommendedGuide": "guides/lifestyle"
+    },
+    {
+      "url": "/science/reynolds-number/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/science",
+        "/science"
+      ],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/tech/audio-file-size/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/tech",
+        "/tech"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/engineering/engine-efficiency/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/guides/grade-needed/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/health/map-calculator/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/health",
+        "/hub/health"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/homegarden/tree-spacing/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/homegarden",
+        "/hub/homegarden"
+      ],
+      "recommendedGuide": "guides/homegarden"
+    },
+    {
+      "url": "/homegarden/grout-calc/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/homegarden",
+        "/hub/homegarden"
+      ],
+      "recommendedGuide": "guides/homegarden"
+    },
+    {
+      "url": "/math/pascal-triangle/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/hub/math",
+        "/math"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/mortgage-payoff/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/finance",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/health/iv-drip-rate/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/health",
+        "/hub/health"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/finance/graduated-payment/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/finance",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/engineering/pcb-trace/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/finance/balloon-payment/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/finance",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/guides/loans-mortgages/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/engineering/bolt-torque/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/guides/tax-salary/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/engineering/pulley/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/engineering",
+        "/hub/engineering"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/guides/math-statistics/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/finance/crypto-profit/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/finance/crypto-gains"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/guides/engineering/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/guides/gear-ratio.html",
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/guides/family/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/guides/baby-cost.html",
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/guides/regional/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/guides/credit-card-minimum/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/finance/loan-payoff/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides/debt-payoff.html"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/guides/heart-rate-zones/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/guides/npv-vs-irr/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/guides/rent-vs-buy/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/guides/sleep-cycles/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/math/weighted-average/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/math/average",
+        "/math/mean-median-mode"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/debt-snowball/",
+      "inlinks": 2,
+      "linkedFrom": [
+        "/guides/debt-payoff.html",
+        "/guides/debt-payoff.html"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/lump-sum-vs-sip/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/finance/sip"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/pmi-calculator/",
+      "inlinks": 1,
+      "linkedFrom": [
+        "/guides/mortgage.html"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    }
+  ],
+  "ok": [
+    {
+      "url": "/health/bmi/",
+      "inlinks": 1528,
+      "linkedFrom": [
+        "/auto/auto-fare",
+        "/auto/bike-fuel",
+        "/auto/bike-loan",
+        "/auto/bus-vs-car",
+        "/auto/car-affordability"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/math/scientific/",
+      "inlinks": 122,
+      "linkedFrom": [
+        "/hub/math",
+        "/math/angle-between-vectors",
+        "/math/annulus-area",
+        "/math/arithmetic-seq",
+        "/math/average"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/math/percentage/",
+      "inlinks": 1573,
+      "linkedFrom": [
+        "/auto/auto-fare",
+        "/auto/bike-fuel",
+        "/auto/bike-loan",
+        "/auto/bus-vs-car",
+        "/auto/car-affordability"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/career/tax-bracket/",
+      "inlinks": 41,
+      "linkedFrom": [
+        "/career/401k-match",
+        "/career/benefits-value",
+        "/career/bonus-calc",
+        "/career/career-gap",
+        "/career/commission-plan"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/conversion/volume/",
+      "inlinks": 38,
+      "linkedFrom": [
+        "/conversion/acceleration-conv",
+        "/conversion/angle",
+        "/conversion/area",
+        "/conversion/bit-rate-conv",
+        "/conversion/clothing-size"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/food/daily-water-intake/",
+      "inlinks": 39,
+      "linkedFrom": [
+        "/food/alcohol-calories",
+        "/food/baking-converter",
+        "/food/body-fat-food",
+        "/food/caffeine-daily",
+        "/food/calorie-burned"
+      ],
+      "recommendedGuide": "guides/food"
+    },
+    {
+      "url": "/guides/bmi/",
+      "inlinks": 6,
+      "linkedFrom": [
+        "/guides/bmr.html",
+        "/guides/calories.html",
+        "/guides/food.html",
+        "/guides/glossary.html",
+        "/guides/health-fitness.html"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/health/body-fat/",
+      "inlinks": 71,
+      "linkedFrom": [
+        "/guides/body-fat.html",
+        "/guides/ideal-weight.html",
+        "/health/anion-gap",
+        "/health/apgar",
+        "/health/blood-pressure"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/math/percent-change/",
+      "inlinks": 122,
+      "linkedFrom": [
+        "/hub/math",
+        "/math/angle-between-vectors",
+        "/math/annulus-area",
+        "/math/arithmetic-seq",
+        "/math/average"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/science/force/",
+      "inlinks": 84,
+      "linkedFrom": [
+        "/guides/science.html",
+        "/hub/science",
+        "/science/acceleration",
+        "/science/air-density",
+        "/science/angular-momentum"
+      ],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/tech/video-size/",
+      "inlinks": 73,
+      "linkedFrom": [
+        "/hub/tech",
+        "/tech/ad-revenue",
+        "/tech/api-cost",
+        "/tech/ascii-table",
+        "/tech/aspect-ratio"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/finance/retirement/",
+      "inlinks": 32,
+      "linkedFrom": [
+        "/finance/compound-interest/10-years-50000",
+        "/finance/compound-interest/15-years-75000",
+        "/finance/compound-interest/20-years-10000",
+        "/finance/compound-interest/20-years-50000",
+        "/finance/compound-interest/25-years-25000"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/homegarden/ac-size/",
+      "inlinks": 5,
+      "linkedFrom": [
+        "/guides/ac-size.html",
+        "/guides/ac-size.html",
+        "/guides/homegarden.html",
+        "/homegarden",
+        "/hub/homegarden"
+      ],
+      "recommendedGuide": "guides/homegarden"
+    },
+    {
+      "url": "/education/test-score/",
+      "inlinks": 34,
+      "linkedFrom": [
+        "/education/act-sat-compare",
+        "/education/act-score",
+        "/education/assignment-split",
+        "/education/attendance-rate",
+        "/education/citation"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/everyday/paint/",
+      "inlinks": 6,
+      "linkedFrom": [
+        "/everyday",
+        "/guides/paint-coverage.html",
+        "/guides/paint-coverage.html",
+        "/guides/room-area.html",
+        "/guides/room-area.html"
+      ],
+      "recommendedGuide": "guides/everyday"
+    },
+    {
+      "url": "/finance/irr/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/finance",
+        "/guides/npv-vs-irr.html",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/family/family-budget-simple/",
+      "inlinks": 4,
+      "linkedFrom": [
+        "/family/family-budget",
+        "/family",
+        "/finance/envelope-budget",
+        "/hub/family"
+      ],
+      "recommendedGuide": "guides/family"
+    },
+    {
+      "url": "/conversion/currency-conv/",
+      "inlinks": 5,
+      "linkedFrom": [
+        "/conversion",
+        "/guides/currency-conversion.html",
+        "/guides/currency-conversion.html",
+        "/guides/zakat.html",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/finance/inflation/",
+      "inlinks": 13,
+      "linkedFrom": [
+        "/blog/rule-of-72.html",
+        "/finance/compound-interest/10-years-50000",
+        "/finance/compound-interest/15-years-75000",
+        "/finance/compound-interest/20-years-10000",
+        "/finance/compound-interest/20-years-50000"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/guides/concrete/",
+      "inlinks": 6,
+      "linkedFrom": [
+        "/blog/concrete-patio-math.html",
+        "/guides/construction.html",
+        "/guides/construction.html",
+        "/guides/engineering.html",
+        "/guides/homegarden.html"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/health/target-heart-rate/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/guides/heart-rate-zones.html",
+        "/health",
+        "/hub/health"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/guides/gpa/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/education/gpa",
+        "/guides/grade-needed.html",
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/business/markup-margin/",
+      "inlinks": 6,
+      "linkedFrom": [
+        "/business",
+        "/business/profit-margin/10000",
+        "/business/profit-margin/25000",
+        "/business/profit-margin/50000",
+        "/business/profit-margin"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/guides/passwords/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/guides",
+        "/guides/random-numbers.html",
+        "/guides/utilities.html"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/health/calorie-deficit/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/guides/calories.html",
+        "/health",
+        "/hub/health"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/finance/home-afford/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/finance",
+        "/guides/rent-vs-buy.html",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/construction/concrete-bags/",
+      "inlinks": 11,
+      "linkedFrom": [
+        "/construction/concrete-slab",
+        "/construction/excavation",
+        "/construction/gravel",
+        "/construction/gravel-driveway",
+        "/construction/gravel-tonnage"
+      ],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/guides/profit-margin/",
+      "inlinks": 5,
+      "linkedFrom": [
+        "/business/profit-margin/10000",
+        "/business/profit-margin/25000",
+        "/business/profit-margin/50000",
+        "/business/profit-margin",
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/business/gross-margin/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/business",
+        "/guides/break-even.html",
+        "/hub/business"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/finance/break-even/",
+      "inlinks": 5,
+      "linkedFrom": [
+        "/finance",
+        "/guides/break-even.html",
+        "/guides/break-even.html",
+        "/guides/business.html",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/education/gpa-target/",
+      "inlinks": 5,
+      "linkedFrom": [
+        "/education/gpa",
+        "/education/grade-needed",
+        "/education",
+        "/education/semester-gpa",
+        "/hub/education"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/markup/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/finance/discount",
+        "/finance",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/discount/",
+      "inlinks": 9,
+      "linkedFrom": [
+        "/blog/stacked-discounts.html",
+        "/finance",
+        "/finance/sales-tax",
+        "/finance/tip",
+        "/guides/discount.html"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/mean-median-mode/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/hub/math",
+        "/math/average",
+        "/math"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/fire/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/finance",
+        "/guides/retirement.html",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/health/tdee-macro/",
+      "inlinks": 10,
+      "linkedFrom": [
+        "/guides/bmr.html",
+        "/guides/macro-calculator.html",
+        "/guides/macro-calculator.html",
+        "/health/bmi",
+        "/health/bmr"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/guides/homegarden/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/guides/ac-size.html",
+        "/guides",
+        "/guides/paint-coverage.html"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/finance/uk-income-tax/",
+      "inlinks": 8,
+      "linkedFrom": [
+        "/finance/tax/100000",
+        "/finance/tax/120000",
+        "/finance/tax/150000",
+        "/finance/tax/50000",
+        "/finance/tax/60000"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/inflation-adjusted/",
+      "inlinks": 6,
+      "linkedFrom": [
+        "/finance/inflation/10-years-10000",
+        "/finance/inflation/15-years-25000",
+        "/finance/inflation/20-years-50000",
+        "/finance/inflation/30-years-100000",
+        "/finance/inflation/5-years-5000"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/envelope-budget/",
+      "inlinks": 16,
+      "linkedFrom": [
+        "/everyday/budget-allocator",
+        "/family/family-budget",
+        "/family/family-budget-simple",
+        "/finance/cash-flow/10000",
+        "/finance/cash-flow/25000"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/home-equity/",
+      "inlinks": 8,
+      "linkedFrom": [
+        "/career/remortgage-calc",
+        "/finance/pmi-drop",
+        "/finance/refinance/10-years-250000",
+        "/finance/refinance/10-years-300000-florida",
+        "/finance/refinance/15-years-300000"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/pmi-drop/",
+      "inlinks": 7,
+      "linkedFrom": [
+        "/finance/home-equity",
+        "/finance/refinance/10-years-250000",
+        "/finance/refinance/10-years-300000-florida",
+        "/finance/refinance/15-years-300000",
+        "/finance/refinance/20-years-400000"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/fitness/running-pace/",
+      "inlinks": 43,
+      "linkedFrom": [
+        "/fitness/beep-test",
+        "/fitness/bench-standards",
+        "/fitness/body-fat-fitness",
+        "/fitness/bodyweight-ratio",
+        "/fitness/burpee-test"
+      ],
+      "recommendedGuide": "guides/health-fitness"
+    },
+    {
+      "url": "/food/daily-calorie/",
+      "inlinks": 39,
+      "linkedFrom": [
+        "/food/alcohol-calories",
+        "/food/baking-converter",
+        "/food/body-fat-food",
+        "/food/caffeine-daily",
+        "/food/calorie-burned"
+      ],
+      "recommendedGuide": "guides/food"
+    },
+    {
+      "url": "/guides/percentage/",
+      "inlinks": 5,
+      "linkedFrom": [
+        "/guides/everyday.html",
+        "/guides/gpa.html",
+        "/guides",
+        "/guides/math-statistics.html",
+        "/guides/math-statistics.html"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/science/density/",
+      "inlinks": 84,
+      "linkedFrom": [
+        "/guides/science.html",
+        "/hub/science",
+        "/science/acceleration",
+        "/science/air-density",
+        "/science/angular-momentum"
+      ],
+      "recommendedGuide": "guides/science"
+    },
+    {
+      "url": "/tech/data-usage/",
+      "inlinks": 73,
+      "linkedFrom": [
+        "/hub/tech",
+        "/tech/ad-revenue",
+        "/tech/api-cost",
+        "/tech/ascii-table",
+        "/tech/aspect-ratio"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/utilities/password-gen/",
+      "inlinks": 34,
+      "linkedFrom": [
+        "/guides/utilities.html",
+        "/hub/utilities",
+        "/utilities/age-exact",
+        "/utilities/area-calc",
+        "/utilities/base-converter"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/business/cac/",
+      "inlinks": 60,
+      "linkedFrom": [
+        "/business/ab-test-significance",
+        "/business/aov",
+        "/business/break-even-point",
+        "/business/break-even-revenue",
+        "/business/burn-rate/10000"
+      ],
+      "recommendedGuide": "guides/business"
+    },
+    {
+      "url": "/career/overtime-pay/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/career",
+        "/guides/career.html",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/conversion/angle/",
+      "inlinks": 8,
+      "linkedFrom": [
+        "/conversion/area",
+        "/conversion/data-storage",
+        "/conversion",
+        "/conversion/length",
+        "/conversion/speed"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/engineering/led-resistor/",
+      "inlinks": 67,
+      "linkedFrom": [
+        "/engineering/battery-life",
+        "/engineering/beam-deflection",
+        "/engineering/beam-load",
+        "/engineering/bearing-load",
+        "/engineering/belt-length"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/auto/ev-vs-gas-petrol/",
+      "inlinks": 6,
+      "linkedFrom": [
+        "/auto",
+        "/blog/ev-vs-petrol-tco.html",
+        "/guides/auto.html",
+        "/guides/ev-vs-petrol.html",
+        "/guides/ev-vs-petrol.html"
+      ],
+      "recommendedGuide": "guides/auto"
+    },
+    {
+      "url": "/engineering/capacitor/",
+      "inlinks": 66,
+      "linkedFrom": [
+        "/engineering/battery-life",
+        "/engineering/beam-deflection",
+        "/engineering/beam-load",
+        "/engineering/bearing-load",
+        "/engineering/belt-length"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/finance/investment/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/finance",
+        "/guides/cagr.html",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/guides/discount/",
+      "inlinks": 6,
+      "linkedFrom": [
+        "/blog/stacked-discounts.html",
+        "/finance/discount",
+        "/guides/auto.html",
+        "/guides/everyday.html",
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/math/lcm-gcd/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/hub/math",
+        "/math/fraction",
+        "/math"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/education/exam-countdown/",
+      "inlinks": 6,
+      "linkedFrom": [
+        "/education/grade",
+        "/education",
+        "/education/reading-speed",
+        "/education/study-time",
+        "/education/test-score"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/engineering/battery-life/",
+      "inlinks": 8,
+      "linkedFrom": [
+        "/engineering/capacitor",
+        "/engineering/gear-ratio",
+        "/engineering",
+        "/engineering/led-resistor",
+        "/engineering/power-factor"
+      ],
+      "recommendedGuide": "guides/engineering"
+    },
+    {
+      "url": "/family/college-savings/",
+      "inlinks": 5,
+      "linkedFrom": [
+        "/family",
+        "/guides/baby-cost.html",
+        "/guides/baby-cost.html",
+        "/guides/family.html",
+        "/hub/family"
+      ],
+      "recommendedGuide": "guides/family"
+    },
+    {
+      "url": "/finance/savings-goal/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/finance",
+        "/guides/net-worth.html",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/tax/",
+      "inlinks": 11,
+      "linkedFrom": [
+        "/career/freelance-budget",
+        "/career/tax-refund",
+        "/family/teen-budget",
+        "/finance/australia-income-tax",
+        "/finance/canada-income-tax"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/guides/gst-sales-tax/",
+      "inlinks": 4,
+      "linkedFrom": [
+        "/finance/sales-tax",
+        "/guides",
+        "/guides/regional.html",
+        "/guides/tax-salary.html"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/conversion/temperature/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/conversion",
+        "/guides/unit-conversion.html",
+        "/hub/conversion"
+      ],
+      "recommendedGuide": "guides/unit-conversion"
+    },
+    {
+      "url": "/finance/sales-tax/",
+      "inlinks": 7,
+      "linkedFrom": [
+        "/finance/discount",
+        "/finance",
+        "/finance/tip",
+        "/guides/gst-sales-tax.html",
+        "/guides/percentage.html"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/guides/glossary/",
+      "inlinks": 1502,
+      "linkedFrom": [
+        "/auto/auto-fare",
+        "/auto/bike-fuel",
+        "/auto/bike-loan",
+        "/auto/bus-vs-car",
+        "/auto/car-affordability"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/construction/bricks/",
+      "inlinks": 4,
+      "linkedFrom": [
+        "/construction",
+        "/guides/concrete.html",
+        "/guides/construction.html",
+        "/hub/construction"
+      ],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/finance/npv/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/finance",
+        "/guides/npv-vs-irr.html",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/guides/inflation/",
+      "inlinks": 11,
+      "linkedFrom": [
+        "/finance/inflation/10-years-10000",
+        "/finance/inflation/15-years-25000",
+        "/finance/inflation/20-years-50000",
+        "/finance/inflation/30-years-100000",
+        "/finance/inflation/5-years-5000"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/guides/salary/",
+      "inlinks": 4,
+      "linkedFrom": [
+        "/guides/career.html",
+        "/guides/family.html",
+        "/guides",
+        "/guides/tax-salary.html"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/construction/excavation/",
+      "inlinks": 8,
+      "linkedFrom": [
+        "/construction/concrete-bags",
+        "/construction/concrete-slab",
+        "/construction/gravel",
+        "/construction/gravel-driveway",
+        "/construction/gravel-tonnage"
+      ],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/finance/roi/",
+      "inlinks": 4,
+      "linkedFrom": [
+        "/finance",
+        "/guides/npv-vs-irr.html",
+        "/guides/profit-margin.html",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/food/vegan-protein/",
+      "inlinks": 4,
+      "linkedFrom": [
+        "/food",
+        "/guides/protein-intake.html",
+        "/guides/protein-intake.html",
+        "/hub/food"
+      ],
+      "recommendedGuide": "guides/food"
+    },
+    {
+      "url": "/finance/tip/",
+      "inlinks": 6,
+      "linkedFrom": [
+        "/finance",
+        "/finance/sales-tax",
+        "/guides/discount.html",
+        "/guides/percentage.html",
+        "/guides/tip.html"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/math/average/",
+      "inlinks": 4,
+      "linkedFrom": [
+        "/hub/math",
+        "/math/fraction",
+        "/math",
+        "/math/mean-median-mode"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/regional/wedding-budget-shaadi/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/guides/wedding-budget.html",
+        "/hub/regional",
+        "/regional"
+      ],
+      "recommendedGuide": "guides/regional"
+    },
+    {
+      "url": "/finance/salary/",
+      "inlinks": 9,
+      "linkedFrom": [
+        "/finance",
+        "/guides/currency-conversion.html",
+        "/guides/emi.html",
+        "/guides/income-tax.html",
+        "/guides/percentage.html"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/guides/random-numbers/",
+      "inlinks": 5,
+      "linkedFrom": [
+        "/guides",
+        "/guides/math-statistics.html",
+        "/guides/math-statistics.html",
+        "/guides/science.html",
+        "/guides/utilities.html"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/utilities/ratio-simplifier/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/hub/utilities",
+        "/utilities/gcd-lcm",
+        "/utilities"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/guides/unit-conversion/",
+      "inlinks": 7,
+      "linkedFrom": [
+        "/guides/auto.html",
+        "/guides/construction.html",
+        "/guides/engineering.html",
+        "/guides/food.html",
+        "/guides/homegarden.html"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/finance/net-worth-calculator/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/finance",
+        "/guides/net-worth.html",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/family/screen-time/",
+      "inlinks": 4,
+      "linkedFrom": [
+        "/family",
+        "/guides/screen-time.html",
+        "/guides/screen-time.html",
+        "/hub/family"
+      ],
+      "recommendedGuide": "guides/family"
+    },
+    {
+      "url": "/finance/rent-vs-buy/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/finance",
+        "/guides/rent-vs-buy.html",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/utilities/coin-flip/",
+      "inlinks": 4,
+      "linkedFrom": [
+        "/guides/random-numbers.html",
+        "/guides/random-numbers.html",
+        "/hub/utilities",
+        "/utilities"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/finance/refinance/",
+      "inlinks": 11,
+      "linkedFrom": [
+        "/career/remortgage-calc",
+        "/finance/amortization/10-years-150000",
+        "/finance/amortization/15-years-200000",
+        "/finance/amortization/20-years-350000",
+        "/finance/amortization/30-years-300000"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/auto/stopping-distance/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/auto",
+        "/auto/tire-size",
+        "/hub/auto"
+      ],
+      "recommendedGuide": "guides/auto"
+    },
+    {
+      "url": "/career/monthly-goal/",
+      "inlinks": 4,
+      "linkedFrom": [
+        "/career",
+        "/guides/freelance-rate-card.html",
+        "/guides/freelance-rate-card.html",
+        "/hub/career"
+      ],
+      "recommendedGuide": "guides/career"
+    },
+    {
+      "url": "/finance/currency-converter/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/finance",
+        "/guides/sip.html",
+        "/hub/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/auto/fuel-efficiency/",
+      "inlinks": 4,
+      "linkedFrom": [
+        "/auto",
+        "/guides/fuel-cost.html",
+        "/guides/fuel-cost.html",
+        "/hub/auto"
+      ],
+      "recommendedGuide": "guides/auto"
+    },
+    {
+      "url": "/food/protein-per-dollar/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/food",
+        "/guides/protein-intake.html",
+        "/hub/food"
+      ],
+      "recommendedGuide": "guides/food"
+    },
+    {
+      "url": "/utilities/random-name/",
+      "inlinks": 5,
+      "linkedFrom": [
+        "/guides/random-numbers.html",
+        "/guides/random-numbers.html",
+        "/guides/random-numbers.html",
+        "/hub/utilities",
+        "/utilities"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/utilities/password-entropy/",
+      "inlinks": 4,
+      "linkedFrom": [
+        "/guides/passwords.html",
+        "/guides/passwords.html",
+        "/hub/utilities",
+        "/utilities"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/regional/uae-vat/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/guides/gst-sales-tax.html",
+        "/hub/regional",
+        "/regional"
+      ],
+      "recommendedGuide": "guides/regional"
+    },
+    {
+      "url": "/tech/password-generator/",
+      "inlinks": 5,
+      "linkedFrom": [
+        "/guides/passwords.html",
+        "/guides/passwords.html",
+        "/guides/random-numbers.html",
+        "/hub/tech",
+        "/tech"
+      ],
+      "recommendedGuide": "guides/utilities"
+    },
+    {
+      "url": "/education/grade-percentage/",
+      "inlinks": 4,
+      "linkedFrom": [
+        "/education",
+        "/guides/percentage.html",
+        "/guides/percentage.html",
+        "/hub/education"
+      ],
+      "recommendedGuide": "guides/math-statistics"
+    },
+    {
+      "url": "/finance/apr/",
+      "inlinks": 14,
+      "linkedFrom": [
+        "/finance/amortization/10-years-150000",
+        "/finance/amortization/15-years-200000",
+        "/finance/amortization/20-years-350000",
+        "/finance/amortization/30-years-300000",
+        "/finance/amortization/5-years-100000"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/loan-comparison/",
+      "inlinks": 6,
+      "linkedFrom": [
+        "/finance/apr/10-years-50000",
+        "/finance/apr/3-years-10000",
+        "/finance/apr/5-years-20000",
+        "/finance/apr",
+        "/finance"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/construction/gravel-driveway/",
+      "inlinks": 4,
+      "linkedFrom": [
+        "/construction/concrete-bags",
+        "/construction/excavation",
+        "/construction",
+        "/hub/construction"
+      ],
+      "recommendedGuide": "guides/construction"
+    },
+    {
+      "url": "/finance/sip/",
+      "inlinks": 6,
+      "linkedFrom": [
+        "/guides/fd-ppf-sip.html",
+        "/guides/fd-ppf-sip.html",
+        "/guides/retirement.html",
+        "/guides/sip.html",
+        "/guides/sip.html"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/finance/us-income-tax/",
+      "inlinks": 17,
+      "linkedFrom": [
+        "/career/freelance-budget",
+        "/career/tax-refund",
+        "/family/teen-budget",
+        "/finance/australia-income-tax",
+        "/finance/canada-income-tax"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    },
+    {
+      "url": "/guides/everyday/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/guides/business-days.html",
+        "/guides/electricity-bill.html",
+        "/guides"
+      ],
+      "recommendedGuide": null
+    },
+    {
+      "url": "/finance/sip-step-up/",
+      "inlinks": 3,
+      "linkedFrom": [
+        "/finance/sip",
+        "/guides/sip.html",
+        "/guides/sip.html"
+      ],
+      "recommendedGuide": "guides/loans-mortgages"
+    }
+  ]
+}

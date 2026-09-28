@@ -487,6 +487,46 @@ for (const tool of tools) {
   }
   page = rewriteSchema(page, buildToolSchema(tool, catKey, canonPath));
   page = rewriteMain(page, buildToolContent(tool, catKey));
+  // INTERNAL-LINK BOOST: append 6 deterministic same-category tool links after
+  // the main content (AFTER rewriteMain — it replaces #mainContent). 279 tool
+  // pages had ZERO static inlinks (crawlers treat them as dead-ends →
+  // 'Discovered/Unknown' stagnation); this guarantees every tool page ≥6 static
+  // inlinks from category siblings. Deterministic rotation (stride 7) keeps the
+  // graph stable across builds.
+  {
+    // BUGFIX (build-hang): purana loop `for (let k = 1; picks.length < 6; k++)`
+    // UNBOUNDED tha — jab sibs.length % 7 === 0 (7/14/21/28...) stride-7 sirf
+    // 1-2 indexes repeat karta hai, picks.size kabhi 6 nahi pahunchta →
+    // infinite loop → SSG hang → build-deploy ads.txt ke baad atak jata tha.
+    // Ab k bounded hai aur UNIQUE INDEXES par pick hota hai (guaranteed
+    // termination + guaranteed 6 unique picks jab siblings ≥6 hain).
+    const sibs = tools.filter(x => x.cat === catKey && x.id !== tool.id);
+    const at = tools.findIndex(x => x.id === tool.id);
+    const want = Math.min(6, sibs.length);
+    const used = new Set();
+    const picks = [];
+    // Pass 1 (stride-7 rotation): k is BOUNDED (<= sibs.length) — period of the
+    // sequence is sibs.length/gcd(sibs.length,7), jo hamesha <= sibs.length hota
+    // hai, to ye loop hamesha terminate hota hai.
+    for (let k = 1; picks.length < want && k <= sibs.length; k++) {
+      const idx = ((at + k * 7) % sibs.length + sibs.length) % sibs.length;
+      if (used.has(idx)) continue;
+      used.add(idx);
+      picks.push(sibs[idx]);
+    }
+    // Pass 2 (sequential fill): jab sibs.length % 7 === 0 stride pass sirf
+    // sibs.length/7 distinct deta hai — baaqi slots sequential unique se bharo.
+    for (let idx = 0; picks.length < want && idx < sibs.length; idx++) {
+      if (used.has(idx)) continue;
+      used.add(idx);
+      picks.push(sibs[idx]);
+    }
+    if (picks.length) {
+      const more = '<div class="tool-more-links"><h2>More ' + esc(CAT_NAME[catKey] || catKey) + ' Calculators</h2>' +
+        '<p>' + picks.map(x => '<a href="/' + catKey + '/' + x.id + '/">' + esc(x.name) + '</a>').join(' · ') + '</p></div>';
+      page = rewriteMainAppend(page, more);
+    }
+  }
   writePage(path.join(catKey, tool.id), page);
 }
 

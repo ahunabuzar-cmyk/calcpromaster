@@ -54,6 +54,23 @@ not measurable this way. Treat this table as a snapshot, not a dashboard.
 
 ---
 
+## Update — 2026-09-28 (refresh, agent-run)
+
+**Production state (curl-verified 2026-09-28):**
+- Homepage title: abhi bhi **"1206+"** — naya build (1,216+ / deploy/ 1,446 pages) **abhi bhi live nahi hua** (Netlify drag-drop master blocker).
+- Sitemap: 1,337 URLs live (local ready build: 1,347+).
+
+**Brand SERP (DuckDuckGo, no-personalization probe):**
+- `calcpromaster` → **calcpromaster.com = POSITION #1** ✅ (GitHub repo bhi top results mein).
+- twelve.tools ka PURANA netlify URL bhi top-5 mein rank kar raha hai — email-0 confirm hote hi ye authority naye .com domain ko milegi.
+- Competition: "CalcMaster" naam ke kai unrelated sites (calcmaster.co/.pro/.org) confuse kar sakte hain — brand term + directory listings isko theek karenge.
+
+**GSC gap (unchanged):** GSC API credentials abhi bhi unconfigured — real impressions/positions sirf manual GSC dashboard se. 375 indexed (last manual check). Deploy ke baad: IndexNow 1,347 ping + top-20 request-indexing (docs/REQUEST-INDEXING-TOP20.md).
+
+**Action reminder (unchanged):** head terms unwinnable abhi; Tier-A long-tail 5/5 pages ready; trigger = deploy.
+
+---
+
 ## Update — 2026-09-19 (live audit run)
 
 **Production state (curl-verified today):**

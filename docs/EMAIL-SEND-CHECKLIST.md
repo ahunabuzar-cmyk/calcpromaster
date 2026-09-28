@@ -51,4 +51,4 @@ Sab emails **docs/outreach-emails.md** mein ready hain — bas copy → personal
 | FixitCalc 9 | 2026-09-28 | ✓ SENT | 2026-10-02 | |
 | Success Bug 10 | 2026-09-28 | ✓ SENT | 2026-10-02 | |
 
-**Agla step (fixed):** 2026-10-02 ko jinhone reply nahi kiya unhe ek short follow-up (template docs/outreach-emails.md bottom). Embed links deploy ke baad hi bhejo (agar Option A use hui).
+**Agla step (fixed):** 2026-10-02 ko jinhone reply nahi kiya unhe ek short follow-up — READY TEMPLATES: docs/OUTREACH-FOLLOWUPS-2026-10-02.md (F1 general, F2 embed-wala sirf deploy ke baad, F3 Twelve.Tools nudge). Embed links deploy ke baad hi bhejo (agar Option A use hui).

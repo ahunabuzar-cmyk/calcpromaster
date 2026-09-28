@@ -1,8 +1,10 @@
 # CalcProMaster
 
-**Live site: https://calcpromaster.netlify.app**
+[![GitHub Stars](https://img.shields.io/github/stars/ahunabuzar-cmyk/calcpromaster?style=social)](https://github.com/ahunabuzar-cmyk/calcpromaster/stargazers)
 
-CalcProMaster is a free online calculator suite — **1,206+ calculators** across 20
+**Live site: https://calcpromaster.com**
+
+CalcProMaster is a free online calculator suite — **1,216+ calculators** across 20
 categories, every page server-rendered with step-by-step results, FAQ schema, and
 a mobile-first SPA shell.
 
@@ -15,16 +17,16 @@ a mobile-first SPA shell.
 | Math | Quadratic solver with steps, percentage, fraction, matrix tools |
 | Construction | Concrete volume, paint coverage, tile, roofing, stairs |
 | Conversion | 250+ unit converters (length, weight, temperature, data…) |
-| …20 categories total | See the [full tool index](https://calcpromaster.netlify.app/hub) |
+| …20 categories total | See the [full tool index](https://calcpromaster.com/hub) |
 
-Also: [73 in-depth guides](https://calcpromaster.netlify.app/guides),
-an [editorial policy](https://calcpromaster.netlify.app/editorial-policy), and a
+Also: [73 in-depth guides](https://calcpromaster.com/guides),
+an [editorial policy](https://calcpromaster.com/editorial-policy), and a
 hard-404 contract (unknown URLs return a real 404 — no soft-404 SEO leakage).
 
 ## Repo layout
 
 ```
-index.html, js/, styles.css   # SPA shell + 1,206 tool definitions (js/data/*.js)
+index.html, js/, styles.css   # SPA shell + 1,216 tool definitions (js/data/*.js)
 guides/, blog/                # static content pages (hand-written)
 scripts/                      # build & QA pipeline (see below)
 build-deploy.js               # → builds the deploy/ artifact (prerender + sitemap)

@@ -36,17 +36,19 @@ Sab emails **docs/outreach-emails.md** mein ready hain — bas copy → personal
 1. **SaaSHub confirmation email click karo** (inbox/spam — 26 Sep ko aayi thi) → 5★ review live hoga.
 2. **Fazier share pack** (docs/outreach-emails.md bottom) WhatsApp + LinkedIn par — first 3 upvotes sabse mushkil hote hain.
 
-## Tracking (bhejte hi ✓ bharo)
+## Tracking (USER UPDATE 2026-09-28: sab 11 emails SENT ✓)
 | Email | Sent date | ✓ | Follow-up due (+4 din) | Reply? |
 |---|---|---|---|---|
-| Twelve.Tools #0 | | | 2026-10-01 | |
-| Be Clever 1 | | | 2026-10-01 | |
-| affordwhere 2 | | | 2026-10-01 | |
-| Truescho 3 | | | 2026-10-01 | |
-| Matutto 4 | | | 2026-10-01 | |
-| Mike Coady 5 | | | 2026-10-01 | |
-| StackWealth 6 | | | 2026-10-01 | |
-| FinToolBaba 7 | | | 2026-10-01 | |
-| College-Sch 8 | | | 2026-10-01 | |
-| FixitCalc 9 | | | 2026-10-01 | |
-| Success Bug 10 | | | 2026-10-01 | |
+| Twelve.Tools #0 | 2026-09-28 | ✓ SENT | 2026-10-02 | |
+| Be Clever 1 | 2026-09-28 | ✓ SENT | 2026-10-02 | |
+| affordwhere 2 | 2026-09-28 | ✓ SENT | 2026-10-02 | |
+| Truescho 3 | 2026-09-28 | ✓ SENT | 2026-10-02 | |
+| Matutto 4 | 2026-09-28 | ✓ SENT | 2026-10-02 | |
+| Mike Coady 5 | 2026-09-28 | ✓ SENT | 2026-10-02 | |
+| StackWealth 6 | 2026-09-28 | ✓ SENT | 2026-10-02 | |
+| FinToolBaba 7 | 2026-09-28 | ✓ SENT | 2026-10-02 | |
+| College-Sch 8 | 2026-09-28 | ✓ SENT | 2026-10-02 | |
+| FixitCalc 9 | 2026-09-28 | ✓ SENT | 2026-10-02 | |
+| Success Bug 10 | 2026-09-28 | ✓ SENT | 2026-10-02 | |
+
+**Agla step (fixed):** 2026-10-02 ko jinhone reply nahi kiya unhe ek short follow-up (template docs/outreach-emails.md bottom). Embed links deploy ke baad hi bhejo (agar Option A use hui).

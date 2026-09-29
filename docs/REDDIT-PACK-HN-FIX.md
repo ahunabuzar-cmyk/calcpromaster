@@ -25,7 +25,7 @@ jaise free-hosting domains par submissions se rokta hai (spam-control). Confirm 
      account?
 
      What I want to post (Show HN):
-     Title: Show HN: CalcProMaster – 1200 calculators that show their work (formulas + steps)
+     Title: Show HN: CalcProMaster – 1200 calculators that show their work
      URL: https://calcpromaster.com/
 
      It's a free, no-signup library of 1200+ client-side calculators where every

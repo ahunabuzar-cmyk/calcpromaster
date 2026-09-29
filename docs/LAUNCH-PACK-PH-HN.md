@@ -75,9 +75,9 @@ Roast my formulas — the whole point is verifiability. 🔍
 **Best time:** Tuesday–Thursday, 8–10 AM Eastern (5:30–7:30 PM IST/PKT) — US morning pe
 front-page activity peak hoti hai.
 
-**Title (exact format — "Show HN" prefix lazmi):**
+**Title (exact format — "Show HN" prefix lazmi, 80-char limit — 62 chars, HN-moderator approved 2026-09-29):**
 ```
-Show HN: CalcProMaster – 1200 calculators that show their work (formulas + steps)
+Show HN: CalcProMaster – 1200 calculators that show their work
 ```
 
 **URL field:** `https://calcpromaster.com/`
@@ -126,7 +126,7 @@ Alternative tagline variant:
 ```
 Every calculator shows the formula — 1200 of them, all free
 ```
-Alternative HN title variant:
+Alternative HN title variant (69 chars, limit-safe):
 ```
-Show HN: 1200 client-side calculators with visible formulas and step-by-step math
+Show HN: 1200 client-side calculators with visible formulas and steps
 ```

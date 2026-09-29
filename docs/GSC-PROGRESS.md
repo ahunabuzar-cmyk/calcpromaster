@@ -37,7 +37,7 @@
 | Peerlist Launch (user 1-click) | Ready | Launch-day spike |
 | Reddit r/InternetIsBeautiful link post | ✅ LIVE 2026-09-29 (user posted) | Day 1-3 referral + brand queries |
 | r/SideProject replacement post | Kal 2026-09-30 6PM PKT (warm-up comments pehle) | Niche referral |
-| HN Show HN (email sent, unlock pending) | Wed/Thu window | 1-day spike 1-5k if frontpage |
+| HN Show HN | ⏸️ TEMP-RESTRICTED 2026-09-29 (HN-wide new-account pause; mod: contribute first, welcome later) | Karma route: 4-5 din genuine comments → retry Tue Oct 6 (title locked, 62 chars) |
 | HN Show HN (post-deploy) | Deploy ke baad Tue-Thu | 1-day spike 1-5k if frontpage |
 
 ## Honest Math (100k possible hai ya nahi)

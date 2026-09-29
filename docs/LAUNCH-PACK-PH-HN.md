@@ -102,7 +102,7 @@ The part I'm most unsure about: whether "show your work" calculators are actuall
 by users, or whether people just want the number. Would love to hear what this crowd thinks.
 
 Technical notes: vanilla JS, no framework, no build pipeline beyond a static-site generator
-that prerenders all 1337 routes; the whole site is static files on Netlify.
+that prerenders all 1350 routes; the whole site is static files on Netlify.
 ```
 
 **HN etiquette (important — votes/meta-gaming rule toot gaya to flag ho jata hai):**

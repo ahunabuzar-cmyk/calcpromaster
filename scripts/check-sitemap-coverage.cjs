@@ -51,7 +51,11 @@ let missing = [];
 let covered = 0;
 const firstSegments = new Set();
 for (const loc of locs) {
-  const p = loc.replace('https://calcpromaster.netlify.app', '');
+  // Strip scheme + host. A sitemap always carries ABSOLUTE URLs (the spec
+  // requires it) and the host has already moved once (.netlify.app -> .com), so
+  // matching one literal host is what silently broke this gate: every URL was
+  // then compared as a path and reported missing. Strip whatever host is there.
+  const p = loc.replace(/^https?:\/\/[^/]+/, '');
   const clean = p.replace(/^\//, '').replace(/\/$/, '');
   firstSegments.add(clean.split('/')[0]);
   if (clean === '') { covered++; continue; } // homepage = deploy/index.html

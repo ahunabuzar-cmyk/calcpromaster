@@ -1,0 +1,251 @@
+{
+  "generatedAt": "2026-10-11T10:22:35.487Z",
+  "snapshotDate": "2026-10-09",
+  "snapshotSource": "gsc-inspect-notindexed.json",
+  "state": {
+    "total": 784,
+    "candidates": 696,
+    "indexed": 111,
+    "notCandidates": 88,
+    "waiting": 585,
+    "notCandidateReasons": {
+      "Page with redirect": 86,
+      "Excluded by ‘noindex’ tag": 1,
+      "Alternate page with proper canonical tag": 1
+    }
+  },
+  "liveState": {
+    "date": "2026-10-11",
+    "source": "data/index-panel-history.json#2026-10-11",
+    "panelSize": 590,
+    "total": 590,
+    "candidates": 590,
+    "indexed": 5,
+    "notCandidates": 0,
+    "waiting": 585,
+    "notCandidateReasons": {}
+  },
+  "snapshots": [
+    {
+      "date": "2026-09-27",
+      "file": "gsc-inspect-batch.json",
+      "urls": 21,
+      "total": 21,
+      "candidates": 21,
+      "indexed": 7,
+      "notCandidates": 0,
+      "waiting": 14,
+      "notCandidateReasons": {}
+    },
+    {
+      "date": "2026-10-05",
+      "file": "gsc-inspect-batch-2026-10-05.json",
+      "urls": 20,
+      "total": 20,
+      "candidates": 20,
+      "indexed": 13,
+      "notCandidates": 0,
+      "waiting": 7,
+      "notCandidateReasons": {}
+    },
+    {
+      "date": "2026-10-08",
+      "file": "gsc-inspect-2026-10-08.json",
+      "urls": 20,
+      "total": 20,
+      "candidates": 20,
+      "indexed": 14,
+      "notCandidates": 0,
+      "waiting": 6,
+      "notCandidateReasons": {}
+    },
+    {
+      "date": "2026-10-09",
+      "file": "gsc-inspect-batch-2026-10-09.json",
+      "urls": 20,
+      "total": 20,
+      "candidates": 20,
+      "indexed": 14,
+      "notCandidates": 0,
+      "waiting": 6,
+      "notCandidateReasons": {}
+    },
+    {
+      "date": "2026-10-09",
+      "file": "gsc-inspect-notindexed.json",
+      "urls": 784,
+      "total": 784,
+      "candidates": 696,
+      "indexed": 111,
+      "notCandidates": 88,
+      "waiting": 585,
+      "notCandidateReasons": {
+        "Page with redirect": 86,
+        "Excluded by ‘noindex’ tag": 1,
+        "Alternate page with proper canonical tag": 1
+      }
+    },
+    {
+      "date": "2026-10-11",
+      "file": "data/index-panel-history.json#2026-10-11",
+      "urls": 590,
+      "total": 590,
+      "candidates": 590,
+      "indexed": 5,
+      "notCandidates": 0,
+      "waiting": 585,
+      "notCandidateReasons": {}
+    }
+  ],
+  "ratePairs": [
+    {
+      "from": "2026-09-27",
+      "to": "2026-10-05",
+      "days": 8,
+      "elapsedDays": 8.260021805555555,
+      "commonUrls": 0,
+      "stagesAdvanced": 0,
+      "slippedBack": 0,
+      "netStages": 0,
+      "becameIndexed": 0,
+      "leftUnknown": 0,
+      "stagesPerDay": 0,
+      "indexedPerDay": 0,
+      "usable": false,
+      "skipReason": "koi common URL nahi — alag batch"
+    },
+    {
+      "from": "2026-10-05",
+      "to": "2026-10-08",
+      "days": 3,
+      "elapsedDays": 2.958649363425926,
+      "commonUrls": 20,
+      "stagesAdvanced": 4,
+      "slippedBack": 0,
+      "netStages": 4,
+      "becameIndexed": 1,
+      "leftUnknown": 2,
+      "stagesPerDay": 1.3519682492447354,
+      "indexedPerDay": 0.33799206231118384,
+      "usable": true
+    },
+    {
+      "from": "2026-10-08",
+      "to": "2026-10-09",
+      "days": 1,
+      "elapsedDays": 0.7822410532407408,
+      "commonUrls": 20,
+      "stagesAdvanced": 3,
+      "slippedBack": 0,
+      "netStages": 3,
+      "becameIndexed": 0,
+      "leftUnknown": 3,
+      "stagesPerDay": 3.835134946665509,
+      "indexedPerDay": 0,
+      "usable": true
+    },
+    {
+      "from": "2026-10-09",
+      "to": "2026-10-09",
+      "days": 0,
+      "elapsedDays": 0.18580457175925927,
+      "commonUrls": 0,
+      "stagesAdvanced": 0,
+      "slippedBack": 0,
+      "netStages": 0,
+      "becameIndexed": 0,
+      "leftUnknown": 0,
+      "stagesPerDay": 0,
+      "indexedPerDay": 0,
+      "usable": false,
+      "skipReason": "URL sets comparable nahi (alag size)"
+    },
+    {
+      "from": "2026-10-09",
+      "to": "2026-10-11",
+      "days": 2,
+      "elapsedDays": 1.8083551851851851,
+      "commonUrls": 590,
+      "stagesAdvanced": 105,
+      "slippedBack": 133,
+      "netStages": -28,
+      "becameIndexed": 0,
+      "leftUnknown": 105,
+      "stagesPerDay": 58.063814487443985,
+      "indexedPerDay": 0,
+      "usable": true
+    }
+  ],
+  "longestSpan": {
+    "from": "2026-10-05",
+    "to": "2026-10-08",
+    "days": 3,
+    "elapsedDays": 2.958649363425926,
+    "commonUrls": 20,
+    "stagesAdvanced": 4,
+    "slippedBack": 0,
+    "netStages": 4,
+    "becameIndexed": 1,
+    "leftUnknown": 2,
+    "stagesPerDay": 1.3519682492447354,
+    "indexedPerDay": 0.33799206231118384,
+    "usable": true
+  },
+  "sampleNote": "20 URLs",
+  "measuredIndexedPerWeek": 2.365944436178287,
+  "measuredRateSource": "same-URL inspection pairs (20 URLs, 3d span)",
+  "panelSpan": null,
+  "measuredStagesPerWeek": 9.463777744713148,
+  "quotaPerWeek": 84,
+  "scenarios": [
+    {
+      "key": "observed",
+      "label": "Observed (measured, same URLs)",
+      "perWeek": 2.365944436178287,
+      "sampled": true,
+      "weeks": 248,
+      "beyondHorizon": true,
+      "doneBy": null
+    },
+    {
+      "key": "half",
+      "label": "Half the observed rate (conservative)",
+      "perWeek": 1.1829722180891435,
+      "sampled": true,
+      "weeks": 495,
+      "beyondHorizon": true,
+      "doneBy": null
+    },
+    {
+      "key": "quota",
+      "label": "GSC request-indexing ceiling (12/day)",
+      "perWeek": 84,
+      "sampled": false,
+      "weeks": 7,
+      "beyondHorizon": false,
+      "doneBy": "2026-11-29"
+    }
+  ],
+  "horizons": [
+    {
+      "weeks": 8,
+      "perWeek": 74,
+      "perDay": 11
+    },
+    {
+      "weeks": 12,
+      "perWeek": 49,
+      "perDay": 7
+    },
+    {
+      "weeks": 26,
+      "perWeek": 23,
+      "perDay": 4
+    },
+    {
+      "weeks": 52,
+      "perWeek": 12,
+      "perDay": 2
+    }
+  ]
+}

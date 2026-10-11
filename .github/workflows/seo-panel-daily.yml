@@ -1,0 +1,134 @@
+name: CalcProMaster — Daily index panel
+
+# Runs daily (04:45 UTC) + manual dispatch.
+#
+# Why daily instead of only the Monday weekly job: the measured indexing rate
+# needs two snapshots of the SAME URLs, and a weekly pair gives one rate per
+# week — a month of waiting before the number is worth reading. Daily samples of
+# the *whole* queue (not a 100-URL stride sample) give the trailing 7-day
+# "current speed" in docs/INDEX-PANEL.md every morning, which is the number the
+# burn-down projection actually needs.
+#
+# Chain (each step depends on the one before it, and the order matters — the
+# staleness gate compares mtimes, so a report must be written after its data):
+#   1. URL inspection of every waiting URL  (build-index-panel.cjs --inspect --all)
+#   2. Index burn-down (reads the panel)    (build-index-burndown.cjs)
+#   3. Public stats page (+ homepage figure)(build-stats-page.cjs)
+#   4. Commit the snapshot back             (so tomorrow has a baseline)
+#
+# The inspection is resumable *within* a run (per-URL checkpoint in
+# data/index-panel-progress.json) and rate-limited: 8 in flight, exponential
+# backoff with jitter on 429/5xx, and a whole-pool cooldown when Google
+# throttles. GSC allows ~600 inspections/min; this run peaks around 70/min.
+#
+# Uses the same Plan-B OAuth secrets as the weekly refresh
+# (GSC_OAUTH_CLIENT_SECRET_B64 / GSC_REFRESH_TOKEN_B64). If they are absent the
+# job is skipped cleanly instead of failing.
+
+on:
+  schedule:
+    - cron: '45 4 * * *'          # every day 04:45 UTC
+  workflow_dispatch:
+
+concurrency:
+  group: calcpro-seo-panel
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  panel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Gate — OAuth credentials configured?
+        id: gate
+        env:
+          CS: ${{ secrets.GSC_OAUTH_CLIENT_SECRET_B64 }}
+          RT: ${{ secrets.GSC_REFRESH_TOKEN_B64 }}
+        run: |
+          if [ -n "$CS" ] && [ -n "$RT" ]; then
+            echo "ready=1" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=0" >> "$GITHUB_OUTPUT"
+            echo "⏭ GSC OAuth secrets not configured — skipping (see docs/api-credentials-setup.md → Plan B)."
+          fi
+      - name: Checkout
+        if: steps.gate.outputs.ready == '1'
+        uses: actions/checkout@v4
+      - name: Setup Node
+        if: steps.gate.outputs.ready == '1'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Write OAuth client + refresh token (from secrets)
+        if: steps.gate.outputs.ready == '1'
+        env:
+          CS: ${{ secrets.GSC_OAUTH_CLIENT_SECRET_B64 }}
+          RT: ${{ secrets.GSC_REFRESH_TOKEN_B64 }}
+        run: |
+          echo "$CS" | base64 -d > gsc-client-secret.json
+          echo "$RT" | base64 -d > gsc-refresh-token.json
+      - name: Validate credentials shape
+        if: steps.gate.outputs.ready == '1'
+        run: |
+          node -e "const c=require('./gsc-client-secret.json'); const i=c.installed||c.web||c; if(!i.client_id||!i.client_secret) throw new Error('bad client secret')"
+          node -e "const t=require('./gsc-refresh-token.json'); if(!t.refresh_token) throw new Error('bad refresh token')"
+      - name: Inspect the whole not-indexed queue
+        if: steps.gate.outputs.ready == '1'
+        env:
+          GSC_OAUTH_CLIENT_SECRET: ${{ github.workspace }}/gsc-client-secret.json
+        run: node scripts/build-index-panel.cjs --inspect --all --concurrency 8 --window 7
+      - name: Index burn-down (reads today's panel snapshot)
+        if: steps.gate.outputs.ready == '1'
+        run: node scripts/build-index-burndown.cjs
+      - name: Public stats page + homepage figure (only when its inputs are here)
+        if: steps.gate.outputs.ready == '1'
+        run: |
+          # stats.html is a published page: regenerating it with half of its input
+          # files present would ship a degraded page, so it runs only when both the
+          # generator and the data it reads exist in this checkout.
+          if [ -f scripts/build-stats-page.cjs ] && [ -f data/growth-model.json ] && [ -f data/run-rate-stall.json ]; then
+            node scripts/build-stats-page.cjs
+          else
+            echo "stats generator/data not in the repo yet — skip (the weekly refresh rebuilds the page)"
+          fi
+      - name: Commit the snapshot back (payload for tomorrow's comparison)
+        if: steps.gate.outputs.ready == '1'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for f in data/index-panel.json data/index-panel-history.json docs/INDEX-PANEL.md \
+                   data/index-burndown.json docs/INDEX-BURNDOWN.md stats.html; do
+            [ -e "$f" ] && git add "$f"
+          done
+          if git diff --cached --quiet; then
+            echo "koi tabdeeli nahi — commit skip"
+          else
+            git commit -m "chore(seo): daily index panel snapshot $(date -u +%F) [skip ci]"
+            git push
+          fi
+      - name: Upload panel snapshot
+        if: success() && steps.gate.outputs.ready == '1'
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-index-panel-${{ github.run_id }}
+          path: |
+            data/index-panel.json
+            data/index-panel-history.json
+            data/index-burndown.json
+            docs/INDEX-PANEL.md
+            docs/INDEX-BURNDOWN.md
+          if-no-files-found: ignore
+      - name: Open alert issue on failure
+        if: failure() && steps.gate.outputs.ready == '1'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '📉 Daily index panel failed',
+              body: 'Today\'s queue inspection did not finish. Run locally: `node scripts/build-index-panel.cjs --inspect --all` (or `npm run seo:panel:all`). The run is resumable — the per-URL checkpoint is kept in `data/index-panel-progress.json`, so re-running inspects only the URLs that are still missing. If the token is dead (`invalid_grant`), refresh it with `node scripts/gsc-oauth-login.cjs --paste` and update the `GSC_REFRESH_TOKEN_B64` secret.'
+            });

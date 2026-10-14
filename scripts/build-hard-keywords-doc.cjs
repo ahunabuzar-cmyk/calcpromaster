@@ -21,11 +21,13 @@ const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 const { tier, score } = require('./keyword-difficulty.cjs');
+const { sitemapDate } = require('./lib/sitemap-date.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const DATA_DIR = path.join(ROOT, 'js', 'data');
 const OUT = path.join(ROOT, 'docs', 'HARD-KEYWORDS.md');
-const DOC_DATE = new Date(fs.statSync(path.join(ROOT, 'sitemap.xml')).mtimeMs).toISOString().slice(0, 10);
+// Content-derived, not mtime-derived — see scripts/lib/sitemap-date.cjs.
+const DOC_DATE = sitemapDate(ROOT) || 'unknown';
 
 // ---------- load per-page rows (deploy tree) ----------
 const pages = fs.readFileSync(path.join(__dirname, '.keywords.jsonl'), 'utf8')

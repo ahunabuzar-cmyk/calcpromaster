@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-14T10:17:45.979Z",
+  "generatedFor": "2026-10-13",
   "source": "data/keyword-gap.json (scripts/audit-keyword-gap.cjs)",
   "totals": {
     "auditedKeywords": 604,

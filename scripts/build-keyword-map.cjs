@@ -16,13 +16,16 @@ const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 const { tier, score } = require('./keyword-difficulty.cjs');
+const { sitemapDate } = require('./lib/sitemap-date.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const DATA_DIR = path.join(ROOT, 'js', 'data');
 const OUT = path.join(ROOT, 'docs', 'KEYWORD-TARGETS.md');
-// Deterministic doc date: source-controlled mtime of sitemap.xml (UTC), so CI
-// (Linux) and local (Windows) builds produce byte-identical documents.
-const DOC_DATE = new Date(fs.statSync(path.join(ROOT, 'sitemap.xml')).mtimeMs).toISOString().slice(0, 10);
+// Deterministic doc date: the newest <lastmod> in the committed sitemap.xml.
+// NOT the file mtime — git re-stamps mtimes on checkout, so an mtime-derived
+// date made `npm run keywords:check` fail on every day except the one the docs
+// were committed. See scripts/lib/sitemap-date.cjs.
+const DOC_DATE = sitemapDate(ROOT) || 'unknown';
 
 // ---------- load per-page rows ----------
 const pages = fs.readFileSync(path.join(__dirname, '.keywords.jsonl'), 'utf8')

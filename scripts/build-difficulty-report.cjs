@@ -18,10 +18,12 @@
 const fs = require('fs');
 const path = require('path');
 const { tier, score, volumeProxy } = require('./keyword-difficulty.cjs');
+const { sitemapDate } = require('./lib/sitemap-date.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'docs', 'KEYWORD-DIFFICULTY.md');
-const REPORT_DATE = new Date(fs.statSync(path.join(ROOT, 'sitemap.xml')).mtimeMs).toISOString().slice(0, 10);
+// Content-derived, not mtime-derived — see scripts/lib/sitemap-date.cjs.
+const REPORT_DATE = sitemapDate(ROOT) || 'unknown';
 
 const pages = fs.readFileSync(path.join(__dirname, '.keywords.jsonl'), 'utf8')
   .split('\n').filter(Boolean).map(l => JSON.parse(l));

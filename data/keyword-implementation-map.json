@@ -1,0 +1,2135 @@
+{
+  "ranAt": "2026-10-14T10:17:45.979Z",
+  "source": "data/keyword-gap.json (scripts/audit-keyword-gap.cjs)",
+  "totals": {
+    "auditedKeywords": 604,
+    "auditCounts": {
+      "COVERED": 468,
+      "WEAK": 17,
+      "GAP": 98,
+      "IGNORE": 21
+    },
+    "pagesIndexedInAudit": 1436,
+    "opportunities": 115,
+    "intentClusters": 104,
+    "decisions": {
+      "A": 0,
+      "B": 28,
+      "C": 62,
+      "D": 7,
+      "E": 18
+    },
+    "priorities": {
+      "P0": 0,
+      "P1": 9,
+      "P2": 88,
+      "P3": 18
+    },
+    "registryTools": 1284,
+    "sitemapUrls": 1419
+  },
+  "decisions": [
+    {
+      "keyword": "snow day calculator",
+      "volume": 368000,
+      "difficulty": 17,
+      "cpc": 0,
+      "source": "keyword-volume-difficulty",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "snow day calculator",
+        "snow days calculator"
+      ],
+      "code": "E",
+      "why": "answer needs a live external feed the repo does not hold (rule: no fabricated values)",
+      "priority": "P3",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 305440
+    },
+    {
+      "keyword": "snow days calculator",
+      "volume": 368000,
+      "difficulty": 17,
+      "cpc": 0,
+      "source": "keyword-volume-difficulty",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "snow day calculator",
+        "snow days calculator"
+      ],
+      "code": "E",
+      "why": "answer needs a live external feed the repo does not hold (rule: no fabricated values)",
+      "priority": "P3",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 305440
+    },
+    {
+      "keyword": "polypeptide calculator",
+      "volume": 301000,
+      "difficulty": 6,
+      "cpc": 0.24,
+      "source": "keyword-volume-difficulty",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "polypeptide calculator"
+      ],
+      "code": "B",
+      "why": "the peptide calculator already ships as /health/peptide-reconstitution/ (\"Peptide Reconstitution Calculator\", verified in deploy/sitemap.xml) — the generic keyword points at that page; a second /<category>/polypeptide-calculator would duplicate one intent",
+      "priority": "P1",
+      "proposedUrl": "/health/peptide-reconstitution/",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 282940
+    },
+    {
+      "keyword": "convert currency xe",
+      "volume": 246000,
+      "difficulty": 55,
+      "cpc": 0.32,
+      "source": "calculator-net-gap",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "convert currency xe",
+        "convert xe currency"
+      ],
+      "code": "B",
+      "why": "the generic intent behind the branded query (convert a currency) is owned by /finance/currency-converter/ (\"Convert between 150+ currencies with live rates\", verified in deploy/sitemap.xml); \"xe\" is the competitor brand, so improve that page’s metadata/internal links and do not target the brand name",
+      "priority": "P1",
+      "proposedUrl": "/finance/currency-converter/",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 110700
+    },
+    {
+      "keyword": "convert xe currency",
+      "volume": 246000,
+      "difficulty": 55,
+      "cpc": 0.32,
+      "source": "calculator-net-gap",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "convert currency xe",
+        "convert xe currency"
+      ],
+      "code": "B",
+      "why": "same intent as \"convert currency xe\" — word order only; both point at /finance/currency-converter/ (verified live) so one page owns the cluster, and no copy names the competitor brand",
+      "priority": "P1",
+      "proposedUrl": "/finance/currency-converter/",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 110700
+    },
+    {
+      "keyword": "chipotle calculator nutrition",
+      "volume": 201000,
+      "difficulty": 7,
+      "cpc": 5.93,
+      "source": "keyword-volume-difficulty",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "chipotle calculator nutrition",
+        "nutrition chipotle calculator",
+        "chipotle nutrition calculator"
+      ],
+      "code": "E",
+      "why": "answer needs a live external feed the repo does not hold (rule: no fabricated values)",
+      "priority": "P3",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 186930
+    },
+    {
+      "keyword": "nutrition chipotle calculator",
+      "volume": 201000,
+      "difficulty": 10,
+      "cpc": 5.93,
+      "source": "keyword-volume-difficulty",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "chipotle calculator nutrition",
+        "nutrition chipotle calculator",
+        "chipotle nutrition calculator"
+      ],
+      "code": "E",
+      "why": "answer needs a live external feed the repo does not hold (rule: no fabricated values)",
+      "priority": "P3",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 180900
+    },
+    {
+      "keyword": "calorie calculator chipotle",
+      "volume": 201000,
+      "difficulty": 10,
+      "cpc": 5.93,
+      "source": "keyword-volume-difficulty",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "calorie calculator chipotle",
+        "chipotle calculator calories",
+        "chipotle calorie calculator",
+        "chipotle calories calculator"
+      ],
+      "code": "E",
+      "why": "answer needs a live external feed the repo does not hold (rule: no fabricated values)",
+      "priority": "P3",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 180900
+    },
+    {
+      "keyword": "chipotle calculator calories",
+      "volume": 201000,
+      "difficulty": 12,
+      "cpc": 5.93,
+      "source": "keyword-volume-difficulty",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "calorie calculator chipotle",
+        "chipotle calculator calories",
+        "chipotle calorie calculator",
+        "chipotle calories calculator"
+      ],
+      "code": "E",
+      "why": "answer needs a live external feed the repo does not hold (rule: no fabricated values)",
+      "priority": "P3",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 176880
+    },
+    {
+      "keyword": "chipotle calorie calculator",
+      "volume": 201000,
+      "difficulty": 12,
+      "cpc": 5.93,
+      "source": "keyword-volume-difficulty",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "calorie calculator chipotle",
+        "chipotle calculator calories",
+        "chipotle calorie calculator",
+        "chipotle calories calculator"
+      ],
+      "code": "E",
+      "why": "answer needs a live external feed the repo does not hold (rule: no fabricated values)",
+      "priority": "P3",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 176880
+    },
+    {
+      "keyword": "chipotle mexican grill nutrition calculator",
+      "volume": 201000,
+      "difficulty": 13,
+      "cpc": 5.93,
+      "source": "keyword-volume-difficulty",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "chipotle mexican grill nutrition calculator"
+      ],
+      "code": "E",
+      "why": "answer needs a live external feed the repo does not hold (rule: no fabricated values)",
+      "priority": "P3",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 174870
+    },
+    {
+      "keyword": "chipotle calories calculator",
+      "volume": 201000,
+      "difficulty": 16,
+      "cpc": 5.93,
+      "source": "keyword-volume-difficulty",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "calorie calculator chipotle",
+        "chipotle calculator calories",
+        "chipotle calorie calculator",
+        "chipotle calories calculator"
+      ],
+      "code": "E",
+      "why": "answer needs a live external feed the repo does not hold (rule: no fabricated values)",
+      "priority": "P3",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 168840
+    },
+    {
+      "keyword": "chipotle nutrition calculator",
+      "volume": 201000,
+      "difficulty": 17,
+      "cpc": 5.93,
+      "source": "keyword-volume-difficulty",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "chipotle calculator nutrition",
+        "nutrition chipotle calculator",
+        "chipotle nutrition calculator"
+      ],
+      "code": "E",
+      "why": "answer needs a live external feed the repo does not hold (rule: no fabricated values)",
+      "priority": "P3",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 166830
+    },
+    {
+      "keyword": "time card clock calculator",
+      "volume": 201000,
+      "difficulty": 20,
+      "cpc": 8.7,
+      "source": "keyword-volume-difficulty",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "time card clock calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool walking-transit (1/3 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 160800
+    },
+    {
+      "keyword": "mortgage expense calculator",
+      "volume": 201000,
+      "difficulty": 35,
+      "cpc": 0.1,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "mortgage expense calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool remortgage-calc (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 130650
+    },
+    {
+      "keyword": "certified deposit calculator",
+      "volume": 165000,
+      "difficulty": 2,
+      "cpc": 4.95,
+      "source": "keyword-volume-difficulty",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "certified deposit calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool fixed-deposit-vs-recurring (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 161700
+    },
+    {
+      "keyword": "cd bank calculator",
+      "volume": 165000,
+      "difficulty": 2,
+      "cpc": 4.95,
+      "source": "keyword-volume-difficulty",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "cd bank calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool cd-calculator (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 161700
+    },
+    {
+      "keyword": "bank certificate calculator",
+      "volume": 165000,
+      "difficulty": 2,
+      "cpc": 4.95,
+      "source": "keyword-volume-difficulty",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "bank certificate calculator"
+      ],
+      "code": "B",
+      "why": "shares the concept token \"certificate\" with \"calculator for certificate of deposit\", which the audit already maps to the live page /finance/cd-calculator — improve that page instead of adding a near-duplicate calculator",
+      "priority": "P1",
+      "proposedUrl": "/finance/cd-calculator",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 161700
+    },
+    {
+      "keyword": "ft2 calculator",
+      "volume": 165000,
+      "difficulty": 9,
+      "cpc": 3.95,
+      "source": "keyword-volume-difficulty",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "ft2 calculator"
+      ],
+      "code": "B",
+      "why": "sq ft ↔ m² conversion is the Area Converter that already ships at /conversion/area/ (verified in deploy/sitemap.xml) — improve that page instead of adding an /<category>/ft2-calculator duplicate",
+      "priority": "P1",
+      "proposedUrl": "/conversion/area/",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 150150
+    },
+    {
+      "keyword": "dynasty league trade calculator",
+      "volume": 165000,
+      "difficulty": 9,
+      "cpc": 0.38,
+      "source": "keyword-volume-difficulty",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "dynasty league trade calculator"
+      ],
+      "code": "E",
+      "why": "answer needs a live external feed the repo does not hold (rule: no fabricated values)",
+      "priority": "P3",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 150150
+    },
+    {
+      "keyword": "ft squared calculator",
+      "volume": 165000,
+      "difficulty": 9,
+      "cpc": 3.95,
+      "source": "keyword-volume-difficulty",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "ft squared calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool shift-differential (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 150150
+    },
+    {
+      "keyword": "dynasty trade calculator",
+      "volume": 165000,
+      "difficulty": 9,
+      "cpc": 0.38,
+      "source": "keyword-volume-difficulty",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "dynasty trade calculator"
+      ],
+      "code": "E",
+      "why": "answer needs a live external feed the repo does not hold (rule: no fabricated values)",
+      "priority": "P3",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 150150
+    },
+    {
+      "keyword": "calculator for certificate of deposit",
+      "volume": 165000,
+      "difficulty": 2,
+      "cpc": 4.95,
+      "source": "keyword-volume-difficulty",
+      "verdict": "WEAK",
+      "auditClosest": "/finance/cd-calculator",
+      "cluster": [
+        "calculator for certificate of deposit",
+        "deposit certificate calculator",
+        "certificate deposit calculator"
+      ],
+      "code": "D",
+      "why": "shares one search intent with 2 other keyword(s) in this audit — one page must own all of them",
+      "priority": "P1",
+      "proposedUrl": "/finance/cd-calculator",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 161700
+    },
+    {
+      "keyword": "deposit certificate calculator",
+      "volume": 165000,
+      "difficulty": 2,
+      "cpc": 4.95,
+      "source": "keyword-volume-difficulty",
+      "verdict": "WEAK",
+      "auditClosest": "/finance/cd-calculator",
+      "cluster": [
+        "calculator for certificate of deposit",
+        "deposit certificate calculator",
+        "certificate deposit calculator"
+      ],
+      "code": "D",
+      "why": "shares one search intent with 2 other keyword(s) in this audit — one page must own all of them",
+      "priority": "P1",
+      "proposedUrl": "/finance/cd-calculator",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 161700
+    },
+    {
+      "keyword": "certificate deposit calculator",
+      "volume": 165000,
+      "difficulty": 2,
+      "cpc": 4.95,
+      "source": "keyword-volume-difficulty",
+      "verdict": "WEAK",
+      "auditClosest": "/finance/cd-calculator",
+      "cluster": [
+        "calculator for certificate of deposit",
+        "deposit certificate calculator",
+        "certificate deposit calculator"
+      ],
+      "code": "D",
+      "why": "shares one search intent with 2 other keyword(s) in this audit — one page must own all of them",
+      "priority": "P1",
+      "proposedUrl": "/finance/cd-calculator",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 161700
+    },
+    {
+      "keyword": "bmi calculator body mass index",
+      "volume": 110000,
+      "difficulty": 53,
+      "cpc": 0.41,
+      "source": "calculatorsoup-gap",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "bmi calculator body mass index"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool body-fat-fitness (2/4 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 51700
+    },
+    {
+      "keyword": "day count",
+      "volume": 74000,
+      "difficulty": 0,
+      "cpc": 0.01,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "day count"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool discount-rate (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 74000
+    },
+    {
+      "keyword": "calendar calculator",
+      "volume": 60500,
+      "difficulty": 0,
+      "cpc": 0.13,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "calendar calculator"
+      ],
+      "code": "B",
+      "why": "the token heuristic attached this to /guides/age through the shared word \"calendar\" (from \"age calendar\"), but the calendar/date-arithmetic intent is served by /everyday/date-diff/ (verified in deploy/sitemap.xml) — improve that page instead",
+      "priority": "P1",
+      "proposedUrl": "/everyday/date-diff/",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 60500
+    },
+    {
+      "keyword": "yearly salary calculator",
+      "volume": 49500,
+      "difficulty": 1,
+      "cpc": 0.03,
+      "source": "keyword-planner",
+      "verdict": "WEAK",
+      "auditClosest": "/lifestyle/parental-leave",
+      "cluster": [
+        "yearly salary calculator"
+      ],
+      "code": "B",
+      "why": "the audit maps this to the live page /lifestyle/parental-leave — improve that page (metadata/content/functionality), no new URL",
+      "priority": "P2",
+      "proposedUrl": "/lifestyle/parental-leave",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 49005
+    },
+    {
+      "keyword": "financial compound calculator",
+      "volume": 40500,
+      "difficulty": 14,
+      "cpc": 0.06,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "financial compound calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool financial-need (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 34830
+    },
+    {
+      "keyword": "financial compounding calculator",
+      "volume": 40500,
+      "difficulty": 14,
+      "cpc": 0.06,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "financial compounding calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool financial-need (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 34830
+    },
+    {
+      "keyword": "interest percentage calculator",
+      "volume": 33100,
+      "difficulty": 10,
+      "cpc": 0.24,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "interest percentage calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool grade-percentage (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 29790
+    },
+    {
+      "keyword": "annual percentage calculator",
+      "volume": 27100,
+      "difficulty": 5,
+      "cpc": 0.84,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "annual percentage calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool grade-percentage (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 25745
+    },
+    {
+      "keyword": "ot calculator",
+      "volume": 22200,
+      "difficulty": 1,
+      "cpc": 1.28,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "ot calculator"
+      ],
+      "code": "B",
+      "why": "an existing registry tool already covers every concept token — improve that page, do not create a duplicate",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 21978
+    },
+    {
+      "keyword": "time payroll calculator",
+      "volume": 22200,
+      "difficulty": 12,
+      "cpc": 1.48,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "time payroll calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool walking-transit (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 19536
+    },
+    {
+      "keyword": "pay time calculator",
+      "volume": 22200,
+      "difficulty": 12,
+      "cpc": 1.48,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "pay time calculator"
+      ],
+      "code": "B",
+      "why": "an existing registry tool already covers every concept token — improve that page, do not create a duplicate",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 19536
+    },
+    {
+      "keyword": "simplify calculator",
+      "volume": 18100,
+      "difficulty": 2,
+      "cpc": 0.02,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "simplify calculator"
+      ],
+      "code": "B",
+      "why": "the \"simplify\" intent is already answered by the Ratio Simplifier (/utilities/ratio-simplifier/, \"Simplify and work with ratios\") and the Fraction Calculator (/math/fraction/, \"Simplify and calculate fractions\") — both verified live; improve metadata/internal links there",
+      "priority": "P2",
+      "proposedUrl": "/utilities/ratio-simplifier/",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 17738
+    },
+    {
+      "keyword": "time adder",
+      "volume": 14800,
+      "difficulty": 0,
+      "cpc": 0.22,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "time adder"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool walking-transit (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 14800
+    },
+    {
+      "keyword": "compounded daily calculator",
+      "volume": 14800,
+      "difficulty": 3,
+      "cpc": 1.07,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "compounded daily calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool freelance-daily (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 14356
+    },
+    {
+      "keyword": "desired weight calculator",
+      "volume": 14800,
+      "difficulty": 5,
+      "cpc": 0.03,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "desired weight calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool power-to-weight (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 14060
+    },
+    {
+      "keyword": "simple loan calculator",
+      "volume": 14800,
+      "difficulty": 13,
+      "cpc": 0.92,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "simple loan calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool car-loan-emi (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 12876
+    },
+    {
+      "keyword": "loan calculator for business",
+      "volume": 14800,
+      "difficulty": 42,
+      "cpc": 2.08,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "loan calculator for business"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool car-loan-emi (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 8584
+    },
+    {
+      "keyword": "payment planner",
+      "volume": 12100,
+      "difficulty": 11,
+      "cpc": 3.01,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "payment planner"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool study-time (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 10769
+    },
+    {
+      "keyword": "fv calculator",
+      "volume": 9900,
+      "difficulty": 3,
+      "cpc": 0.07,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "fv calculator"
+      ],
+      "code": "B",
+      "why": "FV is the standard abbreviation for future value and the site ships /finance/future-value/ (Future Value Calculator, verified in deploy/sitemap.xml) — the acronym belongs on that page",
+      "priority": "P2",
+      "proposedUrl": "/finance/future-value/",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 9603
+    },
+    {
+      "keyword": "mortgage and tax calculator",
+      "volume": 9900,
+      "difficulty": 40,
+      "cpc": 0.1,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "mortgage and tax calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool inheritance-tax-uk-india (2/3 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 5940
+    },
+    {
+      "keyword": "pricing generator",
+      "volume": 8100,
+      "difficulty": 100,
+      "cpc": 0.2,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "pricing generator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool pricing (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 0
+    },
+    {
+      "keyword": "yearly income calculator",
+      "volume": 8100,
+      "difficulty": 3,
+      "cpc": 0.47,
+      "source": "keyword-planner",
+      "verdict": "WEAK",
+      "auditClosest": "/guides/income-tax",
+      "cluster": [
+        "yearly income calculator"
+      ],
+      "code": "B",
+      "why": "the audit maps this to the live page /guides/income-tax — improve that page (metadata/content/functionality), no new URL",
+      "priority": "P2",
+      "proposedUrl": "/guides/income-tax",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 7857
+    },
+    {
+      "keyword": "savings calculator simple",
+      "volume": 6600,
+      "difficulty": 1,
+      "cpc": 1.96,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "savings calculator simple"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool fuel-efficiency (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 6534
+    },
+    {
+      "keyword": "percentage return calculator",
+      "volume": 6600,
+      "difficulty": 7,
+      "cpc": 1.09,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "percentage return calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool grade-percentage (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 6138
+    },
+    {
+      "keyword": "open calculator",
+      "volume": 6600,
+      "difficulty": 11,
+      "cpc": 0.22,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "open calculator"
+      ],
+      "code": "E",
+      "why": "navigational/OS-action intent (\"open calculator\" means launch the device app) — there is no calculation to build and no page can satisfy it",
+      "priority": "P3",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 5874
+    },
+    {
+      "keyword": "retirement plan estimator",
+      "volume": 5400,
+      "difficulty": 6,
+      "cpc": 1.39,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "retirement plan estimator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool ev-range (1/3 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 5076
+    },
+    {
+      "keyword": "hour counter",
+      "volume": 5400,
+      "difficulty": 1,
+      "cpc": 0.51,
+      "source": "keyword-planner",
+      "verdict": "WEAK",
+      "auditClosest": "/everyday/distance-pace",
+      "cluster": [
+        "hour counter"
+      ],
+      "code": "B",
+      "why": "the audit maps this to the live page /everyday/distance-pace — improve that page (metadata/content/functionality), no new URL",
+      "priority": "P2",
+      "proposedUrl": "/everyday/distance-pace",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 5346
+    },
+    {
+      "keyword": "reverse tax calculator",
+      "volume": 4400,
+      "difficulty": 0,
+      "cpc": 0,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "reverse tax calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool taxi-fare (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 4400
+    },
+    {
+      "keyword": "percentage discount calculator",
+      "volume": 4400,
+      "difficulty": 0,
+      "cpc": 0,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "percentage discount calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool discount-rate (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 4400
+    },
+    {
+      "keyword": "daily interest calculator",
+      "volume": 4400,
+      "difficulty": 1,
+      "cpc": 1.19,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "daily interest calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool freelance-daily (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 4356
+    },
+    {
+      "keyword": "smart calculator",
+      "volume": 4400,
+      "difficulty": 51,
+      "cpc": 0.16,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "smart calculator"
+      ],
+      "code": "E",
+      "why": "ambiguous device/product term, not a calculation (difficulty 51) — the searcher wants a physical calculator or an app, so a templated page would be a thin mismatch",
+      "priority": "P3",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 2156
+    },
+    {
+      "keyword": "calculate age by birthday",
+      "volume": 4400,
+      "difficulty": 3,
+      "cpc": 0.01,
+      "source": "keyword-planner",
+      "verdict": "WEAK",
+      "auditClosest": "/guides/age",
+      "cluster": [
+        "calculate age by birthday"
+      ],
+      "code": "B",
+      "why": "the audit maps this to the live page /guides/age — improve that page (metadata/content/functionality), no new URL",
+      "priority": "P2",
+      "proposedUrl": "/guides/age",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 4268
+    },
+    {
+      "keyword": "inflation salary calculator",
+      "volume": 3600,
+      "difficulty": 1,
+      "cpc": 1.57,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "inflation salary calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool salary-converter (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 3564
+    },
+    {
+      "keyword": "dob calculator",
+      "volume": 3600,
+      "difficulty": 1,
+      "cpc": 0.01,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "dob calculator"
+      ],
+      "code": "B",
+      "why": "date-of-birth is the input to an age calculation, and /utilities/age-exact/ (Exact Age Calculator) plus /everyday/age/ already ship and are verified in the sitemap — no new page",
+      "priority": "P2",
+      "proposedUrl": "/utilities/age-exact/",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 3564
+    },
+    {
+      "keyword": "compound investment calculator",
+      "volume": 3600,
+      "difficulty": 25,
+      "cpc": 0.06,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "compound investment calculator",
+        "compound investments"
+      ],
+      "code": "D",
+      "why": "shares one search intent with 1 other keyword(s) in this audit — one page must own all of them",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 2700
+    },
+    {
+      "keyword": "downloadable calculator",
+      "volume": 3600,
+      "difficulty": 28,
+      "cpc": 0.65,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "downloadable calculator"
+      ],
+      "code": "E",
+      "why": "software-download intent, not a calculation — the site is a browser tool with no installable build, so no page can answer it truthfully",
+      "priority": "P3",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 2592
+    },
+    {
+      "keyword": "investment calculator over time",
+      "volume": 3600,
+      "difficulty": 35,
+      "cpc": 0.05,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "investment calculator over time"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool overtime-pay (2/3 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 2340
+    },
+    {
+      "keyword": "simple retirement calculator",
+      "volume": 3600,
+      "difficulty": 47,
+      "cpc": 1.06,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "simple retirement calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool retirement-contrib (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 1908
+    },
+    {
+      "keyword": "compounded monthly calculator",
+      "volume": 2900,
+      "difficulty": 15,
+      "cpc": 0.08,
+      "source": "keyword-planner",
+      "verdict": "WEAK",
+      "auditClosest": "/regional/post-office-savings",
+      "cluster": [
+        "compounded monthly calculator"
+      ],
+      "code": "B",
+      "why": "the audit maps this to the live page /regional/post-office-savings — improve that page (metadata/content/functionality), no new URL",
+      "priority": "P2",
+      "proposedUrl": "/regional/post-office-savings",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 2465
+    },
+    {
+      "keyword": "share return calculator",
+      "volume": 2400,
+      "difficulty": 5,
+      "cpc": 1.09,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "share return calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool ride-share-cost (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 2280
+    },
+    {
+      "keyword": "calculator on this phone",
+      "volume": 2400,
+      "difficulty": 13,
+      "cpc": 0.24,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "calculator on this phone"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool charging-time (2/3 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 2088
+    },
+    {
+      "keyword": "credit rate calculator",
+      "volume": 2400,
+      "difficulty": 26,
+      "cpc": 1.37,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "credit rate calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool conversion-rate (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 1776
+    },
+    {
+      "keyword": "compounded annually calculator",
+      "volume": 2400,
+      "difficulty": 27,
+      "cpc": 0.06,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "compounded annually calculator"
+      ],
+      "code": "B",
+      "why": "shares the concept token \"compounded\" with \"compounded monthly calculator\", which the audit already maps to the live page /regional/post-office-savings — improve that page instead of adding a near-duplicate calculator",
+      "priority": "P2",
+      "proposedUrl": "/regional/post-office-savings",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 1752
+    },
+    {
+      "keyword": "retirement planner calculator",
+      "volume": 2400,
+      "difficulty": 36,
+      "cpc": 1,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "retirement planner calculator",
+        "free online retirement planner"
+      ],
+      "code": "D",
+      "why": "shares one search intent with 1 other keyword(s) in this audit — one page must own all of them",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 1536
+    },
+    {
+      "keyword": "compounding calculator yearly",
+      "volume": 2400,
+      "difficulty": 27,
+      "cpc": 0.06,
+      "source": "keyword-planner",
+      "verdict": "WEAK",
+      "auditClosest": "/guides/cagr",
+      "cluster": [
+        "compounding calculator yearly"
+      ],
+      "code": "B",
+      "why": "the audit maps this to the live page /guides/cagr — improve that page (metadata/content/functionality), no new URL",
+      "priority": "P2",
+      "proposedUrl": "/guides/cagr",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 1752
+    },
+    {
+      "keyword": "pv calculator",
+      "volume": 1900,
+      "difficulty": 1,
+      "cpc": 2.13,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "pv calculator"
+      ],
+      "code": "B",
+      "why": "an existing registry tool already covers every concept token — improve that page, do not create a duplicate",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 1881
+    },
+    {
+      "keyword": "show calculator",
+      "volume": 1900,
+      "difficulty": 2,
+      "cpc": 0.16,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "show calculator"
+      ],
+      "code": "E",
+      "why": "navigational intent (\"show calculator\" = reveal the calculator UI) with no calculable answer",
+      "priority": "P3",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 1862
+    },
+    {
+      "keyword": "loan percentage calculator",
+      "volume": 1900,
+      "difficulty": 21,
+      "cpc": 0.16,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "loan percentage calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool car-loan-emi (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 1501
+    },
+    {
+      "keyword": "figure out interest rate on loan",
+      "volume": 1900,
+      "difficulty": 21,
+      "cpc": 0.16,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "figure out interest rate on loan"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool conversion-rate (2/6 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 1501
+    },
+    {
+      "keyword": "retirement budget calculator",
+      "volume": 1900,
+      "difficulty": 24,
+      "cpc": 1.15,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "retirement budget calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool freelance-budget (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 1444
+    },
+    {
+      "keyword": "retirement expenditure calculator",
+      "volume": 1900,
+      "difficulty": 33,
+      "cpc": 0.35,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "retirement expenditure calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool retirement-contrib (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 1273
+    },
+    {
+      "keyword": "financial planning calculator",
+      "volume": 1900,
+      "difficulty": 37,
+      "cpc": 1.8,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "financial planning calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool financial-need (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 1197
+    },
+    {
+      "keyword": "mortgage calculator how much can i qualify for",
+      "volume": 1900,
+      "difficulty": 66,
+      "cpc": 0.91,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "mortgage calculator how much can i qualify for"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool ab-test-significance (2/4 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 646
+    },
+    {
+      "keyword": "mortgage calculator how much do i qualify for",
+      "volume": 1900,
+      "difficulty": 66,
+      "cpc": 0.91,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "mortgage calculator how much do i qualify for"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool remortgage-calc (2/4 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 646
+    },
+    {
+      "keyword": "paycheck deduction calculator",
+      "volume": 1900,
+      "difficulty": 10,
+      "cpc": 1.57,
+      "source": "keyword-planner",
+      "verdict": "WEAK",
+      "auditClosest": "/guides/career",
+      "cluster": [
+        "paycheck deduction calculator"
+      ],
+      "code": "B",
+      "why": "the audit maps this to the live page /guides/career — improve that page (metadata/content/functionality), no new URL",
+      "priority": "P2",
+      "proposedUrl": "/guides/career",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 1710
+    },
+    {
+      "keyword": "spending calculator retirement",
+      "volume": 1900,
+      "difficulty": 33,
+      "cpc": 0.35,
+      "source": "keyword-planner",
+      "verdict": "WEAK",
+      "auditClosest": "/guides/retirement",
+      "cluster": [
+        "spending calculator retirement"
+      ],
+      "code": "B",
+      "why": "the audit maps this to the live page /guides/retirement — improve that page (metadata/content/functionality), no new URL",
+      "priority": "P2",
+      "proposedUrl": "/guides/retirement",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 1273
+    },
+    {
+      "keyword": "housing cost calculator",
+      "volume": 1900,
+      "difficulty": 50,
+      "cpc": 0.42,
+      "source": "keyword-planner",
+      "verdict": "WEAK",
+      "auditClosest": "/guides/baby-cost",
+      "cluster": [
+        "housing cost calculator"
+      ],
+      "code": "B",
+      "why": "the audit maps this to the live page /guides/baby-cost — improve that page (metadata/content/functionality), no new URL",
+      "priority": "P2",
+      "proposedUrl": "/guides/baby-cost",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 950
+    },
+    {
+      "keyword": "housing cost estimator",
+      "volume": 1900,
+      "difficulty": 50,
+      "cpc": 0.42,
+      "source": "keyword-planner",
+      "verdict": "WEAK",
+      "auditClosest": "/guides/baby-cost",
+      "cluster": [
+        "housing cost estimator"
+      ],
+      "code": "B",
+      "why": "the audit maps this to the live page /guides/baby-cost — improve that page (metadata/content/functionality), no new URL",
+      "priority": "P2",
+      "proposedUrl": "/guides/baby-cost",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 950
+    },
+    {
+      "keyword": "google math calculator",
+      "volume": 1600,
+      "difficulty": 1,
+      "cpc": 0.63,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "google math calculator"
+      ],
+      "code": "E",
+      "why": "branded intent for Google’s own calculator — not our content to target and no unique calculation behind it",
+      "priority": "P3",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 1584
+    },
+    {
+      "keyword": "free online retirement planner",
+      "volume": 1600,
+      "difficulty": 15,
+      "cpc": 2.63,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "retirement planner calculator",
+        "free online retirement planner"
+      ],
+      "code": "D",
+      "why": "shares one search intent with 1 other keyword(s) in this audit — one page must own all of them",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 1360
+    },
+    {
+      "keyword": "compound retirement calculator",
+      "volume": 1600,
+      "difficulty": 21,
+      "cpc": 0.19,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "compound retirement calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool retirement-contrib (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 1264
+    },
+    {
+      "keyword": "compounding calculator retirement",
+      "volume": 1600,
+      "difficulty": 21,
+      "cpc": 0.19,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "compounding calculator retirement"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool retirement-contrib (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 1264
+    },
+    {
+      "keyword": "calculator that prints",
+      "volume": 1600,
+      "difficulty": 100,
+      "cpc": 0.23,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "calculator that prints"
+      ],
+      "code": "E",
+      "why": "ambiguous device intent (difficulty 100) — it describes a physical printing calculator, not a calculation the site can compute",
+      "priority": "P3",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 0
+    },
+    {
+      "keyword": "interest accrual calculator",
+      "volume": 1600,
+      "difficulty": 7,
+      "cpc": 0.96,
+      "source": "keyword-planner",
+      "verdict": "WEAK",
+      "auditClosest": "/finance/loan-emi",
+      "cluster": [
+        "interest accrual calculator"
+      ],
+      "code": "B",
+      "why": "the audit maps this to the live page /finance/loan-emi — improve that page (metadata/content/functionality), no new URL",
+      "priority": "P2",
+      "proposedUrl": "/finance/loan-emi",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 1488
+    },
+    {
+      "keyword": "cash back calculator",
+      "volume": 1300,
+      "difficulty": 1,
+      "cpc": 2.31,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "cash back calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool payback (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 1287
+    },
+    {
+      "keyword": "roi calculation formula",
+      "volume": 1300,
+      "difficulty": 8,
+      "cpc": 0.17,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "roi calculation formula"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool ev-charger-roi (1/3 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 1196
+    },
+    {
+      "keyword": "work schedule calculator",
+      "volume": 1300,
+      "difficulty": 9,
+      "cpc": 1.05,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "work schedule calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool working-capital (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 1183
+    },
+    {
+      "keyword": "concrete calculator formula",
+      "volume": 1300,
+      "difficulty": 11,
+      "cpc": 0.02,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "concrete calculator formula"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool concrete-slab (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 1157
+    },
+    {
+      "keyword": "compound investments",
+      "volume": 1300,
+      "difficulty": 24,
+      "cpc": 1.01,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "compound investment calculator",
+        "compound investments"
+      ],
+      "code": "D",
+      "why": "shares one search intent with 1 other keyword(s) in this audit — one page must own all of them",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 988
+    },
+    {
+      "keyword": "future value of investment calculator",
+      "volume": 1300,
+      "difficulty": 30,
+      "cpc": 0.07,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "future value of investment calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool future-value (2/3 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 910
+    },
+    {
+      "keyword": "retirement calculator growth",
+      "volume": 1300,
+      "difficulty": 36,
+      "cpc": 0.24,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "retirement calculator growth"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool retirement-contrib (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 832
+    },
+    {
+      "keyword": "currency calculator xe",
+      "volume": 1300,
+      "difficulty": 58,
+      "cpc": 0,
+      "source": "calculator-net-gap",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "currency calculator xe"
+      ],
+      "code": "B",
+      "why": "an existing registry tool already covers every concept token — improve that page, do not create a duplicate",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 546
+    },
+    {
+      "keyword": "age calendar",
+      "volume": 1300,
+      "difficulty": 0,
+      "cpc": 0,
+      "source": "keyword-planner",
+      "verdict": "WEAK",
+      "auditClosest": "/guides/age",
+      "cluster": [
+        "age calendar"
+      ],
+      "code": "B",
+      "why": "the audit maps this to the live page /guides/age — improve that page (metadata/content/functionality), no new URL",
+      "priority": "P2",
+      "proposedUrl": "/guides/age",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 1300
+    },
+    {
+      "keyword": "inflation wage calculator",
+      "volume": 1000,
+      "difficulty": 1,
+      "cpc": 1.63,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "inflation wage calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool journeyman-wage-progression (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 990
+    },
+    {
+      "keyword": "time and pay calculator",
+      "volume": 1000,
+      "difficulty": 5,
+      "cpc": 0.95,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "time and pay calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool overtime-pay (2/3 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 950
+    },
+    {
+      "keyword": "compound loan calculator",
+      "volume": 1000,
+      "difficulty": 11,
+      "cpc": 0.17,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "compound loan calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool car-loan-emi (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 890
+    },
+    {
+      "keyword": "formula discount",
+      "volume": 1000,
+      "difficulty": 16,
+      "cpc": 1.76,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "formula discount"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool discount-rate (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 840
+    },
+    {
+      "keyword": "calculator that shows work",
+      "volume": 1000,
+      "difficulty": 21,
+      "cpc": 0.24,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "calculator that shows work"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool working-capital (1/3 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 790
+    },
+    {
+      "keyword": "investment account calculator",
+      "volume": 1000,
+      "difficulty": 25,
+      "cpc": 0.04,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "investment account calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool investment (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 750
+    },
+    {
+      "keyword": "compare loan calculator",
+      "volume": 1000,
+      "difficulty": 25,
+      "cpc": 2.19,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "compare loan calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool fuel-price-compare (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 750
+    },
+    {
+      "keyword": "monthly investment calculator",
+      "volume": 1000,
+      "difficulty": 39,
+      "cpc": 0.11,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "monthly investment calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool freelance-budget (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 610
+    },
+    {
+      "keyword": "yearly interest calculator",
+      "volume": 1000,
+      "difficulty": 10,
+      "cpc": 1.01,
+      "source": "keyword-planner",
+      "verdict": "WEAK",
+      "auditClosest": "/guides/compound-interest",
+      "cluster": [
+        "yearly interest calculator"
+      ],
+      "code": "B",
+      "why": "the audit maps this to the live page /guides/compound-interest — improve that page (metadata/content/functionality), no new URL",
+      "priority": "P2",
+      "proposedUrl": "/guides/compound-interest",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 900
+    },
+    {
+      "keyword": "savings percentage calculator",
+      "volume": 880,
+      "difficulty": 2,
+      "cpc": 1.33,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "savings percentage calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool fuel-efficiency (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 862
+    },
+    {
+      "keyword": "yearly payment calculator",
+      "volume": 880,
+      "difficulty": 5,
+      "cpc": 0.15,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "yearly payment calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool graduated-payment (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 836
+    },
+    {
+      "keyword": "compound return calculator",
+      "volume": 880,
+      "difficulty": 21,
+      "cpc": 0.06,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "compound return calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool compound-savings (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 695
+    },
+    {
+      "keyword": "projected retirement calculator",
+      "volume": 880,
+      "difficulty": 49,
+      "cpc": 0.96,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "projected retirement calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool retirement-contrib (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 449
+    },
+    {
+      "keyword": "retirement financial calculator",
+      "volume": 880,
+      "difficulty": 52,
+      "cpc": 1.31,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "retirement financial calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool retirement-contrib (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 422
+    },
+    {
+      "keyword": "forex xe converter",
+      "volume": 880,
+      "difficulty": 59,
+      "cpc": 0,
+      "source": "calculator-net-gap",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "forex xe converter"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool currency-conv (2/3 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 361
+    },
+    {
+      "keyword": "qualify for a mortgage calculator",
+      "volume": 880,
+      "difficulty": 66,
+      "cpc": 1.7,
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "auditClosest": "",
+      "cluster": [
+        "qualify for a mortgage calculator"
+      ],
+      "code": "C",
+      "why": "partial match with registry tool remortgage-calc (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "priority": "P2",
+      "proposedUrl": "",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 299
+    },
+    {
+      "keyword": "yearly pay calculator",
+      "volume": 880,
+      "difficulty": 5,
+      "cpc": 0.15,
+      "source": "keyword-planner",
+      "verdict": "WEAK",
+      "auditClosest": "/lifestyle/parental-leave",
+      "cluster": [
+        "yearly pay calculator"
+      ],
+      "code": "B",
+      "why": "the audit maps this to the live page /lifestyle/parental-leave — improve that page (metadata/content/functionality), no new URL",
+      "priority": "P2",
+      "proposedUrl": "/lifestyle/parental-leave",
+      "status": "not implemented — decision recorded in this session, no page built yet",
+      "opportunity": 836
+    }
+  ]
+}

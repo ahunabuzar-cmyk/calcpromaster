@@ -2,7 +2,7 @@
 
 _Deterministic audit over the same extraction as docs/KEYWORD-TARGETS.md. Nothing hand-added. Re-run with: `npm run keywords:audit`._
 
-**Inventory:** 1334 indexable pages · 1206 tools · 2242 curated phrases.
+**Inventory:** 1420 indexable pages · 1284 tools · 2526 curated phrases.
 
 ## Verdict at a glance
 
@@ -11,13 +11,22 @@ _Deterministic audit over the same extraction as docs/KEYWORD-TARGETS.md. Nothin
 | C1 · Title cannibalization | ✅ none |
 | C2 · Phrase cannibalization (2+ pages target same phrase) | ✅ none |
 | C3 · Duplicate phrase inside one tool | ✅ none |
-| Q1 · Year-stamped phrases | ✅ none |
+| Q1 · Year-stamped phrases | ⚠️ 2 |
 | Q2 · App/download-intent phrases on web tools | ✅ none |
-| Q3 · Phrases sharing no word with tool name | ℹ️ 82 (review, not always wrong) |
+| Q3 · Phrases sharing no word with tool name | ℹ️ 134 (review, not always wrong) |
 | S1 · Overlong phrases (>70 chars) | ✅ none |
 | S2 · Single generic word | ✅ none |
 
-**Modifier coverage:** 39 phrases use feature modifiers ("with …", "solve for …"), 56 carry locale/currency intent, 1016 say "free".
+**Modifier coverage:** 40 phrases use feature modifiers ("with …", "solve for …"), 69 carry locale/currency intent, 1017 say "free".
+
+## Q1 — Year-stamped phrases (stale by next year)
+
+Hard years inside evergreen keywords guarantee staleness. Drop the year — the page can mention recency without baking it into the target.
+
+| Page | Phrase |
+|---|---|
+| `/regional/bangladesh-income-tax` | nbr tax calculator 2025-26 |
+| `/regional/mexico-isr-salary` | calculadora isr 2026 |
 
 ## Q3 — Phrases sharing no word with the tool name (review list)
 
@@ -33,7 +42,18 @@ Often legitimate (synonyms, problem-space queries like "how many bags of concret
 | `/business/saas-unit-metrics` | ARPU calculator |
 | `/business/saas-unit-metrics` | LTV calculator |
 | `/business/saas-unit-metrics` | CAC calculator |
+| `/business/sponsorship-rate` | how much to charge sponsored post |
+| `/business/sponsorship-rate` | creator pricing calculator |
+| `/business/brand-deal-value` | sponsored package price |
+| `/business/brand-deal-value` | influencer campaign cost |
+| `/business/ev-charger-business-roi` | public charging station profit |
 | `/career/salary-converter` | hourly to annual |
+| `/career/career-break-runway` | how long will savings last |
+| `/career/interview-to-offer-tracker` | application success rate |
+| `/construction/pipe-cutback` | fitting takeout calculator |
+| `/construction/pipe-cutback` | elbow takeout chart |
+| `/construction/pipe-cutback` | pipefitter cut length |
+| `/construction/journeyman-wage-progression` | trade career earnings |
 | `/conversion/length` | meters to feet and inches converter |
 | `/conversion/pressure-conv` | pascal bar psi |
 | `/conversion/temperature` | celsius to fahrenheit |
@@ -48,34 +68,23 @@ Often legitimate (synonyms, problem-space queries like "how many bags of concret
 | `/conversion/voltage-conv` | volts amps watts |
 | `/conversion/density-conv` | kg/m3 to g/cm3 |
 | `/education/reading-speed` | words per minute |
+| `/education/scholarship-gap` | unmet need calculator |
+| `/education/school-fee-inflation` | future tuition cost |
+| `/engineering/pipe-pressure-loss` | hazen williams calculator |
+| `/engineering/hvac-load` | manual j calculator |
+| `/engineering/hvac-load` | btu per square foot air conditioner |
 | `/everyday/calorie-counter` | nutrition tracker |
 | `/everyday/calorie-counter` | diet plan |
+| `/everyday/statute-of-limitations` | claim deadline calculator |
+| `/everyday/statute-of-limitations` | time limit to sue |
+| `/everyday/statute-of-limitations` | legal filing deadline |
+| `/everyday/cost-of-living-compare` | equivalent salary calculator |
 | `/finance/loan-emi` | day count convention |
 | `/finance/mortgage` | fha vs conventional loan comparison calculator |
 | `/finance/mortgage` | home loan affordability calculator with property tax |
 | `/finance/compound-interest` | investment growth calculator with monthly sip |
 | `/finance/compound-interest` | solve for rate |
-| `/finance/credit-card-payoff` | solve for payment |
-| `/finance/retirement` | solve for contribution |
-| `/finance/investment` | roi calculator with annual returns |
-| `/finance/savings-goal` | solve for time |
-| `/finance/npv` | net present value |
-| `/finance/irr` | internal rate of return |
-| `/finance/roi` | return on investment |
-| `/finance/salary` | take home pay calculator with deductions |
-| `/finance/home-afford` | how much house can i afford calculator |
-| `/finance/home-afford` | how much house |
-| `/finance/currency-converter` | usd to pkr live exchange rate converter |
-| `/finance/currency-converter` | pkr to usd converter today |
-| `/finance/investment-growth` | cagr calculator with monthly contributions |
-| `/finance/bond-yield` | YTM calculator |
-| `/finance/bond-yield` | fixed income |
-| `/finance/retirement-income` | 401k calculator |
-| `/finance/retirement-income` | IRA calculator |
-| `/finance/sip` | mutual fund |
-| `/finance/crypto-profit` | cryptocurrency gains |
-| `/finance/stock-profit` | capital gains |
-| … | +32 more |
+| … | +84 more |
 
 ## Method & honest limits
 

@@ -1,6 +1,6 @@
 # Keyword Difficulty Report — CalcProMaster
 
-_Generated 2026-09-18 by `scripts/build-difficulty-report.cjs` (deterministic; re-run with `npm run keywords:fresh`). Difficulty model: `scripts/keyword-difficulty.cjs`._
+_Generated 2026-10-13 by `scripts/build-difficulty-report.cjs` (deterministic; re-run with `npm run keywords:fresh`). Difficulty model: `scripts/keyword-difficulty.cjs`._
 
 ## 0. Honest scope — read this first
 
@@ -25,12 +25,12 @@ _Generated 2026-09-18 by `scripts/build-difficulty-report.cjs` (deterministic; r
 
 | Tier | Phrases | Meaning |
 |---|---|---|
-| **EASY** (go after now) | 1093 | 4+ words with intent qualifier — few strong brands in top-10 |
-| **MEDIUM** (secondary) | 1423 | 3+ words — mixed SERPs, needs some links |
+| **EASY** (go after now) | 1177 | 4+ words with intent qualifier — few strong brands in top-10 |
+| **MEDIUM** (secondary) | 1663 | 3+ words — mixed SERPs, needs some links |
 | **HARD** (park) | 0 | head terms — brand wall (calculator.net, omnicalculator, Khan Academy…) |
 | **BRAND** (own) | 0 | CalcProMaster brand queries — must own #1 |
 
-Total distinct targeted phrases: **2516** across 1334 indexable pages.
+Total distinct targeted phrases: **2840** across 1420 indexable pages.
 
 ## 3. GO list — highest-value EASY targets (difficulty 2, best-volume first, sample of 60)
 
@@ -41,6 +41,7 @@ These pass the <20-strong-brands rule with margin. Each already has a dedicated 
 | CGPA Calculator: Semester GPAs | `/education/cgpa` | low-mid (50–500/mo est.) |
 | cost per hour flying | `/lifestyle/flight-cost-per-hour` | low-mid (50–500/mo est.) |
 | Cubic Equation Solver: Roots | `/math/cubic-equation` | low-mid (50–500/mo est.) |
+| ev charger business roi | `/business/ev-charger-business-roi` | low-mid (50–500/mo est.) |
 | final grade needed weighted | `/education/grade-needed` | low-mid (50–500/mo est.) |
 | free coulombs law calculator | `/science/coulomb` | low-mid (50–500/mo est.) |
 | free gst/vat calculator | `/everyday/gst` | low-mid (50–500/mo est.) |
@@ -97,7 +98,6 @@ These pass the <20-strong-brands rule with margin. Each already has a dedicated 
 | free online IRR Calculator | `/finance/irr` | low-mid (50–500/mo est.) |
 | free online Lens Calculator | `/science/lens` | low-mid (50–500/mo est.) |
 | free online Lever Calculator | `/engineering/lever` | low-mid (50–500/mo est.) |
-| free online Logarithm Calculator | `/math/logarithm` | low-mid (50–500/mo est.) |
 
 ## 4. PARK list — head terms & brand-wall keywords (sample of 30)
 
@@ -110,10 +110,13 @@ Do **not** chase these with the current authority (zero/backlink-poor). Revisit 
 | Age Calculator: Date of Birth | `/everyday/age` | low (10–100/mo est.) |
 | APR Calculator: Loan Amount, Fees & Nominal Rate | `/finance/apr` | low (10–100/mo est.) |
 | Auto Loan Calculator: Vehicle Price, Down Payment & Rate | `/finance/auto-loan` | low (10–100/mo est.) |
+| bangladesh income tax calculator | `/regional/bangladesh-income-tax` | low-mid (50–500/mo est.) |
+| Bangladesh Income Tax Calculator: Annual Income | `/regional/bangladesh-income-tax` | low (10–100/mo est.) |
 | bernoulli equation calculator fluid dynamics | `/science/bernoulli` | low (10–100/mo est.) |
 | Bernoulli Equation: ½ρV² ρGh Constant | `/science/bernoulli` | low (10–100/mo est.) |
 | bill split & tip calculator | `/utilities/tip-split` | low-mid (50–500/mo est.) |
 | Bill Split & Tip: Bill Amount, Tip & Number of People | `/utilities/tip-split` | low (10–100/mo est.) |
+| bir income tax calculator philippines | `/regional/philippines-take-home-salary` | low (10–100/mo est.) |
 | biweekly mortgage calculator accelerated payments savings | `/finance/biweekly-mortgage` | low (10–100/mo est.) |
 | Biweekly Mortgage Calculator: Loan Amount, Rate & Loan Term | `/finance/biweekly-mortgage` | low (10–100/mo est.) |
 | Biweekly Pay Calculator: Annual Salary | `/utilities/salary-biweekly` | low (10–100/mo est.) |
@@ -124,6 +127,7 @@ Do **not** chase these with the current authority (zero/backlink-poor). Revisit 
 | Body Fat Calculator: Weight, Waist & Neck | `/health/body-fat` | low (10–100/mo est.) |
 | Body Surface Area: Weight & Height | `/health/bsa` | low (10–100/mo est.) |
 | bond coupon payment calculator semiannual interest face value | `/finance/coupon-payment` | low (10–100/mo est.) |
+| brazil take home salary calculator | `/regional/brazil-take-home-salary` | low (10–100/mo est.) |
 | Business Days Calculator: Start Date & End Date | `/everyday/business-days` | low (10–100/mo est.) |
 | calorie burn calculator at rest | `/health/bmr` | low (10–100/mo est.) |
 | Calorie Burn Calculator: Weight, Activity & Duration | `/health/calorie-burn` | low (10–100/mo est.) |
@@ -131,10 +135,6 @@ Do **not** chase these with the current authority (zero/backlink-poor). Revisit 
 | calorie deficit calculator weight loss | `/health/calorie-deficit` | low (10–100/mo est.) |
 | calorie surplus deficit goal calculator | `/health/calorie-goal` | low (10–100/mo est.) |
 | Calorie Surplus/Deficit Goal: TDEE & Weeks | `/health/calorie-goal` | low (10–100/mo est.) |
-| Capital Gains Tax: Purchase Price, Sale Price & Tax Rate | `/finance/capital-gains` | low (10–100/mo est.) |
-| Car Lease Payment Calculator: MSRP, Capitalized Cost | `/finance/car-lease-calculator` | low (10–100/mo est.) |
-| car wash cost calculator annual subscription | `/lifestyle/car-wash-annual` | low (10–100/mo est.) |
-| carbon dating calculator radiocarbon age c14 half life archaeology fossils | `/science/carbon-dating` | low (10–100/mo est.) |
 
 ## 5. What actually moves rankings from here (priority order)
 

@@ -24,9 +24,13 @@ const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 const { sitemapDate } = require('./lib/sitemap-date.cjs');
+const { MANUAL_TARGETS } = require('./lib/keyword-target-overrides.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const GAP = path.join(ROOT, 'data', 'keyword-gap.json');
+// Optional: the applier's per-row result, so the map's `status` column tells the
+// truth about what is actually implemented rather than a blanket "not implemented".
+const RESOLUTION = path.join(ROOT, 'data', 'keyword-target-resolution.json');
 const SITEMAP = path.join(ROOT, 'deploy', 'sitemap.xml');
 const OUT_MD = path.join(ROOT, 'docs', 'KEYWORD-IMPLEMENTATION-MAP.md');
 const JSON_ONLY = process.argv.includes('--json');
@@ -238,17 +242,40 @@ function main() {
     for (const t of tokens(r.keyword)) if (t.length > 2 && !liveByToken.has(t)) liveByToken.set(t, { keyword: r.keyword, page: page });
   }
 
+  // The reviewed resolution table fills the target column for the rows whose own
+  // rule stopped at "resolve by internal linking/metadata first". `route: null` is
+  // an honest no-owner verdict, not a missing value.
+  const applied = new Map();
+  try {
+    const rep = JSON.parse(fs.readFileSync(RESOLUTION, 'utf8'));
+    for (const row of rep.rows || []) applied.set(row.keyword, row);
+  } catch (e) { /* applier has not run yet — statuses stay as recorded */ }
+
   const decisions = rows.map((r) => {
     const cluster = byIntent.get(intentKey(r.keyword)) || [r];
     const c = classify(r, cluster, tools, sitemap, liveByToken);
     const slug = slugFor(r.keyword);
+    const mt = MANUAL_TARGETS[String(r.keyword).toLowerCase()];
+    const manualUrl = mt ? (mt.route ? String(mt.route).replace(/\/+$/, '') : '') : null;
+    const baseUrl = c.code === 'A' ? '/<category>/' + slug : (c.page || r.closest || r.page || '');
+    const proposedUrl = manualUrl !== null ? manualUrl : baseUrl;
+    const done = applied.get(r.keyword);
+    let status = 'not implemented — decision recorded, no page built yet';
+    if (done && (done.status === 'IMPROVED' || done.status === 'ALREADY')) {
+      status = 'implemented — keyword answered by a rendered FAQ on ' + done.resolvedTarget;
+    } else if (done && done.status === 'NO_OWNER') {
+      status = 'no implementation — ' + (mt ? mt.note : 'no page can own this intent');
+    } else if (c.code === 'E') {
+      status = 'no implementation — ' + c.why;
+    }
+    const why = mt && mt.route ? c.why + ' · resolved: ' + mt.note : (mt && !mt.route ? mt.note : c.why);
     return {
       keyword: r.keyword, volume: r.volume, difficulty: r.difficulty, cpc: r.cpc == null ? null : r.cpc,
       source: r.source, verdict: r.verdict, auditClosest: r.closest || r.page || '',
-      cluster: cluster.map((x) => x.keyword), code: c.code, why: c.why,
+      cluster: cluster.map((x) => x.keyword), code: c.code, why,
       priority: priorityFor(c.code, r, cluster),
-      proposedUrl: c.code === 'A' ? '/<category>/' + slug : (c.page || r.closest || r.page || ''),
-      status: 'not implemented — decision recorded in this session, no page built yet',
+      proposedUrl,
+      status,
       opportunity: r.opportunity
     };
   }).sort((a, b) => (b.volume || 0) - (a.volume || 0));
@@ -358,8 +385,18 @@ function main() {
       '** | ' + d.priority + ' | ' + (d.proposedUrl ? '`' + d.proposedUrl + '`' : '—') + ' | ' + d.why.replace(/\|/g, '\\|') + ' |');
   }
   L.push('');
-  L.push('**Status of every row above: not implemented.** This session recorded the decisions and built no new');
-  L.push('calculator pages; see `docs/KEYWORD-IMPLEMENTATION-REPORT.md` for the exact remaining work.');
+  const impl = decisions.filter((d) => /^implemented/.test(d.status)).length;
+  const noImpl = decisions.filter((d) => /^no implementation/.test(d.status)).length;
+  L.push('## Implementation status');
+  L.push('');
+  L.push('| Status | Rows |');
+  L.push('|---|---:|');
+  L.push('| implemented (FAQ added on the owner page) | ' + impl + ' |');
+  L.push('| no implementation (no page can own the intent) | ' + noImpl + ' |');
+  L.push('| still open | ' + (decisions.length - impl - noImpl) + ' |');
+  L.push('');
+  L.push('The `What` for each implemented row is a rendered FAQ on the owner page (§ Target), applied by');
+  L.push('`scripts/apply-keyword-targets.cjs`; see [KEYWORD-TARGET-RESOLUTION.md](KEYWORD-TARGET-RESOLUTION.md) for the per-row evidence.');
   L.push('');
   fs.writeFileSync(OUT_MD, L.join('\n'));
 

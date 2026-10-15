@@ -1,0 +1,2469 @@
+{
+  "generatedFor": "2026-10-13",
+  "source": "data/keyword-implementation-map.json (B/C/D rows)",
+  "totals": {
+    "rows": 97,
+    "byCode": {
+      "B": {
+        "COVERED": 34
+      },
+      "C": {
+        "COVERED": 54,
+        "NO_OWNER": 2
+      },
+      "D": {
+        "COVERED": 7
+      }
+    },
+    "byStatus": {
+      "COVERED": 95,
+      "NO_OWNER": 2
+    },
+    "pagesNeedingMeta": 0,
+    "keywordsNeedingMeta": 0
+  },
+  "workQueue": [],
+  "rows": [
+    {
+      "code": "B",
+      "priority": "P1",
+      "keyword": "polypeptide calculator",
+      "volume": 301000,
+      "difficulty": 6,
+      "target": "/health/peptide-reconstitution/",
+      "conceptTokens": [
+        "polypeptide"
+      ],
+      "cluster": [
+        "polypeptide calculator"
+      ],
+      "why": "the peptide calculator already ships as /health/peptide-reconstitution/ (\"Peptide Reconstitution Calculator\", verified in deploy/sitemap.xml) — the generic keyword points at that page; a second /<category>/polypeptide-calculator would duplicate one intent",
+      "pageTitle": "Peptide Reconstitution Calculator: Concentration &amp; Units",
+      "pageFile": "deploy/health/peptide-reconstitution/index.html",
+      "matchedTokens": [
+        "polypeptide"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P1",
+      "keyword": "convert currency xe",
+      "volume": 246000,
+      "difficulty": 55,
+      "target": "/finance/currency-converter/",
+      "conceptTokens": [
+        "currency",
+        "xe"
+      ],
+      "cluster": [
+        "convert currency xe",
+        "convert xe currency"
+      ],
+      "why": "the generic intent behind the branded query (convert a currency) is owned by /finance/currency-converter/ (\"Convert between 150+ currencies with live rates\", verified in deploy/sitemap.xml); \"xe\" is the competitor brand, so improve that page’s metadata/internal links and do not target the brand name",
+      "pageTitle": "Currency Converter — USD to PKR Exchange Rates",
+      "pageFile": "deploy/finance/currency-converter/index.html",
+      "matchedTokens": [
+        "currency",
+        "xe"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P1",
+      "keyword": "convert xe currency",
+      "volume": 246000,
+      "difficulty": 55,
+      "target": "/finance/currency-converter/",
+      "conceptTokens": [
+        "xe",
+        "currency"
+      ],
+      "cluster": [
+        "convert currency xe",
+        "convert xe currency"
+      ],
+      "why": "same intent as \"convert currency xe\" — word order only; both point at /finance/currency-converter/ (verified live) so one page owns the cluster, and no copy names the competitor brand",
+      "pageTitle": "Currency Converter — USD to PKR Exchange Rates",
+      "pageFile": "deploy/finance/currency-converter/index.html",
+      "matchedTokens": [
+        "xe",
+        "currency"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "time card clock calculator",
+      "volume": 201000,
+      "difficulty": 20,
+      "target": "/career/timesheet-hours",
+      "conceptTokens": [
+        "time",
+        "card",
+        "clock"
+      ],
+      "cluster": [
+        "time card clock calculator"
+      ],
+      "why": "partial match with registry tool walking-transit (1/3 concept tokens) — resolve by internal linking/metadata first · resolved: a time card is a timesheet — /career/timesheet-hours/ works out hours from start/end times",
+      "pageTitle": "Timesheet Decimal Converter: Time entries",
+      "pageFile": "deploy/career/timesheet-hours/index.html",
+      "matchedTokens": [
+        "time",
+        "card",
+        "clock"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P1",
+      "keyword": "mortgage expense calculator",
+      "volume": 201000,
+      "difficulty": 35,
+      "target": "/finance/mortgage",
+      "conceptTokens": [
+        "mortgage",
+        "expense"
+      ],
+      "cluster": [
+        "mortgage expense calculator"
+      ],
+      "why": "the audit maps this to the live page /finance/mortgage — improve that page (metadata/content/functionality), no new URL · resolved: mortgage expense = the monthly payment the mortgage page totals",
+      "pageTitle": "Mortgage Calculator: Home Price, Down Payment",
+      "pageFile": "deploy/finance/mortgage/index.html",
+      "matchedTokens": [
+        "mortgage",
+        "expense"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "cd bank calculator",
+      "volume": 165000,
+      "difficulty": 2,
+      "target": "/finance/cd-calculator",
+      "conceptTokens": [
+        "cd",
+        "bank"
+      ],
+      "cluster": [
+        "cd bank calculator"
+      ],
+      "why": "partial match with registry tool cd-calculator (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: CD = certificate of deposit",
+      "pageTitle": "CD Interest Calculator: Deposit Amount, APY &amp; Term",
+      "pageFile": "deploy/finance/cd-calculator/index.html",
+      "matchedTokens": [
+        "cd",
+        "bank"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P1",
+      "keyword": "bank certificate calculator",
+      "volume": 165000,
+      "difficulty": 2,
+      "target": "/finance/cd-calculator",
+      "conceptTokens": [
+        "bank",
+        "certificate"
+      ],
+      "cluster": [
+        "bank certificate calculator"
+      ],
+      "why": "shares the concept token \"certificate\" with \"calculator for certificate of deposit\", which the audit already maps to the live page /finance/cd-calculator — improve that page instead of adding a near-duplicate calculator",
+      "pageTitle": "CD Interest Calculator: Deposit Amount, APY &amp; Term",
+      "pageFile": "deploy/finance/cd-calculator/index.html",
+      "matchedTokens": [
+        "bank",
+        "certificate"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P1",
+      "keyword": "ft2 calculator",
+      "volume": 165000,
+      "difficulty": 9,
+      "target": "/conversion/area/",
+      "conceptTokens": [
+        "squarefoot"
+      ],
+      "cluster": [
+        "ft2 calculator"
+      ],
+      "why": "sq ft ↔ m² conversion is the Area Converter that already ships at /conversion/area/ (verified in deploy/sitemap.xml) — improve that page instead of adding an /<category>/ft2-calculator duplicate",
+      "pageTitle": "Area Converter: m² to ft² and Other Units",
+      "pageFile": "deploy/conversion/area/index.html",
+      "matchedTokens": [
+        "squarefoot"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "ft squared calculator",
+      "volume": 165000,
+      "difficulty": 9,
+      "target": "/conversion/area",
+      "conceptTokens": [
+        "foot",
+        "squared"
+      ],
+      "cluster": [
+        "ft squared calculator"
+      ],
+      "why": "partial match with registry tool shift-differential (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: square feet is an area unit — the area converter, same owner as the ft2 row",
+      "pageTitle": "Area Converter: m² to ft² and Other Units",
+      "pageFile": "deploy/conversion/area/index.html",
+      "matchedTokens": [
+        "foot",
+        "squared"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "D",
+      "priority": "P1",
+      "keyword": "calculator for certificate of deposit",
+      "volume": 165000,
+      "difficulty": 2,
+      "target": "/finance/cd-calculator",
+      "conceptTokens": [
+        "certificate",
+        "deposit"
+      ],
+      "cluster": [
+        "calculator for certificate of deposit",
+        "deposit certificate calculator",
+        "certificate deposit calculator"
+      ],
+      "why": "shares one search intent with 2 other keyword(s) in this audit — one page must own all of them",
+      "pageTitle": "CD Interest Calculator: Deposit Amount, APY &amp; Term",
+      "pageFile": "deploy/finance/cd-calculator/index.html",
+      "matchedTokens": [
+        "certificate",
+        "deposit"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P1",
+      "keyword": "certified deposit calculator",
+      "volume": 165000,
+      "difficulty": 2,
+      "target": "/finance/cd-calculator",
+      "conceptTokens": [
+        "certified",
+        "deposit"
+      ],
+      "cluster": [
+        "certified deposit calculator"
+      ],
+      "why": "the audit maps this to the live page /finance/cd-calculator — improve that page (metadata/content/functionality), no new URL · resolved: confused phrasing for certificate of deposit — the CD page",
+      "pageTitle": "CD Interest Calculator: Deposit Amount, APY &amp; Term",
+      "pageFile": "deploy/finance/cd-calculator/index.html",
+      "matchedTokens": [
+        "certified",
+        "deposit"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "D",
+      "priority": "P1",
+      "keyword": "deposit certificate calculator",
+      "volume": 165000,
+      "difficulty": 2,
+      "target": "/finance/cd-calculator",
+      "conceptTokens": [
+        "deposit",
+        "certificate"
+      ],
+      "cluster": [
+        "calculator for certificate of deposit",
+        "deposit certificate calculator",
+        "certificate deposit calculator"
+      ],
+      "why": "shares one search intent with 2 other keyword(s) in this audit — one page must own all of them",
+      "pageTitle": "CD Interest Calculator: Deposit Amount, APY &amp; Term",
+      "pageFile": "deploy/finance/cd-calculator/index.html",
+      "matchedTokens": [
+        "deposit",
+        "certificate"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "D",
+      "priority": "P1",
+      "keyword": "certificate deposit calculator",
+      "volume": 165000,
+      "difficulty": 2,
+      "target": "/finance/cd-calculator",
+      "conceptTokens": [
+        "certificate",
+        "deposit"
+      ],
+      "cluster": [
+        "calculator for certificate of deposit",
+        "deposit certificate calculator",
+        "certificate deposit calculator"
+      ],
+      "why": "shares one search intent with 2 other keyword(s) in this audit — one page must own all of them",
+      "pageTitle": "CD Interest Calculator: Deposit Amount, APY &amp; Term",
+      "pageFile": "deploy/finance/cd-calculator/index.html",
+      "matchedTokens": [
+        "certificate",
+        "deposit"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "bmi calculator body mass index",
+      "volume": 110000,
+      "difficulty": 53,
+      "target": "/health/bmi",
+      "conceptTokens": [
+        "bmi",
+        "body",
+        "mass",
+        "index"
+      ],
+      "cluster": [
+        "bmi calculator body mass index"
+      ],
+      "why": "partial match with registry tool body-fat-fitness (2/4 concept tokens) — resolve by internal linking/metadata first · resolved: the BMI page, already the registry owner",
+      "pageTitle": "BMI Calculator: Weight &amp; Height",
+      "pageFile": "deploy/health/bmi/index.html",
+      "matchedTokens": [
+        "bmi",
+        "body",
+        "mass",
+        "index"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "day count",
+      "volume": 74000,
+      "difficulty": 0,
+      "target": "/everyday/date-diff",
+      "conceptTokens": [
+        "day",
+        "count"
+      ],
+      "cluster": [
+        "day count"
+      ],
+      "why": "partial match with registry tool discount-rate (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: counting days between dates is the date-difference tool",
+      "pageTitle": "Date Difference Calculator: Days Between Two",
+      "pageFile": "deploy/everyday/date-diff/index.html",
+      "matchedTokens": [
+        "day",
+        "count"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P1",
+      "keyword": "calendar calculator",
+      "volume": 60500,
+      "difficulty": 0,
+      "target": "/everyday/date-diff/",
+      "conceptTokens": [
+        "calendar"
+      ],
+      "cluster": [
+        "calendar calculator"
+      ],
+      "why": "the token heuristic attached this to /guides/age through the shared word \"calendar\" (from \"age calendar\"), but the calendar/date-arithmetic intent is served by /everyday/date-diff/ (verified in deploy/sitemap.xml) — improve that page instead",
+      "pageTitle": "Date Difference Calculator: Days Between Two",
+      "pageFile": "deploy/everyday/date-diff/index.html",
+      "matchedTokens": [
+        "calendar"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "yearly salary calculator",
+      "volume": 49500,
+      "difficulty": 1,
+      "target": "/lifestyle/parental-leave",
+      "conceptTokens": [
+        "yearly",
+        "salary"
+      ],
+      "cluster": [
+        "yearly salary calculator"
+      ],
+      "why": "the audit maps this to the live page /lifestyle/parental-leave — improve that page (metadata/content/functionality), no new URL",
+      "pageTitle": "Parental Leave Pay Calculator: Annual Salary, Leave Weeks",
+      "pageFile": "deploy/lifestyle/parental-leave/index.html",
+      "matchedTokens": [
+        "yearly",
+        "salary"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "financial compound calculator",
+      "volume": 40500,
+      "difficulty": 14,
+      "target": "/finance/compound-interest",
+      "conceptTokens": [
+        "financial",
+        "compound"
+      ],
+      "cluster": [
+        "financial compound calculator"
+      ],
+      "why": "partial match with registry tool financial-need (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: compound interest is the exact tool",
+      "pageTitle": "Compound Interest Calculator: Principal Amount, Annual",
+      "pageFile": "deploy/finance/compound-interest/index.html",
+      "matchedTokens": [
+        "financial",
+        "compound"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "financial compounding calculator",
+      "volume": 40500,
+      "difficulty": 14,
+      "target": "/finance/compound-interest",
+      "conceptTokens": [
+        "financial",
+        "compound"
+      ],
+      "cluster": [
+        "financial compounding calculator"
+      ],
+      "why": "partial match with registry tool financial-need (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: same intent, word order only",
+      "pageTitle": "Compound Interest Calculator: Principal Amount, Annual",
+      "pageFile": "deploy/finance/compound-interest/index.html",
+      "matchedTokens": [
+        "financial",
+        "compound"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "interest percentage calculator",
+      "volume": 33100,
+      "difficulty": 10,
+      "target": "/finance/simple-interest",
+      "conceptTokens": [
+        "interest",
+        "percentage"
+      ],
+      "cluster": [
+        "interest percentage calculator"
+      ],
+      "why": "partial match with registry tool grade-percentage (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: interest as a percentage of principal is the simple-interest tool",
+      "pageTitle": "Simple Interest Calculator: Principal, Rate &amp; Time",
+      "pageFile": "deploy/finance/simple-interest/index.html",
+      "matchedTokens": [
+        "interest",
+        "percentage"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "annual percentage calculator",
+      "volume": 27100,
+      "difficulty": 5,
+      "target": "/finance/apr-annual",
+      "conceptTokens": [
+        "annual",
+        "percentage"
+      ],
+      "cluster": [
+        "annual percentage calculator"
+      ],
+      "why": "partial match with registry tool grade-percentage (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: annual percentage rate = APR",
+      "pageTitle": "Loan APR Calculator: Loan Amount, Fees &amp; Points",
+      "pageFile": "deploy/finance/apr-annual/index.html",
+      "matchedTokens": [
+        "annual",
+        "percentage"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "ot calculator",
+      "volume": 22200,
+      "difficulty": 1,
+      "target": "/career/overtime-pay",
+      "conceptTokens": [
+        "ot"
+      ],
+      "cluster": [
+        "ot calculator"
+      ],
+      "why": "an existing registry tool already covers every concept token — improve that page, do not create a duplicate · resolved: OT = overtime; /career/overtime-pay/ is the dedicated tool",
+      "pageTitle": "Overtime Pay Calculator: Hourly Rate, Regular Hours/Week",
+      "pageFile": "deploy/career/overtime-pay/index.html",
+      "matchedTokens": [
+        "ot"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "time payroll calculator",
+      "volume": 22200,
+      "difficulty": 12,
+      "target": "/career/timesheet-hours",
+      "conceptTokens": [
+        "time",
+        "salary"
+      ],
+      "cluster": [
+        "time payroll calculator"
+      ],
+      "why": "partial match with registry tool walking-transit (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: payroll time = hours worked → the timesheet hours tool",
+      "pageTitle": "Timesheet Decimal Converter: Time entries",
+      "pageFile": "deploy/career/timesheet-hours/index.html",
+      "matchedTokens": [
+        "time",
+        "salary"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "pay time calculator",
+      "volume": 22200,
+      "difficulty": 12,
+      "target": "/career/timesheet-hours",
+      "conceptTokens": [
+        "salary",
+        "time"
+      ],
+      "cluster": [
+        "pay time calculator"
+      ],
+      "why": "an existing registry tool already covers every concept token — improve that page, do not create a duplicate · resolved: pay-for-time is the timesheet-hours calculation",
+      "pageTitle": "Timesheet Decimal Converter: Time entries",
+      "pageFile": "deploy/career/timesheet-hours/index.html",
+      "matchedTokens": [
+        "salary",
+        "time"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "simplify calculator",
+      "volume": 18100,
+      "difficulty": 2,
+      "target": "/utilities/ratio-simplifier/",
+      "conceptTokens": [
+        "simplify"
+      ],
+      "cluster": [
+        "simplify calculator"
+      ],
+      "why": "the \"simplify\" intent is already answered by the Ratio Simplifier (/utilities/ratio-simplifier/, \"Simplify and work with ratios\") and the Fraction Calculator (/math/fraction/, \"Simplify and calculate fractions\") — both verified live; improve metadata/internal links there",
+      "pageTitle": "Ratio Simplifier: First Number &amp; Second Number",
+      "pageFile": "deploy/utilities/ratio-simplifier/index.html",
+      "matchedTokens": [
+        "simplify"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "compounded daily calculator",
+      "volume": 14800,
+      "difficulty": 3,
+      "target": "/finance/compound-interest",
+      "conceptTokens": [
+        "compounded",
+        "daily"
+      ],
+      "cluster": [
+        "compounded daily calculator"
+      ],
+      "why": "partial match with registry tool freelance-daily (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: the compound page takes the compounding frequency (incl. daily)",
+      "pageTitle": "Compound Interest Calculator: Principal Amount, Annual",
+      "pageFile": "deploy/finance/compound-interest/index.html",
+      "matchedTokens": [
+        "compounded",
+        "daily"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "desired weight calculator",
+      "volume": 14800,
+      "difficulty": 5,
+      "target": "/health/ideal-body-weight",
+      "conceptTokens": [
+        "desired",
+        "weight"
+      ],
+      "cluster": [
+        "desired weight calculator"
+      ],
+      "why": "partial match with registry tool power-to-weight (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: a desired/target weight is the ideal-body-weight tool",
+      "pageTitle": "Ideal Body Weight (IBW) Calculator: Devine Formula",
+      "pageFile": "deploy/health/ideal-body-weight/index.html",
+      "matchedTokens": [
+        "desired",
+        "weight"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "simple loan calculator",
+      "volume": 14800,
+      "difficulty": 13,
+      "target": "/finance/loan-emi",
+      "conceptTokens": [
+        "simple",
+        "loan"
+      ],
+      "cluster": [
+        "simple loan calculator"
+      ],
+      "why": "partial match with registry tool car-loan-emi (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: a \"simple\" loan is the plain EMI/amortisation the loan page does",
+      "pageTitle": "Loan EMI Calculator: Loan Amount, Interest Rate &amp; Loan Term",
+      "pageFile": "deploy/finance/loan-emi/index.html",
+      "matchedTokens": [
+        "simple",
+        "loan"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "loan calculator for business",
+      "volume": 14800,
+      "difficulty": 42,
+      "target": "/finance/loan-emi",
+      "conceptTokens": [
+        "loan",
+        "business"
+      ],
+      "cluster": [
+        "loan calculator for business"
+      ],
+      "why": "partial match with registry tool car-loan-emi (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: the loan maths is identical; the business framing is context, not a different formula",
+      "pageTitle": "Loan EMI Calculator: Loan Amount, Interest Rate &amp; Loan Term",
+      "pageFile": "deploy/finance/loan-emi/index.html",
+      "matchedTokens": [
+        "loan",
+        "business"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "time adder",
+      "volume": 14800,
+      "difficulty": 0,
+      "target": "/career/timesheet-hours",
+      "conceptTokens": [
+        "time",
+        "adder"
+      ],
+      "cluster": [
+        "time adder"
+      ],
+      "why": "the audit maps this to the live page /career/timesheet-hours — improve that page (metadata/content/functionality), no new URL · resolved: adding durations is what the timesheet tool does (start/end → total hours)",
+      "pageTitle": "Timesheet Decimal Converter: Time entries",
+      "pageFile": "deploy/career/timesheet-hours/index.html",
+      "matchedTokens": [
+        "time",
+        "adder"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "payment planner",
+      "volume": 12100,
+      "difficulty": 11,
+      "target": "/finance/loan-emi",
+      "conceptTokens": [
+        "payment",
+        "planner"
+      ],
+      "cluster": [
+        "payment planner"
+      ],
+      "why": "partial match with registry tool study-time (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: a payment planner schedules loan payments; the EMI page is the payment schedule calculator",
+      "pageTitle": "Loan EMI Calculator: Loan Amount, Interest Rate &amp; Loan Term",
+      "pageFile": "deploy/finance/loan-emi/index.html",
+      "matchedTokens": [
+        "payment",
+        "planner"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "fv calculator",
+      "volume": 9900,
+      "difficulty": 3,
+      "target": "/finance/future-value/",
+      "conceptTokens": [
+        "fv"
+      ],
+      "cluster": [
+        "fv calculator"
+      ],
+      "why": "FV is the standard abbreviation for future value and the site ships /finance/future-value/ (Future Value Calculator, verified in deploy/sitemap.xml) — the acronym belongs on that page",
+      "pageTitle": "Future Value Calculator: Present Value, Rate &amp; Years",
+      "pageFile": "deploy/finance/future-value/index.html",
+      "matchedTokens": [
+        "fv"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "mortgage and tax calculator",
+      "volume": 9900,
+      "difficulty": 40,
+      "target": "/finance/mortgage",
+      "conceptTokens": [
+        "mortgage",
+        "tax"
+      ],
+      "cluster": [
+        "mortgage and tax calculator"
+      ],
+      "why": "partial match with registry tool inheritance-tax-uk-india (2/3 concept tokens) — resolve by internal linking/metadata first · resolved: mortgage payment + tax/escrow is the mortgage page",
+      "pageTitle": "Mortgage Calculator: Home Price, Down Payment",
+      "pageFile": "deploy/finance/mortgage/index.html",
+      "matchedTokens": [
+        "mortgage",
+        "tax"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "pricing generator",
+      "volume": 8100,
+      "difficulty": 100,
+      "target": "/business/pricing",
+      "conceptTokens": [
+        "price",
+        "generator"
+      ],
+      "cluster": [
+        "pricing generator"
+      ],
+      "why": "partial match with registry tool pricing (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: the Pricing Calculator generates a selling price from unit cost + target margin — the arithmetic intent; the price-list-software intent is not claimed",
+      "pageTitle": "Pricing Calculator: Unit Cost &amp; Desired Margin",
+      "pageFile": "deploy/business/pricing/index.html",
+      "matchedTokens": [
+        "price",
+        "generator"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "yearly income calculator",
+      "volume": 8100,
+      "difficulty": 3,
+      "target": "/guides/income-tax",
+      "conceptTokens": [
+        "yearly",
+        "income"
+      ],
+      "cluster": [
+        "yearly income calculator"
+      ],
+      "why": "the audit maps this to the live page /guides/income-tax — improve that page (metadata/content/functionality), no new URL",
+      "pageTitle": "How Income Tax Is Calculated — Brackets &amp; Marginal Rates",
+      "pageFile": "deploy/guides/income-tax.html",
+      "matchedTokens": [
+        "yearly",
+        "income"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "savings calculator simple",
+      "volume": 6600,
+      "difficulty": 1,
+      "target": "/finance/savings-goal",
+      "conceptTokens": [
+        "sav",
+        "simple"
+      ],
+      "cluster": [
+        "savings calculator simple"
+      ],
+      "why": "partial match with registry tool fuel-efficiency (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: simple saving towards a target is the savings-goal tool",
+      "pageTitle": "Savings Goal Calculator: Savings Goal, Time &amp; Annual Return",
+      "pageFile": "deploy/finance/savings-goal/index.html",
+      "matchedTokens": [
+        "sav",
+        "simple"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "percentage return calculator",
+      "volume": 6600,
+      "difficulty": 7,
+      "target": "/finance/roi",
+      "conceptTokens": [
+        "percentage",
+        "return"
+      ],
+      "cluster": [
+        "percentage return calculator"
+      ],
+      "why": "partial match with registry tool grade-percentage (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: percentage return = ROI",
+      "pageTitle": "ROI Calculator: Investment Cost &amp; Current Value",
+      "pageFile": "deploy/finance/roi/index.html",
+      "matchedTokens": [
+        "percentage",
+        "return"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "retirement plan estimator",
+      "volume": 5400,
+      "difficulty": 6,
+      "target": "/finance/retirement",
+      "conceptTokens": [
+        "retirement",
+        "plan"
+      ],
+      "cluster": [
+        "retirement plan estimator"
+      ],
+      "why": "partial match with registry tool ev-range (1/3 concept tokens) — resolve by internal linking/metadata first · resolved: a retirement plan estimate is the retirement tool",
+      "pageTitle": "Retirement Calculator: Current Savings",
+      "pageFile": "deploy/finance/retirement/index.html",
+      "matchedTokens": [
+        "retirement",
+        "plan"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "hour counter",
+      "volume": 5400,
+      "difficulty": 1,
+      "target": "/career/timesheet-hours",
+      "conceptTokens": [
+        "hour",
+        "counter"
+      ],
+      "cluster": [
+        "hour counter"
+      ],
+      "why": "the audit maps this to the live page /everyday/distance-pace — improve that page (metadata/content/functionality), no new URL · resolved: the recorded target (/everyday/distance-pace) counts hours only as a by-product of pace; the hours tool is the real owner",
+      "pageTitle": "Timesheet Decimal Converter: Time entries",
+      "pageFile": "deploy/career/timesheet-hours/index.html",
+      "matchedTokens": [
+        "hour",
+        "counter"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "reverse tax calculator",
+      "volume": 4400,
+      "difficulty": 0,
+      "target": "/finance/sales-tax",
+      "conceptTokens": [
+        "reverse",
+        "tax"
+      ],
+      "cluster": [
+        "reverse tax calculator"
+      ],
+      "why": "partial match with registry tool taxi-fare (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: reverse tax = working back from a gross amount; the sales-tax page does gross/net",
+      "pageTitle": "Sales Tax Calculator: Purchase Amount &amp; Tax Rate",
+      "pageFile": "deploy/finance/sales-tax/index.html",
+      "matchedTokens": [
+        "reverse",
+        "tax"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "percentage discount calculator",
+      "volume": 4400,
+      "difficulty": 0,
+      "target": "/finance/discount",
+      "conceptTokens": [
+        "percentage",
+        "discount"
+      ],
+      "cluster": [
+        "percentage discount calculator"
+      ],
+      "why": "partial match with registry tool discount-rate (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: discount as a percentage is the discount tool",
+      "pageTitle": "Discount Calculator: Original Price &amp; Discount",
+      "pageFile": "deploy/finance/discount/index.html",
+      "matchedTokens": [
+        "percentage",
+        "discount"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "daily interest calculator",
+      "volume": 4400,
+      "difficulty": 1,
+      "target": "/finance/simple-interest",
+      "conceptTokens": [
+        "daily",
+        "interest"
+      ],
+      "cluster": [
+        "daily interest calculator"
+      ],
+      "why": "partial match with registry tool freelance-daily (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: per-day interest is the simple-interest page with a daily term",
+      "pageTitle": "Simple Interest Calculator: Principal, Rate &amp; Time",
+      "pageFile": "deploy/finance/simple-interest/index.html",
+      "matchedTokens": [
+        "daily",
+        "interest"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "calculate age by birthday",
+      "volume": 4400,
+      "difficulty": 3,
+      "target": "/guides/age",
+      "conceptTokens": [
+        "age",
+        "birthday"
+      ],
+      "cluster": [
+        "calculate age by birthday"
+      ],
+      "why": "the audit maps this to the live page /guides/age — improve that page (metadata/content/functionality), no new URL",
+      "pageTitle": "How to Calculate Your Exact Age in Years, Months &amp; Days",
+      "pageFile": "deploy/guides/age.html",
+      "matchedTokens": [
+        "age",
+        "birthday"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "inflation salary calculator",
+      "volume": 3600,
+      "difficulty": 1,
+      "target": "/career/raise-calculator",
+      "conceptTokens": [
+        "inflation",
+        "salary"
+      ],
+      "cluster": [
+        "inflation salary calculator"
+      ],
+      "why": "partial match with registry tool salary-converter (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: same intent as the wage row — real versus nominal salary",
+      "pageTitle": "Pay Raise Calculator: Current Salary &amp; Raise %",
+      "pageFile": "deploy/career/raise-calculator/index.html",
+      "matchedTokens": [
+        "inflation",
+        "salary"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "dob calculator",
+      "volume": 3600,
+      "difficulty": 1,
+      "target": "/utilities/age-exact/",
+      "conceptTokens": [
+        "dob"
+      ],
+      "cluster": [
+        "dob calculator"
+      ],
+      "why": "date-of-birth is the input to an age calculation, and /utilities/age-exact/ (Exact Age Calculator) plus /everyday/age/ already ship and are verified in the sitemap — no new page",
+      "pageTitle": "Exact Age Calculator: Birth Date &amp; Age on Date",
+      "pageFile": "deploy/utilities/age-exact/index.html",
+      "matchedTokens": [
+        "dob"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "D",
+      "priority": "P2",
+      "keyword": "compound investment calculator",
+      "volume": 3600,
+      "difficulty": 25,
+      "target": "/finance/compound-interest",
+      "conceptTokens": [
+        "compound",
+        "investment"
+      ],
+      "cluster": [
+        "compound investment calculator",
+        "compound investments"
+      ],
+      "why": "shares one search intent with 1 other keyword(s) in this audit — one page must own all of them · resolved: code D cluster with \"compound investments\" — one shared page owns both",
+      "pageTitle": "Compound Interest Calculator: Principal Amount, Annual",
+      "pageFile": "deploy/finance/compound-interest/index.html",
+      "matchedTokens": [
+        "compound",
+        "investment"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "investment calculator over time",
+      "volume": 3600,
+      "difficulty": 35,
+      "target": "/finance/investment",
+      "conceptTokens": [
+        "investment",
+        "over",
+        "time"
+      ],
+      "cluster": [
+        "investment calculator over time"
+      ],
+      "why": "partial match with registry tool overtime-pay (2/3 concept tokens) — resolve by internal linking/metadata first · resolved: growth over time is the investment tool",
+      "pageTitle": "Investment Calculator: Initial Investment, Annual Return",
+      "pageFile": "deploy/finance/investment/index.html",
+      "matchedTokens": [
+        "investment",
+        "over",
+        "time"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "simple retirement calculator",
+      "volume": 3600,
+      "difficulty": 47,
+      "target": "/finance/retirement",
+      "conceptTokens": [
+        "simple",
+        "retirement"
+      ],
+      "cluster": [
+        "simple retirement calculator"
+      ],
+      "why": "partial match with registry tool retirement-contrib (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: the retirement tool with defaults is the simple case",
+      "pageTitle": "Retirement Calculator: Current Savings",
+      "pageFile": "deploy/finance/retirement/index.html",
+      "matchedTokens": [
+        "simple",
+        "retirement"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "compounded monthly calculator",
+      "volume": 2900,
+      "difficulty": 15,
+      "target": "/regional/post-office-savings",
+      "conceptTokens": [
+        "compounded",
+        "monthly"
+      ],
+      "cluster": [
+        "compounded monthly calculator"
+      ],
+      "why": "the audit maps this to the live page /regional/post-office-savings — improve that page (metadata/content/functionality), no new URL",
+      "pageTitle": "Post Office Savings Calculator: Monthly Deposit, Years",
+      "pageFile": "deploy/regional/post-office-savings/index.html",
+      "matchedTokens": [
+        "compounded",
+        "monthly"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "share return calculator",
+      "volume": 2400,
+      "difficulty": 5,
+      "target": "/finance/roi",
+      "conceptTokens": [
+        "share",
+        "return"
+      ],
+      "cluster": [
+        "share return calculator"
+      ],
+      "why": "partial match with registry tool ride-share-cost (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: a share return is an ROI calculation",
+      "pageTitle": "ROI Calculator: Investment Cost &amp; Current Value",
+      "pageFile": "deploy/finance/roi/index.html",
+      "matchedTokens": [
+        "share",
+        "return"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "calculator on this phone",
+      "volume": 2400,
+      "difficulty": 13,
+      "target": null,
+      "conceptTokens": [
+        "this",
+        "phone"
+      ],
+      "cluster": [
+        "calculator on this phone"
+      ],
+      "why": "navigational/device intent (the phone's own calculator app) — no calculation to own",
+      "status": "NO_OWNER",
+      "note": "navigational/device intent (the phone's own calculator app) — no calculation to own",
+      "missingTokens": [
+        "this",
+        "phone"
+      ]
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "credit rate calculator",
+      "volume": 2400,
+      "difficulty": 26,
+      "target": "/finance/apr-annual",
+      "conceptTokens": [
+        "credit",
+        "rate"
+      ],
+      "cluster": [
+        "credit rate calculator"
+      ],
+      "why": "partial match with registry tool conversion-rate (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: the credit rate = APR; the annual-rate tool is the owner",
+      "pageTitle": "Loan APR Calculator: Loan Amount, Fees &amp; Points",
+      "pageFile": "deploy/finance/apr-annual/index.html",
+      "matchedTokens": [
+        "credit",
+        "rate"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "compounded annually calculator",
+      "volume": 2400,
+      "difficulty": 27,
+      "target": "/regional/post-office-savings",
+      "conceptTokens": [
+        "compounded",
+        "annually"
+      ],
+      "cluster": [
+        "compounded annually calculator"
+      ],
+      "why": "shares the concept token \"compounded\" with \"compounded monthly calculator\", which the audit already maps to the live page /regional/post-office-savings — improve that page instead of adding a near-duplicate calculator",
+      "pageTitle": "Post Office Savings Calculator: Monthly Deposit, Years",
+      "pageFile": "deploy/regional/post-office-savings/index.html",
+      "matchedTokens": [
+        "compounded",
+        "annually"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "D",
+      "priority": "P2",
+      "keyword": "retirement planner calculator",
+      "volume": 2400,
+      "difficulty": 36,
+      "target": "/finance/retirement",
+      "conceptTokens": [
+        "retirement",
+        "planner"
+      ],
+      "cluster": [
+        "retirement planner calculator",
+        "free online retirement planner"
+      ],
+      "why": "shares one search intent with 1 other keyword(s) in this audit — one page must own all of them · resolved: code D cluster with \"free online retirement planner\" — one page owns both",
+      "pageTitle": "Retirement Calculator: Current Savings",
+      "pageFile": "deploy/finance/retirement/index.html",
+      "matchedTokens": [
+        "retirement",
+        "planner"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "compounding calculator yearly",
+      "volume": 2400,
+      "difficulty": 27,
+      "target": "/guides/cagr",
+      "conceptTokens": [
+        "compound",
+        "yearly"
+      ],
+      "cluster": [
+        "compounding calculator yearly"
+      ],
+      "why": "the audit maps this to the live page /guides/cagr — improve that page (metadata/content/functionality), no new URL",
+      "pageTitle": "CAGR Guide: What Compound Annual Growth Rate Tells You",
+      "pageFile": "deploy/guides/cagr.html",
+      "matchedTokens": [
+        "compound",
+        "yearly"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "pv calculator",
+      "volume": 1900,
+      "difficulty": 1,
+      "target": "/finance/present-value",
+      "conceptTokens": [
+        "pv"
+      ],
+      "cluster": [
+        "pv calculator"
+      ],
+      "why": "an existing registry tool already covers every concept token — improve that page, do not create a duplicate · resolved: PV is the standard finance abbreviation for present value",
+      "pageTitle": "Present Value Calculator: Future Value, Discount Rate",
+      "pageFile": "deploy/finance/present-value/index.html",
+      "matchedTokens": [
+        "pv"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "loan percentage calculator",
+      "volume": 1900,
+      "difficulty": 21,
+      "target": "/finance/apr-annual",
+      "conceptTokens": [
+        "loan",
+        "percentage"
+      ],
+      "cluster": [
+        "loan percentage calculator"
+      ],
+      "why": "partial match with registry tool car-loan-emi (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: the percentage on a loan is the APR",
+      "pageTitle": "Loan APR Calculator: Loan Amount, Fees &amp; Points",
+      "pageFile": "deploy/finance/apr-annual/index.html",
+      "matchedTokens": [
+        "loan",
+        "percentage"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "figure out interest rate on loan",
+      "volume": 1900,
+      "difficulty": 21,
+      "target": "/finance/apr-annual",
+      "conceptTokens": [
+        "figure",
+        "out",
+        "interest",
+        "rate",
+        "loan"
+      ],
+      "cluster": [
+        "figure out interest rate on loan"
+      ],
+      "why": "partial match with registry tool conversion-rate (2/6 concept tokens) — resolve by internal linking/metadata first · resolved: solving for the rate is what the APR/annual-rate page does",
+      "pageTitle": "Loan APR Calculator: Loan Amount, Fees &amp; Points",
+      "pageFile": "deploy/finance/apr-annual/index.html",
+      "matchedTokens": [
+        "figure",
+        "out",
+        "interest",
+        "rate",
+        "loan"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "retirement budget calculator",
+      "volume": 1900,
+      "difficulty": 24,
+      "target": "/finance/retirement-withdrawal",
+      "conceptTokens": [
+        "retirement",
+        "budget"
+      ],
+      "cluster": [
+        "retirement budget calculator"
+      ],
+      "why": "partial match with registry tool freelance-budget (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: spending in retirement is the withdrawal tool",
+      "pageTitle": "Retirement Withdrawal Calculator: Retirement",
+      "pageFile": "deploy/finance/retirement-withdrawal/index.html",
+      "matchedTokens": [
+        "retirement",
+        "budget"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "financial planning calculator",
+      "volume": 1900,
+      "difficulty": 37,
+      "target": "/finance/retirement",
+      "conceptTokens": [
+        "financial",
+        "plan"
+      ],
+      "cluster": [
+        "financial planning calculator"
+      ],
+      "why": "partial match with registry tool financial-need (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: long-horizon financial planning is the retirement tool",
+      "pageTitle": "Retirement Calculator: Current Savings",
+      "pageFile": "deploy/finance/retirement/index.html",
+      "matchedTokens": [
+        "financial",
+        "plan"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "mortgage calculator how much can i qualify for",
+      "volume": 1900,
+      "difficulty": 66,
+      "target": "/finance/loan-qualify",
+      "conceptTokens": [
+        "mortgage",
+        "much",
+        "can",
+        "qualify"
+      ],
+      "cluster": [
+        "mortgage calculator how much can i qualify for"
+      ],
+      "why": "partial match with registry tool ab-test-significance (2/4 concept tokens) — resolve by internal linking/metadata first · resolved: same intent as the other qualify row — the qualification tool",
+      "pageTitle": "Loan Qualification: Monthly Income, Monthly Debts &amp; Rate",
+      "pageFile": "deploy/finance/loan-qualify/index.html",
+      "matchedTokens": [
+        "mortgage",
+        "much",
+        "can",
+        "qualify"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "mortgage calculator how much do i qualify for",
+      "volume": 1900,
+      "difficulty": 66,
+      "target": "/finance/loan-qualify",
+      "conceptTokens": [
+        "mortgage",
+        "much",
+        "do",
+        "qualify"
+      ],
+      "cluster": [
+        "mortgage calculator how much do i qualify for"
+      ],
+      "why": "partial match with registry tool remortgage-calc (2/4 concept tokens) — resolve by internal linking/metadata first · resolved: same intent as the other qualify row — the qualification tool",
+      "pageTitle": "Loan Qualification: Monthly Income, Monthly Debts &amp; Rate",
+      "pageFile": "deploy/finance/loan-qualify/index.html",
+      "matchedTokens": [
+        "mortgage",
+        "much",
+        "do",
+        "qualify"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "paycheck deduction calculator",
+      "volume": 1900,
+      "difficulty": 10,
+      "target": "/guides/career",
+      "conceptTokens": [
+        "salary",
+        "deductions"
+      ],
+      "cluster": [
+        "paycheck deduction calculator"
+      ],
+      "why": "the audit maps this to the live page /guides/career — improve that page (metadata/content/functionality), no new URL",
+      "pageTitle": "Career &amp; Freelance Guides — Salary, Rates &amp; Negotiation",
+      "pageFile": "deploy/guides/career.html",
+      "matchedTokens": [
+        "salary",
+        "deductions"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "spending calculator retirement",
+      "volume": 1900,
+      "difficulty": 33,
+      "target": "/guides/retirement",
+      "conceptTokens": [
+        "spend",
+        "retirement"
+      ],
+      "cluster": [
+        "spending calculator retirement"
+      ],
+      "why": "the audit maps this to the live page /guides/retirement — improve that page (metadata/content/functionality), no new URL",
+      "pageTitle": "How Much to Retire — The Retirement Number Explained",
+      "pageFile": "deploy/guides/retirement.html",
+      "matchedTokens": [
+        "spend",
+        "retirement"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "retirement expenditure calculator",
+      "volume": 1900,
+      "difficulty": 33,
+      "target": "/finance/retirement-withdrawal",
+      "conceptTokens": [
+        "retirement",
+        "expenditure"
+      ],
+      "cluster": [
+        "retirement expenditure calculator"
+      ],
+      "why": "the audit maps this to the live page /finance/retirement-withdrawal — improve that page (metadata/content/functionality), no new URL · resolved: retirement spending is the withdrawal tool",
+      "pageTitle": "Retirement Withdrawal Calculator: Retirement",
+      "pageFile": "deploy/finance/retirement-withdrawal/index.html",
+      "matchedTokens": [
+        "retirement",
+        "expenditure"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "housing cost calculator",
+      "volume": 1900,
+      "difficulty": 50,
+      "target": "/guides/baby-cost",
+      "conceptTokens": [
+        "hous",
+        "cost"
+      ],
+      "cluster": [
+        "housing cost calculator"
+      ],
+      "why": "the audit maps this to the live page /guides/baby-cost — improve that page (metadata/content/functionality), no new URL",
+      "pageTitle": "Baby Cost Calculator — First-Year Budget &amp; Worked Example",
+      "pageFile": "deploy/guides/baby-cost.html",
+      "matchedTokens": [
+        "hous",
+        "cost"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "housing cost estimator",
+      "volume": 1900,
+      "difficulty": 50,
+      "target": "/guides/baby-cost",
+      "conceptTokens": [
+        "hous",
+        "cost"
+      ],
+      "cluster": [
+        "housing cost estimator"
+      ],
+      "why": "the audit maps this to the live page /guides/baby-cost — improve that page (metadata/content/functionality), no new URL",
+      "pageTitle": "Baby Cost Calculator — First-Year Budget &amp; Worked Example",
+      "pageFile": "deploy/guides/baby-cost.html",
+      "matchedTokens": [
+        "hous",
+        "cost"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "D",
+      "priority": "P2",
+      "keyword": "free online retirement planner",
+      "volume": 1600,
+      "difficulty": 15,
+      "target": "/finance/retirement",
+      "conceptTokens": [
+        "retirement",
+        "planner"
+      ],
+      "cluster": [
+        "retirement planner calculator",
+        "free online retirement planner"
+      ],
+      "why": "shares one search intent with 1 other keyword(s) in this audit — one page must own all of them · resolved: code D cluster with \"retirement planner calculator\" — one page owns both",
+      "pageTitle": "Retirement Calculator: Current Savings",
+      "pageFile": "deploy/finance/retirement/index.html",
+      "matchedTokens": [
+        "retirement",
+        "planner"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "compound retirement calculator",
+      "volume": 1600,
+      "difficulty": 21,
+      "target": "/finance/retirement",
+      "conceptTokens": [
+        "compound",
+        "retirement"
+      ],
+      "cluster": [
+        "compound retirement calculator"
+      ],
+      "why": "partial match with registry tool retirement-contrib (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: compounding into retirement is the retirement tool",
+      "pageTitle": "Retirement Calculator: Current Savings",
+      "pageFile": "deploy/finance/retirement/index.html",
+      "matchedTokens": [
+        "compound",
+        "retirement"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "compounding calculator retirement",
+      "volume": 1600,
+      "difficulty": 21,
+      "target": "/finance/retirement",
+      "conceptTokens": [
+        "compound",
+        "retirement"
+      ],
+      "cluster": [
+        "compounding calculator retirement"
+      ],
+      "why": "partial match with registry tool retirement-contrib (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: same intent as the compound-retirement row",
+      "pageTitle": "Retirement Calculator: Current Savings",
+      "pageFile": "deploy/finance/retirement/index.html",
+      "matchedTokens": [
+        "compound",
+        "retirement"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "interest accrual calculator",
+      "volume": 1600,
+      "difficulty": 7,
+      "target": "/finance/loan-emi",
+      "conceptTokens": [
+        "interest",
+        "accrual"
+      ],
+      "cluster": [
+        "interest accrual calculator"
+      ],
+      "why": "the audit maps this to the live page /finance/loan-emi — improve that page (metadata/content/functionality), no new URL",
+      "pageTitle": "Loan EMI Calculator: Loan Amount, Interest Rate &amp; Loan Term",
+      "pageFile": "deploy/finance/loan-emi/index.html",
+      "matchedTokens": [
+        "interest",
+        "accrual"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "cash back calculator",
+      "volume": 1300,
+      "difficulty": 1,
+      "target": "/finance/credit-card-payoff",
+      "conceptTokens": [
+        "cash",
+        "back"
+      ],
+      "cluster": [
+        "cash back calculator"
+      ],
+      "why": "partial match with registry tool payback (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: cash back is a card reward — the card page is the closest honest owner",
+      "pageTitle": "Credit Card Payoff: Current Balance, APR &amp; Monthly Payment",
+      "pageFile": "deploy/finance/credit-card-payoff/index.html",
+      "matchedTokens": [
+        "cash",
+        "back"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "roi calculation formula",
+      "volume": 1300,
+      "difficulty": 8,
+      "target": "/finance/roi",
+      "conceptTokens": [
+        "roi",
+        "formula"
+      ],
+      "cluster": [
+        "roi calculation formula"
+      ],
+      "why": "partial match with registry tool ev-charger-roi (1/3 concept tokens) — resolve by internal linking/metadata first · resolved: the ROI page carries the formula and the calculator",
+      "pageTitle": "ROI Calculator: Investment Cost &amp; Current Value",
+      "pageFile": "deploy/finance/roi/index.html",
+      "matchedTokens": [
+        "roi",
+        "formula"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "work schedule calculator",
+      "volume": 1300,
+      "difficulty": 9,
+      "target": "/career/timesheet-hours",
+      "conceptTokens": [
+        "work",
+        "schedule"
+      ],
+      "cluster": [
+        "work schedule calculator"
+      ],
+      "why": "partial match with registry tool working-capital (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: a work schedule is a set of timesheets — hours per day/week",
+      "pageTitle": "Timesheet Decimal Converter: Time entries",
+      "pageFile": "deploy/career/timesheet-hours/index.html",
+      "matchedTokens": [
+        "work",
+        "schedule"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "concrete calculator formula",
+      "volume": 1300,
+      "difficulty": 11,
+      "target": "/everyday/concrete",
+      "conceptTokens": [
+        "concrete",
+        "formula"
+      ],
+      "cluster": [
+        "concrete calculator formula"
+      ],
+      "why": "partial match with registry tool concrete-slab (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: the concrete page carries the volume formula",
+      "pageTitle": "Concrete Calculator: Length, Width &amp; Depth",
+      "pageFile": "deploy/everyday/concrete/index.html",
+      "matchedTokens": [
+        "concrete",
+        "formula"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "D",
+      "priority": "P2",
+      "keyword": "compound investments",
+      "volume": 1300,
+      "difficulty": 24,
+      "target": "/finance/compound-interest",
+      "conceptTokens": [
+        "compound",
+        "investment"
+      ],
+      "cluster": [
+        "compound investment calculator",
+        "compound investments"
+      ],
+      "why": "shares one search intent with 1 other keyword(s) in this audit — one page must own all of them · resolved: code D cluster with \"compound investment calculator\" — one shared page owns both",
+      "pageTitle": "Compound Interest Calculator: Principal Amount, Annual",
+      "pageFile": "deploy/finance/compound-interest/index.html",
+      "matchedTokens": [
+        "compound",
+        "investment"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "future value of investment calculator",
+      "volume": 1300,
+      "difficulty": 30,
+      "target": "/finance/future-value",
+      "conceptTokens": [
+        "future",
+        "investment"
+      ],
+      "cluster": [
+        "future value of investment calculator"
+      ],
+      "why": "partial match with registry tool future-value (2/3 concept tokens) — resolve by internal linking/metadata first · resolved: future value is the exact tool",
+      "pageTitle": "Future Value Calculator: Present Value, Rate &amp; Years",
+      "pageFile": "deploy/finance/future-value/index.html",
+      "matchedTokens": [
+        "future",
+        "investment"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "retirement calculator growth",
+      "volume": 1300,
+      "difficulty": 36,
+      "target": "/finance/retirement",
+      "conceptTokens": [
+        "retirement",
+        "growth"
+      ],
+      "cluster": [
+        "retirement calculator growth"
+      ],
+      "why": "partial match with registry tool retirement-contrib (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: projected growth is the retirement tool",
+      "pageTitle": "Retirement Calculator: Current Savings",
+      "pageFile": "deploy/finance/retirement/index.html",
+      "matchedTokens": [
+        "retirement",
+        "growth"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "age calendar",
+      "volume": 1300,
+      "difficulty": 0,
+      "target": "/guides/age",
+      "conceptTokens": [
+        "age",
+        "calendar"
+      ],
+      "cluster": [
+        "age calendar"
+      ],
+      "why": "the audit maps this to the live page /guides/age — improve that page (metadata/content/functionality), no new URL",
+      "pageTitle": "How to Calculate Your Exact Age in Years, Months &amp; Days",
+      "pageFile": "deploy/guides/age.html",
+      "matchedTokens": [
+        "age",
+        "calendar"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "currency calculator xe",
+      "volume": 1300,
+      "difficulty": 58,
+      "target": "/finance/currency-converter",
+      "conceptTokens": [
+        "currency",
+        "xe"
+      ],
+      "cluster": [
+        "currency calculator xe"
+      ],
+      "why": "an existing registry tool already covers every concept token — improve that page, do not create a duplicate · resolved: same generic currency-conversion intent; brand not targeted",
+      "pageTitle": "Currency Converter — USD to PKR Exchange Rates",
+      "pageFile": "deploy/finance/currency-converter/index.html",
+      "matchedTokens": [
+        "currency",
+        "xe"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "inflation wage calculator",
+      "volume": 1000,
+      "difficulty": 1,
+      "target": "/career/raise-calculator",
+      "conceptTokens": [
+        "inflation",
+        "salary"
+      ],
+      "cluster": [
+        "inflation wage calculator"
+      ],
+      "why": "partial match with registry tool journeyman-wage-progression (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: wage vs inflation is the real-terms raise the raise tool computes",
+      "pageTitle": "Pay Raise Calculator: Current Salary &amp; Raise %",
+      "pageFile": "deploy/career/raise-calculator/index.html",
+      "matchedTokens": [
+        "inflation",
+        "salary"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "time and pay calculator",
+      "volume": 1000,
+      "difficulty": 5,
+      "target": "/career/timesheet-hours",
+      "conceptTokens": [
+        "time",
+        "salary"
+      ],
+      "cluster": [
+        "time and pay calculator"
+      ],
+      "why": "partial match with registry tool overtime-pay (2/3 concept tokens) — resolve by internal linking/metadata first · resolved: hours and pay → timesheet hours, then overtime page for the rate",
+      "pageTitle": "Timesheet Decimal Converter: Time entries",
+      "pageFile": "deploy/career/timesheet-hours/index.html",
+      "matchedTokens": [
+        "time",
+        "salary"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "compound loan calculator",
+      "volume": 1000,
+      "difficulty": 11,
+      "target": "/finance/loan-emi",
+      "conceptTokens": [
+        "compound",
+        "loan"
+      ],
+      "cluster": [
+        "compound loan calculator"
+      ],
+      "why": "partial match with registry tool car-loan-emi (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: a loan is amortised, not compounded; the loan page is the honest owner and explains the difference",
+      "pageTitle": "Loan EMI Calculator: Loan Amount, Interest Rate &amp; Loan Term",
+      "pageFile": "deploy/finance/loan-emi/index.html",
+      "matchedTokens": [
+        "compound",
+        "loan"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "formula discount",
+      "volume": 1000,
+      "difficulty": 16,
+      "target": "/finance/discount",
+      "conceptTokens": [
+        "formula",
+        "discount"
+      ],
+      "cluster": [
+        "formula discount"
+      ],
+      "why": "partial match with registry tool discount-rate (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: the discount formula lives on the discount page",
+      "pageTitle": "Discount Calculator: Original Price &amp; Discount",
+      "pageFile": "deploy/finance/discount/index.html",
+      "matchedTokens": [
+        "formula",
+        "discount"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "calculator that shows work",
+      "volume": 1000,
+      "difficulty": 21,
+      "target": null,
+      "conceptTokens": [
+        "that",
+        "show",
+        "work"
+      ],
+      "cluster": [
+        "calculator that shows work"
+      ],
+      "why": "cross-cutting feature (every tool shows its working via the steps panel), not one page's intent",
+      "status": "NO_OWNER",
+      "note": "cross-cutting feature (every tool shows its working via the steps panel), not one page's intent",
+      "missingTokens": [
+        "that",
+        "show",
+        "work"
+      ]
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "investment account calculator",
+      "volume": 1000,
+      "difficulty": 25,
+      "target": "/finance/investment",
+      "conceptTokens": [
+        "investment",
+        "account"
+      ],
+      "cluster": [
+        "investment account calculator"
+      ],
+      "why": "partial match with registry tool investment (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: account balance over time is the investment tool",
+      "pageTitle": "Investment Calculator: Initial Investment, Annual Return",
+      "pageFile": "deploy/finance/investment/index.html",
+      "matchedTokens": [
+        "investment",
+        "account"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "compare loan calculator",
+      "volume": 1000,
+      "difficulty": 25,
+      "target": "/finance/loan-comparison",
+      "conceptTokens": [
+        "compare",
+        "loan"
+      ],
+      "cluster": [
+        "compare loan calculator"
+      ],
+      "why": "partial match with registry tool fuel-price-compare (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: side-by-side loan comparison is the dedicated page",
+      "pageTitle": "Loan Comparison: Loan Amount, Offer 1 Rate &amp; Offer 1 Term",
+      "pageFile": "deploy/finance/loan-comparison/index.html",
+      "matchedTokens": [
+        "compare",
+        "loan"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "monthly investment calculator",
+      "volume": 1000,
+      "difficulty": 39,
+      "target": "/finance/investment-growth",
+      "conceptTokens": [
+        "monthly",
+        "investment"
+      ],
+      "cluster": [
+        "monthly investment calculator"
+      ],
+      "why": "partial match with registry tool freelance-budget (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: monthly contributions with growth is the investment-growth tool",
+      "pageTitle": "Investment Growth Comparison: Initial",
+      "pageFile": "deploy/finance/investment-growth/index.html",
+      "matchedTokens": [
+        "monthly",
+        "investment"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "yearly interest calculator",
+      "volume": 1000,
+      "difficulty": 10,
+      "target": "/guides/compound-interest",
+      "conceptTokens": [
+        "yearly",
+        "interest"
+      ],
+      "cluster": [
+        "yearly interest calculator"
+      ],
+      "why": "the audit maps this to the live page /guides/compound-interest — improve that page (metadata/content/functionality), no new URL",
+      "pageTitle": "How to Calculate Compound Interest — Formula &amp; Examples",
+      "pageFile": "deploy/guides/compound-interest.html",
+      "matchedTokens": [
+        "yearly",
+        "interest"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "savings percentage calculator",
+      "volume": 880,
+      "difficulty": 2,
+      "target": "/finance/savings-goal",
+      "conceptTokens": [
+        "sav",
+        "percentage"
+      ],
+      "cluster": [
+        "savings percentage calculator"
+      ],
+      "why": "partial match with registry tool fuel-efficiency (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: savings as a percentage of income sits on the savings-goal page",
+      "pageTitle": "Savings Goal Calculator: Savings Goal, Time &amp; Annual Return",
+      "pageFile": "deploy/finance/savings-goal/index.html",
+      "matchedTokens": [
+        "sav",
+        "percentage"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "yearly payment calculator",
+      "volume": 880,
+      "difficulty": 5,
+      "target": "/finance/loan-emi",
+      "conceptTokens": [
+        "yearly",
+        "payment"
+      ],
+      "cluster": [
+        "yearly payment calculator"
+      ],
+      "why": "partial match with registry tool graduated-payment (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: the annual payment on a loan is the loan page run over 12 months",
+      "pageTitle": "Loan EMI Calculator: Loan Amount, Interest Rate &amp; Loan Term",
+      "pageFile": "deploy/finance/loan-emi/index.html",
+      "matchedTokens": [
+        "yearly",
+        "payment"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "compound return calculator",
+      "volume": 880,
+      "difficulty": 21,
+      "target": "/finance/cagr",
+      "conceptTokens": [
+        "compound",
+        "return"
+      ],
+      "cluster": [
+        "compound return calculator"
+      ],
+      "why": "partial match with registry tool compound-savings (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: a compound return is CAGR",
+      "pageTitle": "CAGR Calculator: Beginning Value, Ending Value &amp; Years",
+      "pageFile": "deploy/finance/cagr/index.html",
+      "matchedTokens": [
+        "compound",
+        "return"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "retirement financial calculator",
+      "volume": 880,
+      "difficulty": 52,
+      "target": "/finance/retirement",
+      "conceptTokens": [
+        "retirement",
+        "financial"
+      ],
+      "cluster": [
+        "retirement financial calculator"
+      ],
+      "why": "partial match with registry tool retirement-contrib (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: the retirement tool",
+      "pageTitle": "Retirement Calculator: Current Savings",
+      "pageFile": "deploy/finance/retirement/index.html",
+      "matchedTokens": [
+        "retirement",
+        "financial"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "qualify for a mortgage calculator",
+      "volume": 880,
+      "difficulty": 66,
+      "target": "/finance/loan-qualify",
+      "conceptTokens": [
+        "qualify",
+        "mortgage"
+      ],
+      "cluster": [
+        "qualify for a mortgage calculator"
+      ],
+      "why": "partial match with registry tool remortgage-calc (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: affordability/qualification is the loan-qualify tool",
+      "pageTitle": "Loan Qualification: Monthly Income, Monthly Debts &amp; Rate",
+      "pageFile": "deploy/finance/loan-qualify/index.html",
+      "matchedTokens": [
+        "qualify",
+        "mortgage"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "yearly pay calculator",
+      "volume": 880,
+      "difficulty": 5,
+      "target": "/lifestyle/parental-leave",
+      "conceptTokens": [
+        "yearly",
+        "salary"
+      ],
+      "cluster": [
+        "yearly pay calculator"
+      ],
+      "why": "the audit maps this to the live page /lifestyle/parental-leave — improve that page (metadata/content/functionality), no new URL",
+      "pageTitle": "Parental Leave Pay Calculator: Annual Salary, Leave Weeks",
+      "pageFile": "deploy/lifestyle/parental-leave/index.html",
+      "matchedTokens": [
+        "yearly",
+        "salary"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "projected retirement calculator",
+      "volume": 880,
+      "difficulty": 49,
+      "target": "/finance/retirement",
+      "conceptTokens": [
+        "projected",
+        "retirement"
+      ],
+      "cluster": [
+        "projected retirement calculator"
+      ],
+      "why": "the audit maps this to the live page /finance/retirement — improve that page (metadata/content/functionality), no new URL · resolved: a projection is the retirement tool",
+      "pageTitle": "Retirement Calculator: Current Savings",
+      "pageFile": "deploy/finance/retirement/index.html",
+      "matchedTokens": [
+        "projected",
+        "retirement"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "forex xe converter",
+      "volume": 880,
+      "difficulty": 59,
+      "target": "/finance/currency-converter",
+      "conceptTokens": [
+        "forex",
+        "xe",
+        "converter"
+      ],
+      "cluster": [
+        "forex xe converter"
+      ],
+      "why": "the audit maps this to the live page /finance/currency-converter — improve that page (metadata/content/functionality), no new URL · resolved: generic forex-conversion intent; the brand name (\"xe\") is not targeted",
+      "pageTitle": "Currency Converter — USD to PKR Exchange Rates",
+      "pageFile": "deploy/finance/currency-converter/index.html",
+      "matchedTokens": [
+        "forex",
+        "xe",
+        "converter"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    }
+  ]
+}

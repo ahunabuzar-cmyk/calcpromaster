@@ -5,8 +5,8 @@
     "auditedKeywords": 604,
     "auditCounts": {
       "COVERED": 468,
-      "WEAK": 17,
-      "GAP": 98,
+      "WEAK": 26,
+      "GAP": 89,
       "IGNORE": 21
     },
     "pagesIndexedInAudit": 1436,
@@ -14,15 +14,15 @@
     "intentClusters": 104,
     "decisions": {
       "A": 0,
-      "B": 28,
-      "C": 62,
+      "B": 34,
+      "C": 56,
       "D": 7,
       "E": 18
     },
     "priorities": {
       "P0": 0,
-      "P1": 9,
-      "P2": 88,
+      "P1": 11,
+      "P2": 86,
       "P3": 18
     },
     "registryTools": 1284,
@@ -45,7 +45,7 @@
       "why": "answer needs a live external feed the repo does not hold (rule: no fabricated values)",
       "priority": "P3",
       "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "no implementation — answer needs a live external feed the repo does not hold (rule: no fabricated values)",
       "opportunity": 305440
     },
     {
@@ -64,7 +64,7 @@
       "why": "answer needs a live external feed the repo does not hold (rule: no fabricated values)",
       "priority": "P3",
       "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "no implementation — answer needs a live external feed the repo does not hold (rule: no fabricated values)",
       "opportunity": 305440
     },
     {
@@ -82,7 +82,7 @@
       "why": "the peptide calculator already ships as /health/peptide-reconstitution/ (\"Peptide Reconstitution Calculator\", verified in deploy/sitemap.xml) — the generic keyword points at that page; a second /<category>/polypeptide-calculator would duplicate one intent",
       "priority": "P1",
       "proposedUrl": "/health/peptide-reconstitution/",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /health/peptide-reconstitution/",
       "opportunity": 282940
     },
     {
@@ -91,8 +91,8 @@
       "difficulty": 55,
       "cpc": 0.32,
       "source": "calculator-net-gap",
-      "verdict": "GAP",
-      "auditClosest": "",
+      "verdict": "WEAK",
+      "auditClosest": "/finance/currency-converter",
       "cluster": [
         "convert currency xe",
         "convert xe currency"
@@ -101,7 +101,7 @@
       "why": "the generic intent behind the branded query (convert a currency) is owned by /finance/currency-converter/ (\"Convert between 150+ currencies with live rates\", verified in deploy/sitemap.xml); \"xe\" is the competitor brand, so improve that page’s metadata/internal links and do not target the brand name",
       "priority": "P1",
       "proposedUrl": "/finance/currency-converter/",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/currency-converter/",
       "opportunity": 110700
     },
     {
@@ -110,8 +110,8 @@
       "difficulty": 55,
       "cpc": 0.32,
       "source": "calculator-net-gap",
-      "verdict": "GAP",
-      "auditClosest": "",
+      "verdict": "WEAK",
+      "auditClosest": "/finance/currency-converter",
       "cluster": [
         "convert currency xe",
         "convert xe currency"
@@ -120,7 +120,7 @@
       "why": "same intent as \"convert currency xe\" — word order only; both point at /finance/currency-converter/ (verified live) so one page owns the cluster, and no copy names the competitor brand",
       "priority": "P1",
       "proposedUrl": "/finance/currency-converter/",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/currency-converter/",
       "opportunity": 110700
     },
     {
@@ -140,7 +140,7 @@
       "why": "answer needs a live external feed the repo does not hold (rule: no fabricated values)",
       "priority": "P3",
       "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "no implementation — answer needs a live external feed the repo does not hold (rule: no fabricated values)",
       "opportunity": 186930
     },
     {
@@ -160,7 +160,7 @@
       "why": "answer needs a live external feed the repo does not hold (rule: no fabricated values)",
       "priority": "P3",
       "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "no implementation — answer needs a live external feed the repo does not hold (rule: no fabricated values)",
       "opportunity": 180900
     },
     {
@@ -181,7 +181,7 @@
       "why": "answer needs a live external feed the repo does not hold (rule: no fabricated values)",
       "priority": "P3",
       "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "no implementation — answer needs a live external feed the repo does not hold (rule: no fabricated values)",
       "opportunity": 180900
     },
     {
@@ -202,7 +202,7 @@
       "why": "answer needs a live external feed the repo does not hold (rule: no fabricated values)",
       "priority": "P3",
       "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "no implementation — answer needs a live external feed the repo does not hold (rule: no fabricated values)",
       "opportunity": 176880
     },
     {
@@ -223,7 +223,7 @@
       "why": "answer needs a live external feed the repo does not hold (rule: no fabricated values)",
       "priority": "P3",
       "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "no implementation — answer needs a live external feed the repo does not hold (rule: no fabricated values)",
       "opportunity": 176880
     },
     {
@@ -241,7 +241,7 @@
       "why": "answer needs a live external feed the repo does not hold (rule: no fabricated values)",
       "priority": "P3",
       "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "no implementation — answer needs a live external feed the repo does not hold (rule: no fabricated values)",
       "opportunity": 174870
     },
     {
@@ -262,7 +262,7 @@
       "why": "answer needs a live external feed the repo does not hold (rule: no fabricated values)",
       "priority": "P3",
       "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "no implementation — answer needs a live external feed the repo does not hold (rule: no fabricated values)",
       "opportunity": 168840
     },
     {
@@ -282,7 +282,7 @@
       "why": "answer needs a live external feed the repo does not hold (rule: no fabricated values)",
       "priority": "P3",
       "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "no implementation — answer needs a live external feed the repo does not hold (rule: no fabricated values)",
       "opportunity": 166830
     },
     {
@@ -297,10 +297,10 @@
         "time card clock calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool walking-transit (1/3 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool walking-transit (1/3 concept tokens) — resolve by internal linking/metadata first · resolved: a time card is a timesheet — /career/timesheet-hours/ works out hours from start/end times",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/career/timesheet-hours",
+      "status": "implemented — keyword answered by a rendered FAQ on /career/timesheet-hours/",
       "opportunity": 160800
     },
     {
@@ -309,35 +309,17 @@
       "difficulty": 35,
       "cpc": 0.1,
       "source": "keyword-planner",
-      "verdict": "GAP",
-      "auditClosest": "",
+      "verdict": "WEAK",
+      "auditClosest": "/finance/mortgage",
       "cluster": [
         "mortgage expense calculator"
       ],
-      "code": "C",
-      "why": "partial match with registry tool remortgage-calc (1/2 concept tokens) — resolve by internal linking/metadata first",
-      "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "code": "B",
+      "why": "the audit maps this to the live page /finance/mortgage — improve that page (metadata/content/functionality), no new URL · resolved: mortgage expense = the monthly payment the mortgage page totals",
+      "priority": "P1",
+      "proposedUrl": "/finance/mortgage",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/mortgage/",
       "opportunity": 130650
-    },
-    {
-      "keyword": "certified deposit calculator",
-      "volume": 165000,
-      "difficulty": 2,
-      "cpc": 4.95,
-      "source": "keyword-volume-difficulty",
-      "verdict": "GAP",
-      "auditClosest": "",
-      "cluster": [
-        "certified deposit calculator"
-      ],
-      "code": "C",
-      "why": "partial match with registry tool fixed-deposit-vs-recurring (1/2 concept tokens) — resolve by internal linking/metadata first",
-      "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
-      "opportunity": 161700
     },
     {
       "keyword": "cd bank calculator",
@@ -351,10 +333,10 @@
         "cd bank calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool cd-calculator (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool cd-calculator (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: CD = certificate of deposit",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/cd-calculator",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/cd-calculator/",
       "opportunity": 161700
     },
     {
@@ -372,7 +354,7 @@
       "why": "shares the concept token \"certificate\" with \"calculator for certificate of deposit\", which the audit already maps to the live page /finance/cd-calculator — improve that page instead of adding a near-duplicate calculator",
       "priority": "P1",
       "proposedUrl": "/finance/cd-calculator",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/cd-calculator/",
       "opportunity": 161700
     },
     {
@@ -390,7 +372,7 @@
       "why": "sq ft ↔ m² conversion is the Area Converter that already ships at /conversion/area/ (verified in deploy/sitemap.xml) — improve that page instead of adding an /<category>/ft2-calculator duplicate",
       "priority": "P1",
       "proposedUrl": "/conversion/area/",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /conversion/area/",
       "opportunity": 150150
     },
     {
@@ -408,7 +390,7 @@
       "why": "answer needs a live external feed the repo does not hold (rule: no fabricated values)",
       "priority": "P3",
       "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "no implementation — answer needs a live external feed the repo does not hold (rule: no fabricated values)",
       "opportunity": 150150
     },
     {
@@ -423,10 +405,10 @@
         "ft squared calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool shift-differential (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool shift-differential (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: square feet is an area unit — the area converter, same owner as the ft2 row",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/conversion/area",
+      "status": "implemented — keyword answered by a rendered FAQ on /conversion/area/",
       "opportunity": 150150
     },
     {
@@ -444,7 +426,7 @@
       "why": "answer needs a live external feed the repo does not hold (rule: no fabricated values)",
       "priority": "P3",
       "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "no implementation — answer needs a live external feed the repo does not hold (rule: no fabricated values)",
       "opportunity": 150150
     },
     {
@@ -464,7 +446,25 @@
       "why": "shares one search intent with 2 other keyword(s) in this audit — one page must own all of them",
       "priority": "P1",
       "proposedUrl": "/finance/cd-calculator",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/cd-calculator/",
+      "opportunity": 161700
+    },
+    {
+      "keyword": "certified deposit calculator",
+      "volume": 165000,
+      "difficulty": 2,
+      "cpc": 4.95,
+      "source": "keyword-volume-difficulty",
+      "verdict": "WEAK",
+      "auditClosest": "/finance/cd-calculator",
+      "cluster": [
+        "certified deposit calculator"
+      ],
+      "code": "B",
+      "why": "the audit maps this to the live page /finance/cd-calculator — improve that page (metadata/content/functionality), no new URL · resolved: confused phrasing for certificate of deposit — the CD page",
+      "priority": "P1",
+      "proposedUrl": "/finance/cd-calculator",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/cd-calculator/",
       "opportunity": 161700
     },
     {
@@ -484,7 +484,7 @@
       "why": "shares one search intent with 2 other keyword(s) in this audit — one page must own all of them",
       "priority": "P1",
       "proposedUrl": "/finance/cd-calculator",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/cd-calculator/",
       "opportunity": 161700
     },
     {
@@ -504,7 +504,7 @@
       "why": "shares one search intent with 2 other keyword(s) in this audit — one page must own all of them",
       "priority": "P1",
       "proposedUrl": "/finance/cd-calculator",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/cd-calculator/",
       "opportunity": 161700
     },
     {
@@ -519,10 +519,10 @@
         "bmi calculator body mass index"
       ],
       "code": "C",
-      "why": "partial match with registry tool body-fat-fitness (2/4 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool body-fat-fitness (2/4 concept tokens) — resolve by internal linking/metadata first · resolved: the BMI page, already the registry owner",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/health/bmi",
+      "status": "implemented — keyword answered by a rendered FAQ on /health/bmi/",
       "opportunity": 51700
     },
     {
@@ -537,10 +537,10 @@
         "day count"
       ],
       "code": "C",
-      "why": "partial match with registry tool discount-rate (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool discount-rate (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: counting days between dates is the date-difference tool",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/everyday/date-diff",
+      "status": "implemented — keyword answered by a rendered FAQ on /everyday/date-diff/",
       "opportunity": 74000
     },
     {
@@ -558,7 +558,7 @@
       "why": "the token heuristic attached this to /guides/age through the shared word \"calendar\" (from \"age calendar\"), but the calendar/date-arithmetic intent is served by /everyday/date-diff/ (verified in deploy/sitemap.xml) — improve that page instead",
       "priority": "P1",
       "proposedUrl": "/everyday/date-diff/",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /everyday/date-diff/",
       "opportunity": 60500
     },
     {
@@ -576,7 +576,7 @@
       "why": "the audit maps this to the live page /lifestyle/parental-leave — improve that page (metadata/content/functionality), no new URL",
       "priority": "P2",
       "proposedUrl": "/lifestyle/parental-leave",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /lifestyle/parental-leave/",
       "opportunity": 49005
     },
     {
@@ -591,10 +591,10 @@
         "financial compound calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool financial-need (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool financial-need (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: compound interest is the exact tool",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/compound-interest",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/compound-interest/",
       "opportunity": 34830
     },
     {
@@ -609,10 +609,10 @@
         "financial compounding calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool financial-need (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool financial-need (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: same intent, word order only",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/compound-interest",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/compound-interest/",
       "opportunity": 34830
     },
     {
@@ -627,10 +627,10 @@
         "interest percentage calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool grade-percentage (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool grade-percentage (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: interest as a percentage of principal is the simple-interest tool",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/simple-interest",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/simple-interest/",
       "opportunity": 29790
     },
     {
@@ -645,10 +645,10 @@
         "annual percentage calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool grade-percentage (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool grade-percentage (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: annual percentage rate = APR",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/apr-annual",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/apr-annual/",
       "opportunity": 25745
     },
     {
@@ -663,10 +663,10 @@
         "ot calculator"
       ],
       "code": "B",
-      "why": "an existing registry tool already covers every concept token — improve that page, do not create a duplicate",
+      "why": "an existing registry tool already covers every concept token — improve that page, do not create a duplicate · resolved: OT = overtime; /career/overtime-pay/ is the dedicated tool",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/career/overtime-pay",
+      "status": "implemented — keyword answered by a rendered FAQ on /career/overtime-pay/",
       "opportunity": 21978
     },
     {
@@ -681,10 +681,10 @@
         "time payroll calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool walking-transit (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool walking-transit (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: payroll time = hours worked → the timesheet hours tool",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/career/timesheet-hours",
+      "status": "implemented — keyword answered by a rendered FAQ on /career/timesheet-hours/",
       "opportunity": 19536
     },
     {
@@ -699,10 +699,10 @@
         "pay time calculator"
       ],
       "code": "B",
-      "why": "an existing registry tool already covers every concept token — improve that page, do not create a duplicate",
+      "why": "an existing registry tool already covers every concept token — improve that page, do not create a duplicate · resolved: pay-for-time is the timesheet-hours calculation",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/career/timesheet-hours",
+      "status": "implemented — keyword answered by a rendered FAQ on /career/timesheet-hours/",
       "opportunity": 19536
     },
     {
@@ -720,26 +720,8 @@
       "why": "the \"simplify\" intent is already answered by the Ratio Simplifier (/utilities/ratio-simplifier/, \"Simplify and work with ratios\") and the Fraction Calculator (/math/fraction/, \"Simplify and calculate fractions\") — both verified live; improve metadata/internal links there",
       "priority": "P2",
       "proposedUrl": "/utilities/ratio-simplifier/",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /utilities/ratio-simplifier/",
       "opportunity": 17738
-    },
-    {
-      "keyword": "time adder",
-      "volume": 14800,
-      "difficulty": 0,
-      "cpc": 0.22,
-      "source": "keyword-planner",
-      "verdict": "GAP",
-      "auditClosest": "",
-      "cluster": [
-        "time adder"
-      ],
-      "code": "C",
-      "why": "partial match with registry tool walking-transit (1/2 concept tokens) — resolve by internal linking/metadata first",
-      "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
-      "opportunity": 14800
     },
     {
       "keyword": "compounded daily calculator",
@@ -753,10 +735,10 @@
         "compounded daily calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool freelance-daily (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool freelance-daily (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: the compound page takes the compounding frequency (incl. daily)",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/compound-interest",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/compound-interest/",
       "opportunity": 14356
     },
     {
@@ -771,10 +753,10 @@
         "desired weight calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool power-to-weight (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool power-to-weight (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: a desired/target weight is the ideal-body-weight tool",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/health/ideal-body-weight",
+      "status": "implemented — keyword answered by a rendered FAQ on /health/ideal-body-weight/",
       "opportunity": 14060
     },
     {
@@ -789,10 +771,10 @@
         "simple loan calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool car-loan-emi (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool car-loan-emi (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: a \"simple\" loan is the plain EMI/amortisation the loan page does",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/loan-emi",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/loan-emi/",
       "opportunity": 12876
     },
     {
@@ -807,11 +789,29 @@
         "loan calculator for business"
       ],
       "code": "C",
-      "why": "partial match with registry tool car-loan-emi (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool car-loan-emi (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: the loan maths is identical; the business framing is context, not a different formula",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/loan-emi",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/loan-emi/",
       "opportunity": 8584
+    },
+    {
+      "keyword": "time adder",
+      "volume": 14800,
+      "difficulty": 0,
+      "cpc": 0.22,
+      "source": "keyword-planner",
+      "verdict": "WEAK",
+      "auditClosest": "/career/timesheet-hours",
+      "cluster": [
+        "time adder"
+      ],
+      "code": "B",
+      "why": "the audit maps this to the live page /career/timesheet-hours — improve that page (metadata/content/functionality), no new URL · resolved: adding durations is what the timesheet tool does (start/end → total hours)",
+      "priority": "P2",
+      "proposedUrl": "/career/timesheet-hours",
+      "status": "implemented — keyword answered by a rendered FAQ on /career/timesheet-hours/",
+      "opportunity": 14800
     },
     {
       "keyword": "payment planner",
@@ -825,10 +825,10 @@
         "payment planner"
       ],
       "code": "C",
-      "why": "partial match with registry tool study-time (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool study-time (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: a payment planner schedules loan payments; the EMI page is the payment schedule calculator",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/loan-emi",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/loan-emi/",
       "opportunity": 10769
     },
     {
@@ -846,7 +846,7 @@
       "why": "FV is the standard abbreviation for future value and the site ships /finance/future-value/ (Future Value Calculator, verified in deploy/sitemap.xml) — the acronym belongs on that page",
       "priority": "P2",
       "proposedUrl": "/finance/future-value/",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/future-value/",
       "opportunity": 9603
     },
     {
@@ -861,10 +861,10 @@
         "mortgage and tax calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool inheritance-tax-uk-india (2/3 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool inheritance-tax-uk-india (2/3 concept tokens) — resolve by internal linking/metadata first · resolved: mortgage payment + tax/escrow is the mortgage page",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/mortgage",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/mortgage/",
       "opportunity": 5940
     },
     {
@@ -879,10 +879,10 @@
         "pricing generator"
       ],
       "code": "C",
-      "why": "partial match with registry tool pricing (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool pricing (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: the Pricing Calculator generates a selling price from unit cost + target margin — the arithmetic intent; the price-list-software intent is not claimed",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/business/pricing",
+      "status": "implemented — keyword answered by a rendered FAQ on /business/pricing/",
       "opportunity": 0
     },
     {
@@ -900,7 +900,7 @@
       "why": "the audit maps this to the live page /guides/income-tax — improve that page (metadata/content/functionality), no new URL",
       "priority": "P2",
       "proposedUrl": "/guides/income-tax",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /guides/income-tax/",
       "opportunity": 7857
     },
     {
@@ -915,10 +915,10 @@
         "savings calculator simple"
       ],
       "code": "C",
-      "why": "partial match with registry tool fuel-efficiency (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool fuel-efficiency (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: simple saving towards a target is the savings-goal tool",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/savings-goal",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/savings-goal/",
       "opportunity": 6534
     },
     {
@@ -933,10 +933,10 @@
         "percentage return calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool grade-percentage (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool grade-percentage (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: percentage return = ROI",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/roi",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/roi/",
       "opportunity": 6138
     },
     {
@@ -954,7 +954,7 @@
       "why": "navigational/OS-action intent (\"open calculator\" means launch the device app) — there is no calculation to build and no page can satisfy it",
       "priority": "P3",
       "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "no implementation — navigational/OS-action intent (\"open calculator\" means launch the device app) — there is no calculation to build and no page can satisfy it",
       "opportunity": 5874
     },
     {
@@ -969,10 +969,10 @@
         "retirement plan estimator"
       ],
       "code": "C",
-      "why": "partial match with registry tool ev-range (1/3 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool ev-range (1/3 concept tokens) — resolve by internal linking/metadata first · resolved: a retirement plan estimate is the retirement tool",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/retirement",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/retirement/",
       "opportunity": 5076
     },
     {
@@ -987,10 +987,10 @@
         "hour counter"
       ],
       "code": "B",
-      "why": "the audit maps this to the live page /everyday/distance-pace — improve that page (metadata/content/functionality), no new URL",
+      "why": "the audit maps this to the live page /everyday/distance-pace — improve that page (metadata/content/functionality), no new URL · resolved: the recorded target (/everyday/distance-pace) counts hours only as a by-product of pace; the hours tool is the real owner",
       "priority": "P2",
-      "proposedUrl": "/everyday/distance-pace",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/career/timesheet-hours",
+      "status": "implemented — keyword answered by a rendered FAQ on /career/timesheet-hours/",
       "opportunity": 5346
     },
     {
@@ -1005,10 +1005,10 @@
         "reverse tax calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool taxi-fare (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool taxi-fare (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: reverse tax = working back from a gross amount; the sales-tax page does gross/net",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/sales-tax",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/sales-tax/",
       "opportunity": 4400
     },
     {
@@ -1023,10 +1023,10 @@
         "percentage discount calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool discount-rate (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool discount-rate (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: discount as a percentage is the discount tool",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/discount",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/discount/",
       "opportunity": 4400
     },
     {
@@ -1041,10 +1041,10 @@
         "daily interest calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool freelance-daily (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool freelance-daily (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: per-day interest is the simple-interest page with a daily term",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/simple-interest",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/simple-interest/",
       "opportunity": 4356
     },
     {
@@ -1062,7 +1062,7 @@
       "why": "ambiguous device/product term, not a calculation (difficulty 51) — the searcher wants a physical calculator or an app, so a templated page would be a thin mismatch",
       "priority": "P3",
       "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "no implementation — ambiguous device/product term, not a calculation (difficulty 51) — the searcher wants a physical calculator or an app, so a templated page would be a thin mismatch",
       "opportunity": 2156
     },
     {
@@ -1080,7 +1080,7 @@
       "why": "the audit maps this to the live page /guides/age — improve that page (metadata/content/functionality), no new URL",
       "priority": "P2",
       "proposedUrl": "/guides/age",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /guides/age/",
       "opportunity": 4268
     },
     {
@@ -1095,10 +1095,10 @@
         "inflation salary calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool salary-converter (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool salary-converter (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: same intent as the wage row — real versus nominal salary",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/career/raise-calculator",
+      "status": "implemented — keyword answered by a rendered FAQ on /career/raise-calculator/",
       "opportunity": 3564
     },
     {
@@ -1116,7 +1116,7 @@
       "why": "date-of-birth is the input to an age calculation, and /utilities/age-exact/ (Exact Age Calculator) plus /everyday/age/ already ship and are verified in the sitemap — no new page",
       "priority": "P2",
       "proposedUrl": "/utilities/age-exact/",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /utilities/age-exact/",
       "opportunity": 3564
     },
     {
@@ -1132,10 +1132,10 @@
         "compound investments"
       ],
       "code": "D",
-      "why": "shares one search intent with 1 other keyword(s) in this audit — one page must own all of them",
+      "why": "shares one search intent with 1 other keyword(s) in this audit — one page must own all of them · resolved: code D cluster with \"compound investments\" — one shared page owns both",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/compound-interest",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/compound-interest/",
       "opportunity": 2700
     },
     {
@@ -1153,7 +1153,7 @@
       "why": "software-download intent, not a calculation — the site is a browser tool with no installable build, so no page can answer it truthfully",
       "priority": "P3",
       "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "no implementation — software-download intent, not a calculation — the site is a browser tool with no installable build, so no page can answer it truthfully",
       "opportunity": 2592
     },
     {
@@ -1168,10 +1168,10 @@
         "investment calculator over time"
       ],
       "code": "C",
-      "why": "partial match with registry tool overtime-pay (2/3 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool overtime-pay (2/3 concept tokens) — resolve by internal linking/metadata first · resolved: growth over time is the investment tool",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/investment",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/investment/",
       "opportunity": 2340
     },
     {
@@ -1186,10 +1186,10 @@
         "simple retirement calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool retirement-contrib (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool retirement-contrib (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: the retirement tool with defaults is the simple case",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/retirement",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/retirement/",
       "opportunity": 1908
     },
     {
@@ -1207,7 +1207,7 @@
       "why": "the audit maps this to the live page /regional/post-office-savings — improve that page (metadata/content/functionality), no new URL",
       "priority": "P2",
       "proposedUrl": "/regional/post-office-savings",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /regional/post-office-savings/",
       "opportunity": 2465
     },
     {
@@ -1222,10 +1222,10 @@
         "share return calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool ride-share-cost (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool ride-share-cost (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: a share return is an ROI calculation",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/roi",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/roi/",
       "opportunity": 2280
     },
     {
@@ -1240,10 +1240,10 @@
         "calculator on this phone"
       ],
       "code": "C",
-      "why": "partial match with registry tool charging-time (2/3 concept tokens) — resolve by internal linking/metadata first",
+      "why": "navigational/device intent (the phone's own calculator app) — no calculation to own",
       "priority": "P2",
       "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "no implementation — navigational/device intent (the phone's own calculator app) — no calculation to own",
       "opportunity": 2088
     },
     {
@@ -1258,10 +1258,10 @@
         "credit rate calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool conversion-rate (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool conversion-rate (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: the credit rate = APR; the annual-rate tool is the owner",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/apr-annual",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/apr-annual/",
       "opportunity": 1776
     },
     {
@@ -1279,7 +1279,7 @@
       "why": "shares the concept token \"compounded\" with \"compounded monthly calculator\", which the audit already maps to the live page /regional/post-office-savings — improve that page instead of adding a near-duplicate calculator",
       "priority": "P2",
       "proposedUrl": "/regional/post-office-savings",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /regional/post-office-savings/",
       "opportunity": 1752
     },
     {
@@ -1295,10 +1295,10 @@
         "free online retirement planner"
       ],
       "code": "D",
-      "why": "shares one search intent with 1 other keyword(s) in this audit — one page must own all of them",
+      "why": "shares one search intent with 1 other keyword(s) in this audit — one page must own all of them · resolved: code D cluster with \"free online retirement planner\" — one page owns both",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/retirement",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/retirement/",
       "opportunity": 1536
     },
     {
@@ -1316,7 +1316,7 @@
       "why": "the audit maps this to the live page /guides/cagr — improve that page (metadata/content/functionality), no new URL",
       "priority": "P2",
       "proposedUrl": "/guides/cagr",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /guides/cagr/",
       "opportunity": 1752
     },
     {
@@ -1331,10 +1331,10 @@
         "pv calculator"
       ],
       "code": "B",
-      "why": "an existing registry tool already covers every concept token — improve that page, do not create a duplicate",
+      "why": "an existing registry tool already covers every concept token — improve that page, do not create a duplicate · resolved: PV is the standard finance abbreviation for present value",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/present-value",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/present-value/",
       "opportunity": 1881
     },
     {
@@ -1352,7 +1352,7 @@
       "why": "navigational intent (\"show calculator\" = reveal the calculator UI) with no calculable answer",
       "priority": "P3",
       "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "no implementation — navigational intent (\"show calculator\" = reveal the calculator UI) with no calculable answer",
       "opportunity": 1862
     },
     {
@@ -1367,10 +1367,10 @@
         "loan percentage calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool car-loan-emi (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool car-loan-emi (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: the percentage on a loan is the APR",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/apr-annual",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/apr-annual/",
       "opportunity": 1501
     },
     {
@@ -1385,10 +1385,10 @@
         "figure out interest rate on loan"
       ],
       "code": "C",
-      "why": "partial match with registry tool conversion-rate (2/6 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool conversion-rate (2/6 concept tokens) — resolve by internal linking/metadata first · resolved: solving for the rate is what the APR/annual-rate page does",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/apr-annual",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/apr-annual/",
       "opportunity": 1501
     },
     {
@@ -1403,29 +1403,11 @@
         "retirement budget calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool freelance-budget (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool freelance-budget (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: spending in retirement is the withdrawal tool",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/retirement-withdrawal",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/retirement-withdrawal/",
       "opportunity": 1444
-    },
-    {
-      "keyword": "retirement expenditure calculator",
-      "volume": 1900,
-      "difficulty": 33,
-      "cpc": 0.35,
-      "source": "keyword-planner",
-      "verdict": "GAP",
-      "auditClosest": "",
-      "cluster": [
-        "retirement expenditure calculator"
-      ],
-      "code": "C",
-      "why": "partial match with registry tool retirement-contrib (1/2 concept tokens) — resolve by internal linking/metadata first",
-      "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
-      "opportunity": 1273
     },
     {
       "keyword": "financial planning calculator",
@@ -1439,10 +1421,10 @@
         "financial planning calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool financial-need (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool financial-need (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: long-horizon financial planning is the retirement tool",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/retirement",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/retirement/",
       "opportunity": 1197
     },
     {
@@ -1457,10 +1439,10 @@
         "mortgage calculator how much can i qualify for"
       ],
       "code": "C",
-      "why": "partial match with registry tool ab-test-significance (2/4 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool ab-test-significance (2/4 concept tokens) — resolve by internal linking/metadata first · resolved: same intent as the other qualify row — the qualification tool",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/loan-qualify",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/loan-qualify/",
       "opportunity": 646
     },
     {
@@ -1475,10 +1457,10 @@
         "mortgage calculator how much do i qualify for"
       ],
       "code": "C",
-      "why": "partial match with registry tool remortgage-calc (2/4 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool remortgage-calc (2/4 concept tokens) — resolve by internal linking/metadata first · resolved: same intent as the other qualify row — the qualification tool",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/loan-qualify",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/loan-qualify/",
       "opportunity": 646
     },
     {
@@ -1496,7 +1478,7 @@
       "why": "the audit maps this to the live page /guides/career — improve that page (metadata/content/functionality), no new URL",
       "priority": "P2",
       "proposedUrl": "/guides/career",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /guides/career/",
       "opportunity": 1710
     },
     {
@@ -1514,7 +1496,25 @@
       "why": "the audit maps this to the live page /guides/retirement — improve that page (metadata/content/functionality), no new URL",
       "priority": "P2",
       "proposedUrl": "/guides/retirement",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /guides/retirement/",
+      "opportunity": 1273
+    },
+    {
+      "keyword": "retirement expenditure calculator",
+      "volume": 1900,
+      "difficulty": 33,
+      "cpc": 0.35,
+      "source": "keyword-planner",
+      "verdict": "WEAK",
+      "auditClosest": "/finance/retirement-withdrawal",
+      "cluster": [
+        "retirement expenditure calculator"
+      ],
+      "code": "B",
+      "why": "the audit maps this to the live page /finance/retirement-withdrawal — improve that page (metadata/content/functionality), no new URL · resolved: retirement spending is the withdrawal tool",
+      "priority": "P2",
+      "proposedUrl": "/finance/retirement-withdrawal",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/retirement-withdrawal/",
       "opportunity": 1273
     },
     {
@@ -1532,7 +1532,7 @@
       "why": "the audit maps this to the live page /guides/baby-cost — improve that page (metadata/content/functionality), no new URL",
       "priority": "P2",
       "proposedUrl": "/guides/baby-cost",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /guides/baby-cost/",
       "opportunity": 950
     },
     {
@@ -1550,7 +1550,7 @@
       "why": "the audit maps this to the live page /guides/baby-cost — improve that page (metadata/content/functionality), no new URL",
       "priority": "P2",
       "proposedUrl": "/guides/baby-cost",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /guides/baby-cost/",
       "opportunity": 950
     },
     {
@@ -1568,7 +1568,7 @@
       "why": "branded intent for Google’s own calculator — not our content to target and no unique calculation behind it",
       "priority": "P3",
       "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "no implementation — branded intent for Google’s own calculator — not our content to target and no unique calculation behind it",
       "opportunity": 1584
     },
     {
@@ -1584,10 +1584,10 @@
         "free online retirement planner"
       ],
       "code": "D",
-      "why": "shares one search intent with 1 other keyword(s) in this audit — one page must own all of them",
+      "why": "shares one search intent with 1 other keyword(s) in this audit — one page must own all of them · resolved: code D cluster with \"retirement planner calculator\" — one page owns both",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/retirement",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/retirement/",
       "opportunity": 1360
     },
     {
@@ -1602,10 +1602,10 @@
         "compound retirement calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool retirement-contrib (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool retirement-contrib (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: compounding into retirement is the retirement tool",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/retirement",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/retirement/",
       "opportunity": 1264
     },
     {
@@ -1620,10 +1620,10 @@
         "compounding calculator retirement"
       ],
       "code": "C",
-      "why": "partial match with registry tool retirement-contrib (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool retirement-contrib (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: same intent as the compound-retirement row",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/retirement",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/retirement/",
       "opportunity": 1264
     },
     {
@@ -1641,7 +1641,7 @@
       "why": "ambiguous device intent (difficulty 100) — it describes a physical printing calculator, not a calculation the site can compute",
       "priority": "P3",
       "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "no implementation — ambiguous device intent (difficulty 100) — it describes a physical printing calculator, not a calculation the site can compute",
       "opportunity": 0
     },
     {
@@ -1659,7 +1659,7 @@
       "why": "the audit maps this to the live page /finance/loan-emi — improve that page (metadata/content/functionality), no new URL",
       "priority": "P2",
       "proposedUrl": "/finance/loan-emi",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/loan-emi/",
       "opportunity": 1488
     },
     {
@@ -1674,10 +1674,10 @@
         "cash back calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool payback (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool payback (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: cash back is a card reward — the card page is the closest honest owner",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/credit-card-payoff",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/credit-card-payoff/",
       "opportunity": 1287
     },
     {
@@ -1692,10 +1692,10 @@
         "roi calculation formula"
       ],
       "code": "C",
-      "why": "partial match with registry tool ev-charger-roi (1/3 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool ev-charger-roi (1/3 concept tokens) — resolve by internal linking/metadata first · resolved: the ROI page carries the formula and the calculator",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/roi",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/roi/",
       "opportunity": 1196
     },
     {
@@ -1710,10 +1710,10 @@
         "work schedule calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool working-capital (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool working-capital (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: a work schedule is a set of timesheets — hours per day/week",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/career/timesheet-hours",
+      "status": "implemented — keyword answered by a rendered FAQ on /career/timesheet-hours/",
       "opportunity": 1183
     },
     {
@@ -1728,10 +1728,10 @@
         "concrete calculator formula"
       ],
       "code": "C",
-      "why": "partial match with registry tool concrete-slab (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool concrete-slab (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: the concrete page carries the volume formula",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/everyday/concrete",
+      "status": "implemented — keyword answered by a rendered FAQ on /everyday/concrete/",
       "opportunity": 1157
     },
     {
@@ -1747,10 +1747,10 @@
         "compound investments"
       ],
       "code": "D",
-      "why": "shares one search intent with 1 other keyword(s) in this audit — one page must own all of them",
+      "why": "shares one search intent with 1 other keyword(s) in this audit — one page must own all of them · resolved: code D cluster with \"compound investment calculator\" — one shared page owns both",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/compound-interest",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/compound-interest/",
       "opportunity": 988
     },
     {
@@ -1765,10 +1765,10 @@
         "future value of investment calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool future-value (2/3 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool future-value (2/3 concept tokens) — resolve by internal linking/metadata first · resolved: future value is the exact tool",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/future-value",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/future-value/",
       "opportunity": 910
     },
     {
@@ -1783,29 +1783,11 @@
         "retirement calculator growth"
       ],
       "code": "C",
-      "why": "partial match with registry tool retirement-contrib (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool retirement-contrib (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: projected growth is the retirement tool",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/retirement",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/retirement/",
       "opportunity": 832
-    },
-    {
-      "keyword": "currency calculator xe",
-      "volume": 1300,
-      "difficulty": 58,
-      "cpc": 0,
-      "source": "calculator-net-gap",
-      "verdict": "GAP",
-      "auditClosest": "",
-      "cluster": [
-        "currency calculator xe"
-      ],
-      "code": "B",
-      "why": "an existing registry tool already covers every concept token — improve that page, do not create a duplicate",
-      "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
-      "opportunity": 546
     },
     {
       "keyword": "age calendar",
@@ -1822,8 +1804,26 @@
       "why": "the audit maps this to the live page /guides/age — improve that page (metadata/content/functionality), no new URL",
       "priority": "P2",
       "proposedUrl": "/guides/age",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /guides/age/",
       "opportunity": 1300
+    },
+    {
+      "keyword": "currency calculator xe",
+      "volume": 1300,
+      "difficulty": 58,
+      "cpc": 0,
+      "source": "calculator-net-gap",
+      "verdict": "WEAK",
+      "auditClosest": "/finance/currency-converter",
+      "cluster": [
+        "currency calculator xe"
+      ],
+      "code": "B",
+      "why": "an existing registry tool already covers every concept token — improve that page, do not create a duplicate · resolved: same generic currency-conversion intent; brand not targeted",
+      "priority": "P2",
+      "proposedUrl": "/finance/currency-converter",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/currency-converter/",
+      "opportunity": 546
     },
     {
       "keyword": "inflation wage calculator",
@@ -1837,10 +1837,10 @@
         "inflation wage calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool journeyman-wage-progression (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool journeyman-wage-progression (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: wage vs inflation is the real-terms raise the raise tool computes",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/career/raise-calculator",
+      "status": "implemented — keyword answered by a rendered FAQ on /career/raise-calculator/",
       "opportunity": 990
     },
     {
@@ -1855,10 +1855,10 @@
         "time and pay calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool overtime-pay (2/3 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool overtime-pay (2/3 concept tokens) — resolve by internal linking/metadata first · resolved: hours and pay → timesheet hours, then overtime page for the rate",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/career/timesheet-hours",
+      "status": "implemented — keyword answered by a rendered FAQ on /career/timesheet-hours/",
       "opportunity": 950
     },
     {
@@ -1873,10 +1873,10 @@
         "compound loan calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool car-loan-emi (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool car-loan-emi (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: a loan is amortised, not compounded; the loan page is the honest owner and explains the difference",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/loan-emi",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/loan-emi/",
       "opportunity": 890
     },
     {
@@ -1891,10 +1891,10 @@
         "formula discount"
       ],
       "code": "C",
-      "why": "partial match with registry tool discount-rate (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool discount-rate (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: the discount formula lives on the discount page",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/discount",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/discount/",
       "opportunity": 840
     },
     {
@@ -1909,10 +1909,10 @@
         "calculator that shows work"
       ],
       "code": "C",
-      "why": "partial match with registry tool working-capital (1/3 concept tokens) — resolve by internal linking/metadata first",
+      "why": "cross-cutting feature (every tool shows its working via the steps panel), not one page's intent",
       "priority": "P2",
       "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "no implementation — cross-cutting feature (every tool shows its working via the steps panel), not one page's intent",
       "opportunity": 790
     },
     {
@@ -1927,10 +1927,10 @@
         "investment account calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool investment (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool investment (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: account balance over time is the investment tool",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/investment",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/investment/",
       "opportunity": 750
     },
     {
@@ -1945,10 +1945,10 @@
         "compare loan calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool fuel-price-compare (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool fuel-price-compare (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: side-by-side loan comparison is the dedicated page",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/loan-comparison",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/loan-comparison/",
       "opportunity": 750
     },
     {
@@ -1963,10 +1963,10 @@
         "monthly investment calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool freelance-budget (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool freelance-budget (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: monthly contributions with growth is the investment-growth tool",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/investment-growth",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/investment-growth/",
       "opportunity": 610
     },
     {
@@ -1984,7 +1984,7 @@
       "why": "the audit maps this to the live page /guides/compound-interest — improve that page (metadata/content/functionality), no new URL",
       "priority": "P2",
       "proposedUrl": "/guides/compound-interest",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /guides/compound-interest/",
       "opportunity": 900
     },
     {
@@ -1999,10 +1999,10 @@
         "savings percentage calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool fuel-efficiency (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool fuel-efficiency (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: savings as a percentage of income sits on the savings-goal page",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/savings-goal",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/savings-goal/",
       "opportunity": 862
     },
     {
@@ -2017,10 +2017,10 @@
         "yearly payment calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool graduated-payment (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool graduated-payment (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: the annual payment on a loan is the loan page run over 12 months",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/loan-emi",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/loan-emi/",
       "opportunity": 836
     },
     {
@@ -2035,29 +2035,11 @@
         "compound return calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool compound-savings (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool compound-savings (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: a compound return is CAGR",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/cagr",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/cagr/",
       "opportunity": 695
-    },
-    {
-      "keyword": "projected retirement calculator",
-      "volume": 880,
-      "difficulty": 49,
-      "cpc": 0.96,
-      "source": "keyword-planner",
-      "verdict": "GAP",
-      "auditClosest": "",
-      "cluster": [
-        "projected retirement calculator"
-      ],
-      "code": "C",
-      "why": "partial match with registry tool retirement-contrib (1/2 concept tokens) — resolve by internal linking/metadata first",
-      "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
-      "opportunity": 449
     },
     {
       "keyword": "retirement financial calculator",
@@ -2071,29 +2053,11 @@
         "retirement financial calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool retirement-contrib (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool retirement-contrib (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: the retirement tool",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/retirement",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/retirement/",
       "opportunity": 422
-    },
-    {
-      "keyword": "forex xe converter",
-      "volume": 880,
-      "difficulty": 59,
-      "cpc": 0,
-      "source": "calculator-net-gap",
-      "verdict": "GAP",
-      "auditClosest": "",
-      "cluster": [
-        "forex xe converter"
-      ],
-      "code": "C",
-      "why": "partial match with registry tool currency-conv (2/3 concept tokens) — resolve by internal linking/metadata first",
-      "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
-      "opportunity": 361
     },
     {
       "keyword": "qualify for a mortgage calculator",
@@ -2107,10 +2071,10 @@
         "qualify for a mortgage calculator"
       ],
       "code": "C",
-      "why": "partial match with registry tool remortgage-calc (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "why": "partial match with registry tool remortgage-calc (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: affordability/qualification is the loan-qualify tool",
       "priority": "P2",
-      "proposedUrl": "",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "proposedUrl": "/finance/loan-qualify",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/loan-qualify/",
       "opportunity": 299
     },
     {
@@ -2128,8 +2092,44 @@
       "why": "the audit maps this to the live page /lifestyle/parental-leave — improve that page (metadata/content/functionality), no new URL",
       "priority": "P2",
       "proposedUrl": "/lifestyle/parental-leave",
-      "status": "not implemented — decision recorded in this session, no page built yet",
+      "status": "implemented — keyword answered by a rendered FAQ on /lifestyle/parental-leave/",
       "opportunity": 836
+    },
+    {
+      "keyword": "projected retirement calculator",
+      "volume": 880,
+      "difficulty": 49,
+      "cpc": 0.96,
+      "source": "keyword-planner",
+      "verdict": "WEAK",
+      "auditClosest": "/finance/retirement",
+      "cluster": [
+        "projected retirement calculator"
+      ],
+      "code": "B",
+      "why": "the audit maps this to the live page /finance/retirement — improve that page (metadata/content/functionality), no new URL · resolved: a projection is the retirement tool",
+      "priority": "P2",
+      "proposedUrl": "/finance/retirement",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/retirement/",
+      "opportunity": 449
+    },
+    {
+      "keyword": "forex xe converter",
+      "volume": 880,
+      "difficulty": 59,
+      "cpc": 0,
+      "source": "calculator-net-gap",
+      "verdict": "WEAK",
+      "auditClosest": "/finance/currency-converter",
+      "cluster": [
+        "forex xe converter"
+      ],
+      "code": "B",
+      "why": "the audit maps this to the live page /finance/currency-converter — improve that page (metadata/content/functionality), no new URL · resolved: generic forex-conversion intent; the brand name (\"xe\") is not targeted",
+      "priority": "P2",
+      "proposedUrl": "/finance/currency-converter",
+      "status": "implemented — keyword answered by a rendered FAQ on /finance/currency-converter/",
+      "opportunity": 361
     }
   ]
 }

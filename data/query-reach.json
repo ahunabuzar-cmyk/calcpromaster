@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T12:08:56.804Z",
+  "generatedAt": "2026-10-24T12:17:23.282Z",
   "source": "data/gsc-query-page.json",
   "window": {
     "days": 28,
@@ -34,17 +34,17 @@
         "multiple": 14.8
       }
     ],
-    "runRateMonthly": 37767,
+    "runRateMonthly": 17177,
     "targetsFromRunRate": [
       {
         "monthly": 200000,
         "perDay": 6666.7,
-        "multiple": 5.3
+        "multiple": 11.64
       },
       {
         "monthly": 300000,
         "perDay": 10000,
-        "multiple": 7.94
+        "multiple": 17.47
       }
     ]
   },

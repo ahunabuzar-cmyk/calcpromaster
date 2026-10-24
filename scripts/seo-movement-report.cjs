@@ -23,7 +23,7 @@ const path = require('path');
 const { execFileSync } = require('child_process');
 
 // One definition of "run-rate" for every report: the growth model owns it.
-const { runRate, readDailySeries, DAYS_PER_MONTH } = require('./build-growth-model.cjs');
+const { runRate, readDailySeries, trimUnfinalized, DAYS_PER_MONTH } = require('./build-growth-model.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const readJson = (p) => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, p), 'utf8')); } catch (e) { return null; } };
@@ -40,7 +40,11 @@ L.push('');
 
 // ---- 1. RUN-RATE FIRST (the headline), 28-day average below it as context ----
 const num = (n, d = 0) => (Number.isFinite(n) ? n.toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d }) : '?');
-const series = readDailySeries();
+// Same finality rule as the growth model and the run-rate tracker: a day GSC is
+// still filling in must not be averaged into a rate (19-21 Oct read 2, 4 and 1).
+const allDays = readDailySeries();
+const series = trimUnfinalized(allDays, 3);
+const droppedDays = allDays.length - series.length;
 const rr7 = runRate(series, 7);
 const rr3 = runRate(series, 3);
 // The raw dump's 28-day totals, kept for clicks/position/CTR which the daily
@@ -57,15 +61,21 @@ L.push('');
 if (rr7) {
   L.push('- **7-day run-rate: ' + num(rr7.perDay) + ' impressions/day ≈ ' + num(rr7.perMonth) + '/month** (' + rr7.from + ' → ' + rr7.to + ')');
   if (rr3) L.push('- 3-day: ' + num(rr3.perDay) + '/day ≈ ' + num(rr3.perMonth) + '/month (' + rr3.from + ' → ' + rr3.to + ')');
+  if (droppedDays > 0) L.push('- Excluded: last ' + droppedDays + ' day(s) of the chart are not finalised by GSC yet (raw export ends ' + allDays[allDays.length - 1].date + ').');
 } else {
   L.push('- _(daily series nahi mili — GSC se Coverage export lein aur `node scripts/parse-gsc-coverage-export.cjs --dir <folder>` chalao)_');
 }
+// The 28-day average is taken from the SAME series as the run-rate, so the two
+// numbers cover one window and can be compared honestly. data/gsc-queries-raw.txt
+// used to supply it, but its window is whatever day the API was last called —
+// comparing that to a chart that has moved on is how "impressions fell" was
+// concluded from two different periods.
+const rr28 = runRate(series, 28);
+if (rr28) {
+  L.push('- trailing ' + rr28.days + '-day average: ' + num(rr28.perDay) + '/day ≈ ' + num(rr28.perMonth) + '/month (' + rr28.from + ' → ' + rr28.to + ') — **lagging number**, ramp ke pehle wale din isi mein shamil hain' + (rr7 ? ' (' + (rr7.perDay / rr28.perDay).toFixed(1) + 'x run-rate se)' : ''));
+}
 if (raw28) {
-  const perDay = raw28.impressions / 28;
-  L.push('- 28-day average: ' + num(perDay) + '/day ≈ ' + num(perDay * DAYS_PER_MONTH) + '/month — **lagging number**, ramp ke pehle wale din isi mein shamil hain' + (rr7 ? ' (' + (rr7.perDay / perDay).toFixed(1) + 'x neeche run-rate se)' : ''));
-  L.push('- 28-day clicks **' + raw28.clicks + '** · CTR **' + raw28.ctr + '%** · avg position **' + raw28.position + '**');
-} else {
-  L.push('- _(data/gsc-queries-raw.txt missing — `node scripts/gsc-queries.cjs --days 28 > data/gsc-queries-raw.txt` chalao)_');
+  L.push('- Clicks (API, last 28 days at pull time): **' + raw28.clicks + '** · CTR **' + raw28.ctr + '%** · avg position **' + raw28.position + '**');
 }
 L.push('');
 L.push('_Run-rate ke liye 7-day window padho. 28-day average ko speed na samjho — wo trend comparison ka number hai._');

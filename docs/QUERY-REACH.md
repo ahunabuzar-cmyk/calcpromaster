@@ -12,16 +12,16 @@ Do base hamesha saath dikhte hain, warna ek number doosre se takra jata hai (det
 | Base | Window | Impressions | /day | /month |
 |---|---|---|---|---|
 | GSC API window (28-din average) | 2026-09-16 → 2026-10-14 | 18,917 | 675.6 | 20,268 |
-| 7-din run-rate (aaj ki speed) | last 7d | — | 1,258.9 | 37,767 |
+| 7-din run-rate (aaj ki speed) | last 7d | — | 572.567 | 17,177 |
 
 > Join coverage: is window ki **11,567** impressions query→page pairs tak trace hoti hain (61.1%) — baaki GSC ki apni truncation hai, site ka bug nahi. Reach ke per-page numbers isi traced hisse se bante hain, is liye wo **floor** hain.
 
 | Target / month | Impressions / day | Multiple (28-d average) | Multiple (7-d run-rate) |
 |---|---|---|---|
-| 200,000 | 6,666.7 | **9.87x** | **5.3x** |
-| 300,000 | 10,000 | **14.8x** | **7.94x** |
+| 200,000 | 6,666.7 | **9.87x** | **11.64x** |
+| 300,000 | 10,000 | **14.8x** | **17.47x** |
 
-**Seedhi baat:** 200,000/month ke liye **6,666.7/din** chahiye. 28-din average base par wo **9.87x**, aur aaj ke 7-din run-rate par **5.3x**. Ye guarantee nahi hai — ye sirf arithmetic hai. 30 din mein doubling bhi 2x hai, is liye ye ek month ka kaam nahi. Har din ka multiple reach, position aur indexing teeno se banta hai, ek lever se nahi.
+**Seedhi baat:** 200,000/month ke liye **6,666.7/din** chahiye. 28-din average base par wo **9.87x**, aur aaj ke 7-din run-rate par **11.64x**. Ye guarantee nahi hai — ye sirf arithmetic hai. 30 din mein doubling bhi 2x hai, is liye ye ek month ka kaam nahi. Har din ka multiple reach, position aur indexing teeno se banta hai, ek lever se nahi.
 
 ## 2. Reach tiers — kitne pages kitni queries par hain
 

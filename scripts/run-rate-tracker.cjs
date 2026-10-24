@@ -21,7 +21,7 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-const { runRate, readDailySeries } = require('./build-growth-model.cjs');
+const { runRate, readDailySeries, trimUnfinalized } = require('./build-growth-model.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const HISTORY = path.join(ROOT, 'data', 'run-rate-history.json');
@@ -31,6 +31,12 @@ const DOC = path.join(ROOT, 'docs', 'RUN-RATE-STALL.md');
 // A week-over-week move smaller than this is noise, not growth: with hundreds of
 // impressions a day the run-rate jitters by a few percent on its own.
 const FLAT_TOLERANCE = 0.02; // 2%
+
+// GSC finalises a day roughly two to three days after it happens. A run-rate that
+// includes the unfinished tail is not a reading — on 19-21 Oct the chart showed
+// 2, 4 and 1 impressions for days that had not been filled in yet, which alone
+// pulled a 7-day average from ~560 to ~290.
+const FINALITY_LAG_DAYS = 3;
 
 // ---------- pure helpers (unit-tested) ----------
 
@@ -116,7 +122,9 @@ function classifyCause({ flatWeeks, indexedPctDelta }) {
 // ---------- main ----------
 
 function main() {
-  const series = readDailySeries();
+  const allDays = readDailySeries();
+  const series = trimUnfinalized(allDays, FINALITY_LAG_DAYS);
+  const droppedDays = allDays.length - series.length;
   const rr7 = runRate(series, 7);
   const rr3 = runRate(series, 3);
 
@@ -137,8 +145,10 @@ function main() {
   // Where the numbers actually came from, so a frozen export can be named
   // instead of being disguised as a flat week.
   const lastRow = series.length ? series[series.length - 1] : null;
+  const rawLastRow = allDays.length ? allDays[allDays.length - 1] : null;
   const sourceExport = lastRow ? lastRow.source : null;
-  const sourceLatestDate = lastRow ? lastRow.date : null;
+  const sourceLatestDate = lastRow ? lastRow.date : null; // newest day that is finalised
+  const sourceRawLatestDate = rawLastRow ? rawLastRow.date : null; // newest day in the export
   const sourceAgeDays = sourceLatestDate
     ? Math.round((Date.parse(today) - Date.parse(sourceLatestDate)) / 864e5)
     : null;
@@ -155,9 +165,14 @@ function main() {
     indexedPct,
     sourceExport,
     sourceLatestDate,
+    droppedUnfinalizedDays: droppedDays,
   };
 
   const stale = rr7 ? isStaleWindow(history, sample) : false;
+  const recordedSample = (Array.isArray(history) ? history : [])
+    .filter((s) => s && typeof s.date === 'string' && s.windowTo === sample.windowTo)
+    .sort((a, b) => a.date.localeCompare(b.date))
+    .pop() || null;
   // Decide on the history the sample is joining (plus the sample itself, so a run
   // right after a flat week is judged on today's number). A stale sample is not
   // recorded and not judged: it would be the same measurement twice.
@@ -193,11 +208,13 @@ function main() {
     indexedPctDelta,
     sourceExport,
     sourceLatestDate,
+    sourceRawLatestDate,
     sourceAgeDays,
     staleSource: stale,
+    droppedUnfinalizedDays: droppedDays,
     cause: judgedStall ? verdict.cause : null,
     reason: stale
-      ? 'source export ' + (sourceExport || '?') + ' me naya din nahi aaya (last day ' + (sourceLatestDate || '?') + ', ' + sourceAgeDays + ' din purana) — ye window pehle se history me hai, is liye koi naya sample record nahi hua aur koi stall verdict nahi diya.'
+      ? 'window ' + (sample.windowFrom || '?') + ' → ' + (sample.windowTo || '?') + ' ka sample ' + (recordedSample ? recordedSample.date : '?') + ' ko record ho chuka hai; export ' + (sourceExport || '?') + ' me iske baad ka koi finalised din nahi aaya (raw chart ' + (sourceRawLatestDate || '?') + ' tak hai, jo GSC abhi bhar raha hai). Is liye koi naya sample record nahi hua aur koi stall verdict nahi diya.'
       : (judgedStall ? verdict.reason : (canDecide ? 'run-rate barh raha hai' : 'abhi 2 hafte ka history nahi bana')),
     history: probe,
   };
@@ -218,14 +235,15 @@ function main() {
   L.push('| 7-day run-rate | ' + (sample.runRate7 !== null ? sample.runRate7.toLocaleString('en-US') + '/day ≈ ' + sample.runRate7PerMonth.toLocaleString('en-US') + '/month' : '?') + ' |');
   if (rr3) L.push('| 3-day | ' + Math.round(rr3.perDay).toLocaleString('en-US') + '/day |');
   L.push('| window | ' + (sample.windowFrom || '?') + ' → ' + (sample.windowTo || '?') + ' |');
+  if (droppedDays > 0) L.push('| dropped (GSC not finalised) | last ' + droppedDays + ' day(s) — raw chart ends ' + (sourceRawLatestDate || '?') + ', counted through ' + (sourceLatestDate || '?') + ' |');
   L.push('| indexed | ' + (latest ? latest.indexed + '/' + (latest.indexed + latest.notIndexed) + ' (' + indexedPct + '%)' : '?') + ' |');
   L.push('');
   L.push('## Stall status: **' + status + '**');
   L.push('');
   if (stale) {
-    L.push('- ⚠ **Data purana hai, trend nahi.** Source export `' + (sourceExport || '?') + '` ka aakhri din **' + (sourceLatestDate || '?') + '** hai — aaj se **' + sourceAgeDays + ' din** purana.');
-    L.push('- Is liye ye window history me pehle se hai: koi naya sample record **nahi** hua, aur koi stall/cause verdict **nahi** diya gaya. Purana number naye din ke naam par likhna hi "impressions gir gaye" wali galti paida karta hai.');
-    L.push('- Fix: naya coverage export chahiye — `npm run gsc:verify` (token zinda?), phir Search Console se Coverage → Export, `data/gsc-coverage-export-<date>/` me rakho, phir ye script dobara chalao.');
+    L.push('- ⚠ **Koi naya finalised din nahi aaya.** Window ' + (sample.windowFrom || '?') + ' → ' + (sample.windowTo || '?') + ' ka sample ' + (recordedSample ? '**' + recordedSample.date + '**' : 'pehle') + ' ko record ho chuka hai; export `' + (sourceExport || '?') + '` raw chart **' + (sourceRawLatestDate || '?') + '** tak hai aur wo din abhi GSC bhar raha hai — is liye ' + (sourceLatestDate || '?') + ' ke baad ka koi finalised din nahi hai.');
+    L.push('- Is liye koi naya sample record **nahi** hua, aur koi stall/cause verdict **nahi** diya gaya. Purana number naye din ke naam par likhna hi "impressions gir gaye" wali galti paida karta hai.');
+    L.push('- Fix: naya export chahiye — GSC Performance → Export (ya `npm run seo:weekly` jab token zinda ho), `data/gsc-performance-export-<date>/` me rakho, phir ye script dobara chalao.');
     L.push('- Ye number **7-day** hai. Isko 28-day average se compare mat karo: 7-day best-week aur 28-day average do alag measures hain, aur unka farq girna nahi, window ka farq hai.');
   } else if (!canDecide) {
     L.push('- History mein **' + weeksInHistory + ' hafta** hai; 2 lagataar flat hafte detect karne ke liye **3** chahiye.');

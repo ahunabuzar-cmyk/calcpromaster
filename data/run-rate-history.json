@@ -11,36 +11,17 @@
     "indexedPct": 50.8
   },
   {
-    "date": "2026-10-14",
-    "capturedAt": "2026-10-14T14:52:05.648Z",
-    "runRate7": 1241,
-    "runRate7PerMonth": 37767,
-    "windowFrom": "2026-09-28",
-    "windowTo": "2026-10-04",
+    "date": "2026-10-24",
+    "capturedAt": "2026-10-24T12:12:27.008Z",
+    "runRate7": 564,
+    "runRate7PerMonth": 17177,
+    "windowFrom": "2026-10-12",
+    "windowTo": "2026-10-18",
     "indexed": 952,
     "notIndexed": 923,
-    "indexedPct": 50.8
-  },
-  {
-    "date": "2026-10-15",
-    "capturedAt": "2026-10-15T14:06:43.623Z",
-    "runRate7": 1241,
-    "runRate7PerMonth": 37767,
-    "windowFrom": "2026-09-28",
-    "windowTo": "2026-10-04",
-    "indexed": 952,
-    "notIndexed": 923,
-    "indexedPct": 50.8
-  },
-  {
-    "date": "2026-10-17",
-    "capturedAt": "2026-10-17T13:08:25.519Z",
-    "runRate7": 1241,
-    "runRate7PerMonth": 37767,
-    "windowFrom": "2026-09-28",
-    "windowTo": "2026-10-04",
-    "indexed": 952,
-    "notIndexed": 923,
-    "indexedPct": 50.8
+    "indexedPct": 50.8,
+    "sourceExport": "gsc-performance-export-2026-10-23",
+    "sourceLatestDate": "2026-10-18",
+    "droppedUnfinalizedDays": 3
   }
 ]

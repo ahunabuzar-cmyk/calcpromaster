@@ -2,7 +2,45 @@ import { describe, it, expect } from 'vitest';
 import { createRequire } from 'module';
 
 const require = createRequire(import.meta.url);
-const { runRate, monthsToTarget, ladder, decompose } = require('../../scripts/build-growth-model.cjs');
+const { runRate, monthsToTarget, ladder, decompose, trimUnfinalized } = require('../../scripts/build-growth-model.cjs');
+
+describe('trimUnfinalized', () => {
+  // The real shape: three settled days, then the tail GSC has not filled in yet.
+  const tail = [
+    { date: '2026-10-15', impressions: 578 },
+    { date: '2026-10-16', impressions: 681 },
+    { date: '2026-10-17', impressions: 419 },
+    { date: '2026-10-18', impressions: 345 },
+    { date: '2026-10-19', impressions: 2 },
+    { date: '2026-10-20', impressions: 4 },
+    { date: '2026-10-21', impressions: 1 },
+  ];
+
+  it('drops the last lag days so an unfinished day cannot be read as a collapse', () => {
+    expect(trimUnfinalized(tail, 3).map((r) => r.date)).toEqual([
+      '2026-10-15', '2026-10-16', '2026-10-17', '2026-10-18',
+    ]);
+  });
+
+  it('changes the rate it reports, which is the point', () => {
+    expect(Math.round(runRate(tail, 7).perDay)).toBe(290);      // with the empty tail
+    expect(Math.round(runRate(trimUnfinalized(tail, 3), 4).perDay)).toBe(506); // settled days only
+  });
+
+  it('a lag of 0 keeps every day, for callers that want the raw chart', () => {
+    expect(trimUnfinalized(tail, 0)).toHaveLength(7);
+  });
+
+  it('sorts a shuffled series before choosing the newest day', () => {
+    const shuffled = [tail[4], tail[0], tail[6], tail[2]];
+    expect(trimUnfinalized(shuffled, 3).map((r) => r.date)).toEqual(['2026-10-15', '2026-10-17']);
+  });
+
+  it('returns [] for an empty or garbage series instead of throwing', () => {
+    expect(trimUnfinalized(null, 3)).toEqual([]);
+    expect(trimUnfinalized([{ date: 'x' }], 3)).toEqual([]);
+  });
+});
 
 // A ramp: flat-low days then a jump. This is the shape that made the 28-day
 // average read 2.4x below the real run-rate, so runRate must use the tail.

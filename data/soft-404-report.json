@@ -1,30 +1,27 @@
 {
-  "ranAt": "2026-10-24T04:37:18.448Z",
+  "ranAt": "2026-10-24T06:20:27.106Z",
   "origin": "https://calcpromaster.com",
   "render": true,
   "probes": 36,
   "tally": {
-    "noindex": 14,
-    "notfound": 19,
-    "redirect": 3
+    "redirect": 24,
+    "noindex": 10,
+    "notfound": 2
   },
   "rows": [
     {
       "url": "/health/BMR-MIFFLIN",
       "why": "uppercase twin of /health/bmr-mifflin",
-      "status": 200,
-      "kind": "noindex",
-      "detail": "rendered robots=noindex, follow",
-      "rendered": true,
-      "robots": "noindex, follow",
-      "canonicalSeen": "https://calcpromaster.com/404"
+      "status": 301,
+      "kind": "redirect",
+      "detail": "301 -> https://calcpromaster.com/health/bmr-mifflin/"
     },
     {
       "url": "/health/bmr-mifflin.html",
       "why": ".html twin of /health/bmr-mifflin",
-      "status": 404,
-      "kind": "notfound",
-      "detail": "404"
+      "status": 301,
+      "kind": "redirect",
+      "detail": "301 -> https://calcpromaster.com/health/bmr-mifflin/"
     },
     {
       "url": "/health/bmr-mifflin/this-page-does-not-exist-xyz",
@@ -34,24 +31,21 @@
       "detail": "rendered robots=noindex, follow",
       "rendered": true,
       "robots": "noindex, follow",
-      "canonicalSeen": "https://calcpromaster.com/health/bmr-mifflin"
+      "canonicalSeen": "https://calcpromaster.com/health/bmr-mifflin/"
     },
     {
       "url": "/finance/LOAN-EMI",
       "why": "uppercase twin of /finance/loan-emi",
-      "status": 200,
-      "kind": "noindex",
-      "detail": "rendered robots=noindex, follow",
-      "rendered": true,
-      "robots": "noindex, follow",
-      "canonicalSeen": "https://calcpromaster.com/404"
+      "status": 301,
+      "kind": "redirect",
+      "detail": "301 -> https://calcpromaster.com/finance/loan-emi/"
     },
     {
       "url": "/finance/loan-emi.html",
       "why": ".html twin of /finance/loan-emi",
-      "status": 404,
-      "kind": "notfound",
-      "detail": "404"
+      "status": 301,
+      "kind": "redirect",
+      "detail": "301 -> https://calcpromaster.com/finance/loan-emi/"
     },
     {
       "url": "/finance/loan-emi/this-page-does-not-exist-xyz",
@@ -61,17 +55,14 @@
       "detail": "rendered robots=noindex, follow",
       "rendered": true,
       "robots": "noindex, follow",
-      "canonicalSeen": "https://calcpromaster.com/finance/loan-emi"
+      "canonicalSeen": "https://calcpromaster.com/finance/loan-emi/"
     },
     {
       "url": "/guides/TIP",
       "why": "uppercase twin of /guides/tip",
-      "status": 200,
-      "kind": "noindex",
-      "detail": "rendered robots=noindex, follow",
-      "rendered": true,
-      "robots": "noindex, follow",
-      "canonicalSeen": "https://calcpromaster.com/404"
+      "status": 301,
+      "kind": "redirect",
+      "detail": "301 -> https://calcpromaster.com/guides/tip"
     },
     {
       "url": "/guides/tip.html",
@@ -93,12 +84,9 @@
     {
       "url": "/blog/HOW-EMI-WORKS",
       "why": "uppercase twin of /blog/how-emi-works",
-      "status": 200,
-      "kind": "noindex",
-      "detail": "rendered robots=noindex, follow",
-      "rendered": true,
-      "robots": "noindex, follow",
-      "canonicalSeen": "https://calcpromaster.com/404"
+      "status": 301,
+      "kind": "redirect",
+      "detail": "301 -> https://calcpromaster.com/blog/how-emi-works"
     },
     {
       "url": "/blog/how-emi-works.html",
@@ -120,16 +108,16 @@
     {
       "url": "/TECH",
       "why": "uppercase twin of /tech",
-      "status": 404,
-      "kind": "notfound",
-      "detail": "404"
+      "status": 301,
+      "kind": "redirect",
+      "detail": "301 -> https://calcpromaster.com/tech/"
     },
     {
       "url": "/tech.html",
       "why": ".html twin of /tech",
-      "status": 404,
-      "kind": "notfound",
-      "detail": "404"
+      "status": 301,
+      "kind": "redirect",
+      "detail": "301 -> https://calcpromaster.com/tech/"
     },
     {
       "url": "/tech/this-page-does-not-exist-xyz",
@@ -144,16 +132,16 @@
     {
       "url": "/hub/FINANCE",
       "why": "uppercase twin of /hub/finance",
-      "status": 404,
-      "kind": "notfound",
-      "detail": "404"
+      "status": 301,
+      "kind": "redirect",
+      "detail": "301 -> https://calcpromaster.com/hub/finance/"
     },
     {
       "url": "/hub/finance.html",
       "why": ".html twin of /hub/finance",
-      "status": 404,
-      "kind": "notfound",
-      "detail": "404"
+      "status": 301,
+      "kind": "redirect",
+      "detail": "301 -> https://calcpromaster.com/hub/finance/"
     },
     {
       "url": "/hub/finance/this-page-does-not-exist-xyz",
@@ -165,9 +153,9 @@
     {
       "url": "/ABOUT",
       "why": "uppercase twin of /about",
-      "status": 404,
-      "kind": "notfound",
-      "detail": "404"
+      "status": 301,
+      "kind": "redirect",
+      "detail": "301 -> https://calcpromaster.com/about"
     },
     {
       "url": "/about.html",
@@ -186,16 +174,16 @@
     {
       "url": "/HOMEGARDEN",
       "why": "uppercase twin of /homegarden",
-      "status": 404,
-      "kind": "notfound",
-      "detail": "404"
+      "status": 301,
+      "kind": "redirect",
+      "detail": "301 -> https://calcpromaster.com/homegarden/"
     },
     {
       "url": "/homegarden.html",
       "why": ".html twin of /homegarden",
-      "status": 404,
-      "kind": "notfound",
-      "detail": "404"
+      "status": 301,
+      "kind": "redirect",
+      "detail": "301 -> https://calcpromaster.com/homegarden/"
     },
     {
       "url": "/homegarden/this-page-does-not-exist-xyz",
@@ -210,16 +198,16 @@
     {
       "url": "/BUSINESS",
       "why": "uppercase twin of /business",
-      "status": 404,
-      "kind": "notfound",
-      "detail": "404"
+      "status": 301,
+      "kind": "redirect",
+      "detail": "301 -> https://calcpromaster.com/business/"
     },
     {
       "url": "/business.html",
       "why": ".html twin of /business",
-      "status": 404,
-      "kind": "notfound",
-      "detail": "404"
+      "status": 301,
+      "kind": "redirect",
+      "detail": "301 -> https://calcpromaster.com/business/"
     },
     {
       "url": "/business/this-page-does-not-exist-xyz",
@@ -234,16 +222,16 @@
     {
       "url": "/CONSTRUCTION",
       "why": "uppercase twin of /construction",
-      "status": 404,
-      "kind": "notfound",
-      "detail": "404"
+      "status": 301,
+      "kind": "redirect",
+      "detail": "301 -> https://calcpromaster.com/construction/"
     },
     {
       "url": "/construction.html",
       "why": ".html twin of /construction",
-      "status": 404,
-      "kind": "notfound",
-      "detail": "404"
+      "status": 301,
+      "kind": "redirect",
+      "detail": "301 -> https://calcpromaster.com/construction/"
     },
     {
       "url": "/construction/this-page-does-not-exist-xyz",
@@ -258,16 +246,16 @@
     {
       "url": "/CONVERSION",
       "why": "uppercase twin of /conversion",
-      "status": 404,
-      "kind": "notfound",
-      "detail": "404"
+      "status": 301,
+      "kind": "redirect",
+      "detail": "301 -> https://calcpromaster.com/conversion/"
     },
     {
       "url": "/conversion.html",
       "why": ".html twin of /conversion",
-      "status": 404,
-      "kind": "notfound",
-      "detail": "404"
+      "status": 301,
+      "kind": "redirect",
+      "detail": "301 -> https://calcpromaster.com/conversion/"
     },
     {
       "url": "/conversion/this-page-does-not-exist-xyz",
@@ -282,16 +270,16 @@
     {
       "url": "/CAREER",
       "why": "uppercase twin of /career",
-      "status": 404,
-      "kind": "notfound",
-      "detail": "404"
+      "status": 301,
+      "kind": "redirect",
+      "detail": "301 -> https://calcpromaster.com/career/"
     },
     {
       "url": "/career.html",
       "why": ".html twin of /career",
-      "status": 404,
-      "kind": "notfound",
-      "detail": "404"
+      "status": 301,
+      "kind": "redirect",
+      "detail": "301 -> https://calcpromaster.com/career/"
     },
     {
       "url": "/career/this-page-does-not-exist-xyz",

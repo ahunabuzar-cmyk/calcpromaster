@@ -53,9 +53,6 @@ jobs:
           # committed — the script prints a skip notice and exits 0 without it.
           npm run seo:query-quality
 
-      - name: Unit tests
-        run: npm run test:unit
-
       - name: Upload SEO audit artifacts
         # `if: always()` on purpose: these files ARE the evidence for a failed
         # gate, and a red run is exactly when someone needs to read them. Without
@@ -87,6 +84,15 @@ jobs:
 
       - name: Build deploy/ folder
         run: node build-deploy.js
+
+      - name: Unit tests
+        # After the build on purpose: a dozen of these tests read deploy/ as the
+        # ground truth (sitemap, redirect destinations, keyword questions on the
+        # owner page, head/meta integrity). Running them in the static-gates job
+        # meant they failed on every runner with "run node build-deploy.js first",
+        # which is why CI had never been green. They belong beside the build they
+        # inspect, not before it.
+        run: npm run test:unit
 
       - name: Verify no broken JS landed in deploy/
         run: |

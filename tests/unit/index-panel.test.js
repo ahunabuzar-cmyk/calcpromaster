@@ -302,14 +302,25 @@ describe('index panel / churnAlert', () => {
   });
 
   it('prints the alert, and returns nothing to print when there is none', () => {
-    const lines = [];
-    const a = churnAlert(tradedWindow);
-    expect(emitChurnAlert(a, 'index panel', (l) => lines.push(l))).toBe(a);
-    expect(lines).toHaveLength(1);
-    expect(lines[0]).toContain('⚠ index panel: churn alert:');
-    expect(lines[0]).toContain('net -28');
-    expect(emitChurnAlert(null, 'index panel', (l) => lines.push(l))).toBeNull();
-    expect(lines).toHaveLength(1);
+    // This asserts the LOCAL line shape. On a GitHub runner GITHUB_ACTIONS is
+    // set for the whole job, so the emitter swaps the emoji for `::warning::`
+    // and the test used to fail on CI while passing on every laptop. Pin the
+    // env for the shape under test instead of inheriting whatever the runner set.
+    const prev = process.env.GITHUB_ACTIONS;
+    delete process.env.GITHUB_ACTIONS;
+    try {
+      const lines = [];
+      const a = churnAlert(tradedWindow);
+      expect(emitChurnAlert(a, 'index panel', (l) => lines.push(l))).toBe(a);
+      expect(lines).toHaveLength(1);
+      expect(lines[0]).toContain('⚠ index panel: churn alert:');
+      expect(lines[0]).toContain('net -28');
+      expect(emitChurnAlert(null, 'index panel', (l) => lines.push(l))).toBeNull();
+      expect(lines).toHaveLength(1);
+    } finally {
+      if (prev === undefined) delete process.env.GITHUB_ACTIONS;
+      else process.env.GITHUB_ACTIONS = prev;
+    }
   });
 
   it('emits a GitHub Actions annotation, so the alert cannot sit only in a report', () => {

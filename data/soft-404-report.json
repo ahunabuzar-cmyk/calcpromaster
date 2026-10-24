@@ -1,13 +1,12 @@
 {
-  "ranAt": "2026-10-24T04:26:58.007Z",
+  "ranAt": "2026-10-24T04:37:18.448Z",
   "origin": "https://calcpromaster.com",
   "render": true,
   "probes": 36,
   "tally": {
-    "noindex": 12,
+    "noindex": 14,
     "notfound": 19,
-    "redirect": 3,
-    "shell": 2
+    "redirect": 3
   },
   "rows": [
     {
@@ -274,8 +273,11 @@
       "url": "/conversion/this-page-does-not-exist-xyz",
       "why": "junk child of /conversion",
       "status": 200,
-      "kind": "shell",
-      "detail": "SPA shell (200) — needs --render to decide (not rendered — raise --limit)"
+      "kind": "noindex",
+      "detail": "rendered robots=noindex, follow",
+      "rendered": true,
+      "robots": "noindex, follow",
+      "canonicalSeen": "https://calcpromaster.com/404"
     },
     {
       "url": "/CAREER",
@@ -295,8 +297,11 @@
       "url": "/career/this-page-does-not-exist-xyz",
       "why": "junk child of /career",
       "status": 200,
-      "kind": "shell",
-      "detail": "SPA shell (200) — needs --render to decide (not rendered — raise --limit)"
+      "kind": "noindex",
+      "detail": "rendered robots=noindex, follow",
+      "rendered": true,
+      "robots": "noindex, follow",
+      "canonicalSeen": "https://calcpromaster.com/404"
     }
   ]
 }

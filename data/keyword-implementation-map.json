@@ -1,5 +1,5 @@
 {
-  "generatedFor": "2026-10-17",
+  "generatedFor": "2026-10-24",
   "source": "data/keyword-gap.json (scripts/audit-keyword-gap.cjs)",
   "totals": {
     "auditedKeywords": 604,

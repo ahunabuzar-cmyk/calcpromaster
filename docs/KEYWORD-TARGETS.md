@@ -1,6 +1,6 @@
 # Keyword Targeting Map — CalcProMaster (complete inventory)
 
-_Machine-extracted from the deploy tree + calculator data modules on 2026-10-17. Nothing hand-added, nothing omitted._
+_Machine-extracted from the deploy tree + calculator data modules on 2026-10-24. Nothing hand-added, nothing omitted._
 
 **How to read this document**
 
@@ -20,15 +20,15 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 
 ### `/`
 - **Title:** Calculators: 1285+ Free Online Tools — CalcProMaster
-- **Meta:** Free online calculators for loans, mortgages, BMI, tax and unit conversion — 1285+ tools with step-by-step solutions. Try one now, no sign-up.
+- **Meta:** Calculators for loans, mortgages, BMI, tax and unit conversion — 1285+ tools that show the formula and every step. Try one now, no sign-up.
 
 ### `/auto`
 - **Title:** Auto & Transport Calculators | CalcProMaster
-- **Meta:** Fuel cost, EV charging, car loan, depreciation and mileage calculators. It shows the formula and every step behind the result. Try it free, no sign-up.
+- **Meta:** Fuel cost, EV charging, car loan, depreciation and mileage calculators. Use it free, no account needed.
 
 ### `/business`
 - **Title:** Business Calculators | CalcProMaster
-- **Meta:** Free business calculators for ROI, profit margin, cash flow, break-even, CAC, LTV and markup — estimate any business metric in seconds.
+- **Meta:** ROI, profit margin, cash flow, break-even, CAC, LTV and markup calculators — enter your figures and compare the scenarios side by side.
 
 ### `/career`
 - **Title:** Career & Freelance Calculators
@@ -36,39 +36,39 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 
 ### `/construction`
 - **Title:** Construction Calculators — Concrete, Rebar & Roofing
-- **Meta:** Free construction calculators for concrete volume, rebar, roofing, flooring and building material estimates. Try it free, no sign-up.
+- **Meta:** Concrete volume, rebar, roofing, flooring and material estimates, with the coverage assumptions listed beside every result. See the result and every step.
 
 ### `/conversion`
 - **Title:** Unit Conversion Calculators | CalcProMaster
-- **Meta:** Free unit conversion calculators — length, weight, volume, temperature, speed, area and more with instant results. Try it free, no sign-up.
+- **Meta:** Length, weight, volume, temperature, speed and area converters — exact factors, with no rounding until the final. Check your own numbers in the browser.
 
 ### `/education`
 - **Title:** Education Calculators — GPA, Final Grade & Test Scores
-- **Meta:** Free education calculators for GPA, final grades, test scores, study time and grade targets — plan your coursework with real. Try it free, no sign-up.
+- **Meta:** GPA, final grade, test score and study-time calculators — see the weighting that produces the number before you rely on it.
 
 ### `/engineering`
 - **Title:** Engineering Calculators — Electrical, Mechanical & Civil
-- **Meta:** Free engineering calculators for electrical, mechanical and civil work — beam loads, wire gauge, Ohm law, torque and more. Try it free, no sign-up.
+- **Meta:** Electrical, mechanical and civil calculators for beam loads, wire gauge, Ohm law and torque — formula and worked steps on each page. Try it free, no sign-up.
 
 ### `/everyday`
 - **Title:** Everyday Calculators | CalcProMaster
-- **Meta:** Free everyday calculators — age, dates, fuel cost, cooking conversions, tips and time planning for daily life questions. Try it free, no sign-up.
+- **Meta:** Age, date, fuel, cooking, tip and time calculators for daily questions — enter two values and the working appears beside the result. Try it free, no sign-up.
 
 ### `/family`
 - **Title:** Parenting & Family Calculators
-- **Meta:** Child height prediction, family budget, college savings, childcare cost and estate planning. It shows the formula and every step. Try it free, no sign-up.
+- **Meta:** Child height prediction, family budget, college savings, childcare cost and estate planning. Check your own numbers in the browser.
 
 ### `/finance`
 - **Title:** Finance Calculators — Loan, EMI, Tax & SIP Tools
-- **Meta:** Free financial calculators for loans, mortgages, investments, taxes, retirement and more. It shows the formula and every step. Try it free, no sign-up.
+- **Meta:** Loan, mortgage, EMI, tax, retirement and SIP calculators — each page shows the formula. Explore the assumed values beside the result.
 
 ### `/fitness`
 - **Title:** Fitness & Exercise Calculators
-- **Meta:** Free fitness calculators for running pace, one-rep max, heart-rate zones, calories burned and workout planning. Try it free, no sign-up.
+- **Meta:** Running pace, one-rep max, heart-rate zones and calories-burned calculators, with the training formula shown step. Start with the defaults and compare.
 
 ### `/food`
 - **Title:** Food & Nutrition Calculators | CalcProMaster
-- **Meta:** Free food and nutrition calculators — calories, macros, keto limits, meal planning and recipe scaling with instant results. Try it free, no sign-up.
+- **Meta:** Calorie, macro, keto and meal-planning calculators — portion and recipe scaling with the nutrition reference behind. Check your own numbers in the browser.
 
 ### `/health`
 - **Title:** Health & Fitness Calculators | CalcProMaster
@@ -76,31 +76,31 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 
 ### `/homegarden`
 - **Title:** Home & Garden Calculators | CalcProMaster
-- **Meta:** Paint, wallpaper, lighting, AC size, garden soil and DIY project calculators. It shows the formula and every step behind the result. Try it free, no sign-up.
+- **Meta:** Paint, wallpaper, lighting, AC size, garden soil and DIY project calculators. Explore the assumed values beside the result.
 
 ### `/lifestyle`
 - **Title:** Lifestyle & Home Calculators | CalcProMaster
-- **Meta:** Free lifestyle calculators for moving costs, rent splits, cooking conversions, pet care and everyday home decisions. Try it free, no sign-up.
+- **Meta:** Moving cost, rent split, cooking conversion, pet care and home-decision calculators, with the assumptions shown beside each result. Try it free, no sign-up.
 
 ### `/math`
 - **Title:** Math Calculators — Percentage, Fraction & Algebra Tools
-- **Meta:** Scientific calculators, algebra, geometry, statistics and more math tools. It shows the formula and every step behind the result. Try it free, no sign-up.
+- **Meta:** Scientific calculators, algebra, geometry, statistics and more math tools. Explore the assumed values beside the result.
 
 ### `/regional`
 - **Title:** Regional Calculators (India/PK/UAE)
-- **Meta:** Free regional calculators for India, Pakistan and UAE — FD, RD, PPF, GST, zakat, income tax and local salary math. Try it free, no sign-up.
+- **Meta:** India, Pakistan and UAE calculators for FD, RD, PPF, GST, zakat, income tax and take-home salary. See the result and every step.
 
 ### `/science`
 - **Title:** Science Calculators — Physics & Chemistry Formulas
-- **Meta:** Free science calculators for physics and chemistry — density, molarity, kinetic energy, wave speed and lab conversions. Try it free, no sign-up.
+- **Meta:** Physics and chemistry calculators — density, molarity, kinetic energy, wave speed and lab conversions. Start with the defaults and compare.
 
 ### `/tech`
 - **Title:** Tech & Digital Calculators | CalcProMaster
-- **Meta:** Download time, data usage, password strength, domain value and tech ROI. It shows the formula and every step behind the result. Try it free, no sign-up.
+- **Meta:** Download time, data usage, password strength, domain value and tech ROI. Start with the defaults and compare.
 
 ### `/utilities`
 - **Title:** Utility Calculators | CalcProMaster
-- **Meta:** Free utility calculators — QR codes, password strength, color converters, unit helpers and other handy everyday tools. Try it free, no sign-up.
+- **Meta:** QR codes, password strength, colour converters and unit helpers — small tools that run in the browser. Explore the assumed values beside the result.
 
 ## 2. Support & trust pages
 
@@ -131,9 +131,9 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 | `/guides/auto` | Auto & Vehicle Guides — Fuel, ownership & running costs | |
 | `/guides/baby-cost` | Baby Cost Calculator — First-Year Budget & Worked Example |
 | `/guides/bmi` | How to Calculate BMI — Formula, Ranges & Meaning |
-| `/guides/bmr` | BMR Calculator — Mifflin-St Jeor Formula, Worked Example & |
+| `/guides/bmr` | BMR Calculator — Mifflin-St Jeor Formula & Worked Example |
 | `/guides/body-fat` | Body Fat Percentage — the US Navy Method, Formula & Limits |
-| `/guides/break-even` | Break-Even Analysis — Formula & Margin of Safety |
+| `/guides/break-even` | Break-Even Analysis: Formula, Example & Margin of Safety |
 | `/guides/business-days` | Business Days Calculator — Workday Math & Deadlines |
 | `/guides/business` | Business Guides — Break-Even, Margin, Target Profit |
 | `/guides/cagr` | CAGR Guide: What Compound Annual Growth Rate Tells You |
@@ -155,7 +155,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 | `/guides/family` | Family & Parenting Guides — Children & Budgets |
 | `/guides/fd-ppf-sip` | FD vs PPF vs SIP — Same ₹1 Lakh, Three Outcomes (Worked |
 | `/guides/food` | Food & Nutrition Guides — Calories, macros & kitchen math | |
-| `/guides/freelance-rate-card` | Rate Card Guide — Hourly, Project & Retainer Pricing for |
+| `/guides/freelance-rate-card` | Freelance Rate Card — Hourly, Project & Retainer Pricing |
 | `/guides/fuel-cost` | Fuel Cost Calculator — Trip Cost & Efficiency |
 | `/guides/gear-ratio` | Gear Ratio Calculator — Formula, RPM & Torque Trade-off |
 | `/guides/glossary` | Calculator & Finance Glossary — 36 Terms Explained Simply |
@@ -163,13 +163,13 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 | `/guides/grade-needed` | Grade Needed on Final — The Weighted-Grade Formula |
 | `/guides/gst-sales-tax` | GST & Sales Tax Explained — Adding & Removing Tax |
 | `/guides/health-fitness` | Health & Fitness Guides — BMI, Calories, Body Metrics |
-| `/guides/heart-rate-zones` | Heart Rate Training Zones — Formulas, Worked Numbers & |
+| `/guides/heart-rate-zones` | Heart Rate Training Zones — Formulas and Worked Numbers |
 | `/guides/homegarden` | Home & Garden Guides — Rooms, Materials & Sizing |
 | `/guides/hourly-rate` | Freelance Hourly Rate Calculator — Billable-Hours Formula |
 | `/guides/ideal-weight` | Ideal Weight Calculator — Devine Formula & BMI Range |
 | `/guides/income-tax` | How Income Tax Is Calculated — Brackets & Marginal Rates |
 | `/guides/inflation` | How Inflation Is Calculated — CPI & Purchasing Power |
-| `/guides/lifestyle` | Lifestyle & Money Habits Guides — Moving, renting & |
+| `/guides/lifestyle` | Lifestyle & Money Habits Guides — Moving, renting |
 | `/guides/loans-mortgages` | Loan & Mortgage Guides — EMI, Interest, Affordability |
 | `/guides/macro-calculator` | Macro Calculator — Protein, Carb & Fat Grams From Calories |
 | `/guides/math-statistics` | Math & Statistics Guides — Percentages & Randomness |
@@ -182,7 +182,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 | `/guides/percentage` | How to Calculate Percentage — Formula & Examples |
 | `/guides/profit-margin` | Profit Margin Calculator — Margin vs Markup |
 | `/guides/protein-intake` | Protein Intake Calculator — g/kg Targets & Food Equivalents |
-| `/guides/random-numbers` | How Random Number Generators Work — True vs Pseudo, Seeds & |
+| `/guides/random-numbers` | How Random Number Generators Work — True vs Pseudo |
 | `/guides/regional` | Regional Finance Guides — FD, RD, PPF & SIP (India) |
 | `/guides/rent-vs-buy` | Rent vs Buy — the Breakeven Math Most Comparisons Skip |
 | `/guides/retirement` | How Much to Retire — The Retirement Number Explained |
@@ -193,8 +193,8 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 | `/guides/sip` | SIP Calculator — The Future-Value Formula & Compounding |
 | `/guides/sleep-cycles` | Sleep Cycle Logic — 90-Minute Cycles & Wake Times Explained |
 | `/guides/tax-salary` | Tax & Salary Guides — Income Tax, GST, Take-Home Pay |
-| `/guides/tip` | How to Calculate a Tip: Rates and Splitting the Bill |
-| `/guides/unit-conversion` | Metric to Imperial Conversion Guide — Exact Factors & How to |
+| `/guides/tip` | How to Calculate a Tip: 15–20% Rates and Bill Splitting |
+| `/guides/unit-conversion` | Metric to Imperial Conversion Guide: Exact Factors |
 | `/guides/utilities` | Utilities & Developer Tools Guides — Text & Security |
 | `/guides/water-intake` | How Much Water Should You Drink — the Real Formula |
 | `/guides/wedding-budget` | Wedding Budget Planner — Category Splits & Guest Count |
@@ -260,7 +260,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: tire size calculator [MEDIUM/3] · free online Tire Size Calculator [EASY/2]
 
 **/auto/oil-change — Oil Change Interval**
-- Title: Oil Change Interval: When Change Oil
+- Title: Oil Change Interval Calculator: When Change Oil
 - Keywords: oil change interval [MEDIUM/3] · free online Oil Change Interval calculator [EASY/2]
 
 **/auto/car-insurance — Car Insurance Cost**
@@ -276,11 +276,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: rideshare vs car cost [EASY/2]
 
 **/auto/public-transport — Public Transport vs Car**
-- Title: Public Transport vs Car: One-Way km, Days/Month
+- Title: Public Transport vs Car Calculator: One-Way km & Days/Month
 - Keywords: public transport vs car [EASY/2]
 
 **/auto/walking-transit — Walk vs Transit Time**
-- Title: Walk vs Transit Time: Distance, Walk Speed & Transit Wait
+- Title: Walk vs Transit Time Calculator: Distance & Walk Speed
 - Keywords: walk vs transit [MEDIUM/3] · free online Walk vs Transit Time calculator [EASY/2]
 
 **/auto/trip-time — Trip Time Calculator**
@@ -288,7 +288,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: trip time calculator [MEDIUM/3] · free online Trip Time Calculator [EASY/2]
 
 **/auto/speed-distance-time — Speed Distance Time**
-- Title: Speed Distance Time: Distance, Speed & Hours
+- Title: Speed Distance Time Calculator: Distance, Speed & Hours
 - Keywords: speed distance time [MEDIUM/3] · free online Speed Distance Time calculator [EASY/2]
 
 **/auto/parking-cost — Parking Cost Calculator**
@@ -300,7 +300,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: free online Car Depreciation calculator [EASY/2]
 
 **/auto/trade-in-value — Trade-In Value Estimator**
-- Title: Trade-In Value Estimator: Original Price & Age
+- Title: Car Trade-In Value Calculator: What It Is Worth Now
 - Keywords: trade in value [MEDIUM/3] · free online Trade-In Value Estimator [EASY/2]
 
 **/auto/bike-fuel — Motorcycle Fuel Cost**
@@ -312,11 +312,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: free online Motorcycle Loan EMI calculator [EASY/2]
 
 **/auto/stopping-distance — Stopping Distance**
-- Title: Stopping Distance: Speed & Reaction Time
+- Title: Stopping Distance Calculator: Speed & Reaction Time
 - Keywords: stopping distance calculator [MEDIUM/3] · free online Stopping Distance calculator [EASY/2]
 
 **/auto/fuel-efficiency — Fuel Efficiency Savings**
-- Title: Fuel Efficiency Savings: Current km/L, Target km/L
+- Title: Fuel Efficiency Savings Calculator
 - Keywords: fuel efficiency savings [MEDIUM/3] · free online Fuel Efficiency Savings calculator [EASY/2]
 
 **/auto/car-rental — Car Rental Cost**
@@ -328,7 +328,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: taxi fare estimator [MEDIUM/3] · free online Taxi Fare Estimator [EASY/2]
 
 **/auto/auto-fare — Auto-Rickshaw Fare**
-- Title: Auto-Rickshaw Fare: Distance, Base Fare & Per km
+- Title: Auto Fare Meaning: Base Fare Plus Per-km Rate
 - Keywords: auto rickshaw fare [MEDIUM/3] · free online Auto-Rickshaw Fare calculator [EASY/2]
 
 **/auto/delivery-cost — Delivery Cost Calculator**
@@ -340,7 +340,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: route cost calculator [MEDIUM/3] · free online Multi-Stop Route Cost calculator [EASY/2]
 
 **/auto/carbon-footprint-car — Car Carbon Footprint**
-- Title: Car Carbon Footprint: Yearly km & km/L
+- Title: Car Carbon Footprint Calculator: Yearly km & km/L
 - Keywords: free online Car Carbon Footprint calculator [EASY/2]
 
 **/auto/fuel-tank-range — Fuel Tank Range Calculator**
@@ -388,7 +388,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: speed converter kmh mph pace calculator [MEDIUM/3] · free online Speed Converter (Auto) [EASY/2]
 
 **/auto/hybrid-savings — Hybrid vs Gas Savings**
-- Title: Hybrid vs Gas Savings: Annual km, Gas Car & Hybrid
+- Title: Hybrid vs Gas Savings Calculator: Annual km & Gas Car
 - Keywords: hybrid vs gas savings calculator mpg fuel cost [EASY/2]
 
 **/auto/power-to-weight — Power-to-Weight Calculator**
@@ -414,7 +414,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: profit margin calculator with cost and revenue [EASY/2]
 
 **/business/ltv — Customer LTV**
-- Title: Customer LTV: Monthly Revenue/User & Customer Lifespan
+- Title: Customer LTV Calculator: Monthly & Customer Lifespan
 - Keywords: customer ltv calculator [MEDIUM/3] · free online Customer LTV calculator [EASY/2]
 
 **/business/cac — CAC Calculator**
@@ -458,7 +458,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: inventory turnover calculator [MEDIUM/3] · free online Inventory Turnover calculator [EASY/2]
 
 **/business/break-even-revenue — Break-Even Revenue**
-- Title: Break-Even Revenue: Fixed Costs & Contribution Margin
+- Title: Break-Even Revenue Calculator: Fixed Costs & Contribution
 - Keywords: break even revenue [MEDIUM/3] · free online Break-Even Revenue calculator [EASY/2]
 
 **/business/payback — Payback Period**
@@ -482,7 +482,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: break even point calculator with fixed costs [EASY/2] · break even point [MEDIUM/3]
 
 **/business/invoice-due-date — Invoice Due Date & Late Fee**
-- Title: Invoice Due Date & Late Fee: Invoice Amount, Days Late
+- Title: Invoice Due Date & Late Fee Calculator
 - Keywords: free online Invoice Due Date & Late Fee calculator [EASY/2]
 
 **/business/employee-cost — True Employee Cost**
@@ -502,7 +502,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: cash flow calculator net operating investing financing [MEDIUM/3] · free online Cash Flow Statement Calculator [EASY/2]
 
 **/business/revenue-per-employee — Revenue per Employee**
-- Title: Revenue per Employee: Annual Revenue & Employees
+- Title: Revenue per Employee Calculator: Annual Revenue & Employees
 - Keywords: revenue per employee calculator productivity [EASY/2]
 
 **/business/cac-payback — CAC Payback Period**
@@ -510,7 +510,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: cac payback period calculator months customer acquisition [MEDIUM/3] · free online CAC Payback Period calculator [EASY/2]
 
 **/business/business-valuation — Business Valuation (Revenue Multiple)**
-- Title: Business Valuation (Revenue Multiple): Annual
+- Title: Business Valuation (Revenue Multiple) Calculator
 - Keywords: business valuation calculator revenue multiple ebitda [MEDIUM/3] · free online Business Valuation (Revenue Multiple) calculator [EASY/2]
 
 **/business/gross-margin — Gross Margin Calculator**
@@ -550,7 +550,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: conversion funnel calculator step rate drop off marketing [EASY/2]
 
 **/business/ab-test-significance — A/B Test Significance Calculator**
-- Title: A/B Test Significance Calculator: Variant A
+- Title: A/B Test Significance Calculator: Z-Score of Two Variants
 - Keywords: ab test significance calculator z score conversion split test [MEDIUM/3] · free online A/B Test Significance Calculator [EASY/2]
 
 **/business/project-bid — Project Bid Calculator**
@@ -582,7 +582,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: tool depreciation calculator [MEDIUM/3] · equipment depreciation [MEDIUM/3] · small business tool tax deduction [MEDIUM/4] · straight line depreciation [MEDIUM/3]
 
 **/business/ev-charger-business-roi — Business EV Charger ROI Calculator**
-- Title: Business EV Charger ROI Calculator: Number of
+- Title: Business EV Charger ROI: Payback on Installed Units
 - Keywords: ev charger business roi [EASY/2] · commercial ev charger payback [MEDIUM/3] · public charging station profit [MEDIUM/3] · ev charging business case [MEDIUM/3]
 
 ## 5.3 Career & Freelance Calculators — `career/` (46 tools)
@@ -680,7 +680,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: redundancy pay calculator [MEDIUM/3] · free online Redundancy Pay Calculator [EASY/2]
 
 **/career/self-employment-tax — Self-Employment Tax**
-- Title: Self-Employment Tax: Net Self-Employment & Other W-2 Income
+- Title: Self-Employment Tax Calculator: Net & Other W-2 Income
 - Keywords: self employment tax calculator freelancer 15.3 percent [MEDIUM/4] · free online Self-Employment Tax calculator [EASY/2]
 
 **/career/freelance-daily — Freelance Daily Rate**
@@ -692,11 +692,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: freelance monthly goal calculator billable hours target [EASY/2]
 
 **/career/retirement-contrib — Retirement Contribution Impact**
-- Title: Retirement Contribution Impact: Annual Salary
+- Title: Retirement Contribution Impact Calculator
 - Keywords: retirement contribution calculator 401k impact take home [MEDIUM/4] · free online Retirement Contribution Impact calculator [EASY/2]
 
 **/career/benefits-value — Benefits Package Value**
-- Title: Benefits Package Value: Base Salary, Insurance Premium
+- Title: Benefits Package Value Calculator
 - Keywords: benefits value calculator package compensation insurance [MEDIUM/3] · free online Benefits Package Value calculator [EASY/2]
 
 **/career/pto-calc — PTO Accrual Calculator**
@@ -720,7 +720,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: side hustle profit calculator hourly true cost [MEDIUM/3] · free online Side Hustle Profit calculator [EASY/2]
 
 **/career/salary-raise-worth — Salary Raise Worth**
-- Title: Salary Raise Worth: Current Salary, Raise % & Years
+- Title: Salary Raise Worth Calculator: Current Salary & Raise %
 - Keywords: salary raise calculator net worth 5 years [MEDIUM/4] · free online Salary Raise Worth calculator [EASY/2]
 
 **/career/wfh-savings — Work-from-Home Savings Calculator**
@@ -878,7 +878,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: concrete bag calculator cement bags volume [MEDIUM/4] · free online Concrete Bag Calculator [EASY/2]
 
 **/construction/block-wall — Concrete Block Wall**
-- Title: Concrete Block Wall: Wall Length & Wall Height
+- Title: Concrete Block Wall Calculator: Wall Length & Wall Height
 - Keywords: block wall calculator concrete blocks cmu [MEDIUM/4] · free online Concrete Block Wall calculator [EASY/2]
 
 **/construction/rebar-calc — Rebar Layout Calculator**
@@ -902,7 +902,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: mortar mix calculator cement sand ratio [MEDIUM/3] · free online Mortar Mix Calculator [EASY/2]
 
 **/construction/drywall-screws — Drywall Screw Count**
-- Title: Drywall Screw Count: Drywall Sheets
+- Title: Drywall Screw Count Calculator: Drywall Sheets
 - Keywords: drywall screw calculator count per sheet [EASY/2]
 
 **/construction/pipe-volume — Pipe Volume Calculator**
@@ -910,19 +910,19 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: pipe volume calculator gallons liters [MEDIUM/3] · free online Pipe Volume Calculator [EASY/2]
 
 **/construction/retaining-wall — Retaining Wall Blocks**
-- Title: Retaining Wall Blocks: Wall Length, Wall Height
+- Title: Retaining Wall Blocks Calculator: Wall Length & Wall Height
 - Keywords: retaining wall calculator blocks [MEDIUM/3] · free online Retaining Wall Blocks calculator [EASY/2]
 
 **/construction/scaffolding — Scaffolding Estimate**
-- Title: Scaffolding Estimate: Wall Length & Wall Height
+- Title: Scaffolding Estimate Calculator: Wall Length & Wall Height
 - Keywords: scaffolding calculator sections estimate [MEDIUM/3] · free online Scaffolding Estimate calculator [EASY/2]
 
 **/construction/crown-molding — Crown Molding Length**
-- Title: Crown Molding Length: Room Length, Room Width & Waste %
+- Title: Crown Molding Length Calculator: Room Length & Room Width
 - Keywords: crown molding calculator linear feet perimeter [EASY/2]
 
 **/construction/septic-size — Septic Tank Size**
-- Title: Septic Tank Size: Bedrooms & Occupants
+- Title: Septic Tank Size Calculator: Bedrooms & Occupants
 - Keywords: septic tank size calculator bedrooms gallons [MEDIUM/3] · free online Septic Tank Size calculator [EASY/2]
 
 **/construction/plaster — Plaster Quantity Calculator**
@@ -1140,7 +1140,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: radiation dose converter gray sievert rad rem [MEDIUM/3] · free online Radiation Dose Converter [EASY/2]
 
 **/conversion/wire-gauge-conv — Wire Gauge (AWG) Converter**
-- Title: Wire Gauge (AWG) Converter: Mm And Mm
+- Title: AWG to mm Converter: Wire Gauge Diameter and Area
 - Keywords: awg to mm converter wire gauge diameter area [MEDIUM/3] · free online Wire Gauge (AWG) Converter [EASY/2]
 
 **/conversion/acceleration-conv — Acceleration Converter**
@@ -1174,15 +1174,15 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: test score calculator [MEDIUM/3] · free online Test Score Calculator [EASY/2]
 
 **/education/exam-countdown — Exam Countdown**
-- Title: Exam Countdown: Exam Date
+- Title: Exam Countdown Calculator: Exam Date
 - Keywords: days until exam [MEDIUM/3] · free online Exam Countdown calculator [EASY/2]
 
 **/education/words-pages — Words to Pages**
-- Title: Words to Pages: Word Count
+- Title: Words to Pages Calculator: Word Count
 - Keywords: words to pages [MEDIUM/3] · free online Words to Pages calculator [EASY/2]
 
 **/education/citation — Citation Generator**
-- Title: Citation Generator: Author, Title & Year
+- Title: Citation Generator Calculator: Author, Title & Year
 - Keywords: citation generator calculator [MEDIUM/3] · free online Citation Generator calculator [EASY/2]
 
 **/education/quiz-score — Quiz Score Predictor**
@@ -1190,7 +1190,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: quiz score predictor [MEDIUM/3] · free online Quiz Score Predictor calculator [EASY/2]
 
 **/education/semester-gpa — Semester GPA Projector**
-- Title: Semester GPA Projector: Course 1 Credits, Course 1 Grade
+- Title: Semester GPA Projector Calculator
 - Keywords: gpa calculator semester with credit hours [EASY/2]
 
 **/education/college-cost-planner — College Cost Planner**
@@ -1250,7 +1250,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: study hours calculator per credit course [EASY/2]
 
 **/education/tuition-cost — Tuition Cost Calculator**
-- Title: Tuition Cost Calculator: What a Degree Really Costs
+- Title: College Tuition Cost Calculator: Cost of a Degree
 - Keywords: tuition cost calculator degree total fees [MEDIUM/3] · free online Tuition Cost Calculator [EASY/2]
 
 **/education/gpa-target — GPA Target Calculator**
@@ -1306,7 +1306,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: study abroad cost calculator [MEDIUM/3] · cost of studying abroad [MEDIUM/3] · international student cost estimate [MEDIUM/3] · tuition and living cost abroad [MEDIUM/3]
 
 **/education/scholarship-gap — Scholarship Funding Gap Calculator**
-- Title: Scholarship Funding Gap Calculator: Annual cost of
+- Title: Scholarship Funding Gap Calculator: Cost Left per Year
 - Keywords: scholarship gap calculator [MEDIUM/3] · college funding gap [MEDIUM/3] · unmet need calculator [MEDIUM/3] · student aid gap [MEDIUM/3]
 
 **/education/student-loan-vs-scholarship — Student Loan vs Scholarship Calculator**
@@ -1376,7 +1376,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: free hydraulic calculator [MEDIUM/3] · free online Hydraulic Calculator [EASY/2]
 
 **/engineering/thermal — Thermal Expansion**
-- Title: Thermal Expansion: Initial Length, Expansion Coeff
+- Title: Thermal Expansion Calculator: Length Change
 - Keywords: thermal expansion calculator [MEDIUM/3] · free online Thermal Expansion calculator [EASY/2]
 
 **/engineering/kva-kw — kVA to kW Converter**
@@ -1392,7 +1392,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: flow rate calculator [MEDIUM/3] · free online Flow Rate Calculator [EASY/2]
 
 **/engineering/sound-level — Sound Level Addition**
-- Title: Sound Level Addition: Combined
+- Title: Sound Level Addition Calculator: Combined
 - Keywords: sound level addition calculator [MEDIUM/3] · free online Sound Level Addition calculator [EASY/2]
 
 **/engineering/shaft-power — Shaft Power Calculator**
@@ -1424,7 +1424,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: beam deflection calculator simply supported uniform load [MEDIUM/3] · free online Beam Deflection (Simply Supported) calculator [EASY/2]
 
 **/engineering/column-buckling — Euler Buckling Load**
-- Title: Euler Buckling Load: Young Modulus, Moment of Inertia
+- Title: Euler Buckling Load Calculator
 - Keywords: euler buckling load calculator column critical load [MEDIUM/3] · free online Euler Buckling Load calculator [EASY/2]
 
 **/engineering/pipe-flow — Pipe Flow Rate (Darcy-Weisbach)**
@@ -1432,11 +1432,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: pipe flow calculator darcy weisbach pressure drop [MEDIUM/3] · free online Pipe Flow Rate (Darcy-Weisbach) calculator [EASY/2]
 
 **/engineering/steel-weight — Steel Weight Calculator**
-- Title: Steel Weight Calculator: Dimension 1, Dimension 2
+- Title: Steel Weight Calculator: Plate, Bar and Tube Weight
 - Keywords: steel weight calculator beam plate bar kg [EASY/2]
 
 **/engineering/concrete-mix — Concrete Mix Design**
-- Title: Concrete Mix Design: Volume
+- Title: Concrete Mix Design Calculator: Volume
 - Keywords: concrete mix calculator cement sand gravel ratio [MEDIUM/4] · free online Concrete Mix Design calculator [EASY/2]
 
 **/engineering/structural-load — Structural Load Calculator**
@@ -1448,19 +1448,19 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: electricity cost calculator energy bill appliance [MEDIUM/3] · free online Electrical Energy Cost calculator [EASY/2]
 
 **/engineering/resistor-combination — Resistor Combination**
-- Title: Resistor Combination: Series
+- Title: Resistor Combination Calculator: Series
 - Keywords: resistor calculator series parallel combination [MEDIUM/3] · free online Resistor Combination calculator [EASY/2]
 
 **/engineering/capacitor-energy — Capacitor Energy**
-- Title: Capacitor Energy: Capacitance & Voltage
+- Title: Capacitor Energy Calculator: Capacitance & Voltage
 - Keywords: capacitor energy calculator farad voltage joules [MEDIUM/3] · free online Capacitor Energy calculator [EASY/2]
 
 **/engineering/inductor-energy — Inductor Energy**
-- Title: Inductor Energy: Inductance & Current
+- Title: Inductor Energy Calculator: Inductance & Current
 - Keywords: inductor energy calculator henry current joules [MEDIUM/3] · free online Inductor Energy calculator [EASY/2]
 
 **/engineering/rc-time-constant — RC Time Constant**
-- Title: RC Time Constant: Resistance & Capacitance
+- Title: RC Time Constant Calculator: Resistance & Capacitance
 - Keywords: rc time constant calculator capacitor [MEDIUM/3] · free online RC Time Constant calculator [EASY/2]
 
 **/engineering/cable-sizing — Cable Sizing Calculator**
@@ -1472,11 +1472,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: ventilation calculator cfm air changes per hour [EASY/2]
 
 **/engineering/torque-wrench — Torque Wrench Setting**
-- Title: Torque Wrench Setting: Target Torque, Wrench Length
+- Title: Torque Wrench Setting Calculator
 - Keywords: torque wrench calculator extension adapter setting [MEDIUM/3] · free online Torque Wrench Setting calculator [EASY/2]
 
 **/engineering/bearing-load — Bearing Load Rating**
-- Title: Bearing Load Rating: Dynamic Load, Speed & Required Life
+- Title: Bearing Load Rating Calculator: Dynamic Load & Speed
 - Keywords: bearing calculator load rating life l10 hours [EASY/2]
 
 **/engineering/engine-efficiency — Engine Efficiency Calculator**
@@ -1492,7 +1492,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: tank volume calculator cylindrical rectangular water storage [MEDIUM/3] · free online Tank Volume Calculator [EASY/2]
 
 **/engineering/heat-exchanger — Heat Exchanger (LMTD)**
-- Title: Heat Exchanger (LMTD): Hot In, Hot Out & Cold In
+- Title: Heat Exchanger LMTD Calculator: Four Temperatures
 - Keywords: heat exchanger calculator lmtd approach temperature [MEDIUM/3] · free online Heat Exchanger (LMTD) calculator [EASY/2]
 
 **/engineering/pcb-trace — PCB Trace Width Calculator**
@@ -1642,7 +1642,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: time zone converter calculator [MEDIUM/3] · free online Time Zone Converter [EASY/2]
 
 **/everyday/calorie-counter — Daily Calorie Counter**
-- Title: Daily Calorie Counter: Weight, Height & Age
+- Title: Daily Calorie Counter Calculator: Weight, Height & Age
 - Keywords: nutrition tracker [MEDIUM/3] · diet plan [MEDIUM/3] · free online Daily Calorie Counter [EASY/2]
 
 **/everyday/currency-exchange — Currency Exchange Fee Calculator**
@@ -1666,7 +1666,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: dog age to human years calculator [MEDIUM/4] · free online Pet Age Calculator (Dog/Cat) [EASY/2]
 
 **/everyday/blood-alcohol — Blood Alcohol Content (BAC)**
-- Title: Blood Alcohol Content (BAC): Number of Drinks, Weight
+- Title: Blood Alcohol Content (BAC) Calculator
 - Keywords: blood alcohol content calculator [MEDIUM/3] · free online Blood Alcohol Content (BAC) calculator [EASY/2]
 
 **/everyday/vacation-budget — Vacation Budget Planner**
@@ -1690,7 +1690,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: distance pace calculator [MEDIUM/3] · free online Distance Pace Calculator [EASY/2]
 
 **/everyday/savings-goal-date — Savings Goal Date**
-- Title: Savings Goal Date: Goal Amount, Current Savings
+- Title: Savings Goal Date Calculator: Goal Amount & Current Savings
 - Keywords: savings goal calculator date time to save [MEDIUM/4] · free online Savings Goal Date calculator [EASY/2]
 
 **/everyday/budget-allocator — Monthly Budget Allocator**
@@ -1698,19 +1698,19 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: budget calculator monthly allocation percentages [EASY/2]
 
 **/everyday/event-countdown — Event Countdown**
-- Title: Event Countdown: Event Date & Count From
+- Title: Event Countdown Calculator: Event Date & Count From
 - Keywords: countdown calculator days until event date [MEDIUM/4] · free online Event Countdown calculator [EASY/2]
 
 **/everyday/work-hours-weekly — Weekly Work Hours**
-- Title: Weekly Work Hours: Days per Week & Hours per Day
+- Title: Weekly Work Hours Calculator: Days per Week & Hours per Day
 - Keywords: work hours calculator weekly annual [EASY/2]
 
 **/everyday/days-between — Days Between Dates**
-- Title: Days Between Dates: From Date & To Date
+- Title: Days Between Dates Calculator: From Date & To Date
 - Keywords: days between dates calculator duration [EASY/2]
 
 **/everyday/compound-savings — Compound Savings Growth**
-- Title: Compound Savings Growth: Starting Amount, Monthly Deposit
+- Title: Compound Savings Growth Calculator
 - Keywords: compound interest savings calculator monthly contribution [EASY/2]
 
 **/everyday/business-days — Business Days Calculator**
@@ -1726,7 +1726,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: day of year calculator ordinal date [EASY/2]
 
 **/everyday/leap-year — Leap Year Calculator**
-- Title: Leap Year Calculator: Is Year Leap
+- Title: How Is a Leap Year Calculated? The ÷4 Rule
 - Keywords: leap year calculator check divisible 4 100 400 [MEDIUM/3] · free online Leap Year Calculator [EASY/2]
 
 **/everyday/lottery-odds — Lottery Odds Calculator**
@@ -1770,7 +1770,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: moving truck size calculator rooms cubic feet rental [EASY/2]
 
 **/everyday/jet-lag — Jet Lag Recovery Calculator**
-- Title: Jet Lag Calculator: Days to Adjust, East vs West
+- Title: Jet Lag Calculator: Recovery Time, East vs West
 - Keywords: jet lag calculator recovery days time zones east west [MEDIUM/3] · free online Jet Lag Recovery Calculator [EASY/2]
 
 **/everyday/heat-pump-savings — Heat Pump Savings Calculator**
@@ -1812,7 +1812,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: auto loan calculator with sales tax [EASY/2]
 
 **/finance/credit-card-payoff — Credit Card Payoff**
-- Title: Credit Card Payoff: Current Balance, APR & Monthly Payment
+- Title: Credit Card Payoff Calculator: Current Balance & APR
 - Keywords: credit card payoff calculator with extra payment [EASY/2] · debt payoff calculator monthly payment plan [EASY/2] · credit card payoff [MEDIUM/3] · solve for payment [MEDIUM/3]
 
 **/finance/retirement — Retirement Calculator**
@@ -2052,7 +2052,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: annuity payout calculator retirement withdrawal [MEDIUM/3] · free online Annuity Payout Calculator [EASY/2]
 
 **/finance/dividend-yield — Dividend Yield Calculator**
-- Title: Dividend Yield Calculator: Annual Dividend & Share Price
+- Title: Dividend Yield Calculator: Income for Every Dollar
 - Keywords: dividend yield calculator [MEDIUM/3] · free online Dividend Yield Calculator [EASY/2]
 
 **/finance/rule-of-72 — Rule of 72 Calculator**
@@ -2080,7 +2080,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: 529 plan calculator education savings [MEDIUM/3] · free online 529 Plan Calculator [EASY/2]
 
 **/finance/times-interest-earned — Times Interest Earned**
-- Title: Times Interest Earned: EBIT & Interest Expense
+- Title: Times Interest Earned Calculator: EBIT & Interest Expense
 - Keywords: times interest earned ratio calculator [MEDIUM/4] · free online Times Interest Earned calculator [EASY/2]
 
 **/finance/quick-ratio — Quick Ratio Calculator**
@@ -2116,7 +2116,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: payday loan cost calculator true cost [MEDIUM/4] · free online Payday Loan Cost Calculator [EASY/2]
 
 **/finance/emergency-fund-rate — Emergency Fund Growth**
-- Title: Emergency Fund Growth: Monthly Deposit, APY & Months
+- Title: Emergency Fund Growth Calculator: Monthly Deposit & APY
 - Keywords: emergency fund growth high yield savings calculator [MEDIUM/3] · free online Emergency Fund Growth calculator [EASY/2]
 
 **/finance/property-tax — Property Tax Calculator**
@@ -2124,7 +2124,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: property tax calculator annual estimate [MEDIUM/4] · free online Property Tax Calculator [EASY/2]
 
 **/finance/closing-costs — Closing Costs Calculator**
-- Title: Closing Costs Calculator: Home Price, Down Payment
+- Title: Closing Costs Calculator: What to Budget at Closing
 - Keywords: closing costs calculator home purchase [MEDIUM/4] · free online Closing Costs Calculator [EASY/2]
 
 **/finance/cap-rate — Cap Rate Calculator**
@@ -2140,7 +2140,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: after tax cost of debt calculator [MEDIUM/4] · free online Cost of Debt Calculator [EASY/2]
 
 **/finance/fha-loan — FHA Loan Calculator**
-- Title: FHA Loan Calculator: Home Price, Down Payment
+- Title: FHA Loan Calculator: Monthly Payment With MIP
 - Keywords: fha loan calculator mortgage mip [MEDIUM/4] · free online FHA Loan Calculator [EASY/2]
 
 **/finance/va-loan — VA Loan Calculator**
@@ -2168,7 +2168,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: pe ratio calculator price to earnings stock [MEDIUM/3] · free online P/E Ratio Calculator [EASY/2]
 
 **/finance/dividend-discount — Dividend Discount Model**
-- Title: Dividend Discount Model: Annual Dividend, Dividend Growth
+- Title: Dividend Discount Model Calculator
 - Keywords: dividend discount model calculator ddm gordon growth [MEDIUM/4] · free online Dividend Discount Model calculator [EASY/2]
 
 **/finance/margin-call — Margin Call Price Calculator**
@@ -2188,7 +2188,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: growing perpetuity calculator constant growth [MEDIUM/3] · free online Growing Perpetuity Calculator [EASY/2]
 
 **/finance/tax-loss-harvest — Tax Loss Harvesting**
-- Title: Tax Loss Harvesting: Capital Gains, Capital Losses
+- Title: Tax Loss Harvesting Calculator
 - Keywords: tax loss harvesting calculator offset gains losses [MEDIUM/4] · free online Tax Loss Harvesting calculator [EASY/2]
 
 **/finance/savings-rate — Savings Rate Calculator**
@@ -2204,7 +2204,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: car lease payment calculator monthly lease estimate [EASY/2]
 
 **/finance/cost-of-living — Cost of Living Calculator**
-- Title: Cost of Living Calculator: Current Salary, City A
+- Title: Cost of Living Calculator: Compare Two Cities
 - Keywords: cost of living calculator compare cities salary adjustment [MEDIUM/4] · free online Cost of Living Calculator [EASY/2]
 
 **/finance/debt-consolidation — Debt Consolidation Calculator**
@@ -2232,7 +2232,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: operating margin calculator [MEDIUM/3] · free online Operating Margin Calculator [EASY/2]
 
 **/finance/net-profit-margin — Net Profit Margin**
-- Title: Net Profit Margin: Revenue & Net Income
+- Title: Net Profit Margin Calculator: Revenue & Net Income
 - Keywords: net profit margin calculator [MEDIUM/3] · free online Net Profit Margin calculator [EASY/2]
 
 **/finance/coverage-ratio — Debt Coverage Ratio**
@@ -2272,7 +2272,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: payroll tax calculator fica medicare social security [MEDIUM/4] · free online Payroll Tax Calculator [EASY/2]
 
 **/finance/standard-deduction — Standard vs Itemized Deduction**
-- Title: Standard vs Itemized Deduction: SALT, Mortgage Interest
+- Title: Standard vs Itemized Deduction Calculator
 - Keywords: standard deduction vs itemized deduction calculator [EASY/2]
 
 **/finance/home-office-deduction — Home Office Deduction**
@@ -2284,7 +2284,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: estimated tax calculator quarterly self employed [MEDIUM/4] · free online Estimated Tax Calculator [EASY/2]
 
 **/finance/diversification — Portfolio Diversification**
-- Title: Portfolio Diversification: Stocks, Bonds & Real Estate
+- Title: Portfolio Diversification Calculator: Stocks & Bonds
 - Keywords: portfolio diversification calculator asset allocation [MEDIUM/3] · free online Portfolio Diversification calculator [EASY/2]
 
 **/finance/forex-pip — Forex Pip Calculator**
@@ -2328,7 +2328,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: fd vs rd calculator fixed deposit recurring deposit comparison [EASY/2]
 
 **/finance/insurance-surrender-value — Insurance Surrender Value**
-- Title: Insurance Surrender Value: Annual Premium, Years
+- Title: Insurance Surrender Value Calculator
 - Keywords: insurance surrender value calculator life policy lapsed [MEDIUM/3] · free online Insurance Surrender Value calculator [EASY/2]
 
 **/finance/espp — ESPP Calculator (Stock Purchase Plan)**
@@ -2336,7 +2336,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: espp calculator employee stock purchase plan discount lookback [MEDIUM/4] · free online ESPP Calculator (Stock Purchase Plan) [EASY/2]
 
 **/finance/roth-vs-traditional — Roth vs Traditional 401(k)**
-- Title: Roth vs Traditional 401(k): Annual Contribution
+- Title: Roth vs Traditional 401(k) Calculator
 - Keywords: roth vs traditional 401k ira comparison after tax [EASY/2]
 
 **/finance/recast-mortgage — Mortgage Recast Calculator**
@@ -2352,7 +2352,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: mortgage points calculator break even discount points [MEDIUM/4] · free online Mortgage Points Calculator [EASY/2]
 
 **/finance/rent-affordability — Rent Affordability Calculator**
-- Title: Rent Affordability Calculator: Monthly Gross Income
+- Title: Rent Affordability Calculator: Rent You Can Afford
 - Keywords: rent affordability calculator how much rent can i afford [EASY/2]
 
 **/finance/dividend-reinvestment — Dividend Reinvestment Calculator**
@@ -2364,7 +2364,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: stock split calculator forward reverse ratio [MEDIUM/3] · free online Stock Split Calculator [EASY/2]
 
 **/finance/eps-calculator — Earnings Per Share Calculator**
-- Title: Earnings Per Share Calculator: Net Income
+- Title: EPS Calculator: Earnings Per Share From Net Income
 - Keywords: earnings per share calculator eps [EASY/2]
 
 **/finance/book-value-share — Book Value Per Share Calculator**
@@ -2376,11 +2376,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: net operating income calculator noi real estate [MEDIUM/3] · free online NOI Calculator [EASY/2]
 
 **/finance/credit-utilization — Credit Utilization Calculator**
-- Title: Credit Utilization Calculator: Total Card Balances
+- Title: Credit Utilization Calculator: Balance vs Limit
 - Keywords: credit utilization calculator credit card ratio [EASY/2]
 
 **/finance/apy-calculator — APY Calculator**
-- Title: APY Calculator: Annual Percentage Yield & Rate
+- Title: APY Calculator: Annual Percentage Yield From a Rate
 - Keywords: apy calculator annual percentage yield compounding [EASY/2]
 
 **/finance/lump-sum-vs-sip — Lump Sum vs SIP Calculator**
@@ -2388,7 +2388,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: lump sum vs sip calculator comparison mutual fund [EASY/2]
 
 **/finance/pmi-calculator — PMI Calculator**
-- Title: PMI Calculator: Home Price, Down Payment & Annual PMI Rate
+- Title: PMI Calculator: Monthly Mortgage Insurance Cost
 - Keywords: pmi calculator private mortgage insurance monthly [EASY/2]
 
 **/finance/pension-lump-sum — Pension Lump Sum vs Annuity Calculator**
@@ -2396,11 +2396,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: pension lump sum vs annuity calculator present value [EASY/2]
 
 **/finance/prorated-rent — Prorated Rent Calculator**
-- Title: Prorated Rent Calculator: Monthly Rent, Occupied Days
+- Title: Prorated Rent Calculator: Pay Only for Days Used
 - Keywords: prorated rent calculator partial month move in move out daily rent [EASY/2]
 
 **/finance/dso — Days Sales Outstanding (DSO)**
-- Title: Days Sales Outstanding (DSO): Accounts Receivable
+- Title: Days Sales Outstanding (DSO) Calculator
 - Keywords: dso calculator days sales outstanding receivables collection period [MEDIUM/3] · free online Days Sales Outstanding (DSO) calculator [EASY/2]
 
 **/finance/payout-ratio — Dividend Payout Ratio Calculator**
@@ -2660,17 +2660,17 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: inheritance tax calculator uk [EASY/2] · india inheritance tax [MEDIUM/4] · estate tax calculator [MEDIUM/4] · iht calculator [MEDIUM/3]
 
 **/finance/rental-portfolio-tracker — Rental Portfolio Cash Flow Tracker**
-- Title: Rental Portfolio Cash Flow Tracker: Number of
+- Title: Rental Portfolio Cash Flow & Yield Tracker
 - Keywords: rental property portfolio calculator [MEDIUM/3] · rental cash flow tracker [MEDIUM/3] · multiple rental properties [MEDIUM/3] · gross yield calculator [MEDIUM/3]
 
 ## 5.10 Fitness & Exercise Calculators — `fitness/` (42 tools)
 
 **/fitness/running-pace — Running Pace & Split Times**
-- Title: Running Pace & Split Times: Distance, Target Pace
+- Title: Running Pace & Split Times Calculator
 - Keywords: running pace calculator splits [MEDIUM/3] · target pace finish time [MEDIUM/3] · race split calculator [MEDIUM/3] · free online Running Pace & Split Times calculator [EASY/2]
 
 **/fitness/race-predictor — Race Time Predictor**
-- Title: Race Time Predictor: Known Distance & Known Time
+- Title: Race Time Predictor Calculator: Known Distance & Known Time
 - Keywords: race time predictor [MEDIUM/3] · free online Race Time Predictor calculator [EASY/2]
 
 **/fitness/steps-to-distance — Steps to Distance Calculator**
@@ -2690,19 +2690,19 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: vo2 max calculator [MEDIUM/3] · free online VO2 Max Estimator [EASY/2]
 
 **/fitness/calories-exercise — Exercise Calorie Burn**
-- Title: Exercise Calorie Burn: Weight & Duration
+- Title: Exercise Calorie Burn Calculator: Weight & Duration
 - Keywords: free online Exercise Calorie Burn calculator [EASY/2]
 
 **/fitness/body-fat-fitness — Body Fat % from BMI**
-- Title: Body Fat % from BMI: Weight, Height & Age
+- Title: Body Fat % from BMI Calculator: Weight, Height & Age
 - Keywords: body fat percentage from bmi [EASY/2] · body fat estimate without calipers [EASY/2] · deurenberg body fat formula [EASY/2]
 
 **/fitness/pullup-test — Pull-Up Test Standards**
-- Title: Pull-Up Test Standards: Max Pull-ups
+- Title: Pull-Up Test Standards Calculator: Max Pull-ups
 - Keywords: pullup test standards [MEDIUM/3] · free online Pull-Up Test Standards calculator [EASY/2]
 
 **/fitness/flexibility-score — Sit & Reach Test**
-- Title: Sit & Reach Test: Sit & Reach & Age
+- Title: Sit & Reach Test Calculator: Sit & Reach & Age
 - Keywords: flexibility test sit reach [MEDIUM/3] · free online Sit & Reach Test calculator [EASY/2]
 
 **/fitness/sports-calories — Sports Calorie Calculator**
@@ -2710,7 +2710,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: free online Sports Calorie Calculator [EASY/2]
 
 **/fitness/calories-burned — Calories Burned at Rest (BMR)**
-- Title: Calories Burned at Rest (BMR): Weight, Height & Age
+- Title: Calories Burned at Rest (BMR) Calculator: Weight & Height
 - Keywords: free online Calories Burned at Rest (BMR) calculator [EASY/2]
 
 **/fitness/one-rep-max — One-Rep Max Calculator**
@@ -2726,27 +2726,27 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: weight loss pace calculator [MEDIUM/4] · free online Weight Loss Pace Calculator [EASY/2]
 
 **/fitness/muscle-gain — Muscle Gain Calculator**
-- Title: Muscle Gain Calculator: Current Weight, Height
+- Title: Muscle Gain Calculator: How Much Muscle You Can Gain
 - Keywords: muscle gain calculator [MEDIUM/3] · free online Muscle Gain Calculator [EASY/2]
 
 **/fitness/pushup-test — Push-Up Test Standards**
-- Title: Push-Up Test Standards: Max Push-ups & Age
+- Title: Push-Up Test Standards Calculator: Max Push-ups & Age
 - Keywords: pushup test standards [MEDIUM/3] · free online Push-Up Test Standards calculator [EASY/2]
 
 **/fitness/squat-standards — Squat Standards by Body Weight**
-- Title: Squat Standards by Body Weight: Max Squat & Body Weight
+- Title: Squat Standards by Body Weight Calculator
 - Keywords: squat standards by weight [EASY/2]
 
 **/fitness/bench-standards — Bench Press Standards**
-- Title: Bench Press Standards: Max Bench & Body Weight
+- Title: Bench Press Standards Calculator: Max Bench & Body Weight
 - Keywords: bench press standards [MEDIUM/3] · free online Bench Press Standards calculator [EASY/2]
 
 **/fitness/deadlift-standards — Deadlift Standards by Weight**
-- Title: Deadlift Standards by Weight: Max Deadlift & Body Weight
+- Title: Deadlift Standards by Weight Calculator
 - Keywords: deadlift standards by weight calculator [EASY/2]
 
 **/fitness/overhead-standards — Overhead Press Standards**
-- Title: Overhead Press Standards: Max OHP & Body Weight
+- Title: Overhead Press Standards Calculator: Max OHP & Body Weight
 - Keywords: overhead press standards [MEDIUM/3] · free online Overhead Press Standards calculator [EASY/2]
 
 **/fitness/plank-test — Plank Hold Standards**
@@ -2754,7 +2754,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: plank hold standards [MEDIUM/3] · free online Plank Hold Standards calculator [EASY/2]
 
 **/fitness/grip-strength — Grip Strength Standards**
-- Title: Grip Strength Standards: Grip Strength & Age
+- Title: Grip Strength Standards Calculator: Grip Strength & Age
 - Keywords: grip strength standards [MEDIUM/3] · free online Grip Strength Standards calculator [EASY/2]
 
 **/fitness/burpee-test — Burpee Test Calculator**
@@ -2762,11 +2762,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: burpee test calculator fitness level count [MEDIUM/3] · free online Burpee Test Calculator [EASY/2]
 
 **/fitness/situp-test — Sit-Up Test Calculator**
-- Title: Sit-Up Test Calculator: Sit-Ups in 1 Minute
+- Title: Sit-Up Test Calculator: Score Your Core Endurance
 - Keywords: situp test calculator ab endurance minute [MEDIUM/3] · free online Sit-Up Test Calculator [EASY/2]
 
 **/fitness/row-standards — Rowing Standards**
-- Title: Rowing Standards: 500m Split & Distance
+- Title: Rowing Standards Calculator: 500m Split & Distance
 - Keywords: rowing standards calculator split 500m time [MEDIUM/3] · free online Rowing Standards calculator [EASY/2]
 
 **/fitness/swim-pace — Swim Pace Calculator**
@@ -2774,7 +2774,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: swim pace calculator 100m pool time [MEDIUM/3] · free online Swim Pace Calculator [EASY/2]
 
 **/fitness/cycling-speed — Cycling Speed & Time**
-- Title: Cycling Speed & Time: Distance & Avg Speed
+- Title: Cycling Speed & Time Calculator: Distance & Avg Speed
 - Keywords: cycling speed calculator time distance km [MEDIUM/3] · free online Cycling Speed & Time calculator [EASY/2]
 
 **/fitness/cadence-calc — Cycling Cadence Calculator**
@@ -2786,11 +2786,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: stride length calculator walking running height [MEDIUM/3] · free online Stride Length Calculator [EASY/2]
 
 **/fitness/training-volume — Weekly Training Volume**
-- Title: Weekly Training Volume: Sets per Exercise, Reps per Set
+- Title: Weekly Training Volume Calculator
 - Keywords: training volume calculator sets reps weight tonnage [MEDIUM/4] · free online Weekly Training Volume calculator [EASY/2]
 
 **/fitness/vertical-jump — Vertical Jump Power**
-- Title: Vertical Jump Power: Jump Height & Body Weight
+- Title: Vertical Jump Power Calculator: Jump Height & Body Weight
 - Keywords: vertical jump calculator power watts test [MEDIUM/3] · free online Vertical Jump Power calculator [EASY/2]
 
 **/fitness/beep-test — Beep Test (VO2 Max) Estimator**
@@ -2806,7 +2806,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: deload week planner calculator volume reduce [MEDIUM/3] · free online Deload Week Planner calculator [EASY/2]
 
 **/fitness/workout-rest — Workout Rest Timer**
-- Title: Workout Rest Timer: Optimal Rest Between
+- Title: Workout Rest Timer Calculator: Optimal Rest Between
 - Keywords: rest timer calculator workout between sets seconds [EASY/2]
 
 **/fitness/treadmill-pace — Treadmill Incline Pace Calculator**
@@ -2836,7 +2836,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 ## 5.11 Food & Nutrition Calculators — `food/` (37 tools)
 
 **/food/daily-calorie — Daily Calorie Needs**
-- Title: Daily Calorie Needs: Age, Weight & Height
+- Title: Daily Calorie Needs Calculator: Age, Weight & Height
 - Keywords: free online Daily Calorie Needs calculator [EASY/2]
 
 **/food/macro-split — Macro Split Calculator**
@@ -2848,27 +2848,27 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: protein need calculator [MEDIUM/3] · free online Daily Protein Need calculator [EASY/2]
 
 **/food/daily-water-intake — Daily Water Intake**
-- Title: Daily Water Intake: Weight & Exercise
+- Title: Daily Water Intake Calculator: Weight & Exercise
 - Keywords: water intake calculator [MEDIUM/3] · free online Daily Water Intake calculator [EASY/2]
 
 **/food/weight-loss-time — Weight Loss Timeline**
-- Title: Weight Loss Timeline: Current Weight, Goal Weight
+- Title: Weight Loss Timeline Calculator
 - Keywords: free online Weight Loss Timeline calculator [EASY/2]
 
 **/food/body-fat-food — Body Fat % (US Navy)**
-- Title: Body Fat % (US Navy): Height, Waist & Hip
+- Title: Body Fat % (US Navy) Calculator: Height, Waist & Hip
 - Keywords: body fat calculator us navy [MEDIUM/3] · free online Body Fat % (US Navy) calculator [EASY/2]
 
 **/food/calorie-burned — Calories Burned (Activity)**
-- Title: Calories Burned (Activity): Weight & Duration
+- Title: Calories Burned (Activity) Calculator: Weight & Duration
 - Keywords: free online Calories Burned (Activity) calculator [EASY/2]
 
 **/food/recipe-scaler — Recipe Scaler**
-- Title: Recipe Scaler: Original Servings, Desired Servings
+- Title: Recipe Scaler: Servings, Yield and Portions
 - Keywords: recipe scaler calculator [MEDIUM/3] · free online Recipe Scaler calculator [EASY/2]
 
 **/food/cooking-time — Cooking Time Adjuster**
-- Title: Cooking Time Adjuster: Actual Weight, Recipe Weight
+- Title: Cooking Time Adjuster Calculator
 - Keywords: cooking time adjuster [MEDIUM/3] · free online Cooking Time Adjuster calculator [EASY/2]
 
 **/food/meal-prep — Meal Prep Cost**
@@ -2904,7 +2904,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: grocery cost per person [EASY/2]
 
 **/food/baking-converter — Baking Substitution**
-- Title: Baking Substitution: Baking Substitution Ratios
+- Title: Baking Substitution Calculator: Baking Substitution Ratios
 - Keywords: baking substitution calculator [MEDIUM/3] · free online Baking Substitution calculator [EASY/2]
 
 **/food/coffee-cost-per-cup — Coffee Cost per Cup**
@@ -2916,7 +2916,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: tea vs coffee [MEDIUM/3] · coffee cost comparison [MEDIUM/3] · free online Tea vs Coffee Cost calculator [EASY/2]
 
 **/food/sugar-intake — Daily Sugar Intake**
-- Title: Daily Sugar Intake: Age, Added Sugar per Day & Weight
+- Title: Daily Sugar Intake Calculator: Age & Added Sugar per
 - Keywords: daily sugar intake calculator [EASY/2]
 
 **/food/carb-calculator — Carb Calculator**
@@ -2924,11 +2924,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: carb calculator daily carbs grams percentage [EASY/2]
 
 **/food/fiber-need — Daily Fiber Need**
-- Title: Daily Fiber Need: Daily Calories
+- Title: Daily Fiber Need Calculator: Daily Calories
 - Keywords: fiber calculator daily grams need [EASY/2]
 
 **/food/calorie-per-meal — Calories per Meal**
-- Title: Calories per Meal: Daily Calories, Meals per Day & Snacks
+- Title: Calories per Meal Calculator: Daily Calories & Meals per Day
 - Keywords: calories per meal calculator split breakfast lunch dinner [EASY/2]
 
 **/food/rice-water — Rice Water Ratio**
@@ -2940,11 +2940,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: meat cooking time calculator roast per pound kg [EASY/2]
 
 **/food/egg-boil — Egg Boiling Time**
-- Title: Egg Boiling Time: Perfect Egg Boiling
+- Title: Egg Boiling Time Calculator: Perfect Egg Boiling
 - Keywords: egg boil time calculator soft medium hard [MEDIUM/3] · free online Egg Boiling Time calculator [EASY/2]
 
 **/food/smoothie-calories — Smoothie Calories**
-- Title: Smoothie Calories: Fruit, Milk/Yogurt & Bananas
+- Title: Smoothie Calories Calculator: Fruit, Milk/Yogurt & Bananas
 - Keywords: smoothie calorie calculator ingredients fruit yogurt [MEDIUM/4] · free online Smoothie Calories calculator [EASY/2]
 
 **/food/protein-per-dollar — Protein per Dollar**
@@ -2964,11 +2964,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: pizza calculator slices per person party [EASY/2]
 
 **/food/meal-prep-size — Meal Prep Batch Size**
-- Title: Meal Prep Batch Size: Recipe Servings, Batches to Make
+- Title: Meal Prep Batch Size Calculator
 - Keywords: meal prep batch size calculator portions recipe servings [MEDIUM/3] · free online Meal Prep Batch Size calculator [EASY/2]
 
 **/food/sugar-limit — Added Sugar Limit**
-- Title: Added Sugar Limit: Daily Calories & Current Added Sugar
+- Title: Added Sugar Limit Calculator: Daily Calories & Current Added
 - Keywords: sugar limit calculator added grams daily [EASY/2]
 
 **/food/alcohol-calories — Alcohol Calorie Calculator**
@@ -3014,7 +3014,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: max heart rate calculator by age [EASY/2]
 
 **/health/pregnancy — Pregnancy Due Date**
-- Title: Pregnancy Due Date Calculator: From Your Last Period
+- Title: Pregnancy Due Date Calculator: Last Menstrual Period
 - Keywords: pregnancy due date calculator by last period [EASY/2] · pregnancy week calculator from conception [EASY/2]
 
 **/health/ovulation — Ovulation Calculator**
@@ -3026,11 +3026,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: macro calculator for lean bulking [EASY/2] · protein carb fat macro calculator [MEDIUM/3] · protein carbs fat [MEDIUM/3]
 
 **/health/lean-body-mass — Lean Body Mass**
-- Title: Lean Body Mass: Weight & Body Fat
+- Title: Lean Body Mass Calculator: Weight & Body Fat
 - Keywords: lean body mass [MEDIUM/3] · free online Lean Body Mass calculator [EASY/2]
 
 **/health/bsa — Body Surface Area**
-- Title: Body Surface Area: Weight & Height
+- Title: Body Surface Area Calculator: Weight & Height
 - Keywords: body surface area [MEDIUM/3] · free online Body Surface Area calculator [EASY/2]
 
 **/health/waist-hip — Waist-to-Hip Ratio**
@@ -3042,11 +3042,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: vo2 max estimation cooper test [MEDIUM/3] · free online VO2 Max Calculator [EASY/2]
 
 **/health/pregnancy-weight — Pregnancy Weight Gain**
-- Title: Pregnancy Weight Gain: Pre-pregnancy BMI
+- Title: Pregnancy Weight Gain Calculator: Pre-pregnancy BMI
 - Keywords: free online Pregnancy Weight Gain calculator [EASY/2]
 
 **/health/blood-pressure — Blood Pressure Category**
-- Title: Blood Pressure Category: Systolic & Diastolic
+- Title: Blood Pressure Category Calculator: Systolic & Diastolic
 - Keywords: blood pressure category calculator [MEDIUM/3] · free online Blood Pressure Category calculator [EASY/2]
 
 **/health/calorie-burn — Calorie Burn Calculator**
@@ -3098,7 +3098,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: sleep debt calculator deficit recovery [MEDIUM/3] · free online Sleep Debt Calculator [EASY/2]
 
 **/health/met-calories — MET Value / Calories Burned**
-- Title: MET Value / Calories Burned: MET Value, Body Weight
+- Title: MET Value / Calories Burned Calculator
 - Keywords: met calculator calories burned metabolic equivalent [MEDIUM/4] · free online MET Value / Calories Burned calculator [EASY/2]
 
 **/health/body-type — Body Type Calculator**
@@ -3110,11 +3110,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: iron intake calculator daily requirement anemia [EASY/2]
 
 **/health/vitamin-d-dosage — Vitamin D Dosage**
-- Title: Vitamin D Dosage: Current Level & Target Level
+- Title: Vitamin D Dosage Calculator: Current Level & Target Level
 - Keywords: vitamin d dosage calculator supplement iu [MEDIUM/3] · free online Vitamin D Dosage calculator [EASY/2]
 
 **/health/calorie-goal — Calorie Surplus/Deficit Goal**
-- Title: Calorie Surplus/Deficit Goal: TDEE & Weeks
+- Title: Calorie Surplus/Deficit Goal Calculator: TDEE & Weeks
 - Keywords: calorie surplus deficit goal calculator [MEDIUM/4] · free online Calorie Surplus/Deficit Goal calculator [EASY/2]
 
 **/health/burn-severity — Burn Severity Calculator**
@@ -3130,7 +3130,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: pregnancy calculator due date trimester weeks [MEDIUM/4] · free online Pregnancy Trimester Calculator [EASY/2]
 
 **/health/ovulation-calculator — Ovulation & Fertile Window**
-- Title: Ovulation & Fertile Window: Cycle Length, Luteal Phase
+- Title: Ovulation & Fertile Window Calculator
 - Keywords: ovulation calculator fertile window days [MEDIUM/4] · free online Ovulation & Fertile Window calculator [EASY/2]
 
 **/health/cholesterol-ratio — Cholesterol Ratio & LDL**
@@ -3190,7 +3190,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: ponderal index calculator body mass infant neonatal corpulence height [MEDIUM/3] · free online Ponderal Index Calculator [EASY/2]
 
 **/health/bmr-mifflin — Mifflin-St Jeor BMR Calculator**
-- Title: Mifflin-St Jeor BMR Calculator: Basal Metabolic Rate
+- Title: BMR Calculator (Mifflin-St Jeor): Daily Calories
 - Keywords: mifflin st jeor bmr calculator basal metabolic rate [MEDIUM/4] · free online Mifflin-St Jeor BMR Calculator [EASY/2]
 
 **/health/tdee-macro — TDEE and Macro Calculator**
@@ -3264,7 +3264,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: room area & flooring calculator [MEDIUM/3] · free online Room Area & Flooring Calculator [EASY/2]
 
 **/homegarden/wallpaper-rolls — Wallpaper Rolls Needed Calculator**
-- Title: Wallpaper Rolls Needed Calculator: Total Wall
+- Title: Wallpaper Roll Calculator: How Many Rolls to Buy
 - Keywords: wallpaper rolls needed calculator [MEDIUM/3] · free online Wallpaper Rolls Needed Calculator [EASY/2]
 
 **/homegarden/fence-material — Fence Material Calculator**
@@ -3364,7 +3364,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: cabinet & drawer size calculator [MEDIUM/3] · free online Cabinet & Drawer Size Calculator [EASY/2]
 
 **/homegarden/tile-grout — Tile Grout & Mortar Calculator**
-- Title: Tile Grout & Mortar Calculator: Tile Area & Grout Line Width
+- Title: Tile Grout & Mortar Calculator: Tile Area, Grout Line
 - Keywords: tile grout & mortar calculator [MEDIUM/3] · free online Tile Grout & Mortar Calculator [EASY/2]
 
 **/homegarden/light-bulb-save — LED Bulb Savings Calculator**
@@ -3384,7 +3384,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: roof area calculator [MEDIUM/3] · free online Roof Area Calculator [EASY/2]
 
 **/homegarden/vinyl-flooring — Vinyl / Laminate Flooring Calculator**
-- Title: Vinyl / Laminate Flooring Calculator: Room Area, Per
+- Title: Vinyl Plank Calculator: Boxes and Planks You Need
 - Keywords: vinyl / laminate flooring calculator [MEDIUM/3] · free online Vinyl / Laminate Flooring Calculator [EASY/2]
 
 **/homegarden/solar-panel — Solar Panel System Size Calculator**
@@ -3412,7 +3412,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: lawn watering calculator gallons sprinkler inches [EASY/2]
 
 **/homegarden/sprinkler-heads — Sprinkler Head Count**
-- Title: Sprinkler Head Count: Zone Length, Zone Width
+- Title: Sprinkler Head Count Calculator: Zone Length & Zone Width
 - Keywords: sprinkler heads calculator coverage spacing zone [MEDIUM/3] · free online Sprinkler Head Count calculator [EASY/2]
 
 **/homegarden/compost-bin — Compost Bin Calculator**
@@ -3424,11 +3424,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: firepit calculator ring stones size diameter [MEDIUM/3] · free online Firepit Size Calculator [EASY/2]
 
 **/homegarden/deck-post — Deck Post Spacing**
-- Title: Deck Post Spacing: Deck Length, Joist Spacing & Max
+- Title: Deck Post Spacing Calculator: Deck Length & Joist Spacing
 - Keywords: deck post spacing calculator joist span lumber [MEDIUM/3] · free online Deck Post Spacing calculator [EASY/2]
 
 **/homegarden/porch-light — Porch Light Size**
-- Title: Porch Light Size: Mounting Height & Door Width
+- Title: Porch Light Size Calculator: Mounting Height & Door Width
 - Keywords: porch light calculator size wattage lumens [MEDIUM/3] · free online Porch Light Size calculator [EASY/2]
 
 **/homegarden/ceiling-fan-size — Ceiling Fan Size Calculator**
@@ -3530,7 +3530,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: gym membership value [MEDIUM/3] · cost per workout [MEDIUM/3] · free online Gym Cost per Visit Calculator [EASY/2]
 
 **/lifestyle/vacation-savings — Vacation Savings Planner**
-- Title: Vacation Savings Planner: Trip Cost, Months Until Trip
+- Title: Vacation Savings Calculator: Cost & Monthly Target
 - Keywords: vacation savings planner calculator [MEDIUM/3] · free online Vacation Savings Planner calculator [EASY/2]
 
 **/lifestyle/sale-savings — Sale Savings Calculator**
@@ -3550,7 +3550,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: cost per hour [MEDIUM/3] · free online Streaming Service Value Calculator [EASY/2]
 
 **/lifestyle/charging-time — Phone/Device Charging Time Calculator**
-- Title: Phone/Device Charging Time Calculator: Battery
+- Title: Phone Charging Time Calculator: Minutes to Full
 - Keywords: phone/device charging time calculator [MEDIUM/3] · free online Phone/Device Charging Time Calculator [EASY/2]
 
 **/lifestyle/gift-split — Group Gift Cost Splitter**
@@ -3578,11 +3578,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: takeout budget calculator food delivery monthly [EASY/2]
 
 **/lifestyle/home-insurance — Home Insurance Estimate**
-- Title: Home Insurance Estimate: Home Value & Rate
+- Title: Home Insurance Calculator: What You’ll Pay a Year
 - Keywords: home insurance calculator estimate premium coverage [MEDIUM/4] · free online Home Insurance Estimate calculator [EASY/2]
 
 **/lifestyle/renters-insurance — Renters Insurance Estimate**
-- Title: Renters Insurance Estimate: Personal Property Value
+- Title: Renters Insurance Calculator: Cost per Year
 - Keywords: renters insurance calculator estimate coverage [MEDIUM/3] · free online Renters Insurance Estimate calculator [EASY/2]
 
 **/lifestyle/car-wash-annual — Car Wash Cost Calculator**
@@ -3610,7 +3610,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: travel daily budget calculator trip cost [EASY/2]
 
 **/lifestyle/furniture-assembly — Furniture Assembly Time**
-- Title: Furniture Assembly Time: Number of Pieces
+- Title: Furniture Assembly Time Calculator: Number of Pieces
 - Keywords: furniture assembly time calculator estimate hours [EASY/2]
 
 **/lifestyle/home-renovation — Home Renovation Budget**
@@ -3618,7 +3618,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: home renovation budget calculator per square foot [EASY/2]
 
 **/lifestyle/cigarette-cost — Smoking Cost Calculator**
-- Title: Smoking Cost Calculator: Price per Pack, Packs per Day
+- Title: Smoking Cost Calculator: Cost per Year & per Pack
 - Keywords: smoking cost calculator cigarettes per year pack [EASY/2]
 
 **/lifestyle/french-press-ratio — French Press Ratio Calculator**
@@ -3680,7 +3680,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: percentage increase calculator between two numbers [EASY/2] · what is the percentage of a number calculator [EASY/2]
 
 **/math/percent-change — Percentage Change**
-- Title: Percentage Change: Old Value & New Value
+- Title: Percentage Change Calculator: Old Value & New Value
 - Keywords: free online Percentage Change calculator [EASY/2]
 
 **/math/fraction — Fraction Calculator**
@@ -3736,11 +3736,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: free average calculator [MEDIUM/3] · free online Average Calculator [EASY/2]
 
 **/math/pythagorean — Pythagorean Theorem**
-- Title: Pythagorean Theorem: Side a & Side b
+- Title: Pythagorean Theorem Calculator: Side a & Side b
 - Keywords: pythagorean theorem calculator with hypotenuse [EASY/2]
 
 **/math/trigonometry — Trigonometry Calculator**
-- Title: Trigonometry Calculator: Angle
+- Title: Trigonometry Calculator: Sin, Cos and Tan of an Angle
 - Keywords: sin cos tan [MEDIUM/3] · free online Trigonometry Calculator [EASY/2]
 
 **/math/distance — Distance Formula**
@@ -3756,7 +3756,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: free factorial calculator [MEDIUM/3] · free online Factorial Calculator [EASY/2]
 
 **/math/modular — Modular Arithmetic**
-- Title: Modular Arithmetic: Modulo Operations
+- Title: Modular Arithmetic Calculator: Modulo Operations
 - Keywords: modular arithmetic calculator [MEDIUM/3] · free online Modular Arithmetic calculator [EASY/2]
 
 **/math/complex — Complex Number Calculator**
@@ -3768,11 +3768,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: scientific notation converter calculator [MEDIUM/3] · free online Scientific Notation Converter [EASY/2]
 
 **/math/random-generator — Random Number Generator**
-- Title: Random Number Generator: Min Value, Max Value & How
+- Title: Random Number Generator Calculator: Min Value & Max Value
 - Keywords: random generator [MEDIUM/3] · random number [MEDIUM/3] · dice roll [MEDIUM/3] · lottery generator [MEDIUM/3] · free online Random Number Generator calculator [EASY/2]
 
 **/math/cubic-equation — Cubic Equation Solver**
-- Title: Cubic Equation Solver: Roots
+- Title: Cubic Equation Solver Calculator: Roots
 - Keywords: free online Cubic Equation Solver [EASY/2]
 
 **/math/geometric-seq — Geometric Sequence**
@@ -3780,7 +3780,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: geometric sequence calculator nth term sum [MEDIUM/3] · free online Geometric Sequence calculator [EASY/2]
 
 **/math/arithmetic-seq — Arithmetic Sequence**
-- Title: Arithmetic Sequence: First Term, Common Difference
+- Title: Arithmetic Sequence Calculator
 - Keywords: arithmetic sequence calculator [MEDIUM/3] · free online Arithmetic Sequence calculator [EASY/2]
 
 **/math/polar-rect — Polar ↔ Rectangular**
@@ -3788,27 +3788,27 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: polar to rectangular coordinates converter [MEDIUM/3] · free online Polar ↔ Rectangular calculator [EASY/2]
 
 **/math/binomial-prob — Binomial Probability**
-- Title: Binomial Probability: Trials, Successes & Probability
+- Title: Binomial Probability Calculator: Trials & Successes
 - Keywords: binomial probability calculator exact [MEDIUM/3] · free online Binomial Probability calculator [EASY/2]
 
 **/math/normal-dist — Normal Distribution**
-- Title: Normal Distribution: Value, Mean & Std Dev
+- Title: Normal Distribution Calculator: Value, Mean & Std Dev
 - Keywords: normal distribution calculator z-score cdf [MEDIUM/3] · free online Normal Distribution calculator [EASY/2]
 
 **/math/taylor-series — Taylor Series Approximation**
-- Title: Taylor Series Approximation: x value & Terms
+- Title: Taylor Series Approximation Calculator: x value & Terms
 - Keywords: taylor series approximation calculator polynomial [MEDIUM/3] · free online Taylor Series Approximation calculator [EASY/2]
 
 **/math/continued-fraction — Continued Fraction**
-- Title: Continued Fraction: Partial Numerators
+- Title: Continued Fraction Calculator: Partial Numerators & Partial
 - Keywords: continued fraction calculator evaluate convergent [MEDIUM/3] · free online Continued Fraction calculator [EASY/2]
 
 **/math/linear-system — System of Linear Equations**
-- Title: System of Linear Equations: 2×2 Linear Systems
+- Title: System of Linear Equations Calculator: 2×2 Linear Systems
 - Keywords: system of equations solver linear algebra [MEDIUM/3] · free online System of Linear Equations calculator [EASY/2]
 
 **/math/eigenvalue-2x2 — Eigenvalue Finder (2×2)**
-- Title: Eigenvalue Finder (2×2): Eigenvalues 2×2 Matrix
+- Title: Eigenvalue Finder (2×2) Calculator: Eigenvalues 2×2 Matrix
 - Keywords: eigenvalue calculator 2x2 matrix [MEDIUM/3] · free online Eigenvalue Finder (2×2) calculator [EASY/2]
 
 **/math/surface-area-3d — Surface Area Calculator**
@@ -3816,7 +3816,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: surface area calculator sphere cylinder cone cube [MEDIUM/3] · free online Surface Area Calculator [EASY/2]
 
 **/math/complex-modulus — Complex Number Operations**
-- Title: Complex Number Operations: Real Part & Imaginary Part
+- Title: Complex Number Operations Calculator
 - Keywords: complex number calculator modulus argument conjugate [MEDIUM/3] · free online Complex Number Operations calculator [EASY/2]
 
 **/math/mean-median-mode — Mean Median Mode Calculator**
@@ -3832,7 +3832,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: permutation calculator npr arrangements [MEDIUM/3] · free online Permutation Calculator [EASY/2]
 
 **/math/binomial-theorem — Binomial Expansion**
-- Title: Binomial Expansion: Expand (A+B)ⁿ
+- Title: Binomial Expansion Calculator: Expand (A+B)ⁿ
 - Keywords: binomial expansion calculator coefficient [MEDIUM/3] · free online Binomial Expansion calculator [EASY/2]
 
 **/math/golden-ratio — Golden Ratio Calculator**
@@ -3840,31 +3840,31 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: golden ratio phi fibonacci calculator [MEDIUM/3] · free online Golden Ratio Calculator [EASY/2]
 
 **/math/checksum-luhn — Luhn Algorithm / Checksum**
-- Title: Luhn Algorithm / Checksum: Number to check
+- Title: Luhn Algorithm / Checksum Calculator: Number to check
 - Keywords: luhn algorithm checksum validator calculator [MEDIUM/3] · free online Luhn Algorithm / Checksum calculator [EASY/2]
 
 **/math/run-length — Run-Length Encoding**
-- Title: Run-Length Encoding: String to encode
+- Title: Run-Length Encoding Calculator: String to encode
 - Keywords: run length encoding compression calculator [MEDIUM/3] · free online Run-Length Encoding calculator [EASY/2]
 
 **/math/sieve-prime — Sieve of Eratosthenes**
-- Title: Sieve of Eratosthenes: All Primes
+- Title: Sieve of Eratosthenes Calculator: All Primes
 - Keywords: sieve of eratosthenes prime numbers calculator [MEDIUM/3] · free online Sieve of Eratosthenes calculator [EASY/2]
 
 **/math/fibonacci-seq — Fibonacci Sequence**
-- Title: Fibonacci Sequence: Generate n terms
+- Title: Fibonacci Sequence Calculator: Generate n terms
 - Keywords: fibonacci sequence generator calculator [MEDIUM/3] · free online Fibonacci Sequence calculator [EASY/2]
 
 **/math/pascal-triangle — Pascal's Triangle Row**
-- Title: Pascal's Triangle Row: Row number
+- Title: Pascal's Triangle Row Calculator: Row number
 - Keywords: pascal's triangle row calculator [MEDIUM/3] · free online Pascal's Triangle Row calculator [EASY/2]
 
 **/math/collatz — Collatz Sequence Length**
-- Title: Collatz Sequence Length: Starting number
+- Title: Collatz Sequence Length Calculator: Starting number
 - Keywords: collatz conjecture steps calculator 3n+1 [EASY/2]
 
 **/math/modular-exp — Modular Exponentiation**
-- Title: Modular Exponentiation: Base, Exponent & Modulus
+- Title: Modular Exponentiation Calculator: Base, Exponent & Modulus
 - Keywords: modular exponentiation calculator fast power [MEDIUM/3] · free online Modular Exponentiation calculator [EASY/2]
 
 **/math/norm-dist-range — Normal Distribution Range**
@@ -3872,7 +3872,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: normal distribution probability range calculator [MEDIUM/3] · free online Normal Distribution Range calculator [EASY/2]
 
 **/math/dot-cross-product — Dot & Cross Product**
-- Title: Dot & Cross Product: Vector Dot Product
+- Title: Dot & Cross Product Calculator: Vector Dot Product
 - Keywords: vector dot product cross product calculator 3d [MEDIUM/3] · free online Dot & Cross Product calculator [EASY/2]
 
 **/math/bayes-theorem — Bayes Theorem Calculator**
@@ -3880,15 +3880,15 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: bayes theorem calculator conditional probability [MEDIUM/3] · free online Bayes Theorem Calculator [EASY/2]
 
 **/math/matrix-multiply — Matrix Multiplication**
-- Title: Matrix Multiplication: Multiply Two 2×2
+- Title: Matrix Multiplication Calculator: Multiply Two 2×2
 - Keywords: matrix multiplication calculator 2x2 [MEDIUM/3] · free online Matrix Multiplication calculator [EASY/2]
 
 **/math/distance-formula — Distance Between Two Points**
-- Title: Distance Between Two Points: Point 1 x, Point 1 y & Point
+- Title: Distance Between Two Points Calculator
 - Keywords: distance formula calculator two points euclidean [EASY/2]
 
 **/math/slope-intercept — Slope-Intercept Form**
-- Title: Slope-Intercept Form: Point 1 x, Point 1 y & Point 2 x
+- Title: Slope-Intercept Form Calculator: Point 1 x & Point 1 y
 - Keywords: slope intercept form calculator line equation [MEDIUM/4] · free online Slope-Intercept Form calculator [EASY/2]
 
 **/math/zscore-calc — Z-Score Calculator**
@@ -3900,11 +3900,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: linear regression calculator least squares slope intercept r squared [MEDIUM/3]
 
 **/math/pearson-correlation — Pearson Correlation Coefficient**
-- Title: Pearson Correlation Coefficient: X values & Y values
+- Title: Pearson Correlation Coefficient Calculator
 - Keywords: pearson correlation coefficient calculator r value linear relationship [MEDIUM/3] · free online Pearson Correlation Coefficient calculator [EASY/2]
 
 **/math/confidence-interval — Confidence Interval for a Mean**
-- Title: Confidence Interval for a Mean: Sample Mean, Sample Std
+- Title: Confidence Interval for a Mean Calculator
 - Keywords: confidence interval calculator mean z score margin of error [MEDIUM/3] · free online Confidence Interval for a Mean calculator [EASY/2]
 
 **/math/sample-size — Sample Size Calculator**
@@ -3920,7 +3920,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: harmonic mean calculator average rates speeds [MEDIUM/3] · free online Harmonic Mean calculator [EASY/2]
 
 **/math/moving-average — Moving Average (SMA)**
-- Title: Moving Average (SMA): Data & Window
+- Title: Moving Average (SMA) Calculator: Data & Window
 - Keywords: moving average calculator simple sma time series smoothing [EASY/2]
 
 **/math/standard-error — Standard Error of the Mean**
@@ -3928,15 +3928,15 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: standard error of the mean calculator sem sampling [MEDIUM/3] · free online Standard Error of the Mean calculator [EASY/2]
 
 **/math/chi-square — Chi-Square Test**
-- Title: Chi-Square Test: Observed & Expected
+- Title: Chi-Square Test Calculator: Observed & Expected
 - Keywords: chi square test calculator goodness of fit observed expected [MEDIUM/3] · free online Chi-Square Test calculator [EASY/2]
 
 **/math/t-test — Two-Sample T-Test**
-- Title: Two-Sample T-Test: Welch'S
+- Title: Two-Sample T-Test Calculator: Welch'S
 - Keywords: t test calculator two sample independent welch means [MEDIUM/3] · free online Two-Sample T-Test calculator [EASY/2]
 
 **/math/hypergeometric — Hypergeometric Probability**
-- Title: Hypergeometric Probability: Population, Successes
+- Title: Hypergeometric Probability Calculator
 - Keywords: hypergeometric distribution probability calculator without replacement [EASY/2]
 
 **/math/significant-figures — Significant Figures**
@@ -3952,15 +3952,15 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: midpoint calculator two points coordinate [MEDIUM/3] · free online Midpoint Calculator [EASY/2]
 
 **/math/trapezoid — Trapezoid Area**
-- Title: Trapezoid Area: Base a, Base b & Height
+- Title: Trapezoid Area Calculator: Base a, Base b & Height
 - Keywords: trapezoid area calculator trapezium bases height [MEDIUM/3] · free online Trapezoid Area calculator [EASY/2]
 
 **/math/sector-area — Circle Sector Area**
-- Title: Circle Sector Area: Radius & Central Angle
+- Title: Circle Sector Area Calculator: Radius & Central Angle
 - Keywords: sector area calculator circle radius angle [MEDIUM/3] · free online Circle Sector Area calculator [EASY/2]
 
 **/math/pyramid — Square Pyramid Volume**
-- Title: Square Pyramid Volume: Base Side & Height
+- Title: Square Pyramid Volume Calculator: Base Side & Height
 - Keywords: pyramid volume calculator square base height [MEDIUM/3] · free online Square Pyramid Volume calculator [EASY/2]
 
 **/math/vector-add — Vector Addition Calculator**
@@ -3996,7 +3996,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: law of cosines calculator side angle [MEDIUM/3] · free online Law of Cosines Calculator [EASY/2]
 
 **/math/weighted-average — Weighted Average Calculator**
-- Title: Weighted Average Calculator: Values & Weights
+- Title: Weighted Average Calculator: Grades & Weights
 - Keywords: weighted average calculator grades weights [EASY/2]
 
 **/math/coefficient-of-variation — Coefficient of Variation Calculator**
@@ -4060,7 +4060,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: nth root calculator cube root fourth root radical index [MEDIUM/3] · free online Nth Root Calculator [EASY/2]
 
 **/math/series-sum-ap — Arithmetic Series Sum**
-- Title: Arithmetic Series Sum: First Term, Common Difference
+- Title: Arithmetic Series Sum Calculator
 - Keywords: arithmetic series sum calculator sequence common difference gauss [MEDIUM/3] · free online Arithmetic Series Sum calculator [EASY/2]
 
 **/math/sigma-notation — Sum of Squares Calculator**
@@ -4068,19 +4068,19 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: sum of squares calculator sigma notation series formula [EASY/2]
 
 **/math/combination-repeat — Combinations with Repetition**
-- Title: Combinations with Repetition: Distinct Types & Picks
+- Title: Combinations with Repetition Calculator
 - Keywords: combinations with repetition calculator multiset stars and bars [EASY/2]
 
 **/math/permutation-repeat — Permutations with Repetition**
-- Title: Permutations with Repetition: Symbols & Positions
+- Title: Permutations with Repetition Calculator: Symbols & Positions
 - Keywords: permutations with repetition calculator n^k arrangements passwords [EASY/2]
 
 **/math/probability-odds — Odds to Probability**
-- Title: Odds to Probability: Odds For & Odds Against
+- Title: Odds to Probability Calculator: Odds For & Odds Against
 - Keywords: odds to probability calculator a to b chance convert percent [MEDIUM/3] · free online Odds to Probability calculator [EASY/2]
 
 **/math/negative-binomial — Negative Binomial Probability**
-- Title: Negative Binomial Probability: Target Successes
+- Title: Negative Binomial Probability Calculator
 - Keywords: negative binomial calculator kth success trial probability [MEDIUM/3] · free online Negative Binomial Probability calculator [EASY/2]
 
 **/math/circle-through-points — Circumradius Calculator**
@@ -4088,7 +4088,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: circumradius calculator triangle circumcircle abc 4K [MEDIUM/3] · free online Circumradius Calculator [EASY/2]
 
 **/math/secant-tangent — Secant-Tangent Length**
-- Title: Secant-Tangent Length: External Secant Segment
+- Title: Secant-Tangent Length Calculator
 - Keywords: secant tangent calculator power of a point circle geometry [MEDIUM/3] · free online Secant-Tangent Length calculator [EASY/2]
 
 **/math/inscribed-angle — Inscribed Angle Calculator**
@@ -4108,7 +4108,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: rectangular box diagonal calculator 3d cuboid space diagonal [MEDIUM/3] · free online Box Diagonal Calculator [EASY/2]
 
 **/math/triangular-prism — Triangular Prism Volume**
-- Title: Triangular Prism Volume: Triangle Base, Triangle Height
+- Title: Triangular Prism Volume Calculator
 - Keywords: triangular prism volume calculator base area length [MEDIUM/3] · free online Triangular Prism Volume calculator [EASY/2]
 
 **/math/octahedron-volume — Octahedron Volume**
@@ -4124,7 +4124,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: bitwise xor calculator exclusive or binary bits integer [MEDIUM/3] · free online Bitwise XOR Calculator [EASY/2]
 
 **/math/shift-cipher — Caesar Shift Cipher**
-- Title: Caesar Shift Cipher: Text, Shift & 1 = encode, 0 = decode
+- Title: Caesar Shift Cipher Calculator: Text & Shift
 - Keywords: caesar cipher calculator shift encode decode rot13 [MEDIUM/3] · free online Caesar Shift Cipher calculator [EASY/2]
 
 **/math/units-per-person — Per Person Split**
@@ -4144,7 +4144,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: digital root calculator digit sum casting out nines divisibility [MEDIUM/3] · free online Digital Root Calculator [EASY/2]
 
 **/math/mixture-percent — Mixture Concentration**
-- Title: Mixture Concentration: Volume of Solution 1
+- Title: Mixture Concentration Calculator
 - Keywords: mixture calculator concentration percent mixing solutions alligation [MEDIUM/3] · free online Mixture Concentration calculator [EASY/2]
 
 **/math/proportion — Proportion Calculator**
@@ -4162,7 +4162,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: baby feeding schedule [MEDIUM/3] · free online Baby Feeding Schedule calculator [EASY/2]
 
 **/family/baby-sleep — Baby Sleep Schedule**
-- Title: Baby Sleep Schedule: Age
+- Title: Baby Sleep Schedule Calculator: Age
 - Keywords: baby sleep schedule [MEDIUM/3] · free online Baby Sleep Schedule calculator [EASY/2]
 
 **/family/child-height — Child Height Predictor**
@@ -4170,11 +4170,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: child height predictor [MEDIUM/3] · free online Child Height Predictor calculator [EASY/2]
 
 **/family/toddler-screen — Screen Time Limits**
-- Title: Screen Time Limits: Age & Current
+- Title: Screen Time Limits Calculator: Age & Current
 - Keywords: screen time limits [MEDIUM/3] · free online Screen Time Limits calculator [EASY/2]
 
 **/family/child-bmi — Children BMI Percentile**
-- Title: Children BMI Percentile: Age, Weight & Height
+- Title: Children BMI Percentile Calculator: Age, Weight & Height
 - Keywords: free online Children BMI Percentile calculator [EASY/2]
 
 **/family/family-budget — Family Monthly Budget**
@@ -4186,11 +4186,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: childcare cost comparison [MEDIUM/3] · free online Childcare Cost Comparison calculator [EASY/2]
 
 **/family/college-savings — 529 College Savings**
-- Title: 529 College Savings: Child Age, Monthly Savings
+- Title: 529 College Savings Calculator: Child Age & Monthly Savings
 - Keywords: college savings 529 [MEDIUM/3] · free online 529 College Savings calculator [EASY/2]
 
 **/family/maternity-leave — UK Statutory Maternity Pay**
-- Title: UK Statutory Maternity Pay: Average Weekly Earnings
+- Title: UK Statutory Maternity Pay Calculator
 - Keywords: statutory maternity pay uk smp calculator [EASY/2]
 
 **/family/life-insurance — Life Insurance Need**
@@ -4238,7 +4238,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: babysitter rate calculator [MEDIUM/3] · free online Babysitter Rate Calculator [EASY/2]
 
 **/family/screen-time — Screen Time Guidelines**
-- Title: Screen Time Guidelines: Child Age
+- Title: Screen Time Guidelines Calculator: Child Age
 - Keywords: screen time guidelines for kids [EASY/2]
 
 **/family/diaper-cost — Diaper Cost Calculator**
@@ -4250,7 +4250,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: family vacation cost calculator [MEDIUM/3] · free online Family Vacation Cost calculator [EASY/2]
 
 **/family/baby-formula — Baby Formula Amount**
-- Title: Baby Formula Amount: Baby Weight, Age & Feedings per Day
+- Title: Baby Formula Amount Calculator: Baby Weight & Age
 - Keywords: baby formula amount calculator per feeding oz ml [EASY/2]
 
 **/family/diaper-needs — Diaper Needs Calculator**
@@ -4294,7 +4294,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: childcare cost calculator weekly hourly babysitter daycare [EASY/2]
 
 **/family/baby-milestones — Baby Milestones Guide**
-- Title: Baby Milestones Guide: Baby Age
+- Title: Baby Milestones Guide Calculator: Baby Age
 - Keywords: baby milestones calculator month development typical age [MEDIUM/4] · free online Baby Milestones Guide [EASY/2]
 
 **/family/child-support-split — Child Support Split Calculator**
@@ -4328,7 +4328,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: public provident fund [MEDIUM/3] · free online PPF Calculator [EASY/2]
 
 **/regional/nps-calculator — National Pension System (NPS) Calculator**
-- Title: National Pension System (NPS) Calculator: Current
+- Title: NPS Calculator: Corpus and Monthly Pension at 60
 - Keywords: national pension system [MEDIUM/3] · free online National Pension System (NPS) Calculator [EASY/2]
 
 **/regional/sip-return — SIP Return Calculator**
@@ -4380,7 +4380,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: wedding planner india [MEDIUM/3] · free online Wedding Budget Calculator (Shaadi) [EASY/2]
 
 **/regional/dubai-salary — Dubai/UAE Salary Calculator**
-- Title: Dubai Salary & Payroll Calculator: Take-Home Pay
+- Title: Dubai Salary & Payroll Calculator: AED Take-Home Pay
 - Keywords: dubai salary calculator [MEDIUM/4] · uae take home pay calculator [EASY/2] · dubai tax free salary calculator [EASY/2]
 
 **/regional/gold-silver — Gold to Silver Ratio**
@@ -4420,7 +4420,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: capital gains tax calculator india property shares LTCG [EASY/2]
 
 **/regional/sukanya-samriddhi — Sukanya Samriddhi Account**
-- Title: Sukanya Samriddhi Account: Annual Deposit, Years
+- Title: Sukanya Samriddhi Account Calculator: Annual Deposit & Years
 - Keywords: sukanya samriddhi calculator india girl child scheme [EASY/2]
 
 **/regional/nsc-interest — NSC Interest Calculator**
@@ -4444,7 +4444,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: zakat calculator 2.5 percent islamic wealth [MEDIUM/3] · free online Zakat Calculator [EASY/2]
 
 **/regional/pk-income-tax — Pakistan Income Tax**
-- Title: Pakistan Income Tax: Annual Income
+- Title: Pakistan Income Tax Calculator: Annual Income
 - Keywords: pakistan income tax calculator salaried FBR [MEDIUM/4] · free online Pakistan Income Tax calculator [EASY/2]
 
 **/regional/gold-silver-ratio — Gold-Silver Ratio**
@@ -4460,7 +4460,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: stamp duty calculator india property registration charges [EASY/2]
 
 **/regional/gst-calculator — GST Payable (Input Tax Credit)**
-- Title: GST Payable (Input Tax Credit): Taxable Sales
+- Title: GST Payable (Input Tax Credit) Calculator
 - Keywords: gst payable calculator input tax credit itc business liability [EASY/2]
 
 **/regional/uk-ni — UK National Insurance Calculator**
@@ -4484,7 +4484,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: singapore cpf calculator contribution employee employer [MEDIUM/3] · free online Singapore CPF Calculator [EASY/2]
 
 **/regional/uk-take-home-salary — UK Take-Home Salary Calculator**
-- Title: UK Take-Home Salary Calculator: Annual Salary
+- Title: UK Take-Home Pay Calculator: Salary After Tax
 - Keywords: uk take home salary calculator [EASY/2] · uk salary after tax calculator [EASY/2] · take home pay uk calculator [EASY/2]
 
 **/regional/india-take-home-salary — India Take-Home Salary Calculator**
@@ -4674,7 +4674,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: free ph calculator [MEDIUM/3] · free online pH Calculator [EASY/2]
 
 **/science/ideal-gas — Ideal Gas Law**
-- Title: Ideal Gas Law: Pressure, Volume & Temperature
+- Title: Ideal Gas Law Calculator: Pressure, Volume & Temperature
 - Keywords: free online Ideal Gas Law calculator [EASY/2]
 
 **/science/momentum — Momentum Calculator**
@@ -4718,7 +4718,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: free lens calculator [MEDIUM/3] · free online Lens Calculator [EASY/2]
 
 **/science/coulomb — Coulomb's Law**
-- Title: Coulomb's Law: Charge 1, Charge 2 & Distance
+- Title: Coulomb's Law Calculator: Charge 1, Charge 2 & Distance
 - Keywords: coulombs law calculator electric force [MEDIUM/3] · free coulombs law calculator [EASY/2]
 
 **/science/frequency — Frequency Calculator**
@@ -4758,15 +4758,15 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: electric field strength [MEDIUM/3] · e = kq r2 [MEDIUM/3] · free online Electric Field Calculator [EASY/2]
 
 **/science/newtons-second — Newton's Second Law**
-- Title: Newton's Second Law: Value 1 & Value 2
+- Title: Newton's Second Law Calculator: Value 1 & Value 2
 - Keywords: newton's second law calculator force mass acceleration [MEDIUM/3] · free online Newton's Second Law calculator [EASY/2]
 
 **/science/power-electrical — Electrical Power**
-- Title: Electrical Power: Value 1 & Value 2
+- Title: Electrical Power Calculator: Value 1 & Value 2
 - Keywords: electrical power calculator watts [MEDIUM/3] · free online Electrical Power calculator [EASY/2]
 
 **/science/speed-of-sound — Speed of Sound**
-- Title: Speed of Sound: Temperature
+- Title: Speed of Sound Calculator: Temperature
 - Keywords: speed of sound calculator air temperature medium [MEDIUM/3] · free online Speed of Sound calculator [EASY/2]
 
 **/science/wavelength-freq — Wavelength ↔ Frequency**
@@ -4778,19 +4778,19 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: kepler's third law calculator orbital period [MEDIUM/3] · free online Kepler's Third Law calculator [EASY/2]
 
 **/science/radioactive-decay — Radioactive Decay**
-- Title: Radioactive Decay: Initial Atoms, Half-Life & Time
+- Title: Radioactive Decay Calculator: Initial Atoms & Half-Life
 - Keywords: radioactive decay calculator half life activity [MEDIUM/3] · free online Radioactive Decay calculator [EASY/2]
 
 **/science/spring-force — Hooke's Law / Spring Force**
-- Title: Hooke's Law / Spring Force: Spring Constant & Displacement
+- Title: Hooke's Law / Spring Force Calculator
 - Keywords: hooke's law calculator spring constant [MEDIUM/3] · free online Hooke's Law / Spring Force calculator [EASY/2]
 
 **/science/centripetal — Centripetal Acceleration**
-- Title: Centripetal Acceleration: Velocity & Radius
+- Title: Centripetal Acceleration Calculator: Velocity & Radius
 - Keywords: centripetal acceleration calculator circular motion [MEDIUM/3] · free online Centripetal Acceleration calculator [EASY/2]
 
 **/science/orbital-velocity — Orbital Velocity**
-- Title: Orbital Velocity: Central Mass & Altitude
+- Title: Orbital Velocity Calculator: Central Mass & Altitude
 - Keywords: orbital velocity calculator satellite earth [MEDIUM/3] · free online Orbital Velocity calculator [EASY/2]
 
 **/science/heat-transfer — Heat Transfer Rate**
@@ -4798,7 +4798,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: heat transfer calculator specific heat capacity [MEDIUM/3] · free online Heat Transfer Rate calculator [EASY/2]
 
 **/science/boyle-law — Boyle's Law**
-- Title: Boyle's Law: P₁, V₁ & Known Value
+- Title: Boyle's Law Calculator: P₁, V₁ & Known Value
 - Keywords: boyle's law calculator pressure volume gas [MEDIUM/3] · free online Boyle's Law calculator [EASY/2]
 
 **/science/combined-gas-law — Combined Gas Law**
@@ -4810,35 +4810,35 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: wave speed calculator frequency wavelength [MEDIUM/3] · free online Wave Speed Calculator [EASY/2]
 
 **/science/moment-of-inertia — Moment of Inertia**
-- Title: Moment of Inertia: Mass & Radius/Length
+- Title: Moment of Inertia Calculator: Disk, Ring and Rod
 - Keywords: moment of inertia calculator rotational inertia [MEDIUM/3] · free online Moment of Inertia calculator [EASY/2]
 
 **/science/buoyancy — Buoyancy Force**
-- Title: Buoyancy Force: Fluid Density, Displaced Volume & Gravity
+- Title: Buoyancy Force Calculator: Fluid Density & Displaced Volume
 - Keywords: buoyancy force calculator archimedes displaced fluid [MEDIUM/3] · free online Buoyancy Force calculator [EASY/2]
 
 **/science/hydrostatic-pressure — Hydrostatic Pressure**
-- Title: Hydrostatic Pressure: Depth, Fluid Density & Gravity
+- Title: Hydrostatic Pressure Calculator: Depth & Fluid Density
 - Keywords: hydrostatic pressure calculator depth fluid [MEDIUM/3] · free online Hydrostatic Pressure calculator [EASY/2]
 
 **/science/solar-energy — Solar Energy Calculator**
-- Title: Solar Energy Calculator: Number of Panels, Panel Wattage
+- Title: Solar Panel Output Calculator: kWh per Day and Month
 - Keywords: solar energy calculator panel output kwh [MEDIUM/3] · free online Solar Energy Calculator [EASY/2]
 
 **/science/reynolds-number — Reynolds Number**
-- Title: Reynolds Number: Density, Velocity & Characteristic Length
+- Title: Reynolds Number Calculator: Density & Velocity
 - Keywords: reynolds number calculator laminar turbulent flow [MEDIUM/3] · free online Reynolds Number calculator [EASY/2]
 
 **/science/bernoulli — Bernoulli Equation**
-- Title: Bernoulli Equation: ½ρV² ρGh Constant
+- Title: Bernoulli Equation Calculator: ½ρV² ρGh Constant
 - Keywords: bernoulli equation calculator fluid dynamics [MEDIUM/4] · free online Bernoulli Equation calculator [EASY/2]
 
 **/science/projectile — Projectile Motion**
-- Title: Projectile Motion: Launch Velocity, Launch Angle & Gravity
+- Title: Projectile Motion Calculator: Launch Velocity & Launch Angle
 - Keywords: projectile motion calculator range height time launch angle [MEDIUM/3] · free online Projectile Motion calculator [EASY/2]
 
 **/science/pendulum — Pendulum Period**
-- Title: Pendulum Period: Length & Gravity
+- Title: Pendulum Period Calculator: Length & Gravity
 - Keywords: pendulum period calculator simple length gravity [EASY/2]
 
 **/science/molality — Molality Calculator**
@@ -4846,7 +4846,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: molality calculator moles solvent kg chemistry [EASY/2]
 
 **/science/percent-yield — Percent Yield**
-- Title: Percent Yield: Actual Yield & Theoretical Yield
+- Title: Percent Yield Calculator: Actual Yield & Theoretical Yield
 - Keywords: percent yield calculator chemistry actual theoretical [MEDIUM/3] · free online Percent Yield calculator [EASY/2]
 
 **/science/latent-heat — Latent Heat Calculator**
@@ -4914,7 +4914,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: rocket equation calculator tsiolkovsky delta v exhaust velocity mass [MEDIUM/4] · free online Rocket Equation Calculator [EASY/2]
 
 **/science/carbon-dating — Carbon Dating Calculator**
-- Title: Carbon Dating Calculator: C-14 Remaining & C-14 Half-life
+- Title: Carbon Dating Calculator: How Old Is Your Sample?
 - Keywords: carbon dating calculator radiocarbon age c14 half life archaeology [MEDIUM/4] · free online Carbon Dating Calculator [EASY/2]
 
 **/science/calorimetry — Heat Energy Calculator**
@@ -4950,7 +4950,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: machine efficiency calculator mechanical output input energy [MEDIUM/3] · free online Machine Efficiency Calculator [EASY/2]
 
 **/science/dew-point — Dew Point Calculator**
-- Title: Dew Point Calculator: Air Temperature & Relative Humidity
+- Title: Dew Point Calculator: When Will Condensation Form?
 - Keywords: dew point calculator humidity temperature magnus formula condensation [EASY/2]
 
 **/science/cloud-base-lcl — Cloud Base Calculator**
@@ -4976,7 +4976,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 ## 5.19 Tech & Digital Calculators — `tech/` (72 tools)
 
 **/tech/internet-speed — Internet Download Time**
-- Title: Internet Download Time: File Size & Speed
+- Title: Download Time Calculator: How Long a File Takes
 - Keywords: download time calculator [MEDIUM/3] · free online Internet Download Time calculator [EASY/2]
 
 **/tech/bandwidth-calc — Bandwidth Calculator**
@@ -4988,15 +4988,15 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: data usage calculator [MEDIUM/3] · free online Data Usage Calculator [EASY/2]
 
 **/tech/video-size — Video File Size**
-- Title: Video File Size: Duration & Bitrate
+- Title: Video File Size Calculator: Duration & Bitrate
 - Keywords: video file size [MEDIUM/3] · free online Video File Size calculator [EASY/2]
 
 **/tech/monitor-distance — Monitor Viewing Distance**
-- Title: Monitor Viewing Distance: Screen Size
+- Title: Monitor Viewing Distance Calculator: Screen Size
 - Keywords: monitor viewing distance [MEDIUM/3] · free online Monitor Viewing Distance calculator [EASY/2]
 
 **/tech/wifi-channels — WiFi Channel Finder**
-- Title: WiFi Channel Finder: Nearby Networks
+- Title: WiFi Channel Finder Calculator: Nearby Networks
 - Keywords: wifi channel finder [MEDIUM/3] · free online WiFi Channel Finder calculator [EASY/2]
 
 **/tech/cloud-storage — Cloud Storage Cost**
@@ -5008,7 +5008,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: website development cost [MEDIUM/3] · free online Website Dev Cost calculator [EASY/2]
 
 **/tech/ssd-vs-hdd — SSD vs HDD Speed**
-- Title: SSD vs HDD Speed: File Size
+- Title: SSD vs HDD Speed Calculator: File Size
 - Keywords: ssd vs hdd [MEDIUM/3] · free online SSD vs HDD Speed calculator [EASY/2]
 
 **/tech/battery-life-estimator — Battery Life Estimator**
@@ -5024,7 +5024,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: cable length calculator [MEDIUM/3] · free online Cable Length Calculator [EASY/2]
 
 **/tech/ppi-calc — PPI (Pixels Per Inch)**
-- Title: PPI (Pixels Per Inch): Width, Height & Diagonal
+- Title: PPI (Pixels Per Inch) Calculator: Width, Height & Diagonal
 - Keywords: free ppi calculator [MEDIUM/3] · free online PPI (Pixels Per Inch) calculator [EASY/2]
 
 **/tech/wattage-psu — Power Supply Calculator**
@@ -5032,11 +5032,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: power supply wattage [MEDIUM/3] · free online Power Supply Calculator [EASY/2]
 
 **/tech/print-resolution — Print Resolution Guide**
-- Title: Print Resolution Guide: Width & Height
+- Title: Print Resolution Guide Calculator: Width & Height
 - Keywords: print resolution calculator [MEDIUM/3] · free online Print Resolution Guide [EASY/2]
 
 **/tech/password-time — Password Crack Time**
-- Title: Password Crack Time: Password Length & Guesses per Second
+- Title: Password Crack Time Calculator
 - Keywords: password crack time calculator [MEDIUM/3] · free online Password Crack Time calculator [EASY/2]
 
 **/tech/image-file-size — Image File Size Estimator**
@@ -5052,11 +5052,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: monitor refresh rate [MEDIUM/3] · free online Refresh Rate vs FPS calculator [EASY/2]
 
 **/tech/streaming-bitrate — Streaming Bitrate Guide**
-- Title: Streaming Bitrate Guide: Ideal Streaming Bitrate
+- Title: Streaming Bitrate Guide Calculator: Ideal Streaming Bitrate
 - Keywords: streaming bitrate guide calculator [MEDIUM/3] · free online Streaming Bitrate Guide [EASY/2]
 
 **/tech/raid-capacity — RAID Capacity Calculator**
-- Title: RAID Capacity Calculator: Drive Count & Drive Size
+- Title: RAID Capacity Calculator: Usable Space After Parity
 - Keywords: raid capacity calculator [MEDIUM/3] · free online RAID Capacity Calculator [EASY/2]
 
 **/tech/uptime-calculator — Uptime / Downtime Calculator**
@@ -5064,7 +5064,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: uptime / downtime calculator [MEDIUM/3] · free online Uptime / Downtime Calculator [EASY/2]
 
 **/tech/device-charge-time — Device Charging Time**
-- Title: Device Charging Time: Battery, Charger Output & Efficiency
+- Title: Device Charging Time Calculator: Battery & Charger Output
 - Keywords: device charging time calculator [MEDIUM/3] · free online Device Charging Time calculator [EASY/2]
 
 **/tech/data-transfer-cost — Cloud Data Transfer Cost**
@@ -5076,11 +5076,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: ai token cost estimator calculator [MEDIUM/3] · free online AI Token Cost Estimator [EASY/2]
 
 **/tech/base64-encode — Base64 Encoder**
-- Title: Base64 Encoder: Text Base64
+- Title: Base64 Encoder Calculator: Text Base64
 - Keywords: base64 encoder calculator [MEDIUM/3] · free online Base64 Encoder calculator [EASY/2]
 
 **/tech/base64-decode — Base64 Decoder**
-- Title: Base64 Decoder: Base64 Back
+- Title: Base64 Decoder Calculator: Base64 Back
 - Keywords: base64 to text [MEDIUM/3] · free online Base64 Decoder calculator [EASY/2]
 
 **/tech/url-encoder — URL Encoder / Decoder**
@@ -5092,7 +5092,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: pretty print json [MEDIUM/3] · free online JSON Formatter calculator [EASY/2]
 
 **/tech/text-counter — Word & Character Counter**
-- Title: Word & Character Counter: Words
+- Title: Word & Character Counter Calculator: Words
 - Keywords: word & character counter calculator [MEDIUM/3] · free online Word & Character Counter [EASY/2]
 
 **/tech/case-converter — Text Case Converter**
@@ -5104,35 +5104,35 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: hash generator calculator [MEDIUM/3] · free online Hash Generator (MD5/SHA) calculator [EASY/2]
 
 **/tech/rgb-hex — RGB ↔ Hex Converter**
-- Title: RGB ↔ Hex Converter: Red, Green & Blue
+- Title: RGB to Hex Converter: Pick a Colour, Copy the Code
 - Keywords: rgb to hex [MEDIUM/3] · hex to rgb [MEDIUM/3] · free online RGB ↔ Hex Converter [EASY/2]
 
 **/tech/uuid-generator — UUID v4 Generator**
-- Title: UUID v4 Generator: How Many
+- Title: UUID v4 Generator Calculator: One
 - Keywords: uuid v4 generator calculator [MEDIUM/3] · free online UUID v4 Generator calculator [EASY/2]
 
 **/tech/password-generator — Strong Password Generator**
-- Title: Strong Password Generator: Length & How Many
+- Title: Strong Password Generator Calculator: Length
 - Keywords: strong password generator calculator [MEDIUM/3] · free online Strong Password Generator calculator [EASY/2]
 
 **/tech/ip-subnet — IP Subnet Calculator**
-- Title: IP Subnet Calculator: IP Address & Prefix Length
+- Title: IP Subnet Calculator: Network, Broadcast and Hosts
 - Keywords: ip subnet calculator [MEDIUM/3] · free online IP Subnet Calculator [EASY/2]
 
 **/tech/cron-validate — Cron Expression Validator**
-- Title: Cron Expression Validator: Validate
+- Title: Cron Expression Validator Calculator: Validate
 - Keywords: cron expression validator calculator [MEDIUM/3] · free online Cron Expression Validator calculator [EASY/2]
 
 **/tech/resistor-color-code — Resistor Color Code Calculator**
-- Title: Resistor Color Code Calculator: 4-Band Resistor
+- Title: Resistor Color Code Calculator: Read 4-Band Values
 - Keywords: resistor color code [MEDIUM/3] · 4 band resistor [MEDIUM/3] · ohm color code [MEDIUM/3] · free online Resistor Color Code Calculator [EASY/2]
 
 **/tech/ascii-table — ASCII Table Reference**
-- Title: ASCII Table Reference: Character
+- Title: ASCII Table Reference Calculator: Character
 - Keywords: ascii code lookup [MEDIUM/3] · free online ASCII Table Reference calculator [EASY/2]
 
 **/tech/awg-reference — Wire Gauge (AWG) Reference**
-- Title: Wire Gauge (AWG) Reference: AWG Size
+- Title: Wire Gauge (AWG) Reference Calculator: AWG Size
 - Keywords: american wire gauge [MEDIUM/3] · free online Wire Gauge (AWG) Reference calculator [EASY/2]
 
 **/tech/aspect-ratio — Aspect Ratio Calculator**
@@ -5144,7 +5144,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: color contrast checker wcag ratio accessibility [MEDIUM/3] · free online Color Contrast Checker calculator [EASY/2]
 
 **/tech/read-time — Reading Time (Web)**
-- Title: Reading Time (Web): Word Count & Words per Minute
+- Title: Reading Time (Web) Calculator: Word Count & Words per Minute
 - Keywords: reading time calculator words web article minutes [EASY/2]
 
 **/tech/font-size-conv — PX to REM/EM Converter**
@@ -5192,7 +5192,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: api cost calculator pricing requests compute [MEDIUM/3] · free online API Cost Calculator [EASY/2]
 
 **/tech/keyword-density — Keyword Density Calculator**
-- Title: Keyword Density Calculator: Text & Keyword
+- Title: Keyword Density Formula: Occurrences ÷ Words × 100
 - Keywords: keyword density calculator seo percentage [EASY/2]
 
 **/tech/reading-grade — Readability Score Calculator**
@@ -5266,7 +5266,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 ## 5.20 Utility Calculators — `utilities/` (32 tools)
 
 **/utilities/qr-generator — QR Code Generator**
-- Title: QR Code Generator: Text or URL
+- Title: QR Code Generator Calculator: Text or URL
 - Keywords: qr code generator [MEDIUM/3] · free online QR Code Generator calculator [EASY/2]
 
 **/utilities/password-gen — Password Generator**
@@ -5286,19 +5286,19 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: binary decimal hex [MEDIUM/3] · free online Number Base Converter [EASY/2]
 
 **/utilities/hash-gen — Hash Generator**
-- Title: Hash Generator: Sha-256 Hash
+- Title: Hash Generator Calculator: Sha-256 Hash
 - Keywords: md5 sha256 hash generator online [EASY/2]
 
 **/utilities/lorem-ipsum — Lorem Ipsum Generator**
-- Title: Lorem Ipsum Generator: Number of Paragraphs
+- Title: Lorem Ipsum Generator Calculator: Number of Paragraphs
 - Keywords: lorem ipsum generator calculator [MEDIUM/3] · free online Lorem Ipsum Generator calculator [EASY/2]
 
 **/utilities/uuid-gen — UUID Generator**
-- Title: UUID Generator: Number of UUIDs
+- Title: UUID Generator Calculator: Number of UUIDs
 - Keywords: uuid generator calculator [MEDIUM/3] · free online UUID Generator calculator [EASY/2]
 
 **/utilities/tip-split — Bill Split & Tip**
-- Title: Bill Split & Tip: Bill Amount, Tip & Number of People
+- Title: Bill Split & Tip Calculator: Bill Amount & Tip
 - Keywords: bill split & tip calculator [MEDIUM/4] · free online Bill Split & Tip calculator [EASY/2]
 
 **/utilities/timer-calc — Countdown Timer Calculator**
@@ -5354,11 +5354,11 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: rounding calculator round to nearest decimal places [MEDIUM/3] · free online Rounding Calculator [EASY/2]
 
 **/utilities/coin-flip — Coin Flip Simulator**
-- Title: Coin Flip Simulator: Number of Flips
+- Title: Coin Flip Simulator Calculator: Number of Flips
 - Keywords: coin flip simulator heads tails probability [MEDIUM/3] · free online Coin Flip Simulator calculator [EASY/2]
 
 **/utilities/dice-roller — Dice Roll Simulator**
-- Title: Dice Roll Simulator: Number of Dice
+- Title: Dice Roll Simulator Calculator: Number of Dice
 - Keywords: dice roller simulator d6 probability [MEDIUM/3] · free online Dice Roll Simulator calculator [EASY/2]
 
 **/utilities/date-add — Date Add/Subtract**
@@ -5374,7 +5374,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: price per unit calculator compare value best deal [EASY/2]
 
 **/utilities/random-name — Random Team Generator**
-- Title: Random Team Generator: Names & Number of Teams
+- Title: Random Team Generator Calculator: Names & Number of Teams
 - Keywords: random team generator split names groups [MEDIUM/3] · free online Random Team Generator calculator [EASY/2]
 
 **/utilities/password-entropy — Password Entropy Calculator**
@@ -5386,7 +5386,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 - Keywords: speech time calculator words per minute presentation duration pace [EASY/2]
 
 **/utilities/qr-content-size — QR Version Finder**
-- Title: QR Version Finder: Payload Size & ECC
+- Title: QR Version Finder Calculator: Payload Size & ECC
 - Keywords: qr code version calculator byte capacity payload ecc [MEDIUM/3] · free online QR Version Finder calculator [EASY/2]
 
 **/utilities/timestamp-convert — Unix Timestamp Converter**
@@ -5397,6 +5397,6 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-17.
 
 ## 6. Join-quality audit (extraction honesty)
 
-- Tool↔URL joins with matching title: **1221**
-- Joins where the title did not literally contain the tool name (renamed/rebranded tools — kept, flagged here): **64**
+- Tool↔URL joins with matching title: **1200**
+- Joins where the title did not literally contain the tool name (renamed/rebranded tools — kept, flagged here): **85**
 - Data entries with no matching indexable page: **0** (data-only tools, groups, or noindex variants)

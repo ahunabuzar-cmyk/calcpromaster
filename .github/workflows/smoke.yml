@@ -98,6 +98,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
+      # Build-deploy.js minifies with esbuild; without node_modules it only warns
+      # and ships unminified CSS, so this job deployed an artifact the smoke job
+      # never tested (the CSS budget then failed here and nowhere else).
+      - name: Install dependencies
+        run: npm ci || npm install
       # deploy/ is gitignored (built by build-deploy.js) — regenerate it in CI
       - name: Build deploy/ folder
         run: node build-deploy.js

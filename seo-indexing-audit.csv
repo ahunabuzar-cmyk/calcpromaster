@@ -1,7 +1,7 @@
 url,type,status,http,title,titleLen,metaDescLen,canonical,h1,words,links,noindex,jsonld,faq,breadcrumb,app,failures
 https://calcpromaster.com/,home,PASS,PASS,"Calculators: 1285+ Free Online Tools — CalcProMaster",52,139,https://calcpromaster.com/,"CalcPro — 1285+ Free Online Calculators",1476,true,false,true,true,true,true,""
 https://calcpromaster.com/about,legal,PASS,PASS,"About CalcProMaster | CalcProMaster",35,143,https://calcpromaster.com/about,"About CalcProMaster",653,true,false,true,false,true,false,""
-https://calcpromaster.com/stats,category,PASS,PASS,"CalcProMaster Stats: Impressions &amp; Indexing Progress",56,150,https://calcpromaster.com/stats,"Site stats: impressions and indexing",664,true,false,true,false,true,false,""
+https://calcpromaster.com/stats,category,PASS,PASS,"CalcProMaster Stats: Impressions &amp; Indexing Progress",56,150,https://calcpromaster.com/stats,"Site stats: impressions and indexing",680,true,false,true,false,true,false,""
 https://calcpromaster.com/changelog,category,PASS,PASS,"CalcProMaster Changelog: Titles and Copy Changes",48,149,https://calcpromaster.com/changelog,"Changelog: titles and copy changes",2203,true,false,true,false,true,false,""
 https://calcpromaster.com/privacy,legal,PASS,PASS,"Privacy Policy | CalcProMaster",30,155,https://calcpromaster.com/privacy,"Privacy Policy",603,true,false,true,false,true,false,""
 https://calcpromaster.com/terms,legal,PASS,PASS,"Terms of Service | CalcProMaster",32,142,https://calcpromaster.com/terms,"Terms of Service",553,true,false,true,false,true,false,""

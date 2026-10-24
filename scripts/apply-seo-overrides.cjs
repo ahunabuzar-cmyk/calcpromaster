@@ -856,7 +856,10 @@ const TITLE_OVERRIDES = {
   'cigarette-cost': 'Smoking Cost Calculator: Cost per Year & per Pack',
   // "vacation cost calculator" — 101 impressions, position 16.3. The monthly
   // target is what the tool returns, so "Cost" belongs beside "Savings".
-  'vacation-savings': 'Vacation Savings Calculator: Cost & Monthly Target',
+  // NOT here: this id also has a CTR entry, and that table is applied after this
+  // one — a title in both places means the CTR text silently wins while this row
+  // keeps failing `npm run seo:overrides:verify` ("title found on 0 pages").
+  // The "Cost" term lives in the CTR title itself.
   // pregnancy and jet-lag are NOT here: they already own a CTR entry with an
   // answer-first block, and the CTR table writes their title. Their term fixes
   // live there, one row each, so two tables never fight over the same string.
@@ -1547,7 +1550,7 @@ const LABEL_REPAIRS = {
     fix: []
   },
   'vacation-savings': {
-    title: 'Vacation Savings Calculator: How Much to Save Monthly',
+    title: 'Vacation Savings Calculator: Cost & Monthly Target',
     metaDesc: 'Enter trip cost, what you have already saved and the months left to get the monthly and weekly amount to set aside. Adjust the date to see the plan change.',
     fix: []
   },

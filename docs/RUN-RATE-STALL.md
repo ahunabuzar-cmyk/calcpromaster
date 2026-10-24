@@ -11,10 +11,12 @@
 | window | 2026-09-28 → 2026-10-04 |
 | indexed | 952/1875 (50.8%) |
 
-## Stall status: **insufficient-history**
+## Stall status: **stale-source**
 
-- History mein **1 hafta** hai; 2 lagataar flat hafte detect karne ke liye **3** chahiye.
-- Yani ye alert **2 weekly runs** baad asli jawab dega. Abhi ke liye ye sirf run-rate record kar raha hai.
+- ⚠ **Data purana hai, trend nahi.** Source export `gsc-coverage-export-2026-10-09` ka aakhri din **2026-10-04** hai — aaj se **20 din** purana.
+- Is liye ye window history me pehle se hai: koi naya sample record **nahi** hua, aur koi stall/cause verdict **nahi** diya gaya. Purana number naye din ke naam par likhna hi "impressions gir gaye" wali galti paida karta hai.
+- Fix: naya coverage export chahiye — `npm run gsc:verify` (token zinda?), phir Search Console se Coverage → Export, `data/gsc-coverage-export-<date>/` me rakho, phir ye script dobara chalao.
+- Ye number **7-day** hai. Isko 28-day average se compare mat karo: 7-day best-week aur 28-day average do alag measures hain, aur unka farq girna nahi, window ka farq hai.
 
 ## Jab stall ho to kya karo
 

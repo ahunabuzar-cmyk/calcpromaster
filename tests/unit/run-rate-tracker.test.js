@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { createRequire } from 'module';
 
 const require = createRequire(import.meta.url);
-const { upsertSample, weeklyChain, flatWeekStreak, classifyCause } = require('../../scripts/run-rate-tracker.cjs');
+const { upsertSample, weeklyChain, flatWeekStreak, classifyCause, isStaleWindow } = require('../../scripts/run-rate-tracker.cjs');
 
 const s = (date, runRate7, indexedPct = null) => ({ date, runRate7, runRate7PerMonth: runRate7 * 30, indexedPct });
 
@@ -71,6 +71,38 @@ describe('flatWeekStreak', () => {
     const { streak, chain } = flatWeekStreak([s('2026-10-03', 900), s('2026-10-04', 1000), s('2026-10-11', 1000)]);
     expect(streak).toBe(1);
     expect(chain).toHaveLength(2);
+  });
+});
+
+describe('isStaleWindow', () => {
+  const sample = (from, to) => ({ date: '2026-10-24', windowFrom: from, windowTo: to });
+  const recorded = { date: '2026-10-17', windowFrom: '2026-09-28', windowTo: '2026-10-04' };
+
+  it('calls a re-dated identical window stale', () => {
+    expect(isStaleWindow([recorded], sample('2026-09-28', '2026-10-04'))).toBe(true);
+  });
+
+  it('is not stale once the source advances', () => {
+    expect(isStaleWindow([recorded], sample('2026-10-05', '2026-10-11'))).toBe(false);
+  });
+
+  it('does not judge the first ever sample as stale', () => {
+    expect(isStaleWindow([], sample('2026-09-28', '2026-10-04'))).toBe(false);
+    expect(isStaleWindow(null, sample('2026-09-28', '2026-10-04'))).toBe(false);
+  });
+
+  it('compares against the newest row, not the first one', () => {
+    const history = [
+      { date: '2026-10-04', windowFrom: '2026-09-14', windowTo: '2026-09-20' },
+      recorded,
+    ];
+    expect(isStaleWindow(history, sample('2026-09-28', '2026-10-04'))).toBe(true);
+    expect(isStaleWindow(history, sample('2026-09-14', '2026-09-20'))).toBe(false);
+  });
+
+  it('ignores rows without a recorded window rather than crashing', () => {
+    expect(isStaleWindow([{ date: '2026-09-01' }], sample('2026-09-28', '2026-10-04'))).toBe(false);
+    expect(isStaleWindow([recorded], { date: '2026-10-24' })).toBe(false);
   });
 });
 

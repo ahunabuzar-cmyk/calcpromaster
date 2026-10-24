@@ -27,43 +27,43 @@ Do base hamesha saath dikhte hain, warna ek number doosre se takra jata hai (det
 
 | Tier | Distinct queries | Pages | Impressions |
 |---|---|---|---|
-| `hundreds` | 100+ | 1 | 262 |
-| `broad` | 30–99 | 31 | 6,744 |
-| `growing` | 10–29 | 88 | 4,618 |
-| `thin` | 4–9 | 141 | 3,806 |
-| `stuck` | 0–3 | 208 | 3,207 |
+| `hundreds` | 100+ | 1 | 97 |
+| `broad` | 30–99 | 31 | 3,979 |
+| `growing` | 10–29 | 88 | 3,231 |
+| `thin` | 4–9 | 141 | 2,497 |
+| `stuck` | 0–3 | 208 | 3,125 |
 
-Property par **469** canonical pages, **4,141** distinct queries, average **9 queries/page**. Top 25 pages ka average **40.9** hai — matlab reach bahut uneven hai: kuch pages sainkdon queries par hain, baaki 1-3 par atke.
+Property par **469** canonical pages, **4,141** distinct queries, average **9 queries/page**. Top 25 pages ka average **38.3** hai — matlab reach bahut uneven hai: kuch pages sainkdon queries par hain, baaki 1-3 par atke.
 
 ## 3. Top pages — reach ke hisaab se
 
 | # | Path | Queries | Impr | Impr/query | Tier | Head query | pos ≤10 | long-tail share |
 |---|---|---|---|---|---|---|---|---|
-| 1 | `/health/bmr-mifflin` | **77** | 1,108 | 14.39 | broad | mifflin st jeor calculator | 65 | 62.3% |
-| 2 | `/lifestyle/home-insurance` | **75** | 1,012 | 13.49 | broad | home insurance calculator | 2 | 52.0% |
-| 3 | `/family/child-height` | **3** | 615 | 205 | stuck | baby height predictor | 0 | 66.7% |
-| 4 | `/finance/pmi-calculator` | **96** | 608 | 6.33 | broad | pmi calculator | 16 | 66.7% |
-| 5 | `/finance/fha-loan` | **30** | 426 | 14.2 | broad | fha loan calculator | 11 | 56.7% |
-| 6 | `/tech/internet-speed` | **53** | 415 | 7.83 | broad | download speed calculator | 2 | 69.8% |
-| 7 | `/guides/tip` | **1** | 338 | 338 | stuck | how to calculate tip | 1 | 0.0% |
-| 8 | `/finance/apy-calculator` | **67** | 319 | 4.76 | broad | calculate annual percentage yield | 13 | 79.1% |
-| 9 | `/regional/dubai-salary` | **22** | 299 | 13.59 | growing | payroll calculator | 0 | 54.5% |
-| 10 | `/guides/business-days` | **165** | 262 | 1.59 | hundreds | business days calculator | 3 | 92.1% |
-| 11 | `/guides/bmr` | **36** | 253 | 7.03 | broad | mifflin st jeor calculator | 17 | 88.9% |
-| 12 | `/tech/raid-capacity` | **48** | 238 | 4.96 | broad | raid capacity calculator | 7 | 62.5% |
-| 13 | `/finance/credit-utilization` | **30** | 236 | 7.87 | broad | credit utilization calculator | 3 | 60.0% |
-| 14 | `/fitness/muscle-gain` | **5** | 230 | 46 | thin | muscle gain calculator | 0 | 60.0% |
-| 15 | `/lifestyle/renters-insurance` | **14** | 203 | 14.5 | growing | renters insurance calculator | 4 | 78.6% |
-| 16 | `/science/carbon-dating` | **8** | 200 | 25 | thin | dating range calculator | 2 | 100.0% |
-| 17 | `/math/weighted-average` | **49** | 162 | 3.31 | broad | weighted average calculator | 2 | 79.6% |
-| 18 | `/finance/wacc` | **15** | 159 | 10.6 | growing | cost of capital calculator | 1 | 46.7% |
-| 19 | `/education/tuition-cost` | **1** | 159 | 159 | stuck | التكلفة | 1 | 100.0% |
-| 20 | `/finance/rent-affordability` | **39** | 156 | 4 | broad | rent affordability calculator | 6 | 87.2% |
-| 21 | `/lifestyle/charging-time` | **2** | 146 | 73 | stuck | charging time | 1 | 100.0% |
-| 22 | `/tech/rgb-hex` | **27** | 136 | 5.04 | growing | rgb to hex | 7 | 70.4% |
-| 23 | `/conversion/wire-gauge-conv` | **65** | 133 | 2.05 | broad | awg to mm | 0 | 84.6% |
-| 24 | `/science/solar-energy` | **42** | 133 | 3.17 | broad | solar panel wattage calculator | 3 | 69.0% |
-| 25 | `/finance/va-loan` | **52** | 132 | 2.54 | broad | va loan calculator | 0 | 59.6% |
+| 1 | `/family/child-height` | **3** | 846 | 282 | stuck | baby height predictor | 0 | 66.7% |
+| 2 | `/finance/pmi-calculator` | **96** | 640 | 6.67 | broad | pmi calculator | 16 | 66.7% |
+| 3 | `/finance/fha-loan` | **30** | 443 | 14.77 | broad | fha loan calculator | 11 | 56.7% |
+| 4 | `/guides/tip` | **1** | 396 | 396 | stuck | how to calculate tip | 1 | 0.0% |
+| 5 | `/regional/dubai-salary` | **22** | 388 | 17.64 | growing | payroll calculator | 0 | 54.5% |
+| 6 | `/lifestyle/home-insurance` | **75** | 372 | 4.96 | broad | home insurance calculator | 2 | 52.0% |
+| 7 | `/health/bmr-mifflin` | **77** | 359 | 4.66 | broad | mifflin st jeor calculator | 65 | 62.3% |
+| 8 | `/guides/bmr` | **36** | 304 | 8.44 | broad | mifflin st jeor calculator | 17 | 88.9% |
+| 9 | `/tech/internet-speed` | **53** | 226 | 4.26 | broad | download speed calculator | 2 | 69.8% |
+| 10 | `/lifestyle/charging-time` | **2** | 201 | 100.5 | stuck | charging time | 1 | 100.0% |
+| 11 | `/math/weighted-average` | **49** | 193 | 3.94 | broad | weighted average calculator | 2 | 79.6% |
+| 12 | `/fitness/muscle-gain` | **5** | 182 | 36.4 | thin | muscle gain calculator | 0 | 60.0% |
+| 13 | `/tech/rgb-hex` | **27** | 166 | 6.15 | growing | rgb to hex | 7 | 70.4% |
+| 14 | `/regional/singapore-cpf` | **36** | 157 | 4.36 | broad | cpf calculator | 2 | 80.6% |
+| 15 | `/guides/mortgage` | **39** | 148 | 3.79 | broad | compute mortgage payment formula | 0 | 84.6% |
+| 16 | `/homegarden/wallpaper-rolls` | **31** | 145 | 4.68 | broad | wallpaper calculator | 0 | 87.1% |
+| 17 | `/finance/va-loan` | **52** | 132 | 2.54 | broad | va loan calculator | 0 | 59.6% |
+| 18 | `/math/trigonometry` | **3** | 112 | 37.33 | stuck | online calculator trigonometry | 3 | 100.0% |
+| 19 | `/family/baby-weight-gain` | **26** | 106 | 4.08 | growing | baby weight percentile calculator | 20 | 53.8% |
+| 20 | `/tech/raid-capacity` | **48** | 104 | 2.17 | broad | raid capacity calculator | 7 | 62.5% |
+| 21 | `/guides/gear-ratio` | **34** | 102 | 3 | broad | gear ratio formula | 2 | 85.3% |
+| 22 | `/science/dew-point` | **26** | 100 | 3.85 | growing | how is dew point calculated | 13 | 80.8% |
+| 23 | `/guides/business-days` | **165** | 97 | 0.59 | hundreds | business days calculator | 3 | 92.1% |
+| 24 | `/regional/switzerland-take-home-salary` | **21** | 95 | 4.52 | growing | swiss salary calculator | 3 | 81.0% |
+| 25 | `/everyday/gift-wrap` | **1** | 95 | 95 | stuck | how much wrapping paper do i need | 0 | 100.0% |
 
 `impr/query` chhota hona ye batata hai ke reach chaude hai magar patli — hundreds of queries par 1-2 impressions. `impr/query` bara + queries kam = head par depend karta hua page. Dono ki alag dawa hai: pehle ko position chahiye, doosre ko naya content.
 
@@ -84,21 +84,21 @@ Ye section ek trap se bachata hai: split dekh kar 301 add karna **ghalat** hota 
 
 | Path | Variants | Impr (total) | Minority share | Verdict |
 |---|---|---|---|---|
-| `/health/bmr-mifflin` | /health/bmr-mifflin (175) · /health/bmr-mifflin/ (86) | 1,108 | 33.0% | consolidation-lag |
-| `/lifestyle/home-insurance` | /lifestyle/home-insurance/ (637) · /lifestyle/home-insurance (366) | 1,012 | 36.5% | consolidation-lag |
-| `/tech/internet-speed` | /tech/internet-speed/ (125) · /tech/internet-speed (93) | 415 | 42.7% | consolidation-lag |
-| `/guides/business-days` | /guides/business-days (137) · /guides/business-days/ (82) | 262 | 37.4% | consolidation-lag |
-| `/tech/raid-capacity` | /tech/raid-capacity/ (126) · /tech/raid-capacity (98) | 238 | 43.8% | consolidation-lag |
-| `/fitness/muscle-gain` | /fitness/muscle-gain (6) · /fitness/muscle-gain/ (3) | 230 | 33.3% | consolidation-lag |
-| `/lifestyle/renters-insurance` | /lifestyle/renters-insurance (133) · /lifestyle/renters-insurance/ (66) | 203 | 33.2% | consolidation-lag |
-| `/science/carbon-dating` | /science/carbon-dating (9) · /science/carbon-dating/ (2) | 200 | 18.2% | consolidation-lag |
-| `/conversion/wire-gauge-conv` | /conversion/wire-gauge-conv (62) · /conversion/wire-gauge-conv/ (58) | 133 | 48.3% | consolidation-lag |
-| `/science/solar-energy` | /science/solar-energy/ (105) · /science/solar-energy (13) | 133 | 11.0% | consolidation-lag |
-| `/regional/singapore-cpf` | /regional/singapore-cpf (94) · /regional/singapore-cpf/ (17) | 128 | 15.3% | consolidation-lag |
-| `/tech/ip-subnet` | /tech/ip-subnet/ (84) · /tech/ip-subnet (12) | 122 | 12.5% | consolidation-lag |
-| `/auto/parking-cost` | /auto/parking-cost (13) · /auto/parking-cost/ (1) | 107 | 7.1% | consolidation-lag |
-| `/finance/prorated-rent` | /finance/prorated-rent (83) · /finance/prorated-rent/ (11) | 99 | 11.7% | consolidation-lag |
-| `/homegarden/vinyl-flooring` | /homegarden/vinyl-flooring (67) · /homegarden/vinyl-flooring/ (6) | 95 | 8.2% | consolidation-lag |
+| `/lifestyle/home-insurance` | /lifestyle/home-insurance/ (637) · /lifestyle/home-insurance (366) | 372 | 36.5% | consolidation-lag |
+| `/health/bmr-mifflin` | /health/bmr-mifflin (175) · /health/bmr-mifflin/ (86) | 359 | 33.0% | consolidation-lag |
+| `/tech/internet-speed` | /tech/internet-speed/ (125) · /tech/internet-speed (93) | 226 | 42.7% | consolidation-lag |
+| `/fitness/muscle-gain` | /fitness/muscle-gain (6) · /fitness/muscle-gain/ (3) | 182 | 33.3% | consolidation-lag |
+| `/regional/singapore-cpf` | /regional/singapore-cpf (94) · /regional/singapore-cpf/ (17) | 157 | 15.3% | consolidation-lag |
+| `/tech/raid-capacity` | /tech/raid-capacity/ (126) · /tech/raid-capacity (98) | 104 | 43.8% | consolidation-lag |
+| `/guides/business-days` | /guides/business-days (137) · /guides/business-days/ (82) | 97 | 37.4% | consolidation-lag |
+| `/science/carbon-dating` | /science/carbon-dating (9) · /science/carbon-dating/ (2) | 94 | 18.2% | consolidation-lag |
+| `/lifestyle/renters-insurance` | /lifestyle/renters-insurance (133) · /lifestyle/renters-insurance/ (66) | 68 | 33.2% | consolidation-lag |
+| `/conversion/wire-gauge-conv` | /conversion/wire-gauge-conv (62) · /conversion/wire-gauge-conv/ (58) | 64 | 48.3% | consolidation-lag |
+| `/regional/rickshaw-fare` | /regional/rickshaw-fare/ (4) · /regional/rickshaw-fare (3) | 64 | 42.9% | consolidation-lag |
+| `/regional/pk-salary` | /regional/pk-salary/ (21) · /regional/pk-salary (2) | 45 | 8.7% | consolidation-lag |
+| `/auto/mileage-calculator` | /auto/mileage-calculator/ (41) · /auto/mileage-calculator (15) | 40 | 26.8% | consolidation-lag |
+| `/family/vacation-with-kids` | /family/vacation-with-kids (30) · /family/vacation-with-kids/ (3) | 33 | 9.1% | consolidation-lag |
+| `/lifestyle/resell-value` | /lifestyle/resell-value/ (3) · /lifestyle/resell-value (2) | 31 | 40.0% | consolidation-lag |
 
 
 ## 5. Semantic expansion backlog — do taraf ka scan
@@ -111,35 +111,35 @@ Ek page "semantically poor" lagta hai jab uski queries sirf ek shakal mein aati 
 | `expose` | content maujood hai, query nahi | kuch mat likho — section ko copy mein upar lao, exact query wording use karo, andar se link do; page already eligible hai |
 | `fine` | query already aa rahi hai | kuch mat karo |
 
-Top 25 pages par: **17 `write`** · **8 `expose`** · **0 `fine`** — kul 29 buckets likhne hain aur 108 sirf expose karne hain.
+Top 25 pages par: **17 `write`** · **8 `expose`** · **0 `fine`** — kul 26 buckets likhne hain aur 115 sirf expose karne hain.
 
 | Path | Reach | Query coverage | Content coverage | Action | Buckets |
 |---|---|---|---|---|---|
-| `/tech/internet-speed` | 53 q · 415 impr | 12.5% | 75.0% | **write** | Table / chart, Region / year variant |
-| `/guides/tip` | 1 q · 338 impr | 12.5% | 62.5% | **write** | Comparison, Period variant (per day/month/year) |
-| `/regional/dubai-salary` | 22 q · 299 impr | 25.0% | 87.5% | **write** | Table / chart |
-| `/guides/bmr` | 36 q · 253 impr | 12.5% | 75.0% | **write** | Free / online / best, Region / year variant |
-| `/tech/raid-capacity` | 48 q · 238 impr | 50.0% | 75.0% | **write** | Table / chart |
-| `/finance/credit-utilization` | 30 q · 236 impr | 50.0% | 75.0% | **write** | Table / chart |
-| `/fitness/muscle-gain` | 5 q · 230 impr | 12.5% | 75.0% | **write** | Table / chart |
-| `/lifestyle/renters-insurance` | 14 q · 203 impr | 12.5% | 75.0% | **write** | Table / chart, Region / year variant |
-| `/science/carbon-dating` | 8 q · 200 impr | 25.0% | 75.0% | **write** | Table / chart, Region / year variant |
-| `/math/weighted-average` | 49 q · 162 impr | 25.0% | 75.0% | **write** | Table / chart, Region / year variant |
-| `/finance/wacc` | 15 q · 159 impr | 25.0% | 75.0% | **write** | Table / chart, Region / year variant |
-| `/education/tuition-cost` | 1 q · 159 impr | 0.0% | 75.0% | **write** | Table / chart, Region / year variant |
-| `/lifestyle/charging-time` | 2 q · 146 impr | 12.5% | 75.0% | **write** | Table / chart, Region / year variant |
-| `/tech/rgb-hex` | 27 q · 136 impr | 12.5% | 75.0% | **write** | Table / chart, Region / year variant |
-| `/conversion/wire-gauge-conv` | 65 q · 133 impr | 12.5% | 75.0% | **write** | Table / chart, Region / year variant |
-| `/science/solar-energy` | 42 q · 133 impr | 50.0% | 75.0% | **write** | Table / chart, Region / year variant |
+| `/guides/tip` | 1 q · 396 impr | 12.5% | 75.0% | **write** | Comparison, Period variant (per day/month/year) |
+| `/regional/dubai-salary` | 22 q · 388 impr | 25.0% | 87.5% | **write** | Table / chart |
+| `/guides/bmr` | 36 q · 304 impr | 12.5% | 75.0% | **write** | Free / online / best, Region / year variant |
+| `/tech/internet-speed` | 53 q · 226 impr | 12.5% | 75.0% | **write** | Table / chart, Region / year variant |
+| `/lifestyle/charging-time` | 2 q · 201 impr | 12.5% | 75.0% | **write** | Table / chart, Region / year variant |
+| `/math/weighted-average` | 49 q · 193 impr | 25.0% | 75.0% | **write** | Table / chart, Region / year variant |
+| `/fitness/muscle-gain` | 5 q · 182 impr | 12.5% | 75.0% | **write** | Table / chart |
+| `/tech/rgb-hex` | 27 q · 166 impr | 12.5% | 75.0% | **write** | Table / chart, Region / year variant |
+| `/regional/singapore-cpf` | 36 q · 157 impr | 50.0% | 87.5% | **write** | Table / chart |
+| `/homegarden/wallpaper-rolls` | 31 q · 145 impr | 25.0% | 75.0% | **write** | Table / chart, Region / year variant |
 | `/finance/va-loan` | 52 q · 132 impr | 50.0% | 75.0% | **write** | Table / chart |
-| `/health/bmr-mifflin` | 77 q · 1,108 impr | 25.0% | 87.5% | **expose** | Sawal (how/what/why…), Table / chart, Worked example, Comparison (+2) |
-| `/lifestyle/home-insurance` | 75 q · 1,012 impr | 50.0% | 100.0% | **expose** | Formula / method, Table / chart, Worked example, Comparison |
-| `/family/child-height` | 3 q · 615 impr | 12.5% | 100.0% | **expose** | Formula / method, Table / chart, Worked example, Comparison (+3) |
-| `/finance/pmi-calculator` | 96 q · 608 impr | 75.0% | 100.0% | **expose** | Worked example, Comparison |
-| `/finance/fha-loan` | 30 q · 426 impr | 37.5% | 100.0% | **expose** | Formula / method, Table / chart, Worked example, Comparison (+1) |
-| `/finance/apy-calculator` | 67 q · 319 impr | 75.0% | 100.0% | **expose** | Comparison, Region / year variant |
-| `/guides/business-days` | 165 q · 262 impr | 50.0% | 87.5% | **expose** | Table / chart, Worked example, Comparison, Free / online / best |
-| `/finance/rent-affordability` | 39 q · 156 impr | 62.5% | 75.0% | **expose** | Formula / method, Worked example, Comparison |
+| `/math/trigonometry` | 3 q · 112 impr | 12.5% | 75.0% | **write** | Table / chart, Region / year variant |
+| `/family/baby-weight-gain` | 26 q · 106 impr | 12.5% | 87.5% | **write** | Region / year variant |
+| `/tech/raid-capacity` | 48 q · 104 impr | 50.0% | 75.0% | **write** | Table / chart |
+| `/guides/gear-ratio` | 34 q · 102 impr | 25.0% | 75.0% | **write** | Period variant (per day/month/year), Region / year variant |
+| `/regional/switzerland-take-home-salary` | 21 q · 95 impr | 12.5% | 87.5% | **write** | Table / chart |
+| `/everyday/gift-wrap` | 1 q · 95 impr | 12.5% | 87.5% | **write** | Region / year variant |
+| `/family/child-height` | 3 q · 846 impr | 12.5% | 100.0% | **expose** | Formula / method, Table / chart, Worked example, Comparison (+3) |
+| `/finance/pmi-calculator` | 96 q · 640 impr | 75.0% | 100.0% | **expose** | Worked example, Comparison |
+| `/finance/fha-loan` | 30 q · 443 impr | 37.5% | 100.0% | **expose** | Formula / method, Table / chart, Worked example, Comparison (+1) |
+| `/lifestyle/home-insurance` | 75 q · 372 impr | 50.0% | 100.0% | **expose** | Formula / method, Table / chart, Worked example, Comparison |
+| `/health/bmr-mifflin` | 77 q · 359 impr | 25.0% | 87.5% | **expose** | Sawal (how/what/why…), Table / chart, Worked example, Comparison (+2) |
+| `/guides/mortgage` | 39 q · 148 impr | 62.5% | 87.5% | **expose** | Table / chart, Worked example, Comparison |
+| `/science/dew-point` | 26 q · 100 impr | 50.0% | 87.5% | **expose** | Table / chart, Worked example, Comparison, Period variant (per day/month/year) |
+| `/guides/business-days` | 165 q · 97 impr | 50.0% | 100.0% | **expose** | Table / chart, Worked example, Comparison, Free / online / best |
 
 > `write` = naya section (formula + table + worked example jaise `js/tool-enhance.js` mein already kuch tools ke liye hai). `expose` = content pehle se page par hai magar us shakal ki query nahi aa rahi — wahan likhna waste hai, wording + internal link + crawl theek karo. Ye list keyword-stuffing ka license nahi: har section ka jawab page ke apne numbers se ban-na chahiye.
 

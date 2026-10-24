@@ -78,6 +78,22 @@ function flatWeekStreak(history, tolerance = FLAT_TOLERANCE) {
   return { streak, chain };
 }
 
+// Same measurement, new date. When the coverage export has not advanced, every
+// weekly run re-reads the identical window; appending it would create "flat
+// weeks" out of nothing and the stall detector would name a fake cause (this is
+// exactly how the history sat frozen at the Sep 28 – Oct 4 window from 11 to 17
+// Oct: four rows, one measurement). A stale sample is a data-pipeline failure to
+// report, never a trend to judge.
+function isStaleWindow(history, sample) {
+  if (!sample || !sample.windowFrom || !sample.windowTo) return false;
+  const list = (Array.isArray(history) ? history : [])
+    .filter((s) => s && typeof s.date === 'string' && s.windowFrom && s.windowTo)
+    .sort((a, b) => a.date.localeCompare(b.date));
+  if (!list.length) return false;
+  const last = list[list.length - 1];
+  return last.windowFrom === sample.windowFrom && last.windowTo === sample.windowTo;
+}
+
 // Which side is stuck. Indexing moving while the run-rate does not is an
 // exposure problem; neither moving is a crawl problem.
 function classifyCause({ flatWeeks, indexedPctDelta }) {
@@ -118,6 +134,15 @@ function main() {
   let history = [];
   try { history = JSON.parse(fs.readFileSync(HISTORY, 'utf8')); } catch (e) { history = []; }
 
+  // Where the numbers actually came from, so a frozen export can be named
+  // instead of being disguised as a flat week.
+  const lastRow = series.length ? series[series.length - 1] : null;
+  const sourceExport = lastRow ? lastRow.source : null;
+  const sourceLatestDate = lastRow ? lastRow.date : null;
+  const sourceAgeDays = sourceLatestDate
+    ? Math.round((Date.parse(today) - Date.parse(sourceLatestDate)) / 864e5)
+    : null;
+
   const sample = {
     date: today,
     capturedAt: new Date().toISOString(),
@@ -128,12 +153,15 @@ function main() {
     indexed: latest ? latest.indexed : null,
     notIndexed: latest ? latest.notIndexed : null,
     indexedPct,
+    sourceExport,
+    sourceLatestDate,
   };
 
-  const { streak, chain } = flatWeekStreak(history);
+  const stale = rr7 ? isStaleWindow(history, sample) : false;
   // Decide on the history the sample is joining (plus the sample itself, so a run
-  // right after a flat week is judged on today's number).
-  const probe = rr7 ? upsertSample(history, sample) : weeklyChain(history);
+  // right after a flat week is judged on today's number). A stale sample is not
+  // recorded and not judged: it would be the same measurement twice.
+  const probe = rr7 && !stale ? upsertSample(history, sample) : weeklyChain(history);
   const projected = flatWeekStreak(probe);
   const weeksInHistory = projected.chain.length;
   const canDecide = weeksInHistory >= 3;
@@ -147,9 +175,10 @@ function main() {
   const stalled = canDecide && flatWeeks >= 2;
   const verdict = classifyCause({ flatWeeks, indexedPctDelta });
 
-  const status = !canDecide
-    ? 'insufficient-history'
-    : (stalled ? 'stalled' : 'growing');
+  const status = stale
+    ? 'stale-source'
+    : (!canDecide ? 'insufficient-history' : (stalled ? 'stalled' : 'growing'));
+  const judgedStall = !stale && stalled;
 
   const out = {
     ranAt: new Date().toISOString(),
@@ -162,12 +191,18 @@ function main() {
     runRate7PerMonth: sample.runRate7PerMonth,
     indexedPct,
     indexedPctDelta,
-    cause: stalled ? verdict.cause : null,
-    reason: stalled ? verdict.reason : (canDecide ? 'run-rate barh raha hai' : 'abhi 2 hafte ka history nahi bana'),
+    sourceExport,
+    sourceLatestDate,
+    sourceAgeDays,
+    staleSource: stale,
+    cause: judgedStall ? verdict.cause : null,
+    reason: stale
+      ? 'source export ' + (sourceExport || '?') + ' me naya din nahi aaya (last day ' + (sourceLatestDate || '?') + ', ' + sourceAgeDays + ' din purana) — ye window pehle se history me hai, is liye koi naya sample record nahi hua aur koi stall verdict nahi diya.'
+      : (judgedStall ? verdict.reason : (canDecide ? 'run-rate barh raha hai' : 'abhi 2 hafte ka history nahi bana')),
     history: probe,
   };
 
-  fs.writeFileSync(HISTORY, JSON.stringify(probe, null, 2) + '\n');
+  if (!stale) fs.writeFileSync(HISTORY, JSON.stringify(probe, null, 2) + '\n');
   fs.writeFileSync(STALL, JSON.stringify({ ...out, history: undefined }, null, 2) + '\n');
 
   // ---- markdown ----
@@ -187,7 +222,12 @@ function main() {
   L.push('');
   L.push('## Stall status: **' + status + '**');
   L.push('');
-  if (!canDecide) {
+  if (stale) {
+    L.push('- ⚠ **Data purana hai, trend nahi.** Source export `' + (sourceExport || '?') + '` ka aakhri din **' + (sourceLatestDate || '?') + '** hai — aaj se **' + sourceAgeDays + ' din** purana.');
+    L.push('- Is liye ye window history me pehle se hai: koi naya sample record **nahi** hua, aur koi stall/cause verdict **nahi** diya gaya. Purana number naye din ke naam par likhna hi "impressions gir gaye" wali galti paida karta hai.');
+    L.push('- Fix: naya coverage export chahiye — `npm run gsc:verify` (token zinda?), phir Search Console se Coverage → Export, `data/gsc-coverage-export-<date>/` me rakho, phir ye script dobara chalao.');
+    L.push('- Ye number **7-day** hai. Isko 28-day average se compare mat karo: 7-day best-week aur 28-day average do alag measures hain, aur unka farq girna nahi, window ka farq hai.');
+  } else if (!canDecide) {
     L.push('- History mein **' + weeksInHistory + ' hafta** hai; 2 lagataar flat hafte detect karne ke liye **3** chahiye.');
     L.push('- Yani ye alert **' + (out.weeksUntilDecidable === 1 ? '1 weekly run' : out.weeksUntilDecidable + ' weekly runs') + '** baad asli jawab dega. Abhi ke liye ye sirf run-rate record kar raha hai.');
   } else if (stalled) {
@@ -216,11 +256,12 @@ function main() {
   fs.writeFileSync(DOC, L.join('\n'));
 
   console.log('run-rate (7d): ' + (sample.runRate7 !== null ? sample.runRate7 + '/day' : '?') + ' · status: ' + status + ' · flat weeks: ' + flatWeeks + (canDecide ? '' : ' (history ' + weeksInHistory + '/3 hafte)'));
-  if (stalled) console.log('⚠ STALL → cause: ' + verdict.cause);
+  if (stale) console.log('⚠ STALE SOURCE: ' + (sourceExport || '?') + ' ends ' + (sourceLatestDate || '?') + ' (' + sourceAgeDays + ' din purana) — sample record nahi hua, verdict nahi diya');
+  if (judgedStall) console.log('⚠ STALL → cause: ' + verdict.cause);
   console.log('report: docs/RUN-RATE-STALL.md · data/run-rate-history.json');
   if (problems.length) { problems.forEach((p) => console.error('✖ ' + p)); process.exit(1); }
 }
 
-module.exports = { upsertSample, weeklyChain, flatWeekStreak, classifyCause, FLAT_TOLERANCE };
+module.exports = { upsertSample, weeklyChain, flatWeekStreak, classifyCause, isStaleWindow, FLAT_TOLERANCE };
 
 if (require.main === module) main();

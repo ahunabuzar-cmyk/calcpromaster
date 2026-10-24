@@ -12,7 +12,7 @@
 // Manual run:  node scripts/scheduled-smoke.cjs
 // ============================================================
 'use strict';
-const { spawnSync } = require('child_process');
+const { spawn, spawnSync } = require('child_process');
 const path = require('path');
 const http = require('http');
 const https = require('https');
@@ -40,6 +40,26 @@ function sendAlert(subject, details) {
   });
 }
 
+// serve-deploy.cjs never exits, so it has to be spawned and kept alive for the
+// run. Running it with spawnSync used to block for the 15 s timeout and then kill
+// the server before the probe looked — every run reported "deploy server failed
+// to start" — and it was told no port, so it listened on its own default (8123)
+// while this runner probed 3100.
+let server = null;
+function stopServer() {
+  if (server && server.exitCode === null) { try { server.kill(); } catch (e) { /* already gone */ } }
+  server = null;
+}
+process.on('exit', stopServer);
+function startServer() {
+  const child = spawn(process.execPath, ['scripts/serve-deploy.cjs', String(PORT)], { cwd: ROOT, stdio: ['ignore', 'pipe', 'pipe'] });
+  child.log = '';
+  child.stdout.on('data', (d) => { child.log += d; });
+  child.stderr.on('data', (d) => { child.log += d; });
+  child.on('error', (e) => { child.log += String(e); });
+  return child;
+}
+
 function waitForServer(url, tries = 20) {
   return new Promise((resolve) => {
     const attempt = (n) => {
@@ -57,10 +77,11 @@ function waitForServer(url, tries = 20) {
   const up = await waitForServer(BASE + '/', 5);
   if (!up) {
     console.log('Starting deploy server on :' + PORT);
-    const serve = spawnSync(process.execPath, ['scripts/serve-deploy.cjs'], { cwd: ROOT, encoding: 'utf8', timeout: 15000 });
-    console.log(serve.stdout || serve.stderr || '');
+    server = startServer();
     const nowUp = await waitForServer(BASE + '/', 20);
-    if (!nowUp) { console.error('✗ deploy server failed to start'); process.exit(1); }
+    const log = server ? server.log.trim() : '';
+    if (log) console.log(log);
+    if (!nowUp) { console.error('✗ deploy server failed to start'); stopServer(); process.exit(1); }
   }
 
   const SPECS = [
@@ -89,6 +110,7 @@ function waitForServer(url, tries = 20) {
     }
   }
 
+  stopServer();
   if (failed > 0) {
     await sendAlert(`SCHEDULED SMOKE FAILED (${failed} suite(s))`, `Suite ${BASE} — ${failed} Playwright suite(s) failed. Run "node scripts/scheduled-smoke.cjs" locally and inspect test-results/.`);
     console.error(`✗ SCHEDULED SMOKE FAILED: ${failed} suite(s)`);

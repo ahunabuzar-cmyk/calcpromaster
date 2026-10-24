@@ -5,7 +5,7 @@ import path from 'path';
 import os from 'os';
 
 const require = createRequire(import.meta.url);
-const { n, patchHomepage } = require('../../scripts/build-stats-page.cjs');
+const { n, patchHomepage, healthCheckText } = require('../../scripts/build-stats-page.cjs');
 
 const read = (rel) => fs.readFileSync(path.join(process.cwd(), rel), 'utf8');
 
@@ -90,6 +90,47 @@ describe('stats page / the home-page figure', () => {
 
   it('does not claim a click or traffic number it cannot measure', () => {
     expect(block()).not.toMatch(/clicks|visitors|traffic/i);
+  });
+});
+
+describe('stats page / weekly health check wording', () => {
+  const stale = {
+    status: 'stale-source',
+    flatWeeks: 1,
+    sourceLatestDate: '2026-10-18',
+    sourceRawLatestDate: '2026-10-21',
+    recordedWindowSample: '2026-10-24',
+    windowTo: '2026-10-18',
+  };
+
+  it('never turns a re-measured window into a flat week', () => {
+    const text = healthCheckText(stale);
+    expect(text).not.toMatch(/flat week/i);
+    expect(text).toMatch(/already measured on 2026-10-24/);
+    expect(text).toMatch(/no stall is called/i);
+  });
+
+  it('does not claim the export stopped advancing when newer days exist', () => {
+    const text = healthCheckText(stale);
+    expect(text).not.toMatch(/has not advanced past/i);
+    expect(text).toMatch(/runs to 2026-10-21/);
+    expect(text).toMatch(/newest reading worth trusting/);
+  });
+
+  it('drops the settled-day sentence when the chart has no fresher day', () => {
+    const text = healthCheckText({ ...stale, sourceRawLatestDate: '2026-10-18' });
+    expect(text).not.toMatch(/still being filled in/i);
+    expect(text).toMatch(/already measured on 2026-10-24/);
+  });
+
+  it('keeps the flat-week count for a real verdict, and says when it cannot decide', () => {
+    expect(healthCheckText({ status: 'stalled', flatWeeks: 2 })).toMatch(/\(2 flat weeks\)/);
+    expect(healthCheckText({ status: 'insufficient-history', flatWeeks: 0 }))
+      .toMatch(/three weekly readings/i);
+  });
+
+  it('returns nothing when there is no health record', () => {
+    expect(healthCheckText(null)).toBeNull();
   });
 });
 

@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-24T12:17:23.100Z",
+  "ranAt": "2026-10-24T14:12:19.699Z",
   "status": "stale-source",
   "flatWeeks": 1,
   "stalled": false,
@@ -13,6 +13,8 @@
   "sourceLatestDate": "2026-10-18",
   "sourceRawLatestDate": "2026-10-21",
   "sourceAgeDays": 6,
+  "recordedWindowSample": "2026-10-24",
+  "windowTo": "2026-10-18",
   "staleSource": true,
   "droppedUnfinalizedDays": 3,
   "cause": null,

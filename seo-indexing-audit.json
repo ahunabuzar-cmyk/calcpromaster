@@ -1,6 +1,6 @@
 {
   "report": {
-    "generated": "2026-10-24T14:07:33.374Z",
+    "generated": "2026-10-24T14:17:26.903Z",
     "mode": "ssg-deploy",
     "domain": "https://calcpromaster.com",
     "totalUrls": 1420,
@@ -147,7 +147,7 @@
       "robots": "index, follow",
       "h1": "Site stats: impressions and indexing",
       "h1Count": 1,
-      "wordCount": 680,
+      "wordCount": 719,
       "internalLinks": true,
       "jsonLdBlocks": 1,
       "hasLdSchema": true,

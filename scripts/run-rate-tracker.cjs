@@ -210,6 +210,8 @@ function main() {
     sourceLatestDate,
     sourceRawLatestDate,
     sourceAgeDays,
+    recordedWindowSample: recordedSample ? recordedSample.date : null,
+    windowTo: sample.windowTo,
     staleSource: stale,
     droppedUnfinalizedDays: droppedDays,
     cause: judgedStall ? verdict.cause : null,

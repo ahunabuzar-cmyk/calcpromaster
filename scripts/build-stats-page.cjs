@@ -29,6 +29,35 @@ const n = (x, digits = 0) => (Number.isFinite(x)
   ? x.toLocaleString('en-US', { minimumFractionDigits: digits, maximumFractionDigits: digits })
   : '—');
 
+// The health check is the one place a reader can mistake "the same window, read
+// twice" for "a week without growth". The internal status name says nothing to a
+// visitor, and a flat-week count next to it reads as a trend even when no verdict
+// was made — so a re-measured window is spelled out instead of counted.
+function healthCheckText(stall) {
+  if (!stall || !stall.status) return null;
+
+  if (stall.status === 'stale-source') {
+    const settled = stall.sourceLatestDate || 'the last reading';
+    const windowTo = stall.windowTo || settled;
+    const raw = stall.sourceRawLatestDate && stall.sourceRawLatestDate !== stall.sourceLatestDate
+      ? ' Search Console chart data runs to ' + stall.sourceRawLatestDate + ', but its newest days are still being filled in, so ' + settled + ' is the newest reading worth trusting.'
+      : '';
+    return '<p>Run-rate watch: <strong>waiting for a newer settled day</strong>. '
+      + 'Search Console has not settled a day after ' + settled + ', so the seven days to ' + windowTo
+      + (stall.recordedWindowSample ? ' were already measured on ' + stall.recordedWindowSample : ' have already been measured')
+      + '.' + raw
+      + ' This run re-read that same window: no new reading was stored and no stall is called, because a window that has not moved cannot be evidence of a decline.</p>';
+  }
+
+  const weeks = Number(stall.flatWeeks) > 0
+    ? ' (' + stall.flatWeeks + ' flat week' + (stall.flatWeeks === 1 ? '' : 's') + ')'
+    : '';
+  const extra = stall.status === 'insufficient-history'
+    ? ' The alert needs three weekly readings before it can call a stall, so it reports its own sample size rather than guessing.'
+    : '';
+  return '<p>Run-rate watch status: <strong>' + stall.status + '</strong>' + weeks + '.' + extra + '</p>';
+}
+
 function main() {
   const growth = readJson('data/growth-model.json');
   const coverage = readJson('data/gsc-coverage-fresh.json');
@@ -174,7 +203,7 @@ ${indexRows.map((r) => '        <tr><td><strong>' + r[0] + '</strong></td><td>' 
       <strong>What this page does not claim.</strong> The rate above is measured from a tracked sample of URLs, not the whole site, so it is an observation rather than a forecast. Indexing is decided by Google — the calculators themselves have no technical blocker left; they wait for a crawl. Nothing here promises a traffic figure on a date.
     </div>
 ${stall ? `    <h2>Weekly health check</h2>
-    <p>Run-rate watch status: <strong>${stall.status}</strong>${stall.flatWeeks ? ' (' + stall.flatWeeks + ' flat week' + (stall.flatWeeks === 1 ? '' : 's') + ')' : ''}. ${stall.status === 'insufficient-history' ? 'The alert needs three weekly readings before it can call a stall, so it reports its own sample size rather than guessing.' : ''}${stall.status === 'stale-source' ? 'The coverage export behind this check has not advanced past ' + (stall.sourceLatestDate || 'its last day') + ', so the same window is being read again. That is a data-freshness gap, not a traffic movement, and no stall is called on unchanged data.' : ''}</p>
+    ${healthCheckText(stall)}
 ` : ''}
     <h2>What these numbers do not measure</h2>
     <p>Impressions count a result appearing on screen, not a person reading it. A page that ranks on page four can collect impressions for months without a single click, and a page that ranks first for a question already answered in the snippet can get plenty of impressions and few visits. Search Console also omits anonymised queries, so the long tail is undercounted. Nothing here measures whether a visitor found the answer useful: a session that ends in eight seconds after the number was read is a success for a calculator, and there is no metric on this page that would know the difference.</p>
@@ -228,6 +257,6 @@ function patchHomepage(file, block) {
   return { patched: true, changed: true };
 }
 
-module.exports = { n, patchHomepage };
+module.exports = { n, patchHomepage, healthCheckText };
 
 if (require.main === module) main();

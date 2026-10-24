@@ -1,0 +1,302 @@
+{
+  "ranAt": "2026-10-24T04:26:58.007Z",
+  "origin": "https://calcpromaster.com",
+  "render": true,
+  "probes": 36,
+  "tally": {
+    "noindex": 12,
+    "notfound": 19,
+    "redirect": 3,
+    "shell": 2
+  },
+  "rows": [
+    {
+      "url": "/health/BMR-MIFFLIN",
+      "why": "uppercase twin of /health/bmr-mifflin",
+      "status": 200,
+      "kind": "noindex",
+      "detail": "rendered robots=noindex, follow",
+      "rendered": true,
+      "robots": "noindex, follow",
+      "canonicalSeen": "https://calcpromaster.com/404"
+    },
+    {
+      "url": "/health/bmr-mifflin.html",
+      "why": ".html twin of /health/bmr-mifflin",
+      "status": 404,
+      "kind": "notfound",
+      "detail": "404"
+    },
+    {
+      "url": "/health/bmr-mifflin/this-page-does-not-exist-xyz",
+      "why": "junk child of /health/bmr-mifflin",
+      "status": 200,
+      "kind": "noindex",
+      "detail": "rendered robots=noindex, follow",
+      "rendered": true,
+      "robots": "noindex, follow",
+      "canonicalSeen": "https://calcpromaster.com/health/bmr-mifflin"
+    },
+    {
+      "url": "/finance/LOAN-EMI",
+      "why": "uppercase twin of /finance/loan-emi",
+      "status": 200,
+      "kind": "noindex",
+      "detail": "rendered robots=noindex, follow",
+      "rendered": true,
+      "robots": "noindex, follow",
+      "canonicalSeen": "https://calcpromaster.com/404"
+    },
+    {
+      "url": "/finance/loan-emi.html",
+      "why": ".html twin of /finance/loan-emi",
+      "status": 404,
+      "kind": "notfound",
+      "detail": "404"
+    },
+    {
+      "url": "/finance/loan-emi/this-page-does-not-exist-xyz",
+      "why": "junk child of /finance/loan-emi",
+      "status": 200,
+      "kind": "noindex",
+      "detail": "rendered robots=noindex, follow",
+      "rendered": true,
+      "robots": "noindex, follow",
+      "canonicalSeen": "https://calcpromaster.com/finance/loan-emi"
+    },
+    {
+      "url": "/guides/TIP",
+      "why": "uppercase twin of /guides/tip",
+      "status": 200,
+      "kind": "noindex",
+      "detail": "rendered robots=noindex, follow",
+      "rendered": true,
+      "robots": "noindex, follow",
+      "canonicalSeen": "https://calcpromaster.com/404"
+    },
+    {
+      "url": "/guides/tip.html",
+      "why": ".html twin of /guides/tip",
+      "status": 308,
+      "kind": "redirect",
+      "detail": "308 -> /guides/tip"
+    },
+    {
+      "url": "/guides/tip/this-page-does-not-exist-xyz",
+      "why": "junk child of /guides/tip",
+      "status": 200,
+      "kind": "noindex",
+      "detail": "rendered robots=noindex, follow",
+      "rendered": true,
+      "robots": "noindex, follow",
+      "canonicalSeen": "https://calcpromaster.com/404"
+    },
+    {
+      "url": "/blog/HOW-EMI-WORKS",
+      "why": "uppercase twin of /blog/how-emi-works",
+      "status": 200,
+      "kind": "noindex",
+      "detail": "rendered robots=noindex, follow",
+      "rendered": true,
+      "robots": "noindex, follow",
+      "canonicalSeen": "https://calcpromaster.com/404"
+    },
+    {
+      "url": "/blog/how-emi-works.html",
+      "why": ".html twin of /blog/how-emi-works",
+      "status": 308,
+      "kind": "redirect",
+      "detail": "308 -> /blog/how-emi-works"
+    },
+    {
+      "url": "/blog/how-emi-works/this-page-does-not-exist-xyz",
+      "why": "junk child of /blog/how-emi-works",
+      "status": 200,
+      "kind": "noindex",
+      "detail": "rendered robots=noindex, follow",
+      "rendered": true,
+      "robots": "noindex, follow",
+      "canonicalSeen": "https://calcpromaster.com/404"
+    },
+    {
+      "url": "/TECH",
+      "why": "uppercase twin of /tech",
+      "status": 404,
+      "kind": "notfound",
+      "detail": "404"
+    },
+    {
+      "url": "/tech.html",
+      "why": ".html twin of /tech",
+      "status": 404,
+      "kind": "notfound",
+      "detail": "404"
+    },
+    {
+      "url": "/tech/this-page-does-not-exist-xyz",
+      "why": "junk child of /tech",
+      "status": 200,
+      "kind": "noindex",
+      "detail": "rendered robots=noindex, follow",
+      "rendered": true,
+      "robots": "noindex, follow",
+      "canonicalSeen": "https://calcpromaster.com/404"
+    },
+    {
+      "url": "/hub/FINANCE",
+      "why": "uppercase twin of /hub/finance",
+      "status": 404,
+      "kind": "notfound",
+      "detail": "404"
+    },
+    {
+      "url": "/hub/finance.html",
+      "why": ".html twin of /hub/finance",
+      "status": 404,
+      "kind": "notfound",
+      "detail": "404"
+    },
+    {
+      "url": "/hub/finance/this-page-does-not-exist-xyz",
+      "why": "junk child of /hub/finance",
+      "status": 404,
+      "kind": "notfound",
+      "detail": "404"
+    },
+    {
+      "url": "/ABOUT",
+      "why": "uppercase twin of /about",
+      "status": 404,
+      "kind": "notfound",
+      "detail": "404"
+    },
+    {
+      "url": "/about.html",
+      "why": ".html twin of /about",
+      "status": 308,
+      "kind": "redirect",
+      "detail": "308 -> /about"
+    },
+    {
+      "url": "/about/this-page-does-not-exist-xyz",
+      "why": "junk child of /about",
+      "status": 404,
+      "kind": "notfound",
+      "detail": "404"
+    },
+    {
+      "url": "/HOMEGARDEN",
+      "why": "uppercase twin of /homegarden",
+      "status": 404,
+      "kind": "notfound",
+      "detail": "404"
+    },
+    {
+      "url": "/homegarden.html",
+      "why": ".html twin of /homegarden",
+      "status": 404,
+      "kind": "notfound",
+      "detail": "404"
+    },
+    {
+      "url": "/homegarden/this-page-does-not-exist-xyz",
+      "why": "junk child of /homegarden",
+      "status": 200,
+      "kind": "noindex",
+      "detail": "rendered robots=noindex, follow",
+      "rendered": true,
+      "robots": "noindex, follow",
+      "canonicalSeen": "https://calcpromaster.com/404"
+    },
+    {
+      "url": "/BUSINESS",
+      "why": "uppercase twin of /business",
+      "status": 404,
+      "kind": "notfound",
+      "detail": "404"
+    },
+    {
+      "url": "/business.html",
+      "why": ".html twin of /business",
+      "status": 404,
+      "kind": "notfound",
+      "detail": "404"
+    },
+    {
+      "url": "/business/this-page-does-not-exist-xyz",
+      "why": "junk child of /business",
+      "status": 200,
+      "kind": "noindex",
+      "detail": "rendered robots=noindex, follow",
+      "rendered": true,
+      "robots": "noindex, follow",
+      "canonicalSeen": "https://calcpromaster.com/404"
+    },
+    {
+      "url": "/CONSTRUCTION",
+      "why": "uppercase twin of /construction",
+      "status": 404,
+      "kind": "notfound",
+      "detail": "404"
+    },
+    {
+      "url": "/construction.html",
+      "why": ".html twin of /construction",
+      "status": 404,
+      "kind": "notfound",
+      "detail": "404"
+    },
+    {
+      "url": "/construction/this-page-does-not-exist-xyz",
+      "why": "junk child of /construction",
+      "status": 200,
+      "kind": "noindex",
+      "detail": "rendered robots=noindex, follow",
+      "rendered": true,
+      "robots": "noindex, follow",
+      "canonicalSeen": "https://calcpromaster.com/404"
+    },
+    {
+      "url": "/CONVERSION",
+      "why": "uppercase twin of /conversion",
+      "status": 404,
+      "kind": "notfound",
+      "detail": "404"
+    },
+    {
+      "url": "/conversion.html",
+      "why": ".html twin of /conversion",
+      "status": 404,
+      "kind": "notfound",
+      "detail": "404"
+    },
+    {
+      "url": "/conversion/this-page-does-not-exist-xyz",
+      "why": "junk child of /conversion",
+      "status": 200,
+      "kind": "shell",
+      "detail": "SPA shell (200) — needs --render to decide (not rendered — raise --limit)"
+    },
+    {
+      "url": "/CAREER",
+      "why": "uppercase twin of /career",
+      "status": 404,
+      "kind": "notfound",
+      "detail": "404"
+    },
+    {
+      "url": "/career.html",
+      "why": ".html twin of /career",
+      "status": 404,
+      "kind": "notfound",
+      "detail": "404"
+    },
+    {
+      "url": "/career/this-page-does-not-exist-xyz",
+      "why": "junk child of /career",
+      "status": 200,
+      "kind": "shell",
+      "detail": "SPA shell (200) — needs --render to decide (not rendered — raise --limit)"
+    }
+  ]
+}

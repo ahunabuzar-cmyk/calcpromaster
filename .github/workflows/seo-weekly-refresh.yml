@@ -1,0 +1,171 @@
+name: CalcProMaster — Weekly SEO Refresh
+
+# Runs weekly (Monday 08:15 UTC) + manual dispatch.
+# Executes scripts/weekly-seo-refresh.cjs (data → reports → build → gates):
+#   1. GSC per-page impressions pull           (source priority for links)
+#   2. Sitemap resubmit + URL inspection batch (recrawl signal via API)
+#   3. Index panel: the same 100 URLs re-inspected (measured indexing rate)
+#   4. GSC query→page join (input for the opportunity planner)
+#   5. Machine-shaped query guard (non-fatal here; the CI quality job gates it)
+#   6. Growth model · 7. run-rate stall watch · 7b. query reach · 8. index burn-down
+#   9. Public stats page + home-page figure · 10. SEO copy changelog
+#  11. Rebuild deploy/ (crawl-link-boost + all gates)
+#  12. Crawl-link gate verify
+#  13. Link-equity plan (from the built link graph)
+#  14. Host-consolidation regression check (non-fatal inside refresh)
+#  15. Staleness gate — FATAL: no published report/page may be older than its data
+#
+# A separate secret-free `host-check` job runs concurrently and FAILS the
+# workflow if www / pages.dev stop 301-ing to the apex.
+#
+# Uses the Plan-B OAuth refresh token (no service-account key needed —
+# the Google org blocks key creation). Required repo secrets:
+#   GSC_OAUTH_CLIENT_SECRET_B64 → base64 of gsc-client-secret.json
+#   GSC_REFRESH_TOKEN_B64       → base64 of gsc-refresh-token.json
+#   (PowerShell: [Convert]::ToBase64String([IO.File]::ReadAllBytes("gsc-client-secret.json"))
+#    Git Bash:   base64 -w0 gsc-client-secret.json)
+# If the secrets are absent the job is skipped cleanly (no failure).
+
+on:
+  schedule:
+    - cron: '15 8 * * 1'          # every Monday 08:15 UTC
+  workflow_dispatch:
+
+concurrency:
+  group: calcpro-seo-weekly
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  # Independent, secret-free guard: fails if www / pages.dev stop 301-ing to the apex.
+  host-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Host-consolidation regression check
+        run: node scripts/check-host-redirects.cjs
+
+  # Independent, secret-free guard: a 200 that Google cannot index (SPA soft 404).
+  # Raw HTML alone cannot decide this class — the app shell answers 200 for an
+  # unknown path and only sets `robots=noindex` after JS runs — so the job opens
+  # the shell probes in Chromium and fails on one that stayed indexable.
+  soft-404:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Soft-404 check (rendered)
+        run: node scripts/check-soft-404.cjs --render --fail --limit 40
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: soft-404-report
+          path: data/soft-404-report.json
+          if-no-files-found: ignore
+
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Gate — OAuth credentials configured?
+        id: gate
+        env:
+          CS: ${{ secrets.GSC_OAUTH_CLIENT_SECRET_B64 }}
+          RT: ${{ secrets.GSC_REFRESH_TOKEN_B64 }}
+        run: |
+          if [ -n "$CS" ] && [ -n "$RT" ]; then
+            echo "ready=1" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=0" >> "$GITHUB_OUTPUT"
+            echo "⏭ GSC OAuth secrets not configured — skipping (see docs/api-credentials-setup.md → Plan B)."
+          fi
+      - name: Checkout
+        if: steps.gate.outputs.ready == '1'
+        uses: actions/checkout@v4
+      - name: Setup Node
+        if: steps.gate.outputs.ready == '1'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Write OAuth client + refresh token (from secrets)
+        if: steps.gate.outputs.ready == '1'
+        env:
+          CS: ${{ secrets.GSC_OAUTH_CLIENT_SECRET_B64 }}
+          RT: ${{ secrets.GSC_REFRESH_TOKEN_B64 }}
+        run: |
+          echo "$CS" | base64 -d > gsc-client-secret.json
+          echo "$RT" | base64 -d > gsc-refresh-token.json
+      - name: Validate credentials shape
+        if: steps.gate.outputs.ready == '1'
+        run: |
+          node -e "const c=require('./gsc-client-secret.json'); const i=c.installed||c.web||c; if(!i.client_id||!i.client_secret) throw new Error('bad client secret')"
+          node -e "const t=require('./gsc-refresh-token.json'); if(!t.refresh_token) throw new Error('bad refresh token')"
+      - name: Install dependencies
+        if: steps.gate.outputs.ready == '1'
+        run: npm ci --no-audit --no-fund
+      - name: Run weekly SEO refresh
+        if: steps.gate.outputs.ready == '1'
+        env:
+          GSC_OAUTH_CLIENT_SECRET: ${{ github.workspace }}/gsc-client-secret.json
+          GSC_SITE_URL: ${{ vars.GSC_SITE_URL || '' }}
+        run: node scripts/weekly-seo-refresh.cjs --days 28 --limit 100
+      - name: Weekly index watcher (coverage + cohort + inspection)
+        if: success() && steps.gate.outputs.ready == '1'
+        env:
+          GSC_OAUTH_CLIENT_SECRET: ${{ github.workspace }}/gsc-client-secret.json
+          GSC_SITE_URL: ${{ vars.GSC_SITE_URL || '' }}
+        run: node scripts/weekly-index-watcher.cjs
+      - name: Upload SEO snapshots
+        if: success() && steps.gate.outputs.ready == '1'
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-weekly-snapshot
+          path: |
+            data/gsc-page-impressions.json
+            data/gsc-query-page.json
+            data/query-quality-audit.json
+            data/seo-placeholder-audit.json
+            data/crawl-link-boost.json
+            data/crawl-link-gate.json
+            data/gsc-inspect-batch-*.json
+            data/index-panel.json
+            data/index-panel-history.json
+            data/index-burndown.json
+            data/query-reach.json
+            data/link-equity-plan.json
+            data/seo-changelog.json
+            data/weekly-index-watcher.json
+            data/top100-snippet-audit.json
+            docs/WEEKLY-INDEX-WATCHER.md
+            docs/TOP100-SNIPPET-AUDIT.md
+            docs/request-indexing-clickthrough.html
+            stats.html
+            changelog.html
+          if-no-files-found: ignore
+      - name: Open alert issue on failure
+        if: failure() && steps.gate.outputs.ready == '1'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '🔄 Weekly SEO refresh failed',
+              body: 'The weekly SEO refresh failed. Run locally: `node scripts/weekly-seo-refresh.cjs`. If the token is dead (`invalid_grant`), refresh it with `node scripts/gsc-oauth-login.cjs --paste` and update the `GSC_REFRESH_TOKEN_B64` secret.'
+            });

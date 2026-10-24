@@ -1,0 +1,5682 @@
+{
+ "/": {
+  "date": "2026-09-28",
+  "hash": "3c0d4799dc4ced3b"
+ },
+ "/about": {
+  "date": "2026-09-28",
+  "hash": "10066a169c403611"
+ },
+ "/stats": {
+  "date": "2026-10-24",
+  "hash": "59ebeecb203c77e8"
+ },
+ "/changelog": {
+  "date": "2026-10-24",
+  "hash": "a5bb6e9223e1555d"
+ },
+ "/privacy": {
+  "date": "2026-09-28",
+  "hash": "0b855c69c2e306ae"
+ },
+ "/terms": {
+  "date": "2026-09-28",
+  "hash": "d543c4238b600ff1"
+ },
+ "/contact": {
+  "date": "2026-09-28",
+  "hash": "6a5ab90dc3053b13"
+ },
+ "/editorial-policy": {
+  "date": "2026-09-28",
+  "hash": "996486483db706ee"
+ },
+ "/graph": {
+  "date": "2026-10-24",
+  "hash": "60c3decf4b6b5024"
+ },
+ "/geometry-lab": {
+  "date": "2026-10-24",
+  "hash": "ab998feb9959e8af"
+ },
+ "/disclaimer-general": {
+  "date": "2026-09-28",
+  "hash": "79defa74048f67fd"
+ },
+ "/disclaimer-finance": {
+  "date": "2026-09-28",
+  "hash": "276fb154fbeb0796"
+ },
+ "/disclaimer-health": {
+  "date": "2026-09-28",
+  "hash": "757c296f53a0830f"
+ },
+ "/guides/": {
+  "date": "2026-09-28",
+  "hash": "6c28364b7f0e0df6"
+ },
+ "/guides/percentage": {
+  "date": "2026-09-28",
+  "hash": "983b80a95b052ae8"
+ },
+ "/guides/emi": {
+  "date": "2026-09-28",
+  "hash": "bf512d7bb5da3387"
+ },
+ "/guides/age": {
+  "date": "2026-09-28",
+  "hash": "b536d7bc0cf060f1"
+ },
+ "/guides/bmi": {
+  "date": "2026-09-28",
+  "hash": "3067a239e7a79bae"
+ },
+ "/guides/compound-interest": {
+  "date": "2026-09-28",
+  "hash": "e223cf0d36c58c9a"
+ },
+ "/guides/mortgage": {
+  "date": "2026-09-28",
+  "hash": "490d20bd82aad057"
+ },
+ "/guides/zakat": {
+  "date": "2026-09-28",
+  "hash": "c4cf5c5eeb9087ef"
+ },
+ "/guides/income-tax": {
+  "date": "2026-09-28",
+  "hash": "3411323ffde12613"
+ },
+ "/guides/currency-conversion": {
+  "date": "2026-09-28",
+  "hash": "2061ae5e83d817ca"
+ },
+ "/guides/discount": {
+  "date": "2026-09-28",
+  "hash": "687aea9dc643aa56"
+ },
+ "/guides/tip": {
+  "date": "2026-09-28",
+  "hash": "377e8e94e4a922a0"
+ },
+ "/guides/gst-sales-tax": {
+  "date": "2026-09-28",
+  "hash": "85cb5749af7ce126"
+ },
+ "/guides/glossary": {
+  "date": "2026-09-28",
+  "hash": "8f8662af0c85bb51"
+ },
+ "/guides/inflation": {
+  "date": "2026-09-28",
+  "hash": "ffc352d5297adfd2"
+ },
+ "/guides/salary": {
+  "date": "2026-09-28",
+  "hash": "b61309b385dbc6c9"
+ },
+ "/guides/retirement": {
+  "date": "2026-09-28",
+  "hash": "dc15e8133266a8ad"
+ },
+ "/guides/calories": {
+  "date": "2026-09-28",
+  "hash": "d57e5c276d5b84cd"
+ },
+ "/guides/debt-payoff": {
+  "date": "2026-09-28",
+  "hash": "f7dc94be7f488c44"
+ },
+ "/guides/random-numbers": {
+  "date": "2026-09-28",
+  "hash": "c5bbfda8a5b7ce0d"
+ },
+ "/guides/concrete": {
+  "date": "2026-09-28",
+  "hash": "96edabc2b7b428a6"
+ },
+ "/guides/unit-conversion": {
+  "date": "2026-09-28",
+  "hash": "611f88aab16ec501"
+ },
+ "/guides/gpa": {
+  "date": "2026-09-28",
+  "hash": "8455bbef7062085d"
+ },
+ "/guides/break-even": {
+  "date": "2026-09-28",
+  "hash": "53b6edb59a15a28a"
+ },
+ "/guides/passwords": {
+  "date": "2026-09-28",
+  "hash": "bd703f0e26969c5c"
+ },
+ "/guides/baby-cost": {
+  "date": "2026-09-28",
+  "hash": "7bb338aae915a92b"
+ },
+ "/guides/ideal-weight": {
+  "date": "2026-09-28",
+  "hash": "0f804866541c5923"
+ },
+ "/guides/bmr": {
+  "date": "2026-09-28",
+  "hash": "95985e1c91c38fde"
+ },
+ "/guides/profit-margin": {
+  "date": "2026-09-28",
+  "hash": "9e7c9194279bcf0e"
+ },
+ "/guides/ohms-law": {
+  "date": "2026-09-28",
+  "hash": "26bdab4848fb882a"
+ },
+ "/guides/gear-ratio": {
+  "date": "2026-09-28",
+  "hash": "3dc89a479c491e4b"
+ },
+ "/guides/fuel-cost": {
+  "date": "2026-09-28",
+  "hash": "83adb9ab66f569cf"
+ },
+ "/guides/hourly-rate": {
+  "date": "2026-09-28",
+  "hash": "99779807139fbe86"
+ },
+ "/guides/paint-coverage": {
+  "date": "2026-09-28",
+  "hash": "2b31a4db4ce3f211"
+ },
+ "/guides/macro-calculator": {
+  "date": "2026-09-28",
+  "hash": "0984837e5937fa3f"
+ },
+ "/guides/sip": {
+  "date": "2026-09-28",
+  "hash": "b691cfb424fd1c7e"
+ },
+ "/guides/fd-ppf-sip": {
+  "date": "2026-09-28",
+  "hash": "070d456c8bd0d519"
+ },
+ "/guides/ev-vs-petrol": {
+  "date": "2026-09-28",
+  "hash": "3b7e13daeccaf8b1"
+ },
+ "/guides/wedding-budget": {
+  "date": "2026-09-28",
+  "hash": "823918a40d8b7583"
+ },
+ "/guides/freelance-rate-card": {
+  "date": "2026-09-28",
+  "hash": "c23ccff9bb927da4"
+ },
+ "/guides/screen-time": {
+  "date": "2026-09-28",
+  "hash": "1aa936c1c5fda7c7"
+ },
+ "/guides/electricity-bill": {
+  "date": "2026-09-28",
+  "hash": "e6fdcccf3f697e4f"
+ },
+ "/guides/business-days": {
+  "date": "2026-09-28",
+  "hash": "29e3fdfcc3166210"
+ },
+ "/guides/grade-needed": {
+  "date": "2026-09-28",
+  "hash": "e4776bb4f62fbf37"
+ },
+ "/guides/room-area": {
+  "date": "2026-09-28",
+  "hash": "e2b797c841d5e1dc"
+ },
+ "/guides/ac-size": {
+  "date": "2026-09-28",
+  "hash": "8ccec8adfbfe40f9"
+ },
+ "/guides/protein-intake": {
+  "date": "2026-09-28",
+  "hash": "c070ee466e6f9681"
+ },
+ "/guides/loans-mortgages": {
+  "date": "2026-09-28",
+  "hash": "06c1d2ee44b697bb"
+ },
+ "/guides/tax-salary": {
+  "date": "2026-09-28",
+  "hash": "f2c510cf07b6822b"
+ },
+ "/guides/health-fitness": {
+  "date": "2026-09-28",
+  "hash": "b7328fcd3d9b46cf"
+ },
+ "/guides/math-statistics": {
+  "date": "2026-09-28",
+  "hash": "461af56d51c03685"
+ },
+ "/guides/business": {
+  "date": "2026-09-28",
+  "hash": "f7b658dbbdf2b8ea"
+ },
+ "/guides/construction": {
+  "date": "2026-09-28",
+  "hash": "74f12115fcfd0c73"
+ },
+ "/guides/science": {
+  "date": "2026-09-28",
+  "hash": "198ad912f022ba03"
+ },
+ "/guides/engineering": {
+  "date": "2026-09-28",
+  "hash": "9a22a787cf4387c9"
+ },
+ "/guides/auto": {
+  "date": "2026-09-28",
+  "hash": "2f7a9751f0cad5bd"
+ },
+ "/guides/career": {
+  "date": "2026-09-28",
+  "hash": "1c56c7f301140d65"
+ },
+ "/guides/homegarden": {
+  "date": "2026-09-28",
+  "hash": "c13a2cb25879a537"
+ },
+ "/guides/family": {
+  "date": "2026-09-28",
+  "hash": "a994b0e3eb7d7d45"
+ },
+ "/guides/food": {
+  "date": "2026-09-28",
+  "hash": "1efbeea4b0aac6fb"
+ },
+ "/guides/lifestyle": {
+  "date": "2026-09-28",
+  "hash": "ff8d14ef28f45a4a"
+ },
+ "/guides/regional": {
+  "date": "2026-09-28",
+  "hash": "98df6ebd8be474af"
+ },
+ "/guides/everyday": {
+  "date": "2026-09-28",
+  "hash": "2d053d9c94d82eab"
+ },
+ "/guides/utilities": {
+  "date": "2026-09-28",
+  "hash": "7138ebb7a8a118e0"
+ },
+ "/guides/cagr": {
+  "date": "2026-09-28",
+  "hash": "57e1ed71c8da34be"
+ },
+ "/guides/body-fat": {
+  "date": "2026-09-28",
+  "hash": "f281f5260a8df62f"
+ },
+ "/guides/credit-card-minimum": {
+  "date": "2026-09-28",
+  "hash": "7e59b82971ad620e"
+ },
+ "/guides/debt-ratio": {
+  "date": "2026-09-28",
+  "hash": "3f1f0538d4ff0967"
+ },
+ "/guides/heart-rate-zones": {
+  "date": "2026-09-28",
+  "hash": "e9d4d9b08f10d5b1"
+ },
+ "/guides/net-worth": {
+  "date": "2026-09-28",
+  "hash": "53e991253cfac303"
+ },
+ "/guides/npv-vs-irr": {
+  "date": "2026-09-28",
+  "hash": "ec88622c4d548782"
+ },
+ "/guides/rent-vs-buy": {
+  "date": "2026-09-28",
+  "hash": "ab7a5bec38c8f175"
+ },
+ "/guides/sleep-cycles": {
+  "date": "2026-09-28",
+  "hash": "39e275e26efdabc9"
+ },
+ "/guides/water-intake": {
+  "date": "2026-09-28",
+  "hash": "ce0c6e97b3a7202b"
+ },
+ "/embed/": {
+  "date": "2026-09-28",
+  "hash": "5fa5000dd76f6706"
+ },
+ "/blog/": {
+  "date": "2026-09-28",
+  "hash": "afa3e37549e8858d"
+ },
+ "/blog/stacked-discounts": {
+  "date": "2026-09-28",
+  "hash": "a8912fe9841f6637"
+ },
+ "/blog/how-emi-works": {
+  "date": "2026-09-28",
+  "hash": "724165ce39039321"
+ },
+ "/blog/bmi-honest-look": {
+  "date": "2026-09-28",
+  "hash": "e0e620623ff60eca"
+ },
+ "/blog/rule-of-72": {
+  "date": "2026-09-28",
+  "hash": "0c075b1999a08930"
+ },
+ "/blog/concrete-patio-math": {
+  "date": "2026-09-28",
+  "hash": "f998565d10601961"
+ },
+ "/blog/ev-vs-petrol-tco": {
+  "date": "2026-09-28",
+  "hash": "a28fb54507468ed4"
+ },
+ "/auto/": {
+  "date": "2026-09-28",
+  "hash": "35ed0b4df39de58f"
+ },
+ "/hub/auto/": {
+  "date": "2026-09-28",
+  "hash": "5645a7a3c5a24cd3"
+ },
+ "/auto/fuel-cost/": {
+  "date": "2026-09-28",
+  "hash": "ed82b15232766312"
+ },
+ "/auto/mileage-calculator/": {
+  "date": "2026-09-28",
+  "hash": "685fc991d1b0bf8c"
+ },
+ "/auto/fuel-price-compare/": {
+  "date": "2026-09-28",
+  "hash": "d42abf24defa1f84"
+ },
+ "/auto/car-loan-emi/": {
+  "date": "2026-09-28",
+  "hash": "29d65712cdfc9789"
+ },
+ "/auto/car-affordability/": {
+  "date": "2026-09-28",
+  "hash": "fd3fa904eca14781"
+ },
+ "/auto/lease-vs-buy/": {
+  "date": "2026-09-28",
+  "hash": "4705986f42624fb7"
+ },
+ "/auto/ev-charging-cost/": {
+  "date": "2026-09-28",
+  "hash": "aabcf3ee6999a3dd"
+ },
+ "/auto/ev-vs-gas-petrol/": {
+  "date": "2026-09-28",
+  "hash": "01d8f6ae29f719bb"
+ },
+ "/auto/ev-range/": {
+  "date": "2026-09-28",
+  "hash": "7654c28b74609001"
+ },
+ "/auto/car-maintenance/": {
+  "date": "2026-09-28",
+  "hash": "6e7abdbbf41290dc"
+ },
+ "/auto/tire-size/": {
+  "date": "2026-09-28",
+  "hash": "dba99fb0f3373ae8"
+ },
+ "/auto/oil-change/": {
+  "date": "2026-09-28",
+  "hash": "33f3a47ca7ec1b5c"
+ },
+ "/auto/car-insurance/": {
+  "date": "2026-09-28",
+  "hash": "9b8b7214f0bf7c47"
+ },
+ "/auto/commute-cost/": {
+  "date": "2026-09-28",
+  "hash": "6c0d6fc444003d83"
+ },
+ "/auto/ride-share-cost/": {
+  "date": "2026-09-28",
+  "hash": "f0576b3027f2afc4"
+ },
+ "/auto/public-transport/": {
+  "date": "2026-09-28",
+  "hash": "2c9b6c46cc4050ec"
+ },
+ "/auto/walking-transit/": {
+  "date": "2026-09-28",
+  "hash": "aaf9406c238202bf"
+ },
+ "/auto/trip-time/": {
+  "date": "2026-09-28",
+  "hash": "82c2639dcbc113ad"
+ },
+ "/auto/speed-distance-time/": {
+  "date": "2026-09-28",
+  "hash": "462bc78052b9c76f"
+ },
+ "/auto/parking-cost/": {
+  "date": "2026-09-28",
+  "hash": "04c083bf4693217e"
+ },
+ "/auto/car-depreciation/": {
+  "date": "2026-09-28",
+  "hash": "e57b985f5c16df81"
+ },
+ "/auto/trade-in-value/": {
+  "date": "2026-09-28",
+  "hash": "3ccbc0353c0cbcc4"
+ },
+ "/auto/bike-fuel/": {
+  "date": "2026-09-28",
+  "hash": "66320c9b3766ef72"
+ },
+ "/auto/bike-loan/": {
+  "date": "2026-09-28",
+  "hash": "61fa0d99a4a53c25"
+ },
+ "/auto/stopping-distance/": {
+  "date": "2026-09-28",
+  "hash": "f39a103420eb9766"
+ },
+ "/auto/fuel-efficiency/": {
+  "date": "2026-09-28",
+  "hash": "2a8bfc2638caa922"
+ },
+ "/auto/car-rental/": {
+  "date": "2026-09-28",
+  "hash": "7aa1b5fc1d519db8"
+ },
+ "/auto/taxi-fare/": {
+  "date": "2026-09-28",
+  "hash": "1bc3d3dc03d9518b"
+ },
+ "/auto/auto-fare/": {
+  "date": "2026-09-28",
+  "hash": "155839160933dc4b"
+ },
+ "/auto/delivery-cost/": {
+  "date": "2026-09-28",
+  "hash": "003b116587ca2769"
+ },
+ "/auto/route-optimizer/": {
+  "date": "2026-09-28",
+  "hash": "fefbc402aefe5013"
+ },
+ "/auto/carbon-footprint-car/": {
+  "date": "2026-09-28",
+  "hash": "68c3a001cc8a80d4"
+ },
+ "/auto/fuel-tank-range/": {
+  "date": "2026-09-28",
+  "hash": "d6a6cfd08e84149c"
+ },
+ "/auto/tow-capacity/": {
+  "date": "2026-09-28",
+  "hash": "9e77b49ed519c2c5"
+ },
+ "/auto/cargo-volume/": {
+  "date": "2026-09-28",
+  "hash": "1d607988441c0516"
+ },
+ "/auto/toll-cost/": {
+  "date": "2026-09-28",
+  "hash": "9d7a90bd0744fc0d"
+ },
+ "/auto/carpool-savings/": {
+  "date": "2026-09-28",
+  "hash": "b18aa5e6dde69daf"
+ },
+ "/auto/bus-vs-car/": {
+  "date": "2026-09-28",
+  "hash": "956e13ff0c97fc42"
+ },
+ "/auto/ebike-range/": {
+  "date": "2026-09-28",
+  "hash": "5a1fd116e4aefa13"
+ },
+ "/auto/scooter-cost/": {
+  "date": "2026-09-28",
+  "hash": "b6338d809cf3d0b8"
+ },
+ "/auto/registration-cost/": {
+  "date": "2026-09-28",
+  "hash": "9ca4cd7199913b29"
+ },
+ "/auto/tire-replacement/": {
+  "date": "2026-09-28",
+  "hash": "8484aa3a26cfe631"
+ },
+ "/auto/speed-conv/": {
+  "date": "2026-09-28",
+  "hash": "cbd5b5e9487329fb"
+ },
+ "/auto/hybrid-savings/": {
+  "date": "2026-09-28",
+  "hash": "8d017f683a56278c"
+ },
+ "/auto/power-to-weight/": {
+  "date": "2026-09-28",
+  "hash": "385a6922466d4fb3"
+ },
+ "/auto/quarter-mile/": {
+  "date": "2026-09-28",
+  "hash": "7eb1a94461332bc0"
+ },
+ "/auto/ev-charger-roi/": {
+  "date": "2026-10-24",
+  "hash": "43a3e1a79cbf6554"
+ },
+ "/business/": {
+  "date": "2026-09-28",
+  "hash": "43038946f0fc9aa9"
+ },
+ "/hub/business/": {
+  "date": "2026-09-28",
+  "hash": "64226f8239f1ec23"
+ },
+ "/business/business-roi/": {
+  "date": "2026-09-28",
+  "hash": "6b04a1821505b73d"
+ },
+ "/business/profit-margin/": {
+  "date": "2026-09-28",
+  "hash": "e4ff4274ba37446e"
+ },
+ "/business/ltv/": {
+  "date": "2026-09-28",
+  "hash": "1280bd7cc22d8649"
+ },
+ "/business/cac/": {
+  "date": "2026-09-28",
+  "hash": "a59bb5b269b66017"
+ },
+ "/business/conversion-rate/": {
+  "date": "2026-09-28",
+  "hash": "d904a783660f2099"
+ },
+ "/business/churn/": {
+  "date": "2026-09-28",
+  "hash": "4523b486a5b66ca5"
+ },
+ "/business/roas/": {
+  "date": "2026-09-28",
+  "hash": "714052de4a16e89a"
+ },
+ "/business/burn-rate/": {
+  "date": "2026-09-28",
+  "hash": "26c9dbbdbd7ffad1"
+ },
+ "/business/mrr/": {
+  "date": "2026-09-28",
+  "hash": "6ccffc64b886c9d6"
+ },
+ "/business/nps/": {
+  "date": "2026-09-28",
+  "hash": "88f10b04bcc2444a"
+ },
+ "/business/freelance-rate/": {
+  "date": "2026-09-28",
+  "hash": "d8a0bab7f24bdde9"
+ },
+ "/business/pricing/": {
+  "date": "2026-09-28",
+  "hash": "72b49e6d794fbb80"
+ },
+ "/business/inventory/": {
+  "date": "2026-09-28",
+  "hash": "adfb587edae4d255"
+ },
+ "/business/break-even-revenue/": {
+  "date": "2026-09-28",
+  "hash": "ee6557d7220cc861"
+ },
+ "/business/payback/": {
+  "date": "2026-09-28",
+  "hash": "9bfc0349ca067f5f"
+ },
+ "/business/depreciation/": {
+  "date": "2026-09-28",
+  "hash": "559581bb262c965b"
+ },
+ "/business/discount-rate/": {
+  "date": "2026-09-28",
+  "hash": "d021ab05e61cab11"
+ },
+ "/business/saas-unit-metrics/": {
+  "date": "2026-09-28",
+  "hash": "ff3608b9c9501092"
+ },
+ "/business/break-even-point/": {
+  "date": "2026-09-28",
+  "hash": "6565522839525867"
+ },
+ "/business/invoice-due-date/": {
+  "date": "2026-09-28",
+  "hash": "3dcca8fc4613e4a7"
+ },
+ "/business/employee-cost/": {
+  "date": "2026-09-28",
+  "hash": "dae37d366e1db57c"
+ },
+ "/business/markup-margin/": {
+  "date": "2026-09-28",
+  "hash": "80d094cd7da2e049"
+ },
+ "/business/working-capital/": {
+  "date": "2026-09-28",
+  "hash": "dc462def3a17cd70"
+ },
+ "/business/cash-flow-statement/": {
+  "date": "2026-09-28",
+  "hash": "6daf998ab7b8e2f4"
+ },
+ "/business/revenue-per-employee/": {
+  "date": "2026-09-28",
+  "hash": "7c4c45885eef6564"
+ },
+ "/business/cac-payback/": {
+  "date": "2026-09-28",
+  "hash": "6b3beae44e8a3bff"
+ },
+ "/business/business-valuation/": {
+  "date": "2026-09-28",
+  "hash": "1ff4045dfdd3a5a2"
+ },
+ "/business/gross-margin/": {
+  "date": "2026-09-28",
+  "hash": "934c72710995b97b"
+ },
+ "/business/goal-seek-price/": {
+  "date": "2026-09-28",
+  "hash": "3e76c41094dc6373"
+ },
+ "/business/subscription-ltv/": {
+  "date": "2026-09-28",
+  "hash": "a9419dc50c3b0860"
+ },
+ "/business/cash-conversion-cycle/": {
+  "date": "2026-09-28",
+  "hash": "019a71bb89eb9f78"
+ },
+ "/business/market-share/": {
+  "date": "2026-09-28",
+  "hash": "748890b46e300353"
+ },
+ "/business/aov/": {
+  "date": "2026-09-28",
+  "hash": "b1dabf905d21d911"
+ },
+ "/business/customer-ltv/": {
+  "date": "2026-09-28",
+  "hash": "3a143fccffef87bb"
+ },
+ "/business/csat-score/": {
+  "date": "2026-09-28",
+  "hash": "12c833ce050881f4"
+ },
+ "/business/conversion-funnel/": {
+  "date": "2026-09-28",
+  "hash": "1aa85e1c55185efb"
+ },
+ "/business/ab-test-significance/": {
+  "date": "2026-09-28",
+  "hash": "eab7f5e03c245887"
+ },
+ "/business/project-bid/": {
+  "date": "2026-09-28",
+  "hash": "8201008b220a5372"
+ },
+ "/business/retainer-value/": {
+  "date": "2026-09-28",
+  "hash": "eaeaeda14c4a331d"
+ },
+ "/business/sponsorship-rate/": {
+  "date": "2026-10-24",
+  "hash": "2209a78e958e11ef"
+ },
+ "/business/brand-deal-value/": {
+  "date": "2026-10-24",
+  "hash": "649612a1f1a9cf87"
+ },
+ "/business/podcast-ad-rate/": {
+  "date": "2026-10-24",
+  "hash": "cbd647a3ede842c6"
+ },
+ "/business/newsletter-sponsorship-rate/": {
+  "date": "2026-10-24",
+  "hash": "8374076f56b9daf6"
+ },
+ "/business/tool-depreciation/": {
+  "date": "2026-10-24",
+  "hash": "b74ca80525951e0a"
+ },
+ "/business/ev-charger-business-roi/": {
+  "date": "2026-10-24",
+  "hash": "6f9e3d51e5c64ecb"
+ },
+ "/career/": {
+  "date": "2026-09-28",
+  "hash": "9045b19dbfac54f4"
+ },
+ "/hub/career/": {
+  "date": "2026-09-28",
+  "hash": "ff59097d78b4945f"
+ },
+ "/career/salary-converter/": {
+  "date": "2026-09-28",
+  "hash": "bc8f3b704f55b140"
+ },
+ "/career/salary-negotiation/": {
+  "date": "2026-09-28",
+  "hash": "a109aaa84674ceb7"
+ },
+ "/career/raise-calculator/": {
+  "date": "2026-09-28",
+  "hash": "67b648f3f22304bc"
+ },
+ "/career/tax-bracket/": {
+  "date": "2026-09-28",
+  "hash": "a14a67fbcf93afc7"
+ },
+ "/career/freelance-hourly-rate/": {
+  "date": "2026-09-28",
+  "hash": "de6333b32fe4ef7a"
+ },
+ "/career/freelance-project/": {
+  "date": "2026-09-28",
+  "hash": "5d01748c7d4850f7"
+ },
+ "/career/contractor-rate/": {
+  "date": "2026-09-28",
+  "hash": "974ca39900a26f8d"
+ },
+ "/career/overtime-pay/": {
+  "date": "2026-09-28",
+  "hash": "d4c3cda0f84a59ff"
+ },
+ "/career/bonus-calc/": {
+  "date": "2026-09-28",
+  "hash": "7abd67e658f58214"
+ },
+ "/career/pay-gap/": {
+  "date": "2026-09-28",
+  "hash": "d654532735aabd35"
+ },
+ "/career/401k-match/": {
+  "date": "2026-09-28",
+  "hash": "f88c7869a7db1403"
+ },
+ "/career/stock-options/": {
+  "date": "2026-09-28",
+  "hash": "eabe71ecdeee8835"
+ },
+ "/career/side-hustle/": {
+  "date": "2026-09-28",
+  "hash": "97dd93088d88d15b"
+ },
+ "/career/crypto-tax/": {
+  "date": "2026-09-28",
+  "hash": "44d5f84fcd230e01"
+ },
+ "/career/career-gap/": {
+  "date": "2026-09-28",
+  "hash": "0e73a05723cfdf98"
+ },
+ "/career/remortgage-calc/": {
+  "date": "2026-09-28",
+  "hash": "401e18f7622d560f"
+ },
+ "/career/mortgage-afford/": {
+  "date": "2026-09-28",
+  "hash": "b11c302b21df3bb9"
+ },
+ "/career/tax-refund/": {
+  "date": "2026-09-28",
+  "hash": "cac418e8a1887686"
+ },
+ "/career/invoicing-calc/": {
+  "date": "2026-09-28",
+  "hash": "3630534f4fd3952b"
+ },
+ "/career/employment-status/": {
+  "date": "2026-09-28",
+  "hash": "4eb0d7726ea8be62"
+ },
+ "/career/commission-plan/": {
+  "date": "2026-09-28",
+  "hash": "c731094fa7498078"
+ },
+ "/career/freelance-budget/": {
+  "date": "2026-09-28",
+  "hash": "64d467d062db16b9"
+ },
+ "/career/redundancy-pay/": {
+  "date": "2026-09-28",
+  "hash": "772b7bc53feb3999"
+ },
+ "/career/self-employment-tax/": {
+  "date": "2026-09-28",
+  "hash": "978ba9d3b1f3ba63"
+ },
+ "/career/freelance-daily/": {
+  "date": "2026-09-28",
+  "hash": "cb2071cf748b5d2b"
+ },
+ "/career/monthly-goal/": {
+  "date": "2026-09-28",
+  "hash": "d204a8a43e888e6f"
+ },
+ "/career/retirement-contrib/": {
+  "date": "2026-09-28",
+  "hash": "cdb4ff30f82c5027"
+ },
+ "/career/benefits-value/": {
+  "date": "2026-09-28",
+  "hash": "06e333599ed0325f"
+ },
+ "/career/pto-calc/": {
+  "date": "2026-09-28",
+  "hash": "1313fa6d393be054"
+ },
+ "/career/job-offer-compare/": {
+  "date": "2026-09-28",
+  "hash": "78584dfc14ee9eca"
+ },
+ "/career/cost-living-adjustment/": {
+  "date": "2026-09-28",
+  "hash": "2e37a69f0141e799"
+ },
+ "/career/severance-calc/": {
+  "date": "2026-09-28",
+  "hash": "9f5d853cbf8859d5"
+ },
+ "/career/side-hustle-profit/": {
+  "date": "2026-09-28",
+  "hash": "9f5ecef189a35ac5"
+ },
+ "/career/salary-raise-worth/": {
+  "date": "2026-09-28",
+  "hash": "490f311c91c8ccaa"
+ },
+ "/career/wfh-savings/": {
+  "date": "2026-09-28",
+  "hash": "eb2b9a59269d17d2"
+ },
+ "/career/stock-vesting/": {
+  "date": "2026-09-28",
+  "hash": "540fa88dfac0e278"
+ },
+ "/career/vacation-days/": {
+  "date": "2026-09-28",
+  "hash": "86a7cccfcc40728e"
+ },
+ "/career/timesheet-hours/": {
+  "date": "2026-09-28",
+  "hash": "ac7b019859a8edf9"
+ },
+ "/career/shift-differential/": {
+  "date": "2026-09-28",
+  "hash": "6ef14be9b5f6d03b"
+ },
+ "/career/canada-crs/": {
+  "date": "2026-10-24",
+  "hash": "e0b0145934e7de96"
+ },
+ "/career/australia-pr-points/": {
+  "date": "2026-10-24",
+  "hash": "331219f1ddd46d1e"
+ },
+ "/career/career-break-runway/": {
+  "date": "2026-10-24",
+  "hash": "970b481626c506c5"
+ },
+ "/career/ats-resume-score/": {
+  "date": "2026-10-24",
+  "hash": "a6f6d35dcbc47854"
+ },
+ "/career/salary-negotiation-range/": {
+  "date": "2026-10-24",
+  "hash": "ab4ff6c49da189a1"
+ },
+ "/career/us-priority-date/": {
+  "date": "2026-10-24",
+  "hash": "84ecfd4318e9460f"
+ },
+ "/career/interview-to-offer-tracker/": {
+  "date": "2026-10-24",
+  "hash": "0f6c7fa2f51798a8"
+ },
+ "/construction/": {
+  "date": "2026-09-28",
+  "hash": "3319474e779c35ec"
+ },
+ "/hub/construction/": {
+  "date": "2026-09-28",
+  "hash": "3a371d85e9f95b86"
+ },
+ "/construction/concrete-slab/": {
+  "date": "2026-09-28",
+  "hash": "ad20fdad359d1b61"
+ },
+ "/construction/wall-area/": {
+  "date": "2026-09-28",
+  "hash": "3a14323daa3fa73b"
+ },
+ "/construction/roofing/": {
+  "date": "2026-09-28",
+  "hash": "df064de330cd2452"
+ },
+ "/construction/drywall/": {
+  "date": "2026-09-28",
+  "hash": "1d84605d2e1ddfee"
+ },
+ "/construction/flooring/": {
+  "date": "2026-09-28",
+  "hash": "11b06b776045e473"
+ },
+ "/construction/gravel/": {
+  "date": "2026-09-28",
+  "hash": "ec66f4beb4d6aa44"
+ },
+ "/construction/insulation/": {
+  "date": "2026-09-28",
+  "hash": "6105ab484c72fd2b"
+ },
+ "/construction/stairs/": {
+  "date": "2026-09-28",
+  "hash": "2abdd77c9a10c778"
+ },
+ "/construction/wallpaper/": {
+  "date": "2026-09-28",
+  "hash": "d7f6c815a25c7989"
+ },
+ "/construction/carpet/": {
+  "date": "2026-09-28",
+  "hash": "aa261d7cc8982ecd"
+ },
+ "/construction/mulch/": {
+  "date": "2026-09-28",
+  "hash": "83d31d6d8dea413e"
+ },
+ "/construction/soil/": {
+  "date": "2026-09-28",
+  "hash": "9439d2fd0c41a3ca"
+ },
+ "/construction/bricks/": {
+  "date": "2026-09-28",
+  "hash": "d94ef096eb1f7dbb"
+ },
+ "/construction/fence/": {
+  "date": "2026-09-28",
+  "hash": "5e5f92479fc62c52"
+ },
+ "/construction/excavation/": {
+  "date": "2026-09-28",
+  "hash": "ddacfb355d3bb3cd"
+ },
+ "/construction/tile-calculator/": {
+  "date": "2026-09-28",
+  "hash": "06ce4f1a3c2e385e"
+ },
+ "/construction/paint-quantity/": {
+  "date": "2026-09-28",
+  "hash": "d380616ee4a2dea0"
+ },
+ "/construction/rebar-calculator/": {
+  "date": "2026-09-28",
+  "hash": "a0f9bbbc02b8f487"
+ },
+ "/construction/formwork/": {
+  "date": "2026-09-28",
+  "hash": "41f58e60aff5fcbf"
+ },
+ "/construction/concrete-column/": {
+  "date": "2026-09-28",
+  "hash": "babdb3263ef33884"
+ },
+ "/construction/lumber-calculator/": {
+  "date": "2026-09-28",
+  "hash": "03cf9ec27c9628f0"
+ },
+ "/construction/paver-calculator/": {
+  "date": "2026-09-28",
+  "hash": "bbf277475bc19383"
+ },
+ "/construction/water-tank/": {
+  "date": "2026-09-28",
+  "hash": "9a83019a183d0ca9"
+ },
+ "/construction/roof-pitch/": {
+  "date": "2026-09-28",
+  "hash": "230287a2d9970a7d"
+ },
+ "/construction/deck-calculator/": {
+  "date": "2026-09-28",
+  "hash": "72f207c4105e3229"
+ },
+ "/construction/concrete-bags/": {
+  "date": "2026-09-28",
+  "hash": "4395b3b4bd9efd61"
+ },
+ "/construction/block-wall/": {
+  "date": "2026-09-28",
+  "hash": "0278ffd635d88860"
+ },
+ "/construction/rebar-calc/": {
+  "date": "2026-09-28",
+  "hash": "200dc79e1f0643ba"
+ },
+ "/construction/footing-size/": {
+  "date": "2026-09-28",
+  "hash": "f864c4c163a7e3d1"
+ },
+ "/construction/gravel-tonnage/": {
+  "date": "2026-09-28",
+  "hash": "7a50f9fddc809bf5"
+ },
+ "/construction/asphalt-quantity/": {
+  "date": "2026-09-28",
+  "hash": "5348c45a885c05a0"
+ },
+ "/construction/mortar-mix/": {
+  "date": "2026-09-28",
+  "hash": "cdfce3866646dc2a"
+ },
+ "/construction/drywall-screws/": {
+  "date": "2026-09-28",
+  "hash": "0bcc7968d4f4f00f"
+ },
+ "/construction/pipe-volume/": {
+  "date": "2026-09-28",
+  "hash": "32d456965200a139"
+ },
+ "/construction/retaining-wall/": {
+  "date": "2026-09-28",
+  "hash": "5b2f3e3a719991c0"
+ },
+ "/construction/scaffolding/": {
+  "date": "2026-09-28",
+  "hash": "67705cc0ba0ff554"
+ },
+ "/construction/crown-molding/": {
+  "date": "2026-09-28",
+  "hash": "4c20105a7fce27a2"
+ },
+ "/construction/septic-size/": {
+  "date": "2026-09-28",
+  "hash": "121ac48fd6b6e5d6"
+ },
+ "/construction/plaster/": {
+  "date": "2026-09-28",
+  "hash": "787872e7df36a6c0"
+ },
+ "/construction/gutter/": {
+  "date": "2026-09-28",
+  "hash": "fd1e9552a28e47ae"
+ },
+ "/construction/sod/": {
+  "date": "2026-09-28",
+  "hash": "eabc8036c47cadfd"
+ },
+ "/construction/ceiling-tile/": {
+  "date": "2026-09-28",
+  "hash": "4a8e4bc76f3ddbcb"
+ },
+ "/construction/stair-stringer/": {
+  "date": "2026-09-28",
+  "hash": "9a881449a5d7be59"
+ },
+ "/construction/siding-squares/": {
+  "date": "2026-09-28",
+  "hash": "7b7c8f687f9f98da"
+ },
+ "/construction/soffit-area/": {
+  "date": "2026-09-28",
+  "hash": "2c3dd24d1d5fe70d"
+ },
+ "/construction/post-hole-concrete/": {
+  "date": "2026-09-28",
+  "hash": "1bf6ea11a07ea979"
+ },
+ "/construction/fence-panel/": {
+  "date": "2026-09-28",
+  "hash": "efa8485cf8699592"
+ },
+ "/construction/gravel-driveway/": {
+  "date": "2026-09-28",
+  "hash": "e736606c7bc4d22e"
+ },
+ "/construction/insulation-batts/": {
+  "date": "2026-09-28",
+  "hash": "f6131f69edccfcdd"
+ },
+ "/construction/rafter-length/": {
+  "date": "2026-09-28",
+  "hash": "fc27fe8ab3cf1c0c"
+ },
+ "/construction/shingle-squares/": {
+  "date": "2026-09-28",
+  "hash": "09d100231e174d21"
+ },
+ "/construction/drywall-sheets/": {
+  "date": "2026-09-28",
+  "hash": "bb61267ef2784ceb"
+ },
+ "/construction/tile-boxes/": {
+  "date": "2026-09-28",
+  "hash": "a626becbb4830749"
+ },
+ "/construction/conduit-fill/": {
+  "date": "2026-10-24",
+  "hash": "8e458ba1f968ae38"
+ },
+ "/construction/rolling-offset/": {
+  "date": "2026-10-24",
+  "hash": "89ca8d16aef94b6e"
+ },
+ "/construction/pipe-cutback/": {
+  "date": "2026-10-24",
+  "hash": "345ee0ac546b32b1"
+ },
+ "/construction/journeyman-wage-progression/": {
+  "date": "2026-10-24",
+  "hash": "bc02217462646a82"
+ },
+ "/conversion/": {
+  "date": "2026-09-28",
+  "hash": "a7cd583621bc5c77"
+ },
+ "/hub/conversion/": {
+  "date": "2026-09-28",
+  "hash": "2e276b441c8987b7"
+ },
+ "/conversion/length/": {
+  "date": "2026-09-28",
+  "hash": "63ee23a593d74838"
+ },
+ "/conversion/weight/": {
+  "date": "2026-09-28",
+  "hash": "7e427614f0128a35"
+ },
+ "/conversion/volume/": {
+  "date": "2026-09-28",
+  "hash": "76e93d5f5948a51b"
+ },
+ "/conversion/area/": {
+  "date": "2026-09-28",
+  "hash": "597c2de6761f894a"
+ },
+ "/conversion/speed/": {
+  "date": "2026-09-28",
+  "hash": "0be6c9c414cbd175"
+ },
+ "/conversion/data-storage/": {
+  "date": "2026-09-28",
+  "hash": "2173f8a09db0325d"
+ },
+ "/conversion/angle/": {
+  "date": "2026-09-28",
+  "hash": "66429555c81f0d25"
+ },
+ "/conversion/energy/": {
+  "date": "2026-09-28",
+  "hash": "86159785216d1df8"
+ },
+ "/conversion/pressure-conv/": {
+  "date": "2026-09-28",
+  "hash": "d4cc408f44081cdd"
+ },
+ "/conversion/frequency-conv/": {
+  "date": "2026-09-28",
+  "hash": "6d636a090c4fec46"
+ },
+ "/conversion/temperature/": {
+  "date": "2026-09-28",
+  "hash": "9df36958a3ed3dea"
+ },
+ "/conversion/time-conv/": {
+  "date": "2026-09-28",
+  "hash": "a32bc1e634c409e3"
+ },
+ "/conversion/force-conv/": {
+  "date": "2026-09-28",
+  "hash": "f98f05cfe6256da3"
+ },
+ "/conversion/fuel-efficiency-converter/": {
+  "date": "2026-09-28",
+  "hash": "9b3748df86b27980"
+ },
+ "/conversion/cooking-conv/": {
+  "date": "2026-09-28",
+  "hash": "dcfb8cf30aff3876"
+ },
+ "/conversion/clothing-size/": {
+  "date": "2026-09-28",
+  "hash": "a501f8bd676ef2b1"
+ },
+ "/conversion/shoe-size/": {
+  "date": "2026-09-28",
+  "hash": "75c122bc8f8a9754"
+ },
+ "/conversion/currency-conv/": {
+  "date": "2026-09-28",
+  "hash": "90d7a36fadc045fd"
+ },
+ "/conversion/torque-conv/": {
+  "date": "2026-09-28",
+  "hash": "867718f1b0482580"
+ },
+ "/conversion/power-conv/": {
+  "date": "2026-09-28",
+  "hash": "2d9c376496939051"
+ },
+ "/conversion/voltage-conv/": {
+  "date": "2026-09-28",
+  "hash": "d1e107d1f4c6c3ec"
+ },
+ "/conversion/radiation-conv/": {
+  "date": "2026-09-28",
+  "hash": "6b5c83b5805e2175"
+ },
+ "/conversion/density-conv/": {
+  "date": "2026-09-28",
+  "hash": "6a3f6bf5f8655761"
+ },
+ "/conversion/viscosity-conv/": {
+  "date": "2026-09-28",
+  "hash": "2d9502a74f88476a"
+ },
+ "/conversion/bit-rate-conv/": {
+  "date": "2026-09-28",
+  "hash": "8db12bed1825af6c"
+ },
+ "/conversion/luminance-conv/": {
+  "date": "2026-09-28",
+  "hash": "5cfc93a8bbb55cf5"
+ },
+ "/conversion/molarity-conv/": {
+  "date": "2026-09-28",
+  "hash": "3b306d78179919e0"
+ },
+ "/conversion/flow-rate-conv/": {
+  "date": "2026-09-28",
+  "hash": "aa6402e366a7d16a"
+ },
+ "/conversion/paper-size-conv/": {
+  "date": "2026-09-28",
+  "hash": "c0506de6bd6ad90c"
+ },
+ "/conversion/fraction-percent/": {
+  "date": "2026-09-28",
+  "hash": "b18768707ddfa6c9"
+ },
+ "/conversion/roman-numeral/": {
+  "date": "2026-09-28",
+  "hash": "e07e9ffee3d0f178"
+ },
+ "/conversion/ppm-conv/": {
+  "date": "2026-09-28",
+  "hash": "266d8f09d6e41876"
+ },
+ "/conversion/thermal-conductivity/": {
+  "date": "2026-09-28",
+  "hash": "d4a047853aeb0243"
+ },
+ "/conversion/radiation-dose-conv/": {
+  "date": "2026-09-28",
+  "hash": "f94ba4729e2dabc8"
+ },
+ "/conversion/wire-gauge-conv/": {
+  "date": "2026-09-28",
+  "hash": "83ebd4788dc692ef"
+ },
+ "/conversion/acceleration-conv/": {
+  "date": "2026-09-28",
+  "hash": "49a5adc52a375a95"
+ },
+ "/education/": {
+  "date": "2026-09-28",
+  "hash": "2c45c9998048e73f"
+ },
+ "/hub/education/": {
+  "date": "2026-09-28",
+  "hash": "0e0653a55e1396ef"
+ },
+ "/education/gpa/": {
+  "date": "2026-09-28",
+  "hash": "89f8b31eba3ac4bf"
+ },
+ "/education/cgpa/": {
+  "date": "2026-09-28",
+  "hash": "fb548e751e115861"
+ },
+ "/education/grade/": {
+  "date": "2026-09-28",
+  "hash": "33d24454bab9c685"
+ },
+ "/education/study-time/": {
+  "date": "2026-09-28",
+  "hash": "bde441aea5139c7c"
+ },
+ "/education/reading-speed/": {
+  "date": "2026-09-28",
+  "hash": "3d5d68f9c27d9872"
+ },
+ "/education/test-score/": {
+  "date": "2026-09-28",
+  "hash": "1d42cbebfcea0062"
+ },
+ "/education/exam-countdown/": {
+  "date": "2026-09-28",
+  "hash": "62c23c124351fbbb"
+ },
+ "/education/words-pages/": {
+  "date": "2026-09-28",
+  "hash": "90501516a49a80f6"
+ },
+ "/education/citation/": {
+  "date": "2026-09-28",
+  "hash": "e176b0056f74b186"
+ },
+ "/education/quiz-score/": {
+  "date": "2026-09-28",
+  "hash": "5d1269a3188dd272"
+ },
+ "/education/semester-gpa/": {
+  "date": "2026-09-28",
+  "hash": "7d5fca77cdceda44"
+ },
+ "/education/college-cost-planner/": {
+  "date": "2026-09-28",
+  "hash": "5cd74edb3d019ff8"
+ },
+ "/education/scholarship-calc/": {
+  "date": "2026-09-28",
+  "hash": "54212f55369ed577"
+ },
+ "/education/study-break/": {
+  "date": "2026-09-28",
+  "hash": "031da22ed21c0df9"
+ },
+ "/education/grade-needed/": {
+  "date": "2026-09-28",
+  "hash": "47c7935388e5af52"
+ },
+ "/education/class-rank/": {
+  "date": "2026-09-28",
+  "hash": "e935c6e6280705cd"
+ },
+ "/education/homework-time/": {
+  "date": "2026-09-28",
+  "hash": "73e771620131b7b5"
+ },
+ "/education/flashcard-count/": {
+  "date": "2026-09-28",
+  "hash": "8077e58d7eb79882"
+ },
+ "/education/plagiarism-check/": {
+  "date": "2026-09-28",
+  "hash": "697c7afd1b38ccca"
+ },
+ "/education/letter-grade/": {
+  "date": "2026-09-28",
+  "hash": "bc02edee981ca667"
+ },
+ "/education/sat-score/": {
+  "date": "2026-09-28",
+  "hash": "d88a6ed962ce90d1"
+ },
+ "/education/act-score/": {
+  "date": "2026-09-28",
+  "hash": "29306754d473c908"
+ },
+ "/education/exam-score-needed/": {
+  "date": "2026-09-28",
+  "hash": "bf71b7cbcd98a5fc"
+ },
+ "/education/attendance-rate/": {
+  "date": "2026-09-28",
+  "hash": "30673cae957999f9"
+ },
+ "/education/study-hours/": {
+  "date": "2026-09-28",
+  "hash": "8ec217f2e86906ef"
+ },
+ "/education/tuition-cost/": {
+  "date": "2026-09-28",
+  "hash": "cac0c49df101d204"
+ },
+ "/education/gpa-target/": {
+  "date": "2026-09-28",
+  "hash": "e99621be6932942c"
+ },
+ "/education/reading-time/": {
+  "date": "2026-09-28",
+  "hash": "991aa622627c0297"
+ },
+ "/education/presentation-time/": {
+  "date": "2026-09-28",
+  "hash": "8165a336e43c86d2"
+ },
+ "/education/test-average/": {
+  "date": "2026-09-28",
+  "hash": "aa31d75a2524b32f"
+ },
+ "/education/grade-percentage/": {
+  "date": "2026-09-28",
+  "hash": "f009af9aafc04d22"
+ },
+ "/education/graduation-date/": {
+  "date": "2026-09-28",
+  "hash": "0ba8609b4a267d36"
+ },
+ "/education/course-load/": {
+  "date": "2026-09-28",
+  "hash": "7f35ec2ac90a6c15"
+ },
+ "/education/financial-need/": {
+  "date": "2026-09-28",
+  "hash": "ca16f2ec55941789"
+ },
+ "/education/percentile-rank/": {
+  "date": "2026-09-28",
+  "hash": "cc917adc0d11df04"
+ },
+ "/education/act-sat-compare/": {
+  "date": "2026-09-28",
+  "hash": "08023a9c57ed76b6"
+ },
+ "/education/assignment-split/": {
+  "date": "2026-09-28",
+  "hash": "67f879e2264ec6eb"
+ },
+ "/education/citation-count/": {
+  "date": "2026-09-28",
+  "hash": "27234ef4f248961d"
+ },
+ "/education/study-abroad-cost/": {
+  "date": "2026-10-24",
+  "hash": "fc42e9d8385996c6"
+ },
+ "/education/scholarship-gap/": {
+  "date": "2026-10-24",
+  "hash": "35df4f4ce591b5cb"
+ },
+ "/education/student-loan-vs-scholarship/": {
+  "date": "2026-10-24",
+  "hash": "f1ea19a3a06c74e5"
+ },
+ "/education/school-fee-inflation/": {
+  "date": "2026-10-24",
+  "hash": "805b773de9a95ec8"
+ },
+ "/engineering/": {
+  "date": "2026-09-28",
+  "hash": "54ceae79ff15c234"
+ },
+ "/hub/engineering/": {
+  "date": "2026-09-28",
+  "hash": "f4fc206330dc830d"
+ },
+ "/engineering/voltage-drop/": {
+  "date": "2026-09-28",
+  "hash": "96ddd8a370c56289"
+ },
+ "/engineering/power-factor/": {
+  "date": "2026-09-28",
+  "hash": "663f339d9262993e"
+ },
+ "/engineering/gear-ratio/": {
+  "date": "2026-09-28",
+  "hash": "41b62ceea66ce787"
+ },
+ "/engineering/torque/": {
+  "date": "2026-09-28",
+  "hash": "fb21fc963f6ec932"
+ },
+ "/engineering/led-resistor/": {
+  "date": "2026-09-28",
+  "hash": "0ba139e089726695"
+ },
+ "/engineering/capacitor/": {
+  "date": "2026-09-28",
+  "hash": "baa5baf46bcad9f7"
+ },
+ "/engineering/battery-life/": {
+  "date": "2026-09-28",
+  "hash": "0660daf6ec17c414"
+ },
+ "/engineering/wire-gauge/": {
+  "date": "2026-09-28",
+  "hash": "b190fdfb6b47915b"
+ },
+ "/engineering/rpm/": {
+  "date": "2026-09-28",
+  "hash": "f4744b846558d9b0"
+ },
+ "/engineering/horsepower/": {
+  "date": "2026-09-28",
+  "hash": "36d9372171841da4"
+ },
+ "/engineering/inductor/": {
+  "date": "2026-09-28",
+  "hash": "6de03505fd7bc8c4"
+ },
+ "/engineering/impedance/": {
+  "date": "2026-09-28",
+  "hash": "028b5f3d789d5526"
+ },
+ "/engineering/beam-load/": {
+  "date": "2026-09-28",
+  "hash": "6ed3861d8a4984a4"
+ },
+ "/engineering/hydraulic/": {
+  "date": "2026-09-28",
+  "hash": "309a1fee15c2c055"
+ },
+ "/engineering/thermal/": {
+  "date": "2026-09-28",
+  "hash": "4b1b7ac7bbce388b"
+ },
+ "/engineering/kva-kw/": {
+  "date": "2026-09-28",
+  "hash": "a20cac19086d7593"
+ },
+ "/engineering/belt-length/": {
+  "date": "2026-09-28",
+  "hash": "e0d06a2f0123fc09"
+ },
+ "/engineering/flow-rate/": {
+  "date": "2026-09-28",
+  "hash": "1a1dcec15dfc4be4"
+ },
+ "/engineering/sound-level/": {
+  "date": "2026-09-28",
+  "hash": "4ff222a42ce6fae0"
+ },
+ "/engineering/shaft-power/": {
+  "date": "2026-09-28",
+  "hash": "7db9d1755980c308"
+ },
+ "/engineering/spring-rate/": {
+  "date": "2026-09-28",
+  "hash": "f44e1bdc1e73e45e"
+ },
+ "/engineering/resonant-frequency/": {
+  "date": "2026-09-28",
+  "hash": "45aa060503c96845"
+ },
+ "/engineering/transformer-ratio/": {
+  "date": "2026-09-28",
+  "hash": "23a1b9c2e5c7465f"
+ },
+ "/engineering/hydraulic-power/": {
+  "date": "2026-09-28",
+  "hash": "e04897fc4b67dd15"
+ },
+ "/engineering/stress-strain/": {
+  "date": "2026-09-28",
+  "hash": "97952a97a377dfd5"
+ },
+ "/engineering/beam-deflection/": {
+  "date": "2026-09-28",
+  "hash": "f4f8cdf6d02e3061"
+ },
+ "/engineering/column-buckling/": {
+  "date": "2026-09-28",
+  "hash": "2f5efd7a05440ef0"
+ },
+ "/engineering/pipe-flow/": {
+  "date": "2026-09-28",
+  "hash": "c92c77c92906b2d9"
+ },
+ "/engineering/steel-weight/": {
+  "date": "2026-09-28",
+  "hash": "e7eae87d76c1ff17"
+ },
+ "/engineering/concrete-mix/": {
+  "date": "2026-09-28",
+  "hash": "074d7764e03ec86f"
+ },
+ "/engineering/structural-load/": {
+  "date": "2026-09-28",
+  "hash": "1a4344cf5c9090f9"
+ },
+ "/engineering/electrical-energy/": {
+  "date": "2026-09-28",
+  "hash": "0dfc5b081f6c476b"
+ },
+ "/engineering/resistor-combination/": {
+  "date": "2026-09-28",
+  "hash": "1548d5ff28fa67ce"
+ },
+ "/engineering/capacitor-energy/": {
+  "date": "2026-09-28",
+  "hash": "aace8226fe0def64"
+ },
+ "/engineering/inductor-energy/": {
+  "date": "2026-09-28",
+  "hash": "6a27ed440fab1a32"
+ },
+ "/engineering/rc-time-constant/": {
+  "date": "2026-09-28",
+  "hash": "969c5d7e9fb220be"
+ },
+ "/engineering/cable-sizing/": {
+  "date": "2026-09-28",
+  "hash": "12233048a405dd30"
+ },
+ "/engineering/ventilation-cfm/": {
+  "date": "2026-09-28",
+  "hash": "aeba9f48a84bedc4"
+ },
+ "/engineering/torque-wrench/": {
+  "date": "2026-09-28",
+  "hash": "c71ef17d2dc305a7"
+ },
+ "/engineering/bearing-load/": {
+  "date": "2026-09-28",
+  "hash": "54c05729c3a1cf10"
+ },
+ "/engineering/engine-efficiency/": {
+  "date": "2026-09-28",
+  "hash": "4f8d340c47697d04"
+ },
+ "/engineering/pump-power/": {
+  "date": "2026-09-28",
+  "hash": "f562ba63002ba241"
+ },
+ "/engineering/tank-volume/": {
+  "date": "2026-09-28",
+  "hash": "2ede5a0aa30d87ed"
+ },
+ "/engineering/heat-exchanger/": {
+  "date": "2026-09-28",
+  "hash": "77a027f4dc2c857a"
+ },
+ "/engineering/pcb-trace/": {
+  "date": "2026-09-28",
+  "hash": "1990c3b042cc5669"
+ },
+ "/engineering/bolt-torque/": {
+  "date": "2026-09-28",
+  "hash": "64f9e3b476e8c0f8"
+ },
+ "/engineering/pulley/": {
+  "date": "2026-09-28",
+  "hash": "16b6600c5a885faf"
+ },
+ "/engineering/lever/": {
+  "date": "2026-09-28",
+  "hash": "d95fabfd7f132049"
+ },
+ "/engineering/wind-load/": {
+  "date": "2026-09-28",
+  "hash": "f718746fc36bb1d2"
+ },
+ "/engineering/duct-size/": {
+  "date": "2026-09-28",
+  "hash": "3d7a7076a485301b"
+ },
+ "/engineering/head-loss/": {
+  "date": "2026-09-28",
+  "hash": "ba917183b1bf0e00"
+ },
+ "/engineering/breaker-size/": {
+  "date": "2026-09-28",
+  "hash": "f2ca333bcc04b0e9"
+ },
+ "/engineering/power-factor-correction/": {
+  "date": "2026-09-28",
+  "hash": "6778d5231ba835fa"
+ },
+ "/engineering/section-modulus/": {
+  "date": "2026-09-28",
+  "hash": "1d226ed1722ac411"
+ },
+ "/engineering/shaft-torsion/": {
+  "date": "2026-09-28",
+  "hash": "26e789ace8a8301f"
+ },
+ "/engineering/pulley-speed/": {
+  "date": "2026-09-28",
+  "hash": "d7b359f3c6edb13b"
+ },
+ "/engineering/manning-flow/": {
+  "date": "2026-09-28",
+  "hash": "4a36a73e34156b78"
+ },
+ "/engineering/orifice-flow/": {
+  "date": "2026-09-28",
+  "hash": "38d23eb002325cc2"
+ },
+ "/engineering/three-phase-power/": {
+  "date": "2026-09-28",
+  "hash": "aabbac0e44cf2f07"
+ },
+ "/engineering/ups-sizing/": {
+  "date": "2026-09-28",
+  "hash": "1bc97827fe9602c6"
+ },
+ "/engineering/hydraulic-press/": {
+  "date": "2026-09-28",
+  "hash": "f9bd797976d44469"
+ },
+ "/engineering/radiation-shielding/": {
+  "date": "2026-09-28",
+  "hash": "8cb743139203ec6d"
+ },
+ "/engineering/steam-consumption/": {
+  "date": "2026-09-28",
+  "hash": "dd0cd77818230b1a"
+ },
+ "/engineering/noise-level/": {
+  "date": "2026-09-28",
+  "hash": "02e3d272dd444611"
+ },
+ "/engineering/rcf-gforce/": {
+  "date": "2026-09-28",
+  "hash": "f07203e15cf33b1c"
+ },
+ "/engineering/pipe-pressure-loss/": {
+  "date": "2026-10-24",
+  "hash": "fd51b5773de73361"
+ },
+ "/engineering/hvac-load/": {
+  "date": "2026-10-24",
+  "hash": "2d84ee2ec85be4f9"
+ },
+ "/everyday/": {
+  "date": "2026-09-28",
+  "hash": "d95d00ab26c94e27"
+ },
+ "/hub/everyday/": {
+  "date": "2026-09-28",
+  "hash": "96bcf504f45cb0c4"
+ },
+ "/everyday/age/": {
+  "date": "2026-09-28",
+  "hash": "09855748adecc7fd"
+ },
+ "/everyday/date-diff/": {
+  "date": "2026-09-28",
+  "hash": "4804e5f1b7e599fd"
+ },
+ "/everyday/time-calc/": {
+  "date": "2026-09-28",
+  "hash": "9f42058a45557ffd"
+ },
+ "/everyday/trip-fuel-cost/": {
+  "date": "2026-09-28",
+  "hash": "07327022569f6a87"
+ },
+ "/everyday/electricity/": {
+  "date": "2026-09-28",
+  "hash": "7bca0909b6cc59bf"
+ },
+ "/everyday/carbon/": {
+  "date": "2026-09-28",
+  "hash": "bd5a205fe3c9b506"
+ },
+ "/everyday/gst/": {
+  "date": "2026-09-28",
+  "hash": "19da5b7dd7fd80e6"
+ },
+ "/everyday/paint/": {
+  "date": "2026-09-28",
+  "hash": "8a0125684d21a6b4"
+ },
+ "/everyday/concrete/": {
+  "date": "2026-09-28",
+  "hash": "4880150fdbd04cb3"
+ },
+ "/everyday/garden/": {
+  "date": "2026-09-28",
+  "hash": "948847a53aefe027"
+ },
+ "/everyday/cooking/": {
+  "date": "2026-09-28",
+  "hash": "bc0bc21311f33d89"
+ },
+ "/everyday/weather/": {
+  "date": "2026-09-28",
+  "hash": "25841268c08d08e0"
+ },
+ "/everyday/timezone/": {
+  "date": "2026-09-28",
+  "hash": "f1ad291d373db1b2"
+ },
+ "/everyday/calorie-counter/": {
+  "date": "2026-09-28",
+  "hash": "95a5241ed54f2d58"
+ },
+ "/everyday/currency-exchange/": {
+  "date": "2026-09-28",
+  "hash": "89ef88feba95f509"
+ },
+ "/everyday/sleep-calc/": {
+  "date": "2026-09-28",
+  "hash": "49153d7cd9bb00b6"
+ },
+ "/everyday/walking-steps/": {
+  "date": "2026-09-28",
+  "hash": "832a94e190801160"
+ },
+ "/everyday/fitness-age/": {
+  "date": "2026-09-28",
+  "hash": "5faf676528cfcb1f"
+ },
+ "/everyday/pet-age/": {
+  "date": "2026-09-28",
+  "hash": "6cf5570201b1f806"
+ },
+ "/everyday/blood-alcohol/": {
+  "date": "2026-09-28",
+  "hash": "eb72fb5481cc297f"
+ },
+ "/everyday/vacation-budget/": {
+  "date": "2026-09-28",
+  "hash": "19a4521bcdaee6b1"
+ },
+ "/everyday/laundry-cost/": {
+  "date": "2026-09-28",
+  "hash": "bedd8035ac14c414"
+ },
+ "/everyday/coffee-cost/": {
+  "date": "2026-09-28",
+  "hash": "57732952c85a22b0"
+ },
+ "/everyday/grocery-budget/": {
+  "date": "2026-09-28",
+  "hash": "0e8d57dc2e9c7f6e"
+ },
+ "/everyday/distance-pace/": {
+  "date": "2026-09-28",
+  "hash": "c409f98a1098e398"
+ },
+ "/everyday/savings-goal-date/": {
+  "date": "2026-09-28",
+  "hash": "bbe489d59d3134ad"
+ },
+ "/everyday/budget-allocator/": {
+  "date": "2026-09-28",
+  "hash": "1a293dbd2e0a0003"
+ },
+ "/everyday/event-countdown/": {
+  "date": "2026-09-28",
+  "hash": "8161c30cc1952a58"
+ },
+ "/everyday/work-hours-weekly/": {
+  "date": "2026-09-28",
+  "hash": "7fb71d16d61f6b23"
+ },
+ "/everyday/days-between/": {
+  "date": "2026-09-28",
+  "hash": "d92f79dd7f1337ca"
+ },
+ "/everyday/compound-savings/": {
+  "date": "2026-09-28",
+  "hash": "e6f55c91dba53187"
+ },
+ "/everyday/business-days/": {
+  "date": "2026-09-28",
+  "hash": "6c3eb7f5e87e0c82"
+ },
+ "/everyday/week-number/": {
+  "date": "2026-09-28",
+  "hash": "e379e938fca0f6d2"
+ },
+ "/everyday/day-of-year/": {
+  "date": "2026-09-28",
+  "hash": "7594c5a48f97cb4a"
+ },
+ "/everyday/leap-year/": {
+  "date": "2026-09-28",
+  "hash": "ed1089b864ab0c41"
+ },
+ "/everyday/lottery-odds/": {
+  "date": "2026-09-28",
+  "hash": "5aa6d503519a107e"
+ },
+ "/everyday/poker-flush/": {
+  "date": "2026-09-28",
+  "hash": "69baf6ac8d61018d"
+ },
+ "/everyday/easter-date/": {
+  "date": "2026-09-28",
+  "hash": "eb3082ecce01a4d6"
+ },
+ "/everyday/day-of-week/": {
+  "date": "2026-09-28",
+  "hash": "2172d501c7ce2759"
+ },
+ "/everyday/moon-phase/": {
+  "date": "2026-09-28",
+  "hash": "c03692a1d2ed66cf"
+ },
+ "/everyday/meeting-cost/": {
+  "date": "2026-09-28",
+  "hash": "6e2cb3efb4f5ffb0"
+ },
+ "/everyday/sunrise-sunset-length/": {
+  "date": "2026-09-28",
+  "hash": "6bcd99dc74e3ec09"
+ },
+ "/everyday/pomodoro-planner/": {
+  "date": "2026-09-28",
+  "hash": "a0dd0444c6ce08a7"
+ },
+ "/everyday/gift-wrap/": {
+  "date": "2026-09-28",
+  "hash": "327c6a64fee17ad2"
+ },
+ "/everyday/moving-truck/": {
+  "date": "2026-09-28",
+  "hash": "a4dfd5fb2e8f2497"
+ },
+ "/everyday/jet-lag/": {
+  "date": "2026-10-24",
+  "hash": "f94b38e64c7f8eae"
+ },
+ "/everyday/heat-pump-savings/": {
+  "date": "2026-09-28",
+  "hash": "899a01edda5bd6dd"
+ },
+ "/everyday/statute-of-limitations/": {
+  "date": "2026-10-24",
+  "hash": "cafe630c55311fd2"
+ },
+ "/everyday/cost-of-living-compare/": {
+  "date": "2026-10-24",
+  "hash": "3c9a4eaee537f414"
+ },
+ "/everyday/snow-day/": {
+  "date": "2026-10-24",
+  "hash": "a2884b990147920f"
+ },
+ "/finance/": {
+  "date": "2026-09-28",
+  "hash": "817a8f82d5e93e28"
+ },
+ "/hub/finance/": {
+  "date": "2026-09-28",
+  "hash": "290a3de8e1c18d84"
+ },
+ "/finance/loan-emi/": {
+  "date": "2026-09-28",
+  "hash": "6bb6c58a22769339"
+ },
+ "/finance/mortgage/": {
+  "date": "2026-09-28",
+  "hash": "afb54ad2cd772dad"
+ },
+ "/finance/compound-interest/": {
+  "date": "2026-09-28",
+  "hash": "24acd8574deb8ae6"
+ },
+ "/finance/simple-interest/": {
+  "date": "2026-09-28",
+  "hash": "b89018e8c3e58b1a"
+ },
+ "/finance/auto-loan/": {
+  "date": "2026-09-28",
+  "hash": "198ca4ab5bf5843d"
+ },
+ "/finance/credit-card-payoff/": {
+  "date": "2026-09-28",
+  "hash": "4c65ecc13abbb9c1"
+ },
+ "/finance/retirement/": {
+  "date": "2026-09-28",
+  "hash": "4f342635eeab1b49"
+ },
+ "/finance/investment/": {
+  "date": "2026-09-28",
+  "hash": "3d824e0efe186a39"
+ },
+ "/finance/savings-goal/": {
+  "date": "2026-09-28",
+  "hash": "ac1eac5e9a5037dd"
+ },
+ "/finance/tax/": {
+  "date": "2026-09-28",
+  "hash": "01699cca6ec04436"
+ },
+ "/finance/sales-tax/": {
+  "date": "2026-09-28",
+  "hash": "461b61f5fe210dfc"
+ },
+ "/finance/npv/": {
+  "date": "2026-09-28",
+  "hash": "d69cac9320ecc776"
+ },
+ "/finance/irr/": {
+  "date": "2026-09-28",
+  "hash": "5f9a41337c61b963"
+ },
+ "/finance/roi/": {
+  "date": "2026-09-28",
+  "hash": "141ad6228c342772"
+ },
+ "/finance/tip/": {
+  "date": "2026-09-28",
+  "hash": "298ed3ff2008d1d3"
+ },
+ "/finance/salary/": {
+  "date": "2026-09-28",
+  "hash": "f6e6c6bf1c7f12f5"
+ },
+ "/finance/annuity/": {
+  "date": "2026-09-28",
+  "hash": "2ab48646b90aa4b1"
+ },
+ "/finance/inflation/": {
+  "date": "2026-09-28",
+  "hash": "c8bfb46fd0bbf3c5"
+ },
+ "/finance/bonds/": {
+  "date": "2026-09-28",
+  "hash": "c8df8a852fac2197"
+ },
+ "/finance/debt-ratio/": {
+  "date": "2026-09-28",
+  "hash": "e8f230ab96178722"
+ },
+ "/finance/net-worth-calculator/": {
+  "date": "2026-09-28",
+  "hash": "e7670deaffa1423a"
+ },
+ "/finance/rent-vs-buy/": {
+  "date": "2026-09-28",
+  "hash": "2b7a8b0ccfc1285b"
+ },
+ "/finance/refinance/": {
+  "date": "2026-09-28",
+  "hash": "c84a00908cb7345a"
+ },
+ "/finance/home-afford/": {
+  "date": "2026-09-28",
+  "hash": "619437d032255a35"
+ },
+ "/finance/currency-converter/": {
+  "date": "2026-09-28",
+  "hash": "542ffbbe57061ef6"
+ },
+ "/finance/loan-qualify/": {
+  "date": "2026-09-28",
+  "hash": "887776b362b1f351"
+ },
+ "/finance/paycheck/": {
+  "date": "2026-09-28",
+  "hash": "3c152c6d7ef698fe"
+ },
+ "/finance/break-even/": {
+  "date": "2026-09-28",
+  "hash": "069056809acf1cbb"
+ },
+ "/finance/cash-flow/": {
+  "date": "2026-09-28",
+  "hash": "9987e8b97f0c4def"
+ },
+ "/finance/markup/": {
+  "date": "2026-09-28",
+  "hash": "19f7e55019c30f44"
+ },
+ "/finance/discount/": {
+  "date": "2026-09-28",
+  "hash": "1fd609e4b30e8ebd"
+ },
+ "/finance/present-value/": {
+  "date": "2026-09-28",
+  "hash": "b39f0a01a5e08104"
+ },
+ "/finance/future-value/": {
+  "date": "2026-09-28",
+  "hash": "b295ad453b1b4013"
+ },
+ "/finance/amortization/": {
+  "date": "2026-09-28",
+  "hash": "e015d421937c2633"
+ },
+ "/finance/loan-to-value/": {
+  "date": "2026-09-28",
+  "hash": "25f0484adc8eaff8"
+ },
+ "/finance/apr/": {
+  "date": "2026-09-28",
+  "hash": "736d8faac7be9b77"
+ },
+ "/finance/capital-gains/": {
+  "date": "2026-09-28",
+  "hash": "9134dd98513840f0"
+ },
+ "/finance/dividend/": {
+  "date": "2026-09-28",
+  "hash": "3635000ed11461bb"
+ },
+ "/finance/fire/": {
+  "date": "2026-09-28",
+  "hash": "56a7a3815e2feff2"
+ },
+ "/finance/social-security/": {
+  "date": "2026-09-28",
+  "hash": "b23ed418fb4f2bc3"
+ },
+ "/finance/rental-yield/": {
+  "date": "2026-09-28",
+  "hash": "d0bcb4b82e723cc0"
+ },
+ "/finance/loan-comparison/": {
+  "date": "2026-09-28",
+  "hash": "b93656fe01c9074a"
+ },
+ "/finance/investment-growth/": {
+  "date": "2026-09-28",
+  "hash": "7fdff1c314c0c5f4"
+ },
+ "/finance/savings-comparison/": {
+  "date": "2026-09-28",
+  "hash": "9c0966023cb3037a"
+ },
+ "/finance/mortgage-payoff/": {
+  "date": "2026-09-28",
+  "hash": "e7aac6c74adcdb06"
+ },
+ "/finance/graduated-payment/": {
+  "date": "2026-09-28",
+  "hash": "2adfeb804b04d819"
+ },
+ "/finance/balloon-payment/": {
+  "date": "2026-09-28",
+  "hash": "59d88dea7b89218a"
+ },
+ "/finance/interest-only/": {
+  "date": "2026-09-28",
+  "hash": "533056576afe6926"
+ },
+ "/finance/emergency-fund/": {
+  "date": "2026-09-28",
+  "hash": "fa183540fa6b591b"
+ },
+ "/finance/bond-yield/": {
+  "date": "2026-09-28",
+  "hash": "deea8dbcfba560d3"
+ },
+ "/finance/retirement-income/": {
+  "date": "2026-09-28",
+  "hash": "f981c9ecc61be352"
+ },
+ "/finance/sip/": {
+  "date": "2026-09-28",
+  "hash": "48c80803f4f310ba"
+ },
+ "/finance/crypto-profit/": {
+  "date": "2026-09-28",
+  "hash": "e8dd3efeec367c65"
+ },
+ "/finance/stock-profit/": {
+  "date": "2026-09-28",
+  "hash": "8cd6f2070d5e4a19"
+ },
+ "/finance/dca/": {
+  "date": "2026-09-28",
+  "hash": "d4c04c33327a0cd3"
+ },
+ "/finance/college-cost/": {
+  "date": "2026-09-28",
+  "hash": "704a71e3b0299f6b"
+ },
+ "/finance/perpetuity/": {
+  "date": "2026-09-28",
+  "hash": "1817a33ac2bd6ccd"
+ },
+ "/finance/esop/": {
+  "date": "2026-09-28",
+  "hash": "9231bec8bfbbf379"
+ },
+ "/finance/us-income-tax/": {
+  "date": "2026-09-28",
+  "hash": "32d7ebedefc8b372"
+ },
+ "/finance/uk-income-tax/": {
+  "date": "2026-09-28",
+  "hash": "d9c28a1e8c0cad31"
+ },
+ "/finance/canada-income-tax/": {
+  "date": "2026-09-28",
+  "hash": "6794c37bb7b2d81d"
+ },
+ "/finance/australia-income-tax/": {
+  "date": "2026-09-28",
+  "hash": "1e384f7fc9a81757"
+ },
+ "/finance/bond-price/": {
+  "date": "2026-09-28",
+  "hash": "dc6c6c9a8bb565c9"
+ },
+ "/finance/cd-calculator/": {
+  "date": "2026-09-28",
+  "hash": "c18541ef1f250473"
+ },
+ "/finance/annuity-payout/": {
+  "date": "2026-09-28",
+  "hash": "9b8a1d35f9cb2846"
+ },
+ "/finance/dividend-yield/": {
+  "date": "2026-09-28",
+  "hash": "661c23081bf6b099"
+ },
+ "/finance/rule-of-72/": {
+  "date": "2026-09-28",
+  "hash": "b64d9524ec0955db"
+ },
+ "/finance/loan-payoff/": {
+  "date": "2026-09-28",
+  "hash": "b76e74786f4ce506"
+ },
+ "/finance/retirement-withdrawal/": {
+  "date": "2026-09-28",
+  "hash": "228348feeba73997"
+ },
+ "/finance/inflation-adjusted/": {
+  "date": "2026-09-28",
+  "hash": "e49f034836c6d5c7"
+ },
+ "/finance/tax-equivalent-yield/": {
+  "date": "2026-09-28",
+  "hash": "5f45d964503ed05c"
+ },
+ "/finance/529-plan/": {
+  "date": "2026-09-28",
+  "hash": "9b11cea28b6df8a8"
+ },
+ "/finance/times-interest-earned/": {
+  "date": "2026-09-28",
+  "hash": "7f783e9175803250"
+ },
+ "/finance/quick-ratio/": {
+  "date": "2026-09-28",
+  "hash": "cceaabd0cbd0b567"
+ },
+ "/finance/ebitda/": {
+  "date": "2026-09-28",
+  "hash": "8d53c9f3b44d8b02"
+ },
+ "/finance/enterprise-value/": {
+  "date": "2026-09-28",
+  "hash": "9d0c5ffc17dca9c9"
+ },
+ "/finance/wacc/": {
+  "date": "2026-09-28",
+  "hash": "cffedf65fcf627f9"
+ },
+ "/finance/sharpe-ratio/": {
+  "date": "2026-09-28",
+  "hash": "ae65900744ddf41c"
+ },
+ "/finance/geometric-mean/": {
+  "date": "2026-09-28",
+  "hash": "3500c67b3a45fb70"
+ },
+ "/finance/debt-snowball/": {
+  "date": "2026-09-28",
+  "hash": "7843f01afcea1e61"
+ },
+ "/finance/payday-loan-cost/": {
+  "date": "2026-09-28",
+  "hash": "52f983fdf0fa5e41"
+ },
+ "/finance/emergency-fund-rate/": {
+  "date": "2026-09-28",
+  "hash": "ff7ce7252be9bfda"
+ },
+ "/finance/property-tax/": {
+  "date": "2026-09-28",
+  "hash": "13f8db14305a4e0d"
+ },
+ "/finance/closing-costs/": {
+  "date": "2026-09-28",
+  "hash": "d2a3329ce9ebf15b"
+ },
+ "/finance/cap-rate/": {
+  "date": "2026-09-28",
+  "hash": "e58bcabaa11d1e46"
+ },
+ "/finance/student-loan-repayment/": {
+  "date": "2026-09-28",
+  "hash": "9958afbb5c445921"
+ },
+ "/finance/cost-of-debt/": {
+  "date": "2026-09-28",
+  "hash": "d42d985f66a24c02"
+ },
+ "/finance/fha-loan/": {
+  "date": "2026-09-28",
+  "hash": "de4eb8775a60d027"
+ },
+ "/finance/va-loan/": {
+  "date": "2026-09-28",
+  "hash": "9602e538e641cb83"
+ },
+ "/finance/reverse-mortgage/": {
+  "date": "2026-09-28",
+  "hash": "2536b8257356fd7e"
+ },
+ "/finance/house-affordability/": {
+  "date": "2026-09-28",
+  "hash": "37a4f3f04be41397"
+ },
+ "/finance/mortgage-refinance/": {
+  "date": "2026-09-28",
+  "hash": "41e7ba49b656895b"
+ },
+ "/finance/crypto-gains/": {
+  "date": "2026-09-28",
+  "hash": "a6f8b15b931d6fa5"
+ },
+ "/finance/price-to-earnings/": {
+  "date": "2026-09-28",
+  "hash": "2f700083d29337ec"
+ },
+ "/finance/dividend-discount/": {
+  "date": "2026-09-28",
+  "hash": "1be1d15ac08e7cdb"
+ },
+ "/finance/margin-call/": {
+  "date": "2026-09-28",
+  "hash": "9d067d2314c20eaf"
+ },
+ "/finance/black-scholes/": {
+  "date": "2026-09-28",
+  "hash": "9c9171db017513f4"
+ },
+ "/finance/bond-duration/": {
+  "date": "2026-09-28",
+  "hash": "90bf14085b4bd3de"
+ },
+ "/finance/growing-perpetuity/": {
+  "date": "2026-09-28",
+  "hash": "915ab3a03f046951"
+ },
+ "/finance/tax-loss-harvest/": {
+  "date": "2026-09-28",
+  "hash": "412f24be74331479"
+ },
+ "/finance/savings-rate/": {
+  "date": "2026-09-28",
+  "hash": "c39d9a0e40255a0a"
+ },
+ "/finance/envelope-budget/": {
+  "date": "2026-09-28",
+  "hash": "5d6c10175a25b370"
+ },
+ "/finance/car-lease-calculator/": {
+  "date": "2026-09-28",
+  "hash": "9ac9134a8805b8fe"
+ },
+ "/finance/cost-of-living/": {
+  "date": "2026-09-28",
+  "hash": "5d5c030019e18882"
+ },
+ "/finance/debt-consolidation/": {
+  "date": "2026-09-28",
+  "hash": "8f0fac2dd98b0334"
+ },
+ "/finance/yield-to-maturity/": {
+  "date": "2026-09-28",
+  "hash": "f2e85e5b5dc6bf27"
+ },
+ "/finance/gross-rent-multiplier/": {
+  "date": "2026-09-28",
+  "hash": "5ea362a7009e21f7"
+ },
+ "/finance/current-ratio-finance/": {
+  "date": "2026-09-28",
+  "hash": "dd3cdff9d28b3e21"
+ },
+ "/finance/accounts-receivable-turnover/": {
+  "date": "2026-09-28",
+  "hash": "68de7d534576055b"
+ },
+ "/finance/operating-margin/": {
+  "date": "2026-09-28",
+  "hash": "18ec1bda1abc78f5"
+ },
+ "/finance/net-profit-margin/": {
+  "date": "2026-09-28",
+  "hash": "5859712e0b7e4f7f"
+ },
+ "/finance/coverage-ratio/": {
+  "date": "2026-09-28",
+  "hash": "ef9d394d3f0ed34c"
+ },
+ "/finance/home-equity/": {
+  "date": "2026-09-28",
+  "hash": "69e299d7ce84da80"
+ },
+ "/finance/cash-on-cash/": {
+  "date": "2026-09-28",
+  "hash": "e7b9992305f73a71"
+ },
+ "/finance/loan-balance/": {
+  "date": "2026-09-28",
+  "hash": "385e8a0d98ca3796"
+ },
+ "/finance/price-to-rent/": {
+  "date": "2026-09-28",
+  "hash": "205b34ad47623ba5"
+ },
+ "/finance/fico-simulator/": {
+  "date": "2026-09-28",
+  "hash": "2b03def1f22da917"
+ },
+ "/finance/discounted-payback/": {
+  "date": "2026-09-28",
+  "hash": "31a9bc3d92159ae6"
+ },
+ "/finance/portfolio-return/": {
+  "date": "2026-09-28",
+  "hash": "27542906adc7b55a"
+ },
+ "/finance/payroll-tax/": {
+  "date": "2026-09-28",
+  "hash": "59673628b82ce3c6"
+ },
+ "/finance/standard-deduction/": {
+  "date": "2026-09-28",
+  "hash": "6b4da6b121050f8b"
+ },
+ "/finance/home-office-deduction/": {
+  "date": "2026-09-28",
+  "hash": "939a53c1d13cd673"
+ },
+ "/finance/estimated-tax/": {
+  "date": "2026-09-28",
+  "hash": "86320934ab39d240"
+ },
+ "/finance/diversification/": {
+  "date": "2026-09-28",
+  "hash": "bf1fa2a9fd2a8b66"
+ },
+ "/finance/forex-pip/": {
+  "date": "2026-09-28",
+  "hash": "2bd363d745fe8579"
+ },
+ "/finance/currency-arbitrage/": {
+  "date": "2026-09-28",
+  "hash": "4e6d15979ea3727d"
+ },
+ "/finance/payback-period/": {
+  "date": "2026-09-28",
+  "hash": "f05e7fa4a9e97a47"
+ },
+ "/finance/t-bill/": {
+  "date": "2026-09-28",
+  "hash": "337a5e35f0f4ee84"
+ },
+ "/finance/cagr/": {
+  "date": "2026-09-28",
+  "hash": "90c7b00220a39268"
+ },
+ "/finance/capm/": {
+  "date": "2026-09-28",
+  "hash": "d0e8de0d1245ae93"
+ },
+ "/finance/dcf/": {
+  "date": "2026-09-28",
+  "hash": "8913482c5d1ad1bf"
+ },
+ "/finance/debt-to-equity/": {
+  "date": "2026-09-28",
+  "hash": "8962ba5a18c35da8"
+ },
+ "/finance/sip-step-up/": {
+  "date": "2026-09-28",
+  "hash": "5a462bc11c991df3"
+ },
+ "/finance/fixed-deposit-vs-recurring/": {
+  "date": "2026-09-28",
+  "hash": "fb6de30041e8404c"
+ },
+ "/finance/insurance-surrender-value/": {
+  "date": "2026-09-28",
+  "hash": "9e7e3ec16af322d1"
+ },
+ "/finance/espp/": {
+  "date": "2026-09-28",
+  "hash": "8faf10f72317f782"
+ },
+ "/finance/roth-vs-traditional/": {
+  "date": "2026-09-28",
+  "hash": "57365ebe8ab43242"
+ },
+ "/finance/recast-mortgage/": {
+  "date": "2026-09-28",
+  "hash": "125a312509926622"
+ },
+ "/finance/biweekly-mortgage/": {
+  "date": "2026-09-28",
+  "hash": "bff4cf9a4154e6e9"
+ },
+ "/finance/mortgage-points/": {
+  "date": "2026-09-28",
+  "hash": "de6952ad1c2f1a9a"
+ },
+ "/finance/rent-affordability/": {
+  "date": "2026-09-28",
+  "hash": "d454fc4bdc049ec4"
+ },
+ "/finance/dividend-reinvestment/": {
+  "date": "2026-09-28",
+  "hash": "321ef58d62445aad"
+ },
+ "/finance/stock-split/": {
+  "date": "2026-09-28",
+  "hash": "6dec3e47f562086c"
+ },
+ "/finance/eps-calculator/": {
+  "date": "2026-09-28",
+  "hash": "564fe9ce2a800f01"
+ },
+ "/finance/book-value-share/": {
+  "date": "2026-09-28",
+  "hash": "e2b4f9ae0395942c"
+ },
+ "/finance/net-operating-income/": {
+  "date": "2026-09-28",
+  "hash": "8da1f3f8752eb511"
+ },
+ "/finance/credit-utilization/": {
+  "date": "2026-09-28",
+  "hash": "7da2c1f43c38b7ff"
+ },
+ "/finance/apy-calculator/": {
+  "date": "2026-09-28",
+  "hash": "7d26e8f33b6aab52"
+ },
+ "/finance/lump-sum-vs-sip/": {
+  "date": "2026-09-28",
+  "hash": "f1b1eca4fd81e6ed"
+ },
+ "/finance/pmi-calculator/": {
+  "date": "2026-09-28",
+  "hash": "d6213f2588f692bd"
+ },
+ "/finance/pension-lump-sum/": {
+  "date": "2026-09-28",
+  "hash": "41c770ecfe473b8c"
+ },
+ "/finance/prorated-rent/": {
+  "date": "2026-09-28",
+  "hash": "b827e132a29df776"
+ },
+ "/finance/dso/": {
+  "date": "2026-09-28",
+  "hash": "8ebb1ec86b9f5fc7"
+ },
+ "/finance/payout-ratio/": {
+  "date": "2026-09-28",
+  "hash": "526f249454fb2b38"
+ },
+ "/finance/market-cap/": {
+  "date": "2026-09-28",
+  "hash": "aed659425c70f3e5"
+ },
+ "/finance/sortino-ratio/": {
+  "date": "2026-09-28",
+  "hash": "3ed3fa5bad0a4d6d"
+ },
+ "/finance/max-drawdown/": {
+  "date": "2026-09-28",
+  "hash": "82c3c6c628d983bb"
+ },
+ "/finance/zero-coupon-bond/": {
+  "date": "2026-09-28",
+  "hash": "c5a87d610abc94e6"
+ },
+ "/finance/cd-ladder/": {
+  "date": "2026-09-28",
+  "hash": "2bfc794e38bbdd82"
+ },
+ "/finance/ibond-value/": {
+  "date": "2026-09-28",
+  "hash": "b3202772291cab91"
+ },
+ "/finance/put-call-parity/": {
+  "date": "2026-09-28",
+  "hash": "f8a789d9e6f5cd3a"
+ },
+ "/finance/risk-reward-ratio/": {
+  "date": "2026-09-28",
+  "hash": "545c1713e8da8624"
+ },
+ "/finance/position-size/": {
+  "date": "2026-09-28",
+  "hash": "3d8072d4552f8202"
+ },
+ "/finance/stop-loss/": {
+  "date": "2026-09-28",
+  "hash": "12f6dccd20405002"
+ },
+ "/finance/cost-basis-avg/": {
+  "date": "2026-09-28",
+  "hash": "8da45ea684cc0aac"
+ },
+ "/finance/dca-calculator/": {
+  "date": "2026-09-28",
+  "hash": "dde7590dc7e4e3bb"
+ },
+ "/finance/staking-rewards/": {
+  "date": "2026-09-28",
+  "hash": "68b4de29fbecf9c6"
+ },
+ "/finance/kelly-criterion/": {
+  "date": "2026-09-28",
+  "hash": "408ee8bb0007080d"
+ },
+ "/finance/value-at-risk/": {
+  "date": "2026-09-28",
+  "hash": "d08060271937f178"
+ },
+ "/finance/ev-ebitda/": {
+  "date": "2026-09-28",
+  "hash": "5ed9c15422e7630e"
+ },
+ "/finance/peg-ratio/": {
+  "date": "2026-09-28",
+  "hash": "745d9113e3c85609"
+ },
+ "/finance/free-cash-flow/": {
+  "date": "2026-09-28",
+  "hash": "a8cd8a39d6ac008b"
+ },
+ "/finance/interest-coverage/": {
+  "date": "2026-09-28",
+  "hash": "a41548ce5d015812"
+ },
+ "/finance/asset-turnover/": {
+  "date": "2026-09-28",
+  "hash": "a8947e2f94d02fd8"
+ },
+ "/finance/runway-months/": {
+  "date": "2026-09-28",
+  "hash": "76f45b7f170f5d9c"
+ },
+ "/finance/effective-tax-rate/": {
+  "date": "2026-09-28",
+  "hash": "ed1571e0f3217f96"
+ },
+ "/finance/quarterly-tax/": {
+  "date": "2026-09-28",
+  "hash": "8bbae8cb3930b890"
+ },
+ "/finance/late-fee-interest/": {
+  "date": "2026-09-28",
+  "hash": "a2bba2dedbb3812b"
+ },
+ "/finance/factoring-fee/": {
+  "date": "2026-09-28",
+  "hash": "d32f8f19951f9108"
+ },
+ "/finance/royalty-payment/": {
+  "date": "2026-09-28",
+  "hash": "d4e71621aaf92e81"
+ },
+ "/finance/franchise-cost/": {
+  "date": "2026-09-28",
+  "hash": "f204c69677f6688f"
+ },
+ "/finance/food-cost-percent/": {
+  "date": "2026-09-28",
+  "hash": "e5c12d0d358b173e"
+ },
+ "/finance/menu-price/": {
+  "date": "2026-09-28",
+  "hash": "2ac7a05dd8048305"
+ },
+ "/finance/rmd/": {
+  "date": "2026-09-28",
+  "hash": "300400f76ed700b5"
+ },
+ "/finance/hsa-growth/": {
+  "date": "2026-09-28",
+  "hash": "83231129f337b965"
+ },
+ "/finance/safe-withdrawal/": {
+  "date": "2026-09-28",
+  "hash": "2c87b4841c65c2bb"
+ },
+ "/finance/noi/": {
+  "date": "2026-09-28",
+  "hash": "d6f0564b2a1519ea"
+ },
+ "/finance/price-per-sqft/": {
+  "date": "2026-09-28",
+  "hash": "897910b762546ae9"
+ },
+ "/finance/rent-increase/": {
+  "date": "2026-09-28",
+  "hash": "fed9829059524676"
+ },
+ "/finance/deposit-interest/": {
+  "date": "2026-09-28",
+  "hash": "7c7660261eac931d"
+ },
+ "/finance/roommate-rent-split/": {
+  "date": "2026-09-28",
+  "hash": "baa0d938a5f4118d"
+ },
+ "/finance/purchasing-power/": {
+  "date": "2026-09-28",
+  "hash": "d846f064c3a006c6"
+ },
+ "/finance/refinance-breakeven/": {
+  "date": "2026-09-28",
+  "hash": "2380be53e972a54c"
+ },
+ "/finance/apr-annual/": {
+  "date": "2026-09-28",
+  "hash": "e23e1ccc92778f28"
+ },
+ "/finance/auto-lease-vs-buy/": {
+  "date": "2026-09-28",
+  "hash": "082590823d6e7f98"
+ },
+ "/finance/heloc-payment/": {
+  "date": "2026-09-28",
+  "hash": "b6590a341955e973"
+ },
+ "/finance/pmi-drop/": {
+  "date": "2026-09-28",
+  "hash": "43432d13d274d353"
+ },
+ "/finance/escrow-analysis/": {
+  "date": "2026-09-28",
+  "hash": "99a085fce44177a8"
+ },
+ "/finance/portfolio-beta/": {
+  "date": "2026-09-28",
+  "hash": "0e0db0d482aa3467"
+ },
+ "/finance/yield-to-worst/": {
+  "date": "2026-09-28",
+  "hash": "256b03d68fdcadec"
+ },
+ "/finance/coupon-payment/": {
+  "date": "2026-09-28",
+  "hash": "6a1c1d922faa7a6c"
+ },
+ "/finance/clean-dirty-price/": {
+  "date": "2026-09-28",
+  "hash": "d42d142a7af36dc6"
+ },
+ "/finance/convexity/": {
+  "date": "2026-09-28",
+  "hash": "687033db9e68db49"
+ },
+ "/finance/duration-bond/": {
+  "date": "2026-09-28",
+  "hash": "c35a3a9b169f164b"
+ },
+ "/finance/appreciation-forecast/": {
+  "date": "2026-09-28",
+  "hash": "c99d81285c93708b"
+ },
+ "/finance/rent-vs-sell/": {
+  "date": "2026-09-28",
+  "hash": "2e09290830cd377f"
+ },
+ "/finance/seller-net/": {
+  "date": "2026-09-28",
+  "hash": "460b26ea450b2751"
+ },
+ "/finance/points-breakeven/": {
+  "date": "2026-09-28",
+  "hash": "569fc1188fdc46f3"
+ },
+ "/finance/cap-rate-conv/": {
+  "date": "2026-09-28",
+  "hash": "90ebb8e2cf984b73"
+ },
+ "/finance/rule-of-40/": {
+  "date": "2026-09-28",
+  "hash": "01986ef743259f50"
+ },
+ "/finance/cost-of-delay/": {
+  "date": "2026-09-28",
+  "hash": "b2eca995ea5a68e6"
+ },
+ "/finance/hajj-cost/": {
+  "date": "2026-10-24",
+  "hash": "cfe911e3e33ca4a9"
+ },
+ "/finance/power-of-attorney-cost/": {
+  "date": "2026-10-24",
+  "hash": "22247d518cefd55e"
+ },
+ "/finance/divorce-cost/": {
+  "date": "2026-10-24",
+  "hash": "cf8a249c1757d2ff"
+ },
+ "/finance/moving-abroad-cost/": {
+  "date": "2026-10-24",
+  "hash": "beb767b45e49d3db"
+ },
+ "/finance/cosigning-loan-risk/": {
+  "date": "2026-10-24",
+  "hash": "2e527a8cb79756f9"
+ },
+ "/finance/inheritance-tax-uk-india/": {
+  "date": "2026-10-24",
+  "hash": "41b18035ef064f3a"
+ },
+ "/finance/rental-portfolio-tracker/": {
+  "date": "2026-10-24",
+  "hash": "e1aae9571f3c0f8a"
+ },
+ "/fitness/": {
+  "date": "2026-09-28",
+  "hash": "eb14e4986062d616"
+ },
+ "/hub/fitness/": {
+  "date": "2026-09-28",
+  "hash": "af87fd1f0b83d376"
+ },
+ "/fitness/running-pace/": {
+  "date": "2026-09-28",
+  "hash": "3405382a6fd70de5"
+ },
+ "/fitness/race-predictor/": {
+  "date": "2026-09-28",
+  "hash": "b2057dd827584568"
+ },
+ "/fitness/steps-to-distance/": {
+  "date": "2026-09-28",
+  "hash": "6b683fcd6b3d25e2"
+ },
+ "/fitness/max-heart-rate/": {
+  "date": "2026-09-28",
+  "hash": "d47e086b009b1d99"
+ },
+ "/fitness/recovery-hr/": {
+  "date": "2026-09-28",
+  "hash": "64854078a7ff6f5c"
+ },
+ "/fitness/vo2max/": {
+  "date": "2026-09-28",
+  "hash": "dc0e89d44ca86541"
+ },
+ "/fitness/calories-exercise/": {
+  "date": "2026-09-28",
+  "hash": "69d39a22854a99e2"
+ },
+ "/fitness/body-fat-fitness/": {
+  "date": "2026-09-28",
+  "hash": "5874588767d19731"
+ },
+ "/fitness/pullup-test/": {
+  "date": "2026-09-28",
+  "hash": "042c1f4ba856bb57"
+ },
+ "/fitness/flexibility-score/": {
+  "date": "2026-09-28",
+  "hash": "b49458b83ddfe5ff"
+ },
+ "/fitness/sports-calories/": {
+  "date": "2026-09-28",
+  "hash": "37ed1b0c20a45c42"
+ },
+ "/fitness/calories-burned/": {
+  "date": "2026-09-28",
+  "hash": "44515d273a25bf8b"
+ },
+ "/fitness/one-rep-max/": {
+  "date": "2026-09-28",
+  "hash": "3bed495f3429f644"
+ },
+ "/fitness/training-max/": {
+  "date": "2026-09-28",
+  "hash": "71bcd53cc0cff472"
+ },
+ "/fitness/weight-loss/": {
+  "date": "2026-09-28",
+  "hash": "63b6873bf2613831"
+ },
+ "/fitness/muscle-gain/": {
+  "date": "2026-09-28",
+  "hash": "ca57608516a63770"
+ },
+ "/fitness/pushup-test/": {
+  "date": "2026-09-28",
+  "hash": "349fc1a132b9e87c"
+ },
+ "/fitness/squat-standards/": {
+  "date": "2026-09-28",
+  "hash": "c4cda644e01c4609"
+ },
+ "/fitness/bench-standards/": {
+  "date": "2026-09-28",
+  "hash": "10dd7df4ef15cef4"
+ },
+ "/fitness/deadlift-standards/": {
+  "date": "2026-09-28",
+  "hash": "996f22fcd5fd1d85"
+ },
+ "/fitness/overhead-standards/": {
+  "date": "2026-09-28",
+  "hash": "303a4b35959c5240"
+ },
+ "/fitness/plank-test/": {
+  "date": "2026-09-28",
+  "hash": "c443a601427615c0"
+ },
+ "/fitness/grip-strength/": {
+  "date": "2026-09-28",
+  "hash": "baf359447ff8b094"
+ },
+ "/fitness/burpee-test/": {
+  "date": "2026-09-28",
+  "hash": "a84ca029d39b4ecd"
+ },
+ "/fitness/situp-test/": {
+  "date": "2026-09-28",
+  "hash": "d555677f05693d8c"
+ },
+ "/fitness/row-standards/": {
+  "date": "2026-09-28",
+  "hash": "083ab3adc082a724"
+ },
+ "/fitness/swim-pace/": {
+  "date": "2026-09-28",
+  "hash": "db9885b2764bcfc9"
+ },
+ "/fitness/cycling-speed/": {
+  "date": "2026-09-28",
+  "hash": "efc3329f39f090e3"
+ },
+ "/fitness/cadence-calc/": {
+  "date": "2026-09-28",
+  "hash": "75bd62e1ce066473"
+ },
+ "/fitness/stride-length/": {
+  "date": "2026-09-28",
+  "hash": "776d21b28369fdc6"
+ },
+ "/fitness/training-volume/": {
+  "date": "2026-09-28",
+  "hash": "618d81fe92003a5d"
+ },
+ "/fitness/vertical-jump/": {
+  "date": "2026-09-28",
+  "hash": "673547d00b00afa7"
+ },
+ "/fitness/beep-test/": {
+  "date": "2026-09-28",
+  "hash": "fd054099887fcdb1"
+ },
+ "/fitness/bodyweight-ratio/": {
+  "date": "2026-09-28",
+  "hash": "8c74f0a4958a516c"
+ },
+ "/fitness/deload-week/": {
+  "date": "2026-09-28",
+  "hash": "77fac5957e011034"
+ },
+ "/fitness/workout-rest/": {
+  "date": "2026-09-28",
+  "hash": "77b31a6f12882902"
+ },
+ "/fitness/treadmill-pace/": {
+  "date": "2026-09-28",
+  "hash": "2e6fcc2b99d1c9fa"
+ },
+ "/fitness/rowing-split/": {
+  "date": "2026-09-28",
+  "hash": "4dd3ddda56ec7eb1"
+ },
+ "/fitness/sweat-rate/": {
+  "date": "2026-09-28",
+  "hash": "19c120b88003cba1"
+ },
+ "/fitness/rpe-load/": {
+  "date": "2026-09-28",
+  "hash": "ab4f2845a2bb5310"
+ },
+ "/fitness/vo2-beep/": {
+  "date": "2026-09-28",
+  "hash": "05d2229d08be7fa8"
+ },
+ "/fitness/resting-metabolic/": {
+  "date": "2026-09-28",
+  "hash": "86772f95350edc75"
+ },
+ "/food/": {
+  "date": "2026-09-28",
+  "hash": "6532ee31b158e924"
+ },
+ "/hub/food/": {
+  "date": "2026-09-28",
+  "hash": "5e8584892b7b381a"
+ },
+ "/food/daily-calorie/": {
+  "date": "2026-09-28",
+  "hash": "2ed5a825d986f5cd"
+ },
+ "/food/macro-split/": {
+  "date": "2026-09-28",
+  "hash": "d066f55c3ee35c8e"
+ },
+ "/food/protein-need/": {
+  "date": "2026-09-28",
+  "hash": "61b969f0738098fe"
+ },
+ "/food/daily-water-intake/": {
+  "date": "2026-09-28",
+  "hash": "03787d6d63c02bd1"
+ },
+ "/food/weight-loss-time/": {
+  "date": "2026-09-28",
+  "hash": "6670e1bdc80f29cb"
+ },
+ "/food/body-fat-food/": {
+  "date": "2026-09-28",
+  "hash": "f8c5669da2d4968f"
+ },
+ "/food/calorie-burned/": {
+  "date": "2026-09-28",
+  "hash": "15dce1df5e7d0ae3"
+ },
+ "/food/recipe-scaler/": {
+  "date": "2026-09-28",
+  "hash": "cacf294cfcbf44f1"
+ },
+ "/food/cooking-time/": {
+  "date": "2026-09-28",
+  "hash": "1e96c6be8bce704c"
+ },
+ "/food/meal-prep/": {
+  "date": "2026-09-28",
+  "hash": "c54be9e6bcbaaaa5"
+ },
+ "/food/unit-converter-food/": {
+  "date": "2026-09-28",
+  "hash": "ea1895b1008bf317"
+ },
+ "/food/eat-out-vs-cook/": {
+  "date": "2026-09-28",
+  "hash": "2848bef10429b900"
+ },
+ "/food/fast-food-calories/": {
+  "date": "2026-09-28",
+  "hash": "4e7c87e7b75296e2"
+ },
+ "/food/keto-macro/": {
+  "date": "2026-09-28",
+  "hash": "d7ea6542dcdc29e3"
+ },
+ "/food/intermittent-fasting/": {
+  "date": "2026-09-28",
+  "hash": "ac6a693cf6109888"
+ },
+ "/food/vegan-protein/": {
+  "date": "2026-09-28",
+  "hash": "06f06c83ac08e0dd"
+ },
+ "/food/grocery-per-person/": {
+  "date": "2026-09-28",
+  "hash": "c77034e9a24ed8a6"
+ },
+ "/food/baking-converter/": {
+  "date": "2026-09-28",
+  "hash": "510628a10ba7bc8a"
+ },
+ "/food/coffee-cost-per-cup/": {
+  "date": "2026-09-28",
+  "hash": "c58cb459c513554f"
+ },
+ "/food/tea-vs-coffee/": {
+  "date": "2026-09-28",
+  "hash": "b7414f7e72787c14"
+ },
+ "/food/sugar-intake/": {
+  "date": "2026-09-28",
+  "hash": "6e5358ce5deb3fda"
+ },
+ "/food/carb-calculator/": {
+  "date": "2026-09-28",
+  "hash": "5b13614fef2276b1"
+ },
+ "/food/fiber-need/": {
+  "date": "2026-09-28",
+  "hash": "8d53815473528dbd"
+ },
+ "/food/calorie-per-meal/": {
+  "date": "2026-09-28",
+  "hash": "4b3869ddb72ceebb"
+ },
+ "/food/rice-water/": {
+  "date": "2026-09-28",
+  "hash": "4e300853e13cc728"
+ },
+ "/food/meat-cooking-time/": {
+  "date": "2026-09-28",
+  "hash": "6fc1db157450bbc0"
+ },
+ "/food/egg-boil/": {
+  "date": "2026-09-28",
+  "hash": "1fea0b214cbb8d56"
+ },
+ "/food/smoothie-calories/": {
+  "date": "2026-09-28",
+  "hash": "ee1a6d9b755c5da5"
+ },
+ "/food/protein-per-dollar/": {
+  "date": "2026-09-28",
+  "hash": "5126fa89aed34574"
+ },
+ "/food/sodium-intake/": {
+  "date": "2026-09-28",
+  "hash": "3cc079781565edd1"
+ },
+ "/food/caffeine-daily/": {
+  "date": "2026-09-28",
+  "hash": "7670c112be73b80d"
+ },
+ "/food/pizza-slices/": {
+  "date": "2026-09-28",
+  "hash": "f6c09ebb701f2208"
+ },
+ "/food/meal-prep-size/": {
+  "date": "2026-09-28",
+  "hash": "531b59bc12bb8e82"
+ },
+ "/food/sugar-limit/": {
+  "date": "2026-09-28",
+  "hash": "ef241701312e2de7"
+ },
+ "/food/alcohol-calories/": {
+  "date": "2026-09-28",
+  "hash": "0e0829e39300f939"
+ },
+ "/food/oven-conversion/": {
+  "date": "2026-09-28",
+  "hash": "efa3228059b41b81"
+ },
+ "/food/homebrew-abv/": {
+  "date": "2026-09-28",
+  "hash": "5d40c5fb9dde5226"
+ },
+ "/health/": {
+  "date": "2026-09-28",
+  "hash": "5d6ba025c746b3f7"
+ },
+ "/hub/health/": {
+  "date": "2026-09-28",
+  "hash": "fdb8a7b9320cd72c"
+ },
+ "/health/bmi/": {
+  "date": "2026-09-28",
+  "hash": "ac6e47841ff0de66"
+ },
+ "/health/bmr/": {
+  "date": "2026-09-28",
+  "hash": "629c7f60caf16f93"
+ },
+ "/health/calorie/": {
+  "date": "2026-09-28",
+  "hash": "982fce426b190be7"
+ },
+ "/health/body-fat/": {
+  "date": "2026-09-28",
+  "hash": "58781abb05d356a5"
+ },
+ "/health/water-intake-health/": {
+  "date": "2026-09-28",
+  "hash": "16dd38d5966ad664"
+ },
+ "/health/ideal-body-weight/": {
+  "date": "2026-09-28",
+  "hash": "a2cb55d8fe2c6799"
+ },
+ "/health/heart-rate/": {
+  "date": "2026-09-28",
+  "hash": "78d40b90d456e865"
+ },
+ "/health/pregnancy/": {
+  "date": "2026-10-24",
+  "hash": "7ad4f2a88518789d"
+ },
+ "/health/ovulation/": {
+  "date": "2026-09-28",
+  "hash": "de2b86f2241ec5d5"
+ },
+ "/health/macros/": {
+  "date": "2026-09-28",
+  "hash": "dc42417572ba639e"
+ },
+ "/health/lean-body-mass/": {
+  "date": "2026-09-28",
+  "hash": "43ee0d215eb3411f"
+ },
+ "/health/bsa/": {
+  "date": "2026-09-28",
+  "hash": "ca761882ab9ef8d2"
+ },
+ "/health/waist-hip/": {
+  "date": "2026-09-28",
+  "hash": "fbfdff8a128cde32"
+ },
+ "/health/vo2-max/": {
+  "date": "2026-09-28",
+  "hash": "71689800a0af118c"
+ },
+ "/health/pregnancy-weight/": {
+  "date": "2026-09-28",
+  "hash": "b63df28ceb6e3d4a"
+ },
+ "/health/blood-pressure/": {
+  "date": "2026-09-28",
+  "hash": "4810ceb4e30d9c9f"
+ },
+ "/health/calorie-burn/": {
+  "date": "2026-09-28",
+  "hash": "f1e331907b73d9ca"
+ },
+ "/health/sleep/": {
+  "date": "2026-09-28",
+  "hash": "73dfcdb3dbb908bb"
+ },
+ "/health/gfr/": {
+  "date": "2026-09-28",
+  "hash": "7f2311d78568a6c5"
+ },
+ "/health/target-heart-rate/": {
+  "date": "2026-09-28",
+  "hash": "6a088c96ab1bd2fe"
+ },
+ "/health/sleep-quality/": {
+  "date": "2026-09-28",
+  "hash": "de4fc17484539b66"
+ },
+ "/health/fatigue-score/": {
+  "date": "2026-09-28",
+  "hash": "d9f4b204ca83e68b"
+ },
+ "/health/body-fat-navy/": {
+  "date": "2026-09-28",
+  "hash": "4e24a4cf2679c117"
+ },
+ "/health/calorie-deficit/": {
+  "date": "2026-09-28",
+  "hash": "81f42f3ab38d0c11"
+ },
+ "/health/heart-rate-zones/": {
+  "date": "2026-09-28",
+  "hash": "e4e76598c7bbcfb8"
+ },
+ "/health/ideal-weight/": {
+  "date": "2026-09-28",
+  "hash": "dc4424764ce038f0"
+ },
+ "/health/fasting-calculator/": {
+  "date": "2026-09-28",
+  "hash": "510b0244dc81f6c0"
+ },
+ "/health/sleep-debt/": {
+  "date": "2026-09-28",
+  "hash": "3807f304b769b09f"
+ },
+ "/health/met-calories/": {
+  "date": "2026-09-28",
+  "hash": "a97b9106232acdbc"
+ },
+ "/health/body-type/": {
+  "date": "2026-09-28",
+  "hash": "17434eaba049d166"
+ },
+ "/health/iron-intake/": {
+  "date": "2026-09-28",
+  "hash": "fbc3ec3167efa7a8"
+ },
+ "/health/vitamin-d-dosage/": {
+  "date": "2026-09-28",
+  "hash": "dd14185c89437ae7"
+ },
+ "/health/calorie-goal/": {
+  "date": "2026-09-28",
+  "hash": "5083e3b149a582ef"
+ },
+ "/health/burn-severity/": {
+  "date": "2026-09-28",
+  "hash": "f81db6e6dbe795ff"
+ },
+ "/health/drug-dosage/": {
+  "date": "2026-09-28",
+  "hash": "e959f8eacd4d05a0"
+ },
+ "/health/trimester-date/": {
+  "date": "2026-09-28",
+  "hash": "1399952918b4a2ec"
+ },
+ "/health/ovulation-calculator/": {
+  "date": "2026-09-28",
+  "hash": "d31f3c0e04e4be35"
+ },
+ "/health/cholesterol-ratio/": {
+  "date": "2026-09-28",
+  "hash": "291762503e8a64a0"
+ },
+ "/health/nap-planner/": {
+  "date": "2026-09-28",
+  "hash": "ddf1c24a2b850a8e"
+ },
+ "/health/maffetone-hr/": {
+  "date": "2026-09-28",
+  "hash": "3315a6b7770d8306"
+ },
+ "/health/health-insurance-copay/": {
+  "date": "2026-09-28",
+  "hash": "5e3ee6751b817fce"
+ },
+ "/health/hba1c-eag/": {
+  "date": "2026-09-28",
+  "hash": "3fe2d37bc136192a"
+ },
+ "/health/glycemic-load/": {
+  "date": "2026-09-28",
+  "hash": "3621fe11f1b598f9"
+ },
+ "/health/waist-height-ratio/": {
+  "date": "2026-09-28",
+  "hash": "a9c3413a7ad4a2d2"
+ },
+ "/health/map-calculator/": {
+  "date": "2026-09-28",
+  "hash": "bf5087bd32b1e422"
+ },
+ "/health/ldl-calculator/": {
+  "date": "2026-09-28",
+  "hash": "95bd9f22b4d961ed"
+ },
+ "/health/iv-drip-rate/": {
+  "date": "2026-09-28",
+  "hash": "78ec23127cf9922e"
+ },
+ "/health/creatinine-clearance/": {
+  "date": "2026-09-28",
+  "hash": "2ffb1bc69f5fc842"
+ },
+ "/health/anion-gap/": {
+  "date": "2026-09-28",
+  "hash": "855ef680fd95e810"
+ },
+ "/health/qtc/": {
+  "date": "2026-09-28",
+  "hash": "dd827c2ad47a7366"
+ },
+ "/health/ponderal-index/": {
+  "date": "2026-09-28",
+  "hash": "2c5b37b7531642de"
+ },
+ "/health/bmr-mifflin/": {
+  "date": "2026-09-28",
+  "hash": "81ffe6abb764a7d6"
+ },
+ "/health/tdee-macro/": {
+  "date": "2026-09-28",
+  "hash": "c94e66417b50e0d8"
+ },
+ "/health/gfr-estimate/": {
+  "date": "2026-09-28",
+  "hash": "3a96a921d22cc86f"
+ },
+ "/health/chw/": {
+  "date": "2026-09-28",
+  "hash": "de73018114a40f4b"
+ },
+ "/health/gcs/": {
+  "date": "2026-09-28",
+  "hash": "12364290600c38f8"
+ },
+ "/health/apgar/": {
+  "date": "2026-09-28",
+  "hash": "1fa4c6ddf4eeffdd"
+ },
+ "/health/vaccination-schedule/": {
+  "date": "2026-09-28",
+  "hash": "7b722e9181c34382"
+ },
+ "/health/pediatric-dose/": {
+  "date": "2026-09-28",
+  "hash": "fc2a63eadc0696ba"
+ },
+ "/health/corrected-calcium/": {
+  "date": "2026-09-28",
+  "hash": "a26b071a8ebae090"
+ },
+ "/health/winters-formula/": {
+  "date": "2026-09-28",
+  "hash": "42039c4a4b78948a"
+ },
+ "/health/maintenance-fluids/": {
+  "date": "2026-09-28",
+  "hash": "93cb7c70ab0369d5"
+ },
+ "/health/free-water-deficit/": {
+  "date": "2026-09-28",
+  "hash": "c494d7c17970ba36"
+ },
+ "/health/serum-osmolality/": {
+  "date": "2026-09-28",
+  "hash": "9d8a44dd3cb136cd"
+ },
+ "/health/total-body-water/": {
+  "date": "2026-09-28",
+  "hash": "3220c4864369d900"
+ },
+ "/health/pf-ratio/": {
+  "date": "2026-09-28",
+  "hash": "f0ba2e3e8d54cd85"
+ },
+ "/health/pet-medication-dose/": {
+  "date": "2026-10-24",
+  "hash": "9c5387356aeabdc0"
+ },
+ "/health/peptide-reconstitution/": {
+  "date": "2026-10-24",
+  "hash": "dae7461c1e1103f4"
+ },
+ "/homegarden/": {
+  "date": "2026-09-28",
+  "hash": "0fa0d186777266bf"
+ },
+ "/hub/homegarden/": {
+  "date": "2026-09-28",
+  "hash": "a9187bc6b69849f0"
+ },
+ "/homegarden/room-area/": {
+  "date": "2026-09-28",
+  "hash": "56d8615afe62418e"
+ },
+ "/homegarden/wallpaper-rolls/": {
+  "date": "2026-09-28",
+  "hash": "9f6fca82c71a4a0a"
+ },
+ "/homegarden/fence-material/": {
+  "date": "2026-09-28",
+  "hash": "ea24059e60f95baa"
+ },
+ "/homegarden/deck-stain/": {
+  "date": "2026-09-28",
+  "hash": "9f9fc5803cd77f2c"
+ },
+ "/homegarden/curtain-length/": {
+  "date": "2026-09-28",
+  "hash": "74a94304b4efa2d9"
+ },
+ "/homegarden/rug-size/": {
+  "date": "2026-09-28",
+  "hash": "52a814836a39a42c"
+ },
+ "/homegarden/lighting-rooms/": {
+  "date": "2026-09-28",
+  "hash": "4759d2de507841c0"
+ },
+ "/homegarden/paint-cost/": {
+  "date": "2026-09-28",
+  "hash": "b43f7f57c0f0691a"
+ },
+ "/homegarden/ac-size/": {
+  "date": "2026-09-28",
+  "hash": "c4d05ebb0d7533dc"
+ },
+ "/homegarden/water-heater/": {
+  "date": "2026-09-28",
+  "hash": "745637160c5bdba6"
+ },
+ "/homegarden/generator-size/": {
+  "date": "2026-09-28",
+  "hash": "45abd4ac6f07db2f"
+ },
+ "/homegarden/garden-soil/": {
+  "date": "2026-09-28",
+  "hash": "1932448fbc6150b1"
+ },
+ "/homegarden/plant-spacing/": {
+  "date": "2026-09-28",
+  "hash": "4b468a497d564fac"
+ },
+ "/homegarden/grass-seed/": {
+  "date": "2026-09-28",
+  "hash": "2bbf9dd92694313c"
+ },
+ "/homegarden/fertilizer/": {
+  "date": "2026-09-28",
+  "hash": "3971ff9590fdd252"
+ },
+ "/homegarden/compost/": {
+  "date": "2026-09-28",
+  "hash": "7705f95eb20edd9f"
+ },
+ "/homegarden/rain-barrel/": {
+  "date": "2026-09-28",
+  "hash": "acf9d093ab982ba3"
+ },
+ "/homegarden/irrigation-flow/": {
+  "date": "2026-09-28",
+  "hash": "d0e9323bf444f9c6"
+ },
+ "/homegarden/pool-size/": {
+  "date": "2026-09-28",
+  "hash": "b7157f70d79bbc1a"
+ },
+ "/homegarden/pool-chemicals/": {
+  "date": "2026-09-28",
+  "hash": "45b1f956e46a3eda"
+ },
+ "/homegarden/furniture-arrange/": {
+  "date": "2026-09-28",
+  "hash": "913f8fa2c7c68dc9"
+ },
+ "/homegarden/tv-mount-height/": {
+  "date": "2026-09-28",
+  "hash": "60a7685e1b149c5d"
+ },
+ "/homegarden/stair-calculator/": {
+  "date": "2026-09-28",
+  "hash": "69fc46721442daf5"
+ },
+ "/homegarden/countertop-sqft/": {
+  "date": "2026-09-28",
+  "hash": "b5d2e023f12cc2b7"
+ },
+ "/homegarden/closet-organizer/": {
+  "date": "2026-09-28",
+  "hash": "3d6f999bc6fa22af"
+ },
+ "/homegarden/cabinet-door/": {
+  "date": "2026-09-28",
+  "hash": "cb8829821ed48433"
+ },
+ "/homegarden/tile-grout/": {
+  "date": "2026-09-28",
+  "hash": "a809d386050b774e"
+ },
+ "/homegarden/light-bulb-save/": {
+  "date": "2026-09-28",
+  "hash": "9e9a873e00d13beb"
+ },
+ "/homegarden/home-sqft/": {
+  "date": "2026-09-28",
+  "hash": "229a29ea96cc15b4"
+ },
+ "/homegarden/kitchen-remodel/": {
+  "date": "2026-09-28",
+  "hash": "307ed10eec4001fa"
+ },
+ "/homegarden/roof-sqft/": {
+  "date": "2026-09-28",
+  "hash": "7fed8b23631154cb"
+ },
+ "/homegarden/vinyl-flooring/": {
+  "date": "2026-09-28",
+  "hash": "df1581b903ff8802"
+ },
+ "/homegarden/solar-panel/": {
+  "date": "2026-09-28",
+  "hash": "81ee9f6e8a7465dd"
+ },
+ "/homegarden/solar-battery/": {
+  "date": "2026-09-28",
+  "hash": "fdd0dbffaeba92d1"
+ },
+ "/homegarden/ev-charger-home/": {
+  "date": "2026-09-28",
+  "hash": "60f0b48c38351a71"
+ },
+ "/homegarden/raised-bed-soil/": {
+  "date": "2026-09-28",
+  "hash": "c389b786dcf9f2d0"
+ },
+ "/homegarden/garden-fence/": {
+  "date": "2026-09-28",
+  "hash": "8d362a88726e895a"
+ },
+ "/homegarden/lawn-watering/": {
+  "date": "2026-09-28",
+  "hash": "9794ba4ceec9dd3c"
+ },
+ "/homegarden/sprinkler-heads/": {
+  "date": "2026-09-28",
+  "hash": "bf9769e513614a01"
+ },
+ "/homegarden/compost-bin/": {
+  "date": "2026-09-28",
+  "hash": "76a322c723a8286f"
+ },
+ "/homegarden/firepit-size/": {
+  "date": "2026-09-28",
+  "hash": "2a1b757f25389f38"
+ },
+ "/homegarden/deck-post/": {
+  "date": "2026-09-28",
+  "hash": "ce5eea3436491327"
+ },
+ "/homegarden/porch-light/": {
+  "date": "2026-09-28",
+  "hash": "2c960f83123ac207"
+ },
+ "/homegarden/ceiling-fan-size/": {
+  "date": "2026-09-28",
+  "hash": "25c14914180bff76"
+ },
+ "/homegarden/humidifier-size/": {
+  "date": "2026-09-28",
+  "hash": "99f1e4374596cf33"
+ },
+ "/homegarden/tree-spacing/": {
+  "date": "2026-09-28",
+  "hash": "ed0522836adbecf4"
+ },
+ "/homegarden/grout-calc/": {
+  "date": "2026-09-28",
+  "hash": "2a64d78ddd000589"
+ },
+ "/homegarden/appliance-cost/": {
+  "date": "2026-09-28",
+  "hash": "856888d738139da4"
+ },
+ "/homegarden/firewood/": {
+  "date": "2026-09-28",
+  "hash": "688a40f6afe18d29"
+ },
+ "/homegarden/solar-payback/": {
+  "date": "2026-10-24",
+  "hash": "0c360ec9e356855a"
+ },
+ "/homegarden/carbon-offset/": {
+  "date": "2026-10-24",
+  "hash": "8d5ea4442888cece"
+ },
+ "/homegarden/homeowner-first-year-budget/": {
+  "date": "2026-10-24",
+  "hash": "53487d3999d905a7"
+ },
+ "/lifestyle/": {
+  "date": "2026-09-28",
+  "hash": "72856cd183181509"
+ },
+ "/hub/lifestyle/": {
+  "date": "2026-09-28",
+  "hash": "d9f28290372ef544"
+ },
+ "/lifestyle/relocation-cost/": {
+  "date": "2026-09-28",
+  "hash": "486d7e88ef8c9847"
+ },
+ "/lifestyle/rental-deposit/": {
+  "date": "2026-09-28",
+  "hash": "7eddf0959c77bd5e"
+ },
+ "/lifestyle/paint-coverage/": {
+  "date": "2026-09-28",
+  "hash": "aef4e2a432ea6108"
+ },
+ "/lifestyle/electricity-bill-saving/": {
+  "date": "2026-09-28",
+  "hash": "6e50607d9f07352a"
+ },
+ "/lifestyle/water-usage/": {
+  "date": "2026-09-28",
+  "hash": "928227e2dfe6b968"
+ },
+ "/lifestyle/grocery-budget-optimizer/": {
+  "date": "2026-09-28",
+  "hash": "2c6e3531917f647b"
+ },
+ "/lifestyle/food-delivery-vs-cooking/": {
+  "date": "2026-09-28",
+  "hash": "f5bec13ab8e9575c"
+ },
+ "/lifestyle/coffee-habit/": {
+  "date": "2026-09-28",
+  "hash": "5085fc70cdf450fb"
+ },
+ "/lifestyle/road-trip-cost/": {
+  "date": "2026-09-28",
+  "hash": "e4c9c4790f686d26"
+ },
+ "/lifestyle/flight-cost-per-hour/": {
+  "date": "2026-09-28",
+  "hash": "0b760564a1f45c64"
+ },
+ "/lifestyle/baby-cost/": {
+  "date": "2026-09-28",
+  "hash": "98775aeed9628371"
+ },
+ "/lifestyle/parental-leave/": {
+  "date": "2026-09-28",
+  "hash": "a8a8045cc2dc0741"
+ },
+ "/lifestyle/pet-cost/": {
+  "date": "2026-09-28",
+  "hash": "65fc5bee7e429f4c"
+ },
+ "/lifestyle/lawn-mowing/": {
+  "date": "2026-09-28",
+  "hash": "9180891f4926b0ef"
+ },
+ "/lifestyle/gym-cost-per-visit/": {
+  "date": "2026-09-28",
+  "hash": "0fd12bdb7ac124cf"
+ },
+ "/lifestyle/vacation-savings/": {
+  "date": "2026-10-24",
+  "hash": "50f630f5c67e1862"
+ },
+ "/lifestyle/sale-savings/": {
+  "date": "2026-09-28",
+  "hash": "dcd7a422980359c7"
+ },
+ "/lifestyle/resell-value/": {
+  "date": "2026-09-28",
+  "hash": "b60467a4c05207b1"
+ },
+ "/lifestyle/subscription-audit/": {
+  "date": "2026-09-28",
+  "hash": "f73375fc4ada5d21"
+ },
+ "/lifestyle/streaming-value/": {
+  "date": "2026-09-28",
+  "hash": "1150da6676ded196"
+ },
+ "/lifestyle/charging-time/": {
+  "date": "2026-09-28",
+  "hash": "a3d82bbada0db469"
+ },
+ "/lifestyle/gift-split/": {
+  "date": "2026-09-28",
+  "hash": "7732393d0ebeda0c"
+ },
+ "/lifestyle/hourly-annual-salary/": {
+  "date": "2026-09-28",
+  "hash": "70b009481cf85a4a"
+ },
+ "/lifestyle/pet-food-cost/": {
+  "date": "2026-09-28",
+  "hash": "df37c822ee5a917b"
+ },
+ "/lifestyle/cleaning-time/": {
+  "date": "2026-09-28",
+  "hash": "2473181081179c15"
+ },
+ "/lifestyle/date-night-cost/": {
+  "date": "2026-09-28",
+  "hash": "6fad57ee7203aad9"
+ },
+ "/lifestyle/takeout-budget/": {
+  "date": "2026-09-28",
+  "hash": "668f0749a7ab7d18"
+ },
+ "/lifestyle/home-insurance/": {
+  "date": "2026-09-28",
+  "hash": "d54a4dd4223a0528"
+ },
+ "/lifestyle/renters-insurance/": {
+  "date": "2026-09-28",
+  "hash": "bd39dd2b2ef9287e"
+ },
+ "/lifestyle/car-wash-annual/": {
+  "date": "2026-09-28",
+  "hash": "4eb22b61d0c0f043"
+ },
+ "/lifestyle/haircut-annual/": {
+  "date": "2026-09-28",
+  "hash": "4180bb2c140766bf"
+ },
+ "/lifestyle/party-cost/": {
+  "date": "2026-09-28",
+  "hash": "d78696b4299e474f"
+ },
+ "/lifestyle/gift-budget/": {
+  "date": "2026-09-28",
+  "hash": "93b172e8acfc524d"
+ },
+ "/lifestyle/hobby-cost/": {
+  "date": "2026-09-28",
+  "hash": "0611222362a232c7"
+ },
+ "/lifestyle/travel-daily/": {
+  "date": "2026-09-28",
+  "hash": "231e7ca86404534b"
+ },
+ "/lifestyle/furniture-assembly/": {
+  "date": "2026-09-28",
+  "hash": "7b93401d8d4190cb"
+ },
+ "/lifestyle/home-renovation/": {
+  "date": "2026-09-28",
+  "hash": "ce3e0570b17c8c02"
+ },
+ "/lifestyle/cigarette-cost/": {
+  "date": "2026-10-24",
+  "hash": "70205724682e440b"
+ },
+ "/lifestyle/french-press-ratio/": {
+  "date": "2026-09-28",
+  "hash": "62833260aa19cbc0"
+ },
+ "/lifestyle/cocktail-dilution/": {
+  "date": "2026-09-28",
+  "hash": "556557c5ed845287"
+ },
+ "/lifestyle/wine-servings/": {
+  "date": "2026-09-28",
+  "hash": "20a36da694ddb16b"
+ },
+ "/lifestyle/baking-scale/": {
+  "date": "2026-09-28",
+  "hash": "f632ecc8ce8ce483"
+ },
+ "/lifestyle/sourdough-hydration/": {
+  "date": "2026-09-28",
+  "hash": "54436176174d507b"
+ },
+ "/lifestyle/lawn-fertilizer/": {
+  "date": "2026-09-28",
+  "hash": "1dfda3d4dcb02314"
+ },
+ "/lifestyle/candle-wax/": {
+  "date": "2026-09-28",
+  "hash": "438a4423e27f7014"
+ },
+ "/lifestyle/knit-gauge/": {
+  "date": "2026-09-28",
+  "hash": "1fc71074c43518ab"
+ },
+ "/lifestyle/quilt-fabric/": {
+  "date": "2026-09-28",
+  "hash": "597e820e3945d5b3"
+ },
+ "/lifestyle/pet-insurance-cost/": {
+  "date": "2026-10-24",
+  "hash": "6a348d646293a6b8"
+ },
+ "/lifestyle/pet-boarding-cost/": {
+  "date": "2026-10-24",
+  "hash": "02973744f4a7cf2b"
+ },
+ "/math/": {
+  "date": "2026-09-28",
+  "hash": "6130f7ecabf25d90"
+ },
+ "/hub/math/": {
+  "date": "2026-09-28",
+  "hash": "201247ab72181544"
+ },
+ "/math/scientific/": {
+  "date": "2026-09-28",
+  "hash": "2ee52b9778acde61"
+ },
+ "/math/quadratic/": {
+  "date": "2026-09-28",
+  "hash": "1d2dac33f213a9c7"
+ },
+ "/math/percentage/": {
+  "date": "2026-09-28",
+  "hash": "195d45f8dc763abd"
+ },
+ "/math/percent-change/": {
+  "date": "2026-09-28",
+  "hash": "782f128877b68116"
+ },
+ "/math/fraction/": {
+  "date": "2026-09-28",
+  "hash": "ddd6374e67b33cd6"
+ },
+ "/math/triangle/": {
+  "date": "2026-09-28",
+  "hash": "840a52cd53505250"
+ },
+ "/math/circle/": {
+  "date": "2026-09-28",
+  "hash": "b16f0e0420b5f0be"
+ },
+ "/math/statistics/": {
+  "date": "2026-09-28",
+  "hash": "e7af84da1e86288f"
+ },
+ "/math/combinations/": {
+  "date": "2026-09-28",
+  "hash": "db2150de57f326ae"
+ },
+ "/math/lcm-gcd/": {
+  "date": "2026-09-28",
+  "hash": "476725f173a92008"
+ },
+ "/math/prime-factor/": {
+  "date": "2026-09-28",
+  "hash": "7bf49b1e15d3c501"
+ },
+ "/math/matrix-det/": {
+  "date": "2026-09-28",
+  "hash": "eb19558584aa7c64"
+ },
+ "/math/logarithm/": {
+  "date": "2026-09-28",
+  "hash": "903c2e1bbeafa9df"
+ },
+ "/math/exponent/": {
+  "date": "2026-09-28",
+  "hash": "1170b016213516f6"
+ },
+ "/math/root/": {
+  "date": "2026-09-28",
+  "hash": "b690cbeace038351"
+ },
+ "/math/ratio/": {
+  "date": "2026-09-28",
+  "hash": "8cad44ab7f088132"
+ },
+ "/math/average/": {
+  "date": "2026-09-28",
+  "hash": "98f8db0adf01738e"
+ },
+ "/math/pythagorean/": {
+  "date": "2026-09-28",
+  "hash": "9194b83da13c8d16"
+ },
+ "/math/trigonometry/": {
+  "date": "2026-09-28",
+  "hash": "ee07910f7c34e5b7"
+ },
+ "/math/distance/": {
+  "date": "2026-09-28",
+  "hash": "e93f6b6b84c81bda"
+ },
+ "/math/slope/": {
+  "date": "2026-09-28",
+  "hash": "ee8270c30b44e64f"
+ },
+ "/math/factorial/": {
+  "date": "2026-09-28",
+  "hash": "f3d62ba7203208d4"
+ },
+ "/math/modular/": {
+  "date": "2026-09-28",
+  "hash": "a1f631472f1f0164"
+ },
+ "/math/complex/": {
+  "date": "2026-09-28",
+  "hash": "7f0164da1d6d3646"
+ },
+ "/math/scientific-notation/": {
+  "date": "2026-09-28",
+  "hash": "de60cd8234a1108d"
+ },
+ "/math/random-generator/": {
+  "date": "2026-09-28",
+  "hash": "2c5c5ac8aad085d0"
+ },
+ "/math/cubic-equation/": {
+  "date": "2026-09-28",
+  "hash": "2bacb184ae2c96ea"
+ },
+ "/math/geometric-seq/": {
+  "date": "2026-09-28",
+  "hash": "525e4847d62638cf"
+ },
+ "/math/arithmetic-seq/": {
+  "date": "2026-09-28",
+  "hash": "810fc1ef722294b5"
+ },
+ "/math/polar-rect/": {
+  "date": "2026-09-28",
+  "hash": "dfa43ce8dc69e255"
+ },
+ "/math/binomial-prob/": {
+  "date": "2026-09-28",
+  "hash": "4dfdf1d5b1866061"
+ },
+ "/math/normal-dist/": {
+  "date": "2026-09-28",
+  "hash": "68f91f5ca9e97900"
+ },
+ "/math/taylor-series/": {
+  "date": "2026-09-28",
+  "hash": "1134bd50768ddbb5"
+ },
+ "/math/continued-fraction/": {
+  "date": "2026-09-28",
+  "hash": "e3c0d163c54a40ce"
+ },
+ "/math/linear-system/": {
+  "date": "2026-09-28",
+  "hash": "89abb705cbfd7fcd"
+ },
+ "/math/eigenvalue-2x2/": {
+  "date": "2026-09-28",
+  "hash": "b0ba13fdacec5db0"
+ },
+ "/math/surface-area-3d/": {
+  "date": "2026-09-28",
+  "hash": "a8d45c26c5e75d83"
+ },
+ "/math/complex-modulus/": {
+  "date": "2026-09-28",
+  "hash": "b7e4ad0c2f375096"
+ },
+ "/math/mean-median-mode/": {
+  "date": "2026-09-28",
+  "hash": "27da9d9c7400799a"
+ },
+ "/math/variance-sd/": {
+  "date": "2026-09-28",
+  "hash": "5888f3952de690d7"
+ },
+ "/math/permutation/": {
+  "date": "2026-09-28",
+  "hash": "ee491106073d2922"
+ },
+ "/math/binomial-theorem/": {
+  "date": "2026-09-28",
+  "hash": "ab3b573ac424df3f"
+ },
+ "/math/golden-ratio/": {
+  "date": "2026-09-28",
+  "hash": "2bb12bfaf54d7fc8"
+ },
+ "/math/checksum-luhn/": {
+  "date": "2026-09-28",
+  "hash": "b1031ef4c355a459"
+ },
+ "/math/run-length/": {
+  "date": "2026-09-28",
+  "hash": "e233f3d518038117"
+ },
+ "/math/sieve-prime/": {
+  "date": "2026-09-28",
+  "hash": "81b115a853749f2a"
+ },
+ "/math/fibonacci-seq/": {
+  "date": "2026-09-28",
+  "hash": "1d9f8b0b2a0667b1"
+ },
+ "/math/pascal-triangle/": {
+  "date": "2026-09-28",
+  "hash": "d8f4f93f2c0869a0"
+ },
+ "/math/collatz/": {
+  "date": "2026-09-28",
+  "hash": "5fe05bdb62c3cdb4"
+ },
+ "/math/modular-exp/": {
+  "date": "2026-09-28",
+  "hash": "4cb3cfe134184cfd"
+ },
+ "/math/norm-dist-range/": {
+  "date": "2026-09-28",
+  "hash": "dbbf4c356d123ecc"
+ },
+ "/math/dot-cross-product/": {
+  "date": "2026-09-28",
+  "hash": "40ab6482c9348dab"
+ },
+ "/math/bayes-theorem/": {
+  "date": "2026-09-28",
+  "hash": "8e47e203500597e9"
+ },
+ "/math/matrix-multiply/": {
+  "date": "2026-09-28",
+  "hash": "72eeb6f7ea30bb95"
+ },
+ "/math/distance-formula/": {
+  "date": "2026-09-28",
+  "hash": "244733332d953d9b"
+ },
+ "/math/slope-intercept/": {
+  "date": "2026-09-28",
+  "hash": "a40565d6e0575567"
+ },
+ "/math/zscore-calc/": {
+  "date": "2026-09-28",
+  "hash": "0de5591b7ea1ca79"
+ },
+ "/math/linear-regression/": {
+  "date": "2026-09-28",
+  "hash": "6a3a876f42598a36"
+ },
+ "/math/pearson-correlation/": {
+  "date": "2026-09-28",
+  "hash": "6443be40c16d0a2d"
+ },
+ "/math/confidence-interval/": {
+  "date": "2026-09-28",
+  "hash": "f5038ed692163495"
+ },
+ "/math/sample-size/": {
+  "date": "2026-09-28",
+  "hash": "9f4efd0d0d17ddca"
+ },
+ "/math/poisson-probability/": {
+  "date": "2026-09-28",
+  "hash": "7731f9aabacb046a"
+ },
+ "/math/harmonic-mean/": {
+  "date": "2026-09-28",
+  "hash": "af97942ee499c45d"
+ },
+ "/math/moving-average/": {
+  "date": "2026-09-28",
+  "hash": "4137695aeaab451b"
+ },
+ "/math/standard-error/": {
+  "date": "2026-09-28",
+  "hash": "8738ec79e753943c"
+ },
+ "/math/chi-square/": {
+  "date": "2026-09-28",
+  "hash": "97a82cfac9b9cc0f"
+ },
+ "/math/t-test/": {
+  "date": "2026-09-28",
+  "hash": "b39b7ed7a62c10da"
+ },
+ "/math/hypergeometric/": {
+  "date": "2026-09-28",
+  "hash": "8c048f3ec2c05b9c"
+ },
+ "/math/significant-figures/": {
+  "date": "2026-09-28",
+  "hash": "8b9b993d6cb0a813"
+ },
+ "/math/matrix-inverse/": {
+  "date": "2026-09-28",
+  "hash": "3c0a4b11436aab2f"
+ },
+ "/math/midpoint/": {
+  "date": "2026-09-28",
+  "hash": "8cf8899e06ef95ef"
+ },
+ "/math/trapezoid/": {
+  "date": "2026-09-28",
+  "hash": "d7046760babb59ff"
+ },
+ "/math/sector-area/": {
+  "date": "2026-09-28",
+  "hash": "f5f796290f3adfa9"
+ },
+ "/math/pyramid/": {
+  "date": "2026-09-28",
+  "hash": "ef24794d2164f794"
+ },
+ "/math/vector-add/": {
+  "date": "2026-09-28",
+  "hash": "a160d820bdc2650d"
+ },
+ "/math/angle-between-vectors/": {
+  "date": "2026-09-28",
+  "hash": "4cf7b6e637d54c40"
+ },
+ "/math/annulus-area/": {
+  "date": "2026-09-28",
+  "hash": "02f8e4670714d8e4"
+ },
+ "/math/hexagon-area/": {
+  "date": "2026-09-28",
+  "hash": "b3f50b8ab922a85f"
+ },
+ "/math/parallelogram-area/": {
+  "date": "2026-09-28",
+  "hash": "3cc0039eef940e55"
+ },
+ "/math/ellipse-area/": {
+  "date": "2026-09-28",
+  "hash": "e2c7e8b5c805e82f"
+ },
+ "/math/law-of-sines/": {
+  "date": "2026-09-28",
+  "hash": "cf56e508b74fdc58"
+ },
+ "/math/law-of-cosines/": {
+  "date": "2026-09-28",
+  "hash": "d1ed38a2313762ac"
+ },
+ "/math/weighted-average/": {
+  "date": "2026-09-28",
+  "hash": "2f8ac7de0a225141"
+ },
+ "/math/coefficient-of-variation/": {
+  "date": "2026-09-28",
+  "hash": "5f20d77c03cf4a2b"
+ },
+ "/math/quartile/": {
+  "date": "2026-09-28",
+  "hash": "e0459c96a9a65e06"
+ },
+ "/math/percent-error/": {
+  "date": "2026-09-28",
+  "hash": "e9faa2cdfdd092b1"
+ },
+ "/math/quartiles/": {
+  "date": "2026-09-28",
+  "hash": "70ebb1f390f83912"
+ },
+ "/math/rms/": {
+  "date": "2026-09-28",
+  "hash": "91c89e197033c91c"
+ },
+ "/math/covariance/": {
+  "date": "2026-09-28",
+  "hash": "5486e1622402f763"
+ },
+ "/math/exponential-prob/": {
+  "date": "2026-09-28",
+  "hash": "7b9a5f600c72ccfa"
+ },
+ "/math/expected-value/": {
+  "date": "2026-09-28",
+  "hash": "1a5990c7ccb8ec7b"
+ },
+ "/math/euler-totient/": {
+  "date": "2026-09-28",
+  "hash": "ccd78706aa5a504f"
+ },
+ "/math/completing-square/": {
+  "date": "2026-09-28",
+  "hash": "51a4b56cf5c46a1f"
+ },
+ "/math/partial-fractions/": {
+  "date": "2026-09-28",
+  "hash": "8e94688c95510871"
+ },
+ "/math/direct-variation/": {
+  "date": "2026-09-28",
+  "hash": "88881448e14a9d45"
+ },
+ "/math/inverse-variation/": {
+  "date": "2026-09-28",
+  "hash": "c07f097fd5f9a62f"
+ },
+ "/math/spherical-cap/": {
+  "date": "2026-09-28",
+  "hash": "839d2705e99b9588"
+ },
+ "/math/nth-root/": {
+  "date": "2026-09-28",
+  "hash": "e7d93b86ffce5603"
+ },
+ "/math/series-sum-ap/": {
+  "date": "2026-09-28",
+  "hash": "7beca3df97f2e84b"
+ },
+ "/math/sigma-notation/": {
+  "date": "2026-09-28",
+  "hash": "f1d13a55a5deb99d"
+ },
+ "/math/combination-repeat/": {
+  "date": "2026-09-28",
+  "hash": "a9e938d579a4ef4f"
+ },
+ "/math/permutation-repeat/": {
+  "date": "2026-09-28",
+  "hash": "95fe5be1d2ba3263"
+ },
+ "/math/probability-odds/": {
+  "date": "2026-09-28",
+  "hash": "74f71021af5a7305"
+ },
+ "/math/negative-binomial/": {
+  "date": "2026-09-28",
+  "hash": "22ab49294b2fd97f"
+ },
+ "/math/circle-through-points/": {
+  "date": "2026-09-28",
+  "hash": "12215459394ae49b"
+ },
+ "/math/secant-tangent/": {
+  "date": "2026-09-28",
+  "hash": "e5c18ec32b969213"
+ },
+ "/math/inscribed-angle/": {
+  "date": "2026-09-28",
+  "hash": "48e94c8c73ff3383"
+ },
+ "/math/sector-perimeter/": {
+  "date": "2026-09-28",
+  "hash": "1cf6fbacf3fc72d0"
+ },
+ "/math/ellipse-perimeter/": {
+  "date": "2026-09-28",
+  "hash": "dab86ca5fbca9842"
+ },
+ "/math/rectangular-solid/": {
+  "date": "2026-09-28",
+  "hash": "a33d88a99933f086"
+ },
+ "/math/triangular-prism/": {
+  "date": "2026-09-28",
+  "hash": "049913dec639800d"
+ },
+ "/math/octahedron-volume/": {
+  "date": "2026-09-28",
+  "hash": "dcb10fa634586d6e"
+ },
+ "/math/icosahedron-volume/": {
+  "date": "2026-09-28",
+  "hash": "062a63df6143baa6"
+ },
+ "/math/bitwise-xor/": {
+  "date": "2026-09-28",
+  "hash": "df271b6e1fb2a2aa"
+ },
+ "/math/shift-cipher/": {
+  "date": "2026-09-28",
+  "hash": "af1e2d16c5ed522d"
+ },
+ "/math/units-per-person/": {
+  "date": "2026-09-28",
+  "hash": "c628d06b8e3e763a"
+ },
+ "/math/rate-x-time/": {
+  "date": "2026-09-28",
+  "hash": "71d5bf620a76aef5"
+ },
+ "/math/work-rate-together/": {
+  "date": "2026-09-28",
+  "hash": "4e47e7cd955dac79"
+ },
+ "/math/digital-root/": {
+  "date": "2026-09-28",
+  "hash": "0e3b45a86242c80f"
+ },
+ "/math/mixture-percent/": {
+  "date": "2026-09-28",
+  "hash": "a9ed44d93cbc6148"
+ },
+ "/math/proportion/": {
+  "date": "2026-10-24",
+  "hash": "545d92d182d30c9b"
+ },
+ "/family/": {
+  "date": "2026-09-28",
+  "hash": "4982f303459c3aed"
+ },
+ "/hub/family/": {
+  "date": "2026-09-28",
+  "hash": "8a68b13ad05df905"
+ },
+ "/family/baby-weight-gain/": {
+  "date": "2026-09-28",
+  "hash": "23326a02cc983030"
+ },
+ "/family/baby-feeding/": {
+  "date": "2026-09-28",
+  "hash": "f849af271a27a6df"
+ },
+ "/family/baby-sleep/": {
+  "date": "2026-09-28",
+  "hash": "81b3691a198ad2fe"
+ },
+ "/family/child-height/": {
+  "date": "2026-09-28",
+  "hash": "a933b83e1734a7af"
+ },
+ "/family/toddler-screen/": {
+  "date": "2026-09-28",
+  "hash": "1240db5e2ecf5c6f"
+ },
+ "/family/child-bmi/": {
+  "date": "2026-09-28",
+  "hash": "3ef87524bd24574e"
+ },
+ "/family/family-budget/": {
+  "date": "2026-09-28",
+  "hash": "abd67d1db47ec333"
+ },
+ "/family/childcare-cost/": {
+  "date": "2026-09-28",
+  "hash": "0c379950ada3b627"
+ },
+ "/family/college-savings/": {
+  "date": "2026-09-28",
+  "hash": "a78d6e734288dffb"
+ },
+ "/family/maternity-leave/": {
+  "date": "2026-09-28",
+  "hash": "c2a2fd8a381294d4"
+ },
+ "/family/life-insurance/": {
+  "date": "2026-09-28",
+  "hash": "bc5a6ea525e0063f"
+ },
+ "/family/home-buying/": {
+  "date": "2026-09-28",
+  "hash": "318e657301c274bc"
+ },
+ "/family/wedding-budget/": {
+  "date": "2026-09-28",
+  "hash": "0fda5f5f0325e08f"
+ },
+ "/family/baby-name/": {
+  "date": "2026-09-28",
+  "hash": "0f49793c9f928de5"
+ },
+ "/family/college-savings-monthly/": {
+  "date": "2026-09-28",
+  "hash": "ec9614110c8cb2b6"
+ },
+ "/family/childcare-cost-annual/": {
+  "date": "2026-09-28",
+  "hash": "bf05b45bd663e91d"
+ },
+ "/family/family-budget-simple/": {
+  "date": "2026-09-28",
+  "hash": "7a13bcec8114ae0f"
+ },
+ "/family/maternity-leave-finance/": {
+  "date": "2026-09-28",
+  "hash": "f19a406d520e212c"
+ },
+ "/family/paternity-leave/": {
+  "date": "2026-09-28",
+  "hash": "6edfaf56eb420e9b"
+ },
+ "/family/kid-allowance/": {
+  "date": "2026-09-28",
+  "hash": "eddb1dabae639e23"
+ },
+ "/family/babysitter-rate/": {
+  "date": "2026-09-28",
+  "hash": "469d88ae1e02bf2a"
+ },
+ "/family/screen-time/": {
+  "date": "2026-09-28",
+  "hash": "b19db085bfce4ca3"
+ },
+ "/family/diaper-cost/": {
+  "date": "2026-09-28",
+  "hash": "7da3ffe94355aa66"
+ },
+ "/family/vacation-with-kids/": {
+  "date": "2026-09-28",
+  "hash": "ffd32c1f7aa49da0"
+ },
+ "/family/baby-formula/": {
+  "date": "2026-09-28",
+  "hash": "74eea961e4c6d8f0"
+ },
+ "/family/diaper-needs/": {
+  "date": "2026-09-28",
+  "hash": "896030106e967a6b"
+ },
+ "/family/kids-shoe-size/": {
+  "date": "2026-09-28",
+  "hash": "67df92c0ee9a2046"
+ },
+ "/family/family-meal-cost/": {
+  "date": "2026-09-28",
+  "hash": "7cde94e1f080a65e"
+ },
+ "/family/school-supplies/": {
+  "date": "2026-09-28",
+  "hash": "d2f9edb7a85924af"
+ },
+ "/family/birthday-party-cost/": {
+  "date": "2026-09-28",
+  "hash": "ce55c7377c6d9397"
+ },
+ "/family/allowance-calc/": {
+  "date": "2026-09-28",
+  "hash": "16ccd3b0b59464c9"
+ },
+ "/family/teen-budget/": {
+  "date": "2026-09-28",
+  "hash": "a3488990f0ce231c"
+ },
+ "/family/inheritance-estate/": {
+  "date": "2026-09-28",
+  "hash": "562c85b43fc04e49"
+ },
+ "/family/sibling-age-gap/": {
+  "date": "2026-09-28",
+  "hash": "f579fed2516644e1"
+ },
+ "/family/childcare-weekly/": {
+  "date": "2026-09-28",
+  "hash": "2232bf4ed6ddb738"
+ },
+ "/family/baby-milestones/": {
+  "date": "2026-09-28",
+  "hash": "f9962fc15b07287b"
+ },
+ "/family/child-support-split/": {
+  "date": "2026-09-28",
+  "hash": "b7987b6353d73717"
+ },
+ "/family/family-tree-generation/": {
+  "date": "2026-09-28",
+  "hash": "0cef6b155212de17"
+ },
+ "/family/alimony-estimator/": {
+  "date": "2026-10-24",
+  "hash": "fc7d725f6aff4430"
+ },
+ "/family/bereavement-checklist/": {
+  "date": "2026-10-24",
+  "hash": "73f69e997b87998c"
+ },
+ "/regional/": {
+  "date": "2026-09-28",
+  "hash": "71533503d5887679"
+ },
+ "/hub/regional/": {
+  "date": "2026-09-28",
+  "hash": "1393ed8d26145e8d"
+ },
+ "/regional/fd-calculator/": {
+  "date": "2026-09-28",
+  "hash": "b5a5942b965ecfa8"
+ },
+ "/regional/rd-calculator/": {
+  "date": "2026-09-28",
+  "hash": "99f6ddba84c6ed40"
+ },
+ "/regional/ppf-calculator/": {
+  "date": "2026-09-28",
+  "hash": "481bcc8a90ca287e"
+ },
+ "/regional/nps-calculator/": {
+  "date": "2026-09-28",
+  "hash": "4bb85e6ac3dce4cb"
+ },
+ "/regional/sip-return/": {
+  "date": "2026-09-28",
+  "hash": "c9d8f19111192fa9"
+ },
+ "/regional/income-tax-india/": {
+  "date": "2026-09-28",
+  "hash": "fa3678dd4c641294"
+ },
+ "/regional/gst-india/": {
+  "date": "2026-09-28",
+  "hash": "65537a1d19682b85"
+ },
+ "/regional/stamp-duty/": {
+  "date": "2026-09-28",
+  "hash": "a0a79d43cc61a981"
+ },
+ "/regional/home-loan-emi-india/": {
+  "date": "2026-09-28",
+  "hash": "11d71ef938df618f"
+ },
+ "/regional/gold-rate/": {
+  "date": "2026-09-28",
+  "hash": "d107c72275b30a7a"
+ },
+ "/regional/pk-salary/": {
+  "date": "2026-09-28",
+  "hash": "1a1fc54b50f19dea"
+ },
+ "/regional/gold-rate-pk/": {
+  "date": "2026-09-28",
+  "hash": "2bfd90a053f601aa"
+ },
+ "/regional/rickshaw-fare/": {
+  "date": "2026-09-28",
+  "hash": "4f9dbc80067a8d70"
+ },
+ "/regional/electricity-bill-india/": {
+  "date": "2026-09-28",
+  "hash": "69522941f699de8b"
+ },
+ "/regional/lpg-cost/": {
+  "date": "2026-09-28",
+  "hash": "f0134efee0877890"
+ },
+ "/regional/wedding-budget-shaadi/": {
+  "date": "2026-09-28",
+  "hash": "0ca2ed5d317d2c12"
+ },
+ "/regional/dubai-salary/": {
+  "date": "2026-09-28",
+  "hash": "41fedeb2fa68219c"
+ },
+ "/regional/gold-silver/": {
+  "date": "2026-09-28",
+  "hash": "a45d60235ac0d738"
+ },
+ "/regional/chit-fund/": {
+  "date": "2026-09-28",
+  "hash": "00441a3aaa2aba92"
+ },
+ "/regional/gratuity/": {
+  "date": "2026-09-28",
+  "hash": "45bb93b62885f90e"
+ },
+ "/regional/leave-encashment/": {
+  "date": "2026-09-28",
+  "hash": "62d88d3d427fe8a6"
+ },
+ "/regional/epf-calculator/": {
+  "date": "2026-09-28",
+  "hash": "4bede9817a4292f3"
+ },
+ "/regional/esic-calculator/": {
+  "date": "2026-09-28",
+  "hash": "e072efedbdb65e07"
+ },
+ "/regional/tds-calculator/": {
+  "date": "2026-09-28",
+  "hash": "cd99ed304720e43c"
+ },
+ "/regional/hra-exemption/": {
+  "date": "2026-09-28",
+  "hash": "491fb09cf3d3af31"
+ },
+ "/regional/capital-gains-india/": {
+  "date": "2026-09-28",
+  "hash": "4e3833152c51abad"
+ },
+ "/regional/sukanya-samriddhi/": {
+  "date": "2026-09-28",
+  "hash": "efd80ff127522d33"
+ },
+ "/regional/nsc-interest/": {
+  "date": "2026-09-28",
+  "hash": "45f9a4dee2ba249b"
+ },
+ "/regional/senior-savings-scheme/": {
+  "date": "2026-09-28",
+  "hash": "1ed733706a957682"
+ },
+ "/regional/post-office-savings/": {
+  "date": "2026-09-28",
+  "hash": "2813aaff32251c3a"
+ },
+ "/regional/uae-vat/": {
+  "date": "2026-09-28",
+  "hash": "c2326911b292e866"
+ },
+ "/regional/zakat-calculator/": {
+  "date": "2026-09-28",
+  "hash": "336ee8849a901a4c"
+ },
+ "/regional/pk-income-tax/": {
+  "date": "2026-09-28",
+  "hash": "5b9186df45840271"
+ },
+ "/regional/gold-silver-ratio/": {
+  "date": "2026-09-28",
+  "hash": "30ffccd84c13d4cc"
+ },
+ "/regional/gratuity-calculator/": {
+  "date": "2026-09-28",
+  "hash": "177916eef4c7c259"
+ },
+ "/regional/stamp-duty-india/": {
+  "date": "2026-09-28",
+  "hash": "7aaeb4dc564ab9ff"
+ },
+ "/regional/gst-calculator/": {
+  "date": "2026-09-28",
+  "hash": "dbb961a0685d59e4"
+ },
+ "/regional/uk-ni/": {
+  "date": "2026-09-28",
+  "hash": "4a6ccfe3bb7127e1"
+ },
+ "/regional/us-fica/": {
+  "date": "2026-09-28",
+  "hash": "6b6bd15ec6062822"
+ },
+ "/regional/canada-cpp/": {
+  "date": "2026-09-28",
+  "hash": "dd8cd627f0764204"
+ },
+ "/regional/australia-super/": {
+  "date": "2026-09-28",
+  "hash": "c9ad67afe519cd54"
+ },
+ "/regional/singapore-cpf/": {
+  "date": "2026-09-28",
+  "hash": "3bcc3e755a8281c8"
+ },
+ "/regional/uk-take-home-salary/": {
+  "date": "2026-09-28",
+  "hash": "ee1e9bd759a02bb5"
+ },
+ "/regional/india-take-home-salary/": {
+  "date": "2026-09-28",
+  "hash": "a11c4bad972371a5"
+ },
+ "/regional/saudi-take-home-salary/": {
+  "date": "2026-09-28",
+  "hash": "b8ec950d55635d3b"
+ },
+ "/regional/canada-take-home-salary/": {
+  "date": "2026-09-28",
+  "hash": "2775871c1202e212"
+ },
+ "/regional/germany-take-home-salary/": {
+  "date": "2026-09-28",
+  "hash": "6afd50ec8487e1eb"
+ },
+ "/regional/australia-take-home-salary/": {
+  "date": "2026-09-28",
+  "hash": "88c7b9c339363ecc"
+ },
+ "/regional/singapore-take-home-salary/": {
+  "date": "2026-09-28",
+  "hash": "872f513578b94e11"
+ },
+ "/regional/qatar-take-home-salary/": {
+  "date": "2026-09-28",
+  "hash": "0f3be7b3ec908a06"
+ },
+ "/regional/abu-dhabi-cost-living/": {
+  "date": "2026-10-24",
+  "hash": "721a4e782bc5782b"
+ },
+ "/regional/japan-take-home-salary/": {
+  "date": "2026-09-28",
+  "hash": "a34c3917e53973a6"
+ },
+ "/regional/switzerland-take-home-salary/": {
+  "date": "2026-09-28",
+  "hash": "9f748c3052d94e17"
+ },
+ "/regional/netherlands-take-home-salary/": {
+  "date": "2026-09-28",
+  "hash": "892ad3f98815b215"
+ },
+ "/regional/malaysia-take-home-salary/": {
+  "date": "2026-09-28",
+  "hash": "f463445419513353"
+ },
+ "/regional/hongkong-take-home-salary/": {
+  "date": "2026-09-28",
+  "hash": "5b3737101e07903d"
+ },
+ "/regional/uae-gratuity-calculator/": {
+  "date": "2026-09-28",
+  "hash": "0f0cd90c49a9f5b8"
+ },
+ "/regional/ireland-take-home-salary/": {
+  "date": "2026-09-28",
+  "hash": "094cbef28c5120a9"
+ },
+ "/regional/new-zealand-take-home-salary/": {
+  "date": "2026-09-28",
+  "hash": "3f3e4dad56f3c382"
+ },
+ "/regional/south-africa-take-home-salary/": {
+  "date": "2026-09-28",
+  "hash": "7a13ac1792d1c7bb"
+ },
+ "/regional/kenya-take-home-salary/": {
+  "date": "2026-10-24",
+  "hash": "7222832bf00176f3"
+ },
+ "/regional/nigeria-take-home-salary/": {
+  "date": "2026-10-24",
+  "hash": "93795a6c6ef8eebd"
+ },
+ "/regional/philippines-take-home-salary/": {
+  "date": "2026-10-24",
+  "hash": "b27b10d1939e1ec2"
+ },
+ "/regional/bangladesh-income-tax/": {
+  "date": "2026-10-24",
+  "hash": "eb6feae63cb3f718"
+ },
+ "/regional/egypt-take-home-salary/": {
+  "date": "2026-10-24",
+  "hash": "2a4b97ef99dbb657"
+ },
+ "/regional/brazil-take-home-salary/": {
+  "date": "2026-10-24",
+  "hash": "0edf49574a088c4f"
+ },
+ "/regional/mexico-isr-salary/": {
+  "date": "2026-10-24",
+  "hash": "117ad44a5e7a803f"
+ },
+ "/regional/vietnam-take-home-salary/": {
+  "date": "2026-10-24",
+  "hash": "a603c3fef67a6afa"
+ },
+ "/regional/indonesia-take-home-salary/": {
+  "date": "2026-10-24",
+  "hash": "878cbd9d93bc4086"
+ },
+ "/regional/thailand-take-home-salary/": {
+  "date": "2026-10-24",
+  "hash": "c8f8966293b9e2ac"
+ },
+ "/regional/colombia-take-home-salary/": {
+  "date": "2026-10-24",
+  "hash": "3d8f69d2e284256e"
+ },
+ "/regional/chile-take-home-salary/": {
+  "date": "2026-10-24",
+  "hash": "e881fd96526bb882"
+ },
+ "/regional/peru-take-home-salary/": {
+  "date": "2026-10-24",
+  "hash": "144e19a7a5ba88a9"
+ },
+ "/regional/poland-take-home-salary/": {
+  "date": "2026-10-24",
+  "hash": "822f18b2db1198fe"
+ },
+ "/regional/romania-take-home-salary/": {
+  "date": "2026-10-24",
+  "hash": "d23cfc8a4c71fc8c"
+ },
+ "/regional/prayer-time/": {
+  "date": "2026-10-24",
+  "hash": "820be762a4c9958a"
+ },
+ "/regional/mirath-calculator/": {
+  "date": "2026-10-24",
+  "hash": "67397b3f1799cd8f"
+ },
+ "/regional/hijri-converter/": {
+  "date": "2026-10-24",
+  "hash": "6f7ce3df73769c48"
+ },
+ "/regional/gold-price/": {
+  "date": "2026-10-24",
+  "hash": "c76b53243fb5f166"
+ },
+ "/regional/qurbani-cost/": {
+  "date": "2026-10-24",
+  "hash": "9cf3f5787673e7a7"
+ },
+ "/regional/umrah-cost/": {
+  "date": "2026-10-24",
+  "hash": "693f72a5234d5f56"
+ },
+ "/regional/remittance-fee/": {
+  "date": "2026-10-24",
+  "hash": "d59bd2cad8ec3d0a"
+ },
+ "/science/": {
+  "date": "2026-09-28",
+  "hash": "b507ab67aa3a01a0"
+ },
+ "/hub/science/": {
+  "date": "2026-09-28",
+  "hash": "9378157f7538ec47"
+ },
+ "/science/ohms-law/": {
+  "date": "2026-09-28",
+  "hash": "aabb3d1de29ee1f8"
+ },
+ "/science/density/": {
+  "date": "2026-09-28",
+  "hash": "a1831a04a87b19ca"
+ },
+ "/science/force/": {
+  "date": "2026-09-28",
+  "hash": "3a7e84f39173b058"
+ },
+ "/science/pressure/": {
+  "date": "2026-09-28",
+  "hash": "7bb3d20b7b8ded5e"
+ },
+ "/science/kinetic-energy/": {
+  "date": "2026-09-28",
+  "hash": "ac6d69952fa60343"
+ },
+ "/science/potential-energy/": {
+  "date": "2026-09-28",
+  "hash": "476bb89097d36692"
+ },
+ "/science/ph/": {
+  "date": "2026-09-28",
+  "hash": "3f95481bb86acc19"
+ },
+ "/science/ideal-gas/": {
+  "date": "2026-09-28",
+  "hash": "ce4fbe9088375cca"
+ },
+ "/science/momentum/": {
+  "date": "2026-09-28",
+  "hash": "bce72d3ef82e73e9"
+ },
+ "/science/doppler/": {
+  "date": "2026-09-28",
+  "hash": "ab05be527ad859a4"
+ },
+ "/science/half-life/": {
+  "date": "2026-09-28",
+  "hash": "d70e96aa917be3d5"
+ },
+ "/science/wavelength/": {
+  "date": "2026-09-28",
+  "hash": "f69f37665929b7cd"
+ },
+ "/science/acceleration/": {
+  "date": "2026-09-28",
+  "hash": "e5d49eec566c88e3"
+ },
+ "/science/power/": {
+  "date": "2026-09-28",
+  "hash": "029a4fbd8b671b54"
+ },
+ "/science/velocity/": {
+  "date": "2026-09-28",
+  "hash": "f9b700316f228f5f"
+ },
+ "/science/free-fall/": {
+  "date": "2026-09-28",
+  "hash": "aecc3339d225f7ff"
+ },
+ "/science/specific-heat/": {
+  "date": "2026-09-28",
+  "hash": "449d779125a48999"
+ },
+ "/science/lens/": {
+  "date": "2026-09-28",
+  "hash": "1560cac178b0995c"
+ },
+ "/science/coulomb/": {
+  "date": "2026-09-28",
+  "hash": "4db2621ac2e72921"
+ },
+ "/science/frequency/": {
+  "date": "2026-09-28",
+  "hash": "83d28dbd04f1f06b"
+ },
+ "/science/energy-mass/": {
+  "date": "2026-09-28",
+  "hash": "c2fd666ef220ebe7"
+ },
+ "/science/molar-mass/": {
+  "date": "2026-09-28",
+  "hash": "1b0581a5ee1edc8a"
+ },
+ "/science/work-calculator/": {
+  "date": "2026-09-28",
+  "hash": "e2c3cd5f05a7bf6a"
+ },
+ "/science/gravitational-force/": {
+  "date": "2026-09-28",
+  "hash": "85a71797930be2bf"
+ },
+ "/science/escape-velocity/": {
+  "date": "2026-09-28",
+  "hash": "dfbca72f8c3c021b"
+ },
+ "/science/molarity/": {
+  "date": "2026-09-28",
+  "hash": "d5ed12ed348bd340"
+ },
+ "/science/dilution/": {
+  "date": "2026-09-28",
+  "hash": "6253a8d9517f15fa"
+ },
+ "/science/electric-field/": {
+  "date": "2026-09-28",
+  "hash": "6dd6a902cd470849"
+ },
+ "/science/newtons-second/": {
+  "date": "2026-09-28",
+  "hash": "95c96adedf5bc58c"
+ },
+ "/science/power-electrical/": {
+  "date": "2026-09-28",
+  "hash": "0a854265de5bb8f6"
+ },
+ "/science/speed-of-sound/": {
+  "date": "2026-09-28",
+  "hash": "8f4742a2a3824436"
+ },
+ "/science/wavelength-freq/": {
+  "date": "2026-09-28",
+  "hash": "6858f6ae4188741b"
+ },
+ "/science/kepler-third/": {
+  "date": "2026-09-28",
+  "hash": "e47a2d1047d76afe"
+ },
+ "/science/radioactive-decay/": {
+  "date": "2026-09-28",
+  "hash": "d3d755f30d4cb26b"
+ },
+ "/science/spring-force/": {
+  "date": "2026-09-28",
+  "hash": "88db7b432cbdf990"
+ },
+ "/science/centripetal/": {
+  "date": "2026-09-28",
+  "hash": "38627f1c6717e232"
+ },
+ "/science/orbital-velocity/": {
+  "date": "2026-09-28",
+  "hash": "d6edc9a204d279f0"
+ },
+ "/science/heat-transfer/": {
+  "date": "2026-09-28",
+  "hash": "a9badf503c517416"
+ },
+ "/science/boyle-law/": {
+  "date": "2026-09-28",
+  "hash": "855f5b3d798a9a8c"
+ },
+ "/science/combined-gas-law/": {
+  "date": "2026-09-28",
+  "hash": "4a8b908b984ba8a7"
+ },
+ "/science/wave-speed/": {
+  "date": "2026-09-28",
+  "hash": "0a35dcda89304ef4"
+ },
+ "/science/moment-of-inertia/": {
+  "date": "2026-09-28",
+  "hash": "ce813198ae49361f"
+ },
+ "/science/buoyancy/": {
+  "date": "2026-09-28",
+  "hash": "fb4da2be77c02601"
+ },
+ "/science/hydrostatic-pressure/": {
+  "date": "2026-09-28",
+  "hash": "b6860546e8af1862"
+ },
+ "/science/solar-energy/": {
+  "date": "2026-09-28",
+  "hash": "7fc362410f744ef6"
+ },
+ "/science/reynolds-number/": {
+  "date": "2026-09-28",
+  "hash": "ac267ca43ce8a1f7"
+ },
+ "/science/bernoulli/": {
+  "date": "2026-09-28",
+  "hash": "e7a38c59b8a283e8"
+ },
+ "/science/projectile/": {
+  "date": "2026-09-28",
+  "hash": "91d30a5cf231036e"
+ },
+ "/science/pendulum/": {
+  "date": "2026-09-28",
+  "hash": "d6ea67f014699308"
+ },
+ "/science/molality/": {
+  "date": "2026-09-28",
+  "hash": "e88ba0106f3fe827"
+ },
+ "/science/percent-yield/": {
+  "date": "2026-09-28",
+  "hash": "cbd3b000daa612cb"
+ },
+ "/science/latent-heat/": {
+  "date": "2026-09-28",
+  "hash": "b170827cc811cfff"
+ },
+ "/science/friction/": {
+  "date": "2026-09-28",
+  "hash": "02535a284b73e7d5"
+ },
+ "/science/inclined-plane/": {
+  "date": "2026-09-28",
+  "hash": "e959c9d17085065f"
+ },
+ "/science/impulse/": {
+  "date": "2026-09-28",
+  "hash": "182d3864202eaf70"
+ },
+ "/science/terminal-velocity/": {
+  "date": "2026-09-28",
+  "hash": "18733a9768e5a6e7"
+ },
+ "/science/snells-law/": {
+  "date": "2026-09-28",
+  "hash": "cc18d42f60b83846"
+ },
+ "/science/mirror-equation/": {
+  "date": "2026-09-28",
+  "hash": "30c9139e61c8b179"
+ },
+ "/science/mole-conversion/": {
+  "date": "2026-09-28",
+  "hash": "e7240b6ac48fa387"
+ },
+ "/science/charles-law/": {
+  "date": "2026-09-28",
+  "hash": "ce5dfbf2f58f0f50"
+ },
+ "/science/hooke-law/": {
+  "date": "2026-09-28",
+  "hash": "a0599790c0b400e9"
+ },
+ "/science/mach-number/": {
+  "date": "2026-09-28",
+  "hash": "8c23231e18286385"
+ },
+ "/science/stefan-boltzmann/": {
+  "date": "2026-09-28",
+  "hash": "52095c6a0cc114c7"
+ },
+ "/science/coulomb-law/": {
+  "date": "2026-09-28",
+  "hash": "d744e92b1f0099ce"
+ },
+ "/science/photon-energy/": {
+  "date": "2026-09-28",
+  "hash": "d087e43949301eb2"
+ },
+ "/science/debroglie/": {
+  "date": "2026-09-28",
+  "hash": "240940ac4dcdc158"
+ },
+ "/science/rocket-equation/": {
+  "date": "2026-09-28",
+  "hash": "9ffd220113e62320"
+ },
+ "/science/carbon-dating/": {
+  "date": "2026-09-28",
+  "hash": "83668f54d8d601c4"
+ },
+ "/science/calorimetry/": {
+  "date": "2026-09-28",
+  "hash": "5a9b9153a74050ad"
+ },
+ "/science/freezing-depression/": {
+  "date": "2026-09-28",
+  "hash": "8a1832ec7ee49275"
+ },
+ "/science/air-density/": {
+  "date": "2026-09-28",
+  "hash": "88ae26b36ee1a948"
+ },
+ "/science/angular-momentum/": {
+  "date": "2026-09-28",
+  "hash": "4c9414f6a2535eb3"
+ },
+ "/science/bullet-drop/": {
+  "date": "2026-09-28",
+  "hash": "591d5f8ad6fde64d"
+ },
+ "/science/redshift/": {
+  "date": "2026-09-28",
+  "hash": "c0605f42e9b0eccf"
+ },
+ "/science/buffer-ph/": {
+  "date": "2026-09-28",
+  "hash": "d19fbdabbceb2708"
+ },
+ "/science/machine-efficiency/": {
+  "date": "2026-09-28",
+  "hash": "6d191a3911985fdb"
+ },
+ "/science/dew-point/": {
+  "date": "2026-09-28",
+  "hash": "43b7a71564e91069"
+ },
+ "/science/cloud-base-lcl/": {
+  "date": "2026-09-28",
+  "hash": "1a676cccbe79e7af"
+ },
+ "/science/grahams-law/": {
+  "date": "2026-09-28",
+  "hash": "6496d5a8157435c0"
+ },
+ "/science/osmotic-pressure/": {
+  "date": "2026-09-28",
+  "hash": "c70617e562326071"
+ },
+ "/science/sound-intensity/": {
+  "date": "2026-09-28",
+  "hash": "96949644056964ba"
+ },
+ "/science/angular-velocity/": {
+  "date": "2026-09-28",
+  "hash": "3fbbe4af848005dc"
+ },
+ "/tech/": {
+  "date": "2026-09-28",
+  "hash": "55d92e06383bdffc"
+ },
+ "/hub/tech/": {
+  "date": "2026-09-28",
+  "hash": "cbff9dd5862935ec"
+ },
+ "/tech/internet-speed/": {
+  "date": "2026-09-28",
+  "hash": "003c77c56c824929"
+ },
+ "/tech/bandwidth-calc/": {
+  "date": "2026-09-28",
+  "hash": "329e91d9dd4be616"
+ },
+ "/tech/data-usage/": {
+  "date": "2026-09-28",
+  "hash": "74b82912f5117b4f"
+ },
+ "/tech/video-size/": {
+  "date": "2026-09-28",
+  "hash": "f80602ad61091113"
+ },
+ "/tech/monitor-distance/": {
+  "date": "2026-09-28",
+  "hash": "8a4f19640d798660"
+ },
+ "/tech/wifi-channels/": {
+  "date": "2026-09-28",
+  "hash": "552b852b76baf3b8"
+ },
+ "/tech/cloud-storage/": {
+  "date": "2026-09-28",
+  "hash": "593e886ad27cfdb8"
+ },
+ "/tech/website-cost/": {
+  "date": "2026-09-28",
+  "hash": "5ee4e47c3f1fa19c"
+ },
+ "/tech/ssd-vs-hdd/": {
+  "date": "2026-09-28",
+  "hash": "62fa5feea1d8b155"
+ },
+ "/tech/battery-life-estimator/": {
+  "date": "2026-09-28",
+  "hash": "473eb3b792a20524"
+ },
+ "/tech/screen-resolution/": {
+  "date": "2026-09-28",
+  "hash": "dff7430de8a4f3fa"
+ },
+ "/tech/cable-length/": {
+  "date": "2026-09-28",
+  "hash": "69e1427dc95bc479"
+ },
+ "/tech/ppi-calc/": {
+  "date": "2026-09-28",
+  "hash": "a77d31e105298c15"
+ },
+ "/tech/wattage-psu/": {
+  "date": "2026-09-28",
+  "hash": "b48c92519efd2a4a"
+ },
+ "/tech/print-resolution/": {
+  "date": "2026-09-28",
+  "hash": "eada4073e0f25cbe"
+ },
+ "/tech/password-time/": {
+  "date": "2026-09-28",
+  "hash": "55ee319169d1a22d"
+ },
+ "/tech/image-file-size/": {
+  "date": "2026-09-28",
+  "hash": "86b04a0d45c1b76e"
+ },
+ "/tech/hosting-cost/": {
+  "date": "2026-09-28",
+  "hash": "72a8f2ba82e84f9b"
+ },
+ "/tech/monitor-refresh/": {
+  "date": "2026-09-28",
+  "hash": "0029b309169fac60"
+ },
+ "/tech/streaming-bitrate/": {
+  "date": "2026-09-28",
+  "hash": "0efead908f44d9dc"
+ },
+ "/tech/raid-capacity/": {
+  "date": "2026-09-28",
+  "hash": "71e81766ae04215b"
+ },
+ "/tech/uptime-calculator/": {
+  "date": "2026-09-28",
+  "hash": "7f8518ea9f803c0c"
+ },
+ "/tech/device-charge-time/": {
+  "date": "2026-09-28",
+  "hash": "d38e53678411d59c"
+ },
+ "/tech/data-transfer-cost/": {
+  "date": "2026-09-28",
+  "hash": "a9a1a297cfc4717e"
+ },
+ "/tech/token-cost/": {
+  "date": "2026-09-28",
+  "hash": "a1dc7e09eb7cc81d"
+ },
+ "/tech/base64-encode/": {
+  "date": "2026-09-28",
+  "hash": "f90921c28e43b97c"
+ },
+ "/tech/base64-decode/": {
+  "date": "2026-09-28",
+  "hash": "8af00e24ff6baf23"
+ },
+ "/tech/url-encoder/": {
+  "date": "2026-09-28",
+  "hash": "23b7edbfbe027002"
+ },
+ "/tech/json-formatter/": {
+  "date": "2026-09-28",
+  "hash": "ca2a5bb0e76baeec"
+ },
+ "/tech/text-counter/": {
+  "date": "2026-09-28",
+  "hash": "1aa4e9c0d416c015"
+ },
+ "/tech/case-converter/": {
+  "date": "2026-09-28",
+  "hash": "81123d3a2f1fccc0"
+ },
+ "/tech/hash-generator/": {
+  "date": "2026-09-28",
+  "hash": "e52b028dbe305e11"
+ },
+ "/tech/rgb-hex/": {
+  "date": "2026-09-28",
+  "hash": "ed431a44ef80fe75"
+ },
+ "/tech/uuid-generator/": {
+  "date": "2026-09-28",
+  "hash": "f7622b1cda168050"
+ },
+ "/tech/password-generator/": {
+  "date": "2026-09-28",
+  "hash": "608d6c77a83b6890"
+ },
+ "/tech/ip-subnet/": {
+  "date": "2026-09-28",
+  "hash": "888172cb6b991582"
+ },
+ "/tech/cron-validate/": {
+  "date": "2026-09-28",
+  "hash": "2df8da966df9c037"
+ },
+ "/tech/resistor-color-code/": {
+  "date": "2026-09-28",
+  "hash": "53d1044475dc1821"
+ },
+ "/tech/ascii-table/": {
+  "date": "2026-09-28",
+  "hash": "16f2c231b61c1967"
+ },
+ "/tech/awg-reference/": {
+  "date": "2026-09-28",
+  "hash": "8a30fa62c2add968"
+ },
+ "/tech/aspect-ratio/": {
+  "date": "2026-09-28",
+  "hash": "252d3369ac9fb0dc"
+ },
+ "/tech/color-contrast/": {
+  "date": "2026-09-28",
+  "hash": "d2886b1318dd3109"
+ },
+ "/tech/read-time/": {
+  "date": "2026-09-28",
+  "hash": "09c3b832b58189c3"
+ },
+ "/tech/font-size-conv/": {
+  "date": "2026-09-28",
+  "hash": "f759f9a6f3bb548a"
+ },
+ "/tech/storage-need/": {
+  "date": "2026-09-28",
+  "hash": "f3f89bfa132f3667"
+ },
+ "/tech/latency-bandwidth/": {
+  "date": "2026-09-28",
+  "hash": "faf3d07907a9834b"
+ },
+ "/tech/download-time/": {
+  "date": "2026-09-28",
+  "hash": "eedcafcf1393ad98"
+ },
+ "/tech/audio-file-size/": {
+  "date": "2026-09-28",
+  "hash": "b7496ae81c196ce2"
+ },
+ "/tech/backup-size/": {
+  "date": "2026-09-28",
+  "hash": "66f5569a4daf9937"
+ },
+ "/tech/screen-size/": {
+  "date": "2026-09-28",
+  "hash": "38cee50cef046e59"
+ },
+ "/tech/streaming-quality/": {
+  "date": "2026-09-28",
+  "hash": "60223c9e3ead2c71"
+ },
+ "/tech/code-line-count/": {
+  "date": "2026-09-28",
+  "hash": "540856347e56fe16"
+ },
+ "/tech/dbm-watts/": {
+  "date": "2026-09-28",
+  "hash": "881e67d7fa706f46"
+ },
+ "/tech/api-cost/": {
+  "date": "2026-09-28",
+  "hash": "b90dd8a9ef9f2f67"
+ },
+ "/tech/keyword-density/": {
+  "date": "2026-09-28",
+  "hash": "9eab784d1faf3041"
+ },
+ "/tech/reading-grade/": {
+  "date": "2026-09-28",
+  "hash": "9ac7e05f23953419"
+ },
+ "/tech/typing-speed/": {
+  "date": "2026-09-28",
+  "hash": "783cebd2f928980e"
+ },
+ "/tech/ad-revenue/": {
+  "date": "2026-09-28",
+  "hash": "24f032247b266f59"
+ },
+ "/tech/click-through-rate/": {
+  "date": "2026-09-28",
+  "hash": "e610c6fa1df9b916"
+ },
+ "/tech/subnet-cidr/": {
+  "date": "2026-09-28",
+  "hash": "ae48d20261e49f71"
+ },
+ "/tech/video-bitrate/": {
+  "date": "2026-09-28",
+  "hash": "1c5f716cb043f5c1"
+ },
+ "/tech/cidr-convert/": {
+  "date": "2026-09-28",
+  "hash": "cddbad736496bc96"
+ },
+ "/tech/gpu-comparison-perf/": {
+  "date": "2026-09-28",
+  "hash": "bccce5b0476dfc33"
+ },
+ "/tech/data-center-pue/": {
+  "date": "2026-09-28",
+  "hash": "bcebc4b1674fe57d"
+ },
+ "/tech/screen-ppi/": {
+  "date": "2026-09-28",
+  "hash": "53b5d5cb2ca169f6"
+ },
+ "/tech/hash-rate/": {
+  "date": "2026-09-28",
+  "hash": "630d90efb59583ab"
+ },
+ "/tech/storage-array/": {
+  "date": "2026-09-28",
+  "hash": "205443a3d1ca4b9e"
+ },
+ "/tech/docker-resource/": {
+  "date": "2026-09-28",
+  "hash": "873bc5aeba0f5069"
+ },
+ "/tech/load-test-users/": {
+  "date": "2026-09-28",
+  "hash": "b2284723271b62ce"
+ },
+ "/tech/wifi-throughput/": {
+  "date": "2026-09-28",
+  "hash": "a26332f1b9061d30"
+ },
+ "/tech/data-usage-est/": {
+  "date": "2026-09-28",
+  "hash": "f4c3be6bd76a14af"
+ },
+ "/tech/image-size-calc/": {
+  "date": "2026-09-28",
+  "hash": "a2b0043b931ca070"
+ },
+ "/utilities/": {
+  "date": "2026-09-28",
+  "hash": "5814bb542205f1a9"
+ },
+ "/hub/utilities/": {
+  "date": "2026-09-28",
+  "hash": "47c2fceea565d78e"
+ },
+ "/utilities/qr-generator/": {
+  "date": "2026-09-28",
+  "hash": "63c9869f8397e6ef"
+ },
+ "/utilities/password-gen/": {
+  "date": "2026-09-28",
+  "hash": "d0a67e81f2758934"
+ },
+ "/utilities/color-picker/": {
+  "date": "2026-09-28",
+  "hash": "62fea74a6a4f90f2"
+ },
+ "/utilities/unit-converter/": {
+  "date": "2026-09-28",
+  "hash": "d4f7c5b88e379e45"
+ },
+ "/utilities/base-converter/": {
+  "date": "2026-09-28",
+  "hash": "fef5d785052a1385"
+ },
+ "/utilities/hash-gen/": {
+  "date": "2026-09-28",
+  "hash": "b86af0653b6a0103"
+ },
+ "/utilities/lorem-ipsum/": {
+  "date": "2026-09-28",
+  "hash": "5e9d76d798505fa2"
+ },
+ "/utilities/uuid-gen/": {
+  "date": "2026-09-28",
+  "hash": "8feb3216c182a5e2"
+ },
+ "/utilities/tip-split/": {
+  "date": "2026-09-28",
+  "hash": "732f8cdbc8e0e26a"
+ },
+ "/utilities/timer-calc/": {
+  "date": "2026-09-28",
+  "hash": "76a97380ebc199c2"
+ },
+ "/utilities/file-size/": {
+  "date": "2026-09-28",
+  "hash": "4a0a81761b1fdf10"
+ },
+ "/utilities/salary-hourly/": {
+  "date": "2026-09-28",
+  "hash": "a36be0f743e79272"
+ },
+ "/utilities/area-calc/": {
+  "date": "2026-09-28",
+  "hash": "9032183d2d1187bc"
+ },
+ "/utilities/volume-calc/": {
+  "date": "2026-09-28",
+  "hash": "d75d9d3e0f3597f0"
+ },
+ "/utilities/shipping-cost/": {
+  "date": "2026-09-28",
+  "hash": "7ddd0b6d9d558cfe"
+ },
+ "/utilities/salary-biweekly/": {
+  "date": "2026-09-28",
+  "hash": "8884e008ed2ca0d5"
+ },
+ "/utilities/simple-tax/": {
+  "date": "2026-09-28",
+  "hash": "9fa848c6349f78c7"
+ },
+ "/utilities/mileage-calc/": {
+  "date": "2026-09-28",
+  "hash": "a7c7285572a77bc6"
+ },
+ "/utilities/ratio-simplifier/": {
+  "date": "2026-09-28",
+  "hash": "993169d7ed57fe58"
+ },
+ "/utilities/gcd-lcm/": {
+  "date": "2026-09-28",
+  "hash": "e20c3d8171427e94"
+ },
+ "/utilities/prime-check/": {
+  "date": "2026-09-28",
+  "hash": "67a66ace8794a463"
+ },
+ "/utilities/rounding-calc/": {
+  "date": "2026-09-28",
+  "hash": "86ffd7b136eee027"
+ },
+ "/utilities/coin-flip/": {
+  "date": "2026-09-28",
+  "hash": "be30279d9765e53c"
+ },
+ "/utilities/dice-roller/": {
+  "date": "2026-09-28",
+  "hash": "150dce6eebad8348"
+ },
+ "/utilities/date-add/": {
+  "date": "2026-09-28",
+  "hash": "1385fdacacb96a45"
+ },
+ "/utilities/age-exact/": {
+  "date": "2026-09-28",
+  "hash": "183cd63c7ace8d8b"
+ },
+ "/utilities/units-per/": {
+  "date": "2026-09-28",
+  "hash": "d52d57953ef8637b"
+ },
+ "/utilities/random-name/": {
+  "date": "2026-09-28",
+  "hash": "6e66aa08a0dfcc13"
+ },
+ "/utilities/password-entropy/": {
+  "date": "2026-09-28",
+  "hash": "b29d2fdf3d09dd24"
+ },
+ "/utilities/speech-time/": {
+  "date": "2026-09-28",
+  "hash": "ada15849215467ff"
+ },
+ "/utilities/qr-content-size/": {
+  "date": "2026-09-28",
+  "hash": "964783e115a875b4"
+ },
+ "/utilities/timestamp-convert/": {
+  "date": "2026-09-28",
+  "hash": "45cde304ff6094ff"
+ }
+}

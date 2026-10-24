@@ -93,7 +93,26 @@ const UndoRedo = (function () {
   function enableUndoRedoForTool(toolId) {
     const undoContainer = document.getElementById('undo-redo-container');
     if (!undoContainer) return;
-    undoContainer.innerHTML = '<div class="undo-redo-toolbar"><button class="undo-btn" onclick="UndoRedo.undo()" ' + (!canUndo() ? 'disabled' : '') + ' title="Undo (Ctrl+Z)">↶ Undo</button><button class="redo-btn" onclick="UndoRedo.redo()" ' + (!canRedo() ? 'disabled' : '') + ' title="Redo (Ctrl+Y)">↷ Redo</button><button class="clear-stack-btn" onclick="UndoRedo.clear()" title="Clear History">🗑️ Clear</button></div>';
+    // No inline onclick: the production CSP blocks inline handlers, so the
+    // buttons silently did nothing on the deployed build (a hardening audit
+    // failure too). Listeners are bound here instead.
+    undoContainer.innerHTML = '<div class="undo-redo-toolbar" role="group" aria-label="Undo and redo">'
+      + '<button type="button" class="undo-btn" title="Undo (Ctrl+Z)"' + (canUndo() ? '' : ' disabled') + '>↶ Undo</button>'
+      + '<button type="button" class="redo-btn" title="Redo (Ctrl+Y)"' + (canRedo() ? '' : ' disabled') + '>↷ Redo</button>'
+      + '<button type="button" class="clear-stack-btn" title="Clear history">🗑️ Clear</button>'
+      + '</div>';
+    const bind = (sel, fn) => {
+      const btn = undoContainer.querySelector(sel);
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        fn();
+        // Re-render so the disabled state of Undo/Redo reflects the new stack.
+        enableUndoRedoForTool(toolId);
+      });
+    };
+    bind('.undo-btn', undo);
+    bind('.redo-btn', redo);
+    bind('.clear-stack-btn', clear);
     undoContainer.style.display = 'block';
   }
 

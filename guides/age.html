@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How to Calculate Your Exact Age in Years, Months &amp; Days</title>
-  <meta name="description" content="Learn how to calculate your exact age in years, months and days by hand — the difference from simple year subtraction, the manual method, and how leap years…">
+  <meta name="description" content="How to calculate your exact age in years, months and days by hand, why simple year subtraction is wrong, and how leap years move the answer.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
   <link rel="canonical" href="https://calcpromaster.netlify.app/guides/age">
@@ -29,6 +29,16 @@
     "mainEntity": {
       "@type": "FAQPage",
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I use this page for \"age calendar\"?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — this guide answers the \"age calendar\" question: the method is explained in the sections below and the linked calculator returns the number instantly." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this page for \"calculate age by birthday\"?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — this guide answers the \"calculate age by birthday\" question: the method is explained in the sections below and the linked calculator returns the number instantly." }
+        },
         {
           "@type": "Question",
           "name": "How do I calculate exact age by hand?",
@@ -84,13 +94,13 @@
   <header>
     <a class="logo" href="/">CalcProMaster</a>
     <a href="/">Home</a>
-    <a href="/guides">Guides</a>
+    <a href="/guides/">Guides</a>
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
   </header>
   <main>
     <div class="legal-page">
-      <p class="legal-meta"><a href="/guides">← All guides</a></p>
+      <p class="legal-meta"><a href="/guides/">← All guides</a></p>
       <h1>How to Calculate Your Exact Age in Years, Months &amp; Days</h1>
       <p class="legal-meta">Everyday · 4 min read · Last updated September 2026</p>
 
@@ -117,18 +127,54 @@
       <p>For calendar age, no — a year always runs from one birthday to the next. Leap years only matter when you count <em>total days</em>: a February 29 birthday adds one extra day every four years, and the day counts of February (28 vs 29) change month-to-day totals.</p>
 
       <h2>Try it instantly</h2>
-      <p>Let the <a href="/everyday/age">Age Calculator</a> do the counting — it handles month lengths and leap years automatically. Related tools:</p>
+      <p>Let the <a href="/everyday/age/">Age Calculator</a> do the counting — it handles month lengths and leap years automatically. Related tools:</p>
       <div class="related">
-        <a href="/everyday/age">Age Calculator</a>
-        <a href="/everyday/date-diff">Date Difference Calculator</a>
-        <a href="/math/percentage">Percentage Calculator</a>
-        <a href="/guides">All Guides</a>
+        <a href="/everyday/age/">Age Calculator</a>
+        <a href="/everyday/date-diff/">Date Difference Calculator</a>
+        <a href="/math/percentage/">Percentage Calculator</a>
+        <a href="/guides/">All Guides</a>
       </div>
 
       <h2>The February 29 edge case</h2>
       <p>A person born on 29 February 2000 has had 9,131 days of life by 28 February 2025, and 9,132 days by 1 March 2025 — but which date counts as their 25th birthday? Jurisdictions differ: some treat 28 February as the legal anniversary (the day before the birth date's month-end), others 1 March. Documents that matter — pension eligibility, driving licences, contracts — follow the local legal convention, not the calendar-day count. For everyday purposes, most age calculators (including ours) step the birthday to 1 March in non-leap years, and you should match whichever convention your paperwork requires.</p>
 
-      <h2>Frequently asked questions</h2>
+      
+  
+<!-- guide-worked-example:start -->
+<h2>Worked example: Age Calculator at its default inputs</h2>
+<p>Open <a href="/everyday/age/">Age Calculator</a> and press calculate without editing a field. What comes back is the table and result below, so the age numbers here are checkable in one click.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Date of Birth</td><td>—</td></tr></tbody></table>
+<p><strong>Result:</strong> Enter date</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Enter date of birth</li></ol>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>Age maths looks trivial until the boundaries</h2>
+<p>An age calculator subtracts dates, and the part that goes wrong is the month and day comparison: someone born on 31 March is 30 years and 0 days old on 31 March, not 29 years and 12 months. Handle the month-end cases and the answer stops surprising you.</p>
+<p>Leap years matter for exact day counts, not for years. A person born on 29 February has a birthday question every non-leap year, and different systems answer it differently: some count 1 March, some 28 February.</p>
+<h2>Legal and administrative ages</h2>
+<p>Most legal thresholds are defined on the birthday, not on the day before, and some jurisdictions use local time while others use the date of registration. For documents, the date on the certificate is the one that counts, whatever the calculation says.</p>
+<p>School admission cut-offs are a separate rule again and often use a fixed date rather than the birthday itself. Check the rule you are subject to rather than the general formula.</p>
+<h2>Days, weeks and the calendar you count in</h2>
+<p>Day counts between two dates differ depending on whether the first day is included and whether weekends count. Contracts usually state their convention explicitly for exactly this reason.</p>
+<p>For anything financial or legal, use the convention written in the document. For curiosity, the difference of one day rarely matters, but for an eligibility window it can decide the outcome.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/lifestyle">Lifestyle & Money Habits Guides</a></li>
+    <li><a href="/guides/water-intake">Daily Water Intake</a></li>
+    <li><a href="/guides/sleep-cycles">Sleep Cycles</a></li>
+    <li><a href="/guides/heart-rate-zones">Heart Rate Zones</a></li>
+  </ul>
+
+<h2>Frequently asked questions</h2>
+      <h3>Can I use this page for &quot;age calendar&quot;?</h3>
+      <p>Yes — this guide answers the &quot;age calendar&quot; question: the method is explained in the sections below and the linked calculator returns the number instantly.</p>
+      <h3>Can I use this page for &quot;calculate age by birthday&quot;?</h3>
+      <p>Yes — this guide answers the &quot;calculate age by birthday&quot; question: the method is explained in the sections below and the linked calculator returns the number instantly.</p>
       <h3>How do I calculate exact age by hand?</h3>
       <p>Subtract the birth year from the current year for the years. If your birthday has not happened yet this year, subtract one year. Then count the remaining months from your last birthday to the current month, and the days from the last month anniversary to today.</p>
       <h3>Why is exact age different from subtracting years?</h3>
@@ -141,7 +187,7 @@
   </main>
   <footer>
     <a href="/">Home</a>
-    <a href="/guides">Guides</a>
+    <a href="/guides/">Guides</a>
     <a href="/about">About</a>
     <a href="/privacy">Privacy</a>
     <a href="/terms">Terms</a>

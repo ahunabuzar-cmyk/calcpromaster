@@ -1,0 +1,28 @@
+{
+ "ranAt": "2026-10-21T14:38:31.266Z",
+ "pages": 1620,
+ "summary": {
+  "brokenInternalLinks": 0,
+  "brokenUniqueTargets": 0,
+  "pagesReturning4xx": 0,
+  "invalidSchemaItems": 0,
+  "pagesWithInvalidSchema": 0,
+  "duplicateH1TitleGroups": 0,
+  "pagesInDuplicateH1TitleGroups": 0,
+  "pagesWithExtraH1": 0,
+  "externalNofollowLinks": 0,
+  "pagesWithWeakIncoming": 0,
+  "crawlBlockedPages": 0,
+  "unminifiedAssets": 0
+ },
+ "brokenLinks": [],
+ "missingPages": [],
+ "schemaIssues": [],
+ "schemaInvalidJson": [],
+ "dupH1Title": [],
+ "extraH1": [],
+ "externalNofollow": [],
+ "weakIncoming": [],
+ "blocked": [],
+ "unminified": []
+}

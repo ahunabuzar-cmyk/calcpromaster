@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ideal Weight Calculator — Devine Formula, BMI Range &amp; Why They</title>
+  <title>Ideal Weight Calculator — Devine Formula &amp; BMI Range</title>
   <meta name="description" content="How ideal weight is actually estimated: the Devine formula, the healthy-BMI weight range, why the two numbers differ, and how to read your own result honestly.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
@@ -56,7 +56,9 @@
   </style>
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Ideal Weight</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Ideal Weight</p>
   <h1>Ideal Weight: What the Formulas Do — and Don't — Tell You</h1>
   <p class="updated">Health · 6 min read · Last updated September 2026</p>
 
@@ -78,18 +80,52 @@
     <tr><td>Devine</td><td>73.0 kg</td><td>"What does a population-average body of this height weigh?"</td></tr>
     <tr><td>Healthy BMI</td><td>56.7–76.3 kg</td><td>"What range is statistically associated with lower health risk?"</td></tr>
   </table></div>
-  <p>Use the range for context, not a target to hit exactly. A muscular 78 kg person at 1.75 m sits above the BMI band but is not unhealthy; a sedentary 70 kg person inside it may carry more risk than the number suggests. Pair the result with the <a href="/health/bmi">BMI Calculator</a> and — more informatively — a waist measurement or body-fat estimate.</p>
+  <p>Use the range for context, not a target to hit exactly. A muscular 78 kg person at 1.75 m sits above the BMI band but is not unhealthy; a sedentary 70 kg person inside it may carry more risk than the number suggests. Pair the result with the <a href="/health/bmi/">BMI Calculator</a> and — more informatively — a waist measurement or body-fat estimate.</p>
 
   <div class="note"><strong>Limitations:</strong> no height-only formula can see muscle mass, bone frame, age or fat distribution. Treat any "ideal weight" output as a conversation starter with real data, not a verdict.</div>
 
   <h2>Try the calculators</h2>
   <p class="related">
-    <a href="/health/ideal-weight" class="cta">Ideal Weight Calculator</a>
-    <a href="/health/bmi" class="cta">BMI Calculator</a>
-    <a href="/health/body-fat" class="cta">Body Fat Calculator</a>
+    <a href="/health/ideal-weight/" class="cta">Ideal Weight Calculator</a>
+    <a href="/health/bmi/" class="cta">BMI Calculator</a>
+    <a href="/health/body-fat/" class="cta">Body Fat Calculator</a>
   </p>
 
-  <h2>Frequently asked questions</h2>
+<!-- guide-worked-example:start -->
+<h2>Worked example: Ideal Body Weight at its default inputs</h2>
+<p>Take the default setup on <a href="/health/ideal-weight/">Ideal Body Weight</a>: no fields changed, nothing tuned to a nice round number. Run in the site's own engine, those values produce the answer below.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Height (cm)</td><td>175</td></tr></tbody></table>
+<p><strong>Result:</strong> ~70.5 kg</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Height in inches: 68.9</li><li>Hamwi: 72.0 kg | Devine: 70.5 kg</li><li>Robinson: 68.9 kg | Average ≈ 70.5 kg</li></ol>
+<h2>Sensitivity: Height (cm) from half to one-and-a-half times</h2>
+<p>Same calculator, same fields, one change: height (cm).</p>
+<table><thead><tr><th>Height (cm)</th><th>Result</th></tr></thead><tbody><tr><td>87.5</td><td>~-8.8 kg</td></tr><tr><td>175</td><td>~70.5 kg</td></tr><tr><td>262.5</td><td>~149.7 kg</td></tr></tbody></table>
+<p>Halve height (cm) and the result moves one way; add half again and it moves the other. Watching that gap is quicker than guessing which field matters most.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>Formulas describe populations, not people</h2>
+<p>Ideal-weight formulas were built from insurance and military data to describe average healthy weights for heights. They were never designed to tell an individual what to weigh, and they disagree with each other by several kilograms for the same height.</p>
+<p>Treat the output as a reference band. Body composition, frame size, age and training history all sit outside the formula, and none of them are wrong for being outside it.</p>
+<h2>BMI and ideal weight measure different things</h2>
+<p>BMI relates weight to height squared and says nothing about muscle or fat distribution. Ideal-weight formulas usually add a frame adjustment. Someone with substantial muscle can be over an ideal-weight figure and metabolically healthy; someone with low muscle can be inside it and not.</p>
+<p>Waist measurement and body-fat percentage add information that height-and-weight numbers cannot. Use them together rather than choosing the easiest one.</p>
+<h2>Targets for real goals</h2>
+<p>For health outcomes, a 5-10% reduction from current weight already improves blood pressure and glucose control in most people with excess weight. Aiming directly at a formula number skips the part with the best evidence.</p>
+<p>For performance, the target is a body composition and a rate of change, not a scale weight. Losing more than about 1% of body weight a week usually costs muscle.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/calories">How to Calculate Calories for Weight Loss or Gain</a></li>
+    <li><a href="/guides/macro-calculator">Macros</a></li>
+    <li><a href="/guides/protein-intake">Protein Need</a></li>
+    <li><a href="/guides/health-fitness">Health & Fitness Guides</a></li>
+  </ul>
+
+<h2>Frequently asked questions</h2>
   <h3>What is the ideal weight for my height?</h3>
   <p>There is no single number. The healthy-BMI range for your height (18.5–24.9 × height in meters squared) is the most defensible reference band — for 1.75 m that is about 56.7–76.3 kg — and formulas like Devine give a narrower population average inside or near it.</p>
   <h3>How do I calculate ideal weight by hand?</h3>
@@ -99,7 +135,8 @@
   <h3>Why does the calculator show a range instead of one number?</h3>
   <p>Because a range is the honest output. Bodies at the same height legitimately differ by 15–20 kg while remaining healthy; a single kilogram figure implies precision the underlying data does not support.</p>
 
-  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <p class="related"><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog/">Blog</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

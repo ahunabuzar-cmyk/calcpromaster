@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How to Calculate a Discount — Percent Off, Stacked Discounts &amp;</title>
+  <title>How to Calculate a Discount — Percent Off &amp; Stacked</title>
   <meta name="description" content="The discount formula, how stacked discounts multiply instead of add, 'extra 20% off' math, and worked examples that show your true final price.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
@@ -89,14 +89,14 @@
   <header>
     <a class="logo" href="/">CalcProMaster</a>
     <a href="/">Home</a>
-    <a href="/guides">Guides</a>
+    <a href="/guides/">Guides</a>
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
   </header>
   <main>
     <div class="legal-page">
-      <p class="legal-meta"><a href="/guides">← All guides</a></p>
-      <h1>How to Calculate a Discount — Percent Off, Stacked Discounts &amp; Real Savings</h1>
+      <p class="legal-meta"><a href="/guides/">← All guides</a></p>
+      <h1>How to Calculate a Discount (Percent Off &amp; Stacked)</h1>
       <p class="legal-meta">Shopping · 5 min read · Last updated September 2026</p>
 
       <h2>The basic discount formula</h2>
@@ -145,9 +145,46 @@
       <h2>The successive-discount formula</h2>
       <p>Two stacked discounts combine by multiplication, not addition. The equivalent single discount is:</p>
       <div class="formula">Total % off = 100 − (100 − a) × (100 − b) ÷ 100</div>
-      <p>Example: 30% plus 20% off gives 100 − (70 × 80) ÷ 100 = 100 − 56 = <strong>44%</strong>. On a $1,000 order that is $560 to pay, not the $500 that "50% off" suggests. The same formula works for three or more discounts — keep multiplying the remaining-price factors. Our <a href="/blog/stacked-discounts">stacked discounts explainer</a> walks through the checkout math step by step, and the <a href="/finance/discount">Discount Calculator</a> handles the arithmetic for any combination.</p>
+      <p>Example: 30% plus 20% off gives 100 − (70 × 80) ÷ 100 = 100 − 56 = <strong>44%</strong>. On a $1,000 order that is $560 to pay, not the $500 that "50% off" suggests. The same formula works for three or more discounts — keep multiplying the remaining-price factors. Our <a href="/blog/stacked-discounts">stacked discounts explainer</a> walks through the checkout math step by step, and the <a href="/finance/discount/">Discount Calculator</a> handles the arithmetic for any combination.</p>
 
-      <h2>FAQ</h2>
+      
+  
+<!-- guide-worked-example:start -->
+<h2>Worked example: Discount Calculator at its default inputs</h2>
+<p>Open <a href="/finance/discount/">Discount Calculator</a> and press calculate without editing a field. What comes back is the table and result below, so the discount numbers here are checkable in one click.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Original Price</td><td>100</td></tr><tr><td>Discount (%)</td><td>20</td></tr></tbody></table>
+<p><strong>Result:</strong> Final Price: $80.00</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Step 1: Discount = $100 × 20% = $20.00</li><li>Step 2: Final price = $100 - $20.00 = $80.00</li></ol>
+<h2>Original Price: half, as given, and half again</h2>
+<p>Same calculator, same fields, one change: original price.</p>
+<table><thead><tr><th>Original Price</th><th>Result</th></tr></thead><tbody><tr><td>50</td><td>Final Price: $40.00</td></tr><tr><td>100</td><td>Final Price: $80.00</td></tr><tr><td>150</td><td>Final Price: $120.00</td></tr></tbody></table>
+<p>Halve original price and the result moves one way; add half again and it moves the other. Watching that gap is quicker than guessing which field matters most.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>Stacked discounts multiply, they do not add</h2>
+<p>Two successive 20% discounts are not 40% off. The second discount applies to the already-reduced price, so the total reduction is 36%. Three 20% discounts give 48.8%. The gap grows with every additional layer.</p>
+<p>Retailers sometimes present the sum of the percentages because it sounds larger. The honest comparison is the final price, and that is the number to calculate before deciding.</p>
+<h2>Discount, markup and margin run in different directions</h2>
+<p>A 25% discount can be undone by a 33% markup, not a 25% one, because the two percentages are taken on different bases. Confusing them is how a sale price gets set below cost while looking reasonable on a spreadsheet.</p>
+<p>If you know the cost and the target margin, price from the margin formula rather than adding a discount-reversal percentage. The arithmetic is short and the error is expensive.</p>
+<h2>Tax, coupons and the order of operations</h2>
+<p>Whether tax is applied before or after a discount changes the amount, and jurisdictions differ. A coupon that reduces the taxable base lowers the tax too; a coupon applied after tax does not.</p>
+<p>Check the order on the receipt before disputing a total. The discrepancy is usually sequencing rather than an overcharge, and knowing which one it is tells you who to ask.</p>
+<p>Returns complicate it further. Refunding a discounted item at its original price is a common dispute, and the outcome depends on the store's written policy rather than on the arithmetic. Keep the receipt that shows the price actually paid.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/tip">How to Calculate a Tip (Rates & Splitting the Bill)</a></li>
+    <li><a href="/guides/break-even">Break-Even Analysis</a></li>
+    <li><a href="/guides/wedding-budget">Wedding Budgets</a></li>
+    <li><a href="/guides/currency-conversion">How Currency Conversion Works</a></li>
+  </ul>
+
+<h2>FAQ</h2>
       <h3>How do I calculate 15% off quickly?</h3>
       <p>Take 10% (move the decimal one place left), halve it for 5%, and subtract both from the price. On $80: 10% is $8, 5% is $4, so $80 − $12 = $68.</p>
       <h3>Is a bigger percentage always better?</h3>
@@ -159,15 +196,15 @@
   <footer>
     <p>CalcProMaster — free online calculators.</p>
     <p>
-      <a href="/guides">Guides</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a>
+      <a href="/guides/">Guides</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a>
     </p>
   </footer>
   <div class="related" style="max-width:820px;margin:0 auto 40px;padding:0 24px;">
-    <a href="/finance/discount">Discount Calculator</a>
-    <a href="/math/percentage">Percentage Calculator</a>
-    <a href="/everyday/gst">GST Calculator</a>
-    <a href="/finance/tip">Tip Calculator</a>
-    <a href="/guides">All Guides</a>
+    <a href="/finance/discount/">Discount Calculator</a>
+    <a href="/math/percentage/">Percentage Calculator</a>
+    <a href="/everyday/gst/">GST Calculator</a>
+    <a href="/finance/tip/">Tip Calculator</a>
+    <a href="/guides/">All Guides</a>
   </div>
   <script src="/guides/glossary-tooltips.js" defer></script>
 </body>

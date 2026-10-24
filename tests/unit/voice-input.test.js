@@ -45,7 +45,7 @@ function buildFakeInput(id) {
   return obj;
 }
 
-function buildHarness({ supported = true, startThrows = false, inputId = 'loan-amount', ios = false } = {}) {
+function buildHarness({ supported = true, startThrows = false, inputId = 'loan-amount', ios = false, micPermission = null, micError = null } = {}) {
   const toasts = [];
   // Numeric inputs in document order (dictation fills these in order)
   const inputs = {
@@ -87,10 +87,21 @@ function buildHarness({ supported = true, startThrows = false, inputId = 'loan-a
     // watchdog + permission-guard use these (real timers in tests = no-op fine)
     setTimeout: (fn) => setTimeout(fn, 0),
     clearTimeout: (id) => clearTimeout(id),
-    // isIOS() reads navigator — absent in Node, present (iPhone) when ios:true
-    navigator: ios
-      ? { userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15', platform: 'iPhone', maxTouchPoints: 5, permissions: undefined }
-      : undefined,
+    // isIOS() reads navigator — absent in Node, present (iPhone) when ios:true.
+    // micPermission/micError simulate the Permissions API and getUserMedia so the
+    // blocked-mic paths can be asserted without a real browser.
+    navigator: (() => {
+      const nav = ios
+        ? { userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15', platform: 'iPhone', maxTouchPoints: 5, permissions: undefined }
+        : {};
+      if (micPermission) nav.permissions = { query: () => Promise.resolve({ state: micPermission }) };
+      if (micError) {
+        nav.mediaDevices = {
+          getUserMedia: () => Promise.reject(Object.assign(new Error('mic unavailable'), { name: micError }))
+        };
+      }
+      return Object.keys(nav).length ? nav : undefined;
+    })(),
     Security: { safeGetItem: () => [], safeSetItem: () => {}, safeRemoveItem: () => {} },
     App: {
       showToast: (m) => toasts.push(String(m)),
@@ -104,16 +115,24 @@ function buildHarness({ supported = true, startThrows = false, inputId = 'loan-a
     },
     document: {
       getElementById: (id) => inputs[id] || (id === 'zr-voice-area' ? voiceArea : null),
-      createElement: (tag) => ({
-        tagName: tag.toUpperCase(),
-        id: '', className: '', textContent: '', title: '',
-        _handlers: {},
-        setAttribute() {},
-        addEventListener(type, fn) { this._handlers[type] = fn; },
-        appendChild(el) { voiceArea.appendChild(el); el.parentArea = voiceArea; },
-        classList: { toggle() {} },
-        click() { if (this._handlers.click) this._handlers.click(); }
-      })
+      // Each created element owns its own children, like a real DOM node. The
+      // old stub pushed EVERY appendChild onto voiceArea, which made the
+      // language <select>'s six <option> children look like direct children of
+      // the voice bar.
+      createElement: (tag) => {
+        const el = {
+          tagName: tag.toUpperCase(),
+          id: '', className: '', textContent: '', title: '', value: '',
+          children: [],
+          _handlers: {},
+          setAttribute(k, v) { el[k] = v; },
+          addEventListener(type, fn) { el._handlers[type] = fn; },
+          appendChild(child) { el.children.push(child); child.parentNode = el; },
+          classList: { toggle() {} },
+          click() { if (el._handlers.click) el._handlers.click(); }
+        };
+        return el;
+      }
     },
     Event: class Event { constructor(type) { this.type = type; } },
     URLSearchParams
@@ -149,10 +168,14 @@ describe('AdvancedFeatures voice input', () => {
     expect(toasts).toHaveLength(1);
   });
 
-  it('gives iOS Safari users an honest browser recommendation (no SpeechRecognition there)', () => {
+  // iOS used to be blocked unconditionally, which made the mic unusable on
+  // iPhones that DO ship webkitSpeechRecognition (Safari 14.5+). The block was
+  // removed; when the API is genuinely missing, iOS gets the same honest
+  // "not supported in this browser" message as every other browser.
+  it('gives iOS users an honest recommendation when SpeechRecognition is missing', () => {
     const { api, toasts } = buildHarness({ supported: false, ios: true });
     api.voiceInput('loan-amount');
-    expect(toasts[0]).toContain('iOS Safari does not support it');
+    expect(toasts[0]).toContain('not supported in this browser');
   });
 
   it('configures and starts recognition on a supported browser', () => {
@@ -220,6 +243,27 @@ describe('AdvancedFeatures voice input', () => {
     expect(h.toasts.some(t => t.includes('Voice error: weird-engine-failure'))).toBe(true);
   });
 
+  // A blocked microphone used to be a 2.5s toast and nothing else, which reads
+  // as a dead button. The guard must explain it and never start the engine.
+  it('reports a denied mic permission instead of silently starting', async () => {
+    const h = buildHarness({ supported: true, micPermission: 'denied' });
+    h.api.voiceInput('loan-amount');
+    await new Promise((r) => setTimeout(r, 10));
+    expect(h.toasts.some((t) => t.includes('Mic is blocked'))).toBe(true);
+    // The engine may be constructed by the capability check, but a blocked mic
+    // must never reach start() (Chrome would just fail silently).
+    expect(h.getRecognition().started).toBe(false);
+    expect(h.inputs['loan-amount'].value).toBe('');
+  });
+
+  it('reports a getUserMedia NotAllowedError (prompt refused) instead of starting', async () => {
+    const h = buildHarness({ supported: true, micError: 'NotAllowedError' });
+    h.api.voiceInput('loan-amount');
+    await new Promise((r) => setTimeout(r, 10));
+    expect(h.toasts.some((t) => t.includes('Mic blocked'))).toBe(true);
+    expect(h.getRecognition().started).toBe(false);
+  });
+
   it('clears the active-input state after recognition ends', () => {
     const h = buildHarness({ supported: true });
     h.api.voiceInput('loan-amount');
@@ -235,18 +279,47 @@ describe('AdvancedFeatures voice input', () => {
     expect(() => h.api.voiceInput('loan-amount')).not.toThrow();
     expect(h.toasts.some(t => t.includes('already listening'))).toBe(true);
   });
+
+  // Pressing the mic again while it listens must STOP it. The old code called
+  // start() on the live engine, which threw and told the user "already
+  // listening" — the opposite of what a second tap means.
+  it('a second mic click on the same input stops listening', () => {
+    const h = buildHarness({ supported: true });
+    h.api.voiceInput('loan-amount');
+    h.api.voiceInput('loan-amount');
+    expect(h.toasts).toContain('🎤 Stopped');
+    // State cleared, so a later result must not write into the input
+    h.getRecognition().onresult({ results: [[{ transcript: '42' }]] });
+    expect(h.inputs['loan-amount'].value).toBe('');
+  });
+
+  // Alternative 0 is often a homophone ("to" for "two"). Only the first
+  // alternative used to be parsed, so those transcripts dead-ended.
+  it('parses a later recognition alternative when the first one has no number', () => {
+    const h = buildHarness({ supported: true });
+    h.api.voiceInput('loan-amount');
+    h.getRecognition().onresult({ results: [[{ transcript: 'to' }, { transcript: 'two' }]] });
+    expect(h.inputs['loan-amount'].value).toBe('2');
+  });
 });
 
 describe('Voice dictation (fill all inputs)', () => {
-  it('initVoiceArea renders the dictate button next to the walkthrough bar', () => {
+  it('initVoiceArea renders the dictate button and the language picker', () => {
     const h = dictationHarness({ supported: true });
     h.api.initVoiceArea();
-    expect(h.voiceArea.children.length).toBe(1);
-    expect(h.voiceArea.children[0].id).toBe('voice-dictate-btn');
+    // Button first (existing callers lean on children[0]), picker second. The
+    // status line is a SIBLING of #zr-voice-area, not a child: the walkthrough
+    // bar re-renders that area's innerHTML and would delete it.
+    expect(h.voiceArea.children.map((c) => c.id)).toEqual(['voice-dictate-btn', 'voice-lang']);
     expect(h.voiceArea.children[0].className).toContain('voice-dictate-btn');
-    // Idempotent: a second call must not add a duplicate button
+    // The recogniser is single-language, so the picker must offer the locales a
+    // Urdu/Hindi-speaking visitor actually needs — not just en-US.
+    const picker = h.voiceArea.children.find((c) => c.id === 'voice-lang');
+    const opts = picker.children.map((o) => o.value);
+    expect(opts).toEqual(['en-US', 'en-IN', 'en-GB', 'hi-IN', 'ur-PK', 'ar-SA']);
+    // Idempotent: a second call must not add a duplicate button or picker
     h.api.initVoiceArea();
-    expect(h.voiceArea.children.length).toBe(1);
+    expect(h.voiceArea.children.length).toBe(2);
   });
 
   it('dictation fills every numeric input in document order, skipping non-numeric', () => {
@@ -314,6 +387,12 @@ describe('transcriptToNumber (spoken words → number)', () => {
     ['rate is ten point two five percent', 10.25],
     ['enter value seventy five', 75],
     ['zero point five', 0.5],
+    // Romanised Urdu/Hindi: an en-US recogniser very often returns the words,
+    // and these used to be a "No number detected" dead end.
+    ['paanch lakh', 500000],
+    ['ek crore', 10000000],
+    ['das hazaar', 10000],
+    ['aath sau', 800],
     ['hello world', null],
     ['please check the fields', null]
   ];

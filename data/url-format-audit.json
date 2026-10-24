@@ -1,0 +1,223 @@
+{
+  "ranAt": "2026-10-23T12:09:56.481Z",
+  "urlsScanned": 1420,
+  "fails": 0,
+  "warns": 9,
+  "infos": 26,
+  "byRule": {
+    "U10": 26,
+    "U8": 9
+  },
+  "issues": [
+    {
+      "path": "/blog/rule-of-72",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/auto/trade-in-value/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/auto/power-to-weight/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/business/business-roi/",
+      "rule": "U8",
+      "severity": "WARN",
+      "label": "category word \"business\" repeated in the slug"
+    },
+    {
+      "path": "/business/business-valuation/",
+      "rule": "U8",
+      "severity": "WARN",
+      "label": "category word \"business\" repeated in the slug"
+    },
+    {
+      "path": "/career/career-gap/",
+      "rule": "U8",
+      "severity": "WARN",
+      "label": "category word \"career\" repeated in the slug"
+    },
+    {
+      "path": "/career/career-break-runway/",
+      "rule": "U8",
+      "severity": "WARN",
+      "label": "category word \"career\" repeated in the slug"
+    },
+    {
+      "path": "/career/interview-to-offer-tracker/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/everyday/day-of-year/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/everyday/day-of-week/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/everyday/statute-of-limitations/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/everyday/cost-of-living-compare/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/finance/loan-to-value/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/finance/rule-of-72/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/finance/cost-of-debt/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/finance/price-to-earnings/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/finance/cost-of-living/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/finance/yield-to-maturity/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/finance/price-to-rent/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/finance/debt-to-equity/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/finance/yield-to-worst/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/finance/rule-of-40/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/finance/cost-of-delay/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/finance/power-of-attorney-cost/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/fitness/steps-to-distance/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/health/health-insurance-copay/",
+      "rule": "U8",
+      "severity": "WARN",
+      "label": "category word \"health\" repeated in the slug"
+    },
+    {
+      "path": "/math/law-of-sines/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/math/law-of-cosines/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/math/coefficient-of-variation/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/family/family-budget/",
+      "rule": "U8",
+      "severity": "WARN",
+      "label": "category word \"family\" repeated in the slug"
+    },
+    {
+      "path": "/family/family-budget-simple/",
+      "rule": "U8",
+      "severity": "WARN",
+      "label": "category word \"family\" repeated in the slug"
+    },
+    {
+      "path": "/family/family-meal-cost/",
+      "rule": "U8",
+      "severity": "WARN",
+      "label": "category word \"family\" repeated in the slug"
+    },
+    {
+      "path": "/family/family-tree-generation/",
+      "rule": "U8",
+      "severity": "WARN",
+      "label": "category word \"family\" repeated in the slug"
+    },
+    {
+      "path": "/science/speed-of-sound/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    },
+    {
+      "path": "/science/moment-of-inertia/",
+      "rule": "U10",
+      "severity": "INFO",
+      "label": "stop word in the slug"
+    }
+  ]
+}

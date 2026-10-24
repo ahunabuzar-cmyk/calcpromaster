@@ -89,13 +89,13 @@
   <header>
     <a class="logo" href="/">CalcProMaster</a>
     <a href="/">Home</a>
-    <a href="/guides">Guides</a>
+    <a href="/guides/">Guides</a>
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
   </header>
   <main>
     <div class="legal-page">
-      <p class="legal-meta"><a href="/guides">← All guides</a></p>
+      <p class="legal-meta"><a href="/guides/">← All guides</a></p>
       <h1>Debt Snowball vs Avalanche — Which Pays Off Debt Faster?</h1>
       <p class="legal-meta">Debt · 6 min read · Last updated September 2026</p>
 
@@ -156,9 +156,45 @@
         <tr><td>Avalanche (highest rate first)</td><td>A → B → C</td><td>28 months</td><td>$644.57</td></tr>
         <tr><td>Snowball (smallest balance first)</td><td>C → B → A</td><td>28 months</td><td>$827.93</td></tr>
       </table></div>
-      <p>Avalanche saves about $183 in interest here. Snowball's advantage is behavioral: Card C's balance takes far longer to clear, so some people lose motivation before the finish. If you know you're the type who needs an early win, snowball's small premium is money well spent — the mathematically optimal plan you abandon loses to the imperfect one you finish. Model both with the <a href="/finance/debt-snowball">Debt Snowball Calculator</a> or the <a href="/finance/credit-card-payoff">Credit Card Payoff Calculator</a>.</p>
+      <p>Avalanche saves about $183 in interest here. Snowball's advantage is behavioral: Card C's balance takes far longer to clear, so some people lose motivation before the finish. If you know you're the type who needs an early win, snowball's small premium is money well spent — the mathematically optimal plan you abandon loses to the imperfect one you finish. Model both with the <a href="/finance/debt-snowball/">Debt Snowball Calculator</a> or the <a href="/finance/credit-card-payoff/">Credit Card Payoff Calculator</a>.</p>
 
-      <h2>FAQ</h2>
+      
+  
+<!-- guide-worked-example:start -->
+<h2>Worked example: Debt Snowball Calculator at its default inputs</h2>
+<p>This is the answer <a href="/finance/debt-snowball/">Debt Snowball Calculator</a> gives before you touch anything — the defaults as shipped, computed live rather than copied from a sample.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Debts (balance,rate,minPayment comma sep)</td><td>5000,18,200;3000,22,150;8000,6,100;2000,15,100</td></tr><tr><td>Extra Monthly Budget</td><td>300</td></tr></tbody></table>
+<p><strong>Result:</strong> Payoff: 37 months</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Step 1: List debts smallest balance first</li><li>Step 2: Pay minimum on all debts</li><li>Step 3: Apply extra budget to smallest balance</li><li>Step 4: When smallest paid off, roll payment to next</li></ol>
+<h2>Extra Monthly Budget — three values, three answers</h2>
+<p>Hold every other field still and move only extra monthly budget.</p>
+<table><thead><tr><th>Extra Monthly Budget</th><th>Result</th></tr></thead><tbody><tr><td>150</td><td>Payoff: 52 months</td></tr><tr><td>300</td><td>Payoff: 37 months</td></tr><tr><td>450</td><td>Payoff: 28 months</td></tr></tbody></table>
+<p>Read the three rows as a range: the spread between them is how much the answer depends on extra monthly budget alone, with everything else held still.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>Avalanche versus snowball</h2>
+<p>The avalanche method pays the highest interest rate first and minimises total interest. The snowball method pays the smallest balance first and maximises momentum. The arithmetic favours avalanche; the psychology often favours snowball.</p>
+<p>Both require the same thing: a fixed total payment every month, with the minimum on everything and the surplus concentrated on one debt. Without that constraint neither method works.</p>
+<h2>Interest accrues daily</h2>
+<p>Most revolving credit charges interest on the average daily balance, so a payment made on day 3 saves more than the same payment on day 25. The monthly statement hides this by summarising a single figure.</p>
+<p>Paying twice a month, or simply paying as soon as income arrives, reduces the balance that interest is charged on without changing the amount paid.</p>
+<h2>Consolidation only helps if the rate falls</h2>
+<p>Rolling several balances into one loan lowers the monthly payment, which is not the same as lowering the cost. A longer term at a slightly lower rate can increase total interest.</p>
+<p>Compare total interest paid under both arrangements, not the monthly figure. And check whether the consolidation loan is secured: turning unsecured debt into secured debt puts an asset at risk.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/debt-ratio">Debt-to-Income Ratio</a></li>
+    <li><a href="/guides/credit-card-minimum">The Minimum-Payment Trap, in Actual Numbers</a></li>
+    <li><a href="/guides/rent-vs-buy">Rent vs Buy</a></li>
+    <li><a href="/guides/emi">How to Calculate Loan EMI</a></li>
+  </ul>
+
+<h2>FAQ</h2>
       <h3>Does paying twice a month help?</h3>
       <p>Yes, slightly — interest on most cards accrues daily, so earlier payments reduce average daily balance. The bigger win is that splitting payments feels smaller psychologically.</p>
       <h3>Should I close cards after paying them off?</h3>
@@ -170,15 +206,15 @@
   <footer>
     <p>CalcProMaster — free online calculators.</p>
     <p>
-      <a href="/guides">Guides</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a>
+      <a href="/guides/">Guides</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a>
     </p>
   </footer>
   <div class="related" style="max-width:820px;margin:0 auto 40px;padding:0 24px;">
-    <a href="/finance/debt-snowball">Debt Snowball Calculator</a>
-    <a href="/finance/loan-payoff">Loan Payoff Calculator</a>
-    <a href="/finance/loan-emi">Loan EMI Calculator</a>
+    <a href="/finance/debt-snowball/">Debt Snowball Calculator</a>
+    <a href="/finance/loan-payoff/">Loan Payoff Calculator</a>
+    <a href="/finance/loan-emi/">Loan EMI Calculator</a>
     <a href="/guides/emi">EMI Guide</a>
-    <a href="/guides">All Guides</a>
+    <a href="/guides/">All Guides</a>
   </div>
   <script src="/guides/glossary-tooltips.js" defer></script>
 </body>

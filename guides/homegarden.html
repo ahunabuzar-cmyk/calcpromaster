@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home &amp; Garden Guides — Rooms, materials &amp; sizing | CalcProMaster</title>
-  <meta name="description" content="Home projects fail on quantities: one roll of wallpaper short, an AC that never quite cools, paint bought twice. These guides show the measurement-first ap">
+  <title>Home &amp; Garden Guides — Rooms, Materials &amp; Sizing</title>
+  <meta name="description" content="Home projects fail on quantities: one roll of wallpaper short, an AC that never quite cools, paint bought twice. Measure first, then buy.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
   <link rel="canonical" href="https://calcpromaster.netlify.app/guides/homegarden">
@@ -69,16 +69,63 @@
     .cat-card p { margin: 0; color: #4b5563; font-size: 0.95rem; }
     .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
     .updated { color: #6b7280; font-size: 0.85rem; }
-  </style>
+/* guide-depth-css:start */
+.guide-lede{font-weight:600;border-left:3px solid #4f46e5;padding-left:12px;margin:10px 0 4px}
+    .guide-pitfalls{margin:8px 0 14px 20px}
+    .seo-faqs h3{margin:16px 0 4px}
+/* guide-depth-css:end */
+</style>
+
+<!-- guide-faq-schema:start -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much extra should I buy for waste?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For paint, plan on the number of coats plus a small margin for touch-ups, and round up to the tin sizes available. For flooring and tiling add roughly a tenth, more for a diagonal or herringbone layout and for a first attempt. Offcuts are cheaper than a second order that does not match the batch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I turn area into soil volume?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply area by depth in the same units. A 10 m² bed at 5 cm deep needs 0.5 m³, and at 20 cm it needs 2 m³. Bags are usually sold by volume, so convert once and you can compare bags against a bulk delivery on price without guessing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is air-conditioner sizing not just square metres?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because two rooms of the same size can need very different cooling. Ceiling height changes the volume of air, insulation and glazing change how much heat enters, and orientation changes the solar load. Square metres is a starting sanity check, not the sizing calculation."
+      }
+    }
+  ]
+}
+</script>
+<!-- guide-faq-schema:end -->
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Home &amp; Garden</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Home &amp; Garden</p>
   <h1>Home &amp; Garden Guides</h1>
   <p class="updated">Part of the CalcProMaster guides library · Rooms, materials &amp; sizing</p>
 
   <p>Home projects fail on quantities: one roll of wallpaper short, an AC that never quite cools, paint bought twice. These guides show the measurement-first approach — area, factor, waste allowance — behind every room calculation.</p>
+  <p><strong>Methodology:</strong> Standard home and garden estimating formulas (payback, area, yield, maintenance allowances) with the assumptions stated.</p>
 
-  <h2>How the math works</h2>
+
+<!-- guide-lede:start -->
+<p class="guide-lede">Home and garden estimating is a coverage-and-waste problem: the area is easy, and the honest part of the answer is the allowance you add for offcuts, second coats and settling.</p>
+<!-- guide-lede:end -->
+<h2>How the math works</h2>
   <p>Room calculations all start the same way: get the area right, then apply the per-unit coverage factor with a waste allowance. Paint example: a 4 m × 5 m room with 2.5 m ceilings has 45 m² of wall (perimeter 18 m × 2.5 m); at 10 m² per litre and two coats, that’s 9 litres — round up to two 5 L cans, because running out a third of the way into the second coat is a real trip.</p>
   <p>The waste allowance is not padding: wallpaper drops get trimmed (10% typical), tiles break (buy 10% extra), lawns are never perfect rectangles. Buying exactly the computed amount is how projects end with a second shopping trip for one item — and a dye lot that doesn’t quite match.</p>
 
@@ -98,14 +145,51 @@
   <h2>How is AC size (BTU) worked out?</h2>
   <p>Floor area × a climate-and-insulation factor, roughly 20 BTU per square foot as a baseline, adjusted up for sunny rooms, kitchens and high ceilings. Oversizing cools fast but leaves air clammy — size honestly.</p>
 
-  <h2>Try the matching calculators</h2>
+
+<!-- guide-extra-depth:start -->
+<h2>What this category covers</h2>
+<p>Paint, flooring, tiles, grout, lawn seed, soil and fertiliser quantities. These are area-and-volume calculations, where the common failure is measuring one surface and multiplying by a rule of thumb instead of measuring each surface.</p>
+<p>They are also the tools most likely to be used while standing in a shop, so the output needs a buying recommendation in whole units rather than a decimal quantity.</p>
+<h2>Waste allowance is not padding</h2>
+<p>Cuts, breakages, pattern matching and offcuts mean flooring and tiles need 5-10% extra, and diagonal or herringbone layouts need 10-15%. Buying exactly the measured area guarantees a second order and often a different batch.</p>
+<p>Paint is different: a spare litre is useful for touch-ups, but five spare litres are wasted money. Buy whole cans against the computed coverage, not against the wall area.</p>
+<h2>Coverage figures are best-case</h2>
+<p>A coverage rate printed on a can or bag assumes an ideal substrate: smooth, sealed, dry and applied at the stated thickness. Rough concrete, fresh plaster and porous brick all absorb more.</p>
+<p>For a first coat on a new surface, plan on 20-30% more material than the rated coverage. For a second coat on the same surface, the rated figure is usually closer to reality.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/construction">Construction Guides</a></li>
+    <li><a href="/guides/concrete">How to Calculate Concrete for Slabs, Footings and Pads</a></li>
+    <li><a href="/guides/paint-coverage">Paint Coverage</a></li>
+    <li><a href="/guides/room-area">Room Area</a></li>
+  </ul>
+
+<!-- guide-depth:start -->
+<h2>Where these answers go wrong</h2><ul class="guide-pitfalls"><li>Using floor area for paint when walls have their own area — perimeter × height, minus windows and doors.</li><li>Forgetting that most finishes need two coats, and that a primer can change how far the topcoat goes.</li><li>Buying mulch or topsoil by area while the depth is the factor that turns area into volume.</li><li>Sizing an air conditioner on floor area alone when ceiling height, insulation, glazing and sun exposure drive the load.</li></ul><h2>Frequently asked questions</h2><div class="seo-faqs"><h3>How much extra should I buy for waste?</h3><p>For paint, plan on the number of coats plus a small margin for touch-ups, and round up to the tin sizes available. For flooring and tiling add roughly a tenth, more for a diagonal or herringbone layout and for a first attempt. Offcuts are cheaper than a second order that does not match the batch.</p><h3>How do I turn area into soil volume?</h3><p>Multiply area by depth in the same units. A 10 m² bed at 5 cm deep needs 0.5 m³, and at 20 cm it needs 2 m³. Bags are usually sold by volume, so convert once and you can compare bags against a bulk delivery on price without guessing.</p><h3>Why is air-conditioner sizing not just square metres?</h3><p>Because two rooms of the same size can need very different cooling. Ceiling height changes the volume of air, insulation and glazing change how much heat enters, and orientation changes the solar load. Square metres is a starting sanity check, not the sizing calculation.</p></div>
+<!-- guide-depth:end -->
+<!-- guide-worked-example:start -->
+<h2>Worked example: Room Area &amp; Flooring Calculator at its default inputs</h2>
+<p>A worked example is only useful if you can reproduce it. The defaults on <a href="/homegarden/room-area/">Room Area &amp; Flooring Calculator</a> give exactly the figures in this section, with no rounding done by us.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Length (ft)</td><td>12</td></tr><tr><td>Width (ft)</td><td>14</td></tr><tr><td>Waste %</td><td>10</td></tr></tbody></table>
+<p><strong>Result:</strong> 168 sq ft</p>
+<h2>Length (ft): half, as given, and half again</h2>
+<p>Hold every other field still and move only length (ft).</p>
+<table><thead><tr><th>Length (ft)</th><th>Result</th></tr></thead><tbody><tr><td>6</td><td>84 sq ft</td></tr><tr><td>12</td><td>168 sq ft</td></tr><tr><td>18</td><td>252 sq ft</td></tr></tbody></table>
+<p>If the rows barely differ, length (ft) is not your lever — change a different input. If they swing widely, get that number right before trusting the total.</p>
+<!-- guide-worked-example:end -->
+<h2>Try the matching calculators</h2>
   <p>
-    <a href="/homegarden/room-area" class="cta">Room Area &amp; Flooring Calculator</a>
-    <a href="/homegarden/paint-cost" class="cta">Paint Cost Estimator</a>
-    <a href="/homegarden/ac-size" class="cta">AC/BTU Size Calculator</a>
+    <a href="/homegarden/room-area/" class="cta">Room Area &amp; Flooring Calculator</a>
+    <a href="/homegarden/paint-cost/" class="cta">Paint Cost Estimator</a>
+    <a href="/homegarden/ac-size/" class="cta">AC/BTU Size Calculator</a>
   </p>
 
-  <p><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
+  <p><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NPV vs IRR — Which Investment Metric to Trust &amp; Why They Fight</title>
+  <title>NPV vs IRR — Which Investment Metric to Trust</title>
   <meta name="description" content="The NPV and IRR formulas on one worked example, the reinvestment assumption that makes them disagree, and a decision rule for choosing between projects.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
@@ -66,8 +66,10 @@
   </style>
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › NPV vs IRR</p>
-  <h1>NPV vs IRR: Two Ways to Judge the Same Investment — and Why They Disagree</h1>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › NPV vs IRR</p>
+  <h1>NPV vs IRR: Two Ways to Judge an Investment</h1>
   <p class="updated">Finance · 7 min read · Last updated September 2026</p>
 
   <div class="answer">
@@ -95,12 +97,48 @@
 
   <h2>Try the calculators</h2>
   <p class="related">
-    <a href="/finance/npv" class="cta">NPV Calculator</a>
-    <a href="/finance/irr" class="cta">IRR Calculator</a>
-    <a href="/finance/roi" class="cta">ROI Calculator</a>
+    <a href="/finance/npv/" class="cta">NPV Calculator</a>
+    <a href="/finance/irr/" class="cta">IRR Calculator</a>
+    <a href="/finance/roi/" class="cta">ROI Calculator</a>
   </p>
 
-  <h2>Frequently asked questions</h2>
+  
+  
+<!-- guide-worked-example:start -->
+<h2>Worked example: NPV Calculator at its default inputs</h2>
+<p>Open <a href="/finance/npv/">NPV Calculator</a> and press calculate without editing a field. What comes back is the table and result below, so the npv-vs-irr numbers here are checkable in one click.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Discount Rate (%)</td><td>10</td></tr><tr><td>Cash Flows (comma separated)</td><td>-10000,3000,3000,3000,3000</td></tr></tbody></table>
+<p><strong>Result:</strong> NPV: $-490.40</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Formula: NPV = Σ CFt / (1+r)^t</li><li>Step 1: Discount rate r = 10% = 0.1</li><li>Step 2: Discount each cash flow:</li><li>...CF0 = -10000 / (1.1)^0 = -10000</li></ol>
+<h2>What Discount Rate (%) does to the answer</h2>
+<p>The table below varies discount rate (%) alone — half, the default, and half again.</p>
+<table><thead><tr><th>Discount Rate (%)</th><th>Result</th></tr></thead><tbody><tr><td>5</td><td>NPV: $637.85</td></tr><tr><td>10</td><td>NPV: $-490.40</td></tr><tr><td>15</td><td>NPV: $-1435.06</td></tr></tbody></table>
+<p>Halve discount rate (%) and the result moves one way; add half again and it moves the other. Watching that gap is quicker than guessing which field matters most.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>The two measures can disagree, and NPV wins</h2>
+<p>NPV discounts every cash flow at your required rate and reports the value added in money. IRR reports the rate at which NPV would be zero. When a project has unconventional cash flows, the IRR can be multiple or nonexistent, while NPV stays well defined.</p>
+<p>For choosing between projects, NPV is the decision rule: a positive NPV at the hurdle rate means the project beats the alternative use of the capital. IRR is a communication tool, useful because it is a percentage.</p>
+<h2>The reinvestment assumption</h2>
+<p>IRR implicitly assumes interim cash flows are reinvested at the IRR itself, which is optimistic for a project returning 30%. NPV assumes reinvestment at the discount rate, which is the more defensible assumption.</p>
+<p>The gap matters most for long projects with large early cash flows. Modified IRR addresses it by assuming reinvestment at the cost of capital, at the price of one more assumption to explain.</p>
+<h2>Scale and timing</h2>
+<p>A small project can show a high IRR and add less value than a larger project with a lower one. Comparing percentages across different sizes hides the difference in absolute money, which is what actually compounds.</p>
+<p>Use IRR to rank projects of similar scale, and NPV to decide how much capital to commit.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/net-worth">Net Worth</a></li>
+    <li><a href="/guides/inflation">How Inflation Is Calculated</a></li>
+    <li><a href="/guides/compound-interest">How to Calculate Compound Interest</a></li>
+    <li><a href="/guides/cagr">CAGR</a></li>
+  </ul>
+
+<h2>Frequently asked questions</h2>
   <h3>What is the difference between NPV and IRR?</h3>
   <p>NPV converts all future cash flows into today’s money using your required return and answers in currency; IRR finds the discount rate that makes NPV exactly zero and answers in percent. They agree on accept/reject for a single conventional project but can rank projects differently.</p>
   <h3>Why is NPV considered more reliable?</h3>
@@ -111,7 +149,8 @@
   <p>Yes to both. A project that never recovers its cost has a negative IRR, and cash-flow patterns that switch sign more than once can have several IRRs — in those cases rely on NPV alone.</p>
 
 <div class="review-block"><strong>About this guide:</strong> Written and maintained by CalcProMaster’s developer — an independent site, not a licensed financial advisor or medical professional. Every worked example below was computed by hand and cross-checked with the linked calculator; our <a href="/editorial-policy">editorial policy</a> explains how content is written, tested and corrected.</div>
-  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <p class="related"><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog/">Blog</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

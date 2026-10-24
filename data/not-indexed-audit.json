@@ -1,0 +1,4466 @@
+{
+  "ranAt": "2026-10-18T10:17:43.251Z",
+  "snapshotRanAt": "2026-10-17T09:55:55.696Z",
+  "notIndexedTotal": 631,
+  "fixable": 0,
+  "waitingCrawl": 631,
+  "stateTally": {
+    "WAITING_CRAWL": 631
+  },
+  "coverageTally": {
+    "Discovered - currently not indexed": 255,
+    "URL is unknown to Google": 374,
+    "Crawled - currently not indexed": 2
+  },
+  "byCategory": {
+    "fitness": 10,
+    "food": 28,
+    "regional": 13,
+    "science": 40,
+    "auto": 18,
+    "conversion": 30,
+    "guides": 21,
+    "health": 23,
+    "math": 84,
+    "tech": 19,
+    "business": 32,
+    "construction": 30,
+    "career": 39,
+    "engineering": 56,
+    "lifestyle": 8,
+    "family": 19,
+    "finance": 80,
+    "everyday": 13,
+    "utilities": 27,
+    "homegarden": 16,
+    "education": 12,
+    "terms": 1,
+    "privacy": 1,
+    "about": 1,
+    "blog": 1,
+    "hub": 5,
+    "disclaimer-general": 1,
+    "contact": 1,
+    "disclaimer-health": 1,
+    "editorial-policy": 1
+  },
+  "results": [
+    {
+      "url": "/fitness/running-pace/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\fitness\\running-pace\\index.html"
+    },
+    {
+      "url": "/food/daily-calorie/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\daily-calorie\\index.html"
+    },
+    {
+      "url": "/regional/rd-calculator/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\regional\\rd-calculator\\index.html"
+    },
+    {
+      "url": "/science/density/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\density\\index.html"
+    },
+    {
+      "url": "/auto/mileage-calculator/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\auto\\mileage-calculator\\index.html"
+    },
+    {
+      "url": "/conversion/volume/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\volume\\index.html"
+    },
+    {
+      "url": "/food/daily-water-intake/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\daily-water-intake\\index.html"
+    },
+    {
+      "url": "/guides/bmi/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\guides\\bmi.html"
+    },
+    {
+      "url": "/health/body-fat/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\health\\body-fat\\index.html"
+    },
+    {
+      "url": "/math/percent-change/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\percent-change\\index.html"
+    },
+    {
+      "url": "/tech/video-size/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\tech\\video-size\\index.html"
+    },
+    {
+      "url": "/business/burn-rate/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\burn-rate\\index.html"
+    },
+    {
+      "url": "/construction/stairs/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\stairs\\index.html"
+    },
+    {
+      "url": "/career/bonus-calc/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\bonus-calc\\index.html"
+    },
+    {
+      "url": "/construction/wallpaper/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\wallpaper\\index.html"
+    },
+    {
+      "url": "/engineering/capacitor/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\capacitor\\index.html"
+    },
+    {
+      "url": "/food/meal-prep/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\meal-prep\\index.html"
+    },
+    {
+      "url": "/guides/discount/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\guides\\discount.html"
+    },
+    {
+      "url": "/lifestyle/flight-cost-per-hour/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\lifestyle\\flight-cost-per-hour\\index.html"
+    },
+    {
+      "url": "/science/momentum/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\momentum\\index.html"
+    },
+    {
+      "url": "/career/pay-gap/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\pay-gap\\index.html"
+    },
+    {
+      "url": "/engineering/battery-life/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\battery-life\\index.html"
+    },
+    {
+      "url": "/family/college-savings/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\family\\college-savings\\index.html"
+    },
+    {
+      "url": "/finance/savings-goal/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\savings-goal\\index.html"
+    },
+    {
+      "url": "/business/freelance-rate/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\freelance-rate\\index.html"
+    },
+    {
+      "url": "/construction/mulch/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\mulch\\index.html"
+    },
+    {
+      "url": "/everyday/paint/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\everyday\\paint\\index.html"
+    },
+    {
+      "url": "/health/bsa/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\health\\bsa\\index.html"
+    },
+    {
+      "url": "/lifestyle/parental-leave/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\lifestyle\\parental-leave\\index.html"
+    },
+    {
+      "url": "/utilities/file-size/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\file-size\\index.html"
+    },
+    {
+      "url": "/career/stock-options/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\stock-options\\index.html"
+    },
+    {
+      "url": "/conversion/temperature/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\temperature\\index.html"
+    },
+    {
+      "url": "/engineering/rpm/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\rpm\\index.html"
+    },
+    {
+      "url": "/utilities/salary-hourly/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\salary-hourly\\index.html"
+    },
+    {
+      "url": "/auto/oil-change/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\auto\\oil-change\\index.html"
+    },
+    {
+      "url": "/career/side-hustle/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\side-hustle\\index.html"
+    },
+    {
+      "url": "/conversion/time-conv/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\time-conv\\index.html"
+    },
+    {
+      "url": "/engineering/horsepower/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\horsepower\\index.html"
+    },
+    {
+      "url": "/finance/npv/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\npv\\index.html"
+    },
+    {
+      "url": "/food/keto-macro/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\keto-macro\\index.html"
+    },
+    {
+      "url": "/math/exponent/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\exponent\\index.html"
+    },
+    {
+      "url": "/science/acceleration/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\acceleration\\index.html"
+    },
+    {
+      "url": "/utilities/area-calc/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\area-calc\\index.html"
+    },
+    {
+      "url": "/auto/car-insurance/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\auto\\car-insurance\\index.html"
+    },
+    {
+      "url": "/business/break-even-revenue/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\break-even-revenue\\index.html"
+    },
+    {
+      "url": "/guides/salary/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\guides\\salary.html"
+    },
+    {
+      "url": "/construction/excavation/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\excavation\\index.html"
+    },
+    {
+      "url": "/engineering/impedance/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\impedance\\index.html"
+    },
+    {
+      "url": "/finance/roi/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\roi\\index.html"
+    },
+    {
+      "url": "/food/vegan-protein/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\vegan-protein\\index.html"
+    },
+    {
+      "url": "/health/blood-pressure/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\health\\blood-pressure\\index.html"
+    },
+    {
+      "url": "/homegarden/compost/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\homegarden\\compost\\index.html"
+    },
+    {
+      "url": "/education/scholarship-calc/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\education\\scholarship-calc\\index.html"
+    },
+    {
+      "url": "/engineering/beam-load/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\beam-load\\index.html"
+    },
+    {
+      "url": "/food/grocery-per-person/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\grocery-per-person\\index.html"
+    },
+    {
+      "url": "/regional/wedding-budget-shaadi/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\regional\\wedding-budget-shaadi\\index.html"
+    },
+    {
+      "url": "/construction/paint-quantity/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\paint-quantity\\index.html"
+    },
+    {
+      "url": "/conversion/clothing-size/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\clothing-size\\index.html"
+    },
+    {
+      "url": "/engineering/hydraulic/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\hydraulic\\index.html"
+    },
+    {
+      "url": "/guides/debt-payoff/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\guides\\debt-payoff.html"
+    },
+    {
+      "url": "/tech/hosting-cost/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\tech\\hosting-cost\\index.html"
+    },
+    {
+      "url": "/business/saas-unit-metrics/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\saas-unit-metrics\\index.html"
+    },
+    {
+      "url": "/utilities/mileage-calc/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\mileage-calc\\index.html"
+    },
+    {
+      "url": "/business/break-even-point/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\break-even-point\\index.html"
+    },
+    {
+      "url": "/family/maternity-leave-finance/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\family\\maternity-leave-finance\\index.html"
+    },
+    {
+      "url": "/fitness/deadlift-standards/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\fitness\\deadlift-standards\\index.html"
+    },
+    {
+      "url": "/conversion/torque-conv/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\torque-conv\\index.html"
+    },
+    {
+      "url": "/engineering/belt-length/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\belt-length\\index.html"
+    },
+    {
+      "url": "/family/paternity-leave/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\family\\paternity-leave\\index.html"
+    },
+    {
+      "url": "/utilities/gcd-lcm/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\gcd-lcm\\index.html"
+    },
+    {
+      "url": "/engineering/flow-rate/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\flow-rate\\index.html"
+    },
+    {
+      "url": "/business/markup-margin/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\markup-margin\\index.html"
+    },
+    {
+      "url": "/construction/paver-calculator/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\paver-calculator\\index.html"
+    },
+    {
+      "url": "/family/babysitter-rate/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\family\\babysitter-rate\\index.html"
+    },
+    {
+      "url": "/math/modular/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\modular\\index.html"
+    },
+    {
+      "url": "/business/working-capital/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\working-capital\\index.html"
+    },
+    {
+      "url": "/career/redundancy-pay/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\redundancy-pay\\index.html"
+    },
+    {
+      "url": "/finance/rent-vs-buy/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\rent-vs-buy\\index.html"
+    },
+    {
+      "url": "/fitness/burpee-test/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\fitness\\burpee-test\\index.html"
+    },
+    {
+      "url": "/food/calorie-per-meal/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\calorie-per-meal\\index.html"
+    },
+    {
+      "url": "/health/calorie-deficit/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\health\\calorie-deficit\\index.html"
+    },
+    {
+      "url": "/lifestyle/pet-food-cost/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\lifestyle\\pet-food-cost\\index.html"
+    },
+    {
+      "url": "/auto/bike-fuel/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\auto\\bike-fuel\\index.html"
+    },
+    {
+      "url": "/business/cash-flow-statement/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\cash-flow-statement\\index.html"
+    },
+    {
+      "url": "/career/self-employment-tax/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\self-employment-tax\\index.html"
+    },
+    {
+      "url": "/conversion/density-conv/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\density-conv\\index.html"
+    },
+    {
+      "url": "/food/rice-water/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\rice-water\\index.html"
+    },
+    {
+      "url": "/fitness/row-standards/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\fitness\\row-standards\\index.html"
+    },
+    {
+      "url": "/engineering/transformer-ratio/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\transformer-ratio\\index.html"
+    },
+    {
+      "url": "/utilities/age-exact/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\age-exact\\index.html"
+    },
+    {
+      "url": "/auto/fuel-efficiency/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\auto\\fuel-efficiency\\index.html"
+    },
+    {
+      "url": "/career/retirement-contrib/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\retirement-contrib\\index.html"
+    },
+    {
+      "url": "/engineering/hydraulic-power/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\hydraulic-power\\index.html"
+    },
+    {
+      "url": "/math/geometric-seq/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\geometric-seq\\index.html"
+    },
+    {
+      "url": "/business/gross-margin/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\gross-margin\\index.html"
+    },
+    {
+      "url": "/conversion/molarity-conv/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\molarity-conv\\index.html"
+    },
+    {
+      "url": "/fitness/cadence-calc/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\fitness\\cadence-calc\\index.html"
+    },
+    {
+      "url": "/food/protein-per-dollar/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\protein-per-dollar\\index.html"
+    },
+    {
+      "url": "/tech/json-formatter/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\tech\\json-formatter\\index.html"
+    },
+    {
+      "url": "/business/goal-seek-price/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\goal-seek-price\\index.html"
+    },
+    {
+      "url": "/construction/footing-size/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\footing-size\\index.html"
+    },
+    {
+      "url": "/fitness/stride-length/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\fitness\\stride-length\\index.html"
+    },
+    {
+      "url": "/food/sodium-intake/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\sodium-intake\\index.html"
+    },
+    {
+      "url": "/health/body-type/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\health\\body-type\\index.html"
+    },
+    {
+      "url": "/utilities/password-entropy/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\password-entropy\\index.html"
+    },
+    {
+      "url": "/career/job-offer-compare/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\job-offer-compare\\index.html"
+    },
+    {
+      "url": "/construction/gravel-tonnage/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\gravel-tonnage\\index.html"
+    },
+    {
+      "url": "/finance/cash-flow/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\cash-flow\\index.html"
+    },
+    {
+      "url": "/engineering/pipe-flow/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\pipe-flow\\index.html"
+    },
+    {
+      "url": "/food/pizza-slices/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\pizza-slices\\index.html"
+    },
+    {
+      "url": "/guides/hourly-rate/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\guides\\hourly-rate.html"
+    },
+    {
+      "url": "/math/normal-dist/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\normal-dist\\index.html"
+    },
+    {
+      "url": "/business/market-share/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\market-share\\index.html"
+    },
+    {
+      "url": "/career/severance-calc/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\severance-calc\\index.html"
+    },
+    {
+      "url": "/conversion/roman-numeral/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\roman-numeral\\index.html"
+    },
+    {
+      "url": "/everyday/work-hours-weekly/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\everyday\\work-hours-weekly\\index.html"
+    },
+    {
+      "url": "/food/meal-prep-size/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\meal-prep-size\\index.html"
+    },
+    {
+      "url": "/health/calorie-goal/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\health\\calorie-goal\\index.html"
+    },
+    {
+      "url": "/career/side-hustle-profit/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\side-hustle-profit\\index.html"
+    },
+    {
+      "url": "/conversion/ppm-conv/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\ppm-conv\\index.html"
+    },
+    {
+      "url": "/fitness/bodyweight-ratio/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\fitness\\bodyweight-ratio\\index.html"
+    },
+    {
+      "url": "/food/sugar-limit/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\sugar-limit\\index.html"
+    },
+    {
+      "url": "/conversion/thermal-conductivity/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\thermal-conductivity\\index.html"
+    },
+    {
+      "url": "/engineering/structural-load/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\structural-load\\index.html"
+    },
+    {
+      "url": "/everyday/compound-savings/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\everyday\\compound-savings\\index.html"
+    },
+    {
+      "url": "/finance/future-value/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\future-value\\index.html"
+    },
+    {
+      "url": "/lifestyle/furniture-assembly/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\lifestyle\\furniture-assembly\\index.html"
+    },
+    {
+      "url": "/business/csat-score/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\csat-score\\index.html"
+    },
+    {
+      "url": "/career/wfh-savings/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\wfh-savings\\index.html"
+    },
+    {
+      "url": "/engineering/electrical-energy/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\electrical-energy\\index.html"
+    },
+    {
+      "url": "/food/oven-conversion/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\oven-conversion\\index.html"
+    },
+    {
+      "url": "/math/surface-area-3d/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\surface-area-3d\\index.html"
+    },
+    {
+      "url": "/auto/cargo-volume/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\auto\\cargo-volume\\index.html"
+    },
+    {
+      "url": "/engineering/resistor-combination/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\resistor-combination\\index.html"
+    },
+    {
+      "url": "/guides/ev-vs-petrol/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\guides\\ev-vs-petrol.html"
+    },
+    {
+      "url": "/math/complex-modulus/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\complex-modulus\\index.html"
+    },
+    {
+      "url": "/business/ab-test-significance/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\ab-test-significance\\index.html"
+    },
+    {
+      "url": "/engineering/capacitor-energy/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\capacitor-energy\\index.html"
+    },
+    {
+      "url": "/construction/septic-size/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\septic-size\\index.html"
+    },
+    {
+      "url": "/tech/awg-reference/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\tech\\awg-reference\\index.html"
+    },
+    {
+      "url": "/auto/bus-vs-car/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\auto\\bus-vs-car\\index.html"
+    },
+    {
+      "url": "/career/shift-differential/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\shift-differential\\index.html"
+    },
+    {
+      "url": "/construction/plaster/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\plaster\\index.html"
+    },
+    {
+      "url": "/engineering/cable-sizing/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\cable-sizing\\index.html"
+    },
+    {
+      "url": "/homegarden/firepit-size/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\homegarden\\firepit-size\\index.html"
+    },
+    {
+      "url": "/math/golden-ratio/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\golden-ratio\\index.html"
+    },
+    {
+      "url": "/engineering/ventilation-cfm/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\ventilation-cfm\\index.html"
+    },
+    {
+      "url": "/science/hydrostatic-pressure/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\hydrostatic-pressure\\index.html"
+    },
+    {
+      "url": "/construction/stair-stringer/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\stair-stringer\\index.html"
+    },
+    {
+      "url": "/auto/power-to-weight/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\auto\\power-to-weight\\index.html"
+    },
+    {
+      "url": "/engineering/torque-wrench/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\torque-wrench\\index.html"
+    },
+    {
+      "url": "/finance/rental-yield/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\rental-yield\\index.html"
+    },
+    {
+      "url": "/construction/soffit-area/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\soffit-area\\index.html"
+    },
+    {
+      "url": "/engineering/bearing-load/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\bearing-load\\index.html"
+    },
+    {
+      "url": "/engineering/engine-efficiency/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\engine-efficiency\\index.html"
+    },
+    {
+      "url": "/tech/backup-size/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\tech\\backup-size\\index.html"
+    },
+    {
+      "url": "/homegarden/grout-calc/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\homegarden\\grout-calc\\index.html"
+    },
+    {
+      "url": "/math/pascal-triangle/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\pascal-triangle\\index.html"
+    },
+    {
+      "url": "/construction/fence-panel/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\fence-panel\\index.html"
+    },
+    {
+      "url": "/engineering/tank-volume/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\tank-volume\\index.html"
+    },
+    {
+      "url": "/construction/gravel-driveway/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\gravel-driveway\\index.html"
+    },
+    {
+      "url": "/engineering/heat-exchanger/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\heat-exchanger\\index.html"
+    },
+    {
+      "url": "/engineering/pcb-trace/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\pcb-trace\\index.html"
+    },
+    {
+      "url": "/tech/dbm-watts/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\tech\\dbm-watts\\index.html"
+    },
+    {
+      "url": "/everyday/heat-pump-savings/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\everyday\\heat-pump-savings\\index.html"
+    },
+    {
+      "url": "/health/ponderal-index/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\health\\ponderal-index\\index.html"
+    },
+    {
+      "url": "/math/bayes-theorem/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\bayes-theorem\\index.html"
+    },
+    {
+      "url": "/tech/api-cost/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\tech\\api-cost\\index.html"
+    },
+    {
+      "url": "/engineering/pulley/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\pulley\\index.html"
+    },
+    {
+      "url": "/construction/drywall-sheets/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\drywall-sheets\\index.html"
+    },
+    {
+      "url": "/finance/bond-yield/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\bond-yield\\index.html"
+    },
+    {
+      "url": "/guides/math-statistics/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\guides\\math-statistics.html"
+    },
+    {
+      "url": "/math/slope-intercept/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\slope-intercept\\index.html"
+    },
+    {
+      "url": "/science/charles-law/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\charles-law\\index.html"
+    },
+    {
+      "url": "/engineering/shaft-torsion/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\shaft-torsion\\index.html"
+    },
+    {
+      "url": "/finance/perpetuity/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\perpetuity\\index.html"
+    },
+    {
+      "url": "/guides/homegarden/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\guides\\homegarden.html"
+    },
+    {
+      "url": "/science/stefan-boltzmann/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\stefan-boltzmann\\index.html"
+    },
+    {
+      "url": "/engineering/pulley-speed/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\pulley-speed\\index.html"
+    },
+    {
+      "url": "/guides/family/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\guides\\family.html"
+    },
+    {
+      "url": "/engineering/manning-flow/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\manning-flow\\index.html"
+    },
+    {
+      "url": "/tech/storage-array/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\tech\\storage-array\\index.html"
+    },
+    {
+      "url": "/guides/everyday/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\guides\\everyday.html"
+    },
+    {
+      "url": "/engineering/radiation-shielding/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\radiation-shielding\\index.html"
+    },
+    {
+      "url": "/guides/cagr/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\guides\\cagr.html"
+    },
+    {
+      "url": "/math/significant-figures/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\significant-figures\\index.html"
+    },
+    {
+      "url": "/finance/annuity-payout/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\annuity-payout\\index.html"
+    },
+    {
+      "url": "/engineering/rcf-gforce/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\rcf-gforce\\index.html"
+    },
+    {
+      "url": "/science/angular-momentum/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\angular-momentum\\index.html"
+    },
+    {
+      "url": "/math/sector-area/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\sector-area\\index.html"
+    },
+    {
+      "url": "/finance/retirement-withdrawal/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\retirement-withdrawal\\index.html"
+    },
+    {
+      "url": "/guides/rent-vs-buy/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\guides\\rent-vs-buy.html"
+    },
+    {
+      "url": "/math/angle-between-vectors/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\angle-between-vectors\\index.html"
+    },
+    {
+      "url": "/math/annulus-area/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\annulus-area\\index.html"
+    },
+    {
+      "url": "/math/law-of-sines/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\law-of-sines\\index.html"
+    },
+    {
+      "url": "/science/angular-velocity/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\angular-velocity\\index.html"
+    },
+    {
+      "url": "/finance/debt-snowball/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\debt-snowball\\index.html"
+    },
+    {
+      "url": "/math/exponential-prob/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\exponential-prob\\index.html"
+    },
+    {
+      "url": "/math/expected-value/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\expected-value\\index.html"
+    },
+    {
+      "url": "/finance/student-loan-repayment/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\student-loan-repayment\\index.html"
+    },
+    {
+      "url": "/finance/mortgage-refinance/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\mortgage-refinance\\index.html"
+    },
+    {
+      "url": "/finance/crypto-gains/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\crypto-gains\\index.html"
+    },
+    {
+      "url": "/math/negative-binomial/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\negative-binomial\\index.html"
+    },
+    {
+      "url": "/math/ellipse-perimeter/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\ellipse-perimeter\\index.html"
+    },
+    {
+      "url": "/math/rectangular-solid/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\rectangular-solid\\index.html"
+    },
+    {
+      "url": "/finance/gross-rent-multiplier/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\gross-rent-multiplier\\index.html"
+    },
+    {
+      "url": "/math/icosahedron-volume/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\icosahedron-volume\\index.html"
+    },
+    {
+      "url": "/math/rate-x-time/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\rate-x-time\\index.html"
+    },
+    {
+      "url": "/finance/coverage-ratio/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\coverage-ratio\\index.html"
+    },
+    {
+      "url": "/math/work-rate-together/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\work-rate-together\\index.html"
+    },
+    {
+      "url": "/math/mixture-percent/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\mixture-percent\\index.html"
+    },
+    {
+      "url": "/finance/fico-simulator/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\fico-simulator\\index.html"
+    },
+    {
+      "url": "/finance/portfolio-return/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\portfolio-return\\index.html"
+    },
+    {
+      "url": "/finance/asset-turnover/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\asset-turnover\\index.html"
+    },
+    {
+      "url": "/finance/franchise-cost/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\franchise-cost\\index.html"
+    },
+    {
+      "url": "/finance/rmd/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\rmd\\index.html"
+    },
+    {
+      "url": "/finance/price-per-sqft/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\price-per-sqft\\index.html"
+    },
+    {
+      "url": "/finance/purchasing-power/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\purchasing-power\\index.html"
+    },
+    {
+      "url": "/finance/portfolio-beta/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\portfolio-beta\\index.html"
+    },
+    {
+      "url": "/finance/points-breakeven/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\points-breakeven\\index.html"
+    },
+    {
+      "url": "/terms/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\terms.html"
+    },
+    {
+      "url": "/privacy/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\privacy.html"
+    },
+    {
+      "url": "/about/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\about.html"
+    },
+    {
+      "url": "/guides/compound-interest/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\guides\\compound-interest.html"
+    },
+    {
+      "url": "/blog/concrete-patio-math/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\blog\\concrete-patio-math.html"
+    },
+    {
+      "url": "/business/churn/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\churn\\index.html"
+    },
+    {
+      "url": "/career/contractor-rate/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\contractor-rate\\index.html"
+    },
+    {
+      "url": "/construction/roofing/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\roofing\\index.html"
+    },
+    {
+      "url": "/hub/conversion/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\hub\\conversion\\index.html"
+    },
+    {
+      "url": "/education/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\education\\index.html"
+    },
+    {
+      "url": "/education/study-time/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\education\\study-time\\index.html"
+    },
+    {
+      "url": "/engineering/voltage-drop/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\voltage-drop\\index.html"
+    },
+    {
+      "url": "/hub/everyday/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\hub\\everyday\\index.html"
+    },
+    {
+      "url": "/finance/simple-interest/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\simple-interest\\index.html"
+    },
+    {
+      "url": "/finance/auto-loan/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\auto-loan\\index.html"
+    },
+    {
+      "url": "/food/weight-loss-time/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\weight-loss-time\\index.html"
+    },
+    {
+      "url": "/food/calorie-burned/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\calorie-burned\\index.html"
+    },
+    {
+      "url": "/health/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\health\\index.html"
+    },
+    {
+      "url": "/health/heart-rate/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\health\\heart-rate\\index.html"
+    },
+    {
+      "url": "/homegarden/curtain-length/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\homegarden\\curtain-length\\index.html"
+    },
+    {
+      "url": "/homegarden/rug-size/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\homegarden\\rug-size\\index.html"
+    },
+    {
+      "url": "/regional/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\regional\\index.html"
+    },
+    {
+      "url": "/hub/science/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\hub\\science\\index.html"
+    },
+    {
+      "url": "/tech/bandwidth-calc/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\tech\\bandwidth-calc\\index.html"
+    },
+    {
+      "url": "/utilities/hash-gen/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\hash-gen\\index.html"
+    },
+    {
+      "url": "/guides/emi/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\guides\\emi.html"
+    },
+    {
+      "url": "/business/profit-margin/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\profit-margin\\index.html"
+    },
+    {
+      "url": "/career/salary-negotiation/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\salary-negotiation\\index.html"
+    },
+    {
+      "url": "/everyday/date-diff/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\everyday\\date-diff\\index.html"
+    },
+    {
+      "url": "/everyday/statute-of-limitations/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\everyday\\statute-of-limitations\\index.html"
+    },
+    {
+      "url": "/everyday/cost-of-living-compare/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\everyday\\cost-of-living-compare\\index.html"
+    },
+    {
+      "url": "/health/bmr/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\health\\bmr\\index.html"
+    },
+    {
+      "url": "/family/bereavement-checklist/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\family\\bereavement-checklist\\index.html"
+    },
+    {
+      "url": "/regional/australia-take-home-salary/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\regional\\australia-take-home-salary\\index.html"
+    },
+    {
+      "url": "/regional/colombia-take-home-salary/",
+      "coverage": "Discovered - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\regional\\colombia-take-home-salary\\index.html"
+    },
+    {
+      "url": "/health/bmi/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\health\\bmi\\index.html"
+    },
+    {
+      "url": "/math/percentage/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\percentage\\index.html"
+    },
+    {
+      "url": "/tech/data-usage/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\tech\\data-usage\\index.html"
+    },
+    {
+      "url": "/utilities/password-gen/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\password-gen\\index.html"
+    },
+    {
+      "url": "/career/tax-bracket/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\tax-bracket\\index.html"
+    },
+    {
+      "url": "/construction/drywall/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\drywall\\index.html"
+    },
+    {
+      "url": "/fitness/max-heart-rate/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\fitness\\max-heart-rate\\index.html"
+    },
+    {
+      "url": "/homegarden/deck-stain/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\homegarden\\deck-stain\\index.html"
+    },
+    {
+      "url": "/regional/ppf-calculator/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\regional\\ppf-calculator\\index.html"
+    },
+    {
+      "url": "/science/force/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\force\\index.html"
+    },
+    {
+      "url": "/career/overtime-pay/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\overtime-pay\\index.html"
+    },
+    {
+      "url": "/conversion/angle/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\angle\\index.html"
+    },
+    {
+      "url": "/engineering/led-resistor/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\led-resistor\\index.html"
+    },
+    {
+      "url": "/finance/retirement/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\retirement\\index.html"
+    },
+    {
+      "url": "/food/cooking-time/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\cooking-time\\index.html"
+    },
+    {
+      "url": "/homegarden/ac-size/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\homegarden\\ac-size\\index.html"
+    },
+    {
+      "url": "/math/combinations/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\combinations\\index.html"
+    },
+    {
+      "url": "/utilities/uuid-gen/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\uuid-gen\\index.html"
+    },
+    {
+      "url": "/auto/ev-vs-gas-petrol/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\auto\\ev-vs-gas-petrol\\index.html"
+    },
+    {
+      "url": "/business/mrr/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\mrr\\index.html"
+    },
+    {
+      "url": "/education/test-score/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\education\\test-score\\index.html"
+    },
+    {
+      "url": "/health/macros/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\health\\macros\\index.html"
+    },
+    {
+      "url": "/business/nps/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\nps\\index.html"
+    },
+    {
+      "url": "/conversion/pressure-conv/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\pressure-conv\\index.html"
+    },
+    {
+      "url": "/education/exam-countdown/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\education\\exam-countdown\\index.html"
+    },
+    {
+      "url": "/homegarden/generator-size/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\homegarden\\generator-size\\index.html"
+    },
+    {
+      "url": "/science/doppler/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\doppler\\index.html"
+    },
+    {
+      "url": "/auto/car-maintenance/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\auto\\car-maintenance\\index.html"
+    },
+    {
+      "url": "/career/401k-match/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\401k-match\\index.html"
+    },
+    {
+      "url": "/conversion/frequency-conv/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\frequency-conv\\index.html"
+    },
+    {
+      "url": "/education/words-pages/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\education\\words-pages\\index.html"
+    },
+    {
+      "url": "/engineering/wire-gauge/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\wire-gauge\\index.html"
+    },
+    {
+      "url": "/family/maternity-leave/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\family\\maternity-leave\\index.html"
+    },
+    {
+      "url": "/food/eat-out-vs-cook/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\eat-out-vs-cook\\index.html"
+    },
+    {
+      "url": "/auto/tire-size/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\auto\\tire-size\\index.html"
+    },
+    {
+      "url": "/business/pricing/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\pricing\\index.html"
+    },
+    {
+      "url": "/construction/soil/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\soil\\index.html"
+    },
+    {
+      "url": "/education/citation/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\education\\citation\\index.html"
+    },
+    {
+      "url": "/family/life-insurance/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\family\\life-insurance\\index.html"
+    },
+    {
+      "url": "/finance/sales-tax/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\sales-tax\\index.html"
+    },
+    {
+      "url": "/food/fast-food-calories/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\fast-food-calories\\index.html"
+    },
+    {
+      "url": "/guides/glossary/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\guides\\glossary.html"
+    },
+    {
+      "url": "/business/inventory/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\inventory\\index.html"
+    },
+    {
+      "url": "/construction/bricks/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\bricks\\index.html"
+    },
+    {
+      "url": "/health/vo2-max/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\health\\vo2-max\\index.html"
+    },
+    {
+      "url": "/homegarden/grass-seed/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\homegarden\\grass-seed\\index.html"
+    },
+    {
+      "url": "/career/crypto-tax/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\crypto-tax\\index.html"
+    },
+    {
+      "url": "/conversion/force-conv/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\force-conv\\index.html"
+    },
+    {
+      "url": "/finance/irr/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\irr\\index.html"
+    },
+    {
+      "url": "/health/pregnancy-weight/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\health\\pregnancy-weight\\index.html"
+    },
+    {
+      "url": "/utilities/volume-calc/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\volume-calc\\index.html"
+    },
+    {
+      "url": "/career/career-gap/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\career-gap\\index.html"
+    },
+    {
+      "url": "/conversion/fuel-efficiency-converter/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\fuel-efficiency-converter\\index.html"
+    },
+    {
+      "url": "/science/velocity/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\velocity\\index.html"
+    },
+    {
+      "url": "/utilities/shipping-cost/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\shipping-cost\\index.html"
+    },
+    {
+      "url": "/career/remortgage-calc/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\remortgage-calc\\index.html"
+    },
+    {
+      "url": "/construction/tile-calculator/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\tile-calculator\\index.html"
+    },
+    {
+      "url": "/conversion/cooking-conv/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\cooking-conv\\index.html"
+    },
+    {
+      "url": "/family/college-savings-monthly/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\family\\college-savings-monthly\\index.html"
+    },
+    {
+      "url": "/math/average/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\average\\index.html"
+    },
+    {
+      "url": "/tech/image-file-size/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\tech\\image-file-size\\index.html"
+    },
+    {
+      "url": "/utilities/salary-biweekly/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\salary-biweekly\\index.html"
+    },
+    {
+      "url": "/business/discount-rate/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\discount-rate\\index.html"
+    },
+    {
+      "url": "/career/mortgage-afford/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\mortgage-afford\\index.html"
+    },
+    {
+      "url": "/family/childcare-cost-annual/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\family\\childcare-cost-annual\\index.html"
+    },
+    {
+      "url": "/math/pythagorean/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\pythagorean\\index.html"
+    },
+    {
+      "url": "/auto/walking-transit/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\auto\\walking-transit\\index.html"
+    },
+    {
+      "url": "/career/tax-refund/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\tax-refund\\index.html"
+    },
+    {
+      "url": "/construction/rebar-calculator/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\rebar-calculator\\index.html"
+    },
+    {
+      "url": "/finance/annuity/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\annuity\\index.html"
+    },
+    {
+      "url": "/food/coffee-cost-per-cup/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\coffee-cost-per-cup\\index.html"
+    },
+    {
+      "url": "/health/gfr/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\health\\gfr\\index.html"
+    },
+    {
+      "url": "/homegarden/pool-size/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\homegarden\\pool-size\\index.html"
+    },
+    {
+      "url": "/lifestyle/subscription-audit/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\lifestyle\\subscription-audit\\index.html"
+    },
+    {
+      "url": "/science/lens/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\lens\\index.html"
+    },
+    {
+      "url": "/career/invoicing-calc/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\invoicing-calc\\index.html"
+    },
+    {
+      "url": "/conversion/currency-conv/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\currency-conv\\index.html"
+    },
+    {
+      "url": "/everyday/sleep-calc/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\everyday\\sleep-calc\\index.html"
+    },
+    {
+      "url": "/finance/inflation/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\inflation\\index.html"
+    },
+    {
+      "url": "/food/tea-vs-coffee/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\tea-vs-coffee\\index.html"
+    },
+    {
+      "url": "/math/distance/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\distance\\index.html"
+    },
+    {
+      "url": "/utilities/ratio-simplifier/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\ratio-simplifier\\index.html"
+    },
+    {
+      "url": "/auto/speed-distance-time/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\auto\\speed-distance-time\\index.html"
+    },
+    {
+      "url": "/business/invoice-due-date/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\invoice-due-date\\index.html"
+    },
+    {
+      "url": "/career/employment-status/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\employment-status\\index.html"
+    },
+    {
+      "url": "/education/homework-time/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\education\\homework-time\\index.html"
+    },
+    {
+      "url": "/food/sugar-intake/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\sugar-intake\\index.html"
+    },
+    {
+      "url": "/guides/unit-conversion/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\guides\\unit-conversion.html"
+    },
+    {
+      "url": "/math/slope/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\slope\\index.html"
+    },
+    {
+      "url": "/science/frequency/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\frequency\\index.html"
+    },
+    {
+      "url": "/career/commission-plan/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\commission-plan\\index.html"
+    },
+    {
+      "url": "/conversion/power-conv/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\power-conv\\index.html"
+    },
+    {
+      "url": "/utilities/prime-check/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\prime-check\\index.html"
+    },
+    {
+      "url": "/career/freelance-budget/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\freelance-budget\\index.html"
+    },
+    {
+      "url": "/conversion/voltage-conv/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\voltage-conv\\index.html"
+    },
+    {
+      "url": "/engineering/sound-level/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\sound-level\\index.html"
+    },
+    {
+      "url": "/health/body-fat-navy/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\health\\body-fat-navy\\index.html"
+    },
+    {
+      "url": "/homegarden/stair-calculator/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\homegarden\\stair-calculator\\index.html"
+    },
+    {
+      "url": "/utilities/rounding-calc/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\rounding-calc\\index.html"
+    },
+    {
+      "url": "/conversion/radiation-conv/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\radiation-conv\\index.html"
+    },
+    {
+      "url": "/engineering/shaft-power/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\shaft-power\\index.html"
+    },
+    {
+      "url": "/family/screen-time/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\family\\screen-time\\index.html"
+    },
+    {
+      "url": "/utilities/coin-flip/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\coin-flip\\index.html"
+    },
+    {
+      "url": "/engineering/spring-rate/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\spring-rate\\index.html"
+    },
+    {
+      "url": "/finance/refinance/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\refinance\\index.html"
+    },
+    {
+      "url": "/homegarden/closet-organizer/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\homegarden\\closet-organizer\\index.html"
+    },
+    {
+      "url": "/science/gravitational-force/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\gravitational-force\\index.html"
+    },
+    {
+      "url": "/business/revenue-per-employee/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\revenue-per-employee\\index.html"
+    },
+    {
+      "url": "/career/freelance-daily/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\freelance-daily\\index.html"
+    },
+    {
+      "url": "/construction/deck-calculator/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\deck-calculator\\index.html"
+    },
+    {
+      "url": "/conversion/viscosity-conv/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\viscosity-conv\\index.html"
+    },
+    {
+      "url": "/engineering/resonant-frequency/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\resonant-frequency\\index.html"
+    },
+    {
+      "url": "/tech/base64-encode/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\tech\\base64-encode\\index.html"
+    },
+    {
+      "url": "/utilities/date-add/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\date-add\\index.html"
+    },
+    {
+      "url": "/auto/stopping-distance/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\auto\\stopping-distance\\index.html"
+    },
+    {
+      "url": "/career/monthly-goal/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\monthly-goal\\index.html"
+    },
+    {
+      "url": "/conversion/bit-rate-conv/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\bit-rate-conv\\index.html"
+    },
+    {
+      "url": "/finance/currency-converter/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\currency-converter\\index.html"
+    },
+    {
+      "url": "/food/egg-boil/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\egg-boil\\index.html"
+    },
+    {
+      "url": "/science/molarity/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\molarity\\index.html"
+    },
+    {
+      "url": "/business/business-valuation/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\business-valuation\\index.html"
+    },
+    {
+      "url": "/conversion/luminance-conv/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\luminance-conv\\index.html"
+    },
+    {
+      "url": "/family/diaper-needs/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\family\\diaper-needs\\index.html"
+    },
+    {
+      "url": "/food/smoothie-calories/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\smoothie-calories\\index.html"
+    },
+    {
+      "url": "/science/dilution/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\dilution\\index.html"
+    },
+    {
+      "url": "/utilities/units-per/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\units-per\\index.html"
+    },
+    {
+      "url": "/career/benefits-value/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\benefits-value\\index.html"
+    },
+    {
+      "url": "/construction/rebar-calc/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\rebar-calc\\index.html"
+    },
+    {
+      "url": "/education/study-hours/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\education\\study-hours\\index.html"
+    },
+    {
+      "url": "/engineering/stress-strain/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\stress-strain\\index.html"
+    },
+    {
+      "url": "/family/kids-shoe-size/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\family\\kids-shoe-size\\index.html"
+    },
+    {
+      "url": "/math/arithmetic-seq/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\arithmetic-seq\\index.html"
+    },
+    {
+      "url": "/utilities/random-name/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\random-name\\index.html"
+    },
+    {
+      "url": "/career/pto-calc/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\pto-calc\\index.html"
+    },
+    {
+      "url": "/conversion/flow-rate-conv/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\flow-rate-conv\\index.html"
+    },
+    {
+      "url": "/finance/break-even/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\break-even\\index.html"
+    },
+    {
+      "url": "/lifestyle/car-wash-annual/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\lifestyle\\car-wash-annual\\index.html"
+    },
+    {
+      "url": "/math/polar-rect/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\polar-rect\\index.html"
+    },
+    {
+      "url": "/business/subscription-ltv/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\subscription-ltv\\index.html"
+    },
+    {
+      "url": "/conversion/paper-size-conv/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\paper-size-conv\\index.html"
+    },
+    {
+      "url": "/engineering/column-buckling/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\column-buckling\\index.html"
+    },
+    {
+      "url": "/utilities/speech-time/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\speech-time\\index.html"
+    },
+    {
+      "url": "/business/cash-conversion-cycle/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\cash-conversion-cycle\\index.html"
+    },
+    {
+      "url": "/career/cost-living-adjustment/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\cost-living-adjustment\\index.html"
+    },
+    {
+      "url": "/conversion/fraction-percent/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\fraction-percent\\index.html"
+    },
+    {
+      "url": "/family/birthday-party-cost/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\family\\birthday-party-cost\\index.html"
+    },
+    {
+      "url": "/fitness/vertical-jump/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\fitness\\vertical-jump\\index.html"
+    },
+    {
+      "url": "/auto/route-optimizer/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\auto\\route-optimizer\\index.html"
+    },
+    {
+      "url": "/construction/mortar-mix/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\mortar-mix\\index.html"
+    },
+    {
+      "url": "/homegarden/solar-panel/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\homegarden\\solar-panel\\index.html"
+    },
+    {
+      "url": "/utilities/timestamp-convert/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\timestamp-convert\\index.html"
+    },
+    {
+      "url": "/business/aov/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\aov\\index.html"
+    },
+    {
+      "url": "/engineering/concrete-mix/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\concrete-mix\\index.html"
+    },
+    {
+      "url": "/family/teen-budget/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\family\\teen-budget\\index.html"
+    },
+    {
+      "url": "/finance/present-value/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\present-value\\index.html"
+    },
+    {
+      "url": "/guides/macro-calculator/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\guides\\macro-calculator.html"
+    },
+    {
+      "url": "/math/continued-fraction/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\continued-fraction\\index.html"
+    },
+    {
+      "url": "/tech/password-generator/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\tech\\password-generator\\index.html"
+    },
+    {
+      "url": "/business/customer-ltv/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\customer-ltv\\index.html"
+    },
+    {
+      "url": "/career/salary-raise-worth/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\salary-raise-worth\\index.html"
+    },
+    {
+      "url": "/education/grade-percentage/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\education\\grade-percentage\\index.html"
+    },
+    {
+      "url": "/family/inheritance-estate/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\family\\inheritance-estate\\index.html"
+    },
+    {
+      "url": "/math/eigenvalue-2x2/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\eigenvalue-2x2\\index.html"
+    },
+    {
+      "url": "/science/spring-force/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\spring-force\\index.html"
+    },
+    {
+      "url": "/business/conversion-funnel/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\conversion-funnel\\index.html"
+    },
+    {
+      "url": "/career/stock-vesting/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\stock-vesting\\index.html"
+    },
+    {
+      "url": "/everyday/week-number/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\everyday\\week-number\\index.html"
+    },
+    {
+      "url": "/family/childcare-weekly/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\family\\childcare-weekly\\index.html"
+    },
+    {
+      "url": "/finance/loan-to-value/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\loan-to-value\\index.html"
+    },
+    {
+      "url": "/food/homebrew-abv/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\homebrew-abv\\index.html"
+    },
+    {
+      "url": "/career/vacation-days/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\vacation-days\\index.html"
+    },
+    {
+      "url": "/conversion/acceleration-conv/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\acceleration-conv\\index.html"
+    },
+    {
+      "url": "/family/baby-milestones/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\family\\baby-milestones\\index.html"
+    },
+    {
+      "url": "/finance/apr/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\apr\\index.html"
+    },
+    {
+      "url": "/regional/uk-ni/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\regional\\uk-ni\\index.html"
+    },
+    {
+      "url": "/tech/ascii-table/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\tech\\ascii-table\\index.html"
+    },
+    {
+      "url": "/career/timesheet-hours/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\timesheet-hours\\index.html"
+    },
+    {
+      "url": "/science/boyle-law/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\boyle-law\\index.html"
+    },
+    {
+      "url": "/business/retainer-value/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\retainer-value\\index.html"
+    },
+    {
+      "url": "/guides/wedding-budget/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\guides\\wedding-budget.html"
+    },
+    {
+      "url": "/regional/canada-cpp/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\regional\\canada-cpp\\index.html"
+    },
+    {
+      "url": "/auto/ebike-range/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\auto\\ebike-range\\index.html"
+    },
+    {
+      "url": "/everyday/lottery-odds/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\everyday\\lottery-odds\\index.html"
+    },
+    {
+      "url": "/family/family-tree-generation/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\family\\family-tree-generation\\index.html"
+    },
+    {
+      "url": "/homegarden/compost-bin/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\homegarden\\compost-bin\\index.html"
+    },
+    {
+      "url": "/engineering/rc-time-constant/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\rc-time-constant\\index.html"
+    },
+    {
+      "url": "/lifestyle/sourdough-hydration/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\lifestyle\\sourdough-hydration\\index.html"
+    },
+    {
+      "url": "/construction/ceiling-tile/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\ceiling-tile\\index.html"
+    },
+    {
+      "url": "/lifestyle/lawn-fertilizer/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\lifestyle\\lawn-fertilizer\\index.html"
+    },
+    {
+      "url": "/math/checksum-luhn/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\checksum-luhn\\index.html"
+    },
+    {
+      "url": "/health/hba1c-eag/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\health\\hba1c-eag\\index.html"
+    },
+    {
+      "url": "/math/run-length/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\run-length\\index.html"
+    },
+    {
+      "url": "/regional/india-take-home-salary/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\regional\\india-take-home-salary\\index.html"
+    },
+    {
+      "url": "/homegarden/ceiling-fan-size/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\homegarden\\ceiling-fan-size\\index.html"
+    },
+    {
+      "url": "/science/reynolds-number/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\reynolds-number\\index.html"
+    },
+    {
+      "url": "/everyday/sunrise-sunset-length/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\everyday\\sunrise-sunset-length\\index.html"
+    },
+    {
+      "url": "/health/map-calculator/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\health\\map-calculator\\index.html"
+    },
+    {
+      "url": "/homegarden/tree-spacing/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\homegarden\\tree-spacing\\index.html"
+    },
+    {
+      "url": "/science/pendulum/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\pendulum\\index.html"
+    },
+    {
+      "url": "/health/iv-drip-rate/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\health\\iv-drip-rate\\index.html"
+    },
+    {
+      "url": "/math/collatz/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\collatz\\index.html"
+    },
+    {
+      "url": "/math/modular-exp/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\modular-exp\\index.html"
+    },
+    {
+      "url": "/science/molality/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\molality\\index.html"
+    },
+    {
+      "url": "/tech/streaming-quality/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\tech\\streaming-quality\\index.html"
+    },
+    {
+      "url": "/health/creatinine-clearance/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\health\\creatinine-clearance\\index.html"
+    },
+    {
+      "url": "/math/norm-dist-range/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\norm-dist-range\\index.html"
+    },
+    {
+      "url": "/science/percent-yield/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\percent-yield\\index.html"
+    },
+    {
+      "url": "/construction/insulation-batts/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\insulation-batts\\index.html"
+    },
+    {
+      "url": "/math/dot-cross-product/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\dot-cross-product\\index.html"
+    },
+    {
+      "url": "/construction/rafter-length/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\rafter-length\\index.html"
+    },
+    {
+      "url": "/engineering/bolt-torque/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\bolt-torque\\index.html"
+    },
+    {
+      "url": "/construction/shingle-squares/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\shingle-squares\\index.html"
+    },
+    {
+      "url": "/math/matrix-multiply/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\matrix-multiply\\index.html"
+    },
+    {
+      "url": "/science/inclined-plane/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\inclined-plane\\index.html"
+    },
+    {
+      "url": "/engineering/lever/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\lever\\index.html"
+    },
+    {
+      "url": "/health/tdee-macro/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\health\\tdee-macro\\index.html"
+    },
+    {
+      "url": "/construction/tile-boxes/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\tile-boxes\\index.html"
+    },
+    {
+      "url": "/engineering/wind-load/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\wind-load\\index.html"
+    },
+    {
+      "url": "/finance/retirement-income/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\retirement-income\\index.html"
+    },
+    {
+      "url": "/health/gfr-estimate/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\health\\gfr-estimate\\index.html"
+    },
+    {
+      "url": "/science/terminal-velocity/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\terminal-velocity\\index.html"
+    },
+    {
+      "url": "/math/zscore-calc/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\zscore-calc\\index.html"
+    },
+    {
+      "url": "/science/snells-law/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\snells-law\\index.html"
+    },
+    {
+      "url": "/engineering/duct-size/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\duct-size\\index.html"
+    },
+    {
+      "url": "/finance/sip/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\sip\\index.html"
+    },
+    {
+      "url": "/science/mirror-equation/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\mirror-equation\\index.html"
+    },
+    {
+      "url": "/tech/click-through-rate/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\tech\\click-through-rate\\index.html"
+    },
+    {
+      "url": "/engineering/head-loss/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\head-loss\\index.html"
+    },
+    {
+      "url": "/finance/crypto-profit/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\crypto-profit\\index.html"
+    },
+    {
+      "url": "/guides/science/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\guides\\science.html"
+    },
+    {
+      "url": "/math/pearson-correlation/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\pearson-correlation\\index.html"
+    },
+    {
+      "url": "/science/mole-conversion/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\mole-conversion\\index.html"
+    },
+    {
+      "url": "/engineering/breaker-size/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\breaker-size\\index.html"
+    },
+    {
+      "url": "/finance/stock-profit/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\stock-profit\\index.html"
+    },
+    {
+      "url": "/math/confidence-interval/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\confidence-interval\\index.html"
+    },
+    {
+      "url": "/tech/video-bitrate/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\tech\\video-bitrate\\index.html"
+    },
+    {
+      "url": "/engineering/power-factor-correction/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\power-factor-correction\\index.html"
+    },
+    {
+      "url": "/health/pediatric-dose/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\health\\pediatric-dose\\index.html"
+    },
+    {
+      "url": "/math/sample-size/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\sample-size\\index.html"
+    },
+    {
+      "url": "/engineering/section-modulus/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\section-modulus\\index.html"
+    },
+    {
+      "url": "/finance/college-cost/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\college-cost\\index.html"
+    },
+    {
+      "url": "/math/poisson-probability/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\poisson-probability\\index.html"
+    },
+    {
+      "url": "/science/mach-number/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\mach-number\\index.html"
+    },
+    {
+      "url": "/math/moving-average/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\moving-average\\index.html"
+    },
+    {
+      "url": "/science/coulomb-law/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\coulomb-law\\index.html"
+    },
+    {
+      "url": "/math/standard-error/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\standard-error\\index.html"
+    },
+    {
+      "url": "/science/photon-energy/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\photon-energy\\index.html"
+    },
+    {
+      "url": "/tech/hash-rate/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\tech\\hash-rate\\index.html"
+    },
+    {
+      "url": "/math/chi-square/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\chi-square\\index.html"
+    },
+    {
+      "url": "/engineering/three-phase-power/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\three-phase-power\\index.html"
+    },
+    {
+      "url": "/math/t-test/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\t-test\\index.html"
+    },
+    {
+      "url": "/science/rocket-equation/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\rocket-equation\\index.html"
+    },
+    {
+      "url": "/math/hypergeometric/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\hypergeometric\\index.html"
+    },
+    {
+      "url": "/engineering/hydraulic-press/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\hydraulic-press\\index.html"
+    },
+    {
+      "url": "/science/calorimetry/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\calorimetry\\index.html"
+    },
+    {
+      "url": "/engineering/steam-consumption/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\steam-consumption\\index.html"
+    },
+    {
+      "url": "/engineering/noise-level/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\noise-level\\index.html"
+    },
+    {
+      "url": "/math/midpoint/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\midpoint\\index.html"
+    },
+    {
+      "url": "/science/air-density/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\air-density\\index.html"
+    },
+    {
+      "url": "/tech/image-size-calc/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\tech\\image-size-calc\\index.html"
+    },
+    {
+      "url": "/math/trapezoid/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\trapezoid\\index.html"
+    },
+    {
+      "url": "/finance/loan-payoff/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\loan-payoff\\index.html"
+    },
+    {
+      "url": "/guides/heart-rate-zones/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\guides\\heart-rate-zones.html"
+    },
+    {
+      "url": "/science/redshift/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\redshift\\index.html"
+    },
+    {
+      "url": "/math/pyramid/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\pyramid\\index.html"
+    },
+    {
+      "url": "/science/buffer-ph/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\buffer-ph\\index.html"
+    },
+    {
+      "url": "/math/vector-add/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\vector-add\\index.html"
+    },
+    {
+      "url": "/science/machine-efficiency/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\machine-efficiency\\index.html"
+    },
+    {
+      "url": "/math/parallelogram-area/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\parallelogram-area\\index.html"
+    },
+    {
+      "url": "/science/osmotic-pressure/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\osmotic-pressure\\index.html"
+    },
+    {
+      "url": "/math/ellipse-area/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\ellipse-area\\index.html"
+    },
+    {
+      "url": "/science/sound-intensity/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\sound-intensity\\index.html"
+    },
+    {
+      "url": "/math/quartile/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\quartile\\index.html"
+    },
+    {
+      "url": "/math/percent-error/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\percent-error\\index.html"
+    },
+    {
+      "url": "/math/quartiles/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\quartiles\\index.html"
+    },
+    {
+      "url": "/math/covariance/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\covariance\\index.html"
+    },
+    {
+      "url": "/finance/cap-rate/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\cap-rate\\index.html"
+    },
+    {
+      "url": "/math/euler-totient/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\euler-totient\\index.html"
+    },
+    {
+      "url": "/math/partial-fractions/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\partial-fractions\\index.html"
+    },
+    {
+      "url": "/math/direct-variation/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\direct-variation\\index.html"
+    },
+    {
+      "url": "/math/spherical-cap/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\spherical-cap\\index.html"
+    },
+    {
+      "url": "/math/series-sum-ap/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\series-sum-ap\\index.html"
+    },
+    {
+      "url": "/math/sigma-notation/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\sigma-notation\\index.html"
+    },
+    {
+      "url": "/math/combination-repeat/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\combination-repeat\\index.html"
+    },
+    {
+      "url": "/math/permutation-repeat/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\permutation-repeat\\index.html"
+    },
+    {
+      "url": "/math/probability-odds/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\probability-odds\\index.html"
+    },
+    {
+      "url": "/math/secant-tangent/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\secant-tangent\\index.html"
+    },
+    {
+      "url": "/finance/savings-rate/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\savings-rate\\index.html"
+    },
+    {
+      "url": "/math/inscribed-angle/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\inscribed-angle\\index.html"
+    },
+    {
+      "url": "/finance/envelope-budget/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\envelope-budget\\index.html"
+    },
+    {
+      "url": "/math/sector-perimeter/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\sector-perimeter\\index.html"
+    },
+    {
+      "url": "/math/triangular-prism/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\triangular-prism\\index.html"
+    },
+    {
+      "url": "/finance/yield-to-maturity/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\yield-to-maturity\\index.html"
+    },
+    {
+      "url": "/math/octahedron-volume/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\octahedron-volume\\index.html"
+    },
+    {
+      "url": "/finance/current-ratio-finance/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\current-ratio-finance\\index.html"
+    },
+    {
+      "url": "/math/bitwise-xor/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\bitwise-xor\\index.html"
+    },
+    {
+      "url": "/math/shift-cipher/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\shift-cipher\\index.html"
+    },
+    {
+      "url": "/math/units-per-person/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\units-per-person\\index.html"
+    },
+    {
+      "url": "/finance/net-profit-margin/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\net-profit-margin\\index.html"
+    },
+    {
+      "url": "/math/digital-root/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\digital-root\\index.html"
+    },
+    {
+      "url": "/finance/price-to-rent/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\price-to-rent\\index.html"
+    },
+    {
+      "url": "/finance/standard-deduction/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\standard-deduction\\index.html"
+    },
+    {
+      "url": "/finance/home-office-deduction/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\home-office-deduction\\index.html"
+    },
+    {
+      "url": "/finance/estimated-tax/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\estimated-tax\\index.html"
+    },
+    {
+      "url": "/finance/t-bill/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\t-bill\\index.html"
+    },
+    {
+      "url": "/finance/dcf/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\dcf\\index.html"
+    },
+    {
+      "url": "/finance/sip-step-up/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\sip-step-up\\index.html"
+    },
+    {
+      "url": "/finance/espp/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\espp\\index.html"
+    },
+    {
+      "url": "/finance/roth-vs-traditional/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\roth-vs-traditional\\index.html"
+    },
+    {
+      "url": "/finance/mortgage-points/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\mortgage-points\\index.html"
+    },
+    {
+      "url": "/finance/net-operating-income/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\net-operating-income\\index.html"
+    },
+    {
+      "url": "/finance/sortino-ratio/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\sortino-ratio\\index.html"
+    },
+    {
+      "url": "/finance/put-call-parity/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\put-call-parity\\index.html"
+    },
+    {
+      "url": "/finance/stop-loss/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\stop-loss\\index.html"
+    },
+    {
+      "url": "/finance/value-at-risk/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\value-at-risk\\index.html"
+    },
+    {
+      "url": "/finance/interest-coverage/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\interest-coverage\\index.html"
+    },
+    {
+      "url": "/finance/quarterly-tax/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\quarterly-tax\\index.html"
+    },
+    {
+      "url": "/finance/food-cost-percent/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\food-cost-percent\\index.html"
+    },
+    {
+      "url": "/finance/menu-price/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\menu-price\\index.html"
+    },
+    {
+      "url": "/finance/hsa-growth/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\hsa-growth\\index.html"
+    },
+    {
+      "url": "/finance/noi/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\noi\\index.html"
+    },
+    {
+      "url": "/finance/deposit-interest/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\deposit-interest\\index.html"
+    },
+    {
+      "url": "/finance/apr-annual/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\apr-annual\\index.html"
+    },
+    {
+      "url": "/finance/heloc-payment/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\heloc-payment\\index.html"
+    },
+    {
+      "url": "/finance/pmi-drop/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\pmi-drop\\index.html"
+    },
+    {
+      "url": "/finance/escrow-analysis/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\escrow-analysis\\index.html"
+    },
+    {
+      "url": "/disclaimer-general/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\disclaimer-general.html"
+    },
+    {
+      "url": "/contact/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\contact.html"
+    },
+    {
+      "url": "/disclaimer-health/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\disclaimer-health.html"
+    },
+    {
+      "url": "/guides/zakat/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\guides\\zakat.html"
+    },
+    {
+      "url": "/auto/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\auto\\index.html"
+    },
+    {
+      "url": "/auto/lease-vs-buy/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\auto\\lease-vs-buy\\index.html"
+    },
+    {
+      "url": "/business/ltv/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\ltv\\index.html"
+    },
+    {
+      "url": "/business/conversion-rate/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\conversion-rate\\index.html"
+    },
+    {
+      "url": "/career/salary-converter/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\salary-converter\\index.html"
+    },
+    {
+      "url": "/career/raise-calculator/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\raise-calculator\\index.html"
+    },
+    {
+      "url": "/career/freelance-hourly-rate/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\freelance-hourly-rate\\index.html"
+    },
+    {
+      "url": "/career/freelance-project/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\career\\freelance-project\\index.html"
+    },
+    {
+      "url": "/conversion/length/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\length\\index.html"
+    },
+    {
+      "url": "/conversion/area/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\area\\index.html"
+    },
+    {
+      "url": "/education/cgpa/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\education\\cgpa\\index.html"
+    },
+    {
+      "url": "/education/grade/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\education\\grade\\index.html"
+    },
+    {
+      "url": "/engineering/power-factor/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\power-factor\\index.html"
+    },
+    {
+      "url": "/engineering/gear-ratio/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\gear-ratio\\index.html"
+    },
+    {
+      "url": "/engineering/torque/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\engineering\\torque\\index.html"
+    },
+    {
+      "url": "/everyday/age/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\everyday\\age\\index.html"
+    },
+    {
+      "url": "/everyday/time-calc/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\everyday\\time-calc\\index.html"
+    },
+    {
+      "url": "/finance/compound-interest/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\compound-interest\\index.html"
+    },
+    {
+      "url": "/finance/credit-card-payoff/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\credit-card-payoff\\index.html"
+    },
+    {
+      "url": "/fitness/body-fat-fitness/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\fitness\\body-fat-fitness\\index.html"
+    },
+    {
+      "url": "/food/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\index.html"
+    },
+    {
+      "url": "/food/body-fat-food/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\body-fat-food\\index.html"
+    },
+    {
+      "url": "/math/fraction/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\fraction\\index.html"
+    },
+    {
+      "url": "/math/circle/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\circle\\index.html"
+    },
+    {
+      "url": "/math/statistics/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\statistics\\index.html"
+    },
+    {
+      "url": "/hub/family/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\hub\\family\\index.html"
+    },
+    {
+      "url": "/family/child-bmi/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\family\\child-bmi\\index.html"
+    },
+    {
+      "url": "/science/pressure/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\pressure\\index.html"
+    },
+    {
+      "url": "/science/ph/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\science\\ph\\index.html"
+    },
+    {
+      "url": "/hub/tech/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\hub\\tech\\index.html"
+    },
+    {
+      "url": "/utilities/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\index.html"
+    },
+    {
+      "url": "/utilities/qr-generator/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\qr-generator\\index.html"
+    },
+    {
+      "url": "/utilities/color-picker/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\color-picker\\index.html"
+    },
+    {
+      "url": "/utilities/unit-converter/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\unit-converter\\index.html"
+    },
+    {
+      "url": "/utilities/lorem-ipsum/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\utilities\\lorem-ipsum\\index.html"
+    },
+    {
+      "url": "/editorial-policy/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\editorial-policy.html"
+    },
+    {
+      "url": "/construction/rolling-offset/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\construction\\rolling-offset\\index.html"
+    },
+    {
+      "url": "/conversion/weight/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\conversion\\weight\\index.html"
+    },
+    {
+      "url": "/finance/mortgage/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\finance\\mortgage\\index.html"
+    },
+    {
+      "url": "/food/macro-split/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\food\\macro-split\\index.html"
+    },
+    {
+      "url": "/regional/qatar-take-home-salary/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\regional\\qatar-take-home-salary\\index.html"
+    },
+    {
+      "url": "/regional/chile-take-home-salary/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\regional\\chile-take-home-salary\\index.html"
+    },
+    {
+      "url": "/regional/poland-take-home-salary/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\regional\\poland-take-home-salary\\index.html"
+    },
+    {
+      "url": "/regional/umrah-cost/",
+      "coverage": "URL is unknown to Google",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\regional\\umrah-cost\\index.html"
+    },
+    {
+      "url": "/math/mean-median-mode/",
+      "coverage": "Crawled - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\math\\mean-median-mode\\index.html"
+    },
+    {
+      "url": "/business/newsletter-sponsorship-rate/",
+      "coverage": "Crawled - currently not indexed",
+      "state": "WAITING_CRAWL",
+      "detail": "page clean — Google ke crawl ka intezaar",
+      "file": "deploy\\business\\newsletter-sponsorship-rate\\index.html"
+    }
+  ]
+}

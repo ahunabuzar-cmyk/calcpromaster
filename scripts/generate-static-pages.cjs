@@ -66,14 +66,24 @@ const SHELL = (title, body, robots, desc, slug) => `<!DOCTYPE html>
   <link rel="canonical" href="${DOMAIN}/${slug}">
   <link rel="icon" type="image/svg+xml" href="icon.svg">
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "${title}",
-    "url": "${DOMAIN}/${slug}",
-    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "${DOMAIN}/" },
-    "inLanguage": "en"
-  }
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "${title}",
+      "url": "${DOMAIN}/${slug}",
+      "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "${DOMAIN}/" },
+      "inLanguage": "en"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "${DOMAIN}/" },
+        { "@type": "ListItem", "position": 2, "name": "${title}", "item": "${DOMAIN}/${slug}" }
+      ]
+    }
+  ]
   </script>
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
@@ -111,8 +121,10 @@ const SHELL = (title, body, robots, desc, slug) => `<!DOCTYPE html>
   </header>
   <main>${body}</main>
   <footer>
-    <a href="/">CalcProMaster</a> · 1219+ free online calculators · All calculations run in your browser
+    <a href="/">CalcProMaster</a> · 1285+ free online calculators · All calculations run in your browser
     <br><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+    <br><a href="https://fazier.com/launches/calcpromaster.com" target="_blank" rel="noopener"><img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&amp;theme=neutral" alt="Fazier badge" width="120" height="40" style="vertical-align:middle;border:0;width:120px;height:40px;object-fit:contain"></a>
+    <a href="https://startupfa.me/s/calcpromaster?utm_source=calcpromaster.com" target="_blank" rel="noopener"><img src="https://startupfa.me/badges/featured-badge.webp" alt="CalcProMaster - Featured on Startup Fame" width="171" height="54" style="vertical-align:middle;border:0"></a>
   </footer>
 </body>
 </html>`;

@@ -97,13 +97,13 @@
   <header>
     <a class="logo" href="/">CalcProMaster</a>
     <a href="/">Home</a>
-    <a href="/guides">Guides</a>
+    <a href="/guides/">Guides</a>
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
   </header>
   <main>
     <div class="legal-page">
-      <p class="legal-meta"><a href="/guides">← All guides</a></p>
+      <p class="legal-meta"><a href="/guides/">← All guides</a></p>
       <h1>Calculator &amp; Finance Glossary</h1>
       <p class="legal-meta">Reference · 36 terms · Last updated September 2026</p>
 
@@ -113,7 +113,7 @@
       <div class="table-wrap"><table>
         <tr><th>Term</th><th>Meaning</th></tr>
         <tr><td><strong>APR</strong></td><td>Annual Percentage Rate — the yearly cost of a loan, including fees, expressed as one percentage. Lower APR usually means a cheaper loan, but compare like-for-like terms.</td></tr>
-        <tr><td><strong>EMI</strong></td><td>Equated Monthly Installment — the fixed payment a borrower makes each month. See the <a href="/finance/loan-emi">Loan EMI Calculator</a>.</td></tr>
+        <tr><td><strong>EMI</strong></td><td>Equated Monthly Installment — the fixed payment a borrower makes each month. See the <a href="/finance/loan-emi/">Loan EMI Calculator</a>.</td></tr>
         <tr><td><strong>Principal</strong></td><td>The original amount borrowed or invested, before any interest.</td></tr>
         <tr><td><strong>Amortization</strong></td><td>Paying off debt through regular payments; early payments are mostly interest, later ones mostly principal.</td></tr>
         <tr><td><strong>Simple Interest</strong></td><td>Interest calculated only on the principal: Principal × Rate × Time.</td></tr>
@@ -173,11 +173,24 @@
       <h2>Using terms with the calculators</h2>
       <p>These definitions match the tooltips embedded across our tool pages. If a term on a calculator page confuses you, search this page with your browser (Ctrl+F) — each definition is written to stand on its own.</p>
     </div>
+  
+  
+<!-- guide-worked-example:start -->
+<h2>Worked example: Loan EMI Calculator at its default inputs</h2>
+<p>Open <a href="/finance/loan-emi/">Loan EMI Calculator</a> and press calculate without editing a field. What comes back is the table and result below, so the glossary numbers here are checkable in one click.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Loan Amount</td><td>100000</td></tr><tr><td>Interest Rate (% per year)</td><td>8.5</td></tr><tr><td>Loan Term (years)</td><td>5</td></tr><tr><td>Payment per Period (for solve modes)</td><td>2000</td></tr><tr><td>Interest-Only Period (years)</td><td>2</td></tr></tbody></table>
+<p><strong>Result:</strong> Payment: $2,051.65 / monthly</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Solving for Payment (DCC: Actual/365)</li><li>Step 1: Rate per monthly = 8.5% → 0.7083% (Actual/365)</li><li>Step 2: Periods n = 5×12 = 60</li><li>Step 3: PMT = P×r×(1+r)^n / ((1+r)^n − 1)</li></ol>
+<h2>Loan Amount: half, as given, and half again</h2>
+<p>Same calculator, same fields, one change: loan amount.</p>
+<table><thead><tr><th>Loan Amount</th><th>Result</th></tr></thead><tbody><tr><td>50,000</td><td>Payment: $1,025.83 / monthly</td></tr><tr><td>100,000</td><td>Payment: $2,051.65 / monthly</td></tr><tr><td>150,000</td><td>Payment: $3,077.48 / monthly</td></tr></tbody></table>
+<p>Halve loan amount and the result moves one way; add half again and it moves the other. Watching that gap is quicker than guessing which field matters most.</p>
+<!-- guide-worked-example:end -->
   </main>
   <footer>
     <p>CalcProMaster — free online calculators.</p>
     <p>
-      <a href="/guides">Guides</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a>
+      <a href="/guides/">Guides</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a>
     </p>
   </footer>
   <script src="/guides/glossary-tooltips.js" defer></script>

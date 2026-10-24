@@ -36,19 +36,33 @@
     bar.setAttribute('role', 'toolbar');
     bar.setAttribute('aria-label', 'Reading options');
     bar.innerHTML =
+      // Phone launcher (hidden from 641px up). The full toolbar is 8 x 44px = 392px
+      // wide, which on a 412px screen covered the donation pill, the one-handed
+      // toggle and the mini calculator. On phones the bar collapses to this
+      // single button and expands upward on tap.
+      '<button type="button" class="rt-launcher" data-act="menu" aria-expanded="false" aria-controls="reading-toolbar" title="Reading options" aria-label="Reading options">Aa</button>' +
       '<button type="button" data-act="lh" title="Line height" aria-label="Increase line height">A↕</button>' +
       '<button type="button" data-act="ls" title="Letter spacing" aria-label="Adjust letter spacing">A⇔</button>' +
       '<button type="button" data-act="dys" role="switch" aria-checked="' + prefs.dyslexic + '" title="Dyslexia-friendly font" aria-label="Dyslexia-friendly font">Dys</button>' +
-      '<button type="button" data-act="fmt" title="Number format: ' + prefs.numberFormat + '" aria-label="Number format">#,##0</button>' +
+      // axe label-content-name-mismatch: the accessible name must CONTAIN the
+      // visible text. The visible glyph is the literal sample "#,##0", so the
+      // label keeps that sample and adds the state instead of replacing it.
+      '<button type="button" data-act="fmt" title="Number format: ' + prefs.numberFormat + '" aria-label="Number format #,##0 (currently ' + prefs.numberFormat + ')">#,##0</button>' +
       '<button type="button" data-act="collapse" aria-pressed="false" title="Collapse long sections" aria-label="Collapse long sections">⊟</button>' +
       '<button type="button" data-act="tabs" aria-pressed="false" title="Organize sections as tabs" aria-label="Organize sections as tabs">▤ Tabs</button>' +
       '<button type="button" data-act="print" title="Print view" aria-label="Print this page">⎙</button>' +
-      '<button type="button" data-act="zen" title="Distraction-free reading" aria-label="Distraction-free reading">Zen</button>';
+      '<button type="button" data-act="zen" title="Distraction-free reading" aria-label="Zen — distraction-free reading">Zen</button>';
     document.body.appendChild(bar);
     bar.addEventListener('click', function (e) {
       var btn = e.target.closest('button[data-act]');
       if (!btn) return;
       var act = btn.getAttribute('data-act');
+      if (act === 'menu') {
+        var open = !document.body.classList.contains('rt-open');
+        document.body.classList.toggle('rt-open', open);
+        btn.setAttribute('aria-expanded', String(open));
+        return;
+      }
       if (act === 'lh') {
         prefs.lineHeight = R.nextLineHeight(prefs.lineHeight, 1);
       } else if (act === 'ls') {
@@ -60,6 +74,7 @@
         var i = R.NUMBER_FORMATS.indexOf(prefs.numberFormat);
         prefs.numberFormat = R.NUMBER_FORMATS[(i + 1) % R.NUMBER_FORMATS.length];
         btn.title = 'Number format: ' + prefs.numberFormat;
+        btn.setAttribute('aria-label', 'Number format #,##0 (currently ' + prefs.numberFormat + ')');
         document.documentElement.setAttribute('data-numfmt', prefs.numberFormat);
         document.dispatchEvent(new CustomEvent('reading:numfmt', { detail: prefs.numberFormat }));
       } else if (act === 'collapse') {
@@ -147,7 +162,9 @@
     var y = window.scrollY || 0;
     var pct = R.progressPercent(y, docH, vh);
     var bar = $('#reading-progress .rp-fill');
-    if (bar) bar.style.width = pct + '%';
+    // Compositor-friendly: the bar is width:100% and scales, so a scroll frame
+    // never triggers layout (Lighthouse: "Avoid non-composited animations").
+    if (bar) bar.style.transform = 'scaleX(' + (pct / 100) + ')';
     var long = docH - vh > R.SCROLL_THRESHOLD;
     var tb = $('#reading-toolbar');
     if (tb) tb.hidden = !long;

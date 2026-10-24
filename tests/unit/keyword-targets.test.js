@@ -74,10 +74,16 @@ describe('keyword targets — resolution', () => {
     expect(bad).toEqual([]);
   });
 
-  it('records no target for the three genuinely ownerless intents', () => {
+  // "pricing generator" used to sit in this list: the price-*list* SaaS intent is
+  // not ours, but the arithmetic half of the phrase (unit cost -> selling price at
+  // a target margin) is exactly /business/pricing/, so the reviewed table now owns
+  // it and the row is covered. These two remain genuinely ownerless — a phone's
+  // built-in calculator app and a cross-cutting "shows its working" feature are
+  // navigational/feature intents with no calculation to own.
+  it('records no target for the genuinely ownerless intents', () => {
     const rows = report().rows;
     const ownerless = rows.filter((r) => r.status === 'NO_OWNER').map((r) => r.keyword).sort();
-    expect(ownerless).toEqual(['calculator on this phone', 'calculator that shows work', 'pricing generator']);
+    expect(ownerless).toEqual(['calculator on this phone', 'calculator that shows work']);
   });
 });
 

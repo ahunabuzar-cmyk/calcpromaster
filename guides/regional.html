@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Regional Finance (India &amp; South Asia) Guides — FD, RD, PPF, SIP &amp; local tax | CalcProMaster</title>
-  <meta name="description" content="South-Asian savers juggle instruments the rest of the world doesn’t use: quarterly-compounded FDs, PPF’s annual ceiling, SIP instalments, TDS. These guides">
+  <title>Regional Finance Guides — FD, RD, PPF &amp; SIP (India)</title>
+  <meta name="description" content="South-Asian savers juggle instruments the rest of the world does not: quarterly-compounded FDs, PPF ceilings, SIP instalments and TDS. Start here.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
   <link rel="canonical" href="https://calcpromaster.netlify.app/guides/regional">
@@ -70,16 +70,63 @@
     .cat-card p { margin: 0; color: #4b5563; font-size: 0.95rem; }
     .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
     .updated { color: #6b7280; font-size: 0.85rem; }
-  </style>
+/* guide-depth-css:start */
+.guide-lede{font-weight:600;border-left:3px solid #4f46e5;padding-left:12px;margin:10px 0 4px}
+    .guide-pitfalls{margin:8px 0 14px 20px}
+    .seo-faqs h3{margin:16px 0 4px}
+/* guide-depth-css:end */
+</style>
+
+<!-- guide-faq-schema:start -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between a fixed deposit and a recurring deposit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A fixed deposit puts one lump sum in for a term, so interest compounds on the whole amount from day one. A recurring deposit adds a fixed amount every month, so each instalment earns for a different length of time. Same rate, different total interest — the recurring deposit earns roughly half on the same nominal principal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do provident and small-savings rates change?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Governments reset them periodically against a reference — usually government bond yields or a formula tied to them. That is why a plan built on today’s rate is a projection, not a promise. Model a lower rate too, and check whether the plan still holds if the rate resets downwards."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does compounding frequency matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Less than people expect at the same stated rate. Going from annual to quarterly compounding raises the effective annual yield by a small fraction of a percent, while going from 6% to 7% changes the outcome far more. Frequency matters most when the term is long and the amount large, and it rarely changes which instrument wins."
+      }
+    }
+  ]
+}
+</script>
+<!-- guide-faq-schema:end -->
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Regional Finance (India &amp; South Asia)</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Regional Finance (India &amp; South Asia)</p>
   <h1>Regional Finance (India &amp; South Asia) Guides</h1>
   <p class="updated">Part of the CalcProMaster guides library · FD, RD, PPF, SIP &amp; local tax</p>
 
   <p>South-Asian savers juggle instruments the rest of the world doesn’t use: quarterly-compounded FDs, PPF’s annual ceiling, SIP instalments, TDS. These guides do the regional math with the regional rules.</p>
+  <p><strong>Methodology:</strong> Region-specific rules and rates for India, Pakistan and the Gulf, sourced from published rates and clearly labelled as estimates that change.</p>
 
-  <h2>How the math works</h2>
+
+<!-- guide-lede:start -->
+<p class="guide-lede">Regional calculators pair a local instrument with local rules, and those rules move: rates, slabs and limits are revised, so every result is only current for the period it models.</p>
+<!-- guide-lede:end -->
+<h2>How the math works</h2>
   <p>Regional instruments have their own compounding conventions, and using the wrong one misprices them. An Indian FD at 7% “p.a.” usually compounds quarterly: effective yield = (1 + 0.07/4)⁴ − 1 ≈ 7.19%. SIP returns compound monthly and depend on entry timing, which is why the same SIP shows a different XIRR for every investor.</p>
   <p>Tax treatment differs just as sharply: PPF interest is tax-free and the deposit deductible, while FD interest is taxable at slab rate. A 7% FD in the 30% bracket nets about 4.9% after tax — less than PPF’s tax-free 7.1%. The regional calculators encode these rules; the guides show the arithmetic so you can verify each step.</p>
 
@@ -104,14 +151,52 @@
   <h2>What is the PPF interest rule?</h2>
   <p>Interest accrues monthly on the lowest balance between the 5th and last day of each month, credits annually, and compounds yearly. Depositing before the 5th preserves the month’s interest — the PPF calculator follows this convention.</p>
 
-  <h2>Try the matching calculators</h2>
+
+<!-- guide-extra-depth:start -->
+<h2>Local units are not conversions of metric units</h2>
+<p>A marla, a kanal, a bigha, a maund and a tola are traditional units whose exact size varies by region and sometimes by district. Unlike a mile, they have no single international definition, so a figure copied from another city can be wrong by a double-digit percentage.</p>
+<p>Check the local standard before converting. Where a calculator offers a regional unit, it states the definition it used; where it does not, treat the answer as approximate.</p>
+<h2>Large-number names differ by system</h2>
+<p>Lakh and crore are 100,000 and 10,000,000 in the South Asian system, while million and billion follow the short scale used in most English-speaking countries. A figure of 1.2 billion is 120 crore, not 12 crore.</p>
+<p>When sending a number across systems, write the digits as well as the word. That single habit prevents most of the expensive misunderstandings in cross-border contracts.</p>
+<h2>Local tax and payroll rules change the answer</h2>
+<p>Take-home pay, sales tax and property charges are set locally and change with each budget. A calculator that does not name the tax year is giving you a historical answer.</p>
+<p>Use the guide's stated assumptions as a checklist, then confirm the current rates with the authority. The structure of the calculation travels; the rates do not.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/currency-conversion">How Currency Conversion Works</a></li>
+    <li><a href="/guides/zakat">How to Calculate Zakat</a></li>
+    <li><a href="/guides/gst-sales-tax">GST & Sales Tax Explained (Add, Remove, Reverse)</a></li>
+    <li><a href="/guides/salary">Gross Salary vs In-Hand Salary</a></li>
+  </ul>
+
+<!-- guide-depth:start -->
+<h2>Where these answers go wrong</h2><ul class="guide-pitfalls"><li>Applying the current year’s slabs or rates to a past year, or a past year’s to the current one.</li><li>Pairing an annual rate with the wrong compounding frequency — quarterly and monthly recurring deposits differ.</li><li>Reading an advertised return as guaranteed when it is a ceiling, an average or a historical figure.</li><li>Comparing instruments without accounting for how each is taxed and how long the money is locked in.</li></ul><h2>Frequently asked questions</h2><div class="seo-faqs"><h3>What is the difference between a fixed deposit and a recurring deposit?</h3><p>A fixed deposit puts one lump sum in for a term, so interest compounds on the whole amount from day one. A recurring deposit adds a fixed amount every month, so each instalment earns for a different length of time. Same rate, different total interest — the recurring deposit earns roughly half on the same nominal principal.</p><h3>Why do provident and small-savings rates change?</h3><p>Governments reset them periodically against a reference — usually government bond yields or a formula tied to them. That is why a plan built on today’s rate is a projection, not a promise. Model a lower rate too, and check whether the plan still holds if the rate resets downwards.</p><h3>How much does compounding frequency matter?</h3><p>Less than people expect at the same stated rate. Going from annual to quarterly compounding raises the effective annual yield by a small fraction of a percent, while going from 6% to 7% changes the outcome far more. Frequency matters most when the term is long and the amount large, and it rarely changes which instrument wins.</p></div>
+<!-- guide-depth:end -->
+<!-- guide-worked-example:start -->
+<h2>Worked example: Fixed Deposit (FD) Calculator at its default inputs</h2>
+<p>Take the default setup on <a href="/regional/fd-calculator/">Fixed Deposit (FD) Calculator</a>: no fields changed, nothing tuned to a nice round number. Run in the site's own engine, those values produce the answer below.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Deposit Amount (₹)</td><td>100000</td></tr><tr><td>Interest Rate (%)</td><td>7.5</td></tr><tr><td>Tenure (years)</td><td>3</td></tr><tr><td>TDS Rate (%)</td><td>10</td></tr></tbody></table>
+<p><strong>Result:</strong> Maturity: ₹1,24,971.64</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Step 1: Rate = 7.5%</li><li>Step 2: Maturity = ₹100000 × (1 + 7.5%/4)^12 = ₹1,24,971.64</li></ol>
+<h2>Deposit Amount (₹): half, as given, and half again</h2>
+<p>Same calculator, same fields, one change: deposit amount (₹).</p>
+<table><thead><tr><th>Deposit Amount (₹)</th><th>Result</th></tr></thead><tbody><tr><td>50,000</td><td>Maturity: ₹62,485.82</td></tr><tr><td>100,000</td><td>Maturity: ₹1,24,971.64</td></tr><tr><td>150,000</td><td>Maturity: ₹1,87,457.46</td></tr></tbody></table>
+<p>If the rows barely differ, deposit amount (₹) is not your lever — change a different input. If they swing widely, get that number right before trusting the total.</p>
+<!-- guide-worked-example:end -->
+<h2>Try the matching calculators</h2>
   <p>
-    <a href="/regional/fd-calculator" class="cta">FD Calculator</a>
-    <a href="/regional/ppf-calculator" class="cta">PPF Calculator</a>
-    <a href="/regional/sip-return" class="cta">SIP Return Calculator</a>
+    <a href="/regional/fd-calculator/" class="cta">FD Calculator</a>
+    <a href="/regional/ppf-calculator/" class="cta">PPF Calculator</a>
+    <a href="/regional/sip-return/" class="cta">SIP Return Calculator</a>
   </p>
 
-  <p><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
+  <p><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

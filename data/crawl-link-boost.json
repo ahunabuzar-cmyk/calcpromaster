@@ -1,0 +1,118 @@
+{
+  "ranAt": "2026-10-24T06:08:19.861Z",
+  "sources": 621,
+  "targets": 616,
+  "linksAdded": 432,
+  "relevanceMatched": 213,
+  "pagesTouched": 283,
+  "leftoverTargets": 0,
+  "maxLinksPerSource": 12,
+  "impressionsFile": "gsc-page-impressions.json",
+  "byCategory": {
+    "auto": {
+      "targets": 17,
+      "sources": 30,
+      "pool": "same-category"
+    },
+    "business": {
+      "targets": 31,
+      "sources": 8,
+      "pool": "same-category"
+    },
+    "career": {
+      "targets": 39,
+      "sources": 7,
+      "pool": "same-category"
+    },
+    "construction": {
+      "targets": 30,
+      "sources": 25,
+      "pool": "same-category"
+    },
+    "conversion": {
+      "targets": 30,
+      "sources": 6,
+      "pool": "same-category"
+    },
+    "education": {
+      "targets": 11,
+      "sources": 27,
+      "pool": "same-category"
+    },
+    "engineering": {
+      "targets": 56,
+      "sources": 9,
+      "pool": "same-category"
+    },
+    "everyday": {
+      "targets": 13,
+      "sources": 35,
+      "pool": "same-category"
+    },
+    "family": {
+      "targets": 19,
+      "sources": 20,
+      "pool": "same-category"
+    },
+    "finance": {
+      "targets": 80,
+      "sources": 54,
+      "pool": "same-category"
+    },
+    "fitness": {
+      "targets": 10,
+      "sources": 30,
+      "pool": "same-category"
+    },
+    "food": {
+      "targets": 27,
+      "sources": 9,
+      "pool": "same-category"
+    },
+    "health": {
+      "targets": 22,
+      "sources": 43,
+      "pool": "same-category"
+    },
+    "homegarden": {
+      "targets": 16,
+      "sources": 35,
+      "pool": "same-category"
+    },
+    "hub": {
+      "targets": 5,
+      "sources": 15,
+      "pool": "same-category"
+    },
+    "lifestyle": {
+      "targets": 8,
+      "sources": 38,
+      "pool": "same-category"
+    },
+    "math": {
+      "targets": 83,
+      "sources": 35,
+      "pool": "same-category"
+    },
+    "regional": {
+      "targets": 12,
+      "sources": 45,
+      "pool": "same-category"
+    },
+    "science": {
+      "targets": 40,
+      "sources": 42,
+      "pool": "same-category"
+    },
+    "tech": {
+      "targets": 19,
+      "sources": 46,
+      "pool": "same-category"
+    },
+    "utilities": {
+      "targets": 26,
+      "sources": 6,
+      "pool": "same-category"
+    }
+  }
+}

@@ -12,6 +12,12 @@ const OUT = path.join(__dirname, '..', 'guides');
 const DOMAIN = 'https://calcpromaster.netlify.app';
 
 /* ---------- shared shell ---------- */
+// Descriptions are hand-written prose and one of them quotes a phrase ("days of
+// life"). Interpolating that straight into content="…" closed the attribute
+// early, so the served tag read as a 73-character description and the rest of
+// the sentence leaked into the document as text. Escape quotes at the boundary.
+const escAttr = (v) => String(v).replace(/"/g, '&quot;');
+
 function head(g) {
   const faqLd = g.faqs.length ? `,
     "mainEntity": {
@@ -26,7 +32,7 @@ ${g.faqs.map(f => `        { "@type": "Question", "name": ${JSON.stringify(f.q)}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${g.title}</title>
-  <meta name="description" content="${g.desc}">
+  <meta name="description" content="${escAttr(g.desc)}">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
   <link rel="canonical" href="${DOMAIN}/guides/${g.slug}">
@@ -143,7 +149,7 @@ const GUIDES = [
 
 {
   slug: 'bmr', crumb: 'BMR (Basal Metabolic Rate)',
-  title: 'BMR Calculator — Mifflin-St Jeor Formula, Worked Example &amp; Multipliers | CalcProMaster',
+  title: 'BMR Calculator — Mifflin-St Jeor Formula &amp; Worked Example',
   desc: 'How BMR is calculated: the Mifflin-St Jeor formula line by line, a worked example, why formulas disagree, and how activity multipliers turn BMR into daily calorie needs.',
   h1: 'BMR: The Formula Behind Your Resting Calorie Burn',
   cat: 'Health', read: 6,
@@ -597,7 +603,7 @@ const GUIDES = [
 
 {
   slug: 'freelance-rate-card', crumb: 'Freelance Rate Card',
-  title: 'Rate Card Guide — Hourly, Project &amp; Retainer Pricing for Freelancers | CalcProMaster',
+  title: 'Freelance Rate Card — Hourly, Project &amp; Retainer Pricing',
   desc: 'How to build a freelance rate card: the hourly floor, project pricing from scope, retainer math, and when each pricing mode makes sense.',
   h1: 'The Freelance Rate Card: Hourly Floor, Project Layer, Retainer Top',
   cat: 'Career', read: 6,

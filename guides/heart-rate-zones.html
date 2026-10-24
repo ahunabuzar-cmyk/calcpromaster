@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Heart Rate Training Zones — Formulas, Worked Numbers &amp;</title>
+  <title>Heart Rate Training Zones — Formulas and Worked Numbers</title>
   <meta name="description" content="Max heart rate formulas compared (220−age vs Tanaka), the five-zone model with a worked example, and why HRmax formulas have a built-in error band.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
@@ -21,7 +21,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Heart Rate Training Zones — Formulas, Worked Numbers & Sense-Check | CalcProMaster",
+    "headline": "Heart Rate Training Zones — Formulas and Worked Numbers",
     "description": "Max heart rate formulas compared (220−age vs Tanaka), the five-zone model with a worked example, and why HRmax formulas have a built-in error band.",
     "url": "https://calcpromaster.netlify.app/guides/heart-rate-zones",
     "inLanguage": "en",
@@ -66,7 +66,9 @@
   </style>
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Heart Rate Zones</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Heart Rate Zones</p>
   <h1>Heart Rate Zones: Math for Training, With the Error Bars Shown</h1>
   <p class="updated">Health · 6 min read · Last updated September 2026</p>
 
@@ -94,12 +96,48 @@
 
   <h2>Try the calculators</h2>
   <p class="related">
-    <a href="/health/target-heart-rate" class="cta">Target Heart Rate Calculator</a>
-    <a href="/health/heart-rate" class="cta">Heart Rate Calculator</a>
-    <a href="/health/calorie-burn" class="cta">Calorie Burn Calculator</a>
+    <a href="/health/target-heart-rate/" class="cta">Target Heart Rate Calculator</a>
+    <a href="/health/heart-rate/" class="cta">Heart Rate Calculator</a>
+    <a href="/health/calorie-burn/" class="cta">Calorie Burn Calculator</a>
   </p>
 
-  <h2>Frequently asked questions</h2>
+  
+  
+<!-- guide-worked-example:start -->
+<h2>Worked example: Target Heart Rate Zones at its default inputs</h2>
+<p>Take the default setup on <a href="/health/target-heart-rate/">Target Heart Rate Zones</a>: no fields changed, nothing tuned to a nice round number. Run in the site's own engine, those values produce the answer below.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Age</td><td>30</td></tr><tr><td>Resting Heart Rate (bpm)</td><td>70</td></tr></tbody></table>
+<p><strong>Result:</strong> Zone: 130–154 bpm</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Step 1: Max HR = 220 − 30 = 190 bpm</li><li>Step 2: Heart rate reserve = 190 − 70 = 120 bpm</li><li>Step 3: Zone = resting + reserve × intensity (Karvonen formula)</li><li>Step 4: moderate zone ≈ 130–172 bpm</li></ol>
+<h2>What Age does to the answer</h2>
+<p>Age is the first input worth testing, so here it is at three sizes.</p>
+<table><thead><tr><th>Age</th><th>Result</th></tr></thead><tbody><tr><td>15</td><td>Zone: 138–165 bpm</td></tr><tr><td>30</td><td>Zone: 130–154 bpm</td></tr><tr><td>45</td><td>Zone: 123–144 bpm</td></tr></tbody></table>
+<p>Halve age and the result moves one way; add half again and it moves the other. Watching that gap is quicker than guessing which field matters most.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>The age formula is a population average</h2>
+<p>The 220 minus age estimate of maximum heart rate has a standard deviation of roughly 10-12 beats per minute. For a 40-year-old, the plausible maximum spans something like 160 to 200, which moves every zone derived from it.</p>
+<p>A measured maximum from a field test or a lab is far better if you train seriously. The formula is a placeholder, and zones built on it inherit its error.</p>
+<h2>Zones as percentages of maximum</h2>
+<p>Common bands run from 50-60% for recovery, 60-70% for aerobic base, 70-80% for tempo and 80-90%+ for threshold and VO2 work. The boundaries are conventions, not sharp physiological switches.</p>
+<p>Heart rate also drifts upward during a long effort at constant pace, from heat and dehydration. Judging effort by pace or power as well as heart rate prevents chasing a number that is moving for reasons unrelated to intensity.</p>
+<h2>Medication and individual variation</h2>
+<p>Beta blockers and some other medications lower heart rate directly, which makes any age-based zone wrong. So does a naturally high or low resting rate.</p>
+<p>Use perceived effort as a cross-check, and treat chest pain, unusual breathlessness or dizziness as a reason to stop rather than a zone to push through.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/screen-time">Screen Time</a></li>
+    <li><a href="/guides/age">How to Calculate Your Exact Age in Years, Months & Days</a></li>
+    <li><a href="/guides/lifestyle">Lifestyle & Money Habits Guides</a></li>
+    <li><a href="/guides/water-intake">Daily Water Intake</a></li>
+  </ul>
+
+<h2>Frequently asked questions</h2>
   <h3>Which max heart rate formula should I use?</h3>
   <p>Tanaka (208 − 0.7×age) tracks measured maxima better than the classic 220 − age, especially over 40. Both carry roughly ±10–12 bpm error — treat the output as a starting band, then adjust with a field test or how effort actually feels.</p>
   <h3>What is zone 2 and why is everyone talking about it?</h3>
@@ -110,7 +148,8 @@
   <p>For adults, 60–100 bpm is the usual reference band, with well-trained people often in the 40s–50s. A sudden sustained rise from your own normal can signal illness, overtraining or dehydration — it is a trend worth watching, not a single reading.</p>
 
 <div class="review-block"><strong>About this guide:</strong> Written and maintained by CalcProMaster’s developer — an independent site, not a licensed financial advisor or medical professional. Every worked example below was computed by hand and cross-checked with the linked calculator; our <a href="/editorial-policy">editorial policy</a> explains how content is written, tested and corrected.</div>
-  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <p class="related"><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog/">Blog</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

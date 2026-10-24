@@ -1,0 +1,55 @@
+{
+  "ranAt": "2026-10-23T12:06:33.438Z",
+  "totalTools": 1285,
+  "classes": {
+    "P1 undefined placeholder": {
+      "count": 0,
+      "fix": "apply-seo-overrides.cjs → UNDEFINED_FIXES",
+      "pages": []
+    },
+    "P3 \"the page calculator\"": {
+      "count": 0,
+      "fix": "apply-seo-overrides.cjs → SHAPE_RESTORES",
+      "pages": []
+    },
+    "P4 title ends with a raw input label": {
+      "count": 0,
+      "fix": "apply-seo-overrides.cjs → LABEL_REPAIRS title",
+      "pages": []
+    },
+    "P5 result noun is a raw label (\"a between X\", \"force units\", \"a add\")": {
+      "count": 0,
+      "fix": "apply-seo-overrides.cjs → LABEL_REPAIRS",
+      "pages": []
+    },
+    "P6 result label is an error string": {
+      "count": 0,
+      "fix": "needs hand-written meta/quick answer (per tool)",
+      "pages": []
+    },
+    "P7 registry tool has no intro paragraph": {
+      "count": 0,
+      "fix": "run node generate-intros.js",
+      "pages": []
+    },
+    "P8 intro opener does not fit the description shape": {
+      "count": 0,
+      "fix": "generate-intros.js → VERBS / OPENERS",
+      "pages": []
+    },
+    "P9 phrase cut inside the description (hyphen/colon)": {
+      "count": 0,
+      "fix": "generate-intros.js → descPhrase head rules",
+      "pages": []
+    },
+    "P10 machine shapes in guide/hub/blog/premium copy": {
+      "count": 0,
+      "fix": "edit the offending source file; tool labels go through apply-seo-overrides.cjs",
+      "files": 90,
+      "pages": []
+    }
+  },
+  "registryTools": 1285,
+  "siteCopyFiles": 90,
+  "totalFindings": 0
+}

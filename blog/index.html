@@ -7,12 +7,12 @@
   <meta name="description" content="Plain-language explainers on the calculations that cost people money: stacked discounts, EMI amortization, what BMI does and doesn't tell you, and more.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
-  <link rel="canonical" href="https://calcpromaster.netlify.app/blog">
+  <link rel="canonical" href="https://calcpromaster.netlify.app/blog/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="CalcProMaster">
   <meta property="og:title" content="CalcProMaster Blog — The Math Behind Everyday Decisions">
   <meta property="og:description" content="Plain-language explainers on the calculations that cost people money: stacked discounts, EMI amortization, what BMI does and doesn't tell you, and more.">
-  <meta property="og:url" content="https://calcpromaster.netlify.app/blog">
+  <meta property="og:url" content="https://calcpromaster.netlify.app/blog/">
   <meta property="og:image" content="https://calcpromaster.netlify.app/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="CalcProMaster Blog — The Math Behind Everyday Decisions">
@@ -27,6 +27,27 @@
     "description": "Plain-language explainers on the calculations behind everyday decisions — discounts, loans, health metrics and more.",
     "url": "https://calcpromaster.netlify.app/blog",
     "publisher": { "@type": "Organization", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How is a blog post different from a guide?", "acceptedAnswer": { "@type": "Answer", "text": "A guide teaches one calculation from the formula through worked examples and edge cases. A blog post follows a single idea out of a calculator to its conclusion — why the sign in a shop implies more of a discount than it delivers, or what an amortisation table really pays in the third year. If you want the method, read the guide; if you want the surprise, read the post." } },
+      { "@type": "Question", "name": "Can I check the numbers in a post myself?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every post states the formula it uses and links the calculators that produce the same numbers, so you can enter your own figures and compare. Where a figure depends on a local rate that changes — interest, tax, fuel — the post names the assumption rather than quoting a rate that would be stale within a year." } },
+      { "@type": "Question", "name": "Where should I start?", "acceptedAnswer": { "@type": "Answer", "text": "If you searched for a specific number, start with that post and follow the calculator link at the end of it. If you are not sure what you need, the guides library groups the same material by topic — money, health, home, auto — and each category page lists the calculators behind it." } }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://calcpromaster.com/blog/" }
+    ]
   }
   </script>
   <style>
@@ -45,17 +66,19 @@
 <body>
   <header class="site">
     <a href="/">Calculators</a>
-    <a href="/guides">Guides</a>
-    <a href="/blog">Blog</a>
+    <a href="/guides/">Guides</a>
+    <a href="/blog/">Blog</a>
     <a href="/about">About</a>
   </header>
+<!-- main-landmark -->
+<main>
   <p class="crumb"><a href="/">Home</a> › Blog</p>
   <h1>CalcProMaster Blog</h1>
   <p>Short, honest explainers on the math behind everyday decisions — the calculations that quietly cost people money, and the numbers behind the health metrics everyone quotes. Every post shows its working.</p>
 
   <h2>What you'll find here</h2>
   <p>The guides library teaches a specific calculation top to bottom; the blog takes a single idea the calculator surfaced and follows it to the conclusion. Why stacked discounts never add up the way the sign implies. Why an EMI that never changes actually pays two different things at once. Why one screening number describes millions of bodies and still shouldn't be read as a personal verdict. Each post is short on purpose — one idea, the formula behind it, and the numbers that prove it — and every claim can be checked with the linked calculator.</p>
-  <p>Posts are organized by what they help you decide, not by tool category: money posts deal with borrowing, discounting and salary math; health posts deal with the metrics people quote at each other. If you want the full step-by-step treatment of a calculation instead, the <a href="/guides">guides library</a> and its <a href="/guides/glossary">glossary</a> cover 60+ calculations with worked examples and FAQs.</p>
+  <p>Posts are organized by what they help you decide, not by tool category: money posts deal with borrowing, discounting and salary math; health posts deal with the metrics people quote at each other. If you want the full step-by-step treatment of a calculation instead, the <a href="/guides/">guides library</a> and its <a href="/guides/glossary">glossary</a> cover 60+ calculations with worked examples and FAQs.</p>
 
   <a class="post-card" href="/blog/stacked-discounts">
     <h2>"Extra 20% off" is less than you think — the math of stacked discounts</h2>
@@ -93,7 +116,16 @@
     <p class="meta">Sep 2026 · ~7 min read · Auto</p>
   </a>
 
-  <p><a href="/guides">→ Step-by-step guides library</a> · <a href="/guides/glossary">Glossary</a> · <a href="/editorial-policy">Editorial policy</a></p>
+  <h2>Frequently asked questions</h2>
+  <h3>How is a blog post different from a guide?</h3>
+  <p>A guide teaches one calculation from the formula through worked examples and edge cases. A blog post follows a single idea out of a calculator to its conclusion — why the sign in a shop implies more of a discount than it delivers, or what an amortisation table really pays in the third year. If you want the method, read the guide; if you want the surprise, read the post.</p>
+  <h3>Can I check the numbers in a post myself?</h3>
+  <p>Yes. Every post states the formula it uses and links the calculators that produce the same numbers, so you can enter your own figures and compare. Where a figure depends on a local rate that changes — interest, tax, fuel — the post names the assumption rather than quoting a rate that would be stale within a year.</p>
+  <h3>Where should I start?</h3>
+  <p>If you searched for a specific number, start with that post and follow the calculator link at the end of it. If you are not sure what you need, the <a href="/guides/">guides library</a> groups the same material by topic — money, health, home, auto — and each category page lists the calculators behind it.</p>
+
+  <p><a href="/guides/">→ Step-by-step guides library</a> · <a href="/guides/glossary">Glossary</a> · <a href="/editorial-policy">Editorial policy</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

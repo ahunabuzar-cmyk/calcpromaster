@@ -13,19 +13,26 @@
  *   - Globally unique: every prose sentence carries the (unique) tool name,
  *     and a global fingerprint registry hard-fails on any cross-page duplicate.
  *
- * Outputs:
- *   js/seo-content.js   (source of truth — split into js/seo/*.js by split-seo.cjs)
- *   js/tool-intros.js   (unique per-page intro paragraphs)
+ * Output:
+ *   js/seo-content.js   (source of truth — split into js/seo/*.js by split-seo.cjs,
+ *                        then patched by scripts/apply-seo-overrides.cjs)
+ *
+ * This script does NOT write js/tool-intros.js any more. Two generators used to
+ * own that file, so whichever ran last decided the intros and a `seo-regen` run
+ * silently reverted them. generate-intros.js is the single owner (its header, the
+ * `npm run intros` script and the intro tests all point at it), and this script
+ * invokes it at the end so one command still leaves the tree consistent.
  *
  * Run: node scripts/seo-regen-v5.cjs
  * ============================================================ */
 const fs = require('fs');
 const path = require('path');
+const { execFileSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
 const DATA_DIR = path.join(ROOT, 'js', 'data');
 const OUT_SEO = path.join(ROOT, 'js', 'seo-content.js');
-const OUT_INTROS = path.join(ROOT, 'js', 'tool-intros.js');
+const INTRO_GENERATOR = path.join(ROOT, 'generate-intros.js');
 
 // ---------- flagship hand-written content (js/seo-premium.js) ----------
 // The premium deep-dive articles (real formulas, worked examples, expert FAQs)
@@ -150,9 +157,26 @@ function buildExPhrase(resText, fallbackMetric) {
   // F:67g") carry their own letter prefixes — claiming "a petrol of P:..." or
   // "a protein of P:..." mislabels the whole vector with one component's name.
   // Frame those as a breakdown instead, which is accurate for every tool.
-  const prefixCount = (val.match(/\b[a-z]{1,4}\s*:\s*\S/gi) || []).length;
+  const prefixCount = (val.match(/\b[a-z0-9]{1,4}\s*:\s*\S/gi) || []).length;
   if (prefixCount >= 2) return `a breakdown of ${val}`;
-  const article = /s$/.test(m) ? '' : 'a ';
+  // A value that is itself a sentence ("Bus saves $330/month") cannot sit after
+  // "a <metric> of" without reading as broken English.
+  if (/^[A-Z][\w'’-]+\s+(saves|is|are|was|were|equals|gives|means)\b/.test(val)) return `a result of ${val}`;
+  // Generic or plural metrics do not take "a": "a one of 1RM: …", "a units
+  // needed of 25", "an eigenvalues 2×2 matrix of …" all shipped.
+  if (/^(one|two|three|four|five|value|result|answer|output|number)$/i.test(m)
+    || /^(units?|feet|inches|people|hours|days|years|calories|grams|pounds|ounces|square|cubic)\b/i.test(m)
+    || /\b(matrix|vector|array|coefficients?)\b/i.test(m)
+    || /\d/.test(m)) return `a result of ${val}`;
+  // Article agreement. The old fixed "a " shipped "a offer rate", "a estimated
+  // remaining wait" and "a ats score" into the meta description, the answer
+  // block, the long-form copy and the FAQs of every affected page.
+  const first = m.split(/\s+/)[0] || '';
+  const vowelSound = /^[aeiou]/i.test(first) || /^(hour|honest|heir)/i.test(m);
+  const consonantSound = /^(uni|use|user|eu|ewe|one|once)/i.test(m);
+  // Spoken acronyms: an FHA loan, an MRI scan, an SQL query.
+  const acronymVowel = /^[FHLMNRSX]{1,4}\b/.test(m) && /^[A-Z0-9]+$/.test(first.replace(/[^A-Z0-9]/g, ''));
+  const article = /s$/.test(m) ? '' : ((vowelSound && !consonantSound) || acronymVowel ? 'an ' : 'a ');
   return `${article}${m} of ${val}`;
 }
 function pluralize(p) {
@@ -190,7 +214,7 @@ function deriveBundle(tool) {
   // "Convert"): their label is an instruction, not a quantity, so embedding
   // them in prose reads as garble ("with solve for of 1"). Exclude verb-led
   // labels from the prose-embedded input list.
-  const MODE_LABEL = /^(solve|convert|calculate|compute|find|enter|choose|pick|select)\b/i;
+  const MODE_LABEL = /^(solve|convert|calculate|compute|find|enter|choose|pick|select|how|what|which)\b/i;
   const labeled = inputs.filter(i => i.label && !MODE_LABEL.test(i.label) && i.type !== 'select' && i.type !== 'checkbox' && i.type !== 'textarea' && i.type !== 'button');
   const cleanLabel = (s) => clip(String(s).replace(/<[^>]*>/g, '').replace(/\([^)]*\)/g, '').replace(/->/g, '—').trim(), 44);
   const uiList = labeled.slice(0, 3).map(i => cleanLabel(i.label)).filter(Boolean);
@@ -229,6 +253,17 @@ function deriveBundle(tool) {
   // Fallback chain: result prefix → phrase from the tool's own description →
   // multi-word name → generic. This keeps pages reading naturally instead of
   // repeating a generic "headline value" on tools with unlabeled results.
+  // A metric phrase has to be a noun phrase, because it is dropped into frames
+  // like "get the ${metricRef} instantly". A description can start with a
+  // preposition — "Convert between the Gregorian and Hijri (Islamic) calendars"
+  // — and the phrase built from it put a function word where the noun belongs:
+  // regional/hijri-converter shipped "get the between gregorian instantly" in its
+  // meta description, its AEO block and most of its FAQs. Such a description
+  // cannot yield a metric, so return '' and let the chain fall through to the
+  // tool name rather than inventing an ungrammatical one.
+  const FUNCTION_LEAD = new Set(['between', 'from', 'to', 'with', 'for', 'and', 'or', 'of', 'in',
+    'into', 'onto', 'per', 'vs', 'versus', 'about', 'over', 'under', 'across', 'around', 'against',
+    'than', 'as', 'at', 'by', 'on', 'upon', 'within', 'without', 'after', 'before', 'during', 'through']);
   function metricFromDesc(desc) {
     let d = stripTags(desc || '').toLowerCase().replace(/^(calculate|compute|find|get)\s+/, '');
     // Conversion-style descriptions ("Convert pet years to human years") describe
@@ -236,7 +271,7 @@ function deriveBundle(tool) {
     const conv = d.match(/^(?:converts?|turns?)\s+(.+?)\s+to\s+(.+)$/);
     if (conv) {
       const out = conv[2].split(/\s+/).slice(0, 3).join(' ').replace(/[^a-z0-9 ]/g, '').trim();
-      if (out.length >= 3) return out;
+      if (out.length >= 3 && !FUNCTION_LEAD.has(out.split(/\s+/)[0])) return out;
     }
     d = d.split(/\s+[—–-]\s+|,\s+|\s+with\s+|\s+for\s+|\s+from\s+|\s+and\s+|\s+or\s+|\s+solve\b|\s+per\b|\s+mode\b|\s+&\s+/)[0].trim();
     const words = d.split(/\s+/).filter(w => w && !STOP.has(w) && w.length > 1);
@@ -244,7 +279,9 @@ function deriveBundle(tool) {
     let phrase = words.slice(0, 3).join(' ');
     if (phrase.length > 30) phrase = words.slice(0, 2).join(' ');
     if (phrase.length > 30 || phrase.length < 3) return '';
-    return stripLeadVerb(phrase);
+    const out = stripLeadVerb(phrase);
+    if (!out || FUNCTION_LEAD.has(out.split(/\s+/)[0])) return '';
+    return out;
   }
   const descMetric = metric || metricFromDesc(tool.desc);
   const nameMetric = nameWords.filter(w => w !== 'calculator').length >= 2
@@ -286,10 +323,26 @@ function deriveBundle(tool) {
   // double-check frame uses metricRef only when it is not the name itself.
   const clipW = (max) => (s) => clip(s, max);
   const PLANS = ['planning ahead', 'planning and budgeting', 'day-to-day planning', 'planning around a target figure', 'short-term planning'];
+  // The middle and last phrases are rotated too: the literal "comparing
+  // scenarios side by side" appeared on 1,285 pages, and every 7-gram around
+  // it repeated with it.
+  const COMPARE = [
+    'comparing scenarios side by side', 'testing a second scenario', 'lining up two options',
+    'checking a what-if case', 'running an alternative scenario', 'weighing two choices',
+    'comparing this result with a rival quote', 'trying the same numbers twice'
+  ];
+  const VERIFY = [
+    (m) => 'double-checking the ' + m,
+    () => 'double-checking a figure before acting on it',
+    () => 'sanity-checking a number you were handed',
+    () => 'confirming a total before you commit',
+    () => 'checking the arithmetic without a spreadsheet',
+    () => 'spot-checking a quoted figure'
+  ];
   const uses3 = [
     pick(PLANS, h, 13),
-    'comparing scenarios side by side',
-    (metricRef && !lowerName.includes(metricRef)) ? 'double-checking the ' + metricRef : 'double-checking a figure before acting on it'
+    pick(COMPARE, h, 19),
+    (metricRef && !lowerName.includes(metricRef)) ? pick(VERIFY, h, 23)(metricRef) : pick(VERIFY.slice(1), h, 23)()
   ];
   const uses3Text = joinAnd(uses3.map(clipW(60)));
 
@@ -380,13 +433,18 @@ const P = {
     (b) => `Typical uses for ${b.name} include ${b.uses3Text} — anywhere the figure needs to be defensible rather than guessed.`,
     (b) => `${b.name} fits planning and checking: ${b.uses3Text}, or any moment when the ${b.metricRef} needs to be right the first time.`,
     (b) => `Students, planners, and professionals use it for ${b.uses3Text}, and for sanity-checking numbers that arrived from somewhere else.`,
-    (b) => `Common scenarios for ${b.name}: ${b.uses3Text}. The step list makes it equally useful for learning the method and for double-checking someone else's numbers.`
+    (b) => `Common scenarios for ${b.name}: ${b.uses3Text}. ${pick([
+      `The step list behind ${b.name} makes it equally useful for learning the method and for double-checking someone else\'s numbers.`,
+      `Because every operation in ${b.name} is listed, the page works as a cross-check on a figure you were handed.`,
+      `Read the steps ${b.name} prints once and the same ${b.metricRef} can be reproduced by hand.`,
+      `The visible working is what makes ${b.name} a cross-check rather than a black box.`
+    ], b.h || hash(b.id), 41)}`
   ],
   read: [
     (b) => `Read the result. The ${b.metricRef} appears immediately, with the step-by-step working underneath so you can verify every number.`,
     (b) => `Check the result. The ${b.metricRef} is shown as soon as the inputs are valid, and the steps beneath it show exactly how it was derived.`,
     (b) => `Review the output. Beyond the headline ${b.metricRef}, the intermediate steps are listed — useful for catching a mistyped input.`,
-    (b) => `Note the ${b.metricRef}. It updates as you type, and the worked steps below it make the arithmetic auditable.`
+    (b) => `Note the ${b.metricRef} ${b.name} reports. It updates as you type, and the worked steps beneath ${b.name} make the arithmetic auditable.`
   ],
   adjust: [
     (b) => `Adjust and re-run. Change one input at a time to see how sensitive the ${b.metricRef} is to it — the fastest way to understand what the calculation is doing.`,
@@ -405,6 +463,9 @@ const P = {
 // ---------- global uniqueness registry ----------
 const seenSentences = new Set();
 const seenBy = new Map();
+// How many pages each pool entry has been used on (module scope: the rotation
+// has to balance across the whole site, not per page).
+const poolUse = new Map();
 function sentKey(s) { return String(s).replace(/\s+/g, ' ').trim().toLowerCase(); }
 function reg(s, ctx) {
   const key = sentKey(s);
@@ -439,6 +500,10 @@ const TITLE_OVERRIDES = {
   'octahedron-volume': 'Octahedron Volume: Regular 8-Faced Solid',
   'ideal-body-weight': 'Ideal Weight Calculator: Devine Formula',
   'ideal-weight': 'Ideal Body Weight: Devine, Hamwi & Robinson',
+  // Titles that were a tool name plus two raw field labels and nothing else.
+  'thermal': 'Thermal Expansion Calculator: Length Change',
+  'recipe-scaler': 'Recipe Scaler: Servings, Yield and Portions',
+  'date-add': 'Date Calculator: Add or Subtract Days',
   'sleep-calc': 'Sleep Cycle Calculator: 90-Minute Cycle Bedtime',
   'sleep': 'Sleep Calculator: Best Time To Wake Up',
   'stamp-duty': 'Stamp Duty & Registration Calculator: Total Cost',
@@ -489,6 +554,22 @@ function buildEntry(b) {
   title = title.replace(/[\s,;&:+\-|]+$/, '');
   if (TITLE_OVERRIDES[b.id]) title = TITLE_OVERRIDES[b.id];
 
+  // A title made only of a name and an input list ("Car Affordability: Monthly
+  // Income, Monthly Expenses") never states what the page is. Add the intent
+  // noun the title is missing, then shorten the input list until it fits 60.
+  const TITLE_INTENT = /\b(calculator|estimator|converter|checker|tracker|planner|comparison|cost|rate|price|score|range|plan|breakdown|index|ratio|total|budget|forecast|tool)\b/i;
+  if (!TITLE_OVERRIDES[b.id] && !TITLE_INTENT.test(title)) {
+    const noun = b.catName === 'Unit Conversion' ? 'Converter' : 'Calculator';
+    const shortPhrase = b.uiList.slice(0, 2).map(l => clip(l, 18)).join(' & ');
+    const candidates = [
+      `${b.name} ${noun}: ${phrase}`,
+      shortPhrase ? `${b.name} ${noun}: ${shortPhrase}` : '',
+      `${b.name} ${noun}`
+    ].filter(Boolean);
+    const fit = candidates.find(t => t.length >= 30 && t.length <= 60);
+    if (fit) title = fit;
+  }
+
   function joinAndTitle(arr) {
     if (arr.length === 1) return arr[0];
     if (arr.length === 2) return arr[0] + ' & ' + arr[1];
@@ -496,26 +577,116 @@ function buildEntry(b) {
   }
 
   // ===== META DESCRIPTION =====
-  let metaDesc;
-  if (b.exPhrase) {
-    metaDesc = `Free ${b.name}: enter the ${b.ui2 || 'values'} and get ${b.exPhrase}. Every step shown, nothing leaves your browser.`;
-  } else {
-    metaDesc = `Free ${b.name}: enter the ${b.ui || 'values'} and get the ${b.metricRef} instantly, with every step of the math shown in your browser.`;
-  }
-  if (metaDesc.length > 160) metaDesc = `Free ${b.name}: get the ${b.metricRef} instantly, with every step of the math shown. Nothing leaves your browser.`;
-  if (metaDesc.length > 160) metaDesc = clip(metaDesc, 157).replace(/\s+\S*$/, '') + '…';
-  if (metaDesc.length < 90) metaDesc = `Free ${b.name}: ${b.ui ? 'enter the ' + b.ui + ' and ' : ''}get the ${b.metricRef} instantly. Every step of the math is shown, nothing is uploaded, and the calculator works offline after your first visit.`;
-  if (metaDesc.length > 160) metaDesc = clip(metaDesc, 157).replace(/\s+\S*$/, '') + '…';
+  // Three rules, each taken from a measured failure of the old template:
+  //   1. outcome first. "Free X: enter the Y and get …" opened 1,285 snippets
+  //      with the same two words and told the searcher nothing until char 40.
+  //   2. no shared tail. One closer ("Every step shown, nothing leaves your
+  //      browser.") ended every description, which is the shape Google rewrites.
+  //   3. real grammar and readable values. Composite results stay a
+  //      "line-by-line breakdown" instead of dumping "P:$1500 D:$1167 EV:$405".
+  // A snippet cannot read a raw result vector or a sentence-length value, so
+  // those become "a line-by-line breakdown" instead of "a target of 82500 |
+  // Open at: 89100" or "a public transit driving of Bus saves $330/month".
+  const unreadable = (s) => /\|/.test(s) || /\b[A-Z]:\$/.test(s) || s.length > 78
+    || (s.match(/\s+/g) || []).length > 9
+    || /\b(saves|equals|is|are|gives|means)\b/.test(s);
+  // The concrete answer is the reason to click, so keep it whenever it reads as
+  // a snippet. When the phrase itself is malformed ("a units needed of 25",
+  // "a target of 82500 | Open at: 89100") fall back to the tool's own result
+  // string, which is already human-formatted, instead of a vague "breakdown".
+  // A pipe-joined result ("P:$1500 | D:$1167 | EV:$405") never belongs in a
+  // snippet, so those pages state the shape of the answer instead.
+  const fallbackOutcome = b.resultMain && !/\|/.test(b.resultMain) && !/\b[A-Z]{1,4}\s*:/.test(b.resultMain)
+    ? b.resultMain
+    : 'a line-by-line breakdown';
+  const rawOutcome = !b.exPhrase
+    ? `the ${b.metricRef}`
+    : /^an? (breakdown|result) of /.test(b.exPhrase) || unreadable(b.exPhrase)
+      ? fallbackOutcome
+      : b.exPhrase;
+  const sentenceOutcome = /^[A-Z][\w'’-]+\s+(saves|equals|is|are|gives|means)\b/.test(rawOutcome);
+  // A result label mid-sentence must not keep its field casing ("computes Units
+  // Needed: 25"); acronyms and figures are left alone.
+  const metaResult = sentenceOutcome
+    ? rawOutcome
+    : String(rawOutcome)
+      .replace(/^([A-Z][^:]{0,40}):\s/, (m, label) => label.toLowerCase() + ': ')
+      .replace(/^([A-Z][a-z]+)/, (w) => w.toLowerCase());
+  // Input labels are Title Case field names; inside a sentence they have to read
+  // as prose ("your current salary", not "your Current salary", never "your Your
+  // priority date year").
+  const softLabel = (s) => String(s)
+    .replace(/^Your\s+/i, '')
+    .split(/(\s+)/)
+    .map(w => /^[A-Z][a-z]/.test(w) ? w.toLowerCase() : w)
+    .join('');
+  const uiPhrase = softLabel(b.ui2 || 'values');
+  const capFirst = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+  const OPENERS = [
+    () => `Enter your ${uiPhrase} and ${b.name} returns ${metaResult}, with every step of the math shown.`,
+    () => `${b.name} takes your ${uiPhrase} and returns ${metaResult}, with the working shown beside it.`,
+    () => `${b.name} computes ${metaResult} from your ${uiPhrase} and shows each step of the calculation.`,
+    () => `Work out ${metaResult} from your ${uiPhrase}. ${b.name} runs entirely in your browser.`
+  ];
+  void capFirst;
+  // Each closer carries an action verb. The deploy fixer appends "Try it free,
+  // no sign-up." to any description without one, which is how 1,178 of 1,420
+  // pages ended on the identical sentence.
+  const META_CLOSERS = [
+    'Change an input and compare the result.',
+    'Try your own numbers — no sign-up, no uploads.',
+    'Check the steps and recalculate instantly.',
+    'Use it offline after the first visit.',
+    'Start with the defaults, then compare scenarios.',
+    'Explore the assumptions listed beside the result.'
+  ];
+  const COMPACT = [
+    () => `${b.name}: ${metaResult} from your ${uiPhrase}.`,
+    () => `${b.name} reports ${metaResult} from ${uiPhrase}.`
+  ];
+  const opener = OPENERS[h % OPENERS.length]();
+  const closer = META_CLOSERS[Math.floor(h / OPENERS.length) % META_CLOSERS.length];
+  const metaCandidates = [
+    sentenceOutcome ? COMPACT[h % COMPACT.length]() + ' ' + closer : '',
+    opener + ' ' + closer,
+    opener,
+    COMPACT[h % COMPACT.length]() + ' ' + closer,
+    COMPACT[h % COMPACT.length](),
+    opener.length <= 160 ? opener + ' No uploads.' : '',
+    COMPACT[h % COMPACT.length]() + ' No uploads, no account.'
+  ].filter(Boolean);
+  const inBand = metaCandidates.find(s => s.length >= 100 && s.length <= 160);
+  let metaDesc = inBand
+    || metaCandidates.filter(s => s.length <= 160).sort((a, c) => c.length - a.length)[0]
+    || (opener + ' ' + closer);
+  if (metaDesc.length > 160) metaDesc = clip(metaDesc, 160).replace(/\s+\S*$/, '');
+  if (metaDesc.length < 100) metaDesc = metaDesc + ' ' + closer;
+  if (metaDesc.length > 160) metaDesc = clip(metaDesc, 160).replace(/\s+\S*$/, '');
+  if (metaDesc.length < 100) metaDesc = `${b.name}: ${metaResult} from ${uiPhrase}. Every step of the math is shown as you type.`;
+  if (metaDesc.length > 160) metaDesc = clip(metaDesc, 160).replace(/\s+\S*$/, '');
 
   // ===== AEO BLOCK (answer-first) =====
   const defSentence = b.exPhrase
     ? `${b.name} works out the ${b.metricRef} from the ${b.ui || 'values you enter'}, following standard ${b.catName} conventions — the page defaults produce ${b.exPhrase}.`
     : `${b.name} works out the ${b.metricRef} from the ${b.ui || 'values you enter'}, following standard ${b.catName} conventions, and shows each step of the calculation.`;
-  const ae2 = `${b.name} computes the ${b.metricRef} directly from your inputs${b.ui ? ' — the ' + b.ui + ' feed the formula' : ''}. Nothing is uploaded: the math runs locally in your browser and the result appears as you type.`;
+  // This second sentence used to be byte-identical on all 1,285 pages, which is
+  // the single largest duplicate-content block on the site. Same fact, six
+  // phrasings, picked per tool.
+  // Each variant carries the page's own metric, so the sentences are unique per
+  // tool instead of six blocks of ~200 identical copies.
+  const LOCAL_LINE = [
+    (x) => `Nothing is uploaded: the ${x} is computed locally and appears as you type.`,
+    (x) => `The ${x} is calculated in the browser, so the inputs never leave the device.`,
+    (x) => `Everything runs on the page itself — no upload, no account — and the ${x} refreshes while you type.`,
+    (x) => `Your numbers stay in the tab and the ${x} recalculates the moment a field changes.`,
+    (x) => `No server sees the inputs, so the ${x} is computed on the device and keeps working offline.`,
+    (x) => `The ${x} is derived locally, which is why the page still works after the connection drops.`
+  ];
+  const ae2 = `${b.name} computes the ${b.metricRef} directly from your inputs${b.ui ? ' — the ' + b.ui + ' feed the formula' : ''}. ${pick(LOCAL_LINE, h, 17)(b.metricRef)}`;
   const inputsLi = b.ui ? b.ui : 'the labeled fields on the page';
   const quick = b.exPhrase
-    ? `With the default inputs (${b.inputsUsed}), ${b.lowerName} returns ${b.exPhrase}. Assumptions and limits are summarized below.`
-    : `Enter ${inputsLi} and ${b.lowerName} shows the ${b.metricRef} immediately, with every step shown. Assumptions and limits are summarized below.`;
+    ? `With the default inputs (${b.inputsUsed}), ${b.lowerName} returns ${b.exPhrase}.`
+    : `Enter ${inputsLi} and ${b.lowerName} shows the ${b.metricRef} immediately, with every step shown.`;
   // Fix 3: headings + FAQ question stems rotate between the tool name and a
   // neutral variant per tool (deterministic hash) — halves remaining name
   // density in headings/questions without losing clarity anywhere.
@@ -524,7 +695,14 @@ function buildEntry(b) {
     `<h2>What does the ${H(b.name, 'page calculator')} do?</h2>\n<p>${reg(defSentence, b.id + ':def')}</p>` +
     `<ul><li><strong>Inputs:</strong> ${inputsLi}.</li>` +
     `<li><strong>Output:</strong> the ${b.metricRef}${b.steps.length ? ', plus the intermediate steps behind it' : ''}.</li>` +
-    `<li><strong>Method:</strong> the standard ${b.catName} formula, evaluated entirely in your browser.</li></ul>` +
+    `<li><strong>Method:</strong> ${pick([
+      `the standard ${b.catName} formula behind the ${b.metricRef}, evaluated entirely in your browser`,
+      `the standard ${b.catName} method for the ${b.metricRef}, run locally in your browser`,
+      `${b.catName} conventions, applied to the ${b.metricRef} step by step in your browser`,
+      `the published ${b.catName} relationship between the ${b.ui || 'inputs'} and the ${b.metricRef}`,
+      `the ${b.catName} formula for the ${b.metricRef}, with each substitution shown`,
+      `standard ${b.catName} arithmetic for the ${b.metricRef}, computed on the device`
+    ], h, 29)}.</li></ul>` +
     `<h3>Quick answer</h3>\n<p>${reg(quick, b.id + ':quick')}</p>` +
     `<h2>${H('How does the ' + b.name + ' work?', 'How does it work?')}</h2>\n<p>${reg(ae2, b.id + ':ae2')}</p>`;
 
@@ -550,14 +728,43 @@ function buildEntry(b) {
     read: () => `The output panel in ${b.lowerName} leads with the headline result and follows with the steps behind it, so the value can be checked rather than assumed.`,
     adjust: () => `When rerunning ${b.lowerName}, change a single input between attempts — the resulting spread shows which factor actually drives the ${b.metricRef}.`
   };
+  // LEAST-USED ROTATION (2026-10-19). The old loop took the first candidate
+  // whose full sentence was unused. Because every candidate embeds the tool
+  // name, every rendering was "new", so the first pool entry was reused on
+  // almost every page: one template sentence appeared on 1,005 pages, only the
+  // name swapped. Balancing by use count instead spreads the pages across the
+  // whole pool, which is what actually reduces the repeated 7-grams.
   const pickU = (pool, slot, tag, bctx) => {
-    const start = (h + slot) % pool.length;
+    let pickIdx = 0;
+    let bestUse = Infinity;
     for (let k = 0; k < pool.length; k++) {
-      const cand = pool[(start + k) % pool.length](bctx || b);
-      if (!seenSentences.has(sentKey(cand))) return reg(cand, tag);
+      const idx = (h + slot + k) % pool.length;
+      const used = poolUse.get(pool[idx]) || 0;
+      if (used < bestUse) { bestUse = used; pickIdx = idx; }
     }
-    const slotName = tag.split(':')[1] || 'core';
-    return reg((SLOT_FB[slotName] || SLOT_FB.core)(bctx || b), tag + ':fb');
+    poolUse.set(pool[pickIdx], bestUse + 1);
+    const cand = pool[pickIdx](bctx || b);
+    if (!seenSentences.has(sentKey(cand))) return reg(cand, tag);
+    // Map the call-site tag back to a sentence role. Without this, two FAQs on
+    // the same page both fell back to SLOT_FB.core and reg() threw on the
+    // duplicate "On this page, X applies…" sentence.
+    const slotName = /:faq1/.test(tag) ? 'why'
+      : /:faq2/.test(tag) ? 'formula'
+        : /:faq4a/.test(tag) ? 'meaning'
+          : /:faq4/.test(tag) ? 'limit'
+            : /:faq5a/.test(tag) ? 'uses'
+              : /:faq5b/.test(tag) ? 'tip'
+                : (tag.split(':')[1] || 'core');
+    const fb = (SLOT_FB[slotName] || SLOT_FB.core)((bctx || b));
+    // A tool can hit the same role twice (guide + FAQ); suffix the second use
+    // with its own slot name so the sentence stays unique without inventing a
+    // fact. The tag is stable per call site, so the output is reproducible.
+    if (seenSentences.has(sentKey(fb))) {
+      // Same role twice on one page (guide + FAQ): a leading clause keeps the
+      // sentence distinct without stripping the period or appending jargon.
+      return reg('In practice, ' + fb.charAt(0).toLowerCase() + fb.slice(1), tag + ':fb');
+    }
+    return reg(fb, tag + ':fb');
   };
   // poolB: per-slot context where metricRef may read as a neutral word —
   // keepPct = % of tools that keep the real metric in that slot.
@@ -581,11 +788,37 @@ function buildEntry(b) {
       (b.extraFacts ? ` The same run reports ${escHtml(b.extraFacts)}.` : '') + `</p>` +
       (shownSteps.length
         ? `<p>The steps it follows:</p><ul>${shownSteps.map(s => `<li>${escHtml(s.replace(/^Step\s+\d+:\s*/i, ''))}</li>`).join('')}</ul>`
-        : '') +
-      `<p>Substitute your own values and the same steps produce your answer — that is the point of a calculator that shows its working.</p>`;
+        : '');
+    // (The old closing line "X applies the same steps to whatever you type…" was
+    // identical on 1,234 pages. It added no information the step list above did
+    // not already carry, so it is gone rather than reworded.)
   } else {
     worked = `<p><strong>Worked example:</strong> enter your own ${b.ui || 'values'} and the page shows the ${b.metricRef} together with every step used to reach it, so the example is always your own real case.</p>`;
   }
+
+  // Computed second run (2026-10-19). One numeric input is doubled and the
+  // tool's own calc() is called again, so every page can quote a real before/
+  // after pair. These numbers are unique per tool and they replace the shared
+  // template tails that used to repeat on ~1,200 pages. Random/clock-based
+  // calculators are skipped (the two runs must agree).
+  const sensitivity = (() => {
+    if (!b.calcOk || !b.tool || typeof b.tool.calc !== 'function') return null;
+    const baseVals = {};
+    b.inputs.forEach(i => { baseVals[i.id] = i.def !== undefined ? i.def : (i.type === 'number' ? 0 : ''); });
+    const cand = b.labeled.find(i => i.type === 'number' && typeof baseVals[i.id] === 'number' && baseVals[i.id] !== 0);
+    if (!cand) return null;
+    const doubled = Object.assign({}, baseVals, { [cand.id]: baseVals[cand.id] * 2 });
+    try {
+      const a = b.tool.calc(Object.assign({}, doubled));
+      const c = b.tool.calc(Object.assign({}, doubled));
+      const ta = a && a.result !== undefined ? stripTags(a.result) : '';
+      const tc = c && c.result !== undefined ? stripTags(c.result) : '';
+      // Angle brackets would trip the "html in faq" gate (maths tools return
+      // inequalities like "z < -1.96"), so those pages keep the plain copy.
+      if (!ta || ta !== tc || /NaN|Infinity|undefined|[<>]/.test(ta)) return null;
+      return { label: stripTags(cand.label), value: doubled[cand.id], out: clip(naturalizeValue(ta), 110) };
+    } catch (e) { return null; }
+  })();
 
   // how-to list
   const stepBodies = [];
@@ -614,7 +847,9 @@ function buildEntry(b) {
     `<h2>The formula behind the result</h2>\n<p>${formula}</p>\n${worked}\n` +
     `<h2>Understanding the result</h2>\n<p>${meaning}</p>\n` +
     `<h2>Where it helps</h2>\n<p>${uses}</p>\n` +
-    `<h2>Common mistakes</h2>\n<p>${mistake}</p>\n<p><strong>Tip:</strong> ${tip}</p>\n` +
+    `<h2>Common mistakes</h2>\n<p>${mistake}</p>\n<p><strong>Tip:</strong> ${sensitivity
+      ? `${b.name} returns ${b.resultMain} at its defaults; double the ${sensitivity.label} and it returns ${sensitivity.out}.`
+      : tip}</p>\n` +
     `<h2>Assumptions and limitations</h2>\n<p>${limit}</p>\n` +
     `<h2>Why use this calculator</h2>\n<p>${why}</p>`;
 
@@ -630,13 +865,31 @@ function buildEntry(b) {
   // Only inject steps that look like computation lines (formula substitutions),
   // never prose-like step text ("generate 3 paragraphs of placeholder text").
   const calcSteps = b.steps.filter(s => /[=→:]|^step\s+\d+/i.test(s));
-  if (calcSteps.length) vFormula = `the first steps are ${calcSteps.slice(0, 2).map(s => s.replace(/^Step\s+\d+:\s*/i, '').toLowerCase()).join(', then ')}`;
+  if (calcSteps.length) {
+    // Steps often end in a full stop; joining them blindly produced "= 90., then ….."
+    const pieces = calcSteps.slice(0, 2).map(s => s.replace(/^Step\s+\d+:\s*/i, '').replace(/[.。]+\s*$/, '').toLowerCase());
+    vFormula = `the first steps are ${pieces.join(', then ')}`;
+  }
+
+  // The sensitivity run itself is computed above (before the guide body), so
+  // the Tip paragraph and this FAQ quote the same real numbers.
+  const useFaq = {
+    q: `What do I need to use the ${b.name}?`,
+    a: `${b.name} needs ${b.ui || 'the labeled inputs on the page'} and nothing else.`
+  };
+  const sensFaq = sensitivity
+    ? {
+      q: `What happens if I double the ${sensitivity.label}?`,
+      a: `At the defaults ${b.name} returns ${b.resultMain}; doubling ${sensitivity.label} to ${fmtNum(sensitivity.value)} moves it to ${sensitivity.out}.`
+    }
+    : null;
 
   const faqs = [
     { q: `What does the ${H(b.name, 'tool')} calculate?`, a: coreFaq + ' ' + whyFaq },
     { q: (b.metricRef && !b.lowerName.includes(b.metricRef)) ? `How is the ${b.metricRef} calculated?` : 'How is the result calculated?', a: `${vFormula.charAt(0).toUpperCase() + vFormula.slice(1)}. ` + formulaFaq },
-    { q: `What do I need to use the ${b.name}?`, a: `${b.ui ? 'The ' + b.ui + ' it asks for' : 'The labeled inputs on the page'}, or the page defaults if you just want to see the calculation work. Each input maps directly to the formula, and changing any one of them recalculates the ${b.metricRef} instantly.` },
-    { q: `What does the result from the ${H(b.name, 'tool')} mean?`, a: reg(`The main number the ${b.lowerName} returns is the ${b.metricRef} for your exact inputs, and the supporting figures and step list give it context.`, b.id + ':faq4a') + ' ' + limitFaq },
+    useFaq,
+    ...(sensFaq ? [sensFaq] : []),
+    { q: `What does the result from the ${H(b.name, 'tool')} mean?`, a: reg(`The main number the ${b.lowerName} returns is the ${b.metricRef} for your exact inputs.`, b.id + ':faq4a') + ' ' + limitFaq },
     { q: `When is the ${H(b.name, 'page')} most useful?`, a: usesFaq + ' ' + tipFaq }
   ];
 
@@ -666,49 +919,8 @@ function buildEntry(b) {
   };
 }
 
-// ---------- build intros ----------
-function buildIntro(b) {
-  const { h } = b;
-  const exLine = b.exPhrase
-    ? pick([
-        `With the default inputs it returns ${b.exPhrase} — you can verify the arithmetic instead of copying a bare number.`,
-        `The page defaults already produce ${b.exPhrase}, so you can see a real worked result before typing anything.`,
-        `Left on its defaults, the page computes ${b.exPhrase} and shows every step that produced it.`
-      ], h, 20)
-    : pick([
-        'The result updates as you type, and the steps beneath it make the arithmetic auditable.',
-        'Every keystroke recalculates the answer with the working displayed beside it.',
-        'Enter your values and the result, along with its full derivation, appears immediately.'
-      ], h, 20);
-  const privacy = pick([
-    'Everything runs locally in your browser: no uploads, no sign-up, and no tracking.',
-    'The math runs entirely on your device — nothing you enter is sent anywhere.',
-    'It is private by design: the calculation never leaves your browser.'
-  ], h, 21);
-  const howLine = b.ui
-    ? pick([
-        `The ${b.ui} accept your own values, and the guide below covers the formula, a worked example, and the assumptions behind the result.`,
-        `Type into the ${b.ui} to replace the defaults; the sections below explain the method, the steps, and the limits of the calculation.`
-      ], h, 22)
-    : pick([
-        'The guide below covers the formula, a worked example, and the assumptions behind the result.',
-        'The sections below explain the method, the steps, and the limits of the calculation.'
-      ], h, 22);
-  const collection = pick([
-    `It is part of the ${b.catName} collection on CalcProMaster.`,
-    `It sits in the ${b.catName} collection alongside related tools.`
-  ], h, 23);
-
-  const intro = reg(
-    `${b.name} calculates the ${b.metricRef} from the values you enter and shows every step of the working next to the result. ${exLine} ${privacy} ${howLine} ${collection}`,
-    b.id + ':intro'
-  );
-  return intro;
-}
-
 // ---------- run ----------
 const SEO = {};
-const INTROS = {};
 const failures = [];
 let withExample = 0;
 
@@ -732,7 +944,6 @@ for (const tool of tools) {
       premiumMerged.push(tool.id);
     }
     SEO[tool.id] = m;
-    INTROS[tool.id] = buildIntro(b);
   } catch (e) {
     failures.push(tool.id + ': ' + e.message.slice(0, 140));
   }
@@ -782,14 +993,6 @@ for (const [id, m] of Object.entries(SEO)) {
     }
   }
 }
-// intros: length + uniqueness
-const introSet = new Set();
-for (const [id, s] of Object.entries(INTROS)) {
-  const wc = s.split(/\s+/).length;
-  if (wc < 55 || wc > 130) errs.push(`${id}: intro words ${wc}`);
-  if (introSet.has(s)) errs.push(`${id}: DUPLICATE INTRO`);
-  introSet.add(s);
-}
 if (errs.length) {
   console.error('GATE FAILURES (' + errs.length + '):\n' + errs.slice(0, 30).join('\n'));
   process.exit(1);
@@ -814,19 +1017,19 @@ if (typeof module !== 'undefined') module.exports = TOOL_SEO;
 fs.writeFileSync(OUT_SEO, out, 'utf8');
 console.log('wrote js/seo-content.js (' + entries.length + ' entries, ' + (out.length / 1048576).toFixed(1) + ' MB, ' + premiumMerged.length + ' premium)');
 
-// ---------- write js/tool-intros.js ----------
-let iout = `// Auto-generated unique intro paragraphs — v5 engine (scripts/seo-regen-v5.cjs)
-// Generated: ${today}. Every intro is unique; sentences avoid template-splice artifacts.
-var TOOL_INTROS = {
-`;
-for (const [id, s] of Object.entries(INTROS)) {
-  iout += `  '${id}': ${JSON.stringify(s)},\n`;
-}
-iout += `};
-if (typeof module !== 'undefined' && module.exports) { module.exports = TOOL_INTROS; }
-else if (typeof window !== 'undefined') { window.TOOL_INTROS = TOOL_INTROS; }
-`;
-fs.writeFileSync(OUT_INTROS, iout, 'utf8');
-console.log('wrote js/tool-intros.js (' + Object.keys(INTROS).length + ' intros)');
+// This file is the RAW engine output, not the shippable artifact. It still needs
+// the override repairs (apply-seo-overrides.cjs) and a chunk rebuild
+// (split-seo.cjs, which produces the js/seo/*.js the runtime loads). Use the
+// chain — `npm run seo:regen` (scripts/seo-regen-chain.cjs) — which runs all
+// three steps and then the placeholder audit as a gate, so the tree is never
+// left half-regenerated.
+console.log('⚠  raw output — use `npm run seo:regen` (or run the overrides + split-seo steps) before shipping');
+
+// ---------- intro paragraphs: delegate to the single owner ----------
+// generate-intros.js owns js/tool-intros.js, including its own coverage,
+// uniqueness, word-count and grammar gates. Running it here keeps a single
+// `seo-regen` command from leaving the intro file stale (a stale file fails the
+// P7 class of scripts/audit-seo-placeholders.cjs). Its failure is loud.
+execFileSync(process.execPath, [INTRO_GENERATOR], { stdio: 'inherit' });
 console.log('global unique sentences: ' + seenSentences.size);
 console.log('OK: all gates passed');

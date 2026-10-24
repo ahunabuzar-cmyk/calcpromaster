@@ -15,33 +15,38 @@ const path = require('path');
 const dataDir = path.join(__dirname, '..', 'js', 'data');
 const files = fs.readdirSync(dataDir).filter(f => f.endsWith('.js'));
 
-// Tool ids use `id: '...'` (space after colon); field ids use `id:'...'` (no space).
-const toolIdRe = /^\s*\{\s*id:\s+'([^']+)'/;
-
+// Read the REAL registry, not a guess at its punctuation.
+//
+// The previous version regex-scanned for `{ id: '...'` at the start of a line,
+// which cannot tell a tool object from the first field of a multi-line `inputs:`
+// array (`{ id: 'chargerCost', ...` looks identical). Measured 2026-10-17: it
+// reported 187 tools "without intro" that were really input-field ids, and 82
+// intros "without a tool" that were real calculators. Every data file exports
+// its array (`module.exports`), so requiring them is exact and cheap.
+const problemsNote = [];
 const counts = {};
 const idLocs = {};
 let total = 0;
+let loadFailures = 0;
 
 for (const f of files) {
-  const src = fs.readFileSync(path.join(dataDir, f), 'utf8');
-  const lines = src.split('\n');
-  let inTool = false;
-  let curId = null;
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    const m = line.match(toolIdRe);
-    if (m) {
-      curId = m[1];
-      inTool = true;
-      total++;
-      counts[curId] = (counts[curId] || 0) + 1;
-      (idLocs[curId] = idLocs[curId] || []).push(f + ':' + (i + 1));
-    } else if (inTool && /^\s*\},?\s*$/.test(line)) {
-      inTool = false;
-      curId = null;
-    }
+  let tools;
+  try {
+    tools = require(path.join(dataDir, f));
+  } catch (e) {
+    loadFailures++;
+    console.log('!!! DATA FILE WILL NOT LOAD: ' + f + ' — ' + e.message);
+    continue;
+  }
+  if (!Array.isArray(tools)) continue;
+  for (const t of tools) {
+    if (!t || typeof t.id !== 'string') continue;
+    total++;
+    counts[t.id] = (counts[t.id] || 0) + 1;
+    (idLocs[t.id] = idLocs[t.id] || []).push(f);
   }
 }
+if (loadFailures) problemsNote.push(loadFailures + ' data file(s) failed to load');
 
 const uniqueIds = Object.keys(counts).length;
 const duplicates = Object.entries(counts).filter(([, n]) => n > 1);
@@ -101,6 +106,10 @@ if (fs.existsSync(introFile)) {
 }
 
 console.log('========================');
+if (problemsNote.length) {
+  problems++;
+  problemsNote.forEach(n => console.log('!!! ' + n));
+}
 if (problems) {
   console.log(`RESULT: ${problems} problem group(s) found — fix before deploy.`);
   process.exit(1);

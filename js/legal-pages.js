@@ -63,16 +63,17 @@ const LegalPages = (function() {
       </ul>
       <p>Your use of these services is subject to their respective terms and privacy policies.</p>
 
-      <h2>7. Changes to Terms</h2>
+      <h2>7. Embedding and Attribution</h2>
+      <p>You may link to any calculator and quote short excerpts with a visible link back to the source page. Embedding a tool in a frame is allowed for classrooms, internal wikis and non-commercial publications, provided the embed is not modified to hide branding and the surrounding page does not imply endorsement. Re-publishing an entire page, mirroring the calculator catalogue, or reselling access to these tools is not permitted without written permission.</p>
+
+      <h2>8. Changes to Terms</h2>
       <p>We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting. Your continued use of CalcProMaster after changes constitutes acceptance of the new Terms.</p>
 
-      <h2>8. Governing Law</h2>
-      <!-- MANUAL ACTION: apne country/state ka naam yahan daal do (e.g. Pakistan,
-           India, USA — jahan aap registered ho). Abhi neutral placeholder hai. -->
-      <p>These Terms are governed by the laws of the country/state in which CalcProMaster is based. Any disputes shall be resolved in the courts of that jurisdiction.</p>
+      <h2>9. Governing Law</h2>
+      <p>These Terms are governed by the laws applicable at the operator's principal place of business. Any dispute that cannot be resolved by correspondence will be handled by the courts of that jurisdiction, without affecting any right you have under mandatory consumer law where you live.</p>
 
-      <h2>9. Contact</h2>
-      <p>Questions about these Terms? Contact us at: <strong>calpromaster@gmail.com</strong></p>
+      <h2>10. Contact</h2>
+      <p>Questions about these Terms? Contact us at: <strong>calpromaster@gmail.com</strong> and include the page URL so we can answer precisely.</p>
     </div>
   `;
 
@@ -111,7 +112,15 @@ const LegalPages = (function() {
       <h2>How Our Financial Calculations Work (Methodology)</h2>
       <p>Every calculator shows its formula, a worked example with default inputs, and the assumptions behind the math — visible on the page, not hidden behind scripts. Results are computed in your browser from the values you enter, using standard published formulas (for example, standard amortization for loans and compound-interest math for savings). Where a real-world outcome depends on factors no calculator can know — your lender's exact fee schedule, your tax situation, market movements — the calculator's limitations section says so explicitly. Each calculator is covered by an automated formula QA contract with independently verified expected results before it is promoted into the sitemap.</p>
 
+      <h2>What the Calculators Cannot See</h2>
+      <p>A loan result assumes the rate stays fixed for the whole term and that every payment arrives on time. It cannot see an arrangement fee added at signing, a variable rate that resets after two years, an offset account, or a penalty for early repayment. An investment projection assumes a constant return, while real markets deliver the same average through very different sequences of good and bad years. A tax estimate assumes the rules for one jurisdiction and one year, and ignores credits, allowances and filing status changes that move the final bill.</p>
+
+      <h2>Which Rate or Price to Enter</h2>
+      <p>Use the annual rate your lender actually quoted, as a percentage, not the APR if the calculator does not ask for fees. For savings, use the rate net of any account fee. For currency, remember that a card or bank applies a spread on top of the mid-market rate shown here, typically half a percent to three percent. Entering a headline rate that ignores those costs produces an answer that is precise but optimistic.</p>
+
       <h2>Your Responsibility</h2>
+      <p>You are solely responsible for:</p>
+      <ul>
         <li>Understanding the limitations of each calculator</li>
         <li>Seeking professional advice before acting on results</li>
         <li>Any financial decisions you make</li>
@@ -164,6 +173,12 @@ const LegalPages = (function() {
 
       <h2>How Our Health Calculations Work (Methodology)</h2>
       <p>Our health tools use formulas published in peer-reviewed research and clinical practice — for example, Mifflin-St Jeor for basal metabolic rate, the standard BMI weight/height ratio, and established heart-rate zone percentages. Each calculator displays its formula, a worked example, and its assumptions on the page, and states its limits: the population ranges a formula was derived from, what activity multipliers assume, and when a result should be discussed with a clinician. All calculations run entirely in your browser — no health data is sent anywhere.</p>
+
+      <h2>What the Formulas Assume</h2>
+      <p>Most health formulas were derived from a specific population and inherit its assumptions. BMI was built for population screening, not for individuals with high muscle mass, and it says nothing about where fat sits. Basal metabolic rate equations assume a resting, fasted state and a typical body composition; activity multipliers then stretch that number by a fixed factor even though two people with the same step count can burn very different amounts. Heart-rate formulas estimate a maximum from age alone, which can be off by ten to fifteen beats per minute for any one person. Pregnancy, menopause, thyroid conditions and some medications move these numbers further than any calculator can follow.</p>
+
+      <h2>When to Ignore the Number</h2>
+      <p>Treat a health calculator result as a starting point for a conversation, not a target to hit. If a figure conflicts with how you feel, with a trend your clinician is tracking, or with advice you have already been given, the clinical advice wins. A single reading of weight, body fat or calories is noise; a trend over weeks is signal. Do not use these tools to adjust medication, to set a calorie floor below what a professional recommended, or to interpret symptoms.</p>
 
       <h2>Your Responsibility</h2>
       <p>You are solely responsible for:</p>
@@ -227,6 +242,12 @@ const LegalPages = (function() {
         <li><strong>Opt out of analytics:</strong> Reject non-essential cookies via the cookie banner.</li>
         <li><strong>Opt out of ads:</strong> Reject non-essential cookies or use an ad blocker.</li>
       </ul>
+
+      <h2>What Stays on Your Device</h2>
+      <p>Calculation history, favourites, theme choice and your cookie decision are stored in localStorage under this site's own key space. They survive a refresh, a browser restart and an offline session, and they disappear when you clear site data. Nothing in that store is transmitted: there is no account, no sync and no server-side copy to request or delete. On a shared computer, use the "Clear History" control before you leave, or open a private window so the store is discarded when you close it.</p>
+
+      <h2>Children's Privacy</h2>
+      <p>CalcProMaster is a general-audience reference site and does not knowingly collect personal information from children. Because there are no accounts, no profiles and no uploaded inputs, a child using the site creates no server-side record. Analytics and advertising scripts only load after a visitor accepts the cookie banner; declining leaves the calculators fully usable.</p>
 
       <h2>Data Security</h2>
       <p>Since all calculations run in your browser and no data is sent to our servers, your data is as secure as your device. We recommend:</p>
@@ -293,6 +314,15 @@ const LegalPages = (function() {
         <li>Any decisions or actions based on calculator results</li>
       </ul>
 
+      <h2>How Our Estimates Are Produced</h2>
+      <p>Every calculator implements a named, publicly documented formula rather than a proprietary black box: the standard loan amortisation equation, the Mifflin-St Jeor energy equation, the shoelace area formula, and so on. Each page states the formula it uses, shows a worked example with the expected output, and lists the assumptions built into the model. Arithmetic runs locally in your browser with full precision, and rounding happens only at the display step, so the number you see is reproducible by hand from the inputs shown.</p>
+
+      <h2>Reporting an Error</h2>
+      <p>If a result looks wrong, email <strong>calpromaster@gmail.com</strong> with the page URL, the exact inputs, the output you expected and the output you saw. Confirmed formula errors are fixed and re-tested before the next build; the correction is noted in the site changelog rather than quietly patched.</p>
+
+      <h2>Which Disclaimer Applies</h2>
+      <p>Finance, health and fitness pages carry their own subject-specific disclaimers linked in the footer. Where a page could reasonably fall into more than one category, the stricter disclaimer applies. This general page covers everything else, including everyday maths, unit conversion, construction quantities and software utilities.</p>
+
       <h2>No Liability</h2>
       <p>CalcProMaster and its creators are not liable for any losses, damages, or consequences arising from the use of these calculators, including but not limited to:</p>
       <ul>
@@ -305,6 +335,9 @@ const LegalPages = (function() {
 
       <h2>Changes and Updates</h2>
       <p>Calculator formulas, assumptions, and features may change without notice. We are not responsible for keeping calculators updated with the latest regulations, rates, or best practices in every field.</p>
+
+      <h2>Using Results Responsibly</h2>
+      <p>A calculator is a checking tool, not a decision-maker. The useful pattern is to run the number twice: once with your best estimate and once with a deliberately pessimistic value. If the decision still holds at the worse number, the estimate was never load-bearing; if it flips, the input you changed is the one worth confirming with a professional or a primary document. That habit costs a minute and catches most of the errors a disclaimer can only warn about.</p>
 
       <p class="legal-warning">⚠️ <strong>Bottom line: Use CalcProMaster as a helpful starting point, but always verify important calculations and consult professionals before making significant decisions.</strong></p>
     </div>
@@ -327,17 +360,23 @@ const LegalPages = (function() {
       <ol>
         <li><strong>Formula check.</strong> The implemented formula is compared against its published definition before a calculator ships.</li>
         <li><strong>Hand-verified examples.</strong> Each page's worked example is computed by hand and must reproduce exactly in the tool.</li>
-        <li><strong>Automated regression tests.</strong> Every calculator is covered by a QA contract with independently computed expected results; the suite runs on every build, and a failing tool is not promoted to the sitemap. The current matrix is public on the <a href="/qa-dashboard.html" target="_blank" rel="noopener">QA dashboard</a>.</li>
+        <li><strong>Automated regression tests.</strong> Every calculator is covered by a QA contract with independently computed expected results; the suite runs on every build, and a failing tool is not promoted to the sitemap. The current matrix is public on the <a href="/qa-dashboard" target="_blank" rel="noopener">QA dashboard</a>.</li>
       </ol>
 
       <h2>Who Writes and Reviews It</h2>
       <p>CalcProMaster is built and maintained by its developer, whose background spans mathematics and software engineering. Content is written and reviewed by the same person who maintains the calculation engine and its test suite — not by external contributors. The developer is not a licensed financial advisor or medical professional; finance and health pages carry explicit disclaimers stating this, and results are presented as math education, not professional advice.</p>
 
       <h2>Corrections</h2>
-      <p>Found an error in a formula, example, or explanation? Email <a href="mailto:calpromaster@gmail.com">calpromaster@gmail.com</a> with the page URL and what you expected. Confirmed errors are fixed and re-tested before the next build; we aim to respond within 2-3 business days.</p>
+      <p>Found an error in a formula, example, or explanation? Email <a href="/contact" data-email="calpromaster@gmail.com">calpromaster@gmail.com</a> with the page URL and what you expected. Confirmed errors are fixed and re-tested before the next build; we aim to respond within 2-3 business days.</p>
 
       <h2>Updates</h2>
       <p>When a formula, default rate, or convention changes, the affected pages are regenerated and re-tested. Pages are not redated cosmetically — a page's review date changes only when its content actually changes.</p>
+
+      <h2>Sources We Rely On</h2>
+      <p>Formulas come from primary standards where one exists — ISO and IEC definitions for units and engineering quantities, national statistical agencies and tax authorities for rates and thresholds, and published clinical or exercise-science equations for health metrics. When a figure changes annually, the page names the year of the rate rather than implying it is permanent. Where no single standard exists, the page says which convention it follows and what an alternative convention would change.</p>
+
+      <h2>What We Do Not Cover</h2>
+      <p>We do not publish personalised advice, product rankings, lending or insurance offers, or anything that requires knowing an individual's full circumstances. We also avoid calculators whose only purpose is producing a number nobody can check. If a tool cannot show its formula and a reproducible example, it does not ship here.</p>
 
       <h2>Advertising &amp; Independence</h2>
       <p>Ads and affiliate links never determine calculation results, formulas, or recommendations. Any sponsored placement is labeled. See our <a href="/privacy">Privacy Policy</a> for data practices — calculations run entirely in your browser.</p>
@@ -354,7 +393,7 @@ const LegalPages = (function() {
 
       <h2>What Makes CalcProMaster Different</h2>
       <ul>
-        <li><strong>1219+ calculators:</strong> From mortgages to BMI, loan payoffs to unit conversions—everything in one place</li>
+        <li><strong>1285+ calculators:</strong> From mortgages to BMI, loan payoffs to unit conversions—everything in one place</li>
         <li><strong>Step-by-Step Solutions:</strong> Understand the math behind the results</li>
         <li><strong>No Sign-Up Required:</strong> Use any calculator instantly, no account needed</li>
         <li><strong>Privacy-First:</strong> All calculations run in your browser, nothing stored on our servers</li>
@@ -366,7 +405,7 @@ const LegalPages = (function() {
       <h2>Who We Are</h2>
       <!-- MANUAL ACTION (optional): apna naam/credentials yahan add karo jab chaaho —
            niche ek professional generic bio hai jo launch ke liye ready hai -->
-      <p>CalcProMaster is built by a dedicated developer with a strong background in mathematics, software engineering, and data accuracy. What started as a small collection of personal calculation tools grew into a public library of <strong>1219+ free online calculators</strong> spanning finance, health, science, engineering, education, and everyday life.</p>\n      <p>Every calculator page is held to a documented standard: the formula, a worked example, and the assumptions appear beside each result. Our <a href=\"/editorial-policy\">editorial policy</a> governs how content is written and corrected, each page carries a visible <em>Last reviewed</em> stamp showing when its formulas and explanations were last verified, and a public formula QA dashboard documents how results are tested. Found an error? The <a href=\"/contact\">contact page</a> reaches the maintainer directly — corrections are applied and re-reviewed, not just acknowledged.</p>
+      <p>CalcProMaster is built by a dedicated developer with a strong background in mathematics, software engineering, and data accuracy. What started as a small collection of personal calculation tools grew into a public library of <strong>1285+ free online calculators</strong> spanning finance, health, science, engineering, education, and everyday life.</p>\n      <p>Every calculator page is held to a documented standard: the formula, a worked example, and the assumptions appear beside each result. Our <a href=\"/editorial-policy\">editorial policy</a> governs how content is written and corrected, each page carries a visible <em>Last reviewed</em> stamp showing when its formulas and explanations were last verified, and a public formula QA dashboard documents how results are tested. Found an error? The <a href=\"/contact\">contact page</a> reaches the maintainer directly — corrections are applied and re-reviewed, not just acknowledged.</p>
       <p>Every calculator on this site is designed with the same standards: verified formulas, transparent step-by-step explanations, and rigorous testing against real-world scenarios. We believe a calculator is only as good as its accuracy — which is why each tool documents its assumptions and limitations openly, and why our finance and health calculators always carry clear disclaimers.</p>
       <p>CalcProMaster runs entirely in your browser. No accounts, no hidden costs — just fast, honest calculation tools that anyone can use, from students checking homework to families planning budgets. Calculations run locally; optional analytics and advertising only activate if you consent via our cookie banner.</p>
 
@@ -384,7 +423,7 @@ const LegalPages = (function() {
       <ol>
         <li><strong>Published formulas only.</strong> Each tool implements a standard, publicly documented formula — the amortization equation lenders use, Mifflin-St Jeor for basal metabolic rate, the Euclidean algorithm for GCD — and names it in the page's "How It Works" section.</li>
         <li><strong>Hand-verified worked examples.</strong> Every page shows a worked example with expected values, checked by hand against the formula before it ships, so you can confirm the arithmetic yourself.</li>
-        <li><strong>Automated QA contract.</strong> Each calculator is covered by an automated test suite with independently computed expected results. The suite runs on every build; a tool that fails its formula contract is not promoted to the sitemap. The full matrix is public on our <a href="/qa-dashboard.html" target="_blank" rel="noopener">QA dashboard</a>.</li>
+        <li><strong>Automated QA contract.</strong> Each calculator is covered by an automated test suite with independently computed expected results. The suite runs on every build; a tool that fails its formula contract is not promoted to the sitemap. The full matrix is public on our <a href="/qa-dashboard" target="_blank" rel="noopener">QA dashboard</a>.</li>
       </ol>
       <p>Where real-world outcomes depend on facts no formula can know — your lender's fee schedule, your tax situation, market movements — the calculator's limitations section says so explicitly. Read the full <a href="/editorial-policy">editorial policy</a> for how content is written, reviewed and corrected.</p>
 
@@ -409,10 +448,10 @@ const LegalPages = (function() {
 
       <h2>Email Us</h2>
       <p>For general inquiries, feedback, bug reports, or calculator requests:</p>
-      <p class="contact-email"><a href="mailto:calpromaster@gmail.com"><strong>calpromaster@gmail.com</strong></a></p>
+      <p class="contact-email"><a href="/contact" data-email="calpromaster@gmail.com"><strong>calpromaster@gmail.com</strong></a></p>
 
       <h2>Business &amp; Partnership Inquiries</h2>
-      <p>Interested in affiliate partnerships, sponsored placements, content collaborations, or backlink exchanges? We love working with brands and publishers who care about useful, privacy-first tools. Email us at <a href="mailto:calpromaster@gmail.com"><strong>calpromaster@gmail.com</strong></a> with the subject line <em>Partnership</em> and we typically reply within 2-3 business days.</p>
+      <p>Interested in affiliate partnerships, sponsored placements, content collaborations, or backlink exchanges? We love working with brands and publishers who care about useful, privacy-first tools. Email us at <a href="/contact" data-email="calpromaster@gmail.com"><strong>calpromaster@gmail.com</strong></a> with the subject line <em>Partnership</em> and we typically reply within 2-3 business days.</p>
       <p>We accept a limited number of <strong>sponsored recommendation placements</strong> in our calculator result pages (clearly labeled "Recommended"), as well as <strong>guest content and editorial backlinks</strong> on our reference sections. All partnerships are disclosed and never affect calculation results.</p>
 
       <h2>What to Include in Your Message</h2>
@@ -427,13 +466,13 @@ const LegalPages = (function() {
       <h2>Recommended Resources &amp; Partners</h2>
       <p>We carefully curate a short list of trusted resources we personally use and recommend alongside our tools. These links may include affiliate relationships — when you buy through them we may earn a small commission at no extra cost to you. It never affects our calculator results, which remain unbiased and algorithm-based.</p>
       <ul class="partner-list">
-        <li>📈 <a href="https://www.investopedia.com/" rel="nofollow noopener sponsored" target="_blank">Investopedia</a> — financial education and definitions</li>
-        <li>💳 <a href="https://www.nerdwallet.com/" rel="nofollow noopener sponsored" target="_blank">NerdWallet</a> — rate and card comparisons</li>
-        <li>📊 <a href="https://www.semrush.com/" rel="nofollow noopener sponsored" target="_blank">Semrush</a> — SEO and keyword research</li>
-        <li>🔗 <a href="https://ahrefs.com/" rel="nofollow noopener sponsored" target="_blank">Ahrefs</a> — backlink analysis</li>
+        <li>📈 <a href="https://www.investopedia.com/" rel="noopener" target="_blank">Investopedia</a> — financial education and definitions</li>
+        <li>💳 <a href="https://www.nerdwallet.com/" rel="noopener" target="_blank">NerdWallet</a> — rate and card comparisons</li>
+        <li>📊 <a href="https://www.semrush.com/" rel="noopener" target="_blank">Semrush</a> — SEO and keyword research</li>
+        <li>🔗 <a href="https://ahrefs.com/" rel="noopener" target="_blank">Ahrefs</a> — backlink analysis</li>
         <li>🩺 <a href="https://www.who.int/health-topics" rel="nofollow noopener" target="_blank">WHO Health Topics</a> — health standards (editorial reference)</li>
       </ul>
-      <p class="legal-note">Want to be listed here? Email <a href="mailto:calpromaster@gmail.com">calpromaster@gmail.com</a> with the subject <em>Partnership</em>.</p>
+      <p class="legal-note">Want to be listed here? Email <a href="/contact" data-email="calpromaster@gmail.com">calpromaster@gmail.com</a> with the subject <em>Partnership</em>.</p>
 
       <h2>Response Time</h2>
       <p>We typically respond within 2-3 business days. For urgent issues (calculator down, major bug), we aim to respond within 24 hours.</p>
@@ -441,8 +480,14 @@ const LegalPages = (function() {
       <h2>Privacy Note</h2>
       <p>When you email us, we collect your email address and message content only to respond to your inquiry. We do not add you to mailing lists or share your information with third parties. See our <a href="/privacy" onclick="event.preventDefault();Router.navigate('/privacy')">Privacy Policy</a> for details.</p>
 
-      <h2>Alternative Contact (Future)</h2>
-      <p>We're working on adding a contact form and social media channels. Check back soon!</p>
+      <h2>Before You Email</h2>
+      <p>Two checks save a round trip. First, confirm the calculator's page states the formula and a worked example that matches what you got — if your number differs, compare your inputs against the example one at a time. Second, look at the assumptions list at the bottom of the page: a result that looks surprising is often the model correctly applying a rate, year or unit you did not intend to type.</p>
+
+      <h2>What We Can and Cannot Help With</h2>
+      <p>We can explain how a formula works, correct an error in a page, add a missing calculator, fix a layout or accessibility problem, and clarify a limitation. We cannot give personal financial, medical or legal advice, recommend a specific lender, insurer or product, review a contract, or tell you what a tax authority will decide in your case. Those questions need a qualified professional who can see your full situation.</p>
+
+      <h2>Alternative Contact</h2>
+      <p>Email is currently the only support channel, which keeps response times honest and avoids a half-monitored inbox. If you prefer, send the page URL and a screenshot of the result panel; that is usually enough to reproduce the problem without a long description.</p>
     </div>
   `;
 

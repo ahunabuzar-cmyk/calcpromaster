@@ -73,6 +73,11 @@ describe('gen-ios-splash (S2 #18)', () => {
 
   it('ship list: build-deploy copies icons/ so splashes reach production', () => {
     const bd = readFileSync(join(ROOT, 'build-deploy.js'), 'utf8');
-    expect(bd).toMatch(/'embed',\s*'icons'\]/);
+    // DIRS lists the folders shipped to deploy/; it must include 'icons'
+    // (splash PNGs) and 'embed'. Extra entries (e.g. '.well-known') are fine.
+    const dirsLine = bd.match(/^const DIRS = \[([^\]]*)\]/m)[1];
+    const dirs = dirsLine.split(',').map((s) => s.trim().replace(/^'|'$/g, ''));
+    expect(dirs).toContain('icons');
+    expect(dirs).toContain('embed');
   });
 });

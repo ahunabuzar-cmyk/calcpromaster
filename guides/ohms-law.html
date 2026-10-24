@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ohm's Law Calculator — V = IR Formula, Worked Examples &amp; Power</title>
+  <title>Ohm's Law Calculator — V = IR Formula &amp; Power</title>
   <meta name="description" content="Ohm's law explained with worked examples: V = IR, the triangle trick, series and parallel circuits, and how electrical power ties in (P = VI).">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
@@ -56,7 +56,9 @@
   </style>
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Ohm's Law</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Ohm's Law</p>
   <h1>Ohm's Law: V = IR, With Numbers That Actually Compute</h1>
   <p class="updated">Science · 5 min read · Last updated September 2026</p>
 
@@ -79,18 +81,55 @@
   </table></div>
 
   <h2>Practical uses</h2>
-  <p>Choosing an LED series resistor (supply voltage minus LED drop, divided by desired current), checking whether a wire gauge can carry a motor's inrush current, or verifying a power-supply spec. The <a href="/science/ohms-law">Ohm's Law Calculator</a> solves any missing variable; the <a href="/tech/resistor-color-code">Resistor Color Code</a> tool decodes the bands on the part itself.</p>
+  <p>Choosing an LED series resistor (supply voltage minus LED drop, divided by desired current), checking whether a wire gauge can carry a motor's inrush current, or verifying a power-supply spec. The <a href="/science/ohms-law/">Ohm's Law Calculator</a> solves any missing variable; the <a href="/tech/resistor-color-code/">Resistor Color Code</a> tool decodes the bands on the part itself.</p>
 
   <div class="note"><strong>Limitations:</strong> Ohm's law strictly applies to ohmic (linear) devices at constant temperature. Diodes, filaments and semiconductors do not obey it linearly — real filament resistance rises sharply as the bulb warms up.</div>
 
   <h2>Try the calculators</h2>
   <p class="related">
-    <a href="/science/ohms-law" class="cta">Ohm's Law Calculator</a>
-    <a href="/tech/resistor-color-code" class="cta">Resistor Color Code</a>
+    <a href="/science/ohms-law/" class="cta">Ohm's Law Calculator</a>
+    <a href="/tech/resistor-color-code/" class="cta">Resistor Color Code</a>
     <a href="/guides/science" class="cta">Science Guides</a>
   </p>
 
-  <h2>Frequently asked questions</h2>
+  
+  
+<!-- guide-worked-example:start -->
+<h2>Worked example: Ohm's Law Calculator at its default inputs</h2>
+<p>Take the default setup on <a href="/science/ohms-law/">Ohm's Law Calculator</a>: no fields changed, nothing tuned to a nice round number. Run in the site's own engine, those values produce the answer below.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Voltage (V)</td><td>12</td></tr><tr><td>Current (A)</td><td>2</td></tr></tbody></table>
+<p><strong>Result:</strong> Resistance: 6.00 Ω | Power: 24.00 W</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Formula: V = I × R, P = V × I</li><li>Step 1: R = V / I = 12 / 2 = 6.00 Ω</li><li>Step 2: P = V × I = 12 × 2 = 24.00 W</li></ol>
+<h2>Voltage (V) — three values, three answers</h2>
+<p>Hold every other field still and move only voltage (v).</p>
+<table><thead><tr><th>Voltage (V)</th><th>Result</th></tr></thead><tbody><tr><td>6</td><td>Resistance: 3.00 Ω | Power: 12.00 W</td></tr><tr><td>12</td><td>Resistance: 6.00 Ω | Power: 24.00 W</td></tr><tr><td>18</td><td>Resistance: 9.00 Ω | Power: 36.00 W</td></tr></tbody></table>
+<p>The middle row is the default. The outer two show how far the answer drifts when voltage (v) is wrong by half or by a half in the other direction.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>The three forms you actually use</h2>
+<p>Voltage equals current times resistance, current equals voltage divided by resistance, and power equals voltage times current. Every other form is algebra on those three. Writing them down before substituting numbers prevents the most common mistake, which is dividing by the wrong quantity.</p>
+<p>Power also appears as current squared times resistance and as voltage squared divided by resistance. Those two are handy when the value you know is current or voltage rather than both.</p>
+<h2>Series and parallel change the rules</h2>
+<p>In series, resistances add and the same current flows through each element, so voltage divides across them. In parallel, voltage is common and the currents add, so the equivalent resistance is smaller than the smallest branch.</p>
+<p>Two equal resistors in parallel give half the resistance, not double. That single fact explains most incorrect answers about household wiring and loudspeaker loads.</p>
+<h2>Real components are not ideal</h2>
+<p>A resistor has a tolerance, a wire has resistance per metre, and a supply has internal resistance that drops voltage under load. At low currents these are noise; at high currents they decide whether the circuit works.</p>
+<p>Heat matters too: resistance rises with temperature in most conductors, so a component that measures correctly cold can behave differently when it is running.</p>
+<p>Wire gauge is the practical version of this. A cable rated for a current at one length may overheat at another, because resistance rises with length and heating rises with the square of the current.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/gear-ratio">Gear Ratio</a></li>
+    <li><a href="/guides/engineering">Engineering Guides</a></li>
+    <li><a href="/guides/unit-conversion">Metric to Imperial Conversion</a></li>
+    <li><a href="/guides/science">Science Guides</a></li>
+  </ul>
+
+<h2>Frequently asked questions</h2>
   <h3>What is Ohm's law in simple words?</h3>
   <p>Current through a resistor equals voltage across it divided by its resistance. Double the voltage and current doubles; double the resistance and current halves.</p>
   <h3>How do I calculate current from voltage and resistance?</h3>
@@ -100,7 +139,8 @@
   <h3>Why does parallel resistance come out lower than either resistor?</h3>
   <p>Each parallel path carries current independently at the full voltage, so total current adds while voltage stays the same — which means the effective resistance must be lower. Two equal resistors in parallel give exactly half the resistance.</p>
 
-  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <p class="related"><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog/">Blog</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

@@ -120,7 +120,16 @@ const AdvancedFeatures = (function () {
 function getChain() { return Security.safeGetItem(CHAIN_KEY, []); }
 function addToChain(toolId, toolName, result, values) {
   const chain = getChain();
-  chain.unshift({ id: toolId, name: toolName, result: result.result, values, ts: Date.now() });
+  const res = result.result;
+  // Dedupe: auto-calc re-runs on every keystroke and every re-render, so the
+  // same tool+result landed in the bar three or four times in a row. On a phone
+  // that filled the whole first screen with identical chips and pushed the
+  // inputs below the fold. Identical (tool, result) collapses to one entry that
+  // moves to the front; a genuinely different answer still adds a new chip.
+  const key = toolId + '\u0000' + String(res);
+  const existing = chain.findIndex(function (c) { return c && (c.id + '\u0000' + String(c.result)) === key; });
+  if (existing !== -1) chain.splice(existing, 1);
+  chain.unshift({ id: toolId, name: toolName, result: res, values, ts: Date.now() });
   if (chain.length > 10) chain.length = 10;
   localStorage.setItem(CHAIN_KEY, JSON.stringify(chain));
 }
@@ -433,12 +442,22 @@ function runComparisonMode() {
   // indistinguishable from a stalled engine). Without it (old browsers,
   // sandboxed tests): start synchronously — the onerror 'not-allowed' mapping
   // is the safety net.
-  function _guardMicPermission(allowed) {
+  // A blocked mic used to surface only as a 2.5s toast, so a user who looked at
+  // the keyboard instead of the corner concluded the button was dead. Paint the
+  // reason into the persistent status line as well, with the two actions that
+  // actually unblock them: retry, or type the value.
+  function _voiceBlocked(targetInputId, msg) {
+    App.showToast(msg);
+    voiceStatus(msg + '. Chrome only asks once — after a block you have to allow microphone in the padlock menu for this site.', {
+      kind: 'error', retryId: targetInputId, focusId: targetInputId
+    });
+  }
+  function _guardMicPermission(targetInputId, allowed) {
     if (typeof navigator === 'undefined' || !navigator.permissions || !navigator.permissions.query) { allowed(); return; }
     navigator.permissions.query({ name: 'microphone' }).then(
       function (st) {
         if (st.state === 'denied') {
-          App.showToast('Mic is blocked for this site — allow microphone (padlock icon → Site settings) and retry');
+          _voiceBlocked(targetInputId, 'Mic is blocked for this site — allow microphone (padlock icon → Site settings) and retry');
           return;
         }
         allowed();
@@ -458,6 +477,40 @@ function runComparisonMode() {
       App.showToast('Voice is not responding — check mic permission (site settings) or try Chrome');
     }, _VOICE_WATCHDOG_MS);
   }
+  // ---------- Voice language ----------
+  // Hard-coding 'en-US' made the mic useless for the people most likely to use
+  // it here: an Urdu or Hindi speaker saying "paanch lakh" gets either nothing
+  // or an English transcription of Urdu phonemes. The engine is chosen from the
+  // visitor's own browser locale when that locale is one Chrome actually has a
+  // recogniser for, and the picker in the voice bar overrides it.
+  const VOICE_LANGS = ['en-US', 'en-IN', 'en-GB', 'hi-IN', 'ur-PK', 'ar-SA'];
+  const VOICE_LANG_KEY = 'calcpro.voiceLang';
+  function voiceLangPref() {
+    try {
+      const v = localStorage.getItem(VOICE_LANG_KEY);
+      return v && VOICE_LANGS.indexOf(v) !== -1 ? v : '';
+    } catch (e) { return ''; }
+  }
+  function voiceLang() {
+    const pref = voiceLangPref();
+    if (pref) return pref;
+    let nav = '';
+    try { nav = String(navigator.language || ''); } catch (e) { nav = ''; }
+    if (nav && VOICE_LANGS.indexOf(nav) !== -1) return nav;
+    // Regional variants Chrome recognisers accept but navigator may report
+    // differently (en-PK falls back to en-IN, ur-IN to ur-PK, ...).
+    const base = nav.split('-')[0].toLowerCase();
+    if (base === 'ur') return 'ur-PK';
+    if (base === 'hi') return 'hi-IN';
+    if (base === 'ar') return 'ar-SA';
+    if (base === 'en') return nav.indexOf('-IN') !== -1 || nav.indexOf('-PK') !== -1 ? 'en-IN' : 'en-US';
+    return 'en-US';
+  }
+  function setVoiceLang(lang) {
+    if (VOICE_LANGS.indexOf(lang) === -1) return;
+    try { localStorage.setItem(VOICE_LANG_KEY, lang); } catch (e) { /* private mode */ }
+  }
+
   // Fresh instance per attempt: webkitSpeechRecognition objects are single-use.
   function freshRecognition() {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -465,17 +518,58 @@ function runComparisonMode() {
     recognition = new SR();
     recognition.continuous = false;
     recognition.interimResults = false;
-    recognition.lang = 'en-US';
+    recognition.lang = voiceLang();
+    // The engine's top guess is sometimes a homophone ("to"/"two"); giving it a
+    // few alternatives lets the number parser pick the one that actually parses.
+    try { recognition.maxAlternatives = 3; } catch (e) { /* not supported */ }
     return recognition;
   }
   function initVoice() {
-    if (isIOS()) return false; // no SpeechRecognition on iOS Safari — honest early-out
+    // iOS used to be blocked outright. Safari 14.5+ (and every modern iOS
+    // release) DOES expose webkitSpeechRecognition, so the old early-out made
+    // the mic silently unavailable on iPhone and iPad. Now we simply require
+    // the API: browsers without it get the honest "not supported" message.
     return !!freshRecognition();
+  }
+  // Chrome's recognition service can start and stall without ever prompting for
+  // the microphone when permission is still "prompt" in some builds. Asking
+  // getUserMedia first forces the prompt (and surfaces "no mic" immediately),
+  // then releases the track before recognition opens its own stream.
+  function _warmMic(targetInputId, cb) {
+    if (typeof navigator === 'undefined' || !navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) { cb(); return; }
+    navigator.mediaDevices.getUserMedia({ audio: true }).then(
+      function (stream) {
+        try { stream.getTracks().forEach(function (t) { t.stop(); }); } catch (e) { /* ignore */ }
+        cb();
+      },
+      function (err) {
+        const name = err && err.name;
+        if (name === 'NotAllowedError' || name === 'SecurityError') {
+          _voiceBlocked(targetInputId, 'Mic blocked — allow microphone for this site (padlock icon → Site settings) and retry');
+          return;
+        }
+        if (name === 'NotFoundError' || name === 'DevicesNotFoundError') {
+          App.showToast('No microphone found on this device');
+          voiceStatus('No microphone found on this device. Plug one in (or check the system input device) and retry.', {
+            kind: 'error', retryId: targetInputId, focusId: targetInputId
+          });
+          return;
+        }
+        cb(); // OverconstrainedError / NotReadableError: let recognition report it
+      }
+    );
   }
   // "seventy five point five" -> "75.5". Chrome's en-US engine DOES return
   // word-numbers for 0-20 and exact tens/hundreds; the old regex-only parser
   // matched nothing on those transcripts ("No number detected").
-  const _NUM_WORDS = { zero: 0, one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, eleven: 11, twelve: 12, thirteen: 13, fourteen: 14, fifteen: 15, sixteen: 16, seventeen: 17, eighteen: 18, nineteen: 19, twenty: 20, thirty: 30, forty: 40, fourty: 40, fifty: 50, sixty: 60, seventy: 70, eighty: 80, ninety: 90, hundred: 100, thousand: 1000, million: 1000000, 'lac': 100000, 'lakh': 100000 };
+  // Romanised Urdu/Hindi number words are here on purpose: a visitor in Pakistan
+  // or India speaking into an en-US engine very often gets the NUMBER WORDS
+  // back ("paanch lakh") rather than digits, and the old table made that a
+  // "No number detected" dead end.
+  const _NUM_WORDS = { zero: 0, one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, eleven: 11, twelve: 12, thirteen: 13, fourteen: 14, fifteen: 15, sixteen: 16, seventeen: 17, eighteen: 18, nineteen: 19, twenty: 20, thirty: 30, forty: 40, fourty: 40, fifty: 50, sixty: 60, seventy: 70, eighty: 80, ninety: 90, hundred: 100, thousand: 1000, million: 1000000, 'lac': 100000, 'lakh': 100000,
+    'ek': 1, 'aik': 1, 'teen': 3, 'paanch': 5, 'panch': 5, 'chhe': 6, 'chah': 6, 'saat': 7, 'aath': 8, 'nau': 9, 'das': 10, 'bees': 20, 'tees': 30, 'chalees': 40, 'pachas': 50, 'pachaas': 50, 'sau': 100, 'hazaar': 1000, 'hazar': 1000, 'crore': 10000000 };
+  // Place-value words multiply the running total instead of adding to it.
+  const _MULTI = { 100: 1, 1000: 1, 100000: 1, 1000000: 1, 10000000: 1 };
   function wordsToNumber(words) {
     const parts = String(words).toLowerCase().replace(/-/g, ' ').split(/\s+/).filter(Boolean);
     let total = 0, current = 0, seen = false;
@@ -483,7 +577,7 @@ function runComparisonMode() {
       if (w in _NUM_WORDS) {
         seen = true;
         const v = _NUM_WORDS[w];
-        if (v === 100 || v === 1000 || v === 100000 || v === 1000000) {
+        if (_MULTI[v]) {
           current = (current || 1) * v;
           total += current;
           current = 0;
@@ -523,7 +617,7 @@ function runComparisonMode() {
         if (!(w in _NUM_WORDS)) break;
         seen = true;
         const v = _NUM_WORDS[w];
-        if (v === 100 || v === 1000 || v === 100000 || v === 1000000) {
+        if (_MULTI[v]) {
           current = (current || 1) * v;
           total += current;
           current = 0;
@@ -556,10 +650,70 @@ function runComparisonMode() {
     }
     return null;
   }
+  // Persistent voice status line. A toast disappears in seconds, which is how a
+  // blocked microphone or an unreachable speech service ends up looking like a
+  // button that "does nothing". This panel stays put, names the reason, and
+  // offers the two things a stuck user can actually do: retry, or type the value.
+  // #zr-voice-area is re-rendered by the walkthrough bar after some tool events,
+  // which deletes anything painted inside it — an error written there vanished
+  // before it could be read. The node therefore lives NEXT TO that area (in the
+  // calculator card, which the re-render keeps), and the last message is kept in
+  // memory so a re-render restores it instead of silently clearing it.
+  let _lastVoice = null;
+  function ensureVoiceStatus() {
+    var box = document.getElementById('voice-status');
+    if (box && box.isConnected !== false) return box;
+    var anchor = document.getElementById('zr-voice-area');
+    var host = anchor && anchor.parentNode
+      ? anchor.parentNode
+      : (document.getElementById('calc-form') || {}).parentNode;
+    if (!host) return null;
+    box = document.createElement('div');
+    box.id = 'voice-status';
+    box.className = 'voice-status';
+    box.setAttribute('role', 'status');
+    box.setAttribute('aria-live', 'polite');
+    box.hidden = true;
+    if (anchor && anchor.parentNode === host) host.insertBefore(box, anchor.nextSibling);
+    else host.appendChild(box);
+    return box;
+  }
+  function paintVoiceStatus(box, msg, opts) {
+    opts = opts || {};
+    if (!msg) { box.hidden = true; box.textContent = ''; return; }
+    box.hidden = false;
+    box.className = 'voice-status' + (opts.kind ? ' voice-status-' + opts.kind : '');
+    box.textContent = msg;
+    if (opts.retryId) {
+      var retry = document.createElement('button');
+      retry.type = 'button';
+      retry.className = 'voice-status-btn';
+      retry.textContent = 'Retry';
+      retry.addEventListener('click', function () { voiceInput(opts.retryId); });
+      box.appendChild(retry);
+    }
+    if (opts.focusId) {
+      var type = document.createElement('button');
+      type.type = 'button';
+      type.className = 'voice-status-btn';
+      type.textContent = 'Type instead';
+      type.addEventListener('click', function () {
+        var el = document.getElementById(opts.focusId);
+        if (el) { el.focus(); el.select && el.select(); }
+      });
+      box.appendChild(type);
+    }
+  }
+  function voiceStatus(msg, opts) {
+    _lastVoice = msg ? { msg: msg, opts: opts || {} } : null;
+    var box = ensureVoiceStatus();
+    if (!box) return;
+    paintVoiceStatus(box, msg, opts);
+  }
   function _voiceCommonHandlers(targetInputId) {
     clearVoiceWatchdog();
     armVoiceWatchdog();
-    recognition.onstart = function () { clearVoiceWatchdog(); };
+    recognition.onstart = function () { clearVoiceWatchdog(); voiceStatus('Listening — say the number', { kind: 'listening' }); };
     recognition.onaudiostart = function () { clearVoiceWatchdog(); };
     recognition.onerror = function (e) {
       clearVoiceWatchdog();
@@ -567,23 +721,54 @@ function runComparisonMode() {
         'not-allowed': 'Mic blocked — allow microphone for this site (padlock icon → Site settings)',
         'service-not-allowed': 'Speech service blocked — check browser settings or try Chrome',
         'network': 'Speech service unreachable — check your connection',
-        'language-not-supported': 'Speech language not supported in this browser',
+        'language-not-supported': 'This browser has no recogniser for ' + voiceLang() + ' — pick another language in the 🎤 bar',
         'audio-capture': 'No microphone found',
         'aborted': null // user/initiated cancel — silent
       };
-      if (e.error === 'no-speech') { App.showToast('No speech heard — try again'); return; }
+      if (e.error === 'no-speech') {
+        App.showToast('No speech heard — try again');
+        voiceStatus('No speech heard. Check that the right microphone is selected, then retry.', { kind: 'error', retryId: targetInputId, focusId: targetInputId });
+        return;
+      }
       const msg = map[e.error] !== undefined ? map[e.error] : ('Voice error: ' + (e.error || 'unknown'));
       if (msg) App.showToast(msg);
+      if (msg && e.error !== 'aborted') {
+        var hint = e.error === 'network'
+          ? ' The browser\u2019s speech service could not be reached (offline, blocked network, or a region where it is unavailable). Retry, or type the value.'
+          : (e.error === 'not-allowed' || e.error === 'service-not-allowed'
+            ? ' Chrome blocks the mic until you allow it for this site. Retry, or type the value.'
+            : '');
+        voiceStatus(msg + '.' + hint, { kind: 'error', retryId: targetInputId, focusId: targetInputId });
+      }
     };
     recognition.onend = function () { clearVoiceWatchdog(); _voiceActiveInput = null; };
   }
   // Universal per-input voice: works on ANY numeric input of ANY tool.
   function voiceInput(targetInputId) {
-    if (isIOS()) { App.showToast('Voice input needs Chrome, Edge, or Samsung Internet (iOS Safari does not support it)'); return; }
-    if (!recognition && !initVoice()) { App.showToast('Voice input not supported in this browser — try Chrome or Edge'); return; }
+    // Only an explicit false blocks: test harnesses and older browsers leave the
+    // property undefined, and getUserMedia itself is the real capability check.
+    if (window.isSecureContext === false) {
+      App.showToast('Voice input needs HTTPS — open the site on https:// and retry');
+      return;
+    }
+    // SECOND CLICK STOPS. The old behaviour re-called start() on a live engine,
+    // which throws and surfaced as "Voice already listening" — the opposite of
+    // what a user pressing the mic again is asking for.
+    if (recognition && _voiceActiveInput === targetInputId) {
+      try { recognition.stop(); } catch (e) { /* already stopped */ }
+      clearVoiceWatchdog();
+      _voiceActiveInput = null;
+      App.showToast('🎤 Stopped');
+      return;
+    }
+    if (!recognition && !initVoice()) {
+      App.showToast('Voice input not supported in this browser — try Chrome or Edge');
+      voiceStatus('This browser has no speech recognition (Firefox and some privacy browsers ship without it). Open the page in Chrome or Edge, or type the value.', { kind: 'error', focusId: targetInputId });
+      return;
+    }
     const input = document.getElementById(targetInputId);
     if (!input) { App.showToast('Input not found'); return; }
-    _guardMicPermission(function () { _startForInput(targetInputId); });
+    _guardMicPermission(targetInputId, function () { _warmMic(targetInputId, function () { _startForInput(targetInputId); }); });
   }
   function _startForInput(targetInputId) {
     freshRecognition(); // single-use: always a clean engine
@@ -594,16 +779,29 @@ function runComparisonMode() {
     _voiceCommonHandlers(targetInputId);
     recognition.onresult = function (e) {
       clearVoiceWatchdog();
-      const transcript = e.results[0][0].transcript;
-      const num = transcriptToNumber(transcript);
+      // Try every alternative the engine returned: alternative 0 can be a
+      // homophone that parses to nothing while alternative 1 holds the number.
+      let transcript = '';
+      let num = null;
+      const alts = (e.results && e.results[0]) || [];
+      for (let i = 0; i < alts.length; i++) {
+        const t = alts[i] && alts[i].transcript ? alts[i].transcript : '';
+        if (!transcript) transcript = t;
+        const parsed = transcriptToNumber(t);
+        if (parsed != null) { num = parsed; transcript = t; break; }
+      }
       const el = document.getElementById(_voiceActiveInput);
       if (num != null && el) {
         el.value = String(num);
         el.dispatchEvent(new Event('input'));
         el.dispatchEvent(new Event('change'));
         App.showToast('Voice: ' + num);
+        voiceStatus('Heard \u201c' + transcript + '\u201d \u2192 ' + num + '. Change it if that is not the number you meant.', { kind: 'ok' });
       } else {
         App.showToast('No number detected in: "' + transcript + '"');
+        voiceStatus('Heard \u201c' + transcript + '\u201d but no number in it. Say just the value, for example "five lakh" or "8.5 percent".', {
+          kind: 'error', retryId: _voiceActiveInput, focusId: _voiceActiveInput
+        });
       }
     };
     try { recognition.start(); } catch (e2) { clearVoiceWatchdog(); App.showToast('Voice already listening — try again in a second'); }
@@ -634,6 +832,7 @@ function runComparisonMode() {
     const container = document.getElementById('calc-form') || document;
     const ids = [];
     const seen = new Set();
+    if (!container || typeof container.querySelectorAll !== 'function') return ids;
     container.querySelectorAll('input[type="number"]').forEach(function (el) {
       if (el.id && !seen.has(el.id)) { seen.add(el.id); ids.push(el.id); }
     });
@@ -641,16 +840,24 @@ function runComparisonMode() {
   }
 
   function startDictation() {
-    if (isIOS()) { App.showToast('Voice input needs Chrome, Edge, or Samsung Internet (iOS Safari does not support it)'); return; }
+    if (window.isSecureContext === false) { App.showToast('Voice input needs HTTPS — open the site on https:// and retry'); return; }
     if (!recognition && !initVoice()) { App.showToast('Voice input not supported in this browser — try Chrome or Edge'); return; }
-    _guardMicPermission(_startDictationFresh);
+    // Status-line errors belong next to the first numeric input of the tool.
+    const anchorId = (getCurrentNumericInputs() || [])[0] || '';
+    _guardMicPermission(anchorId, function () { _warmMic(anchorId, _startDictationFresh); });
   }
   function _startDictationFresh() {
     freshRecognition(); // single-use engine, same as per-input voice
     recognition.onresult = function (e) {
       clearVoiceWatchdog();
-      const transcript = e.results[0][0].transcript;
-      const nums = (transcript.match(/-?\d+(?:\.\d+)?/g) || []);
+      const transcript = (e.results && e.results[0] && e.results[0][0] && e.results[0][0].transcript) || '';
+      let nums = (transcript.match(/-?\d+(?:\.\d+)?/g) || []);
+      // Word-numbers ("paanch lakh") carry no digits at all: fall back to the
+      // run-based parser so dictation is not silently empty for those users.
+      if (nums.length === 0 && transcript) {
+        const single = transcriptToNumber(transcript);
+        if (single != null) nums = [String(single)];
+      }
       const inputs = voiceFillNumericInputs();
       _voiceActiveInput = null;
       if (nums.length === 0) { App.showToast('No numbers detected in: "' + transcript + '"'); return; }
@@ -690,10 +897,34 @@ function runComparisonMode() {
     const container = document.getElementById('calc-form') || document;
     const ids = [];
     const seen = new Set();
+    if (!container || typeof container.querySelectorAll !== 'function') return ids;
     container.querySelectorAll('input[type="number"]').forEach(function (el) {
       if (el.id && !seen.has(el.id)) { seen.add(el.id); ids.push(el.id); }
     });
     return ids;
+  }
+
+  // Delegated mic binding. The per-input mic used to rely on an inline
+  // onclick="AdvancedFeatures.voiceInput(...)" — if that global had not been
+  // defined yet (script order, a CSP without 'unsafe-inline', a re-render that
+  // replaced the node) the button looked live and did nothing at all. One
+  // document-level listener removes every one of those failure modes.
+  let _voiceDelegated = false;
+  function bindDelegatedVoice() {
+    if (_voiceDelegated) return;
+    if (typeof document === 'undefined' || !document.addEventListener) return;
+    _voiceDelegated = true;
+    document.addEventListener('click', function (e) {
+      const t = e.target;
+      const btn = t && t.closest ? t.closest('[data-voice-input], .voice-input-btn') : null;
+      if (!btn) return;
+      const id = btn.getAttribute('data-voice-input');
+      if (id) { e.preventDefault(); voiceInput(id); return; }
+      // Legacy buttons without the attribute: derive the input from the DOM row.
+      const row = btn.closest('.input-row');
+      const input = row && row.querySelector('input[id]');
+      if (input) { e.preventDefault(); voiceInput(input.id); }
+    });
   }
 
   function initVoiceArea() {
@@ -701,6 +932,7 @@ function runComparisonMode() {
     // renderVoiceBar() resets #zr-voice-area.innerHTML, so this is append-only
     // and idempotent: it never wipes the walkthrough bar and re-attaches the
     // button (called again after that render via ZR.afterCalc hook below).
+    bindDelegatedVoice();
     const wrapper = document.getElementById('zr-voice-area');
     if (!wrapper) return;
     if (wrapper.querySelector('#voice-dictate-btn')) return;
@@ -719,6 +951,37 @@ function runComparisonMode() {
       startDictation();
     });
     wrapper.appendChild(btn);
+
+    // Language picker: the recogniser is not multilingual, so "voice does not
+    // work" for an Urdu/Hindi speaker is usually a language mismatch, not a
+    // broken mic. Persisted, and applied to the next recognition instance.
+    const sel = document.createElement('select');
+    sel.id = 'voice-lang';
+    sel.className = 'voice-lang';
+    sel.setAttribute('aria-label', 'Voice recognition language');
+    sel.title = 'Language the microphone should listen for';
+    [['en-US', 'English (US)'], ['en-IN', 'English (India)'], ['en-GB', 'English (UK)'], ['hi-IN', 'हिन्दी'], ['ur-PK', 'اردو'], ['ar-SA', 'العربية']]
+      .forEach(function (pair) {
+        const o = document.createElement('option');
+        o.value = pair[0];
+        o.textContent = pair[1];
+        sel.appendChild(o);
+      });
+    sel.value = voiceLang();
+    sel.addEventListener('change', function () {
+      setVoiceLang(sel.value);
+      // A language change applies to the NEXT attempt: the engine reads lang
+      // once at construction, and an in-flight instance cannot be re-targeted.
+      App.showToast('🎤 Voice language: ' + sel.value);
+    });
+    wrapper.appendChild(sel);
+
+    // Status line: a toast fades before a blocked mic or an unreachable speech
+    // service can be read, so the reason and its two remedies stay on the page.
+    // Re-created outside the re-rendered area, and repainted with the last
+    // message so a re-render cannot swallow an error the user has not seen.
+    var statusBox = ensureVoiceStatus();
+    if (statusBox && _lastVoice) paintVoiceStatus(statusBox, _lastVoice.msg, _lastVoice.opts);
   }
 
   // ---------- Shareable Links ----------

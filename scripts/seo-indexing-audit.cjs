@@ -25,7 +25,16 @@ const https = require('https');
 
 const ROOT = path.join(__dirname, '..');
 const DEPLOY = path.join(ROOT, 'deploy');
-const DOMAIN = 'https://calcpromaster.netlify.app';
+// Domain — SINGLE SOURCE OF TRUTH: js/site-config.js (`domain:`), the same
+// resolution scripts/quality-gate.cjs and scripts/ssg-pages.cjs use. This was a
+// pinned 'https://calcpromaster.netlify.app' literal, which reported every URL
+// against the staging host after the custom-domain switch.
+let DOMAIN = 'https://calcpromaster.com';
+try {
+  const cfg = fs.readFileSync(path.join(ROOT, 'js', 'site-config.js'), 'utf8');
+  const m = cfg.match(/domain:\s*'([^']+)'/);
+  if (m && m[1]) DOMAIN = 'https://' + m[1].replace(/^https?:\/\//, '');
+} catch (e) { /* keep the calcpromaster.com default */ }
 const LIVE = process.argv.includes('--live');
 
 // ---------- Load sitemap URLs ----------
@@ -61,6 +70,10 @@ function classifyUrl(u, toolIds) {
       segs[0] === 'disclaimer-finance' || segs[0] === 'disclaimer-health' || segs[0] === 'llms') return 'legal';
   if (segs[0] === 'favorites' || segs[0] === 'history' || segs[0] === 'compare' || segs[0] === 'settings') return 'dashboard';
   if (segs[0] === 'hub' && segs.length === 2) return 'hub';
+  // Editorial pages: guides/<slug> and blog/<slug> are indexable content pages
+  // that are in the sitemap on purpose — see the indexable whitelist below.
+  if (segs[0] === 'guides' && segs.length === 2) return 'guide';
+  if (segs[0] === 'blog' && segs.length === 2) return 'blog';
   if (segs.length === 1) return 'category';
   if (segs.length === 2) return toolIds.has(segs[1]) ? 'tool' : 'category-other';
   if (segs.length === 3 && toolIds.has(segs[1])) return 'longtail';
@@ -176,13 +189,19 @@ function auditUrl(url, htmlOverride) {
     else if (ROUTE_LEGAL.has(segs[0])) type = 'legal';
     else if (ROUTE_DASHBOARD.has(segs[0])) type = 'dashboard';
     else if (segs[0] === 'hub') type = 'hub';
+    else if (segs[0] === 'guides' && segs.length === 2) type = 'guide';
+    else if (segs[0] === 'blog' && segs.length === 2) type = 'blog';
     else if (segs.length === 1) type = 'category';
     else if (segs.length === 2 && toolIds.has(segs[1])) type = 'tool';
     else if (segs.length >= 3 && toolIds.has(segs[1])) type = 'longtail';
     else type = 'other';
 
     const isNoindex = /noindex/i.test(r.robots);
-    const indexable = !isNoindex && (type === 'tool' || type === 'category' || type === 'home' || type === 'hub' || type === 'longtail' || type === 'legal');
+    // guide/blog are authored editorial pages that sit in the sitemap and pass
+    // every other check (self-canonical, one H1, 300+ words, breadcrumb + JSON-LD),
+    // so they are indexable. Leaving them out produced 40 false-negative
+    // warnings on /guides/* and /blog/* — the whitelist, not the pages, was wrong.
+    const indexable = !isNoindex && (type === 'tool' || type === 'category' || type === 'home' || type === 'hub' || type === 'longtail' || type === 'legal' || type === 'guide' || type === 'blog');
 
     // Quality gate (Phase 14)
     const checks = {

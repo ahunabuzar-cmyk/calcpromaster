@@ -1,0 +1,3674 @@
+{
+  "generatedAt": "2026-10-17T13:16:48.796Z",
+  "gscWindow": {
+    "start": "2026-09-16",
+    "end": "2026-10-14",
+    "ranAt": "2026-10-17T10:48:24.148Z"
+  },
+  "counts": {
+    "rows": 114,
+    "NEW_PAGE": 1,
+    "DUPLICATE": 1,
+    "HOLD": 11,
+    "COVER_EXISTING": 92,
+    "REJECT_NAVIGATIONAL": 9
+  },
+  "approved": [
+    {
+      "keyword": "snow day calculator",
+      "volume": 368000,
+      "difficulty": 17,
+      "opportunity": 305440,
+      "auditVerdict": "GAP",
+      "verdict": "NEW_PAGE",
+      "page": "/everyday/snow-day",
+      "why": "Predicts a school-closure decision from snow forecast and district thresholds; no existing page models closure. Seasonal, so build only with a transparent rule set.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    }
+  ],
+  "cover": [
+    {
+      "keyword": "cd bank calculator",
+      "volume": 165000,
+      "difficulty": 2,
+      "opportunity": 161700,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/cd-calculator",
+      "why": "CD = certificate of deposit; the page already prices one.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "bank certificate calculator",
+      "volume": 165000,
+      "difficulty": 2,
+      "opportunity": 161700,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/cd-calculator",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "calculator for certificate of deposit",
+      "volume": 165000,
+      "difficulty": 2,
+      "opportunity": 161700,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/cd-calculator",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "certified deposit calculator",
+      "volume": 165000,
+      "difficulty": 2,
+      "opportunity": 161700,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/cd-calculator",
+      "why": "\"certified deposit\" is a misspelling of certificate of deposit.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "deposit certificate calculator",
+      "volume": 165000,
+      "difficulty": 2,
+      "opportunity": 161700,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/cd-calculator",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "certificate deposit calculator",
+      "volume": 165000,
+      "difficulty": 2,
+      "opportunity": 161700,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/cd-calculator",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "time card clock calculator",
+      "volume": 201000,
+      "difficulty": 20,
+      "opportunity": 160800,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/career/timesheet-hours",
+      "why": "Same job: hours from clock-in/clock-out.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "ft2 calculator",
+      "volume": 165000,
+      "difficulty": 9,
+      "opportunity": 150150,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/conversion/area",
+      "why": "ft² is a unit of area.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "ft squared calculator",
+      "volume": 165000,
+      "difficulty": 9,
+      "opportunity": 150150,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/conversion/area",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "mortgage expense calculator",
+      "volume": 201000,
+      "difficulty": 35,
+      "opportunity": 130650,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/mortgage",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "convert currency xe",
+      "volume": 246000,
+      "difficulty": 55,
+      "opportunity": 110700,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/currency-converter",
+      "why": "Brand modifier only; the page is the same conversion.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "convert xe currency",
+      "volume": 246000,
+      "difficulty": 55,
+      "opportunity": 110700,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/currency-converter",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "day count",
+      "volume": 74000,
+      "difficulty": 0,
+      "opportunity": 74000,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/everyday/date-diff",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "calendar calculator",
+      "volume": 60500,
+      "difficulty": 0,
+      "opportunity": 60500,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/everyday/date-diff",
+      "why": "",
+      "gsc": {
+        "impressions": 22,
+        "clicks": 0,
+        "bestPosition": 58,
+        "matches": 17
+      }
+    },
+    {
+      "keyword": "bmi calculator body mass index",
+      "volume": 110000,
+      "difficulty": 53,
+      "opportunity": 51700,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/health/bmi",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "yearly salary calculator",
+      "volume": 49500,
+      "difficulty": 1,
+      "opportunity": 49005,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/salary",
+      "why": "",
+      "gsc": {
+        "impressions": 11,
+        "clicks": 0,
+        "bestPosition": 71.75,
+        "matches": 3
+      }
+    },
+    {
+      "keyword": "financial compound calculator",
+      "volume": 40500,
+      "difficulty": 14,
+      "opportunity": 34830,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/compound-interest",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "financial compounding calculator",
+      "volume": 40500,
+      "difficulty": 14,
+      "opportunity": 34830,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/compound-interest",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "interest percentage calculator",
+      "volume": 33100,
+      "difficulty": 10,
+      "opportunity": 29790,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/simple-interest",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "ot calculator",
+      "volume": 22200,
+      "difficulty": 1,
+      "opportunity": 21978,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/career/overtime-pay",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "time payroll calculator",
+      "volume": 22200,
+      "difficulty": 12,
+      "opportunity": 19536,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/career/timesheet-hours",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "pay time calculator",
+      "volume": 22200,
+      "difficulty": 12,
+      "opportunity": 19536,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/career/timesheet-hours",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "simplify calculator",
+      "volume": 18100,
+      "difficulty": 2,
+      "opportunity": 17738,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/math/fraction",
+      "why": "Simplify is a fraction operation; the fraction tool reduces.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "time adder",
+      "volume": 14800,
+      "difficulty": 0,
+      "opportunity": 14800,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/career/timesheet-hours",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "compounded daily calculator",
+      "volume": 14800,
+      "difficulty": 3,
+      "opportunity": 14356,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/compound-interest",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "desired weight calculator",
+      "volume": 14800,
+      "difficulty": 5,
+      "opportunity": 14060,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/health/ideal-body-weight",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "simple loan calculator",
+      "volume": 14800,
+      "difficulty": 13,
+      "opportunity": 12876,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/loan-emi",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "payment planner",
+      "volume": 12100,
+      "difficulty": 11,
+      "opportunity": 10769,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/loan-emi",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "fv calculator",
+      "volume": 9900,
+      "difficulty": 3,
+      "opportunity": 9603,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/future-value",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "loan calculator for business",
+      "volume": 14800,
+      "difficulty": 42,
+      "opportunity": 8584,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/loan-emi",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "yearly income calculator",
+      "volume": 8100,
+      "difficulty": 3,
+      "opportunity": 7857,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/salary",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "savings calculator simple",
+      "volume": 6600,
+      "difficulty": 1,
+      "opportunity": 6534,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/everyday/compound-savings",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "percentage return calculator",
+      "volume": 6600,
+      "difficulty": 7,
+      "opportunity": 6138,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/investment",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "mortgage and tax calculator",
+      "volume": 9900,
+      "difficulty": 40,
+      "opportunity": 5940,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/mortgage",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "hour counter",
+      "volume": 5400,
+      "difficulty": 1,
+      "opportunity": 5346,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/career/timesheet-hours",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "retirement plan estimator",
+      "volume": 5400,
+      "difficulty": 6,
+      "opportunity": 5076,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/retirement",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "reverse tax calculator",
+      "volume": 4400,
+      "difficulty": 0,
+      "opportunity": 4400,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/tax",
+      "why": "The tax page reverses net to gross.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "percentage discount calculator",
+      "volume": 4400,
+      "difficulty": 0,
+      "opportunity": 4400,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/discount",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "daily interest calculator",
+      "volume": 4400,
+      "difficulty": 1,
+      "opportunity": 4356,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/simple-interest",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "calculate age by birthday",
+      "volume": 4400,
+      "difficulty": 3,
+      "opportunity": 4268,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/guides/age",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "inflation salary calculator",
+      "volume": 3600,
+      "difficulty": 1,
+      "opportunity": 3564,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/inflation-adjusted",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "dob calculator",
+      "volume": 3600,
+      "difficulty": 1,
+      "opportunity": 3564,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/guides/age",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "compound investment calculator",
+      "volume": 3600,
+      "difficulty": 25,
+      "opportunity": 2700,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/investment",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "compounded monthly calculator",
+      "volume": 2900,
+      "difficulty": 15,
+      "opportunity": 2465,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/compound-interest",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "investment calculator over time",
+      "volume": 3600,
+      "difficulty": 35,
+      "opportunity": 2340,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/investment",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "share return calculator",
+      "volume": 2400,
+      "difficulty": 5,
+      "opportunity": 2280,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/investment",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "simple retirement calculator",
+      "volume": 3600,
+      "difficulty": 47,
+      "opportunity": 1908,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/retirement",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "pv calculator",
+      "volume": 1900,
+      "difficulty": 1,
+      "opportunity": 1881,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/present-value",
+      "why": "",
+      "gsc": {
+        "impressions": 5,
+        "clicks": 0,
+        "bestPosition": 3,
+        "matches": 5
+      }
+    },
+    {
+      "keyword": "credit rate calculator",
+      "volume": 2400,
+      "difficulty": 26,
+      "opportunity": 1776,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/credit-card-payoff",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "compounded annually calculator",
+      "volume": 2400,
+      "difficulty": 27,
+      "opportunity": 1752,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/compound-interest",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "compounding calculator yearly",
+      "volume": 2400,
+      "difficulty": 27,
+      "opportunity": 1752,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/cagr",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "paycheck deduction calculator",
+      "volume": 1900,
+      "difficulty": 10,
+      "opportunity": 1710,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/payroll-tax",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "retirement planner calculator",
+      "volume": 2400,
+      "difficulty": 36,
+      "opportunity": 1536,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/retirement",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "loan percentage calculator",
+      "volume": 1900,
+      "difficulty": 21,
+      "opportunity": 1501,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/loan-emi",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "figure out interest rate on loan",
+      "volume": 1900,
+      "difficulty": 21,
+      "opportunity": 1501,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/loan-emi",
+      "why": "The reverse mode solves the rate from payment and term.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "interest accrual calculator",
+      "volume": 1600,
+      "difficulty": 7,
+      "opportunity": 1488,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/simple-interest",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "retirement budget calculator",
+      "volume": 1900,
+      "difficulty": 24,
+      "opportunity": 1444,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/retirement-withdrawal",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "age calendar",
+      "volume": 1300,
+      "difficulty": 0,
+      "opportunity": 1300,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/guides/age",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "cash back calculator",
+      "volume": 1300,
+      "difficulty": 1,
+      "opportunity": 1287,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/discount",
+      "why": "Cash back is a percentage of spend, which is the discount calculation.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "spending calculator retirement",
+      "volume": 1900,
+      "difficulty": 33,
+      "opportunity": 1273,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/retirement-withdrawal",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "retirement expenditure calculator",
+      "volume": 1900,
+      "difficulty": 33,
+      "opportunity": 1273,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/retirement-withdrawal",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "compound retirement calculator",
+      "volume": 1600,
+      "difficulty": 21,
+      "opportunity": 1264,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/retirement",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "compounding calculator retirement",
+      "volume": 1600,
+      "difficulty": 21,
+      "opportunity": 1264,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/retirement",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "financial planning calculator",
+      "volume": 1900,
+      "difficulty": 37,
+      "opportunity": 1197,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/net-worth-calculator",
+      "why": "Umbrella intent; net worth is the planning entry point.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "roi calculation formula",
+      "volume": 1300,
+      "difficulty": 8,
+      "opportunity": 1196,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/roi",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "work schedule calculator",
+      "volume": 1300,
+      "difficulty": 9,
+      "opportunity": 1183,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/everyday/work-hours-weekly",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "concrete calculator formula",
+      "volume": 1300,
+      "difficulty": 11,
+      "opportunity": 1157,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/construction/concrete-slab",
+      "why": "The formula is on the slab page; \"concrete calculator\" is the same intent.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "inflation wage calculator",
+      "volume": 1000,
+      "difficulty": 1,
+      "opportunity": 990,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/inflation-adjusted",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "compound investments",
+      "volume": 1300,
+      "difficulty": 24,
+      "opportunity": 988,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/investment",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "time and pay calculator",
+      "volume": 1000,
+      "difficulty": 5,
+      "opportunity": 950,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/career/timesheet-hours",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "housing cost calculator",
+      "volume": 1900,
+      "difficulty": 50,
+      "opportunity": 950,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/rent-affordability",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "housing cost estimator",
+      "volume": 1900,
+      "difficulty": 50,
+      "opportunity": 950,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/rent-affordability",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "future value of investment calculator",
+      "volume": 1300,
+      "difficulty": 30,
+      "opportunity": 910,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/future-value",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "yearly interest calculator",
+      "volume": 1000,
+      "difficulty": 10,
+      "opportunity": 900,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/compound-interest",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "compound loan calculator",
+      "volume": 1000,
+      "difficulty": 11,
+      "opportunity": 890,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/loan-emi",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "savings percentage calculator",
+      "volume": 880,
+      "difficulty": 2,
+      "opportunity": 862,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/savings-rate",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "formula discount",
+      "volume": 1000,
+      "difficulty": 16,
+      "opportunity": 840,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/discount",
+      "why": "Formula-shaped query for the discount page.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "yearly payment calculator",
+      "volume": 880,
+      "difficulty": 5,
+      "opportunity": 836,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/loan-emi",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "yearly pay calculator",
+      "volume": 880,
+      "difficulty": 5,
+      "opportunity": 836,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/salary",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "retirement calculator growth",
+      "volume": 1300,
+      "difficulty": 36,
+      "opportunity": 832,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/retirement",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "investment account calculator",
+      "volume": 1000,
+      "difficulty": 25,
+      "opportunity": 750,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/investment",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "compare loan calculator",
+      "volume": 1000,
+      "difficulty": 25,
+      "opportunity": 750,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/loan-comparison",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "compound return calculator",
+      "volume": 880,
+      "difficulty": 21,
+      "opportunity": 695,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/cagr",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "mortgage calculator how much can i qualify for",
+      "volume": 1900,
+      "difficulty": 66,
+      "opportunity": 646,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/loan-qualify",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "mortgage calculator how much do i qualify for",
+      "volume": 1900,
+      "difficulty": 66,
+      "opportunity": 646,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/loan-qualify",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "monthly investment calculator",
+      "volume": 1000,
+      "difficulty": 39,
+      "opportunity": 610,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/investment",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "currency calculator xe",
+      "volume": 1300,
+      "difficulty": 58,
+      "opportunity": 546,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/currency-converter",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "projected retirement calculator",
+      "volume": 880,
+      "difficulty": 49,
+      "opportunity": 449,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/retirement",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "retirement financial calculator",
+      "volume": 880,
+      "difficulty": 52,
+      "opportunity": 422,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/retirement",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "forex xe converter",
+      "volume": 880,
+      "difficulty": 59,
+      "opportunity": 361,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/currency-converter",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "qualify for a mortgage calculator",
+      "volume": 880,
+      "difficulty": 66,
+      "opportunity": 299,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/loan-qualify",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "pricing generator",
+      "volume": 8100,
+      "difficulty": 100,
+      "opportunity": 0,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/business/pricing",
+      "why": "The pricing tool produces the price; \"generator\" is the same job.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    }
+  ],
+  "held": [
+    {
+      "keyword": "snow days calculator",
+      "volume": 368000,
+      "difficulty": 17,
+      "opportunity": 305440,
+      "auditVerdict": "GAP",
+      "verdict": "DUPLICATE",
+      "page": "",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "polypeptide calculator",
+      "volume": 301000,
+      "difficulty": 6,
+      "opportunity": 282940,
+      "auditVerdict": "GAP",
+      "verdict": "HOLD",
+      "page": "",
+      "why": "Peptide dosing is a clinical calculation; building it needs a reviewed protocol and a safety page, not a template.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "chipotle calculator nutrition",
+      "volume": 201000,
+      "difficulty": 7,
+      "opportunity": 186930,
+      "auditVerdict": "GAP",
+      "verdict": "HOLD",
+      "page": "",
+      "why": "Requires up-to-date per-item nutrition data we do not hold; stale numbers would be worse than no page.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "nutrition chipotle calculator",
+      "volume": 201000,
+      "difficulty": 10,
+      "opportunity": 180900,
+      "auditVerdict": "GAP",
+      "verdict": "HOLD",
+      "page": "",
+      "why": "Same brand-nutrition dataset gap.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "calorie calculator chipotle",
+      "volume": 201000,
+      "difficulty": 10,
+      "opportunity": 180900,
+      "auditVerdict": "GAP",
+      "verdict": "HOLD",
+      "page": "",
+      "why": "Same brand-nutrition dataset gap.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "chipotle calculator calories",
+      "volume": 201000,
+      "difficulty": 12,
+      "opportunity": 176880,
+      "auditVerdict": "GAP",
+      "verdict": "HOLD",
+      "page": "",
+      "why": "Same brand-nutrition dataset gap.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "chipotle calorie calculator",
+      "volume": 201000,
+      "difficulty": 12,
+      "opportunity": 176880,
+      "auditVerdict": "GAP",
+      "verdict": "HOLD",
+      "page": "",
+      "why": "Same brand-nutrition dataset gap.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "chipotle mexican grill nutrition calculator",
+      "volume": 201000,
+      "difficulty": 13,
+      "opportunity": 174870,
+      "auditVerdict": "GAP",
+      "verdict": "HOLD",
+      "page": "",
+      "why": "Same brand-nutrition dataset gap.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "chipotle calories calculator",
+      "volume": 201000,
+      "difficulty": 16,
+      "opportunity": 168840,
+      "auditVerdict": "GAP",
+      "verdict": "HOLD",
+      "page": "",
+      "why": "Same brand-nutrition dataset gap.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "chipotle nutrition calculator",
+      "volume": 201000,
+      "difficulty": 17,
+      "opportunity": 166830,
+      "auditVerdict": "GAP",
+      "verdict": "HOLD",
+      "page": "",
+      "why": "Same brand-nutrition dataset gap.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "dynasty league trade calculator",
+      "volume": 165000,
+      "difficulty": 9,
+      "opportunity": 150150,
+      "auditVerdict": "GAP",
+      "verdict": "HOLD",
+      "page": "",
+      "why": "Fantasy-football trade values need a maintained player-value dataset; out of scope for a maths/health site.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "dynasty trade calculator",
+      "volume": 165000,
+      "difficulty": 9,
+      "opportunity": 150150,
+      "auditVerdict": "GAP",
+      "verdict": "HOLD",
+      "page": "",
+      "why": "Same fantasy-sports dataset gap.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "keyword": "open calculator",
+      "volume": 6600,
+      "difficulty": 11,
+      "opportunity": 5874,
+      "auditVerdict": "GAP",
+      "verdict": "REJECT_NAVIGATIONAL",
+      "page": "",
+      "why": "The searcher wants an app, not a result; no page can satisfy it better than the homepage.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "downloadable calculator",
+      "volume": 3600,
+      "difficulty": 28,
+      "opportunity": 2592,
+      "auditVerdict": "GAP",
+      "verdict": "REJECT_NAVIGATIONAL",
+      "page": "",
+      "why": "Wants software, not a web tool.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "smart calculator",
+      "volume": 4400,
+      "difficulty": 51,
+      "opportunity": 2156,
+      "auditVerdict": "GAP",
+      "verdict": "REJECT_NAVIGATIONAL",
+      "page": "",
+      "why": "Generic product query, not a calculation intent.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "calculator on this phone",
+      "volume": 2400,
+      "difficulty": 13,
+      "opportunity": 2088,
+      "auditVerdict": "GAP",
+      "verdict": "REJECT_NAVIGATIONAL",
+      "page": "",
+      "why": "Device utility query.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "show calculator",
+      "volume": 1900,
+      "difficulty": 2,
+      "opportunity": 1862,
+      "auditVerdict": "GAP",
+      "verdict": "REJECT_NAVIGATIONAL",
+      "page": "",
+      "why": "Navigational/utility query.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "google math calculator",
+      "volume": 1600,
+      "difficulty": 1,
+      "opportunity": 1584,
+      "auditVerdict": "GAP",
+      "verdict": "REJECT_NAVIGATIONAL",
+      "page": "",
+      "why": "Brand navigational query.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "free online retirement planner",
+      "volume": 1600,
+      "difficulty": 15,
+      "opportunity": 1360,
+      "auditVerdict": "GAP",
+      "verdict": "REJECT_NAVIGATIONAL",
+      "page": "",
+      "why": "Generic or navigational phrasing with no distinct calculation intent.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "calculator that shows work",
+      "volume": 1000,
+      "difficulty": 21,
+      "opportunity": 790,
+      "auditVerdict": "GAP",
+      "verdict": "REJECT_NAVIGATIONAL",
+      "page": "",
+      "why": "Asks for a product feature, not a calculation.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "calculator that prints",
+      "volume": 1600,
+      "difficulty": 100,
+      "opportunity": 0,
+      "auditVerdict": "GAP",
+      "verdict": "REJECT_NAVIGATIONAL",
+      "page": "",
+      "why": "Printer utility query.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    }
+  ],
+  "rows": [
+    {
+      "keyword": "snow day calculator",
+      "volume": 368000,
+      "difficulty": 17,
+      "opportunity": 305440,
+      "auditVerdict": "GAP",
+      "verdict": "NEW_PAGE",
+      "page": "/everyday/snow-day",
+      "why": "Predicts a school-closure decision from snow forecast and district thresholds; no existing page models closure. Seasonal, so build only with a transparent rule set.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "snow days calculator",
+      "volume": 368000,
+      "difficulty": 17,
+      "opportunity": 305440,
+      "auditVerdict": "GAP",
+      "verdict": "DUPLICATE",
+      "page": "",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "polypeptide calculator",
+      "volume": 301000,
+      "difficulty": 6,
+      "opportunity": 282940,
+      "auditVerdict": "GAP",
+      "verdict": "HOLD",
+      "page": "",
+      "why": "Peptide dosing is a clinical calculation; building it needs a reviewed protocol and a safety page, not a template.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "chipotle calculator nutrition",
+      "volume": 201000,
+      "difficulty": 7,
+      "opportunity": 186930,
+      "auditVerdict": "GAP",
+      "verdict": "HOLD",
+      "page": "",
+      "why": "Requires up-to-date per-item nutrition data we do not hold; stale numbers would be worse than no page.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "nutrition chipotle calculator",
+      "volume": 201000,
+      "difficulty": 10,
+      "opportunity": 180900,
+      "auditVerdict": "GAP",
+      "verdict": "HOLD",
+      "page": "",
+      "why": "Same brand-nutrition dataset gap.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "calorie calculator chipotle",
+      "volume": 201000,
+      "difficulty": 10,
+      "opportunity": 180900,
+      "auditVerdict": "GAP",
+      "verdict": "HOLD",
+      "page": "",
+      "why": "Same brand-nutrition dataset gap.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "chipotle calculator calories",
+      "volume": 201000,
+      "difficulty": 12,
+      "opportunity": 176880,
+      "auditVerdict": "GAP",
+      "verdict": "HOLD",
+      "page": "",
+      "why": "Same brand-nutrition dataset gap.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "chipotle calorie calculator",
+      "volume": 201000,
+      "difficulty": 12,
+      "opportunity": 176880,
+      "auditVerdict": "GAP",
+      "verdict": "HOLD",
+      "page": "",
+      "why": "Same brand-nutrition dataset gap.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "chipotle mexican grill nutrition calculator",
+      "volume": 201000,
+      "difficulty": 13,
+      "opportunity": 174870,
+      "auditVerdict": "GAP",
+      "verdict": "HOLD",
+      "page": "",
+      "why": "Same brand-nutrition dataset gap.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "chipotle calories calculator",
+      "volume": 201000,
+      "difficulty": 16,
+      "opportunity": 168840,
+      "auditVerdict": "GAP",
+      "verdict": "HOLD",
+      "page": "",
+      "why": "Same brand-nutrition dataset gap.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "chipotle nutrition calculator",
+      "volume": 201000,
+      "difficulty": 17,
+      "opportunity": 166830,
+      "auditVerdict": "GAP",
+      "verdict": "HOLD",
+      "page": "",
+      "why": "Same brand-nutrition dataset gap.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "cd bank calculator",
+      "volume": 165000,
+      "difficulty": 2,
+      "opportunity": 161700,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/cd-calculator",
+      "why": "CD = certificate of deposit; the page already prices one.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "bank certificate calculator",
+      "volume": 165000,
+      "difficulty": 2,
+      "opportunity": 161700,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/cd-calculator",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "time card clock calculator",
+      "volume": 201000,
+      "difficulty": 20,
+      "opportunity": 160800,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/career/timesheet-hours",
+      "why": "Same job: hours from clock-in/clock-out.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "ft2 calculator",
+      "volume": 165000,
+      "difficulty": 9,
+      "opportunity": 150150,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/conversion/area",
+      "why": "ft² is a unit of area.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "dynasty league trade calculator",
+      "volume": 165000,
+      "difficulty": 9,
+      "opportunity": 150150,
+      "auditVerdict": "GAP",
+      "verdict": "HOLD",
+      "page": "",
+      "why": "Fantasy-football trade values need a maintained player-value dataset; out of scope for a maths/health site.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "ft squared calculator",
+      "volume": 165000,
+      "difficulty": 9,
+      "opportunity": 150150,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/conversion/area",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "dynasty trade calculator",
+      "volume": 165000,
+      "difficulty": 9,
+      "opportunity": 150150,
+      "auditVerdict": "GAP",
+      "verdict": "HOLD",
+      "page": "",
+      "why": "Same fantasy-sports dataset gap.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "day count",
+      "volume": 74000,
+      "difficulty": 0,
+      "opportunity": 74000,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/everyday/date-diff",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "calendar calculator",
+      "volume": 60500,
+      "difficulty": 0,
+      "opportunity": 60500,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/everyday/date-diff",
+      "why": "",
+      "gsc": {
+        "impressions": 22,
+        "clicks": 0,
+        "bestPosition": 58,
+        "matches": 17
+      }
+    },
+    {
+      "keyword": "bmi calculator body mass index",
+      "volume": 110000,
+      "difficulty": 53,
+      "opportunity": 51700,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/health/bmi",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "financial compound calculator",
+      "volume": 40500,
+      "difficulty": 14,
+      "opportunity": 34830,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/compound-interest",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "financial compounding calculator",
+      "volume": 40500,
+      "difficulty": 14,
+      "opportunity": 34830,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/compound-interest",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "interest percentage calculator",
+      "volume": 33100,
+      "difficulty": 10,
+      "opportunity": 29790,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/simple-interest",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "ot calculator",
+      "volume": 22200,
+      "difficulty": 1,
+      "opportunity": 21978,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/career/overtime-pay",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "time payroll calculator",
+      "volume": 22200,
+      "difficulty": 12,
+      "opportunity": 19536,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/career/timesheet-hours",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "pay time calculator",
+      "volume": 22200,
+      "difficulty": 12,
+      "opportunity": 19536,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/career/timesheet-hours",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "simplify calculator",
+      "volume": 18100,
+      "difficulty": 2,
+      "opportunity": 17738,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/math/fraction",
+      "why": "Simplify is a fraction operation; the fraction tool reduces.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "compounded daily calculator",
+      "volume": 14800,
+      "difficulty": 3,
+      "opportunity": 14356,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/compound-interest",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "desired weight calculator",
+      "volume": 14800,
+      "difficulty": 5,
+      "opportunity": 14060,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/health/ideal-body-weight",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "simple loan calculator",
+      "volume": 14800,
+      "difficulty": 13,
+      "opportunity": 12876,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/loan-emi",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "payment planner",
+      "volume": 12100,
+      "difficulty": 11,
+      "opportunity": 10769,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/loan-emi",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "fv calculator",
+      "volume": 9900,
+      "difficulty": 3,
+      "opportunity": 9603,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/future-value",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "loan calculator for business",
+      "volume": 14800,
+      "difficulty": 42,
+      "opportunity": 8584,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/loan-emi",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "savings calculator simple",
+      "volume": 6600,
+      "difficulty": 1,
+      "opportunity": 6534,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/everyday/compound-savings",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "percentage return calculator",
+      "volume": 6600,
+      "difficulty": 7,
+      "opportunity": 6138,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/investment",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "mortgage and tax calculator",
+      "volume": 9900,
+      "difficulty": 40,
+      "opportunity": 5940,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/mortgage",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "open calculator",
+      "volume": 6600,
+      "difficulty": 11,
+      "opportunity": 5874,
+      "auditVerdict": "GAP",
+      "verdict": "REJECT_NAVIGATIONAL",
+      "page": "",
+      "why": "The searcher wants an app, not a result; no page can satisfy it better than the homepage.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "retirement plan estimator",
+      "volume": 5400,
+      "difficulty": 6,
+      "opportunity": 5076,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/retirement",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "reverse tax calculator",
+      "volume": 4400,
+      "difficulty": 0,
+      "opportunity": 4400,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/tax",
+      "why": "The tax page reverses net to gross.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "percentage discount calculator",
+      "volume": 4400,
+      "difficulty": 0,
+      "opportunity": 4400,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/discount",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "daily interest calculator",
+      "volume": 4400,
+      "difficulty": 1,
+      "opportunity": 4356,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/simple-interest",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "inflation salary calculator",
+      "volume": 3600,
+      "difficulty": 1,
+      "opportunity": 3564,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/inflation-adjusted",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "dob calculator",
+      "volume": 3600,
+      "difficulty": 1,
+      "opportunity": 3564,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/guides/age",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "compound investment calculator",
+      "volume": 3600,
+      "difficulty": 25,
+      "opportunity": 2700,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/investment",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "downloadable calculator",
+      "volume": 3600,
+      "difficulty": 28,
+      "opportunity": 2592,
+      "auditVerdict": "GAP",
+      "verdict": "REJECT_NAVIGATIONAL",
+      "page": "",
+      "why": "Wants software, not a web tool.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "investment calculator over time",
+      "volume": 3600,
+      "difficulty": 35,
+      "opportunity": 2340,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/investment",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "share return calculator",
+      "volume": 2400,
+      "difficulty": 5,
+      "opportunity": 2280,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/investment",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "smart calculator",
+      "volume": 4400,
+      "difficulty": 51,
+      "opportunity": 2156,
+      "auditVerdict": "GAP",
+      "verdict": "REJECT_NAVIGATIONAL",
+      "page": "",
+      "why": "Generic product query, not a calculation intent.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "calculator on this phone",
+      "volume": 2400,
+      "difficulty": 13,
+      "opportunity": 2088,
+      "auditVerdict": "GAP",
+      "verdict": "REJECT_NAVIGATIONAL",
+      "page": "",
+      "why": "Device utility query.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "simple retirement calculator",
+      "volume": 3600,
+      "difficulty": 47,
+      "opportunity": 1908,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/retirement",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "pv calculator",
+      "volume": 1900,
+      "difficulty": 1,
+      "opportunity": 1881,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/present-value",
+      "why": "",
+      "gsc": {
+        "impressions": 5,
+        "clicks": 0,
+        "bestPosition": 3,
+        "matches": 5
+      }
+    },
+    {
+      "keyword": "show calculator",
+      "volume": 1900,
+      "difficulty": 2,
+      "opportunity": 1862,
+      "auditVerdict": "GAP",
+      "verdict": "REJECT_NAVIGATIONAL",
+      "page": "",
+      "why": "Navigational/utility query.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "credit rate calculator",
+      "volume": 2400,
+      "difficulty": 26,
+      "opportunity": 1776,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/credit-card-payoff",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "compounded annually calculator",
+      "volume": 2400,
+      "difficulty": 27,
+      "opportunity": 1752,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/compound-interest",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "google math calculator",
+      "volume": 1600,
+      "difficulty": 1,
+      "opportunity": 1584,
+      "auditVerdict": "GAP",
+      "verdict": "REJECT_NAVIGATIONAL",
+      "page": "",
+      "why": "Brand navigational query.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "retirement planner calculator",
+      "volume": 2400,
+      "difficulty": 36,
+      "opportunity": 1536,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/retirement",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "loan percentage calculator",
+      "volume": 1900,
+      "difficulty": 21,
+      "opportunity": 1501,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/loan-emi",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "figure out interest rate on loan",
+      "volume": 1900,
+      "difficulty": 21,
+      "opportunity": 1501,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/loan-emi",
+      "why": "The reverse mode solves the rate from payment and term.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "retirement budget calculator",
+      "volume": 1900,
+      "difficulty": 24,
+      "opportunity": 1444,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/retirement-withdrawal",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "free online retirement planner",
+      "volume": 1600,
+      "difficulty": 15,
+      "opportunity": 1360,
+      "auditVerdict": "GAP",
+      "verdict": "REJECT_NAVIGATIONAL",
+      "page": "",
+      "why": "Generic or navigational phrasing with no distinct calculation intent.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "cash back calculator",
+      "volume": 1300,
+      "difficulty": 1,
+      "opportunity": 1287,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/discount",
+      "why": "Cash back is a percentage of spend, which is the discount calculation.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "compound retirement calculator",
+      "volume": 1600,
+      "difficulty": 21,
+      "opportunity": 1264,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/retirement",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "compounding calculator retirement",
+      "volume": 1600,
+      "difficulty": 21,
+      "opportunity": 1264,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/retirement",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "financial planning calculator",
+      "volume": 1900,
+      "difficulty": 37,
+      "opportunity": 1197,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/net-worth-calculator",
+      "why": "Umbrella intent; net worth is the planning entry point.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "roi calculation formula",
+      "volume": 1300,
+      "difficulty": 8,
+      "opportunity": 1196,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/roi",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "work schedule calculator",
+      "volume": 1300,
+      "difficulty": 9,
+      "opportunity": 1183,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/everyday/work-hours-weekly",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "concrete calculator formula",
+      "volume": 1300,
+      "difficulty": 11,
+      "opportunity": 1157,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/construction/concrete-slab",
+      "why": "The formula is on the slab page; \"concrete calculator\" is the same intent.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "inflation wage calculator",
+      "volume": 1000,
+      "difficulty": 1,
+      "opportunity": 990,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/inflation-adjusted",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "compound investments",
+      "volume": 1300,
+      "difficulty": 24,
+      "opportunity": 988,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/investment",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "time and pay calculator",
+      "volume": 1000,
+      "difficulty": 5,
+      "opportunity": 950,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/career/timesheet-hours",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "future value of investment calculator",
+      "volume": 1300,
+      "difficulty": 30,
+      "opportunity": 910,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/future-value",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "compound loan calculator",
+      "volume": 1000,
+      "difficulty": 11,
+      "opportunity": 890,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/loan-emi",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "savings percentage calculator",
+      "volume": 880,
+      "difficulty": 2,
+      "opportunity": 862,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/savings-rate",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "formula discount",
+      "volume": 1000,
+      "difficulty": 16,
+      "opportunity": 840,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/discount",
+      "why": "Formula-shaped query for the discount page.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "yearly payment calculator",
+      "volume": 880,
+      "difficulty": 5,
+      "opportunity": 836,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/loan-emi",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "retirement calculator growth",
+      "volume": 1300,
+      "difficulty": 36,
+      "opportunity": 832,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/retirement",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "calculator that shows work",
+      "volume": 1000,
+      "difficulty": 21,
+      "opportunity": 790,
+      "auditVerdict": "GAP",
+      "verdict": "REJECT_NAVIGATIONAL",
+      "page": "",
+      "why": "Asks for a product feature, not a calculation.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "investment account calculator",
+      "volume": 1000,
+      "difficulty": 25,
+      "opportunity": 750,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/investment",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "compare loan calculator",
+      "volume": 1000,
+      "difficulty": 25,
+      "opportunity": 750,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/loan-comparison",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "compound return calculator",
+      "volume": 880,
+      "difficulty": 21,
+      "opportunity": 695,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/cagr",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "mortgage calculator how much can i qualify for",
+      "volume": 1900,
+      "difficulty": 66,
+      "opportunity": 646,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/loan-qualify",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "mortgage calculator how much do i qualify for",
+      "volume": 1900,
+      "difficulty": 66,
+      "opportunity": 646,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/loan-qualify",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "monthly investment calculator",
+      "volume": 1000,
+      "difficulty": 39,
+      "opportunity": 610,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/investment",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "retirement financial calculator",
+      "volume": 880,
+      "difficulty": 52,
+      "opportunity": 422,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/retirement",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "qualify for a mortgage calculator",
+      "volume": 880,
+      "difficulty": 66,
+      "opportunity": 299,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/loan-qualify",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "pricing generator",
+      "volume": 8100,
+      "difficulty": 100,
+      "opportunity": 0,
+      "auditVerdict": "GAP",
+      "verdict": "COVER_EXISTING",
+      "page": "/business/pricing",
+      "why": "The pricing tool produces the price; \"generator\" is the same job.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "calculator that prints",
+      "volume": 1600,
+      "difficulty": 100,
+      "opportunity": 0,
+      "auditVerdict": "GAP",
+      "verdict": "REJECT_NAVIGATIONAL",
+      "page": "",
+      "why": "Printer utility query.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "calculator for certificate of deposit",
+      "volume": 165000,
+      "difficulty": 2,
+      "opportunity": 161700,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/cd-calculator",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "certified deposit calculator",
+      "volume": 165000,
+      "difficulty": 2,
+      "opportunity": 161700,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/cd-calculator",
+      "why": "\"certified deposit\" is a misspelling of certificate of deposit.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "deposit certificate calculator",
+      "volume": 165000,
+      "difficulty": 2,
+      "opportunity": 161700,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/cd-calculator",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "certificate deposit calculator",
+      "volume": 165000,
+      "difficulty": 2,
+      "opportunity": 161700,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/cd-calculator",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "mortgage expense calculator",
+      "volume": 201000,
+      "difficulty": 35,
+      "opportunity": 130650,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/mortgage",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "convert currency xe",
+      "volume": 246000,
+      "difficulty": 55,
+      "opportunity": 110700,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/currency-converter",
+      "why": "Brand modifier only; the page is the same conversion.",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "convert xe currency",
+      "volume": 246000,
+      "difficulty": 55,
+      "opportunity": 110700,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/currency-converter",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "yearly salary calculator",
+      "volume": 49500,
+      "difficulty": 1,
+      "opportunity": 49005,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/salary",
+      "why": "",
+      "gsc": {
+        "impressions": 11,
+        "clicks": 0,
+        "bestPosition": 71.75,
+        "matches": 3
+      }
+    },
+    {
+      "keyword": "time adder",
+      "volume": 14800,
+      "difficulty": 0,
+      "opportunity": 14800,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/career/timesheet-hours",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "yearly income calculator",
+      "volume": 8100,
+      "difficulty": 3,
+      "opportunity": 7857,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/salary",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "hour counter",
+      "volume": 5400,
+      "difficulty": 1,
+      "opportunity": 5346,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/career/timesheet-hours",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "calculate age by birthday",
+      "volume": 4400,
+      "difficulty": 3,
+      "opportunity": 4268,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/guides/age",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "compounded monthly calculator",
+      "volume": 2900,
+      "difficulty": 15,
+      "opportunity": 2465,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/compound-interest",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "compounding calculator yearly",
+      "volume": 2400,
+      "difficulty": 27,
+      "opportunity": 1752,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/cagr",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "paycheck deduction calculator",
+      "volume": 1900,
+      "difficulty": 10,
+      "opportunity": 1710,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/payroll-tax",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "interest accrual calculator",
+      "volume": 1600,
+      "difficulty": 7,
+      "opportunity": 1488,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/simple-interest",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "age calendar",
+      "volume": 1300,
+      "difficulty": 0,
+      "opportunity": 1300,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/guides/age",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "spending calculator retirement",
+      "volume": 1900,
+      "difficulty": 33,
+      "opportunity": 1273,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/retirement-withdrawal",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "retirement expenditure calculator",
+      "volume": 1900,
+      "difficulty": 33,
+      "opportunity": 1273,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/retirement-withdrawal",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "housing cost calculator",
+      "volume": 1900,
+      "difficulty": 50,
+      "opportunity": 950,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/rent-affordability",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "housing cost estimator",
+      "volume": 1900,
+      "difficulty": 50,
+      "opportunity": 950,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/rent-affordability",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "yearly interest calculator",
+      "volume": 1000,
+      "difficulty": 10,
+      "opportunity": 900,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/compound-interest",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "yearly pay calculator",
+      "volume": 880,
+      "difficulty": 5,
+      "opportunity": 836,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/salary",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "currency calculator xe",
+      "volume": 1300,
+      "difficulty": 58,
+      "opportunity": 546,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/currency-converter",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "projected retirement calculator",
+      "volume": 880,
+      "difficulty": 49,
+      "opportunity": 449,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/retirement",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    },
+    {
+      "keyword": "forex xe converter",
+      "volume": 880,
+      "difficulty": 59,
+      "opportunity": 361,
+      "auditVerdict": "WEAK",
+      "verdict": "COVER_EXISTING",
+      "page": "/finance/currency-converter",
+      "why": "",
+      "gsc": {
+        "impressions": 0,
+        "clicks": 0,
+        "bestPosition": null,
+        "matches": 0
+      }
+    }
+  ]
+}

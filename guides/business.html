@@ -44,16 +44,62 @@
     .cat-card p { margin: 0; color: #4b5563; font-size: 0.95rem; }
     .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
     .updated { color: #6b7280; font-size: 0.85rem; }
-  </style>
+/* guide-depth-css:start */
+.guide-lede{font-weight:600;border-left:3px solid #4f46e5;padding-left:12px;margin:10px 0 4px}
+    .guide-pitfalls{margin:8px 0 14px 20px}
+    .seo-faqs h3{margin:16px 0 4px}
+/* guide-depth-css:end */
+</style>
+
+<!-- guide-faq-schema:start -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should I price with margin or markup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use margin to judge a sale (profit as a share of the price you charged) and markup to price off cost (profit as a share of what you paid). Pricing from a target margin is the safer habit: price = cost ÷ (1 − margin), so a 30% margin on a $70 cost is $100, not $91."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does break-even include tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Break-even as normally written covers operating costs only, so it is a pre-tax line. Profit tax is charged on profit, not on the point where profit becomes zero, so folding it into the break-even calculation would double-count it. Keep the two questions separate and apply tax afterwards."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my spreadsheet disagree with a break-even calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Almost always one of three inputs: rounding of contribution margin per unit, whether owner pay and loan repayments sit in fixed costs, or a different period. Put every figure on the same monthly or annual basis, list what is and is not counted, and then compare the two results."
+      }
+    }
+  ]
+}
+</script>
+<!-- guide-faq-schema:end -->
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Business</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Business</p>
   <h1>Business Guides</h1>
   <p class="updated">Part of the CalcProMaster guides library · Updated September 2026</p>
 
   <p>Business math fails most often in the same two spots: confusing margin with markup, and guessing break-even instead of computing it. These guides nail both.</p>
 
-  <h2>How the math works</h2>
+
+<!-- guide-lede:start -->
+<p class="guide-lede">Business maths rewards being explicit about which base a number is divided by: the same profit can be a 20% margin or a 25% markup, and a break-even point is only as honest as the fixed costs that went into it.</p>
+<!-- guide-lede:end -->
+<h2>How the math works</h2>
   <p><strong>Margin vs markup</strong> is a base confusion: margin is profit ÷ <em>selling</em> price, markup is profit ÷ <em>cost</em>. The same $10 profit on a $40-cost item selling at $50 is a 20% margin and a 25% markup — both correct, answering different questions. Pricing from a target margin needs the markup conversion: price = cost ÷ (1 − margin), so a 30% margin on $70 cost means $100, not $91.</p>
   <p><strong>Break-even</strong> converts that into planning: units = fixed costs ÷ (price − variable cost per unit). The denominator — contribution margin — is what each sale adds toward covering rent and salaries. The <a href="/guides/break-even">break-even guide</a> runs a full café example, extends it to a target profit, and shows why a business below break-even loses money at roughly the contribution margin per unit, not at its full selling price.</p>
   <p>One more distinction the guides keep returning to: <strong>profit is not cash</strong>. A profitable sale paid on 60-day terms still leaves payroll due on the 30th — which is why the break-even arithmetic a café needs is monthly, in cash terms, not annual. When you run the calculators, feed them the numbers from a real month (rent, average ticket, variable cost per order) rather than aspirational ones; the resulting break-even is then a line you can actually watch the business cross.</p>
@@ -63,14 +109,52 @@
     <p>Fixed vs variable costs, contribution margin, a full café example, margin of safety, and the target-profit extension.</p>
   </div>
 
-  <h2>Try the matching calculators</h2>
+
+<!-- guide-extra-depth:start -->
+<h2>What this category covers</h2>
+<p>Break-even, margin, markup, pricing, runway, invoice factoring and unit economics. These are the numbers a small business needs weekly, and the ones most often calculated once and never updated.</p>
+<p>Pick the cadence first: margin per sale, break-even per month, runway per quarter. A number with no review rhythm stops being a decision tool.</p>
+<h2>Fixed and variable costs behave differently</h2>
+<p>A variable cost moves with each sale and belongs in the contribution margin. A fixed cost is paid whether or not you sell anything, and belongs in the break-even denominator. Putting rent into the per-unit cost makes every unit look unprofitable at low volume.</p>
+<p>Some costs are step-fixed: they jump at a threshold, such as a second employee or a larger warehouse. Model them as steps rather than as smooth growth.</p>
+<h2>Cash is not profit</h2>
+<p>Profit is recognised when work is done; cash arrives when the customer pays. A profitable month on 60-day terms can still miss payroll, which is why a cash-flow forecast sits beside the profit calculation.</p>
+<p>Runway is the more useful number for a young business: months of cash at the current burn. It converts a vague worry into a deadline you can plan against.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/career">Career & Freelance Guides</a></li>
+    <li><a href="/guides/salary">Gross Salary vs In-Hand Salary</a></li>
+    <li><a href="/guides/tax-salary">Tax & Salary Guides</a></li>
+    <li><a href="/guides/income-tax">How Income Tax Is Calculated (Brackets & Rates)</a></li>
+  </ul>
+
+<!-- guide-depth:start -->
+<h2>Where these answers go wrong</h2><ul class="guide-pitfalls"><li>Using revenue and cost as if they were the same base — margin divides profit by the selling price, markup divides it by the cost, so 20% margin is a 25% markup.</li><li>Leaving fixed costs out because they are paid monthly while the price is per unit — convert both to the same period before dividing.</li><li>Treating profit as cash, which is why a profitable month on 60-day invoice terms can still miss a payroll run.</li><li>Wanting a target margin but applying a markup percentage, which quietly underprices every sale.</li></ul><h2>Frequently asked questions</h2><div class="seo-faqs"><h3>Should I price with margin or markup?</h3><p>Use margin to judge a sale (profit as a share of the price you charged) and markup to price off cost (profit as a share of what you paid). Pricing from a target margin is the safer habit: price = cost ÷ (1 − margin), so a 30% margin on a $70 cost is $100, not $91.</p><h3>Does break-even include tax?</h3><p>Break-even as normally written covers operating costs only, so it is a pre-tax line. Profit tax is charged on profit, not on the point where profit becomes zero, so folding it into the break-even calculation would double-count it. Keep the two questions separate and apply tax afterwards.</p><h3>Why does my spreadsheet disagree with a break-even calculator?</h3><p>Almost always one of three inputs: rounding of contribution margin per unit, whether owner pay and loan repayments sit in fixed costs, or a different period. Put every figure on the same monthly or annual basis, list what is and is not counted, and then compare the two results.</p></div>
+<!-- guide-depth:end -->
+<!-- guide-worked-example:start -->
+<h2>Worked example: Break-Even Calculator at its default inputs</h2>
+<p>Take the default setup on <a href="/finance/break-even/">Break-Even Calculator</a>: no fields changed, nothing tuned to a nice round number. Run in the site's own engine, those values produce the answer below.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Fixed Costs</td><td>10000</td></tr><tr><td>Price per Unit</td><td>50</td></tr><tr><td>Variable Cost/Unit</td><td>20</td></tr></tbody></table>
+<p><strong>Result:</strong> Break-Even: 333 units</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Formula: Break-Even = Fixed Costs / (Price - Variable Cost)</li><li>Step 1: Contribution margin = $50 - $20 = $30</li><li>Step 2: Break-even = $10000 / $30 = 333 units</li></ol>
+<h2>Fixed Costs — three values, three answers</h2>
+<p>Same calculator, same fields, one change: fixed costs.</p>
+<table><thead><tr><th>Fixed Costs</th><th>Result</th></tr></thead><tbody><tr><td>5,000</td><td>Break-Even: 167 units</td></tr><tr><td>10,000</td><td>Break-Even: 333 units</td></tr><tr><td>15,000</td><td>Break-Even: 500 units</td></tr></tbody></table>
+<p>Read the three rows as a range: the spread between them is how much the answer depends on fixed costs alone, with everything else held still.</p>
+<!-- guide-worked-example:end -->
+<h2>Try the matching calculators</h2>
   <p>
-    <a href="/finance/break-even" class="cta">Break-Even Calculator</a>
-    <a href="/business/profit-margin" class="cta">Profit Margin Calculator</a>
-    <a href="/finance/loan-emi" class="cta">Loan EMI Calculator</a>
+    <a href="/finance/break-even/" class="cta">Break-Even Calculator</a>
+    <a href="/business/profit-margin/" class="cta">Profit Margin Calculator</a>
+    <a href="/finance/loan-emi/" class="cta">Loan EMI Calculator</a>
   </p>
 
-  <p><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
+  <p><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

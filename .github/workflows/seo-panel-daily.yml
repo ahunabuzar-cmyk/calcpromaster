@@ -13,8 +13,9 @@ name: CalcProMaster — Daily index panel
 # staleness gate compares mtimes, so a report must be written after its data):
 #   1. URL inspection of every waiting URL  (build-index-panel.cjs --inspect --all)
 #   2. Index burn-down (reads the panel)    (build-index-burndown.cjs)
-#   3. Public stats page (+ homepage figure)(build-stats-page.cjs)
-#   4. Commit the snapshot back             (so tomorrow has a baseline)
+#   3. Index velocity (daily speed + stall)  (track-index-velocity.cjs)
+#   4. Public stats page (+ homepage figure)(build-stats-page.cjs)
+#   5. Commit the snapshot back             (so tomorrow has a baseline)
 #
 # The inspection is resumable *within* a run (per-URL checkpoint in
 # data/index-panel-progress.json) and rate-limited: 8 in flight, exponential
@@ -83,6 +84,20 @@ jobs:
       - name: Index burn-down (reads today's panel snapshot)
         if: steps.gate.outputs.ready == '1'
         run: node scripts/build-index-burndown.cjs
+      - name: "Index-regression alert (per-URL — indexed → not indexed, new duplicate canonical)"
+        # Burn-down ka "net" ek URL ka index-se girna chhupa leta hai (doosri taraf
+        # do URL index ho gaye to total upar dikhta hai). Ye step wahi per-URL
+        # transition pakadta hai. `continue-on-error` jaan-boojh kar hai: report
+        # aur snapshot pehle likhe jaate hain, phir neeche ek dedicated issue khulta
+        # hai — warna job fail hone par aaj ka snapshot commit hi na hota aur kal
+        # ka comparison bina baseline ke ho jata.
+        id: regress
+        if: steps.gate.outputs.ready == '1'
+        continue-on-error: true
+        run: node scripts/check-index-regressions.cjs
+      - name: Index velocity (daily speed + stall verdict)
+        if: steps.gate.outputs.ready == '1'
+        run: node scripts/track-index-velocity.cjs
       - name: Public stats page + homepage figure (only when its inputs are here)
         if: steps.gate.outputs.ready == '1'
         run: |
@@ -100,7 +115,9 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           for f in data/index-panel.json data/index-panel-history.json docs/INDEX-PANEL.md \
-                   data/index-burndown.json docs/INDEX-BURNDOWN.md stats.html; do
+                   data/index-burndown.json docs/INDEX-BURNDOWN.md \
+                   data/index-velocity.json docs/INDEX-VELOCITY.md \
+                   data/index-regressions.json docs/INDEX-REGRESSIONS.md stats.html; do
             [ -e "$f" ] && git add "$f"
           done
           if git diff --cached --quiet; then
@@ -118,9 +135,39 @@ jobs:
             data/index-panel.json
             data/index-panel-history.json
             data/index-burndown.json
+            data/index-velocity.json
+            data/index-regressions.json
             docs/INDEX-PANEL.md
             docs/INDEX-BURNDOWN.md
+            docs/INDEX-VELOCITY.md
+            docs/INDEX-REGRESSIONS.md
           if-no-files-found: ignore
+      - name: Open index-regression issue (a page fell out of the index)
+        # Dedicated, specific issue — the generic "panel failed" issue below says
+        # the inspection did not finish, which is a different problem. Runs ON TOP
+        # of today's snapshot commit, so the evidence is already in the repo.
+        if: steps.regress.outcome == 'failure' && steps.gate.outputs.ready == '1'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let body = 'Per-URL index transitions found something new. Full report: `docs/INDEX-REGRESSIONS.md` · data: `data/index-regressions.json`.';
+            try {
+              const r = JSON.parse(fs.readFileSync('data/index-regressions.json', 'utf8'));
+              const lines = [];
+              for (const it of (r.newRegressions || [])) lines.push('- REGRESSION: `' + it.url + '` — ' + it.from + ' → ' + it.to + ' (' + it.window + ')');
+              for (const it of (r.newDuplicateCanonicals || [])) lines.push('- DUPLICATE CANONICAL: `' + it.url + '` — ' + it.from + ' → ' + it.to + ' (' + it.window + ')');
+              for (const it of (r.newNotCandidates || [])) lines.push('- NOT A CANDIDATE: `' + it.url + '` — ' + it.from + ' → ' + it.to + ' (' + it.window + ')');
+              for (const it of (r.newCurrent || [])) lines.push('- CURRENT STATE: `' + it.url + '` — ' + it.to);
+              body = (lines.length ? lines.join('\n') : '(no details in the JSON)') + '\n\n' + body;
+            } catch (e) { /* report the generic message */ }
+            body += '\n\nAccept a known finding: `node scripts/check-index-regressions.cjs --update` (writes `data/index-regressions-ledger.json`). Category/hub duplicate canonicals: check `npm run check:category-dup` and `docs/DUPLICATE-HUBS-FIX.md` first.';
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '📉 Index regression — ' + new Date().toISOString().slice(0, 10),
+              body
+            });
       - name: Open alert issue on failure
         if: failure() && steps.gate.outputs.ready == '1'
         uses: actions/github-script@v7

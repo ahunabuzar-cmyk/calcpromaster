@@ -1,0 +1,798 @@
+{
+  "ranAt": "2026-10-23T12:06:36.588Z",
+  "window": {
+    "days": 28,
+    "startDate": "2026-09-16",
+    "endDate": "2026-10-14"
+  },
+  "thresholds": {
+    "minMachineImpressions": 20,
+    "maxMachineShare": 0.25
+  },
+  "rules": [
+    {
+      "pattern": "/^[+\\-%#]/",
+      "reason": "starts with an appended +, -, % or # fragment"
+    },
+    {
+      "pattern": "/%[0-9a-fA-F]{2}/",
+      "reason": "URL-encoded bytes (%2b, %20 …)"
+    },
+    {
+      "pattern": "/^#?[0-9a-fA-F]{6}$/",
+      "reason": "bare six-digit hex colour"
+    },
+    {
+      "pattern": "/^[^\\p{L}]*$/u",
+      "reason": "no letters in any script (digits/punctuation only)"
+    },
+    {
+      "pattern": "/\\bsource%$/",
+      "reason": "formula-fragment tail (\"…161 source%\")"
+    }
+  ],
+  "summary": {
+    "pagesInJoin": 469,
+    "pairRows": 4465,
+    "impressionsInJoin": 11567,
+    "machineRows": 71,
+    "machineImpressions": 193,
+    "machineClicks": 0,
+    "machineShareOfJoin": 0.0167,
+    "flaggedPages": 1,
+    "knownPages": 1,
+    "newPages": 0
+  },
+  "flagged": [
+    {
+      "path": "/health/bmr-mifflin",
+      "paths": [
+        "https://calcpromaster.com/health/bmr-mifflin",
+        "https://calcpromaster.com/health/bmr-mifflin/"
+      ],
+      "impressions": 261,
+      "clicks": 0,
+      "machineImpressions": 171,
+      "machineQueries": [
+        {
+          "query": "+mifflin st jeor equation women 10 weight 6.25 height 5 age 161 source%",
+          "impressions": 22,
+          "position": 5.954545454545454,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation sex age height weight official",
+          "impressions": 9,
+          "position": 2.666666666666667,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation women 10 weight 6.25 height 5 age 161 source%",
+          "impressions": 8,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation sex age height weight calorie needs official",
+          "impressions": 6,
+          "position": 6.166666666666667,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation sex age height weight resting energy expenditure official",
+          "impressions": 6,
+          "position": 4.333333333333334,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation women 10 weight 6.25 height 5 age 161 source",
+          "impressions": 6,
+          "position": 6.5,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "%mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161",
+          "impressions": 5,
+          "position": 6.4,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation 10 weight 6.25 height 5 age male pubmed%",
+          "impressions": 5,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation age sex height weight resting energy expenditure official",
+          "impressions": 5,
+          "position": 3,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161 source",
+          "impressions": 5,
+          "position": 6.4,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation sex age height weight resting energy expenditure official%",
+          "impressions": 5,
+          "position": 4.6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161 pubmed",
+          "impressions": 4,
+          "position": 7.5,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161 source%",
+          "impressions": 4,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161 source%",
+          "impressions": 4,
+          "position": 6.5,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation women 10 weight 6.25 height 5 age 161 source",
+          "impressions": 4,
+          "position": 6.5,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+academy nutrition dietetics mifflin st jeor equation sex age height weight",
+          "impressions": 3,
+          "position": 2,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+academy nutrition dietetics mifflin st jeor equation women 10 weight 6.25 height 5 age 161",
+          "impressions": 3,
+          "position": 2,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161",
+          "impressions": 3,
+          "position": 6.666666666666667,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161 pubmed%",
+          "impressions": 3,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161 source",
+          "impressions": 3,
+          "position": 6.333333333333333,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation women 10 weight 6.25 height 5 age 161 authoritative",
+          "impressions": 3,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+pubmed mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161",
+          "impressions": 3,
+          "position": 7.666666666666667,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "%mifflin st jeor equation resting energy expenditure men 10 weight 6.25 height 5 age 5",
+          "impressions": 2,
+          "position": 7.5,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "%mifflin st jeor equation women 10 weight 6.25 height 5 age 161 source",
+          "impressions": 2,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "%mifflin st jeor equation women resting energy expenditure 10 weight 6.25 height 5 age 161",
+          "impressions": 2,
+          "position": 6.5,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "%pubmed mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161",
+          "impressions": 2,
+          "position": 8,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation 10 weight 6.25 height 5 age +5 source",
+          "impressions": 2,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation 10 weight 6.25 height 5 age male pubmed%",
+          "impressions": 2,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation men 10 weight 6.25 height 5 age +5 source",
+          "impressions": 2,
+          "position": 7.5,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation men 10 weight 6.25 height 5 age +5 source",
+          "impressions": 2,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation men 10 weight 6.25 height 5 age 5 source",
+          "impressions": 2,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation resting energy expenditure men 10 weight 6.25 height 5 age official",
+          "impressions": 2,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161",
+          "impressions": 2,
+          "position": 6.5,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161 pubmed",
+          "impressions": 2,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161 pubmed%",
+          "impressions": 2,
+          "position": 8,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation women 10 weight 6.25 height 5 age 161 authoritative",
+          "impressions": 2,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "%mifflin st jeor equation resting energy expenditure men 10 weight 6.25 height 5 age 5",
+          "impressions": 1,
+          "position": 8,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "%mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161",
+          "impressions": 1,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "%mifflin st jeor equation women 10 weight 6.25 height 5 age 161 official clinical source",
+          "impressions": 1,
+          "position": 8,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "%mifflin st jeor equation women 10 weight 6.25 height 5 age 161 source",
+          "impressions": 1,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "%mifflin st jeor equation women resting energy expenditure 10 weight 6.25 height 5 age 161",
+          "impressions": 1,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "%mifflin st jeor equation women resting energy expenditure formula 10 weight 6.25 height 5 age 161",
+          "impressions": 1,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "%mifflin-st jeor equation women 10*weight + 6.25*height - 5*age - 161",
+          "impressions": 1,
+          "position": 10,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation female 10 weight 6.25 height 5 age 161",
+          "impressions": 1,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation female 10 weight 6.25 height 5 age 161 official clinical source",
+          "impressions": 1,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation female 10 weight 6.25 height 5 age 161 resting energy expenditure",
+          "impressions": 1,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation male 10 weight 6.25 height 5 age resting metabolic rate",
+          "impressions": 1,
+          "position": 5,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation men 10 weight 6.25 height 5 age +5 authoritative",
+          "impressions": 1,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation men 10 weight 6.25 height 5 age +5 official source",
+          "impressions": 1,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation men 10 weight 6.25 height 5 age 5 authoritative",
+          "impressions": 1,
+          "position": 5,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation resting energy expenditure women formula 10 weight 6.25 height 5 age 161",
+          "impressions": 1,
+          "position": 8,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation sex age height weight official clinical guideline",
+          "impressions": 1,
+          "position": 8,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation women 10 x weight + 6.25 x height - 5 x age - 161 source",
+          "impressions": 1,
+          "position": 8,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation women resting energy expenditure 10 weight 6.25 height 5 age 161",
+          "impressions": 1,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation women resting energy expenditure 10 weight 6.25 height 5 age 161",
+          "impressions": 1,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation women resting energy expenditure formula 10 weight 6.25 height 5 age 161",
+          "impressions": 1,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation women resting metabolic rate 10 weight 6.25 height 5 age 161 source",
+          "impressions": 1,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin-st jeor equation women 10 weight 6.25 height -5 age -161",
+          "impressions": 1,
+          "position": 9,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin-st jeor equation women 10*weight + 6.25*height - 5*age - 161",
+          "impressions": 1,
+          "position": 11,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+pubmed mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161",
+          "impressions": 1,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        }
+      ],
+      "share": 0.6551724137931034
+    }
+  ],
+  "known": [
+    {
+      "path": "/health/bmr-mifflin",
+      "paths": [
+        "https://calcpromaster.com/health/bmr-mifflin",
+        "https://calcpromaster.com/health/bmr-mifflin/"
+      ],
+      "impressions": 261,
+      "clicks": 0,
+      "machineImpressions": 171,
+      "machineQueries": [
+        {
+          "query": "+mifflin st jeor equation women 10 weight 6.25 height 5 age 161 source%",
+          "impressions": 22,
+          "position": 5.954545454545454,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation sex age height weight official",
+          "impressions": 9,
+          "position": 2.666666666666667,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation women 10 weight 6.25 height 5 age 161 source%",
+          "impressions": 8,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation sex age height weight calorie needs official",
+          "impressions": 6,
+          "position": 6.166666666666667,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation sex age height weight resting energy expenditure official",
+          "impressions": 6,
+          "position": 4.333333333333334,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation women 10 weight 6.25 height 5 age 161 source",
+          "impressions": 6,
+          "position": 6.5,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "%mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161",
+          "impressions": 5,
+          "position": 6.4,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation 10 weight 6.25 height 5 age male pubmed%",
+          "impressions": 5,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation age sex height weight resting energy expenditure official",
+          "impressions": 5,
+          "position": 3,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161 source",
+          "impressions": 5,
+          "position": 6.4,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation sex age height weight resting energy expenditure official%",
+          "impressions": 5,
+          "position": 4.6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161 pubmed",
+          "impressions": 4,
+          "position": 7.5,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161 source%",
+          "impressions": 4,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161 source%",
+          "impressions": 4,
+          "position": 6.5,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation women 10 weight 6.25 height 5 age 161 source",
+          "impressions": 4,
+          "position": 6.5,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+academy nutrition dietetics mifflin st jeor equation sex age height weight",
+          "impressions": 3,
+          "position": 2,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+academy nutrition dietetics mifflin st jeor equation women 10 weight 6.25 height 5 age 161",
+          "impressions": 3,
+          "position": 2,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161",
+          "impressions": 3,
+          "position": 6.666666666666667,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161 pubmed%",
+          "impressions": 3,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161 source",
+          "impressions": 3,
+          "position": 6.333333333333333,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation women 10 weight 6.25 height 5 age 161 authoritative",
+          "impressions": 3,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+pubmed mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161",
+          "impressions": 3,
+          "position": 7.666666666666667,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "%mifflin st jeor equation resting energy expenditure men 10 weight 6.25 height 5 age 5",
+          "impressions": 2,
+          "position": 7.5,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "%mifflin st jeor equation women 10 weight 6.25 height 5 age 161 source",
+          "impressions": 2,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "%mifflin st jeor equation women resting energy expenditure 10 weight 6.25 height 5 age 161",
+          "impressions": 2,
+          "position": 6.5,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "%pubmed mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161",
+          "impressions": 2,
+          "position": 8,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation 10 weight 6.25 height 5 age +5 source",
+          "impressions": 2,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation 10 weight 6.25 height 5 age male pubmed%",
+          "impressions": 2,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation men 10 weight 6.25 height 5 age +5 source",
+          "impressions": 2,
+          "position": 7.5,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation men 10 weight 6.25 height 5 age +5 source",
+          "impressions": 2,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation men 10 weight 6.25 height 5 age 5 source",
+          "impressions": 2,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation resting energy expenditure men 10 weight 6.25 height 5 age official",
+          "impressions": 2,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161",
+          "impressions": 2,
+          "position": 6.5,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161 pubmed",
+          "impressions": 2,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161 pubmed%",
+          "impressions": 2,
+          "position": 8,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation women 10 weight 6.25 height 5 age 161 authoritative",
+          "impressions": 2,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "%mifflin st jeor equation resting energy expenditure men 10 weight 6.25 height 5 age 5",
+          "impressions": 1,
+          "position": 8,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "%mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161",
+          "impressions": 1,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "%mifflin st jeor equation women 10 weight 6.25 height 5 age 161 official clinical source",
+          "impressions": 1,
+          "position": 8,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "%mifflin st jeor equation women 10 weight 6.25 height 5 age 161 source",
+          "impressions": 1,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "%mifflin st jeor equation women resting energy expenditure 10 weight 6.25 height 5 age 161",
+          "impressions": 1,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "%mifflin st jeor equation women resting energy expenditure formula 10 weight 6.25 height 5 age 161",
+          "impressions": 1,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "%mifflin-st jeor equation women 10*weight + 6.25*height - 5*age - 161",
+          "impressions": 1,
+          "position": 10,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation female 10 weight 6.25 height 5 age 161",
+          "impressions": 1,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation female 10 weight 6.25 height 5 age 161 official clinical source",
+          "impressions": 1,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation female 10 weight 6.25 height 5 age 161 resting energy expenditure",
+          "impressions": 1,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation male 10 weight 6.25 height 5 age resting metabolic rate",
+          "impressions": 1,
+          "position": 5,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation men 10 weight 6.25 height 5 age +5 authoritative",
+          "impressions": 1,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation men 10 weight 6.25 height 5 age +5 official source",
+          "impressions": 1,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation men 10 weight 6.25 height 5 age 5 authoritative",
+          "impressions": 1,
+          "position": 5,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation resting energy expenditure women formula 10 weight 6.25 height 5 age 161",
+          "impressions": 1,
+          "position": 8,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation sex age height weight official clinical guideline",
+          "impressions": 1,
+          "position": 8,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation women 10 x weight + 6.25 x height - 5 x age - 161 source",
+          "impressions": 1,
+          "position": 8,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation women resting energy expenditure 10 weight 6.25 height 5 age 161",
+          "impressions": 1,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation women resting energy expenditure 10 weight 6.25 height 5 age 161",
+          "impressions": 1,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation women resting energy expenditure formula 10 weight 6.25 height 5 age 161",
+          "impressions": 1,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin st jeor equation women resting metabolic rate 10 weight 6.25 height 5 age 161 source",
+          "impressions": 1,
+          "position": 6,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin-st jeor equation women 10 weight 6.25 height -5 age -161",
+          "impressions": 1,
+          "position": 9,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+mifflin-st jeor equation women 10*weight + 6.25*height - 5*age - 161",
+          "impressions": 1,
+          "position": 11,
+          "why": "starts with an appended +, -, % or # fragment"
+        },
+        {
+          "query": "+pubmed mifflin st jeor equation resting energy expenditure women 10 weight 6.25 height 5 age 161",
+          "impressions": 1,
+          "position": 7,
+          "why": "starts with an appended +, -, % or # fragment"
+        }
+      ],
+      "share": 0.6551724137931034,
+      "status": "known"
+    }
+  ],
+  "newFindings": []
+}

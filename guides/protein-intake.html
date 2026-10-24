@@ -56,7 +56,9 @@
   </style>
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Protein Intake</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Protein Intake</p>
   <h1>Protein Need: Grams per Kilogram, Then Real Food</h1>
   <p class="updated">Food & Nutrition · 5 min read · Last updated September 2026</p>
 
@@ -72,7 +74,7 @@
     <tr><td>Active / fitness</td><td>1.6</td><td>112 g</td></tr>
     <tr><td>Athlete / muscle gain</td><td>2.0</td><td>140 g</td></tr>
   </table></div>
-  <p>Worked example: 70 kg × 1.6 = <strong>112 g/day</strong>. In food: chicken breast ≈ 31 g/100 g → 361 g; eggs ≈ 6.3 g each → ~18; lentils ≈ 9 g per cooked cup → 12 cups (why plant-based eaters combine sources — the <a href="/food/vegan-protein">Vegan Protein</a> tool does that math).</p>
+  <p>Worked example: 70 kg × 1.6 = <strong>112 g/day</strong>. In food: chicken breast ≈ 31 g/100 g → 361 g; eggs ≈ 6.3 g each → ~18; lentils ≈ 9 g per cooked cup → 12 cups (why plant-based eaters combine sources — the <a href="/food/vegan-protein/">Vegan Protein</a> tool does that math).</p>
 
   <h2>Distribution beats totals (slightly)</h2>
   <p>Muscle protein synthesis responds per-meal; roughly 20–40 g per meal across 3–4 meals uses the day's total more effectively than one dinner-sized load. 112 g across four meals = 28 g each — a palm of chicken, a cup of dal plus yogurt, or a shake.</p>
@@ -81,12 +83,48 @@
 
   <h2>Try the calculators</h2>
   <p class="related">
-    <a href="/food/protein-need" class="cta">Daily Protein Need</a>
-    <a href="/food/protein-per-dollar" class="cta">Protein per Dollar</a>
-    <a href="/food/vegan-protein" class="cta">Vegan Protein Sources</a>
+    <a href="/food/protein-need/" class="cta">Daily Protein Need</a>
+    <a href="/food/protein-per-dollar/" class="cta">Protein per Dollar</a>
+    <a href="/food/vegan-protein/" class="cta">Vegan Protein Sources</a>
   </p>
 
-  <h2>Frequently asked questions</h2>
+<!-- guide-worked-example:start -->
+<h2>Worked example: Vegan Protein Sources at its default inputs</h2>
+<p>This is the answer <a href="/food/vegan-protein/">Vegan Protein Sources</a> gives before you touch anything — the defaults as shipped, computed live rather than copied from a sample.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Weight (kg)</td><td>70</td></tr></tbody></table>
+<p><strong>Result:</strong> 126 g/day</p>
+<h2>Sensitivity: Weight (kg) from half to one-and-a-half times</h2>
+<p>Hold every other field still and move only weight (kg).</p>
+<table><thead><tr><th>Weight (kg)</th><th>Result</th></tr></thead><tbody><tr><td>35</td><td>63 g/day</td></tr><tr><td>70</td><td>126 g/day</td></tr><tr><td>105</td><td>189 g/day</td></tr></tbody></table>
+<p>If the rows barely differ, weight (kg) is not your lever — change a different input. If they swing widely, get that number right before trusting the total.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>Where the 1.6 g/kg figure comes from</h2>
+<p>The 0.8 g/kg in the table is the RDA — the intake that keeps almost everyone in nitrogen balance, i.e. the floor that prevents deficiency. It was never a target for people who train. Meta-analyses of resistance-training trials put the point where extra protein stops adding muscle at roughly 1.6 g/kg per day, with a confidence interval that reaches about 2.2.</p>
+<p>That gap matters when reading contradictory advice: a dietitian quoting 0.8 and a coach quoting 2.0 can both be right about different questions. Deficiency prevention and muscle gain are separate targets with separate evidence bases.</p>
+<h2>Protein quality is a second variable</h2>
+<p>Grams are only half the story. Digestibility and amino-acid profile decide how much of those grams the body can actually use, which is why plant-based eaters are usually advised to aim 10-20% higher than the bands above and to combine sources across the day rather than in one meal.</p>
+<p>Leucine is the switch most often discussed: roughly 2.5 g in a sitting is the threshold associated with triggering muscle protein synthesis, which is why 30 g of whey and 30 g of rice protein are not interchangeable even though the labels match.</p>
+<h2>Cooked weight versus raw weight</h2>
+<p>Food databases disagree about protein because they disagree about water. Chicken breast is about 23 g of protein per 100 g raw and about 31 g per 100 g cooked, because cooking removes water and concentrates everything else. Weighing cooked food against a raw-weight table inflates your total by a third.</p>
+<p>Pick one basis and stay on it. If you weigh food as it goes on the plate, use cooked values; if you portion before cooking, use raw values. The same trap applies to rice, lentils and pasta, where the water gain is far larger than in meat.</p>
+<h2>What this calculator cannot know</h2>
+<p>Kidney disease, pregnancy, liver conditions and some medications change protein targets, and none of them are inputs here. Intakes up to about 2 g/kg are well studied in healthy adults; that sentence does not transfer to someone with reduced kidney function, whose target belongs to a clinician.</p>
+<p>It also cannot tell you whether you are eating enough overall. Protein targets are usually set inside a calorie target, and a person in a large deficit will lose muscle on a "correct" protein number if the deficit is too aggressive. Treat the grams as one constraint, not the whole plan.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/health-fitness">Health & Fitness Guides</a></li>
+    <li><a href="/guides/bmi">How to Calculate BMI</a></li>
+    <li><a href="/guides/bmr">BMR</a></li>
+    <li><a href="/guides/body-fat">Body Fat Percentage</a></li>
+  </ul>
+
+<h2>Frequently asked questions</h2>
   <h3>How much protein do I need per day?</h3>
   <p>Weight × activity factor: 0.8 g/kg sedentary, ~1.6 g/kg active, ~2.0 g/kg for heavy training. A 70 kg active person needs about 112 g/day.</p>
   <h3>Is too much protein harmful?</h3>
@@ -96,7 +134,8 @@
   <h3>What food equals 100 g of protein?</h3>
   <p>About 320 g of chicken breast, 16 eggs, or a mix: 200 g Greek yogurt (20 g) + 100 g lentils (9 g) + 150 g paneer (27 g) + 2 eggs (13 g) + whey scoop (25 g). The Protein per Dollar tool compares costs too.</p>
 
-  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <p class="related"><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog/">Blog</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

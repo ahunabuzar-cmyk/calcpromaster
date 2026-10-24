@@ -1,14 +1,14 @@
 # Hard Keywords — Full List + Easy Replacement for Every Page
 
-_Generated 2026-10-13 by `scripts/build-hard-keywords-doc.cjs` (deterministic; data: `js/data/*.js` curated `kw` fields + `.keywords.jsonl`). Tiering model: `scripts/keyword-difficulty.cjs`._
+_Generated 2026-10-17 by `scripts/build-hard-keywords-doc.cjs` (deterministic; data: `js/data/*.js` curated `kw` fields + `.keywords.jsonl`). Tiering model: `scripts/keyword-difficulty.cjs`._
 
 ## 0. Direct answer — kitne keywords target hue, kitne easy
 
 | Count | Meaning |
 |---|---|
-| **2526** | total curated keywords targeted across **1284 tool pages** (deterministic count from js/data) |
-| **1267** | 🟢 EASY — long-tail (4+ words + intent qualifier); live probes (docs/KEYWORD-DIFFICULTY.md §1) is pattern par top-10 mein **0–1 strong brands** dikhaate hain — microsites rank karti hain |
-| **1259** | 🟡 MEDIUM — 3-word ya qualified 2-word; thodi links chahiye |
+| **2529** | total curated keywords targeted across **1285 tool pages** (deterministic count from js/data) |
+| **1268** | 🟢 EASY — long-tail (4+ words + intent qualifier); live probes (docs/KEYWORD-DIFFICULTY.md §1) is pattern par top-10 mein **0–1 strong brands** dikhaate hain — microsites rank karti hain |
+| **1261** | 🟡 MEDIUM — 3-word ya qualified 2-word; thodi links chahiye |
 | **0** | 🔴 HARD — head terms; top-10 = brand wall (calculator.net, omnicalculator, Groww, Khan Academy… DR 70–90) |
 | 0 | BRAND — site ke apne queries |
 

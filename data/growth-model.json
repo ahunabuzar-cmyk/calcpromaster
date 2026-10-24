@@ -1,0 +1,122 @@
+{
+  "generatedAt": "2026-10-17T13:08:25.446Z",
+  "series": [
+    {
+      "date": "2026-09-24",
+      "impressions": 0,
+      "source": "gsc-coverage-export-2026-10-09"
+    },
+    {
+      "date": "2026-09-25",
+      "impressions": 63,
+      "source": "gsc-coverage-export-2026-10-09"
+    },
+    {
+      "date": "2026-09-26",
+      "impressions": 1114,
+      "source": "gsc-coverage-export-2026-10-09"
+    },
+    {
+      "date": "2026-09-27",
+      "impressions": 1554,
+      "source": "gsc-coverage-export-2026-10-09"
+    },
+    {
+      "date": "2026-09-28",
+      "impressions": 1044,
+      "source": "gsc-coverage-export-2026-10-09"
+    },
+    {
+      "date": "2026-09-29",
+      "impressions": 1126,
+      "source": "gsc-coverage-export-2026-10-09"
+    },
+    {
+      "date": "2026-09-30",
+      "impressions": 1191,
+      "source": "gsc-coverage-export-2026-10-09"
+    },
+    {
+      "date": "2026-10-01",
+      "impressions": 1183,
+      "source": "gsc-coverage-export-2026-10-09"
+    },
+    {
+      "date": "2026-10-02",
+      "impressions": 1325,
+      "source": "gsc-coverage-export-2026-10-09"
+    },
+    {
+      "date": "2026-10-03",
+      "impressions": 1473,
+      "source": "gsc-coverage-export-2026-10-09"
+    },
+    {
+      "date": "2026-10-04",
+      "impressions": 1343,
+      "source": "gsc-coverage-export-2026-10-09"
+    }
+  ],
+  "runRate7": {
+    "perDay": 1240.7142857142858,
+    "perMonth": 37767.34285714286,
+    "from": "2026-09-28",
+    "to": "2026-10-04",
+    "days": 7,
+    "windowRequested": 7
+  },
+  "runRate3": {
+    "perDay": 1380.3333333333333,
+    "perMonth": 42017.346666666665,
+    "from": "2026-10-02",
+    "to": "2026-10-04",
+    "days": 3,
+    "windowRequested": 3
+  },
+  "runRateAll": {
+    "perDay": 1037.8181818181818,
+    "perMonth": 31591.185454545455,
+    "from": "2026-09-24",
+    "to": "2026-10-04",
+    "days": 11,
+    "windowRequested": 11
+  },
+  "api": {
+    "clicks": 21,
+    "impressions": 18917,
+    "ctr": 0.0011101125971348523,
+    "position": 33.143415975048896,
+    "startDate": "2026-09-16",
+    "endDate": "2026-10-14",
+    "days": 28,
+    "ranAt": "2026-10-17T10:48:24.148Z",
+    "site": "https://calcpromaster.com",
+    "coverage": {
+      "pairImpressions": 11567,
+      "pairClicks": 8,
+      "totalImpressions": 18917,
+      "totalClicks": 21
+    },
+    "sources": [
+      "data/gsc-query-page.json"
+    ]
+  },
+  "reconcile": {
+    "apiImpressions": 18917,
+    "apiDays": 28,
+    "apiPerDay": 676,
+    "runRatePerDay": 1241,
+    "ratio": 1.8364434106887983
+  },
+  "indexation": {
+    "date": "2026-10-04",
+    "notIndexed": 923,
+    "indexed": 952
+  },
+  "audit": {
+    "notIndexedTotal": 631,
+    "fixable": 0,
+    "waitingCrawl": 631
+  },
+  "base": 37767.34285714286
+}

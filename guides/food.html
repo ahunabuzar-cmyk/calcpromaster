@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Food &amp; Nutrition Guides — Calories, macros &amp; kitchen math | CalcProMaster</title>
-  <meta name="description" content="Nutrition advice collapses without arithmetic: how many calories your body actually needs, how protein maps to body weight, and how a recipe scales from fo">
+  <meta name="description" content="Nutrition advice collapses without arithmetic: how many calories your body needs, how protein maps to body weight, and how a recipe scales.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
   <link rel="canonical" href="https://calcpromaster.netlify.app/guides/food">
@@ -70,16 +70,63 @@
     .cat-card p { margin: 0; color: #4b5563; font-size: 0.95rem; }
     .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
     .updated { color: #6b7280; font-size: 0.85rem; }
-  </style>
+/* guide-depth-css:start */
+.guide-lede{font-weight:600;border-left:3px solid #4f46e5;padding-left:12px;margin:10px 0 4px}
+    .guide-pitfalls{margin:8px 0 14px 20px}
+    .seo-faqs h3{margin:16px 0 4px}
+/* guide-depth-css:end */
+</style>
+
+<!-- guide-faq-schema:start -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why do my macros add up to more calories than the label?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because the label rounds. Protein and carbohydrate are about 4 kcal per gram and fat about 9, so multiplying the rounded gram figures and adding them can land a few percent away from the stated total. Neither number is wrong; they are rounded at different stages."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does cooking change a weight?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the method and the food. Grilled or roasted meat loses roughly a quarter of its weight as water and fat, while grains and pasta gain weight by absorbing water. That is why a nutrition plan has to say whether it counts raw or cooked, and use the same one throughout."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are carb limits from keto calculators exact?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The threshold at which a person stays in ketosis varies with activity, insulin sensitivity and how the carbs are timed. The calculators give a commonly used starting range, and the honest way to use it is as a starting point to adjust against how you actually respond."
+      }
+    }
+  ]
+}
+</script>
+<!-- guide-faq-schema:end -->
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Food &amp; Nutrition</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Food &amp; Nutrition</p>
   <h1>Food &amp; Nutrition Guides</h1>
   <p class="updated">Part of the CalcProMaster guides library · Calories, macros &amp; kitchen math</p>
 
   <p>Nutrition advice collapses without arithmetic: how many calories your body actually needs, how protein maps to body weight, and how a recipe scales from four plates to forty without the seasoning going wrong.</p>
+  <p><strong>Methodology:</strong> Published nutrition data and standard macro and calorie methods, using accepted energy conversions.</p>
 
-  <h2>How the math works</h2>
+
+<!-- guide-lede:start -->
+<p class="guide-lede">Nutrition maths lives or dies on the portion: whether a label figure is per 100 g or per serving, whether the ingredient is weighed raw or cooked, and whether the batch actually scales linearly.</p>
+<!-- guide-lede:end -->
+<h2>How the math works</h2>
   <p>Nutrition math starts with TDEE: BMR × activity multiplier. For the calculators’ example adult — 70 kg, 30 years, 175 cm — Mifflin-St Jeor lands near 1,650 kcal BMR; a moderate multiplier of 1.55 brings TDEE to roughly 2,550 kcal. A 500 kcal daily deficit then predicts about half a kilogram of loss per week — slowly and noisily, not linearly.</p>
   <p>Protein targets are simpler than supplement marketing suggests: 0.8 g/kg is the RDA floor for sedentary adults; 1.2–2.0 g/kg fits active training or ageing bodies. For an 80 kg lifter at 1.6 g/kg, that’s 128 g/day — spreadable across three meals; precision beyond that earns nothing.</p>
 
@@ -104,14 +151,50 @@
   <h2>How much protein do I need per day?</h2>
   <p>The RDA floor is 0.8 g per kg of body weight; 1.2–2.0 g/kg supports active training or older adults. The protein need calculator applies your weight and goal directly.</p>
 
-  <h2>Try the matching calculators</h2>
+
+<!-- guide-extra-depth:start -->
+<h2>What this category covers</h2>
+<p>These calculators handle portion maths, recipe scaling, nutrition per serving and food-cost comparisons. The formulas are simple; the difficulty is in units, serving sizes and whether a label describes the food as sold or as eaten.</p>
+<p>Because the inputs are small numbers, a mistake of one unit silently doubles the answer. Reading the label carefully is a larger part of the work than the arithmetic.</p>
+<h2>Raw, cooked and drained</h2>
+<p>Rice roughly triples in weight when cooked, pasta doubles, and meat loses about a quarter of its weight to moisture. A nutrition table built on raw weight cannot be applied to a cooked portion without adjusting for that water.</p>
+<p>Canned goods add another state: drained weight is not the same as the label weight. For anything sold in brine or syrup, use the drained figure the label provides.</p>
+<h2>Serving size versus portion size</h2>
+<p>A label serving is an administrative unit chosen by the manufacturer, and it is frequently smaller than what people eat. Two servings in a bottle is common and easy to miss.</p>
+<p>Multiply by the number of servings you actually ate, not by the number in the package. That single step fixes most of the discrepancy between tracked intake and observed results.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/everyday">Everyday Calculations Guides</a></li>
+    <li><a href="/guides/baby-cost">Baby Cost Calculator</a></li>
+    <li><a href="/guides/family">Family & Parenting Guides</a></li>
+  </ul>
+
+<!-- guide-depth:start -->
+<h2>Where these answers go wrong</h2><ul class="guide-pitfalls"><li>Comparing a per-100 g label value with a per-serving recipe figure without converting the weight first.</li><li>Using raw weights for foods that lose water when cooked — cooked meat is roughly a quarter lighter than the same piece raw.</li><li>Scaling salt and leavening straight with the batch when only the quantity changed, not the pan or the rise time.</li><li>Reading calorie estimates as exact when labels are permitted to differ from the stated value.</li></ul><h2>Frequently asked questions</h2><div class="seo-faqs"><h3>Why do my macros add up to more calories than the label?</h3><p>Because the label rounds. Protein and carbohydrate are about 4 kcal per gram and fat about 9, so multiplying the rounded gram figures and adding them can land a few percent away from the stated total. Neither number is wrong; they are rounded at different stages.</p><h3>How much does cooking change a weight?</h3><p>It depends on the method and the food. Grilled or roasted meat loses roughly a quarter of its weight as water and fat, while grains and pasta gain weight by absorbing water. That is why a nutrition plan has to say whether it counts raw or cooked, and use the same one throughout.</p><h3>Are carb limits from keto calculators exact?</h3><p>No. The threshold at which a person stays in ketosis varies with activity, insulin sensitivity and how the carbs are timed. The calculators give a commonly used starting range, and the honest way to use it is as a starting point to adjust against how you actually respond.</p></div>
+<!-- guide-depth:end -->
+<!-- guide-worked-example:start -->
+<h2>Worked example: Daily Calorie Needs at its default inputs</h2>
+<p>This is the answer <a href="/food/daily-calorie/">Daily Calorie Needs</a> gives before you touch anything — the defaults as shipped, computed live rather than copied from a sample.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Age</td><td>30</td></tr><tr><td>Weight (kg)</td><td>70</td></tr><tr><td>Height (cm)</td><td>170</td></tr></tbody></table>
+<p><strong>Result:</strong> 2507 cal/day</p>
+<h2>Age — three values, three answers</h2>
+<p>Same calculator, same fields, one change: age.</p>
+<table><thead><tr><th>Age</th><th>Result</th></tr></thead><tbody><tr><td>15</td><td>2623 cal/day</td></tr><tr><td>30</td><td>2507 cal/day</td></tr><tr><td>45</td><td>2391 cal/day</td></tr></tbody></table>
+<p>If the rows barely differ, age is not your lever — change a different input. If they swing widely, get that number right before trusting the total.</p>
+<!-- guide-worked-example:end -->
+<h2>Try the matching calculators</h2>
   <p>
-    <a href="/food/daily-calorie" class="cta">Daily Calorie Needs</a>
-    <a href="/food/macro-split" class="cta">Macro Split Calculator</a>
-    <a href="/food/recipe-scaler" class="cta">Recipe Scaler</a>
+    <a href="/food/daily-calorie/" class="cta">Daily Calorie Needs</a>
+    <a href="/food/macro-split/" class="cta">Macro Split Calculator</a>
+    <a href="/food/recipe-scaler/" class="cta">Recipe Scaler</a>
   </p>
 
-  <p><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
+  <p><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

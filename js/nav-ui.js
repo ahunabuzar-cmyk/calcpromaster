@@ -272,7 +272,11 @@
         return '<button type="button" class="bn-item" data-bn-act="search" aria-label="Search calculators">' + inner + '</button>';
       }
       if (it.act === 'settings') {
-        return '<button type="button" class="bn-item" data-bn-act="settings" aria-label="Display preferences">' + inner + '</button>';
+        // Keep the visible word "Settings" inside the accessible name — an
+        // aria-label of only "Display preferences" failed axe's
+        // label-content-name-mismatch (the icon is aria-hidden, so the visible
+        // text of this control is exactly "Settings").
+        return '<button type="button" class="bn-item" data-bn-act="settings" aria-label="Settings — display preferences">' + inner + '</button>';
       }
       return '<a class="bn-item" href="' + it.href + '"' + (current ? ' aria-current="page"' : '') + '>' + inner + '</a>';
     }).join('');

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interactive Geometry Lab — Drag Points &amp; Measure</title>
+<meta name="description" content="Drag the corners of a triangle and watch the sides, angles, perimeter and area update live. Free, private geometry tool, no sign-up.">
+<link rel="canonical" href="https://calcpromaster.com/geometry-lab">
+<meta name="robots" content="index,follow">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Interactive Geometry Lab",
+    "url": "https://calcpromaster.com/geometry-lab",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Interactive Geometry Lab", "item": "https://calcpromaster.com/geometry-lab" }
+    ]
+  }
+]
+</script>
+<!-- Social sharing (complete Open Graph + Twitter card) -->
+<meta property="og:title" content="Interactive Geometry Lab — Drag Points &amp; Measure">
+<meta property="og:description" content="Drag the corners of a triangle and watch the sides, angles, perimeter and area update live. Free, private geometry tool, no sign-up.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://calcpromaster.com/geometry-lab">
+<meta property="og:image" content="https://calcpromaster.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Interactive Geometry Lab — Drag Points &amp; Measure">
+<meta name="twitter:description" content="Drag the corners of a triangle and watch the sides, angles, perimeter and area update live.">
+<meta name="twitter:image" content="https://calcpromaster.com/og-image.png">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<style>
+  :root { --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --brand:#2563eb; --bg:#f8fafc; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--ink); background:var(--bg); }
+  header, main, footer { max-width: 900px; margin: 0 auto; padding: 16px 20px; }
+  h1 { font-size: 1.6rem; margin: 12px 0 4px; }
+  p.lead { color: var(--muted); margin-top: 0; }
+  .panel { background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px; margin:16px 0; }
+  svg { width:100%; height:auto; touch-action:none; border:1px solid var(--line); border-radius:8px; background:#fff; }
+  .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap:10px; margin-top:12px; }
+  .stat { background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:10px; }
+  .stat b { display:block; font-size:.8rem; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:.03em; }
+  .stat span { font-size:1.15rem; }
+  .hint { color:var(--muted); font-size:.9rem; }
+  a { color: var(--brand); }
+</style>
+</head>
+<body>
+<header>
+  <a href="/" style="text-decoration:none;color:var(--muted)">&larr; CalcProMaster</a>
+  <h1>Interactive Geometry Lab</h1>
+  <p class="lead">Drag any corner of the triangle and watch the sides, angles, perimeter and area update live.</p>
+</header>
+<main>
+  <div class="panel">
+    <svg id="board" viewBox="0 0 800 560" role="application" aria-label="Draggable triangle">
+      <polygon id="tri" fill="#dbeafe" stroke="#2563eb" stroke-width="2"></polygon>
+      <circle data-v="0" r="11" fill="#2563eb" stroke="#fff" stroke-width="2" style="cursor:grab"></circle>
+      <circle data-v="1" r="11" fill="#2563eb" stroke="#fff" stroke-width="2" style="cursor:grab"></circle>
+      <circle data-v="2" r="11" fill="#2563eb" stroke="#fff" stroke-width="2" style="cursor:grab"></circle>
+    </svg>
+    <div class="grid">
+      <div class="stat"><b>Side a</b><span id="sa">—</span></div>
+      <div class="stat"><b>Side b</b><span id="sb">—</span></div>
+      <div class="stat"><b>Side c</b><span id="sc">—</span></div>
+      <div class="stat"><b>Angle A</b><span id="aa">—</span></div>
+      <div class="stat"><b>Angle B</b><span id="ab">—</span></div>
+      <div class="stat"><b>Angle C</b><span id="ac">—</span></div>
+      <div class="stat"><b>Perimeter</b><span id="per">—</span></div>
+      <div class="stat"><b>Area</b><span id="area">—</span></div>
+    </div>
+    <p class="hint">Coordinates are in grid units (1 unit = 1/40 of the SVG width). Angles always sum to 180 degrees.</p>
+  </div>
+  <div class="panel">
+    <h2 style="font-size:1.1rem">The formulas behind the numbers</h2>
+    <p>The area of a triangle is found with the shoelace formula, which works for any shape: multiply each x by the next y, subtract the next x times the current y, add the results around the figure, and halve the absolute total. This gives the same answer as the familiar base times height divided by two, but without needing to know which side is the base.</p>
+    <p>The perimeter is simply the sum of the three side lengths, each found from the distance formula, which is the square root of the sum of the squared differences in x and y. Each angle is found from the cosine rule: the cosine of the angle at a corner equals the sum of the squares of its two adjacent sides minus the square of the opposite side, all divided by twice the product of the adjacent sides.</p>
+    <p>Dragging a corner keeps all of this consistent. Angles always add to exactly 180 degrees inside a flat triangle. If you drag the three points into a straight line, the area collapses to zero, which is the tool telling you the shape is no longer a triangle.</p>
+    <h2 style="font-size:1.1rem">Why use an interactive figure</h2>
+    <p>Geometry is easier to understand when you can move it. Watch how the area changes differently from the perimeter: stretching one corner far out can add a lot of perimeter while adding little area. Watch an angle grow as you flatten the opposite side, and shrink as you raise it. These are the relationships that textbooks describe, made visible.</p>
+    <h2 style="font-size:1.1rem">How to use the lab</h2>
+    <ol>
+      <li>Drag any of the three blue handles. The triangle redraws and all eight measurements update while you move.</li>
+      <li>Watch the angle values as you drag a corner across from a side. Flatten the triangle and the opposite angle shrinks toward zero; pull the corner up and it grows toward a right angle and beyond.</li>
+      <li>Compare area with perimeter. Push one corner far out and the perimeter climbs quickly while the area grows much more slowly — a shape can have a long outline without enclosing much.</li>
+      <li>Line all three points up to see the area collapse to zero. That is the tool confirming the points no longer form a triangle.</li>
+    </ol>
+    <h2 style="font-size:1.1rem">A worked example you can reproduce</h2>
+    <p>Put one corner at the origin, one four units to the right, and one three units up. The three sides come out as 3, 4 and 5 grid units, which is the classic right triangle: the angle between the two shorter sides reads 90°, and the other two angles are about 36.9° and 53.1°. The perimeter is 12 units and the area is 6 square units, which matches base times height divided by two: 4 × 3 ÷ 2 = 6.</p>
+    <p>Now drag the top corner sideways while keeping its height. The base and the height stay the same, so the area does not move, but the two slanted sides and their angles change. That is a useful check on the formula: the area depends only on the base and the perpendicular height, not on how slanted the sides are.</p>
+    <h2 style="font-size:1.1rem">Where the numbers are useful</h2>
+    <p>Reading a triangle from its coordinates is the same skill used in surveying, drafting, roof framing and screen layout. If you know where the corners are, you can get every length and angle without measuring each one separately. For a right triangle, the distance formula reduces to the <a href="/math/pythagorean/">Pythagorean theorem</a>, and for any other triangle the angle calculation is the <a href="/math/law-of-cosines/">law of cosines</a>. If you only need the side lengths, the <a href="/math/triangle/">triangle calculator</a> takes them directly, and the <a href="/math/distance-formula/">distance formula</a> page covers the two-point step on its own.</p>
+    <h2 style="font-size:1.1rem">Frequently asked questions</h2>
+    <p><strong>Is this tool free?</strong> Yes, it is free and needs no login, and the drag interaction works on phones and tablets as well as desktop.</p>
+    <p><strong>What are the units?</strong> Measurements are in grid units, where one unit is one fortieth of the drawing width, so you can compare shapes without committing to centimetres or inches.</p>
+    <p><strong>Can the angles ever not sum to 180?</strong> Only if the points stop forming a triangle, for example when they line up. Otherwise they always sum to 180 degrees.</p>
+    <p><strong>How accurate are the measurements?</strong> Side lengths are shown to three decimals and angles to one decimal, calculated from the exact coordinates rather than measured from the drawing, so rounding is the only source of error.</p>
+    <p><strong>Can I use this in a classroom?</strong> Yes. Project it, drag a corner and ask what will happen to the area before you move it — the prediction-then-check loop is the part that makes the relationship stick.</p>
+    <p><strong>Does it work offline?</strong> The page has no network calls after the first load, so the lab keeps working on a plane, in a classroom with weak Wi-Fi, or with the tab left open.</p>
+  </div>
+</main>
+<footer>
+  <p class="hint">Free geometry education tool. Also try our <a href="/math/percentage/">percentage calculator</a> and <a href="/graph">function grapher</a>.</p>
+</footer>
+<script src="/js/geometry-lab.js"></script>
+<script>
+(function () {
+  var pts = [{ x: 150, y: 440 }, { x: 650, y: 440 }, { x: 340, y: 100 }];
+  var board = document.getElementById('board');
+  var tri = document.getElementById('tri');
+  var handles = Array.prototype.slice.call(board.querySelectorAll('circle'));
+
+  function draw() {
+    tri.setAttribute('points', pts.map(function (p) { return p.x + ',' + p.y; }).join(' '));
+    handles.forEach(function (h, i) { h.setAttribute('cx', pts[i].x); h.setAttribute('cy', pts[i].y); });
+
+    var t = GeometryLab.triangle(pts[0], pts[1], pts[2]);
+    var u = 1 / 40; // grid unit
+    document.getElementById('sa').textContent = GeometryLab.round(t.sides.a * u, 3);
+    document.getElementById('sb').textContent = GeometryLab.round(t.sides.b * u, 3);
+    document.getElementById('sc').textContent = GeometryLab.round(t.sides.c * u, 3);
+    document.getElementById('aa').textContent = GeometryLab.round(t.angles.A, 1) + '\u00b0';
+    document.getElementById('ab').textContent = GeometryLab.round(t.angles.B, 1) + '\u00b0';
+    document.getElementById('ac').textContent = GeometryLab.round(t.angles.C, 1) + '\u00b0';
+    document.getElementById('per').textContent = GeometryLab.round(t.perimeter * u, 3);
+    document.getElementById('area').textContent = GeometryLab.round(t.area * u * u, 4);
+  }
+
+  function toSvg(evt) {
+    var rect = board.getBoundingClientRect();
+    var vb = board.viewBox.baseVal;
+    var x = (evt.clientX - rect.left) / rect.width * vb.width + vb.x;
+    var y = (evt.clientY - rect.top) / rect.height * vb.height + vb.y;
+    return { x: Math.max(12, Math.min(788, x)), y: Math.max(12, Math.min(548, y)) };
+  }
+
+  var drag = -1;
+  handles.forEach(function (h) {
+    h.addEventListener('pointerdown', function (e) {
+      drag = +h.getAttribute('data-v');
+      h.setPointerCapture(e.pointerId);
+      h.style.cursor = 'grabbing';
+    });
+    h.addEventListener('pointerup', function (e) {
+      drag = -1;
+      h.style.cursor = 'grab';
+    });
+  });
+  board.addEventListener('pointermove', function (e) {
+    if (drag < 0) return;
+    pts[drag] = toSvg(e);
+    draw();
+  });
+  board.addEventListener('pointerup', function () { drag = -1; });
+
+  draw();
+})();
+</script>
+</body>
+</html>

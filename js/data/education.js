@@ -131,7 +131,137 @@ const EDUCATION_TOOLS = [
   { id: 'assignment-split', name: 'Grade Weighting Calculator', desc: 'Current course grade from weighted components', kw: 'grade weighting calculator current grade needed final exam, free online Grade Weighting Calculator', inputs: [{id:'score',label:'Current Score (%)',type:'number',def:90},{id:'worth',label:'Component Weight (%)',type:'number',def:40}], calc: function(v){ if(v.score<0||v.worth<0||v.worth>100) return{result:'Enter valid score and weight',chart:'',extra:''}; var contrib=v.score*v.worth/100; var remaining=100-v.worth; var needFinal=v.worth<100?(72-contrib)/(remaining/100):0; return{result:'Contribution: '+contrib.toFixed(1)+' points',chart:Charts.bar([contrib,100-contrib],['Earned','Still possible']),extra:'These points are locked in | To finish with 72 overall you would need about '+Math.max(0,needFinal).toFixed(1)+'% of the remaining '+remaining+'%'};}, steps: function(v){ var contrib=v.score*v.worth/100; return['Formula: contribution = score × weight','Step 1: '+v.score+'% × '+(v.worth/100)+' = '+contrib.toFixed(1)+' points','Step 2: Remaining weight = '+(100-v.worth)+'% of the course','Weighted grading means early low scores are recoverable if their weight was small'];} },
 
   { id: 'citation-count', name: 'H-Index Calculator', desc: 'h-index from a citation count list', kw: 'h index calculator citations researcher impact publication, free online H-Index Calculator', inputs: [{id:'cites',label:'Citations per paper (comma separated)',type:'text',def:'10,8,5,3,1'}], calc: function(v){ var c=v.cites.split(',').map(Number).filter(function(x){return !isNaN(x);}); c.sort(function(a,b){return b-a;}); var h=0; for(var i=0;i<c.length;i++){ if(c[i]>=i+1) h=i+1; else break; } return{result:'h-index: '+h,charchart:'',chart:Charts.bar(c.slice(0,8),c.slice(0,8).map(function(_,i){return '#'+(i+1);})),extra:h+' papers have at least '+h+' citations each | The h-index rewards sustained output — one blockbuster paper cannot push it up alone'};}, steps: function(v){ var c=v.cites.split(',').map(Number).filter(function(x){return !isNaN(x);}); c.sort(function(a,b){return b-a;}); return['Step 1: Sort citations descending: '+c.join(', '),'Step 2: Find the largest h where the h-th paper has at least h citations','Step 3: Compare each position with its rank — the last position that clears it is the h-index'];} },
-
+  {
+    id: 'study-abroad-cost',
+    name: 'Study Abroad Cost Calculator',
+    desc: 'Estimate total international study cost from tuition by country, living costs and the number of years.',
+    kw: 'study abroad cost calculator, cost of studying abroad, international student cost estimate, tuition and living cost abroad',
+    inputs: [
+{ id: 'country', label: 'Destination', type: 'select', opts: [{v:'USA',l:'USA'},{v:'UK',l:'UK'},{v:'Canada',l:'Canada'},{v:'Australia',l:'Australia'},{v:'Germany',l:'Germany'},{v:'UAE',l:'UAE'}], def: 'USA' },
+      { id: 'years', label: 'Years of study', type: 'number', def: 4 },
+      { id: 'livingCostPerYear', label: 'Living cost per year', type: 'number', def: 12000 },
+      { id: 'tuitionPerYearOverride', label: 'Tuition per year (0 to use average)', type: 'number', def: 0 }
+    ],
+    calc: function (v) {
+      var avg = { 'USA': 35000, 'UK': 25000, 'Canada': 22000, 'Australia': 28000, 'Germany': 1000, 'UAE': 18000 };
+      var perYear = v.tuitionPerYearOverride > 0 ? v.tuitionPerYearOverride : (avg[v.country] || 25000);
+      var tuition = perYear * v.years;
+      var living = v.livingCostPerYear * v.years;
+      var total = tuition + living;
+      return {
+        result: 'Estimated total cost: ' + total.toFixed(0),
+        chart: Charts.bar([tuition, living], ['Tuition', 'Living']),
+        extra: v.country + ' | Tuition ' + tuition.toFixed(0) + ' | Living ' + living.toFixed(0) + ' over ' + v.years + ' years | Excludes flights, insurance and visa fees'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Pick the destination and the average international tuition per year, or enter your own figure.',
+        'Step 2: Multiply tuition per year by the number of years.',
+        'Step 3: Multiply living cost per year by the number of years.',
+        'Step 4: Add tuition and living for the total.',
+        'Step 5: Add flights, health insurance, visa fees and any currency risk on top, since these can add several thousand a year.'
+      ];
+    }
+  },
+  {
+    id: 'scholarship-gap',
+    name: 'Scholarship Funding Gap Calculator',
+    desc: 'Work out the funding gap left after scholarships, family contribution and work-study, per year and in total.',
+    kw: 'scholarship gap calculator, college funding gap, unmet need calculator, student aid gap',
+    inputs: [
+{ id: 'annualCost', label: 'Annual cost of study', type: 'number', def: 50000 },
+      { id: 'scholarshipPerYear', label: 'Scholarships and grants per year', type: 'number', def: 20000 },
+      { id: 'familyContributionPerYear', label: 'Family contribution per year', type: 'number', def: 15000 },
+      { id: 'workStudyPerYear', label: 'Work-study per year', type: 'number', def: 3000 },
+      { id: 'years', label: 'Years', type: 'number', def: 4 }
+    ],
+    calc: function (v) {
+      var gap = Math.max(0, v.annualCost - v.scholarshipPerYear - v.familyContributionPerYear - v.workStudyPerYear);
+      var total = gap * v.years;
+      return {
+        result: 'Annual gap: ' + gap.toFixed(0) + ' | Total need: ' + total.toFixed(0),
+        chart: Charts.bar([v.scholarshipPerYear, v.familyContributionPerYear, v.workStudyPerYear, gap], ['Scholarships', 'Family', 'Work-study', 'Gap']),
+        extra: (gap > 0 ? 'You still need to cover ' + gap.toFixed(0) + ' a year, likely with loans' : 'The sources fully cover the annual cost') + ' | Over ' + v.years + ' years the total is ' + total.toFixed(0)
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Start from the annual cost of study.',
+        'Step 2: Subtract scholarships and grants, which do not have to be repaid.',
+        'Step 3: Subtract the family contribution.',
+        'Step 4: Subtract work-study earnings, then the remainder is the annual gap.',
+        'Step 5: Multiply the annual gap by the number of years for the total amount you need to fund, usually through loans.'
+      ];
+    }
+  }
+,
+  {
+    id: 'student-loan-vs-scholarship',
+    name: 'Student Loan vs Scholarship Calculator',
+    desc: 'Compare borrowing against winning a scholarship by showing the loan needed and the total interest repaid.',
+    kw: 'student loan vs scholarship, how much student loan do i need, student loan interest calculator, scholarship savings',
+    inputs: [
+{ id: 'tuitionPerYear', label: 'Tuition per year', type: 'number', def: 20000 },
+      { id: 'years', label: 'Years', type: 'number', def: 4 },
+      { id: 'scholarshipPerYear', label: 'Scholarship per year', type: 'number', def: 5000 },
+      { id: 'loanRatePct', label: 'Loan interest rate (percent)', type: 'number', def: 6 },
+      { id: 'loanTermYears', label: 'Repayment term (years)', type: 'number', def: 10 }
+    ],
+    calc: function (v) {
+      var uncovered = Math.max(0, v.tuitionPerYear - v.scholarshipPerYear);
+      var loan = uncovered * v.years;
+      var r = v.loanRatePct / 100 / 12;
+      var n = v.loanTermYears * 12;
+      var payment = loan === 0 ? 0 : (r === 0 ? loan / n : loan * r / (1 - Math.pow(1 + r, -n)));
+      var totalInterest = loan === 0 ? 0 : payment * n - loan;
+      return {
+        result: 'Loan needed: ' + loan.toFixed(0),
+        chart: Charts.bar([v.scholarshipPerYear * v.years, loan, Math.round(totalInterest)], ['Scholarship', 'Loan', 'Interest']),
+        extra: 'Scholarship saves ' + (v.scholarshipPerYear * v.years).toFixed(0) + ' | Monthly payment ' + Math.round(payment) + ' | Total interest ' + Math.round(totalInterest) + ' over ' + v.loanTermYears + ' years'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Find the uncovered cost per year: tuition minus scholarship.',
+        'Step 2: Multiply by the years to get the loan principal needed.',
+        'Step 3: Convert the annual rate to a monthly rate and the term to months.',
+        'Step 4: Use the standard amortising payment formula, then multiply by the months to find total interest.',
+        'Step 5: Every year of scholarship reduces both the principal and the interest, so a scholarship is worth more than its face value.'
+      ];
+    }
+  }
+,
+  {
+    id: 'school-fee-inflation',
+    name: 'School Fee Inflation Calculator',
+    desc: 'Project future school or college fees from today fees, an annual increase and the number of years.',
+    kw: 'school fee inflation calculator, future tuition cost, education fee projection, fee increase calculator',
+    inputs: [
+{ id: 'currentAnnualFee', label: 'Current annual fee', type: 'number', def: 3000 },
+      { id: 'inflationPct', label: 'Annual fee increase (percent)', type: 'number', def: 8 },
+      { id: 'years', label: 'Years of schooling', type: 'number', def: 12 }
+    ],
+    calc: function (v) {
+      var r = v.inflationPct / 100;
+      var finalFee = v.currentAnnualFee * Math.pow(1 + r, v.years);
+      var total = r === 0 ? v.currentAnnualFee * v.years : v.currentAnnualFee * (Math.pow(1 + r, v.years) - 1) / r;
+      return {
+        result: 'Fee in final year: ' + Math.round(finalFee),
+        chart: Charts.bar([v.currentAnnualFee, Math.round(finalFee), Math.round(total)], ['This year', 'Final year', 'Total paid']),
+        extra: 'Total over ' + v.years + ' years ' + Math.round(total) + ' | Assumes ' + v.inflationPct + ' percent a year | Start saving early to spread the cost'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Convert the annual increase to a decimal rate.',
+        'Step 2: The fee in the final year is the current fee times one plus the rate, raised to the number of years.',
+        'Step 3: The total paid is the sum of each year growing fee, given by the geometric series formula.',
+        'Step 4: Compare the final-year fee with today to see how much fees climb over a full course.',
+        'Step 5: Fee increases vary by school and can be raised without notice, so keep a margin and revisit the estimate each year.'
+      ];
+    }
+  }
 ];
 if (typeof module !== 'undefined') module.exports = EDUCATION_TOOLS;
 if (typeof window !== 'undefined') window.EDUCATION_TOOLS = EDUCATION_TOOLS;

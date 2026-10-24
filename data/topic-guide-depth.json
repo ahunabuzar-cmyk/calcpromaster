@@ -1,0 +1,21 @@
+{
+  "ranAt": "2026-10-19T10:09:46.979Z",
+  "guides": 2,
+  "pages": [
+    {
+      "guide": "room-area",
+      "before": 952,
+      "after": 952,
+      "faqs": 7
+    },
+    {
+      "guide": "gear-ratio",
+      "before": 1031,
+      "after": 1031,
+      "faqs": 6
+    }
+  ],
+  "totalBefore": 1983,
+  "totalAfter": 1983,
+  "minAfter": 952
+}

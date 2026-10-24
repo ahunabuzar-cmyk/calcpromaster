@@ -140,24 +140,99 @@ async function mapPool(items, limit, worker) {
   return out;
 }
 
+// The ladder moves BOTH ways inside one window: "105 stages advanced" printed
+// beside "133 slipped back" is not a queue draining, it is churn. Gross movement
+// is what actually happened; `gainedBack` is the part of the advance that
+// same-size backslides cancel out, so a two-way flow can never be published as if
+// it were one-way. Shared with the burn-down report so the two cannot drift apart.
+function churnOf({ stages = 0, slipped = 0, urlsAdvanced = 0, urlsSlipped = 0 } = {}) {
+  return {
+    urlsAdvanced,
+    urlsSlipped,
+    churnStages: stages + slipped,
+    gainedBack: Math.min(stages, slipped),
+    netStages: stages - slipped,
+  };
+}
+
+// Churn par alert: "stages advanced" headline tab jhootha hota hai jab isi window
+// ka backslide us advance ko kha jaye. `minStages` chhote noise ko chup rakhta hai,
+// `cancelShare` batata hai ke advance ka kitna hissa cancel hona kafi hai.
+const CHURN_ALERT = { minStages: 10, cancelShare: 0.5 };
+
+// Null = koi alert nahi. Warna severity + numbers, taake report aur console dono
+// wahi baat likhein. Pure function: koi IO nahi.
+function churnAlert(pair, opts = {}) {
+  if (!pair) return null;
+  const minStages = Number.isFinite(opts.minStages) ? opts.minStages : CHURN_ALERT.minStages;
+  const cancelShare = Number.isFinite(opts.cancelShare) ? opts.cancelShare : CHURN_ALERT.cancelShare;
+  // Do producers hain (panel ka movementPair: `stages`/`slipped`; burn-down ka
+  // advanceRate: `stagesAdvanced`/`slippedBack`), is liye dono shapes padho — warna
+  // ek report mein alert chup-chaap kabhi fire hi na kare.
+  const advanced = pair.stagesAdvanced ?? pair.stages ?? 0;
+  const slipped = pair.slippedBack ?? pair.slipped ?? 0;
+  const churnStages = Number.isFinite(pair.churnStages) ? pair.churnStages : advanced + slipped;
+  const gainedBack = Number.isFinite(pair.gainedBack) ? pair.gainedBack : Math.min(advanced, slipped);
+  const netStages = Number.isFinite(pair.netStages) ? pair.netStages : advanced - slipped;
+  // Koi advance nahi (ya itni harkat nahi ke ratio ka matlab ho): chhupane wali
+  // koi cheez nahi hai, is liye shor mat karo.
+  if (advanced === 0 || churnStages < minStages) return null;
+  const cancelled = gainedBack / advanced;
+  const draining = netStages > 0;
+  // Queue pehle se peeche ja rahi hai (net <= 0) to har advance churn hi hai;
+  // warna sirf tab alert jab advance ka aadha ya zyada cancel ho gaya.
+  if (draining && cancelled < cancelShare) return null;
+  const pct = Math.round(cancelled * 100);
+  return {
+    from: pair.from || null,
+    to: pair.to || null,
+    severity: draining ? 'warn' : 'high',
+    stagesAdvanced: advanced,
+    slippedBack: slipped,
+    churnStages,
+    gainedBack,
+    netStages,
+    cancelledShare: Math.round(cancelled * 1000) / 1000,
+    message: advanced + ' stages advance ka ' + pct + '% (' + gainedBack + ' stages) isi window mein cancel ho gaya'
+      + ' — gross ' + churnStages + ', net ' + (netStages >= 0 ? '+' : '') + netStages
+      + '. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain.',
+  };
+}
+
+// Alert ko wahin chhap do jahan run dekh sakta ho. GitHub Actions par `::warning::`
+// line job annotation ban jati hai, is liye churn-heavy hafta bina report khole dikh
+// jata hai. `write` inject ho sakta hai (tests console ko capture karte hain).
+function emitChurnAlert(alert, where, write) {
+  if (!alert) return null;
+  const out = typeof write === 'function' ? write : console.warn;
+  const line = (where ? where + ': ' : '') + 'churn alert: ' + alert.message;
+  out(process.env.GITHUB_ACTIONS ? '::warning::' + line : '⚠ ' + line);
+  return alert;
+}
+
 // Movement between two snapshots, over the URLs both checked.
 function movementPair(before, after) {
   const days = Math.round((Date.parse(after.date) - Date.parse(before.date)) / 864e5);
   let common = 0, stages = 0, slipped = 0, becameIndexed = 0, leftUnknown = 0;
+  let urlsAdvanced = 0, urlsSlipped = 0;
   const afterChecked = after.checked || {};
   for (const [url, cov] of Object.entries(before.checked || {})) {
     if (!(url in afterChecked)) continue;
     common++;
     const rb = rankOf(cov), ra = rankOf(afterChecked[url]);
     if (rb === null || ra === null) continue;
-    if (ra > rb) stages += ra - rb;
+    if (ra > rb) { stages += ra - rb; urlsAdvanced++; }
     // Backwards moves count here, not as negative progress: "Discovered" is not a
     // banked state unless the report says how often it is lost.
-    else if (ra < rb) slipped += rb - ra;
+    else if (ra < rb) { slipped += rb - ra; urlsSlipped++; }
     if (rb < 3 && ra >= 3) becameIndexed++;
     if (rb === 0 && ra > 0) leftUnknown++;
   }
-  return { from: before.date, to: after.date, days, common, stages, slipped, netStages: stages - slipped, becameIndexed, leftUnknown };
+  return {
+    from: before.date, to: after.date, days, common, stages, slipped,
+    urlsAdvanced, urlsSlipped, becameIndexed, leftUnknown,
+    ...churnOf({ stages, slipped, urlsAdvanced, urlsSlipped }),
+  };
 }
 
 // Movement between consecutive snapshots (the long-span headline), plus the
@@ -347,6 +422,21 @@ async function main() {
   }
 
   const rate = panelRate(history, { windowDays: WINDOW_DAYS });
+  // Jo do numbers ye run publish karta hai — current speed (trailing window) aur
+  // longest-span rate — dono par churn check lagta hai. Jis window ka advance
+  // zyadatar cancel ho gaya, uska rate bina flag ke headline nahi ban sakta.
+  const churnAlerts = [];
+  {
+    const seen = new Set();
+    for (const p of [rate.recent, rate.span]) {
+      const a = churnAlert(p);
+      if (!a) continue;
+      const key = a.from + '→' + a.to;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      churnAlerts.push(a);
+    }
+  }
   const L = [];
   const n = (x, d = 1) => (Number.isFinite(x) ? (Math.round(x * 10 ** d) / 10 ** d).toLocaleString('en-US') : '—');
   L.push('# Index panel — measured crawl speed');
@@ -363,16 +453,27 @@ async function main() {
   L.push('| snapshots | ' + history.length + ' |');
   L.push('| **measured rate (longest span)** | **' + (rate.indexedPerWeek === null ? 'abhi do snapshots nahi hain' : n(rate.indexedPerWeek) + ' pages/week indexed') + '** |');
   L.push('| **current speed (last ' + WINDOW_DAYS + 'd)** | ' + (rate.recent
-    ? '**' + n(rate.recent.indexedPerWeek) + ' pages/week** indexed · ' + n(rate.recent.stagesPerWeek) + ' ladder-stages/week (' + rate.recent.slipped + ' slipped back, net ' + (rate.recent.netStages >= 0 ? '+' : '') + rate.recent.netStages + ') — ' + rate.recent.from + ' → ' + rate.recent.to + ' (' + rate.recent.days + 'd, ' + rate.recent.common + ' URLs)'
+    ? '**' + n(rate.recent.indexedPerWeek) + ' pages/week** indexed · ' + n(rate.recent.stagesPerWeek) + ' ladder-stages/week (' + rate.recent.slipped + ' slipped back, ' + rate.recent.gainedBack + ' gained back, net ' + (rate.recent.netStages >= 0 ? '+' : '') + rate.recent.netStages + ') — ' + rate.recent.from + ' → ' + rate.recent.to + ' (' + rate.recent.days + 'd, ' + rate.recent.common + ' URLs)'
     : 'abhi is window mein doosra snapshot nahi hai') + ' |');
   L.push('');
   if (rate.pairs.length) {
-    L.push('| from | to | days | common URLs | stages advanced | slipped back | net | became indexed | left "unknown" |');
-    L.push('|---|---|---|---|---|---|---|---|---|');
-    for (const p of rate.pairs) L.push('| ' + p.from + ' | ' + p.to + ' | ' + p.days + ' | ' + p.common + ' | ' + p.stages + ' | ' + p.slipped + ' | ' + (p.netStages >= 0 ? '+' : '') + p.netStages + ' | ' + p.becameIndexed + ' | ' + p.leftUnknown + ' |');
+    // Both directions are printed on purpose: with churn, the honest number is
+    // `net`, and `gainedBack` says how much of the advance cancelled out.
+    L.push('| from | to | days | common URLs | stages advanced | slipped back | gained back | churn | net | URLs aage | URLs peeche | became indexed | left "unknown" |');
+    L.push('|---|---|---|---|---|---|---|---|---|---|---|---|---|');
+    for (const p of rate.pairs) L.push('| ' + p.from + ' | ' + p.to + ' | ' + p.days + ' | ' + p.common + ' | ' + p.stages + ' | ' + p.slipped + ' | ' + p.gainedBack + ' | ' + p.churnStages + ' | ' + (p.netStages >= 0 ? '+' : '') + p.netStages + ' | ' + p.urlsAdvanced + ' | ' + p.urlsSlipped + ' | ' + p.becameIndexed + ' | ' + p.leftUnknown + ' |');
+    L.push('');
+    L.push('`gained back` = min(advanced, slipped) — jitni movement wapas cancel ho gayi. `churn` = advanced + slipped (gross). Jab churn > net, headline "stages advanced" ko progress na padho, sirf **net** aur `became indexed` dekho.');
     L.push('');
   } else {
     L.push('_Pehla snapshot hai. Agle run ke baad yahan real speed aayegi_ — daily job (`.github/workflows/seo-panel-daily.yml`) ise khud chala deta hai, aur `npm run seo:weekly` bhi.');
+    L.push('');
+  }
+  // Alert table ke bilkul baad: rate padhne se pehle pata ho ke wo churn hai.
+  if (churnAlerts.length) {
+    L.push('> ⚠️ **Churn alert — is window ka rate progress nahi hai**');
+    L.push('>');
+    for (const a of churnAlerts) L.push('> - ' + (a.from ? a.from + ' → ' + a.to + ': ' : '') + a.message);
     L.push('');
   }
 
@@ -403,6 +504,7 @@ async function main() {
   if (rate.recent) {
     console.log('current speed: ' + n(rate.recent.indexedPerWeek) + ' pages/week indexed (' + n(rate.recent.stagesPerWeek) + ' stages/week) — ' + rate.recent.from + '→' + rate.recent.to + ', ' + rate.recent.common + ' URLs');
   }
+  for (const a of churnAlerts) emitChurnAlert(a, 'index panel');
   if (panel.mode === 'full-queue') console.log('scope: poora queue (' + panel.size + ' URLs incl. ' + (panel.controlUrls || 0) + ' controls)');
   console.log('report: docs/INDEX-PANEL.md');
   if (history.length && !process.argv.includes('--inspect')) {
@@ -410,6 +512,6 @@ async function main() {
   }
 }
 
-module.exports = { selectPanel, mergeFullQueue, panelRate, movementPair, tallyPanel, rankOf, pendingUrls, mapPool, NOT_A_CANDIDATE };
+module.exports = { selectPanel, mergeFullQueue, panelRate, movementPair, churnOf, churnAlert, emitChurnAlert, CHURN_ALERT, tallyPanel, rankOf, pendingUrls, mapPool, NOT_A_CANDIDATE };
 
 if (require.main === module) main().catch((e) => { console.error('index panel failed:', e.message); process.exit(1); });

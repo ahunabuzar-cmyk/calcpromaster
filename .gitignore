@@ -46,4 +46,6 @@ google-creds*
 # Local analytics/GSC snapshots (tracking data, not part of the site)
 data/ga4-events-snapshot.json
 data/gsc-snapshot.json
+# Mid-run checkpoint for the weekly index panel (resumable; never a shippable artifact)
+data/index-panel-progress.json
 scripts/.keywords.jsonl

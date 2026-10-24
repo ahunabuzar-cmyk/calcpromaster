@@ -1,0 +1,640 @@
+# CalcProMaster — 500+ Free Backlink Sites
+
+Ye poori list 30 din ke plan ki hai: 1000 backlinks, sab free. Har site par account banao, URL aur description paste karo, email verify karo aur link LIVE ho jayega. Ek site barabar ek backlink. Roz 33 sites karo to 30 din me 1000 se upar. Koi site dead mile to list me agli site le lo, rukna nahi hai.
+
+## Sabse pehle — yehi paanch cheezein har site me paste karni hain
+
+- Site ka naam: CalcProMaster
+- URL: https://calcpromaster.com
+- Chhoti description jo title ya tagline wale khane me jayegi: 1200+ free online calculators — loan EMI, mortgage, BMI, percentage, GPA and more. Every formula shown, every step explained. Free forever.
+- Lambi description jo description wale khane me jayegi: CalcProMaster is a free library of 1200+ calculators covering finance, health, math, construction and everyday math. Every calculator shows the exact formula and every calculation step — no black-box answers. No signup, no paywall, 100% in-browser.
+- Keywords jo comma wale khane me jayenge: free online calculators, loan EMI calculator, mortgage calculator, BMI calculator, percentage calculator, GPA calculator, compound interest calculator, calorie calculator, free math tools, step by step calculator
+
+Account har site ke liye same hai. Email: ahunabuzar@gmail.com, Password: CalcPro@2026!, aur jab username maange to likho: ahunabuzar.
+
+Bio jab site maange to yeh daalo: Building CalcProMaster, 1200+ free online calculators that show every formula and step. https://calcpromaster.com
+
+## Structure (12 categories · 578 sites)
+
+### WEB2.0 (60 sites)
+
+- **Blogger** — https://www.blogger.com — Google account se login — Posts with 2-3 dofollow links
+- **WordPress.com** — https://wordpress.com — email se naya account — Free blog, links nofollow but strong
+- **Tumblr** — https://www.tumblr.com — Google account se login — Short posts + link
+- **Medium** — https://medium.com — Google account se login — Story + embedded links, nofollow
+- **Hashnode** — https://hashnode.com — GitHub account se login — Tech article, dofollow
+- **Google Sites** — https://sites.google.com — Google account se login — Mini-site, dofollow
+- **Substack** — https://substack.com — email se naya account — Newsletter post
+- **Strikingly** — https://www.strikingly.com — email se naya account — One-page site, dofollow
+- **Weebly** — https://www.weebly.com — email se naya account — Free site, dofollow
+- **Wix** — https://www.wix.com — email se naya account — Free site
+- **Jimdo** — https://www.jimdo.com — email se naya account — Free site
+- **Webnode** — https://www.webnode.com — email se naya account — Free site
+- **Yola** — https://www.yola.com — email se naya account — Free site
+- **Site123** — https://www.site123.com — email se naya account — Free site
+- **Duda** — https://www.duda.co — email se naya account — Free trial site
+- **Notion** — https://notion.so — Google account se login — Public page + share link
+- **GitBook** — https://www.gitbook.com — GitHub account se login — Docs-style guide
+- **HackMD** — https://hackmd.io — GitHub account se login — Public notes, dofollow
+- **Dev.to** — https://dev.to — GitHub account se login — Article #2 and #3, dofollow
+- **Codeberg Pages** — https://codeberg.org — GitHub account se login — Static page via repo
+- **Neocities** — https://neocities.org — email se naya account — Free static site, dofollow
+- **Teleport** — https://gohugo.io — login ki zaroorat nahi — n/a - skip
+- **Bettermode** — https://bettermode.com — email se naya account — Community trial
+- **Minds Blog** — https://www.minds.com — email se naya account — Blog + post
+- **Steemit** — https://steemit.com — email se naya account — Crypto-style blog post
+- **Publish0x** — https://www.publish0x.com — email se naya account — Article post
+- **Vocal Media** — https://vocal.media — Google account se login — Story submission
+- **HubPages** — https://hubpages.com — email se naya account — Article hub
+- **Wattpad** — https://www.wattpad.com — Google account se login — Story page about the tool
+- **Wix Blog** — https://www.wix.com — email se naya account — Same as Wix
+- **Livejournal** — https://www.livejournal.com — email se naya account — Journal entry
+- **Storeboard** — https://www.storeboard.com — email se naya account — Business blog
+- **Behance Project** — https://www.behance.net — Google account se login — Project page
+- **Dribbble Shot** — https://dribbble.com — Google account se login — Shot description link
+- **Ello** — https://ello.co — email se naya account — Creative post
+- **Mastodon** — https://joinmastodon.org — email se naya account — Instance profile link
+- **Gab** — https://gab.com — email se naya account — Post link
+- **Gettr** — https://gettr.com — email se naya account — Post link
+- **Truth Social** — https://truthsocial.com — email se naya account — Post link
+- **Reddit Self Post** — https://www.reddit.com — Google account se login — Value post in niche sub
+- **LiveJournal Community** — https://www.livejournal.com — email se naya account — Community post
+- **Blogger Custom Domain** — https://www.blogger.com — Google account se login — Second blog
+- **WordPress Post 2** — https://wordpress.com — email se naya account — Second post
+- **Medium Publication** — https://medium.com — Google account se login — Own publication
+- **Substack Note** — https://substack.com — email se naya account — Notes feature
+- **Quora Blog** — https://www.quora.com — Google account se login — Quora blog post
+- **LinkedIn Article** — https://www.linkedin.com — Google account se login — Article #2
+- **X Profile** — https://x.com — Google account se login — Pinned post link
+- **Facebook Page** — https://www.facebook.com — Google account se login — Page info website
+- **Instagram Bio** — https://www.instagram.com — Google account se login — Bio link
+- **Pinterest Board 2** — https://www.pinterest.com — Google account se login — Second board
+- **TikTok Bio** — https://www.tiktok.com — email se naya account — Bio website field
+- **YouTube Channel** — https://www.youtube.com — Google account se login — About + video desc
+- **Vimeo Profile** — https://vimeo.com — email se naya account — Profile website
+- **Dailymotion** — https://www.dailymotion.com — email se naya account — Video upload + desc link
+- **Odysee** — https://odysee.com — email se naya account — Reel upload, dofollow
+- **Rumble** — https://rumble.com — email se naya account — Reel upload
+- **BitChute** — https://www.bitchute.com — email se naya account — Reel upload
+- **Giphy** — https://giphy.com — Google account se login — GIF source link
+- **Imgur Post** — https://imgur.com — email se naya account — Album with site mention
+
+### BOOKMARK (60 sites)
+
+- **Folkd** — https://www.folkd.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **URL.org** — https://url.org — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **A2Bookmarks** — https://a2bookmarks.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Sitejot** — https://www.sitejot.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Bookmax** — https://www.bookmax.net — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **LinkaGoGo** — https://linkagogo.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Start.me** — https://start.me — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Pearltrees** — https://www.pearltrees.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Scoop.it** — https://www.scoop.it — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Diigo** — https://www.diigo.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Mix** — https://mix.com — Google account se login — Submit URL: 1200+ free calculators that show every formula and step
+- **Flipboard** — https://flipboard.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Papaly** — https://papaly.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Raindrop** — https://raindrop.io — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Blogmarks** — https://blogmarks.net — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **BibSonomy** — https://www.bibsonomy.org — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Pocket** — https://getpocket.com — Google account se login — Submit URL: 1200+ free calculators that show every formula and step
+- **Instapaper** — https://www.instapaper.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Savenkeep** — https://www.savenkeep.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Buddymarks** — https://buddymarks.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Bookmark4You** — https://www.bookmark4you.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Bookmarkee** — https://bookmarkee.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Clipclip** — https://www.clipclip.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Fark** — https://www.fark.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Slogbox** — https://slogbox.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Small SEO Bookmarks** — https://smallseotools.org — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Metafilter** — https://www.metafilter.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Digg** — https://digg.com — Google account se login — Submit URL: 1200+ free calculators that show every formula and step
+- **Slashdot** — https://slashdot.org — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Scoopnest** — https://www.scoopnest.com — Google account se login — Submit URL: 1200+ free calculators that show every formula and step
+- **List.ly** — https://list.ly — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Symbaloo** — https://www.symbaloo.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Milestonebookmarks** — https://milestonebookmarks.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Bloggertemplates23** — https://bloggertemplates23.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Wirefan** — https://www.wirefan.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Youbookmark** — https://youbookmark.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Skybacklinks** — https://skybacklinks.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Teztourbookmarks** — https://teztourbookmarks.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Otavea** — https://otavea.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Openfaves** — https://openfaves.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Livelinkscollections** — https://livelinkscollections.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Favli** — https://favli.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Bookmarkng** — https://bookmarkng.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Murl** — https://murl.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Spurl** — https://www.spurl.net — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **MySiteVote** — https://www.mysitevote.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Jodohkita** — https://jodohkita.info — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Ezy.link (yeh skip kar do)** — https://ezy.link — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Moonrocksbookmark** — https://moonrocksbookmark.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Wordable (yeh skip kar do)** — https://wordable.io — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **N4G** — https://www.n4g.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **DZone** — https://dzone.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Growfollows** — https://growfollows.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Aixindashi** — https://aixindashi.org — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Bookmarks2.top** — https://bookmarks2.top — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Emolinks** — https://emolinks.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Artsybookmarks** — https://artsybookmarks.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Mettablog** — https://mettablog.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Bookmarkgroups** — https://bookmarkgroups.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+- **Activebookmarks** — https://activebookmarks.com — email se naya account — Submit URL: 1200+ free calculators that show every formula and step
+
+### DIRECTORY (59 sites)
+
+- **Somuch** — https://www.somuch.com — email se naya account — Standard listing form
+- **InfoTiger** — https://www.infotiger.com — email se naya account — Standard listing form
+- **Directory r-tt** — https://directory.r-tt.com — email se naya account — Standard listing form
+- **1M1.biz** — https://www.1m1.biz — email se naya account — Standard listing form
+- **Bedwan** — https://www.bedwan.com — email se naya account — Standard listing form
+- **Webotopia** — https://www.webotopia.org — email se naya account — Standard listing form
+- **Fat64** — https://www.fat64.net — email se naya account — Standard listing form
+- **SubmissionWebDirectory** — https://www.submissionwebdirectory.com — email se naya account — Standard listing form
+- **ProlinkDirectory** — https://www.prolinkdirectory.com — email se naya account — Standard listing form
+- **Absolutedirectory** — https://www.absolutedirectory.com — email se naya account — Standard listing form
+- **FreePRWebDirectory** — https://www.freeprwebdirectory.com — email se naya account — Standard listing form
+- **Canlinks** — https://www.canlinks.net — email se naya account — Standard listing form
+- **Jewana** — https://jewana.com — email se naya account — Standard listing form
+- **Ananar** — https://www.ananar.com — email se naya account — Standard listing form
+- **A1WebDirectory** — https://www.a1webdirectory.org — email se naya account — Standard listing form
+- **ABC Directory** — https://www.abc-directory.com — email se naya account — Standard listing form
+- **Huge Directory** — https://www.hugedirectory.com — email se naya account — Standard listing form
+- **PR9** — https://www.pr9.net — email se naya account — Standard listing form
+- **Gmaw** — https://www.gmaw.org — email se naya account — Standard listing form
+- **Gain Web** — https://www.gainweb.org — email se naya account — Standard listing form
+- **Loadz Games (yeh skip kar do)** — https://loadzgames.com — email se naya account — Standard listing form
+- **DirectoryFire** — https://www.directoryfire.com — email se naya account — Standard listing form
+- **Mongoosetop** — https://mongoosetop.com — email se naya account — Standard listing form
+- **LinkUP Studios Directory** — https://www.linkupstudios.com — email se naya account — Standard listing form
+- **E Vocative** — https://www.evocative.com — email se naya account — Standard listing form
+- **Directorydeluxe** — https://directorydeluxe.org — email se naya account — Standard listing form
+- **BusyBits** — https://busybits.com — email se naya account — Standard listing form
+- **Pi blotter (yeh skip kar do)** — https://piblotter.com — email se naya account — Standard listing form
+- **LinkPedia** — https://linkpedia.net — email se naya account — Standard listing form
+- **Bhanvad** — https://www.bhanvad.com — email se naya account — Standard listing form
+- **Siteswebdirectory** — https://www.siteswebdirectory.com — email se naya account — Standard listing form
+- **FreeWebDirectories** — https://www.freewebdirectories.com — email se naya account — Standard listing form
+- **Directoryfreight (yeh skip kar do)** — https://directoryfreight.com — email se naya account — Standard listing form
+- **UntouchableDirectory** — https://untouchabledirectory.com — email se naya account — Standard listing form
+- **The-Free-Directory** — https://www.the-free-directory.co.uk — email se naya account — Standard listing form
+- **Directories.net (yeh skip kar do)** — https://directories.net — email se naya account — Standard listing form
+- **Pegasus Directory** — https://pegasusdirectory.com — email se naya account — Standard listing form
+- **Viesearch** — https://www.viesearch.com — email se naya account — Standard listing form
+- **Wld Directory** — https://www.wld.com — email se naya account — Standard listing form
+- **So Much 2** — https://www.somuch.com — email se naya account — Standard listing form
+- **Best Free Online (yeh skip kar do)** — https://bestfreeonline.net — email se naya account — Standard listing form
+- **Netinsert** — https://www.netinsert.com — login ki zaroorat nahi — Standard listing form
+- **Prolink 2** — https://www.prolinkdirectory.com — email se naya account — Standard listing form
+- **Ace Web Directory (yeh skip kar do)** — https://acewebdirectory.com — email se naya account — Standard listing form
+- **Add Page** — https://www.addpage.net — email se naya account — Standard listing form
+- **Uncle Directory** — https://uncledirectory.com — email se naya account — Standard listing form
+- **Directory Wind (yeh skip kar do)** — https://directorywind.com — email se naya account — Standard listing form
+- **Web Direx (yeh skip kar do)** — https://webdirex.com — email se naya account — Standard listing form
+- **Freelistingdirectory (yeh skip kar do)** — https://freelistingdirectory.com — email se naya account — Standard listing form
+- **Icy Directory (yeh skip kar do)** — https://icydirectory.com — email se naya account — Standard listing form
+- **Thales Directory** — https://www.thalesdirectory.com — email se naya account — Standard listing form
+- **USGeoWebDirectory** — https://www.usgeowebdirectory.com — email se naya account — Standard listing form
+- **Tsection** — https://www.tsection.com — email se naya account — Standard listing form
+- **WWW Searcher (yeh skip kar do)** — https://www.wwwsearcher.com — email se naya account — Standard listing form
+- **Yellowise** — https://www.yellowise.com — email se naya account — Standard listing form
+- **Yellowpages Local (yeh skip kar do)** — https://local.yahoo.com — email se naya account — Standard listing form
+- **Moz (yeh skip kar do)** — https://moz.com — email se naya account — Standard listing form
+- **Botw** — https://botw.org — paid hai, free nahi — Standard listing form
+- **DMOZ clone Curlie** — https://curlie.org — login ki zaroorat nahi — Standard listing form
+
+### STARTUP-DIR (69 sites)
+
+- **StartupBase #3 (duplicate hai, skip kar do)** — https://startupbase.io — Google account se login — Already 2 listings
+- **Launched** — https://launched.io — login ki zaroorat nahi — Free submit
+- **Startup Catchup** — https://startupcatchup.com — login ki zaroorat nahi — Free submit
+- **Startup88** — https://startup88.com — login ki zaroorat nahi — Free submit
+- **ToolsPedia** — https://toolspedia.io — login ki zaroorat nahi — Free submit
+- **Theres An AI For That** — https://theresanaiforthat.com — email se naya account — Free submit
+- **Futurepedia** — https://www.futurepedia.io — email se naya account — Free submit
+- **AI Tools Directory** — https://aitoolsdirectory.com — email se naya account — Free submit
+- **Top Tools** — https://www.toptools.directory — email se naya account — Free submit
+- **ToolFinder (yeh skip kar do)** — https://toolfinder.co — email se naya account — Free submit
+- **SaaSHub 2nd profile** — https://www.saashub.com — Google account se login — Free submit
+- **AlternativeTo 2 (duplicate hai, skip kar do)** — https://alternativeto.net — Google account se login — Free submit
+- **StackShare (yeh dead hai, skip kar do)** — https://stackshare.io — GitHub account se login — Free submit
+- **G2 free listing** — https://www.g2.com — email se naya account — Free submit
+- **Capterra free listing** — https://www.capterra.com — email se naya account — Free submit
+- **GetApp** — https://www.getapp.com — email se naya account — Free submit
+- **Software Advice** — https://www.softwareadvice.com — email se naya account — Free submit
+- **TrustPilot free** — https://www.trustpilot.com — email se naya account — Free submit
+- **TrustRadius** — https://www.trustradius.com — email se naya account — Free submit
+- **Crozdesk (yeh dead hai, skip kar do)** — https://crozdesk.com — login ki zaroorat nahi — Free submit
+- **SoftwareSuggest** — https://www.softwaresuggest.com — email se naya account — Free submit
+- **SourceForge (yeh site bots ko block karti hai)** — https://sourceforge.net — email se naya account — Free submit
+- **ProductHunt 2nd (duplicate hai, skip kar do)** — https://www.producthunt.com — Google account se login — Free submit
+- **Fazier 2nd (duplicate hai, skip kar do)** — https://fazier.com — Google account se login — Free submit
+- **Peerlist 2 (duplicate hai, skip kar do)** — https://peerlist.io — Google account se login — Free submit
+- **Uneed** — https://www.uneed.best — GitHub account se login — Free submit
+- **Microlaunch** — https://microlaunch.net — GitHub account se login — Free submit
+- **DevHunt** — https://devhunt.org — GitHub account se login — Free submit
+- **1000tools** — https://1000.tools — login ki zaroorat nahi — Free submit
+- **There Is App For That (yeh dead hai, skip kar do)** — https://thereisanappforthat.com — login ki zaroorat nahi — Free submit
+- **F6S** — https://www.f6s.com — email se naya account — Free submit
+- **StartupBlink** — https://www.startupblink.com — email se naya account — Free submit
+- **Startup Stash** — https://startupstash.com — email se naya account — Free submit
+- **Killer Startups** — https://killerstartups.com — paid hai, free nahi — Free submit
+- **LauchingNext** — https://www.launchingnext.com — email se naya account — Free submit
+- **PitchWall** — https://pitchwall.co — Google account se login — Free submit
+- **Startup Fame 2 (duplicate hai, skip kar do)** — https://startupfa.me — Google account se login — Free submit
+- **TinyStartups 2 (duplicate hai, skip kar do)** — https://tinystartups.com — login ki zaroorat nahi — Free submit
+- **TinyLaunch 2 (duplicate hai, skip kar do)** — https://tinylaunch.com — GitHub account se login — Free submit
+- **IndieHunt** — https://indiehunt.com — login ki zaroorat nahi — Free submit
+- **Postmake** — https://postmake.io — GitHub account se login — Free submit
+- **SideProjectors 2 (duplicate hai, skip kar do)** — https://www.sideprojectors.com — Google account se login — Free submit
+- **BetaList** — https://betalist.com — paid hai, free nahi — Free submit
+- **StartupRanking** — https://www.startupranking.com — email se naya account — Free submit
+- **StartupBuffer** — https://startupbuffer.com — email se naya account — Free submit
+- **AllTopStartups** — https://alltopstartups.com — email se naya account — Free submit
+- **StartupHits** — https://startuphits.com — login ki zaroorat nahi — Free submit
+- **FounderPath (yeh skip kar do)** — https://founderpath.com — email se naya account — Free submit
+- **Launch List** — https://httpslaunchlist.co — email se naya account — Free submit
+- **EpicLaunch** — https://epiclaunch.com — email se naya account — Free submit
+- **WebAppRater** — https://webapprater.com — email se naya account — Free submit
+- **Chrome Web Store (browser ext later)** — https://chrome.google.com/webstore — Google account se login — Free submit
+- **Mozilla Addons (ext later)** — https://addons.mozilla.org — GitHub account se login — Free submit
+- **Framasoft (yeh skip kar do)** — https://framasoft.org — login ki zaroorat nahi — Free submit
+- **Awesome screenshot (yeh skip kar do)** — https://awesomescreenshot.com — login ki zaroorat nahi — Free submit
+- **Slant 2 (yeh ab band hai)** — https://www.slant.co — login ki zaroorat nahi — Free submit
+- **OpenAlternative** — https://openalternative.co — GitHub account se login — Free submit
+- **FreeForDev PR** — https://free-for.dev — GitHub account se login — Free submit
+- **ToolPilot** — https://www.toolpilot.ai — email se naya account — Free submit
+- **AIToolsHub (pehle check karo ke chalu hai)** — https://aitoolshub.com — login ki zaroorat nahi — Free submit
+- **Dang.ai** — https://dang.ai — email se naya account — Free submit
+- **ToolPockets (pehle check karo ke chalu hai)** — https://toolpockets.com — login ki zaroorat nahi — Free submit
+- **StartupStage** — https://startupstage.app — email se naya account — Free submit
+- **Made In Webflow (yeh skip kar do)** — https://webflow.com — email se naya account — Free submit
+- **Built With (yeh skip kar do)** — https://builtwith.com — login ki zaroorat nahi — Free submit
+- **Crunchbase 2 (duplicate hai, skip kar do)** — https://www.crunchbase.com — Google account se login — Free submit
+- **AngelList/WF (Cloudflare block karta hai)** — https://wellfound.com — Google account se login — Free submit
+- **Gust 2 (yeh dead hai, skip kar do)** — https://gust.com — login ki zaroorat nahi — Free submit
+- **TechCrunch Pitch (yeh skip kar do)** — https://techcrunch.com — paid hai, free nahi — Free submit
+
+### PROFILE (60 sites)
+
+- **Gravatar** — https://gravatar.com — Google account se login — Bio + website field
+- **Disqus** — https://disqus.com — email se naya account — Bio + website field
+- **SlideShare** — https://www.slideshare.net — Google account se login — Bio + website field
+- **Scribd** — https://www.scribd.com — Google account se login — Bio + website field
+- **CodePen** — https://codepen.io — GitHub account se login — Bio + website field
+- **Replit** — https://replit.com — GitHub account se login — Bio + website field
+- **Glitch** — https://glitch.com — GitHub account se login — Bio + website field
+- **GitLab 2 (yeh pehle ho chuka hai)** — https://gitlab.com — GitHub account se login — Bio + website field
+- **Bitbucket** — https://bitbucket.org — GitHub account se login — Bio + website field
+- **Docker Hub** — https://hub.docker.com — email se naya account — Bio + website field
+- **Kaggle** — https://www.kaggle.com — Google account se login — Bio + website field
+- **HuggingFace** — https://huggingface.co — email se naya account — Bio + website field
+- **NPM** — https://www.npmjs.com — GitHub account se login — Bio + website field
+- **PyPI** — https://pypi.org — GitHub account se login — Bio + website field
+- **StackExchange** — https://stackexchange.com — email se naya account — Bio + website field
+- **HackerNews profile** — https://news.ycombinator.com — email se naya account — Bio + website field
+- **Dribbble 2 (duplicate hai, skip kar do)** — https://dribbble.com — Google account se login — Bio + website field
+- **Behance 2 (duplicate hai, skip kar do)** — https://www.behance.net — Google account se login — Bio + website field
+- **500px** — https://500px.com — email se naya account — Bio + website field
+- **Flickr** — https://www.flickr.com — Google account se login — Bio + website field
+- **Patreon** — https://www.patreon.com — Google account se login — Bio + website field
+- **Ko-fi** — https://ko-fi.com — email se naya account — Bio + website field
+- **BuyMeACoffee** — https://buymeacoffee.com — Google account se login — Bio + website field
+- **Gumroad** — https://gumroad.com — email se naya account — Bio + website field
+- **ProductHunt bio** — https://www.producthunt.com — Google account se login — Bio + website field
+- **IndieHackers post 2** — https://www.indiehackers.com — Google account se login — Bio + website field
+- **Medium profile 2 (duplicate hai, skip kar do)** — https://medium.com — Google account se login — Bio + website field
+- **Quora profile 2 (duplicate hai, skip kar do)** — https://www.quora.com — Google account se login — Bio + website field
+- **Pinterest 2 (duplicate hai, skip kar do)** — https://www.pinterest.com — Google account se login — Bio + website field
+- **Reddit profile** — https://www.reddit.com — Google account se login — Bio + website field
+- **Chess (yeh skip kar do)** — https://www.chess.com — email se naya account — Bio + website field
+- **Duolingo (yeh skip kar do)** — https://www.duolingo.com — Google account se login — Bio + website field
+- **Goodreads** — https://www.goodreads.com — Google account se login — Bio + website field
+- **LastFM** — https://www.last.fm — email se naya account — Bio + website field
+- **Spotify (yeh skip kar do)** — https://spotify.com — Google account se login — Bio + website field
+- **SoundCloud** — https://soundcloud.com — Google account se login — Bio + website field
+- **Bandcamp** — https://bandcamp.com — email se naya account — Bio + website field
+- **Mixcloud** — https://www.mixcloud.com — email se naya account — Bio + website field
+- **Letterboxd (yeh skip kar do)** — https://letterboxd.com — Google account se login — Bio + website field
+- **Untappd (yeh skip kar do)** — https://untappd.com — email se naya account — Bio + website field
+- **Steam (yeh skip kar do)** — https://store.steampowered.com — email se naya account — Bio + website field
+- **Itch.io** — https://itch.io — email se naya account — Bio + website field
+- **Gamejolt (yeh skip kar do)** — https://gamejolt.com — email se naya account — Bio + website field
+- **Polywork** — https://www.polywork.com — Google account se login — Bio + website field
+- **Bento.me** — https://bento.me — Google account se login — Bio + website field
+- **Linktree** — https://linktr.ee — email se naya account — Bio + website field
+- **Beacons** — https://beacons.ai — email se naya account — Bio + website field
+- **Carrd** — https://carrd.co — email se naya account — Bio + website field
+- **About.me 2 (duplicate hai, skip kar do)** — https://about.me — email se naya account — Bio + website field
+- **Fiverr** — https://www.fiverr.com — Google account se login — Bio + website field
+- **Upwork** — https://www.upwork.com — Google account se login — Bio + website field
+- **Freelancer** — https://www.freelancer.com — email se naya account — Bio + website field
+- **PeoplePerHour** — https://www.peopleperhour.com — email se naya account — Bio + website field
+- **Toptal (yeh skip kar do)** — https://www.toptal.com — email se naya account — Bio + website field
+- **Dribbble3 (duplicate hai, skip kar do)** — https://dribbble.com — Google account se login — Bio + website field
+- **LinkedIn 2 (duplicate hai, skip kar do)** — https://www.linkedin.com — Google account se login — Bio + website field
+- **Xing** — https://www.xing.com — email se naya account — Bio + website field
+- **Meetup** — https://www.meetup.com — Google account se login — Bio + website field
+- **Eventbrite** — https://www.eventbrite.com — Google account se login — Bio + website field
+- **SlideServe** — https://www.slideserve.com — email se naya account — Bio + website field
+
+### PDF-DOC (30 sites)
+
+- **Issuu** — https://issuu.com — email se naya account — Upload 1200-calculators guide PDF
+- **Edocr** — https://www.edocr.com — email se naya account — Upload 1200-calculators guide PDF
+- **Calameo** — https://www.calameo.com — email se naya account — Upload 1200-calculators guide PDF
+- **4shared** — https://www.4shared.com — email se naya account — Upload 1200-calculators guide PDF
+- **MediaFire** — https://www.mediafire.com — email se naya account — Upload 1200-calculators guide PDF
+- **Dropbox public doc** — https://www.dropbox.com — Google account se login — Upload 1200-calculators guide PDF
+- **Google Drive public** — https://drive.google.com — Google account se login — Upload 1200-calculators guide PDF
+- **Academia.edu** — https://www.academia.edu — email se naya account — Upload 1200-calculators guide PDF
+- **SlideShare 2 (duplicate hai, skip kar do)** — https://www.slideshare.net — Google account se login — Upload 1200-calculators guide PDF
+- **Speaker Deck** — https://speakerdeck.com — GitHub account se login — Upload 1200-calculators guide PDF
+- **SlideServe 2 (duplicate hai, skip kar do)** — https://www.slideserve.com — email se naya account — Upload 1200-calculators guide PDF
+- **AuthorSTREAM** — https://www.authorstream.com — email se naya account — Upload 1200-calculators guide PDF
+- **PDFArchive (pehle check karo ke chalu hai)** — https://www.pdf-archive.com — email se naya account — Upload 1200-calculators guide PDF
+- **PDFHost** — https://pdfhost.io — email se naya account — Upload 1200-calculators guide PDF
+- **DocDroid** — https://www.docdroid.net — email se naya account — Upload 1200-calculators guide PDF
+- **Viewkick (yeh skip kar do)** — https://viewkick.com — email se naya account — Upload 1200-calculators guide PDF
+- **Yumpu** — https://www.yumpu.com — email se naya account — Upload 1200-calculators guide PDF
+- **Fiction (yeh skip kar do)** — https://www.fictiondb.com — email se naya account — Upload 1200-calculators guide PDF
+- **Mega (dhyan rakho: nofollow)** — https://mega.nz — email se naya account — Upload 1200-calculators guide PDF
+- **Zoho Docs** — https://www.zoho.com/docs — email se naya account — Upload 1200-calculators guide PDF
+- **OneDrive public (dhyan rakho: nofollow)** — https://onedrive.live.com — Google account se login — Upload 1200-calculators guide PDF
+- **Box public** — https://www.box.com — email se naya account — Upload 1200-calculators guide PDF
+- **pCloud** — https://www.pcloud.com — email se naya account — Upload 1200-calculators guide PDF
+- **Sync (yeh skip kar do)** — https://www.sync.com — email se naya account — Upload 1200-calculators guide PDF
+- **Icedrive** — https://icedrive.net — email se naya account — Upload 1200-calculators guide PDF
+- **Koofr** — https://app.koofr.net — email se naya account — Upload 1200-calculators guide PDF
+- **TeraBox** — https://terabox.com — email se naya account — Upload 1200-calculators guide PDF
+- **SendSpace** — https://www.sendspace.com — email se naya account — Upload 1200-calculators guide PDF
+- **Rapidgator (yeh skip kar do)** — https://rapidgator.net — email se naya account — Upload 1200-calculators guide PDF
+- **Divshare (yeh dead hai, skip kar do)** — https://divshare.com — email se naya account — Upload 1200-calculators guide PDF
+
+### FORUM-QA (50 sites)
+
+- **Money StackExchange** — https://money.stackexchange.com — email se naya account — Genuine value answers only
+- **Math StackExchange** — https://math.stackexchange.com — email se naya account — Genuine value answers only
+- **WebApps SE** — https://webapps.stackexchange.com — email se naya account — Genuine value answers only
+- **SoftwareRecs SE** — https://softwarerecs.stackexchange.com — email se naya account — Genuine value answers only
+- **SuperUser** — https://superuser.com — email se naya account — Genuine value answers only
+- **OpenSource SE** — https://opensource.stackexchange.com — email se naya account — Genuine value answers only
+- **Productivity SE** — https://productivity.stackexchange.com — email se naya account — Genuine value answers only
+- **Startups SE** — https://startups.stackexchange.com — email se naya account — Genuine value answers only
+- **Interpersonal SE (ho sakta hai chal jaye)** — https://interpersonal.stackexchange.com — email se naya account — Genuine value answers only
+- **LifeHacks SE** — https://lifehacks.stackexchange.com — email se naya account — Genuine value answers only
+- **PersonalFinance SE** — https://personal finance SE dup — email se naya account — Genuine value answers only
+- **Quora answer 2** — https://www.quora.com — Google account se login — Genuine value answers only
+- **Quora answer 3** — https://www.quora.com — Google account se login — Genuine value answers only
+- **Quora answer 4** — https://www.quora.com — Google account se login — Genuine value answers only
+- **Quora answer 5** — https://www.quora.com — Google account se login — Genuine value answers only
+- **Quora answer 6** — https://www.quora.com — Google account se login — Genuine value answers only
+- **IndieHackers discussion** — https://www.indiehackers.com — Google account se login — Genuine value answers only
+- **IndieHackers milestone** — https://www.indiehackers.com — Google account se login — Genuine value answers only
+- **Reddit r/personalfinance** — https://www.reddit.com — Google account se login — Genuine value answers only
+- **Reddit r/math** — https://www.reddit.com — Google account se login — Genuine value answers only
+- **Reddit r/InternetIsBeautiful 2** — https://www.reddit.com — Google account se login — Genuine value answers only
+- **Reddit r/somethingiswrong (yeh skip kar do)** — https://www.reddit.com — Google account se login — Genuine value answers only
+- **Reddit r/coolwebsites** — https://www.reddit.com — Google account se login — Genuine value answers only
+- **Reddit r/SideProject** — https://www.reddit.com — Google account se login — Genuine value answers only
+- **Reddit r/startups** — https://www.reddit.com — Google account se login — Genuine value answers only
+- **Reddit r/Entrepreneur** — https://www.reddit.com — Google account se login — Genuine value answers only
+- **Reddit r/smallbusiness** — https://www.reddit.com — Google account se login — Genuine value answers only
+- **Reddit r/webdev** — https://www.reddit.com — Google account se login — Genuine value answers only
+- **Reddit r/SideProject2 (duplicate hai, skip kar do)** — https://www.reddit.com — Google account se login — Genuine value answers only
+- **HackerNews comment 2** — https://news.ycombinator.com — email se naya account — Genuine value answers only
+- **HackerNews Ask 2** — https://news.ycombinator.com — email se naya account — Genuine value answers only
+- **DigitalPoint** — https://digitalpoint.com — email se naya account — Genuine value answers only
+- **WarriorForum** — https://www.warriorforum.com — email se naya account — Genuine value answers only
+- **WebHostingTalk (sirf isi kaam ke liye)** — https://www.webhostingtalk.com — email se naya account — Genuine value answers only
+- **NamePros** — https://www.namepros.com — email se naya account — Genuine value answers only
+- **V7N Forum** — https://www.v7n.com — email se naya account — Genuine value answers only
+- **BlackHatWorld (sambhal ke karo)** — https://www.blackhatworld.com — email se naya account — Genuine value answers only
+- **SEO Chat** — https://www.seochat.com — email se naya account — Genuine value answers only
+- **WebmasterWorld** — https://www.webmasterworld.com — email se naya account — Genuine value answers only
+- **MyMathForum** — https://mymathforum.com — email se naya account — Genuine value answers only
+- **FreeMathHelp** — https://www.freemathhelp.com/forum — email se naya account — Genuine value answers only
+- **MathisFun forum** — https://www.mathisfunforum.com — email se naya account — Genuine value answers only
+- **Bogleheads** — https://www.bogleheads.org/forum — email se naya account — Genuine value answers only
+- **InteractiveBrokers forum (sirf isi kaam ke liye)** — https://forums.interactivebrokers.com — email se naya account — Genuine value answers only
+- **Stack Overflow** — https://stackoverflow.com — Google account se login — Genuine value answers only
+- **Dev Community** — https://dev.to — GitHub account se login — Genuine value answers only
+- **Hashnode forum (yahan kaam nahi banega)** — https://hashnode.com — GitHub account se login — Genuine value answers only
+- **Disqus comments on blogs** — https://disqus.com — email se naya account — Genuine value answers only
+- **Hive blog** — https://hive.blog — email se naya account — Genuine value answers only
+- **Minds forum (yahan kaam nahi banega)** — https://www.minds.com — email se naya account — Genuine value answers only
+
+### PRESS (25 sites)
+
+- **PRLog** — https://www.prlog.org — email se naya account — PR headline: CalcProMaster launches 1200+ free calculators
+- **OpenPR** — https://www.openpr.com — email se naya account — PR headline: CalcProMaster launches 1200+ free calculators
+- **PressReleasePoint** — https://www.pressreleasepoint.com — email se naya account — PR headline: CalcProMaster launches 1200+ free calculators
+- **NewswireToday** — https://www.newswiretoday.com — email se naya account — PR headline: CalcProMaster launches 1200+ free calculators
+- **IssueWire free** — https://www.issuewire.com — email se naya account — PR headline: CalcProMaster launches 1200+ free calculators
+- **OnlinePRNews free** — https://www.onlineprnews.com — email se naya account — PR headline: CalcProMaster launches 1200+ free calculators
+- **PressReleaseJet (pehle check karo ke chalu hai)** — https://www.pressreleasejet.com — email se naya account — PR headline: CalcProMaster launches 1200+ free calculators
+- **FreePressRelease (pehle check karo ke chalu hai)** — https://www.free-press-release.com — email se naya account — PR headline: CalcProMaster launches 1200+ free calculators
+- **PRInside (pehle check karo ke chalu hai)** — https://www.prinside.com — email se naya account — PR headline: CalcProMaster launches 1200+ free calculators
+- **PressBox (pehle check karo ke chalu hai)** — https://pressbox.co.uk — email se naya account — PR headline: CalcProMaster launches 1200+ free calculators
+- **ClickPress** — https://www.clickpress.com — email se naya account — PR headline: CalcProMaster launches 1200+ free calculators
+- **1888PressRelease** — https://www.1888pressrelease.com — email se naya account — PR headline: CalcProMaster launches 1200+ free calculators
+- **PRZoom (pehle check karo ke chalu hai)** — https://www.przoom.com — email se naya account — PR headline: CalcProMaster launches 1200+ free calculators
+- **NewsHero (yeh skip kar do)** — https://newshero.com — email se naya account — PR headline: CalcProMaster launches 1200+ free calculators
+- **PRFire (paid ho sakti hai)** — https://www.prfire.com — paid hai, free nahi — PR headline: CalcProMaster launches 1200+ free calculators
+- **EINPresswire free (dhyan rakho: check)** — https://www.einpresswire.com — paid hai, free nahi — PR headline: CalcProMaster launches 1200+ free calculators
+- **NPR (yeh skip kar do)** — https://www.npr.org — login ki zaroorat nahi — PR headline: CalcProMaster launches 1200+ free calculators
+- **PR.com** — https://www.pr.com — email se naya account — PR headline: CalcProMaster launches 1200+ free calculators
+- **ExpressPressRelease (pehle check karo ke chalu hai)** — https://expresspressrelease.com — email se naya account — PR headline: CalcProMaster launches 1200+ free calculators
+- **24-7PressRelease** — https://www.24-7pressrelease.com — paid hai, free nahi — PR headline: CalcProMaster launches 1200+ free calculators
+- **WebWire** — https://www.webwire.com — paid hai, free nahi — PR headline: CalcProMaster launches 1200+ free calculators
+- **PRUnderground** — https://www.prunderground.com — paid hai, free nahi — PR headline: CalcProMaster launches 1200+ free calculators
+- **IdeaMarketers** — https://www.ideamarketers.com — email se naya account — PR headline: CalcProMaster launches 1200+ free calculators
+- **BusinessWire2 (yeh skip kar do)** — https://www.businesswire.com — paid hai, free nahi — PR headline: CalcProMaster launches 1200+ free calculators
+- **SBWire** — https://www.sbwire.com — paid hai, free nahi — PR headline: CalcProMaster launches 1200+ free calculators
+
+### IMAGE (20 sites)
+
+- **Pinterest pin 2** — https://www.pinterest.com — Google account se login — Infographic upload + description link
+- **Flickr 2 (duplicate hai, skip kar do)** — https://www.flickr.com — Google account se login — Infographic upload + description link
+- **Imgur album** — https://imgur.com — email se naya account — Infographic upload + description link
+- **DeviantArt** — https://www.deviantart.com — email se naya account — Infographic upload + description link
+- **ArtStation** — https://www.artstation.com — email se naya account — Infographic upload + description link
+- **Behance 3 (duplicate hai, skip kar do)** — https://www.behance.net — Google account se login — Infographic upload + description link
+- **Unsplash (yeh skip kar do)** — https://unsplash.com — Google account se login — Infographic upload + description link
+- **Pexels (yeh skip kar do)** — https://www.pexels.com — Google account se login — Infographic upload + description link
+- **Pixabay (yeh skip kar do)** — https://pixabay.com — Google account se login — Infographic upload + description link
+- **Fotolog (yeh dead hai, skip kar do)** — https://fotolog.com — email se naya account — Infographic upload + description link
+- **23hq** — https://www.23hq.com — email se naya account — Infographic upload + description link
+- **Aminus3** — https://www.aminus3.com — email se naya account — Infographic upload + description link
+- **BetterPhoto (pehle check karo ke chalu hai)** — https://www.betterphoto.com — email se naya account — Infographic upload + description link
+- **Photobucket** — https://photobucket.com — email se naya account — Infographic upload + description link
+- **SmugMug** — https://www.smugmug.com — email se naya account — Infographic upload + description link
+- **Zenfolio** — https://zenfolio.com — paid hai, free nahi — Infographic upload + description link
+- **FreeImages (yeh skip kar do)** — https://www.freeimages.com — email se naya account — Infographic upload + description link
+- **ImgBB** — https://imgbb.com — email se naya account — Infographic upload + description link
+- **PostImages** — https://postimages.org — login ki zaroorat nahi — Infographic upload + description link
+- **CubeUpload** — https://cubeupload.com — login ki zaroorat nahi — Infographic upload + description link
+
+### COMMENTS (60 sites)
+
+- **ProBlogger comments** — https://problogger.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **Smart Passive Income blog** — https://www.smartpassiveincome.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **I Will Teach You Rich blog** — https://www.iwillteachyoutoberich.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **GetRichSlowly** — https://www.getrichslowly.org — login ki zaroorat nahi — Genuine comment + name + URL
+- **Mr Money Mustache** — https://www.mrmoneymustache.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **TheSimpleDollar** — https://www.thesimpledollar.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **NerdWallet blog** — https://www.nerdwallet.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **FinancialSamurai** — https://www.financialsamurai.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **BudgetsAreSexy** — https://www.budgetsaresexy.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **ThePennyHoarder** — https://www.thepennyhoarder.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **WalletHacks** — https://wallethacks.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **CashMoneyLife** — https://cashmoneylife.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **MoneyUnder30** — https://www.moneyunder30.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **CreditCards blog** — https://www.creditcards.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **Bankrate blog** — https://www.bankrate.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **Investopedia articles** — https://www.investopedia.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **MathIsFun comments (yeh skip kar do)** — https://www.mathsisfun.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **BetterExplained** — https://betterexplained.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **MathAcademy blog (yeh skip kar do)** — https://www.mathacademy.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **ArtOfProblemSolving blog** — https://artofproblemsolving.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **Preplounge (sirf isi kaam ke liye)** — https://www.preplounge.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **IndieHackers blogs** — https://www.indiehackers.com — Google account se login — Genuine comment + name + URL
+- **Josh Kaufman blog** — https://joshkaufman.net — login ki zaroorat nahi — Genuine comment + name + URL
+- **NoCSStylr (yeh skip kar do)** — https://ncase.me — login ki zaroorat nahi — Genuine comment + name + URL
+- **Swyx blog** — https://www.swyx.io — login ki zaroorat nahi — Genuine comment + name + URL
+- **Tania Rascia** — https://www.taniarascia.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **CSS Tricks** — https://css-tricks.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **Smashing Magazine** — https://www.smashingmagazine.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **Dev.to comments 2** — https://dev.to — GitHub account se login — Genuine comment + name + URL
+- **HackerNoon comments** — https://hackernoon.com — GitHub account se login — Genuine comment + name + URL
+- **Hashnode comments** — https://hashnode.com — GitHub account se login — Genuine comment + name + URL
+- **Medium comments** — https://medium.com — Google account se login — Genuine comment + name + URL
+- **Substack comments** — https://substack.com — email se naya account — Genuine comment + name + URL
+- **ProductHunt discussions** — https://www.producthunt.com — Google account se login — Genuine comment + name + URL
+- **BetaList discussions (yeh skip kar do)** — https://betalist.com — paid hai, free nahi — Genuine comment + name + URL
+- **Toolsology (pehle check karo ke chalu hai)** — https://toolsology.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **MakeUseOf tools articles** — https://www.makeuseof.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **LifeHacker articles** — https://lifehacker.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **Mashable articles (yeh skip kar do)** — https://mashable.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **TNW articles (yeh skip kar do)** — https://thenextweb.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **TechCrunch articles (yeh skip kar do)** — https://techcrunch.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **Gizmodo (yeh skip kar do)** — https://gizmodo.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **TheVerge (yeh skip kar do)** — https://www.theverge.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **Wired (yeh skip kar do)** — https://www.wired.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **Zapier blog** — https://zapier.com/blog — login ki zaroorat nahi — Genuine comment + name + URL
+- **HubSpot blog** — https://blog.hubspot.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **NEILPATEL blog** — https://neilpatel.com/blog — login ki zaroorat nahi — Genuine comment + name + URL
+- **Backlinko blog** — https://backlinko.com/blog — login ki zaroorat nahi — Genuine comment + name + URL
+- **Moz blog** — https://moz.com/blog — login ki zaroorat nahi — Genuine comment + name + URL
+- **Ahrefs blog** — https://ahrefs.com/blog — login ki zaroorat nahi — Genuine comment + name + URL
+- **SearchEngineJournal** — https://www.searchenginejournal.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **SearchEngineLand** — https://searchengineland.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **Kaiserthesage (purani site hai)** — https://kaiserthesage.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **MatthewWoodward** — https://www.matthewwoodward.co.uk — login ki zaroorat nahi — Genuine comment + name + URL
+- **Gotch SEO** — https://www.gotchseo.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **Detailed.com** — https://detailed.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **NicheHacks (purani site hai)** — https://nichehacks.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **SideHustleNation** — https://www.sidehustlenation.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **SmartBlogger** — https://smartblogger.com — login ki zaroorat nahi — Genuine comment + name + URL
+- **BloggerJet** — https://bloggerjet.com — login ki zaroorat nahi — Genuine comment + name + URL
+
+### AWESOME-PR (40 sites)
+
+- **awesome-finance** — https://github.com/brandonhimpfen/awesome-finance — GitHub account se login — Fork + add line + PR
+- **awesome-ai-in-finance** — https://github.com/georgezouq/awesome-ai-in-finance — GitHub account se login — Fork + add line + PR
+- **awesome-quant** — https://github.com/wilsonfreitas/awesome-quant — GitHub account se login — Fork + add line + PR
+- **awesome-fintech** — https://github.com/nikita-hlopov/awesome-fintech — GitHub account se login — Fork + add line + PR
+- **awesome-personal-finance (GitHub par search karke dhoondo)** — https://github.com/search?q=awesome+personal+finance — GitHub account se login — Fork + add line + PR
+- **awesome-math** — https://github.com/rossant/awesome-math — GitHub account se login — Fork + add line + PR
+- **awesome-algorithms (ho sakta hai chal jaye)** — https://github.com/tayllan/awesome-algorithms — GitHub account se login — Fork + add line + PR
+- **awesome-calculators (self)** — https://github.com/ahunabuzar-cmyk/awesome-calculators — GitHub account se login — Fork + add line + PR
+- **awesome-public-calculators (GitHub par search karke dhoondo)** — https://github.com/search?q=awesome+calculators — GitHub account se login — Fork + add line + PR
+- **awesome-education** — https://github.com/sindresorhus/awesome#education — GitHub account se login — Fork + add line + PR
+- **awesome-health (GitHub par search karke dhoondo)** — https://github.com/search?q=awesome+health — GitHub account se login — Fork + add line + PR
+- **awesome-fitness (GitHub par search karke dhoondo)** — https://github.com/search?q=awesome+fitness — GitHub account se login — Fork + add line + PR
+- **awesome-selfhosted (ho sakta hai chal jaye)** — https://github.com/awesome-selfhosted/awesome-selfhosted — GitHub account se login — Fork + add line + PR
+- **awesome-free (dhyan rakho: free-for-dev)** — https://github.com/free-for-dev/free-for-dev — GitHub account se login — Fork + add line + PR
+- **awesome-static (GitHub par search karke dhoondo)** — https://github.com/search?q=awesome+static+site+generators — GitHub account se login — Fork + add line + PR
+- **awesome-tools (GitHub par search karke dhoondo)** — https://github.com/search?q=awesome+online+tools — GitHub account se login — Fork + add line + PR
+- **awesome-productivity** — https://github.com/jhguch/awesome-productivity — GitHub account se login — Fork + add line + PR
+- **awesome-open-source (GitHub par search karke dhoondo)** — https://github.com/search?q=awesome+open+source — GitHub account se login — Fork + add line + PR
+- **awesome-list-of-lists** — https://github.com/emijrp/awesome-awesome — GitHub account se login — Fork + add line + PR
+- **awesome-indie** — https://github.com/mezod/awesome-indie — GitHub account se login — Fork + add line + PR
+- **awesome-saas (GitHub par search karke dhoondo)** — https://github.com/search?q=awesome+saas — GitHub account se login — Fork + add line + PR
+- **awesome-first-timers (yeh skip kar do)** — https://github.com/firstcontributions/first-contributions — GitHub account se login — Fork + add line + PR
+- **awesome-javascript (ho sakta hai chal jaye)** — https://github.com/sorrycc/awesome-javascript — GitHub account se login — Fork + add line + PR
+- **awesome-webdev (GitHub par search karke dhoondo)** — https://github.com/search?q=awesome+web+dev+resources — GitHub account se login — Fork + add line + PR
+- **awesome-bookmarks** — https://github.com/Pungyeon/awesome-bookmarks — GitHub account se login — Fork + add line + PR
+- **awesome-producthunt (yeh skip kar do)** — https://github.com/search?q=awesome+product+hunt — GitHub account se login — Fork + add line + PR
+- **awesome-npm-scripts (yeh skip kar do)** — https://github.com/search?q=awesome+npm — GitHub account se login — Fork + add line + PR
+- **awesome-opensource-apps** — https://github.com/mattdesl/awesome-opensource-apps — GitHub account se login — Fork + add line + PR
+- **awesome-scifi (yeh skip kar do)** — https://github.com/search?q=awesome+science — GitHub account se login — Fork + add line + PR
+- **awesome-data-science (ho sakta hai chal jaye)** — https://github.com/academic/awesome-datascience — GitHub account se login — Fork + add line + PR
+- **awesome-machine-learning (yeh skip kar do)** — https://github.com/josephmisiti/awesome-machine-learning — GitHub account se login — Fork + add line + PR
+- **awesome-python (yeh skip kar do)** — https://github.com/vinta/awesome-python — GitHub account se login — Fork + add line + PR
+- **awesome-devtools (GitHub par search karke dhoondo)** — https://github.com/search?q=awesome+dev+tools — GitHub account se login — Fork + add line + PR
+- **awesome-browser-tools (GitHub par search karke dhoondo)** — https://github.com/search?q=awesome+browser+extensions — GitHub account se login — Fork + add line + PR
+- **awesome-curated (GitHub par search karke dhoondo)** — https://github.com/search?q=awesome+curated+list — GitHub account se login — Fork + add line + PR
+- **awesome-math2 (dhyan rakho: dup check)** — https://github.com/search?q=awesome+math+resources — GitHub account se login — Fork + add line + PR
+- **awesome-finance2 (duplicate hai, skip kar do)** — https://github.com/search?q=awesome+finance — GitHub account se login — Fork + add line + PR
+- **awesome-healthcare (ho sakta hai chal jaye)** — https://github.com/kakitz/awesome-healthcare — GitHub account se login — Fork + add line + PR
+- **awesome-construction (GitHub par search karke dhoondo)** — https://github.com/search?q=awesome+construction — GitHub account se login — Fork + add line + PR
+- **awesome-engineering (GitHub par search karke dhoondo)** — https://github.com/search?q=awesome+engineering+tools — GitHub account se login — Fork + add line + PR
+
+### LOCAL-MISC (45 sites)
+
+- **Netlify showcase** — https://answers.netlify.com — email se naya account — Business listing + website
+- **Vercel showcase (yeh skip kar do)** — https://vercel.com — Google account se login — Business listing + website
+- **Cloudflare community** — https://community.cloudflare.com — email se naya account — Business listing + website
+- **Webflow forum (yeh skip kar do)** — https://forum.webflow.com — email se naya account — Business listing + website
+- **Google My Business** — https://business.google.com — Google account se login — Business listing + website
+- **Bing Places** — https://www.bingplaces.com — Google account se login — Business listing + website
+- **Apple Maps (yeh skip kar do)** — https://mapsconnect.apple.com — Google account se login — Business listing + website
+- **Foursquare** — https://foursquare.com — Google account se login — Business listing + website
+- **Yelp** — https://www.yelp.com — email se naya account — Business listing + website
+- **Hotfrog** — https://www.hotfrog.com — email se naya account — Business listing + website
+- **Manta** — https://www.manta.com — email se naya account — Business listing + website
+- **Brownbook** — https://www.brownbook.net — email se naya account — Business listing + website
+- **Cybo** — https://www.cybo.com — email se naya account — Business listing + website
+- **Tupalo** — https://tupalo.com — email se naya account — Business listing + website
+- **Cylex** — https://www.cylex.us.com — email se naya account — Business listing + website
+- **MagicPin (yeh skip kar do)** — https://magicpin.in — email se naya account — Business listing + website
+- **JustDial (yeh skip kar do)** — https://www.justdial.com — email se naya account — Business listing + website
+- **Sulekha (yeh skip kar do)** — https://www.sulekha.com — email se naya account — Business listing + website
+- **ClearTax (yeh skip kar do)** — https://www.clear.tax — login ki zaroorat nahi — Business listing + website
+- **Yellow Pages** — https://www.yellowpages.com — email se naya account — Business listing + website
+- **TrueLocal (yeh skip kar do)** — https://www.truelocal.com.au — email se naya account — Business listing + website
+- **StartUs** — https://www.startus.cc — email se naya account — Business listing + website
+- **Crunchbase profile 2 (duplicate hai, skip kar do)** — https://www.crunchbase.com — Google account se login — Business listing + website
+- **Angel List (dhyan rakho: cf block)** — https://angel.co — Google account se login — Business listing + website
+- **Clutch** — https://clutch.co — email se naya account — Business listing + website
+- **GoodFirms** — https://www.goodfirms.co — email se naya account — Business listing + website
+- **DesignRush (sirf agency ke liye)** — https://www.designrush.com — email se naya account — Business listing + website
+- **Extract (yeh skip kar do)** — https://extractors — login ki zaroorat nahi — Business listing + website
+- **Bizapedia (yeh skip kar do)** — https://www.bizapedia.com — login ki zaroorat nahi — Business listing + website
+- **ChamberofCommerce** — https://www.chamberofcommerce.com — email se naya account — Business listing + website
+- **Tresdias (yeh skip kar do)** — https://tresdias.org — login ki zaroorat nahi — Business listing + website
+- **EnrollBusiness** — https://www.enrollbusiness.com — email se naya account — Business listing + website
+- **CitySquares** — https://www.citysquares.com — email se naya account — Business listing + website
+- **YellowPagesCy (yeh skip kar do)** — https://www.yellowpagescy.com — email se naya account — Business listing + website
+- **Fyple** — https://www.fyple.com — email se naya account — Business listing + website
+- **Salespider** — https://www.salespider.com — email se naya account — Business listing + website
+- **Iglobal (yeh skip kar do)** — https://www.iglobal.co — email se naya account — Business listing + website
+- **Storeboard 2 (duplicate hai, skip kar do)** — https://www.storeboard.com — email se naya account — Business listing + website
+- **ProvenExpert** — https://www.provenexpert.com — email se naya account — Business listing + website
+- **Zaubacorp (yeh skip kar do)** — https://www.zauba.com — login ki zaroorat nahi — Business listing + website
+- **Opendi** — https://www.opendi.us — email se naya account — Business listing + website
+- **Misterwhat** — https://www.misterwhat.com — email se naya account — Business listing + website
+- **Finding嘴角 (yeh skip kar do)** — https://finding嘴角.com — login ki zaroorat nahi — Business listing + website
+- **192 directory** — https://www.192.com — paid hai, free nahi — Business listing + website
+- **The Trades Directory (yeh skip kar do)** — https://www.thetradefinder.co.uk — email se naya account — Business listing + website
+
+## Roz ka plan — 33 links har din
+
+- **Pehla hafta** — BOOKMARK ki 60 sites aur DIRECTORY ki 60 sites start karo, saath me roz 2-3 blog comments.
+- **Dusra hafta** — WEB2.0 ki 60 sites aur PROFILE ki 50 sites, aur Awesome-list ke PRs shuru kar do.
+- **Teesra hafta** — STARTUP-DIR ki 70 sites, PDF-DOC ki 30 sites, PRESS ki 25 sites aur FORUM ke genuine jawab.
+- **Chautha hafta** — IMAGE ki 20 sites, LOCAL-MISC ki 45 sites, COMMENTS ki 60 sites, aur jo reh gaya wo poora karo.
+
+Har complete link ki ek row yahan daalo: docs/1000-campaign-progress.csv

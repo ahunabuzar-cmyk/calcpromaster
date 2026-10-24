@@ -45,12 +45,61 @@ function fromGit(commit) {
 fromGit('3be1923'); // batch #2 (skip 100, 21 URLs)
 fromGit('887a883'); // batch #1 (skip 0, 9 URLs) — unshift puts it first
 
-// ---- merge, dedupe by URL (later batches override) ----
-const byUrl = new Map();
+// ---- also merge the live URL-Inspection store ----
+// scripts/gsc-inspect-all.cjs re-inspects the whole live sitemap and merges into
+// data/gsc-inspect-batch.json. That file used to be ignored here, so this report
+// kept describing the frozen batch-skip* snapshot no matter how often the queue
+// was re-inspected. It is now the LAST and highest-priority source, ordered by
+// fetchedAt so a fresh result always beats an older row for the same URL.
+const INSPECT_STORE = path.join(DATA, 'gsc-inspect-batch.json');
+const allRows = [];
 for (const b of batches) {
   for (const r of (b.results || [])) {
-    if (r && r.url) byUrl.set(r.url, { url: r.url, verdict: r.verdict, coverage: r.coverage, batch: b.name });
+    allRows.push(Object.assign({}, r, { _batch: b.name, _t: Date.parse(r.fetchedAt || 0) || 0 }));
   }
+}
+let inspectRows = 0;
+if (fs.existsSync(INSPECT_STORE)) {
+  try {
+    const j = JSON.parse(fs.readFileSync(INSPECT_STORE, 'utf8'));
+    for (const r of (j.results || [])) {
+      allRows.push(Object.assign({}, r, { _batch: 'inspect-all', _t: Date.parse(r.fetchedAt || 0) || 0 }));
+      inspectRows++;
+    }
+  } catch (e) { console.warn('  ! gsc-inspect-batch.json unreadable: ' + e.message); }
+}
+
+// The inspection API keys the property on the apex domain; older rows were
+// recorded against the netlify.app host, and the two must dedupe as one URL.
+function normUrl(u) {
+  const s = String(u || '').replace('://calcpromaster.netlify.app', '://calcpromaster.com').replace(/\/+$/, '');
+  return s ? s + '/' : '';
+}
+
+// Rows carry either the raw GSC coverageState or a coarse bucket ('indexed',
+// 'unknown', ...). Map the bucket form back onto the phrases catOf() matches.
+const BUCKET_PHRASE = {
+  indexed: 'Submitted and indexed',
+  unknown: 'URL is unknown to Google',
+  discovered: 'Discovered - currently not indexed',
+  crawled: 'Crawled - currently not indexed',
+  error: 'API_ERROR',
+};
+function coveragePhrase(r) {
+  if (r.coverageState) return r.coverageState;
+  const c = String(r.coverage || '');
+  return BUCKET_PHRASE[c.toLowerCase()] || c;
+}
+
+// ---- merge, dedupe by URL (newest fetchedAt wins) ----
+allRows.sort((a, b) => a._t - b._t);
+const byUrl = new Map();
+for (const r of allRows) {
+  const url = normUrl(r.url || r.inspectedUrl);
+  if (!url || url === '/') continue;
+  const coverage = coveragePhrase(r);
+  if (!coverage) continue;
+  byUrl.set(url, { url, verdict: r.verdict, coverage, batch: r._batch, fetchedAt: r.fetchedAt || null });
 }
 
 // ---- categorize ----
@@ -86,7 +135,9 @@ for (const r of byUrl.values()) {
 const report = {
   ranAt: new Date().toISOString(),
   site: SITE,
-  batches: batches.map(b => ({ name: b.name, count: b.count, ranAt: b.ranAt })),
+  batches: batches.map(b => ({ name: b.name, count: b.count, ranAt: b.ranAt })).concat(
+    inspectRows ? [{ name: 'inspect-all', count: inspectRows, ranAt: new Date().toISOString() }] : []
+  ),
   uniqueUrls: byUrl.size,
   tally,
   lists: Object.fromEntries(Object.entries(lists).map(([k, v]) => [k, v.map(r => ({ url: r.url.replace(SITE, '') || '/', coverage: r.coverage, batch: r.batch }))])),
@@ -95,7 +146,7 @@ const out = path.join(DATA, 'gsc-coverage-report.json');
 fs.writeFileSync(out, JSON.stringify(report, null, 2));
 
 // ---- console summary ----
-console.log('=== GSC Coverage — aggregated ' + batches.length + ' batches, ' + byUrl.size + ' unique URLs ===\n');
+console.log('=== GSC Coverage — aggregated ' + batches.length + ' batches + ' + inspectRows + ' inspections, ' + byUrl.size + ' unique URLs ===\n');
 for (const [k, v] of Object.entries(tally).sort((a, b) => b[1] - a[1])) {
   console.log('  ' + String(v).padStart(4) + '  ' + k);
 }

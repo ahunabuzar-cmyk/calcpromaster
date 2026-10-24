@@ -151,6 +151,207 @@ const BUSINESS_TOOLS = [
   { id: 'project-bid', name: 'Project Bid Calculator', desc: 'Bid price from cost, contingency, and margin', kw: 'project bid calculator price margin contingency contractor estimate, free online Project Bid Calculator', inputs: [{id:'cost',label:'Direct Cost ($)',type:'number',def:50000},{id:'cont',label:'Contingency (%)',type:'number',def:10},{id:'margin',label:'Profit Margin (%)',type:'number',def:20}], calc: function(v){ if(v.cost<=0) return{result:'Cost must be positive',chart:'',extra:''}; var withCont=v.cost*(1+v.cont/100); var bid=withCont/(1-v.margin/100); return{result:'Bid: $'+bid.toFixed(0),chart:Charts.bar([v.cost,withCont-v.cost,bid-withCont],['Cost','Contingency','Margin']),extra:'Margin on price, not cost: dividing by (1 − margin) is correct — multiplying cost by 1.2 underprices every job'};}, steps: function(v){ var withCont=v.cost*(1+v.cont/100); var bid=withCont/(1-v.margin/100); return['Step 1: Cost + contingency = $'+v.cost.toLocaleString()+' × '+(1+v.cont/100)+' = $'+withCont.toLocaleString(),'Step 2: Bid = $'+withCont.toLocaleString()+' ÷ (1 − '+(v.margin/100)+') = $'+bid.toLocaleString(),'The division matters: a 20% margin on price equals a 25% markup on cost'];} },
 
   { id: 'retainer-value', name: 'Retainer Value Calculator', desc: 'Contract value with a term discount applied', kw: 'retainer value calculator monthly contract discount annual', inputs: [{id:'monthly',label:'Monthly Fee ($)',type:'number',def:5000},{id:'months',label:'Term (months)',type:'number',def:12},{id:'disc',label:'Prepay Discount (%)',type:'number',def:10}], calc: function(v){ if(v.monthly<=0||v.months<=0) return{result:'Enter positive values',chart:'',extra:''}; var gross=v.monthly*v.months; var net=gross*(1-v.disc/100); return{result:'Contract Value: $'+net.toFixed(0),chart:Charts.bar([gross,gross-net],['List','Discount']),extra:'Effective monthly: $'+(net/v.months).toFixed(0)+' | The discount buys cash flow and commitment — cap it below your financing cost plus churn risk'};}, steps: function(v){ var gross=v.monthly*v.months; var net=gross*(1-v.disc/100); return['Step 1: List value = $'+v.monthly+' × '+v.months+' = $'+gross.toLocaleString(),'Step 2: Apply '+v.disc+'% prepay discount → $'+net.toLocaleString(),'Discounts should be traded, not given: tie them to longer terms or upfront payment'];} }
+,
+  {
+    id: 'sponsorship-rate',
+    name: 'Influencer Sponsorship Rate Calculator',
+    desc: 'Free influencer sponsorship rate calculator: an estimated paid-post price from follower count, engagement rate and platform CPM.',
+    kw: 'influencer rate calculator, sponsorship rate calculator, how much to charge sponsored post, creator pricing calculator',
+    inputs: [
+{ id: 'followers', label: 'Followers', type: 'number', def: 50000 },
+      { id: 'engagement', label: 'Engagement rate (percent)', type: 'number', def: 3 },
+      { id: 'platform', label: 'Platform', type: 'select', opts: [{v:'Instagram',l:'Instagram'},{v:'TikTok',l:'TikTok'},{v:'YouTube',l:'YouTube'}], def: 'Instagram' },
+      { id: 'cpm', label: 'Rate per 1000 followers', type: 'number', def: 25 }
+    ],
+    calc: function (v) {
+      var base = v.followers / 1000 * v.cpm;
+      var adj = v.engagement / 3;
+      var est = base * adj;
+      return {
+        result: 'Estimated rate per post: ' + est.toFixed(0),
+        chart: Charts.bar([est * 0.7, est, est * 1.5], ['Low', 'Mid', 'High']),
+        extra: 'Range ' + (est * 0.7).toFixed(0) + ' to ' + (est * 1.5).toFixed(0) + ' | Base ' + base.toFixed(0) + ' x engagement factor ' + adj.toFixed(2) + ' | ' + v.platform + ' rates vary with niche and usage rights'
+      };
+    },
+    steps: function (v) {
+      var base = v.followers / 1000 * v.cpm;
+      var adj = v.engagement / 3;
+      var est = base * adj;
+      return [
+        'Step 1: Base value = followers / 1000 x rate per 1000 = ' + v.followers + ' / 1000 x ' + v.cpm + ' = ' + base.toFixed(0) + '.',
+        'Step 2: Adjust for engagement. A 3 percent rate is the baseline, so the factor is ' + v.engagement + ' / 3 = ' + adj.toFixed(2) + '.',
+        'Step 3: Estimated rate = ' + base.toFixed(0) + ' x ' + adj.toFixed(2) + ' = ' + est.toFixed(0) + ' per post.',
+        'Step 4: Quote a range of ' + (est * 0.7).toFixed(0) + ' to ' + (est * 1.5).toFixed(0) + ' to leave room for negotiation.',
+        'Step 5: Add a premium for exclusive usage, whitelisting, or a multi-post package, and never trade free product for a rate this calculation says you are worth.'
+      ];
+    }
+  },
+  {
+    id: 'brand-deal-value',
+    name: 'Brand Deal Value Calculator',
+    desc: 'Free brand deal value calculator: estimate a multi-post sponsorship package price from followers, engagement and number of deliverables.',
+    kw: 'brand deal calculator, sponsored package price, influencer campaign cost, creator deal calculator',
+    inputs: [
+{ id: 'followers', label: 'Followers', type: 'number', def: 50000 },
+      { id: 'engagement', label: 'Engagement rate (percent)', type: 'number', def: 3 },
+      { id: 'posts', label: 'Deliverables (posts)', type: 'number', def: 3 },
+      { id: 'cpm', label: 'Rate per 1000 followers', type: 'number', def: 25 }
+    ],
+    calc: function (v) {
+      var per = v.followers / 1000 * v.cpm * (v.engagement / 3);
+      var total = per * v.posts;
+      var bundle = total * 0.9;
+      return {
+        result: 'Estimated deal value: ' + total.toFixed(0),
+        chart: Charts.bar([per, total, bundle], ['Per post', 'Total', 'Bundle (10% off)']),
+        extra: 'Per post ' + per.toFixed(0) + ' x ' + v.posts + ' deliverables = ' + total.toFixed(0) + ' | Typical multi-post bundle discount lands near ' + bundle.toFixed(0)
+      };
+    },
+    steps: function (v) {
+      var per = v.followers / 1000 * v.cpm * (v.engagement / 3);
+      var total = per * v.posts;
+      return [
+        'Step 1: Value per post = followers / 1000 x rate x engagement factor = ' + per.toFixed(0) + '.',
+        'Step 2: Multiply by the number of deliverables: ' + per.toFixed(0) + ' x ' + v.posts + ' = ' + total.toFixed(0) + '.',
+        'Step 3: A multi-post bundle is usually pitched 10 to 20 percent below the straight sum, so a fair bundle is about ' + (total * 0.9).toFixed(0) + '.',
+        'Step 4: Price usage rights and exclusivity separately — they are not free.',
+        'Step 5: Ask for a deposit and clear deliverables before you commit to a launch date.'
+      ];
+    }
+  },
+  {
+    id: 'podcast-ad-rate',
+    name: 'Podcast Ad Rate Calculator',
+    desc: 'Free podcast advertising rate calculator: estimated ad price per episode from downloads, CPM and number of ad spots.',
+    kw: 'podcast ad rate calculator, podcast sponsorship cost, cpm podcast calculator, how much do podcasts charge',
+    inputs: [
+{ id: 'downloads', label: 'Downloads per episode', type: 'number', def: 5000 },
+      { id: 'cpm', label: 'CPM', type: 'number', def: 18 },
+      { id: 'spots', label: 'Ad spots per episode', type: 'number', def: 2 }
+    ],
+    calc: function (v) {
+      var perSpot = v.downloads / 1000 * v.cpm;
+      var total = perSpot * v.spots;
+      return {
+        result: 'Ad rate: ' + total.toFixed(0) + ' per episode',
+        chart: Charts.donut([total, perSpot], ['Per episode', 'Per spot']),
+        extra: perSpot.toFixed(0) + ' per spot x ' + v.spots + ' spots | CPM ' + v.cpm + ' | Host-read ads command a higher CPM than programmatic'
+      };
+    },
+    steps: function (v) {
+      var perSpot = v.downloads / 1000 * v.cpm;
+      var total = perSpot * v.spots;
+      return [
+        'Step 1: Rate per spot = downloads / 1000 x CPM = ' + v.downloads + ' / 1000 x ' + v.cpm + ' = ' + perSpot.toFixed(0) + '.',
+        'Step 2: Podcast CPMs commonly run from about 15 for programmatic to 30 or more for a host-read endorsement.',
+        'Step 3: Multiply by the number of spots: ' + perSpot.toFixed(0) + ' x ' + v.spots + ' = ' + total.toFixed(0) + ' per episode.',
+        'Step 4: For a multi-episode campaign, price a package rather than a single episode and offer a mid-roll premium.',
+        'Step 5: Downloads for older episodes keep earning, so a back-catalogue bundle can be the most valuable thing you sell.'
+      ];
+    }
+  },
+  {
+    id: 'newsletter-sponsorship-rate',
+    name: 'Newsletter Sponsorship Rate Calculator',
+    desc: 'Free newsletter sponsorship rate calculator: suggested per-issue price from subscriber count, open rate and newsletter CPM.',
+    kw: 'newsletter sponsorship rate, newsletter ad pricing, cpm newsletter calculator, how much to charge newsletter ad',
+    inputs: [
+{ id: 'subs', label: 'Subscribers', type: 'number', def: 10000 },
+      { id: 'openRate', label: 'Open rate (percent)', type: 'number', def: 35 },
+      { id: 'cpm', label: 'CPM (per 1000 opens)', type: 'number', def: 30 }
+    ],
+    calc: function (v) {
+      var opens = v.subs * v.openRate / 100;
+      var rate = opens / 1000 * v.cpm;
+      return {
+        result: 'Suggested rate: ' + rate.toFixed(0) + ' per issue',
+        chart: Charts.donut([rate, opens], ['Rate', 'Opens']),
+        extra: 'Estimated opens ' + opens.toFixed(0) + ' x ' + (v.cpm / 1000).toFixed(3) + ' per open = ' + rate.toFixed(0) + ' | Priced like a primary placement; a classified slot can go for a third of that'
+      };
+    },
+    steps: function (v) {
+      var opens = v.subs * v.openRate / 100;
+      var rate = opens / 1000 * v.cpm;
+      return [
+        'Step 1: Estimate real opens = subscribers x open rate = ' + v.subs + ' x ' + v.openRate + ' percent = ' + opens.toFixed(0) + '.',
+        'Step 2: Newsletter CPMs are quoted per 1000 opens and typically run from 20 to 50 or more for a niche audience.',
+        'Step 3: Suggested rate = ' + opens.toFixed(0) + ' / 1000 x ' + v.cpm + ' = ' + rate.toFixed(0) + ' per issue.',
+        'Step 4: A primary placement earns the full rate; a classified or secondary slot is usually a third to a half.',
+        'Step 5: Sell a four-issue run for a discount rather than one-offs, and always disclose sponsored content clearly.'
+      ];
+    }
+  }
+,
+  {
+    id: 'tool-depreciation',
+    name: 'Tool and Equipment Depreciation Calculator',
+    desc: 'Work out annual tool depreciation for taxes using straight line or declining balance methods.',
+    kw: 'tool depreciation calculator, equipment depreciation, small business tool tax deduction, straight line depreciation',
+    inputs: [
+{ id: 'toolCost', label: 'Tool cost', type: 'number', def: 2000 },
+      { id: 'salvageValue', label: 'Salvage value', type: 'number', def: 200 },
+      { id: 'usefulLifeYears', label: 'Useful life (years)', type: 'number', def: 5 },
+      { id: 'method', label: 'Method', type: 'select', opts: [{v:'Straight line',l:'Straight line'},{v:'Declining balance',l:'Declining balance'}], def: 'Straight line' }
+    ],
+    calc: function (v) {
+      var annual = v.method === 'Declining balance'
+        ? v.toolCost * 2 / v.usefulLifeYears
+        : (v.toolCost - v.salvageValue) / v.usefulLifeYears;
+      return {
+        result: 'Annual depreciation: ' + annual.toFixed(0),
+        chart: Charts.bar([annual, annual * v.usefulLifeYears], ['Per year', 'Over life']),
+        extra: v.method + ' over ' + v.usefulLifeYears + ' years | Depreciable base ' + (v.toolCost - v.salvageValue).toFixed(0) + ' | Confirm the correct method and life with your tax adviser'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Separate the cost from the salvage value, the amount the tool is still worth at the end.',
+        'Step 2: For straight line, divide the cost minus salvage by the useful life for an even annual deduction.',
+        'Step 3: For declining balance, apply twice the straight-line rate to the remaining book value, so the deduction is larger early.',
+        'Step 4: Tools above a set threshold can sometimes be expensed in full in the first year instead of depreciated.',
+        'Step 5: Tax rules differ by country, so confirm the allowable method, life and threshold with a qualified accountant.'
+      ];
+    }
+  },
+  {
+    id: 'ev-charger-business-roi',
+    name: 'Business EV Charger ROI Calculator',
+    desc: 'Estimate payback on installing public EV chargers for a business from capital cost, sessions and pricing.',
+    kw: 'ev charger business roi, commercial ev charger payback, public charging station profit, ev charging business case',
+    inputs: [
+{ id: 'chargers', label: 'Number of chargers', type: 'number', def: 4 },
+      { id: 'costPerCharger', label: 'Cost per charger', type: 'number', def: 5000 },
+      { id: 'installTotal', label: 'Installation and setup total', type: 'number', def: 20000 },
+      { id: 'sessionsPerDay', label: 'Sessions per charger per day', type: 'number', def: 6 },
+      { id: 'kwhPerSession', label: 'kWh per session', type: 'number', def: 30 },
+      { id: 'pricePerKwh', label: 'Price charged per kWh', type: 'number', def: 0.5 },
+      { id: 'costPerKwh', label: 'Energy cost per kWh', type: 'number', def: 0.2 },
+      { id: 'daysPerYear', label: 'Operating days per year', type: 'number', def: 350 }
+    ],
+    calc: function (v) {
+      var sessions = v.chargers * v.sessionsPerDay * v.daysPerYear;
+      var kwh = sessions * v.kwhPerSession;
+      var revenue = kwh * v.pricePerKwh;
+      var energy = kwh * v.costPerKwh;
+      var gross = revenue - energy;
+      var capex = v.chargers * v.costPerCharger + v.installTotal;
+      var payback = gross > 0 ? capex / gross : 0;
+      return {
+        result: 'Payback: ' + payback.toFixed(1) + ' years',
+        chart: Charts.bar([revenue, energy, gross], ['Revenue', 'Energy cost', 'Gross profit']),
+        extra: 'Annual gross profit ' + gross.toFixed(0) + ' | Capital ' + capex.toFixed(0) + ' | Sessions a year ' + (sessions * 1).toFixed(0) + ' | Excludes maintenance and demand charges'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Annual sessions equals chargers times sessions per day times operating days.',
+        'Step 2: Multiply sessions by kWh per session for annual energy delivered.',
+        'Step 3: Revenue is energy delivered times the price per kWh; energy cost is the same times your cost per kWh.',
+        'Step 4: Gross profit is revenue minus energy cost, before maintenance, network fees and demand charges.',
+        'Step 5: Payback equals total capital divided by annual gross profit. Utilization is the key risk: quiet sites never pay back.'
+      ];
+    }
+  }
 ];
 if (typeof module !== 'undefined') module.exports = BUSINESS_TOOLS;
 if (typeof window !== 'undefined') window.BUSINESS_TOOLS = BUSINESS_TOOLS;

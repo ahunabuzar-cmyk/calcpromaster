@@ -1,0 +1,3877 @@
+{
+ "ranAt": "2026-10-18T08:42:56.180Z",
+ "sources": [
+  "backlinks-calculatorio.csv",
+  "backlinks-rapidtables.csv",
+  "keywords-currency.csv",
+  "keywords-head.csv",
+  "keywords-modifiers.csv",
+  "refdomains-calculatorio.csv",
+  "refdomains-omnicalculator.csv",
+  "refdomains-rapidtables.csv"
+ ],
+ "sitemapUrls": 1420,
+ "keywords": [
+  {
+   "file": "keywords-head.csv",
+   "note": "seeded on the bare word \"calculator\"",
+   "rows": 502,
+   "zeroVolumeRows": 32,
+   "byClass": {
+    "serve": 291,
+    "app": 41,
+    "brand": 9,
+    "device": 74,
+    "serial": 66,
+    "code": 21
+   },
+   "volumeMax": 55600000,
+   "cpcMax": 7.685,
+   "serveClusters": 270,
+   "genericDropped": 177,
+   "clusters": [
+    {
+     "cluster": "age",
+     "phrases": [
+      "calculator age",
+      "calculator my age",
+      "calculator age online",
+      "calculator the age",
+      "calculator your age"
+     ],
+     "volume": 11100000,
+     "cpc": 0.405,
+     "sd": null
+    },
+    {
+     "cluster": "bmi",
+     "phrases": [
+      "calculator bmi"
+     ],
+     "volume": 7480000,
+     "cpc": 0.365,
+     "sd": null
+    },
+    {
+     "cluster": "emi",
+     "phrases": [
+      "calculator emi"
+     ],
+     "volume": 2740000,
+     "cpc": 0.085,
+     "sd": null
+    },
+    {
+     "cluster": "sip",
+     "phrases": [
+      "calculator sip"
+     ],
+     "volume": 2740000,
+     "cpc": 0.155,
+     "sd": null
+    },
+    {
+     "cluster": "compound interest",
+     "phrases": [
+      "calculator compound interest"
+     ],
+     "volume": 1830000,
+     "cpc": 0.97,
+     "sd": null
+    },
+    {
+     "cluster": "date",
+     "phrases": [
+      "calculator date"
+     ],
+     "volume": 1830000,
+     "cpc": 0.38,
+     "sd": null
+    },
+    {
+     "cluster": "pregnancy",
+     "phrases": [
+      "calculator pregnancy"
+     ],
+     "volume": 1000000,
+     "cpc": 0.73,
+     "sd": null
+    },
+    {
+     "cluster": "day",
+     "phrases": [
+      "calculator days"
+     ],
+     "volume": 823000,
+     "cpc": 0.02,
+     "sd": null
+    },
+    {
+     "cluster": "emi home loan",
+     "phrases": [
+      "calculator emi home loan"
+     ],
+     "volume": 673000,
+     "cpc": 0.065,
+     "sd": null
+    },
+    {
+     "cluster": "home loan",
+     "phrases": [
+      "calculator for home loan"
+     ],
+     "volume": 673000,
+     "cpc": 1.05,
+     "sd": null
+    },
+    {
+     "cluster": "gst",
+     "phrases": [
+      "calculator gst",
+      "calculator gst rate"
+     ],
+     "volume": 550000,
+     "cpc": 1.155,
+     "sd": null
+    },
+    {
+     "cluster": "bmi female",
+     "phrases": [
+      "calculator bmi female"
+     ],
+     "volume": 550000,
+     "cpc": 0.32,
+     "sd": null
+    },
+    {
+     "cluster": "fd",
+     "phrases": [
+      "calculator fd"
+     ],
+     "volume": 550000,
+     "cpc": 0.435,
+     "sd": null
+    },
+    {
+     "cluster": "birth date",
+     "phrases": [
+      "calculator birth date"
+     ],
+     "volume": 450000,
+     "cpc": 0.075,
+     "sd": null
+    },
+    {
+     "cluster": "loan personal",
+     "phrases": [
+      "calculator personal loan"
+     ],
+     "volume": 368000,
+     "cpc": 3.085,
+     "sd": null
+    },
+    {
+     "cluster": "car emi",
+     "phrases": [
+      "calculator emi car"
+     ],
+     "volume": 301000,
+     "cpc": 0.01,
+     "sd": null
+    },
+    {
+     "cluster": "emi loan personal",
+     "phrases": [
+      "calculator emi personal loan"
+     ],
+     "volume": 301000,
+     "cpc": 0.205,
+     "sd": null
+    },
+    {
+     "cluster": "emi loan",
+     "phrases": [
+      "calculator emi loan"
+     ],
+     "volume": 301000,
+     "cpc": 0.12,
+     "sd": null
+    },
+    {
+     "cluster": "duration time",
+     "phrases": [
+      "calculator time duration"
+     ],
+     "volume": 301000,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "rd",
+     "phrases": [
+      "calculator rd"
+     ],
+     "volume": 246000,
+     "cpc": 0.64,
+     "sd": null
+    },
+    {
+     "cluster": "average",
+     "phrases": [
+      "calculator average"
+     ],
+     "volume": 201000,
+     "cpc": 0.805,
+     "sd": null
+    },
+    {
+     "cluster": "birthday",
+     "phrases": [
+      "calculator birthday"
+     ],
+     "volume": 201000,
+     "cpc": 0.215,
+     "sd": null
+    },
+    {
+     "cluster": "birth year",
+     "phrases": [
+      "calculator year of birth"
+     ],
+     "volume": 201000,
+     "cpc": 0.01,
+     "sd": null
+    },
+    {
+     "cluster": "401k",
+     "phrases": [
+      "calculator 401k"
+     ],
+     "volume": 165000,
+     "cpc": 1.12,
+     "sd": null
+    },
+    {
+     "cluster": "feet meter",
+     "phrases": [
+      "calculator meter to feet"
+     ],
+     "volume": 165000,
+     "cpc": 0.05,
+     "sd": null
+    },
+    {
+     "cluster": "discount",
+     "phrases": [
+      "calculator discount"
+     ],
+     "volume": 110000,
+     "cpc": 7.685,
+     "sd": null
+    },
+    {
+     "cluster": "gratuity",
+     "phrases": [
+      "calculator gratuity"
+     ],
+     "volume": 110000,
+     "cpc": 0.01,
+     "sd": null
+    },
+    {
+     "cluster": "interest",
+     "phrases": [
+      "calculator rate of interest",
+      "calculator interest rate"
+     ],
+     "volume": 110000,
+     "cpc": 1.965,
+     "sd": null
+    },
+    {
+     "cluster": "year",
+     "phrases": [
+      "calculator year"
+     ],
+     "volume": 110000,
+     "cpc": 0.01,
+     "sd": null
+    },
+    {
+     "cluster": "interest loan",
+     "phrases": [
+      "calculator loan interest"
+     ],
+     "volume": 90500,
+     "cpc": 1.99,
+     "sd": null
+    },
+    {
+     "cluster": "weight",
+     "phrases": [
+      "calculator weight"
+     ],
+     "volume": 90500,
+     "cpc": 0.985,
+     "sd": null
+    },
+    {
+     "cluster": "cgpa percent",
+     "phrases": [
+      "calculator cgpa to percentage"
+     ],
+     "volume": 60500,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "month",
+     "phrases": [
+      "calculator month"
+     ],
+     "volume": 60500,
+     "cpc": 0.095,
+     "sd": null
+    },
+    {
+     "cluster": "equation quadratic",
+     "phrases": [
+      "calculator quadratic equation"
+     ],
+     "volume": 60500,
+     "cpc": 0.98,
+     "sd": null
+    },
+    {
+     "cluster": "age birthday",
+     "phrases": [
+      "calculator birthday age"
+     ],
+     "volume": 49500,
+     "cpc": 0.01,
+     "sd": null
+    },
+    {
+     "cluster": "roi",
+     "phrases": [
+      "calculator roi"
+     ],
+     "volume": 49500,
+     "cpc": 1.925,
+     "sd": null
+    },
+    {
+     "cluster": "log",
+     "phrases": [
+      "calculator log"
+     ],
+     "volume": 40500,
+     "cpc": 0.805,
+     "sd": null
+    },
+    {
+     "cluster": "dollar inr",
+     "phrases": [
+      "calculator usd to inr",
+      "calculator dollar to inr"
+     ],
+     "volume": 40500,
+     "cpc": 0.265,
+     "sd": null
+    },
+    {
+     "cluster": "hour minute",
+     "phrases": [
+      "calculator hours and minutes"
+     ],
+     "volume": 33100,
+     "cpc": 1.815,
+     "sd": null
+    },
+    {
+     "cluster": "fd interest",
+     "phrases": [
+      "calculator fd interest"
+     ],
+     "volume": 27100,
+     "cpc": 0.275,
+     "sd": null
+    },
+    {
+     "cluster": "hour time",
+     "phrases": [
+      "calculator time hours"
+     ],
+     "volume": 22200,
+     "cpc": 2.06,
+     "sd": null
+    },
+    {
+     "cluster": "loan vehicle",
+     "phrases": [
+      "calculator vehicle loan"
+     ],
+     "volume": 22200,
+     "cpc": 1.04,
+     "sd": null
+    },
+    {
+     "cluster": "calorie",
+     "phrases": [
+      "calculator calories"
+     ],
+     "volume": 14800,
+     "cpc": 0.375,
+     "sd": null
+    },
+    {
+     "cluster": "percent",
+     "phrases": [
+      "calculator percentage"
+     ],
+     "volume": 14800,
+     "cpc": 1.005,
+     "sd": null
+    },
+    {
+     "cluster": "interest rd",
+     "phrases": [
+      "calculator rd interest"
+     ],
+     "volume": 12100,
+     "cpc": 0.545,
+     "sd": null
+    },
+    {
+     "cluster": "401k withdrawal",
+     "phrases": [
+      "calculator 401k withdrawal"
+     ],
+     "volume": 9900,
+     "cpc": 2.1,
+     "sd": null
+    },
+    {
+     "cluster": "quadratic",
+     "phrases": [
+      "calculator quadratic"
+     ],
+     "volume": 9900,
+     "cpc": 0.665,
+     "sd": null
+    },
+    {
+     "cluster": "root",
+     "phrases": [
+      "calculator root"
+     ],
+     "volume": 8100,
+     "cpc": 0.28,
+     "sd": null
+    },
+    {
+     "cluster": "401k growth",
+     "phrases": [
+      "calculator 401k growth"
+     ],
+     "volume": 6600,
+     "cpc": 1.085,
+     "sd": null
+    },
+    {
+     "cluster": "between date day two",
+     "phrases": [
+      "calculator days between two dates"
+     ],
+     "volume": 6600,
+     "cpc": 0.02,
+     "sd": null
+    },
+    {
+     "cluster": "xor",
+     "phrases": [
+      "calculator xor"
+     ],
+     "volume": 5400,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "loan",
+     "phrases": [
+      "calculator loan"
+     ],
+     "volume": 3600,
+     "cpc": 1.2,
+     "sd": null
+    },
+    {
+     "cluster": "interest yearly",
+     "phrases": [
+      "calculator yearly interest"
+     ],
+     "volume": 3600,
+     "cpc": 1.16,
+     "sd": null
+    },
+    {
+     "cluster": "kalkulator zakat",
+     "phrases": [
+      "kalkulator zakat"
+     ],
+     "volume": 2900,
+     "cpc": 0.185,
+     "sd": null
+    },
+    {
+     "cluster": "currency",
+     "phrases": [
+      "calculator currency"
+     ],
+     "volume": 1900,
+     "cpc": 0.42,
+     "sd": null
+    },
+    {
+     "cluster": "24 clock hour",
+     "phrases": [
+      "calculator 24 hour clock"
+     ],
+     "volume": 1900,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "kaise mein nikale percent",
+     "phrases": [
+      "calculator mein percentage kaise nikale"
+     ],
+     "volume": 1300,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "volume",
+     "phrases": [
+      "calculator volume"
+     ],
+     "volume": 1000,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "income tax",
+     "phrases": [
+      "calculator income tax"
+     ],
+     "volume": 720,
+     "cpc": 2.22,
+     "sd": null
+    },
+    {
+     "cluster": "difference time",
+     "phrases": [
+      "calculator time difference"
+     ],
+     "volume": 390,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "month year",
+     "phrases": [
+      "calculator year and month"
+     ],
+     "volume": 390,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "return sip",
+     "phrases": [
+      "calculator sip return"
+     ],
+     "volume": 320,
+     "cpc": 0.16,
+     "sd": null
+    },
+    {
+     "cluster": "birthday date",
+     "phrases": [
+      "calculator birthday date"
+     ],
+     "volume": 260,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "lumpsum",
+     "phrases": [
+      "calculator lumpsum"
+     ],
+     "volume": 260,
+     "cpc": 0.165,
+     "sd": null
+    },
+    {
+     "cluster": "samriddhi sukanya yojana",
+     "phrases": [
+      "calculator of sukanya samriddhi yojana"
+     ],
+     "volume": 260,
+     "cpc": 0.215,
+     "sd": null
+    },
+    {
+     "cluster": "day month year",
+     "phrases": [
+      "calculator year month day"
+     ],
+     "volume": 170,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "bike emi",
+     "phrases": [
+      "calculator emi bike"
+     ],
+     "volume": 110,
+     "cpc": 0.015,
+     "sd": null
+    },
+    {
+     "cluster": "period time",
+     "phrases": [
+      "calculator time period"
+     ],
+     "volume": 110,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "interest reducing",
+     "phrases": [
+      "calculator reducing interest rate"
+     ],
+     "volume": 90,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "experience year",
+     "phrases": [
+      "calculator years of experience"
+     ],
+     "volume": 90,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "sign zodiac",
+     "phrases": [
+      "calculator zodiac sign"
+     ],
+     "volume": 90,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "janm tithi",
+     "phrases": [
+      "calculator janm tithi"
+     ],
+     "volume": 70,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "office post rd",
+     "phrases": [
+      "calculator rd post office"
+     ],
+     "volume": 70,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "date day",
+     "phrases": [
+      "calculator date to days"
+     ],
+     "volume": 70,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "72 hour",
+     "phrases": [
+      "calculator 72 hours"
+     ],
+     "volume": 50,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "90 day today",
+     "phrases": [
+      "calculator 90 days from today"
+     ],
+     "volume": 30,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "xirr",
+     "phrases": [
+      "calculator xirr",
+      "calculator xirr online"
+     ],
+     "volume": 30,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "day year",
+     "phrases": [
+      "calculator year and days calculator"
+     ],
+     "volume": 30,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "qr",
+     "phrases": [
+      "calculator qr"
+     ],
+     "volume": 30,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "30 off percent",
+     "phrases": [
+      "calculator 30 percent off"
+     ],
+     "volume": 20,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "5 percent",
+     "phrases": [
+      "calculator 5 percent"
+     ],
+     "volume": 20,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "60 date day",
+     "phrases": [
+      "calculator 60 days from date"
+     ],
+     "volume": 10,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "6 date month",
+     "phrases": [
+      "calculator 6 months from date"
+     ],
+     "volume": 10,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "48 hour",
+     "phrases": [
+      "calculator 48 hours"
+     ],
+     "volume": 0,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "60 day today",
+     "phrases": [
+      "calculator 60 days from today"
+     ],
+     "volume": 0,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "6th grade",
+     "phrases": [
+      "calculator 6th grade"
+     ],
+     "volume": 0,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "7th cpc matrix pay",
+     "phrases": [
+      "calculator 7th cpc pay matrix"
+     ],
+     "volume": 0,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "7th grade",
+     "phrases": [
+      "calculator 7th grade"
+     ],
+     "volume": 0,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "7 grade",
+     "phrases": [
+      "calculator 7 grade"
+     ],
+     "volume": 0,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "8th grade",
+     "phrases": [
+      "calculator 8th grade"
+     ],
+     "volume": 0,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "calendar month year",
+     "phrases": [
+      "calculator year and month calendar"
+     ],
+     "volume": 0,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "6 month today",
+     "phrases": [
+      "calculator 6 months from today"
+     ],
+     "volume": 0,
+     "cpc": 0,
+     "sd": null
+    },
+    {
+     "cluster": "date janm",
+     "phrases": [
+      "calculator janm date"
+     ],
+     "volume": 0,
+     "cpc": 0,
+     "sd": null
+    }
+   ]
+  },
+  {
+   "file": "keywords-modifiers.csv",
+   "note": "modifier sweep (\"calculator vs\", \"calculator or\")",
+   "rows": 54,
+   "zeroVolumeRows": 23,
+   "byClass": {
+    "serve": 13,
+    "device": 6,
+    "offintent": 25,
+    "serial": 1,
+    "brand": 6,
+    "app": 1,
+    "code": 2
+   },
+   "volumeMax": 55600000,
+   "cpcMax": 0.82,
+   "serveClusters": 12,
+   "genericDropped": 11,
+   "clusters": [
+    {
+     "cluster": "binary",
+     "phrases": [
+      "or calculator binary"
+     ],
+     "volume": 10,
+     "cpc": 0,
+     "sd": null
+    }
+   ]
+  },
+  {
+   "file": "keywords-currency.csv",
+   "note": "\"Suggested keywords\" for the currency converter",
+   "rows": 50,
+   "zeroVolumeRows": 0,
+   "byClass": {
+    "serve": 50
+   },
+   "volumeMax": 1500000,
+   "cpcMax": 403.3805159,
+   "serveClusters": 12,
+   "genericDropped": 6,
+   "clusters": [
+    {
+     "cluster": "dollar pkr",
+     "phrases": [
+      "dollar to rupee pak",
+      "usd to rupee pakistan",
+      "usd to pak rs",
+      "dollar to pakistani rupee",
+      "usd in pak rupees",
+      "us dollar to pakistan rs",
+      "us dollar to rupee pakistan",
+      "dollar to pk rupee",
+      "dollar rate in pakistan",
+      "us to pakistan rupee",
+      "dollar to pak rupee",
+      "dollar to pakistani rs"
+     ],
+     "volume": 1500000,
+     "cpc": 121.9844859,
+     "sd": 34
+    },
+    {
+     "cluster": "currency dollar pkr",
+     "phrases": [
+      "america currency rate in pakistan",
+      "dollar pakistan currency"
+     ],
+     "volume": 1500000,
+     "cpc": 121.9844859,
+     "sd": 34
+    },
+    {
+     "cluster": "pkr pound",
+     "phrases": [
+      "pound sterling to pakistan rupee",
+      "pound to pak rupee",
+      "pound sterling in pak rupees",
+      "british pounds to pakistan rupees",
+      "pound sterling pakistani rupee",
+      "gbp to pak",
+      "pound to rupees pakistani"
+     ],
+     "volume": 1000000,
+     "cpc": 199.610977,
+     "sd": 21
+    },
+    {
+     "cluster": "currency dirham pkr",
+     "phrases": [
+      "dirham to pakistan currency",
+      "aed currency in pakistan"
+     ],
+     "volume": 201000,
+     "cpc": 299.4164654,
+     "sd": 16
+    },
+    {
+     "cluster": "1 dollar pkr",
+     "phrases": [
+      "1 usd to pakistan rupee",
+      "1 dollar to rupee pakistan",
+      "1 dollar to pak rupee"
+     ],
+     "volume": 165000,
+     "cpc": 249.5137212,
+     "sd": 34
+    },
+    {
+     "cluster": "cad dollar pkr",
+     "phrases": [
+      "cad dollar to pak rupees"
+     ],
+     "volume": 135000,
+     "cpc": 217.6314124,
+     "sd": 34
+    }
+   ]
+  }
+ ],
+ "currency": {
+  "rows": [
+   {
+    "keyword": "riyal to pakistan",
+    "volume": 368000,
+    "cpc": 209.3142883,
+    "sd": 42
+   },
+   {
+    "keyword": "cad dollar to pak rupees",
+    "volume": 135000,
+    "cpc": 217.6314124,
+    "sd": 34
+   },
+   {
+    "keyword": "dirham pakistan rupees",
+    "volume": 165000,
+    "cpc": 243.9689718,
+    "sd": 42
+   },
+   {
+    "keyword": "euro to pak",
+    "volume": 823000,
+    "cpc": 256.4446579,
+    "sd": 42
+   },
+   {
+    "keyword": "saudi rial to pakistan rupees",
+    "volume": 301000,
+    "cpc": 110.8949872,
+    "sd": 34
+   },
+   {
+    "keyword": "aud to pak rupees",
+    "volume": 165000,
+    "cpc": 374.2705818,
+    "sd": 14
+   },
+   {
+    "keyword": "dollar to rupee pak",
+    "volume": 1500000,
+    "cpc": 121.9844859,
+    "sd": 34
+   },
+   {
+    "keyword": "dirham to pakistan currency",
+    "volume": 165000,
+    "cpc": 243.9689718,
+    "sd": 34
+   },
+   {
+    "keyword": "pound sterling to pakistan rupee",
+    "volume": 1000000,
+    "cpc": 199.610977,
+    "sd": 26
+   },
+   {
+    "keyword": "pound to pak rupee",
+    "volume": 1000000,
+    "cpc": 221.7899744,
+    "sd": 22
+   },
+   {
+    "keyword": "euro to pak rs",
+    "volume": 823000,
+    "cpc": 256.4446579,
+    "sd": 34
+   },
+   {
+    "keyword": "riyal to pakistan rupee",
+    "volume": 368000,
+    "cpc": 209.3142883,
+    "sd": 34
+   },
+   {
+    "keyword": "usd to rupee pakistan",
+    "volume": 1500000,
+    "cpc": 166.3424808,
+    "sd": 34
+   },
+   {
+    "keyword": "usd to pak rs",
+    "volume": 1000000,
+    "cpc": 224.5623491,
+    "sd": 45
+   },
+   {
+    "keyword": "1 usd to pakistan rupee",
+    "volume": 165000,
+    "cpc": 249.5137212,
+    "sd": 34
+   },
+   {
+    "keyword": "1 dollar to rupee pakistan",
+    "volume": 165000,
+    "cpc": 249.5137212,
+    "sd": 34
+   },
+   {
+    "keyword": "euro to rupee pakistan",
+    "volume": 823000,
+    "cpc": 182.9767289,
+    "sd": 29
+   },
+   {
+    "keyword": "riyal to pak rupees",
+    "volume": 368000,
+    "cpc": 209.3142883,
+    "sd": 34
+   },
+   {
+    "keyword": "pound sterling in pak rupees",
+    "volume": 823000,
+    "cpc": 182.9767289,
+    "sd": 21
+   },
+   {
+    "keyword": "british pounds to pakistan rupees",
+    "volume": 823000,
+    "cpc": 80.39886572,
+    "sd": 34
+   },
+   {
+    "keyword": "dollar to pakistani rupee",
+    "volume": 1500000,
+    "cpc": 121.9844859,
+    "sd": 34
+   },
+   {
+    "keyword": "usd in pak rupees",
+    "volume": 1500000,
+    "cpc": 166.3424808,
+    "sd": 34
+   },
+   {
+    "keyword": "euro to pakistani",
+    "volume": 823000,
+    "cpc": 256.4446579,
+    "sd": 42
+   },
+   {
+    "keyword": "us dollar to pakistan rs",
+    "volume": 1000000,
+    "cpc": 246.7413465,
+    "sd": 34
+   },
+   {
+    "keyword": "us dollar to rupee pakistan",
+    "volume": 1500000,
+    "cpc": 166.3424808,
+    "sd": 34
+   },
+   {
+    "keyword": "cad to pak rupees",
+    "volume": 135000,
+    "cpc": 299.4164654,
+    "sd": 20
+   },
+   {
+    "keyword": "dollar to pk rupee",
+    "volume": 1500000,
+    "cpc": 121.9844859,
+    "sd": 34
+   },
+   {
+    "keyword": "aud to pakistan rupee",
+    "volume": 165000,
+    "cpc": 403.3805159,
+    "sd": 34
+   },
+   {
+    "keyword": "pound sterling pakistani rupee",
+    "volume": 823000,
+    "cpc": 99.80548848,
+    "sd": 34
+   },
+   {
+    "keyword": "dollar rate in pakistan",
+    "volume": 165000,
+    "cpc": 0,
+    "sd": 34
+   },
+   {
+    "keyword": "eur to pak rupee",
+    "volume": 823000,
+    "cpc": 256.4446579,
+    "sd": 34
+   },
+   {
+    "keyword": "us to pakistan rupee",
+    "volume": 1500000,
+    "cpc": 166.3424808,
+    "sd": 34
+   },
+   {
+    "keyword": "gbp to pak",
+    "volume": 823000,
+    "cpc": 80.39886572,
+    "sd": 42
+   },
+   {
+    "keyword": "dirham to pak rs",
+    "volume": 201000,
+    "cpc": 230.1070984,
+    "sd": 34
+   },
+   {
+    "keyword": "pound to rupees pakistani",
+    "volume": 823000,
+    "cpc": 80.39886572,
+    "sd": 34
+   },
+   {
+    "keyword": "euro in pak rupee",
+    "volume": 823000,
+    "cpc": 256.4446579,
+    "sd": 34
+   },
+   {
+    "keyword": "dollar to pak rupee",
+    "volume": 1500000,
+    "cpc": 121.9844859,
+    "sd": 34
+   },
+   {
+    "keyword": "aed to pakistan rupees",
+    "volume": 201000,
+    "cpc": 249.5137212,
+    "sd": 19
+   },
+   {
+    "keyword": "america currency rate in pakistan",
+    "volume": 135000,
+    "cpc": 159.4115441,
+    "sd": 34
+   },
+   {
+    "keyword": "dollar pakistan currency",
+    "volume": 1500000,
+    "cpc": 121.9844859,
+    "sd": 42
+   },
+   {
+    "keyword": "dollar to pakistani rs",
+    "volume": 1500000,
+    "cpc": 121.9844859,
+    "sd": 34
+   },
+   {
+    "keyword": "saudi riyal to pak rupee",
+    "volume": 301000,
+    "cpc": 257.8308452,
+    "sd": 25
+   },
+   {
+    "keyword": "aed currency in pakistan",
+    "volume": 201000,
+    "cpc": 299.4164654,
+    "sd": 16
+   },
+   {
+    "keyword": "euro to pakistani rs",
+    "volume": 823000,
+    "cpc": 256.4446579,
+    "sd": 34
+   },
+   {
+    "keyword": "aed to pak rupee",
+    "volume": 201000,
+    "cpc": 280.0098427,
+    "sd": 21
+   },
+   {
+    "keyword": "saudi riyal to pakistan rupee",
+    "volume": 368000,
+    "cpc": 209.3142883,
+    "sd": 34
+   },
+   {
+    "keyword": "euro to pk rupee",
+    "volume": 823000,
+    "cpc": 256.4446579,
+    "sd": 34
+   },
+   {
+    "keyword": "cad to pak rupee",
+    "volume": 135000,
+    "cpc": 221.7899744,
+    "sd": 19
+   },
+   {
+    "keyword": "1 dollar to pak rupee",
+    "volume": 165000,
+    "cpc": 249.5137212,
+    "sd": 34
+   },
+   {
+    "keyword": "dirham to pak rupee",
+    "volume": 246000,
+    "cpc": 304.9612148,
+    "sd": 17
+   }
+  ],
+  "pairs": [
+   {
+    "pair": "USD>PKR",
+    "phrasings": 16,
+    "volume": 1500000,
+    "sd": 34,
+    "cpc": 121.9844859,
+    "examples": [
+     "dollar to rupee pak",
+     "usd to rupee pakistan",
+     "usd to pak rs",
+     "1 usd to pakistan rupee",
+     "1 dollar to rupee pakistan",
+     "dollar to pakistani rupee",
+     "usd in pak rupees",
+     "us dollar to pakistan rs",
+     "us dollar to rupee pakistan",
+     "dollar to pk rupee",
+     "dollar rate in pakistan",
+     "dollar to pak rupee",
+     "america currency rate in pakistan",
+     "dollar pakistan currency",
+     "dollar to pakistani rs",
+     "1 dollar to pak rupee"
+    ]
+   },
+   {
+    "pair": "GBP>PKR",
+    "phrasings": 7,
+    "volume": 1000000,
+    "sd": 21,
+    "cpc": 199.610977,
+    "examples": [
+     "pound sterling to pakistan rupee",
+     "pound to pak rupee",
+     "pound sterling in pak rupees",
+     "british pounds to pakistan rupees",
+     "pound sterling pakistani rupee",
+     "gbp to pak",
+     "pound to rupees pakistani"
+    ]
+   },
+   {
+    "pair": "EUR>PKR",
+    "phrasings": 8,
+    "volume": 823000,
+    "sd": 29,
+    "cpc": 256.4446579,
+    "examples": [
+     "euro to pak",
+     "euro to pak rs",
+     "euro to rupee pakistan",
+     "euro to pakistani",
+     "eur to pak rupee",
+     "euro in pak rupee",
+     "euro to pakistani rs",
+     "euro to pk rupee"
+    ]
+   },
+   {
+    "pair": "SAR>PKR",
+    "phrasings": 6,
+    "volume": 368000,
+    "sd": 25,
+    "cpc": 209.3142883,
+    "examples": [
+     "riyal to pakistan",
+     "saudi rial to pakistan rupees",
+     "riyal to pakistan rupee",
+     "riyal to pak rupees",
+     "saudi riyal to pak rupee",
+     "saudi riyal to pakistan rupee"
+    ]
+   },
+   {
+    "pair": "AED>PKR",
+    "phrasings": 7,
+    "volume": 246000,
+    "sd": 16,
+    "cpc": 304.9612148,
+    "examples": [
+     "dirham pakistan rupees",
+     "dirham to pakistan currency",
+     "dirham to pak rs",
+     "aed to pakistan rupees",
+     "aed currency in pakistan",
+     "aed to pak rupee",
+     "dirham to pak rupee"
+    ]
+   },
+   {
+    "pair": "AUD>PKR",
+    "phrasings": 2,
+    "volume": 165000,
+    "sd": 14,
+    "cpc": 374.2705818,
+    "examples": [
+     "aud to pak rupees",
+     "aud to pakistan rupee"
+    ]
+   },
+   {
+    "pair": "CAD>PKR",
+    "phrasings": 3,
+    "volume": 135000,
+    "sd": 19,
+    "cpc": 217.6314124,
+    "examples": [
+     "cad dollar to pak rupees",
+     "cad to pak rupees",
+     "cad to pak rupee"
+    ]
+   }
+  ],
+  "dropped": 1
+ },
+ "links": [
+  {
+   "file": "backlinks-rapidtables.csv",
+   "rows": 500,
+   "byClass": {
+    "news": 86,
+    "other": 251,
+    "forum": 69,
+    "wiki": 20,
+    "search/shortener": 17,
+    "edu": 54,
+    "farm": 3
+   },
+   "farmShare": 0.006,
+   "pursueCount": 140,
+   "pursue": [
+    {
+     "url": "236.102.106.34.bc.googleusercontent.com/2019/03/03/gcmap-instruction/",
+     "da": 99,
+     "klass": "news"
+    },
+    {
+     "url": "www.nytimes.com/wirecutter/reviews/best-led-lantern/",
+     "da": 95,
+     "klass": "news"
+    },
+    {
+     "url": "www.uol.com.br/tilt/noticias/redacao/2019/11/19/multiplicar-por-sete-esta-errado-como-calcular-idade-humana-do-cachorro.htm",
+     "da": 95,
+     "klass": "news"
+    },
+    {
+     "url": "www.washingtonpost.com/magazine/2022/02/13/solution-evan-birnholzs-feb-13-post-magazine-crossword-code-words/",
+     "da": 94,
+     "klass": "news"
+    },
+    {
+     "url": "www.bbc.com/future/article/20200106-how-to-calculate-your-dogs-real-age",
+     "da": 94,
+     "klass": "news"
+    },
+    {
+     "url": "www.businessinsider.com/how-to-email-politicians-email-template-email-marketing-2020-6",
+     "da": 94,
+     "klass": "news"
+    },
+    {
+     "url": "www.theguardian.com/world/2020/sep/21/can-the-uk-avoid-50000-covid-19-cases-a-day",
+     "da": 94,
+     "klass": "news"
+    },
+    {
+     "url": "www.cnet.com/roadshow/auto-tech/how-to-get-household-current-in-your-car/",
+     "da": 93,
+     "klass": "news"
+    },
+    {
+     "url": "www.tecmundo.com.br/produto/58809-calcular-quantidade-energia-utilizada-pc.htm",
+     "da": 93,
+     "klass": "news"
+    },
+    {
+     "url": "link.springer.com/article/10.1186/s12888-021-03571-x",
+     "da": 93,
+     "klass": "news"
+    },
+    {
+     "url": "nypost.com/2019/11/19/why-a-dogs-age-in-human-years-might-not-be-as-old-as-you-think/",
+     "da": 93,
+     "klass": "news"
+    },
+    {
+     "url": "community.appinventor.mit.edu/t/usb-permission-popup-every-time-serial-component/12596",
+     "da": 93,
+     "klass": "edu"
+    },
+    {
+     "url": "www.thesun.co.uk/tech/10367726/dogs-real-age-in-human-years/",
+     "da": 93,
+     "klass": "news"
+    },
+    {
+     "url": "pswww.slac.stanford.edu/swdoc/releases/ana-current/doxy-all/html/namespacePSQt.html",
+     "da": 93,
+     "klass": "edu"
+    },
+    {
+     "url": "www.lanacion.com.ar/sociedad/crean-precisa-manera-calcular-edad-perros-anos-nid2307789/",
+     "da": 93,
+     "klass": "news"
+    },
+    {
+     "url": "www.foxnews.com/science/your-dogs-real-age-in-dog-years-revealed-and-its-not-their-age-multiplied-by-seven",
+     "da": 93,
+     "klass": "news"
+    },
+    {
+     "url": "blogs.cornell.edu/siemreapmasterclass/2011/02/07/history-of-siem-reap/comment-page-44/",
+     "da": 93,
+     "klass": "edu"
+    },
+    {
+     "url": "gizmodo.com/silicon-valleys-season-five-trailer-has-a-hidden-messag-1823490304",
+     "da": 93,
+     "klass": "news"
+    },
+    {
+     "url": "metro.co.uk/2019/09/12/apple-hidden-secret-message-iphone-11-10730766/",
+     "da": 93,
+     "klass": "news"
+    },
+    {
+     "url": "www.clarin.com/viste/nueva-formula-comparar-edad-perro-humana_0_CP8bdQBwF5.html",
+     "da": 93,
+     "klass": "news"
+    },
+    {
+     "url": "www.hola.com/mascotas/20191204154936/nuevo-metodo-calcular-edad-perros-gt/",
+     "da": 92,
+     "klass": "news"
+    },
+    {
+     "url": "theconversation.com/are-dog-years-for-real-an-explanation-of-calculating-canine-age-127655",
+     "da": 92,
+     "klass": "news"
+    },
+    {
+     "url": "www.newscientist.com/article/2059014-the-martian-the-science-of-surviving-a-space-catastrophe/",
+     "da": 92,
+     "klass": "news"
+    },
+    {
+     "url": "www.cs.cmu.edu/%7E15110-f12/lectures.html",
+     "da": 92,
+     "klass": "edu"
+    },
+    {
+     "url": "faculty.washington.edu/joelross/courses/archive/f13/cs161/lab/f/",
+     "da": 92,
+     "klass": "edu"
+    }
+   ]
+  },
+  {
+   "file": "backlinks-calculatorio.csv",
+   "rows": 500,
+   "byClass": {
+    "other": 229,
+    "search/shortener": 1,
+    "forum": 10,
+    "news": 26,
+    "farm": 230,
+    "edu": 4
+   },
+   "farmShare": 0.46,
+   "pursueCount": 4,
+   "pursue": [
+    {
+     "url": "caras.perfil.com/noticias/empresas-y-protagonistas/calculadora-virtual-y-otras-apps-para-ayudarte-en-tu-dia-a-dia.phtml",
+     "da": 90,
+     "klass": "news"
+    },
+    {
+     "url": "www.em.com.br/empresas/2025/06/7164557-calculadoras-on-line-ferramentas-essenciais-no-cotidiano-moderno.html",
+     "da": 89,
+     "klass": "news"
+    },
+    {
+     "url": "j21.18a.myftpupload.com/2022/12/",
+     "da": 86,
+     "klass": "news"
+    },
+    {
+     "url": "www.asiae.co.kr/visual-news/article/2024111214454055437",
+     "da": 81,
+     "klass": "news"
+    }
+   ]
+  }
+ ],
+ "refDomains": {
+  "files": [
+   "refdomains-rapidtables.csv",
+   "refdomains-calculatorio.csv",
+   "refdomains-omnicalculator.csv"
+  ],
+  "perFile": [
+   {
+    "file": "refdomains-rapidtables.csv",
+    "rows": 500
+   },
+   {
+    "file": "refdomains-calculatorio.csv",
+    "rows": 500
+   },
+   {
+    "file": "refdomains-omnicalculator.csv",
+    "rows": 500
+   }
+  ],
+  "union": 1310,
+  "sharedAtLeast2": 179,
+  "sharedAll3": 11,
+  "sharedPlatformNoise": 36,
+  "sharedRealCount": 143,
+  "sharedReal": [
+   {
+    "domain": "en.wikipedia.org",
+    "da": 98,
+    "competitors": 2
+   },
+   {
+    "domain": "es.wikipedia.org",
+    "da": 96,
+    "competitors": 2
+   },
+   {
+    "domain": "fr.wikipedia.org",
+    "da": 95,
+    "competitors": 2
+   },
+   {
+    "domain": "nytimes.com",
+    "da": 95,
+    "competitors": 2
+   },
+   {
+    "domain": "uol.com.br",
+    "da": 95,
+    "competitors": 2
+   },
+   {
+    "domain": "washingtonpost.com",
+    "da": 94,
+    "competitors": 2
+   },
+   {
+    "domain": "nasa.gov",
+    "da": 94,
+    "competitors": 2
+   },
+   {
+    "domain": "news.yahoo.com",
+    "da": 94,
+    "competitors": 2
+   },
+   {
+    "domain": "bing.com",
+    "da": 94,
+    "competitors": 2
+   },
+   {
+    "domain": "yandex.com",
+    "da": 94,
+    "competitors": 2
+   },
+   {
+    "domain": "businessinsider.com",
+    "da": 94,
+    "competitors": 2
+   },
+   {
+    "domain": "theguardian.com",
+    "da": 94,
+    "competitors": 2
+   },
+   {
+    "domain": "detik.com",
+    "da": 93,
+    "competitors": 2
+   },
+   {
+    "domain": "cnet.com",
+    "da": 93,
+    "competitors": 2
+   },
+   {
+    "domain": "tecmundo.com.br",
+    "da": 93,
+    "competitors": 2
+   },
+   {
+    "domain": "springer.com",
+    "da": 93,
+    "competitors": 2
+   },
+   {
+    "domain": "nypost.com",
+    "da": 93,
+    "competitors": 2
+   },
+   {
+    "domain": "thesun.co.uk",
+    "da": 93,
+    "competitors": 2
+   },
+   {
+    "domain": "hubspot.com",
+    "da": 93,
+    "competitors": 2
+   },
+   {
+    "domain": "pl.wikipedia.org",
+    "da": 93,
+    "competitors": 2
+   },
+   {
+    "domain": "sapo.pt",
+    "da": 93,
+    "competitors": 2
+   },
+   {
+    "domain": "cornell.edu",
+    "da": 93,
+    "competitors": 2
+   },
+   {
+    "domain": "gizmodo.com",
+    "da": 93,
+    "competitors": 2
+   },
+   {
+    "domain": "plos.org",
+    "da": 93,
+    "competitors": 2
+   },
+   {
+    "domain": "groups.google.com",
+    "da": 93,
+    "competitors": 2
+   },
+   {
+    "domain": "metro.co.uk",
+    "da": 93,
+    "competitors": 2
+   },
+   {
+    "domain": "wikihow.com",
+    "da": 93,
+    "competitors": 2
+   },
+   {
+    "domain": "aol.com",
+    "da": 93,
+    "competitors": 2
+   },
+   {
+    "domain": "finance.yahoo.com",
+    "da": 93,
+    "competitors": 2
+   },
+   {
+    "domain": "ja.wikipedia.org",
+    "da": 93,
+    "competitors": 2
+   },
+   {
+    "domain": "it.wikipedia.org",
+    "da": 93,
+    "competitors": 2
+   },
+   {
+    "domain": "outlook.com",
+    "da": 93,
+    "competitors": 2
+   },
+   {
+    "domain": "clarin.com",
+    "da": 93,
+    "competitors": 2
+   },
+   {
+    "domain": "zendesk.com",
+    "da": 93,
+    "competitors": 2
+   },
+   {
+    "domain": "mdpi.com",
+    "da": 92,
+    "competitors": 2
+   },
+   {
+    "domain": "dell.com",
+    "da": 92,
+    "competitors": 2
+   },
+   {
+    "domain": "theconversation.com",
+    "da": 92,
+    "competitors": 2
+   },
+   {
+    "domain": "newscientist.com",
+    "da": 92,
+    "competitors": 2
+   },
+   {
+    "domain": "macrumors.com",
+    "da": 92,
+    "competitors": 2
+   },
+   {
+    "domain": "reddit.com",
+    "da": 92,
+    "competitors": 2
+   }
+  ]
+ },
+ "gsc": {
+  "ranAt": "2026-10-17T10:48:24.148Z",
+  "window": {
+   "start": "2026-09-16",
+   "end": "2026-10-14",
+   "days": 28
+  },
+  "totals": {
+   "clicks": 21,
+   "impressions": 18917,
+   "ctr": 0.0011101125971348523,
+   "position": 33.143415975048896
+  },
+  "coverage": {
+   "pairImpressions": 11567,
+   "pairClicks": 8,
+   "totalImpressions": 18917,
+   "totalClicks": 21
+  },
+  "anonymisedImpressions": 7350,
+  "urlsWithImpressions": 581,
+  "duplicateUrlForms": 112,
+  "duplicateFormImpressions": 4967,
+  "duplicateFormExamples": [
+   {
+    "key": "https://calcpromaster.com/lifestyle/home-insurance",
+    "slash": 1,
+    "noSlash": 1,
+    "impressions": 1003,
+    "clicks": 0
+   },
+   {
+    "key": "https://calcpromaster.com/health/bmr-mifflin",
+    "slash": 1,
+    "noSlash": 1,
+    "impressions": 261,
+    "clicks": 0
+   },
+   {
+    "key": "https://calcpromaster.com/tech/raid-capacity",
+    "slash": 1,
+    "noSlash": 1,
+    "impressions": 224,
+    "clicks": 0
+   },
+   {
+    "key": "https://calcpromaster.com/guides/business-days",
+    "slash": 1,
+    "noSlash": 1,
+    "impressions": 219,
+    "clicks": 0
+   },
+   {
+    "key": "https://calcpromaster.com/tech/internet-speed",
+    "slash": 1,
+    "noSlash": 1,
+    "impressions": 218,
+    "clicks": 0
+   },
+   {
+    "key": "https://calcpromaster.com/lifestyle/renters-insurance",
+    "slash": 1,
+    "noSlash": 1,
+    "impressions": 199,
+    "clicks": 0
+   },
+   {
+    "key": "https://calcpromaster.com/conversion/wire-gauge-conv",
+    "slash": 1,
+    "noSlash": 1,
+    "impressions": 120,
+    "clicks": 0
+   },
+   {
+    "key": "https://calcpromaster.com/science/solar-energy",
+    "slash": 1,
+    "noSlash": 1,
+    "impressions": 118,
+    "clicks": 0
+   },
+   {
+    "key": "https://calcpromaster.com/regional/singapore-cpf",
+    "slash": 1,
+    "noSlash": 1,
+    "impressions": 111,
+    "clicks": 0
+   },
+   {
+    "key": "https://calcpromaster.com/tech/ip-subnet",
+    "slash": 1,
+    "noSlash": 1,
+    "impressions": 96,
+    "clicks": 0
+   }
+  ],
+  "zeroClickTop10": [
+   {
+    "url": "https://calcpromaster.com/lifestyle/home-insurance/",
+    "impressions": 637,
+    "best": 2
+   },
+   {
+    "url": "https://calcpromaster.com/finance/pmi-calculator/",
+    "impressions": 561,
+    "best": 5
+   },
+   {
+    "url": "https://calcpromaster.com/finance/fha-loan/",
+    "impressions": 416,
+    "best": 2
+   },
+   {
+    "url": "https://calcpromaster.com/guides/tip",
+    "impressions": 327,
+    "best": 7.03
+   },
+   {
+    "url": "https://calcpromaster.com/finance/apy-calculator/",
+    "impressions": 252,
+    "best": 2
+   },
+   {
+    "url": "https://calcpromaster.com/finance/credit-utilization/",
+    "impressions": 224,
+    "best": 4
+   },
+   {
+    "url": "https://calcpromaster.com/health/bmr-mifflin",
+    "impressions": 175,
+    "best": 1
+   },
+   {
+    "url": "https://calcpromaster.com/finance/wacc/",
+    "impressions": 152,
+    "best": 6
+   },
+   {
+    "url": "https://calcpromaster.com/guides/business-days",
+    "impressions": 137,
+    "best": 5.5
+   },
+   {
+    "url": "https://calcpromaster.com/lifestyle/renters-insurance",
+    "impressions": 133,
+    "best": 6.76
+   },
+   {
+    "url": "https://calcpromaster.com/tech/rgb-hex/",
+    "impressions": 130,
+    "best": 7
+   },
+   {
+    "url": "https://calcpromaster.com/tech/raid-capacity/",
+    "impressions": 126,
+    "best": 4
+   },
+   {
+    "url": "https://calcpromaster.com/finance/rent-affordability/",
+    "impressions": 122,
+    "best": 2
+   },
+   {
+    "url": "https://calcpromaster.com/math/weighted-average/",
+    "impressions": 112,
+    "best": 7
+   },
+   {
+    "url": "https://calcpromaster.com/science/solar-energy/",
+    "impressions": 105,
+    "best": 6.4
+   }
+  ],
+  "zeroClickTop10Forms": 279,
+  "zeroClickTop10Count": 241,
+  "zeroClickTop10Impressions": 8109,
+  "strikingCount": 833,
+  "strikingImpressions": 3694,
+  "strikingClicks": 5,
+  "strikingMeaningfulCount": 32,
+  "strikingMeaningful": [
+   {
+    "query": "how to calculate tip",
+    "page": "https://calcpromaster.com/guides/tip",
+    "clicks": 0,
+    "impressions": 327,
+    "ctr": 0,
+    "position": 7.027522935779817
+   },
+   {
+    "query": "fha loan calculator",
+    "page": "https://calcpromaster.com/finance/fha-loan/",
+    "clicks": 0,
+    "impressions": 223,
+    "ctr": 0,
+    "position": 11.112107623318385
+   },
+   {
+    "query": "pmi calculator",
+    "page": "https://calcpromaster.com/finance/pmi-calculator/",
+    "clicks": 0,
+    "impressions": 142,
+    "ctr": 0,
+    "position": 9.852112676056338
+   },
+   {
+    "query": "renters insurance calculator",
+    "page": "https://calcpromaster.com/lifestyle/renters-insurance",
+    "clicks": 0,
+    "impressions": 100,
+    "ctr": 0,
+    "position": 6.76
+   },
+   {
+    "query": "rgb to hex",
+    "page": "https://calcpromaster.com/tech/rgb-hex/",
+    "clicks": 0,
+    "impressions": 76,
+    "ctr": 0,
+    "position": 13.026315789473685
+   },
+   {
+    "query": "if you spend $3 on coffee per school/work day, how much are you spending per year? under $100 between $100 and $250 between $250 and $750 more than $750",
+    "page": "https://calcpromaster.com/everyday/coffee-cost/",
+    "clicks": 0,
+    "impressions": 68,
+    "ctr": 0,
+    "position": 8.514705882352942
+   },
+   {
+    "query": "prorated rent calculator",
+    "page": "https://calcpromaster.com/finance/prorated-rent",
+    "clicks": 0,
+    "impressions": 66,
+    "ctr": 0,
+    "position": 13.333333333333334
+   },
+   {
+    "query": "fha home loan calculator",
+    "page": "https://calcpromaster.com/finance/fha-loan/",
+    "clicks": 0,
+    "impressions": 65,
+    "ctr": 0,
+    "position": 6.938461538461539
+   },
+   {
+    "query": "rent affordability calculator",
+    "page": "https://calcpromaster.com/finance/rent-affordability/",
+    "clicks": 0,
+    "impressions": 61,
+    "ctr": 0,
+    "position": 13.311475409836065
+   },
+   {
+    "query": "last menstrual period calculator",
+    "page": "https://calcpromaster.com/health/pregnancy/",
+    "clicks": 0,
+    "impressions": 57,
+    "ctr": 0,
+    "position": 5.2631578947368425
+   },
+   {
+    "query": "calculate annual percentage yield",
+    "page": "https://calcpromaster.com/finance/apy-calculator/",
+    "clicks": 0,
+    "impressions": 52,
+    "ctr": 0,
+    "position": 9.653846153846153
+   },
+   {
+    "query": "harmonic mean calculator",
+    "page": "https://calcpromaster.com/math/harmonic-mean/",
+    "clicks": 0,
+    "impressions": 49,
+    "ctr": 0,
+    "position": 8.387755102040817
+   },
+   {
+    "query": "vacation cost calculator",
+    "page": "https://calcpromaster.com/lifestyle/vacation-savings/",
+    "clicks": 0,
+    "impressions": 40,
+    "ctr": 0,
+    "position": 9.05
+   },
+   {
+    "query": "home insurance estimate calculator",
+    "page": "https://calcpromaster.com/lifestyle/home-insurance",
+    "clicks": 0,
+    "impressions": 37,
+    "ctr": 0,
+    "position": 12.27027027027027
+   },
+   {
+    "query": "dividend reinvestment calculator",
+    "page": "https://calcpromaster.com/finance/dividend-reinvestment/",
+    "clicks": 0,
+    "impressions": 35,
+    "ctr": 0,
+    "position": 14.714285714285714
+   }
+  ],
+  "pagesRanking": 581
+ },
+ "overlap": {
+  "checkedQueries": 250,
+  "checkedKeywords": 605,
+  "exactMatches": 0,
+  "examples": []
+ },
+ "opportunity": {
+  "measuredCapture": 0.00001720059439579809,
+  "matchedCount": 15,
+  "matchedVolume": 16918020,
+  "matchedImpressions": 291,
+  "currentPerDay": 675.6071428571429,
+  "answeredCount": 14,
+  "silentCount": 12,
+  "silent": [
+   {
+    "cluster": "dollar pkr",
+    "volume": 1500000,
+    "url": "/finance/currency-converter",
+    "tool": "currency-converter"
+   },
+   {
+    "cluster": "currency dollar pkr",
+    "volume": 1500000,
+    "url": "/finance/currency-converter",
+    "tool": "currency-converter"
+   },
+   {
+    "cluster": "duration time",
+    "volume": 301000,
+    "url": "/utilities/speech-time",
+    "tool": "speech-time"
+   },
+   {
+    "cluster": "cgpa percent",
+    "volume": 60500,
+    "url": "/education/cgpa",
+    "tool": "cgpa"
+   },
+   {
+    "cluster": "age birthday",
+    "volume": 49500,
+    "url": "/utilities/age-exact",
+    "tool": "age-exact"
+   },
+   {
+    "cluster": "hour minute",
+    "volume": 33100,
+    "url": "/conversion/time-conv",
+    "tool": "time-conv"
+   },
+   {
+    "cluster": "hour time",
+    "volume": 22200,
+    "url": "/career/pto-calc",
+    "tool": "pto-calc"
+   },
+   {
+    "cluster": "between date day two",
+    "volume": 6600,
+    "url": "/everyday/date-diff",
+    "tool": "date-diff"
+   },
+   {
+    "cluster": "interest yearly",
+    "volume": 3600,
+    "url": "/finance/compound-interest",
+    "tool": "compound-interest"
+   },
+   {
+    "cluster": "month year",
+    "volume": 390,
+    "url": "/everyday/age",
+    "tool": "age"
+   },
+   {
+    "cluster": "day month year",
+    "volume": 170,
+    "url": "/everyday/age",
+    "tool": "age"
+   },
+   {
+    "cluster": "binary",
+    "volume": 10,
+    "url": "/math/bitwise-xor",
+    "tool": "bitwise-xor"
+   }
+  ],
+  "gapCount": 39,
+  "answeredVolume": 3477160,
+  "gapVolume": 3150760,
+  "listVolume": 6627920,
+  "targets": [
+   {
+    "target": 200000,
+    "perDay": 6667,
+    "multiple": 9.867667530087575,
+    "captureNeeded": 0.030175379304517858,
+    "xCapture": 1754.3218920323684
+   },
+   {
+    "target": 300000,
+    "perDay": 10000,
+    "multiple": 14.801501295131363,
+    "captureNeeded": 0.045263068956776786,
+    "xCapture": 2631.482838048553
+   }
+  ],
+  "answered": [
+   {
+    "cluster": "dollar pkr",
+    "volume": 1500000,
+    "phrasings": 12,
+    "sd": 34,
+    "source": "keywords-currency.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/food/protein-per-dollar/",
+    "answeredBy": {
+     "id": "currency-converter",
+     "file": "finance.js"
+    }
+   },
+   {
+    "cluster": "currency dollar pkr",
+    "volume": 1500000,
+    "phrasings": 2,
+    "sd": 34,
+    "source": "keywords-currency.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/currency-conversion",
+    "answeredBy": {
+     "id": "currency-converter",
+     "file": "finance.js"
+    }
+   },
+   {
+    "cluster": "duration time",
+    "volume": 301000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/screen-time",
+    "answeredBy": {
+     "id": "speech-time",
+     "file": "utilities.js"
+    }
+   },
+   {
+    "cluster": "cgpa percent",
+    "volume": 60500,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/conversion/fraction-percent/",
+    "answeredBy": {
+     "id": "cgpa",
+     "file": "education.js"
+    }
+   },
+   {
+    "cluster": "age birthday",
+    "volume": 49500,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/age",
+    "answeredBy": {
+     "id": "age-exact",
+     "file": "utilities.js"
+    }
+   },
+   {
+    "cluster": "hour minute",
+    "volume": 33100,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/lifestyle/flight-cost-per-hour/",
+    "answeredBy": {
+     "id": "time-conv",
+     "file": "conversion.js"
+    }
+   },
+   {
+    "cluster": "hour time",
+    "volume": 22200,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/screen-time",
+    "answeredBy": {
+     "id": "pto-calc",
+     "file": "career-freelance.js"
+    }
+   },
+   {
+    "cluster": "between date day two",
+    "volume": 6600,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/business/invoice-due-date/",
+    "answeredBy": {
+     "id": "date-diff",
+     "file": "everyday.js"
+    }
+   },
+   {
+    "cluster": "interest yearly",
+    "volume": 3600,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/compound-interest",
+    "answeredBy": {
+     "id": "compound-interest",
+     "file": "finance.js"
+    }
+   },
+   {
+    "cluster": "month year",
+    "volume": 390,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/everyday/day-of-year/",
+    "answeredBy": {
+     "id": "age",
+     "file": "everyday.js"
+    }
+   },
+   {
+    "cluster": "day month year",
+    "volume": 170,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/everyday/day-of-year/",
+    "answeredBy": {
+     "id": "age",
+     "file": "everyday.js"
+    }
+   },
+   {
+    "cluster": "office post rd",
+    "volume": 70,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/regional/post-office-savings/",
+    "answeredBy": {
+     "id": "post-office-savings",
+     "file": "regional.js"
+    }
+   },
+   {
+    "cluster": "5 percent",
+    "volume": 20,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/conversion/fraction-percent/",
+    "answeredBy": {
+     "id": "uae-vat",
+     "file": "regional.js"
+    }
+   },
+   {
+    "cluster": "binary",
+    "volume": 10,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-modifiers.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": null,
+    "answeredBy": {
+     "id": "bitwise-xor",
+     "file": "math.js"
+    }
+   }
+  ],
+  "gaps": [
+   {
+    "cluster": "pkr pound",
+    "volume": 1000000,
+    "phrasings": 7,
+    "sd": 21,
+    "source": "keywords-currency.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": null,
+    "answeredBy": null
+   },
+   {
+    "cluster": "bmi female",
+    "volume": 550000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/bmi",
+    "answeredBy": null
+   },
+   {
+    "cluster": "loan personal",
+    "volume": 368000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/auto/car-loan-emi/",
+    "answeredBy": null
+   },
+   {
+    "cluster": "emi loan personal",
+    "volume": 301000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/auto/car-loan-emi/",
+    "answeredBy": null
+   },
+   {
+    "cluster": "birth year",
+    "volume": 201000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/everyday/day-of-year/",
+    "answeredBy": null
+   },
+   {
+    "cluster": "currency dirham pkr",
+    "volume": 201000,
+    "phrasings": 2,
+    "sd": 16,
+    "source": "keywords-currency.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/currency-conversion",
+    "answeredBy": null
+   },
+   {
+    "cluster": "feet meter",
+    "volume": 165000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": null,
+    "answeredBy": null
+   },
+   {
+    "cluster": "1 dollar pkr",
+    "volume": 165000,
+    "phrasings": 3,
+    "sd": 34,
+    "source": "keywords-currency.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/food/protein-per-dollar/",
+    "answeredBy": null
+   },
+   {
+    "cluster": "cad dollar pkr",
+    "volume": 135000,
+    "phrasings": 1,
+    "sd": 34,
+    "source": "keywords-currency.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/food/protein-per-dollar/",
+    "answeredBy": null
+   },
+   {
+    "cluster": "dollar inr",
+    "volume": 40500,
+    "phrasings": 2,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/food/protein-per-dollar/",
+    "answeredBy": null
+   },
+   {
+    "cluster": "401k withdrawal",
+    "volume": 9900,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/career/401k-match/",
+    "answeredBy": null
+   },
+   {
+    "cluster": "401k growth",
+    "volume": 6600,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/career/401k-match/",
+    "answeredBy": null
+   },
+   {
+    "cluster": "kalkulator zakat",
+    "volume": 2900,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/zakat",
+    "answeredBy": null
+   },
+   {
+    "cluster": "24 clock hour",
+    "volume": 1900,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/lifestyle/flight-cost-per-hour/",
+    "answeredBy": null
+   },
+   {
+    "cluster": "kaise mein nikale percent",
+    "volume": 1300,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/conversion/fraction-percent/",
+    "answeredBy": null
+   },
+   {
+    "cluster": "difference time",
+    "volume": 390,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/screen-time",
+    "answeredBy": null
+   },
+   {
+    "cluster": "birthday date",
+    "volume": 260,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/business/invoice-due-date/",
+    "answeredBy": null
+   },
+   {
+    "cluster": "lumpsum",
+    "volume": 260,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": null,
+    "answeredBy": null
+   },
+   {
+    "cluster": "samriddhi sukanya yojana",
+    "volume": 260,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/regional/sukanya-samriddhi/",
+    "answeredBy": null
+   },
+   {
+    "cluster": "interest reducing",
+    "volume": 90,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/compound-interest",
+    "answeredBy": null
+   },
+   {
+    "cluster": "experience year",
+    "volume": 90,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/everyday/day-of-year/",
+    "answeredBy": null
+   },
+   {
+    "cluster": "sign zodiac",
+    "volume": 90,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": null,
+    "answeredBy": null
+   },
+   {
+    "cluster": "janm tithi",
+    "volume": 70,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": null,
+    "answeredBy": null
+   },
+   {
+    "cluster": "72 hour",
+    "volume": 50,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/blog/rule-of-72",
+    "answeredBy": null
+   },
+   {
+    "cluster": "90 day today",
+    "volume": 30,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/everyday/day-of-year/",
+    "answeredBy": null
+   },
+   {
+    "cluster": "xirr",
+    "volume": 30,
+    "phrasings": 2,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": null,
+    "answeredBy": null
+   },
+   {
+    "cluster": "30 off percent",
+    "volume": 20,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/conversion/fraction-percent/",
+    "answeredBy": null
+   },
+   {
+    "cluster": "60 date day",
+    "volume": 10,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/business/invoice-due-date/",
+    "answeredBy": null
+   },
+   {
+    "cluster": "6 date month",
+    "volume": 10,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/business/invoice-due-date/",
+    "answeredBy": null
+   },
+   {
+    "cluster": "48 hour",
+    "volume": 0,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/lifestyle/flight-cost-per-hour/",
+    "answeredBy": null
+   },
+   {
+    "cluster": "60 day today",
+    "volume": 0,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/everyday/day-of-year/",
+    "answeredBy": null
+   },
+   {
+    "cluster": "6th grade",
+    "volume": 0,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/grade-needed",
+    "answeredBy": null
+   },
+   {
+    "cluster": "7th cpc matrix pay",
+    "volume": 0,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/career/overtime-pay/",
+    "answeredBy": null
+   },
+   {
+    "cluster": "7th grade",
+    "volume": 0,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/grade-needed",
+    "answeredBy": null
+   },
+   {
+    "cluster": "7 grade",
+    "volume": 0,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/grade-needed",
+    "answeredBy": null
+   },
+   {
+    "cluster": "8th grade",
+    "volume": 0,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/grade-needed",
+    "answeredBy": null
+   },
+   {
+    "cluster": "calendar month year",
+    "volume": 0,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/everyday/day-of-year/",
+    "answeredBy": null
+   },
+   {
+    "cluster": "6 month today",
+    "volume": 0,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": null,
+    "answeredBy": null
+   },
+   {
+    "cluster": "date janm",
+    "volume": 0,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/business/invoice-due-date/",
+    "answeredBy": null
+   }
+  ]
+ },
+ "join": {
+  "slugCovered": 36,
+  "titleCovered": 11,
+  "covered": [
+   {
+    "cluster": "age",
+    "volume": 11100000,
+    "phrasings": 5,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/guides/age",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "bmi",
+    "volume": 7480000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/guides/bmi",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "emi",
+    "volume": 2740000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/guides/emi",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "sip",
+    "volume": 2740000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/guides/sip",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "compound interest",
+    "volume": 1830000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/guides/compound-interest",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "date",
+    "volume": 1830000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/business/invoice-due-date/",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "pregnancy",
+    "volume": 1000000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/health/pregnancy/",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "day",
+    "volume": 823000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/everyday/day-of-year/",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "emi home loan",
+    "volume": 673000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/regional/home-loan-emi-india/",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "home loan",
+    "volume": 673000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/regional/home-loan-emi-india/",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "gst",
+    "volume": 550000,
+    "phrasings": 2,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/guides/gst-sales-tax",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "fd",
+    "volume": 550000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/guides/fd-ppf-sip",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "birth date",
+    "volume": 450000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": "https://calcpromaster.com/everyday/age/",
+    "partial": "https://calcpromaster.com/business/invoice-due-date/"
+   },
+   {
+    "cluster": "car emi",
+    "volume": 301000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/auto/car-loan-emi/",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "emi loan",
+    "volume": 301000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/auto/car-loan-emi/",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "rd",
+    "volume": 246000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/regional/rd-calculator/",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "average",
+    "volume": 201000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/education/test-average/",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "birthday",
+    "volume": 201000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/family/birthday-party-cost/",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "401k",
+    "volume": 165000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/career/401k-match/",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "discount",
+    "volume": 110000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/guides/discount",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "gratuity",
+    "volume": 110000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/regional/gratuity/",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "interest",
+    "volume": 110000,
+    "phrasings": 2,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/guides/compound-interest",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "year",
+    "volume": 110000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/everyday/day-of-year/",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "interest loan",
+    "volume": 90500,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": "https://calcpromaster.com/guides/loans-mortgages",
+    "partial": "https://calcpromaster.com/guides/compound-interest"
+   },
+   {
+    "cluster": "weight",
+    "volume": 90500,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/guides/ideal-weight",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "month",
+    "volume": 60500,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": "https://calcpromaster.com/guides/sip",
+    "partial": null
+   },
+   {
+    "cluster": "equation quadratic",
+    "volume": 60500,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": "https://calcpromaster.com/math/quadratic/",
+    "partial": "https://calcpromaster.com/math/quadratic/"
+   },
+   {
+    "cluster": "roi",
+    "volume": 49500,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/auto/ev-charger-roi/",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "log",
+    "volume": 40500,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": "https://calcpromaster.com/homegarden/firewood/",
+    "partial": null
+   },
+   {
+    "cluster": "fd interest",
+    "volume": 27100,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": "https://calcpromaster.com/finance/fixed-deposit-vs-recurring/",
+    "partial": "https://calcpromaster.com/guides/compound-interest"
+   },
+   {
+    "cluster": "loan vehicle",
+    "volume": 22200,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": "https://calcpromaster.com/finance/auto-loan/",
+    "partial": "https://calcpromaster.com/auto/car-loan-emi/"
+   },
+   {
+    "cluster": "calorie",
+    "volume": 14800,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/everyday/calorie-counter/",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "percent",
+    "volume": 14800,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/conversion/fraction-percent/",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "interest rd",
+    "volume": 12100,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": "https://calcpromaster.com/finance/fixed-deposit-vs-recurring/",
+    "partial": "https://calcpromaster.com/guides/compound-interest"
+   },
+   {
+    "cluster": "quadratic",
+    "volume": 9900,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/math/quadratic/",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "root",
+    "volume": 8100,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/math/root/",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "xor",
+    "volume": 5400,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/math/bitwise-xor/",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "loan",
+    "volume": 3600,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/auto/car-loan-emi/",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "currency",
+    "volume": 1900,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/guides/currency-conversion",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "volume",
+    "volume": 1000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/auto/cargo-volume/",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "income tax",
+    "volume": 720,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/guides/income-tax",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "return sip",
+    "volume": 320,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/regional/sip-return/",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "bike emi",
+    "volume": 110,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": "https://calcpromaster.com/auto/bike-loan/",
+    "partial": "https://calcpromaster.com/guides/emi"
+   },
+   {
+    "cluster": "period time",
+    "volume": 110,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": "https://calcpromaster.com/finance/discounted-payback/",
+    "partial": "https://calcpromaster.com/guides/screen-time"
+   },
+   {
+    "cluster": "date day",
+    "volume": 70,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": "https://calcpromaster.com/everyday/date-diff/",
+    "partial": "https://calcpromaster.com/business/invoice-due-date/"
+   },
+   {
+    "cluster": "day year",
+    "volume": 30,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/everyday/day-of-year/",
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "qr",
+    "volume": 30,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": "https://calcpromaster.com/utilities/qr-generator/",
+    "pageTitle": null,
+    "partial": null
+   }
+  ],
+  "uncovered": [
+   {
+    "cluster": "dollar pkr",
+    "volume": 1500000,
+    "phrasings": 12,
+    "sd": 34,
+    "source": "keywords-currency.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/food/protein-per-dollar/"
+   },
+   {
+    "cluster": "currency dollar pkr",
+    "volume": 1500000,
+    "phrasings": 2,
+    "sd": 34,
+    "source": "keywords-currency.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/currency-conversion"
+   },
+   {
+    "cluster": "pkr pound",
+    "volume": 1000000,
+    "phrasings": 7,
+    "sd": 21,
+    "source": "keywords-currency.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "bmi female",
+    "volume": 550000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/bmi"
+   },
+   {
+    "cluster": "loan personal",
+    "volume": 368000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/auto/car-loan-emi/"
+   },
+   {
+    "cluster": "emi loan personal",
+    "volume": 301000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/auto/car-loan-emi/"
+   },
+   {
+    "cluster": "duration time",
+    "volume": 301000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/screen-time"
+   },
+   {
+    "cluster": "birth year",
+    "volume": 201000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/everyday/day-of-year/"
+   },
+   {
+    "cluster": "currency dirham pkr",
+    "volume": 201000,
+    "phrasings": 2,
+    "sd": 16,
+    "source": "keywords-currency.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/currency-conversion"
+   },
+   {
+    "cluster": "feet meter",
+    "volume": 165000,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "1 dollar pkr",
+    "volume": 165000,
+    "phrasings": 3,
+    "sd": 34,
+    "source": "keywords-currency.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/food/protein-per-dollar/"
+   },
+   {
+    "cluster": "cad dollar pkr",
+    "volume": 135000,
+    "phrasings": 1,
+    "sd": 34,
+    "source": "keywords-currency.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/food/protein-per-dollar/"
+   },
+   {
+    "cluster": "cgpa percent",
+    "volume": 60500,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/conversion/fraction-percent/"
+   },
+   {
+    "cluster": "age birthday",
+    "volume": 49500,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/age"
+   },
+   {
+    "cluster": "dollar inr",
+    "volume": 40500,
+    "phrasings": 2,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/food/protein-per-dollar/"
+   },
+   {
+    "cluster": "hour minute",
+    "volume": 33100,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/lifestyle/flight-cost-per-hour/"
+   },
+   {
+    "cluster": "hour time",
+    "volume": 22200,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/screen-time"
+   },
+   {
+    "cluster": "401k withdrawal",
+    "volume": 9900,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/career/401k-match/"
+   },
+   {
+    "cluster": "401k growth",
+    "volume": 6600,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/career/401k-match/"
+   },
+   {
+    "cluster": "between date day two",
+    "volume": 6600,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/business/invoice-due-date/"
+   },
+   {
+    "cluster": "interest yearly",
+    "volume": 3600,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/compound-interest"
+   },
+   {
+    "cluster": "kalkulator zakat",
+    "volume": 2900,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/zakat"
+   },
+   {
+    "cluster": "24 clock hour",
+    "volume": 1900,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/lifestyle/flight-cost-per-hour/"
+   },
+   {
+    "cluster": "kaise mein nikale percent",
+    "volume": 1300,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/conversion/fraction-percent/"
+   },
+   {
+    "cluster": "difference time",
+    "volume": 390,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/screen-time"
+   },
+   {
+    "cluster": "month year",
+    "volume": 390,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/everyday/day-of-year/"
+   },
+   {
+    "cluster": "birthday date",
+    "volume": 260,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/business/invoice-due-date/"
+   },
+   {
+    "cluster": "lumpsum",
+    "volume": 260,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "samriddhi sukanya yojana",
+    "volume": 260,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/regional/sukanya-samriddhi/"
+   },
+   {
+    "cluster": "day month year",
+    "volume": 170,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/everyday/day-of-year/"
+   },
+   {
+    "cluster": "interest reducing",
+    "volume": 90,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/compound-interest"
+   },
+   {
+    "cluster": "experience year",
+    "volume": 90,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/everyday/day-of-year/"
+   },
+   {
+    "cluster": "sign zodiac",
+    "volume": 90,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "janm tithi",
+    "volume": 70,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "office post rd",
+    "volume": 70,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/regional/post-office-savings/"
+   },
+   {
+    "cluster": "72 hour",
+    "volume": 50,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/blog/rule-of-72"
+   },
+   {
+    "cluster": "90 day today",
+    "volume": 30,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/everyday/day-of-year/"
+   },
+   {
+    "cluster": "xirr",
+    "volume": 30,
+    "phrasings": 2,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "30 off percent",
+    "volume": 20,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/conversion/fraction-percent/"
+   },
+   {
+    "cluster": "5 percent",
+    "volume": 20,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/conversion/fraction-percent/"
+   },
+   {
+    "cluster": "60 date day",
+    "volume": 10,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/business/invoice-due-date/"
+   },
+   {
+    "cluster": "6 date month",
+    "volume": 10,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/business/invoice-due-date/"
+   },
+   {
+    "cluster": "binary",
+    "volume": 10,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-modifiers.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "48 hour",
+    "volume": 0,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/lifestyle/flight-cost-per-hour/"
+   },
+   {
+    "cluster": "60 day today",
+    "volume": 0,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/everyday/day-of-year/"
+   },
+   {
+    "cluster": "6th grade",
+    "volume": 0,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/grade-needed"
+   },
+   {
+    "cluster": "7th cpc matrix pay",
+    "volume": 0,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/career/overtime-pay/"
+   },
+   {
+    "cluster": "7th grade",
+    "volume": 0,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/grade-needed"
+   },
+   {
+    "cluster": "7 grade",
+    "volume": 0,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/grade-needed"
+   },
+   {
+    "cluster": "8th grade",
+    "volume": 0,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/guides/grade-needed"
+   },
+   {
+    "cluster": "calendar month year",
+    "volume": 0,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/everyday/day-of-year/"
+   },
+   {
+    "cluster": "6 month today",
+    "volume": 0,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": null
+   },
+   {
+    "cluster": "date janm",
+    "volume": 0,
+    "phrasings": 1,
+    "sd": null,
+    "source": "keywords-head.csv",
+    "page": null,
+    "pageTitle": null,
+    "partial": "https://calcpromaster.com/business/invoice-due-date/"
+   }
+  ]
+ }
+}

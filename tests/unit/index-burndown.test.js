@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { createRequire } from 'module';
 
 const require = createRequire(import.meta.url);
-const { rankOf, splitSet, advanceRate, weeksToClear, addWeeks } = require('../../scripts/build-index-burndown.cjs');
+const { rankOf, splitSet, advanceRate, collectChurnAlerts, weeksToClear, addWeeks } = require('../../scripts/build-index-burndown.cjs');
 
 describe('rankOf', () => {
   it('orders the real index pipeline', () => {
@@ -97,6 +97,56 @@ describe('advanceRate', () => {
     const r = advanceRate(after, before);
     expect(r.stagesAdvanced).toBe(0);
     expect(r.becameIndexed).toBe(0);
+    // The same pair read backwards is five stages of slippage, not silence.
+    expect(r.slippedBack).toBe(5);
+    expect(r.urlsSlipped).toBe(3);
+    expect(r.urlsAdvanced).toBe(0);
+    expect(r.netStages).toBe(-5);
+  });
+
+  it('counts the URLs on each side, not only the stages', () => {
+    const r = advanceRate(before, after);
+    // /a 0→3, /b 0→1, /c 1→2 moved up; nothing moved down.
+    expect(r.urlsAdvanced).toBe(3);
+    expect(r.urlsSlipped).toBe(0);
+  });
+
+  it('reports gainedBack as zero when the movement only went one way', () => {
+    const r = advanceRate(before, after);
+    expect(r.gainedBack).toBe(0);
+    expect(r.churnStages).toBe(5);
+    expect(r.netStages).toBe(5);
+  });
+
+  it('shows a traded window as churn, so the advance cannot read as progress', () => {
+    const tradedBefore = {
+      ranAt: before.ranAt,
+      results: [
+        { url: '/up1', coverage: 'URL is unknown to Google' },
+        { url: '/up2', coverage: 'URL is unknown to Google' },
+        { url: '/down1', coverage: 'Discovered - currently not indexed' },
+        { url: '/down2', coverage: 'Discovered - currently not indexed' },
+        { url: '/flat', coverage: 'Submitted and indexed' },
+      ],
+    };
+    const tradedAfter = {
+      ranAt: after.ranAt,
+      results: [
+        { url: '/up1', coverage: 'Discovered - currently not indexed' },
+        { url: '/up2', coverage: 'Discovered - currently not indexed' },
+        { url: '/down1', coverage: 'URL is unknown to Google' },
+        { url: '/down2', coverage: 'URL is unknown to Google' },
+        { url: '/flat', coverage: 'Submitted and indexed' },
+      ],
+    };
+    const r = advanceRate(tradedBefore, tradedAfter);
+    expect(r.urlsAdvanced).toBe(2);
+    expect(r.urlsSlipped).toBe(2);
+    expect(r.stagesAdvanced).toBe(2);
+    expect(r.slippedBack).toBe(2);
+    expect(r.gainedBack).toBe(2); // the whole advance was cancelled out
+    expect(r.churnStages).toBe(4);
+    expect(r.netStages).toBe(0);
   });
 
   it('reports pages that slipped back down the ladder instead of hiding them', () => {
@@ -154,5 +204,46 @@ describe('addWeeks', () => {
 
   it('crosses a year boundary correctly', () => {
     expect(addWeeks('2026-12-28', 1)).toBe('2027-01-04');
+  });
+});
+
+describe('collectChurnAlerts', () => {
+  const traded = {
+    from: '2026-10-09', to: '2026-10-11',
+    stagesAdvanced: 105, slippedBack: 133, gainedBack: 105, churnStages: 238, netStages: -28,
+  };
+  const clean = { from: '2026-10-05', to: '2026-10-08', stagesAdvanced: 4, slippedBack: 0, gainedBack: 0, churnStages: 4, netStages: 4 };
+
+  it('alerts only on the windows whose rate is really churn', () => {
+    const alerts = collectChurnAlerts([clean, traded]);
+    expect(alerts).toHaveLength(1);
+    expect(alerts[0].from).toBe('2026-10-09');
+  });
+
+  it('reports one alert per window, even when the same window is listed twice', () => {
+    // The headline pair (the panel window) is also a row in the table.
+    expect(collectChurnAlerts([traded, traded])).toHaveLength(1);
+  });
+
+  it('is empty rather than undefined when nothing trips the threshold', () => {
+    expect(collectChurnAlerts([clean])).toEqual([]);
+    expect(collectChurnAlerts(null)).toEqual([]);
+  });
+
+  it('picks up churn measured by the burn-down’s own pair maths', () => {
+    const before = { ranAt: '2026-10-09T00:00:00.000Z', results: [] };
+    const after = { ranAt: '2026-10-11T00:00:00.000Z', results: [] };
+    const up = (n, base) => Array.from({ length: n }, (_, i) => ({ url: base + i, coverage: 'URL is unknown to Google' }));
+    const upAfter = (n, base) => Array.from({ length: n }, (_, i) => ({ url: base + i, coverage: 'Discovered - currently not indexed' }));
+    const down = (n, base) => Array.from({ length: n }, (_, i) => ({ url: base + i, coverage: 'Discovered - currently not indexed' }));
+    const downAfter = (n, base) => Array.from({ length: n }, (_, i) => ({ url: base + i, coverage: 'URL is unknown to Google' }));
+    // 15 pages up, 20 pages back down — the real queue's shape, scaled down.
+    before.results = [...up(15, '/u'), ...down(20, '/d')];
+    after.results = [...upAfter(15, '/u'), ...downAfter(20, '/d')];
+    const r = advanceRate(before, after);
+    const alerts = collectChurnAlerts([r]);
+    expect(alerts).toHaveLength(1);
+    expect(alerts[0].netStages).toBe(-5);
+    expect(alerts[0].severity).toBe('high');
   });
 });

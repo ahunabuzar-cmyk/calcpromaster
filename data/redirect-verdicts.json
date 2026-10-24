@@ -1,0 +1,463 @@
+{
+ "checkedAt": "2026-10-17T10:10:51.714Z",
+ "tally": {
+  "200": 91
+ },
+ "rows": [
+  {
+   "u": "/lifestyle/relocation-cost/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/tax/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/investment/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/regional/pk-salary/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/family/childcare-cost/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/tech/ppi-calc/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/salary/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/everyday/garden/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/fitness/weight-loss/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/homegarden/pool-chemicals/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/net-worth-calculator/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/home-afford/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/construction/concrete-bags/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/tip/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/paycheck/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/loan-qualify/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/health/met-calories/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/markup/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/bonds/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/discount/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/tech/aspect-ratio/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/fitness/sweat-rate/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/loan-comparison/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/tech/screen-size/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/investment-growth/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/mortgage-payoff/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/interest-only/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/graduated-payment/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/emergency-fund/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/balloon-payment/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/tech/keyword-density/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/dca/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/esop/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/tech/wifi-throughput/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/cd-calculator/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/rule-of-72/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/tech/docker-resource/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/inflation-adjusted/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/times-interest-earned/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/tax-equivalent-yield/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/geometric-mean/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/ebitda/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/payday-loan-cost/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/enterprise-value/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/emergency-fund-rate/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/va-loan/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/reverse-mortgage/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/house-affordability/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/price-to-earnings/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/dividend-discount/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/bond-duration/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/growing-perpetuity/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/black-scholes/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/cost-of-living/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/debt-consolidation/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/operating-margin/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/accounts-receivable-turnover/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/loan-balance/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/discounted-payback/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/diversification/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/home-equity/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/capm/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/payback-period/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/fixed-deposit-vs-recurring/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/stock-split/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/recast-mortgage/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/biweekly-mortgage/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/lump-sum-vs-sip/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/book-value-share/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/payout-ratio/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/market-cap/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/max-drawdown/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/zero-coupon-bond/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/pension-lump-sum/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/position-size/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/dca-calculator/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/cd-ladder/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/staking-rewards/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/kelly-criterion/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/factoring-fee/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/runway-months/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/late-fee-interest/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/royalty-payment/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/yield-to-worst/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/coupon-payment/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/clean-dirty-price/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/duration-bond/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/seller-net/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/cost-of-delay/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/appreciation-forecast/",
+   "s": 200,
+   "loc": ""
+  },
+  {
+   "u": "/finance/rule-of-40/",
+   "s": 200,
+   "loc": ""
+  }
+ ]
+}

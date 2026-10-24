@@ -1,0 +1,648 @@
+{
+  "ranAt": "2026-10-19T12:45:22.432Z",
+  "pages": 1329,
+  "noindexPages": 186,
+  "ngram": 7,
+  "minDocumentFrequency": 6,
+  "siteDupSharePct": 40.7,
+  "pagesOver40Pct": 949,
+  "pagesUnder400Words": 1,
+  "duplicateTitles": 0,
+  "duplicateMetaDescriptions": 0,
+  "worstBlocks": [
+    {
+      "pages": 1285,
+      "sharePct": 96.7,
+      "text": "your data never leaves your device reviewed october 2026",
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "pages": 1285,
+      "sharePct": 96.7,
+      "text": "what do i need to use the",
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "pages": 1285,
+      "sharePct": 96.7,
+      "text": "formulas, checked against worked examples and covered by automated",
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "pages": 1285,
+      "sharePct": 96.7,
+      "text": "see our editorial policy . last reviewed 2026-10-19 methodology",
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "pages": 1181,
+      "sharePct": 88.9,
+      "text": "and nothing else. what happens if i double the",
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "pages": 1033,
+      "sharePct": 77.7,
+      "text": "plus the intermediate steps behind it. method",
+      "samples": [
+        "/auto/bus-vs-car/",
+        "/auto/cargo-volume/",
+        "/auto/carpool-savings/"
+      ]
+    },
+    {
+      "pages": 869,
+      "sharePct": 65.4,
+      "text": "comes down to transparency the working stays visible, the math stays local, and the result is reproducible line by line.",
+      "samples": [
+        "/auto/bike-fuel/",
+        "/auto/bus-vs-car/",
+        "/auto/car-depreciation/"
+      ]
+    },
+    {
+      "pages": 849,
+      "sharePct": 63.9,
+      "text": "bound the estimate inputs outside the labeled ranges can make the",
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-loan/",
+        "/auto/carbon-footprint-car/"
+      ]
+    },
+    {
+      "pages": 788,
+      "sharePct": 59.3,
+      "text": "vary one input at a time and note how far the",
+      "samples": [
+        "/auto/bike-loan/",
+        "/auto/car-affordability/",
+        "/auto/car-depreciation/"
+      ]
+    },
+    {
+      "pages": 770,
+      "sharePct": 57.9,
+      "text": "understanding the result to interpret the result from",
+      "samples": [
+        "/auto/bike-loan/",
+        "/auto/bus-vs-car/",
+        "/auto/car-insurance/"
+      ]
+    },
+    {
+      "pages": 770,
+      "sharePct": 57.9,
+      "text": "read it together with the intermediate figures the pairing is what makes the number auditable. where it helps",
+      "samples": [
+        "/auto/bike-loan/",
+        "/auto/bus-vs-car/",
+        "/auto/car-insurance/"
+      ]
+    },
+    {
+      "pages": 743,
+      "sharePct": 55.9,
+      "text": "moves before trusting any single run. similar calculators",
+      "samples": [
+        "/auto/bike-loan/",
+        "/auto/car-affordability/",
+        "/auto/car-depreciation/"
+      ]
+    }
+  ],
+  "worstPages": [
+    {
+      "url": "/math/percentage/",
+      "words": 2265,
+      "dupShare": 64.3
+    },
+    {
+      "url": "/health/bmi/",
+      "words": 2370,
+      "dupShare": 61.4
+    },
+    {
+      "url": "/career/salary-converter/",
+      "words": 2532,
+      "dupShare": 59.6
+    },
+    {
+      "url": "/auto/car-loan-emi/",
+      "words": 2712,
+      "dupShare": 56.2
+    },
+    {
+      "url": "/auto/fuel-cost/",
+      "words": 2749,
+      "dupShare": 55.2
+    },
+    {
+      "url": "/finance/us-income-tax/",
+      "words": 2821,
+      "dupShare": 54.9
+    },
+    {
+      "url": "/regional/egypt-take-home-salary/",
+      "words": 1165,
+      "dupShare": 54.5
+    },
+    {
+      "url": "/regional/romania-take-home-salary/",
+      "words": 1149,
+      "dupShare": 54.4
+    },
+    {
+      "url": "/regional/japan-take-home-salary/",
+      "words": 1114,
+      "dupShare": 53.6
+    },
+    {
+      "url": "/regional/netherlands-take-home-salary/",
+      "words": 1122,
+      "dupShare": 53.5
+    },
+    {
+      "url": "/finance/retirement/",
+      "words": 3129,
+      "dupShare": 53.3
+    },
+    {
+      "url": "/finance/credit-card-payoff/",
+      "words": 2878,
+      "dupShare": 53.2
+    },
+    {
+      "url": "/regional/qatar-take-home-salary/",
+      "words": 1175,
+      "dupShare": 53.2
+    },
+    {
+      "url": "/regional/australia-take-home-salary/",
+      "words": 1156,
+      "dupShare": 52.6
+    },
+    {
+      "url": "/regional/singapore-take-home-salary/",
+      "words": 1106,
+      "dupShare": 52.3
+    },
+    {
+      "url": "/regional/brazil-take-home-salary/",
+      "words": 1204,
+      "dupShare": 52.1
+    },
+    {
+      "url": "/regional/poland-take-home-salary/",
+      "words": 1174,
+      "dupShare": 52.1
+    },
+    {
+      "url": "/regional/hongkong-take-home-salary/",
+      "words": 1177,
+      "dupShare": 51.7
+    },
+    {
+      "url": "/regional/philippines-take-home-salary/",
+      "words": 1204,
+      "dupShare": 51.7
+    },
+    {
+      "url": "/finance/tax/",
+      "words": 1065,
+      "dupShare": 51.6
+    },
+    {
+      "url": "/construction/gravel/",
+      "words": 1033,
+      "dupShare": 51.5
+    },
+    {
+      "url": "/conversion/volume/",
+      "words": 933,
+      "dupShare": 51.5
+    },
+    {
+      "url": "/math/lcm-gcd/",
+      "words": 989,
+      "dupShare": 51.4
+    },
+    {
+      "url": "/regional/colombia-take-home-salary/",
+      "words": 1203,
+      "dupShare": 51.4
+    },
+    {
+      "url": "/regional/kenya-take-home-salary/",
+      "words": 1176,
+      "dupShare": 51.4
+    }
+  ],
+  "shortestPages": [
+    {
+      "url": "/",
+      "words": 342
+    }
+  ],
+  "repeatedSentencePageHits": 193,
+  "repeatedContentSentences": 20,
+  "repeatedBoilerplateSentences": 22,
+  "repeatedSentences": [
+    {
+      "pages": 20,
+      "text": "compare calculators by what you enter one row per calculator what it works out and the inputs it asks for.",
+      "sample": "/hub/auto/",
+      "boilerplate": false
+    },
+    {
+      "pages": 10,
+      "text": "no data is uploaded, nothing is tracked, and after the first visit the page works offline.",
+      "sample": "/auto/car-loan-emi/",
+      "boilerplate": false
+    },
+    {
+      "pages": 10,
+      "text": "every stage of the math is shown so you can verify the result by hand.",
+      "sample": "/auto/car-loan-emi/",
+      "boilerplate": false
+    },
+    {
+      "pages": 9,
+      "text": "instead of juggling the math by hand or trusting a bank's quoted figure, you type your own numbers and see the result instantly, with the working shown so you can verify every step.",
+      "sample": "/auto/car-loan-emi/",
+      "boilerplate": false
+    },
+    {
+      "pages": 9,
+      "text": "that means the numbers it produces follow the same conventions a professional would use, which keeps the output realistic for real-world planning rather than a rough classroom estimate.",
+      "sample": "/auto/car-loan-emi/",
+      "boilerplate": false
+    },
+    {
+      "pages": 9,
+      "text": "when should you use it any time someone hands you a number you cannot verify by hand run it here and the breakdown panel shows exactly how it was derived.",
+      "sample": "/auto/car-loan-emi/",
+      "boilerplate": false
+    },
+    {
+      "pages": 9,
+      "text": "the result is a precise calculation of what you entered the accuracy of the real-world answer always depends on how accurate your inputs are.",
+      "sample": "/auto/car-loan-emi/",
+      "boilerplate": false
+    },
+    {
+      "pages": 9,
+      "text": "each input plays a specific role, and the engine applies them in the same order every time so the result is reproducible by hand.",
+      "sample": "/auto/car-loan-emi/",
+      "boilerplate": false
+    },
+    {
+      "pages": 9,
+      "text": "that ordering is what makes the answer consistent change one input and the whole chain re-runs, so you can see exactly how each field moves the outcome.",
+      "sample": "/auto/car-loan-emi/",
+      "boilerplate": false
+    },
+    {
+      "pages": 9,
+      "text": "the main number is your answer the details line adds the context you need to interpret it.",
+      "sample": "/auto/car-loan-emi/",
+      "boilerplate": false
+    },
+    {
+      "pages": 9,
+      "text": "watch how the result moves that is the fastest way to understand which factor drives your number most.",
+      "sample": "/auto/car-loan-emi/",
+      "boilerplate": false
+    },
+    {
+      "pages": 9,
+      "text": "use the batch mode or run two sets of inputs side by side to choose between options.",
+      "sample": "/auto/car-loan-emi/",
+      "boilerplate": false
+    },
+    {
+      "pages": 9,
+      "text": "copy the result, download it as an image, csv or pdf, or share a link pre-filled with your inputs.",
+      "sample": "/auto/car-loan-emi/",
+      "boilerplate": false
+    },
+    {
+      "pages": 9,
+      "text": "step-by-step panel the exact arithmetic used, so you can cross-check the main number by hand.",
+      "sample": "/auto/car-loan-emi/",
+      "boilerplate": false
+    },
+    {
+      "pages": 9,
+      "text": "business run quick what-if scenarios without waiting on a spreadsheet or a colleague.",
+      "sample": "/auto/car-loan-emi/",
+      "boilerplate": false
+    },
+    {
+      "pages": 9,
+      "text": "professional use it as an independent cross-check before you commit to a decision or a quote.",
+      "sample": "/auto/car-loan-emi/",
+      "boilerplate": false
+    },
+    {
+      "pages": 9,
+      "text": "using a monthly rate where an annual one belongs, or the reverse the tool expects the rate exactly as the label says.",
+      "sample": "/auto/car-loan-emi/",
+      "boilerplate": false
+    },
+    {
+      "pages": 9,
+      "text": "typing commas or currency symbols into number fields paste plain digits instead.",
+      "sample": "/auto/car-loan-emi/",
+      "boilerplate": false
+    },
+    {
+      "pages": 9,
+      "text": "ignoring the default values they exist because they are realistic, so keep them unless you have a real number to replace them with.",
+      "sample": "/auto/car-loan-emi/",
+      "boilerplate": false
+    },
+    {
+      "pages": 9,
+      "text": "forgetting that the result is only as good as the inputs garbage in, garbage out applies here as much as anywhere.",
+      "sample": "/auto/car-loan-emi/",
+      "boilerplate": false
+    }
+  ],
+  "duplicateTitleExamples": [],
+  "duplicateDescExamples": [],
+  "topRepeatedBlocks": [
+    {
+      "gram": "your data never leaves your device reviewed",
+      "pages": 1285,
+      "sharePct": 96.7,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "data never leaves your device reviewed october",
+      "pages": 1285,
+      "sharePct": 96.7,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "never leaves your device reviewed october 2026",
+      "pages": 1285,
+      "sharePct": 96.7,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "what do i need to use the",
+      "pages": 1285,
+      "sharePct": 96.7,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "formulas, checked against worked examples and covered",
+      "pages": 1285,
+      "sharePct": 96.7,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "checked against worked examples and covered by",
+      "pages": 1285,
+      "sharePct": 96.7,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "against worked examples and covered by automated",
+      "pages": 1285,
+      "sharePct": 96.7,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "see our editorial policy . last reviewed",
+      "pages": 1285,
+      "sharePct": 96.7,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "our editorial policy . last reviewed 2026-10-19",
+      "pages": 1285,
+      "sharePct": 96.7,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "editorial policy . last reviewed 2026-10-19 methodology",
+      "pages": 1285,
+      "sharePct": 96.7,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "and nothing else. what happens if i",
+      "pages": 1181,
+      "sharePct": 88.9,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "nothing else. what happens if i double",
+      "pages": 1181,
+      "sharePct": 88.9,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "else. what happens if i double the",
+      "pages": 1181,
+      "sharePct": 88.9,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "plus the intermediate steps behind it. method",
+      "pages": 1033,
+      "sharePct": 77.7,
+      "samples": [
+        "/auto/bus-vs-car/",
+        "/auto/cargo-volume/",
+        "/auto/carpool-savings/"
+      ]
+    },
+    {
+      "gram": "comes down to transparency the working stays",
+      "pages": 869,
+      "sharePct": 65.4,
+      "samples": [
+        "/auto/bike-fuel/",
+        "/auto/bus-vs-car/",
+        "/auto/car-depreciation/"
+      ]
+    },
+    {
+      "gram": "down to transparency the working stays visible,",
+      "pages": 869,
+      "sharePct": 65.4,
+      "samples": [
+        "/auto/bike-fuel/",
+        "/auto/bus-vs-car/",
+        "/auto/car-depreciation/"
+      ]
+    },
+    {
+      "gram": "to transparency the working stays visible, the",
+      "pages": 869,
+      "sharePct": 65.4,
+      "samples": [
+        "/auto/bike-fuel/",
+        "/auto/bus-vs-car/",
+        "/auto/car-depreciation/"
+      ]
+    },
+    {
+      "gram": "transparency the working stays visible, the math",
+      "pages": 869,
+      "sharePct": 65.4,
+      "samples": [
+        "/auto/bike-fuel/",
+        "/auto/bus-vs-car/",
+        "/auto/car-depreciation/"
+      ]
+    },
+    {
+      "gram": "the working stays visible, the math stays",
+      "pages": 869,
+      "sharePct": 65.4,
+      "samples": [
+        "/auto/bike-fuel/",
+        "/auto/bus-vs-car/",
+        "/auto/car-depreciation/"
+      ]
+    },
+    {
+      "gram": "working stays visible, the math stays local,",
+      "pages": 869,
+      "sharePct": 65.4,
+      "samples": [
+        "/auto/bike-fuel/",
+        "/auto/bus-vs-car/",
+        "/auto/car-depreciation/"
+      ]
+    },
+    {
+      "gram": "stays visible, the math stays local, and",
+      "pages": 869,
+      "sharePct": 65.4,
+      "samples": [
+        "/auto/bike-fuel/",
+        "/auto/bus-vs-car/",
+        "/auto/car-depreciation/"
+      ]
+    },
+    {
+      "gram": "visible, the math stays local, and the",
+      "pages": 869,
+      "sharePct": 65.4,
+      "samples": [
+        "/auto/bike-fuel/",
+        "/auto/bus-vs-car/",
+        "/auto/car-depreciation/"
+      ]
+    },
+    {
+      "gram": "the math stays local, and the result",
+      "pages": 869,
+      "sharePct": 65.4,
+      "samples": [
+        "/auto/bike-fuel/",
+        "/auto/bus-vs-car/",
+        "/auto/car-depreciation/"
+      ]
+    },
+    {
+      "gram": "math stays local, and the result is",
+      "pages": 869,
+      "sharePct": 65.4,
+      "samples": [
+        "/auto/bike-fuel/",
+        "/auto/bus-vs-car/",
+        "/auto/car-depreciation/"
+      ]
+    },
+    {
+      "gram": "stays local, and the result is reproducible",
+      "pages": 869,
+      "sharePct": 65.4,
+      "samples": [
+        "/auto/bike-fuel/",
+        "/auto/bus-vs-car/",
+        "/auto/car-depreciation/"
+      ]
+    }
+  ],
+  "baselineSavedAt": "2026-10-19T12:45:40.698Z",
+  "reviewAfter": "2026-11-09"
+}

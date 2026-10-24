@@ -1,0 +1,14 @@
+{
+  "updatedAt": "2026-10-12T16:20:00.000Z",
+  "note": "Accepted/known index findings. A finding listed here stops alerting; remove an entry to start alerting on it again. Every entry carries its own reason in `note`.",
+  "known": [
+    {
+      "url": "https://calcpromaster.com/finance/",
+      "kind": "duplicate-canonical",
+      "to": "Alternate page with proper canonical tag",
+      "window": "current state @ 2026-10-12",
+      "addedAt": "2026-10-12T16:20:00.000Z",
+      "note": "Known and addressed: Google consolidated the bare category page onto /hub/finance/ because the pair shared ~80% of their five-grams (same methodology note, same category FAQ, same 48-card catalog). The 2026-10-12 de-duplication gave every block exactly one owner (docs/DUPLICATE-HUBS-FIX.md) and added the check:category-dup gate that fails if it regresses. Re-arm this alert (delete this entry) after Google re-crawls both URLs; a second consecutive snapshot still reporting alternate-canonical would mean the canonical hint needs a stronger fix (301 or a canonical tag on /finance/)."
+    }
+  ]
+}

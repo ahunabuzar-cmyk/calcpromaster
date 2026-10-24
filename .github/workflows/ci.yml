@@ -27,8 +27,48 @@ jobs:
       - name: Tool audit — every calc() runs without error
         run: npm run audit
 
+      - name: SEO copy audit — placeholders, intros and guide/blog/hub copy
+        run: |
+          # One pass over every generated and authored copy source:
+          #   P1-P6  tool SEO entries (js/seo-content.js)
+          #   P7-P9  intro paragraphs (coverage, opener shape, truncated phrase)
+          #   P10    guides/, blog/, hub modules, premium articles
+          # Exit 1 while any class is non-empty, so a regression cannot ship.
+          npm run seo:placeholders
+
+      - name: Intro generator owns js/tool-intros.js
+        run: |
+          # Rebuilds the intros in memory and diffs them against the committed
+          # file (ignoring the generation date). Fails if any other script wrote
+          # the file or an intro was hand-edited, so "one writer" stays true.
+          npm run intros:check
+
+      - name: SEO override source freshness
+        run: npm run seo:overrides:check
+
+      - name: Machine-shaped query guard
+        run: |
+          # Fails when a page's impressions come mostly from unsearchable query
+          # strings. Needs the GSC join (data/gsc-query-page.json), which is not
+          # committed — the script prints a skip notice and exits 0 without it.
+          npm run seo:query-quality
+
       - name: Unit tests
         run: npm run test:unit
+
+      - name: Upload SEO audit artifacts
+        # `if: always()` on purpose: these files ARE the evidence for a failed
+        # gate, and a red run is exactly when someone needs to read them. Without
+        # this step the reports are generated and then thrown away with the runner.
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-quality-audit-${{ github.run_id }}
+          path: |
+            data/seo-placeholder-audit.json
+            data/query-quality-audit.json
+          if-no-files-found: ignore
+          retention-days: 14
 
   build:
     name: Deploy build (deploy/ folder)
@@ -55,11 +95,102 @@ jobs:
           done
           echo "deploy/js syntax OK ($(find deploy/js -name '*.js' | wc -l) files)"
 
+      - name: Head criteria on every indexable page
+        run: |
+          # Ten head-level criteria (title, description + CTA, self canonical,
+          # page-specific keywords, JSON-LD + visible dates, no inline handlers,
+          # no comments, one GA4 property) measured on deploy/, not the source.
+          # The 2026-10-17 pass took this from 501 failures to 0; this keeps it there.
+          npm run seo:head:check
+
+      - name: Whole-site bug audit (ids, links, canonicals, JSON-LD, alts)
+        run: npm run audit:site-bugs
+
+      - name: Thin content audit (no page under 500 words)
+        run: npm run audit:thin
+
+      - name: Social tags, internal links and JSON-LD on every built page
+        run: |
+          # Crawl-visible defects an external audit reports: indexable pages with
+          # <=1 dofollow internal link, incomplete Open Graph / Twitter cards,
+          # unparseable JSON-LD or schema entities missing required fields.
+          # 2026-10-19 pass: 184 -> 0 / 79 -> 0 / 154 -> 0.
+          npm run seo:built:audit
+          node scripts/apply-premium-intros.cjs --check
+          node scripts/fix-article-schema.cjs --check
+
+      - name: Upload head-criteria audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: head-criteria-audit-${{ github.run_id }}
+          path: data/head-criteria-audit.json
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Duplicate content (7-gram + sentence) audit
+        run: |
+          # Measures the BUILT pages: per-page n-gram duplication, repeated
+          # editorial sentences, duplicate titles/metas, thin pages. Writes
+          # data/duplicate-content-report.json.
+          npm run seo:dup
+          # Fails only when the duplicated share got worse than the committed
+          # baseline by more than one point (data/duplicate-content-baseline.json).
+          npm run seo:dup:compare
+
+      - name: Upload duplicate-content report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: duplicate-content-${{ github.run_id }}
+          path: data/duplicate-content-report.json
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: SEO overrides + label repairs landed in the built HTML
+        run: |
+          # The overrides are source edits; this reads deploy/ back and asserts the
+          # title, meta, answer-first block and every label repair actually rendered.
+          npm run seo:overrides:verify
+
       - name: Sitemap coverage + 404-catch-all safety gate
         run: |
           # Every sitemap URL must be statically covered and no legit route may
           # hit the hard-404 catch-all — fails with exit 1 on any drift.
           node scripts/check-sitemap-coverage.cjs
+
+      - name: One canonical URL per page (slash twins + sitemap + canonical tags)
+        run: |
+          # GSC had 196 paths listed twice (/x and /x/), with ~11k impressions split
+          # between the twins. The edge now redirects one form to the other, but
+          # nothing stopped the repo from re-creating a twin: a stray X/index.html
+          # next to X.html, a slashed guide submitted in the sitemap, a canonical
+          # tag on the legacy netlify.app host, or a link that costs a redirect hop.
+          # This gate reads the BUILT tree + sitemap and fails on any of them.
+          npm run check:canonical-urls
+
+      - name: Structured data must parse (no bad escape sequences)
+        run: |
+          # Search Console reported "Unparsable structured data → Bad escape sequence
+          # in string" from 2026-10-19. The build's own check only matched the exact
+          # attribute string `<script type="application/ld+json">`, so a block with
+          # single quotes or an extra attribute was never validated — and it ran
+          # before stampReviewDates rewrote dateModified inside those blocks. This
+          # reads the finished tree with a tolerant matcher and prints the offending
+          # escape so the fix is a one-line source edit.
+          npm run check:structured-data
+
+      - name: Live routing guard (serve deploy/, probe it over HTTP)
+        run: |
+          # File-level gates cannot see what a visitor gets. This starts
+          # scripts/serve-deploy.cjs on a free port and requests the built
+          # folder like a browser: every whitelisted extensionless prefix and
+          # every sitemap URL must answer 200 with a <title>, styles.css and
+          # js/app.js must carry the right Content-Type, the shell must
+          # reference ?v=<build> asset URLs (Cloudflare's 4h edge TTL on .js/
+          # .css otherwise serves old code against new HTML), and unknown paths
+          # must be a true 404 rather than the home shell with 200.
+          node scripts/live-routing-guard.cjs
 
       - name: SEO indexing audit — every sitemap URL must be index-ready
         run: |
@@ -71,6 +202,116 @@ jobs:
             echo "::error::SEO indexing audit FAILED — see seo-indexing-audit.json for details"
             exit 1
           fi
+
+      - name: URL-format gate (no uppercase / underscore / .html / query URLs in the sitemap)
+        run: |
+          # Third-party panels report "pages with a poorly formatted URL" as a bare
+          # count; scripts/audit-url-format.cjs turns that into a written rule set
+          # (docs/URL-FORMAT-AUDIT.md). U1-U7 are FAIL, U8-U9 are WARN judgement
+          # calls, and only FAILs stop the build. The one URL that used to trip
+          # this (camelCase /regional/abuDhabi-cost-living) is now a lowercase
+          # slug plus a 301 in _redirects.
+          npm run seo:url-format:check
+
+      - name: Guide-depth gates (thinnest pages must stay above the depth floor)
+        run: |
+          # Both scripts inject unique sections + FAQ into guide pages between
+          # markers and regenerate the FAQPage JSON-LD from the visible FAQ text.
+          # --check fails when a guide's depth block is missing or hand-edited, so
+          # the pages that were once the site's thinnest cannot silently shrink
+          # again. See docs/THIN-PAGES-REPORT.md for the measured word counts.
+          npm run seo:guide-depth:check
+          npm run seo:topic-depth:check
+          # Computed worked examples (numbers from each calculator's own engine)
+          # are what lifted the 400-800-word guides over the depth floor; a
+          # random-output calculator is skipped rather than frozen into stale copy.
+          npm run seo:guide-examples:check
+
+      - name: Page-count drift gate (contentless pages + structural counts)
+        run: |
+          # Reads the deploy/ tree that was just built. Catches the one failure mode
+          # the other gates miss: an interrupted build leaves NUL-padded pages whose
+          # file count and size still look fine, so every count-report lies by
+          # omission. Invariants (no contentless page, every tool id + sitemap URL
+          # has local HTML, no duplicate <loc>) fail on their own; counts that
+          # legitimately move with new GSC data only fail past the tolerance.
+          # Intentional change? `npm run check:page-drift -- --update` + commit.
+          npm run check:page-drift
+
+      - name: Category/hub duplication gate (one owner per block)
+        run: |
+          # /<cat>/ aur /hub/<cat>/ ke beech ~79.8% identical 5-grams tha (Google
+          # khud ek pair consolidate kar chuka tha). Fix ke baad block ownership
+          # badli: FAQ + methodology + catalog grid /<cat>/ par, comparison table
+          # /hub/<cat>/ par. Ye gate wahi ownership aur overlap budget lock karta
+          # hai — koi block wapas dono taraf render ho gaya to build yahin ruk jata
+          # hai. Details: docs/DUPLICATE-HUBS-FIX.md
+          npm run check:category-dup
+
+      - name: Index-regression alert (committed GSC snapshots)
+        run: |
+          # Burn-down "net" ek URL ka index se girna chhupa leta hai. Ye step har
+          # URL ki transition dekhta hai (data/index-panel-history.json + inspect
+          # batches) aur sirf TEEN cheezein fail karta hai: indexed → not indexed,
+          # naya not-candidate, aur naya duplicate-canonical (Google ne page ko
+          # doosre URL par consolidate kar diya). Already-dekhay gaye findings
+          # data/index-regressions-ledger.json mein hain, is liye ek hi baat
+          # dobara CI red nahi karti.
+          # Naya finding accept karna ho: npm run seo:index-regressions:update
+          npm run seo:index-regressions
+
+      - name: Cluster topology gate (spokes → hub, hub → ≥2 spokes)
+        run: |
+          # js/cluster-map.js se sitemap aur prerendered pages tak ki topology.
+          # Url matching dono shakalon ko qubool karti hai (`/x` aur `/x/`) kyunki
+          # deploy tree guides ko flat file aur tool pages ko directory ki tarah
+          # likhta hai — pehle sirf ek shakal match hone se 64 jhooti failure aa
+          # rahi thi jab ke link page par mojood tha.
+          npm run cluster:check
+
+      - name: Query→page cannibalization gate (D3 guide links must exist)
+        run: |
+          # Reads the GSC query→page join and pairs every query that two pages
+          # share, then classifies the pair (D1 consolidate / D2 differentiate /
+          # D3 link the guide / D4-D6 by design). The one class that is a plain
+          # defect is D3: a guide ranking for its calculator's query without
+          # linking the calculator. That count was 2 and is now 0; this step
+          # fails if a guide link goes missing again. D1 is an owner decision, so
+          # it is REPORTED in docs/CANNIBALIZATION-REPORT.md, never auto-applied.
+          # Skips (exit 0) without the GSC join, like the other GSC-fed gates.
+          npm run seo:cannibal:check
+
+      - name: Discovered-fallback analysis (only when its inputs are here)
+        # Explains the "Discovered ➜ unknown" backslides the burn-down reports, and
+        # is uploaded below as evidence. Skipped — not failed — while the scripts it
+        # reads are still uncommitted, the same way the panel workflow guards the
+        # stats generator.
+        if: always()
+        run: |
+          if [ -f scripts/analyze-discovered-fallback.cjs ] && [ -f scripts/build-crawl-plan.cjs ]; then
+            node scripts/analyze-discovered-fallback.cjs
+          else
+            echo "analysis inputs not in the repo yet — skip (run locally: node scripts/analyze-discovered-fallback.cjs)"
+          fi
+
+      - name: Upload SEO audit artifacts
+        # Runs even when the audit above failed — a FAILED run is the one whose
+        # per-URL detail someone actually needs to read. `seo-indexing-audit.csv`
+        # is the flat matrix (spreadsheet-friendly), the JSON carries the full
+        # evidence and the queue burn-down built from it.
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-indexing-audit-${{ github.run_id }}
+          path: |
+            seo-indexing-audit.json
+            seo-indexing-audit.csv
+            data/index-burndown.json
+            docs/INDEX-BURNDOWN.md
+            data/discovered-fallback.json
+            docs/DISCOVERED-FALLBACK-ANALYSIS.md
+          if-no-files-found: ignore
+          retention-days: 14
 
       - name: Keyword docs freshness gate (targets + audit must match deployed content)
         run: |

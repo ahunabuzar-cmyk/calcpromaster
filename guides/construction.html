@@ -45,16 +45,62 @@
     .cat-card p { margin: 0; color: #4b5563; font-size: 0.95rem; }
     .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
     .updated { color: #6b7280; font-size: 0.85rem; }
-  </style>
+/* guide-depth-css:start */
+.guide-lede{font-weight:600;border-left:3px solid #4f46e5;padding-left:12px;margin:10px 0 4px}
+    .guide-pitfalls{margin:8px 0 14px 20px}
+    .seo-faqs h3{margin:16px 0 4px}
+/* guide-depth-css:end */
+</style>
+
+<!-- guide-faq-schema:start -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much extra material should I order?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As a rule of thumb, add around a tenth for slabs and footings on prepared ground, more where the sub-base is uneven or the pour is at a shallow thickness. Too little means a cold joint you cannot undo, so the waste allowance is cheap insurance rather than slack estimating."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does slab thickness change the material?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Directly and linearly: doubling the thickness doubles the volume for the same area. That is why thickness is the first number to pin down, and why a centimetre of extra thickness across a large area costs noticeably more than the same centimetre in a small one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many bags make a cubic metre?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends entirely on the bag weight and the mix strength, which is why bag counts should be taken from the product’s own stated yield rather than a generic figure. Divide the required volume by the yield printed on the bag, then round up — and remember that ready-mix is usually cheaper once the volume is large."
+      }
+    }
+  ]
+}
+</script>
+<!-- guide-faq-schema:end -->
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Construction</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Construction</p>
   <h1>Construction Guides</h1>
   <p class="updated">Part of the CalcProMaster guides library · Updated September 2026</p>
 
   <p>Material estimates decide whether a pour or a wall comes in on budget — or needs an emergency re-order. These guides show the volume math and the wastage buffers professionals actually use.</p>
 
-  <h2>How the math works</h2>
+
+<!-- guide-lede:start -->
+<p class="guide-lede">Construction estimating is a waste-and-tolerance problem: the material arithmetic is straightforward, and the difference between a quote and a shortage lives in the allowances.</p>
+<!-- guide-lede:end -->
+<h2>How the math works</h2>
   <p>Construction estimating is volume first, wastage second. <strong>Volume</strong>: length × width × thickness, kept in one unit system — a 6 m × 4 m slab at 0.1 m is 2.4 m³. Converting to bags uses the mix's cement content (a 1:2:4 mix needs roughly 6.5 bags per m³, so about 16 bags here) — the <a href="/guides/concrete">concrete guide</a> shows the full walk-through with the common mix ratios.</p>
   <p><strong>Wastage</strong> is where estimates fail: 10% on concrete for spillage and over-excavation, 10% on tiles for cuts and breakage, 10% on wallpaper for pattern matching. Ordering exactly the computed volume is the classic first-project mistake — the last third of the pour arrives from a different batch, or the cut tiles for the room's awkward corner were never bought. Every guide in this section builds the buffer into the arithmetic instead of leaving it to memory.</p>
   <p>When a job involves both materials and labour, keep the two estimates separate. Materials scale with the plan (and its wastage); labour scales with site reality — access, weather, cure times — and is quoted by experience, not by formula. The guides here deliberately cover only the material half: it's the half arithmetic can actually pin down, and the half where a 10-minute calculation reliably saves a same-day emergency purchase at whatever the local supplier charges for urgency.</p>
@@ -69,14 +115,52 @@
     <p>Exact factors for length, weight and volume that construction drawings mix daily, with the precision traps to avoid.</p>
   </div>
 
-  <h2>Try the matching calculators</h2>
+
+<!-- guide-extra-depth:start -->
+<h2>What this category covers</h2>
+<p>Concrete volume, brick and block counts, plaster and mortar quantities, steel weight and area take-offs. The formulas are simple; the estimates go wrong on waste, openings and the difference between nominal and actual material sizes.</p>
+<p>Order from a measured take-off plus a stated allowance, and keep the allowance explicit so the next job can reuse the number.</p>
+<h2>Nominal sizes are not actual sizes</h2>
+<p>A 4x2 timber is not 4 inches by 2 inches, a nominal brick includes the mortar joint, and a 50 kg bag of cement yields a fixed volume of concrete only at a stated mix. Working from the nominal figure without checking the actual one is the most common source of over-ordering.</p>
+<p>Check the supplier's actual dimensions for the batch you are buying. Regional standards differ, and a specification copied from another country can be wrong on the first delivery.</p>
+<h2>Waste, access and sequence</h2>
+<p>Concrete is ordered in whole truckloads and cannot be stored, so an underestimate means a cold joint and an overestimate means paid-for waste. Small pours usually justify a 5-10% allowance.</p>
+<p>For blocks and tiles, waste depends on the pattern and on how many cuts the layout needs. A simple running bond wastes far less than a diagonal or feature layout.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/concrete">How to Calculate Concrete for Slabs, Footings and Pads</a></li>
+    <li><a href="/guides/paint-coverage">Paint Coverage</a></li>
+    <li><a href="/guides/room-area">Room Area</a></li>
+    <li><a href="/guides/ac-size">AC Sizing</a></li>
+  </ul>
+
+<!-- guide-depth:start -->
+<h2>Where these answers go wrong</h2><ul class="guide-pitfalls"><li>Ordering the exact calculated volume with no allowance for spillage, uneven ground or over-excavation.</li><li>Mixing bag yield with ready-mix volume — a bag’s nominal size sounds like more concrete than it actually places.</li><li>Computing area from plan dimensions without adding the waste of the real laying pattern.</li><li>Forgetting that materials arrive in standard unit sizes, so the practical order rounds up anyway.</li></ul><h2>Frequently asked questions</h2><div class="seo-faqs"><h3>How much extra material should I order?</h3><p>As a rule of thumb, add around a tenth for slabs and footings on prepared ground, more where the sub-base is uneven or the pour is at a shallow thickness. Too little means a cold joint you cannot undo, so the waste allowance is cheap insurance rather than slack estimating.</p><h3>How does slab thickness change the material?</h3><p>Directly and linearly: doubling the thickness doubles the volume for the same area. That is why thickness is the first number to pin down, and why a centimetre of extra thickness across a large area costs noticeably more than the same centimetre in a small one.</p><h3>How many bags make a cubic metre?</h3><p>It depends entirely on the bag weight and the mix strength, which is why bag counts should be taken from the product’s own stated yield rather than a generic figure. Divide the required volume by the yield printed on the bag, then round up — and remember that ready-mix is usually cheaper once the volume is large.</p></div>
+<!-- guide-depth:end -->
+<!-- guide-worked-example:start -->
+<h2>Worked example: Concrete Slab Calculator at its default inputs</h2>
+<p>This is the answer <a href="/construction/concrete-slab/">Concrete Slab Calculator</a> gives before you touch anything — the defaults as shipped, computed live rather than copied from a sample.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Length (m)</td><td>5</td></tr><tr><td>Width (m)</td><td>3</td></tr><tr><td>Thickness (m)</td><td>0.15</td></tr></tbody></table>
+<p><strong>Result:</strong> Concrete: 2.25 m³</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Formula: Volume = L × W × T</li><li>Step 1: V = 5 × 3 × 0.15</li><li>Step 2: V = 2.25 m³</li><li>Step 3: Bags needed = 90 (40kg bags)</li></ol>
+<h2>What Length (m) does to the answer</h2>
+<p>The table below varies length (m) alone — half, the default, and half again.</p>
+<table><thead><tr><th>Length (m)</th><th>Result</th></tr></thead><tbody><tr><td>2.5</td><td>Concrete: 1.13 m³</td></tr><tr><td>5</td><td>Concrete: 2.25 m³</td></tr><tr><td>7.5</td><td>Concrete: 3.38 m³</td></tr></tbody></table>
+<p>If the rows barely differ, length (m) is not your lever — change a different input. If they swing widely, get that number right before trusting the total.</p>
+<!-- guide-worked-example:end -->
+<h2>Try the matching calculators</h2>
   <p>
-    <a href="/construction/concrete-slab" class="cta">Concrete Slab Calculator</a>
-    <a href="/construction/concrete-bags" class="cta">Concrete Bags Calculator</a>
-    <a href="/construction/bricks" class="cta">Brick Calculator</a>
+    <a href="/construction/concrete-slab/" class="cta">Concrete Slab Calculator</a>
+    <a href="/construction/concrete-bags/" class="cta">Concrete Bags Calculator</a>
+    <a href="/construction/bricks/" class="cta">Brick Calculator</a>
   </p>
 
-  <p><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
+  <p><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

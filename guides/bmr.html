@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BMR Calculator — Mifflin-St Jeor Formula, Worked Example &amp;</title>
-  <meta name="description" content="How BMR is calculated: the Mifflin-St Jeor formula line by line, a worked example, why formulas disagree, and how activity multipliers turn BMR into daily…">
+  <title>BMR Calculator — Mifflin-St Jeor Formula &amp; Worked Example</title>
+  <meta name="description" content="How BMR is calculated: the Mifflin-St Jeor formula line by line, a worked example, and how activity multipliers turn BMR into daily calorie needs.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
   <link rel="canonical" href="https://calcpromaster.netlify.app/guides/bmr">
@@ -13,7 +13,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "BMR Calculator — Mifflin-St Jeor Formula, Worked Example & Multipliers | CalcProMaster",
+    "headline": "BMR Calculator — Mifflin-St Jeor Formula & Worked Example",
     "description": "How BMR is calculated: the Mifflin-St Jeor formula line by line, a worked example, why formulas disagree, and how activity multipliers turn BMR into daily calorie needs.",
     "url": "https://calcpromaster.netlify.app/guides/bmr",
     "inLanguage": "en",
@@ -56,7 +56,9 @@
   </style>
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › BMR (Basal Metabolic Rate)</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › BMR (Basal Metabolic Rate)</p>
   <h1>BMR: The Formula Behind Your Resting Calorie Burn</h1>
   <p class="updated">Health · 6 min read · Last updated September 2026</p>
 
@@ -85,12 +87,48 @@
 
   <h2>Try the calculators</h2>
   <p class="related">
-    <a href="/health/bmr" class="cta">BMR Calculator</a>
-    <a href="/health/bmr-mifflin" class="cta">Mifflin-St Jeor BMR</a>
-    <a href="/health/tdee-macro" class="cta">TDEE & Macro Calculator</a>
+    <a href="/health/bmr/" class="cta">BMR Calculator</a>
+    <a href="/health/bmr-mifflin/" class="cta">Mifflin-St Jeor BMR</a>
+    <a href="/health/tdee-macro/" class="cta">TDEE & Macro Calculator</a>
   </p>
 
-  <h2>Frequently asked questions</h2>
+  
+  
+<!-- guide-worked-example:start -->
+<h2>Worked example: BMR Calculator at its default inputs</h2>
+<p>Open <a href="/health/bmr/">BMR Calculator</a> and press calculate without editing a field. What comes back is the table and result below, so the bmr numbers here are checkable in one click.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Weight (kg)</td><td>70</td></tr><tr><td>Height (cm)</td><td>170</td></tr><tr><td>Age</td><td>30</td></tr><tr><td>Body Fat % (for Katch-McArdle)</td><td>15</td></tr></tbody></table>
+<p><strong>Result:</strong> BMR: 1618 cal/day (Mifflin-St Jeor)</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Formula (Mifflin-St Jeor, 1990):</li><li>Male: BMR = 10W + 6.25H - 5A + 5</li><li>Female: BMR = 10W + 6.25H - 5A - 161</li><li>≈ 1618 cal/day</li></ol>
+<h2>Weight (kg): half, as given, and half again</h2>
+<p>The table below varies weight (kg) alone — half, the default, and half again.</p>
+<table><thead><tr><th>Weight (kg)</th><th>Result</th></tr></thead><tbody><tr><td>35</td><td>BMR: 1268 cal/day (Mifflin-St Jeor)</td></tr><tr><td>70</td><td>BMR: 1618 cal/day (Mifflin-St Jeor)</td></tr><tr><td>105</td><td>BMR: 1968 cal/day (Mifflin-St Jeor)</td></tr></tbody></table>
+<p>Read the three rows as a range: the spread between them is how much the answer depends on weight (kg) alone, with everything else held still.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>BMR is a resting measurement</h2>
+<p>Basal metabolic rate is the energy needed at complete rest to keep organs running. Predictive equations estimate it from weight, height, age and sex, and they carry an error of roughly 10% against measured values in an individual.</p>
+<p>That error is why the first two weeks of any calorie plan are a test rather than a prescription. Use the estimate as a starting point, then adjust based on what the scale and your energy levels actually do.</p>
+<h2>Activity multipliers are the weak link</h2>
+<p>Total daily energy is BMR times an activity factor. The factor is a coarse category, and people routinely choose one that is too high: an office job with three gym sessions is not the same as a job on your feet all day.</p>
+<p>If your weight is stable, you already know your maintenance calories empirically. That number beats any multiplier, and it is easy to estimate from two weeks of intake and weight change.</p>
+<h2>Muscle, age and the direction of drift</h2>
+<p>BMR falls with age partly because muscle mass falls, and it rises with muscle mass independently of exercise during the measurement. Resistance training changes body composition and, over years, the resting burn.</p>
+<p>Crash dieting lowers it too, through lost muscle and adaptive thermogenesis. That is why the same calorie intake stops producing loss after a long deficit, and why a diet break or a slower rate is often the better move.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/body-fat">Body Fat Percentage</a></li>
+    <li><a href="/guides/ideal-weight">Ideal Weight</a></li>
+    <li><a href="/guides/calories">How to Calculate Calories for Weight Loss or Gain</a></li>
+    <li><a href="/guides/macro-calculator">Macros</a></li>
+  </ul>
+
+<h2>Frequently asked questions</h2>
   <h3>How is BMR calculated?</h3>
   <p>The standard Mifflin-St Jeor formula: 10 × weight in kg + 6.25 × height in cm − 5 × age, plus 5 for men or minus 161 for women. For an 80 kg, 180 cm, 30-year-old man that is 1,780 kcal/day.</p>
   <h3>What is a good BMR for my age?</h3>
@@ -103,7 +141,8 @@
   <h3>What do I do with my BMR once I have it?</h3>
   <p>Multiply it by an activity factor to get your daily burn, then set your intake against that number. The <a href="/guides/ideal-weight">ideal weight guide</a> covers what a sensible target weight looks like, and the <a href="/guides/bmi">BMI guide</a> explains the screening number most people pair with BMR.</p>
 
-  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <p class="related"><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog/">Blog</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

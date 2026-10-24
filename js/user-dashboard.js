@@ -29,8 +29,8 @@ const UserDashboard = (function () {
       '<div class="usb-section"><h4>⭐ Favorites</h4><div id="usb-favorites" class="usb-list"></div></div>' +
       '<div class="usb-section"><h4>🕒 Recent (last 10)</h4><div id="usb-recent" class="usb-list"></div></div>' +
       '<div class="usb-footer">' +
-        '<a href="/favorites" class="usb-link" onclick="event.preventDefault();UserDashboard.go(\'/favorites\')">Manage favorites →</a>' +
-        '<a href="/history" class="usb-link" onclick="event.preventDefault();UserDashboard.go(\'/history\')">Full history →</a>' +
+        '<a href="/favorites/" class="usb-link" onclick="event.preventDefault();UserDashboard.go(\'/favorites\')">Manage favorites →</a>' +
+        '<a href="/history/" class="usb-link" onclick="event.preventDefault();UserDashboard.go(\'/history\')">Full history →</a>' +
       '</div>' +
       '<div id="usb-donation-slot"></div>';
     document.body.appendChild(el);

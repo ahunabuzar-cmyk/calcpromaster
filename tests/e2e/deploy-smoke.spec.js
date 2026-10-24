@@ -11,6 +11,13 @@ const path = require('path');
 
 const BASE = process.env.PLAYWRIGHT_BASE_URL || process.env.E2E_BASE || 'http://localhost:3100';
 
+// Authoritative calculator count, read from the registry (all-tool-ids.json) that
+// scripts/sync-counts.cjs keeps the copy in sync with. Hardcoding it here is what
+// made this suite fail once the registry grew past the old literal "1206+": the
+// page was right and the test was stale. Deriving it keeps the same assertion
+// strength (the header must show the current count) without a rotting constant.
+const TOOL_COUNT = require('../../all-tool-ids.json').length;
+
 // True when running against the freshly-built deploy/ artifact (build-smoke
 // job / local runs). False when running against the live CDN (live-smoke job).
 // The full 543-route sweep is artifact-only; the live pass uses a strict
@@ -109,10 +116,10 @@ test.describe('deploy live smoke — behavior', () => {
   // Same reasoning as above: tolerate one transient CI-runner network flake.
   test.describe.configure({ retries: 1 });
 
-  test('homepage has 1206+ header + category grid', async ({ page }) => {
+  test('homepage has the current count header + category grid', async ({ page }) => {
     const t = trackFailures(page, BASE);
     await page.goto(BASE + '/', { waitUntil: 'domcontentloaded' });
-    await expect(page.locator('main h1')).toContainText('1206+', { timeout: 15000 });
+    await expect(page.locator('main h1')).toContainText(TOOL_COUNT + '+', { timeout: 15000 });
     await expect(page.locator('main')).toContainText('Finance', { timeout: 15000 });
     await expect(page.locator('main')).toContainText('Math', { timeout: 15000 });
     expect(t.firstParty, `first-party resource failures: ${t.firstParty.join(' | ')}`).toEqual([]);

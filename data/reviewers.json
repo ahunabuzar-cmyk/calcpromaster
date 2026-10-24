@@ -1,0 +1,3 @@
+{
+  "_comment": "Optional reviewer bylines. Leave {} to show NO byline (we never invent reviewer names). To show a byline for a category, add an entry keyed by category name (finance, health, math, ...) or '_default' for every category. Only add REAL people who agreed to be named. Each entry: { \"name\": \"...\", \"credentials\": \"...\", \"url\": \"/about\" }. Run `node scripts/apply-reviewers.cjs` (or just build) after editing."
+}

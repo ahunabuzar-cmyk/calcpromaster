@@ -116,7 +116,42 @@ const AUTO_TRANSPORT_TOOLS = [
     inputs: [{id:'power',label:'Power (hp)',type:'number',def:250},{id:'weight',label:'Weight (lbs)',type:'number',def:3307}],
     calc: function(v){ if(v.power<=0||v.weight<=0) return{result:'Power and weight must be > 0',chart:'',extra:''}; var et=5.825*Math.pow(v.weight/v.power,1/3); var mph=234*Math.pow(v.power/v.weight,1/3); return{result:'ET: '+et.toFixed(2)+' s @ '+mph.toFixed(1)+' mph',chart:Charts.gauge(Math.min(et/20,1)*100,100),extra:'Rule-of-thumb: ET = 5.825×(W/P)^⅓, mph = 234×(P/W)^⅓ — real times depend on traction, gearing, driver'};},
     steps: function(v){ var et=5.825*Math.pow(v.weight/v.power,1/3); var mph=234*Math.pow(v.power/v.weight,1/3); return['Formula: ET = 5.825 × (weight/hp)^⅓','Step 1: W/P = '+v.weight+' / '+v.power+' = '+(v.weight/v.power).toFixed(3),'Step 2: (W/P)^⅓ = '+Math.pow(v.weight/v.power,1/3).toFixed(3),'Step 3: ET = 5.825 × '+Math.pow(v.weight/v.power,1/3).toFixed(3)+' = '+et.toFixed(2)+' s','Step 4: Trap speed = 234 × (P/W)^⅓ = '+mph.toFixed(1)+' mph'];} },
-
+  {
+    id: 'ev-charger-roi',
+    name: 'EV Charger ROI Calculator',
+    desc: 'Compare home EV charging running cost with petrol and work out the charger payback period.',
+    kw: 'ev charger roi calculator, home ev charging cost, ev vs petrol cost calculator, ev charger payback',
+    inputs: [
+{ id: 'chargerCost', label: 'Charger unit cost', type: 'number', def: 1200 },
+      { id: 'installCost', label: 'Installation cost', type: 'number', def: 800 },
+      { id: 'annualMiles', label: 'Annual miles', type: 'number', def: 12000 },
+      { id: 'gasPrice', label: 'Petrol price per gallon', type: 'number', def: 3.5 },
+      { id: 'gasMpg', label: 'Petrol miles per gallon', type: 'number', def: 28 },
+      { id: 'evMilesPerKwh', label: 'EV miles per kWh', type: 'number', def: 3.5 },
+      { id: 'electricityRate', label: 'Electricity rate per kWh', type: 'number', def: 0.15 }
+    ],
+    calc: function (v) {
+      var total = v.chargerCost + v.installCost;
+      var gasYear = v.annualMiles / v.gasMpg * v.gasPrice;
+      var evYear = v.annualMiles / v.evMilesPerKwh * v.electricityRate;
+      var savings = gasYear - evYear;
+      var payback = savings > 0 ? total / savings : 0;
+      return {
+        result: 'Charger payback: ' + payback.toFixed(1) + ' years',
+        chart: Charts.bar([gasYear, evYear], ['Petrol', 'Electric']),
+        extra: 'Installed ' + total.toFixed(0) + ' | Annual savings ' + savings.toFixed(0) + ' | Petrol ' + gasYear.toFixed(0) + ' a year vs electric ' + evYear.toFixed(0)
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Total installed cost equals the charger plus installation.',
+        'Step 2: Annual petrol cost equals miles divided by miles per gallon, times the petrol price.',
+        'Step 3: Annual electric cost equals miles divided by miles per kWh, times the electricity rate.',
+        'Step 4: Annual savings is the difference; payback equals installed cost divided by annual savings.',
+        'Step 5: Home charging is usually cheaper per mile than petrol, but public fast charging, off-peak rates and time-of-use tariffs change the figure.'
+      ];
+    }
+  }
 ];
 if (typeof module !== 'undefined') module.exports = AUTO_TRANSPORT_TOOLS;
 if (typeof window !== 'undefined') window.AUTO_TRANSPORT_TOOLS = AUTO_TRANSPORT_TOOLS;

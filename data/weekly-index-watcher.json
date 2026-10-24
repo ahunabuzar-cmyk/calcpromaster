@@ -1,0 +1,32 @@
+{
+  "updatedAt": "2026-10-18T12:27:09.006Z",
+  "snapshots": [
+    {
+      "date": "2026-10-18",
+      "coverage": {
+        "inspected": 1415,
+        "indexed": 640,
+        "pctIndexed": 45.2,
+        "snapshotAt": "2026-10-17T09:55:55.696Z"
+      },
+      "cohort": {
+        "date": "2026-10-15",
+        "size": 590,
+        "indexed": 5,
+        "since": "2026-10-11",
+        "before": 5,
+        "delta": 0
+      },
+      "inspected": {
+        "count": 40,
+        "byState": {
+          "unknown": 1,
+          "discovered": 3,
+          "indexed": 28,
+          "redirect": 8
+        },
+        "actionable": 12
+      }
+    }
+  ]
+}

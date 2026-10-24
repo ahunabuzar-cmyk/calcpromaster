@@ -1,0 +1,791 @@
+url,page_type,category,word_count,duplicate_ratio,internal_links,index_status,classification_2026-10-12,reassessment_status,reason,improvement_checklist
+/,home,(root),1419,0.703,69,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto,hub,auto,1656,0.609,87,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/hub/auto,hub,auto,1922,0.548,87,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/mileage-calculator,calculator,auto,2085,0.718,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/fuel-price-compare,calculator,auto,2112,0.732,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/car-affordability,calculator,auto,2139,0.725,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/lease-vs-buy,calculator,auto,2173,0.729,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/ev-charging-cost,calculator,auto,2145,0.742,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/ev-range,calculator,auto,2111,0.729,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/commute-cost,calculator,auto,2286,0.687,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/ride-share-cost,calculator,auto,2231,0.72,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/public-transport,calculator,auto,2202,0.702,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/trip-time,calculator,auto,2165,0.739,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/parking-cost,calculator,auto,2183,0.711,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/car-depreciation,calculator,auto,2126,0.746,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/trade-in-value,calculator,auto,2135,0.721,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/bike-loan,calculator,auto,2251,0.703,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/car-rental,calculator,auto,2145,0.734,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/taxi-fare,calculator,auto,2167,0.733,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/auto-fare,calculator,auto,2181,0.736,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/delivery-cost,calculator,auto,2145,0.751,63,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.751 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/auto/carbon-footprint-car,calculator,auto,2145,0.723,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/fuel-tank-range,calculator,auto,2188,0.72,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/tow-capacity,calculator,auto,2296,0.678,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/toll-cost,calculator,auto,2196,0.737,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/carpool-savings,calculator,auto,2208,0.7,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/scooter-cost,calculator,auto,2146,0.742,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/registration-cost,calculator,auto,2157,0.747,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/tire-replacement,calculator,auto,2155,0.735,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/speed-conv,calculator,auto,2131,0.726,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/hybrid-savings,calculator,auto,2267,0.679,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/quarter-mile,calculator,auto,2175,0.727,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/auto/ev-charger-roi,calculator,auto,1950,0.62,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/business,hub,business,1702,0.602,85,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/hub/business,hub,business,1942,0.54,84,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/business/business-roi,calculator,business,2114,0.756,57,not checked,major-improve,READY_FOR_IMPROVEMENT,url-style warning: U8 WARN · template duplication 0.756 of 5-gram shingles,"consider a shorter or non-repeating slug at the next URL change; no redirect warranted on its own · add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/business/profit-margin,calculator,business,2496,0.548,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/business/ltv,calculator,business,2119,0.736,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/business/conversion-rate,calculator,business,2093,0.753,60,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.753 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/business/churn,calculator,business,2147,0.739,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/business/roas,calculator,business,2123,0.768,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.768 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/business/payback,calculator,business,2142,0.758,65,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.758 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/business/depreciation,calculator,business,2270,0.709,67,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/business/employee-cost,calculator,business,2216,0.707,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/business/cac-payback,calculator,business,2178,0.738,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/business/project-bid,calculator,business,2236,0.723,66,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/business/sponsorship-rate,calculator,business,1937,0.63,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/business/brand-deal-value,calculator,business,1942,0.633,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/business/podcast-ad-rate,calculator,business,1940,0.633,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/business/newsletter-sponsorship-rate,calculator,business,1929,0.629,57,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/business/tool-depreciation,calculator,business,1942,0.633,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/business/ev-charger-business-roi,calculator,business,2002,0.614,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/career,hub,career,1728,0.586,86,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/hub/career,hub,career,2016,0.519,86,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/career/salary-negotiation,calculator,career,2175,0.713,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/career/raise-calculator,calculator,career,2113,0.746,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/career/freelance-hourly-rate,calculator,career,2105,0.746,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/career/freelance-project,calculator,career,2138,0.716,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/career/contractor-rate,calculator,career,2173,0.734,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/career/canada-crs,calculator,career,2008,0.611,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/career/australia-pr-points,calculator,career,1971,0.618,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/career/career-break-runway,calculator,career,1952,0.635,61,not checked,major-improve,AUDITED,url-style warning: U8 WARN,consider a shorter or non-repeating slug at the next URL change; no redirect warranted on its own
+/career/ats-resume-score,calculator,career,1972,0.621,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/career/salary-negotiation-range,calculator,career,1985,0.621,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/career/us-priority-date,calculator,career,1962,0.624,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/career/interview-to-offer-tracker,calculator,career,1897,0.648,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction,hub,construction,1642,0.621,87,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/hub/construction,hub,construction,1864,0.567,86,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/concrete-slab,calculator,construction,2094,0.767,59,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.767 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/construction/wall-area,calculator,construction,2113,0.732,56,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/roofing,calculator,construction,2102,0.743,57,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/drywall,calculator,construction,2170,0.704,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/flooring,calculator,construction,2066,0.724,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/gravel,calculator,construction,2062,0.793,60,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.793 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/construction/insulation,calculator,engineering,2150,0.712,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/carpet,calculator,construction,2143,0.733,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/fence,calculator,construction,2051,0.777,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.777 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/construction/formwork,calculator,construction,2121,0.759,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.759 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/construction/concrete-column,calculator,construction,2131,0.737,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/lumber-calculator,calculator,construction,2193,0.71,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/water-tank,calculator,construction,2216,0.715,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/roof-pitch,calculator,construction,2098,0.748,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/concrete-bags,calculator,construction,2165,0.722,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/block-wall,calculator,construction,2143,0.705,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/asphalt-quantity,calculator,construction,2143,0.725,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/drywall-screws,calculator,construction,2103,0.734,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/pipe-volume,calculator,construction,2250,0.687,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/retaining-wall,calculator,construction,2146,0.745,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/scaffolding,calculator,construction,2118,0.733,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/crown-molding,calculator,construction,2173,0.715,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/gutter,calculator,construction,2287,0.695,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/sod,calculator,construction,2117,0.747,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/siding-squares,calculator,construction,2298,0.686,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/post-hole-concrete,calculator,construction,2249,0.709,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/conduit-fill,calculator,construction,1962,0.604,56,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/rolling-offset,calculator,construction,1971,0.59,56,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/pipe-cutback,calculator,construction,1936,0.617,55,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/construction/journeyman-wage-progression,calculator,construction,1900,0.628,57,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/conversion,hub,conversion,1501,0.671,76,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/hub/conversion,hub,conversion,1566,0.669,75,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/conversion/length,calculator,engineering,2082,0.737,54,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/conversion/weight,calculator,health,2023,0.753,55,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.753 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/conversion/area,calculator,engineering,2033,0.751,57,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.751 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/conversion/speed,calculator,conversion,2023,0.777,58,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.777 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/conversion/data-storage,calculator,conversion,2089,0.758,58,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.758 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/conversion/energy,calculator,conversion,2042,0.741,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/conversion/shoe-size,calculator,conversion,2069,0.753,64,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.753 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/conversion/radiation-dose-conv,calculator,conversion,2077,0.751,61,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.751 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/conversion/wire-gauge-conv,calculator,conversion,2109,0.738,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education,hub,education,1650,0.611,82,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/hub/education,hub,education,1844,0.56,81,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/gpa,calculator,education,2446,0.556,57,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/cgpa,calculator,education,2050,0.774,58,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.774 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/education/grade,calculator,education,2153,0.718,57,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/study-time,calculator,education,2113,0.712,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/reading-speed,calculator,education,2091,0.739,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/quiz-score,calculator,education,2083,0.737,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/semester-gpa,calculator,education,2136,0.701,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/college-cost-planner,calculator,education,2145,0.72,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/study-break,calculator,education,2112,0.732,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/grade-needed,calculator,education,2202,0.68,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/class-rank,calculator,education,2160,0.727,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/flashcard-count,calculator,education,2180,0.733,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/plagiarism-check,calculator,education,2145,0.711,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/letter-grade,calculator,education,2022,0.753,59,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.753 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/education/sat-score,calculator,education,2094,0.739,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/act-score,calculator,education,2109,0.738,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/exam-score-needed,calculator,education,2205,0.714,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/attendance-rate,calculator,education,2121,0.739,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/tuition-cost,calculator,education,2193,0.721,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/gpa-target,calculator,education,2189,0.712,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/reading-time,calculator,education,2085,0.764,60,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.764 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/education/presentation-time,calculator,education,2238,0.685,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/test-average,calculator,education,2055,0.746,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/graduation-date,calculator,education,2124,0.714,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/course-load,calculator,education,2143,0.747,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/financial-need,calculator,education,2193,0.677,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/percentile-rank,calculator,education,2154,0.726,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/act-sat-compare,calculator,education,2133,0.73,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/assignment-split,calculator,education,2135,0.735,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/citation-count,calculator,education,2070,0.756,60,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.756 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/education/study-abroad-cost,calculator,education,1897,0.627,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/scholarship-gap,calculator,education,1901,0.623,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/student-loan-vs-scholarship,calculator,education,1962,0.606,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/education/school-fee-inflation,calculator,education,1893,0.622,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/engineering,hub,engineering,1670,0.61,88,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/hub/engineering,hub,engineering,1833,0.574,87,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/engineering/voltage-drop,calculator,engineering,2134,0.752,57,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.752 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/engineering/power-factor,calculator,engineering,2120,0.742,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/engineering/gear-ratio,calculator,engineering,2105,0.743,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/engineering/torque,calculator,engineering,2089,0.772,60,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.772 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/engineering/inductor,calculator,engineering,2122,0.731,69,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/engineering/thermal,calculator,engineering,2109,0.761,69,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.761 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/engineering/kva-kw,calculator,engineering,2161,0.719,70,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/engineering/beam-deflection,calculator,engineering,2164,0.731,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/engineering/steel-weight,calculator,engineering,2161,0.747,68,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/engineering/inductor-energy,calculator,engineering,2088,0.761,68,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.761 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/engineering/pump-power,calculator,engineering,2244,0.681,69,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/engineering/orifice-flow,calculator,engineering,2153,0.735,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/engineering/ups-sizing,calculator,engineering,2236,0.694,69,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/engineering/pipe-pressure-loss,calculator,engineering,1988,0.599,57,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/engineering/hvac-load,calculator,engineering,1996,0.598,56,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday,hub,everyday,1701,0.587,88,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/hub/everyday,hub,everyday,1911,0.546,88,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/age,calculator,regional,2077,0.713,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/date-diff,calculator,everyday,2084,0.744,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/time-calc,calculator,everyday,2081,0.757,59,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.757 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/everyday/trip-fuel-cost,calculator,everyday,2150,0.749,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/electricity,calculator,everyday,2148,0.714,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/carbon,calculator,everyday,2188,0.734,63,not checked,major-improve,VERIFIED,changed and re-checked this session,no defect found in the measured signals — keep as is
+/everyday/gst,calculator,everyday,2084,0.755,63,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.755 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/everyday/concrete,calculator,everyday,2095,0.756,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.756 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/everyday/garden,calculator,everyday,2150,0.721,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/cooking,calculator,everyday,2055,0.749,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/weather,calculator,everyday,2063,0.741,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/timezone,calculator,everyday,2180,0.727,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/calorie-counter,calculator,everyday,2119,0.716,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/currency-exchange,calculator,everyday,2256,0.68,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/walking-steps,calculator,everyday,2127,0.715,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/fitness-age,calculator,everyday,2198,0.71,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/pet-age,calculator,everyday,2135,0.724,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/blood-alcohol,calculator,everyday,2194,0.723,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/vacation-budget,calculator,everyday,2206,0.719,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/laundry-cost,calculator,everyday,2178,0.727,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/coffee-cost,calculator,everyday,2276,0.686,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/grocery-budget,calculator,everyday,2168,0.709,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/distance-pace,calculator,everyday,2154,0.746,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/savings-goal-date,calculator,everyday,2172,0.706,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/budget-allocator,calculator,everyday,2182,0.725,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/event-countdown,calculator,everyday,2142,0.722,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/days-between,calculator,everyday,2097,0.754,64,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.754 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/everyday/business-days,calculator,everyday,2172,0.72,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/day-of-year,calculator,everyday,2098,0.739,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/leap-year,calculator,everyday,2100,0.734,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/poker-flush,calculator,everyday,2233,0.687,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/easter-date,calculator,everyday,2088,0.735,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/day-of-week,calculator,everyday,2118,0.733,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/moon-phase,calculator,everyday,2179,0.685,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/meeting-cost,calculator,everyday,2157,0.733,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/pomodoro-planner,calculator,everyday,2196,0.745,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/gift-wrap,calculator,everyday,2274,0.672,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/moving-truck,calculator,everyday,2344,0.656,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/jet-lag,calculator,everyday,2269,0.671,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/statute-of-limitations,calculator,everyday,1920,0.624,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/everyday/cost-of-living-compare,calculator,everyday,1901,0.623,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance,hub,finance,1732,0.594,87,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/hub/finance,hub,finance,1984,0.53,86,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/compound-interest,calculator,finance,2456,0.554,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/simple-interest,calculator,finance,2544,0.556,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/auto-loan,calculator,finance,2190,0.739,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/investment,calculator,finance,2196,0.729,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/tax,calculator,finance,2159,0.744,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/tip,calculator,finance,2398,0.584,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/salary,calculator,regional,2159,0.747,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/bonds,calculator,finance,2161,0.744,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/debt-ratio,calculator,finance,2209,0.747,73,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/net-worth-calculator,calculator,finance,2135,0.761,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.761 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/finance/home-afford,calculator,finance,2234,0.723,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/loan-qualify,calculator,finance,2181,0.749,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/paycheck,calculator,finance,2157,0.727,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/markup,calculator,finance,2106,0.74,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/discount,calculator,finance,2562,0.559,66,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/amortization,calculator,finance,2561,0.54,74,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/capital-gains,calculator,finance,2197,0.721,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/dividend,calculator,finance,2173,0.751,61,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.751 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/finance/fire,calculator,finance,2149,0.748,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/social-security,calculator,finance,2198,0.727,71,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/loan-comparison,calculator,finance,2170,0.737,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/investment-growth,calculator,finance,2179,0.732,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/savings-comparison,calculator,finance,2198,0.735,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/mortgage-payoff,calculator,finance,2199,0.735,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/graduated-payment,calculator,finance,2202,0.713,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/balloon-payment,calculator,finance,2172,0.753,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.753 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/finance/interest-only,calculator,finance,2197,0.734,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/emergency-fund,calculator,finance,2229,0.733,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/dca,calculator,finance,2264,0.706,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/esop,calculator,finance,2249,0.727,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/uk-income-tax,calculator,finance,2216,0.737,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/canada-income-tax,calculator,finance,2180,0.752,61,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.752 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/finance/australia-income-tax,calculator,finance,2283,0.682,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/bond-price,calculator,finance,2213,0.747,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/cd-calculator,calculator,finance,2173,0.748,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/dividend-yield,calculator,finance,2190,0.75,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.75 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/finance/rule-of-72,calculator,finance,2174,0.746,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/inflation-adjusted,calculator,finance,2145,0.756,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.756 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/finance/tax-equivalent-yield,calculator,finance,2210,0.739,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/529-plan,calculator,finance,2240,0.724,73,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/times-interest-earned,calculator,finance,2157,0.73,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/quick-ratio,calculator,finance,2205,0.738,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/ebitda,calculator,finance,2163,0.769,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.769 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/finance/enterprise-value,calculator,finance,2249,0.733,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/wacc,calculator,finance,2239,0.734,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/sharpe-ratio,calculator,finance,2209,0.744,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/geometric-mean,calculator,finance,2107,0.751,61,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.751 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/finance/payday-loan-cost,calculator,finance,2272,0.712,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/emergency-fund-rate,calculator,finance,2194,0.721,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/property-tax,calculator,finance,2218,0.715,74,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/closing-costs,calculator,finance,2301,0.687,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/cost-of-debt,calculator,finance,2352,0.68,75,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/fha-loan,calculator,finance,2544,0.625,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/va-loan,calculator,finance,2228,0.712,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/reverse-mortgage,calculator,finance,2210,0.747,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/house-affordability,calculator,finance,2247,0.711,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/price-to-earnings,calculator,finance,2137,0.777,61,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.777 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/finance/dividend-discount,calculator,finance,2189,0.745,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/margin-call,calculator,finance,2373,0.666,76,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/black-scholes,calculator,finance,2209,0.728,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/bond-duration,calculator,finance,2206,0.708,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/growing-perpetuity,calculator,finance,2208,0.725,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/tax-loss-harvest,calculator,finance,2236,0.723,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/car-lease-calculator,calculator,finance,2204,0.744,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/cost-of-living,calculator,finance,2281,0.71,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/debt-consolidation,calculator,finance,2251,0.722,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/accounts-receivable-turnover,calculator,finance,2183,0.738,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/operating-margin,calculator,finance,2171,0.765,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.765 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/finance/home-equity,calculator,finance,2199,0.724,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/cash-on-cash,calculator,finance,2255,0.712,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/loan-balance,calculator,finance,2188,0.739,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/discounted-payback,calculator,finance,2249,0.719,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/payroll-tax,calculator,finance,2125,0.751,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.751 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/finance/diversification,calculator,finance,2177,0.713,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/forex-pip,calculator,finance,2142,0.756,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.756 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/finance/currency-arbitrage,calculator,finance,2203,0.743,72,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/payback-period,calculator,finance,2181,0.727,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/cagr,calculator,finance,2202,0.74,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/capm,calculator,finance,2191,0.742,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/debt-to-equity,calculator,finance,2223,0.711,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/fixed-deposit-vs-recurring,calculator,finance,2300,0.708,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/insurance-surrender-value,calculator,finance,2291,0.717,73,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/recast-mortgage,calculator,finance,2231,0.72,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/biweekly-mortgage,calculator,finance,2211,0.723,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/rent-affordability,calculator,finance,2210,0.717,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/dividend-reinvestment,calculator,finance,2214,0.696,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/stock-split,calculator,finance,2234,0.728,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/eps-calculator,calculator,finance,2229,0.728,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/book-value-share,calculator,finance,2252,0.704,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/credit-utilization,calculator,finance,2177,0.757,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.757 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/finance/apy-calculator,calculator,finance,2916,0.552,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/lump-sum-vs-sip,calculator,finance,2267,0.729,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/pmi-calculator,calculator,finance,2500,0.655,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/pension-lump-sum,calculator,finance,2327,0.693,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/prorated-rent,calculator,finance,2375,0.686,74,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/dso,calculator,finance,2309,0.695,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/payout-ratio,calculator,finance,2247,0.727,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/market-cap,calculator,finance,2263,0.718,72,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/max-drawdown,calculator,finance,2224,0.757,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.757 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/finance/zero-coupon-bond,calculator,finance,2292,0.701,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/cd-ladder,calculator,finance,2286,0.703,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/ibond-value,calculator,finance,2227,0.716,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/risk-reward-ratio,calculator,finance,2295,0.707,72,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/position-size,calculator,finance,2238,0.728,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/cost-basis-avg,calculator,finance,2266,0.732,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/dca-calculator,calculator,finance,2247,0.709,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/staking-rewards,calculator,finance,2212,0.709,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/kelly-criterion,calculator,finance,2219,0.713,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/ev-ebitda,calculator,finance,2214,0.747,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/peg-ratio,calculator,finance,2200,0.751,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.751 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/finance/free-cash-flow,calculator,finance,2273,0.696,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/runway-months,calculator,finance,2189,0.758,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.758 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/finance/effective-tax-rate,calculator,finance,2264,0.735,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/late-fee-interest,calculator,finance,2272,0.698,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/factoring-fee,calculator,finance,2266,0.716,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/royalty-payment,calculator,finance,2204,0.722,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/safe-withdrawal,calculator,finance,2383,0.674,72,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/rent-increase,calculator,finance,2210,0.747,72,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/roommate-rent-split,calculator,finance,2356,0.709,71,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/refinance-breakeven,calculator,finance,2289,0.706,71,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/auto-lease-vs-buy,calculator,finance,2353,0.678,71,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/yield-to-worst,calculator,finance,2297,0.717,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/coupon-payment,calculator,finance,2256,0.704,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/clean-dirty-price,calculator,finance,2233,0.712,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/convexity,calculator,finance,2275,0.714,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/duration-bond,calculator,finance,2211,0.731,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/appreciation-forecast,calculator,finance,2245,0.705,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/rent-vs-sell,calculator,finance,2351,0.668,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/seller-net,calculator,finance,2277,0.71,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/cap-rate-conv,calculator,finance,2247,0.725,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/rule-of-40,calculator,finance,2244,0.718,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/cost-of-delay,calculator,finance,2174,0.732,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/hajj-cost,calculator,finance,1921,0.658,60,not checked,major-improve,VERIFIED,changed and re-checked this session,no defect found in the measured signals — keep as is
+/finance/power-of-attorney-cost,calculator,finance,1952,0.627,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/divorce-cost,calculator,finance,1980,0.625,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/moving-abroad-cost,calculator,finance,1950,0.638,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/cosigning-loan-risk,calculator,finance,1943,0.652,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/inheritance-tax-uk-india,calculator,finance,2024,0.617,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/finance/rental-portfolio-tracker,calculator,finance,1991,0.62,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness,hub,fitness,1650,0.611,82,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/hub/fitness,hub,fitness,1819,0.576,82,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/race-predictor,calculator,fitness,2183,0.7,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/steps-to-distance,calculator,fitness,2158,0.738,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/max-heart-rate,calculator,fitness,2159,0.735,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/recovery-hr,calculator,fitness,2151,0.721,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/vo2max,calculator,fitness,2149,0.72,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/calories-exercise,calculator,fitness,2127,0.743,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/body-fat-fitness,calculator,fitness,2258,0.689,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/pullup-test,calculator,fitness,2159,0.744,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/flexibility-score,calculator,fitness,2158,0.713,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/sports-calories,calculator,fitness,2152,0.763,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.763 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/fitness/calories-burned,calculator,fitness,2247,0.714,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/one-rep-max,calculator,fitness,2212,0.707,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/training-max,calculator,fitness,2090,0.764,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.764 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/fitness/weight-loss,calculator,fitness,2248,0.717,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/muscle-gain,calculator,fitness,2193,0.704,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/pushup-test,calculator,fitness,2228,0.722,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/squat-standards,calculator,fitness,2198,0.708,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/bench-standards,calculator,fitness,2164,0.733,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/overhead-standards,calculator,fitness,2143,0.744,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/plank-test,calculator,fitness,2157,0.713,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/grip-strength,calculator,fitness,2157,0.738,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/situp-test,calculator,fitness,2152,0.726,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/swim-pace,calculator,fitness,2241,0.694,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/cycling-speed,calculator,fitness,2236,0.688,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/training-volume,calculator,fitness,2223,0.705,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/beep-test,calculator,fitness,2214,0.731,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/deload-week,calculator,fitness,2236,0.702,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/workout-rest,calculator,fitness,2100,0.731,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/treadmill-pace,calculator,fitness,2229,0.706,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/rowing-split,calculator,fitness,2219,0.721,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/sweat-rate,calculator,fitness,2221,0.694,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/rpe-load,calculator,fitness,2191,0.72,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/vo2-beep,calculator,fitness,2282,0.684,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/fitness/resting-metabolic,calculator,fitness,2159,0.716,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/food,hub,food,1551,0.648,77,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/hub/food,hub,food,1713,0.611,77,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/food/macro-split,calculator,food,2074,0.759,58,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.759 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/food/protein-need,calculator,food,2113,0.758,59,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.758 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/food/weight-loss-time,calculator,food,2193,0.696,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/food/body-fat-food,calculator,food,2177,0.713,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/food/calorie-burned,calculator,food,2134,0.749,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/food/recipe-scaler,calculator,food,2140,0.744,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/food/unit-converter-food,calculator,food,2068,0.765,64,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.765 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/food/intermittent-fasting,calculator,food,2085,0.729,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/food/baking-converter,calculator,food,2087,0.741,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/food/carb-calculator,calculator,food,2090,0.759,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.759 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/food/fiber-need,calculator,food,2113,0.729,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/food/meat-cooking-time,calculator,food,2128,0.734,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/food/caffeine-daily,calculator,food,2133,0.744,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/food/alcohol-calories,calculator,food,2177,0.721,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health,hub,health,1728,0.591,87,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/hub/health,hub,health,1943,0.534,86,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/bmr,calculator,health,2641,0.52,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/calorie,calculator,health,2581,0.538,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/water-intake-health,calculator,health,2553,0.541,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/ideal-body-weight,calculator,health,2116,0.741,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/heart-rate,calculator,health,2138,0.733,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/pregnancy,calculator,health,2177,0.718,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/ovulation,calculator,health,2115,0.75,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.75 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/health/lean-body-mass,calculator,health,2161,0.696,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/waist-hip,calculator,health,2143,0.742,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/calorie-burn,calculator,health,2181,0.727,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/sleep,calculator,health,2106,0.749,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/target-heart-rate,calculator,health,2207,0.719,61,Submitted and indexed,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/sleep-quality,calculator,health,2184,0.733,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/fatigue-score,calculator,health,2181,0.752,61,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.752 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/health/heart-rate-zones,calculator,health,2164,0.717,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/ideal-weight,calculator,health,2140,0.719,66,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/fasting-calculator,calculator,health,2150,0.74,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/sleep-debt,calculator,health,2202,0.732,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/met-calories,calculator,health,2206,0.73,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/iron-intake,calculator,health,2121,0.762,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.762 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/health/vitamin-d-dosage,calculator,health,2168,0.717,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/burn-severity,calculator,health,2142,0.728,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/drug-dosage,calculator,health,2271,0.704,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/trimester-date,calculator,health,2192,0.737,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/ovulation-calculator,calculator,health,2245,0.697,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/cholesterol-ratio,calculator,health,2163,0.717,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/nap-planner,calculator,health,2269,0.698,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/maffetone-hr,calculator,health,2204,0.703,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/health-insurance-copay,calculator,health,2284,0.703,62,not checked,major-improve,AUDITED,url-style warning: U8 WARN,consider a shorter or non-repeating slug at the next URL change; no redirect warranted on its own
+/health/glycemic-load,calculator,health,2178,0.74,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/waist-height-ratio,calculator,health,2180,0.749,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/ldl-calculator,calculator,health,2196,0.729,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/anion-gap,calculator,health,2231,0.722,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/qtc,calculator,health,2163,0.719,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/bmr-mifflin,calculator,health,2668,0.593,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/chw,calculator,health,2215,0.745,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/gcs,calculator,health,2238,0.71,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/apgar,calculator,health,2193,0.74,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/vaccination-schedule,calculator,health,2187,0.714,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/corrected-calcium,calculator,health,2152,0.726,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/winters-formula,calculator,health,2082,0.746,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/maintenance-fluids,calculator,health,2156,0.719,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/free-water-deficit,calculator,health,2199,0.727,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/serum-osmolality,calculator,health,2188,0.731,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/total-body-water,calculator,health,2221,0.702,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/pf-ratio,calculator,health,2228,0.722,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/health/pet-medication-dose,calculator,health,1978,0.63,55,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden,hub,homegarden,1781,0.561,88,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/room-area,calculator,homegarden,2201,0.721,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/wallpaper-rolls,calculator,homegarden,2236,0.72,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/fence-material,calculator,homegarden,2173,0.737,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/deck-stain,calculator,homegarden,2280,0.697,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/curtain-length,calculator,homegarden,2211,0.698,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/rug-size,calculator,homegarden,2232,0.679,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/lighting-rooms,calculator,homegarden,2210,0.734,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/paint-cost,calculator,homegarden,2178,0.738,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/water-heater,calculator,homegarden,2261,0.694,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/garden-soil,calculator,homegarden,2204,0.722,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/plant-spacing,calculator,homegarden,2214,0.715,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/fertilizer,calculator,homegarden,2130,0.726,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/rain-barrel,calculator,homegarden,2205,0.708,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/irrigation-flow,calculator,homegarden,2261,0.702,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/pool-chemicals,calculator,homegarden,2217,0.705,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/furniture-arrange,calculator,homegarden,2252,0.696,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/tv-mount-height,calculator,homegarden,2232,0.706,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/countertop-sqft,calculator,homegarden,2225,0.714,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/cabinet-door,calculator,homegarden,2191,0.714,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/tile-grout,calculator,homegarden,2184,0.727,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/light-bulb-save,calculator,homegarden,2218,0.694,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/home-sqft,calculator,homegarden,2245,0.727,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/kitchen-remodel,calculator,homegarden,2131,0.743,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/roof-sqft,calculator,homegarden,2116,0.741,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/vinyl-flooring,calculator,homegarden,2195,0.729,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/solar-battery,calculator,homegarden,2275,0.69,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/ev-charger-home,calculator,homegarden,2184,0.716,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/raised-bed-soil,calculator,homegarden,2199,0.732,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/garden-fence,calculator,homegarden,2136,0.738,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/lawn-watering,calculator,homegarden,2167,0.736,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/sprinkler-heads,calculator,homegarden,2213,0.707,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/deck-post,calculator,homegarden,2201,0.719,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/porch-light,calculator,homegarden,2175,0.702,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/humidifier-size,calculator,homegarden,2195,0.712,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/appliance-cost,calculator,homegarden,2255,0.699,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/firewood,calculator,homegarden,2140,0.73,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/solar-payback,calculator,homegarden,1966,0.61,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/homegarden/carbon-offset,calculator,homegarden,1925,0.625,59,not checked,major-improve,VERIFIED,changed and re-checked this session,no defect found in the measured signals — keep as is
+/homegarden/homeowner-first-year-budget,calculator,homegarden,1911,0.633,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle,hub,lifestyle,1817,0.555,88,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/relocation-cost,calculator,lifestyle,2169,0.742,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/rental-deposit,calculator,lifestyle,2182,0.7,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/paint-coverage,calculator,lifestyle,2209,0.703,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/electricity-bill-saving,calculator,lifestyle,2212,0.688,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/water-usage,calculator,lifestyle,2260,0.694,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/grocery-budget-optimizer,calculator,lifestyle,2167,0.722,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/food-delivery-vs-cooking,calculator,lifestyle,2229,0.706,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/coffee-habit,calculator,lifestyle,2228,0.693,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/road-trip-cost,calculator,lifestyle,2197,0.715,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/baby-cost,calculator,lifestyle,2177,0.727,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/pet-cost,calculator,lifestyle,2161,0.721,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/lawn-mowing,calculator,lifestyle,2213,0.704,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/gym-cost-per-visit,calculator,lifestyle,2259,0.686,66,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/vacation-savings,calculator,lifestyle,2181,0.678,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/sale-savings,calculator,lifestyle,2137,0.704,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/resell-value,calculator,lifestyle,2160,0.705,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/streaming-value,calculator,lifestyle,2167,0.714,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/charging-time,calculator,lifestyle,2225,0.695,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/gift-split,calculator,lifestyle,2215,0.685,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/hourly-annual-salary,calculator,lifestyle,2229,0.709,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/cleaning-time,calculator,lifestyle,2186,0.698,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/date-night-cost,calculator,lifestyle,2162,0.742,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/takeout-budget,calculator,lifestyle,2120,0.711,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/home-insurance,calculator,lifestyle,2919,0.53,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/renters-insurance,calculator,lifestyle,2152,0.715,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/haircut-annual,calculator,lifestyle,2168,0.709,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/party-cost,calculator,lifestyle,2200,0.721,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/gift-budget,calculator,lifestyle,2192,0.723,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/hobby-cost,calculator,lifestyle,2153,0.732,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/travel-daily,calculator,lifestyle,2147,0.709,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/home-renovation,calculator,lifestyle,2098,0.754,64,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.754 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/lifestyle/cigarette-cost,calculator,lifestyle,2168,0.737,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/french-press-ratio,calculator,lifestyle,2132,0.718,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/cocktail-dilution,calculator,lifestyle,2155,0.721,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/wine-servings,calculator,lifestyle,2123,0.748,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/baking-scale,calculator,lifestyle,2169,0.729,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/candle-wax,calculator,lifestyle,2186,0.723,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/knit-gauge,calculator,lifestyle,2169,0.706,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/quilt-fabric,calculator,lifestyle,2189,0.734,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/pet-insurance-cost,calculator,lifestyle,1930,0.629,57,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/lifestyle/pet-boarding-cost,calculator,lifestyle,1868,0.646,57,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/math,hub,math,1649,0.62,86,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/hub/math,hub,math,1666,0.627,85,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/math/scientific,calculator,math,1997,0.754,55,Submitted and indexed,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.754 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/math/quadratic,calculator,math,2455,0.54,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/math/fraction,calculator,math,2292,0.575,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/math/triangle,calculator,math,2121,0.728,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/math/circle,calculator,math,2064,0.77,64,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.77 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/math/statistics,calculator,math,2023,0.762,61,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.762 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/math/lcm-gcd,calculator,math,2039,0.782,61,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.782 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/math/prime-factor,calculator,math,1977,0.766,64,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.766 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/math/matrix-det,calculator,math,2051,0.792,64,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.792 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/math/logarithm,calculator,math,2052,0.762,64,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.762 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/math/root,calculator,math,2054,0.772,64,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.772 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/math/ratio,calculator,math,2045,0.782,64,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.782 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/math/trigonometry,calculator,math,2106,0.731,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/math/factorial,calculator,math,2001,0.779,63,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.779 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/math/complex,calculator,math,2124,0.72,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/math/scientific-notation,calculator,math,2098,0.762,63,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.762 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/math/random-generator,calculator,math,2147,0.731,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/math/cubic-equation,calculator,math,2155,0.732,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/math/binomial-prob,calculator,math,2106,0.746,66,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/math/taylor-series,calculator,math,2079,0.749,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/math/linear-system,calculator,math,2121,0.759,63,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.759 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/math/mean-median-mode,calculator,math,2599,0.515,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/math/variance-sd,calculator,math,2057,0.743,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/math/permutation,calculator,math,2029,0.754,63,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.754 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/math/binomial-theorem,calculator,math,2062,0.752,63,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.752 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/math/sieve-prime,calculator,math,2113,0.718,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/math/fibonacci-seq,calculator,math,2061,0.755,64,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.755 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/math/distance-formula,calculator,math,2108,0.746,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/math/linear-regression,calculator,math,2079,0.743,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/math/harmonic-mean,calculator,math,2058,0.763,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.763 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/math/matrix-inverse,calculator,math,2077,0.745,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/math/hexagon-area,calculator,math,2063,0.752,61,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.752 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/math/law-of-cosines,calculator,math,2170,0.723,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/math/weighted-average,calculator,math,2091,0.767,61,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.767 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/math/coefficient-of-variation,calculator,math,2133,0.707,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/math/rms,calculator,math,2058,0.751,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.751 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/math/completing-square,calculator,math,2160,0.721,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/math/inverse-variation,calculator,math,2091,0.75,64,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.75 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/math/nth-root,calculator,math,2161,0.71,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/math/circle-through-points,calculator,math,2111,0.755,65,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.755 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/family,hub,family,1599,0.631,80,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/hub/family,hub,family,1815,0.572,80,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/family/baby-weight-gain,calculator,family,2300,0.674,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/family/baby-feeding,calculator,family,2210,0.707,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/family/baby-sleep,calculator,family,2100,0.722,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/family/child-height,calculator,family,2277,0.67,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/family/toddler-screen,calculator,family,2151,0.729,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/family/child-bmi,calculator,family,2137,0.721,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/family/family-budget,calculator,family,2153,0.723,63,not checked,major-improve,AUDITED,url-style warning: U8 WARN,consider a shorter or non-repeating slug at the next URL change; no redirect warranted on its own
+/family/childcare-cost,calculator,family,2197,0.715,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/family/home-buying,calculator,family,2221,0.718,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/family/wedding-budget,calculator,family,2116,0.747,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/family/baby-name,calculator,family,2103,0.743,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/family/family-budget-simple,calculator,family,2139,0.742,63,Submitted and indexed,major-improve,AUDITED,url-style warning: U8 WARN,consider a shorter or non-repeating slug at the next URL change; no redirect warranted on its own
+/family/kid-allowance,calculator,family,2130,0.751,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.751 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/family/diaper-cost,calculator,family,2170,0.731,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/family/vacation-with-kids,calculator,family,2249,0.679,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/family/baby-formula,calculator,family,2223,0.708,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/family/family-meal-cost,calculator,family,2205,0.741,63,not checked,major-improve,AUDITED,url-style warning: U8 WARN,consider a shorter or non-repeating slug at the next URL change; no redirect warranted on its own
+/family/school-supplies,calculator,family,2192,0.71,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/family/allowance-calc,calculator,family,2199,0.719,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/family/sibling-age-gap,calculator,family,2173,0.731,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/family/child-support-split,calculator,family,2232,0.714,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/family/alimony-estimator,calculator,family,1963,0.607,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/family/bereavement-checklist,calculator,family,1946,0.621,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional,hub,regional,1893,0.537,88,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/fd-calculator,calculator,regional,2228,0.736,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/rd-calculator,calculator,regional,2210,0.731,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/ppf-calculator,calculator,regional,2658,0.53,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/nps-calculator,calculator,regional,2283,0.708,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/sip-return,calculator,regional,2242,0.727,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/income-tax-india,calculator,regional,2228,0.709,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/gst-india,calculator,regional,2155,0.743,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/stamp-duty,calculator,regional,2268,0.698,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/home-loan-emi-india,calculator,regional,2278,0.715,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/gold-rate,calculator,regional,2234,0.728,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/pk-salary,calculator,regional,2266,0.714,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/gold-rate-pk,calculator,regional,2243,0.713,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/rickshaw-fare,calculator,regional,2252,0.709,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/electricity-bill-india,calculator,regional,2287,0.711,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/lpg-cost,calculator,regional,2243,0.74,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/dubai-salary,calculator,regional,2315,0.701,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/gold-silver,calculator,regional,2242,0.751,64,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.751 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/regional/chit-fund,calculator,regional,2188,0.742,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/gratuity,calculator,regional,2213,0.736,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/leave-encashment,calculator,regional,2220,0.729,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/epf-calculator,calculator,regional,2230,0.728,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/esic-calculator,calculator,regional,2137,0.766,63,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.766 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/regional/tds-calculator,calculator,regional,2228,0.733,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/hra-exemption,calculator,regional,2263,0.715,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/capital-gains-india,calculator,regional,2279,0.702,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/sukanya-samriddhi,calculator,regional,2237,0.699,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/nsc-interest,calculator,regional,2220,0.726,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/senior-savings-scheme,calculator,regional,2168,0.756,63,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.756 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/regional/post-office-savings,calculator,regional,2258,0.726,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/uae-vat,calculator,regional,2118,0.759,64,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.759 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/regional/zakat-calculator,calculator,regional,2725,0.514,66,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/pk-income-tax,calculator,regional,2199,0.719,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/gold-silver-ratio,calculator,regional,2218,0.734,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/gratuity-calculator,calculator,regional,2282,0.716,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/stamp-duty-india,calculator,regional,2241,0.735,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/gst-calculator,calculator,regional,2298,0.688,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/us-fica,calculator,regional,2158,0.758,64,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.758 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/regional/australia-super,calculator,regional,2220,0.737,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/singapore-cpf,calculator,regional,2136,0.744,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/uk-take-home-salary,calculator,regional,2186,0.569,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/saudi-take-home-salary,calculator,regional,2134,0.58,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/canada-take-home-salary,calculator,regional,2137,0.58,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/germany-take-home-salary,calculator,regional,2172,0.56,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/australia-take-home-salary,calculator,regional,2023,0.604,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/singapore-take-home-salary,calculator,regional,2039,0.605,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/qatar-take-home-salary,calculator,regional,1973,0.617,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/abuDhabi-cost-living,calculator,regional,2038,0.593,63,not checked,major-improve,BLOCKED,"url-format: U1 FAIL, U7 FAIL",rename slug to the lowercase-hyphen form and 301 the old path (changes an indexed URL — needs owner authorisation)
+/regional/japan-take-home-salary,calculator,regional,2007,0.615,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/switzerland-take-home-salary,calculator,regional,1938,0.651,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/netherlands-take-home-salary,calculator,regional,1893,0.659,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/malaysia-take-home-salary,calculator,regional,1893,0.667,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/hongkong-take-home-salary,calculator,regional,1904,0.65,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/uae-gratuity-calculator,calculator,regional,1907,0.645,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/ireland-take-home-salary,calculator,regional,1989,0.62,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/new-zealand-take-home-salary,calculator,regional,1991,0.627,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/south-africa-take-home-salary,calculator,regional,1993,0.628,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/kenya-take-home-salary,calculator,regional,2019,0.631,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/nigeria-take-home-salary,calculator,regional,1981,0.628,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/philippines-take-home-salary,calculator,regional,2033,0.624,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/bangladesh-income-tax,calculator,regional,2038,0.622,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/egypt-take-home-salary,calculator,regional,2030,0.624,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/brazil-take-home-salary,calculator,regional,1944,0.665,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/mexico-isr-salary,calculator,regional,1933,0.658,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/vietnam-take-home-salary,calculator,regional,1936,0.661,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/indonesia-take-home-salary,calculator,regional,1968,0.654,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/thailand-take-home-salary,calculator,regional,1980,0.651,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/colombia-take-home-salary,calculator,regional,1956,0.659,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/chile-take-home-salary,calculator,regional,1956,0.651,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/peru-take-home-salary,calculator,regional,1928,0.649,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/poland-take-home-salary,calculator,regional,1906,0.663,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/romania-take-home-salary,calculator,regional,1891,0.666,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/prayer-time,calculator,regional,2107,0.594,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/mirath-calculator,calculator,regional,2069,0.608,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/hijri-converter,calculator,regional,1987,0.621,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/gold-price,calculator,regional,1989,0.617,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/qurbani-cost,calculator,regional,1937,0.648,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/regional/umrah-cost,calculator,regional,1949,0.638,61,not checked,major-improve,VERIFIED,changed and re-checked this session,no defect found in the measured signals — keep as is
+/regional/remittance-fee,calculator,regional,1977,0.635,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science,hub,science,1565,0.649,88,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/hub/science,hub,science,1707,0.615,87,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science/ohms-law,calculator,science,2439,0.56,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science/pressure,calculator,science,2025,0.786,58,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.786 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/science/kinetic-energy,calculator,science,2083,0.757,58,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.757 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/science/potential-energy,calculator,science,2090,0.753,59,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.753 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/science/ph,calculator,science,1996,0.764,60,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.764 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/science/ideal-gas,calculator,science,2118,0.739,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science/half-life,calculator,science,2120,0.728,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science/wavelength,calculator,science,2031,0.772,61,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.772 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/science/power,calculator,science,2058,0.787,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.787 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/science/free-fall,calculator,science,2068,0.765,60,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.765 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/science/specific-heat,calculator,science,2102,0.729,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science/coulomb,calculator,science,2051,0.739,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science/energy-mass,calculator,science,2035,0.76,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.76 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/science/molar-mass,calculator,science,2087,0.746,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science/work-calculator,calculator,science,2036,0.782,61,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.782 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/science/escape-velocity,calculator,science,2123,0.754,63,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.754 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/science/electric-field,calculator,science,2084,0.755,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.755 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/science/newtons-second,calculator,science,2069,0.735,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science/power-electrical,calculator,science,2046,0.779,60,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.779 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/science/speed-of-sound,calculator,science,2065,0.764,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.764 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/science/wavelength-freq,calculator,science,2015,0.773,63,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.773 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/science/kepler-third,calculator,science,2117,0.724,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science/radioactive-decay,calculator,science,2069,0.744,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science/centripetal,calculator,science,2031,0.769,63,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.769 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/science/orbital-velocity,calculator,science,2067,0.738,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science/heat-transfer,calculator,science,2117,0.724,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science/combined-gas-law,calculator,science,2050,0.771,61,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.771 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/science/wave-speed,calculator,science,2057,0.746,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science/moment-of-inertia,calculator,science,2105,0.734,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science/buoyancy,calculator,science,2113,0.735,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science/solar-energy,calculator,science,2187,0.714,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science/bernoulli,calculator,science,2077,0.771,64,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.771 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/science/projectile,calculator,science,2104,0.729,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science/latent-heat,calculator,science,2055,0.772,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.772 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/science/friction,calculator,science,2156,0.738,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science/impulse,calculator,science,2059,0.781,61,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.781 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/science/hooke-law,calculator,science,2112,0.752,64,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.752 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/science/debroglie,calculator,science,2153,0.729,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science/carbon-dating,calculator,science,2132,0.735,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science/freezing-depression,calculator,science,2228,0.693,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science/bullet-drop,calculator,science,2185,0.744,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science/dew-point,calculator,science,2118,0.739,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science/cloud-base-lcl,calculator,science,2132,0.713,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/science/grahams-law,calculator,science,2175,0.746,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech,hub,tech,1691,0.599,88,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/hub/tech,hub,tech,1873,0.553,88,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/internet-speed,calculator,tech,2113,0.738,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/bandwidth-calc,calculator,tech,2026,0.757,58,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.757 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/tech/monitor-distance,calculator,tech,2063,0.741,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/wifi-channels,calculator,tech,2059,0.731,62,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/cloud-storage,calculator,tech,2044,0.753,63,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.753 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/tech/website-cost,calculator,tech,2084,0.723,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/ssd-vs-hdd,calculator,tech,2107,0.74,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/battery-life-estimator,calculator,tech,2131,0.72,63,Submitted and indexed,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/screen-resolution,calculator,tech,2087,0.732,63,Submitted and indexed,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/cable-length,calculator,tech,2059,0.766,63,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.766 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/tech/ppi-calc,calculator,tech,2199,0.702,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/wattage-psu,calculator,tech,2178,0.727,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/print-resolution,calculator,tech,2119,0.73,66,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/password-time,calculator,tech,2151,0.709,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/monitor-refresh,calculator,tech,2165,0.733,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/streaming-bitrate,calculator,tech,2090,0.733,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/raid-capacity,calculator,tech,2101,0.722,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/uptime-calculator,calculator,tech,2044,0.779,65,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.779 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/tech/device-charge-time,calculator,tech,2172,0.723,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/data-transfer-cost,calculator,tech,2102,0.751,67,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.751 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/tech/token-cost,calculator,tech,2166,0.714,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/base64-decode,calculator,tech,2049,0.745,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/url-encoder,calculator,tech,2104,0.731,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/text-counter,calculator,tech,2098,0.748,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/case-converter,calculator,tech,2087,0.726,67,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/hash-generator,calculator,tech,2085,0.758,64,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.758 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/tech/rgb-hex,calculator,tech,2126,0.729,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/uuid-generator,calculator,tech,2097,0.734,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/ip-subnet,calculator,tech,2123,0.737,67,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/cron-validate,calculator,tech,2077,0.739,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/resistor-color-code,calculator,tech,2106,0.74,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/aspect-ratio,calculator,tech,2171,0.72,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/color-contrast,calculator,tech,2142,0.728,66,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/read-time,calculator,tech,2123,0.72,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/font-size-conv,calculator,tech,2200,0.716,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/storage-need,calculator,tech,2154,0.718,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/latency-bandwidth,calculator,tech,2182,0.705,66,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/download-time,calculator,tech,2155,0.701,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/audio-file-size,calculator,tech,2140,0.736,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/screen-size,calculator,tech,2102,0.734,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/code-line-count,calculator,tech,2161,0.724,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/keyword-density,calculator,tech,2138,0.744,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/reading-grade,calculator,tech,2176,0.724,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/typing-speed,calculator,tech,2167,0.714,65,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/ad-revenue,calculator,tech,2181,0.725,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/subnet-cidr,calculator,tech,2147,0.72,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/cidr-convert,calculator,tech,2158,0.71,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/gpu-comparison-perf,calculator,tech,2198,0.708,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/data-center-pue,calculator,tech,2224,0.695,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/screen-ppi,calculator,tech,2160,0.738,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/docker-resource,calculator,tech,2212,0.712,61,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/load-test-users,calculator,tech,2266,0.716,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/wifi-throughput,calculator,tech,2179,0.699,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/tech/data-usage-est,calculator,tech,2203,0.699,58,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/utilities,hub,utilities,1533,0.668,72,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/hub/utilities,hub,utilities,1624,0.651,71,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/utilities/qr-generator,calculator,utilities,2062,0.749,55,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/utilities/color-picker,calculator,utilities,2062,0.761,57,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.761 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/utilities/unit-converter,calculator,utilities,2060,0.752,58,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.752 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/utilities/base-converter,calculator,utilities,2104,0.751,59,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.751 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/utilities/hash-gen,calculator,utilities,2036,0.737,60,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/utilities/lorem-ipsum,calculator,utilities,2079,0.754,62,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.754 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/utilities/tip-split,calculator,utilities,2172,0.693,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/utilities/timer-calc,calculator,utilities,2090,0.718,63,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/utilities/simple-tax,calculator,utilities,2274,0.704,64,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is
+/utilities/dice-roller,calculator,utilities,2068,0.756,64,not checked,major-improve,READY_FOR_IMPROVEMENT,template duplication 0.756 of 5-gram shingles,"add a page-unique differentiator (worked example, boundary rule, comparison), not prose"
+/utilities/qr-content-size,calculator,utilities,2201,0.694,59,not checked,major-improve,AUDITED,no defect found in the measured signals,no defect found in the measured signals — keep as is

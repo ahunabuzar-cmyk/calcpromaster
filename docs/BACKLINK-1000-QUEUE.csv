@@ -1,0 +1,151 @@
+category,site,url,login_needed,link_type,notes,priority
+NOLOGIN-PAGE,Telegra.ph,https://telegra.ph/,NO,dofollow?,No-account instant article page - publish + link,1
+NOLOGIN-PAGE,Write.as,https://write.as/,NO,nofollow?,Anonymous posts free,1
+NOLOGIN-PAGE,Pastebin,https://pastebin.com/,NO,nofollow,Paste with URL - crawlable,2
+NOLOGIN-PAGE,JustPaste.it,https://justpaste.it/,NO,dofollow?,Instant article + link,1
+NOLOGIN-PAGE,GitHub Gist,https://gist.github.com/,GITHUB,dofollow,Gist readme markdown links,1
+WEB2.0-BLOG,Blogger,https://www.blogger.com,GOOGLE,dofollow,Blogspot blog - 3-4 posts with links,1
+WEB2.0-BLOG,WordPress.com,https://wordpress.com,GOOGLE,nofollow+1 dofollow,Free blog setup,1
+WEB2.0-BLOG,Tumblr,https://www.tumblr.com,GOOGLE,nofollow,Post + blog link,2
+WEB2.0-BLOG,Medium,https://medium.com,GOOGLE,nofollow,Story with embedded links,1
+WEB2.0-BLOG,Hashnode,https://hashnode.com,GITHUB,dofollow,Tech article,1
+WEB2.0-BLOG,Google Sites,https://sites.google.com,GOOGLE,dofollow,Mini-site for CalcProMaster tools,1
+WEB2.0-BLOG,Substack,https://substack.com,EMAIL,nofollow,Newsletter post,2
+WEB2.0-BLOG,Strikingly,https://www.strikingly.com,EMAIL,dofollow,Free one-page site,2
+WEB2.0-BLOG,Weebly,https://www.weebly.com,EMAIL,dofollow,Free site,2
+WEB2.0-BLOG,Wix,https://www.wix.com,EMAIL,nofollow,Free site,3
+WEB2.0-BLOG,Teleport? Nah -Jimdo,https://www.jimdo.com,EMAIL,nofollow,Free site,3
+WEB2.0-BLOG,Notion public page,https://notion.so,GOOGLE,nofollow,Public tools list page,2
+WEB2.0-BLOG,GitBook,https://www.gitbook.com,GITHUB,dofollow,Docs-style guide,2
+WEB2.0-BLOG,Dev.to more posts,https://dev.to,GITHUB,dofollow,Article #2 #3 - comment links too,1
+WEB2.0-BLOG,HackMD,https://hackmd.io,GITHUB,dofollow,Public notes page,2
+BOOKMARK,Folkd,https://www.folkd.com,EMAIL,dofollow?,Bookmark submit,1
+BOOKMARK,URL.org,https://url.org,EMAIL,dofollow?,Bookmark,1
+BOOKMARK,Bookmark4You,https://www.bookmark4you.com,EMAIL,nofollow,Bookmark,2
+BOOKMARK,A2Bookmarks,https://a2bookmarks.com,EMAIL,nofollow,Bookmark,2
+BOOKMARK,Sitejot,https://www.sitejot.com,EMAIL,nofollow,Bookmark,2
+BOOKMARK,Bookmax,https://www.bookmax.net,EMAIL,nofollow,Bookmark,2
+BOOKMARK,LinkaGoGo,https://linkagogo.com,EMAIL,nofollow,Bookmark,3
+BOOKMARK,Start.me,https://start.me,EMAIL,nofollow,Public page with links,2
+BOOKMARK,Pearltrees,https://www.pearltrees.com,EMAIL,nofollow,Tree of links,2
+BOOKMARK,Scoop.it,https://www.scoop.it,EMAIL,nofollow,Curate + link,3
+BOOKMARK,Diigo,https://www.diigo.com,EMAIL,dofollow?,Bookmark + annotation,2
+BOOKMARK,Mix.com,https://mix.com,GOOGLE,nofollow,Mix collection,2
+BOOKMARK,Flipboard,https://flipboard.com,EMAIL,nofollow,Magazine + link,2
+BOOKMARK,Papaly,https://papaly.com,EMAIL,nofollow,Public board,3
+BOOKMARK,Raindrop,https://raindrop.io,EMAIL,nofollow,Public collection,3
+BOOKMARK,Blogmarks,https://blogmarks.net,EMAIL,dofollow?,Bookmark,2
+BOOKMARK,Feedly? no-link,Folkd alt: BibSonomy,https://www.bibsonomy.org,EMAIL,dofollow?,Academic bookmark,2
+DIRECTORY-GENERAL,Somuch,https://www.somuch.com,EMAIL,dofollow,Free directory submit,1
+DIRECTORY-GENERAL,Directory r-tt,https://directory.r-tt.com,EMAIL,dofollow,Free,2
+DIRECTORY-GENERAL,InfoTiger,https://www.infotiger.com,EMAIL,dofollow,Free,2
+DIRECTORY-GENERAL,A1 Web Directory? Verify,https://www.a1webdirectory.org,EMAIL,dofollow,Free,2
+DIRECTORY-GENERAL,Groovyt? verify alive,https://www.groovyjesus? no,NO,,SKIP placeholder,3
+DIRECTORY-GENERAL,Free Web directories bundle 1,https://www.abc-directory.com,EMAIL,dofollow,2
+DIRECTORY-GENERAL,1M1 Web Directory,https://www.1m1.biz,EMAIL,dofollow,3
+DIRECTORY-GENERAL,Bedwan,https://www.bedwan.com,EMAIL,dofollow,2
+DIRECTORY-GENERAL,Directories.co? verify,https://www.directories.co,EMAIL,,3
+DIRECTORY-GENERAL,Webotopia,https://www.webotopia.org,EMAIL,dofollow,2
+DIRECTORY-GENERAL,Fat 64,https://www.fat64.net,EMAIL,dofollow,2
+DIRECTORY-GENERAL,Submission Web Directory,https://www.submissionwebdirectory.com,EMAIL,dofollow,2
+DIRECTORY-GENERAL,Mark 65,https://www.mark65.com? verify,EMAIL,,3
+DIRECTORY-GENERAL,Prolink Directory,https://www.prolinkdirectory.com,EMAIL,dofollow,2
+DIRECTORY-GENERAL,Absolut directory,https://www.absolutedirectory.com,EMAIL,dofollow,3
+DIRECTORY-GENERAL,Gima directory? verify,https://www.gimpan? no,EMAIL,,3
+DIRECTORY-GENERAL,Free PR Web Directory,https://www.freeprwebdirectory.com,EMAIL,dofollow,2
+DIRECTORY-GENERAL,Canlinks,https://www.canlinks.net,EMAIL,dofollow,2
+DIRECTORY-GENERAL,Jewana,https://jewana.com,EMAIL,dofollow,2
+DIRECTORY-GENERAL,Ananar,https://www.ananar.com,EMAIL,dofollow,2
+DIRECTORY-GENERAL,BariBeam? verify,https://www.baribeam? no,EMAIL,,3
+DIRECTORY-NICHE-STARTUP,Launched,https://launched.io,NO,dofollow?,Check submit page,1
+DIRECTORY-NICHE-STARTUP,Startup Catchup,https://startupcatchup.com,NO,dofollow?,Check,1
+DIRECTORY-NICHE-STARTUP,Startup 88,https://startup88.com,NO,dofollow?,Check,1
+DIRECTORY-NICHE-STARTUP,Grhe? no - Startupli.st,https://startupli.st,NO,,Verify alive,2
+DIRECTORY-NICHE-STARTUP,MakeLands? no,StartupBase #3 none,NO,,Already 2 listings,3
+DIRECTORY-NICHE-STARTUP,ToolsPedia? verify,https://toolspedia.io,NO,dofollow?,Tool directory,1
+DIRECTORY-NICHE-STARTUP,AI/Tool dirs bundle: There is an AI,https://theresanaiforthat.com,EMAIL,nofollow,Submit tool,2
+DIRECTORY-NICHE-STARTUP,FreeTool? verify,https://www.freetools? no,NO,,3
+DIRECTORY-NICHE-STARTUP,Slashdot alt: Tech directory,https://www.techdirectory? verify,NO,,3
+DIRECTORY-NICHE-STARTUP,Neteka? no skip,SKIP,NO,,3
+PROFILE,Gravatar,https://gravatar.com,GOOGLE,nofollow,Profile + link display on comments,1
+PROFILE,Disqus,https://disqus.com,EMAIL,nofollow,Profile + comment backlinks site-wide,1
+PROFILE,SlideShare,https://www.slideshare.net,GOOGLE,nofollow,Profile + deck with link,2
+PROFILE,Scribd,https://www.scribd.com,GOOGLE,nofollow,Doc upload with link,2
+PROFILE,CodePen,https://codepen.io,GITHUB,dofollow?,Profile + calc demo pen,1
+PROFILE,Replit,https://replit.com,GITHUB,dofollow,Profile + repl link,1
+PROFILE,Glitch,https://glitch.com,GITHUB,dofollow,Profile + project,2
+PROFILE,GitLab,https://gitlab.com,GITHUB,dofollow,Profile website field,1
+PROFILE,Bitbucket,https://bitbucket.org,GITHUB,dofollow,Profile,2
+PROFILE,Docker Hub,https://hub.docker.com,EMAIL,nofollow,Profile,2
+PROFILE,Kaggle,https://www.kaggle.com,GOOGLE,nofollow,Profile,2
+PROFILE,HuggingFace,https://huggingface.co,EMAIL,dofollow,Profile + dataset card,1
+PROFILE,NPM,https://www.npmjs.com,GITHUB,dofollow,Package readme (calc-utils pkg),1
+PROFILE,PyPI,https://pypi.org,GITHUB,dofollow,Package page,2
+PROFILE,StackExchange,https://stackexchange.com,EMAIL,dofollow,Profile website field + genuine answers,1
+PROFILE,Hacker News,https://news.ycombinator.com,EMAIL,nofollow,Profile + future Show HN,1
+PROFILE,IndieHackers more posts,https://www.indiehackers.com,GOOGLE,nofollow,2 posts,1
+PROFILE,Dribbble,https://dribbble.com,GOOGLE,nofollow,Profile (shot of reels),3
+PROFILE,Behance,https://www.behance.net,GOOGLE,nofollow,Project page,3
+PROFILE,Imgur,https://imgur.com,EMAIL,nofollow,Profile + gallery post,2
+PROFILE,Flickr,https://www.flickr.com,GOOGLE,nofollow,Profile + image links,3
+PROFILE,Vimeo,https://vimeo.com,EMAIL,nofollow,Profile + reel upload,2
+PROFILE,Dailymotion,https://www.dailymotion.com,EMAIL,nofollow,Reel upload + desc link,2
+PROFILE,Odysee,https://odysee.com,EMAIL,dofollow?,Reel upload,2
+PROFILE,Rumble,https://rumble.com,EMAIL,nofollow,Reel upload,3
+PROFILE,Giphy,https://giphy.com,GOOGLE,nofollow,Profile + GIF uploads,3
+PROFILE,Twitch? no,SKIP,NO,,3
+PROFILE,ProductHunt profile bio,https://www.producthunt.com,GOOGLE,nofollow,Profile URL + comment links,1
+PROFILE,F6S,https://www.f6s.com,EMAIL,dofollow,Founder profile + company,1
+PROFILE,StartupBlink,https://www.startupblink.com,EMAIL,dofollow,Startup map listing,2
+PROFILE,Gust? dead skip,SKIP,NO,,3
+PDF-DOC,Issuu,https://issuu.com,EMAIL,nofollow,'1200 Calculators Guide' PDF upload,2
+PDF-DOC,Edocr,https://www.edocr.com,EMAIL,dofollow,PDF upload,2
+PDF-DOC,Calameo,https://www.calameo.com,EMAIL,nofollow,PDF upload,2
+PDF-DOC,4shared,https://www.4shared.com,EMAIL,nofollow,PDF,3
+PDF-DOC,PDF.ac? verify,https://pdf.ac,EMAIL,,3
+PDF-DOC,Slideshare deck #2,https://www.slideshare.net,GOOGLE,nofollow,EMI guide deck,2
+FORUM,StackExchange Personal Finance+Money,https://money.stackexchange.com,EMAIL,nofollow,Genuine answers w/ profile link,1
+FORUM,Math StackExchange,https://math.stackexchange.com,EMAIL,nofollow,Answer formula Qs,1
+FORUM,WebApps SE,https://webapps.stackexchange.com,EMAIL,nofollow,Tool questions answers,2
+FORUM,Software Recs SE,https://softwarerecs.stackexchange.com,EMAIL,nofollow,Answer calculator tool recs,1
+FORUM,IndieHackers forum,https://www.indiehackers.com,GOOGLE,nofollow,Discussions,1
+FORUM,DigitalPoint,https://digitalpoint.com,EMAIL,dofollow?,Webmaster forum,2
+FORUM,WarriorForum,https://www.warriorforum.com,EMAIL,nofollow,Introduce + posts,3
+FORUM,MyMathForum,https://mymathforum.com,EMAIL,nofollow,Math discussions,3
+FORUM,FreeMathHelp forum,https://www.freemathhelp.com/forum/,EMAIL,nofollow,Math help answers,3
+FORUM,PhysicsForums? off-scope,SKIP,EMAIL,,3
+FORUM,Bogleheads (investing),https://www.bogleheads.org/forum,EMAIL,nofollow,Genuine mortgage/loan threads,2
+FORUM,Reddit more subs,https://www.reddit.com,GOOGLE,nofollow,r/personalfinance value comments,1
+FORUM,Quora Spaces + 3 more answers,https://www.quora.com,GOOGLE,nofollow,EMI/BMI/GPA answers,1
+FORUM,HackerNew comments,https://news.ycombinator.com,EMAIL,nofollow,2-3 genuine comments/day prep,1
+AWESOME-PR,awesome (sindresorhus) via sub-lists,https://github.com/sindresorhus/awesome,GITHUB,dofollow,PR only via listed sub-lists,1
+AWESOME-PR,awesome-finance,https://github.com/search?q=awesome-finance,GITHUB,dofollow,Find repo + PR,1
+AWESOME-PR,awesome-math,https://github.com/search?q=awesome+calculators,GITHUB,dofollow,Find repos + PRs,1
+AWESOME-PR,awesome-tools,https://github.com/search?q=awesome-tools+free,GITHUB,dofollow,PRs,1
+AWESOME-PR,awesome-indie,https://github.com/search?q=awesome-indie,GITHUB,dofollow,PR,2
+AWESOME-PR,free-for-dev,https://github.com/free-for-dev/free-for-dev? verify,GITHUB,dofollow,PR: free calculators section? off-scope maybe,2
+AWESOME-PR,awesome-awesome (curated of curated),https://github.com/emijrp/awesome-awesome,GITHUB,dofollow,PR,2
+AWESOME-PR,awesome-self-calculators? search,https://github.com/search?q=calculator+list,GITHUB,dofollow,Multiple repos,1
+AWESOME-PR,awesome-static-web (site is static),https://github.com/search?q=awesome+static+site,GITHUB,dofollow,PR,3
+AWESOME-PR,awesome-productivity-adjacent? no,SKIP,GITHUB,,3
+PRESS-FREE,PRLog,https://www.prlog.org,EMAIL,dofollow,Free press release: 1200 calculators launch,1
+PRESS-FREE,OpenPR,https://www.openpr.com,EMAIL,dofollow,Free PR,1
+PRESS-FREE,PressReleasePoint,https://www.pressreleasepoint.com,EMAIL,dofollow,Free PR,1
+PRESS-FREE,PRFree? verify,https://www.prfree.com,EMAIL,,3
+PRESS-FREE,Newswire Today,https://www.newswiretoday.com,EMAIL,dofollow,Free PR,2
+PRESS-FREE,IssueWire free tier,https://www.issuewire.com,EMAIL,nofollow,Free PR,2
+PRESS-FREE,Online PR News free,https://www.onlineprnews.com,EMAIL,nofollow,Free tier,2
+PRESS-FREE,PR Underground? paid check,SKIP,EMAIL,,3
+QA-SITES,Answers.com,https://www.answers.com,EMAIL,nofollow,Answer EMI/BMI Qs,2
+QA-SITES,Blurtit,https://www.blurtit.com,EMAIL,nofollow,QA answers,3
+QA-SITES,TheAnswerBank,https://www.theanswerbank.co.uk,EMAIL,nofollow,QA,3
+QA-SITES,Fluther,https://www.fluther.com,EMAIL,nofollow,QA,3
+QA-SITES,Quora 5 more answers,https://www.quora.com,GOOGLE,nofollow,High-traffic Qs,1
+COMMENT-DAILY,Finance blogs (discover daily),discover via google,NONE,nofollow,Genuine value comments w/ name+URL,1
+COMMENT-DAILY,Math/edu blogs,discover daily,NONE,nofollow,Same,1
+COMMENT-DAILY,Tool review blogs,discover daily,NONE,nofollow,Same,1
+COMMENT-DAILY,Disqus-enabled blogs,via disqus.com,EMAIL,nofollow,Disqus profile powers comments,1
+INFRA,Netlify community forum,https://answers.netlify.com,EMAIL,nofollow,Site showcase thread,2
+INFRA,CSS-Tricks/CodePen showcases,https://codepen.io,GITHUB,dofollow,Calc collection pen,2
+INFRA,Wikipedia? NO (not notable),SKIP,NO,,3
+INFRA,Internet Archive profile? no links,SKIP,NO,,3

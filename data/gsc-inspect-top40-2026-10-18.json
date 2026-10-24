@@ -1,0 +1,209 @@
+{
+  "ranAt": "2026-10-18T12:12:04.081Z",
+  "site": "https://calcpromaster.com",
+  "source": "data/top40-today.json",
+  "total": 40,
+  "count": 40,
+  "results": [
+    {
+      "url": "https://calcpromaster.com/finance/fha-loan/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/apy-calculator/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/credit-utilization/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/dividend-yield/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/closing-costs/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/eps-calculator/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/dividend-reinvestment/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/dso/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/canada-income-tax/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/debt-to-equity/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/dividend/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/factoring-fee/",
+      "verdict": "NEUTRAL",
+      "coverage": "Page with redirect"
+    },
+    {
+      "url": "https://calcpromaster.com/family/family-budget-simple/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/cost-basis-avg/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/education/gpa-target/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/tech/load-test-users/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/ev-ebitda/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/tech/cron-validate/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/engineering/orifice-flow/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/effective-tax-rate/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/bond-price/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/family/sibling-age-gap/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/family/school-supplies/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/cd-ladder/",
+      "verdict": "NEUTRAL",
+      "coverage": "Page with redirect"
+    },
+    {
+      "url": "https://calcpromaster.com/conversion/thermal-conductivity/",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/cap-rate-conv/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/forex-pip/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/tech/aspect-ratio/",
+      "verdict": "NEUTRAL",
+      "coverage": "Page with redirect"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/discounted-payback/",
+      "verdict": "NEUTRAL",
+      "coverage": "Page with redirect"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/convexity/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/bonds/",
+      "verdict": "NEUTRAL",
+      "coverage": "Page with redirect"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/coupon-payment/",
+      "verdict": "NEUTRAL",
+      "coverage": "Page with redirect"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/australia-income-tax/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/cash-on-cash/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/business/cac/",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/appreciation-forecast/",
+      "verdict": "NEUTRAL",
+      "coverage": "Page with redirect"
+    },
+    {
+      "url": "https://calcpromaster.com/finance/debt-consolidation/",
+      "verdict": "NEUTRAL",
+      "coverage": "Page with redirect"
+    },
+    {
+      "url": "https://calcpromaster.com/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/about/",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.com/editorial-policy/",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    }
+  ]
+}

@@ -45,16 +45,62 @@
     .cat-card p { margin: 0; color: #4b5563; font-size: 0.95rem; }
     .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
     .updated { color: #6b7280; font-size: 0.85rem; }
-  </style>
+/* guide-depth-css:start */
+.guide-lede{font-weight:600;border-left:3px solid #4f46e5;padding-left:12px;margin:10px 0 4px}
+    .guide-pitfalls{margin:8px 0 14px 20px}
+    .seo-faqs h3{margin:16px 0 4px}
+/* guide-depth-css:end */
+</style>
+
+<!-- guide-faq-schema:start -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should I trust BMI or body fat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They answer different questions. BMI compares weight with height across a population, which is useful for screening and hopeless for a muscular individual. A body-fat estimate or waist measurement says more about an individual. Read BMI as a first filter, then use a measure that accounts for composition."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which metabolic-rate formula should I pick?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mifflin-St Jeor is the most widely used modern estimate and is usually closer than the older Harris-Benedict figures for most adults. Both are population fits with a typical error of a few percent either way, so the honest approach is to start from the estimate and adjust it against what your weight actually does over three to four weeks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate are calorie and zone estimates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Good enough to plan with, not good enough to treat as exact. Metabolic estimates can be off by a few hundred calories a day between individuals, and the common \"220 minus age\" heart-rate rule can miss by ten to fifteen beats. Zones built on a measured maximum, or on heart-rate reserve, are noticeably better."
+      }
+    }
+  ]
+}
+</script>
+<!-- guide-faq-schema:end -->
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Health &amp; Fitness</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Health &amp; Fitness</p>
   <h1>Health &amp; Fitness Guides</h1>
   <p class="updated">Part of the CalcProMaster guides library · Updated September 2026</p>
 
   <p>Health metrics are only useful when you know what they measure, what they ignore, and when they don't apply. These guides cover both the formula and its limits.</p>
 
-  <h2>How the math works</h2>
+
+<!-- guide-lede:start -->
+<p class="guide-lede">Health calculators convert measurements into population estimates, and the population is the point: each formula is a best fit for a group, not a measurement of you.</p>
+<!-- guide-lede:end -->
+<h2>How the math works</h2>
   <p>The two formulas here are simple; the honest part is what they assume. <strong>BMI</strong> = weight ÷ height² — a population-screening ratio that cannot distinguish muscle from fat. <strong>TDEE</strong> = BMR × activity multiplier — and the multiplier (1.2 sedentary to 1.9 very active) is the least precise number in the whole chain: two people with identical stats can differ by several hundred calories in reality. The <a href="/guides/calories">calories guide</a> shows how to pick a multiplier honestly and adjust from observed results instead of trusting the first estimate.</p>
   <p>Every figure in this section is a <em>reference</em>, not a prescription. Formulas like Mifflin-St Jeor are population regressions — they're right on average and uncertain for any individual. That's why each guide ends by naming what the metric cannot see, and why the blog's <a href="/blog/bmi-honest-look">BMI explainer</a> pairs the formula with companion measurements rather than treating one number as a verdict.</p>
   <p>For anyone changing weight or fitness, the working method is: compute a starting estimate, hold it for two to three weeks while recording actual outcomes, then adjust by observed reality — roughly 100–200 kcal at a time. That loop (estimate → observe → adjust) is more reliable than any formula refinement, because it uses your body's actual response instead of a population average. The calculators give you the honest starting point; the record-keeping makes it yours.</p>
@@ -69,15 +115,53 @@
     <p>The Mifflin-St Jeor BMR formula, activity multipliers, realistic deficit targets, and how to read the scale honestly.</p>
   </div>
 
-  <h2>Try the matching calculators</h2>
+
+<!-- guide-extra-depth:start -->
+<h2>What this category covers</h2>
+<p>BMI, body fat, BMR, calorie needs, protein targets, heart-rate zones and hydration. The formulas are well known; what they share is a wide margin of individual error, because they infer a whole body from a few measurements.</p>
+<p>Use them to establish a starting point and to track direction. A single reading is a data point, not a verdict.</p>
+<h2>Screening tools versus diagnostic tools</h2>
+<p>BMI was designed to describe populations, not to diagnose individuals. It misses muscle mass, fat distribution and ethnicity-specific risk thresholds, all of which change the interpretation.</p>
+<p>If a number on this site worries you, the next step is a measurement with a clinician, not a stricter calculation. These tools organise information; they do not replace assessment.</p>
+<h2>Consistency beats precision</h2>
+<p>Weigh yourself at the same time of day, under the same conditions, and look at the weekly average. Day-to-day changes are mostly water and food, and reacting to them produces decisions that make no sense over a month.</p>
+<p>The same applies to body fat and heart rate: repeatable conditions matter more than the absolute accuracy of the method.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/bmi">How to Calculate BMI</a></li>
+    <li><a href="/guides/bmr">BMR</a></li>
+    <li><a href="/guides/body-fat">Body Fat Percentage</a></li>
+    <li><a href="/guides/ideal-weight">Ideal Weight</a></li>
+  </ul>
+
+<!-- guide-depth:start -->
+<h2>Where these answers go wrong</h2><ul class="guide-pitfalls"><li>Reading BMI as an individual diagnosis when it was calibrated on populations and misreads muscular builds.</li><li>Applying an activity multiplier to a metabolic rate and then eating back exercise calories a second time.</li><li>Building heart-rate zones on the age estimate when a measured maximum is available.</li><li>Weighing daily and reacting to water swings, which move far faster than fat does.</li></ul><h2>Frequently asked questions</h2><div class="seo-faqs"><h3>Should I trust BMI or body fat?</h3><p>They answer different questions. BMI compares weight with height across a population, which is useful for screening and hopeless for a muscular individual. A body-fat estimate or waist measurement says more about an individual. Read BMI as a first filter, then use a measure that accounts for composition.</p><h3>Which metabolic-rate formula should I pick?</h3><p>Mifflin-St Jeor is the most widely used modern estimate and is usually closer than the older Harris-Benedict figures for most adults. Both are population fits with a typical error of a few percent either way, so the honest approach is to start from the estimate and adjust it against what your weight actually does over three to four weeks.</p><h3>How accurate are calorie and zone estimates?</h3><p>Good enough to plan with, not good enough to treat as exact. Metabolic estimates can be off by a few hundred calories a day between individuals, and the common &quot;220 minus age&quot; heart-rate rule can miss by ten to fifteen beats. Zones built on a measured maximum, or on heart-rate reserve, are noticeably better.</p></div>
+<!-- guide-depth:end -->
+<!-- guide-worked-example:start -->
+<h2>Worked example: BMR Calculator at its default inputs</h2>
+<p>Open <a href="/health/bmr/">BMR Calculator</a> and press calculate without editing a field. What comes back is the table and result below, so the health-fitness numbers here are checkable in one click.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Weight (kg)</td><td>70</td></tr><tr><td>Height (cm)</td><td>170</td></tr><tr><td>Age</td><td>30</td></tr><tr><td>Body Fat % (for Katch-McArdle)</td><td>15</td></tr></tbody></table>
+<p><strong>Result:</strong> BMR: 1618 cal/day (Mifflin-St Jeor)</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Formula (Mifflin-St Jeor, 1990):</li><li>Male: BMR = 10W + 6.25H - 5A + 5</li><li>Female: BMR = 10W + 6.25H - 5A - 161</li><li>≈ 1618 cal/day</li></ol>
+<h2>Sensitivity: Weight (kg) from half to one-and-a-half times</h2>
+<p>Weight (kg) is the first input worth testing, so here it is at three sizes.</p>
+<table><thead><tr><th>Weight (kg)</th><th>Result</th></tr></thead><tbody><tr><td>35</td><td>BMR: 1268 cal/day (Mifflin-St Jeor)</td></tr><tr><td>70</td><td>BMR: 1618 cal/day (Mifflin-St Jeor)</td></tr><tr><td>105</td><td>BMR: 1968 cal/day (Mifflin-St Jeor)</td></tr></tbody></table>
+<p>Read the three rows as a range: the spread between them is how much the answer depends on weight (kg) alone, with everything else held still.</p>
+<!-- guide-worked-example:end -->
+<h2>Try the matching calculators</h2>
   <p>
-    <a href="/health/bmi" class="cta">BMI Calculator</a>
-    <a href="/health/bmr" class="cta">BMR Calculator</a>
-    <a href="/health/calorie" class="cta">Calorie Calculator</a>
-    <a href="/health/ideal-weight" class="cta">Ideal Weight Calculator</a>
+    <a href="/health/bmi/" class="cta">BMI Calculator</a>
+    <a href="/health/bmr/" class="cta">BMR Calculator</a>
+    <a href="/health/calorie/" class="cta">Calorie Calculator</a>
+    <a href="/health/ideal-weight/" class="cta">Ideal Weight Calculator</a>
   </p>
 
-  <p><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
+  <p><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

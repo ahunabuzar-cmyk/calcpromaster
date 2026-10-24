@@ -1,21 +1,44 @@
-/*
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.g.doubleclick.net https://tpc.googlesyndication.com https://*.googlesyndication.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.googleapis.com; img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://*.g.doubleclick.net https://*.gstatic.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://fonts.googleapis.com https://open.er-api.com https://api.frankfurter.app https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.g.doubleclick.net; worker-src 'self' blob:; frame-src 'self' https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://*.googlesyndication.com; frame-ancestors https:; base-uri 'self'; form-action 'self'; object-src 'none'
-  X-Frame-Options: DENY
-  X-Content-Type-Options: nosniff
-  Cross-Origin-Opener-Policy: same-origin
-  Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: geolocation=(), microphone=(), camera=()
-  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-  Cache-Control: public, max-age=86400, stale-while-revalidate=86400
+# ============================================================
+# Cloudflare Pages headers
+# ------------------------------------------------------------
+# ORDER IS LOAD-BEARING. Cloudflare Pages applies the FIRST matching rule for a
+# given header name, so every path-specific rule must come BEFORE the global
+# "/*" block at the bottom. Measured 2026-10-21 on the old (global-first) file:
+#   /js/app.js  →  Cache-Control: …max-age=86400…, …  (the no-cache rule below
+#                  it was dead, so a fixed app.js could stay cached for a day)
+# That is exactly the "stuck on an old build" class of bug — returning visitors
+# kept an old styles.css/app.js after a deploy. Specific rules first; the
+# catch-all last.
+#
+# Security headers (CSP, HSTS, Permissions-Policy, …) live in the final "/*"
+# block: no path-specific rule sets them, so they still apply everywhere, and
+# /embed/* explicitly overrides the two that would break embedding.
+# ============================================================
 
-# JS data files (no content hash) — no-cache forces revalidation (304) after every deploy,
-# so returning visitors never see stale tool lists (new tool links would otherwise 404).
-/js/data/*.js
-  Cache-Control: no-cache
+# JS data files — the URL is versioned at build time (?v=<content hash>): the
+# build rewrites every <script src>, and js/data-loader.js appends the same token
+# from <html data-asset-version> when it injects a data chunk at runtime. A new
+# build = a new URL = a cache miss, so a year-long immutable TTL is safe AND
+# removes the "Use efficient cache lifetimes" finding (this is the bulk of it:
+# the homepage's JS payload).
+/js/data/*
+  Cache-Control: public, max-age=31536000, immutable
 
-# Immutable static assets: fonts and per-tool OG images are content-hashed at build
-# (or effectively never change) — a 1-year immutable lifetime kills repeat-visit
-# re-downloads (PageSpeed "efficient cache lifetimes" opportunity).
+# Top-level JS files — same versioned-URL contract (?v=<hash>).
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# The stylesheet URL carries ?v=<hash> too (all <link>/<script> references are
+# versioned by build-deploy.js), so it can be cached for a year. Anything that
+# loads these files dynamically must append the same token — see
+# js/data-loader.js / loadScriptOnce() in js/app.js. sw.js is NOT versioned and
+# keeps its own no-cache rule below.
+/styles.css
+  Cache-Control: public, max-age=31536000, immutable
+
+# Immutable static assets: fonts and per-tool OG images are content-hashed at
+# build (or effectively never change) — a 1-year immutable lifetime kills
+# repeat-visit re-downloads (PageSpeed "efficient cache lifetimes").
 /fonts/*
   Cache-Control: public, max-age=31536000, immutable
 
@@ -25,32 +48,73 @@
 /icons/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Top-level JS files (no content hash) — same revalidation strategy
-/js/*.js
-  Cache-Control: no-cache
-
 /sw.js
   Cache-Control: no-cache
 
-# HTML shell must revalidate on EVERY visit so the one-time cache-bust + watchdog
-# above always reach returning browsers — a stale index.html is the stuck-Loading bug.
+# HTML shell must revalidate on EVERY visit so the one-time cache-bust + the SW
+# watchdog always reach returning browsers — a stale index.html is the
+# stuck-Loading bug.
 /index.html
   Cache-Control: no-cache
 
-# Googlebot must always get a fresh, fast sitemap + robots (GSC 'Couldn't fetch' hygiene)
+# Googlebot must always get a fresh, fast sitemap + robots (GSC 'Couldn't fetch'
+# hygiene).
 /sitemap.xml
   Cache-Control: public, max-age=3600
 
 /robots.txt
   Cache-Control: public, max-age=3600
 
+# Root-level images + manifest are not under /og/, /icons/ or /fonts/, so give
+# them their own TTLs before the HTML catch-all below.
+/manifest.json
+  Cache-Control: public, max-age=86400
+
+/og-image.png
+  Cache-Control: public, max-age=604800
+
+/icon.svg
+  Cache-Control: public, max-age=604800
+
+/icon-192.png
+  Cache-Control: public, max-age=604800
+
+/icon-512.png
+  Cache-Control: public, max-age=604800
+
 # /embed/* — linkable iframe widget pages. These MUST be frameable from other
-# sites (that's their whole purpose: natural backlinks). The global rule above
-# sets X-Frame-Options: DENY; this path-scoped rule overrides it, and CSP
-# frame-ancestors is fully open here (absence of the directive = allowed).
-# Note: modern browsers ignore X-Frame-Options when a CSP frame-ancestors
-# directive is present, so an explicit permissive frame-ancestors is required.
+# sites (that's their whole purpose: natural backlinks). The global block below
+# sets X-Frame-Options: DENY; this path-scoped rule overrides it with a fully
+# open CSP frame-ancestors. Modern browsers ignore X-Frame-Options when
+# frame-ancestors is present, so the explicit permissive directive is required.
 /embed/*
   X-Frame-Options: ALLOWALL
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; frame-ancestors https: http:
   Cache-Control: public, max-age=86400
+
+# ============================================================
+# GLOBAL RULE — MUST STAY LAST (first-match wins; see the note at the top)
+# ============================================================
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.g.doubleclick.net https://tpc.googlesyndication.com https://*.googlesyndication.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.googleapis.com; img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://*.g.doubleclick.net https://*.gstatic.com https://fazier.com https://startupfa.me; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://cloudflareinsights.com https://fonts.googleapis.com https://open.er-api.com https://api.frankfurter.app https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.g.doubleclick.net;  worker-src 'self' blob:; frame-src 'self' https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://*.googlesyndication.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Cross-Origin-Opener-Policy: same-origin
+  Referrer-Policy: strict-origin-when-cross-origin
+  # microphone must stay available to this origin: the calculator pages ship a
+  # voice-input button beside every numeric field. `microphone=()` disabled the
+  # API sitewide, so tapping the mic could never prompt or record — the voice
+  # feature looked broken no matter what the browser permission said.
+  Permissions-Policy: geolocation=(), camera=(), microphone=(self)
+  # The edge answered with a wildcard ACAO, which an external audit flags as
+  # reflexive CORS. Nothing on the site is meant to be read cross-origin except
+  # the public calculator data, and every consumer of it is same-origin, so pin
+  # the allowed origin to the canonical host instead of "*".
+  Access-Control-Allow-Origin: https://calcpromaster.com
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  # HTML catch-all: this rule also covers the ~1,600 prerendered directory
+  # pages (/finance/loan-emi/ etc.), which must NOT be cached for a day — a
+  # 24h HTML TTL is how a deployed fix keeps showing the old page. Every
+  # cacheable subresource is versioned or listed above, so this only affects
+  # documents. must-revalidate still allows a cheap 304 with ETag.
+  Cache-Control: public, max-age=0, must-revalidate

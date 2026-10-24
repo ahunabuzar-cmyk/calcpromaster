@@ -86,13 +86,13 @@
   <header>
     <a class="logo" href="/">CalcProMaster</a>
     <a href="/">Home</a>
-    <a href="/guides">Guides</a>
+    <a href="/guides/">Guides</a>
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
   </header>
   <main>
     <div class="legal-page">
-      <p class="legal-meta"><a href="/guides">← All guides</a></p>
+      <p class="legal-meta"><a href="/guides/">← All guides</a></p>
       <h1>How to Calculate a Mortgage Payment — Formula &amp; Example</h1>
       <p class="legal-meta">Finance · 6 min read · Last updated September 2026</p>
 
@@ -150,23 +150,59 @@
       <p><strong>Prepayment as a middle path:</strong> take the 30-year and add $200/month. The loan closes at month <strong>291 instead of 360</strong> and total interest drops to about <strong>$432,600</strong> — capturing a third of the 15-year saving while keeping the lower required payment as option value.</p>
 
       <h2>PMI: the cost of a small down payment</h2>
-      <p>Put down less than 20% and most US lenders add <strong>Private Mortgage Insurance</strong> — an insurance policy that protects the <em>lender</em>, paid by <em>you</em>. It's not small: on a $360,000 loan (10% down) at a typical 0.6% annual premium, PMI is $180/month. It doesn't fall off automatically the day you cross 20% equity either — by the amortization math, the balance first reaches 80% of the home's value at around month <strong>101</strong>, by which point you'd have paid roughly <strong>$18,000</strong> of PMI. The <a href="/finance/pmi-calculator">PMI calculator</a> estimates the monthly add-on for your own figures, and the <a href="/finance/amortization">amortization schedule</a> shows exactly when your balance crosses the threshold.</p>
+      <p>Put down less than 20% and most US lenders add <strong>Private Mortgage Insurance</strong> — an insurance policy that protects the <em>lender</em>, paid by <em>you</em>. It's not small: on a $360,000 loan (10% down) at a typical 0.6% annual premium, PMI is $180/month. It doesn't fall off automatically the day you cross 20% equity either — by the amortization math, the balance first reaches 80% of the home's value at around month <strong>101</strong>, by which point you'd have paid roughly <strong>$18,000</strong> of PMI. The <a href="/finance/pmi-calculator/">PMI calculator</a> estimates the monthly add-on for your own figures, and the <a href="/finance/amortization/">amortization schedule</a> shows exactly when your balance crosses the threshold.</p>
 
       <div class="legal-warning">
         <strong>Important:</strong> educational guide, not financial advice. Lender fees, points, PMI and local taxes change real numbers. See our <a href="/disclaimer-finance">financial disclaimer</a>.
       </div>
 
       <h2>Try it instantly</h2>
-      <p>Model your own purchase with the <a href="/finance/mortgage">Mortgage Calculator</a>. Related tools:</p>
+      <p>Model your own purchase with the <a href="/finance/mortgage/">Mortgage Calculator</a>. Related tools:</p>
       <div class="related">
-        <a href="/finance/mortgage">Mortgage Calculator</a>
-        <a href="/finance/loan-emi">Loan EMI Calculator</a>
-        <a href="/finance/compound-interest">Compound Interest Calculator</a>
+        <a href="/finance/mortgage/">Mortgage Calculator</a>
+        <a href="/finance/loan-emi/">Loan EMI Calculator</a>
+        <a href="/finance/compound-interest/">Compound Interest Calculator</a>
         <a href="/guides/emi">EMI Guide</a>
-        <a href="/guides">All Guides</a>
+        <a href="/guides/">All Guides</a>
       </div>
 
-      <h2>Frequently asked questions</h2>
+      
+  
+<!-- guide-worked-example:start -->
+<h2>Worked example: PMI Calculator at its default inputs</h2>
+<p>A worked example is only useful if you can reproduce it. The defaults on <a href="/finance/pmi-calculator/">PMI Calculator</a> give exactly the figures in this section, with no rounding done by us.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Home Price ($)</td><td>300000</td></tr><tr><td>Down Payment (%)</td><td>10</td></tr><tr><td>Annual PMI Rate (%)</td><td>0.5</td></tr></tbody></table>
+<p><strong>Result:</strong> PMI: $112.50/mo</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Step 1: Down payment = 10% × $300,000 = $30,000</li><li>Step 2: Loan = $300,000 − $30,000 = $270,000</li><li>Step 3: Annual PMI = 0.5% × $270,000 = $1350</li><li>Step 4: Monthly PMI = $112.50</li></ol>
+<h2>Home Price ($) — three values, three answers</h2>
+<p>Home Price ($) is the first input worth testing, so here it is at three sizes.</p>
+<table><thead><tr><th>Home Price ($)</th><th>Result</th></tr></thead><tbody><tr><td>150,000</td><td>PMI: $56.25/mo</td></tr><tr><td>300,000</td><td>PMI: $112.50/mo</td></tr><tr><td>450,000</td><td>PMI: $168.75/mo</td></tr></tbody></table>
+<p>The middle row is the default. The outer two show how far the answer drifts when home price ($) is wrong by half or by a half in the other direction.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>Principal and interest is not the monthly cost</h2>
+<p>The payment this calculator returns covers principal and interest only. A real monthly outgo usually adds property tax, homeowners insurance, and — below a down-payment threshold — mortgage insurance, plus any association fee. Those extras can add 20-40% to the number on the screen.</p>
+<p>Budget against the full figure. A payment that fits your income before escrow can fail to fit after it, and escrow amounts change every year as assessments and insurance premiums move.</p>
+<h2>Fixed and adjustable carry different risks</h2>
+<p>A fixed rate locks the interest for the whole term, so the risk is opportunity cost if rates fall. An adjustable rate starts lower and resets on a schedule, so the risk is the payment itself — and the reset usually arrives whether or not your income has kept up.</p>
+<p>If you take an adjustable product, model the payment at the capped rate, not the teaser rate. The affordability question is whether you can carry the worst case for a few years, not the first year.</p>
+<h2>The term changes cost far more than the rate</h2>
+<p>Going from a 20-year to a 30-year term cuts the payment by roughly a fifth and raises total interest by well over half. Shortening the term does the reverse and raises the monthly obligation, which is where most affordability problems actually start.</p>
+<p>A middle path is a longer term with deliberate extra principal payments. It keeps the required payment low while recovering much of the interest saving — provided the extra payments actually happen.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/loans-mortgages">Loan & Mortgage Guides</a></li>
+    <li><a href="/guides/debt-payoff">Debt Snowball vs Avalanche</a></li>
+    <li><a href="/guides/debt-ratio">Debt-to-Income Ratio</a></li>
+    <li><a href="/guides/credit-card-minimum">The Minimum-Payment Trap, in Actual Numbers</a></li>
+  </ul>
+
+<h2>Frequently asked questions</h2>
       <h3>What is the mortgage payment formula?</h3>
       <p>M = P × r × (1 + r)^n ÷ ((1 + r)^n − 1), with P the loan amount, r the monthly rate (annual ÷ 12 ÷ 100), and n the total monthly payments.</p>
       <h3>What does PITI mean?</h3>
@@ -179,7 +215,7 @@
   </main>
   <footer>
     <a href="/">Home</a>
-    <a href="/guides">Guides</a>
+    <a href="/guides/">Guides</a>
     <a href="/about">About</a>
     <a href="/privacy">Privacy</a>
     <a href="/terms">Terms</a>

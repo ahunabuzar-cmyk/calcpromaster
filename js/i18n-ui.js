@@ -89,15 +89,18 @@ const I18nUI = (function () {
     const selector = document.createElement('div');
     selector.id = 'language-selector';
     selector.className = 'language-selector';
+    // No inline onclick here: the language menu rendered one handler per locale
+    // (23 of the 24 inline handlers an audit found in the served homepage DOM).
+    // The buttons carry plain data-lang attributes and are bound below.
     selector.innerHTML = `
-      <button class="lang-trigger" onclick="I18nUI.toggleDropdown()" aria-expanded="false" aria-haspopup="true">
+      <button class="lang-trigger" type="button" aria-expanded="false" aria-haspopup="true">
         <span class="lang-flag">${getFlag(currentLocale)}</span>
         <span class="lang-code">${currentLocale.toUpperCase()}</span>
         <span class="lang-arrow">▼</span>
       </button>
       <div class="lang-dropdown" id="langDropdown" role="menu" hidden>
         ${locales.map(l => `
-          <button role="menuitem" onclick="I18nUI.setLanguage('${l.code}')" class="lang-option ${l.code === currentLocale ? 'active' : ''}">
+          <button role="menuitem" type="button" data-lang="${l.code}" class="lang-option ${l.code === currentLocale ? 'active' : ''}">
             <span class="lang-flag">${getFlag(l.code)}</span>
             <span class="lang-name">${l.name}</span>
             ${l.code === currentLocale ? '<span class="lang-check">✓</span>' : ''}
@@ -107,6 +110,12 @@ const I18nUI = (function () {
     `;
     
     nav.appendChild(selector);
+
+    const triggerBtn = selector.querySelector('.lang-trigger');
+    if (triggerBtn) triggerBtn.addEventListener('click', toggleDropdown);
+    selector.querySelectorAll('.lang-option').forEach((opt) => {
+      opt.addEventListener('click', function () { setLanguage(this.getAttribute('data-lang')); });
+    });
     
     document.addEventListener('click', (e) => {
       if (!selector.contains(e.target)) closeDropdown();
@@ -146,7 +155,7 @@ const I18nUI = (function () {
     trigger.querySelector('.lang-code').textContent = currentLocale.toUpperCase();
     
     dropdown.querySelectorAll('.lang-option').forEach(function (opt) {
-      const code = String(opt.onclick).match(/'([^']+)'/)?.[1] || '';
+      const code = opt.getAttribute('data-lang') || '';
       opt.classList.toggle('active', code === currentLocale);
       const checkEl = opt.querySelector('.lang-check');
       if (checkEl) checkEl.style.display = code === currentLocale ? 'inline' : 'none';

@@ -2,7 +2,7 @@
 
 _Deterministic audit over the same extraction as docs/KEYWORD-TARGETS.md. Nothing hand-added. Re-run with: `npm run keywords:audit`._
 
-**Inventory:** 1420 indexable pages · 1284 tools · 2526 curated phrases.
+**Inventory:** 1421 indexable pages · 1285 tools · 2529 curated phrases.
 
 ## Verdict at a glance
 
@@ -17,7 +17,7 @@ _Deterministic audit over the same extraction as docs/KEYWORD-TARGETS.md. Nothin
 | S1 · Overlong phrases (>70 chars) | ✅ none |
 | S2 · Single generic word | ✅ none |
 
-**Modifier coverage:** 40 phrases use feature modifiers ("with …", "solve for …"), 69 carry locale/currency intent, 1017 say "free".
+**Modifier coverage:** 40 phrases use feature modifiers ("with …", "solve for …"), 69 carry locale/currency intent, 1018 say "free".
 
 ## Q1 — Year-stamped phrases (stale by next year)
 

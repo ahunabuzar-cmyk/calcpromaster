@@ -6,6 +6,7 @@
  */
 const fs = require('fs');
 const path = require('path');
+const zlib = require('zlib');
 
 const D = path.join(__dirname, '..', 'deploy');
 const KB = n => (n / 1024).toFixed(0) + 'KB';
@@ -18,7 +19,13 @@ const BUDGETS = [
         .filter(p => fs.existsSync(p))
         .reduce((s, p) => s + fs.statSync(p).size, 0);
     } },
-  { id: 'index-html', max: 90 * 1024, get: () => fs.statSync(path.join(D, 'index.html')).size },
+  // GZIPPED html, not raw bytes: the homepage carries the FULL stylesheet inline
+  // (build-deploy.js inlineFullCss), so raw size grew by ~86KB while the wire
+  // cost stayed the same — the same CSS was previously a separate 17KB-gzip file
+  // plus a render-blocking round trip. Budget on transfer size measures what a
+  // visitor actually pays; the old 90KB raw limit only passed because a
+  // prerender step was accidentally stripping the inline CSS again.
+  { id: 'index-html (gzip)', max: 50 * 1024, get: () => zlib.gzipSync(fs.readFileSync(path.join(D, 'index.html'))).length },
   { id: 'styles-css', max: 110 * 1024, get: () => fs.statSync(path.join(D, 'styles.css')).size },
   { id: 'fonts-total', max: 120 * 1024, get: () => {
       const dir = path.join(D, 'fonts');

@@ -1,0 +1,94 @@
+{
+  "ranAt": "2026-10-20T16:37:15.842Z",
+  "guides": 17,
+  "pages": [
+    {
+      "guide": "business",
+      "before": 998,
+      "after": 998
+    },
+    {
+      "guide": "family",
+      "before": 962,
+      "after": 962
+    },
+    {
+      "guide": "everyday",
+      "before": 927,
+      "after": 927
+    },
+    {
+      "guide": "auto",
+      "before": 953,
+      "after": 953
+    },
+    {
+      "guide": "science",
+      "before": 985,
+      "after": 985
+    },
+    {
+      "guide": "utilities",
+      "before": 989,
+      "after": 989
+    },
+    {
+      "guide": "food",
+      "before": 933,
+      "after": 933
+    },
+    {
+      "guide": "tax-salary",
+      "before": 982,
+      "after": 982
+    },
+    {
+      "guide": "homegarden",
+      "before": 960,
+      "after": 960
+    },
+    {
+      "guide": "lifestyle",
+      "before": 951,
+      "after": 951
+    },
+    {
+      "guide": "career",
+      "before": 984,
+      "after": 984
+    },
+    {
+      "guide": "math-statistics",
+      "before": 1062,
+      "after": 1062
+    },
+    {
+      "guide": "regional",
+      "before": 1022,
+      "after": 1022
+    },
+    {
+      "guide": "engineering",
+      "before": 967,
+      "after": 967
+    },
+    {
+      "guide": "health-fitness",
+      "before": 982,
+      "after": 982
+    },
+    {
+      "guide": "construction",
+      "before": 1000,
+      "after": 1000
+    },
+    {
+      "guide": "loans-mortgages",
+      "before": 1056,
+      "after": 1056
+    }
+  ],
+  "totalBefore": 16713,
+  "totalAfter": 16713,
+  "minAfter": 927
+}

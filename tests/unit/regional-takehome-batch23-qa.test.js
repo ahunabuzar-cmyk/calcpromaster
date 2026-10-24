@@ -200,9 +200,9 @@ describe('qatar-take-home-salary (batch #2)', () => {
   });
 });
 
-describe('abuDhabi-cost-living (batch #2)', () => {
+describe('abu-dhabi-cost-living (batch #2)', () => {
   it('surplus = salary - fixed - 20% discretionary', () => {
-    const out = run('abuDhabi-cost-living', { salary: 16000, rent: 55000, school: 24000, transport: 900, utilities: 700 });
+    const out = run('abu-dhabi-cost-living', { salary: 16000, rent: 55000, school: 24000, transport: 900, utilities: 700 });
     const fixed = (55000 + 24000) / 12 + 900 + 700;
     const surplus = 16000 - fixed - 16000 * 0.2;
     expectMoney(out, Math.round(surplus * 100) / 100);

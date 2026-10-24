@@ -1,70 +1,111 @@
-# CalcProMaster — GA4 Setup Guide (Measurement ID)
+# CalcProMaster — GA4 status & remaining owner steps
 
-GA4 code **already fully wired** in the site (consent-gated, event-ready). Sirf aapka real
-Measurement ID (`G-XXXX`) chahiye jo aapke Google account se banta hai. Ye guide 10 minute ka hai.
+**Tracking is done and live; reporting is blocked (re-checked 2026-10-15).** The Measurement ID is a real property, not a placeholder, and it
+is served by production right now. What is still open is the *reporting* side (reading GA4 back
+with the Data API), and the only thing blocking it is two API toggles in Google Cloud — an owner
+action, listed below with exact links.
 
-## Code jo pehle se live hai (kuch nahi karna)
+## 1. Tracking — DONE (verified against production, not just the repo)
 
-| Piece | Kahan | Status |
+| Piece | Where | Status |
 |---|---|---|
-| gtag.js loader | `index.html` | sirf load hota hai jab `SITE_GA4_READY` true ho |
-| Consent Mode | `index.html` (`gtag('consent', 'default', ...)`) | `analytics_storage: denied` default — user "Accept" pe update |
-| `calculator_use` event | `js/app.js:1529` | har calculation pe fire: `{ tool_id, tool_category }` — **koi input values/PII nahi** |
-| Gate | `js/site-config.js` | `SITE_GA4_READY = /^G-[A-Z0-9]{6,}$/.test(ga4Id)` — placeholder kabhi load nahi hota |
+| Measurement ID | `js/site-config.js` → `ga4Id: 'G-8QCP0TP1TD'` | ✅ real ID (not `G-XXXXXXXXXX`) |
+| Live site serves it | `https://calcpromaster.com/js/site-config.js` | ✅ verified via HTTP fetch |
+| gtag.js loader | `index.html` (lazy: first interaction or ~5s idle) | ✅ present on the live homepage |
+| Consent Mode | `index.html` → `gtag('consent', 'default', …)` | ✅ `analytics_storage: denied` until Accept |
+| `calculator_use` event | `js/app.js` | ✅ `{ tool_id, tool_category }` — no input values, no PII |
+| Load gate | `js/site-config.js` → `SITE_GA4_READY` regex | ✅ placeholder IDs never load gtag |
 
-## STEP 1 — Property + Measurement ID banao (10 min)
-
-1. **https://analytics.google.com** kholo (wahi Google account jo GSC ke liye use karoge).
-2. Niche left corner → **Admin** (⚙️) → **Create property** → naame: `CalcProMaster`.
-3. Reporting timezone → apna (e.g. `(GMT+05:00) Asia/Karachi`) → currency → **Create**.
-4. Industry → koi bhi → **Create**. (Business details skip ho sakti hain.)
-5. **Data streams** → **Add stream** → **Web** → Website URL: `https://calcpromaster.com` →
-   Stream name: `CalcProMaster Web` → **Create stream**.
-6. **Measurement ID** screen pe dikhega: `G-XXXXXXXXXX` → **copy**.
-
-## STEP 2 — ID paste karo + redeploy (1 command, ~2 min)
-
-Measurement ID milte hi — **sab kuch ek command mein** (config update + build + Netlify deploy + live verify):
+Reproduce the live check any time:
 
 ```bash
-node scripts/set-ga4.cjs G-AB12CD34EF5
+curl -s https://calcpromaster.com/js/site-config.js | grep -o "ga4Id: '[^']*'"
+curl -s https://calcpromaster.com/ | grep -c googletagmanager     # expect 3
 ```
 
-Ye script khud karti hai:
-1. ID format validate (`G-` + 6+ alphanumerics, placeholder reject)
-2. `js/site-config.js` mein `ga4Id` update (+ `gsc` bhi live code set)
-3. `node build-deploy.js` (production artifact rebuild)
-4. Netlify production deploy
-5. 25s CDN wait + LIVE verify (homepage meta, app.js mein ID, gtag loader)
+In the browser (F12 → Network → filter `gtag`): the request
+`googletagmanager.com/gtag/js?id=G-8QCP0TP1TD` returns 200 after first interaction, and a
+`collect` request follows a calculation with `en=calculator_use`. GA4 → **Realtime** then shows
+the page view within ~30 s.
 
-Manual alternative: `js/site-config.js` mein `ga4Id: 'G-XXXXXXXXXX'` paste karo →
-`node build-deploy.js` → `deploy/` upload.
+## 2. Reporting (numeric property ID) — BLOCKED on two API toggles
 
-## STEP 3 — LIVE verify (3 min)
+`npm run monitor:ga4` reads events back with the GA4 Data API. It needs the **numeric** property
+ID (e.g. `123456789`) — never the `G-XXXX` measurement ID — and Google will not serve either
+Analytics API to this project yet:
 
-1. Live site kholo → **F12** → **Network** tab → filter: `gtag` → `googletagmanager.com/gtag/js?id=G-...` request dikhni chahiye (HTTP 200).
-2. Koi calculator kholo (e.g. `/finance/loan-emi`) → Calculate dabao → Network mein `collect` request aani chahiye with `en=calculator_use` & `tool_id=loan-emi` (query param).
-3. **GA4 dashboard** → **Realtime** report → apna page-view + `calculator_use` event 5-30 sec mein dikhega.
+```
+✖ Google Analytics Admin API is DISABLED on Cloud project 601116511726
+✖ Google Analytics Data  API is DISABLED on Cloud project 601116511726
+```
 
-## Automatically verify by script
+The OAuth token is healthy and already carries `analytics.readonly` — verified by exchanging it
+and reading back its scopes — so this is **not** a credential problem and not `invalid_grant`.
+The APIs were simply never enabled for the project that owns the OAuth client.
+
+### Fix (owner, ~2 minutes, no billing, no card)
+
+Enable both APIs in the Google Cloud project **601116511726**:
+
+1. Admin API (property discovery) —
+   https://console.developers.google.com/apis/api/analyticsadmin.googleapis.com/overview?project=601116511726
+2. Data API (event/report reads) —
+   https://console.developers.google.com/apis/api/analyticsdata.googleapis.com/overview?project=601116511726
+
+Clear **Enable** on each, wait ~2 minutes, then:
 
 ```bash
-# Deployed app.js mein event present? (2 min quick check)
-curl -s https://calcpromaster.com/js/app.js | grep -c calculator_use
+npm run ga4:discover                                  # prints every property + its numeric ID
+GA4_PROPERTY_ID=<numeric-id> npm run monitor:ga4 -- --days 28
 ```
 
-`1` aaye = event deployed. (Fire hone ka confirmation browser/GA4 Realtime mein hota hai.)
+`npm run ga4:discover` prints the exact command with the ID already filled in, so nothing has to
+be copied out of the GA4 UI. It also maps each numeric property back to its `G-XXXX` stream, which
+is how the running site is matched to the property.
 
-## Best practices (built-in)
+To make the checks permanent in CI, set the two repository secrets (already referenced by
+`.github/workflows/analytics-trackers.yml`):
 
-- **Consent-gated:** user "Accept" kare tab hi GA4 data jaata hai — GDPR/consent-safe.
-- **No PII:** `calculator_use` event mein sirf `tool_id` + `tool_category` — input values, loan amounts,
-  health data, email, kuch bhi nahi.
-- **CSP safe:** Content-Security-Policy mein `googletagmanager.com` / `google-analytics.com` already allowlisted (`netlify.toml`).
-- **placeholder-safe:** jab tak `G-XXXX` nahi aata, gtag script **load hi nahi hoti** — koi broken request nahi.
+| Secret | Value |
+|---|---|
+| `GA4_PROPERTY_ID` | the numeric property ID from `npm run ga4:discover` |
+| `SERVICE_ACCOUNT_B64` | base64 service-account JSON with Viewer on the property — see [api-credentials-setup.md](api-credentials-setup.md) |
 
-## Typical timeline
+Until then `analytics-trackers.yml` skips the GA4 job instead of failing, which is the honest
+state: tracking live, reporting not yet readable.
 
-- Real-time data: turant (Realtime report).
-- Standard reports (Traffic acquisition, Pages, Events): 24-48 hours.
-- GSC mein queries/clicks data: 1-2 hafte baad (alag system hai — GA4 traffic aur GSC search data combine karo).
+### 2026-10-15 re-check (still blocked, and it is not a token problem)
+
+Retried `npm run ga4:discover` on 2026-10-15: **both APIs are still disabled** on
+Cloud project `601116511726` (`analyticsadmin.googleapis.com` → 403
+`SERVICE_DISABLED`). The OAuth refresh token exchanged successfully in the same run
+(GSC reads worked), so the failure is the project's API enablement, not
+`invalid_grant`, not a missing scope.
+
+What is genuinely missing, in order:
+
+| # | Missing piece | Who can supply it |
+|---|---|---|
+| 1 | Admin API enabled on project 601116511726 (property discovery) | owner, 1 click (link above) |
+| 2 | Data API enabled on project 601116511726 (report/event reads) | owner, 1 click (link above) |
+| 3 | `GA4_PROPERTY_ID` — the numeric property id | printed by `npm run ga4:discover` once (1) is on |
+| 4 | `SERVICE_ACCOUNT_B64` — base64 service-account JSON, Viewer on the property (CI path only) | owner, GCP → IAM → Service accounts |
+| 5 | `analytics-trackers.yml` GA4 job stops skipping | automatic once (3) + (4) are set |
+
+Nothing in the repo can produce (3): the numeric property id exists only inside the
+Google account, and the Data API rejects the `G-XXXX` measurement id with HTTP 404.
+Until (1)–(3) land, `npm run monitor:ga4` stays unrunnable and CI keeps skipping the
+GA4 job by design rather than failing on it.
+
+## 3. Why the property ID cannot be committed
+
+The numeric ID is not derivable from the repo — it only exists inside the Google account. The
+`G-8QCP0TP1TD` measurement ID identifies the *stream*, not the property, and the Data API rejects
+it with HTTP 404. That is why this is an owner step and not a build step; the tooling around it
+(discovery, exact command, CI secrets) is already in place.
+
+## Typical timeline once the APIs are on
+
+- Realtime GA4 events: instant.
+- Standard reports (Traffic acquisition, Pages, Events): 24–48 h.
+- GSC query/click data: separate system, 1–2 weeks — join it with GA4 traffic via `npm run seo:gsc-join`.

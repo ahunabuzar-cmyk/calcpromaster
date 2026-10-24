@@ -1,0 +1,6 @@
+Contact: https://calcpromaster.com/contact.html
+Contact: mailto:security@calcpromaster.com
+Expires: 2027-10-04T00:00:00.000Z
+Preferred-Languages: en, ur
+Canonical: https://calcpromaster.com/.well-known/security.txt
+Policy: https://calcpromaster.com/editorial-policy.html

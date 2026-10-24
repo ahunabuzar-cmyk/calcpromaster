@@ -313,7 +313,8 @@ describe('SSG static pages (deploy/)', () => {
     const schemas = extractJsonLd(readPage(path.join('finance', 'loan-emi', 'index.html')));
     const bc = schemas.find((s) => s['@type'] === 'BreadcrumbList');
     expect(bc.itemListElement).toHaveLength(4);
-    expect(bc.itemListElement[3].item).toBe(SITE_ORIGIN + '/finance/loan-emi');
+    // Trailing slash matches the served URL (/finance/loan-emi/) + canonical.
+    expect(bc.itemListElement[3].item).toBe(SITE_ORIGIN + '/finance/loan-emi/');
   });
 
   it('FAQPage schema mirrors visible FAQs (5+ questions with answers)', () => {

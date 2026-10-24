@@ -169,9 +169,9 @@ const EVERYDAY_TOOLS = [
     steps: function(v){ function C(n,k){ if(k<0||k>n) return 0; k=Math.min(k,n-k); var r=1; for(var i=1;i<=k;i++) r=r*(n-k+i)/i; return r; } var combos=C(v.max,v.balls); var ways=C(v.balls,v.match)*C(v.max-v.balls,v.balls-v.match); return['Step 1: Total tickets = C('+v.max+','+v.balls+') = '+combos.toLocaleString(),'Step 2: Winning combinations matching '+v.match+' = C('+v.balls+','+v.match+') × C('+(v.max-v.balls)+','+(v.balls-v.match)+') = '+ways.toLocaleString(),'Step 3: Odds = '+combos.toLocaleString()+' / '+ways.toLocaleString()+' = 1 in '+(combos/ways).toLocaleString('en-US',{maximumFractionDigits:0})];} },
 
   { id: 'poker-flush', name: 'Poker Flush Odds Calculator', desc: 'Probability of flush-type hands in 5-card poker', kw: 'poker flush odds calculator 5 card probability combinations straight, free online Poker Flush Odds Calculator',
-    inputs: [{id:'matches',label:'Cards of the Same Suit Needed (1–5 of 5)',type:'number',def:5}],
-    calc: function(v){ function C(n,k){ if(k<0||k>n) return 0; k=Math.min(k,n-k); var r=1; for(var i=1;i<=k;i++) r=r*(n-k+i)/i; return r; } var need=Math.min(5,Math.max(1,Math.round(v.matches))); var ways=C(4,1)*C(13,need)*C(39,5-need); var total=C(52,5); var p=ways/total; return{result:'Probability: '+(p*100).toFixed(4)+'%',chart:Charts.bar([p*100,100-p*100],['This hand','Other hands']),extra:'1 in '+Math.round(1/p).toLocaleString()+' hands | Ways: '+ways.toLocaleString()+' of '+total.toLocaleString()+' | A 5-card flush includes straight flushes — subtract 40 ways to exclude them'};},
-    steps: function(v){ function C(n,k){ if(k<0||k>n) return 0; k=Math.min(k,n-k); var r=1; for(var i=1;i<=k;i++) r=r*(n-k+i)/i; return r; } var need=Math.min(5,Math.max(1,Math.round(v.matches))); var ways=C(4,1)*C(13,need)*C(39,5-need); var total=C(52,5); return['Formula: P = (suit choices × suit-card picks × other-suit fill) ÷ C(52,5)','Step 1: Ways = C(4,1) × C(13,'+need+') × C(39,'+(5-need)+') = '+ways.toLocaleString(),'Step 2: Total 5-card hands = C(52,5) = '+total.toLocaleString(),'Step 3: P = '+(ways/total*100).toFixed(4)+'% ≈ 1 in '+Math.round(total/ways).toLocaleString()];} },
+    inputs: [{id:'same_suit',label:'Cards of the Same Suit Needed (1–5 of 5)',type:'number',def:5}],
+    calc: function(v){ function C(n,k){ if(k<0||k>n) return 0; k=Math.min(k,n-k); var r=1; for(var i=1;i<=k;i++) r=r*(n-k+i)/i; return r; } var need=Math.min(5,Math.max(1,Math.round(v.same_suit))); var ways=C(4,1)*C(13,need)*C(39,5-need); var total=C(52,5); var p=ways/total; return{result:'Probability: '+(p*100).toFixed(4)+'%',chart:Charts.bar([p*100,100-p*100],['This hand','Other hands']),extra:'1 in '+Math.round(1/p).toLocaleString()+' hands | Ways: '+ways.toLocaleString()+' of '+total.toLocaleString()+' | A 5-card flush includes straight flushes — subtract 40 ways to exclude them'};},
+    steps: function(v){ function C(n,k){ if(k<0||k>n) return 0; k=Math.min(k,n-k); var r=1; for(var i=1;i<=k;i++) r=r*(n-k+i)/i; return r; } var need=Math.min(5,Math.max(1,Math.round(v.same_suit))); var ways=C(4,1)*C(13,need)*C(39,5-need); var total=C(52,5); return['Formula: P = (suit choices × suit-card picks × other-suit fill) ÷ C(52,5)','Step 1: Ways = C(4,1) × C(13,'+need+') × C(39,'+(5-need)+') = '+ways.toLocaleString(),'Step 2: Total 5-card hands = C(52,5) = '+total.toLocaleString(),'Step 3: P = '+(ways/total*100).toFixed(4)+'% ≈ 1 in '+Math.round(total/ways).toLocaleString()];} },
 
   { id: 'easter-date', name: 'Easter Date Calculator', desc: 'Western Easter Sunday from the Gregorian computus', kw: 'easter date calculator computus good friday western sunday ash, free online Easter Date Calculator',
     inputs: [{id:'year',label:'Year (1583–4099)',type:'number',def:2026}],
@@ -204,6 +204,99 @@ const EVERYDAY_TOOLS = [
   { id: 'jet-lag', name: 'Jet Lag Recovery Calculator', desc: 'Recovery days for eastward or westward travel', kw: 'jet lag calculator recovery days time zones east west, free online Jet Lag Recovery Calculator', inputs: [{id:'zones',label:'Time Zones Crossed',type:'number',def:7},{id:'dir',label:'Direction (1=east, 0=west)',type:'number',def:1}], calc: function(v){ if(v.zones<=0||v.zones>12) return{result:'Enter zones between 1 and 12',chart:'',extra:''}; var days=v.zones*(v.dir===1?1:0.6); return{result:'Recovery: about '+days.toFixed(1)+' days',chart:Charts.bar([days],['Recovery days']),extra:(v.dir===1?'Eastward':'Westward')+' travel — eastward flights shorten your day and are harder; westward is about 40% easier | Morning bright light shifts your clock the right way after eastward flights'};}, steps: function(v){ var days=v.zones*(v.dir===1?1:0.6); return['Rule of thumb: ~1 day per zone eastward, ~0.6 westward','Step 1: '+v.zones+' zones × '+(v.dir===1?'1':'0.6')+' = '+days.toFixed(1)+' days','Speed it up: shift sleep an hour daily before departure, get morning light at destination, and stay awake to local bedtime'];} },
 
   { id: 'heat-pump-savings', name: 'Heat Pump Savings Calculator', desc: 'Annual savings versus electric resistance heating', kw: 'heat pump savings calculator cop electric resistance annual cost, free online Heat Pump Savings Calculator', inputs: [{id:'load',label:'Annual Heating Need (kWh)',type:'number',def:12000},{id:'rate',label:'Electricity Rate ($/kWh)',type:'number',def:0.15},{id:'cop',label:'Heat Pump COP',type:'number',def:3}], calc: function(v){ if(v.load<=0||v.rate<=0||v.cop<=0) return{result:'Enter positive values',chart:'',extra:''}; var res=v.load*v.rate; var hp=v.load*v.rate/v.cop; var sav=res-hp; return{result:'Savings: $'+sav.toFixed(0)+'/year',chart:Charts.bar([res,hp],['Resistance','Heat pump']),extra:'Resistance cost $'+res.toFixed(0)+', heat pump $'+hp.toFixed(0)+' | COP falls in deep cold — size savings on the seasonal average, not the rated peak'};}, steps: function(v){ var res=v.load*v.rate; var hp=v.load*v.rate/v.cop; var sav=res-hp; return['Step 1: Resistance cost = '+v.load+' kWh × $'+v.rate+' = $'+res.toFixed(0),'Step 2: Heat pump draws load ÷ COP = '+(v.load/v.cop).toFixed(0)+' kWh → $'+hp.toFixed(0),'Step 3: Savings = $'+sav.toFixed(0)+' per year','Every unit of electricity moves '+v.cop.toFixed(1)+' units of heat — that is the whole trick'];} }
+,
+  {
+    id: 'statute-of-limitations',
+    name: 'Statute of Limitations Date Calculator',
+    desc: 'Deadline date for common claim types from the incident date and the typical time limit.',
+    kw: 'statute of limitations calculator, claim deadline calculator, time limit to sue, legal filing deadline',
+    inputs: [
+{ id: 'claimType', label: 'Claim type', type: 'select', opts: [{v:'Personal injury',l:'Personal injury'},{v:'Contract dispute',l:'Contract dispute'},{v:'Debt recovery',l:'Debt recovery'},{v:'Property damage',l:'Property damage'},{v:'Medical malpractice',l:'Medical malpractice'},{v:'Defamation',l:'Defamation'},{v:'Workers compensation',l:'Workers compensation'}], def: 'Personal injury' },
+      { id: 'incidentDate', label: 'Incident date', type: 'date', def: '' }
+    ],
+    calc: function (v) {
+      var map = { 'Personal injury': 2, 'Contract dispute': 6, 'Debt recovery': 6, 'Property damage': 3, 'Medical malpractice': 2, 'Defamation': 1, 'Workers compensation': 2 };
+      var yrs = map[v.claimType] || 2;
+      var parts = String(v.incidentDate || '').split('-');
+      var y = parseInt(parts[0], 10), mo = parseInt(parts[1], 10), da = parseInt(parts[2], 10);
+      if (!y || !mo || !da) return { result: 'Enter the incident date', chart: '', extra: '' };
+      var deadline = new Date(y + yrs, mo - 1, da);
+      function pad(n) { return (n < 10 ? '0' : '') + n; }
+      var ds = deadline.getFullYear() + '-' + pad(deadline.getMonth() + 1) + '-' + pad(deadline.getDate());
+      return {
+        result: 'File by ' + ds,
+        chart: Charts.gauge(yrs, 10),
+        extra: v.claimType + ' is commonly limited to ' + yrs + ' year(s) in many jurisdictions | Illustrative only, confirm your local rule and any discovery rule'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Identify the claim type, which sets the typical limitation period.',
+        'Step 2: Start the clock on the incident date, or on the date the harm was discovered in many jurisdictions.',
+        'Step 3: Add the period for the claim type. Many US states use two years for personal injury and six years for contract.',
+        'Step 4: Some claims have shorter or longer special rules, and deadlines can be paused for minors.',
+        'Step 5: This is an illustrative guide only. Confirm the real deadline with a qualified lawyer in your jurisdiction.'
+      ];
+    }
+  }
+,
+  {
+    id: 'cost-of-living-compare',
+    name: 'City Cost of Living Comparison Calculator',
+    desc: 'Compare the salary you need to keep the same standard of living between two cities using cost indices.',
+    kw: 'cost of living calculator, compare cities cost of living, equivalent salary calculator, relocation salary comparison',
+    inputs: [
+{ id: 'cityA', label: 'Current city', type: 'select', opts: [{v:'Karachi',l:'Karachi'},{v:'Lahore',l:'Lahore'},{v:'Delhi',l:'Delhi'},{v:'Mumbai',l:'Mumbai'},{v:'Dubai',l:'Dubai'},{v:'London',l:'London'},{v:'Manchester',l:'Manchester'},{v:'New York',l:'New York'},{v:'Toronto',l:'Toronto'},{v:'Sydney',l:'Sydney'},{v:'Berlin',l:'Berlin'},{v:'Houston',l:'Houston'}], def: 'Karachi' },
+      { id: 'cityB', label: 'New city', type: 'select', opts: [{v:'Karachi',l:'Karachi'},{v:'Lahore',l:'Lahore'},{v:'Delhi',l:'Delhi'},{v:'Mumbai',l:'Mumbai'},{v:'Dubai',l:'Dubai'},{v:'London',l:'London'},{v:'Manchester',l:'Manchester'},{v:'New York',l:'New York'},{v:'Toronto',l:'Toronto'},{v:'Sydney',l:'Sydney'},{v:'Berlin',l:'Berlin'},{v:'Houston',l:'Houston'}], def: 'London' },
+      { id: 'currentSalary', label: 'Current salary', type: 'number', def: 60000 },
+      { id: 'housingSharePct', label: 'Housing share of budget (percent)', type: 'number', def: 30 }
+    ],
+    calc: function (v) {
+      var idx = { 'Karachi': 35, 'Lahore': 34, 'Delhi': 38, 'Mumbai': 42, 'Dubai': 65, 'London': 100, 'Manchester': 78, 'New York': 130, 'Toronto': 95, 'Sydney': 105, 'Berlin': 85, 'Houston': 92 };
+      var a = idx[v.cityA] || 100, b = idx[v.cityB] || 100;
+      var equiv = v.currentSalary * b / a;
+      return {
+        result: 'Equivalent salary in ' + v.cityB + ': ' + equiv.toFixed(0),
+        chart: Charts.bar([v.currentSalary, equiv], [v.cityA, v.cityB]),
+        extra: v.cityA + ' index ' + a + ' | ' + v.cityB + ' index ' + b + ' | Difference ' + (equiv - v.currentSalary).toFixed(0) + ' | Indices are indicative averages, not a rent quote'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Assign each city a cost index, where 100 is the reference level.',
+        'Step 2: The equivalent salary equals your current salary times the new city index divided by the current city index.',
+        'Step 3: The difference shows how much more or less you would need for the same basket of goods and services.',
+        'Step 4: Housing is the biggest swing, so weigh it carefully if you plan to buy or rent in a central area.',
+        'Step 5: Indices are averages and ignore exchange-rate timing, taxes and lifestyle, so use them as a starting point only.'
+      ];
+    }
+  },
+  { id: 'snow-day', name: 'Snow Day Calculator', desc: 'Estimate the chance a school closes for snow', kw: 'snow day calculator, school closure snow forecast, free online Snow Day Calculator',
+    inputs: [{id:'snowfall',label:'Expected Snowfall (inches)',type:'number',def:4},{id:'threshold',label:'District Closing Threshold (inches)',type:'number',def:4},{id:'temp',label:'Overnight Low (°F)',type:'number',def:28},{id:'roads',label:'Road Clearing',type:'select',opts:[{v:'good',l:'Good — main roads cleared'},{v:'mixed',l:'Mixed — side roads slow'},{v:'poor',l:'Poor — rural or untreated'}],def:'mixed'}],
+    calc: function(v){
+      var threshold = Math.max(1, v.threshold);
+      var snowScore = Math.min(1, Math.max(0, v.snowfall) / threshold) * 55;
+      var coldScore = v.temp <= 20 ? 25 : v.temp <= 28 ? 15 : v.temp <= 32 ? 5 : 0;
+      var roadScore = v.roads === 'poor' ? 25 : v.roads === 'mixed' ? 15 : 5;
+      var score = Math.round(Math.min(100, snowScore + coldScore + roadScore));
+      var band = score >= 75 ? 'Very likely' : score >= 55 ? 'Likely' : score >= 35 ? 'Possible' : 'Unlikely';
+      return { result: band + ' (' + score + '/100)', chart: Charts.gauge(score, 100), extra: 'Snow ' + v.snowfall + '" vs ' + threshold + '" threshold = ' + Math.round(snowScore) + ' | Cold ' + coldScore + ' | Roads ' + roadScore + ' | A transparent estimate, not a district decision' };
+    },
+    steps: function(v){
+      var threshold = Math.max(1, v.threshold);
+      var snowScore = Math.min(1, Math.max(0, v.snowfall) / threshold) * 55;
+      var coldScore = v.temp <= 20 ? 25 : v.temp <= 28 ? 15 : v.temp <= 32 ? 5 : 0;
+      var roadScore = v.roads === 'poor' ? 25 : v.roads === 'mixed' ? 15 : 5;
+      var score = Math.round(Math.min(100, snowScore + coldScore + roadScore));
+      return [
+        'Step 1: Snow score = min(1, snowfall ÷ threshold) × 55 = ' + Math.round(snowScore),
+        'Step 2: Cold score = ' + coldScore + ' (≤20°F 25 · ≤28°F 15 · ≤32°F 5 · above freezing 0)',
+        'Step 3: Road score = ' + roadScore + ' (good 5 · mixed 15 · poor 25)',
+        'Step 4: Total = ' + Math.round(snowScore) + ' + ' + coldScore + ' + ' + roadScore + ' = ' + score + '/100',
+        'Bands: 75+ very likely · 55–74 likely · 35–54 possible · below 35 unlikely',
+        'Districts also weigh timing, wind and bus routes, so treat this as an estimate, not an announcement.'
+      ];
+    } }
 ];
 if (typeof window !== 'undefined') window.EVERYDAY_TOOLS = EVERYDAY_TOOLS;
 if (typeof module !== 'undefined') module.exports = EVERYDAY_TOOLS;

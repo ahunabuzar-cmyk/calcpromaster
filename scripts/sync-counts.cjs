@@ -58,15 +58,37 @@ const FILES = [
 // 4-digit (1000..9999) counts next to calculator/tool words — older regex
 // only caught 6XX–9XX, which let stale counts like "497+" and "1201+"
 // survive while the registry moved to 1206.
-const COUNT_RE = /(\b\d{3,4}\+?\s*(calculators?|tools?|free\s+[\w\s]*?online\s+calculators?|calculators?[,\s]|tools?[,\s])|"numberOfItems":\s*"\d{3,4}\+?")/gi;
+// NOTE: the hero phrases wrap the count in markup, e.g.
+//   <span class="highlight">1282+</span> Free Online Calculators
+// so the number is not directly adjacent to the keyword. The extra
+// span branch below catches that form; without it a stale hero count
+// survived every sync (1216+ vs a 1282 registry).
+// (?<![\d,]) — NOT \b: a comma-grouped number like "1,282" has a word
+// boundary before 282, so \b matched the tail and rewrote "1,282 calculators"
+// into the corrupted "1,1282+ calculators". The lookbehind refuses to start a
+// match immediately after a digit or comma.
+const COUNT_RE = /((?<![\d,])\d{3,4}\+?\s*(calculators?|tools?|free\s+[\w\s]*?online\s+calculators?|calculators?[,\s]|tools?[,\s])|"numberOfItems":\s*"\d{3,4}\+?"|<span\s+class="highlight">\d{3,4}\+?<\/span>)/gi;
 
 // Extra targeted fixes for awkward phrasings not caught above.
 function fixKnownStrings(content, n) {
   return content
-    .replace(/\b\d{3,4}\+?\s*calculators?/gi, n + '+ calculators')
-    .replace(/\b\d{3,4}\+?\s*tools?/gi, n + '+ tools')
-    .replace(/\b\d{3,4}\+?\s*free\s+[\w\s]*?online\s+calculators?/gi, n + '+ free online calculators')
-    .replace(/\b\d{3,4}\+?\s*free\s+calculators?/gi, n + '+ free calculators')
+    // Hero/heading form where the count sits inside a highlight span.
+    .replace(/(<span\s+class="highlight">)\d{3,4}\+?(<\/span>)/gi, '$1' + n + '+$2')
+    .replace(/(?<![\d,])\d{3,4}\+?\s*calculators?/gi, n + '+ calculators')
+    .replace(/(?<![\d,])\d{3,4}\+?\s*tools?/gi, n + '+ tools')
+    .replace(/(?<![\d,])\d{3,4}\+?\s*free\s+[\w\s]*?online\s+calculators?/gi, n + '+ free online calculators')
+    .replace(/(?<![\d,])\d{3,4}\+?\s*free\s+calculators?/gi, n + '+ free calculators')
+    // Data-URI SVG favicon badge, e.g. ">1211%2B</text>" (URL-encoded "1282+")
+    .replace(/(>\s*)\d{3,4}%2B(<\/text>)/g, '$1' + n + '%2B$2')
+    // "1211 online calculators" — a word sits between the number and keyword,
+    // so the adjacency patterns above miss it.
+    .replace(/(?<![\d,])\d{3,4}\s+online\s+calculators?\b/gi, n + ' online calculators')
+    // "one of 1211+ free CalcProMaster calculators …" (js/tool-intros.js)
+    // Lowercase: the sentence continues mid-paragraph ("… works. Tool is one
+    // of …"), and generate-intros.js emits it in lowercase. Rewriting it as
+    // "One of" made every build mutate the generated file, so the intro
+    // freshness gate failed after each deploy build.
+    .replace(/\bone of \d{3,4}\+?/gi, 'one of ' + n + '+')
     .replace(/"numberOfItems":\s*"\d{3,4}\+?"/g, '"numberOfItems": "' + n + '+"');
 }
 

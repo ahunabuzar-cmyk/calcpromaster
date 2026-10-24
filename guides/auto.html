@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Auto &amp; Vehicle Guides — Fuel, ownership &amp; running costs | CalcProMaster</title>
-  <meta name="description" content="The sticker price is the cheapest part of owning a car. Fuel burn, maintenance, depreciation and the lease-vs-buy decision decide what a vehicle really cos">
+  <meta name="description" content="The sticker price is the cheapest part of owning a car. Fuel, maintenance, depreciation and the lease-vs-buy decision set what a vehicle really costs.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
   <link rel="canonical" href="https://calcpromaster.netlify.app/guides/auto">
@@ -69,16 +69,63 @@
     .cat-card p { margin: 0; color: #4b5563; font-size: 0.95rem; }
     .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
     .updated { color: #6b7280; font-size: 0.85rem; }
-  </style>
+/* guide-depth-css:start */
+.guide-lede{font-weight:600;border-left:3px solid #4f46e5;padding-left:12px;margin:10px 0 4px}
+    .guide-pitfalls{margin:8px 0 14px 20px}
+    .seo-faqs h3{margin:16px 0 4px}
+/* guide-depth-css:end */
+</style>
+
+<!-- guide-faq-schema:start -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is real-world fuel use worse than the published figure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Test cycles run at moderate speeds with no traffic, no air-conditioning and no cold starts. Real driving adds all of those. The gap is largest for short urban trips and smallest for steady motorway running, which is why two owners of the same car can report very different economy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I compare an EV with a petrol car fairly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Put both on the same annual distance, then use a real consumption figure for each and the actual price you pay per kWh and per litre. Electricity price, charging losses and where you charge matter more than the sticker efficiency, and purchase price is a separate question from running cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is depreciation estimated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most calculators apply a constant annual percentage to the remaining value, which gives a smooth curve. Real depreciation is front-loaded and uneven — the first year and the first owner take the largest hit — so treat the result as a shape rather than a resale quote."
+      }
+    }
+  ]
+}
+</script>
+<!-- guide-faq-schema:end -->
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Auto &amp; Vehicle</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Auto &amp; Vehicle</p>
   <h1>Auto &amp; Vehicle Guides</h1>
   <p class="updated">Part of the CalcProMaster guides library · Fuel, ownership &amp; running costs</p>
 
   <p>The sticker price is the cheapest part of owning a car. Fuel burn, maintenance, depreciation and the lease-vs-buy decision decide what a vehicle really costs per kilometre — these guides walk the actual math.</p>
+  <p><strong>Methodology:</strong> Standard vehicle formulas for fuel use, running costs and depreciation, using published efficiencies as inputs.</p>
 
-  <h2>How the math works</h2>
+
+<!-- guide-lede:start -->
+<p class="guide-lede">Vehicle maths is dominated by two inputs people estimate badly: real-world consumption rather than the test-cycle figure, and how much of the driving is urban stop-start rather than open road.</p>
+<!-- guide-lede:end -->
+<h2>How the math works</h2>
   <p>Per-kilometre fuel cost is the number every other vehicle decision hangs on: fuel cost per km = fuel price per litre ÷ consumption in km/L. Petrol at $1.50/L with a car doing 12 km/L costs 12.5¢/km — so a 20 km daily commute costs $2.50 each way before parking or tolls.</p>
   <p>Compare that with depreciation, which dwarfs fuel on newer cars: a $25,000 car losing 15% of its value in year one costs about $3,000 — roughly $8.20 a day whether you drive or not. That asymmetry is why the lease-vs-buy and EV-comparison guides ask for your annual mileage first: high mileage favors efficient ownership, low mileage questions owning at all.</p>
 
@@ -98,14 +145,51 @@
   <h2>MPG and L/100km — why can’t I divide one by the other?</h2>
   <p>They are reciprocal scales: higher MPG is better, lower L/100km is better. L/100km = 235.215 ÷ MPG (US). The unit conversion guide keeps the factor handy.</p>
 
-  <h2>Try the matching calculators</h2>
+
+<!-- guide-extra-depth:start -->
+<h2>What this category covers</h2>
+<p>Fuel cost, mileage, trip cost, EV comparisons, tyre and lease maths. These tools all depend on one number people guess badly: the real consumption of their own vehicle, measured over several tanks rather than read from a brochure.</p>
+<p>Use the calculator for a decision, not for precision. A range of plausible inputs, run three times, tells you more than one run with an optimistic mileage.</p>
+<h2>The costs that sit outside the tank</h2>
+<p>Fuel is only part of running a car. Depreciation, insurance, servicing, tyres, parking and tolls are all per-kilometre costs that a fuel calculator deliberately excludes, and on a new car depreciation usually exceeds fuel.</p>
+<p>If the question is whether to drive or take a train, fuel and tolls are the right comparison. If the question is whether to own a car, the full ownership total is the only honest one.</p>
+<h2>Units and regional differences</h2>
+<p>Mileage is quoted in miles per gallon in some markets and litres per 100 km in others, and the two move in opposite directions: higher mpg is better, lower litres per 100 km is better. Mixing them silently inverts the conclusion.</p>
+<p>Fuel prices and gallon sizes also differ: a US gallon is about 3.785 litres and an imperial gallon about 4.546. When comparing figures from different countries, convert the unit before comparing the value.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/engineering">Engineering Guides</a></li>
+    <li><a href="/guides/fuel-cost">Fuel Cost</a></li>
+    <li><a href="/guides/ev-vs-petrol">EV vs Petrol</a></li>
+    <li><a href="/guides/gear-ratio">Gear Ratio</a></li>
+  </ul>
+
+<!-- guide-depth:start -->
+<h2>Where these answers go wrong</h2><ul class="guide-pitfalls"><li>Using the manufacturer’s consumption figure, which is measured under ideal test conditions and is usually optimistic in daily use.</li><li>Comparing purchase prices when depreciation, insurance, tyres and servicing are most of what separates two cars over five years.</li><li>Mixing units — miles with km/L, litres with gallons — so every result is off by a fixed factor.</li><li>Ignoring charging and refuelling losses, which add roughly a tenth to the electricity an EV actually draws.</li></ul><h2>Frequently asked questions</h2><div class="seo-faqs"><h3>Why is real-world fuel use worse than the published figure?</h3><p>Test cycles run at moderate speeds with no traffic, no air-conditioning and no cold starts. Real driving adds all of those. The gap is largest for short urban trips and smallest for steady motorway running, which is why two owners of the same car can report very different economy.</p><h3>How do I compare an EV with a petrol car fairly?</h3><p>Put both on the same annual distance, then use a real consumption figure for each and the actual price you pay per kWh and per litre. Electricity price, charging losses and where you charge matter more than the sticker efficiency, and purchase price is a separate question from running cost.</p><h3>How is depreciation estimated?</h3><p>Most calculators apply a constant annual percentage to the remaining value, which gives a smooth curve. Real depreciation is front-loaded and uneven — the first year and the first owner take the largest hit — so treat the result as a shape rather than a resale quote.</p></div>
+<!-- guide-depth:end -->
+<!-- guide-worked-example:start -->
+<h2>Worked example: Fuel Cost Calculator at its default inputs</h2>
+<p>A worked example is only useful if you can reproduce it. The defaults on <a href="/auto/fuel-cost/">Fuel Cost Calculator</a> give exactly the figures in this section, with no rounding done by us.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Distance (km)</td><td>500</td></tr><tr><td>Mileage (km/L)</td><td>15</td></tr><tr><td>Fuel Price ($/L)</td><td>1.5</td></tr><tr><td>Toll/Parking ($)</td><td>0</td></tr></tbody></table>
+<p><strong>Result:</strong> $50.00</p>
+<h2>Sensitivity: Distance (km) from half to one-and-a-half times</h2>
+<p>The table below varies distance (km) alone — half, the default, and half again.</p>
+<table><thead><tr><th>Distance (km)</th><th>Result</th></tr></thead><tbody><tr><td>250</td><td>$25.00</td></tr><tr><td>500</td><td>$50.00</td></tr><tr><td>750</td><td>$75.00</td></tr></tbody></table>
+<p>If the rows barely differ, distance (km) is not your lever — change a different input. If they swing widely, get that number right before trusting the total.</p>
+<!-- guide-worked-example:end -->
+<h2>Try the matching calculators</h2>
   <p>
-    <a href="/auto/fuel-cost" class="cta">Fuel Cost Calculator</a>
-    <a href="/auto/car-loan-emi" class="cta">Car Loan EMI Calculator</a>
-    <a href="/auto/ev-vs-gas-petrol" class="cta">EV vs Petrol Cost</a>
+    <a href="/auto/fuel-cost/" class="cta">Fuel Cost Calculator</a>
+    <a href="/auto/car-loan-emi/" class="cta">Car Loan EMI Calculator</a>
+    <a href="/auto/ev-vs-gas-petrol/" class="cta">EV vs Petrol Cost</a>
   </p>
 
-  <p><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
+  <p><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

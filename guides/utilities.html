@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Utilities &amp; Developer Tools Guides — Text, codes &amp; security | CalcProMaster</title>
-  <meta name="description" content="Utility tools deserve one explanation each: what a UUID actually guarantees, why password strength is entropy rather than length theatre, and when a hash i">
+  <title>Utilities &amp; Developer Tools Guides — Text &amp; Security</title>
+  <meta name="description" content="Utility tools deserve one explanation each: what a UUID guarantees, why password strength is entropy rather than length, and when a hash is enough.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
   <link rel="canonical" href="https://calcpromaster.netlify.app/guides/utilities">
@@ -69,16 +69,63 @@
     .cat-card p { margin: 0; color: #4b5563; font-size: 0.95rem; }
     .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
     .updated { color: #6b7280; font-size: 0.85rem; }
-  </style>
+/* guide-depth-css:start */
+.guide-lede{font-weight:600;border-left:3px solid #4f46e5;padding-left:12px;margin:10px 0 4px}
+    .guide-pitfalls{margin:8px 0 14px 20px}
+    .seo-faqs h3{margin:16px 0 4px}
+/* guide-depth-css:end */
+</style>
+
+<!-- guide-faq-schema:start -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What download speed do I need for a 4 GB file in 10 minutes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Work backwards in consistent units. 4 GB is about 32,000 megabits, and 10 minutes is 600 seconds, so you need roughly 53 Mbps of sustained throughput. Protocol overhead and server limits mean the connection should be comfortably faster than the number you calculate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does a 1 TB drive show less than 1 TB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Drive makers use decimal prefixes, where 1 TB means 1,000 GB, while many operating systems report binary units, where 1 TiB means 1,024 GiB. Both numbers describe the same space. The visible shortfall is the gap between the two conventions, not missing storage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a password strength meter measure entropy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most measure a checklist plus an estimate of the search space implied by length and character set, which is not the same as true entropy. Length raises the search space fastest, which is why a long passphrase usually beats a short scramble of symbols — and why any password reused elsewhere should be considered weak."
+      }
+    }
+  ]
+}
+</script>
+<!-- guide-faq-schema:end -->
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Utilities &amp; Developer Tools</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Utilities &amp; Developer Tools</p>
   <h1>Utilities &amp; Developer Tools Guides</h1>
   <p class="updated">Part of the CalcProMaster guides library · Text, codes &amp; security</p>
 
   <p>Utility tools deserve one explanation each: what a UUID actually guarantees, why password strength is entropy rather than length theatre, and when a hash is a fingerprint versus a password. These guides cover the concepts the tools rely on.</p>
+  <p><strong>Methodology:</strong> Standard utility formulas such as energy use, cost per unit and efficiency, using published tariffs as inputs only.</p>
 
-  <h2>How the math works</h2>
+
+<!-- guide-lede:start -->
+<p class="guide-lede">Utility calculators answer small questions where the unit convention is the whole answer: bits versus bytes, decimal versus binary prefixes, and what a &quot;strong&quot; password is actually measuring.</p>
+<!-- guide-lede:end -->
+<h2>How the math works</h2>
   <p>Security utilities are honest when the limits are stated. A random UUIDv4 carries 122 random bits — collision odds across a billion UUIDs are roughly one in a quintillion, so you will never see one. Password entropy is bits = log2(pool size) × length: 16 lowercase letters give about 75 bits; 8 characters from the full keyboard give about 52. Length wins because the formula multiplies, not adds.</p>
   <p>Hashes are for verifying data, not for storing passwords: a hash is fast by design, which is exactly what an attacker wants. That is why the password tools generate client-side with cryptographically secure randomness and never transmit anything — the tool’s honesty is in what it refuses to do, not just what it computes.</p>
 
@@ -98,14 +145,55 @@
   <h2>Are UUIDs safe as unguessable IDs?</h2>
   <p>Version-4 UUIDs carry 122 random bits, so guessing one is effectively impossible. But they are not secrets — anything that must resist guessing AND stay confidential still needs authentication on top.</p>
 
-  <h2>Try the matching calculators</h2>
+
+<!-- guide-extra-depth:start -->
+<h2>What this category covers</h2>
+<p>Electricity, gas and water bills, plus appliance running costs and tariff comparisons. The arithmetic is simple, but the tariff structure rarely is: slabs, fixed charges, duties and time-of-use rates all change what a unit actually costs.</p>
+<p>Read one real bill before using any calculator in this category. The fixed portion and the tax lines explain most of the gap between an estimate and what arrives in the post.</p>
+<h2>Slabs make the last unit the expensive one</h2>
+<p>In a slab tariff, each band has its own rate, so the bill is the sum of bands rather than units times one price. The rate on your final unit can be several times the rate on your first.</p>
+<p>That is why adding a large appliance often costs more than a per-unit estimate suggests, and why reducing usage in a high band saves more per unit than reducing it in a low one.</p>
+<h2>Appliance estimates and duty cycles</h2>
+<p>Watts times hours is the formula, but nameplate watts are a maximum. A fridge cycles, an inverter air conditioner modulates, and a laptop idles well below its charger rating.</p>
+<p>For anything that runs for hours, measure it for a week with a plug-in meter. For a phone charger or a router, the label is close enough and the total is too small to justify the effort.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/homegarden">Home & Garden Guides</a></li>
+    <li><a href="/guides/construction">Construction Guides</a></li>
+    <li><a href="/guides/concrete">How to Calculate Concrete for Slabs, Footings and Pads</a></li>
+    <li><a href="/guides/paint-coverage">Paint Coverage</a></li>
+  </ul>
+
+<!-- guide-depth:start -->
+<h2>Where these answers go wrong</h2><ul class="guide-pitfalls"><li>Reading a connection speed in megabits as if it were megabytes — divide by eight before estimating how long a download takes.</li><li>Comparing a drive’s advertised capacity (decimal) with what the operating system reports (binary), which differ by roughly 9%.</li><li>Judging a password by character classes alone rather than by the search space its length creates.</li><li>Converting colour codes without checking the working colour space, so the hex value looks right and the rendered colour does not.</li></ul><h2>Frequently asked questions</h2><div class="seo-faqs"><h3>What download speed do I need for a 4 GB file in 10 minutes?</h3><p>Work backwards in consistent units. 4 GB is about 32,000 megabits, and 10 minutes is 600 seconds, so you need roughly 53 Mbps of sustained throughput. Protocol overhead and server limits mean the connection should be comfortably faster than the number you calculate.</p><h3>Why does a 1 TB drive show less than 1 TB?</h3><p>Drive makers use decimal prefixes, where 1 TB means 1,000 GB, while many operating systems report binary units, where 1 TiB means 1,024 GiB. Both numbers describe the same space. The visible shortfall is the gap between the two conventions, not missing storage.</p><h3>Does a password strength meter measure entropy?</h3><p>Most measure a checklist plus an estimate of the search space implied by length and character set, which is not the same as true entropy. Length raises the search space fastest, which is why a long passphrase usually beats a short scramble of symbols — and why any password reused elsewhere should be considered weak.</p></div>
+<!-- guide-depth:end -->
+<!-- guide-worked-example:start -->
+<h2>Worked example: Universal Unit Converter at its default inputs</h2>
+<p>This is the answer <a href="/utilities/unit-converter/">Universal Unit Converter</a> gives before you touch anything — the defaults as shipped, computed live rather than copied from a sample.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Value</td><td>1</td></tr></tbody></table>
+<p><strong>Result:</strong> 1 m = 3.2808 ft</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Step 1: Convert 1 m to meters = 1.0000 m</li><li>Step 2: Convert meters to ft = 3.2808</li></ol>
+<h2>Sensitivity: Value from half to one-and-a-half times</h2>
+<p>Value is the first input worth testing, so here it is at three sizes.</p>
+<table><thead><tr><th>Value</th><th>Result</th></tr></thead><tbody><tr><td>0.5</td><td>0.5 m = 1.6404 ft</td></tr><tr><td>1</td><td>1 m = 3.2808 ft</td></tr><tr><td>1.5</td><td>1.5 m = 4.9213 ft</td></tr></tbody></table>
+<p>Halve value and the result moves one way; add half again and it moves the other. Watching that gap is quicker than guessing which field matters most.</p>
+<!-- guide-worked-example:end -->
+
+
+
+<h2>Try the matching calculators</h2>
   <p>
-    <a href="/utilities/password-gen" class="cta">Password Generator</a>
-    <a href="/utilities/unit-converter" class="cta">Universal Unit Converter</a>
-    <a href="/utilities/qr-generator" class="cta">QR Code Generator</a>
+    <a href="/utilities/password-gen/" class="cta">Password Generator</a>
+    <a href="/utilities/unit-converter/" class="cta">Universal Unit Converter</a>
+    <a href="/utilities/qr-generator/" class="cta">QR Code Generator</a>
   </p>
 
-  <p><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
+  <p><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

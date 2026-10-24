@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Break-Even Analysis — Formula, Margin of Safety &amp; Worked Example</title>
-  <meta name="description" content="The break-even formula in units and revenue dollars, fixed vs variable costs, contribution margin, margin of safety, and a full café example with a…">
+  <title>Break-Even Analysis: Formula, Example &amp; Margin of Safety</title>
+  <meta name="description" content="Break-even formula in units and revenue, contribution margin, a café worked example, price-sensitivity table, service-business hours and margin of safety.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
   <link rel="canonical" href="https://calcpromaster.netlify.app/guides/break-even">
@@ -56,12 +56,14 @@
   </style>
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Break-Even</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Break-Even</p>
   <h1>Break-Even Analysis: How Many Sales Before You Make Money?</h1>
   <p class="updated">Last updated: September 2026 · Independently QA-tested formulas</p>
 
   <div class="answer">
-    <strong>Quick answer:</strong> Break-even units = Fixed costs ÷ (Price − Variable cost per unit). Every sale above that point earns profit equal to its contribution margin; every sale below it digs the hole deeper. The <a href="/finance/break-even">break-even calculator</a> returns this instantly with charts.
+    <strong>Quick answer:</strong> Break-even units = Fixed costs ÷ (Price − Variable cost per unit). Every sale above that point earns profit equal to its contribution margin; every sale below it digs the hole deeper. The <a href="/finance/break-even/">break-even calculator</a> returns this instantly with charts.
   </div>
 
   <p>Break-even is the first number every small business should know — and the one most often guessed. It answers "how much do I need to sell to stop losing money?" and, with one extension, "how much to hit my target income?"</p>
@@ -93,12 +95,88 @@
   <div class="table-wrap"><table>
     <tr><th>Move</th><th>Effect on break-even</th></tr>
     <tr><td>Raise price $0.50 (CM → $4.00)</td><td>4,000 ÷ 4.00 = 1,000 tickets (−143)</td></tr>
-    <td>Cut variable cost $0.25 (CM → $3.75)</td><td>4,000 ÷ 3.75 ≈ 1,067 (−76)</td></tr>
+    <tr><td>Cut variable cost $0.25 (CM → $3.75)</td><td>4,000 ÷ 3.75 ≈ 1,067 (−76)</td></tr>
     <tr><td>Cut fixed costs $500</td><td>3,500 ÷ 3.50 = 1,000 (−143)</td></tr>
   </table></div>
   <p>Small margin improvements compound quickly — a 10% price increase typically moves break-even far more than a 10% sales increase would.</p>
 
-  <h2>Frequently Asked Questions</h2>
+  <h2>Sensitivity: what happens at other price points</h2>
+  <p>Price is the strongest lever, because every extra dollar of price lands straight in contribution margin — it does not carry extra variable cost with it. Hold the café's $4,000 of fixed costs and $1.50 variable cost constant and move only the average ticket:</p>
+  <div class="table-wrap"><table>
+    <tr><th>Average ticket</th><th>Contribution margin</th><th>Break-even tickets</th><th>Break-even revenue</th></tr>
+    <tr><td>$4.50</td><td>$3.00 (67%)</td><td>1,334</td><td>$6,000</td></tr>
+    <tr><td>$5.00 (base case)</td><td>$3.50 (70%)</td><td>1,143</td><td>$5,714</td></tr>
+    <tr><td>$5.50</td><td>$4.00 (73%)</td><td>1,000</td><td>$5,500</td></tr>
+    <tr><td>$6.00</td><td>$4.50 (75%)</td><td>889</td><td>$5,333</td></tr>
+  </table></div>
+  <p>A 10% price increase (from $5.00 to $5.50) removes 12.5% of the required volume. That is why a small, well-tested price change usually beats a large sales push: the sales route has to fund the extra beans, cups and staff hours, while the price route does not. The catch is demand — the table assumes the same number of customers keeps walking in at the higher price, which is exactly what the margin of safety tells you whether you can afford to test.</p>
+  <p>Run the same table with variable cost instead of price and the effect is smaller per dollar: on the café's $5.00 ticket, cutting variable cost by $0.50 (to $1.00) moves break-even to 1,000 tickets — the same drop a $0.50 price rise achieves, but it usually costs money or quality to get there. Improving the largest, cheapest lever is the whole discipline.</p>
+
+  <h2>Service businesses: break-even without units</h2>
+  <p>Consultants, agencies, salons and freelancers sell time, not items, so the “unit” is one billable hour (or one project, or one client on retainer — pick the one you invoice). The math is identical:</p>
+  <div class="formula">CM per hour = Billable rate − Variable cost per hour<br>Break-even hours = Fixed costs ÷ CM per hour</div>
+  <p>Example: a two-person studio with $6,000 of monthly fixed costs (rent $1,200, software $300, insurance $500, owner draw $4,000). The blended billable rate is $90/hour and variable cost per billed hour — contractor help, payment fees, travel — is $15, so CM is $75.</p>
+  <ol>
+    <li>Break-even = 6,000 ÷ 75 = <strong>80 billable hours per month</strong></li>
+    <li>With two people at roughly 140 available hours each, that is 80 of 280 hours — a <strong>29% utilisation rate</strong></li>
+    <li>At 70% utilisation (196 hours) the studio clears 196 × 75 − 6,000 = <strong>$8,700/month</strong></li>
+  </ol>
+  <p>Utilisation is the number that trips up service firms: a healthy-looking $90 rate hides a business that needs 80 billed hours before it earns a cent, and unbilled admin time never appears in the calculation.</p>
+
+  <h2>What break-even does not tell you</h2>
+  <ul>
+    <li><strong>Cash timing.</strong> You can be past break-even on paper and still run out of money, because invoices are paid 30–60 days later while rent and payroll leave on the first. Pair break-even with a simple cash-flow forecast.</li>
+    <li><strong>Taxes.</strong> Break-even is a pre-tax operating number. Income tax and sales tax sit on top, and sales tax collected is never your revenue.</li>
+    <li><strong>Capacity.</strong> A formula that says “sell 3,000 units” is useless if your kitchen, chair or van can only produce 2,000. Break-even above capacity means the model needs a price or cost change, not more effort.</li>
+    <li><strong>Whether demand exists.</strong> Break-even describes the volume required, never the volume available. The market research question stays a market research question.</li>
+    <li><strong>One-off costs.</strong> Equipment, build-out and deposits are not monthly fixed costs — they belong in payback period and ROI.</li>
+  </ul>
+
+  <h2>Break-even vs payback vs ROI</h2>
+  <p>These three answer different questions and are often quoted as if they were interchangeable:</p>
+  <div class="table-wrap"><table>
+    <tr><th>Metric</th><th>Question it answers</th><th>Time frame</th></tr>
+    <tr><td>Break-even</td><td>How many units or hours until monthly losses stop?</td><td>One period (month, year)</td></tr>
+    <tr><td>Payback period</td><td>How long until an upfront investment is recovered?</td><td>Cumulative, months or years</td></tr>
+    <tr><td>ROI</td><td>What return did the money earn relative to its cost?</td><td>Whole project or year</td></tr>
+  </table></div>
+  <p>A café can break even in month three and still take two years to pay back its fit-out. Both facts are true, and a plan that only shows one of them is half a plan.
+
+<!-- guide-worked-example:start -->
+<h2>Worked example: Break-Even Calculator at its default inputs</h2>
+<p>Take the default setup on <a href="/finance/break-even/">Break-Even Calculator</a>: no fields changed, nothing tuned to a nice round number. Run in the site's own engine, those values produce the answer below.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Fixed Costs</td><td>10000</td></tr><tr><td>Price per Unit</td><td>50</td></tr><tr><td>Variable Cost/Unit</td><td>20</td></tr></tbody></table>
+<p><strong>Result:</strong> Break-Even: 333 units</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Formula: Break-Even = Fixed Costs / (Price - Variable Cost)</li><li>Step 1: Contribution margin = $50 - $20 = $30</li><li>Step 2: Break-even = $10000 / $30 = 333 units</li></ol>
+<h2>What Fixed Costs does to the answer</h2>
+<p>Hold every other field still and move only fixed costs.</p>
+<table><thead><tr><th>Fixed Costs</th><th>Result</th></tr></thead><tbody><tr><td>5,000</td><td>Break-Even: 167 units</td></tr><tr><td>10,000</td><td>Break-Even: 333 units</td></tr><tr><td>15,000</td><td>Break-Even: 500 units</td></tr></tbody></table>
+<p>If the rows barely differ, fixed costs is not your lever — change a different input. If they swing widely, get that number right before trusting the total.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>Contribution margin is the number that matters</h2>
+<p>Break-even units are fixed costs divided by the contribution margin — price minus variable cost per unit. A product priced at 40 with 25 of variable cost contributes 15, so 6,000 of fixed cost needs 400 units.</p>
+<p>Dividing fixed costs by revenue instead is the classic error: it ignores the cost of making each unit and produces a break-even that is always too optimistic.</p>
+<h2>Fixed costs are only fixed inside a range</h2>
+<p>Rent, salaries and software are fixed within a capacity band. Add enough volume and you need another shift, another machine or another warehouse, and the fixed line steps up. Break-even computed at one capacity level does not hold at the next.</p>
+<p>Re-run the calculation at the volume you actually expect, not the volume you hope for. The step where fixed costs jump is often closer than it looks.</p>
+<h2>Margin of safety tells you how much room there is</h2>
+<p>Margin of safety is (actual sales − break-even sales) ÷ actual sales. Ten percent means a one-tenth drop in revenue wipes out profit; forty percent means the business can absorb a bad quarter.</p>
+<p>Track it as a trend. A shrinking margin of safety is an early signal that variable costs or discounts are eating the contribution, long before the profit line turns negative.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/wedding-budget">Wedding Budgets</a></li>
+    <li><a href="/guides/currency-conversion">How Currency Conversion Works</a></li>
+    <li><a href="/guides/unit-conversion">Metric to Imperial Conversion</a></li>
+    <li><a href="/guides/zakat">How to Calculate Zakat</a></li>
+  </ul>
+
+<h2>Frequently Asked Questions</h2>
   <h3>Is break-even analysis useful for startups with no sales history?</h3>
   <p>That's exactly when it matters most — it converts a business plan into a daily sales target before money is committed. Use conservative price and cost estimates, then re-run monthly with real data.</p>
   <h3>What if I sell many products at different margins?</h3>
@@ -106,17 +184,18 @@
   <h3>Does break-even include owner salary?</h3>
   <p>Only if you put it in fixed costs. For a true picture, include the salary you need to survive — otherwise you've calculated break-even for the business, not for you.</p>
   <h3>What's the difference between break-even and payback period?</h3>
-  <p>Break-even is per-period (usually monthly) operating coverage. <a href="/finance/payback-period">Payback period</a> asks how long an upfront investment takes to recover from cumulative cash flows — related, different question.</p>
+  <p>Break-even is per-period (usually monthly) operating coverage. <a href="/finance/payback-period/">Payback period</a> asks how long an upfront investment takes to recover from cumulative cash flows — related, different question.</p>
 
   <h2>Try the calculators</h2>
   <p class="related">
-    <a href="/finance/break-even" class="cta">Break-Even Calculator</a>
-    <a href="/business/gross-margin" class="cta">Gross Margin Calculator</a>
-    <a href="/finance/payback-period" class="cta">Payback Period</a>
-    <a href="/business/profit-margin" class="cta">Profit Margin (Business)</a>
+    <a href="/finance/break-even/" class="cta">Break-Even Calculator</a>
+    <a href="/business/gross-margin/" class="cta">Gross Margin Calculator</a>
+    <a href="/finance/payback-period/" class="cta">Payback Period</a>
+    <a href="/business/profit-margin/" class="cta">Profit Margin (Business)</a>
   </p>
 
-  <p><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/about">Methodology</a></p>
+  <p><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/about">Methodology</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

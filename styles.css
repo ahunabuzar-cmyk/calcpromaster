@@ -1,9 +1,19 @@
     /* Self-hosted variable fonts (latin subset, OFL licensed): fetched at parse
-       time on the same origin — no third-party font request, and the H1's
-       font-swap repaint (the LCP record) happens as early as the font arrives.
-       font-display:swap keeps text visible instantly with fallback fonts. */
-    @font-face{font-family:'Space Grotesk';font-style:normal;font-weight:300 700;font-display:swap;src:url(fonts/space-grotesk-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-    @font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/inter-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+       time on the same origin — no third-party font request.
+
+       font-display:optional, NOT swap. Measured 2026-10-22 on the built deploy/
+       with real slow-4G throttling (not Lighthouse's simulation, which hid this):
+       Inter arrives ~1.5s after first paint on a cold cache, swaps in, and re-wraps
+       the hero — +20px at 412px wide, +74px at 360px (`.hero-desc` and
+       `.smart-examples` each gained a line). Everything below jumped: CLS 0.172,
+       and the earlier Lighthouse run could not attribute it because the shifted
+       nodes were gone by trace time. With `optional` the browser uses the fallback
+       for THAT view instead of swapping after paint (no reflow, CLS 0.000 measured),
+       and still uses the real font whenever it is ready in time or already cached —
+       both files are preloaded at high priority and served immutable for a year.
+       Do not switch these back to `swap`: the hero's line count is the layout. */
+    @font-face{font-family:'Space Grotesk';font-style:normal;font-weight:300 700;font-display:optional;src:url(fonts/space-grotesk-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:optional;src:url(fonts/inter-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
     :root {
       --primary: #4f46e5;
       --primary-dark: #4338ca;
@@ -215,8 +225,22 @@
     }
     .logo:hover { transform: scale(1.02); }
     .nav-links { display: flex; gap: 20px; align-items: center; }
-    .nav-links a { color: var(--text); text-decoration: none; font-size: 14px; font-weight: 500; }
+    /* nowrap: "Geometry Lab" used to break onto a second line at 1280px, which
+       made the whole nav row 48px tall and misaligned against the one-line
+       links beside it. */
+    .nav-links a { color: var(--text); text-decoration: none; font-size: 14px; font-weight: 500; white-space: nowrap; }
     .nav-links a:hover { color: var(--primary); }
+    /* Laptop width (1025–1400px): the row is max-width 1200 with 20px padding, so
+       the content box is 1160px. Measured at 1280: logo 207 + .nav-links 1027 =
+       1234px — 74px wider than the row, which pushed the language/Settings
+       controls under the viewport edge. Tightening the gaps, link font and
+       search width reclaims ~140px without hiding a single control. */
+    @media (min-width: 1025px) and (max-width: 1400px) {
+      .nav-links { gap: 12px; }
+      .nav-links a { font-size: 13px; }
+      .nav-search { width: 180px; }
+      .logo { font-size: 23px; }
+    }
     .nav-search { width: 250px; padding: 8px 12px; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 14px; }
     /* Header nav collapse raised to 1024px — tablet sizes (768–1024px) previously
        overflowed horizontally because .nav-links (≈806px wide with the language
@@ -313,6 +337,13 @@
       transform: translateY(-1px);
     }
     .search-box input::placeholder { color: var(--text-light); }
+    /* Smart search: example chips under the hero search + the value-fill row */
+    .smart-examples { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; margin: 14px auto 0; max-width: 640px; font-size: 13px; }
+    .smart-examples-label { color: var(--text-light); font-weight: 600; }
+    .smart-chip { background: var(--surface); border: 1px solid var(--border); border-radius: 50px; padding: 7px 14px; font-size: 13px; color: var(--text); cursor: pointer; font-family: var(--font-body); transition: all var(--transition); }
+    .smart-chip:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-1px); }
+    .search-item.search-smart { background: rgba(79, 70, 229, 0.08); border: 1px solid rgba(79, 70, 229, 0.25); border-radius: 10px; }
+    .search-item.search-smart strong { color: var(--primary); }
     .search-results { 
       display: none; 
       position: absolute; 
@@ -354,7 +385,12 @@
       margin-bottom: 32px; 
       animation: fadeInUp 0.8s ease-out;
     }
+    /* Rendered as <a href> (not a click-handling <div>) so the card is a real
+       link: keyboard reachable, crawlable, and free of an inline onclick. */
     .category-card { 
+      display: block;
+      color: inherit;
+      text-decoration: none;
       background: var(--surface); 
       border: 1px solid var(--border); 
       border-radius: var(--radius); 
@@ -400,6 +436,9 @@
       animation: fadeInUp 0.6s ease-out;
     }
     .tool-card { 
+      display: block;
+      color: inherit;
+      text-decoration: none;
       background: var(--surface); 
       border: 1px solid var(--border); 
       border-radius: var(--radius); 
@@ -481,7 +520,10 @@
       display: block;
       width: 100%;
       height: auto;
-      max-height: 380px;
+      /* Was 380px: a 1200x630 OG card cropped to 1158x380 pushed the first input
+         a full banner-height below the fold on every tool page. 260px keeps the
+         card legible and moves the calculator up 120px. */
+      max-height: 260px;
       object-fit: cover;
       object-position: center;
     }
@@ -489,6 +531,31 @@
       .tool-hero-img { max-height: 220px; }
     }
     .tool-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    /* Undo / redo / clear row injected by js/undo-redo.js. It had NO rules at all:
+       the three raw <button>s rendered 51px wide with padding 0 and UA default
+       chrome, their labels clipped, and the row used inline onclick (which the
+       production CSP blocks — so the buttons were decorative). Styling + real
+       listeners now live in undo-redo.js. */
+    .undo-redo-toolbar { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
+    .undo-redo-toolbar button {
+      display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+      min-height: 44px; padding: 9px 14px;
+      border: 1px solid var(--border); border-radius: var(--radius-sm);
+      background: var(--surface); color: var(--text);
+      font: 600 13px/1 var(--font-body); cursor: pointer;
+      transition: all var(--transition);
+    }
+    .undo-redo-toolbar button:hover:not(:disabled) { border-color: var(--primary); color: var(--primary); transform: translateY(-1px); }
+    .undo-redo-toolbar button:disabled { opacity: .45; cursor: not-allowed; }
+    .undo-redo-toolbar .clear-stack-btn:hover:not(:disabled) { border-color: #ef4444; color: #ef4444; }
+    /* Mobile ease — the decorative per-tool hero image ate 220px above the form.
+       Capping it at 150px on phones moves the first input up ~70px without
+       hiding a single control. (A horizontal-scroll strip for .tool-actions was
+       tried and rejected: measured at 390px it showed only 3 of 10 actions, so
+       Settings/PDF/Share became undiscoverable — wrapping is the honest trade.) */
+    @media (max-width: 600px) {
+      .tool-hero-img { max-height: 150px; }
+    }
     .action-btn { 
       padding: 9px 16px; 
       background: var(--surface); 
@@ -679,6 +746,12 @@
       background: rgba(45, 212, 191, 0.12); color: var(--text);
       border: 1px solid rgba(45, 212, 191, 0.35);
     }
+    /* Freshness line: visible, machine-readable last-reviewed date (pairs with
+       JSON-LD dateModified). Quiet on purpose — a recency signal, not a CTA. */
+    .tool-reviewed {
+      margin: 2px 0 10px; font-size: 12px; color: var(--text-light);
+    }
+    .tool-reviewed time { font-weight: 600; }
     /* E-E-A-T trust badges (Gap 4) */
     .trust-badges { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 4px 0 12px; }
     .trust-badge {
@@ -878,6 +951,10 @@
     .footer-section h4 { font-size: 14px; font-weight: 700; margin-bottom: 12px; color: var(--text); }
     .footer-section a { display: block; color: var(--text-light); text-decoration: none; font-size: 13px; padding: 4px 0; }
     .footer-section a:hover { color: var(--primary); }
+    /* Footer action links rendered as <button> (open modals, no href) so crawlers
+       don't see an empty/anchor link. Visually identical to the sibling links. */
+    .footer-section .footer-link-btn { display: block; background: none; border: 0; color: var(--text-light); font: inherit; font-size: 13px; text-align: left; padding: 4px 0; cursor: pointer; }
+    .footer-section .footer-link-btn:hover { color: var(--primary); }
     .footer-bottom { max-width: 1200px; margin: 24px auto 0; padding-top: 16px; border-top: 1px solid var(--border); text-align: center; color: var(--text-light); font-size: 13px; }
     /* Modal */
     .modal-overlay { 
@@ -1036,13 +1113,66 @@
       color: #fff;
       animation: voice-pulse 1.2s ease-in-out infinite;
     }
+    /* Recognition language picker beside "Dictate all inputs". The engine is
+       single-language, so this is the actual fix for a mic that "does nothing"
+       on an Urdu/Hindi speaker rather than an English one. */
+    #zr-voice-area { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .voice-lang {
+      min-height: 36px;
+      padding: 0 8px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .voice-lang:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
     @keyframes voice-pulse {
       0%, 100% { box-shadow: 0 0 0 0 rgba(79,70,229,0.35); }
       50% { box-shadow: 0 0 0 8px rgba(79,70,229,0); }
     }
+    /* Persistent voice status: a toast fades before a blocked mic can be read,
+       so the reason (and the retry / type-instead actions) stay on the page. */
+    .voice-status {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin: 8px 0 4px;
+      padding: 8px 12px;
+      font-size: 13px;
+      line-height: 1.45;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+    }
+    .voice-status[hidden] { display: none; }
+    .voice-status-listening { border-color: var(--primary); background: var(--primary-light); }
+    .voice-status-ok { border-color: #16a34a; background: #f0fdf4; color: #14532d; }
+    .voice-status-error { border-color: #dc2626; background: #fef2f2; color: #7f1d1d; }
+    .voice-status-btn {
+      min-height: 32px;
+      padding: 4px 12px;
+      font: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      background: transparent;
+      color: inherit;
+      cursor: pointer;
+    }
+    .voice-status-btn:hover { background: rgba(0,0,0,0.06); }
+    .voice-status-btn:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
 
     /* ===== RECENT CHIPS WITH ICON ===== */
     .recent-chip {
+      /* Rendered as an <a href> now, so reset the anchor chrome. */
+      color: inherit;
+      text-decoration: none;
       transition: all var(--transition);
       font-family: var(--font-body);
     }
@@ -1143,6 +1273,10 @@
       line-height: 1.7;
       animation: fadeInUp 0.4s ease-out;
     }
+    /* 1.7 is the body measure on this card; headings inherited it too, so a
+       two-line <h2> measured 71px (21px x 1.7) and the guide felt airier than
+       its word count warrants on a phone. Headings get their own leading. */
+    .explain-card h1, .explain-card h2, .explain-card h3, .explain-card h4 { line-height: 1.3; }
     .explain-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
     .explain-card p { margin-bottom: 6px; }
     .explain-card strong { color: var(--primary-dark); }
@@ -1513,9 +1647,28 @@
 .zr-heatmap th { background: var(--surface-2, #f1f5f9); font-weight: 600; color: var(--text, #0f172a); }
 .zr-heatmap td { cursor: default; transition: transform .12s ease; }
 .zr-heatmap td:hover { transform: scale(1.06); outline: 2px solid rgba(255,255,255,.5); z-index: 1; position: relative; }
-.zr-heatmap-legend { display: flex; align-items: center; gap: 8px; margin-top: 8px; font-size: 11.5px; color: var(--text-light, #64748b); }
-.zr-heatmap-legend span { width: 14px; height: 14px; border-radius: 3px; display: inline-block; }
-.zr-legend-note { margin-left: auto; font-style: italic; }
+/* Legend: 5 swatches + “Monthly payment for the highlighted input” note is wider
+   than the content column on tablets and phones (measured scrollWidth 1003 in a
+   984px box at 1024px, 391 in 372 at 412px), which turned the whole page into a
+   sideways-scrolling document. Wrapping the row keeps it inside its own box. */
+.zr-heatmap-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin-top: 8px; max-width: 100%; font-size: 11.5px; color: var(--text-light, #64748b); }
+.zr-heatmap-legend span { width: 14px; height: 14px; border-radius: 3px; display: inline-block; flex: none; }
+/* margin-left:auto made this item claim the full remaining width, which is what
+   pushed the legend 19px past its container at EVERY width. */
+.zr-legend-note { flex-basis: 100%; margin-left: 0; font-style: italic; }
+/* Mobile: the table's min-width:64px per cell made it 415px wide inside a 372px
+   column, so every row scrolled sideways and the row labels sat off-screen.
+   Below 600px the cells shrink and wrap instead — no horizontal scroll.
+   MUST stay after the base rules above: same specificity, later wins, and when
+   this block sat BEFORE them the 64px floor silently came back (measured 385px
+   table in a 372px box). */
+@media (max-width: 600px) {
+  /* fixed layout: five auto columns still resolved to a 385px min-content width
+     inside a 372px column, so the table scrolled 13px sideways even after the
+     cell rules changed. Equal columns + wrapping text fits by construction. */
+  .zr-heatmap { width: 100%; table-layout: fixed; font-size: 11px; }
+  .zr-heatmap th, .zr-heatmap td { min-width: 0; padding: 4px 3px; white-space: normal; overflow-wrap: anywhere; }
+}
 
 /* Wizard */
 .zr-wizard-progress { height: 8px; background: var(--surface-2, #e2e8f0); border-radius: 99px; overflow: hidden; margin: 12px 0 6px; }
@@ -1692,6 +1845,9 @@
 
 /* ===== CATEGORY HUB PAGES (/hub/:cat) ===== */
 .cat-actions { margin: 14px 0 4px; display: flex; flex-wrap: wrap; gap: 10px; }
+.cat-featured { margin: 12px 0 4px; padding: 12px 16px; background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--primary); border-radius: var(--radius-sm); }
+.cat-featured p { margin: 0; font-size: 14px; line-height: 1.55; }
+.cat-featured a { color: var(--primary); font-weight: 600; }
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 11px 20px; border-radius: var(--radius-sm);
@@ -1799,11 +1955,122 @@ main {
    even when the skeleton paints first on slow connections. The blocks mirror
    the real homepage above-the-fold geometry for a natural look. */
 #mainContent { position: relative; min-height: 100svh; }
-/* Skeleton is in-flow BELOW the static hero: it reserves the same geometry as the
-   real below-fold blocks (Calculator of the Day + Daily Tip + section title), so the
-   skeleton->content swap is position-identical — zero layout shift (CLS), while the
-   static hero renders real content at parse time. */
-.boot-skeleton { box-sizing: border-box; }
+/* The boot skeleton is an OUT-OF-FLOW overlay anchored where the below-fold
+   blocks will render (right after the static hero). Reserving space in-flow only
+   works when the reserved heights match the real content exactly, and that broke
+   the moment the daily pick was a card whose height depended on its text
+   (measured: 222px skeleton replaced by a 621px card → CLS 0.164, the
+   element-less shift Lighthouse could not attribute because the skeleton nodes
+   were gone). An absolutely positioned overlay cannot move anything when it is
+   removed: #mainContent already reserves the fold with min-height:100svh, and
+   the real content lands in the same place the skeleton was drawn. */
+.boot-skeleton { box-sizing: border-box; position: relative; height: 0; }
+.boot-skeleton > .skeleton { position: absolute; left: 0; right: 0; }
+.boot-skeleton .skeleton-cod   { top: 0; }
+.boot-skeleton .skeleton-tip   { top: 230px; }
+.boot-skeleton .skeleton-title { top: 314px; }
+@media (min-width: 769px) {
+  .boot-skeleton .skeleton-tip   { top: 230px; height: 53px; }
+  .boot-skeleton .skeleton-title { top: 293px; height: 41px; }
+}
+
+/* ===== Calculator of the Day (homepage) =====
+   The card markup shipped without any rules at all, so it stacked as unstyled
+   blocks: badge, icon, three paragraphs, two button rows — 621px on a 412px
+   phone, and the row of emoji/`Open Calculator` controls read as broken. These
+   rules give it one compact card (~212px) with the share/favourite controls in
+   the corner. The fixed reason-line clamp also keeps its height deterministic,
+   which is what the skeleton above is positioned against. */
+#calc-of-day-spotlight:empty { display: none; }
+.calc-of-day-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 10px 14px;
+  margin: 0 0 18px;
+  padding: 16px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: left;
+}
+.dark-theme .cod-badge { color: #a5b4fc; } /* 3.27:1 → 6.9:1 on --surface #1e293b */
+.cod-badge {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  min-height: 36px;
+  /* leaves room for the absolutely-positioned share/favourite pill in the
+     corner; the title starts on the NEXT row so nothing can overlap it */
+  padding-right: 150px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+.cod-content { display: contents; }
+/* ConfidenceNotes inserts its panel as a direct child of the card, and an
+   auto-placed grid item joins column 1 (`auto`) — its long content made that
+   column 353px wide and collapsed the title column to 0 (title text then
+   overflowed the card and widened the document). Span the panel across both. */
+.calc-of-day-card > div[id^="confidence-"] { grid-column: 1 / -1; }
+.calc-of-day-card > * { min-width: 0; }
+/* Explicit rows/columns: with auto-placement the absolutely-positioned
+   .cod-share took the next slot, pushing .cod-info into a zero-width implicit
+   third column (measured: info width 0 → its text overflowed the card by 72px
+   and widened the whole document to 464px on a 412px phone). */
+.cod-icon { grid-column: 1; grid-row: 2; font-size: 30px; line-height: 1; }
+.cod-info { grid-column: 2; grid-row: 2; min-width: 0; }
+.cod-info h2 { margin: 0 0 2px; font-size: 18px; line-height: 1.3; }
+.cod-highlight { margin: 0; font-size: 13px; font-weight: 600; line-height: 1.4; color: var(--primary); }
+.cod-reason {
+  margin: 2px 0 0;
+  min-height: 2.9em;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--text-light);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.cod-meta { display: flex; flex-wrap: wrap; gap: 4px 10px; margin-top: 4px; font-size: 11px; color: var(--text-light); }
+.cod-action-btn {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  justify-self: start;
+  min-height: 44px;
+  margin-top: 2px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--primary-gradient);
+  color: #fff;
+  font: 600 14px/1 var(--font-body);
+  cursor: pointer;
+}
+.cod-action-btn:hover { filter: brightness(1.06); }
+.cod-share { position: absolute; top: 10px; right: 12px; left: auto; display: flex; gap: 6px; width: -moz-max-content; width: max-content; max-width: calc(100% - 24px); }
+.cod-share-btn, .cod-fav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-width: 36px;
+  min-height: 36px;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-light);
+  font-size: 12px;
+  cursor: pointer;
+}
+.cod-share-btn:hover, .cod-fav-btn:hover { border-color: var(--primary); color: var(--primary); }
 footer {
   padding-bottom: max(32px, env(safe-area-inset-bottom));
 }
@@ -1816,6 +2083,14 @@ footer {
   .calc-input-panel, .calc-result-panel { padding: 22px; }
   .categories-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
   .tool-header h1 { font-size: 26px; }
+  /* The 2-column calc layout is kept here, but a result table with the base
+     `tbody th { white-space: nowrap }` has a min-content width of ~459px while
+     the right panel only offers ~322px at a 820px viewport — the table pushed
+     the document 84px past the viewport (responsive spec: tablet-820 tool).
+     Fixed layout plus wrappable labels keeps the table inside its panel from
+     1024px down (the ≤768px block below already did this for phones). */
+  .result-table, .ref-table { table-layout: fixed; }
+  .result-table tbody th, .ref-table tbody th { white-space: normal; }
 }
 
 /* Small phones: compact sticky header, keep tools tappable */
@@ -1856,6 +2131,12 @@ footer {
      on touch devices (zero layout shift risk: these are inline-flex/flex chips). */
   .fav-btn-small, .recent-chip, .fav-chip, .chain-chip, .scen-chip, .small-btn { min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; }
   header button, .icon-btn, .nav-icon-btn, .topbar-btn, [class*="icon-btn"], .cod-fav-btn, .donation-close { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  /* Those 44px minimums widen every header control, which pushed the single-row
+     header ~18px past a 1280px viewport on touch devices (nav-links right edge
+     at 1298px — responsive spec, mobile-chromium laptop-1280). Wrapping the row
+     keeps the controls tappable without growing the document. */
+  .nav { flex-wrap: wrap; }
+  .nav-links { flex-wrap: wrap; justify-content: flex-end; }
   /* Calculator-of-the-day buttons were unstyled (default ~19-21px browser buttons).
      Now consistent surface buttons with 44px tap targets (WCAG 2.5.8). */
   .cod-action-btn, .cod-share-btn { min-height: 44px; padding: 8px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); cursor: pointer; font-size: 13px; font-weight: 500; color: var(--text); font-family: var(--font-body); display: inline-flex; align-items: center; justify-content: center; transition: all var(--transition); }
@@ -1983,6 +2264,23 @@ footer {
 .copy-result-btn:focus-visible { outline: 2px solid var(--primary, #4f46e5); outline-offset: 2px; }
 @media (hover: none), (pointer: coarse) { .copy-result-btn { min-height: 44px; padding: 6px 14px; } }
 
+/* ===== "Was this helpful?" star rating (js/trust-extras.js) ===== */
+/* The markup used to carry these declarations inline, which left the star
+   buttons 20x44 on touch devices — width 20px failed the 44px tap-target audit
+   (safe-area-tap-targets spec, tool page). */
+.cpm-star {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 0 2px;
+}
+.cpm-star:focus-visible { outline: 2px solid var(--primary, #4f46e5); outline-offset: 2px; border-radius: 6px; }
+@media (hover: none), (pointer: coarse) {
+  .cpm-star { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+}
+
 /* ===== UX round 2: search intent chip ===== */
 .search-chip {
   display: inline-block;
@@ -2089,7 +2387,31 @@ html[data-dyslexic="on"] p, html[data-dyslexic="on"] li, html[data-dyslexic="on"
 
 /* #53 reading progress bar */
 #reading-progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 1200; pointer-events: none; background: transparent; }
-#reading-progress .rp-fill { height: 100%; width: 0; background: var(--accent); transition: width 80ms linear; }
+/* The consent banner is position:fixed with left:0;right:0 AND horizontal
+   padding, so under content-box it rendered 40px wider than the viewport
+   (measured 464px on a 412px phone). That horizontal overflow reflowed the
+   document and produced the largest unattributed layout shift on the page
+   (CLS 0.103) — the element itself only reported 0.026. border-box pins it to
+   the viewport width. */
+#cookie-banner { box-sizing: border-box; }
+/* Consent banner vs the floating-widget pile-up. On a 412px phone the open
+   banner (412x135 at the bottom) landed on top of five other fixed widgets:
+   measured overlaps 25,132px² with #cpm-bottom-nav, 19,941px² with
+   #reading-toolbar, 13,452px² with #donation-widget, 14,256px² with #toast,
+   plus the mini calculator and one-handed toggle. The banner is the one thing
+   the user has to answer, so while it is open the others step aside
+   (js/app.js toggles body.consent-open). */
+body.consent-open #donation-widget,
+body.consent-open #cp-minicalc,
+body.consent-open #cpm-bottom-nav,
+body.consent-open #cpm-one-handed-toggle,
+body.consent-open #reading-toolbar,
+body.consent-open #toast { display: none !important; }
+
+/* Progress uses transform, not width: a width change re-lays-out the fixed bar
+   on every scroll frame and Lighthouse flags it as a non-composited animation.
+   scaleX runs on the compositor with no transition needed. */
+#reading-progress .rp-fill { height: 100%; width: 100%; transform: scaleX(0); transform-origin: 0 50%; background: var(--accent); will-change: transform; }
 
 /* floating reading toolbar */
 #reading-toolbar { position: fixed; bottom: 84px; left: 14px; z-index: 1100; display: flex; gap: 4px; padding: 4px; border-radius: 12px; background: var(--card-bg, #fff); box-shadow: 0 4px 16px rgba(0,0,0,.16); border: 1px solid var(--border, #e2e8f0); }
@@ -2098,13 +2420,24 @@ html[data-dyslexic="on"] p, html[data-dyslexic="on"] li, html[data-dyslexic="on"
 
 /* #52 TOC sidebar */
 #toc-sidebar { display: none; }
+/* From 1180px the TOC shows, but it sits INSIDE the content column. The
+   negative right margin that hangs it into the page gutter only fits once the
+   viewport can hold the 1200px content column plus a 250px gutter on each side
+   (1200 + 2×250 = 1700px). Between 1180px and 1700px that negative margin
+   pushed the sidebar past the viewport edge — 1470px of scrollWidth at a 1280px
+   viewport, i.e. a horizontal scrollbar on every laptop (see the responsive
+   spec's laptop-1280 home case). */
 @media (min-width: 1180px) {
-  #toc-sidebar { display: block; position: sticky; top: 76px; float: right; width: 230px; margin: 0 -250px 16px 16px; max-height: 78vh; overflow: auto; font-size: 13px; border-left: 2px solid var(--border, #e2e8f0); padding-left: 12px; }
+  #toc-sidebar { display: block; position: sticky; top: 76px; float: right; width: 230px; margin: 0 0 16px 24px; max-height: 78vh; overflow: auto; font-size: 13px; border-left: 2px solid var(--border, #e2e8f0); padding-left: 12px; }
   #toc-sidebar h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; opacity: .7; }
   #toc-sidebar ul { list-style: none; margin: 0; padding: 0; }
   #toc-sidebar .toc-h3 { padding-left: 12px; opacity: .85; }
   #toc-sidebar a { display: block; padding: 3px 6px; border-radius: 6px; color: inherit; text-decoration: none; }
   #toc-sidebar a.toc-active { background: rgba(127,127,127,.14); font-weight: 600; }
+}
+/* Wide enough for the TOC to live in the gutter again (1200px column + gutters) */
+@media (min-width: 1700px) {
+  #toc-sidebar { margin: 0 -250px 16px 16px; }
 }
 
 /* #58 jump-to-input */
@@ -2255,6 +2588,11 @@ html[data-reduced-motion="on"] .search-skeleton .sk-line { animation: none; opac
 .cp-checklist ul { margin: 0; padding: 4px 18px 12px 34px; }
 .cp-checklist li { margin: 4px 0; }
 .cp-inshort { font-size: .95rem; font-weight: 600; margin: 0 0 8px; color: var(--text, #1e293b); }
+/* These two now render inside the result <td> (js/decide-ui.js), under the big
+   number, so they must not inherit its 22px display size. */
+.result-table td .cp-inshort { font-size: 13px; font-weight: 500; margin: 6px 0 0; color: var(--text-light); }
+.result-table td .cp-scale { margin: 8px 0 0; }
+.result-table td #cp-speak-result { display: block; }
 .cp-scale { margin: 10px 0 4px; }
 .cp-scale-track { position: relative; height: 10px; border-radius: 6px; background: linear-gradient(90deg, var(--success-text, #166534), var(--warning-text, #92400e), var(--error-text, #b91c1c)); }
 .cp-scale-dot { position: absolute; top: 50%; transform: translate(-50%, -50%); width: 18px; height: 18px; border-radius: 50%; background: var(--surface, #fff); border: 3px solid var(--text, #1e293b); box-shadow: 0 1px 4px rgba(0,0,0,.25); }
@@ -2354,3 +2692,119 @@ html.zoom-150 .calc-layout, html.zoom-200 .calc-layout { grid-template-columns: 
 .cat-guide-link p { margin: 0; font-size: 0.92rem; color: var(--text-light); }
 .cat-guide-link a { color: var(--primary); font-weight: 600; text-decoration: none; }
 .cat-guide-link a:hover { text-decoration: underline; }
+
+/* ── Homepage inline-style removal (2026-10-17) ────────────────────────────────
+   Audit finding: "Limited inline styles — 54 elements (13.2%) use inline style
+   attributes". These four blocks moved here verbatim from index.html so the
+   markup carries no presentation attributes. #back-to-top visibility is now a
+   class toggle (.is-visible) instead of three inline writes on every scroll. */
+.hero-content{position:relative;z-index:1}
+.hero-stats{font-size:14px;color:var(--text-light);margin:14px auto 0;max-width:640px}
+.badge-link{display:inline-block;margin-top:10px}
+.badge-img{vertical-align:middle;border:0}
+#back-to-top{position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;background:var(--primary-gradient);color:#fff;border:none;cursor:pointer;font-size:20px;box-shadow:var(--shadow-lg),var(--shadow-glow);opacity:0;transform:translateY(20px);transition:all .3s ease-out;z-index:999;display:flex;align-items:center;justify-content:center;pointer-events:none}
+#back-to-top.is-visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.footer-updated{font-size:12px;color:var(--text-light);text-align:center;margin:4px 0 10px}
+.home-about,.home-faq{max-width:1080px;margin:28px auto 0;padding:0 20px}
+.home-q{font-size:1rem;margin:14px 0 4px}
+
+/* ── `hidden` must win over the flex/grid display these widgets declare ────────
+   js/reading-ui.js sets `bar.hidden = !long` so the reading toolbar and the
+   jump-to-input button only appear on long pages. `#reading-toolbar { display:
+   flex }` has higher precedence than the UA `[hidden] { display: none }`, so
+   both were permanently visible — including on calculator pages, where the
+   toolbar has nothing to read. These ids are also styled with display:flex/
+   inline-flex further up, so the override needs !important. */
+#reading-toolbar[hidden],
+#jump-to-input[hidden],
+#cpm-sticky-calc[hidden],
+#cpm-one-handed-toggle[hidden] { display: none !important; }
+
+/* Desktop keeps the full 8-button toolbar; the phone launcher stays hidden. */
+#reading-toolbar .rt-launcher { display: none; }
+
+/* ── Phone dock (≤640px): one slot per fixed widget, nothing on top of ────────
+   anything. Measured on a 412x823 phone before this block: #reading-toolbar
+   (392x54 at bottom 84) sat under #donation-widget (11,804px² overlap) and
+   #cpm-one-handed-toggle (1,056px²); #cp-minicalc sat under #cpm-bottom-nav
+   (1,936px²); #back-to-top (48px at right 24 / bottom 24) sat inside the 64px
+   bottom bar; #toast (bottom 24, centred) sat inside the bar too.
+
+   Layout now, bottom upward:
+     0–64    .cpm-bottom-nav (unchanged)
+     72      left  #reading-toolbar launcher (44) · right #cp-minicalc (44)
+     124     right #cpm-one-handed-toggle (44)
+     176     right #back-to-top (44)
+   The donation pill is the one widget with no phone job (the footer CTA and
+   the .donation-card remain), so it is not rendered there. */
+@media (max-width: 640px) {
+  /* Toasts are transient and pointer-events:none, but centring them over the
+     bottom bar hid the nav labels. Put them at the top instead. */
+  #toast {
+    top: calc(12px + env(safe-area-inset-top, 0px)) !important;
+    bottom: auto !important;
+    max-width: calc(100vw - 24px);
+    white-space: normal !important;
+    text-align: center;
+  }
+
+  /* Reading toolbar: a single 44px launcher that expands upward. */
+  #reading-toolbar {
+    left: 10px; right: auto;
+    bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+    padding: 0; gap: 4px;
+    background: transparent; border: 0; box-shadow: none;
+    flex-wrap: wrap; max-width: calc(100vw - 20px);
+  }
+  #reading-toolbar button {
+    min-width: 44px; min-height: 44px;
+    background: var(--card-bg, #fff);
+    border: 1px solid var(--border, #e2e8f0);
+  }
+  #reading-toolbar .rt-launcher {
+    display: flex; align-items: center; justify-content: center;
+    width: 44px; height: 44px; border-radius: 50%;
+    font-size: 14px; font-weight: 700; color: var(--text, #1e293b);
+    box-shadow: 0 4px 16px rgba(0,0,0,.16);
+  }
+  body:not(.rt-open) #reading-toolbar button:not(.rt-launcher) { display: none; }
+  body.rt-open #reading-toolbar {
+    width: 208px; padding: 6px;
+    background: var(--card-bg, #fff);
+    border: 1px solid var(--border, #e2e8f0);
+    box-shadow: 0 10px 30px rgba(0,0,0,.22);
+    border-radius: 14px;
+  }
+  body.rt-open #reading-toolbar button:not(.rt-launcher) {
+    display: flex; align-items: center; justify-content: center;
+    background: transparent; border: 0;
+  }
+  body.rt-open #reading-toolbar .rt-launcher {
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: none; border: 1px solid var(--border, #e2e8f0);
+  }
+
+  #donation-widget { display: none !important; }
+
+  /* js/power-tools.js positions the wrapper with inline left/bottom. */
+  #cp-minicalc {
+    left: auto !important; right: 10px !important;
+    bottom: calc(72px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  #cpm-one-handed-toggle {
+    right: 10px;
+    bottom: calc(124px + env(safe-area-inset-bottom, 0px));
+    z-index: 950;
+  }
+
+  #back-to-top {
+    right: 10px;
+    bottom: calc(176px + env(safe-area-inset-bottom, 0px));
+    width: 44px; height: 44px;
+  }
+
+  /* The sticky result bar spans the full width between the two dock rows; it
+     collided with #cp-minicalc at right 10 / bottom 72 whenever it appeared. */
+  #cpm-sticky-calc { bottom: calc(72px + env(safe-area-inset-bottom, 0px)); max-width: calc(100vw - 120px); }
+}

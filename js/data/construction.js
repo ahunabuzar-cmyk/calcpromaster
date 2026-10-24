@@ -220,6 +220,156 @@ const CONSTRUCTION_TOOLS = [
   { id: 'drywall-sheets', name: 'Drywall Sheets Calculator', desc: 'Sheet count from wall area with waste allowance', kw: 'drywall sheets calculator wall area 4x8 boards waste, free online Drywall Sheets Calculator', inputs: [{id:'area',label:'Wall Area (sq ft)',type:'number',def:800},{id:'sheet',label:'Sheet Size (sq ft)',type:'number',def:32},{id:'waste',label:'Waste Factor (%)',type:'number',def:10}], calc: function(v){ if(v.area<=0||v.sheet<=0) return{result:'Enter positive areas',chart:'',extra:''}; var sheets=Math.ceil(v.area/v.sheet*(1+v.waste/100)); return{result:sheets+' sheets',chart:Charts.bar([v.area/v.sheet,Math.ceil(v.area/v.sheet*(1+v.waste/100))-v.area/v.sheet],['Base sheets','Waste']),extra:'4x8 sheet = 32 sq ft, 4x12 = 48 | Vertical hanging on 8 ft walls avoids horizontal seams and tapering labour'};}, steps: function(v){ var base=v.area/v.sheet; return['Step 1: Base sheets = '+v.area+' ÷ '+v.sheet+' = '+base.toFixed(1),'Step 2: Apply '+v.waste+'% waste and round up → '+Math.ceil(base*(1+v.waste/100))+' sheets','Ceilings count too — add them to the area before waste'];} },
 
   { id: 'tile-boxes', name: 'Tile Boxes Calculator', desc: 'Boxes of tile for a floor with breakage allowance', kw: 'tile boxes calculator floor area coverage breakage waste, free online Tile Boxes Calculator', inputs: [{id:'area',label:'Floor Area (sq ft)',type:'number',def:200},{id:'box',label:'Coverage per Box (sq ft)',type:'number',def:20},{id:'waste',label:'Breakage & Cuts (%)',type:'number',def:10}], calc: function(v){ if(v.area<=0||v.box<=0) return{result:'Enter positive values',chart:'',extra:''}; var boxes=Math.ceil(v.area/v.box*(1+v.waste/100)); return{result:boxes+' boxes',chart:Charts.bar([v.area/v.box,Math.ceil(v.area/v.box*(1+v.waste/100))-v.area/v.box],['Base','Waste']),extra:'Order from one dye lot — mixing lots shows as shade bands across the floor | Diagonal layouts want 15%+ waste'};}, steps: function(v){ var base=v.area/v.box; return['Step 1: Base boxes = '+v.area+' ÷ '+v.box+' = '+base.toFixed(1),'Step 2: With '+v.waste+'% allowance and rounding up → '+Math.ceil(base*(1+v.waste/100))+' boxes','Keep 1 spare box per job for future repairs — dye lots retire'];} }
+,
+  {
+    id: 'conduit-fill',
+    name: 'Conduit Fill Calculator',
+    desc: 'Free conduit fill calculator: NEC Chapter 9 fill percentage for THHN conductors in EMT, with the 40 percent limit checked.',
+    kw: 'conduit fill calculator, nec conduit fill percentage, conduit fill chart emt, how many wires in conduit',
+    inputs: [
+{ id: 'conduit', label: 'Conduit size (EMT)', type: 'select', opts: [{v:'1/2 in',l:'1/2 in'},{v:'3/4 in',l:'3/4 in'},{v:'1 in',l:'1 in'},{v:'1-1/4 in',l:'1-1/4 in'},{v:'1-1/2 in',l:'1-1/2 in'},{v:'2 in',l:'2 in'}], def: '1/2 in' },
+      { id: 'conductor', label: 'THHN conductor size', type: 'select', opts: [{v:'14 AWG',l:'14 AWG'},{v:'12 AWG',l:'12 AWG'},{v:'10 AWG',l:'10 AWG'},{v:'8 AWG',l:'8 AWG'},{v:'6 AWG',l:'6 AWG'},{v:'4 AWG',l:'4 AWG'},{v:'2 AWG',l:'2 AWG'}], def: '12 AWG' },
+      { id: 'count', label: 'Number of conductors', type: 'number', def: 3 }
+    ],
+    calc: function (v) {
+      var area = { '1/2 in': 0.304, '3/4 in': 0.533, '1 in': 0.864, '1-1/4 in': 1.496, '1-1/2 in': 2.036, '2 in': 3.356 };
+      var ca = { '14 AWG': 0.0097, '12 AWG': 0.0133, '10 AWG': 0.0211, '8 AWG': 0.0366, '6 AWG': 0.0507, '4 AWG': 0.0824, '2 AWG': 0.1158 };
+      var A = area[v.conduit];
+      var a = ca[v.conductor];
+      var total = v.count * a;
+      var pct = total / A * 100;
+      var maxN = Math.floor(0.40 * A / a);
+      var pass = pct <= 40;
+      return {
+        result: 'Conduit fill: ' + pct.toFixed(1) + ' percent of ' + A.toFixed(3) + ' sq in',
+        chart: Charts.gauge(pct, 100),
+        extra: v.count + ' x ' + v.conductor + ' THHN = ' + total.toFixed(4) + ' sq in | ' + v.conduit + ' EMT internal area ' + A.toFixed(3) + ' sq in | NEC limit 40 percent (' + (0.40 * A).toFixed(4) + ' sq in, max ' + maxN + ' conductors) | ' + (pass ? 'PASS' : 'OVER LIMIT')
+      };
+    },
+    steps: function (v) {
+      var area = { '1/2 in': 0.304, '3/4 in': 0.533, '1 in': 0.864, '1-1/4 in': 1.496, '1-1/2 in': 2.036, '2 in': 3.356 };
+      var ca = { '14 AWG': 0.0097, '12 AWG': 0.0133, '10 AWG': 0.0211, '8 AWG': 0.0366, '6 AWG': 0.0507, '4 AWG': 0.0824, '2 AWG': 0.1158 };
+      var A = area[v.conduit];
+      var a = ca[v.conductor];
+      var total = v.count * a;
+      var pct = total / A * 100;
+      var maxN = Math.floor(0.40 * A / a);
+      return [
+        'Step 1: Look up the conductor cross-section. THHN ' + v.conductor + ' = ' + a + ' sq in (NEC Chapter 9, Table 5).',
+        'Step 2: Total conductor area = ' + v.count + ' x ' + a + ' = ' + total.toFixed(4) + ' sq in.',
+        'Step 3: Look up the conduit internal area. ' + v.conduit + ' EMT = ' + A.toFixed(3) + ' sq in (Chapter 9, Table 4).',
+        'Step 4: Fill percentage = ' + total.toFixed(4) + ' / ' + A.toFixed(3) + ' = ' + pct.toFixed(1) + ' percent.',
+        'Step 5: The 40 percent limit applies when there are more than two conductors: ' + (pct <= 40 ? 'the run PASSES.' : 'the run is OVER the limit.'),
+        'Step 6: The largest count that still fits is ' + maxN + ' conductors of ' + v.conductor + ' in ' + v.conduit + ' EMT.'
+      ];
+    }
+  },
+  {
+    id: 'rolling-offset',
+    name: 'Rolling Offset Calculator',
+    desc: 'Free pipefitter rolling offset calculator: true offset, travel and run for 45, 22.5, 30 and 60 degree fittings, with the multiplier shown.',
+    kw: 'rolling offset calculator, pipefitter rolling offset, 45 degree offset travel, pipe offset multiplier',
+    inputs: [
+{ id: 'offset', label: 'Offset / rise (in)', type: 'number', def: 10 },
+      { id: 'roll', label: 'Roll / horizontal (in)', type: 'number', def: 0 },
+      { id: 'angle', label: 'Fitting angle (deg)', type: 'select', opts: [{v:'45',l:'45'},{v:'22.5',l:'22.5'},{v:'30',l:'30'},{v:'60',l:'60'}], def: '45' }
+    ],
+    calc: function (v) {
+      var deg = parseFloat(v.angle);
+      var rad = deg * Math.PI / 180;
+      var trueOffset = Math.sqrt(v.offset * v.offset + v.roll * v.roll);
+      var travel = trueOffset / Math.sin(rad);
+      var run = trueOffset / Math.tan(rad);
+      return {
+        result: 'Travel: ' + travel.toFixed(2) + ' in',
+        chart: Charts.bar([travel, run, trueOffset], ['Travel', 'Run', 'True offset']),
+        extra: 'True offset: ' + trueOffset.toFixed(2) + ' in | Run (advance): ' + run.toFixed(2) + ' in | Multiplier ' + (1 / Math.sin(rad)).toFixed(3) + ' at ' + deg + ' deg'
+      };
+    },
+    steps: function (v) {
+      var deg = parseFloat(v.angle);
+      var rad = deg * Math.PI / 180;
+      var trueOffset = Math.sqrt(v.offset * v.offset + v.roll * v.roll);
+      var travel = trueOffset / Math.sin(rad);
+      var run = trueOffset / Math.tan(rad);
+      return [
+        'Step 1: True offset combines both planes = square root of (' + v.offset + ' squared + ' + v.roll + ' squared) = ' + trueOffset.toFixed(2) + ' in.',
+        'Step 2: Travel is the centre-to-centre length on the pipe = true offset / sin(' + deg + ' deg).',
+        'Step 3: sin(' + deg + ' deg) = ' + Math.sin(rad).toFixed(4) + ', so the multiplier is ' + (1 / Math.sin(rad)).toFixed(3) + '.',
+        'Step 4: Travel = ' + trueOffset.toFixed(2) + ' x ' + (1 / Math.sin(rad)).toFixed(3) + ' = ' + travel.toFixed(2) + ' in.',
+        'Step 5: Run (the advance along the pipe to the first fitting) = true offset / tan(' + deg + ' deg) = ' + run.toFixed(2) + ' in.'
+      ];
+    }
+  },
+  {
+    id: 'pipe-cutback',
+    name: 'Pipe Cutback Calculator',
+    desc: 'Free pipe cutback and fitting takeout calculator: the length to cut back for 90 and 45 degree long and short radius elbows by NPS.',
+    kw: 'pipe cutback calculator, fitting takeout calculator, elbow takeout chart, pipefitter cut length',
+    inputs: [
+{ id: 'nps', label: 'Nominal pipe size (in)', type: 'number', def: 4 },
+      { id: 'elbow', label: 'Elbow type', type: 'select', opts: [{v:'90 long radius',l:'90 long radius'},{v:'45 long radius',l:'45 long radius'},{v:'90 short radius',l:'90 short radius'}], def: '90 long radius' },
+      { id: 'fittings', label: 'Number of fittings', type: 'number', def: 2 }
+    ],
+    calc: function (v) {
+      var f = v.elbow === '90 long radius' ? 1.5 : v.elbow === '45 long radius' ? 0.625 : 1.0;
+      var takeout = f * v.nps;
+      var total = takeout * v.fittings;
+      return {
+        result: 'Cutback per fitting: ' + takeout.toFixed(3) + ' in',
+        chart: Charts.bar([takeout, total], ['Per fitting', 'Total']),
+        extra: 'Total cutback for ' + v.fittings + ' fittings: ' + total.toFixed(3) + ' in | Factor ' + f + ' x NPS ' + v.nps + ' | Centre-to-centre pipe length = C2C - ' + (2 * takeout).toFixed(3) + ' in per joint'
+      };
+    },
+    steps: function (v) {
+      var f = v.elbow === '90 long radius' ? 1.5 : v.elbow === '45 long radius' ? 0.625 : 1.0;
+      var takeout = f * v.nps;
+      var total = takeout * v.fittings;
+      return [
+        'Step 1: Standard takeout factors: a 90 degree long radius elbow is 1.5 x NPS, a 45 degree long radius is 0.625 x NPS, and a 90 degree short radius is 1.0 x NPS.',
+        'Step 2: For ' + v.nps + ' in NPS and a ' + v.elbow + ' elbow the factor is ' + f + '.',
+        'Step 3: Takeout per fitting = ' + f + ' x ' + v.nps + ' = ' + takeout.toFixed(3) + ' in (face to centreline).',
+        'Step 4: Cut back ' + takeout.toFixed(3) + ' in from the end of the pipe for each fitting.',
+        'Step 5: For ' + v.fittings + ' fittings the total cutback is ' + total.toFixed(3) + ' in.'
+      ];
+    }
+  }
+,
+  {
+    id: 'journeyman-wage-progression',
+    name: 'Journeyman Wage Progression Calculator',
+    desc: 'Project trade career earnings from apprentice pay through journeyman wages with annual raises.',
+    kw: 'journeyman wage calculator, apprentice to journeyman earnings, trade career earnings, electrician wage progression',
+    inputs: [
+{ id: 'apprenticeStartWage', label: 'Apprentice start wage per hour', type: 'number', def: 16 },
+      { id: 'journeyWage', label: 'Journeyman wage per hour', type: 'number', def: 32 },
+      { id: 'apprenticeYears', label: 'Apprentice years', type: 'number', def: 4 },
+      { id: 'journeyYears', label: 'Journeyman years', type: 'number', def: 10 },
+      { id: 'hoursPerYear', label: 'Paid hours per year', type: 'number', def: 2000 },
+      { id: 'annualRaisePct', label: 'Annual raise (percent)', type: 'number', def: 3 }
+    ],
+    calc: function (v) {
+      var avgApp = (v.apprenticeStartWage + v.journeyWage) / 2;
+      var appEarn = Math.round(avgApp * v.hoursPerYear * v.apprenticeYears);
+      var r = v.annualRaisePct / 100;
+      var grow = r === 0 ? v.journeyYears : (Math.pow(1 + r, v.journeyYears) - 1) / r;
+      var jourEarn = Math.round(v.journeyWage * v.hoursPerYear * grow);
+      return {
+        result: 'Career earnings: ' + (appEarn + jourEarn),
+        chart: Charts.bar([appEarn, jourEarn], ['Apprentice', 'Journeyman']),
+        extra: 'Apprentice ' + appEarn + ' | Journeyman ' + jourEarn + ' over ' + v.journeyYears + ' years at ' + v.annualRaisePct + ' percent raises | Pre-tax, before overtime'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Apprentice pay is modelled as rising evenly from the start wage to the journeyman wage, so its average is the midpoint.',
+        'Step 2: Multiply that average by paid hours and apprentice years for apprentice earnings.',
+        'Step 3: Journeyman pay starts at the full rate and grows by the annual raise, compounded over the journeyman years.',
+        'Step 4: Sum the geometric growth for the journeyman total, then add the apprentice total.',
+        'Step 5: These are pre-tax figures and exclude overtime, which is common in the trades and can lift real earnings well above this.'
+      ];
+    }
+  }
 ];
 if (typeof module !== 'undefined') module.exports = CONSTRUCTION_TOOLS;
 if (typeof window !== 'undefined') window.CONSTRUCTION_TOOLS = CONSTRUCTION_TOOLS;

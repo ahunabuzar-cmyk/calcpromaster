@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baby Cost Calculator — First-Year Budget Formula &amp; Worked Example</title>
-  <meta name="description" content="How to budget a baby's first year: the one-time vs monthly cost structure, a worked $4,500–$20,000 example showing why childcare dominates, and the formulas…">
+  <title>Baby Cost Calculator — First-Year Budget &amp; Worked Example</title>
+  <meta name="description" content="How to budget a baby's first year: the one-time versus monthly costs, a worked $4,500–$20,000 example, and why childcare dominates the total.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
   <link rel="canonical" href="https://calcpromaster.netlify.app/guides/baby-cost">
@@ -29,6 +29,16 @@
     "mainEntity": {
       "@type": "FAQPage",
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I use this page for \"housing cost estimator\"?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — this guide answers the \"housing cost estimator\" question: the method is explained in the sections below and the linked calculator returns the number instantly." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this page for \"housing cost calculator\"?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — this guide answers the \"housing cost calculator\" question: the method is explained in the sections below and the linked calculator returns the number instantly." }
+        },
         { "@type": "Question", "name": "How much does a baby cost in the first year?", "acceptedAnswer": { "@type": "Answer", "text": "There is no universal number — it depends overwhelmingly on childcare. A first-year budget built from typical item costs lands around $4,500 without paid childcare and around $20,000 with full-time daycare at $300/week. The honest method is to build your own line-item budget, not to trust a single national average." } },
         { "@type": "Question", "name": "What is the biggest expense for a new baby?", "acceptedAnswer": { "@type": "Answer", "text": "For most working families, childcare. At $300/week, daycare costs roughly $15,600 a year — several times the cost of diapers, formula and clothing combined. Housing changes (a bigger place) can be comparable but are a family decision, not a baby-specific line item." } },
         { "@type": "Question", "name": "How do I calculate my own baby budget?", "acceptedAnswer": { "@type": "Answer", "text": "First-year cost = one-time gear costs + (monthly recurring costs × 12) + (weekly childcare cost × 52 × childcare months used). Price your own local numbers for each line — diapers, feeding, clothing, health — then compare childcare options directly." } },
@@ -57,7 +67,9 @@
   </style>
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Baby Cost — First Year</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Baby Cost — First Year</p>
   <h1>Baby Cost Calculator — First-Year Budget Formula &amp; Worked Example</h1>
   <p class="updated">Family · 6 min read · Last updated September 2026</p>
 
@@ -116,15 +128,53 @@
   </div>
 
   <h2>Run your own numbers</h2>
-  <p>The <a href="/family/childcare-cost">childcare cost comparison calculator</a> prices daycare vs nanny vs a stay-home parent directly. The <a href="/family/family-budget">family budget planner</a> fits the new line items into your existing monthly budget. The <a href="/family/college-savings">college savings calculator</a> shows what a small monthly amount becomes over 17 years — the second-decision horizon after the first-year budget.</p>
+  <p>Start with the <a href="/lifestyle/baby-cost/">baby cost calculator</a> — it takes diapers per day, cost per diaper, formula or feeding cost, and the one-off gear list, and totals the first year line by line so the numbers above can be replaced with yours. The <a href="/family/childcare-cost/">childcare cost comparison calculator</a> prices daycare vs nanny vs a stay-home parent directly. The <a href="/family/family-budget/">family budget planner</a> fits the new line items into your existing monthly budget. The <a href="/family/college-savings/">college savings calculator</a> shows what a small monthly amount becomes over 17 years — the second-decision horizon after the first-year budget.</p>
   <p class="related">
-    <a href="/family/childcare-cost" class="cta">Childcare Cost Comparison</a>
-    <a href="/family/family-budget" class="cta">Family Budget Planner</a>
-    <a href="/family/college-savings" class="cta">College Savings</a>
+    <a href="/lifestyle/baby-cost/" class="cta">Baby Cost Calculator</a>
+    <a href="/family/childcare-cost/" class="cta">Childcare Cost Comparison</a>
+    <a href="/family/family-budget/" class="cta">Family Budget Planner</a>
+    <a href="/family/college-savings/" class="cta">College Savings</a>
   </p>
 
-  <h2>Frequently asked questions</h2>
-  <h3>How much does a baby cost in the first year?</h3>
+<!-- guide-worked-example:start -->
+<h2>Worked example: Baby Cost Calculator at its default inputs</h2>
+<p>Take the default setup on <a href="/lifestyle/baby-cost/">Baby Cost Calculator</a>: no fields changed, nothing tuned to a nice round number. Run in the site's own engine, those values produce the answer below.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Diapers per Day</td><td>8</td></tr><tr><td>Cost per Diaper ($)</td><td>0.35</td></tr><tr><td>Monthly Formula Cost ($)</td><td>150</td></tr><tr><td>Monthly Clothing ($)</td><td>60</td></tr><tr><td>Monthly Childcare ($)</td><td>800</td></tr></tbody></table>
+<p><strong>Result:</strong> Annual Cost: $13142.00</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Step 1: Diapers = 8×$0.35×365 = $1022.00</li><li>Step 2: Formula = $150×12 = $1800.00</li><li>Step 3: Total = $1022.00 + $1800.00 + $720.00 + $9600.00 = $13142.00</li></ol>
+<h2>What Diapers per Day does to the answer</h2>
+<p>Same calculator, same fields, one change: diapers per day.</p>
+<table><thead><tr><th>Diapers per Day</th><th>Result</th></tr></thead><tbody><tr><td>4</td><td>Annual Cost: $12631.00</td></tr><tr><td>8</td><td>Annual Cost: $13142.00</td></tr><tr><td>12</td><td>Annual Cost: $13653.00</td></tr></tbody></table>
+<p>Read the three rows as a range: the spread between them is how much the answer depends on diapers per day alone, with everything else held still.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>Split the budget into one-off and recurring</h2>
+<p>The setup costs — cot, pram, car seat, clothes, feeding equipment — arrive in a burst before birth and then stop. The recurring costs — nappies, formula or food, childcare, healthcare — are smaller per month but compound for years.</p>
+<p>Keep them in separate columns. A budget that mixes them looks alarming in month one and understates the years that follow.</p>
+<h2>Childcare usually dominates the total</h2>
+<p>In most cities, full-time childcare for one child costs more per year than everything else in the list combined. It is also the line most sensitive to a decision: one parent reducing hours, grandparents helping, or a nursery versus a childminder changes the total more than any purchase.</p>
+<p>Price it before the birth, in your own area, with the hours you actually expect to work. Averages from another country are not a plan.</p>
+<h2>Later children cost less, then more again</h2>
+<p>A second child reuses equipment and clothes, so the one-off column shrinks sharply. Childcare often does not: two places cost nearly twice one, though some providers discount siblings.</p>
+<p>Costs also step up at school age with activities, transport and meals, and again at secondary level. Model the first five years in detail and the rest as a band rather than a single number.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/family">Family & Parenting Guides</a></li>
+    <li><a href="/guides/food">Food & Nutrition Guides</a></li>
+    <li><a href="/guides/everyday">Everyday Calculations Guides</a></li>
+  </ul>
+
+<h2>Frequently asked questions</h2>
+  <h3>Can I use this page for &quot;housing cost estimator&quot;?</h3>
+<p>Yes — this guide answers the &quot;housing cost estimator&quot; question: the method is explained in the sections below and the linked calculator returns the number instantly.</p>
+<h3>Can I use this page for &quot;housing cost calculator&quot;?</h3>
+<p>Yes — this guide answers the &quot;housing cost calculator&quot; question: the method is explained in the sections below and the linked calculator returns the number instantly.</p>
+<h3>How much does a baby cost in the first year?</h3>
   <p>It depends overwhelmingly on childcare. Built line by line, the example budget lands around $4,500 without paid care and about $20,000 with full-time daycare at $300/week. Build your own version with local numbers — that figure is the only one you can act on.</p>
   <h3>What is the biggest expense for a new baby?</h3>
   <p>For most working families, childcare — roughly $15,600/year at $300/week, several times the cost of all physical essentials combined. Housing upgrades can be comparable but are a separate family decision.</p>
@@ -133,7 +183,8 @@
   <h3>What one-time costs should I budget before the baby arrives?</h3>
   <p>The daily-use cluster: car seat, crib or bassinet, stroller, feeding supplies, monitor — commonly $800–$1,500 depending on choices. Buy car seats new unless you know their full history; most other items can be second-hand.</p>
 
-  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/family">Family guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <p class="related"><a href="/guides/">← All guides</a> · <a href="/guides/family">Family guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog/">Blog</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

@@ -1,6 +1,6 @@
 # Keyword Difficulty Report — CalcProMaster
 
-_Generated 2026-10-13 by `scripts/build-difficulty-report.cjs` (deterministic; re-run with `npm run keywords:fresh`). Difficulty model: `scripts/keyword-difficulty.cjs`._
+_Generated 2026-10-17 by `scripts/build-difficulty-report.cjs` (deterministic; re-run with `npm run keywords:fresh`). Difficulty model: `scripts/keyword-difficulty.cjs`._
 
 ## 0. Honest scope — read this first
 
@@ -25,12 +25,12 @@ _Generated 2026-10-13 by `scripts/build-difficulty-report.cjs` (deterministic; r
 
 | Tier | Phrases | Meaning |
 |---|---|---|
-| **EASY** (go after now) | 1177 | 4+ words with intent qualifier — few strong brands in top-10 |
-| **MEDIUM** (secondary) | 1663 | 3+ words — mixed SERPs, needs some links |
+| **EASY** (go after now) | 1179 | 4+ words with intent qualifier — few strong brands in top-10 |
+| **MEDIUM** (secondary) | 1665 | 3+ words — mixed SERPs, needs some links |
 | **HARD** (park) | 0 | head terms — brand wall (calculator.net, omnicalculator, Khan Academy…) |
 | **BRAND** (own) | 0 | CalcProMaster brand queries — must own #1 |
 
-Total distinct targeted phrases: **2840** across 1420 indexable pages.
+Total distinct targeted phrases: **2844** across 1421 indexable pages.
 
 ## 3. GO list — highest-value EASY targets (difficulty 2, best-volume first, sample of 60)
 
@@ -105,6 +105,7 @@ Do **not** chase these with the current authority (zero/backlink-poor). Revisit 
 
 | Keyword | Best page | Volume proxy |
 |---|---|---|
+| 529 Plan Compound Interest Calculator | `/finance/529-plan` | low (10–100/mo est.) |
 | Adjusted Body Weight Calculator: Measured Weight | `/health/chw` | low (10–100/mo est.) |
 | after tax cost of debt calculator | `/finance/cost-of-debt` | low (10–100/mo est.) |
 | Age Calculator: Date of Birth | `/everyday/age` | low (10–100/mo est.) |
@@ -128,7 +129,6 @@ Do **not** chase these with the current authority (zero/backlink-poor). Revisit 
 | Body Surface Area: Weight & Height | `/health/bsa` | low (10–100/mo est.) |
 | bond coupon payment calculator semiannual interest face value | `/finance/coupon-payment` | low (10–100/mo est.) |
 | brazil take home salary calculator | `/regional/brazil-take-home-salary` | low (10–100/mo est.) |
-| Business Days Calculator: Start Date & End Date | `/everyday/business-days` | low (10–100/mo est.) |
 | calorie burn calculator at rest | `/health/bmr` | low (10–100/mo est.) |
 | Calorie Burn Calculator: Weight, Activity & Duration | `/health/calorie-burn` | low (10–100/mo est.) |
 | Calorie Calculator: Weight, Height & Age | `/health/calorie` | low (10–100/mo est.) |

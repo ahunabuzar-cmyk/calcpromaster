@@ -22,6 +22,10 @@
 const fs = require('fs');
 const path = require('path');
 
+// The churn maths lives with the panel: both reports print the same two-way
+// table, so a shared definition is the only way they cannot drift apart.
+const { churnOf, churnAlert, emitChurnAlert } = require('./build-index-panel.cjs');
+
 const ROOT = path.join(__dirname, '..');
 const DOC = path.join(ROOT, 'docs', 'INDEX-BURNDOWN.md');
 const OUT = path.join(ROOT, 'data', 'index-burndown.json');
@@ -85,26 +89,49 @@ function advanceRate(before, after) {
   const days = (Date.parse(after.ranAt) - Date.parse(before.ranAt)) / 864e5;
   const fullDays = Math.round(days);
   let common = 0, stages = 0, slipped = 0, becameIndexed = 0, leftUnknown = 0;
+  let urlsAdvanced = 0, urlsSlipped = 0;
   for (const [url, cov] of b) {
     if (!a.has(url)) continue;
     common++;
     const rb = rankOf(cov), ra = rankOf(a.get(url));
     if (rb === null || ra === null) continue;
-    if (ra > rb) stages += (ra - rb);
+    if (ra > rb) { stages += (ra - rb); urlsAdvanced++; }
     // Backwards moves are reported separately instead of being dropped: a queue
     // whose "Discovered" pages keep falling back to "unknown" is not progressing
     // at the headline rate, and hiding that is how a burn-down lies.
-    else if (ra < rb) slipped += (rb - ra);
+    else if (ra < rb) { slipped += (rb - ra); urlsSlipped++; }
     if (rb < 3 && ra >= 3) becameIndexed++;
     if (rb === 0 && ra > 0) leftUnknown++;
   }
   return {
     from: before.ranAt.slice(0, 10), to: after.ranAt.slice(0, 10), days: fullDays, elapsedDays: days,
-    commonUrls: common, stagesAdvanced: stages, slippedBack: slipped, netStages: stages - slipped,
+    commonUrls: common, stagesAdvanced: stages, slippedBack: slipped,
+    // Both directions, always: `gainedBack` is the advance that backslides in the
+    // same window cancel out, so "stages advanced" can never be read as progress
+    // on its own.
+    ...churnOf({ stages, slipped, urlsAdvanced, urlsSlipped }),
     becameIndexed, leftUnknown,
     stagesPerDay: days > 0 ? stages / days : null,
     indexedPerDay: days > 0 ? becameIndexed / days : null,
   };
+}
+
+// Har wo window jise report publish karti hai (table ki rows + headline rate ka
+// pair) churn ke liye check hoti hai. Jis hafte ki harkat khud ko cancel kar de,
+// wahan flag uthta hai — progress ban kar nahi guzarta. Deduped, taake ek hi window
+// do bar alert na kare.
+function collectChurnAlerts(pairs) {
+  const seen = new Set();
+  const out = [];
+  for (const p of pairs || []) {
+    const a = churnAlert(p);
+    if (!a) continue;
+    const key = a.from + '→' + a.to;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(a);
+  }
+  return out;
 }
 
 // Weeks needed to clear `waiting` at `perWeek`, capped so a zero rate does not
@@ -238,6 +265,12 @@ function main() {
   const RATE_PER_WEEK_STAGES = panel && Number.isFinite(panel.stagesPerWeek)
     ? panel.stagesPerWeek
     : (longest && longest.stagesPerDay !== null ? longest.stagesPerDay * 7 : null);
+  // Headline rate ka pair (panel window) pehle: agar wahi churn hai to alert usi par
+  // sabse zyada matlab rakhta hai, kyunki projection usi number ko multiply karti hai.
+  const churnAlerts = collectChurnAlerts([
+    ...(panel && panel.recent ? [panel.recent] : []),
+    ...ratePairs,
+  ]);
   const rateSource = panel
     ? (panel.used === 'window'
       ? 'full-queue panel — trailing ' + panel.recent.days + 'd window (' + panel.recent.from + ' → ' + panel.recent.to + ', ' + panel.recent.common + ' URLs)'
@@ -282,6 +315,7 @@ function main() {
     sampleNote,
     measuredIndexedPerWeek: RATE_PER_WEEK_INDEXED,
     measuredRateSource: rateSource,
+    churnAlerts,
     panelSpan: panel ? panel.span : null,
     measuredStagesPerWeek: RATE_PER_WEEK_STAGES,
     quotaPerWeek: QUOTA_PER_WEEK,
@@ -330,16 +364,28 @@ function main() {
   if (longest) {
     L.push('Jab **wahi URLs** do dates par inspect hue, tab unka index-ladder par movement:');
     L.push('');
-    L.push('| from | to | days | common URLs | stages advanced | slipped back | net | became indexed | left "unknown" | indexed/day |');
-    L.push('|---|---|---|---|---|---|---|---|---|---|');
+    // Both directions, next to each other: a ladder move that goes both ways in
+    // one window is churn, and the only honest headline from it is `net`.
+    L.push('| from | to | days | common URLs | stages advanced | slipped back | gained back | churn | net | URLs aage | URLs peeche | became indexed | left "unknown" | indexed/day |');
+    L.push('|---|---|---|---|---|---|---|---|---|---|---|---|---|---|');
     for (const r of ratePairs) {
-      L.push('| ' + r.from + ' | ' + r.to + ' | ' + r.days + ' | ' + r.commonUrls + ' | ' + r.stagesAdvanced + ' | ' + r.slippedBack + ' | ' + (r.netStages >= 0 ? '+' : '') + r.netStages + ' | ' + r.becameIndexed + ' | ' + r.leftUnknown + ' | ' + f1(r.indexedPerDay) + ' |');
+      L.push('| ' + r.from + ' | ' + r.to + ' | ' + r.days + ' | ' + r.commonUrls + ' | ' + r.stagesAdvanced + ' | ' + r.slippedBack + ' | ' + r.gainedBack + ' | ' + r.churnStages + ' | ' + (r.netStages >= 0 ? '+' : '') + r.netStages + ' | ' + r.urlsAdvanced + ' | ' + r.urlsSlipped + ' | ' + r.becameIndexed + ' | ' + r.leftUnknown + ' | ' + f1(r.indexedPerDay) + ' |');
     }
     L.push('');
+    L.push('`gained back` = min(advanced, slipped) — jitni movement isi window mein wapas cancel ho gayi. `churn` = advanced + slipped (gross movement). Jab **churn net se kaafi bara ho**, tab "stages advanced" ko progress na padho — sirf **net** aur `became indexed` dekho.');
+    L.push('');
+    // Alert table ke turant baad: rate ka number padhne se pehle pata ho ke wo churn hai.
+    if (churnAlerts.length) {
+      L.push('> ⚠️ **Churn alert — ye rate progress nahi hai**');
+      L.push('>');
+      for (const a of churnAlerts) L.push('> - ' + (a.from ? a.from + ' → ' + a.to + ': ' : '') + a.message);
+      L.push('');
+    }
     L.push('- Sabse lamba span: **' + longest.from + ' → ' + longest.to + '** (' + longest.days + ' din, ' + longest.commonUrls + ' URLs).');
     const widest = ratePairs.slice().sort((a, b) => b.commonUrls - a.commonUrls)[0];
     if (widest) {
-      L.push('- Sabse **bara sample** (aur isi liye sabse bharosay-wala): ' + widest.from + ' → ' + widest.to + ' — ' + widest.commonUrls + ' URLs, ' + f1(widest.elapsedDays) + ' din mein **' + widest.stagesAdvanced + ' stages aage, ' + widest.slippedBack + ' peeche** (net ' + (widest.netStages >= 0 ? '+' : '') + widest.netStages + '), ' + widest.becameIndexed + ' index hue.');
+      L.push('- Sabse **bara sample** (aur isi liye sabse bharosay-wala): ' + widest.from + ' → ' + widest.to + ' — ' + widest.commonUrls + ' URLs, ' + f1(widest.elapsedDays) + ' din mein **' + widest.stagesAdvanced + ' stages aage, ' + widest.slippedBack + ' peeche**. Yani ' + widest.urlsAdvanced + ' URLs upar gaye aur **' + widest.urlsSlipped + ' neeche** — gross ' + widest.churnStages + ' stages, jismein **' + widest.gainedBack + ' wapas cancel** ho gaye (net ' + (widest.netStages >= 0 ? '+' : '') + widest.netStages + '), aur ' + widest.becameIndexed + ' index hue.');
+      L.push('- Is liye is sample ka headline **"' + widest.stagesAdvanced + ' stages aage" nahi hai** — woh churn ka adha hissa hai. Jo number progress batata hai woh **net ' + (widest.netStages >= 0 ? '+' : '') + widest.netStages + '** aur **' + widest.becameIndexed + ' became indexed** hai. (Detail: `docs/DISCOVERED-FALLBACK-ANALYSIS.md` — ' + widest.urlsSlipped + ' backslides mein se zyadatar "Discovered ➜ unknown" the, aur page-side kuch nahi badla.)');
       L.push('- Usmein **' + widest.leftUnknown + '** pages "unknown" se nikal kar "discovered" tak pahunchi — magar poore queue ki ginti dekho: "unknown" kam nahi hua. Yani "discovered" bank hua progress nahi hai; kuch pages wapas "unknown" mein gir jate hain. Isi liye neeche wala projection queue ke *unknown* hissay par hai, staged par nahi.');
     }
     L.push('- Us par measured: **' + f1(RATE_PER_WEEK_INDEXED) + ' pages/week** indexed hue (' + f1(RATE_PER_WEEK_STAGES) + ' ladder-stages/week).');
@@ -389,12 +435,13 @@ function main() {
   console.log('snapshot ' + json.snapshotDate + ' (' + latest.file + '): total ' + state.total
     + ' · waiting ' + state.waiting + ' · not-candidates ' + state.notCandidates + ' · indexed ' + state.indexed);
   if (longest) console.log('measured rate: ' + f1(RATE_PER_WEEK_INDEXED) + ' pages/week indexed (' + longest.commonUrls + ' URLs, ' + longest.days + 'd)');
+  for (const a of churnAlerts) emitChurnAlert(a, 'index burn-down');
   if (scenarios[0] && Number.isFinite(scenarios[0].weeks)) {
     console.log('queue clears in ~' + scenarios[0].weeks + ' weeks at that rate (' + (scenarios[0].doneBy || '2 saal se zyada — sample-scaled, forecast nahi') + ')');
   }
   console.log('report: docs/INDEX-BURNDOWN.md · data/index-burndown.json');
 }
 
-module.exports = { rankOf, splitSet, advanceRate, weeksToClear, addWeeks, readPanelSnapshot, NOT_A_CANDIDATE };
+module.exports = { rankOf, splitSet, advanceRate, collectChurnAlerts, weeksToClear, addWeeks, readPanelSnapshot, NOT_A_CANDIDATE };
 
 if (require.main === module) main();

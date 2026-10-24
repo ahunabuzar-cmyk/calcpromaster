@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How to Calculate Compound Interest — Formula &amp; Worked Examples</title>
-  <meta name="description" content="Learn how to calculate compound interest step by step: the formula, the difference from simple interest, worked examples for yearly and monthly compounding…">
+  <title>How to Calculate Compound Interest — Formula &amp; Examples</title>
+  <meta name="description" content="How to calculate compound interest step by step: the formula, the difference from simple interest, and yearly versus monthly compounding examples.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
   <link rel="canonical" href="https://calcpromaster.netlify.app/guides/compound-interest">
@@ -29,6 +29,11 @@
     "mainEntity": {
       "@type": "FAQPage",
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I use this page for \"yearly interest calculator\"?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — this guide answers the \"yearly interest calculator\" question: the method is explained in the sections below and the linked calculator returns the number instantly." }
+        },
         {
           "@type": "Question",
           "name": "What is the compound interest formula?",
@@ -89,13 +94,13 @@
   <header>
     <a class="logo" href="/">CalcProMaster</a>
     <a href="/">Home</a>
-    <a href="/guides">Guides</a>
+    <a href="/guides/">Guides</a>
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
   </header>
   <main>
     <div class="legal-page">
-      <p class="legal-meta"><a href="/guides">← All guides</a></p>
+      <p class="legal-meta"><a href="/guides/">← All guides</a></p>
       <h1>How to Calculate Compound Interest — Formula &amp; Worked Examples</h1>
       <p class="legal-meta">Finance · 6 min read · Last updated September 2026</p>
 
@@ -172,16 +177,52 @@
       </div>
 
       <h2>Try it instantly</h2>
-      <p>Run your own numbers with the <a href="/finance/compound-interest">Compound Interest Calculator</a>. Related tools:</p>
+      <p>Run your own numbers with the <a href="/finance/compound-interest/">Compound Interest Calculator</a>. Related tools:</p>
       <div class="related">
-        <a href="/finance/compound-interest">Compound Interest Calculator</a>
-        <a href="/finance/simple-interest">Simple Interest Calculator</a>
-        <a href="/finance/mortgage">Mortgage Calculator</a>
+        <a href="/finance/compound-interest/">Compound Interest Calculator</a>
+        <a href="/finance/simple-interest/">Simple Interest Calculator</a>
+        <a href="/finance/mortgage/">Mortgage Calculator</a>
         <a href="/guides/emi">EMI Guide</a>
-        <a href="/guides">All Guides</a>
+        <a href="/guides/">All Guides</a>
       </div>
 
-      <h2>Frequently asked questions</h2>
+<!-- guide-worked-example:start -->
+<h2>Worked example: Compound Interest Calculator at its default inputs</h2>
+<p>Take the default setup on <a href="/finance/compound-interest/">Compound Interest Calculator</a>: no fields changed, nothing tuned to a nice round number. Run in the site's own engine, those values produce the answer below.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Principal Amount</td><td>10000</td></tr><tr><td>Annual Rate (%)</td><td>7</td></tr><tr><td>Time (years)</td><td>10</td></tr><tr><td>Target Amount (for solve modes)</td><td>20000</td></tr><tr><td>Regular Contribution (per period)</td><td>0</td></tr></tbody></table>
+<p><strong>Result:</strong> Final Amount: $20,096.61</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Solving for Final Amount</li><li>Step 1: A = P(1 + r/n)^(n·t), n = 12</li><li>Step 2: Growth of principal = $20096.61</li><li>Step 3: No regular contributions</li></ol>
+<h2>Principal Amount: half, as given, and half again</h2>
+<p>Hold every other field still and move only principal amount.</p>
+<table><thead><tr><th>Principal Amount</th><th>Result</th></tr></thead><tbody><tr><td>5,000</td><td>Final Amount: $10,048.31</td></tr><tr><td>10,000</td><td>Final Amount: $20,096.61</td></tr><tr><td>15,000</td><td>Final Amount: $30,144.92</td></tr></tbody></table>
+<p>The middle row is the default. The outer two show how far the answer drifts when principal amount is wrong by half or by a half in the other direction.</p>
+<!-- guide-worked-example:end -->
+      
+<!-- guide-extra-depth:start -->
+<h2>Frequency changes the effective rate</h2>
+<p>A nominal 6% compounded monthly is not 6% a year: (1 + 0.06/12)^12 − 1 gives 6.17%. Daily compounding gives 6.18%, and continuous compounding tops out at e^0.06 − 1, or 6.18% as well — the gains shrink quickly after monthly.</p>
+<p>That is why regulators require an annual equivalent figure. Compare products on the effective annual rate, otherwise a monthly-compounded headline beats a quarterly one on presentation alone.</p>
+<h2>The rule of 72 is a sanity check</h2>
+<p>Dividing 72 by the annual return gives the years to double: 8% doubles in about nine years. It is accurate to within a few percent for returns between roughly 4% and 12%, and it fails badly outside that band.</p>
+<p>Use it to check a calculator rather than replace one. If a tool says a 6% investment doubles in eight years, either the rate or the compounding assumption is wrong.</p>
+<h2>Nominal growth is not purchasing power</h2>
+<p>A 7% return with 3% inflation grows real wealth at about 3.9% a year, not 4% — the exact figure is (1.07 ÷ 1.03) − 1. Over thirty years that small difference is worth several percent of the final balance.</p>
+<p>Model inflation explicitly when the goal is a future purchase. A retirement number computed in today money and a number computed in future money can differ by more than the contribution itself.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/cagr">CAGR</a></li>
+    <li><a href="/guides/sip">SIP Math</a></li>
+    <li><a href="/guides/fd-ppf-sip">FD vs PPF vs SIP</a></li>
+    <li><a href="/guides/retirement">How Much You Need to Retire</a></li>
+  </ul>
+
+<h2>Frequently asked questions</h2>
+      <h3>Can I use this page for &quot;yearly interest calculator&quot;?</h3>
+      <p>Yes — this guide answers the &quot;yearly interest calculator&quot; question: the method is explained in the sections below and the linked calculator returns the number instantly.</p>
       <h3>What is the compound interest formula?</h3>
       <p>A = P × (1 + r/n)^(n×t), where A is the final amount, P is the principal, r is the annual rate as a decimal, n is compounding periods per year, and t is years. Interest earned is A − P.</p>
       <h3>What is the difference between simple and compound interest?</h3>
@@ -194,7 +235,7 @@
   </main>
   <footer>
     <a href="/">Home</a>
-    <a href="/guides">Guides</a>
+    <a href="/guides/">Guides</a>
     <a href="/about">About</a>
     <a href="/privacy">Privacy</a>
     <a href="/terms">Terms</a>

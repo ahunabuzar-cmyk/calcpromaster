@@ -1642,7 +1642,237 @@ const FINANCE_TOOLS = [
   { id: 'cost-of-delay', name: 'Cost of Delay Calculator', desc: 'Revenue lost per month a launch or decision slips', kw: 'cost of delay calculator product launch revenue lost month, free online Cost of Delay Calculator',
     inputs: [{id:'monthly',label:'Value at Stake ($/month)',type:'number',def:1000},{id:'months',label:'Delay (months)',type:'number',def:8}],
     calc: function(v){ const d=v.monthly*v.months; return { result: '$'+d.toFixed(0), chart: null, extra: 'Simple linear cost of delay — the core quantity in SAFe and Lean product economics' }; },
-    steps: function(v){ return ['Cost of delay = value per month × months delayed']; } },
+    steps: function(v){ return ['Cost of delay = value per month × months delayed']; } }
+,
+  {
+    id: 'hajj-cost',
+    name: 'Hajj Cost Calculator',
+    desc: 'Free Hajj cost estimator: total pilgrimage budget from the package price, number of travellers and travel extras.',
+    kw: 'hajj cost calculator, hajj budget estimator, hajj cost per person, pilgrimage cost calculator',
+    inputs: [
+{ id: 'pkg', label: 'Package per person', type: 'number', def: 7000 },
+      { id: 'people', label: 'Travellers', type: 'number', def: 1 },
+      { id: 'extras', label: 'Travel extras (flights, visa)', type: 'number', def: 1500 }
+    ],
+    calc: function (v) {
+      var packageTotal = v.pkg * v.people;
+      var total = packageTotal + v.extras;
+      return {
+        result: 'Total Hajj cost: ' + total.toFixed(0),
+        chart: Charts.donut([packageTotal, v.extras], ['Package', 'Extras']),
+        extra: 'Package ' + v.pkg + ' x ' + v.people + ' = ' + packageTotal.toFixed(0) + ' | Extras ' + v.extras.toFixed(0) + ' | Add spending money, Qurbani and gifts separately'
+      };
+    },
+    steps: function (v) {
+      var packageTotal = v.pkg * v.people;
+      var total = packageTotal + v.extras;
+      return [
+        'Step 1: Package cost = ' + v.pkg + ' per person x ' + v.people + ' travellers = ' + packageTotal.toFixed(0) + '.',
+        'Step 2: Add travel extras such as flights, visa and insurance = ' + v.extras.toFixed(0) + '.',
+        'Step 3: Total = ' + packageTotal.toFixed(0) + ' + ' + v.extras.toFixed(0) + ' = ' + total.toFixed(0) + '.',
+        'Step 4: Budget separately for spending money, Qurbani, gifts and any medical costs.',
+        'Step 5: Prices vary widely by country, package tier and distance from the Haram, so treat this as a planning baseline.'
+      ];
+    }
+  }
+,
+  {
+    id: 'power-of-attorney-cost',
+    name: 'Power of Attorney and Will Cost Estimator',
+    desc: 'Planning cost estimate for wills, power of attorney and trust documents by route and complexity.',
+    kw: 'power of attorney cost, will writing cost, estate document cost estimator, living trust cost',
+    inputs: [
+{ id: 'docType', label: 'Document', type: 'select', opts: [{v:'Simple will',l:'Simple will'},{v:'Complex will',l:'Complex will'},{v:'Power of attorney',l:'Power of attorney'},{v:'Living trust',l:'Living trust'}], def: 'Simple will' },
+      { id: 'route', label: 'Preparation route', type: 'select', opts: [{v:'Online service',l:'Online service'},{v:'Local lawyer',l:'Local lawyer'},{v:'Specialist firm',l:'Specialist firm'}], def: 'Online service' },
+      { id: 'complexity', label: 'Complexity', type: 'select', opts: [{v:'Simple',l:'Simple'},{v:'Moderate',l:'Moderate'},{v:'Complex',l:'Complex'}], def: 'Simple' }
+    ],
+    calc: function (v) {
+      var base = ({ 'Simple will': 150, 'Complex will': 600, 'Power of attorney': 120, 'Living trust': 1500 })[v.docType] || 150;
+      var routeF = v.route === 'Online service' ? 0.5 : v.route === 'Specialist firm' ? 1.8 : 1;
+      var cxF = v.complexity === 'Simple' ? 1 : v.complexity === 'Moderate' ? 1.5 : 2.4;
+      var est = base * routeF * cxF;
+      return {
+        result: 'Estimated cost: ' + est.toFixed(0),
+        chart: Charts.bar([est * 0.7, est, est * 1.4], ['Low', 'Mid', 'High']),
+        extra: 'Typical range ' + (est * 0.7).toFixed(0) + ' to ' + (est * 1.4).toFixed(0) + ' | Base ' + base + ' x route factor ' + routeF + ' x complexity factor ' + cxF + ' | Forms alone are cheaper but a lawyer review reduces the risk of an invalid document'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Start from a base cost for the document type: a simple will is cheapest, a living trust the most involved.',
+        'Step 2: Apply the preparation route. An online service is roughly half a local lawyer, a specialist firm close to double.',
+        'Step 3: Apply the complexity factor. Moderate adds about half again, complex more than double.',
+        'Step 4: Estimated cost = ' + v.docType + ' base x route x complexity.',
+        'Step 5: Shop around and read reviews. An invalid or ambiguous document costs far more to fix than a careful one costs to prepare.'
+      ];
+    }
+  }
+,
+  {
+    id: 'divorce-cost',
+    name: 'Divorce Cost Estimator',
+    desc: 'Estimate the cost of a divorce by process route, hourly rate, hours worked and children involved.',
+    kw: 'divorce cost calculator, divorce cost estimate, cost of divorce by state, contested divorce cost',
+    inputs: [
+{ id: 'route', label: 'Process route', type: 'select', opts: [{v:'Mediation',l:'Mediation'},{v:'Lawyer negotiated',l:'Lawyer negotiated'},{v:'Contested court',l:'Contested court'}], def: 'Lawyer negotiated' },
+      { id: 'hourlyRate', label: 'Lawyer hourly rate', type: 'number', def: 300 },
+      { id: 'totalHours', label: 'Total lawyer hours', type: 'number', def: 20 },
+      { id: 'children', label: 'Children involved', type: 'number', def: 0 }
+    ],
+    calc: function (v) {
+      var factor = v.route === 'Mediation' ? 0.4 : v.route === 'Contested court' ? 2.5 : 1;
+      var cost = v.hourlyRate * v.totalHours * factor + v.children * 500;
+      return {
+        result: 'Estimated divorce cost: ' + cost.toFixed(0),
+        chart: Charts.bar([cost * 0.7, cost, cost * 1.6], ['Low', 'Mid', 'High']),
+        extra: v.route + ' route | Legal fees ' + (v.hourlyRate * v.totalHours * factor).toFixed(0) + ' plus ' + (v.children * 500).toFixed(0) + ' for child-related work | Illustrative only, confirm with local quotes'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Choose the process route. Mediation is the cheapest because the parties settle directly with a neutral.',
+        'Step 2: Multiply the lawyer hourly rate by the estimated number of hours.',
+        'Step 3: Apply the route factor: mediation 0.4, lawyer negotiated 1.0, contested court 2.5.',
+        'Step 4: Add an allowance per child for parenting plans, custody work and extra correspondence.',
+        'Step 5: This is a planning estimate only. Real fees depend on the dispute, the jurisdiction and how cooperative both sides are.'
+      ];
+    }
+  },
+  {
+    id: 'moving-abroad-cost',
+    name: 'Moving Abroad Cost Estimator',
+    desc: 'One-time relocation cost estimate for shipping, visas, flights and settling-in deposits by destination.',
+    kw: 'moving abroad cost calculator, relocation cost estimate, emigrate cost calculator, international moving cost',
+    inputs: [
+{ id: 'destination', label: 'Destination', type: 'select', opts: [{v:'USA',l:'USA'},{v:'UK',l:'UK'},{v:'Canada',l:'Canada'},{v:'Australia',l:'Australia'},{v:'UAE',l:'UAE'},{v:'Germany',l:'Germany'}], def: 'USA' },
+      { id: 'cubicMeters', label: 'Shipment volume (cubic meters)', type: 'number', def: 10 },
+      { id: 'adults', label: 'Adults', type: 'number', def: 1 },
+      { id: 'children', label: 'Children', type: 'number', def: 0 },
+      { id: 'deposit', label: 'Include rental deposit', type: 'checkbox', def: true }
+    ],
+    calc: function (v) {
+      var visaMap = { 'USA': 1200, 'UK': 1000, 'Canada': 900, 'Australia': 1100, 'UAE': 700, 'Germany': 800 };
+      var shipping = v.cubicMeters * 120;
+      var visas = v.adults * (visaMap[v.destination] || 1000) + v.children * 400;
+      var travel = v.adults * 800 + v.children * 500;
+      var deposit = v.deposit ? 1500 : 0;
+      var total = shipping + visas + travel + deposit;
+      return {
+        result: 'Estimated one-time moving cost: ' + total.toFixed(0),
+        chart: Charts.bar([shipping, visas, travel, deposit], ['Shipping', 'Visas', 'Flights', 'Deposit']),
+        extra: v.destination + ' | Shipping ' + shipping + ' | Visas ' + visas + ' | Flights ' + travel + ' | Deposit ' + deposit + ' | Excludes ongoing living costs'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Estimate the shipment volume in cubic meters and multiply by a typical rate of 120 per cubic meter.',
+        'Step 2: Add visa and permit fees for each adult and child for the destination country.',
+        'Step 3: Add one-way flights at about 800 per adult and 500 per child.',
+        'Step 4: Add a settling-in deposit for a rental if you expect one.',
+        'Step 5: Total the parts. This is a one-time relocation estimate and does not include the first months of rent, food or transport.'
+      ];
+    }
+  },
+  {
+    id: 'cosigning-loan-risk',
+    name: 'Cosigning a Loan Risk Calculator',
+    desc: 'Estimate the financial exposure from cosigning a loan given the balance and the chance the borrower defaults.',
+    kw: 'cosigning a loan calculator, cosigner risk, should i cosign a loan, loan default exposure',
+    inputs: [
+{ id: 'loanAmount', label: 'Outstanding balance', type: 'number', def: 20000 },
+      { id: 'defaultProbabilityPct', label: 'Chance borrower defaults (percent)', type: 'number', def: 10 },
+      { id: 'loanTermYears', label: 'Remaining term (years)', type: 'number', def: 5 }
+    ],
+    calc: function (v) {
+      var exposure = v.loanAmount * v.defaultProbabilityPct / 100;
+      return {
+        result: 'Estimated exposure: ' + exposure.toFixed(0),
+        chart: Charts.gauge(v.defaultProbabilityPct, 100),
+        extra: 'Balance ' + v.loanAmount.toFixed(0) + ' over ' + v.loanTermYears + ' years | On default you can be pursued for the full balance, which hurts your credit too'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Start from the outstanding balance you would be guaranteeing.',
+        'Step 2: Estimate the chance the borrower defaults, from their payment history and the loan type.',
+        'Step 3: Expected exposure equals balance times default probability.',
+        'Step 4: Remember that a default can leave you liable for the whole balance, not just the expected figure, and it can damage your credit.',
+        'Step 5: This is a simple expected-value estimate. Treat a cosigned loan as your own debt in your budget.'
+      ];
+    }
+  }
+,
+  {
+    id: 'inheritance-tax-uk-india',
+    name: 'Inheritance Tax Calculator (UK and India)',
+    desc: 'Estimate inheritance tax on an estate under UK rules, or note the position for India where most inheritances are untaxed.',
+    kw: 'inheritance tax calculator uk, india inheritance tax, estate tax calculator, iht calculator',
+    inputs: [
+{ id: 'country', label: 'Country', type: 'select', opts: [{v:'UK',l:'UK'},{v:'India',l:'India'}], def: 'UK' },
+      { id: 'estateValue', label: 'Estate value', type: 'number', def: 500000 },
+      { id: 'spouseExempt', label: 'Left to a spouse (exempt)', type: 'checkbox', def: false },
+      { id: 'charityPercent', label: 'Percent to charity', type: 'number', def: 0 }
+    ],
+    calc: function (v) {
+      if (v.spouseExempt) {
+        return { result: 'Estimated inheritance tax: 0', chart: Charts.gauge(0, 100), extra: v.country + ' | Transfers to a spouse are exempt, so no tax is due on this estate' };
+      }
+      if (v.country === 'India') {
+        return { result: 'Estimated inheritance tax: 0', chart: Charts.gauge(0, 100), extra: 'India | There is no inheritance tax on inherited assets. Capital gains may apply when you later sell, so keep the cost records.' };
+      }
+      var relief = v.estateValue * (v.charityPercent / 100);
+      var taxable = Math.max(0, v.estateValue - relief - 325000);
+      var tax = taxable * 0.4;
+      return {
+        result: 'Estimated inheritance tax: ' + tax.toFixed(0),
+        chart: Charts.donut([tax, Math.max(0, v.estateValue - tax)], ['Tax', 'To heirs']),
+        extra: 'UK | Nil rate band 325000 | Taxable ' + taxable.toFixed(0) + ' at 40 percent | The residence nil rate band can add up to 175000 more when a home passes to direct descendants'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Confirm the country. The UK charges inheritance tax; India has no inheritance tax on inherited assets.',
+        'Step 2: Check the spouse exemption. Anything passing to a spouse is exempt and resets the tax position.',
+        'Step 3: For the UK, subtract any charitable gift and the 325000 nil rate band from the estate.',
+        'Step 4: Tax the remainder at 40 percent. A reduced rate of 36 percent can apply when at least ten percent goes to charity.',
+        'Step 5: The residence nil rate band can shelter a further amount when a home passes to direct descendants. Take professional advice for a real estate.'
+      ];
+    }
+  },
+  {
+    id: 'rental-portfolio-tracker',
+    name: 'Rental Portfolio Cash Flow Tracker',
+    desc: 'Aggregate monthly cash flow, annual net and gross yield across a small rental portfolio you can save and revisit.',
+    kw: 'rental property portfolio calculator, rental cash flow tracker, multiple rental properties, gross yield calculator',
+    inputs: [
+{ id: 'properties', label: 'Number of properties', type: 'number', def: 3 },
+      { id: 'avgValue', label: 'Average property value', type: 'number', def: 200000 },
+      { id: 'avgMonthlyRent', label: 'Average monthly rent each', type: 'number', def: 1500 },
+      { id: 'avgMonthlyCosts', label: 'Average monthly costs each', type: 'number', def: 400 },
+      { id: 'mortgagePerProperty', label: 'Monthly mortgage each', type: 'number', def: 800 }
+    ],
+    calc: function (v) {
+      var rent = v.properties * v.avgMonthlyRent;
+      var costs = v.properties * v.avgMonthlyCosts;
+      var mortgage = v.properties * v.mortgagePerProperty;
+      var net = rent - costs - mortgage;
+      var yieldPct = (rent * 12) / (v.properties * v.avgValue) * 100;
+      return {
+        result: 'Monthly net cash flow: ' + net.toFixed(0),
+        chart: Charts.bar([rent, costs, mortgage, net], ['Rent', 'Costs', 'Mortgage', 'Net']),
+        extra: 'Annual net ' + (net * 12).toFixed(0) + ' | Gross yield ' + yieldPct.toFixed(1) + ' percent | ' + v.properties + ' properties | Save each property with the portfolio store to revisit later'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Multiply the number of properties by the average rent for total monthly income.',
+        'Step 2: Multiply by the average monthly costs for total operating expenses.',
+        'Step 3: Add the mortgages across all properties.',
+        'Step 4: Net cash flow is rent minus costs minus mortgages; annual net is twelve times that.',
+        'Step 5: Gross yield is annual rent divided by total property value. Use the portfolio store to keep each property on file and revisit it.'
+      ];
+    }
+  }
 ];
 
 if (typeof window !== 'undefined') window.FINANCE_TOOLS = FINANCE_TOOLS;

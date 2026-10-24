@@ -37,7 +37,11 @@ const CATEGORIES = [
 // prerendered static files (deploy/hub/<cat>/index.html), and bare /hub has
 // no renderer (the SPA only handles /hub/<cat>), so it must fall through to
 // the true-404 catch-all (pinned by tests/e2e/deploy-smoke.spec.js).
-const APP_ROUTES = ['compare', 'favorites', 'guides', 'blog'];
+// 'history' belongs here with its siblings: deploy/history/index.html exists as a
+// prerendered page, but on any host where the static file is missing (local
+// `node server.js`, a fresh clone before the build) /history returned a hard
+// 404 while /favorites and /compare rewrote to the SPA. Same renderer, same rule.
+const APP_ROUTES = ['compare', 'favorites', 'history', 'guides', 'blog'];
 
 // Locale prefixes written by the language switcher (Router.syncUrl → /xx/path)
 // via js/i18n.js. Kept EXPLICITLY in sync with the TRANSLATIONS keys there —

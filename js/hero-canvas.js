@@ -142,8 +142,11 @@
     var h = parent.clientHeight;
     canvas.width = Math.round(w * dpr);
     canvas.height = Math.round(h * dpr);
-    canvas.style.width = w + 'px';
-    canvas.style.height = h + 'px';
+    // The element's CSS size is width:100%;height:100% of the hero (inline style
+    // in the markup). Writing px width/height here changed a CSS property on
+    // every resize — Chrome reports that as a non-composited "width/height"
+    // animation (Lighthouse) and it invalidates layout for no benefit: the
+    // backing-store attributes above already define the drawing resolution.
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     // rebuild particles to fill the new area (~46 desktop, fewer on mobile)
     var count = w < 640 ? 22 : (w < 1100 ? 34 : 46);

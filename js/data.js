@@ -53,8 +53,13 @@ let TOTAL_CALCULATORS = ALL_TOOLS.length;
 
 // Static pages
 const STATIC_PAGES = {
-  '': { title: 'CalcProMaster — 1219+ free online calculators for Finance, Health, Math & More', desc: 'CalcProMaster — 1219+ free online calculators: loan EMI, mortgage, BMI, percentage, unit conversion and more across 20 categories. Step-by-step solutions, formulas and charts — no sign-up.', type: 'home' },
-  'about': { title: 'About CalcProMaster', desc: 'Learn about CalcProMaster - your comprehensive calculator resource with 1219+ tools across 20 categories.', type: 'about' },
+  // Home head tags — MUST stay byte-identical to index.html's static <title>/
+  // <meta name="description"> (the SPA swaps them in on route change, so any
+  // drift makes the audited length differ from the served one). Title 52 chars,
+  // description 142 chars with a call to action; both live inside the audit's
+  // 50-60 / 140-160 windows.
+  '': { title: 'Calculators: 1284+ Free Online Tools — CalcProMaster', desc: 'Calculators for loans, mortgages, BMI, tax and unit conversion — 1285+ tools that show the formula and every step. Try one now, no sign-up.', type: 'home' },
+  'about': { title: 'About CalcProMaster', desc: 'Learn about CalcProMaster - your comprehensive calculator resource with 1285+ tools across 20 categories.', type: 'about' },
   'privacy': { title: 'Privacy Policy', desc: 'CalcProMaster privacy policy. Calculations run locally in your browser; optional analytics and advertising only with your consent.', type: 'privacy' },
   'terms': { title: 'Terms of Service', desc: 'CalcProMaster Terms of Service. Free calculator tools provided as-is without warranty.', type: 'terms' },
   'disclaimer-finance': { title: 'Financial Disclaimer', desc: 'CalcProMaster financial calculators are for educational purposes only. Not financial advice.', type: 'disclaimer' },
@@ -99,12 +104,28 @@ const CATEGORY_META = {
 // from the (now populated) CALC_DATA so search, TOOL_MAP lookups, related-tools
 // matching, and the live total count all see the new tools immediately.
 function refreshCalcData() {
+  // Keep the homepage seeds (js/home-tools.js) for categories that have not
+  // hydrated yet. The first version dropped every seed here, so the moment a
+  // single chunk finished loading — the calculator-of-day widget pulls one at
+  // boot — ALL_TOOLS shrank to that chunk alone (measured on the built home
+  // page 2026-10-17: 68 tools of 1285) and homepage search lost every tool in
+  // the 19 categories that had not loaded. Seeds are placeholders: as soon as a
+  // category's real array is present it replaces its own seeded rows.
+  var seeds = [];
+  ALL_TOOLS.forEach(function (t) { if (t && t._seed) seeds.push(t); });
   ALL_TOOLS.length = 0;
   Object.keys(CALC_DATA).forEach(function (key) {
     CALC_DATA[key].tools.forEach(function (t) { ALL_TOOLS.push(t); });
   });
   Object.keys(TOOL_MAP).forEach(function (k) { delete TOOL_MAP[k]; });
   ALL_TOOLS.forEach(function (t) { TOOL_MAP[t.id] = t; });
+  seeds.forEach(function (t) {
+    if (TOOL_MAP[t.id]) return;                       // real row already there
+    var cat = CALC_DATA[t.cat];
+    if (cat && cat.tools && cat.tools.length) return;  // category hydrated
+    ALL_TOOLS.push(t);
+    TOOL_MAP[t.id] = t;
+  });
   TOTAL_CALCULATORS = ALL_TOOLS.length;
   if (typeof window !== 'undefined') {
     window.ALL_TOOLS = ALL_TOOLS;

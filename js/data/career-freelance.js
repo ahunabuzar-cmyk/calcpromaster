@@ -95,6 +95,262 @@ const CAREER_TOOLS = [
 
 
   { id: 'shift-differential', name: 'Shift Differential Calculator', desc: 'Premium pay for nights or weekends', kw: 'shift differential calculator night shift premium weekend pay, free online Shift Differential Calculator', inputs: [{id:'base',label:'Base Rate ($/h)',type:'number',def:25},{id:'diff',label:'Differential (%)',type:'number',def:15},{id:'hours',label:'Differential Hours',type:'number',def:8}], calc: function(v){ if(v.base<=0||v.diff<0||v.hours<0) return{result:'Enter valid values',chart:'',extra:''}; var rate=v.base*(1+v.diff/100); var extra=rate-v.base; return{result:'Premium Rate: $'+rate.toFixed(2)+'/h',chart:Charts.bar([v.base*v.hours,extra*v.hours],['Base pay','Differential']),extra:'Per shift: +$'+(extra*v.hours).toFixed(2)+' | Over a year of 160 night shifts, a 15% differential adds '+(extra*v.hours*160).toFixed(0)+' dollars — real money worth negotiating'};}, steps: function(v){ var rate=v.base*(1+v.diff/100); var extra=rate-v.base; return['Step 1: Premium rate = '+v.base+' × '+(1+v.diff/100)+' = $'+rate.toFixed(2)+'/h','Step 2: Uplift = $'+extra.toFixed(2)+'/h × '+v.hours+' h = $'+(extra*v.hours).toFixed(2)+' per shift','Differentials typically run 10-15% for nights, more for weekends or hazardous duty'];} }
+,
+  {
+    id: 'canada-crs',
+    name: 'Canada CRS Score Estimator',
+    desc: 'Simplified Express Entry CRS core points estimate from age, education, language and work.',
+    kw: 'canada crs calculator, express entry crs estimator, immigration points calculator canada, pr points canada',
+    inputs: [
+{ id: 'age', label: 'Age', type: 'number', def: 30 },
+      { id: 'education', label: 'Education', type: 'select', opts: [{v:'Secondary',l:'Secondary'},{v:'One-year post-secondary',l:'One-year post-secondary'},{v:'Two-year post-secondary',l:'Two-year post-secondary'},{v:'Bachelors',l:'Bachelors'},{v:'Two or more certificates',l:'Two or more certificates'},{v:'Masters',l:'Masters'},{v:'Doctoral',l:'Doctoral'}], def: 'Bachelors' },
+      { id: 'clb', label: 'First official language CLB', type: 'number', def: 9 },
+      { id: 'canadianWorkYears', label: 'Canadian skilled work years', type: 'number', def: 1 },
+      { id: 'foreignWorkYears', label: 'Foreign skilled work years', type: 'number', def: 3 }
+    ],
+    calc: function (v) {
+      var age = Math.round(v.age);
+      var agePts = 0;
+      if (age >= 18 && age <= 44) {
+        if (age === 18) agePts = 90;
+        else if (age === 19) agePts = 95;
+        else if (age <= 29) agePts = 110;
+        else { var t = { 30: 105, 31: 99, 32: 94, 33: 88, 34: 83, 35: 77, 36: 72, 37: 66, 38: 61, 39: 55, 40: 50, 41: 39, 42: 28, 43: 17, 44: 6 }; agePts = t[age] || 0; }
+      }
+      var eduPts = ({ 'Secondary': 30, 'One-year post-secondary': 90, 'Two-year post-secondary': 98, 'Bachelors': 120, 'Two or more certificates': 128, 'Masters': 135, 'Doctoral': 150 })[v.education] || 0;
+      var clb = Math.round(v.clb);
+      var per = clb < 4 ? 0 : clb <= 5 ? 6 : clb === 6 ? 8 : clb === 7 ? 16 : clb === 8 ? 22 : clb === 9 ? 29 : 32;
+      var langPts = per * 4;
+      var cw = Math.round(v.canadianWorkYears);
+      var workPts = cw >= 5 ? 80 : cw >= 4 ? 72 : cw >= 3 ? 64 : cw >= 2 ? 53 : cw >= 1 ? 40 : 0;
+      var fw = Math.round(v.foreignWorkYears);
+      var foreignPts = fw >= 2 ? 25 : fw >= 1 ? 13 : 0;
+      var total = agePts + eduPts + langPts + workPts + foreignPts;
+      return {
+        result: 'Estimated CRS core: ' + total + ' points',
+        chart: Charts.bar([agePts, eduPts, langPts, workPts + foreignPts], ['Age', 'Education', 'Language', 'Work']),
+        extra: 'Age ' + agePts + ' | Education ' + eduPts + ' | Language ' + langPts + ' | Canadian work ' + workPts + ' | Foreign work ' + foreignPts + ' | Core human capital only, skill transferability and additional points not included'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Age points peak at 110 for ages 20 to 29 and fall each year after 30.',
+        'Step 2: Education points run from 30 for secondary up to 150 for a doctorate.',
+        'Step 3: Language points are awarded per ability at CLB level, here ' + v.clb + ' across four abilities.',
+        'Step 4: Canadian skilled work experience adds up to 80 points at five years or more; foreign experience adds a smaller amount.',
+        'Step 5: Add the parts. The full CRS also includes skill transferability, spouse factors and additional points, so treat this as a core estimate only.'
+      ];
+    }
+  },
+  {
+    id: 'australia-pr-points',
+    name: 'Australia PR Points Calculator',
+    desc: 'Simplified skilled migration points estimate for age, English, qualifications and experience.',
+    kw: 'australia pr points calculator, skilled migration points, australia immigration points test, subclass 189 points',
+    inputs: [
+{ id: 'age', label: 'Age', type: 'number', def: 30 },
+      { id: 'english', label: 'English level', type: 'select', opts: [{v:'Competent',l:'Competent'},{v:'Proficient',l:'Proficient'},{v:'Superior',l:'Superior'}], def: 'Proficient' },
+      { id: 'qualification', label: 'Qualification', type: 'select', opts: [{v:'Diploma',l:'Diploma'},{v:'Bachelors',l:'Bachelors'},{v:'Masters',l:'Masters'},{v:'Doctorate',l:'Doctorate'}], def: 'Bachelors' },
+      { id: 'overseasYears', label: 'Overseas skilled work years', type: 'number', def: 5 },
+      { id: 'australianYears', label: 'Australian skilled work years', type: 'number', def: 0 },
+      { id: 'partner', label: 'Partner status', type: 'select', opts: [{v:'Single',l:'Single'},{v:'Partner skilled',l:'Partner skilled'},{v:'Partner not skilled',l:'Partner not skilled'}], def: 'Single' }
+    ],
+    calc: function (v) {
+      var age = Math.round(v.age);
+      var agePts = (age >= 25 && age <= 32) ? 30 : (age >= 18 && age <= 24) ? 25 : (age >= 33 && age <= 39) ? 25 : (age >= 40 && age <= 44) ? 15 : 0;
+      var engPts = v.english === 'Superior' ? 20 : v.english === 'Proficient' ? 10 : 0;
+      var qualPts = ({ 'Diploma': 10, 'Bachelors': 15, 'Masters': 15, 'Doctorate': 20 })[v.qualification] || 0;
+      var ov = Math.round(v.overseasYears);
+      var ovPts = ov >= 8 ? 15 : ov >= 5 ? 10 : ov >= 3 ? 5 : 0;
+      var au = Math.round(v.australianYears);
+      var auPts = au >= 8 ? 20 : au >= 5 ? 15 : au >= 3 ? 10 : au >= 1 ? 5 : 0;
+      var partnerPts = v.partner === 'Partner not skilled' ? 0 : 10;
+      var total = agePts + engPts + qualPts + ovPts + auPts + partnerPts;
+      return {
+        result: 'Estimated points: ' + total,
+        chart: Charts.bar([agePts, engPts, qualPts, ovPts + auPts, partnerPts], ['Age', 'English', 'Qualification', 'Experience', 'Partner']),
+        extra: 'Age ' + agePts + ' | English ' + engPts + ' | Qualification ' + qualPts + ' | Overseas ' + ovPts + ' | Australian ' + auPts + ' | Partner ' + partnerPts + ' | The skilled visa threshold is generally 65 points'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Age awards 30 points between 25 and 32, 25 points at 18 to 24 and 33 to 39, and 15 points at 40 to 44.',
+        'Step 2: English awards 10 points for proficient and 20 for superior.',
+        'Step 3: Qualifications award 10 for a diploma, 15 for a degree or masters, and 20 for a doctorate.',
+        'Step 4: Skilled work experience awards points by years, with Australian experience worth more than overseas.',
+        'Step 5: Partner and single status add 10 points. Add the parts, and remember the visa threshold is generally 65 points.'
+      ];
+    }
+  }
+,
+  {
+    id: 'career-break-runway',
+    name: 'Career Break Runway Calculator',
+    desc: 'See how many months your savings last on a career break or sabbatical and the gap if the break is longer.',
+    kw: 'career break calculator, sabbatical runway calculator, how long will savings last, career gap fund',
+    inputs: [
+{ id: 'monthlyExpenses', label: 'Monthly expenses', type: 'number', def: 2000 },
+      { id: 'currentSavings', label: 'Savings set aside', type: 'number', def: 10000 },
+      { id: 'monthlyIncome', label: 'Income during break', type: 'number', def: 0 },
+      { id: 'plannedMonths', label: 'Planned break (months)', type: 'number', def: 12 }
+    ],
+    calc: function (v) {
+      var net = v.monthlyExpenses - v.monthlyIncome;
+      if (net <= 0) return { result: 'No drawdown: income covers expenses', chart: Charts.gauge(100, 100), extra: 'Your income during the break meets or beats your expenses' };
+      var runway = v.currentSavings / net;
+      var shortfall = Math.max(0, v.plannedMonths * net - v.currentSavings);
+      return {
+        result: 'Runway ' + runway.toFixed(1) + ' months | Shortfall at ' + v.plannedMonths + ' months: ' + shortfall.toFixed(0),
+        chart: Charts.bar([runway, v.plannedMonths], ['Runway', 'Planned break']),
+        extra: 'Net monthly drawdown ' + net.toFixed(0) + ' | ' + (shortfall > 0 ? 'Top up savings before you start' : 'Your fund covers the planned break') + ' | Excludes one-off costs and investment returns'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Net monthly drawdown equals monthly expenses minus any income during the break.',
+        'Step 2: Runway in months equals savings divided by the net drawdown.',
+        'Step 3: Compare the runway with the planned break length.',
+        'Step 4: If the planned break is longer, shortfall equals planned months times net drawdown minus savings.',
+        'Step 5: Add a buffer for one-off costs such as travel, healthcare and re-entry, since this model only counts regular monthly spending.'
+      ];
+    }
+  },
+  {
+    id: 'ats-resume-score',
+    name: 'ATS Resume Score Checker',
+    desc: 'Score a resume out of 100 for applicant tracking system friendliness from keywords, format and structure.',
+    kw: 'ats resume score, ats checker, resume score calculator, will my resume pass ats',
+    inputs: [
+{ id: 'keywordMatchPct', label: 'Job keyword match (percent)', type: 'number', def: 70 },
+      { id: 'quantifiedBulletsPct', label: 'Bullets with numbers (percent)', type: 'number', def: 60 },
+      { id: 'hasContactInfo', label: 'Clear contact details', type: 'checkbox', def: true },
+      { id: 'hasSkillsSection', label: 'Dedicated skills section', type: 'checkbox', def: true },
+      { id: 'wordCount', label: 'Resume word count', type: 'number', def: 600 },
+      { id: 'usesTablesGraphics', label: 'Uses tables, columns or graphics', type: 'checkbox', def: false },
+      { id: 'fileFormat', label: 'File format', type: 'select', opts: [{v:'PDF (text-based)',l:'PDF (text-based)'},{v:'DOCX',l:'DOCX'},{v:'PDF (scanned image)',l:'PDF (scanned image)'}], def: 'PDF (text-based)' }
+    ],
+    calc: function (v) {
+      var score = 0;
+      score += Math.min(40, v.keywordMatchPct * 0.4);
+      score += Math.min(30, v.quantifiedBulletsPct * 0.3);
+      if (v.hasContactInfo) score += 10;
+      if (v.hasSkillsSection) score += 10;
+      if (v.wordCount >= 400 && v.wordCount <= 800) score += 10;
+      if (v.fileFormat !== 'PDF (scanned image)') score += 10;
+      if (v.usesTablesGraphics) score -= 10;
+      score = Math.max(0, Math.min(100, Math.round(score)));
+      return {
+        result: 'ATS score: ' + score + ' out of 100',
+        chart: Charts.gauge(score, 100),
+        extra: 'Keywords ' + Math.min(40, v.keywordMatchPct * 0.4).toFixed(0) + ' | Quantified bullets ' + Math.min(30, v.quantifiedBulletsPct * 0.3).toFixed(0) + ' | Format ' + (v.fileFormat === 'PDF (scanned image)' ? 'scanned PDF, a common ATS failure' : 'text readable') + ' | Aim for 80 or more'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Keyword match adds up to 40 points, the single biggest factor.',
+        'Step 2: Bullets that contain numbers add up to 30 points.',
+        'Step 3: Clear contact details and a dedicated skills section add 10 points each.',
+        'Step 4: A word count between 400 and 800 adds 10 points, and a text-readable file adds 10 more.',
+        'Step 5: Tables, columns or graphics subtract 10 points because many systems cannot parse them. Aim for 80 or more.'
+      ];
+    }
+  },
+  {
+    id: 'salary-negotiation-range',
+    name: 'Salary Negotiation Range Calculator',
+    desc: 'Build an opening, target and walk-away salary range from market data, experience and offer strength.',
+    kw: 'salary negotiation calculator, salary range calculator, how much to ask for salary, negotiation target salary',
+    inputs: [
+{ id: 'currentSalary', label: 'Current salary', type: 'number', def: 60000 },
+      { id: 'marketLow', label: 'Market low', type: 'number', def: 65000 },
+      { id: 'marketMedian', label: 'Market median', type: 'number', def: 75000 },
+      { id: 'marketHigh', label: 'Market high', type: 'number', def: 85000 },
+      { id: 'yearsExperience', label: 'Years relevant experience', type: 'number', def: 5 },
+      { id: 'offerStrength', label: 'Your leverage', type: 'select', opts: [{v:'Strong',l:'Strong'},{v:'Moderate',l:'Moderate'},{v:'Weak',l:'Weak'}], def: 'Strong' }
+    ],
+    calc: function (v) {
+      var target = Math.min(v.marketHigh, Math.round(v.marketMedian * (1 + 0.02 * v.yearsExperience)));
+      var sf = v.offerStrength === 'Strong' ? 1 : v.offerStrength === 'Moderate' ? 0.5 : 0;
+      var opening = Math.round(target * (1 + 0.08 * sf));
+      return {
+        result: 'Target: ' + target + ' | Open at: ' + opening,
+        chart: Charts.bar([v.marketLow, target, opening], ['Walk-away', 'Target', 'Opening']),
+        extra: 'Walk away below ' + v.marketLow + ' | Market median ' + v.marketMedian + ' | Current ' + v.currentSalary + ' | Ask for the whole package, not just base'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Start from the market median for the role and location.',
+        'Step 2: Add about two percent per year of relevant experience, capped at the market high.',
+        'Step 3: That gives your target. Your opening ask sits above the target by up to eight percent depending on leverage.',
+        'Step 4: Your walk-away is the market low, the figure below which you would rather not accept.',
+        'Step 5: Anchor at the opening, justify it with results, and negotiate the whole package including bonus, equity, leave and flexibility.'
+      ];
+    }
+  }
+,
+  {
+    id: 'us-priority-date',
+    name: 'US Visa Priority Date Wait Estimator',
+    desc: 'Estimate the remaining wait for a US immigrant visa from your priority date and the current published cutoff.',
+    kw: 'us visa priority date calculator, green card wait time estimator, visa bulletin priority date, immigrant visa backlog',
+    inputs: [
+{ id: 'category', label: 'Preference category', type: 'select', opts: [{v:'Family F1',l:'Family F1'},{v:'Family F2A',l:'Family F2A'},{v:'Family F2B',l:'Family F2B'},{v:'Family F3',l:'Family F3'},{v:'Family F4',l:'Family F4'},{v:'Employment EB-2',l:'Employment EB-2'},{v:'Employment EB-3',l:'Employment EB-3'}], def: 'Family F4' },
+      { id: 'priorityYear', label: 'Your priority date year', type: 'number', def: 2025 },
+      { id: 'currentCutoffYear', label: 'Current cutoff year (visa bulletin)', type: 'number', def: 2018 }
+    ],
+    calc: function (v) {
+      var behind = Math.max(0, v.priorityYear - v.currentCutoffYear);
+      if (behind === 0) {
+        return { result: 'Priority date is current', chart: Charts.gauge(0, 20), extra: v.category + ' | Your priority date is at or before the published cutoff, so you may be able to progress' };
+      }
+      return {
+        result: 'Estimated remaining wait: approximately ' + behind + ' years',
+        chart: Charts.gauge(behind, 20),
+        extra: v.category + ' | Your priority date is ' + behind + ' years behind the published cutoff | Cutoffs move forward unevenly and can retrogression, so treat this as a rough estimate'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Find the cutoff priority date for your category and country in the current visa bulletin.',
+        'Step 2: Compare your priority date with that cutoff year.',
+        'Step 3: If your priority date is earlier than the cutoff, you are current; otherwise the gap estimates the remaining wait.',
+        'Step 4: Watch the final action date and the filing date, which can differ, and note that some countries have separate, longer queues.',
+        'Step 5: Cutoffs move unevenly and can go backwards. This is an educational estimate, not legal or official guidance. Confirm with the visa bulletin.'
+      ];
+    }
+  },
+  {
+    id: 'interview-to-offer-tracker',
+    name: 'Interview to Offer Conversion Tracker',
+    desc: 'Track job search conversion rates from applications to interviews to offers.',
+    kw: 'interview to offer calculator, job search conversion rate, application success rate, job hunt tracker',
+    inputs: [
+{ id: 'applications', label: 'Applications sent', type: 'number', def: 50 },
+      { id: 'interviews', label: 'Interviews', type: 'number', def: 10 },
+      { id: 'offers', label: 'Offers', type: 'number', def: 1 }
+    ],
+    calc: function (v) {
+      var apps = Math.max(1, v.applications);
+      var interviewRate = v.interviews / apps * 100;
+      var offerRate = v.offers / apps * 100;
+      var perInterview = v.interviews > 0 ? v.offers / v.interviews * 100 : 0;
+      return {
+        result: 'Offer rate: ' + offerRate.toFixed(1) + ' percent (' + v.offers + ' of ' + v.applications + ' applications)',
+        chart: Charts.bar([v.applications, v.interviews, v.offers], ['Applications', 'Interviews', 'Offers']),
+        extra: 'Interview rate ' + interviewRate.toFixed(1) + ' percent | Offer per interview ' + perInterview.toFixed(1) + ' percent | A healthy funnel usually narrows at each stage'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Count applications, interviews and offers over a fixed period.',
+        'Step 2: Interview rate equals interviews divided by applications.',
+        'Step 3: Offer rate equals offers divided by applications.',
+        'Step 4: Offer per interview shows how well you convert once you are in the room.',
+        'Step 5: A low interview rate points at the resume and targeting; a low offer per interview points at the interview itself.'
+      ];
+    }
+  }
 ];
 if (typeof module !== 'undefined') module.exports = CAREER_TOOLS;
 if (typeof window !== 'undefined') window.CAREER_TOOLS = CAREER_TOOLS;

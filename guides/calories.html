@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How to Calculate Calories for Weight Loss or Gain — TDEE</title>
-  <meta name="description" content="How calorie needs are calculated: BMR formulas, activity multipliers, the deficit/surplus rule of thumb, and a full worked example with realistic rate…">
+  <meta name="description" content="How calorie needs are calculated: BMR formulas, activity multipliers, the deficit and surplus rule of thumb, and a worked example with realistic rates.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
   <link rel="canonical" href="https://calcpromaster.netlify.app/guides/calories">
@@ -89,13 +89,13 @@
   <header>
     <a class="logo" href="/">CalcProMaster</a>
     <a href="/">Home</a>
-    <a href="/guides">Guides</a>
+    <a href="/guides/">Guides</a>
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
   </header>
   <main>
     <div class="legal-page">
-      <p class="legal-meta"><a href="/guides">← All guides</a></p>
+      <p class="legal-meta"><a href="/guides/">← All guides</a></p>
       <h1>How to Calculate Calories for Weight Loss or Gain — TDEE Explained</h1>
       <p class="legal-meta">Nutrition · 6 min read · Last updated September 2026</p>
 
@@ -148,7 +148,7 @@
 
       <h2>Why the multiplier is the weakest link (and how to fix it)</h2>
       <p>Every number in the chain above is a measured regression — except the activity multiplier, which is a guess you make about yourself. The gap between tiers is enormous: for the worked example's BMR of 1,767.5, moving from 1.375 to 1.55 swings TDEE by <strong>310 kcal/day</strong> — the entire intended deficit, created by one honest-vs-optimistic self-assessment. This is why "I'm eating less and not losing" so often traces to a multiplier chosen one tier too high, then exercise calories counted <em>on top</em> of it (double-counting — mistake #2 below).</p>
-      <p>The fix is calibration, not precision: treat the computed TDEE as a hypothesis, hold intake steady at it for 2–3 weeks while recording weekly average weight, then adjust by what happened. Weight held flat → that number <em>was</em> your TDEE, whatever the table said. Lost 0.4 kg/week → you were eating ~1,900 below true expenditure, and the deficit is bigger than intended. Two calibration cycles teach you more about your metabolism than any formula refinement — the <a href="/health/calorie">calorie calculator</a> gives the starting hypothesis, the record-keeping converts it to a fact.</p>
+      <p>The fix is calibration, not precision: treat the computed TDEE as a hypothesis, hold intake steady at it for 2–3 weeks while recording weekly average weight, then adjust by what happened. Weight held flat → that number <em>was</em> your TDEE, whatever the table said. Lost 0.4 kg/week → you were eating ~1,900 below true expenditure, and the deficit is bigger than intended. Two calibration cycles teach you more about your metabolism than any formula refinement — the <a href="/health/calorie/">calorie calculator</a> gives the starting hypothesis, the record-keeping converts it to a fact.</p>
 
       <h2>Macros: turning calories into grams</h2>
       <p>Once the calorie target exists, macro targets are simple division — protein and carbs carry 4 kcal/g, fat 9 kcal/g. For an 80 kg lifter holding muscle on a 2,600 kcal target with a 30/40/30 split:</p>
@@ -162,7 +162,43 @@
         <p><strong>Health note:</strong> Formulas are population averages; individual metabolism varies. If you are under 18, pregnant, managing a medical condition, or have a history of disordered eating, work with a qualified professional rather than a formula.</p>
       </div>
 
-      <h2>FAQ</h2>
+      
+  
+<!-- guide-worked-example:start -->
+<h2>Worked example: Calorie Calculator at its default inputs</h2>
+<p>A worked example is only useful if you can reproduce it. The defaults on <a href="/health/calorie/">Calorie Calculator</a> give exactly the figures in this section, with no rounding done by us.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Weight (kg)</td><td>70</td></tr><tr><td>Height (cm)</td><td>170</td></tr><tr><td>Age</td><td>30</td></tr><tr><td>Body Fat % (for Katch-McArdle)</td><td>15</td></tr></tbody></table>
+<p><strong>Result:</strong> Daily Calories: 2507</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Step 1: Calculate BMR using mifflin formula = 1618 cal</li><li>Step 2: Apply activity factor 1.55</li><li>Step 3: TDEE = 1618 × 1.55 = 2507 cal/day</li><li>Step 4: To lose weight: 2006 cal/day</li></ol>
+<h2>Weight (kg): half, as given, and half again</h2>
+<p>Hold every other field still and move only weight (kg).</p>
+<table><thead><tr><th>Weight (kg)</th><th>Result</th></tr></thead><tbody><tr><td>35</td><td>Daily Calories: 1965</td></tr><tr><td>70</td><td>Daily Calories: 2507</td></tr><tr><td>105</td><td>Daily Calories: 3050</td></tr></tbody></table>
+<p>If the rows barely differ, weight (kg) is not your lever — change a different input. If they swing widely, get that number right before trusting the total.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>An estimate is a hypothesis, not a prescription</h2>
+<p>Predictive equations carry roughly a 10% error against measured expenditure, which is several hundred calories a day. Two people with identical inputs can differ by more than the deficit they are trying to create.</p>
+<p>That is why the plan needs a test: eat the estimate for two to three weeks, weigh daily, and compare weekly averages. If weight is flat, the estimate is your maintenance, whatever the formula said.</p>
+<h2>Pick a rate you can hold</h2>
+<p>Roughly 7,700 kcal is stored in a kilogram of body fat, so a 500 kcal daily deficit predicts about 0.45 kg a week on paper. Real loss runs faster at first — glycogen and water leave with the first week of restriction — and slower later as the body gets smaller.</p>
+<p>Half a percent to one percent of bodyweight per week is the range most people can sustain without losing muscle or abandoning the plan. Faster deficits mostly test willpower, and willpower has a budget.</p>
+<h2>The body adapts, and labels are approximate</h2>
+<p>A smaller body burns less at rest, and there is an additional adaptive component: measured expenditure often falls further than the weight change alone predicts. The same intake that produced loss in month one can produce a plateau in month four.</p>
+<p>Logged intake is also usually under-reported, and packaged portions are allowed a margin of error on the label. If the scale disagrees with the arithmetic for three weeks, trust the scale and adjust the target.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/macro-calculator">Macros</a></li>
+    <li><a href="/guides/protein-intake">Protein Need</a></li>
+    <li><a href="/guides/health-fitness">Health & Fitness Guides</a></li>
+    <li><a href="/guides/bmi">How to Calculate BMI</a></li>
+  </ul>
+
+<h2>FAQ</h2>
       <h3>Do I need to hit macros exactly?</h3>
       <p>Calories drive weight change; protein adequacy (roughly 1.6–2.2 g/kg) helps preserve muscle. Carb/fat split is mostly preference within your calorie target.</p>
       <h3>Why did weight loss stop after a few weeks?</h3>
@@ -174,15 +210,15 @@
   <footer>
     <p>CalcProMaster — free online calculators.</p>
     <p>
-      <a href="/guides">Guides</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a>
+      <a href="/guides/">Guides</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a>
     </p>
   </footer>
   <div class="related" style="max-width:820px;margin:0 auto 40px;padding:0 24px;">
-    <a href="/health/calorie">Calorie Calculator</a>
-    <a href="/health/calorie-deficit">Calorie Deficit Calculator</a>
-    <a href="/health/bmi">BMI Calculator</a>
+    <a href="/health/calorie/">Calorie Calculator</a>
+    <a href="/health/calorie-deficit/">Calorie Deficit Calculator</a>
+    <a href="/health/bmi/">BMI Calculator</a>
     <a href="/guides/bmi">BMI Guide</a>
-    <a href="/guides">All Guides</a>
+    <a href="/guides/">All Guides</a>
   </div>
   <script src="/guides/glossary-tooltips.js" defer></script>
 </body>

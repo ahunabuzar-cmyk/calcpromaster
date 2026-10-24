@@ -1,13 +1,13 @@
 {
-  "generatedFor": "2026-10-13",
+  "generatedFor": "2026-10-17",
   "totals": {
-    "rows": 97,
-    "improved": 0,
-    "already": 95,
+    "rows": 91,
+    "improved": 80,
+    "already": 9,
     "noOwner": 2,
     "other": 0,
-    "addedFaqs": 0,
-    "addedLsi": 0,
+    "addedFaqs": 80,
+    "addedLsi": 80,
     "guideEdits": 0
   },
   "rows": [
@@ -20,7 +20,9 @@
       "resolvedTarget": "/health/peptide-reconstitution/",
       "source": "map",
       "note": "",
-      "status": "ALREADY"
+      "answer": "Peptide Reconstitution Calculator handles that: set the Vial amount, Reconstitution volume, Amount per dose and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "peptide-reconstitution"
     },
     {
       "code": "B",
@@ -31,7 +33,9 @@
       "resolvedTarget": "/finance/currency-converter/",
       "source": "map",
       "note": "",
-      "status": "ALREADY"
+      "answer": "Currency Converter handles that: set the Amount, From, To and the result updates instantly.",
+      "status": "IMPROVED",
+      "tool": "currency-converter"
     },
     {
       "code": "B",
@@ -42,18 +46,9 @@
       "resolvedTarget": "/finance/currency-converter/",
       "source": "map",
       "note": "",
-      "status": "ALREADY"
-    },
-    {
-      "code": "C",
-      "priority": "P2",
-      "keyword": "time card clock calculator",
-      "volume": 201000,
-      "recordedTarget": "/career/timesheet-hours/",
-      "resolvedTarget": "/career/timesheet-hours/",
-      "source": "reviewed-table",
-      "note": "a time card is a timesheet — /career/timesheet-hours/ works out hours from start/end times",
-      "status": "ALREADY"
+      "answer": "Currency Converter handles that: set the Amount, From, To and the result updates instantly.",
+      "status": "IMPROVED",
+      "tool": "currency-converter"
     },
     {
       "code": "B",
@@ -64,7 +59,9 @@
       "resolvedTarget": "/finance/mortgage/",
       "source": "reviewed-table",
       "note": "mortgage expense = the monthly payment the mortgage page totals",
-      "status": "ALREADY"
+      "answer": "Mortgage Calculator handles that: set the Solve For, Home Price, Down Payment and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "mortgage"
     },
     {
       "code": "C",
@@ -75,7 +72,9 @@
       "resolvedTarget": "/finance/cd-calculator/",
       "source": "reviewed-table",
       "note": "CD = certificate of deposit",
-      "status": "ALREADY"
+      "answer": "CD Interest Calculator handles that: set the Deposit Amount, APY, Term and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "cd-calculator"
     },
     {
       "code": "B",
@@ -86,7 +85,9 @@
       "resolvedTarget": "/finance/cd-calculator/",
       "source": "map",
       "note": "",
-      "status": "ALREADY"
+      "answer": "CD Interest Calculator handles that: set the Deposit Amount, APY, Term and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "cd-calculator"
     },
     {
       "code": "B",
@@ -97,7 +98,9 @@
       "resolvedTarget": "/conversion/area/",
       "source": "map",
       "note": "",
-      "status": "ALREADY"
+      "answer": "Area Converter handles that: set the Value, From, To and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "area"
     },
     {
       "code": "C",
@@ -108,7 +111,9 @@
       "resolvedTarget": "/conversion/area/",
       "source": "reviewed-table",
       "note": "square feet is an area unit — the area converter, same owner as the ft2 row",
-      "status": "ALREADY"
+      "answer": "Area Converter handles that: set the Value, From, To and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "area"
     },
     {
       "code": "D",
@@ -119,7 +124,9 @@
       "resolvedTarget": "/finance/cd-calculator/",
       "source": "map",
       "note": "",
-      "status": "ALREADY"
+      "answer": "CD Interest Calculator handles that: set the Deposit Amount, APY, Term and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "cd-calculator"
     },
     {
       "code": "B",
@@ -130,7 +137,9 @@
       "resolvedTarget": "/finance/cd-calculator/",
       "source": "reviewed-table",
       "note": "confused phrasing for certificate of deposit — the CD page",
-      "status": "ALREADY"
+      "answer": "CD Interest Calculator handles that: set the Deposit Amount, APY, Term and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "cd-calculator"
     },
     {
       "code": "D",
@@ -141,7 +150,9 @@
       "resolvedTarget": "/finance/cd-calculator/",
       "source": "map",
       "note": "",
-      "status": "ALREADY"
+      "answer": "CD Interest Calculator handles that: set the Deposit Amount, APY, Term and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "cd-calculator"
     },
     {
       "code": "D",
@@ -152,7 +163,9 @@
       "resolvedTarget": "/finance/cd-calculator/",
       "source": "map",
       "note": "",
-      "status": "ALREADY"
+      "answer": "CD Interest Calculator handles that: set the Deposit Amount, APY, Term and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "cd-calculator"
     },
     {
       "code": "C",
@@ -163,18 +176,9 @@
       "resolvedTarget": "/health/bmi/",
       "source": "reviewed-table",
       "note": "the BMI page, already the registry owner",
-      "status": "ALREADY"
-    },
-    {
-      "code": "C",
-      "priority": "P2",
-      "keyword": "day count",
-      "volume": 74000,
-      "recordedTarget": "/everyday/date-diff/",
-      "resolvedTarget": "/everyday/date-diff/",
-      "source": "reviewed-table",
-      "note": "counting days between dates is the date-difference tool",
-      "status": "ALREADY"
+      "answer": "BMI Calculator handles that: set the Weight, Height and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "bmi"
     },
     {
       "code": "B",
@@ -185,7 +189,9 @@
       "resolvedTarget": "/everyday/date-diff/",
       "source": "map",
       "note": "",
-      "status": "ALREADY"
+      "answer": "Date Difference Calculator handles that: set the Date 1, Date 2 and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "date-diff"
     },
     {
       "code": "B",
@@ -196,7 +202,9 @@
       "resolvedTarget": "/lifestyle/parental-leave/",
       "source": "map",
       "note": "",
-      "status": "ALREADY"
+      "answer": "Parental Leave Pay Calculator handles that: set the Annual Salary, Leave Weeks, Paid Leave % and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "parental-leave"
     },
     {
       "code": "C",
@@ -207,7 +215,9 @@
       "resolvedTarget": "/finance/compound-interest/",
       "source": "reviewed-table",
       "note": "compound interest is the exact tool",
-      "status": "ALREADY"
+      "answer": "Compound Interest Calculator handles that: set the Solve For, Principal Amount, Annual Rate and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "compound-interest"
     },
     {
       "code": "C",
@@ -218,7 +228,9 @@
       "resolvedTarget": "/finance/compound-interest/",
       "source": "reviewed-table",
       "note": "same intent, word order only",
-      "status": "ALREADY"
+      "answer": "Compound Interest Calculator handles that: set the Solve For, Principal Amount, Annual Rate and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "compound-interest"
     },
     {
       "code": "C",
@@ -229,18 +241,9 @@
       "resolvedTarget": "/finance/simple-interest/",
       "source": "reviewed-table",
       "note": "interest as a percentage of principal is the simple-interest tool",
-      "status": "ALREADY"
-    },
-    {
-      "code": "C",
-      "priority": "P2",
-      "keyword": "annual percentage calculator",
-      "volume": 27100,
-      "recordedTarget": "/finance/apr-annual/",
-      "resolvedTarget": "/finance/apr-annual/",
-      "source": "reviewed-table",
-      "note": "annual percentage rate = APR",
-      "status": "ALREADY"
+      "answer": "Simple Interest Calculator handles that: set the Solve For, Principal, Rate and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "simple-interest"
     },
     {
       "code": "B",
@@ -251,29 +254,9 @@
       "resolvedTarget": "/career/overtime-pay/",
       "source": "reviewed-table",
       "note": "OT = overtime; /career/overtime-pay/ is the dedicated tool",
-      "status": "ALREADY"
-    },
-    {
-      "code": "C",
-      "priority": "P2",
-      "keyword": "time payroll calculator",
-      "volume": 22200,
-      "recordedTarget": "/career/timesheet-hours/",
-      "resolvedTarget": "/career/timesheet-hours/",
-      "source": "reviewed-table",
-      "note": "payroll time = hours worked → the timesheet hours tool",
-      "status": "ALREADY"
-    },
-    {
-      "code": "B",
-      "priority": "P2",
-      "keyword": "pay time calculator",
-      "volume": 22200,
-      "recordedTarget": "/career/timesheet-hours/",
-      "resolvedTarget": "/career/timesheet-hours/",
-      "source": "reviewed-table",
-      "note": "pay-for-time is the timesheet-hours calculation",
-      "status": "ALREADY"
+      "answer": "Overtime Pay Calculator handles that: set the Hourly Rate, Regular Hours/Week, Overtime Hours/Week and the result updates instantly.",
+      "status": "IMPROVED",
+      "tool": "overtime-pay"
     },
     {
       "code": "B",
@@ -284,7 +267,9 @@
       "resolvedTarget": "/utilities/ratio-simplifier/",
       "source": "map",
       "note": "",
-      "status": "ALREADY"
+      "answer": "Ratio Simplifier handles that: set the First Number, Second Number and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "ratio-simplifier"
     },
     {
       "code": "C",
@@ -295,7 +280,9 @@
       "resolvedTarget": "/finance/compound-interest/",
       "source": "reviewed-table",
       "note": "the compound page takes the compounding frequency (incl. daily)",
-      "status": "ALREADY"
+      "answer": "Compound Interest Calculator handles that: set the Solve For, Principal Amount, Annual Rate and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "compound-interest"
     },
     {
       "code": "C",
@@ -306,7 +293,9 @@
       "resolvedTarget": "/health/ideal-body-weight/",
       "source": "reviewed-table",
       "note": "a desired/target weight is the ideal-body-weight tool",
-      "status": "ALREADY"
+      "answer": "Ideal Weight Calculator handles that: set the Height, Gender and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "ideal-body-weight"
     },
     {
       "code": "C",
@@ -317,7 +306,9 @@
       "resolvedTarget": "/finance/loan-emi/",
       "source": "reviewed-table",
       "note": "a \"simple\" loan is the plain EMI/amortisation the loan page does",
-      "status": "ALREADY"
+      "answer": "Loan EMI Calculator handles that: set the Solve For, Loan Amount, Interest Rate and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "loan-emi"
     },
     {
       "code": "C",
@@ -328,7 +319,9 @@
       "resolvedTarget": "/finance/loan-emi/",
       "source": "reviewed-table",
       "note": "the loan maths is identical; the business framing is context, not a different formula",
-      "status": "ALREADY"
+      "answer": "Loan EMI Calculator handles that: set the Solve For, Loan Amount, Interest Rate and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "loan-emi"
     },
     {
       "code": "B",
@@ -339,7 +332,9 @@
       "resolvedTarget": "/career/timesheet-hours/",
       "source": "reviewed-table",
       "note": "adding durations is what the timesheet tool does (start/end → total hours)",
-      "status": "ALREADY"
+      "answer": "Timesheet Decimal Converter handles that: set the Time entries and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "timesheet-hours"
     },
     {
       "code": "C",
@@ -350,7 +345,9 @@
       "resolvedTarget": "/finance/loan-emi/",
       "source": "reviewed-table",
       "note": "a payment planner schedules loan payments; the EMI page is the payment schedule calculator",
-      "status": "ALREADY"
+      "answer": "Loan EMI Calculator handles that: set the Solve For, Loan Amount, Interest Rate and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "loan-emi"
     },
     {
       "code": "B",
@@ -361,7 +358,9 @@
       "resolvedTarget": "/finance/future-value/",
       "source": "map",
       "note": "",
-      "status": "ALREADY"
+      "answer": "Future Value Calculator handles that: set the Solve For, Present Value, Rate and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "future-value"
     },
     {
       "code": "C",
@@ -372,7 +371,9 @@
       "resolvedTarget": "/finance/mortgage/",
       "source": "reviewed-table",
       "note": "mortgage payment + tax/escrow is the mortgage page",
-      "status": "ALREADY"
+      "answer": "Mortgage Calculator handles that: set the Solve For, Home Price, Down Payment and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "mortgage"
     },
     {
       "code": "C",
@@ -383,7 +384,9 @@
       "resolvedTarget": "/business/pricing/",
       "source": "reviewed-table",
       "note": "the Pricing Calculator generates a selling price from unit cost + target margin — the arithmetic intent; the price-list-software intent is not claimed",
-      "status": "ALREADY"
+      "answer": "Pricing Calculator handles that: set the Unit Cost, Desired Margin and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "pricing"
     },
     {
       "code": "B",
@@ -405,7 +408,9 @@
       "resolvedTarget": "/finance/savings-goal/",
       "source": "reviewed-table",
       "note": "simple saving towards a target is the savings-goal tool",
-      "status": "ALREADY"
+      "answer": "Savings Goal Calculator handles that: set the Solve For, Savings Goal, Time and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "savings-goal"
     },
     {
       "code": "C",
@@ -416,7 +421,9 @@
       "resolvedTarget": "/finance/roi/",
       "source": "reviewed-table",
       "note": "percentage return = ROI",
-      "status": "ALREADY"
+      "answer": "ROI Calculator handles that: set the Investment Cost, Current Value and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "roi"
     },
     {
       "code": "C",
@@ -427,7 +434,9 @@
       "resolvedTarget": "/finance/retirement/",
       "source": "reviewed-table",
       "note": "a retirement plan estimate is the retirement tool",
-      "status": "ALREADY"
+      "answer": "Retirement Calculator handles that: set the Solve For, Current Savings, Monthly Contribution and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "retirement"
     },
     {
       "code": "B",
@@ -438,7 +447,9 @@
       "resolvedTarget": "/career/timesheet-hours/",
       "source": "reviewed-table",
       "note": "the recorded target (/everyday/distance-pace) counts hours only as a by-product of pace; the hours tool is the real owner",
-      "status": "ALREADY"
+      "answer": "Timesheet Decimal Converter handles that: set the Time entries and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "timesheet-hours"
     },
     {
       "code": "C",
@@ -449,7 +460,9 @@
       "resolvedTarget": "/finance/sales-tax/",
       "source": "reviewed-table",
       "note": "reverse tax = working back from a gross amount; the sales-tax page does gross/net",
-      "status": "ALREADY"
+      "answer": "Sales Tax Calculator handles that: set the Purchase Amount, Tax Rate and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "sales-tax"
     },
     {
       "code": "C",
@@ -460,7 +473,9 @@
       "resolvedTarget": "/finance/discount/",
       "source": "reviewed-table",
       "note": "discount as a percentage is the discount tool",
-      "status": "ALREADY"
+      "answer": "Discount Calculator handles that: set the Original Price, Discount and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "discount"
     },
     {
       "code": "C",
@@ -471,7 +486,9 @@
       "resolvedTarget": "/finance/simple-interest/",
       "source": "reviewed-table",
       "note": "per-day interest is the simple-interest page with a daily term",
-      "status": "ALREADY"
+      "answer": "Simple Interest Calculator handles that: set the Solve For, Principal, Rate and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "simple-interest"
     },
     {
       "code": "B",
@@ -493,7 +510,9 @@
       "resolvedTarget": "/career/raise-calculator/",
       "source": "reviewed-table",
       "note": "same intent as the wage row — real versus nominal salary",
-      "status": "ALREADY"
+      "answer": "Pay Raise Calculator handles that: set the Current Salary, Raise % and the result updates instantly.",
+      "status": "IMPROVED",
+      "tool": "raise-calculator"
     },
     {
       "code": "B",
@@ -504,7 +523,9 @@
       "resolvedTarget": "/utilities/age-exact/",
       "source": "map",
       "note": "",
-      "status": "ALREADY"
+      "answer": "Exact Age Calculator handles that: set the Birth Date, Age on Date and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "age-exact"
     },
     {
       "code": "D",
@@ -515,7 +536,9 @@
       "resolvedTarget": "/finance/compound-interest/",
       "source": "reviewed-table",
       "note": "code D cluster with \"compound investments\" — one shared page owns both",
-      "status": "ALREADY"
+      "answer": "Compound Interest Calculator handles that: set the Solve For, Principal Amount, Annual Rate and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "compound-interest"
     },
     {
       "code": "C",
@@ -526,7 +549,9 @@
       "resolvedTarget": "/finance/investment/",
       "source": "reviewed-table",
       "note": "growth over time is the investment tool",
-      "status": "ALREADY"
+      "answer": "Investment Calculator handles that: set the Solve For, Initial Investment, Annual Return and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "investment"
     },
     {
       "code": "C",
@@ -537,7 +562,9 @@
       "resolvedTarget": "/finance/retirement/",
       "source": "reviewed-table",
       "note": "the retirement tool with defaults is the simple case",
-      "status": "ALREADY"
+      "answer": "Retirement Calculator handles that: set the Solve For, Current Savings, Monthly Contribution and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "retirement"
     },
     {
       "code": "B",
@@ -548,7 +575,9 @@
       "resolvedTarget": "/regional/post-office-savings/",
       "source": "map",
       "note": "",
-      "status": "ALREADY"
+      "answer": "Post Office Savings Calculator handles that: set the Monthly Deposit, Years, Rate and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "post-office-savings"
     },
     {
       "code": "C",
@@ -559,7 +588,9 @@
       "resolvedTarget": "/finance/roi/",
       "source": "reviewed-table",
       "note": "a share return is an ROI calculation",
-      "status": "ALREADY"
+      "answer": "ROI Calculator handles that: set the Investment Cost, Current Value and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "roi"
     },
     {
       "code": "C",
@@ -581,7 +612,9 @@
       "resolvedTarget": "/finance/apr-annual/",
       "source": "reviewed-table",
       "note": "the credit rate = APR; the annual-rate tool is the owner",
-      "status": "ALREADY"
+      "answer": "Loan APR Calculator handles that: set the Loan Amount, Fees & Points, Total Interest Over Loan and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "apr-annual"
     },
     {
       "code": "B",
@@ -592,7 +625,9 @@
       "resolvedTarget": "/regional/post-office-savings/",
       "source": "map",
       "note": "",
-      "status": "ALREADY"
+      "answer": "Post Office Savings Calculator handles that: set the Monthly Deposit, Years, Rate and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "post-office-savings"
     },
     {
       "code": "D",
@@ -603,7 +638,9 @@
       "resolvedTarget": "/finance/retirement/",
       "source": "reviewed-table",
       "note": "code D cluster with \"free online retirement planner\" — one page owns both",
-      "status": "ALREADY"
+      "answer": "Retirement Calculator handles that: set the Solve For, Current Savings, Monthly Contribution and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "retirement"
     },
     {
       "code": "B",
@@ -625,7 +662,9 @@
       "resolvedTarget": "/finance/present-value/",
       "source": "reviewed-table",
       "note": "PV is the standard finance abbreviation for present value",
-      "status": "ALREADY"
+      "answer": "Present Value Calculator handles that: set the Solve For, Future Value, Discount Rate and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "present-value"
     },
     {
       "code": "C",
@@ -636,7 +675,9 @@
       "resolvedTarget": "/finance/apr-annual/",
       "source": "reviewed-table",
       "note": "the percentage on a loan is the APR",
-      "status": "ALREADY"
+      "answer": "Loan APR Calculator handles that: set the Loan Amount, Fees & Points, Total Interest Over Loan and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "apr-annual"
     },
     {
       "code": "C",
@@ -647,7 +688,9 @@
       "resolvedTarget": "/finance/apr-annual/",
       "source": "reviewed-table",
       "note": "solving for the rate is what the APR/annual-rate page does",
-      "status": "ALREADY"
+      "answer": "Loan APR Calculator handles that: set the Loan Amount, Fees & Points, Total Interest Over Loan and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "apr-annual"
     },
     {
       "code": "C",
@@ -658,7 +701,9 @@
       "resolvedTarget": "/finance/retirement-withdrawal/",
       "source": "reviewed-table",
       "note": "spending in retirement is the withdrawal tool",
-      "status": "ALREADY"
+      "answer": "Retirement Withdrawal Calculator handles that: set the Retirement Fund, Withdrawal Rate, Annual Return and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "retirement-withdrawal"
     },
     {
       "code": "C",
@@ -669,18 +714,9 @@
       "resolvedTarget": "/finance/retirement/",
       "source": "reviewed-table",
       "note": "long-horizon financial planning is the retirement tool",
-      "status": "ALREADY"
-    },
-    {
-      "code": "C",
-      "priority": "P2",
-      "keyword": "mortgage calculator how much can i qualify for",
-      "volume": 1900,
-      "recordedTarget": "/finance/loan-qualify/",
-      "resolvedTarget": "/finance/loan-qualify/",
-      "source": "reviewed-table",
-      "note": "same intent as the other qualify row — the qualification tool",
-      "status": "ALREADY"
+      "answer": "Retirement Calculator handles that: set the Solve For, Current Savings, Monthly Contribution and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "retirement"
     },
     {
       "code": "C",
@@ -691,7 +727,9 @@
       "resolvedTarget": "/finance/loan-qualify/",
       "source": "reviewed-table",
       "note": "same intent as the other qualify row — the qualification tool",
-      "status": "ALREADY"
+      "answer": "Loan Qualification handles that: set the Monthly Income, Monthly Debts, Rate and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "loan-qualify"
     },
     {
       "code": "B",
@@ -724,7 +762,9 @@
       "resolvedTarget": "/finance/retirement-withdrawal/",
       "source": "reviewed-table",
       "note": "retirement spending is the withdrawal tool",
-      "status": "ALREADY"
+      "answer": "Retirement Withdrawal Calculator handles that: set the Retirement Fund, Withdrawal Rate, Annual Return and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "retirement-withdrawal"
     },
     {
       "code": "B",
@@ -757,7 +797,9 @@
       "resolvedTarget": "/finance/retirement/",
       "source": "reviewed-table",
       "note": "code D cluster with \"retirement planner calculator\" — one page owns both",
-      "status": "ALREADY"
+      "answer": "Retirement Calculator handles that: set the Solve For, Current Savings, Monthly Contribution and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "retirement"
     },
     {
       "code": "C",
@@ -768,7 +810,9 @@
       "resolvedTarget": "/finance/retirement/",
       "source": "reviewed-table",
       "note": "compounding into retirement is the retirement tool",
-      "status": "ALREADY"
+      "answer": "Retirement Calculator handles that: set the Solve For, Current Savings, Monthly Contribution and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "retirement"
     },
     {
       "code": "C",
@@ -779,7 +823,9 @@
       "resolvedTarget": "/finance/retirement/",
       "source": "reviewed-table",
       "note": "same intent as the compound-retirement row",
-      "status": "ALREADY"
+      "answer": "Retirement Calculator handles that: set the Solve For, Current Savings, Monthly Contribution and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "retirement"
     },
     {
       "code": "B",
@@ -790,7 +836,9 @@
       "resolvedTarget": "/finance/loan-emi/",
       "source": "map",
       "note": "",
-      "status": "ALREADY"
+      "answer": "Loan EMI Calculator handles that: set the Solve For, Loan Amount, Interest Rate and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "loan-emi"
     },
     {
       "code": "C",
@@ -801,7 +849,9 @@
       "resolvedTarget": "/finance/credit-card-payoff/",
       "source": "reviewed-table",
       "note": "cash back is a card reward — the card page is the closest honest owner",
-      "status": "ALREADY"
+      "answer": "Credit Card Payoff handles that: set the Solve For, Current Balance, APR and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "credit-card-payoff"
     },
     {
       "code": "C",
@@ -812,7 +862,9 @@
       "resolvedTarget": "/finance/roi/",
       "source": "reviewed-table",
       "note": "the ROI page carries the formula and the calculator",
-      "status": "ALREADY"
+      "answer": "ROI Calculator handles that: set the Investment Cost, Current Value and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "roi"
     },
     {
       "code": "C",
@@ -823,7 +875,9 @@
       "resolvedTarget": "/career/timesheet-hours/",
       "source": "reviewed-table",
       "note": "a work schedule is a set of timesheets — hours per day/week",
-      "status": "ALREADY"
+      "answer": "Timesheet Decimal Converter handles that: set the Time entries and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "timesheet-hours"
     },
     {
       "code": "C",
@@ -834,7 +888,9 @@
       "resolvedTarget": "/everyday/concrete/",
       "source": "reviewed-table",
       "note": "the concrete page carries the volume formula",
-      "status": "ALREADY"
+      "answer": "Concrete Calculator handles that: set the Length, Width, Depth and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "concrete"
     },
     {
       "code": "D",
@@ -845,7 +901,9 @@
       "resolvedTarget": "/finance/compound-interest/",
       "source": "reviewed-table",
       "note": "code D cluster with \"compound investment calculator\" — one shared page owns both",
-      "status": "ALREADY"
+      "answer": "Compound Interest Calculator handles that: set the Solve For, Principal Amount, Annual Rate and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "compound-interest"
     },
     {
       "code": "C",
@@ -856,7 +914,9 @@
       "resolvedTarget": "/finance/future-value/",
       "source": "reviewed-table",
       "note": "future value is the exact tool",
-      "status": "ALREADY"
+      "answer": "Future Value Calculator handles that: set the Solve For, Present Value, Rate and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "future-value"
     },
     {
       "code": "C",
@@ -867,7 +927,9 @@
       "resolvedTarget": "/finance/retirement/",
       "source": "reviewed-table",
       "note": "projected growth is the retirement tool",
-      "status": "ALREADY"
+      "answer": "Retirement Calculator handles that: set the Solve For, Current Savings, Monthly Contribution and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "retirement"
     },
     {
       "code": "B",
@@ -889,7 +951,9 @@
       "resolvedTarget": "/finance/currency-converter/",
       "source": "reviewed-table",
       "note": "same generic currency-conversion intent; brand not targeted",
-      "status": "ALREADY"
+      "answer": "Currency Converter handles that: set the Amount, From, To and the result updates instantly.",
+      "status": "IMPROVED",
+      "tool": "currency-converter"
     },
     {
       "code": "C",
@@ -900,18 +964,9 @@
       "resolvedTarget": "/career/raise-calculator/",
       "source": "reviewed-table",
       "note": "wage vs inflation is the real-terms raise the raise tool computes",
-      "status": "ALREADY"
-    },
-    {
-      "code": "C",
-      "priority": "P2",
-      "keyword": "time and pay calculator",
-      "volume": 1000,
-      "recordedTarget": "/career/timesheet-hours/",
-      "resolvedTarget": "/career/timesheet-hours/",
-      "source": "reviewed-table",
-      "note": "hours and pay → timesheet hours, then overtime page for the rate",
-      "status": "ALREADY"
+      "answer": "Pay Raise Calculator handles that: set the Current Salary, Raise % and the result updates instantly.",
+      "status": "IMPROVED",
+      "tool": "raise-calculator"
     },
     {
       "code": "C",
@@ -922,7 +977,9 @@
       "resolvedTarget": "/finance/loan-emi/",
       "source": "reviewed-table",
       "note": "a loan is amortised, not compounded; the loan page is the honest owner and explains the difference",
-      "status": "ALREADY"
+      "answer": "Loan EMI Calculator handles that: set the Solve For, Loan Amount, Interest Rate and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "loan-emi"
     },
     {
       "code": "C",
@@ -933,7 +990,9 @@
       "resolvedTarget": "/finance/discount/",
       "source": "reviewed-table",
       "note": "the discount formula lives on the discount page",
-      "status": "ALREADY"
+      "answer": "Discount Calculator handles that: set the Original Price, Discount and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "discount"
     },
     {
       "code": "C",
@@ -955,7 +1014,22 @@
       "resolvedTarget": "/finance/investment/",
       "source": "reviewed-table",
       "note": "account balance over time is the investment tool",
-      "status": "ALREADY"
+      "answer": "Investment Calculator handles that: set the Solve For, Initial Investment, Annual Return and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "investment"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "loan calculator monthly",
+      "volume": 1000,
+      "recordedTarget": null,
+      "resolvedTarget": "/finance/loan-emi/",
+      "source": "registry-match",
+      "note": "strict all-token registry match: loan-emi",
+      "answer": "Loan EMI Calculator handles that: set the Solve For, Loan Amount, Interest Rate and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "loan-emi"
     },
     {
       "code": "C",
@@ -966,7 +1040,9 @@
       "resolvedTarget": "/finance/loan-comparison/",
       "source": "reviewed-table",
       "note": "side-by-side loan comparison is the dedicated page",
-      "status": "ALREADY"
+      "answer": "Loan Comparison handles that: set the Loan Amount, Offer 1 Rate, Offer 1 Term and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "loan-comparison"
     },
     {
       "code": "C",
@@ -977,7 +1053,9 @@
       "resolvedTarget": "/finance/investment-growth/",
       "source": "reviewed-table",
       "note": "monthly contributions with growth is the investment-growth tool",
-      "status": "ALREADY"
+      "answer": "Investment Growth Comparison handles that: set the Initial Investment, Conservative, Moderate and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "investment-growth"
     },
     {
       "code": "B",
@@ -999,7 +1077,9 @@
       "resolvedTarget": "/finance/savings-goal/",
       "source": "reviewed-table",
       "note": "savings as a percentage of income sits on the savings-goal page",
-      "status": "ALREADY"
+      "answer": "Savings Goal Calculator handles that: set the Solve For, Savings Goal, Time and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "savings-goal"
     },
     {
       "code": "C",
@@ -1010,7 +1090,9 @@
       "resolvedTarget": "/finance/loan-emi/",
       "source": "reviewed-table",
       "note": "the annual payment on a loan is the loan page run over 12 months",
-      "status": "ALREADY"
+      "answer": "Loan EMI Calculator handles that: set the Solve For, Loan Amount, Interest Rate and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "loan-emi"
     },
     {
       "code": "C",
@@ -1021,7 +1103,9 @@
       "resolvedTarget": "/finance/cagr/",
       "source": "reviewed-table",
       "note": "a compound return is CAGR",
-      "status": "ALREADY"
+      "answer": "CAGR Calculator handles that: set the Beginning Value, Ending Value, Years and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "cagr"
     },
     {
       "code": "C",
@@ -1032,7 +1116,9 @@
       "resolvedTarget": "/finance/retirement/",
       "source": "reviewed-table",
       "note": "the retirement tool",
-      "status": "ALREADY"
+      "answer": "Retirement Calculator handles that: set the Solve For, Current Savings, Monthly Contribution and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "retirement"
     },
     {
       "code": "C",
@@ -1043,7 +1129,9 @@
       "resolvedTarget": "/finance/loan-qualify/",
       "source": "reviewed-table",
       "note": "affordability/qualification is the loan-qualify tool",
-      "status": "ALREADY"
+      "answer": "Loan Qualification handles that: set the Monthly Income, Monthly Debts, Rate and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "loan-qualify"
     },
     {
       "code": "B",
@@ -1054,7 +1142,9 @@
       "resolvedTarget": "/lifestyle/parental-leave/",
       "source": "map",
       "note": "",
-      "status": "ALREADY"
+      "answer": "Parental Leave Pay Calculator handles that: set the Annual Salary, Leave Weeks, Paid Leave % and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "parental-leave"
     },
     {
       "code": "B",
@@ -1065,7 +1155,9 @@
       "resolvedTarget": "/finance/retirement/",
       "source": "reviewed-table",
       "note": "a projection is the retirement tool",
-      "status": "ALREADY"
+      "answer": "Retirement Calculator handles that: set the Solve For, Current Savings, Monthly Contribution and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "retirement"
     },
     {
       "code": "B",
@@ -1076,7 +1168,9 @@
       "resolvedTarget": "/finance/currency-converter/",
       "source": "reviewed-table",
       "note": "generic forex-conversion intent; the brand name (\"xe\") is not targeted",
-      "status": "ALREADY"
+      "answer": "Currency Converter handles that: set the Amount, From, To and the result updates instantly.",
+      "status": "IMPROVED",
+      "tool": "currency-converter"
     }
   ]
 }

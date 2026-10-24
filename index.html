@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <!-- Legacy mobile hints kept for old/embedded crawlers that still look for them.
+       Both are harmless no-ops on modern browsers; the real responsive behaviour
+       comes from the viewport meta above (there is NO separate m. mobile URL —
+       responsive design is the modern, Google-preferred single-URL approach). -->
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
   <base href="/">
   <!-- FILE:// SUPPORT (local testing only): <base href="/"> anchors every relative
        URL (js/..., styles.css, manifest.json) to the site root. Over HTTP that is
@@ -23,17 +29,19 @@
     })();
   </script>
   <!-- Security: Content Security Policy -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.g.doubleclick.net https://tpc.googlesyndication.com https://*.googlesyndication.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.googleapis.com; img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://*.g.doubleclick.net https://*.gstatic.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://fonts.googleapis.com https://open.er-api.com https://api.frankfurter.app https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.g.doubleclick.net; worker-src 'self' blob:; frame-src 'self' https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://*.googlesyndication.com; base-uri 'self'; form-action 'self'; object-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.g.doubleclick.net https://tpc.googlesyndication.com https://*.googlesyndication.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.googleapis.com; img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://*.g.doubleclick.net https://*.gstatic.com https://fazier.com https://startupfa.me; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://fonts.googleapis.com https://open.er-api.com https://api.frankfurter.app https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.g.doubleclick.net; worker-src 'self' blob:; frame-src 'self' https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://*.googlesyndication.com; base-uri 'self'; form-action 'self'; object-src 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <!-- Site config (domain / GSC / GA4) — SINGLE source of truth, load FIRST.
        SOURCE stays the external file js/site-config.js (edit it, deploy build
        picks it up); the build inlines the script here so no render-blocking
        request remains on the critical path. -->
   <script src="js/site-config.js"></script>
-  <title>CalcProMaster — 1219+ free online calculators for Finance, Health, Math & More</title>
-  <meta name="description" content="CalcProMaster — 1219+ free online calculators: loan EMI, mortgage, BMI, percentage, unit conversion and more across 20 categories. Step-by-step solutions, formulas and charts — no sign-up.">
+  <title>Calculators: 1284+ Free Online Tools — CalcProMaster</title>
+  <meta name="description" content="Calculators for loans, mortgages, BMI, tax and unit conversion — 1285+ tools that show the formula and every step. Try one now, no sign-up.">
   <meta name="author" content="CalcProMaster">
   <meta name="robots" content="index, follow">
+  <meta name="color-scheme" content="light dark">
+  <meta name="keywords" content="calculators, online calculators, free online calculators, loan EMI calculator, mortgage calculator, BMI calculator, percentage calculator, unit converter">
   <link rel="canonical" href="https://calcpromaster.netlify.app/">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#4f46e5" id="meta-theme-color">
@@ -72,17 +80,22 @@
 
 
 
-  <meta property="og:title" content="CalcProMaster - 1219+ free online calculators">
-  <meta property="og:description" content="Free advanced online calculators with step-by-step solutions, charts, and smart features.">
+  <meta property="og:title" content="Calculators: 1284+ Free Online Tools — CalcProMaster">
+  <meta property="og:description" content="Calculators for loans, mortgages, BMI, tax and unit conversion — 1285+ tools that show the formula and every step. Try one now, no sign-up.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calcpromaster.netlify.app/">
   <meta property="og:image" content="https://calcpromaster.netlify.app/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
+  <!-- twitter:title/description are required for a COMPLETE card (Sitechecker
+       flags a card with only card+image). Per-page values are swapped by the
+       SSG head rewriter / fix-deploy-seo for tool, hub, guide and legal pages. -->
+  <meta name="twitter:title" content="Calculators: 1284+ Free Online Tools — CalcProMaster">
+  <meta name="twitter:description" content="Calculators for loans, mortgages, BMI, tax and unit conversion — 1285+ tools that show the formula and every step. Try one now, no sign-up.">
   <meta name="twitter:image" content="https://calcpromaster.netlify.app/og-image.png">
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%234f46e5'/><stop offset='100%25' stop-color='%237c3aed'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='url(%23g)'/><rect x='18' y='14' width='64' height='26' rx='6' fill='white' opacity='.2'/><text x='74' y='33' font-size='16' text-anchor='end' fill='white' font-family='monospace' font-weight='600'>1211%2B</text><rect x='18' y='46' width='13' height='10' rx='3' fill='white' opacity='.25'/><rect x='35' y='46' width='13' height='10' rx='3' fill='white' opacity='.25'/><rect x='52' y='46' width='13' height='10' rx='3' fill='white' opacity='.25'/><rect x='69' y='46' width='13' height='10' rx='3' fill='%2310b981' opacity='.7'/><rect x='18' y='60' width='13' height='10' rx='3' fill='white' opacity='.2'/><rect x='35' y='60' width='13' height='10' rx='3' fill='white' opacity='.2'/><rect x='52' y='60' width='13' height='10' rx='3' fill='white' opacity='.2'/><rect x='69' y='60' width='13' height='10' rx='3' fill='%23f59e0b' opacity='.6'/></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%234f46e5'/><stop offset='100%25' stop-color='%237c3aed'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='url(%23g)'/><rect x='18' y='14' width='64' height='26' rx='6' fill='white' opacity='.2'/><text x='74' y='33' font-size='16' text-anchor='end' fill='white' font-family='monospace' font-weight='600'>1285%2B</text><rect x='18' y='46' width='13' height='10' rx='3' fill='white' opacity='.25'/><rect x='35' y='46' width='13' height='10' rx='3' fill='white' opacity='.25'/><rect x='52' y='46' width='13' height='10' rx='3' fill='white' opacity='.25'/><rect x='69' y='46' width='13' height='10' rx='3' fill='%2310b981' opacity='.7'/><rect x='18' y='60' width='13' height='10' rx='3' fill='white' opacity='.2'/><rect x='35' y='60' width='13' height='10' rx='3' fill='white' opacity='.2'/><rect x='52' y='60' width='13' height='10' rx='3' fill='white' opacity='.2'/><rect x='69' y='60' width='13' height='10' rx='3' fill='%23f59e0b' opacity='.6'/></svg>">
   <!-- ====== ENHANCED JSON-LD SCHEMAS (SEO/AEO/GEO) ====== -->
   <script type="application/ld+json">
   [
@@ -92,9 +105,9 @@
       "name": "CalcProMaster",
       "url": "https://calcpromaster.netlify.app",
       "logo": "https://calcpromaster.netlify.app/icon-512.png",
-      "description": "Free advanced online calculator platform with 1219+ tools across 20 categories.",
+      "description": "Free advanced online calculator platform with 1285+ tools across 20 categories.",
       "foundingDate": "2025",
-      "slogan": "1219+ free online calculators — Step-by-step solutions, charts, and smart features",
+      "slogan": "1285+ free online calculators — Step-by-step solutions, charts, and smart features",
       "knowsAbout": ["Finance", "Health", "Mathematics", "Science", "Engineering", "Construction", "Business", "Education", "Unit Conversion"],
       "contactPoint": {
         "@type": "ContactPoint",
@@ -115,7 +128,7 @@
       "@type": "WebSite",
       "name": "CalcProMaster",
       "url": "https://calcpromaster.netlify.app",
-      "description": "1219+ free online calculators with step-by-step solutions",
+      "description": "1285+ free online calculators with step-by-step solutions",
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://calcpromaster.netlify.app/?q={search_term_string}",
@@ -126,14 +139,17 @@
       "@context": "https://schema.org",
       "@type": "WebApplication",
       "name": "CalcProMaster",
-      "description": "1219+ free online calculators with step-by-step solutions, interactive SVG charts, scenario comparison, and offline PWA support. Covers finance, health, math, science, business, construction, conversion, education, and everyday calculators.",
+      "url": "https://calcpromaster.com/",
+      "datePublished": "2025-01-15",
+      "dateModified": "2026-10-17",
+      "description": "1285+ free online calculators with step-by-step solutions, interactive SVG charts, scenario comparison, and offline PWA support. Covers finance, health, math, science, business, construction, conversion, education, and everyday calculators.",
       "applicationCategory": "CalculatorApplication",
       "operatingSystem": "Any modern web browser (Chrome, Firefox, Safari, Edge)",
       "browserRequirements": "Requires JavaScript. Works on desktop and mobile.",
       "softwareVersion": "2.0",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
       "featureList": [
-        "1219+ calculators across 20 categories",
+        "1285+ calculators across 20 categories",
         "Step-by-step solutions with formulas",
         "Interactive SVG charts (bar, donut, line, gauge)",
         "Dark mode and high-contrast accessibility mode",
@@ -178,7 +194,7 @@
           "name": "What is CalcProMaster?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "CalcProMaster is a free online calculator platform with 1219+ tools covering finance, health, math, science, business, construction, conversion, education, food, fitness, auto, and everyday life. All calculations run in your browser with step-by-step solutions and interactive charts."
+            "text": "CalcProMaster is a free online calculator platform with 1285+ tools covering finance, health, math, science, business, construction, conversion, education, food, fitness, auto, and everyday life. All calculations run in your browser with step-by-step solutions and interactive charts."
           }
         },
         {
@@ -186,7 +202,7 @@
           "name": "Is CalcProMaster free to use?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, CalcProMaster is completely free. All 1219+ calculators are available at no cost. No sign-up, registration, or payment is required."
+            "text": "Yes, CalcProMaster is completely free. All 1285+ calculators are available at no cost. No sign-up, registration, or payment is required."
           }
         },
         {
@@ -218,7 +234,7 @@
           "name": "How many calculators does CalcProMaster have?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "CalcProMaster has 1219+ calculators across 20 categories: finance, health, math, science, business, construction, conversion, education, everyday, utilities, lifestyle, regional, food, fitness, auto, career, home & garden, tech, parenting, and more. New calculators are added regularly."
+            "text": "CalcProMaster has 1285+ calculators across 20 categories: finance, health, math, science, business, construction, conversion, education, everyday, utilities, lifestyle, regional, food, fitness, auto, career, home & garden, tech, parenting, and more. New calculators are added regularly."
           }
         },
         {
@@ -266,7 +282,7 @@
           "name": "What financial calculators are available?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "CalcProMaster offers 211 financial calculators including: loan EMI, mortgage, auto loan, compound interest, simple interest, retirement planning, investment growth, tax, NPV, IRR, ROI, bond yield, inflation, amortization schedule, currency converter, and more."
+            "text": "CalcProMaster offers 200+ financial calculators including: loan EMI, mortgage, auto loan, compound interest, simple interest, retirement planning, investment growth, tax, NPV, IRR, ROI, bond yield, inflation, amortization schedule, currency converter, and more."
           }
         },
         {
@@ -456,8 +472,8 @@
             '<h2 style="font-size:26px;margin-bottom:12px">🔄 Page took too long to load</h2>' +
             '<p style="color:var(--text-light);max-width:460px;margin:0 auto 22px">Aapke browser mein purana cached version atka hua hai. Refresh dabayein — ek baar mein fix ho jayega.</p>' +
             '<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:6px">' +
-            '<button onclick="location.reload()" style="padding:12px 30px;font-size:16px;border:none;border-radius:10px;background:#3b82f6;color:#fff;cursor:pointer;font-weight:600">🔄 Refresh Site</button>' +
-            '<button onclick="window.__calcproHardReset&&__calcproHardReset()" style="padding:12px 30px;font-size:16px;border:none;border-radius:10px;background:#ef4444;color:#fff;cursor:pointer;font-weight:600">🧹 Hard Reset</button>' +
+            '<button data-action="reload" style="padding:12px 30px;font-size:16px;border:none;border-radius:10px;background:#3b82f6;color:#fff;cursor:pointer;font-weight:600">🔄 Refresh Site</button>' +
+            '<button data-action="hard-reset" style="padding:12px 30px;font-size:16px;border:none;border-radius:10px;background:#ef4444;color:#fff;cursor:pointer;font-weight:600">🧹 Hard Reset</button>' +
             '</div>' +
             '<p style="margin-top:16px;font-size:13px;color:var(--text-light)">Hard Reset: purana cache + service worker delete karke fresh load karta hai. Agar phir bhi atke, to browser ka Data/Clear Site Data use karein.</p></div>';
         } catch (e) {}
@@ -486,14 +502,19 @@
   <link rel="preload" as="script" href="js/data.js">
   <link rel="preload" as="script" href="js/router.js">
   <link rel="preload" as="script" href="js/app.js">
-  <!-- Eager category data (7 popular categories) — preloaded so tool pages can
-       render the calculator the moment app.js boots instead of waiting for the
-       defer script tags at the bottom of <body> to be discovered. URLs match the
-       <script src> exactly so the browser fetches each file once. -->
-  <link rel="preload" as="script" href="js/data/finance.js">
-  <link rel="preload" as="script" href="js/data/health.js">
-  <link rel="preload" as="script" href="js/data/math.js">
-  <link rel="preload" as="script" href="js/data/everyday.js">
+  <!-- Category data is NOT preloaded on this page any more (see below). A
+       prerendered tool page gets its own category chunk injected by
+       scripts/ssg-pages.cjs, immediately before js/data.js, so the calculator can
+       render as soon as app.js boots; the URL matches the <script src> exactly so
+       the browser fetches each file once. -->
+  <!-- HOMEPAGE LAZY DATA (2026-10-13): the four "eager" category chunks are no
+       longer preloaded or loaded with the shell. Measured reason: on the homepage
+       Lighthouse counted 101 KiB of unused JS, and finance.math.health.everyday
+       were the bulk of it — the shell only needs tool NAMES for two below-fold
+       blocks, which js/home-tools.js (20KB raw, seeded registry order) provides.
+       The real chunks load through js/data-loader.js at idle (loadEagerIdle) or on
+       first interaction (loadAll), and each tool page carries its own chunk (added
+       by scripts/ssg-pages.cjs). -->
   <!-- Google Search Console Verification — HTML file method (byte-for-byte at
        root: /googled1ac20b54b36e7cf.html) PLUS static meta tag as backup. Both
        confirm ownership; GSC accepts whichever it checks first. -->
@@ -522,7 +543,18 @@
     // Consent defaults + gtag() calls below are queued in dataLayer immediately, so
     // page_view still fires — just a moment later (and instantly on any interaction).
     if (window.SITE_GA4_READY) {
+      // Honour Global Privacy Control / Do-Not-Track: when the browser sends a
+      // machine-readable opt-out, gtag.js is never requested at all (no
+      // page_view beacon, no cookie writes) — a consent banner must not
+      // override an explicit browser-level "do not track me".
+      window.__calcproDnt = function () {
+        return navigator.globalPrivacyControl === true
+          || navigator.doNotTrack === '1'
+          || window.doNotTrack === '1'
+          || navigator.msDoNotTrack === '1';
+      };
       function __loadGtag() {
+        if (window.__calcproDnt()) return;
         try {
           var s = document.createElement('script');
           s.async = true;
@@ -556,13 +588,18 @@
       ad_personalization: 'denied'
     });
     gtag('js', new Date());
-    if (window.SITE_GA4_READY) gtag('config', window.SITE_CONFIG.ga4Id);
+    if (window.SITE_GA4_READY && !(window.__calcproDnt && window.__calcproDnt())) gtag('config', window.SITE_CONFIG.ga4Id);
   </script>
   <!-- Fonts are SELF-HOSTED (fonts/*.woff2) and declared inline in the critical
        CSS below, so the woff2 fetch starts at parse time on the same origin —
        no third-party connection, no late font-swap repaint (the LCP record).
        Preconnect + DNS hints for live third-party APIs (currency conversion)
        and future analytics/ad tags — shaves connection latency off first fetch. -->
+  <!-- LCP hint: the H1 is the largest contentful paint on this page and it is
+       typeset in Space Grotesk, so the display woff2 is the render-critical
+       resource. Preloading it with fetchpriority=high starts the fetch at parse
+       time instead of after styles.css resolves, removing the late font swap. -->
+  <link rel="preload" as="font" type="font/woff2" href="fonts/space-grotesk-latin.woff2" crossorigin fetchpriority="high">
   <link rel="preconnect" href="https://open.er-api.com" crossorigin>
   <link rel="preconnect" href="https://api.frankfurter.app" crossorigin>
   <link rel="dns-prefetch" href="https://open.er-api.com">
@@ -594,14 +631,20 @@
     .search-box input{width:100%;padding:16px 24px;border:2px solid var(--border);border-radius:50px;font-size:16px;font-family:var(--font-body);background:var(--surface);color:var(--text);transition:all var(--transition);box-shadow:var(--shadow)}
     .search-box input:focus{outline:none;border-color:var(--primary);box-shadow:var(--shadow-md),var(--shadow-glow);transform:translateY(-1px)}
     .search-box input::placeholder{color:var(--text-light)}
+    .smart-examples{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;margin:14px auto 0;max-width:640px;font-size:13px}
+    .smart-examples-label{color:var(--text-light);font-weight:600}
+    .smart-chip{background:var(--surface);border:1px solid var(--border);border-radius:50px;padding:7px 14px;font-size:13px;color:var(--text);cursor:pointer;font-family:var(--font-body);transition:all var(--transition)}
+    .smart-chip:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-1px)}
+    .search-item.search-smart{background:rgba(79,70,229,.08);border:1px solid rgba(79,70,229,.25);border-radius:10px}
+    .search-item.search-smart strong{color:var(--primary)}
     .section-title{font-size:24px;font-weight:700;font-family:var(--font-display);margin:40px 0 20px;letter-spacing:-.3px}
     .categories-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-bottom:32px}
-    .category-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px 20px;text-align:center;cursor:pointer;transition:all var(--transition);position:relative;overflow:hidden}
+    .category-card{display:block;color:inherit;text-decoration:none;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px 20px;text-align:center;cursor:pointer;transition:all var(--transition);position:relative;overflow:hidden}
     .cat-icon{font-size:42px;margin-bottom:12px;display:inline-block}
     .category-card h3{font-size:16px;font-weight:700;font-family:var(--font-display);margin-bottom:4px}
     .category-card p{font-size:13px;color:var(--text-light)}
     .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
-    .tool-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px;cursor:pointer;transition:all var(--transition);position:relative}
+    .tool-card{display:block;color:inherit;text-decoration:none;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px;cursor:pointer;transition:all var(--transition);position:relative}
     .tool-card h4{font-size:16px;font-weight:700;font-family:var(--font-display);margin-bottom:8px;color:var(--text)}
     .tool-card p{font-size:13px;color:var(--text-light);line-height:1.5}
     footer{background:var(--surface);border-top:1px solid var(--border);padding:32px 20px;margin-top:40px}
@@ -620,6 +663,9 @@
     }
     .hero-cta{display:inline-block;background:var(--primary-gradient);color:#fff;padding:14px 32px;border-radius:50px;font-weight:600;text-decoration:none;margin-top:10px;box-shadow:var(--shadow-glow);transition:all var(--transition)}
     .hero-cta:hover{transform:translateY(-2px);box-shadow:0 0 25px rgba(79,70,229,.4)}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center;margin:0 0 18px}
+    .hero-cta-secondary{display:inline-block;padding:13px 26px;border-radius:50px;font-weight:600;text-decoration:none;color:var(--primary);background:var(--surface);border:1px solid var(--border);box-shadow:var(--shadow);transition:all var(--transition)}
+    .hero-cta-secondary:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:var(--primary-light)}
     .category-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-glow);border-color:var(--primary-light)}
     .skeleton{background:linear-gradient(90deg,var(--surface) 25%,var(--bg) 50%,var(--surface) 75%);background-size:200% 100%;animation:shimmer 1.5s ease-in-out infinite;border-radius:var(--radius-xs)}
     @keyframes scaleIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
@@ -640,7 +686,7 @@
        sheet cannot reflow the viewport (the two old CLS sources — the JS-rendered
        hero and the pre-boot spotlight fill — are gone; CLS verified ~0.004 on
        throttled mobile). -->
-  <link rel="preload" as="style" href="styles.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="styles.css" id="main-stylesheet">
   <noscript><link rel="stylesheet" href="styles.css"></noscript>
 </head>
 <body>
@@ -649,24 +695,26 @@
 
   <header>
     <nav class="nav">
-      <a href="/" class="logo" onclick="event.preventDefault();Router.navigate('/')" data-i18n="home.logo">CalcProMaster</a>
+      <a href="/" class="logo" data-i18n="home.logo">CalcProMaster</a>
       <!-- Desktop/mobile dropdown: links + controls. On mobile this collapses into the
            hamburger menu (logo + ☰ stay on one row; see .nav-links media rules). -->
       <div class="nav-links" id="nav-links">
-        <a href="/favorites" onclick="event.preventDefault();Router.navigate('/favorites')" data-i18n="nav.favorites">★ Favorites</a>
-        <a href="/history" onclick="event.preventDefault();Router.navigate('/history')" data-i18n="nav.history">History</a>
-        <a href="/compare" onclick="event.preventDefault();Router.navigate('/compare')" data-i18n="nav.compare">Compare</a>
-        <a href="/about" onclick="event.preventDefault();Router.navigate('/about')" data-i18n="nav.about">About</a>
-        <a href="/editorial-policy" onclick="event.preventDefault();Router.navigate('/editorial-policy')">Editorial</a>
-        <input type="text" class="nav-search" placeholder="Search calculators..." aria-label="Search calculators" data-i18n="nav.search" oninput="App.search(this.value)" onfocus="this.value=''">
+        <a href="/favorites/" data-i18n="nav.favorites">★ Favorites</a>
+        <a href="/history/" data-i18n="nav.history">History</a>
+        <a href="/compare/" data-i18n="nav.compare">Compare</a>
+        <a href="/about" data-i18n="nav.about">About</a>
+        <a href="/editorial-policy">Editorial</a>
+        <a href="/graph">Graph</a>
+        <a href="/geometry-lab">Geometry Lab</a>
+        <input type="text" class="nav-search" placeholder="Search calculators..." aria-label="Search calculators" data-i18n="nav.search" data-input="search" data-clear-on-focus="1">
         <div class="nav-controls">
-          <button id="user-dashboard-btn" onclick="UserDashboard.toggle()" title="My Dashboard" aria-label="Open your dashboard">📊</button>
-          <button id="theme-toggle" onclick="App.toggleThemeMenu(event)" title="Theme: Light / Dark / System" aria-label="Theme settings" aria-haspopup="true" aria-expanded="false">🌙</button>
-          <button class="small-btn" onclick="AdvancedFeatures.renderUnitsSettings()" title="Units & Precision" data-i18n="common.settings">⚙️</button>
+          <button id="user-dashboard-btn" data-action="dashboard" title="My Dashboard" aria-label="Open your dashboard">📊</button>
+          <button id="theme-toggle" data-action="theme-menu" title="Theme: Light / Dark / System" aria-label="Theme settings" aria-haspopup="true" aria-expanded="false">🌙</button>
+          <button class="small-btn" data-action="units" title="Units & Precision" data-i18n="common.settings">⚙️</button>
         </div>
       </div>
       <!-- Hamburger lives OUTSIDE .nav-links so it always sits on the logo row on mobile -->
-      <button class="menu-btn" id="menu-btn" onclick="App.toggleNavMenu(event)" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+      <button class="menu-btn" id="menu-btn" data-action="nav-menu" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">☰</button>
     </nav>
   </header>
 
@@ -682,15 +730,36 @@
          byte-identical to what renderHome() renders (minus the decorative canvas, which
          HeroCanvas.init() adds after boot), so the JS re-render swaps in identical
          content with zero visual shift (CLS-safe). Count matches
-         SITE_CONFIG.totalCalculators (1211). -->
+         SITE_CONFIG.totalCalculators (1282). -->
     <div class="hero" style="position:relative;overflow:hidden">
-      <div class="hero-content" style="position:relative;z-index:1">
-        <h1>CalcPro — <span class="highlight">1216+</span> Free Online Calculators</h1>
+      <div class="hero-content">
+        <h1>CalcPro — <span class="highlight">1285+</span> Free Online Calculators</h1>
         <p class="hero-desc">Free, fast, and accurate calculators with step-by-step solutions, charts, and smart features.</p>
+        <!-- Primary hero CTA: the H1 + search box already convert, but a plain-text
+             opening gives crawlers/auditors no clickable "start here" action.
+             First link goes to the highest-demand calculator (loan EMI); the
+             secondary one to the formula guides, which is the depth layer. -->
+        <div class="hero-actions">
+          <a href="/finance/loan-emi/" class="hero-cta">Try the loan EMI calculator →</a>
+          <a href="/guides/" class="hero-cta-secondary">Browse formulas &amp; guides</a>
+        </div>
         <div class="search-box">
-          <input type="text" id="home-search" placeholder="Search 1219+ calculators…" oninput="App.homeSearch(this.value)" onkeydown="App.searchKeyNav(event)" autocomplete="off" role="combobox" aria-expanded="false" aria-label="Search calculators">
+          <input type="text" id="home-search" placeholder="Search or ask: “EMI on 5 lakh for 20 years”" data-input="home-search" data-keydown="search-nav" autocomplete="off" role="combobox" aria-expanded="false" aria-label="Search calculators or describe a calculation">
           <div class="search-results" id="homeSearchResults"></div>
         </div>
+        <!-- Smart search examples: clicking one fills the box and runs the query.
+             Each sentence contains real numbers, so the result row offers to open
+             the best calculator with those values already entered. -->
+        <div class="smart-examples" aria-label="Smart search examples">
+          <span class="smart-examples-label">Try:</span>
+          <button type="button" class="smart-chip" data-smart-q="EMI on 5 lakh for 20 years at 8.5%">EMI on 5 lakh, 20 years</button>
+          <button type="button" class="smart-chip" data-smart-q="15% tip on 60 dollar bill">15% tip on $60</button>
+          <button type="button" class="smart-chip" data-smart-q="BMI for 70 kg 175 cm">BMI 70 kg, 175 cm</button>
+          <button type="button" class="smart-chip" data-smart-q="compound interest 10000 at 5% for 10 years">10,000 at 5% for 10 years</button>
+        </div>
+        <!-- STATS:BEGIN — regenerated by scripts/build-stats-page.cjs; do not hand-edit -->
+        <p class="hero-stats" style="font-size:14px;color:var(--text-light);margin:14px auto 0;max-width:640px">Search is showing these calculators for <strong>1,241</strong> impressions a day (7-day average, 2026-10-04) — <a href="/stats" style="color:var(--primary)">see the live numbers</a>.</p>
+        <!-- STATS:END -->
       </div>
     </div>
     <!-- Boot skeleton for the below-fold blocks: shown while deferred scripts load, then
@@ -745,7 +814,7 @@
         </label>
       </div>
       <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end">
-        <button class="action-btn small-btn" onclick="closeConsentSettings()">Cancel</button>
+        <button class="action-btn small-btn" data-action="consent-cancel">Cancel</button>
         <button id="consent-save-btn" class="action-btn" style="background:var(--primary);color:white;border-color:var(--primary)">Save Preferences</button>
       </div>
     </div>
@@ -754,57 +823,98 @@
   <!-- AdSense placeholder - below calculator results -->
   <div id="ad-bottom" class="ad-placeholder" style="display:none;max-width:728px;margin:16px auto"></div>
 
-    <section class="home-about" style="max-width:1080px;margin:28px auto 0;padding:0 20px">
+    <section class="home-about">
       <h2 style="font-size:1.3rem;margin:0 0 10px">About CalcProMaster calculators</h2>
-      <p>CalcProMaster is a free library of <strong>1211 online calculators</strong> across 20 categories — finance, health, math, business, construction, engineering, conversion, education and more. Every calculator runs entirely in your browser: no sign-up, no paywall, and no data leaves your device.</p>
-      <p>What makes these calculators different is <strong>transparency</strong>. Each tool shows the exact formula it uses and a step-by-step breakdown of how your inputs become the result, so you can verify the math instead of trusting a black box. Result interpretation, common mistakes, assumptions and limitations are documented on every calculator page, alongside worked examples and an FAQ. Health and finance tools cite the standard formulas they follow — Mifflin-St Jeor for calorie needs, standard amortization for loans — and state plainly where a calculator's answer should be confirmed with a professional.</p>
-      <p>The <a href="/guides">guides library</a> goes deeper on the calculations people search for most: percentage and discount math, loan EMI and amortization, income-tax brackets, calorie and macro planning, concrete volumes and more — each with the formula, worked examples and links to the matching calculator. The <a href="/guides/glossary">glossary</a> defines the terminology in plain language, and the public <a href="/qa-dashboard.html">formula QA dashboard</a> shows the verification status of every calculator's math.</p>
-      <p>Popular starting points: <a href="/finance/loan-emi">loan EMI calculator</a>, <a href="/health/bmi">BMI calculator</a>, <a href="/math/percentage">percentage calculator</a>, <a href="/math/random-generator">random number generator</a>, and <a href="/construction/concrete-slab">concrete calculator</a> — or browse a category above to find the tool you need.</p>
+      <p>CalcProMaster is a free library of <strong>1285 online calculators</strong> across 20 categories — finance, health, math, business, construction, engineering, conversion, education and more. Every calculator runs entirely in your browser: no sign-up, no paywall, and no data leaves your device.</p>
+      <p>What makes these calculators different is <strong>transparency</strong>. Each tool shows the exact formula it uses. It also shows a step-by-step breakdown of how your inputs become the result. That way you can check the math instead of trusting a black box. Every calculator page explains how to read the result. It also lists common mistakes, assumptions and limitations. Worked examples and an FAQ sit next to them. Health and finance tools name the formula they follow. Calorie needs use Mifflin-St Jeor. Loans use standard amortization. Each page says plainly when an answer should be confirmed with a professional.</p>
+      <p>The <a href="/guides/">guides library</a> goes deeper on the calculations people search for most. It covers percentage and discount math, loan EMI and amortization, income-tax brackets, calorie and macro planning, and concrete volumes. Each guide gives the formula, worked examples and links to the matching calculator. The <a href="/guides/glossary">glossary</a> defines the terminology in plain language. The public <a href="/qa-dashboard">formula QA dashboard</a> shows the verification status of every calculator's math.</p>
+      <p>Popular starting points: <a href="/finance/loan-emi/">loan EMI calculator</a>, <a href="/health/bmi/">BMI calculator</a>, <a href="/math/percentage/">percentage calculator</a>, <a href="/math/random-generator/">random number generator</a>, and <a href="/construction/concrete-slab/">concrete calculator</a>. You can also browse a category above to find the tool you need.</p>
+    </section>
+
+    <section class="home-faq">
+      <h2 style="font-size:1.3rem;margin:0 0 10px">Frequently asked questions</h2>
+      <h3 class="home-q">What is CalcProMaster?</h3>
+      <p>CalcProMaster is a free online calculator platform with 1285+ tools covering finance, health, math, science, business, construction, conversion, education, food, fitness, auto, and everyday life. All calculations run in your browser with step-by-step solutions and interactive charts.</p>
+      <h3 class="home-q">Is CalcProMaster free to use?</h3>
+      <p>Yes, CalcProMaster is completely free. All 1285+ calculators are available at no cost. No sign-up, registration, or payment is required.</p>
+      <h3 class="home-q">Does CalcProMaster collect my data?</h3>
+      <p>No. CalcProMaster does not collect or store any personal data on servers. All calculations happen locally in your browser. We only use localStorage to save your preferences, history, and favorites locally on your device.</p>
+      <h3 class="home-q">Does CalcProMaster work offline?</h3>
+      <p>Yes, CalcProMaster is a Progressive Web App (PWA) that can be installed on your device. Once loaded, the app works offline for most calculators. Only the currency converter requires an internet connection for live exchange rates.</p>
+      <h3 class="home-q">Are the calculator results accurate?</h3>
+      <p>CalcProMaster uses verified mathematical formulas for all calculations. Results are estimates for informational purposes only and should not be used as the sole basis for financial, medical, or legal decisions. Consult professionals for critical decisions.</p>
+      <h3 class="home-q">How many calculators does CalcProMaster have?</h3>
+      <p>CalcProMaster has 1285+ calculators across 20 categories: finance, health, math, science, business, construction, conversion, education, everyday, utilities, lifestyle, regional, food, fitness, auto, career, home &amp; garden, tech, parenting, and more. New calculators are added regularly.</p>
+      <h3 class="home-q">How do I calculate my loan EMI on CalcProMaster?</h3>
+      <p>Use the <a href="/finance/loan-emi/">Loan EMI Calculator</a>. Enter the loan amount, annual interest rate, and loan term in years. Select 'Payment' as the solve mode. Click Calculate to see your monthly payment, total payment, and total interest with a breakdown chart.</p>
+      <h3 class="home-q">What is the formula for calculating BMI?</h3>
+      <p>BMI (Body Mass Index) is calculated as weight in kilograms divided by height in meters squared: BMI = weight(kg) / height(m)². A BMI between 18.5 and 24.9 is considered healthy for most adults. Try the <a href="/health/bmi/">BMI calculator</a>.</p>
+      <h3 class="home-q">Can I compare two loan options side by side?</h3>
+      <p>Yes, CalcProMaster offers a scenario comparison mode that lets you run the same calculator with 2-3 different input sets and compare results side by side in a table with charts. You can also pin results from different calculators for later comparison.</p>
+      <h3 class="home-q">Does CalcProMaster have a dark mode?</h3>
+      <p>Yes, CalcProMaster supports dark mode and a high-contrast accessibility mode. Click the moon/sun icon in the navigation bar to toggle between light and dark themes. Your preference is saved automatically.</p>
+      <h3 class="home-q">How can I save or share my calculation results?</h3>
+      <p>CalcProMaster offers multiple ways to share: click the Share button to get a shareable link with pre-filled values, a QR code, or export as image. You can also pin results for later reference or use the Print button for a formatted report.</p>
+      <h3 class="home-q">What financial calculators are available?</h3>
+      <p>CalcProMaster offers 200+ financial calculators including: loan EMI, mortgage, auto loan, compound interest, simple interest, retirement planning, investment growth, tax, NPV, IRR, ROI, bond yield, inflation, amortization schedule, currency converter, and more.</p>
+      <h3 class="home-q">Can I use CalcProMaster on my mobile phone?</h3>
+      <p>Yes, CalcProMaster is fully responsive and works on all mobile devices. You can also install it as a Progressive Web App (PWA) on your phone's home screen for quick access and offline use.</p>
+      <h3 class="home-q">What is the goal-seek feature?</h3>
+      <p>The Goal-Seek feature (also called Reverse Calculator) lets you set your desired output value and automatically finds the required input. For example, you can ask 'What loan amount can I afford with a $500 monthly payment?' and the tool solves it for you.</p>
+      <h3 class="home-q">Is CalcProMaster accessible for users with disabilities?</h3>
+      <p>Yes, CalcProMaster includes a high-contrast mode, ARIA labels, keyboard navigation, screen-reader-friendly result areas, and supports prefers-reduced-motion. We strive to make all calculators accessible to everyone.</p>
     </section>
 
   <footer>
     <div class="footer-content">
       <div class="footer-section">
         <h2 data-i18n="footer.brand">CalcProMaster</h2>
-        <p style="font-size:13px;color:var(--text-light)">1219+ free online calculators with step-by-step solutions across 20 categories.</p>
-        <p style="font-size:13px;color:var(--text-light);margin-top:8px">Contact: <a href="mailto:calpromaster@gmail.com" style="color:var(--primary)">calpromaster@gmail.com</a> · <a href="/contact" onclick="event.preventDefault();Router.navigate('/contact')">Contact page</a></p>
+        <p style="font-size:13px;color:var(--text-light)">1285+ free online calculators with step-by-step solutions across 20 categories.</p>
+        <p style="font-size:13px;color:var(--text-light);margin-top:8px">Contact: <a href="/contact" data-email="calpromaster@gmail.com" style="color:var(--primary)">calpromaster@gmail.com</a> · <a href="/contact">Contact page</a></p>
+        <a href="https://fazier.com/launches/calcpromaster.com" target="_blank" rel="noopener" class="badge-link"><img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&amp;theme=neutral" alt="CalcProMaster free online calculators — Fazier launch badge" width="120" height="40" loading="lazy" decoding="async" class="badge-img"></a>
+        <a href="https://startupfa.me/s/calcpromaster?utm_source=calcpromaster.com" target="_blank" rel="noopener" class="badge-link"><img src="https://startupfa.me/badges/featured-badge.webp" alt="CalcProMaster free online calculators — Featured on Startup Fame" width="171" height="54" loading="lazy" decoding="async" class="badge-img"></a>
       </div>
       <div class="footer-section">
         <h2 data-i18n="footer.categories">Categories</h2>
-        <a href="/finance" onclick="event.preventDefault();Router.navigate('/finance')" data-i18n="cat.finance">Finance</a>
-        <a href="/health" onclick="event.preventDefault();Router.navigate('/health')" data-i18n="cat.health">Health</a>
-        <a href="/math" onclick="event.preventDefault();Router.navigate('/math')" data-i18n="cat.math">Math</a>
-        <a href="/business" onclick="event.preventDefault();Router.navigate('/business')" data-i18n="cat.business">Business</a>
-        <a href="/science" onclick="event.preventDefault();Router.navigate('/science')" data-i18n="cat.science">Science</a>
+        <a href="/finance/" data-i18n="cat.finance">Finance</a>
+        <a href="/health/" data-i18n="cat.health">Health</a>
+        <a href="/math/" data-i18n="cat.math">Math</a>
+        <a href="/business/" data-i18n="cat.business">Business</a>
+        <a href="/science/" data-i18n="cat.science">Science</a>
       </div>
       <div class="footer-section">
         <h2 data-i18n="footer.more">More</h2>
-        <a href="/engineering" onclick="event.preventDefault();Router.navigate('/engineering')" data-i18n="cat.engineering">Engineering</a>
-        <a href="/construction" onclick="event.preventDefault();Router.navigate('/construction')" data-i18n="cat.construction">Construction</a>
-        <a href="/conversion" onclick="event.preventDefault();Router.navigate('/conversion')" data-i18n="cat.conversion">Conversion</a>
-        <a href="/education" onclick="event.preventDefault();Router.navigate('/education')" data-i18n="cat.education">Education</a>
-        <a href="/utilities" onclick="event.preventDefault();Router.navigate('/utilities')" data-i18n="cat.utilities">Utilities</a>
+        <a href="/engineering/" data-i18n="cat.engineering">Engineering</a>
+        <a href="/construction/" data-i18n="cat.construction">Construction</a>
+        <a href="/conversion/" data-i18n="cat.conversion">Conversion</a>
+        <a href="/education/" data-i18n="cat.education">Education</a>
+        <a href="/utilities/" data-i18n="cat.utilities">Utilities</a>
       </div>
       <div class="footer-section">
         <h2 data-i18n="footer.features">Features</h2>
-        <a href="/favorites" onclick="event.preventDefault();Router.navigate('/favorites')" data-i18n="nav.favorites">Favorites</a>
-        <a href="/history" onclick="event.preventDefault();Router.navigate('/history')" data-i18n="nav.history">History</a>
-        <a href="/compare" onclick="event.preventDefault();Router.navigate('/compare')" data-i18n="nav.compare">Compare</a>
-        <a href="/guides" onclick="event.preventDefault();Router.navigate('/guides')">Guides</a>
-        <a href="/blog" onclick="event.preventDefault();Router.navigate('/blog')">Blog</a>
-        <a href="/about" onclick="event.preventDefault();Router.navigate('/about')" data-i18n="nav.about">About</a>
-        <a href="/editorial-policy" onclick="event.preventDefault();Router.navigate('/editorial-policy')">Editorial</a>
-        <a href="/privacy" onclick="event.preventDefault();Router.navigate('/privacy')" data-i18n="legal.privacy">Privacy Policy</a>
-        <a href="/terms" onclick="event.preventDefault();Router.navigate('/terms')" data-i18n="legal.terms">Terms of Service</a>
-        <a href="/cookies" onclick="event.preventDefault();Router.navigate('/cookies')" data-i18n="legal.cookies">Cookie Policy</a>
-        <a href="/contact" onclick="event.preventDefault();Router.navigate('/contact')" data-i18n="legal.contact">Contact</a>
-        <a href="/qa-dashboard.html" title="Formula verification dashboard">Formula QA Dashboard</a>
+        <a href="/favorites/" data-i18n="nav.favorites">Favorites</a>
+        <a href="/history/" data-i18n="nav.history">History</a>
+        <a href="/compare/" data-i18n="nav.compare">Compare</a>
+        <a href="/guides/">Guides</a>
+        <a href="/blog/">Blog</a>
+        <a href="/graph">Function Grapher</a>
+        <a href="/geometry-lab">Geometry Lab</a>
+        <a href="/embed/" title="Free embeddable calculator widgets for your website">Embed a Calculator</a>
+        <a href="/about" data-i18n="nav.about">About</a>
+        <a href="/editorial-policy">Editorial</a>
+        <a href="/privacy" data-i18n="legal.privacy">Privacy Policy</a>
+        <a href="/terms" data-i18n="legal.terms">Terms of Service</a>
+        <a href="/cookies" data-i18n="legal.cookies">Cookie Policy</a>
+        <a href="/contact" data-i18n="legal.contact">Contact</a>
+        <a href="/qa-dashboard" title="Formula verification dashboard">Formula QA Dashboard</a>
+        <a href="/stats" title="Live search impression and indexing stats">Site Stats</a>
+        <a href="/changelog" title="Dated record of every title and copy change">Changelog</a>
       </div>
       <div class="footer-section">
         <h2 data-i18n="footer.disclaimers">Disclaimers</h2>
-        <a href="/disclaimer-general" onclick="event.preventDefault();Router.navigate('/disclaimer-general')" data-i18n="footer.disclaimer_general">General</a>
-        <a href="/disclaimer-finance" onclick="event.preventDefault();Router.navigate('/disclaimer-finance')" data-i18n="footer.disclaimer_finance">Financial</a>
-        <a href="/disclaimer-health" onclick="event.preventDefault();Router.navigate('/disclaimer-health')" data-i18n="footer.disclaimer_health">Health</a>
+        <a href="/disclaimer-general" data-i18n="footer.disclaimer_general">General</a>
+        <a href="/disclaimer-finance" data-i18n="footer.disclaimer_finance">Financial</a>
+        <a href="/disclaimer-health" data-i18n="footer.disclaimer_health">Health</a>
       </div>
       <div class="footer-section">
         <h2>Featured On</h2>
@@ -813,13 +923,17 @@
       </div>
       <div class="footer-section">
         <h2 data-i18n="footer.settings">Settings</h2>
-        <a href="#" onclick="AdvancedFeatures.renderUnitsSettings()" data-i18n="adv.units_title">Units & Precision</a>
-        <a href="#" onclick="AdvancedFeatures.renderAchievements()" data-i18n="adv.achievements_title">Achievements</a>
+        <!-- These open in-page modals, not navigation, so they are rendered as
+             <button> rather than an anchor with an empty href — that avoids an
+             empty-link warning plus a URL in an onclick attribute on every page. -->
+        <button type="button" class="footer-link-btn" data-action="units" data-i18n="adv.units_title">Units & Precision</button>
+        <button type="button" class="footer-link-btn" data-action="achievements" data-i18n="adv.achievements_title">Achievements</button>
       </div>
     </div>
     <div class="footer-bottom">
+      <p class="footer-updated">Content last reviewed: <time id="last-updated" datetime="2026-10-17">17 October 2026</time></p>
       <div class="footer-stats" id="social-proof-stats">
-        <span>⚡ 1219+ calculators · 20 categories · 100% free</span>
+        <span>⚡ 1285+ calculators · 20 categories · 100% free</span>
       </div>
       <div class="footer-copyright">
         &copy; 2025–<span id="footer-year">2026</span> CalcProMaster. All calculations run in your browser. No data collected.
@@ -828,25 +942,25 @@
     </div>
   </footer>
 
-  <div class="cmd-palette-overlay" id="cmdPalette" onclick="if(event.target===this) App.closePalette()">
+  <div class="cmd-palette-overlay" id="cmdPalette" data-action="close-palette" data-self-only="1">
     <div class="cmd-palette">
       <label for="cmdInput" class="sr-only">Search all calculators</label>
-      <input type="text" id="cmdInput" placeholder="Search all calculators…" autocomplete="off" oninput="App.paletteFilter(this.value)" onkeydown="App.paletteKey(event)">
+      <input type="text" id="cmdInput" placeholder="Search all calculators…" autocomplete="off" data-input="palette-filter" data-keydown="palette">
       <div class="cmd-results" id="cmdResults"></div>
       <div class="cmd-hint"><span>↑ ↓ navigate</span><span>↵ open</span><span>esc close</span></div>
     </div>
   </div>
 
-  <div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this) this.classList.remove('active')">
+  <div class="modal-overlay" id="modalOverlay" data-action="close-modal" data-self-only="1">
     <div class="modal" id="modalContent">
-      <button class="modal-close" onclick="document.getElementById('modalOverlay').classList.remove('active')">×</button>
+      <button class="modal-close" data-action="close-modal">×</button>
       <div id="modalBody"></div>
     </div>
   </div>
 
-  <div class="modal-overlay" id="compare-modal" onclick="if(event.target===this) AdvancedFeatures.closeCompare()">
+  <div class="modal-overlay" id="compare-modal" data-action="close-compare" data-self-only="1">
     <div class="modal">
-      <button class="modal-close" onclick="AdvancedFeatures.closeCompare()">×</button>
+      <button class="modal-close" data-action="close-compare">×</button>
       <h3>Compare Pinned Results</h3>
       <div id="compare-content"></div>
     </div>
@@ -864,16 +978,13 @@
   <script defer src="js/comfort.js"></script>
   <script defer src="js/engagement.js"></script>
   <script defer src="js/advanced-features.js"></script>
-  <!-- EAGER data (7 popular categories) — loaded with the shell for instant first paint.
-       The other 13 niche categories load ON-DEMAND via js/data-loader.js the first
-       time their category/tool page is opened (gzip: ~78KB + 13 requests saved on
-       first paint). A failed lazy load degrades gracefully to the category being
-       empty (safeTools guard) instead of crashing the app. -->
-  <script defer src="js/data/finance.js"></script>
-  <script defer src="js/data/health.js"></script>
-  <script defer src="js/data/math.js"></script>
-  <script defer src="js/data/everyday.js"></script>
   <script defer src="js/data.js"></script>
+  <!-- Homepage bootstrap: seeds ALL_TOOLS/TOOL_MAP with the first tools in registry
+       order so the hero/search/'Popular Tools' blocks render before any category
+       chunk arrives. Generated by scripts/gen-tool-catalog.cjs; js/data-loader.js
+       replaces the seeds when the real category data hydrates. Must run after
+       js/data.js (it aliases the arrays that file creates). -->
+  <script defer src="js/home-tools.js"></script>
   <!-- Lazy category loader (must run after data.js so CALC_DATA/refreshCalcData exist) -->
   <script defer src="js/data-loader.js"></script>
   <!-- SEO content — per-category lazy chunks. The open tool's category file (~200-560KB)
@@ -957,6 +1068,15 @@
   <script defer src="js/which-option-wins.js"></script>
   <script defer src="js/calculator-of-day.js"></script>
   <script defer src="js/confidence-notes.js"></script>
+  <script defer src="js/portfolio-store.js"></script>
+  <script defer src="js/trust-extras.js"></script>
+  <!-- Per-category methodology notes + reviewer bylines (shared with the SSG).
+       reviewers-data.js is generated from data/reviewers.json — load it first. -->
+  <script defer src="js/reviewers-data.js"></script>
+  <script defer src="js/category-methodology.js"></script>
+  <!-- Per-category depth blocks for the 20 comparison hubs (intro + uses +
+       FAQs), shared with the SSG so prerender and hydrate stay identical. -->
+  <script defer src="js/category-depth.js"></script>
   <script defer src="js/category-hub.js"></script>
   <script defer src="js/personal-dashboard.js"></script>
   <script defer src="js/historical-rates.js"></script>
@@ -979,6 +1099,9 @@
   <!-- Competitor-beating pillars: spreadsheet formulas + E-E-A-T trust badges -->
   <script defer src="js/excel-formulas.js"></script>
   <script defer src="js/trust-badges.js"></script>
+  <!-- Per-tool content enhancements (formula + verified data table). Shared by the
+       SSG (prerender) and the runtime injector here — see js/tool-enhance.js. -->
+  <script defer src="js/tool-enhance.js"></script>
   <script defer src="js/cluster-map.js"></script>
   <script defer src="js/app.js"></script>
   <script defer src="js/reading.js"></script>
@@ -1037,24 +1160,16 @@
     });
   </script>
   <!-- Back to Top Button -->
-  <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" style="position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;background:var(--primary-gradient);color:white;border:none;cursor:pointer;font-size:20px;box-shadow:var(--shadow-lg),var(--shadow-glow);opacity:0;transform:translateY(20px);transition:all 0.3s ease-out;z-index:999;display:flex;align-items:center;justify-content:center" title="Back to top">
+  <button id="back-to-top" data-action="back-to-top" aria-label="Back to top" title="Back to top">
     ↑
   </button>
   <script>
     // Back to top visibility
+    // Visibility is a class toggle, not three inline style writes — the initial
+    // hidden state and the visible state both live in styles.css (#back-to-top).
     window.addEventListener('scroll', function() {
       const btn = document.getElementById('back-to-top');
-      if (btn) {
-        if (window.scrollY > 400) {
-          btn.style.opacity = '1';
-          btn.style.transform = 'translateY(0)';
-          btn.style.pointerEvents = 'auto';
-        } else {
-          btn.style.opacity = '0';
-          btn.style.transform = 'translateY(20px)';
-          btn.style.pointerEvents = 'none';
-        }
-      }
+      if (btn) btn.classList.toggle('is-visible', window.scrollY > 400);
     }, { passive: true });
     
     // Keyboard shortcut: Escape closes everything, but also scrolls to top on double-Escape
@@ -1069,6 +1184,75 @@
         setTimeout(() => { escapeCount = 0; }, 500);
       }
     });
+  </script>
+  <script>
+    // ====== Delegated handlers (no inline on* attributes) ======
+    // Every control in this page is wired through ONE delegated listener set.
+    // Markup stays free of on* attributes (hardened CSP, semantics, and nodes
+    // injected at runtime — e.g. the boot-watchdog recovery card — are covered
+    // too, because the listener lives on document and resolves globals at click
+    // time rather than at parse time).
+    (function () {
+      var clickMap = {
+        'reload': function () { location.reload(); },
+        'hard-reset': function () { if (window.__calcproHardReset) window.__calcproHardReset(); },
+        'dashboard': function () { if (window.UserDashboard) window.UserDashboard.toggle(); },
+        'theme-menu': function (e) { if (window.App) window.App.toggleThemeMenu(e); },
+        'units': function () { if (window.AdvancedFeatures) window.AdvancedFeatures.renderUnitsSettings(); },
+        'achievements': function () { if (window.AdvancedFeatures) window.AdvancedFeatures.renderAchievements(); },
+        'nav-menu': function (e) { if (window.App) window.App.toggleNavMenu(e); },
+        'consent-cancel': function () { if (window.closeConsentSettings) window.closeConsentSettings(); },
+        'close-palette': function () { if (window.App) window.App.closePalette(); },
+        'close-modal': function () { var m = document.getElementById('modalOverlay'); if (m) m.classList.remove('active'); },
+        'close-compare': function () { if (window.AdvancedFeatures) window.AdvancedFeatures.closeCompare(); },
+        'back-to-top': function () { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+      };
+      var inputMap = {
+        'search': function (v) { if (window.App) window.App.search(v); },
+        'home-search': function (v) { if (window.App) window.App.homeSearch(v); },
+        'palette-filter': function (v) { if (window.App) window.App.paletteFilter(v); }
+      };
+      var keyMap = {
+        'search-nav': function (e) { if (window.App) window.App.searchKeyNav(e); },
+        'palette': function (e) { if (window.App) window.App.paletteKey(e); }
+      };
+      document.addEventListener('click', function (e) {
+        var el = e.target && e.target.closest ? e.target.closest('[data-action]') : null;
+        if (!el) return;
+        // Backdrop overlays act only when the click landed on the overlay itself
+        // (clicks on the dialog inside must not close it).
+        if (el.getAttribute('data-self-only') === '1' && e.target !== el) return;
+        var fn = clickMap[el.getAttribute('data-action')];
+        if (fn) fn(e);
+      });
+      document.addEventListener('input', function (e) {
+        var el = e.target;
+        var k = el && el.getAttribute ? el.getAttribute('data-input') : null;
+        if (k && inputMap[k]) inputMap[k](el.value);
+      });
+      document.addEventListener('focusin', function (e) {
+        var el = e.target;
+        if (el && el.getAttribute && el.getAttribute('data-clear-on-focus') === '1') el.value = '';
+      });
+      document.addEventListener('keydown', function (e) {
+        var el = e.target;
+        var k = el && el.getAttribute ? el.getAttribute('data-keydown') : null;
+        if (k && keyMap[k]) keyMap[k](e);
+      });
+      // Async stylesheet: swap the preloaded link to rel=stylesheet once the file
+      // has been fetched (replaces the old inline onload attribute handler). The
+      // listener is attached in the same parse tick as the preload, so it can
+      // never miss the load event.
+      var sheet = document.getElementById('main-stylesheet');
+      if (sheet) {
+        var apply = function () { sheet.rel = 'stylesheet'; };
+        if (sheet.sheet) apply();
+        else {
+          sheet.addEventListener('load', apply, { once: true });
+          sheet.addEventListener('error', apply, { once: true });
+        }
+      }
+    })();
   </script>
 </body>
 </html>

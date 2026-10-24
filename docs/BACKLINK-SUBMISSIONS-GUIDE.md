@@ -58,13 +58,13 @@ Sab free tier. Har ek ke liye: `docs/LINK-BUILDING-CHECKLIST.md` ka copy-paste b
 ## Peerlist Profile Bio (2026-09-28 — 3 options, sab 120+ chars, sab sach)
 
 **Option 1 (maker, recommended):**
-Building CalcProMaster — 1,216+ free online calculators that show the formula and a worked example behind every result. 100% client-side, no sign-up, works offline. Open source on GitHub. I care about honest math, fast pages and shipping weekly.
+Building CalcProMaster — 1,282+ free online calculators that show the formula and a worked example behind every result. 100% client-side, no sign-up, works offline. Open source on GitHub. I care about honest math, fast pages and shipping weekly.
 
 **Option 2 (growth/SEO angle):**
-Maker of CalcProMaster — 1,216+ free calculators, each showing its formula and worked example. Open source, 100% client-side, works offline. Currently growing it organically: SEO, internal linking, and shipping something new every week.
+Maker of CalcProMaster — 1,282+ free calculators, each showing its formula and worked example. Open source, 100% client-side, works offline. Currently growing it organically: SEO, internal linking, and shipping something new every week.
 
 **Option 3 (freelance/collab angle):**
-Full-stack developer and maker. Building CalcProMaster: 1,216+ free online calculators, open source and 100% client-side. I obsess over page speed, honest UX and documenting the math behind every tool. Open to freelance and collabs.
+Full-stack developer and maker. Building CalcProMaster: 1,282+ free online calculators, open source and 100% client-side. I obsess over page speed, honest UX and documenting the math behind every tool. Open to freelance and collabs.
 
 Profile tips: real photo (logo nahi), website link add karna (backlink yahi se aata hai), username ahunabuzar OK. Profile complete → phir LaunchPad submission (upar steps).
 
@@ -78,15 +78,15 @@ Profile tips: real photo (logo nahi), website link add karna (backlink yahi se a
 CalcProMaster
 
 **Tagline (agar short field ho):**
-1,200+ Free Online Calculators — Formulas Included
+1,282+ Free Online Calculators — Formulas Included
 
 **Website URL:** https://calcpromaster.com/
 **Secondary URL (agar optional ho):** https://calcpromaster.com/guides — YA khali chhodo
 
-**Description (purani "1206+" GHALTAT se theek kiya — safe honest count 1,200+):**
-CalcProMaster — 1,200+ free online calculators for finance, health, math, science, engineering and everyday life. Every calculator shows its formula and a worked example so you can verify the math. Charts, step-by-step solutions. No sign-up, no paywall.
+**Description (purani "1282+" GHALTAT se theek kiya — safe honest count 1,282+):**
+CalcProMaster — 1,282+ free online calculators for finance, health, math, science, engineering and everyday life. Every calculator shows its formula and a worked example so you can verify the math. Charts, step-by-step solutions. No sign-up, no paywall.
 
 **Features (semicolon-separated, REQUIRED — paste ye):**
-Loan EMI, mortgage, compound interest and retirement calculators; BMI, BMR, calorie and macro tools; percentage, fraction and statistics calculators; 20 categories with 1,200+ tools; formulas and worked examples on every page; interactive charts and visualizations; works offline as a PWA; no sign-up required, completely free
+Loan EMI, mortgage, compound interest and retirement calculators; BMI, BMR, calorie and macro tools; percentage, fraction and statistics calculators; 20 categories with 1,282+ tools; formulas and worked examples on every page; interactive charts and visualizations; works offline as a PWA; no sign-up required, completely free
 
 > ⚠️ **UPDATE 2026-09-28:** 1000.tools ne REJECT kar diya — "focus on developer tools, SaaS products, and technology platforms". CalcProMaster unki categories mein fit nahi. Ye site ab target NAHI — steps upar sirf record ke liye. Iski jagah: Hacker News (Show HN), Slant.co answer, Indie Hackers post — ye teeno tracker mein pehle se hain.

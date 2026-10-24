@@ -1,0 +1,37 @@
+{
+  "ranAt": "2026-10-19T10:14:12.377Z",
+  "threshold": 500,
+  "pages": 1412,
+  "thin": 3,
+  "bare": 1,
+  "thinnest": 431,
+  "rows": [
+    {
+      "path": "/geometry-lab.html",
+      "words": 431,
+      "thin": true,
+      "faq": true,
+      "h2s": 3,
+      "shape": "focused",
+      "inlinks": 1512
+    },
+    {
+      "path": "/graph.html",
+      "words": 435,
+      "thin": true,
+      "faq": true,
+      "h2s": 4,
+      "shape": "focused",
+      "inlinks": 1513
+    },
+    {
+      "path": "/stats.html",
+      "words": 474,
+      "thin": true,
+      "faq": false,
+      "h2s": 4,
+      "shape": "bare",
+      "inlinks": 1513
+    }
+  ]
+}

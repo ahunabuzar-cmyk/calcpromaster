@@ -82,7 +82,7 @@ blocks.push(entry('qatar-take-home-salary',
    ['Is the Qatar Take-Home Salary Calculator really free?', 'Yes — 100% free, no sign-up, runs entirely in your browser, and works offline after the first load.']]));
 
 // ---------- ABU DHABI COST OF LIVING ----------
-blocks.push(entry('abuDhabi-cost-living',
+blocks.push(entry('abu-dhabi-cost-living',
   'Abu Dhabi Cost of Living Calculator: Salary vs Rent, School & Transport',
   'Estimate Abu Dhabi living costs instantly — rent, schooling, transport and utilities against your salary, with your monthly surplus and saving rate shown. Every item itemised.',
   ['abu dhabi cost of living calculator', 'uae living cost calculator expat', 'abu dhabi salary vs rent calculator'],

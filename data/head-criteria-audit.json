@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-10-23T12:06:50.049Z",
+  "site": "https://calcpromaster.com",
+  "checked": 1420,
+  "skipped": 200,
+  "passingPages": 1420,
+  "totalFailures": 0,
+  "criteria": {
+    "title30to60": {
+      "label": "title 30-60 chars",
+      "failures": 0,
+      "pages": []
+    },
+    "desc100to160": {
+      "label": "description 100-160 chars",
+      "failures": 0,
+      "pages": []
+    },
+    "descCTA": {
+      "label": "description has a CTA",
+      "failures": 0,
+      "pages": []
+    },
+    "canonicalServed": {
+      "label": "self canonical",
+      "failures": 0,
+      "pages": []
+    },
+    "keywordsPageSpecific": {
+      "label": "page-specific keywords",
+      "failures": 0,
+      "pages": []
+    },
+    "jsonLdDates": {
+      "label": "JSON-LD dateModified",
+      "failures": 0,
+      "pages": []
+    },
+    "visibleTime": {
+      "label": "visible <time datetime>",
+      "failures": 0,
+      "pages": []
+    },
+    "noInlineHandlers": {
+      "label": "no inline handlers",
+      "failures": 0,
+      "pages": []
+    },
+    "noComments": {
+      "label": "no HTML comments",
+      "failures": 0,
+      "pages": []
+    },
+    "singleGA4": {
+      "label": "one GA4 property",
+      "failures": 0,
+      "pages": []
+    }
+  }
+}

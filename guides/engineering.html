@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Engineering Guides — Electrical, mechanical &amp; structural math | CalcProMaster</title>
-  <meta name="description" content="Engineering calculations punish small errors — a wrong voltage-drop figure means undersized cables, a wrong gear ratio means a drivetrain that never reache">
+  <title>Engineering Guides — Electrical, Mechanical &amp; Structural</title>
+  <meta name="description" content="Engineering calculations punish small errors: an undersized cable, a gear ratio that never reaches top speed. Work the numbers before you build.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
   <link rel="canonical" href="https://calcpromaster.netlify.app/guides/engineering">
@@ -69,16 +69,63 @@
     .cat-card p { margin: 0; color: #4b5563; font-size: 0.95rem; }
     .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
     .updated { color: #6b7280; font-size: 0.85rem; }
-  </style>
+/* guide-depth-css:start */
+.guide-lede{font-weight:600;border-left:3px solid #4f46e5;padding-left:12px;margin:10px 0 4px}
+    .guide-pitfalls{margin:8px 0 14px 20px}
+    .seo-faqs h3{margin:16px 0 4px}
+/* guide-depth-css:end */
+</style>
+
+<!-- guide-faq-schema:start -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why do calculators and code tables disagree?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tables are conservative by construction: they already include installation conditions, derating and required safety margins for a range of situations. A calculator solving the ideal case will therefore give a different number. Design to the standard, and use the calculator to understand the relationship between the inputs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a safety factor for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It covers what the calculation cannot: material variation, construction tolerance, fatigue, unexpected loads and the consequences of failure. It is chosen by standard or by engineering judgement, not by the calculator, and it is the reason a component is specified well above the theoretical minimum."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know my units are consistent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Write the units into the equation and cancel them. Ohm’s law works with volts, amps and ohms; a length used in the same formula must be in the matching base unit, not switched between millimetres and metres. If the units of the result are not what you expected, the inputs are inconsistent."
+      }
+    }
+  ]
+}
+</script>
+<!-- guide-faq-schema:end -->
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Engineering</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Engineering</p>
   <h1>Engineering Guides</h1>
   <p class="updated">Part of the CalcProMaster guides library · Electrical, mechanical &amp; structural math</p>
 
   <p>Engineering calculations punish small errors — a wrong voltage-drop figure means undersized cables, a wrong gear ratio means a drivetrain that never reaches design speed. These guides show the formula, the assumptions behind it, and a worked example you can check by hand.</p>
+  <p><strong>Methodology:</strong> Standard engineering formulas and material properties from published handbooks, with safety factors noted where they apply.</p>
 
-  <h2>How the math works</h2>
+
+<!-- guide-lede:start -->
+<p class="guide-lede">Engineering calculators carry safety and tolerance assumptions with them: a load, a beam or a wire figure is a starting point for a design, never a substitute for the standard the design has to meet.</p>
+<!-- guide-lede:end -->
+<h2>How the math works</h2>
   <p>Every engineering formula hides assumptions, and knowing them matters more than memorizing the algebra. Voltage drop = 2 × L × I × ρ ÷ A assumes a resistive load, a conductor at operating temperature, and length L counted along both conductors — hence the 2. Ignore any of these and the number is precise but wrong.</p>
   <p>A worked check: 20 m run, 10 A load, 2.5 mm² copper (ρ ≈ 0.0175 Ω·mm²/m). Drop = 2 × 20 × 10 × 0.0175 ÷ 2.5 = 2.8 V — about 1.2% of a 230 V supply, comfortably inside the 3–5% usually tolerated. If your real circuit shows double that, the likely culprits are temperature-derated conductors or an undersized return path, not the formula.</p>
 
@@ -98,14 +145,52 @@
   <h2>What does a gear ratio actually tell you?</h2>
   <p>It is driven-teeth ÷ driver-teeth: a 4:1 ratio cuts speed to a quarter while multiplying torque fourfold (minus friction losses). The gear ratio calculator converts ratio, RPM and torque in both directions.</p>
 
-  <h2>Try the matching calculators</h2>
+
+<!-- guide-extra-depth:start -->
+<h2>What this category covers</h2>
+<p>Beam loading, torque, power, pressure, flow, gear ratios and electrical relationships. These are design aids, not substitutes for a code check: every real structure or machine has safety factors, material limits and local regulations behind it.</p>
+<p>Use the calculator to size a first estimate, then verify against the governing standard. A number from a web tool is a starting point, not a certification.</p>
+<h2>Units are the first failure mode</h2>
+<p>Engineering formulas assume consistent units: newtons and metres, or kilonewtons and millimetres, but rarely a mixture. Mixing them produces an answer that is wrong by a factor of a thousand and looks entirely plausible.</p>
+<p>Convert every input before substituting, and write the unit next to the result. If the unit does not make sense, the number does not either.</p>
+<h2>Safety factors are not padding</h2>
+<p>A safety factor covers uncertainty in loads, material properties, workmanship and consequences of failure. It is chosen by code or by a qualified engineer, and reducing it to save material is how structures fail.</p>
+<p>The same applies to electrical and thermal work: the margin is part of the design, not an inefficiency to be optimised away.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/fuel-cost">Fuel Cost</a></li>
+    <li><a href="/guides/ev-vs-petrol">EV vs Petrol</a></li>
+    <li><a href="/guides/gear-ratio">Gear Ratio</a></li>
+    <li><a href="/guides/auto">Auto & Vehicle Guides</a></li>
+  </ul>
+
+<!-- guide-depth:start -->
+<h2>Where these answers go wrong</h2><ul class="guide-pitfalls"><li>Using a nominal load or capacity and ignoring the safety factor the applicable code requires.</li><li>Applying a three-phase current formula to a single-phase circuit, or the reverse.</li><li>Ignoring temperature and grouping derating, which lowers a cable’s real capacity below its table value.</li><li>Treating a simplifying assumption — point load, uniform section, ideal behaviour — as if it were exact.</li></ul><h2>Frequently asked questions</h2><div class="seo-faqs"><h3>Why do calculators and code tables disagree?</h3><p>Tables are conservative by construction: they already include installation conditions, derating and required safety margins for a range of situations. A calculator solving the ideal case will therefore give a different number. Design to the standard, and use the calculator to understand the relationship between the inputs.</p><h3>What is a safety factor for?</h3><p>It covers what the calculation cannot: material variation, construction tolerance, fatigue, unexpected loads and the consequences of failure. It is chosen by standard or by engineering judgement, not by the calculator, and it is the reason a component is specified well above the theoretical minimum.</p><h3>How do I know my units are consistent?</h3><p>Write the units into the equation and cancel them. Ohm’s law works with volts, amps and ohms; a length used in the same formula must be in the matching base unit, not switched between millimetres and metres. If the units of the result are not what you expected, the inputs are inconsistent.</p></div>
+<!-- guide-depth:end -->
+<!-- guide-worked-example:start -->
+<h2>Worked example: Voltage Drop Calculator at its default inputs</h2>
+<p>This is the answer <a href="/engineering/voltage-drop/">Voltage Drop Calculator</a> gives before you touch anything — the defaults as shipped, computed live rather than copied from a sample.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Current (A)</td><td>10</td></tr><tr><td>Cable Length (m)</td><td>30</td></tr><tr><td>Resistance (Ω/km)</td><td>0.5</td></tr></tbody></table>
+<p><strong>Result:</strong> Voltage Drop: 0.30 V</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Formula: V_drop = I × 2L × R/km</li><li>Step 1: V = 10 × 2×30 × 0.5/1000</li><li>Step 2: V = 0.30 V</li></ol>
+<h2>Current (A): half, as given, and half again</h2>
+<p>The table below varies current (a) alone — half, the default, and half again.</p>
+<table><thead><tr><th>Current (A)</th><th>Result</th></tr></thead><tbody><tr><td>5</td><td>Voltage Drop: 0.15 V</td></tr><tr><td>10</td><td>Voltage Drop: 0.30 V</td></tr><tr><td>15</td><td>Voltage Drop: 0.45 V</td></tr></tbody></table>
+<p>If the rows barely differ, current (a) is not your lever — change a different input. If they swing widely, get that number right before trusting the total.</p>
+<!-- guide-worked-example:end -->
+<h2>Try the matching calculators</h2>
   <p>
-    <a href="/engineering/voltage-drop" class="cta">Voltage Drop Calculator</a>
-    <a href="/engineering/gear-ratio" class="cta">Gear Ratio Calculator</a>
-    <a href="/engineering/torque" class="cta">Torque Calculator</a>
+    <a href="/engineering/voltage-drop/" class="cta">Voltage Drop Calculator</a>
+    <a href="/engineering/gear-ratio/" class="cta">Gear Ratio Calculator</a>
+    <a href="/engineering/torque/" class="cta">Torque Calculator</a>
   </p>
 
-  <p><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
+  <p><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

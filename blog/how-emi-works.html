@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How Banks Calculate Your EMI — Amortization Demystified</title>
-  <meta name="description" content="The same payment every month hides a shifting split between interest and principal. See a real 36-month table, the EMI formula, and where refinancing…">
+  <meta name="description" content="The same payment every month hides a shifting split between interest and principal. See a real 36-month table and the formula behind it.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
   <link rel="canonical" href="https://calcpromaster.netlify.app/blog/how-emi-works">
@@ -55,15 +55,50 @@
     .meta { color: #6b7280; font-size: .875rem; }
     .tip { background: #fefce8; border-left: 4px solid #ca8a04; padding: .75rem 1rem; border-radius: 0 .5rem .5rem 0; margin: 1rem 0; }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://calcpromaster.netlify.app/blog/how-emi-works#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does EMI stand for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Equated Monthly Installment — a fixed payment that covers both interest and principal every month for the full loan term."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is my first EMI mostly interest?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Because interest each month is charged on the outstanding balance, which is largest at the start. As the balance falls, the interest portion of the fixed EMI falls and the principal portion rises."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it better to reduce EMI or reduce tenure after prepayment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Keeping the EMI the same and shortening the tenure saves more total interest, because the balance is repaid faster. Reducing the EMI keeps the loan alive longer, so interest accrues on the balance for more months."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header>
     <a href="/">Home</a>
-    <a href="/blog">Blog</a>
-    <a href="/guides">Guides</a>
+    <a href="/blog/">Blog</a>
+    <a href="/guides/">Guides</a>
     <a href="/about">About</a>
   </header>
-  <p class="crumb"><a href="/">Home</a> › <a href="/blog">Blog</a> › How EMI Works</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/blog/">Blog</a> › How EMI Works</p>
   <h1>How Banks Calculate Your EMI — Amortization Demystified</h1>
   <p class="meta">Sep 2026 · ~7 min read · Money</p>
 
@@ -106,7 +141,7 @@
     <li><strong>Prepay ₹1,00,000 in month 12</strong> (balance ≈ ₹14.48 lakh) and you cut roughly ₹2.1–2.3 lakh of future interest over the full original term.</li>
     <li><strong>Prepay the same ₹1,00,000 in month 180</strong> (balance ≈ ₹3.70 lakh) and the saving is roughly ₹45,000–50,000.</li>
   </ul>
-  <p>The same rupee amount, at a different time, produces a very different result. There is no penalty for verifying this yourself: run your own numbers on the <a href="/finance/amortization">amortization schedule calculator</a>, which shows the month-by-month split.</p>
+  <p>The same rupee amount, at a different time, produces a very different result. There is no penalty for verifying this yourself: run your own numbers on the <a href="/finance/amortization/">amortization schedule calculator</a>, which shows the month-by-month split.</p>
   <div class="tip">
     <strong>One honest caveat:</strong> compare prepaying against what the same money earns elsewhere. If your loan rate is 8.5% and a risk-free deposit pays 7.5% after tax, prepayment wins. If your investments reliably beat the loan rate after tax, they may win instead. The comparison — not the prepayment itself — is the decision.
   </div>
@@ -127,10 +162,10 @@
   </ul>
 
   <h2>Try it on your own loan</h2>
-  <p>The <a href="/finance/loan-emi">Loan EMI calculator</a> solves for payment, amount, rate, or term — including interest-only and day-count conventions that affect the first payment. The <a href="/finance/amortization">amortization schedule</a> shows your actual month-by-month split, which is where prepayment decisions come from.</p>
+  <p>The <a href="/finance/loan-emi/">Loan EMI calculator</a> solves for payment, amount, rate, or term — including interest-only and day-count conventions that affect the first payment. The <a href="/finance/amortization/">amortization schedule</a> shows your actual month-by-month split, which is where prepayment decisions come from.</p>
   <p>
-    <a class="cta" href="/finance/loan-emi">Loan EMI Calculator</a>
-    <a class="cta" href="/finance/amortization">Amortization Schedule</a>
+    <a class="cta" href="/finance/loan-emi/">Loan EMI Calculator</a>
+    <a class="cta" href="/finance/amortization/">Amortization Schedule</a>
   </p>
 
   <h2>Frequently asked questions</h2>
@@ -141,7 +176,8 @@
   <h3>Is it better to reduce EMI or reduce tenure after prepayment?</h3>
   <p>Keeping the EMI the same and shortening the tenure saves more total interest, because the balance is repaid faster. Reducing the EMI keeps the loan alive longer, so interest accrues on the balance for more months.</p>
 
-  <p><a href="/blog">← All blog posts</a> · <a href="/guides">Step-by-step guides</a> · <a href="/guides/glossary">Glossary</a></p>
+  <p><a href="/blog/">← All blog posts</a> · <a href="/guides/">Step-by-step guides</a> · <a href="/guides/glossary">Glossary</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

@@ -27,16 +27,26 @@ const DonationWidget = (function () {
     el.id = 'donation-widget';
     el.className = 'donation-widget';
     el.innerHTML =
-      '<a class="donation-link" href="' + COFFEE_URL + '" target="_blank" rel="noopener noreferrer nofollow" aria-label="Support this free project on Buy Me a Coffee">' +
-        '<span class="donation-heart">☕</span>' +
+      // No aria-label here on purpose: an aria-label of "Support this free project
+      // on Buy Me a Coffee" did not contain the link's visible text, which failed
+      // axe/label-content-name-mismatch (Lighthouse a11y). The name now comes from
+      // the visible copy itself; the emoji/arrow are decorative and hidden, and
+      // the new-tab hint is a visually-hidden span so it stays announced.
+      '<a class="donation-link" href="' + COFFEE_URL + '" target="_blank" rel="noopener noreferrer nofollow">' +
+        '<span class="donation-heart" aria-hidden="true">☕</span>' +
         '<span class="donation-copy">' +
           '<span class="donation-title">Support the creator</span>' +
           '<span class="donation-sub">Free forever — buy a coffee?</span>' +
         '</span>' +
-        '<span class="donation-chev">→</span>' +
+        '<span class="sr-only"> (opens Buy Me a Coffee in a new tab)</span>' +
+        '<span class="donation-chev" aria-hidden="true">→</span>' +
       '</a>' +
-      '<button class="donation-close" onclick="DonationWidget.dismiss()" aria-label="Dismiss donation prompt">×</button>';
+      '<button type="button" class="donation-close" aria-label="Dismiss donation prompt">×</button>';
     document.body.appendChild(el);
+    // Delegated listener instead of an inline onclick (crawler audits flag every
+    // inline handler in the served DOM, and this widget is injected after load).
+    var closeBtn = el.querySelector('.donation-close');
+    if (closeBtn) closeBtn.addEventListener('click', dismiss);
     // Slide-in after a short delay so it never blocks the first paint
     setTimeout(function () { el.classList.add('shown'); }, 1500);
   }

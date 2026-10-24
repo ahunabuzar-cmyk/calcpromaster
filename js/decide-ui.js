@@ -39,6 +39,18 @@
     return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 
+  // .result-main is often a <td> inside .result-table. insertAdjacentElement on
+  // that node put the new <p>/<div> BETWEEN </td> and </tr>, which is invalid
+  // table content: the HTML parser foster-parented it out of the table and the
+  // fixed-layout table then guessed four columns (measured: every cell 25% wide,
+  // so an 11-row result table grew to 1,179px on a 412px phone). Anything that
+  // belongs next to the big number must live INSIDE the cell.
+  function afterMain(main, el) {
+    var cell = main.closest ? main.closest('td, th') : null;
+    if (cell) { cell.appendChild(el); return; }
+    main.insertAdjacentElement('afterend', el);
+  }
+
   function firstNumeric(resultStr) {
     var m = String(resultStr == null ? '' : resultStr).replace(/,/g, '').match(/-?\d+(\.\d+)?/);
     return m ? parseFloat(m[0]) : null;
@@ -65,7 +77,7 @@
         var line = document.createElement('p');
         line.className = 'cp-inshort';
         line.textContent = 'In short: ' + headline + ' is ' + headVal + '.';
-        main.insertAdjacentElement('beforebegin', line);
+        afterMain(main, line);
       }
     }
 
@@ -85,7 +97,7 @@
           '<div class="cp-scale-track"><span class="cp-scale-dot" style="left:' + res.pct + '%"></span></div>' +
           '<div class="cp-scale-labels">' + labels.map(function (l) { return '<span>' + esc(l) + '</span>'; }).join('') + '</div>' +
           '<p class="cp-scale-note">Your value falls in: <strong>' + esc(res.label) + '</strong></p>';
-        main.insertAdjacentElement('afterend', wrap);
+        afterMain(main, wrap);
       }
     }
 

@@ -306,7 +306,50 @@ const SmartSearch = (function () {
     return list.slice(0, limit);
   }
 
-  return { search, buildCatalog, normalize, tokens, _lev: lev, NL_INTENTS, SYNONYMS, STOPWORDS };
+  // ---------- Smart query parsing (natural language → input values) ----------
+  // "emi on 5 lakh for 20 years at 8.5%" → { money: 500000, years: 20, percent: 8.5 }
+  // Pure: returns numbers only; the caller maps them onto a tool's input ids.
+  const MONEY_WORDS = { k: 1e3, thousand: 1e3, lakh: 1e5, lac: 1e5, lacs: 1e5, lakhs: 1e5,
+    m: 1e6, million: 1e6, mn: 1e6, crore: 1e7, cr: 1e7, bn: 1e9, billion: 1e9 };
+  function parse(query) {
+    // Keep dots (% and decimals) and percent signs — normalize() strips ".",
+    // which turned "8.5%" into "8 5" and lost both the percent and the value.
+    let q = String(query || '').toLowerCase()
+      .replace(/[^a-z0-9%. ]+/g, ' ').replace(/\s+/g, ' ').trim();
+    const out = { money: null, percent: null, years: null, months: null, weight: null, height: null, age: null, numbers: [] };
+    // Each match is removed from q so its digits cannot be re-read as a bare number.
+    const take = (re, set, scale) => {
+      const m = q.match(re);
+      if (!m) return;
+      const raw = parseFloat(m[1]);
+      if (!isFinite(raw)) return;
+      q = q.slice(0, m.index) + ' ' + q.slice(m.index + m[0].length);
+      set(scale ? raw * scale(m) : raw);
+    };
+    // Money with a magnitude suffix (5 lakh, 1.2m, 250k) or a currency prefix.
+    take(/\b(\d+(?:\.\d+)?)\s*(k|thousand|lakhs?|lacs?|m|mn|million|crores?|cr|bn|billion)\b/, (v) => { out.money = v; }, (m) => MONEY_WORDS[m[2]] || 1);
+    if (out.money == null) take(/[₹$€£]\s*(\d+(?:\.\d+)?)/, (v) => { out.money = v; });
+    // Percent: "8.5%" / "8.5 percent" / "at 8.5" only when the word rate/percent is near.
+    take(/(\d+(?:\.\d+)?)\s*(?:%|percent\b|per cent\b|pct\b)/, (v) => { out.percent = v; });
+    // Years / months, in English and Urdu/Hindi spellings people actually type.
+    take(/\b(\d+(?:\.\d+)?)\s*(?:years?|yrs?|saal|sal|varsh)\b/, (v) => { out.years = v; });
+    take(/\b(\d+(?:\.\d+)?)\s*(?:months?|mos?|mah|mahine)\b/, (v) => { out.months = v; });
+    take(/\b(\d+(?:\.\d+)?)\s*(?:kg|kgs|kilograms?)\b/, (v) => { out.weight = v; });
+    take(/\b(\d+(?:\.\d+)?)\s*(?:lb|lbs|pounds?)\b/, (v) => { out.weight = v * 0.45359237; });
+    take(/\b(\d+(?:\.\d+)?)\s*(?:cm|centimet(?:er|re)s?)\b/, (v) => { out.height = v; });
+    take(/\b(\d+(?:\.\d+)?)\s*(?:ft|feet|foot)\b/, (v) => { out.height = v * 30.48; });
+    take(/\b(?:age[d]?\s*)?(\d{1,3})\s*(?:years?\s*old|yo)\b/, (v) => { out.age = v; });
+    // Remaining bare numbers, in order (e.g. "tip 60 15" → [60, 15]).
+    const rest = q.match(/\d+(?:\.\d+)?/g) || [];
+    for (const n of rest) {
+      const v = parseFloat(n);
+      if (isFinite(v)) out.numbers.push(v);
+    }
+    out.hasAny = [out.money, out.percent, out.years, out.months, out.weight, out.height, out.age].some((v) => v != null) || out.numbers.length > 0;
+    return out;
+  }
+
+  return { search, buildCatalog, normalize, tokens, parse, _lev: lev, NL_INTENTS, SYNONYMS, STOPWORDS };
 })();
 
 if (typeof module !== 'undefined' && module.exports) module.exports = SmartSearch;

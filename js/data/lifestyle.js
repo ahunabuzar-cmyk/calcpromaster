@@ -197,6 +197,76 @@ const LIFESTYLE_TOOLS = [
   { id: 'knit-gauge', name: 'Knitting Cast-On Calculator', desc: 'Stitches to cast on from gauge and width', kw: 'knitting cast on calculator gauge stitches per inch width', inputs: [{id:'width',label:'Finished Width (inches)',type:'number',def:20},{id:'spi',label:'Gauge (stitches per inch)',type:'number',def:5}], calc: function(v){ if(v.width<=0||v.spi<=0) return{result:'Enter positive values',chart:'',extra:''}; var st=Math.round(v.width*v.spi); return{result:'Cast on '+st+' stitches',chart:Charts.bar([st],['stitches']),extra:'Always knit a 4-inch swatch and wash it — gauge lies until blocked | Add 2 edge stitches if your pattern does not include selvedges'};}, steps: function(v){ var st=Math.round(v.width*v.spi); return['Formula: Stitches = width × gauge','Step 1: '+v.width+' in × '+v.spi+' sts/in = '+st+' stitches','Re-measure gauge mid-project — tension drifts with mood and yarn batch'];} },
 
   { id: 'quilt-fabric', name: 'Quilt Backing Calculator', desc: 'Yardage for a quilt backing with seams', kw: 'quilt backing calculator yardage fabric width seam allowance, free online Quilt Backing Calculator', inputs: [{id:'w',label:'Quilt Width (inches)',type:'number',def:60},{id:'h',label:'Quilt Height (inches)',type:'number',def:80},{id:'fw',label:'Fabric Width (inches)',type:'number',def:42}], calc: function(v){ if(Math.min(v.w,v.h,v.fw)<=0) return{result:'Enter positive values',chart:'',extra:''}; var needW=v.w+8, needH=v.h+8; var panels=Math.ceil(needW/(v.fw-1)); var len=panels*needH/36; return{result:len.toFixed(2)+' yards',chart:Charts.bar([panels],['panels']),extra:'Backing should overhang 4 inches per side | Join panels with a 1/2 inch seam, pressed open, and remove the selvedges first'};}, steps: function(v){ var needW=v.w+8, needH=v.h+8; var panels=Math.ceil(needW/(v.fw-1)); var len=panels*needH/36; return['Step 1: Backing size = '+(v.w+8)+' × '+(v.h+8)+' in (4 in overhang each side)','Step 2: Panels across = ceil('+needW+' ÷ '+(v.fw-1)+') = '+panels,'Step 3: Length = '+panels+' × '+needH+' in ÷ 36 = '+len.toFixed(2)+' yards'];} }
+,
+  {
+    id: 'pet-insurance-cost',
+    name: 'Pet Insurance Cost Calculator',
+    desc: 'Free pet insurance cost estimator: monthly and annual premium from species, age, size and the level of cover you choose.',
+    kw: 'pet insurance cost calculator, dog insurance estimate, cat insurance calculator, pet premium estimate',
+    inputs: [
+{ id: 'species', label: 'Pet', type: 'select', opts: [{v:'Dog',l:'Dog'},{v:'Cat',l:'Cat'}], def: 'Dog' },
+      { id: 'age', label: 'Age (years)', type: 'number', def: 3 },
+      { id: 'size', label: 'Size', type: 'select', opts: [{v:'Small',l:'Small'},{v:'Medium',l:'Medium'},{v:'Large',l:'Large'}], def: 'Medium' },
+      { id: 'coverage', label: 'Coverage', type: 'select', opts: [{v:'Accident only',l:'Accident only'},{v:'Comprehensive',l:'Comprehensive'}], def: 'Comprehensive' }
+    ],
+    calc: function (v) {
+      var base = v.species === 'Dog' ? (v.coverage === 'Accident only' ? 22 : 48) : (v.coverage === 'Accident only' ? 15 : 32);
+      var ageF = v.age <= 2 ? 0.9 : v.age <= 7 ? 1.0 : 1.4;
+      var sizeF = v.size === 'Small' ? 0.9 : v.size === 'Large' ? 1.25 : 1.0;
+      var prem = base * ageF * sizeF;
+      return {
+        result: 'Estimated premium: ' + prem.toFixed(2) + ' per month',
+        chart: Charts.donut([prem, prem * 11], ['This month', 'Rest of year']),
+        extra: 'Annual premium: ' + (prem * 12).toFixed(0) + ' | Base ' + base + ' x age factor ' + ageF + ' x size factor ' + sizeF + ' | Indicative only, actual quotes depend on breed and insurer'
+      };
+    },
+    steps: function (v) {
+      var base = v.species === 'Dog' ? (v.coverage === 'Accident only' ? 22 : 48) : (v.coverage === 'Accident only' ? 15 : 32);
+      var ageF = v.age <= 2 ? 0.9 : v.age <= 7 ? 1.0 : 1.4;
+      var sizeF = v.size === 'Small' ? 0.9 : v.size === 'Large' ? 1.25 : 1.0;
+      var prem = base * ageF * sizeF;
+      return [
+        'Step 1: Start from a base premium for a ' + v.species + ' on ' + v.coverage + ' cover = ' + base + ' a month.',
+        'Step 2: Apply the age factor. Pets under 2 are cheaper and pets over 7 cost more: factor ' + ageF + '.',
+        'Step 3: Apply the size factor for a ' + v.size + ' ' + v.species + ': ' + sizeF + '.',
+        'Step 4: Monthly premium = ' + base + ' x ' + ageF + ' x ' + sizeF + ' = ' + prem.toFixed(2) + '.',
+        'Step 5: Annual premium = ' + prem.toFixed(2) + ' x 12 = ' + (prem * 12).toFixed(0) + '.',
+        'Step 6: Compare at least three quotes — breed, region and excess change the real price a lot.'
+      ];
+    }
+  },
+  {
+    id: 'pet-boarding-cost',
+    name: 'Pet Boarding Cost Calculator',
+    desc: 'Free pet boarding cost calculator: total kennel or sitter cost from night rate, number of pets, length of stay and any extras.',
+    kw: 'pet boarding cost calculator, kennel cost calculator, cat boarding price, dog sitting cost',
+    inputs: [
+{ id: 'days', label: 'Nights', type: 'number', def: 5 },
+      { id: 'rate', label: 'Nightly rate per pet', type: 'number', def: 35 },
+      { id: 'pets', label: 'Number of pets', type: 'number', def: 1 },
+      { id: 'extras', label: 'Extras (grooming, meds)', type: 'number', def: 25 }
+    ],
+    calc: function (v) {
+      var boarding = v.days * v.rate * v.pets;
+      var total = boarding + v.extras;
+      return {
+        result: 'Boarding cost: ' + total.toFixed(0),
+        chart: Charts.donut([boarding, v.extras], ['Boarding', 'Extras']),
+        extra: 'Boarding ' + v.days + ' x ' + v.rate + ' x ' + v.pets + ' pets = ' + boarding.toFixed(0) + ' | Extras ' + v.extras.toFixed(0) + ' | Many kennels give a second-pet discount'
+      };
+    },
+    steps: function (v) {
+      var boarding = v.days * v.rate * v.pets;
+      var total = boarding + v.extras;
+      return [
+        'Step 1: Boarding for one pet = ' + v.days + ' nights x ' + v.rate + ' a night = ' + (v.days * v.rate).toFixed(0) + '.',
+        'Step 2: Multiply by the number of pets: ' + (v.days * v.rate).toFixed(0) + ' x ' + v.pets + ' = ' + boarding.toFixed(0) + '.',
+        'Step 3: Add extras such as grooming or medication: +' + v.extras.toFixed(0) + '.',
+        'Step 4: Total = ' + boarding.toFixed(0) + ' + ' + v.extras.toFixed(0) + ' = ' + total.toFixed(0) + '.',
+        'Step 5: Ask about multi-pet discounts, which are often 20 to 50 percent off the second pet.'
+      ];
+    }
+  }
 ];
 
 if (typeof module !== 'undefined') module.exports = LIFESTYLE_TOOLS;

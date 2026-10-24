@@ -21,8 +21,11 @@ const readline = require('readline');
 const fs = require('fs');
 const { loadOAuthClient, OAUTH_REDIRECT_URI, REFRESH_TOKEN_FILE } = require('./lib/google-oauth.cjs');
 
+// Full `webmasters` (not .readonly) so the same consent also allows WRITE
+// actions — sitemap resubmit (PUT /sitemaps) used by gsc-batch-inspect.cjs.
+// The full scope is a superset of .readonly for all read calls.
 const SCOPES = [
-  'https://www.googleapis.com/auth/webmasters.readonly',
+  'https://www.googleapis.com/auth/webmasters',
   'https://www.googleapis.com/auth/analytics.readonly',
 ].join(' ');
 const PORT = 3737;

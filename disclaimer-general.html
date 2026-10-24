@@ -10,14 +10,24 @@
   <link rel="canonical" href="https://calcpromaster.netlify.app/disclaimer-general">
   <link rel="icon" type="image/svg+xml" href="icon.svg">
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "General Disclaimer",
-    "url": "https://calcpromaster.netlify.app/disclaimer-general",
-    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
-    "inLanguage": "en"
-  }
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "General Disclaimer",
+      "url": "https://calcpromaster.netlify.app/disclaimer-general",
+      "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+      "inLanguage": "en"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "General Disclaimer", "item": "https://calcpromaster.netlify.app/disclaimer-general" }
+      ]
+    }
+  ]
   </script>
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
@@ -93,6 +103,15 @@
         <li>Any decisions or actions based on calculator results</li>
       </ul>
 
+      <h2>How Our Estimates Are Produced</h2>
+      <p>Every calculator implements a named, publicly documented formula rather than a proprietary black box: the standard loan amortisation equation, the Mifflin-St Jeor energy equation, the shoelace area formula, and so on. Each page states the formula it uses, shows a worked example with the expected output, and lists the assumptions built into the model. Arithmetic runs locally in your browser with full precision, and rounding happens only at the display step, so the number you see is reproducible by hand from the inputs shown.</p>
+
+      <h2>Reporting an Error</h2>
+      <p>If a result looks wrong, email <strong>calpromaster@gmail.com</strong> with the page URL, the exact inputs, the output you expected and the output you saw. Confirmed formula errors are fixed and re-tested before the next build; the correction is noted in the site changelog rather than quietly patched.</p>
+
+      <h2>Which Disclaimer Applies</h2>
+      <p>Finance, health and fitness pages carry their own subject-specific disclaimers linked in the footer. Where a page could reasonably fall into more than one category, the stricter disclaimer applies. This general page covers everything else, including everyday maths, unit conversion, construction quantities and software utilities.</p>
+
       <h2>No Liability</h2>
       <p>CalcProMaster and its creators are not liable for any losses, damages, or consequences arising from the use of these calculators, including but not limited to:</p>
       <ul>
@@ -106,12 +125,17 @@
       <h2>Changes and Updates</h2>
       <p>Calculator formulas, assumptions, and features may change without notice. We are not responsible for keeping calculators updated with the latest regulations, rates, or best practices in every field.</p>
 
+      <h2>Using Results Responsibly</h2>
+      <p>A calculator is a checking tool, not a decision-maker. The useful pattern is to run the number twice: once with your best estimate and once with a deliberately pessimistic value. If the decision still holds at the worse number, the estimate was never load-bearing; if it flips, the input you changed is the one worth confirming with a professional or a primary document. That habit costs a minute and catches most of the errors a disclaimer can only warn about.</p>
+
       <p class="legal-warning">⚠️ <strong>Bottom line: Use CalcProMaster as a helpful starting point, but always verify important calculations and consult professionals before making significant decisions.</strong></p>
     </div>
   </main>
   <footer>
-    <a href="/">CalcProMaster</a> · 1219+ free online calculators · All calculations run in your browser
+    <a href="/">CalcProMaster</a> · 1285+ free online calculators · All calculations run in your browser
     <br><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+    <br><a href="https://fazier.com/launches/calcpromaster.com" target="_blank" rel="noopener"><img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&amp;theme=neutral" alt="Fazier badge" width="120" height="40" style="vertical-align:middle;border:0;width:120px;height:40px;object-fit:contain"></a>
+    <a href="https://startupfa.me/s/calcpromaster?utm_source=calcpromaster.com" target="_blank" rel="noopener"><img src="https://startupfa.me/badges/featured-badge.webp" alt="CalcProMaster - Featured on Startup Fame" width="171" height="54" style="vertical-align:middle;border:0"></a>
   </footer>
 </body>
 </html>

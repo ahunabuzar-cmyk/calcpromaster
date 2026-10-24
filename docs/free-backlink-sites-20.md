@@ -50,7 +50,7 @@ screenshots + pehle din 2-3 genuine comments/queries — spam na ho to approval 
 
 ### Bonus (quick wins, 5 min each)
 21. **Morr.co / Morse列表** skip — instead: **Reddit r/InternetIsBeautiful + r/SideProject** — text post with link (Reddit nofollow but traffic + indexing signal)
-22. **Hacker News Show HN** — news.ycombinator.com — "Show HN: I built 1,216 free calculators that show their formulas" (free, high-authority nofollow)
+22. **Hacker News Show HN** — news.ycombinator.com — "Show HN: I built 1,282 free calculators that show their formulas" (free, high-authority nofollow)
 
 ---
 
@@ -58,12 +58,12 @@ screenshots + pehle din 2-3 genuine comments/queries — spam na ho to approval 
 
 - **Name:** CalcProMaster
 - **URL:** https://calcpromaster.com
-- **Tagline:** 1216+ free online calculators with step-by-step solutions
+- **Tagline:** 1282+ free online calculators with step-by-step solutions
 - **Description:** Free browser-based calculators for finance (EMI, mortgage, CAGR, SIP), health
   (BMI, calories, macros), math, conversion, construction and engineering. Every tool shows its
   formula, a worked example and assumptions. No sign-up, works offline (PWA).
 - **Topics/tags:** calculator, finance, education, productivity, developer tools
-- **Screenshots:** deploy/og/*.jpg (1,216 ready-made images) + homepage screenshot
+- **Screenshots:** deploy/og/*.jpg (1,282 ready-made images) + homepage screenshot
 - **Pricing:** Free
 - **Email:** calpromaster@gmail.com
 

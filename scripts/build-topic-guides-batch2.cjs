@@ -142,7 +142,7 @@ const GUIDES = [
   <div class="note"><strong>Limitations:</strong> CAGR says nothing about the path taken, risk, or volatility. Two investments with identical CAGR can have wildly different drawdowns. For periodic contributions, use an IRR-based calculator, not CAGR.</div>
 `,
     ctas: [
-      { href: '/finance/cagr-calculator', label: 'CAGR Calculator' },
+      { href: '/finance/cagr', label: 'CAGR Calculator' },
       { href: '/finance/investment', label: 'Investment Return Calculator' },
       { href: '/finance/compound-interest', label: 'Compound Interest Calculator' }
     ],
@@ -235,7 +235,7 @@ const GUIDES = [
 
   {
     slug: 'heart-rate-zones', crumb: 'Heart Rate Zones',
-    title: 'Heart Rate Training Zones — Formulas, Worked Numbers &amp; Sense-Check | CalcProMaster',
+    title: 'Heart Rate Training Zones — Formulas and Worked Numbers',
     desc: 'Max heart rate formulas compared (220−age vs Tanaka), the five-zone model with a worked example, and why HRmax formulas have a built-in error band.',
     h1: 'Heart Rate Zones: Math for Training, With the Error Bars Shown',
     cat: 'Health', read: 6,

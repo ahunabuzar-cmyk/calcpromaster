@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Science Guides — Physics &amp; chemistry fundamentals | CalcProMaster</title>
-  <meta name="description" content="Science calculators look intimidating because textbooks bury the formula under notation. Each of these explainers strips a physical law down to its variabl">
+  <title>Science Guides — Physics &amp; Chemistry Fundamentals</title>
+  <meta name="description" content="Science calculators look intimidating because textbooks bury the formula under notation. Each explainer strips a physical law down to its variables.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
   <link rel="canonical" href="https://calcpromaster.netlify.app/guides/science">
@@ -69,16 +69,63 @@
     .cat-card p { margin: 0; color: #4b5563; font-size: 0.95rem; }
     .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
     .updated { color: #6b7280; font-size: 0.85rem; }
-  </style>
+/* guide-depth-css:start */
+.guide-lede{font-weight:600;border-left:3px solid #4f46e5;padding-left:12px;margin:10px 0 4px}
+    .guide-pitfalls{margin:8px 0 14px 20px}
+    .seo-faqs h3{margin:16px 0 4px}
+/* guide-depth-css:end */
+</style>
+
+<!-- guide-faq-schema:start -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many significant figures should I report?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As many as the least precise input supports. If one measurement is 2.1 (two figures) and another is 12.35, the answer carries two. Round only at the end — rounding in the middle is what makes a hand calculation disagree with the calculator by more than the measurement error."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does temperature have to be in kelvin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because the gas laws are proportional to absolute temperature: halving the kelvin value halves the volume at constant pressure, which is only true on a scale that starts at absolute zero. Celsius has an arbitrary zero, so using it produces answers that are wrong by a fixed offset."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When do the standard approximations stop working?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each formula has conditions printed with it for a reason. Ideal-gas estimates drift as pressure rises or as a gas approaches condensation; small-angle approximations fail past roughly fifteen degrees; frictionless and massless assumptions fail as soon as real hardware is involved. Check the condition before trusting the number."
+      }
+    }
+  ]
+}
+</script>
+<!-- guide-faq-schema:end -->
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Science</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Science</p>
   <h1>Science Guides</h1>
   <p class="updated">Part of the CalcProMaster guides library · Physics &amp; chemistry fundamentals</p>
 
   <p>Science calculators look intimidating because textbooks bury the formula under notation. Each of these explainers strips a physical law down to its variables, shows a worked number, and tells you which units must match before the answer means anything.</p>
+  <p><strong>Methodology:</strong> SI-based physical constants and standard scientific formulas, with units carried through the working.</p>
 
-  <h2>How the math works</h2>
+
+<!-- guide-lede:start -->
+<p class="guide-lede">Scientific calculators are only as good as their units: the gas laws want kelvin and pascals, mole calculations want a matching molar mass, and most formulas carry conditions that are easy to violate by accident.</p>
+<!-- guide-lede:end -->
+<h2>How the math works</h2>
   <p>Start every problem by writing the formula, then listing each variable with its unit. Density = mass ÷ volume: 27 g of aluminium occupying 10 cm³ gives 2.7 g/cm³ — the accepted value, which is how you know the units were right. Enter that mass in kilograms while volume stays in cm³ and the result is 0.0027, silently meaningless.</p>
   <p>Two habits prevent most wrong answers. First, convert everything to the formula’s base units before calculating — the unit conversion guide lists the exact factors. Second, sanity-check the magnitude: a human body is roughly 1,000 kg/m³ (we barely float), the Earth about 5,500 kg/m³, sea-level air about 1.2 kg/m³. Results far outside familiar ranges usually mean a unit slipped, not that you discovered new physics.</p>
 
@@ -98,14 +145,52 @@
   <h2>Which base units does SI use?</h2>
   <p>Metre (length), kilogram (mass), second (time), ampere (current), kelvin (temperature), mole (amount), and candela (luminous intensity). Every derived unit — newtons, joules, pascals — is built from these.</p>
 
-  <h2>Try the matching calculators</h2>
+
+<!-- guide-extra-depth:start -->
+<h2>What this category covers</h2>
+<p>Physics and chemistry calculations: motion, energy, concentration, molarity, gas laws and half-life. The formulas are exact; the answers depend entirely on consistent units and on whether the model applies to the situation.</p>
+<p>Use them for coursework and for quick estimates, and check the assumptions in the guide before trusting a number in a real system.</p>
+<h2>Significant figures and rounding</h2>
+<p>A result cannot be more precise than its inputs. Reporting 4.7382 from inputs given to two significant figures is a claim about measurement precision that the data does not support.</p>
+<p>Carry full precision through the calculation and round only the final answer, to the precision of the least precise input. That is the convention most exam boards and journals expect.</p>
+<h2>When the model stops applying</h2>
+<p>Ideal gas behaviour fails at high pressure and low temperature. Simple projectile motion ignores drag, which matters beyond short ranges. Half-life assumes first-order kinetics, which not every reaction follows.</p>
+<p>Knowing the boundary of a model is part of using it. An answer outside the model is not wrong arithmetic; it is the wrong tool.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/gpa">How GPA Is Calculated (and Why Students Differ)</a></li>
+    <li><a href="/guides/grade-needed">What Do I Need on the Final? The Weighted-Grade Formula</a></li>
+    <li><a href="/guides/math-statistics">Math & Statistics Guides</a></li>
+    <li><a href="/guides/random-numbers">How Random Number Generators Work</a></li>
+  </ul>
+
+<!-- guide-depth:start -->
+<h2>Where these answers go wrong</h2><ul class="guide-pitfalls"><li>Entering temperatures in Celsius where the equation requires kelvin — every gas-law style formula needs absolute temperature.</li><li>Pairing grams with a molar mass and then reporting the result as if it were a concentration per litre.</li><li>Rounding at each intermediate step, so error accumulates before the final significant figures are chosen.</li><li>Applying a formula outside the range it was derived for, such as an ideal-gas estimate near condensation.</li></ul><h2>Frequently asked questions</h2><div class="seo-faqs"><h3>How many significant figures should I report?</h3><p>As many as the least precise input supports. If one measurement is 2.1 (two figures) and another is 12.35, the answer carries two. Round only at the end — rounding in the middle is what makes a hand calculation disagree with the calculator by more than the measurement error.</p><h3>Why does temperature have to be in kelvin?</h3><p>Because the gas laws are proportional to absolute temperature: halving the kelvin value halves the volume at constant pressure, which is only true on a scale that starts at absolute zero. Celsius has an arbitrary zero, so using it produces answers that are wrong by a fixed offset.</p><h3>When do the standard approximations stop working?</h3><p>Each formula has conditions printed with it for a reason. Ideal-gas estimates drift as pressure rises or as a gas approaches condensation; small-angle approximations fail past roughly fifteen degrees; frictionless and massless assumptions fail as soon as real hardware is involved. Check the condition before trusting the number.</p></div>
+<!-- guide-depth:end -->
+<!-- guide-worked-example:start -->
+<h2>Worked example: Ohm's Law Calculator at its default inputs</h2>
+<p>Take the default setup on <a href="/science/ohms-law/">Ohm's Law Calculator</a>: no fields changed, nothing tuned to a nice round number. Run in the site's own engine, those values produce the answer below.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Voltage (V)</td><td>12</td></tr><tr><td>Current (A)</td><td>2</td></tr></tbody></table>
+<p><strong>Result:</strong> Resistance: 6.00 Ω | Power: 24.00 W</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Formula: V = I × R, P = V × I</li><li>Step 1: R = V / I = 12 / 2 = 6.00 Ω</li><li>Step 2: P = V × I = 12 × 2 = 24.00 W</li></ol>
+<h2>Sensitivity: Voltage (V) from half to one-and-a-half times</h2>
+<p>Hold every other field still and move only voltage (v).</p>
+<table><thead><tr><th>Voltage (V)</th><th>Result</th></tr></thead><tbody><tr><td>6</td><td>Resistance: 3.00 Ω | Power: 12.00 W</td></tr><tr><td>12</td><td>Resistance: 6.00 Ω | Power: 24.00 W</td></tr><tr><td>18</td><td>Resistance: 9.00 Ω | Power: 36.00 W</td></tr></tbody></table>
+<p>Read the three rows as a range: the spread between them is how much the answer depends on voltage (v) alone, with everything else held still.</p>
+<!-- guide-worked-example:end -->
+<h2>Try the matching calculators</h2>
   <p>
-    <a href="/science/ohms-law" class="cta">Ohm's Law Calculator</a>
-    <a href="/science/density" class="cta">Density Calculator</a>
-    <a href="/science/force" class="cta">Force Calculator</a>
+    <a href="/science/ohms-law/" class="cta">Ohm's Law Calculator</a>
+    <a href="/science/density/" class="cta">Density Calculator</a>
+    <a href="/science/force/" class="cta">Force Calculator</a>
   </p>
 
-  <p><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
+  <p><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

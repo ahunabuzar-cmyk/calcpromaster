@@ -51,7 +51,7 @@ let missing = [];
 let covered = 0;
 const firstSegments = new Set();
 for (const loc of locs) {
-  const p = loc.replace('https://calcpromaster.netlify.app', '');
+  const p = loc.replace(/^https?:\/\/[^/]+/, ''); // strip scheme + host (was .netlify.app, now .com)
   const clean = p.replace(/^\//, '').replace(/\/$/, '');
   firstSegments.add(clean.split('/')[0]);
   if (clean === '') { covered++; continue; } // homepage = deploy/index.html
@@ -99,17 +99,20 @@ for (const prefix of PREFIXES) {
 for (const l of ['es', 'hi']) {
   if (!rewriteFroms.has('/' + l)) warn('_redirects missing bare locale rewrite: /' + l);
 }
-// 2c-extra) Every ROOT-LEVEL flat static page must carry a bare rewrite rule
-// (/about /about.html 200). Without it the trailing /* 404 catch-all wins and
-// the page 404s on Netlify (deep flat files like guides/<slug>.html are fine —
-// the /guides/* SPA rewrite covers their URLs).
-const BARE_RULE_EXEMPT = new Set(['404', 'auto-404', 'og-image', 'googled1ac20b54b36e7cf']);
+// 2c-extra) Cloudflare Pages serves ROOT-LEVEL flat pages NATIVELY as clean
+// URLs: deploy/about.html is reachable at /about with no rule (the
+// extensionless path maps to the flat file). A "/about /about.html 200"
+// rewrite is therefore both unnecessary and HARMFUL — Pages 308-redirects
+// /about.html back to /about, producing an infinite loop. Assert such rules
+// are ABSENT. (Deep flat files like guides/<slug>.html are covered by the
+// /guides/* SPA rewrite, so they are skipped here.)
+const CLEAN_URL_EXEMPT = new Set(['404', 'auto-404', 'og-image', 'googled1ac20b54b36e7cf']);
 for (const rp of REWRITE_PAGES) {
   if (rp.includes('/')) continue; // nested flat files: covered by splat rules
-  if (BARE_RULE_EXEMPT.has(rp)) continue; // asset/404/verification files, never clean-URLs
-  const rule = rules.find(r => r[0] === '/' + rp);
-  if (!rule || rule[1] !== '/' + rp + '.html' || rule[2] !== '200') {
-    warn('_redirects missing bare rewrite for static page: /' + rp + ' → /' + rp + '.html 200');
+  if (CLEAN_URL_EXEMPT.has(rp)) continue; // asset/404/verification files
+  const loopRule = rules.find(r => r[0] === '/' + rp && r[1] === '/' + rp + '.html' && r[2] === '200');
+  if (loopRule) {
+    warn('_redirects has a self-rewriting rule that loops on Cloudflare Pages: /' + rp + ' → /' + rp + '.html 200 (Pages serves /' + rp + ' natively; drop the rule)');
   }
 }
 // 2d) SPA rewrites must not reference anything outside the whitelist.

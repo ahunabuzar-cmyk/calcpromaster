@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grade Needed on Final Calculator — The Weighted-Grade Formula</title>
-  <meta name="description" content="The weighted-grade formula that tells you exactly what to score on the final, a worked example, and the honest reality check when the required grade is above…">
+  <title>Grade Needed on Final — The Weighted-Grade Formula</title>
+  <meta name="description" content="The weighted-grade formula that tells you what to score on the final, a worked example, and an honest check when the required grade is above 100.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
   <link rel="canonical" href="https://calcpromaster.netlify.app/guides/grade-needed">
@@ -56,7 +56,9 @@
   </style>
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Grade Needed</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Grade Needed</p>
   <h1>What Do I Need on the Final? The Weighted-Grade Formula</h1>
   <p class="updated">Education · 5 min read · Last updated September 2026</p>
 
@@ -69,7 +71,7 @@
   <p>Where w is the final's weight as a decimal. Worked example: current 78%, final worth 20% (w = 0.2), target 80%. (80 − 78 × 0.8) ÷ 0.2 = (80 − 62.4) ÷ 0.2 = <strong>88%</strong>. Heavier finals move the requirement less than intuition suggests — a 40%-weight final for the same 80% target needs only (80 − 46.8) ÷ 0.4 = <strong>83%</strong>.</p>
 
   <h2>Reading impossible answers</h2>
-  <p>If the formula returns more than 100, the target is mathematically unreachable — better to know at study-plan time than at results time. Example: 60% current, 30%-weight final, 85% target: (85 − 42) ÷ 0.3 = <strong>143%</strong> → impossible; the honest ceiling is 60 × 0.7 + 100 × 0.3 = 72%. Recalculate targets with the <a href="/education/grade">Grade Calculator</a> after each marked assessment — the requirement changes every time current% moves.</p>
+  <p>If the formula returns more than 100, the target is mathematically unreachable — better to know at study-plan time than at results time. Example: 60% current, 30%-weight final, 85% target: (85 − 42) ÷ 0.3 = <strong>143%</strong> → impossible; the honest ceiling is 60 × 0.7 + 100 × 0.3 = 72%. Recalculate targets with the <a href="/education/grade/">Grade Calculator</a> after each marked assessment — the requirement changes every time current% moves.</p>
 
   <h2>Common mistakes</h2>
   <ul>
@@ -80,12 +82,51 @@
 
   <h2>Try the calculators</h2>
   <p class="related">
-    <a href="/education/grade" class="cta">Grade Calculator</a>
-    <a href="/education/gpa" class="cta">GPA Calculator</a>
+    <a href="/education/grade/" class="cta">Grade Calculator</a>
+    <a href="/education/gpa/" class="cta">GPA Calculator</a>
     <a href="/guides/gpa" class="cta">GPA Guide</a>
   </p>
 
-  <h2>Frequently asked questions</h2>
+  
+  
+<!-- guide-worked-example:start -->
+<h2>Worked example: Grade Calculator at its default inputs</h2>
+<p>Open <a href="/education/grade/">Grade Calculator</a> and press calculate without editing a field. What comes back is the table and result below, so the grade-needed numbers here are checkable in one click.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Current Grade (%)</td><td>85</td></tr><tr><td>Final Exam Weight (%)</td><td>30</td></tr><tr><td>Target Grade (%)</td><td>90</td></tr></tbody></table>
+<p><strong>Result:</strong> Need on final: 101.7%</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Formula: Needed = (Target - Current×(1-weight)) / weight</li><li>Step 1: Needed = (90 - 85×0.7) / 0.3</li><li>Step 2: Needed = 101.7%</li></ol>
+<h2>What Current Grade (%) does to the answer</h2>
+<p>Hold every other field still and move only current grade (%).</p>
+<table><thead><tr><th>Current Grade (%)</th><th>Result</th></tr></thead><tbody><tr><td>42.5</td><td>Need on final: 200.8%</td></tr><tr><td>85</td><td>Need on final: 101.7%</td></tr><tr><td>127.5</td><td>Need on final: 2.5%</td></tr></tbody></table>
+<p>Halve current grade (%) and the result moves one way; add half again and it moves the other. Watching that gap is quicker than guessing which field matters most.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>Work backwards from the weighted total</h2>
+<p>Most courses compute a final grade as a weighted sum, so the question is not what score the last exam needs, but what weighted contribution is still missing. Convert the target grade into points, subtract what is already locked in, and divide by the weight of what remains.</p>
+<p>If the remaining weight is small, the answer can exceed 100 and the target is arithmetically impossible. That is useful information before the exam rather than after it, because it shifts the plan to the courses where the gap can still be closed.</p>
+<h2>What counts as already locked in</h2>
+<p>Only completed work with a released grade is locked. An assignment submitted but unmarked, a participation mark awarded at the end, or a dropped lowest quiz all change the denominator, and every one of them is a common source of a wrong answer.</p>
+<p>Ask for the syllabus weighting rather than assuming equal weights. A course where the final is 40% behaves completely differently from one where it is 15%, and students routinely plan for the wrong one.</p>
+<h2>Rounding, curving and grade boundaries</h2>
+<p>Institutions round differently: some round the final percentage, some round each component, some apply a curve after rounding. A student sitting at 89.4 can pass or fail a 90 boundary depending on which rule the registrar uses.</p>
+<p>Treat the calculator's output as a target with a margin, not a precise threshold. Aim a point above the boundary you need, then confirm the rounding rule with the instructor.</p>
+<h2>What-if planning</h2>
+<p>Run the calculation at three outcomes for the remaining work — a realistic score, a good day and a bad day. The spread tells you whether the course is already decided or genuinely still open, which is more useful than a single number.</p>
+<p>If even the bad-day case clears the target, spend the revision time elsewhere. If the good-day case barely clears it, that course is where the next week goes.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/math-statistics">Math & Statistics Guides</a></li>
+    <li><a href="/guides/random-numbers">How Random Number Generators Work</a></li>
+    <li><a href="/guides/science">Science Guides</a></li>
+    <li><a href="/guides/gpa">How GPA Is Calculated (and Why Students Differ)</a></li>
+  </ul>
+
+<h2>Frequently asked questions</h2>
   <h3>How do I calculate what I need on the final exam?</h3>
   <p>(Target − Current × (1 − weight)) ÷ weight, with the final’s weight as a decimal. 78% current, 20%-weight final, 80% target → 88% needed.</p>
   <h3>What if the grade I need is over 100%?</h3>
@@ -95,7 +136,8 @@
   <h3>Should I calculate this before or after each exam?</h3>
   <p>Both. Before the final it sets the study target; after every marked assessment the requirement changes, so recompute rather than relying on an old number.</p>
 
-  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <p class="related"><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog/">Blog</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

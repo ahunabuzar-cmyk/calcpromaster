@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Function Grapher — Plot y = f(x) Instantly</title>
+<meta name="description" content="Plot any function y = f(x) instantly in your browser. Free, private, no sign-up. Supports powers, trigonometry, logarithms and more.">
+<link rel="canonical" href="https://calcpromaster.com/graph">
+<meta name="robots" content="index,follow">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Function Grapher",
+    "url": "https://calcpromaster.com/graph",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Function Grapher", "item": "https://calcpromaster.com/graph" }
+    ]
+  }
+]
+</script>
+<!-- Social sharing (complete Open Graph + Twitter card) -->
+<meta property="og:title" content="Function Grapher — Plot y = f(x) Instantly">
+<meta property="og:description" content="Plot any function y = f(x) instantly in your browser. Free, private, no sign-up. Supports powers, trigonometry, logarithms and more.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://calcpromaster.com/graph">
+<meta property="og:image" content="https://calcpromaster.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Function Grapher — Plot y = f(x) Instantly">
+<meta name="twitter:description" content="Plot any function y = f(x) instantly in your browser. Free, private, no sign-up.">
+<meta name="twitter:image" content="https://calcpromaster.com/og-image.png">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<style>
+  :root { --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --brand:#2563eb; --bg:#f8fafc; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--ink); background:var(--bg); }
+  header, main, footer { max-width: 900px; margin: 0 auto; padding: 16px 20px; }
+  h1 { font-size: 1.6rem; margin: 12px 0 4px; }
+  p.lead { color: var(--muted); margin-top: 0; }
+  .panel { background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px; margin:16px 0; }
+  label { display:block; font-weight:600; margin: 8px 0 4px; }
+  input[type=text], input[type=number] { width:100%; padding:10px; border:1px solid var(--line); border-radius:8px; font-size:1rem; }
+  .row { display:flex; gap:12px; flex-wrap:wrap; }
+  .row > div { flex:1 1 140px; }
+  button { background:var(--brand); color:#fff; border:0; border-radius:8px; padding:10px 16px; font-size:1rem; cursor:pointer; margin-top:12px; }
+  canvas { width:100%; height:auto; display:block; border:1px solid var(--line); border-radius:8px; background:#fff; }
+  .err { color:#b91c1c; min-height:1.2em; margin-top:8px; }
+  .hint { color:var(--muted); font-size:.9rem; }
+  a { color: var(--brand); }
+</style>
+</head>
+<body>
+<header>
+  <a href="/" style="text-decoration:none;color:var(--muted)">&larr; CalcProMaster</a>
+  <h1>Function Grapher</h1>
+  <p class="lead">Plot any function y = f(x) instantly — free, private, and everything runs in your browser.</p>
+</header>
+<main>
+  <div class="panel">
+    <label for="expr">f(x) =</label>
+    <input id="expr" type="text" value="x^2 - 2" autocomplete="off" spellcheck="false">
+    <p class="hint">Try: <code>sin(x)</code>, <code>x^2-2</code>, <code>3x+1</code>, <code>1/x</code>, <code>2pi</code>, <code>ln(x)</code>, <code>abs(x)</code></p>
+    <div class="row">
+      <div><label for="xmin">x min</label><input id="xmin" type="number" value="-10"></div>
+      <div><label for="xmax">x max</label><input id="xmax" type="number" value="10"></div>
+    </div>
+    <button id="plot" type="button">Plot</button>
+    <div class="err" id="err" role="alert"></div>
+    <canvas id="cv" width="1200" height="720" aria-label="Function plot"></canvas>
+  </div>
+  <div class="panel">
+    <h2 style="font-size:1.1rem">How it works</h2>
+    <p>Type any expression in <strong>x</strong>. The parser reads it left to right, then the plotter samples it across your x-range and draws the curve. Undefined points (like <code>1/x</code> at zero) are skipped rather than drawn as false lines.</p>
+    <p class="hint">Supported: + - * / ^, parentheses, implicit multiplication (2x, 3sin(x)), sin cos tan, asin acos atan, sqrt, abs, exp, ln, log, floor, ceil, round, and the constants pi and e.</p>
+  </div>
+  <div class="panel">
+    <h2 style="font-size:1.1rem">Functions you can plot</h2>
+    <p>A linear function such as <code>2x + 1</code> draws a straight line with a slope of two. A quadratic such as <code>x^2 - 2</code> draws a parabola, opening upward when the x squared term is positive. A cubic or higher power bends more sharply and can cross the axis several times.</p>
+    <p>Trigonometric functions such as <code>sin(x)</code> and <code>cos(x)</code> repeat in waves between minus one and one. Because the working angle unit is radians, a full wave spans about 6.28 on the x axis, which is two pi. Exponential functions such as <code>exp(x)</code> grow quickly, while logarithms such as <code>ln(x)</code> grow slowly and are only defined for positive x.</p>
+    <p>Rational functions such as <code>1/x</code> show a break at zero, where the value is undefined. The plotter leaves that gap empty instead of connecting the two branches with a false line, so the shape you see is the shape the function really has.</p>
+    <h2 style="font-size:1.1rem">Tips for reading a graph</h2>
+    <p>Where the curve crosses the horizontal axis, the function equals zero, which is useful for spotting roots. Where it crosses the vertical axis, x is zero, so you are reading the constant term. The steepness of the curve at a point is its slope, and a curve that flattens out is approaching a maximum, minimum or plateau.</p>
+    <h2 style="font-size:1.1rem">A plotted example, start to finish</h2>
+    <p>Plot <code>x^2 - 2</code> from -10 to 10. The curve is a parabola with its lowest point at x = 0, where the value is -2. It crosses the horizontal axis twice, at about -1.414 and 1.414 — those are the square roots of two, because the function equals zero exactly when x squared equals two. At x = 3 the value is 7, and at x = -3 it is also 7, which is the symmetry of an even power.</p>
+    <p>Now change the range to -2 to 2 and plot again. Nothing about the function changed, but the shape looks far less dramatic because the vertical scale is compressed into a smaller window. This is the most common misreading in graphing: the picture depends on the window you chose, so state the range whenever you compare two curves.</p>
+    <p>Finally try <code>1/x</code>. Near zero the values shoot off the canvas, and the plotter leaves a gap at exactly zero instead of drawing a vertical line. A vertical line there would be a lie: the function has no value at zero, and no amount of zoom fills that gap.</p>
+    <h2 style="font-size:1.1rem">Functions worth plotting side by side</h2>
+    <ul>
+      <li><code>x</code> and <code>2x + 1</code> — two straight lines, one twice as steep, one shifted up by 1.</li>
+      <li><code>x^2</code> and <code>x^3</code> — the even power turns back up, the odd power keeps falling below zero.</li>
+      <li><code>sin(x)</code> and <code>cos(x)</code> — the same wave, offset by a quarter turn.</li>
+      <li><code>exp(x)</code> and <code>ln(x)</code> — growth against its inverse; they mirror each other across the line y = x.</li>
+      <li><code>abs(x)</code> and <code>sqrt(x)</code> — a corner versus a curve that only exists for non-negative x.</li>
+    </ul>
+    <h2 style="font-size:1.1rem">Related calculators</h2>
+    <p>A graph answers shape questions; the algebra pages answer the numbers. Use the <a href="/math/quadratic/">quadratic solver</a> for exact roots, the <a href="/math/slope/">slope calculator</a> for the gradient between two points, the <a href="/math/linear-system/">linear system solver</a> for where two lines meet, and the <a href="/math/cubic-equation/">cubic equation solver</a> for the roots of a third-degree curve.</p>
+    <h2 style="font-size:1.1rem">Frequently asked questions</h2>
+    <p><strong>Is the grapher free?</strong> Yes, it is completely free and needs no sign-up. Everything runs in your browser, and nothing you type is sent anywhere.</p>
+    <p><strong>Why is my curve missing?</strong> If the expression cannot be parsed, the error box explains why. Check for a missing parenthesis or an unsupported symbol.</p>
+    <p><strong>How many points does it plot?</strong> It samples hundreds of points across your x-range and connects them, which is smooth enough for everyday work while staying fast.</p>
+    <p><strong>Radians or degrees?</strong> Radians. A full sine wave therefore spans about 6.28 units on the x axis. To work in degrees, convert first: degrees × pi ÷ 180 gives radians.</p>
+    <p><strong>Can I plot two functions at once?</strong> Not in one canvas here. Plot the first, note where it crosses the axis, then plot the second with the same range — matching the two windows is what makes the comparison fair.</p>
+    <p><strong>Why does a straight line look jagged?</strong> Zoom in far enough and any drawn line becomes a staircase of pixels. That is the screen, not the function: the underlying evaluation is exact at every sampled point.</p>
+  </div>
+</main>
+<footer>
+  <p class="hint">Free math education tool. Also try our <a href="/math/percentage/">percentage calculator</a> and <a href="/utilities/unit-converter/">unit converter</a>.</p>
+</footer>
+<script src="/js/grapher.js"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  function plot() {
+    var expr = $('expr').value;
+    var xmin = parseFloat($('xmin').value), xmax = parseFloat($('xmax').value);
+    $('err').textContent = '';
+    if (!(xmax > xmin)) { $('err').textContent = 'x max must be greater than x min.'; return; }
+    try {
+      Grapher.render($('cv'), expr, { xmin: xmin, xmax: xmax });
+    } catch (e) {
+      $('err').textContent = 'Could not plot: ' + e.message;
+    }
+  }
+  $('plot').addEventListener('click', plot);
+  $('expr').addEventListener('keydown', function (e) { if (e.key === 'Enter') plot(); });
+  plot();
+})();
+</script>
+</body>
+</html>

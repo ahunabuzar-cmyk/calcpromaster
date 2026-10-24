@@ -220,10 +220,16 @@ const ZR = (function () {
         const c = matrix[idx++];
         const bg = cellColor(c.n);
         const fg = cellTextColor(c.n);
+        // Cell text used to be c.raw.substring(0, 14), which cut the NUMBER
+        // mid-digit: "Payment: $1,575.32" rendered as "Payment: $1,57" — it read
+        // as one-fifty-seven. The label is already in the row/column headers, so
+        // the cell keeps the value part intact and wraps if it needs to.
+        const raw = String(c.raw || '');
+        const cellText = raw.indexOf(': ') !== -1 ? raw.slice(raw.indexOf(': ') + 2) : raw;
         html += '<td style="background:' + bg + ';color:' + fg + '" ' +
           'title="' + esc(a.label) + ' ' + (c.pa > 0 ? '+' : '') + c.pa + '% → ' + c.va.toFixed(2) + ', ' +
           esc(b.label) + ' ' + (c.pb > 0 ? '+' : '') + c.pb + '% → ' + c.vb.toFixed(2) + '">' +
-          esc(c.raw.substring(0, 14)) + '</td>';
+          esc(cellText) + '</td>';
       });
       html += '</tr>';
     });
@@ -674,22 +680,20 @@ const ZR = (function () {
     }
   }
 
-  function currencySymbolFor(cc) {
-    try {
-      return new Intl.NumberFormat('en-' + (cc === 'UK' ? 'GB' : cc), { style: 'currency', currency: (function (c) {
-        const map = { US: 'USD', CA: 'CAD', GB: 'GBP', DE: 'EUR', FR: 'EUR', ES: 'EUR', NL: 'EUR', PK: 'PKR', IN: 'INR', BD: 'BDT', LK: 'LKR', AE: 'AED', SA: 'SAR', JP: 'JPY', SG: 'SGD', CN: 'CNY', AU: 'AUD', NG: 'NGN', KE: 'KES' };
-        return map[c] || 'USD';
-      })(cc) }).formatToParts(1).find(function (p) { return p.type === 'currency'; }).value;
-    } catch (e) { return ''; }
-  }
-
+  // The chip used to print the visitor's local currency symbol next to the region
+  // (e.g. "🇵🇰 Pakistan • Rs") while every result on the page is formatted in the
+  // tool's own unit — a plain number, or USD for the currency converter. Visitors
+  // read that as a bug ("chip says Rs, result says $2,051.65"). The chip now
+  // states only what is actually true: the detected region and its local tax
+  // hint. It does NOT convert or relabel any figure.
   function renderGeoChip() {
     const holder = document.getElementById('zr-geo-chip');
     if (!holder) return;
     const g = detectRegion();
-    const sym = g.symbol || currencySymbolFor(g.cc) || (g.currency ? g.currency : '');
-    holder.innerHTML = '<span class="zr-geo-chip" title="Detected from your browser timezone — no IP tracking. ' +
-      esc(g.vat || '') + '">' + esc(g.flag) + ' ' + esc(g.region) + (sym ? ' • ' + esc(sym) : '') + '</span>';
+    holder.innerHTML = '<span class="zr-geo-chip" title="Region detected from your browser timezone — no IP lookup, no tracking. ' +
+      'Used for the local tax hint only: calculator figures are the numbers you type, and the currency converter uses the From/To currencies you pick.' +
+      (g.vat ? ' Local tax: ' + esc(g.vat) + '.' : '') + '">' +
+      esc(g.flag) + ' ' + esc(g.region) + (g.vat ? ' • ' + esc(g.vat) : '') + '</span>';
     return g;
   }
 

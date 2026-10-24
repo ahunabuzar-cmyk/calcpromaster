@@ -183,6 +183,17 @@ const App = (function () {
     t._timeout = setTimeout(() => { t.style.opacity = '0'; }, duration);
   }
 
+  // Pad titles shorter than ~30 chars (crawlers flag "title too short").
+  // Mirror of padTitle() in scripts/ssg-pages.cjs so the hydrated title matches
+  // the prerendered one exactly.
+  function _padTitle(t) {
+    t = String(t == null ? '' : t);
+    if (!t) return 'CalcProMaster — Free Online Calculators';
+    if (t.length >= 30) return t;
+    if (/CalcProMaster/i.test(t)) return t + ' — Free Online Calculators';
+    return t + ' | CalcProMaster';
+  }
+
   // ---------- Navigation (clean-path via History API) ----------
   function navigate(path) {
     // SearchAction fulfillment: /?q=loan+calculator (the target advertised in the
@@ -400,7 +411,8 @@ const App = (function () {
         canon.setAttribute('rel', 'canonical');
         document.head.appendChild(canon);
       }
-      canon.setAttribute('href', window.location.origin + '/' + catKey + '/' + toolId);
+      // Base tool page canonical (slash form) — the variant consolidates here.
+      canon.setAttribute('href', window.location.origin + '/' + catKey + '/' + toolId + '/');
     } catch (e) { /* non-fatal */ }
   }
 
@@ -469,10 +481,25 @@ const App = (function () {
       html += '<div class="hero-content" style="position:relative;z-index:1">';
       html += '<h1>CalcPro — <span class="highlight">' + getCalculatorCount() + '+</span> Free Online Calculators</h1>';
       html += '<p class="hero-desc">Free, fast, and accurate calculators with step-by-step solutions, charts, and smart features.</p>';
+      html += '<div class="hero-actions"><a href="/finance/loan-emi/" class="hero-cta">Try the loan EMI calculator →</a> <a href="/guides/" class="hero-cta-secondary">Browse formulas &amp; guides</a></div>';
       html += '<div class="search-box">';
-      html += '<input type="text" id="home-search" placeholder="Search ' + getCalculatorCount() + '+ calculators…" oninput="App.homeSearch(this.value)" onkeydown="App.searchKeyNav(event)" autocomplete="off" role="combobox" aria-expanded="false" aria-label="Search calculators">';
+      // The placeholder must advertise the sentence parser, not a plain "search N+
+      // calculators": this rebuilt hero is what a visitor sees on every return to
+      // the home page (the static one is only in the first paint), so the old
+      // wording hid smart search from anyone who had navigated away once.
+      html += '<input type="text" id="home-search" placeholder="Search or ask: “EMI on 5 lakh for 20 years”" data-input="home-search" data-keydown="search-nav" oninput="App.homeSearch(this.value)" onkeydown="App.searchKeyNav(event)" autocomplete="off" role="combobox" aria-expanded="false" aria-label="Search calculators or describe a calculation">';
       html += '<div id="search-skeleton" class="search-skeleton" hidden aria-hidden="true"><span class="sk-line"></span><span class="sk-line"></span><span class="sk-line"></span></div>';
       html += '<div class="search-results" id="homeSearchResults"></div>';
+      html += '</div>';
+      // Smart-search examples (same four as the static hero). Without these the
+      // feature was invisible after the first SPA navigation: the rebuilt hero is
+      // byte-identical intent, just not byte-identical markup.
+      html += '<div class="smart-examples" aria-label="Smart search examples">';
+      html += '<span class="smart-examples-label">Try:</span>';
+      html += '<button type="button" class="smart-chip" data-smart-q="EMI on 5 lakh for 20 years at 8.5%">EMI on 5 lakh, 20 years</button>';
+      html += '<button type="button" class="smart-chip" data-smart-q="15% tip on 60 dollar bill">15% tip on $60</button>';
+      html += '<button type="button" class="smart-chip" data-smart-q="BMI for 70 kg 175 cm">BMI 70 kg, 175 cm</button>';
+      html += '<button type="button" class="smart-chip" data-smart-q="compound interest 10000 at 5% for 10 years">10,000 at 5% for 10 years</button>';
       html += '</div>';
       // S12 #84 — guided wizard trigger (opens the 2-question picker)
       html += '<div style="margin-top:14px"><button type="button" class="wizard-trigger" data-open-wizard>🧭 Which calculator do I need?</button></div>';
@@ -507,8 +534,9 @@ const App = (function () {
       html += '<div class="favorites-bar" id="favorites-bar">';
       html += '<span style="font-size:14px;font-weight:600;margin-right:4px">★</span>';
       favs.slice(0, 8).forEach(f => {
-        // XSS-hardening: favorites from localStorage — escape onclick args + text
-        html += `<button class="recent-chip" onclick="App.navigateToTool('${Security.sanitizeJsString(f.id)}','${Security.sanitizeJsString(f.cat)}')">${Security.sanitizeHtml(f.name)}</button>`;
+        // Favorites come from localStorage — build a plain href so nothing from
+        // storage is ever interpolated into an event-handler attribute.
+        html += `<a class="recent-chip" href="${Security.sanitizeHtml('/' + (f.cat || '') + '/' + f.id + '/')}">${Security.sanitizeHtml(f.name)}</a>`;
       });
       html += '</div>';
     }
@@ -518,8 +546,9 @@ const App = (function () {
       html += '<h2 class="section-title">' + _t('home.recently_viewed', 'Recently Viewed') + '</h2>';
       html += '<div class="recent-bar">';
       recentTools.forEach(h => {
-        // XSS-hardening: history entries can carry crafted values — escape id/name before inlining
-        html += `<button class="recent-chip" onclick="App.navigateToTool('${Security.sanitizeHtml(h.toolId)}','${Security.sanitizeHtml(h.catKey)}')">${Security.sanitizeHtml(h.toolName || h.toolId)}</button>`;
+        // History entries can carry crafted values — an href keeps them out of
+        // any attribute that the browser executes.
+        html += `<a class="recent-chip" href="${Security.sanitizeHtml('/' + (h.catKey || '') + '/' + h.toolId + '/')}">${Security.sanitizeHtml(h.toolName || h.toolId)}</a>`;
       });
       html += '</div>';
     }
@@ -531,9 +560,13 @@ const App = (function () {
       popular.forEach(id => {
         const t = TOOL_MAP[id];
         if (t) {
-          const catKey = Object.entries(CALC_DATA).find(([k,c]) => c.tools.some(tc => tc.id === id))?.[0];
-          // XSS-hardening: analytics ids from localStorage — escape onclick args + text
-          html += `<button class="recent-chip" onclick="App.navigateToTool('${Security.sanitizeJsString(id)}','${Security.sanitizeJsString(catKey)}')">${Security.sanitizeHtml(t.name)}</button>`;
+          // `|| t.cat` covers a seeded/bootstrap tool whose category has not hydrated yet.
+          const catKey = Object.entries(CALC_DATA).find(([k,c]) => c.tools.some(tc => tc.id === id))?.[0] || t.cat;
+          // A real link, not a button with an inline onclick: the ids come from
+          // localStorage, so routing through an attribute value was the only
+          // reason they needed JS escaping. href keeps the escaping in one place
+          // (sanitizeHtml) and the delegated router upgrades it to SPA nav.
+          html += `<a class="recent-chip" href="${Security.sanitizeHtml('/' + catKey + '/' + id + '/')}">${Security.sanitizeHtml(t.name)}</a>`;
         }
       });
       html += '</div>';
@@ -543,11 +576,11 @@ const App = (function () {
     html += '<h2 class="section-title">' + _t('home.all_categories', 'All Categories') + '</h2>';
     html += '<div class="categories-grid">';
     Object.entries(CALC_DATA).forEach(([key, cat]) => {
-      html += `<div class="category-card" onclick="Router.navigate('/${key}')" data-cat="${key}">
+      html += `<a class="category-card" href="/${key}/" data-cat="${key}">
         <div class="cat-icon">${cat.icon}</div>
         <h3>${_t('cat.' + key, cat.name)}</h3>
         <p class="cat-count" data-count-for="${key}">${_t('cat.count', ((window.SITE_CONFIG && window.SITE_CONFIG.catCounts && window.SITE_CONFIG.catCounts[key]) || cat.tools.length) + ' calculators').replace('{count}', (window.SITE_CONFIG && window.SITE_CONFIG.catCounts && window.SITE_CONFIG.catCounts[key]) || cat.tools.length)}</p>
-      </div>`;
+      </a>`;
     });
     html += '</div>';
     
@@ -558,7 +591,10 @@ const App = (function () {
     let popularTools = popIds.map(id => TOOL_MAP[id]).filter(Boolean);
     if (popularTools.length < 12) {
       const seen = new Set(popularTools.map(t => t.id));
-      for (const c of Object.values(CALC_DATA)) {
+      // CALC_DATA's own categories are empty until the lazy chunks land; the
+      // ALL_TOOLS tail (js/home-tools.js seed, then real data) keeps the grid at
+      // 12 cards on first paint instead of rendering an empty section.
+      for (const c of Object.values(CALC_DATA).concat([{ tools: (typeof ALL_TOOLS !== 'undefined' ? ALL_TOOLS : []) }])) {
         for (const t of c.tools) {
           if (popularTools.length >= 12) break;
           if (seen.has(t.id)) continue;
@@ -570,11 +606,11 @@ const App = (function () {
     html += '<h2 class="section-title">' + _t('home.popular_tools', 'Popular Tools') + '</h2>';
     html += '<div class="tools-grid">';
     popularTools.forEach(t => {
-      const catKey = Object.entries(CALC_DATA).find(([k,c]) => c.tools.includes(t))?.[0];
-      html += `<div class="tool-card" onclick="Router.navigate('/${catKey}/${t.id}')">
-        <h4>${Security.sanitizeHtml(t.name)}</h4>
+      const catKey = Object.entries(CALC_DATA).find(([k,c]) => c.tools.includes(t))?.[0] || t.cat;
+      html += `<a class="tool-card" href="/${catKey}/${t.id}/">
+        <h3>${Security.sanitizeHtml(t.name)}</h3>
         <p>${Security.sanitizeHtml(t.desc)}</p>
-      </div>`;
+      </a>`;
     });
     html += '</div>';
     
@@ -629,6 +665,11 @@ const App = (function () {
     // Social proof
     updateSocialProof();
 
+    // The popular chunks get the same treatment — see the comment below.
+    function warmEagerData() {
+      if (window.DataLoader && typeof window.DataLoader.loadEager === 'function') window.DataLoader.loadEager();
+    }
+
     // Lazy niche-category data is warmed on FIRST USER INTERACTION, not at boot:
     // loading all 13 chunks at boot saturates the throttled mobile pipe (~12s TTI).
     // Counts on the cards are static (SITE_CONFIG.catCounts) so they are correct
@@ -637,6 +678,19 @@ const App = (function () {
       ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (ev) {
         window.addEventListener(ev, warmLazyData, { once: true, passive: true });
       });
+      // The four popular chunks are no longer in the shell (index.html "HOMEPAGE
+      // LAZY DATA"), and they now warm on the SAME first-interaction signal as
+      // the 16 niche chunks instead of unconditionally at idle. Rationale: a
+      // homepage visitor who never opens a popular category was still
+      // downloading finance.js + math.js (104 KiB gzip) for nothing — the biggest
+      // single item in the homepage's JS budget. Correctness does not depend on
+      // the warm: the homepage blocks render from js/home-tools.js seeds, the
+      // category counts are static (SITE_CONFIG.catCounts), and every navigation
+      // calls DataLoader.ensure().
+      window.addEventListener('pointerdown', warmEagerData, { once: true, passive: true });
+      window.addEventListener('keydown', warmEagerData, { once: true, passive: true });
+      window.addEventListener('touchstart', warmEagerData, { once: true, passive: true });
+      window.addEventListener('scroll', warmEagerData, { once: true, passive: true });
     }
   }
 
@@ -696,14 +750,36 @@ const App = (function () {
     if (!main) return;
     
     const meta = CATEGORY_META[catKey] || {};
-    document.title = meta.title || cat.name + ' Calculators - CalcPro';
+    document.title = _padTitle(meta.title || cat.name + ' Calculators - CalcPro');
     updateMeta(meta.desc || cat.name + ' calculators', '/' + catKey);
     
     let html = '<div class="breadcrumb"><a href="/" onclick="event.preventDefault();Router.navigate(\'/\')">Home</a> › ' + cat.name + '</div>';
     html += '<div class="tool-header"><h1>' + cat.icon + ' ' + cat.name + ' Calculators</h1>';
     html += '<p class="tool-desc">' + (meta.desc || cat.name + ' calculators') + '</p>';
     html += '<div class="cat-actions"><button class="btn btn-outline" onclick="event.preventDefault();Router.navigate(\'/hub/' + catKey + '\')">📊 ' + cat.name + ' Comparison Table</button></div></div>';
-    
+
+    // Featured interactive math tools (also linked site-wide from the nav and
+    // footer, and prerendered into the static /math page by the SSG).
+    if (catKey === 'math') {
+      html += '<div class="cat-featured"><p><strong>Interactive math tools:</strong> <a href="/graph">Function Grapher</a> — plot y = f(x) instantly and see where it crosses zero · <a href="/geometry-lab">Interactive Geometry Lab</a> — drag a triangle and watch sides, angles, perimeter and area update live.</p></div>';
+    }
+    // The four pages with the most GSC impressions but no clicks (home, PMI and
+    // FHA insurance, APY) had 13-14 inlinks each, none of them from their own
+    // category page — the strongest internal hub on the site linked neither of
+    // the three finance pages. These blocks carry a descriptive anchor plus one
+    // sentence saying what the calculator returns, which is the inlink shape a
+    // category hub can give and a footer block cannot. Mirror of the copy in
+    // scripts/ssg-pages.cjs (the prerendered page must match the hydrated one).
+    if (catKey === 'finance') {
+      html += '<div class="cat-featured"><p><strong>Most-used money calculators:</strong> <a href="/finance/apy-calculator/">APY Calculator</a> — the annual percentage yield a nominal rate actually pays once compounding is counted · <a href="/finance/pmi-calculator/">PMI Calculator</a> — the private mortgage insurance a low-down-payment loan adds to the monthly bill · <a href="/finance/fha-loan/">FHA Loan Calculator</a> — the monthly payment with FHA mortgage insurance included.</p></div>';
+    }
+    if (catKey === 'lifestyle') {
+      html += '<div class="cat-featured"><p><strong>Household cost calculators:</strong> <a href="/lifestyle/home-insurance/">Home Insurance Calculator</a> — turn your home value and an annual rate into the premium you should expect to pay.</p></div>';
+    }
+
+    // How this category's numbers are produced (also shown on every tool page).
+    if (window.CategoryMethodology) html += CategoryMethodology.methodologyHtml(catKey);
+
     // Category search
     html += '<input type="text" class="cat-search" placeholder="Search in ' + cat.name + '…" oninput="App.filterCategory(this.value)" id="catFilter">';
     
@@ -724,6 +800,12 @@ const App = (function () {
     html += '</div>';
     if (paginated) {
       html += '<div class="show-more-wrap"><button class="btn-show-more" id="showMoreBtn" onclick="App.showMoreTools(this)">Show <span class="sm-count">' + (tools.length - PAGE) + '</span> more calculators</button></div>';
+    }
+    // Category-level FAQ — MOVED here from the comparison hub so each block has
+    // one owner (docs/DUPLICATE-HUBS-FIX.md). Mirrors the FAQPage JSON-LD the
+    // SSG emits on this same page.
+    if (window.CategoryDepth && typeof CategoryDepth.faqHtml === 'function') {
+      html += CategoryDepth.faqHtml(catKey);
     }
     
     main.innerHTML = html;
@@ -844,8 +926,11 @@ const App = (function () {
           if (_state.modifierPath) {
             updateMeta(seo.metaDesc, _state.modifierPath);
           } else {
-            document.title = seo.title;
-            var canonPath = seo.canonicalPath || '/' + catKey + '/' + tool.id;
+            document.title = _padTitle(seo.title);
+            // Canonical MUST match the served URL (/<cat>/<tool>/) — without the
+            // trailing slash the client rewrote the correct static canonical to a
+            // redirecting URL, producing "Canonical ≠ URL" in audits.
+            var canonPath = seo.canonicalPath || '/' + catKey + '/' + tool.id + '/';
             updateMeta(seo.metaDesc, canonPath);
           }
           // Re-apply the per-tool OG card — updateMeta() above resets OG to the
@@ -965,9 +1050,9 @@ const App = (function () {
     }
     // Use SEO-optimized title/description from TOOL_SEO if available
     var seo = window.TOOL_SEO && window.TOOL_SEO[tool.id] || null;
-    document.title = seo ? seo.title : (tool.name + ' - CalcPro');
+    document.title = _padTitle(seo ? seo.title : (tool.name + ' - CalcPro'));
     // Canonical uses the clean generated path when available, else the category route
-    var canonPath = (seo && seo.canonicalPath) ? seo.canonicalPath : '/' + catKey + '/' + tool.id;
+    var canonPath = (seo && seo.canonicalPath) ? seo.canonicalPath : '/' + catKey + '/' + tool.id + '/';
     updateMeta(seo ? seo.metaDesc : tool.desc, canonPath);
     // Per-tool OG share card (unique 1200x630 image per calculator)
     setOgMeta(seo ? seo.title : tool.name + ' - CalcPro', seo ? seo.metaDesc : tool.desc, '/og/' + tool.id + '.jpg');
@@ -1021,7 +1106,10 @@ const App = (function () {
         }
         inputsHtml += `<input type="${inp.type || 'number'}" id="${inp.id}" class="calc-input" value="${inp.def || ''}" ${native ? 'step="any"' : ''} maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" data-private="true" oninput="App.clearInputError('${inp.id}')">`;
         if (native) {
-          inputsHtml += '<button type="button" class="voice-input-btn" onclick="AdvancedFeatures.voiceInput(\'' + inp.id + '\')" aria-label="Voice input for ' + inp.label + '" title="Speak a number">🎤</button>';
+          // data-voice-input (not inline onclick): AdvancedFeatures binds one
+          // delegated listener for every mic button on the page, so a button
+          // can never render "live but dead" when script order changes.
+          inputsHtml += '<button type="button" class="voice-input-btn" data-voice-input="' + inp.id + '" aria-label="Voice input for ' + inp.label + '" title="Speak a number">🎤</button>';
           inputsHtml += '</div>';
         }
         // Inline unit switching (Gap 3 — Omni/RapidTables style): a units array on the
@@ -1044,7 +1132,10 @@ const App = (function () {
     
     const cat = CALC_DATA[catKey];
     
-    let html = '<div class="breadcrumb"><a href="/" onclick="event.preventDefault();Router.navigate(\'/\')">' + _t('nav.home', 'Home') + '</a> › <a href="/' + catKey + '" onclick="event.preventDefault();Router.navigate(\'/' + catKey + "\')" + '">' + _t('cat.' + catKey, cat.name) + '</a> › ' + tool.name + '</div>';
+    // Trailing slash on the category link is REQUIRED: categories are served at
+    // /<cat>/ (directory index); /<cat> would 308-redirect and be flagged as an
+    // internal 3xx link. Matches the SSG breadcrumb + canonical + sitemap.
+    let html = '<div class="breadcrumb"><a href="/" onclick="event.preventDefault();Router.navigate(\'/\')">' + _t('nav.home', 'Home') + '</a> › <a href="/' + catKey + '/" onclick="event.preventDefault();Router.navigate(\'/' + catKey + "/\')" + '">' + _t('cat.' + catKey, cat.name) + '</a> › ' + tool.name + '</div>';
     
     html += '<div class="tool-header">';
     html += '<h1>' + tool.name + '</h1>';
@@ -1054,9 +1145,11 @@ const App = (function () {
     // routes, so it must be EAGER + high priority — lazy-loading the LCP
     // element delays the largest paint by seconds on throttled networks.
     // Silent fallback so a missing image never breaks the page or paints a
-    // broken icon.
+    // broken icon — done by the delegated capture-phase listener installed in
+    // initHeroFallback() (an inline onerror is a CSP-hardening audit failure and
+    // is blocked outright once the CSP stops allowing 'unsafe-inline').
     html += '<div class="tool-hero-wrap">' +
-      '<img class="tool-hero-img" src="/og/' + encodeURIComponent(tool.id) + '.jpg" alt="' + tool.name + ' calculator — free online tool" loading="eager" fetchpriority="high" decoding="async" width="1200" height="630" onerror="this.closest(\'.tool-hero-wrap\').style.display=\'none\'">' +
+      '<img class="tool-hero-img" src="/og/' + encodeURIComponent(tool.id) + '.jpg" alt="' + tool.name + ' calculator — free online tool" loading="eager" fetchpriority="high" decoding="async" width="1200" height="630">' +
       '</div>';
     // Privacy-first visible badge — reassures users their data never leaves the device
     html += '<div class="privacy-badge" role="note" aria-label="Privacy">🔒 <span>Your data never leaves your device</span></div>';
@@ -1166,13 +1259,20 @@ const App = (function () {
     const YMYL_FINANCE_EEAT = ['finance', 'business', 'regional', 'career'];
     const YMYL_HEALTH_EEAT = ['health', 'fitness', 'food', 'family'];
     if (YMYL_FINANCE_EEAT.includes(catKey)) {
-      html += '<div class="tool-review-block"><strong>About this page:</strong> Built on standard financial formulas (the same conventions banks use), hand-checked against worked examples and covered by automated tests on every build. Maintained by CalcProMaster\'s developer — not a licensed financial advisor — so results are math education, not financial advice. Read our <a href="/editorial-policy" onclick="event.preventDefault();Router.navigate(\'/editorial-policy\')">editorial policy</a> for how content is written and verified.</div>';
+      html += '<div class="tool-review-block"><strong>About this page:</strong> Standard financial formulas, checked against worked examples and covered by automated tests. Math education, not financial advice — see our <a href="/editorial-policy" onclick="event.preventDefault();Router.navigate(\'/editorial-policy\')">editorial policy</a>.</div>';
     } else if (YMYL_HEALTH_EEAT.includes(catKey)) {
-      html += '<div class="tool-review-block"><strong>About this page:</strong> Built on published, peer-reviewed formulas, hand-checked against worked examples and covered by automated tests on every build. Maintained by CalcProMaster\'s developer — not a medical professional — so results are health education, not medical advice. Read our <a href="/editorial-policy" onclick="event.preventDefault();Router.navigate(\'/editorial-policy\')">editorial policy</a>.</div>';
+      html += '<div class="tool-review-block"><strong>About this page:</strong> Published, peer-reviewed formulas, checked against worked examples and covered by automated tests. Health education, not medical advice — see our <a href="/editorial-policy" onclick="event.preventDefault();Router.navigate(\'/editorial-policy\')">editorial policy</a>.</div>';
     } else {
-      html += '<div class="tool-review-block"><strong>About this page:</strong> Built on documented public formulas, hand-checked against worked examples and covered by automated tests on every build. See our <a href="/editorial-policy" onclick="event.preventDefault();Router.navigate(\'/editorial-policy\')">editorial policy</a> for how content is written and verified.</div>';
+      html += '<div class="tool-review-block"><strong>About this page:</strong> Documented public formulas, checked against worked examples and covered by automated tests — see our <a href="/editorial-policy" onclick="event.preventDefault();Router.navigate(\'/editorial-policy\')">editorial policy</a>.</div>';
     }
     
+    // Per-category methodology + reviewer byline — kept in sync with the
+    // identical block emitted statically by scripts/ssg-pages.cjs.
+    if (window.CategoryMethodology) {
+      html += CategoryMethodology.bylineHtml(catKey);
+      html += CategoryMethodology.methodologyHtml(catKey);
+    }
+
     // YMYL disclaimer — every tool page carries a category-appropriate disclaimer at the bottom
     const YMYL_FINANCE = ['finance', 'business', 'regional', 'career'];
     const YMYL_HEALTH = ['health', 'fitness', 'food', 'family'];
@@ -1298,6 +1398,8 @@ const App = (function () {
     } else if (typeof AdvancedFeatures.loadFromUrl === 'function') {
       AdvancedFeatures.loadFromUrl(tool);
     }
+    // Smart-search values are applied last so they win over URL defaults.
+    try { applyPendingFill(tool); } catch (e) { /* never break render */ }
     
     // Render the full SEO guide (Blocks 3-6) immediately on page load so the
     // 1,200+ word content is visible to users AND Googlebot without waiting for
@@ -1453,7 +1555,7 @@ const App = (function () {
     area.innerHTML = '<h3>Similar Calculators</h3><div class="related-grid">' +
       related.map(t => {
         const rc = catOf(t);
-        return '<a class="related-card" href="' + Router.href('/' + rc + '/' + t.id) + '" onclick="event.preventDefault();Router.navigate(\'/' + rc + '/' + t.id + '\')">' + t.name + '</a>';
+        return '<a class="related-card" href="' + Router.href('/' + rc + '/' + t.id + '/') + '" onclick="event.preventDefault();Router.navigate(\'/' + rc + '/' + t.id + '/\')">' + t.name + '</a>';
       }).join('') +
       '</div>';
   }
@@ -1588,7 +1690,7 @@ const App = (function () {
     if (ctx.length) {
       const fullPath = '/' + _state.cat + '/' + tool.id + '/' + modifier;
       _state.modifierPath = fullPath;
-      document.title = tool.name + ': ' + ctx.join(' ') + ' - CalcProMaster';
+      document.title = _padTitle(tool.name + ': ' + ctx.join(' ') + ' - CalcProMaster');
       // Word-boundary clip (155 + ellipsis) keeps the meta description inside
       // the ~165-char SERP display limit without cutting mid-word.
       const mDesc = tool.desc + ' Calculate ' + ctx.join(' ') + ' instantly — free, private, step-by-step.';
@@ -1889,7 +1991,13 @@ const App = (function () {
               Comfort.speakResult(tool.name, main.textContent + '. ' + (resultArea.querySelector('.result-sub') ? resultArea.querySelector('.result-sub').textContent : ''));
             }
           });
-          main.insertAdjacentElement('afterend', btn);
+          // .result-main is a <td> in .result-table. Appending the button after it
+          // placed a <button> directly inside <tr> — invalid table content, which
+          // the parser moves out of the table and which distorted the column
+          // widths of the whole result table. Keep it inside the cell.
+          const cell = main.closest ? main.closest('td, th') : null;
+          if (cell) cell.appendChild(btn);
+          else main.insertAdjacentElement('afterend', btn);
         }
       } catch (e) { /* never break result render */ }
       
@@ -2357,7 +2465,7 @@ const App = (function () {
       const stripSpa = function (h) { return String(h).replace(/\sonclick="[^"]*"/g, ''); };
       html = (typeof LegalPages !== 'undefined' && LegalPages.EDITORIAL_POLICY)
         ? stripSpa(LegalPages.EDITORIAL_POLICY)
-        : '<h1>Editorial Policy</h1><p>How CalcProMaster content is written, verified and corrected: published formulas, hand-checked worked examples, and an automated QA contract on every build. Contact <a href="mailto:calpromaster@gmail.com">calpromaster@gmail.com</a> for corrections.</p>';
+        : '<h1>Editorial Policy</h1><p>How CalcProMaster content is written, verified and corrected: published formulas, hand-checked worked examples, and an automated QA contract on every build. Contact <a href="/contact" data-email="calpromaster@gmail.com">calpromaster@gmail.com</a> for corrections.</p>';
     } else if (page.type === 'privacy') {
       html = '<div class="legal-page"><h1>Privacy Policy</h1>';
       html += '<p class="legal-meta">Last updated: July 2026</p>';
@@ -2405,17 +2513,17 @@ const App = (function () {
     } else if (pageKey === 'contact') {
       html = '<div class="legal-page"><h1>Contact CalcProMaster</h1>';
       html += '<p>We\'d love to hear from you! Whether you have questions, feedback, found a bug, or want to partner with us, please reach out.</p>';
-      html += '<div class="contact-email">📧 <a href="mailto:calpromaster@gmail.com">calpromaster@gmail.com</a></div>';
+      html += '<div class="contact-email">📧 <a href="/contact" data-email="calpromaster@gmail.com">calpromaster@gmail.com</a></div>';
       html += '<h2>Business &amp; Partnership Inquiries</h2>';
-      html += '<p>Interested in affiliate partnerships, sponsored placements, content collaborations, or backlink exchanges? Email <a href="mailto:calpromaster@gmail.com">calpromaster@gmail.com</a> with the subject line <em>Partnership</em> and we typically reply within 2-3 business days.</p>';
+      html += '<p>Interested in affiliate partnerships, sponsored placements, content collaborations, or backlink exchanges? Email <a href="/contact" data-email="calpromaster@gmail.com">calpromaster@gmail.com</a> with the subject line <em>Partnership</em> and we typically reply within 2-3 business days.</p>';
       html += '<p>We accept a limited number of <strong>sponsored recommendation placements</strong> in calculator result pages (clearly labeled "Recommended") plus <strong>guest content and editorial backlinks</strong>. All partnerships are disclosed and never affect calculation results.</p>';
       html += '<h2>Recommended Resources &amp; Partners</h2>';
       html += '<p>We carefully curate a short list of trusted resources we personally use and recommend. These links may include affiliate relationships — when you buy through them we may earn a small commission at no extra cost to you. It never affects our calculator results.</p>';
       html += '<ul class="partner-list">';
-      html += '<li>📈 <a href="https://www.investopedia.com/" rel="nofollow noopener sponsored" target="_blank">Investopedia</a> — financial education and definitions</li>';
-      html += '<li>💳 <a href="https://www.nerdwallet.com/" rel="nofollow noopener sponsored" target="_blank">NerdWallet</a> — rate and card comparisons</li>';
-      html += '<li>📊 <a href="https://www.semrush.com/" rel="nofollow noopener sponsored" target="_blank">Semrush</a> — SEO and keyword research</li>';
-      html += '<li>🔗 <a href="https://ahrefs.com/" rel="nofollow noopener sponsored" target="_blank">Ahrefs</a> — backlink analysis</li>';
+      html += '<li>📈 <a href="https://www.investopedia.com/" rel="noopener" target="_blank">Investopedia</a> — financial education and definitions</li>';
+      html += '<li>💳 <a href="https://www.nerdwallet.com/" rel="noopener" target="_blank">NerdWallet</a> — rate and card comparisons</li>';
+      html += '<li>📊 <a href="https://www.semrush.com/" rel="noopener" target="_blank">Semrush</a> — SEO and keyword research</li>';
+      html += '<li>🔗 <a href="https://ahrefs.com/" rel="noopener" target="_blank">Ahrefs</a> — backlink analysis</li>';
       html += '<li>🩺 <a href="https://www.who.int/health-topics" rel="nofollow noopener" target="_blank">WHO Health Topics</a> — health standards (editorial reference)</li>';
       html += '</ul>';
       html += '<h2>Report a Bug</h2>';
@@ -2493,7 +2601,7 @@ const App = (function () {
       html += '<a href="/guides/regional" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Regional Finance Guides</strong><br><span style="color:var(--text-light);font-size:13px">FD, PPF, SIP, GST — India-specific rules.</span></a>';
       html += '<a href="/guides/everyday" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Everyday Guides</strong><br><span style="color:var(--text-light);font-size:13px">Exact age, date differences, electricity bills decoded.</span></a>';
       html += '<a href="/guides/utilities" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>Utilities Guides</strong><br><span style="color:var(--text-light);font-size:13px">Password entropy, UUID guarantees, tool concepts.</span></a>';
-      html += '<div style="margin-top:20px"><strong style="font-size:15px">From the blog</strong> — <a href="/blog" style="color:var(--primary)">all posts</a></div>';
+      html += '<div style="margin-top:20px"><strong style="font-size:15px">From the blog</strong> — <a href="/blog/" style="color:var(--primary)">all posts</a></div>';
       html += '<a href="/blog/stacked-discounts" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>\u201cExtra 20% off\u201d is less than you think</strong><br><span style="color:var(--text-light);font-size:13px">Why 30% + 20% off is 44%, not 50% — stacked discount math with worked examples.</span></a>';
       html += '<a href="/blog/how-emi-works" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>How banks calculate your EMI</strong><br><span style="color:var(--text-light);font-size:13px">Amortization demystified: the shifting interest/principal split, a real 36-month view, prepayment math.</span></a>';
       html += '<a href="/blog/bmi-honest-look" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>BMI is a screening tool, not a diagnosis</strong><br><span style="color:var(--text-light);font-size:13px">What the formula can and cannot see — and which companion metrics fill the gaps.</span></a>';
@@ -2559,13 +2667,13 @@ const App = (function () {
       html += '<a href="/blog/concrete-patio-math" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>The 4-inch mistake — concrete orders gone wrong</strong><br><span style="color:var(--text-light);font-size:13px">A 20×20 patio: 5.4 cubic yards, 222 bags, and the 12× unit trap.</span></a>';
       html += '<a href="/blog/ev-vs-petrol-tco" class="guide-card" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;text-decoration:none;display:block"><strong>EV vs petrol — the 5-year math nobody finishes</strong><br><span style="color:var(--text-light);font-size:13px">82,000/year energy savings vs the 4.9-year premium payback.</span></a>';
       html += '</div>';
-      html += '<p style="margin-top:18px">Deeper step-by-step coverage lives in the <a href="/guides" onclick="event.preventDefault();Router.navigate(\'/guides\')">guides library</a> — 64 guides with formulas, worked examples and FAQs.</p></div>';
+      html += '<p style="margin-top:18px">Deeper step-by-step coverage lives in the <a href="/guides/" onclick="event.preventDefault();Router.navigate(\'/guides\')">guides library</a> — 64 guides with formulas, worked examples and FAQs.</p></div>';
     } else if (pageKey === '404') {
       html = '<div class="legal-page"><div class="empty-state"><div class="empty-state-icon">🔍</div><h1>404 — Page Not Found</h1>';
       html += '<p>The page you\'re looking for doesn\'t exist. Let\'s find what you need instead.</p>';
       html += '<div class="search-box" style="margin:24px auto"><input type="text" placeholder="Search ' + getCalculatorCount() + '+ calculators…" oninput="App.homeSearch(this.value)" onkeydown="App.searchKeyNav(event)" id="search-404-input" role="combobox" aria-expanded="false" aria-label="Search calculators"><div class="search-results" id="homeSearchResults"></div></div>';
       html += '<div style="margin-top:24px"><a href="/" class="action-btn" onclick="event.preventDefault();Router.navigate(\'/\')">🏠 Return to Home</a>';
-      html += ' <a href="/finance" class="action-btn" onclick="event.preventDefault();Router.navigate(\'/finance\')">💰 Popular Calculators</a></div></div></div>';
+      html += ' <a href="/finance/" class="action-btn" onclick="event.preventDefault();Router.navigate(\'/finance\')">💰 Popular Calculators</a></div></div></div>';
     }
     
     main.innerHTML = html;
@@ -2628,14 +2736,55 @@ const App = (function () {
     }
     return _ssCatalog;
   }
+  // Cache-safe URL for a script the app injects at runtime. build-deploy.js
+  // versions every <script src> in the HTML with ?v=<build hash> and _headers
+  // serves /js/* as a year-long immutable asset, so a dynamically injected file
+  // MUST carry the same token or it would be cached under a URL the next build
+  // never invalidates. The token comes from <html data-asset-version>.
+  function withAssetVersion(src) {
+    if (!src || !/(^|\/)js\//.test(src) || /[?&]v=/.test(src)) return src;
+    var v = document.documentElement && document.documentElement.getAttribute('data-asset-version');
+    if (!v) return src;
+    return src + (src.indexOf('?') === -1 ? '?' : '&') + 'v=' + v;
+  }
+  // In-flight/last result per URL, so two callers never append two copies of the
+  // same script (a second copy of a classic script re-declares its top-level
+  // consts and throws "Identifier 'X' has already been declared" — the exact
+  // console error Lighthouse reported for smart-search.js).
+  var _scriptPromises = {};
+  function findScript(src) {
+    var all = document.querySelectorAll('script[src]');
+    for (var i = 0; i < all.length; i++) {
+      var raw = all[i].getAttribute('src') || '';
+      // Compare path names, ignoring ?v= and a leading slash: index.html ships
+      // "js/smart-search.js" while runtime callers ask for "/js/smart-search.js".
+      if (raw.replace(/^\//, '').split('?')[0] === src.replace(/^\//, '').split('?')[0]) return all[i];
+    }
+    return null;
+  }
   function loadScriptOnce(src) {
-    return new Promise(function (res) {
+    var full = withAssetVersion(src);
+    if (_scriptPromises[full]) return _scriptPromises[full];
+    _scriptPromises[full] = new Promise(function (res) {
+      var existing = findScript(src);
+      if (existing) {
+        // A deferred tag earlier in the document has already executed by the
+        // time the app runs, so its globals are available now.
+        if (existing.getAttribute('data-loaded') === '1') { res(true); return; }
+        existing.addEventListener('load', function () { res(true); });
+        existing.addEventListener('error', function () { res(false); });
+        // Already-executed deferred script: its load event fired before we
+        // attached. document.readyState covers that case.
+        if (document.readyState !== 'loading') res(true);
+        return;
+      }
       var s = document.createElement('script');
-      s.src = src;
-      s.onload = function () { res(true); };
+      s.src = full;
+      s.onload = function () { s.setAttribute('data-loaded', '1'); res(true); };
       s.onerror = function () { res(false); };
       document.head.appendChild(s);
     });
+    return _scriptPromises[full];
   }
   function ensureSmartSearch() {
     if (ssAvailable()) return Promise.resolve(true);
@@ -2719,6 +2868,100 @@ const App = (function () {
     }
     return [...results.values()].sort((a, b) => b.score - a.score).slice(0, 10);
   }
+  // ---------- Smart query: parse numbers out of a sentence and prefill inputs ----------
+  // "emi on 5 lakh for 20 years at 8.5%" → Loan EMI opens with 500000 / 8.5 / 20.
+  // Values are guessed from the input id/label; the user still sees and can edit
+  // every field, and the URL params are the same ones the share link uses.
+  function smartFillValues(t, q) {
+    if (!t || !Array.isArray(t.inputs) || !t.inputs.length) return null;
+    if (!window.SmartSearch || typeof window.SmartSearch.parse !== 'function') return null;
+    const p = window.SmartSearch.parse(q);
+    if (!p || !p.hasAny) return null;
+    const vals = {};
+    const used = new Set();
+    const numeric = t.inputs.filter(function (i) { return !i.type || i.type === 'number'; });
+    function pick(re, v, exclude) {
+      if (v == null || !isFinite(v)) return;
+      const inp = numeric.find(function (i) {
+        return !used.has(i.id) && re.test(i.id + ' ' + (i.label || '')) && !(exclude && exclude.test(i.id + ' ' + (i.label || '')));
+      });
+      if (inp) { vals[inp.id] = Math.round(v * 1e6) / 1e6; used.add(inp.id); }
+    }
+    pick(/amount|principal|price|balance|salary|income|value|cost|budget|deposit|saving|invest|rent|debt|bill|loan/i, p.money, /payment|result/i);
+    pick(/rate|percent|pct|interest|apr|discount|tip|tax|yield/i, p.percent);
+    pick(/year|term|tenure|duration|period/i, p.years);
+    pick(/month/i, p.months);
+    pick(/weight/i, p.weight);
+    pick(/height/i, p.height);
+    pick(/age/i, p.age);
+    // Leftover numbers fill the remaining numeric fields in document order.
+    const leftovers = (p.numbers || []).slice();
+    for (const inp of numeric) {
+      if (!leftovers.length) break;
+      if (used.has(inp.id)) continue;
+      vals[inp.id] = leftovers.shift();
+      used.add(inp.id);
+    }
+    return Object.keys(vals).length ? vals : null;
+  }
+  // A sentence is a great query for the parser and a terrible one for the
+  // matcher: "emi on 5 lakh for 20 years at 8.5%" matches no tool name, which
+  // made the smart row unreachable (the result list said "no calculators found"
+  // before smartFillValues ever ran). Strip the numbers, magnitudes and filler
+  // words so the matcher sees "emi", and keep the full sentence for the parser.
+  const _Q_FILLER = /\b(on|for|at|with|the|my|is|of|a|an|and|to|in|per|how|much|many|calculate|calculator|compute|what|please)\b/g;
+  const _Q_UNITS = /\b(k|thousand|lakh|lakhs|lac|lacs|million|mn|crore|crores|cr|billion|bn|percent|pct|years?|yrs?|months?|weeks?|days?|kg|kgs|cm|mm|ft|feet|pounds?|lbs?|dollars?|rupees?|rs|usd|pkr|inr|eur|gbp|aed)\b/g;
+  function searchableQuery(q) {
+    const stripped = String(q)
+      .replace(/[₹$€£%]/g, ' ')
+      .replace(/\d+(?:[.,]\d+)?/g, ' ')
+      .replace(_Q_UNITS, ' ')
+      .replace(_Q_FILLER, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+    return stripped;
+  }
+  // The router normalises the query string on navigate (URLStateManager writes
+  // the current defaults), so a ?amount=… URL is gone before the tool renders.
+  // Hand the values over in sessionStorage instead and apply them after mount.
+  function smartFillNavigate(catKey, toolId, vals) {
+    try { sessionStorage.setItem('calcpro_pending_fill', JSON.stringify({ tool: toolId, vals: vals })); } catch (e) { /* private mode */ }
+    Router.navigate('/' + catKey + '/' + toolId + '/');
+  }
+  function applyPendingFill(tool) {
+    if (!tool || !tool.inputs) return false;
+    let pend = null;
+    try { pend = JSON.parse(sessionStorage.getItem('calcpro_pending_fill') || 'null'); } catch (e) { return false; }
+    if (!pend || pend.tool !== tool.id || !pend.vals) return false;
+    let n = 0;
+    tool.inputs.forEach(function (inp) {
+      const v = pend.vals[inp.id];
+      if (v == null) return;
+      const el = document.getElementById(inp.id);
+      if (!el) return;
+      el.value = String(v);
+      el.dispatchEvent(new Event('input', { bubbles: true }));
+      el.dispatchEvent(new Event('change', { bubbles: true }));
+      // Keep the paired range slider in step. The slider ships its own default
+      // `value` (min or the tool's default), so a smart-filled "5 lakh" loan
+      // showed 500000 in the field but left the thumb at 101000 — and the next
+      // drag silently overwrote the filled number. Widen the track when the
+      // spoken value sits outside it, otherwise the thumb cannot represent it.
+      const slider = document.getElementById(inp.id + '-slider');
+      const num = parseFloat(v);
+      if (slider && isFinite(num)) {
+        const sMin = parseFloat(slider.min), sMax = parseFloat(slider.max);
+        if (isFinite(sMax) && num > sMax) slider.max = String(num);
+        if (isFinite(sMin) && num < sMin) slider.min = String(num);
+        slider.value = String(num);
+      }
+      n++;
+    });
+    try { sessionStorage.removeItem('calcpro_pending_fill'); } catch (e) { /* ignore */ }
+    if (n) showToast('Smart search filled ' + n + ' input' + (n === 1 ? '' : 's') + ' — check them');
+    return n > 0;
+  }
+
   function homeSearch(val) {
     // First search keystroke also warms the lazy categories in the background, so
     // results for niche calculators appear as the user keeps typing.
@@ -2738,14 +2981,34 @@ const App = (function () {
     if (skel) { skel.hidden = false; }
     setTimeout(function () { const s = document.getElementById('search-skeleton'); if (s) s.hidden = true; }, 700);
     
-    const matches = _searchAll(q);
+    // Match on the stripped query first (a sentence contains no tool name), then
+    // fall back to the raw text so a literal phrase still works.
+    const qForMatch = searchableQuery(q);
+    let matches = qForMatch ? _searchAll(qForMatch) : [];
+    if (!matches.length && qForMatch !== q) matches = _searchAll(q);
     _searchItems = matches;
     if (input) input.setAttribute('aria-expanded', 'true');
     
     if (matches.length === 0) {
       results.innerHTML = '<div class="search-item" style="color:var(--text-light)">No calculators found — try a different word</div>';
     } else {
-      results.innerHTML = matches.map(m => {
+      // Smart row: only when the sentence actually contains numbers to fill in.
+      let smartRow = '';
+      const top = matches[0];
+      if (top && top.catKey) {
+        const filled = smartFillValues(top.t, val);
+        if (filled) {
+          const shown = Object.keys(filled).map(function (k) {
+            const inp = (top.t.inputs || []).find(function (i) { return i.id === k; });
+            return (inp && inp.label ? inp.label + ': ' : '') + filled[k];
+          }).slice(0, 4).join(' · ');
+          const call = 'App.smartFillNavigate(\'' + Security.sanitizeJsString(top.catKey) + '\',\'' + Security.sanitizeJsString(top.t.id) + '\',' + JSON.stringify(filled).replace(/'/g, "\\'") + ');document.getElementById(\'homeSearchResults\').style.display=\'none\'';
+          smartRow = '<div class="search-item search-smart" role="option" onclick="' + Security.sanitizeHtml(call) + '">' +
+            '<strong>⚡ Open ' + Security.sanitizeHtml(top.t.name) + ' with your numbers</strong> <span class="search-chip">smart search</span><br>' +
+            '<small>Fills ' + Security.sanitizeHtml(shown) + ' — you can change any field</small></div>';
+        }
+      }
+      results.innerHTML = smartRow + matches.map(m => {
         const t = m.t;
         const catName = m.catKey && CALC_DATA[m.catKey] ? CALC_DATA[m.catKey].name : '';
         const chip = m.alias ? ' <span class="search-chip">via ' + Security.sanitizeHtml(m.alias) + '</span>' : '';
@@ -3074,7 +3337,13 @@ const App = (function () {
         'Runs entirely in your browser — no server upload',
         'Works offline after first load',
         'Share results with link or export as image or CSV'
-      ]
+      ],
+      // Semantic entity coverage: the tool's own related-term set (lsi) is
+      // exposed to machines as schema.org Thing entities + keywords, instead of
+      // being left in a JS array no crawler reads. Kept in sync with
+      // scripts/ssg-pages.cjs buildToolSchema().
+      'keywords': ((seo && seo.lsi) || []).slice(0, 8).join(', '),
+      'about': ((seo && seo.lsi) || []).slice(0, 4).map(function (t) { return { '@type': 'Thing', 'name': t }; })
     };
     schemas.push(appSchema);
     
@@ -3321,11 +3590,29 @@ const App = (function () {
   }
 
   // ---------- Init ----------
+  // Hero-image fallback, delegated. <img onerror="..."> used to hide the hero
+  // wrapper; that inline handler is a CSP-hardening failure (and is dead the
+  // moment script-src drops 'unsafe-inline'). Capture phase is required because
+  // resource load errors do not bubble.
+  function initHeroFallback() {
+    if (initHeroFallback.done) return;
+    initHeroFallback.done = true;
+    window.addEventListener('error', function (e) {
+      var t = e && e.target;
+      if (!t || t.tagName !== 'IMG' || !t.classList || !t.classList.contains('tool-hero-img')) return;
+      try {
+        var wrap = t.closest('.tool-hero-wrap');
+        if (wrap) wrap.style.display = 'none';
+      } catch (err) { /* non-fatal */ }
+    }, true);
+  }
+
   function init() {
     // Error boundary: if a tool render throws, show a friendly card instead of a blank screen
     if (typeof Monitor !== 'undefined') {
       try { Monitor.init(); } catch(e) {}
     }
+    initHeroFallback();
     loadTheme();
     initKeyboard();
     
@@ -3517,6 +3804,10 @@ const App = (function () {
     if (!consent) {
       const banner = document.getElementById('cookie-banner');
       if (banner) banner.style.display = 'block';
+      // One decision at a time: on a phone the banner overlaps the bottom nav,
+      // reading toolbar, donation widget, mini calculator and toast by 11
+      // measured intersections. body.consent-open hides those while it is open.
+      document.body.classList.add('consent-open');
     }
     // Harden consent controls: bind handlers via addEventListener (not just inline
     // onclick) so the banner always responds, even if a script elsewhere overrides.
@@ -3571,6 +3862,7 @@ const App = (function () {
     localStorage.setItem('calcpro_consent', 'accepted');
     localStorage.setItem('calcpro_consent_analytics', 'granted');
     localStorage.setItem('calcpro_consent_ads', 'granted');
+    document.body.classList.remove('consent-open');
     var banner = document.getElementById('cookie-banner');
     if (banner) banner.style.display = 'none';
     var settings = document.getElementById('consent-settings-modal');
@@ -3589,6 +3881,7 @@ const App = (function () {
     localStorage.setItem('calcpro_consent', 'rejected');
     localStorage.setItem('calcpro_consent_analytics', 'denied');
     localStorage.setItem('calcpro_consent_ads', 'denied');
+    document.body.classList.remove('consent-open');
     var banner = document.getElementById('cookie-banner');
     if (banner) banner.style.display = 'none';
     var settings = document.getElementById('consent-settings-modal');
@@ -3612,6 +3905,7 @@ const App = (function () {
     localStorage.setItem('calcpro_consent', 'accepted');
     localStorage.setItem('calcpro_consent_analytics', analyticsGranted ? 'granted' : 'denied');
     localStorage.setItem('calcpro_consent_ads', adsGranted ? 'granted' : 'denied');
+    document.body.classList.remove('consent-open');
     var banner = document.getElementById('cookie-banner');
     if (banner) banner.style.display = 'none';
     var modal = document.getElementById('consent-settings-modal');
@@ -3777,6 +4071,8 @@ const App = (function () {
     navigateToTool,
     search,
     homeSearch,
+    smartFillNavigate,
+    applyPendingFill,
     searchKeyNav,
     clearInputError,
     toggleNavMenu,
@@ -3809,6 +4105,7 @@ const App = (function () {
     executeCommand,
     showMoreTools,
     initScrollReveal,
+    initHeroFallback,
   };
 })();
 
@@ -3836,5 +4133,15 @@ if (typeof window !== 'undefined') {
     if (window.Comfort && typeof Comfort.init === 'function') {
       try { Comfort.init(); } catch (e) { /* best-effort */ }
     }
+    // Smart search example chips: fill the hero search box and run the query.
+    document.addEventListener('click', function (ev) {
+      const chip = ev.target.closest && ev.target.closest('[data-smart-q]');
+      if (!chip) return;
+      const box = document.getElementById('home-search');
+      if (!box) return;
+      box.value = chip.getAttribute('data-smart-q') || '';
+      box.focus();
+      App.homeSearch(box.value);
+    });
   });
 }

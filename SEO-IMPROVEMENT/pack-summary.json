@@ -1,0 +1,92 @@
+{
+  "ranAt": "2026-10-13T02:35:25.052Z",
+  "pages": 1417,
+  "sitemapUrls": 1417,
+  "byClassification": {
+    "major-improve": 790,
+    "minor-update": 31,
+    "keep-improve": 11,
+    "investigate-indexing": 585
+  },
+  "byPageType": {
+    "home": 1,
+    "static": 11,
+    "hub": 44,
+    "guide": 73,
+    "blog": 6,
+    "calculator": 1282
+  },
+  "statusCounts": {
+    "AUDITED": 713,
+    "READY_FOR_IMPROVEMENT": 696,
+    "VERIFIED": 7,
+    "BLOCKED": 1
+  },
+  "prioCounts": {
+    "P0": 1,
+    "P1": 586,
+    "P2": 114,
+    "P3": 716
+  },
+  "groupCounts": {
+    "2 — minor improvement needed": 39,
+    "3 — major improvement needed": 3,
+    "4 — technical repair needed": 582,
+    "1 — no change needed, verified": 3
+  },
+  "thin": {
+    "threshold": 500,
+    "count": 20,
+    "bare": 1,
+    "thinnest": 407
+  },
+  "urlFormat": {
+    "scanned": 1417,
+    "fails": 2,
+    "warns": 9
+  },
+  "keywordAudit": {
+    "c1": "⚠️ 1 duplicated titles",
+    "c2": "✅ none",
+    "i1": "104 clusters (43 cross-category tools)",
+    "i4": "2 pairs"
+  },
+  "internalLinks": {
+    "orphans": 0,
+    "weak": 0
+  },
+  "changes": [
+    {
+      "page": "/guides/room-area",
+      "status": "VERIFIED"
+    },
+    {
+      "page": "/guides/gear-ratio",
+      "status": "VERIFIED"
+    },
+    {
+      "page": "/everyday/carbon",
+      "status": "NO_CHANGE_JUSTIFIED"
+    },
+    {
+      "page": "/homegarden/carbon-offset",
+      "status": "VERIFIED"
+    },
+    {
+      "page": "/regional/umrah-cost",
+      "status": "NO_CHANGE_JUSTIFIED"
+    },
+    {
+      "page": "/finance/hajj-cost",
+      "status": "VERIFIED"
+    },
+    {
+      "page": "/guides/cagr",
+      "status": "VERIFIED"
+    },
+    {
+      "page": "/regional/abuDhabi-cost-living",
+      "status": "BLOCKED"
+    }
+  ]
+}

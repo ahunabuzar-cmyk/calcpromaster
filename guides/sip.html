@@ -56,7 +56,9 @@
   </style>
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › SIP Returns</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › SIP Returns</p>
   <h1>SIP Math: Where ₹5,000 a Month Actually Goes</h1>
   <p class="updated">Regional Finance · 6 min read · Last updated September 2026</p>
 
@@ -77,16 +79,55 @@
   <p>Doubling the time invested 2× the money but produced <strong>5×</strong> the growth. Compounding is back-loaded: the final years contribute most of the gain, which is why interrupting a SIP at year 7 costs far more than the 7 years of deposits suggest.</p>
 
   <h2>Assumptions to keep honest</h2>
-  <p>The 12% figure is an assumed constant annual return — real equity funds deliver it as a volatile path (−35% years happen), and the formula's smooth curve is a simplification, not a promise. Inflation also shrinks real value: ₹11.6 lakh in 10 years buys roughly what ₹6–7 lakh buys today at 5–6% inflation. Run your own numbers in the <a href="/finance/sip">SIP Calculator</a>; the <a href="/finance/sip-step-up">Step-up SIP</a> version models the annual increase most salaried investors actually do.</p>
+  <p>The 12% figure is an assumed constant annual return — real equity funds deliver it as a volatile path (−35% years happen), and the formula's smooth curve is a simplification, not a promise. Inflation also shrinks real value: ₹11.6 lakh in 10 years buys roughly what ₹6–7 lakh buys today at 5–6% inflation. Run your own numbers in the <a href="/finance/sip/">SIP Calculator</a>; the <a href="/finance/sip-step-up/">Step-up SIP</a> version models the annual increase most salaried investors actually do.</p>
 
   <h2>Try the calculators</h2>
   <p class="related">
-    <a href="/finance/sip" class="cta">SIP Calculator</a>
-    <a href="/finance/sip-step-up" class="cta">Step-up SIP</a>
-    <a href="/finance/currency-converter" class="cta">Currency Converter</a>
+    <a href="/finance/sip/" class="cta">SIP Calculator</a>
+    <a href="/finance/sip-step-up/" class="cta">Step-up SIP</a>
+    <a href="/finance/currency-converter/" class="cta">Currency Converter</a>
   </p>
 
-  <h2>Frequently asked questions</h2>
+  
+  
+<!-- guide-worked-example:start -->
+<h2>Worked example: SIP Calculator (Systematic Investment Plan) at its default inputs</h2>
+<p>Take the default setup on <a href="/finance/sip/">SIP Calculator (Systematic Investment Plan)</a>: no fields changed, nothing tuned to a nice round number. Run in the site's own engine, those values produce the answer below.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Monthly Investment ($)</td><td>500</td></tr><tr><td>Expected Annual Return (%)</td><td>12</td></tr><tr><td>Investment Period (years)</td><td>10</td></tr></tbody></table>
+<p><strong>Result:</strong> Future Value: $116170</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Step 1: 10 years = 120 months</li><li>Step 2: Total invested = $60000</li><li>Step 3: FV = $116170</li></ol>
+<h2>Sensitivity: Monthly Investment ($) from half to one-and-a-half times</h2>
+<p>Monthly Investment ($) is the first input worth testing, so here it is at three sizes.</p>
+<table><thead><tr><th>Monthly Investment ($)</th><th>Result</th></tr></thead><tbody><tr><td>250</td><td>Future Value: $58085</td></tr><tr><td>500</td><td>Future Value: $116170</td></tr><tr><td>750</td><td>Future Value: $174254</td></tr></tbody></table>
+<p>If the rows barely differ, monthly investment ($) is not your lever — change a different input. If they swing widely, get that number right before trusting the total.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>Monthly investing versus a lump sum</h2>
+<p>A systematic plan invests a fixed amount on a schedule, so it buys more units when prices are low and fewer when they are high. That averaging reduces the risk of investing everything at a peak, at the cost of holding cash that could have been invested earlier.</p>
+<p>With a lump sum available, investing it immediately has historically beaten spreading it out in most markets, because markets rise more often than they fall. Regular investing wins on behaviour, not on arithmetic: it works because people keep doing it.</p>
+<h2>Step-up contributions matter more than fund choice</h2>
+<p>Raising the contribution by 10% a year, in line with income, changes the final corpus far more than a one-point difference in expense ratio over a normal career. The reason is that later contributions are invested for less time, so early increases compound the longest.</p>
+<p>Fees still matter, just second. A one-point annual fee on a thirty-year plan removes roughly a fifth of the final value, which is worth checking once and then ignoring.</p>
+<h2>The return you quote is not the return you get</h2>
+<p>Fund factsheets show point-to-point or annualised returns for a period that has already ended. Your own return depends on when each instalment went in, which is why an XIRR calculated from your actual cash flows is the honest number.</p>
+<p>A plan that started before a crash can show a low trailing return while the money invested after the crash did very well. Judging the strategy on the headline number alone misreads both.</p>
+<h2>Inflation and the target corpus</h2>
+<p>A corpus built at 12% nominal over twenty years looks impressive until it is deflated at 6%. Planning in real terms keeps the target honest: decide the monthly income you want in today's money, then solve for the corpus that produces it.</p>
+<p>Also decide what happens at the end of the accumulation period. A plan with no withdrawal rule is a savings habit, not a retirement plan.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/fd-ppf-sip">FD vs PPF vs SIP</a></li>
+    <li><a href="/guides/retirement">How Much You Need to Retire</a></li>
+    <li><a href="/guides/npv-vs-irr">NPV vs IRR</a></li>
+    <li><a href="/guides/net-worth">Net Worth</a></li>
+  </ul>
+
+<h2>Frequently asked questions</h2>
   <h3>How is SIP return calculated?</h3>
   <p>As the future value of a monthly annuity: FV = P × [(1+i)ⁿ − 1] ÷ i × (1+i), with i as the monthly rate. ₹5,000/month at 12% for 5 years ≈ ₹4,12,432 against ₹3,00,000 invested.</p>
   <h3>What will ₹5,000 a month for 10 years become?</h3>
@@ -96,7 +137,8 @@
   <h3>What is a step-up SIP?</h3>
   <p>One where the monthly amount rises each year, typically with your salary. Because later deposits are larger, step-up SIPs end substantially higher than flat SIPs at the same duration.</p>
 
-  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <p class="related"><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog/">Blog</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

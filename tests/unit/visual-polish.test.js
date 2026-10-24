@@ -80,6 +80,20 @@ describe('VisualPolish — gauge', () => {
     expect(VP.gauge(50, { label: '<b>' })).toContain('&lt;b&gt;');
   });
 
+  it('never puts a percentage inside a transform attribute', () => {
+    // Chrome logs `<circle> attribute transform: Expected number, "rotate(-90 50% 50%)"`
+    // for percentage units in the transform ATTRIBUTE, which failed the axe E2E on
+    // /math/percentage: a console error is a page error. The rotation must use the
+    // numeric centre of the viewBox instead.
+    for (const size of [120, 80, 200]) {
+      const svg = VP.gauge(40, { size });
+      for (const m of svg.matchAll(/transform="([^"]*)"/g)) {
+        expect(m[1], 'transform with % in size ' + size).not.toMatch(/%/);
+      }
+      expect(svg).toContain('rotate(-90 ' + size / 2 + ' ' + size / 2 + ')');
+    }
+  });
+
   it('includes sub-label and aria when provided', () => {
     const svg = VP.gauge(60, { sub: 'of goal', aria: '60 percent of goal' });
     expect(svg).toContain('of goal');

@@ -1,6 +1,6 @@
 # Keyword implementation status (B / C / D)
 
-_Generated for the 2026-10-13 sitemap tree by `scripts/audit-keyword-implementation.cjs` from
+_Generated for the 2026-10-17 sitemap tree by `scripts/audit-keyword-implementation.cjs` from
 `data/keyword-implementation-map.json`. Do not edit by hand — regenerate with `npm run seo:kw-impl`._
 
 The implementation map decides **which page owns which keyword**. This audit checks whether that
@@ -11,14 +11,14 @@ page, or with the wrong page, is visible instead of sitting in the plan looking 
 
 | Status | Rows | Meaning |
 |---|---:|---|
-| COVERED | 95 | page already names the keyword — nothing to change |
+| COVERED | 94 | page already names the keyword — nothing to change |
 | NO_OWNER | 2 |  |
-| **total** | **97** | |
+| **total** | **96** | |
 
 | Code | Rows | COVERED | NEEDS_META | WRONG_OWNER | NO_TARGET | PAGE_MISSING |
 |---|---:|---:|---:|---:|---:|---:|
 | B | 34 | 34 | 0 | 0 | 0 | 0 |
-| C | 56 | 54 | 0 | 0 | 0 | 0 |
+| C | 55 | 53 | 0 | 0 | 0 | 0 |
 | D | 7 | 7 | 0 | 0 | 0 | 0 |
 
 ## Work queue — pages that are the right owner but under-describe it
@@ -53,7 +53,6 @@ None.
 | C | COVERED | `financial compound calculator` | 40,500 | financial compound | `/finance/compound-interest` | — |
 | C | COVERED | `financial compounding calculator` | 40,500 | financial compound | `/finance/compound-interest` | — |
 | C | COVERED | `interest percentage calculator` | 33,100 | interest percentage | `/finance/simple-interest` | — |
-| C | COVERED | `annual percentage calculator` | 27,100 | annual percentage | `/finance/apr-annual` | — |
 | B | COVERED | `ot calculator` | 22,200 | ot | `/career/overtime-pay` | — |
 | C | COVERED | `time payroll calculator` | 22,200 | time salary | `/career/timesheet-hours` | — |
 | B | COVERED | `pay time calculator` | 22,200 | salary time | `/career/timesheet-hours` | — |

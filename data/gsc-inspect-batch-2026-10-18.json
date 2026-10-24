@@ -1,0 +1,208 @@
+{
+  "ranAt": "2026-10-18T10:17:12.401Z",
+  "site": "https://calcpromaster.com",
+  "sitemapResubmit": 204,
+  "count": 40,
+  "results": [
+    {
+      "url": "https://calcpromaster.com/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/about",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.com/privacy",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.com/contact",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.com/hub/auto/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/hub/business/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/hub/career/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/hub/construction/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/hub/conversion/",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/hub/education/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/hub/engineering/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/hub/everyday/",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.com/hub/finance/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/hub/fitness/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/hub/food/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/hub/health/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/hub/homegarden/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/hub/lifestyle/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/hub/math/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/hub/family/",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.com/hub/regional/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/hub/science/",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/hub/tech/",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.com/hub/utilities/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/auto/",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/blog/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/business/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/career/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/changelog",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/construction/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/conversion/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/disclaimer-finance",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/disclaimer-general",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.com/disclaimer-health",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.com/editorial-policy",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.com/education/",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.com/embed/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/engineering/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/everyday/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/family/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    }
+  ]
+}

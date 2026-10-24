@@ -1,0 +1,16 @@
+{
+  "updatedAt": "2026-10-13T11:20:00.000Z",
+  "note": "Accepted machine-shaped-query findings. An entry here stops alerting; delete it to start alerting again. An entry also re-alerts once the page grows past the numbers it was accepted at (share +0.1 or +25 machine impressions). Every entry carries its own reason in `note`.",
+  "known": [
+    {
+      "path": "/health/bmr-mifflin",
+      "share": 0.6552,
+      "machineImpressions": 171,
+      "impressions": 261,
+      "clicks": 0,
+      "window": "2026-09-09 → 2026-10-07",
+      "addedAt": "2026-10-13T11:20:00.000Z",
+      "note": "Accepted, not dismissed. 171 of 261 impressions (65.5%) are the page's own Mifflin-St Jeor constants pasted back with a leading '+' or a trailing 'source%' — a scraper/parameter artifact in the query report, not a page defect, and 0 clicks on any of them. Nothing on /health/bmr-mifflin can be edited to stop those strings existing; the fixable half is the ~90 clean impressions, which the CTR overrides target. Re-alerts automatically at share ≥ 0.755 or ≥ 196 machine impressions, so accepting this cannot hide a page getting worse. Also note the ledger entry covers both GSC path forms (/health/bmr-mifflin and /health/bmr-mifflin/), which the guard now normalises into one page — before the fix they were counted as two pages with 53% and 91% shares."
+    }
+  ]
+}

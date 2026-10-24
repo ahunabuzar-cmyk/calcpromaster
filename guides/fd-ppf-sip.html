@@ -56,7 +56,9 @@
   </style>
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › FD vs PPF vs SIP</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › FD vs PPF vs SIP</p>
   <h1>FD vs PPF vs SIP: One Sum, Three Very Different Machines</h1>
   <p class="updated">Regional Finance · 7 min read · Last updated September 2026</p>
 
@@ -82,18 +84,54 @@
     <li><strong>Long-horizon, tax-sensitive, fixed-income share</strong> (retirement bond sleeve): PPF — rate plus EEE status.</li>
     <li><strong>7–10+ year growth goals</strong>: SIP into diversified equity — higher expected return, tolerated volatility, no guarantee.</li>
   </ul>
-  <p>Run your own comparisons in the <a href="/regional/fd-calculator">FD Calculator</a>, the <a href="/regional/ppf-calculator">PPF Calculator</a> and the <a href="/finance/sip">SIP Calculator</a> — then decide per goal, not per portfolio.</p>
+  <p>Run your own comparisons in the <a href="/regional/fd-calculator/">FD Calculator</a>, the <a href="/regional/ppf-calculator/">PPF Calculator</a> and the <a href="/finance/sip/">SIP Calculator</a> — then decide per goal, not per portfolio.</p>
 
   <div class="note"><strong>This is education, not investment advice.</strong> Rates change, tax rules change, and equity outcomes vary. Verify current rates with the issuing institutions before acting.</div>
 
   <h2>Try the calculators</h2>
   <p class="related">
-    <a href="/regional/fd-calculator" class="cta">FD Calculator</a>
-    <a href="/regional/ppf-calculator" class="cta">PPF Calculator</a>
-    <a href="/finance/sip" class="cta">SIP Calculator</a>
+    <a href="/regional/fd-calculator/" class="cta">FD Calculator</a>
+    <a href="/regional/ppf-calculator/" class="cta">PPF Calculator</a>
+    <a href="/finance/sip/" class="cta">SIP Calculator</a>
   </p>
 
-  <h2>Frequently asked questions</h2>
+  
+  
+<!-- guide-worked-example:start -->
+<h2>Worked example: Fixed Deposit (FD) Calculator at its default inputs</h2>
+<p>This is the answer <a href="/regional/fd-calculator/">Fixed Deposit (FD) Calculator</a> gives before you touch anything — the defaults as shipped, computed live rather than copied from a sample.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Deposit Amount (₹)</td><td>100000</td></tr><tr><td>Interest Rate (%)</td><td>7.5</td></tr><tr><td>Tenure (years)</td><td>3</td></tr><tr><td>TDS Rate (%)</td><td>10</td></tr></tbody></table>
+<p><strong>Result:</strong> Maturity: ₹1,24,971.64</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Step 1: Rate = 7.5%</li><li>Step 2: Maturity = ₹100000 × (1 + 7.5%/4)^12 = ₹1,24,971.64</li></ol>
+<h2>What Deposit Amount (₹) does to the answer</h2>
+<p>Hold every other field still and move only deposit amount (₹).</p>
+<table><thead><tr><th>Deposit Amount (₹)</th><th>Result</th></tr></thead><tbody><tr><td>50,000</td><td>Maturity: ₹62,485.82</td></tr><tr><td>100,000</td><td>Maturity: ₹1,24,971.64</td></tr><tr><td>150,000</td><td>Maturity: ₹1,87,457.46</td></tr></tbody></table>
+<p>If the rows barely differ, deposit amount (₹) is not your lever — change a different input. If they swing widely, get that number right before trusting the total.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>Three products, three different contracts</h2>
+<p>A fixed deposit locks a lump sum for a term at a stated rate. A public provident fund is a long-horizon, government-backed account with annual contribution limits and a lock-in. A systematic investment plan buys market-linked units monthly. The comparison is not which return is highest, but which contract matches the money's job.</p>
+<p>Money needed in two years does not belong in a market-linked plan regardless of expected return, because the horizon cannot absorb a drawdown. Money not needed for fifteen years is poorly served by a product that barely beats inflation.</p>
+<h2>Tax treatment changes the ranking</h2>
+<p>Interest on deposits is usually taxed as income each year, while some long-term accounts are exempt and market-linked gains are taxed at their own rates with their own holding periods. A pre-tax comparison can therefore reverse once tax is applied.</p>
+<p>Compare post-tax returns at your own marginal rate. The difference between two products is often smaller than the difference between two taxpayers.</p>
+<h2>Liquidity is a feature with a price</h2>
+<p>A deposit can usually be broken with a penalty; a provident fund allows partial withdrawal only under rules; market-linked units can be sold but may carry exit loads and capital-gains consequences.</p>
+<p>Price that flexibility before choosing. An emergency fund parked in a locked product is not an emergency fund, and breaking the lock at the wrong moment can cost more than the extra return.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/retirement">How Much You Need to Retire</a></li>
+    <li><a href="/guides/npv-vs-irr">NPV vs IRR</a></li>
+    <li><a href="/guides/net-worth">Net Worth</a></li>
+    <li><a href="/guides/inflation">How Inflation Is Calculated</a></li>
+  </ul>
+
+<h2>Frequently asked questions</h2>
   <h3>Which gives better returns: FD, PPF or SIP?</h3>
   <p>At 5 years on ₹100,000: FD at 6.5% ≈ ₹1,38,042, PPF at 7.1% ≈ ₹1,40,912, and a ₹20,000/year SIP at 12% assumed ≈ ₹4,12,432 on ₹300,000 invested. But the SIP number is a volatile-market model, not a promise — expected return and certainty are different things.</p>
   <h3>Is PPF better than FD?</h3>
@@ -103,7 +141,8 @@
   <h3>How are these three taxed?</h3>
   <p>FD interest is taxed at your income slab. PPF is fully exempt. Equity fund gains held over a year are long-term capital gains, taxed on redemption above the annual exemption — timing is under your control.</p>
 
-  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <p class="related"><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog/">Blog</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

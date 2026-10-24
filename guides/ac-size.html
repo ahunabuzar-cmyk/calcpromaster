@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AC Size Calculator — BTU Formula, Tonnage &amp; the Oversizing Trap</title>
+  <title>AC Size Calculator — BTU, Tonnage &amp; Oversizing Trap</title>
   <meta name="description" content="How to size an air conditioner correctly: the BTU-per-sq-ft formula, sun and occupancy adjustments, tonnage conversion, and why bigger is not colder.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
@@ -56,7 +56,9 @@
   </style>
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › AC Sizing (BTU)</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › AC Sizing (BTU)</p>
   <h1>AC Sizing: BTU Math and Why Oversized Units Underperform</h1>
   <p class="updated">Home & Garden · 6 min read · Last updated September 2026</p>
 
@@ -79,16 +81,53 @@
   </table></div>
 
   <h2>Why oversizing fails</h2>
-  <p>An oversized unit drops temperature fast, satisfies the thermostat in minutes, and shuts off — before it has dehumidified the air. Result: cold-but-clammy rooms, more on/off cycling (wear + higher peaks), and worse comfort than the "smaller" correct unit. The <a href="/homegarden/ac-size">AC/BTU Size Calculator</a> applies all adjustments; the <a href="/everyday/electricity">Electricity Bill Calculator</a> estimates what your chosen tonnage costs to run.</p>
+  <p>An oversized unit drops temperature fast, satisfies the thermostat in minutes, and shuts off — before it has dehumidified the air. Result: cold-but-clammy rooms, more on/off cycling (wear + higher peaks), and worse comfort than the "smaller" correct unit. The <a href="/homegarden/ac-size/">AC/BTU Size Calculator</a> applies all adjustments; the <a href="/everyday/electricity/">Electricity Bill Calculator</a> estimates what your chosen tonnage costs to run.</p>
 
   <h2>Try the calculators</h2>
   <p class="related">
-    <a href="/homegarden/ac-size" class="cta">AC/BTU Size Calculator</a>
-    <a href="/everyday/electricity" class="cta">Electricity Bill Calculator</a>
+    <a href="/homegarden/ac-size/" class="cta">AC/BTU Size Calculator</a>
+    <a href="/everyday/electricity/" class="cta">Electricity Bill Calculator</a>
     <a href="/guides/homegarden" class="cta">Home & Garden Guides</a>
   </p>
 
-  <h2>Frequently asked questions</h2>
+<!-- guide-worked-example:start -->
+<h2>Worked example: AC/BTU Size Calculator at its default inputs</h2>
+<p>Take the default setup on <a href="/homegarden/ac-size/">AC/BTU Size Calculator</a>: no fields changed, nothing tuned to a nice round number. Run in the site's own engine, those values produce the answer below.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Room Length (ft)</td><td>14</td></tr><tr><td>Room Width (ft)</td><td>12</td></tr><tr><td>Ceiling Height (ft)</td><td>8</td></tr><tr><td>People in Room</td><td>2</td></tr></tbody></table>
+<p><strong>Result:</strong> 5000 BTU (min. 0.4 ton)</p>
+<h2>Room Length (ft): half, as given, and half again</h2>
+<p>Room Length (ft) is the first input worth testing, so here it is at three sizes.</p>
+<table><thead><tr><th>Room Length (ft)</th><th>Result</th></tr></thead><tbody><tr><td>7</td><td>5000 BTU (min. 0.2 ton)</td></tr><tr><td>14</td><td>5000 BTU (min. 0.4 ton)</td></tr><tr><td>21</td><td>7000 BTU (min. 0.6 ton)</td></tr></tbody></table>
+<p>The middle row is the default. The outer two show how far the answer drifts when room length (ft) is wrong by half or by a half in the other direction.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>Tonnage is capacity, not comfort</h2>
+<p>One ton of cooling is about 3,517 watts, or 12,000 BTU per hour. The number describes how much heat the unit can remove, so it has to be matched to the room's heat load rather than to its floor area alone.</p>
+<p>A room can be small and still need a large unit: a west-facing wall, a glass façade, an uninsulated roof or a kitchen all add load that square footage cannot express. That is why two rooms of the same size can need different tonnage.</p>
+<h2>What adds heat load</h2>
+<p>Sun on glazing, especially west and south, is usually the largest single factor after area. Insulation, ceiling height, the number of occupants (roughly 400-600 BTU per person) and appliances — a computer, a television, an oven — all add to the total.</p>
+<p>Ventilation matters too: an open doorway to a hot corridor can undo a correctly sized unit. Fix the envelope before buying a bigger machine, because cooling a leaky room is a permanent running cost.</p>
+<h2>Oversizing is a real failure mode</h2>
+<p>A unit that is too large cools the air quickly, reaches the setpoint and switches off, leaving the room cold and clammy because it never ran long enough to remove humidity. Short cycling also wears the compressor and uses more energy than a steady run.</p>
+<p>Undersizing fails differently: the unit runs continuously, never reaches the setpoint on the hottest days, and consumes maximum power while doing it. Both errors are expensive; the correct size is the one that runs steadily at design conditions.</p>
+<h2>Inverter units change the arithmetic</h2>
+<p>An inverter air conditioner varies compressor speed instead of switching on and off, so it holds a temperature rather than chasing it. That makes slight oversizing less harmful than with fixed-speed units, and it makes part-load efficiency the number to compare.</p>
+<p>Check the seasonal efficiency rating rather than the headline tonnage when comparing two units. Two 1.5-ton inverters from different years can differ by a third in electricity use over a summer.</p>
+<p>Servicing matters as much as the rating. A clogged filter and a fouled coil can add close to a fifth to consumption within one season, which is a larger effect than the gap between two closely matched models.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/electricity-bill">Your Electricity Bill, Decoded</a></li>
+    <li><a href="/guides/utilities">Utilities & Developer Tools Guides</a></li>
+    <li><a href="/guides/homegarden">Home & Garden Guides</a></li>
+    <li><a href="/guides/construction">Construction Guides</a></li>
+  </ul>
+
+<h2>Frequently asked questions</h2>
   <h3>How many BTU do I need per square foot?</h3>
   <p>Start at 20 BTU/sq ft for temperate, well-insulated rooms; hot climates with average insulation run 60–80 BTU/sq ft. Adjust ±10% for sun exposure and add for kitchens and extra occupants.</p>
   <h3>What size AC for a 150 sq ft room?</h3>
@@ -98,7 +137,8 @@
   <h3>How do I convert BTU to tons?</h3>
   <p>Divide BTU by 12,000. 12,000 BTU = 1 ton, 18,000 = 1.5 tons, 24,000 = 2 tons.</p>
 
-  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <p class="related"><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog/">Blog</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

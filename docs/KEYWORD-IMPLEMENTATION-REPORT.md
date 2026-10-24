@@ -19,10 +19,31 @@ node scripts/audit-keyword-gap.cjs → exit 0
 The historical figures in the brief (604 / 463 / 12 / 108 / 21 / 1,434 pages) **match the current
 repository exactly** — they are verified, not assumed.
 
-**The second ("user-export") audit could not be verified.** No input file for it exists in the repo
-(`docs/KEYWORD-GAP-USER-EXPORT.md` and any 88-keyword export: **missing**), so its 88 / 61 / 3 / 22 / 2
-totals are **unverified** and are not used in any decision below. If that export exists somewhere else,
-drop it in `data/` and re-run the audit with it.
+**The second ("user-export") audit — re-checked 2026-10-15: the export exists and is now traceable.**
+The 88-keyword export is [`data/keyword-gap/keyword-volume-difficulty.csv`](../data/keyword-gap/keyword-volume-difficulty.csv)
+— 88 data rows, committed in this repo. Re-audited today it reads
+**64 COVERED / 4 WEAK / 18 GAP / 2 IGNORE = 88/88 rows classified**, so no row of that export can now be
+silently dropped from the analysis:
+
+```
+node scripts/audit-keyword-gap.cjs                          # 604 unique from 608 input rows (4 dupes)
+npx vitest run tests/unit/keyword-gap-agreement.test.js      # pins export <-> analysis agreement
+```
+
+`data/keyword-gap-verdicts.csv` holds one line per classified keyword (604 rows), and
+`data/keyword-gap.json` records `inputRows` / `bySource` / `duplicateKeywords`, which is what reconciles
+the counts (608 rows − 4 duplicate keywords = 604 unique). The `88 / 61 / 3 / 22 / 2` split quoted in the
+brief **does not match this file** and remains unexplained; what is verified here is the export that
+exists, not that number.
+
+Refreshed totals, 2026-10-15 (same command, freshly built `deploy/`):
+
+```
+  pages indexed : 1424
+  keywords      : 604 unique from 608 input row(s) (4 duplicate keyword(s) merged)
+                  (COVERED 469 / WEAK 26 / GAP 88 / IGNORE 21)
+  actionable    : 114 rows in 103 intent clusters — decisions B 34 · C 55 · D 7 · E 18
+```
 
 ## 2. Decisions produced
 

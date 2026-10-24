@@ -258,7 +258,12 @@ function main() {
     const mt = MANUAL_TARGETS[String(r.keyword).toLowerCase()];
     const manualUrl = mt ? (mt.route ? String(mt.route).replace(/\/+$/, '') : '') : null;
     const baseUrl = c.code === 'A' ? '/<category>/' + slug : (c.page || r.closest || r.page || '');
-    const proposedUrl = manualUrl !== null ? manualUrl : baseUrl;
+    // An E row is a recorded "do not build" verdict (external feed, official rules,
+    // device/navigational intent), so it must not carry a target URL at all: the
+    // audit's `closest` page is the nearest *existing* page, not an owner, and
+    // printing it made the map look like it wanted a build that the rule forbade
+    // (caught by tests/unit/keyword-implementation-map.test.js).
+    const proposedUrl = c.code === 'E' ? '' : (manualUrl !== null ? manualUrl : baseUrl);
     const done = applied.get(r.keyword);
     let status = 'not implemented — decision recorded, no page built yet';
     if (done && (done.status === 'IMPROVED' || done.status === 'ALREADY')) {

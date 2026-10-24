@@ -34,7 +34,13 @@ const OUT_JSON = path.join(ROOT, 'data', 'guide-depth.json');
 const DEPTH = require(path.join(ROOT, 'js', 'guide-depth.js'));
 
 const CHECK = process.argv.includes('--check');
-const MATCH_H2 = /<h2[^>]*>\s*Try the matching calculators\s*<\/h2>/i;
+// The depth block belongs directly above the closing CTA. scripts/
+// apply-guide-worked-examples.cjs parks its computed example between the depth
+// block and that CTA, so anchoring on the CTA alone would shove the depth block
+// past the example on the next run — a one-way reorder that broke the byte-level
+// idempotency this script's --check gate depends on. Match whichever comes
+// first; insertBefore then keeps the order the page already has.
+const MATCH_H2 = /<!-- guide-worked-example:start -->|<h2[^>]*>\s*Try the matching calculators\s*<\/h2>/i;
 
 // scripts/apply-keyword-targets.cjs answers a B/C/D keyword on a guide page by
 // inserting its FAQ pair straight after the "Frequently asked questions" heading

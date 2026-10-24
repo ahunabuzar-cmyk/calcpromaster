@@ -79,8 +79,42 @@ const HOME_GARDEN_TOOLS = [
     inputs: [{id:'cabinetW',label:'Cabinet Width (inches)',type:'number',def:36},{id:'cabinetH',label:'Cabinet Height (inches)',type:'number',def:34},{id:'doors',label:'Number of Doors',type:'select',opts:[{v:'1',l:'1 Door'},{v:'2',l:'2 Doors'}],def:'2'},{id:'overlay',label:'Overlay (inches)',type:'number',def:0.5}],
     calc: function(v) { const doors=parseInt(v.doors); const doorW=v.cabinetW/doors+v.overlay*2; const doorH=v.cabinetH+v.overlay*2; const pullPos=doorH*0.4; return { result:(doorW).toFixed(1)+'×'+(doorH).toFixed(1)+'" per door', chart:Charts.bar([v.cabinetW,v.cabinetH,doorW,doorH],['Cab W','Cab H','Door W','Door H']), extra:'Door size: '+doorW.toFixed(1)+'w × '+doorH.toFixed(1)+'h | Overlay: '+v.overlay+'" | Pull at: '+pullPos.toFixed(0)+'" up | '+(doors==2?'Double doors':'Single door') }; } },
   { id: 'tile-grout', name: 'Tile Grout & Mortar Calculator', desc: 'Calculate grout and thin-set mortar needed for tiling', kw: 'tile grout & mortar calculator, free online Tile Grout & Mortar Calculator',
-    inputs: [{id:'sqft',label:'Tile Area (sq ft)',type:'number',def:100},{id:'tileSize',label:'Tile Size',type:'select',opts:[{v:'12',l:'12×12"'},{v:'6',l:'6×6"'},{v:'8',l:'8×8"'},{v:'18',l:'18×18"'}],def:'12'},{id:'groutWidth',label:'Grout Line Width (inches)',type:'number',def:0.125}],
-    calc: function(v) { const ts=parseInt(v.tileSize); const tileSqft=ts*ts/144; const tiles=Math.ceil(v.sqft/tileSqft*1.1); const groutLbs=v.sqft*0.02*(1+1/Math.pow(ts/12,2))*1.5; const thinsetLbs=v.sqft*5/50; return { result:Math.ceil(groutLbs*10)/10+' lbs grout', chart:Charts.bar([tiles,groutLbs,thinsetLbs],['Tiles','Grout (lbs)','Thinset (bags)']), extra:'Tiles: '+tiles+' (incl. 10%) | Thinset: '+Math.ceil(thinsetLbs*10)/10+' bags (50lb) | Grout: '+v.sqft+' sqft at '+(1/Math.pow(ts/12,2))+' t/sqft' }; } },
+    inputs: [{id:'sqft',label:'Tile Area (sq ft)',type:'number',def:100},{id:'tileSize',label:'Tile Size',type:'select',opts:[{v:'12',l:'12×12"'},{v:'6',l:'6×6"'},{v:'8',l:'8×8"'},{v:'18',l:'18×18"'}],def:'12'},{id:'groutWidth',label:'Grout Line Width (inches)',type:'number',def:0.125},{id:'tileThick',label:'Tile Thickness (inches)',type:'number',def:0.375},{id:'trowel',label:'Trowel Notch (mortar bed)',type:'select',opts:[{v:'quarter',l:'1/4" × 1/4" square — up to 8" tile'},{v:'quarter_three_eighth',l:'1/4" × 3/8" square — 10-17" tile'},{v:'half',l:'1/2" × 1/2" square — 18"+ tile'},{v:'u_notch',l:'3/4" × 9/16" U-notch — 24"+ tile'}],def:'quarter_three_eighth'}],
+    calc: function(v) {
+      // GROUT — joint-network volume model, calibrated to SGM's published sanded-grout
+      // coverage chart (25 lb bag: 12x12 tile with a 3/8" bed covers 392 / 199 / 135 sq ft
+      // at 1/8" / 1/4" / 3/8" joints; 6x6 with a 5/16" bed covers 239 / 123 / 85).
+      // Joint length per sq ft on a square-tile grid is 288*(L+W)/(L*W) inches;
+      // x joint width x tile thickness x 0.0284 lb/in3 x 1.1 (10% waste) reproduces
+      // those six rows within 9% (12x12 rows within 3.5%).
+      const ts = parseFloat(v.tileSize) || 12;
+      const jw = Math.max(0.0625, parseFloat(v.groutWidth) || 0.125);
+      const thick = Math.max(0.1875, parseFloat(v.tileThick) || 0.375);
+      const tileSqft = ts * ts / 144;
+      // -1e-9 guards the float case 100/1*1.1 = 110.00000000000001, which used to
+      // round a whole extra tile onto a clean 100 sq ft / 12" tile job.
+      const tiles = Math.ceil(v.sqft / tileSqft * 1.1 - 1e-9);
+      const jointIn = 288 * (ts + ts) / (ts * ts);
+      const groutLb = v.sqft * jointIn * jw * thick * 0.0284 * 1.1;
+      // THINSET — 50 lb bag coverage by trowel notch size, midpoints of the coverage
+      // ranges CUSTOM publishes for VersaBond (1/4x1/4 = 90-100 sq ft, 1/4x3/8 = 60-67,
+      // 1/2x1/2 = 42-47, 3/4x9/16 U-notch = 34-38), x 1.1 for waste.
+      const TROWEL = { quarter: { cover: 95, label: '1/4" × 1/4"', maxTile: 8 }, quarter_three_eighth: { cover: 63.5, label: '1/4" × 3/8"', maxTile: 17 }, half: { cover: 44.5, label: '1/2" × 1/2"', maxTile: 24 }, u_notch: { cover: 36, label: '3/4" × 9/16" U', maxTile: 999 } };
+      const tr = TROWEL[v.trowel] || TROWEL.quarter_three_eighth;
+      const thinsetBags = Math.ceil(v.sqft * 1.1 / tr.cover);
+      // MAPEI's tile-size guidance maps a trowel to each tile size; flag a mismatch
+      // in either direction (too small a notch risks <95% mortar contact, too big
+      // a notch burns mortar the job does not need).
+      const rec = ts <= 8 ? 'quarter' : ts <= 17 ? 'quarter_three_eighth' : ts <= 24 ? 'half' : 'u_notch';
+      const recLabel = TROWEL[rec].label;
+      // More sq ft per bag means a SMALLER notch, so the sign flips here.
+      const warn = v.trowel && v.trowel !== rec
+        ? (tr.cover > TROWEL[rec].cover
+          ? ' | ⚠ ' + tr.label + ' notch is small for ' + ts + '" tile — MAPEI suggests ' + recLabel + ' so the bed reaches 95% contact'
+          : ' | ℹ ' + tr.label + ' notch is larger than ' + ts + '" tile needs — MAPEI suggests ' + recLabel + ', so expect extra mortar use')
+        : '';
+      return { result: Math.round(groutLb) + ' lbs grout + ' + thinsetBags + ' bag' + (thinsetBags > 1 ? 's' : '') + ' thinset', chart: Charts.bar([tiles, Math.round(groutLb), thinsetBags], ['Tiles', 'Grout (lbs)', 'Thinset (bags)']), extra: 'Tiles: ' + tiles + ' (incl. 10% breakage) | Grout: ' + groutLb.toFixed(1) + ' lbs incl. 10% waste (' + Math.ceil(groutLb / 25) + ' × 25 lb bag) | Thinset: ' + thinsetBags + ' × 50 lb bag at ' + tr.label + ' notch (~' + tr.cover + ' sq ft/bag) for ' + v.sqft + ' sqft' + warn + ' | Joint: ' + jw + '" wide × ' + thick + '" deep on ' + ts + '×' + ts + '" tile' };
+    } },
   { id: 'light-bulb-save', name: 'LED Bulb Savings Calculator', desc: 'Calculate savings from switching to LED bulbs', kw: 'energy saving bulbs, LED vs incandescent, light bulb cost, free online LED Bulb Savings Calculator',
     inputs: [{id:'currentW',label:'Current Bulb Wattage',type:'number',def:60},{id:'newW',label:'LED Wattage',type:'number',def:9},{id:'bulbs',label:'Number of Bulbs',type:'number',def:10},{id:'hoursDay',label:'Hours On per Day',type:'number',def:5},{id:'rate',label:'Electricity Rate ($/kWh)',type:'number',def:0.12},{id:'ledPrice',label:'LED Price per Bulb ($)',type:'number',def:5}],
     calc: function(v) { const currentKwh=v.currentW*v.bulbs*v.hoursDay*365/1000; const newKwh=v.newW*v.bulbs*v.hoursDay*365/1000; const annualSave=(currentKwh-newKwh)*v.rate; const totalCost=v.bulbs*v.ledPrice; const paybackMonths=totalCost/(annualSave/12); const co2Saved=(currentKwh-newKwh)*0.5; return { result:'Save $'+annualSave.toFixed(2)+'/yr', chart:Charts.bar([currentKwh,newKwh,annualSave],['Current kWh','LED kWh','Savings']), extra:'kWh/yr: '+currentKwh.toFixed(0)+' → '+newKwh.toFixed(0)+' | Payback: '+paybackMonths.toFixed(0)+' months | CO₂: '+co2Saved.toFixed(0)+' kg/yr saved | Bulbs: '+v.bulbs }; } },
@@ -168,7 +202,108 @@ const HOME_GARDEN_TOOLS = [
     inputs: [{id:'length',label:'Stack Length (ft)',type:'number',def:4},{id:'height',label:'Stack Height (ft)',type:'number',def:4},{id:'depth',label:'Log Depth (ft)',type:'number',def:8},{id:'price',label:'Price per Cord ($)',type:'number',def:250}],
     calc: function(v){ var vol=v.length*v.height*v.depth; var cords=vol/128; return{result:cords.toFixed(2)+' cords',chart:Charts.donut([vol],['Volume (cu ft)']),extra:'Volume: '+vol.toFixed(0)+' ft³ | Cost: $'+(cords*v.price).toFixed(2)+' | 1 cord = 128 ft³ (4×4×8 ft)'};},
     steps: function(v){ var vol=v.length*v.height*v.depth; var cords=vol/128; return['Step 1: Volume = '+v.length+' × '+v.height+' × '+v.depth+' = '+vol.toFixed(0)+' ft³','Step 2: Cords = '+vol.toFixed(0)+' / 128 = '+cords.toFixed(2),'Step 3: Cost = '+cords.toFixed(2)+' × $'+v.price+' = $'+(cords*v.price).toFixed(2)];} },
-
+  {
+    id: 'solar-payback',
+    name: 'Solar Panel Payback Calculator',
+    desc: 'Estimate solar panel payback period, net cost after incentives and lifetime savings from production and rate.',
+    kw: 'solar payback calculator, solar panel roi, solar net cost calculator, solar savings over 25 years',
+    inputs: [
+{ id: 'systemCost', label: 'System cost', type: 'number', def: 15000 },
+      { id: 'annualProductionKwh', label: 'Annual production (kWh)', type: 'number', def: 9000 },
+      { id: 'annualUsageKwh', label: 'Annual usage (kWh)', type: 'number', def: 10000 },
+      { id: 'electricityRate', label: 'Electricity rate per kWh', type: 'number', def: 0.2 },
+      { id: 'incentivePct', label: 'Incentive or tax credit (percent)', type: 'number', def: 30 }
+    ],
+    calc: function (v) {
+      var net = v.systemCost * (1 - v.incentivePct / 100);
+      var savings = Math.min(v.annualProductionKwh, v.annualUsageKwh) * v.electricityRate;
+      var payback = savings > 0 ? net / savings : 0;
+      var lifetime = savings * 25 - net;
+      return {
+        result: 'Payback: ' + payback.toFixed(1) + ' years',
+        chart: Charts.bar([net, savings * 25, lifetime], ['Net cost', '25yr savings', 'Lifetime net']),
+        extra: 'Net cost ' + net.toFixed(0) + ' | Annual savings ' + savings.toFixed(0) + ' | 25-year net savings ' + lifetime.toFixed(0) + ' | Assumes steady rates and no battery'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Net cost equals system cost minus the incentive or tax credit.',
+        'Step 2: Annual savings equals the lower of production and usage, times the electricity rate, since self-consumed power is what you avoid buying.',
+        'Step 3: Payback equals net cost divided by annual savings.',
+        'Step 4: Lifetime savings approximates 25 years of annual savings minus the net cost.',
+        'Step 5: Real results vary with shading, degradation, rate changes and export rules, so get site-specific quotes.'
+      ];
+    }
+  },
+  {
+    id: 'carbon-offset',
+    name: 'Household Carbon Footprint and Offset Calculator',
+    desc: 'Estimate a household annual carbon footprint from flights, driving and home electricity, plus the offset cost.',
+    kw: 'household carbon footprint calculator, carbon offset cost, household co2 estimate, offset my emissions cost',
+    inputs: [
+{ id: 'flights', label: 'Return flights a year', type: 'number', def: 4 },
+      { id: 'hoursPerFlight', label: 'Average hours per flight', type: 'number', def: 6 },
+      { id: 'carMiles', label: 'Car miles a year', type: 'number', def: 12000 },
+      { id: 'homeKwh', label: 'Home electricity a year (kWh)', type: 'number', def: 8000 },
+      { id: 'offsetPricePerTonne', label: 'Offset price per tonne', type: 'number', def: 15 }
+    ],
+    calc: function (v) {
+      var f = v.flights * v.hoursPerFlight * 0.09;
+      var c = v.carMiles * 0.0004;
+      var h = v.homeKwh * 0.0004;
+      var total = f + c + h;
+      var cost = total * v.offsetPricePerTonne;
+      return {
+        result: 'Annual footprint: ' + total.toFixed(2) + ' tonnes CO2e',
+        chart: Charts.donut([f, c, h], ['Flights', 'Car', 'Home']),
+        extra: 'Offset cost about ' + cost.toFixed(0) + ' a year | Flights ' + f.toFixed(2) + ' | Car ' + c.toFixed(2) + ' | Home ' + h.toFixed(2)
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Flights are estimated at 0.09 tonnes per passenger-hour on a typical short to medium haul.',
+        'Step 2: Driving is estimated at 0.0004 tonnes per mile for an average petrol car.',
+        'Step 3: Home electricity is estimated at 0.0004 tonnes per kWh on a typical grid mix.',
+        'Step 4: Add the three sources for the household total, then multiply by the offset price per tonne.',
+        'Step 5: Reduce first and offset the rest. Offsets vary widely in quality and price, so prefer verified schemes.'
+      ];
+    }
+  },
+  {
+    id: 'homeowner-first-year-budget',
+    name: 'First-Year Homeowner Cost Calculator',
+    desc: 'Total the cash you need in the first year of owning a home, from closing and moving to taxes and maintenance.',
+    kw: 'first year homeowner cost, homeownership cost calculator, cost of buying a house first year, true cost of owning a home',
+    inputs: [
+{ id: 'homePrice', label: 'Home price', type: 'number', def: 300000 },
+      { id: 'closingCosts', label: 'Closing costs', type: 'number', def: 6000 },
+      { id: 'movingCost', label: 'Moving cost', type: 'number', def: 1500 },
+      { id: 'furnishing', label: 'Furnishing and setup', type: 'number', def: 4000 },
+      { id: 'emergencyRepairs', label: 'Emergency repairs', type: 'number', def: 2000 },
+      { id: 'monthlyMortgage', label: 'Monthly mortgage payment', type: 'number', def: 1600 },
+      { id: 'propertyTaxAnnual', label: 'Annual property tax', type: 'number', def: 3600 },
+      { id: 'insuranceAnnual', label: 'Annual home insurance', type: 'number', def: 1200 },
+      { id: 'maintenancePct', label: 'Maintenance (percent of price)', type: 'number', def: 1 }
+    ],
+    calc: function (v) {
+      var maintenance = v.homePrice * v.maintenancePct / 100;
+      var total = v.closingCosts + v.movingCost + v.furnishing + v.emergencyRepairs + v.monthlyMortgage * 12 + v.propertyTaxAnnual + v.insuranceAnnual + maintenance;
+      return {
+        result: 'First-year cash need: ' + total.toFixed(0),
+        chart: Charts.bar([v.monthlyMortgage * 12, v.propertyTaxAnnual + v.insuranceAnnual + maintenance, v.closingCosts + v.movingCost + v.furnishing + v.emergencyRepairs], ['Mortgage', 'Tax and upkeep', 'Setup costs']),
+        extra: 'Mortgage ' + (v.monthlyMortgage * 12).toFixed(0) + ' | Upkeep ' + (v.propertyTaxAnnual + v.insuranceAnnual + maintenance).toFixed(0) + ' | Setup ' + (v.closingCosts + v.movingCost + v.furnishing + v.emergencyRepairs).toFixed(0) + ' | Excludes utilities'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Add the one-off buying costs: closing costs, moving and basic furnishing.',
+        'Step 2: Add a contingency for emergency repairs in the first year.',
+        'Step 3: Add twelve months of mortgage payments.',
+        'Step 4: Add the annual property tax and home insurance.',
+        'Step 5: Add maintenance at about one percent of the home price a year, a common rule of thumb, then total the parts.'
+      ];
+    }
+  }
 ];
 
 if (typeof module !== 'undefined') module.exports = HOME_GARDEN_TOOLS;

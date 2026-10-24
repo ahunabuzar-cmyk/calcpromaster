@@ -47,16 +47,62 @@
     .cat-card p { margin: 0; color: #4b5563; font-size: 0.95rem; }
     .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
     .updated { color: #6b7280; font-size: 0.85rem; }
-  </style>
+/* guide-depth-css:start */
+.guide-lede{font-weight:600;border-left:3px solid #4f46e5;padding-left:12px;margin:10px 0 4px}
+    .guide-pitfalls{margin:8px 0 14px 20px}
+    .seo-faqs h3{margin:16px 0 4px}
+/* guide-depth-css:end */
+</style>
+
+<!-- guide-faq-schema:start -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does my average tax rate look lower than my marginal rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because brackets are applied in bands. Only the income above each threshold is taxed at the higher rate, so the average rate across all income is always below the rate on the last slice. The marginal rate is the right one for a decision about earning or giving up one more unit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a raise ever leave me with less take-home pay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not from bracket rates alone — with banded rates every extra unit of income is taxed at some rate below 100%, so take-home pay still rises. A real reduction requires something else: a benefit or allowance that is withdrawn once income passes a threshold. That is where the effect people describe actually comes from."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do these calculators leave out?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They model the income tax and the social contributions you enter, at the rates you set. Investment income, capital gains, reliefs, local or state taxes and employer-side contributions are separate questions. Use the result for salary planning, then check your specific jurisdiction’s rules before deciding."
+      }
+    }
+  ]
+}
+</script>
+<!-- guide-faq-schema:end -->
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Tax &amp; Salary</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Tax &amp; Salary</p>
   <h1>Tax &amp; Salary Guides</h1>
   <p class="updated">Part of the CalcProMaster guides library · Updated September 2026</p>
 
   <p>Tax math creates more confusion than almost any other everyday calculation — brackets feel punitive, reverse tax trips people, and salary slips hide the real take-home. These guides give the actual mechanics.</p>
 
-  <h2>How the math works</h2>
+
+<!-- guide-lede:start -->
+<p class="guide-lede">Salary and tax maths is a marginal calculation, not an average one: the rate that applies to your next unit of income is not the rate that applied to your whole income.</p>
+<!-- guide-lede:end -->
+<h2>How the math works</h2>
   <p>The single most misunderstood idea here is the <strong>marginal bracket</strong>. Tax brackets apply to portions of income, not the whole: in a system taxing 5% up to $50,000 and 10% above, someone earning $60,000 pays 5% on the first $50,000 and 10% only on the last $10,000 — an effective rate of 5.83%, not 10%. A raise that "pushes you into a higher bracket" can therefore never reduce take-home under a marginal system.</p>
   <p>Two more patterns repeat through this section. <strong>Reverse tax</strong>: an invoice total already contains the tax, so the base is total ÷ (1 + rate) — $115 at 15% GST is $100 + $15, never $115 × 15%. And <strong>gross-to-net</strong>: take-home = gross − income tax − social contributions − deductions, each computed on a different base, which is why two people with the same gross can have different nets. The salary guide walks a full slip line by line.</p>
 
@@ -80,14 +126,52 @@
     <p>The 2.5% rate, gold/silver nisab thresholds, zakatable assets vs exemptions, and a worked gold-plus-cash example.</p>
   </div>
 
-  <h2>Try the matching calculators</h2>
+
+<!-- guide-extra-depth:start -->
+<h2>Gross, taxable and take-home are three numbers</h2>
+<p>Gross salary is the headline. Taxable income is gross minus the allowances and deductions the jurisdiction permits. Take-home is taxable income after tax, plus any non-taxable components. Confusing any two of them produces a wrong answer that looks plausible.</p>
+<p>Employer contributions to retirement or insurance are often outside gross salary but have value, so a comparison of two offers on gross alone can miss a real difference.</p>
+<h2>Slabs, surcharges and marginal rates</h2>
+<p>Progressive systems tax bands of income at increasing rates, so your marginal rate applies only to the last band. A raise that crosses a threshold is never a pay cut in absolute terms, though it can reduce the net gain sharply.</p>
+<p>Surcharges on high incomes and phase-outs of allowances can push the effective marginal rate above the headline top rate. Those are the cases where a calculator beats a rule of thumb.</p>
+<h2>Deductions are worth more at a higher rate</h2>
+<p>A deduction reduces taxable income, so its value equals the amount times your marginal rate. The same charitable donation saves twice as much tax for someone in a 30% band as for someone in a 15% band.</p>
+<p>A credit reduces tax directly and is worth the same to everyone. Mixing the two when comparing options is a common planning mistake.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/income-tax">How Income Tax Is Calculated (Brackets & Rates)</a></li>
+    <li><a href="/guides/gst-sales-tax">GST & Sales Tax Explained (Add, Remove, Reverse)</a></li>
+    <li><a href="/guides/hourly-rate">Freelance Rates</a></li>
+    <li><a href="/guides/freelance-rate-card">The Freelance Rate Card</a></li>
+  </ul>
+
+<!-- guide-depth:start -->
+<h2>Where these answers go wrong</h2><ul class="guide-pitfalls"><li>Multiplying total income by the top bracket rate instead of applying each rate to the band it covers.</li><li>Budgeting from gross pay when every recurring payment leaves from net pay.</li><li>Ignoring the deductions that are capped, or that stop once a threshold is reached, which moves the effective rate.</li><li>Comparing two salaries without accounting for allowances, pension matching, leave and local levies.</li></ul><h2>Frequently asked questions</h2><div class="seo-faqs"><h3>Why does my average tax rate look lower than my marginal rate?</h3><p>Because brackets are applied in bands. Only the income above each threshold is taxed at the higher rate, so the average rate across all income is always below the rate on the last slice. The marginal rate is the right one for a decision about earning or giving up one more unit.</p><h3>Can a raise ever leave me with less take-home pay?</h3><p>Not from bracket rates alone — with banded rates every extra unit of income is taxed at some rate below 100%, so take-home pay still rises. A real reduction requires something else: a benefit or allowance that is withdrawn once income passes a threshold. That is where the effect people describe actually comes from.</p><h3>What do these calculators leave out?</h3><p>They model the income tax and the social contributions you enter, at the rates you set. Investment income, capital gains, reliefs, local or state taxes and employer-side contributions are separate questions. Use the result for salary planning, then check your specific jurisdiction’s rules before deciding.</p></div>
+<!-- guide-depth:end -->
+<!-- guide-worked-example:start -->
+<h2>Worked example: Sales Tax Calculator at its default inputs</h2>
+<p>Open <a href="/finance/sales-tax/">Sales Tax Calculator</a> and press calculate without editing a field. What comes back is the table and result below, so the tax-salary numbers here are checkable in one click.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Purchase Amount</td><td>100</td></tr><tr><td>Tax Rate (%)</td><td>8.25</td></tr></tbody></table>
+<p><strong>Result:</strong> Tax: $8.25</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Step 1: Tax = $100 × 8.25% = $8.25</li><li>Step 2: Total = $100 + $8.25 = $108.25</li></ol>
+<h2>Purchase Amount: half, as given, and half again</h2>
+<p>Same calculator, same fields, one change: purchase amount.</p>
+<table><thead><tr><th>Purchase Amount</th><th>Result</th></tr></thead><tbody><tr><td>50</td><td>Tax: $4.13</td></tr><tr><td>100</td><td>Tax: $8.25</td></tr><tr><td>150</td><td>Tax: $12.38</td></tr></tbody></table>
+<p>If the rows barely differ, purchase amount is not your lever — change a different input. If they swing widely, get that number right before trusting the total.</p>
+<!-- guide-worked-example:end -->
+<h2>Try the matching calculators</h2>
   <p>
-    <a href="/finance/tax" class="cta">Income Tax Calculator</a>
-    <a href="/finance/sales-tax" class="cta">Sales Tax Calculator</a>
-    <a href="/regional/pk-salary" class="cta">PK Salary Calculator</a>
+    <a href="/finance/tax/" class="cta">Income Tax Calculator</a>
+    <a href="/finance/sales-tax/" class="cta">Sales Tax Calculator</a>
+    <a href="/regional/pk-salary/" class="cta">PK Salary Calculator</a>
   </p>
 
-  <p><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
+  <p><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

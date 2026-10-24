@@ -148,6 +148,33 @@ const Router = (function () {
     // Listen for back/forward browser navigation
     window.addEventListener('popstate', _onPopState);
 
+    // ---------- Delegated internal-link interception ----------
+    // Previously every internal link carried
+    // onclick="event.preventDefault();Router.navigate('/x')", which put a URL in
+    // an onclick attribute on every page (a crawler/validator warning). Links now
+    // carry only a real href; this single delegated listener upgrades qualifying
+    // same-origin navigations to SPA routing. Links that still ship an inline
+    // onclick keep owning their own handling, so we never double-fire.
+    if (!document._cpLinkDelegate) {
+      document._cpLinkDelegate = true;
+      document.addEventListener('click', function (e) {
+        if (e.defaultPrevented) return;
+        if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+        if (!a) return;
+        if (a.hasAttribute('onclick')) return;
+        if (a.hasAttribute('download') || a.hasAttribute('target')) return;
+        var rel = a.getAttribute('rel') || '';
+        if (rel.indexOf('external') !== -1 || rel.indexOf('nofollow') !== -1) return;
+        var href = a.getAttribute('href');
+        if (!href || href.charAt(0) !== '/' || href.charAt(1) === '/') return;
+        // Let the browser handle asset/file paths and hash-only links.
+        if (href.charAt(1) === '#' || /\.[a-z0-9]{2,5}$/i.test(href)) return;
+        e.preventDefault();
+        navigate(href);
+      });
+    }
+
     // Capture initial path
     _initialPath = getPath();
 

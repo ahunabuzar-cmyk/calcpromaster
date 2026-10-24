@@ -1,0 +1,2861 @@
+{
+  "ranAt": "2026-10-23T12:10:05.482Z",
+  "source": "data/gsc-query-page.json",
+  "window": {
+    "start": "2026-09-16",
+    "end": "2026-10-14",
+    "days": 28
+  },
+  "method": {
+    "collapse": "trailing slash normalised (/x and /x/ are one page)",
+    "rule": "reported only when 2+ distinct pages of this site got impressions for one query",
+    "minActionable": 3,
+    "dominantShare": 0.8,
+    "dominantRatio": 10
+  },
+  "pairsScanned": 4465,
+  "queriesScanned": 4141,
+  "splitQueries": 81,
+  "impressionsOnSplitQueries": 458,
+  "joinedImpressions": 11567,
+  "splitShare": 4,
+  "byDecision": {
+    "D1_consolidate": 20,
+    "D1_linked": 3,
+    "D2_differentiate": 16,
+    "D2_linked": 2,
+    "D3_link_missing": 2,
+    "D3_by_design": 19,
+    "D4_by_design": 13,
+    "D5_accept": 1,
+    "D6_locale_by_design": 37
+  },
+  "actionableCount": 0,
+  "decisions": [
+    {
+      "query": "vacation cost calculator",
+      "decision": "D2_LINKED",
+      "note": "clustered in js/cluster-map.js — the SSG/SPA related-links block already connects the pair",
+      "pages": [
+        {
+          "page": "/lifestyle/vacation-savings",
+          "impressions": 40,
+          "clicks": 0,
+          "position": 17.9,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/family/vacation-with-kids",
+          "impressions": 30,
+          "clicks": 0,
+          "position": 25.9,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 30,
+      "queryImpressions": 70
+    },
+    {
+      "query": "mifflin st jeor calculator",
+      "decision": "D3",
+      "note": "guide links the calculator — guide↔tool split is by design",
+      "pages": [
+        {
+          "page": "/health/bmr-mifflin",
+          "impressions": 34,
+          "clicks": 0,
+          "position": 5.1,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/guides/bmr",
+          "impressions": 6,
+          "clicks": 0,
+          "position": 120.1,
+          "kind": "guide",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 6,
+      "queryImpressions": 40
+    },
+    {
+      "query": "savings account dividend calculator",
+      "decision": "D1_LINKED",
+      "note": "clustered in js/cluster-map.js — the SSG/SPA related-links block already connects the pair",
+      "pages": [
+        {
+          "page": "/finance/dividend-yield",
+          "impressions": 14,
+          "clicks": 0,
+          "position": 30.1,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/finance/dividend",
+          "impressions": 10,
+          "clicks": 0,
+          "position": 19.1,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 10,
+      "queryImpressions": 24
+    },
+    {
+      "query": "take home pay calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/dubai-salary",
+          "impressions": 11,
+          "clicks": 0,
+          "position": 139.9,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/uk-take-home-salary",
+          "impressions": 7,
+          "clicks": 0,
+          "position": 185.4,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 7,
+      "queryImpressions": 23
+    },
+    {
+      "query": "take home pay calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/dubai-salary",
+          "impressions": 11,
+          "clicks": 0,
+          "position": 139.9,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/canada-take-home-salary",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 155,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 2,
+      "queryImpressions": 23
+    },
+    {
+      "query": "take home pay calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/uk-take-home-salary",
+          "impressions": 7,
+          "clicks": 0,
+          "position": 185.4,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/canada-take-home-salary",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 155,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 2,
+      "queryImpressions": 23
+    },
+    {
+      "query": "take home pay calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/dubai-salary",
+          "impressions": 11,
+          "clicks": 0,
+          "position": 139.9,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/pk-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 100.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 23
+    },
+    {
+      "query": "take home pay calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/dubai-salary",
+          "impressions": 11,
+          "clicks": 0,
+          "position": 139.9,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/saudi-take-home-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 90,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 23
+    },
+    {
+      "query": "take home pay calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/dubai-salary",
+          "impressions": 11,
+          "clicks": 0,
+          "position": 139.9,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/switzerland-take-home-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 93,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 23
+    },
+    {
+      "query": "take home pay calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/uk-take-home-salary",
+          "impressions": 7,
+          "clicks": 0,
+          "position": 185.4,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/pk-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 100.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 23
+    },
+    {
+      "query": "take home pay calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/uk-take-home-salary",
+          "impressions": 7,
+          "clicks": 0,
+          "position": 185.4,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/saudi-take-home-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 90,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 23
+    },
+    {
+      "query": "take home pay calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/uk-take-home-salary",
+          "impressions": 7,
+          "clicks": 0,
+          "position": 185.4,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/switzerland-take-home-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 93,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 23
+    },
+    {
+      "query": "take home pay calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/canada-take-home-salary",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 155,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/pk-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 100.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 23
+    },
+    {
+      "query": "take home pay calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/canada-take-home-salary",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 155,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/saudi-take-home-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 90,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 23
+    },
+    {
+      "query": "take home pay calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/canada-take-home-salary",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 155,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/switzerland-take-home-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 93,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 23
+    },
+    {
+      "query": "take home pay calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/pk-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 100.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/saudi-take-home-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 90,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 23
+    },
+    {
+      "query": "take home pay calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/pk-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 100.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/switzerland-take-home-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 93,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 23
+    },
+    {
+      "query": "take home pay calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/saudi-take-home-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 90,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/switzerland-take-home-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 93,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 23
+    },
+    {
+      "query": "salary calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/saudi-take-home-salary",
+          "impressions": 6,
+          "clicks": 0,
+          "position": 16.4,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/dubai-salary",
+          "impressions": 4,
+          "clicks": 0,
+          "position": 139.1,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 4,
+      "queryImpressions": 19
+    },
+    {
+      "query": "salary calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/saudi-take-home-salary",
+          "impressions": 6,
+          "clicks": 0,
+          "position": 16.4,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/pk-salary",
+          "impressions": 3,
+          "clicks": 0,
+          "position": 179.1,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 3,
+      "queryImpressions": 19
+    },
+    {
+      "query": "salary calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/saudi-take-home-salary",
+          "impressions": 6,
+          "clicks": 0,
+          "position": 16.4,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/switzerland-take-home-salary",
+          "impressions": 3,
+          "clicks": 0,
+          "position": 42,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 3,
+      "queryImpressions": 19
+    },
+    {
+      "query": "salary calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/dubai-salary",
+          "impressions": 4,
+          "clicks": 0,
+          "position": 139.1,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/pk-salary",
+          "impressions": 3,
+          "clicks": 0,
+          "position": 179.1,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 3,
+      "queryImpressions": 19
+    },
+    {
+      "query": "salary calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/dubai-salary",
+          "impressions": 4,
+          "clicks": 0,
+          "position": 139.1,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/switzerland-take-home-salary",
+          "impressions": 3,
+          "clicks": 0,
+          "position": 42,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 3,
+      "queryImpressions": 19
+    },
+    {
+      "query": "salary calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/pk-salary",
+          "impressions": 3,
+          "clicks": 0,
+          "position": 179.1,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/switzerland-take-home-salary",
+          "impressions": 3,
+          "clicks": 0,
+          "position": 42,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 3,
+      "queryImpressions": 19
+    },
+    {
+      "query": "salary calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/saudi-take-home-salary",
+          "impressions": 6,
+          "clicks": 0,
+          "position": 16.4,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/ireland-take-home-salary",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 91.7,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 2,
+      "queryImpressions": 19
+    },
+    {
+      "query": "salary calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/dubai-salary",
+          "impressions": 4,
+          "clicks": 0,
+          "position": 139.1,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/ireland-take-home-salary",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 91.7,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 2,
+      "queryImpressions": 19
+    },
+    {
+      "query": "salary calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/pk-salary",
+          "impressions": 3,
+          "clicks": 0,
+          "position": 179.1,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/ireland-take-home-salary",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 91.7,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 2,
+      "queryImpressions": 19
+    },
+    {
+      "query": "salary calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/switzerland-take-home-salary",
+          "impressions": 3,
+          "clicks": 0,
+          "position": 42,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/ireland-take-home-salary",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 91.7,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 2,
+      "queryImpressions": 19
+    },
+    {
+      "query": "salary calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/saudi-take-home-salary",
+          "impressions": 6,
+          "clicks": 0,
+          "position": 16.4,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/singapore-cpf",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 109.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 19
+    },
+    {
+      "query": "salary calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/dubai-salary",
+          "impressions": 4,
+          "clicks": 0,
+          "position": 139.1,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/singapore-cpf",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 109.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 19
+    },
+    {
+      "query": "salary calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/pk-salary",
+          "impressions": 3,
+          "clicks": 0,
+          "position": 179.1,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/singapore-cpf",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 109.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 19
+    },
+    {
+      "query": "salary calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/switzerland-take-home-salary",
+          "impressions": 3,
+          "clicks": 0,
+          "position": 42,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/singapore-cpf",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 109.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 19
+    },
+    {
+      "query": "salary calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/ireland-take-home-salary",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 91.7,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/singapore-cpf",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 109.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 19
+    },
+    {
+      "query": "baby cost calculator",
+      "decision": "D3",
+      "note": "guide links the calculator — guide↔tool split is by design",
+      "pages": [
+        {
+          "page": "/guides/baby-cost",
+          "impressions": 14,
+          "clicks": 0,
+          "position": 14.9,
+          "kind": "guide",
+          "inSitemap": true
+        },
+        {
+          "page": "/lifestyle/baby-cost",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 14.2,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 2,
+      "queryImpressions": 16
+    },
+    {
+      "query": "payroll calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/dubai-salary",
+          "impressions": 11,
+          "clicks": 0,
+          "position": 173.7,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/singapore-cpf",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 140.8,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 2,
+      "queryImpressions": 13
+    },
+    {
+      "query": "workout calculator",
+      "decision": "D4",
+      "note": "",
+      "pages": [
+        {
+          "page": "/hub/fitness",
+          "impressions": 7,
+          "clicks": 0,
+          "position": 175.4,
+          "kind": "hub",
+          "inSitemap": true
+        },
+        {
+          "page": "/fitness",
+          "impressions": 5,
+          "clicks": 0,
+          "position": 159.5,
+          "kind": "category",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 5,
+      "queryImpressions": 12
+    },
+    {
+      "query": "load testing calculator",
+      "decision": "D5",
+      "note": "",
+      "pages": [
+        {
+          "page": "/tech/load-test-users",
+          "impressions": 11,
+          "clicks": 1,
+          "position": 85.7,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/hub/engineering",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 27,
+          "kind": "hub",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 12
+    },
+    {
+      "query": "vacation budget calculator",
+      "decision": "D2_LINKED",
+      "note": "clustered in js/cluster-map.js — the SSG/SPA related-links block already connects the pair",
+      "pages": [
+        {
+          "page": "/everyday/vacation-budget",
+          "impressions": 8,
+          "clicks": 0,
+          "position": 26.2,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/lifestyle/vacation-savings",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 118.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 9
+    },
+    {
+      "query": "yearly salary calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/dubai-salary",
+          "impressions": 8,
+          "clicks": 0,
+          "position": 135.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/pk-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 108,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 9
+    },
+    {
+      "query": "income tax calculator",
+      "decision": "D1_LINKED",
+      "note": "clustered in js/cluster-map.js — the SSG/SPA related-links block already connects the pair",
+      "pages": [
+        {
+          "page": "/finance/tax",
+          "impressions": 4,
+          "clicks": 0,
+          "position": 72.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/finance/canada-income-tax",
+          "impressions": 3,
+          "clicks": 0,
+          "position": 57.2,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 3,
+      "queryImpressions": 8
+    },
+    {
+      "query": "income tax calculator",
+      "decision": "D2",
+      "note": "cross-category tools sharing one intent — differentiate wording + internal links",
+      "pages": [
+        {
+          "page": "/finance/tax",
+          "impressions": 4,
+          "clicks": 0,
+          "position": 72.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/dubai-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 36,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 8
+    },
+    {
+      "query": "income tax calculator",
+      "decision": "D2",
+      "note": "cross-category tools sharing one intent — differentiate wording + internal links",
+      "pages": [
+        {
+          "page": "/finance/canada-income-tax",
+          "impressions": 3,
+          "clicks": 0,
+          "position": 57.2,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/dubai-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 36,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 8
+    },
+    {
+      "query": "mifflin-st jeor bmr formula",
+      "decision": "D3",
+      "note": "guide links the calculator — guide↔tool split is by design",
+      "pages": [
+        {
+          "page": "/guides/bmr",
+          "impressions": 4,
+          "clicks": 0,
+          "position": 6.3,
+          "kind": "guide",
+          "inSitemap": true
+        },
+        {
+          "page": "/health/bmr-mifflin",
+          "impressions": 3,
+          "clicks": 0,
+          "position": 58,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 3,
+      "queryImpressions": 7
+    },
+    {
+      "query": "floor calculator",
+      "decision": "D2",
+      "note": "cross-category tools sharing one intent — differentiate wording + internal links",
+      "pages": [
+        {
+          "page": "/homegarden/room-area",
+          "impressions": 5,
+          "clicks": 0,
+          "position": 177.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/construction/flooring",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 111.7,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 2,
+      "queryImpressions": 7
+    },
+    {
+      "query": "flooring calculator",
+      "decision": "D2",
+      "note": "cross-category tools sharing one intent — differentiate wording + internal links",
+      "pages": [
+        {
+          "page": "/homegarden/room-area",
+          "impressions": 6,
+          "clicks": 0,
+          "position": 152.8,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/construction/flooring",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 66,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 7
+    },
+    {
+      "query": "gold silver ratio calculator",
+      "decision": "D1",
+      "note": "same category, same intent — one page should own the query (owner decision)",
+      "pages": [
+        {
+          "page": "/regional/gold-silver",
+          "impressions": 6,
+          "clicks": 0,
+          "position": 130.3,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/gold-silver-ratio",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 97.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 7
+    },
+    {
+      "query": "+mifflin st jeor equation women 10 weight 6.25 height 5 age 161 authoritative",
+      "decision": "D3",
+      "note": "guide links the calculator — guide↔tool split is by design",
+      "pages": [
+        {
+          "page": "/health/bmr-mifflin",
+          "impressions": 5,
+          "clicks": 0,
+          "position": 13,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/guides/bmr",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 175.5,
+          "kind": "guide",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 6
+    },
+    {
+      "query": "calculator b2b",
+      "decision": "D4",
+      "note": "",
+      "pages": [
+        {
+          "page": "/hub/business",
+          "impressions": 3,
+          "clicks": 0,
+          "position": 124.3,
+          "kind": "hub",
+          "inSitemap": true
+        },
+        {
+          "page": "/business",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 121.7,
+          "kind": "category",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 2,
+      "queryImpressions": 5
+    },
+    {
+      "query": "calculator for salary",
+      "decision": "D1",
+      "note": "same category, same intent — one page should own the query (owner decision)",
+      "pages": [
+        {
+          "page": "/regional/singapore-cpf",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 122.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/singapore-take-home-salary",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 109.2,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 2,
+      "queryImpressions": 5
+    },
+    {
+      "query": "payback years",
+      "decision": "D2",
+      "note": "cross-category tools sharing one intent — differentiate wording + internal links",
+      "pages": [
+        {
+          "page": "/business/payback",
+          "impressions": 3,
+          "clicks": 0,
+          "position": 129.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/finance/payback-period",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 89.2,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 2,
+      "queryImpressions": 5
+    },
+    {
+      "query": "wavelength calculator",
+      "decision": "D1",
+      "note": "same category, same intent — one page should own the query (owner decision)",
+      "pages": [
+        {
+          "page": "/science/wavelength",
+          "impressions": 3,
+          "clicks": 0,
+          "position": 162.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/science/wave-speed",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 135,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 2,
+      "queryImpressions": 5
+    },
+    {
+      "query": "calculator for salary",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/singapore-cpf",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 122.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/canada-take-home-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 115.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 5
+    },
+    {
+      "query": "calculator for salary",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/singapore-take-home-salary",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 109.2,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/canada-take-home-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 115.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 5
+    },
+    {
+      "query": "how to calculate electricity bill",
+      "decision": "D2",
+      "note": "cross-category tools sharing one intent — differentiate wording + internal links",
+      "pages": [
+        {
+          "page": "/regional/electricity-bill-india",
+          "impressions": 4,
+          "clicks": 0,
+          "position": 162,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/everyday/electricity",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 13.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 5
+    },
+    {
+      "query": "pay calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/dubai-salary",
+          "impressions": 4,
+          "clicks": 0,
+          "position": 148.1,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/pk-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 24,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 5
+    },
+    {
+      "query": "rickshaw fare calculator",
+      "decision": "D2",
+      "note": "cross-category tools sharing one intent — differentiate wording + internal links",
+      "pages": [
+        {
+          "page": "/regional/rickshaw-fare",
+          "impressions": 4,
+          "clicks": 0,
+          "position": 125.1,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/auto/auto-fare",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 85.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 5
+    },
+    {
+      "query": "car trade in calculator",
+      "decision": "D4",
+      "note": "",
+      "pages": [
+        {
+          "page": "/auto/trade-in-value",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 153.3,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/hub/auto",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 16.7,
+          "kind": "hub",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 2,
+      "queryImpressions": 4
+    },
+    {
+      "query": "grocery bill calculator",
+      "decision": "D2",
+      "note": "cross-category tools sharing one intent — differentiate wording + internal links",
+      "pages": [
+        {
+          "page": "/everyday/grocery-budget",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 60,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/lifestyle/grocery-budget-optimizer",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 14.2,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 2,
+      "queryImpressions": 4
+    },
+    {
+      "query": "business day calculator",
+      "decision": "D3",
+      "note": "guide links the calculator — guide↔tool split is by design",
+      "pages": [
+        {
+          "page": "/guides/business-days",
+          "impressions": 3,
+          "clicks": 0,
+          "position": 119.6,
+          "kind": "guide",
+          "inSitemap": true
+        },
+        {
+          "page": "/everyday/business-days",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 12,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 4
+    },
+    {
+      "query": "mifflin st jeor bmr formula",
+      "decision": "D3",
+      "note": "guide links the calculator — guide↔tool split is by design",
+      "pages": [
+        {
+          "page": "/guides/bmr",
+          "impressions": 3,
+          "clicks": 0,
+          "position": 91,
+          "kind": "guide",
+          "inSitemap": true
+        },
+        {
+          "page": "/health/bmr-mifflin",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 85.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 4
+    },
+    {
+      "query": "mifflin-st jeor equation women bmr 10*weight 6.25*height - 5*age - 161",
+      "decision": "D3",
+      "note": "guide links the calculator — guide↔tool split is by design",
+      "pages": [
+        {
+          "page": "/health/bmr-mifflin",
+          "impressions": 3,
+          "clicks": 0,
+          "position": 12.8,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/guides/bmr",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 13.5,
+          "kind": "guide",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 4
+    },
+    {
+      "query": "paint coverage calculator",
+      "decision": "D3_LINK_MISSING",
+      "note": "guide ranks for this query but does not link /lifestyle/paint-coverage",
+      "pages": [
+        {
+          "page": "/lifestyle/paint-coverage",
+          "impressions": 3,
+          "clicks": 0,
+          "position": 156.3,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/guides/paint-coverage",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 142.5,
+          "kind": "guide",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 4
+    },
+    {
+      "query": "1 3 business days from today",
+      "decision": "D3",
+      "note": "guide links the calculator — guide↔tool split is by design",
+      "pages": [
+        {
+          "page": "/everyday/business-days",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 118.3,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/guides/business-days",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 118.5,
+          "kind": "guide",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 3
+    },
+    {
+      "query": "78 working days from today",
+      "decision": "D3",
+      "note": "guide links the calculator — guide↔tool split is by design",
+      "pages": [
+        {
+          "page": "/guides/business-days",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 16.8,
+          "kind": "guide",
+          "inSitemap": true
+        },
+        {
+          "page": "/everyday/business-days",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 12,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 3
+    },
+    {
+      "query": "calculate reading speed",
+      "decision": "D1",
+      "note": "same category, same intent — one page should own the query (owner decision)",
+      "pages": [
+        {
+          "page": "/education/reading-speed",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 123.3,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/education/reading-time",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 139.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 3
+    },
+    {
+      "query": "calculate salary",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/singapore-cpf",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 65.8,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/switzerland-take-home-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 117,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 3
+    },
+    {
+      "query": "grocery estimator",
+      "decision": "D2",
+      "note": "cross-category tools sharing one intent — differentiate wording + internal links",
+      "pages": [
+        {
+          "page": "/lifestyle/grocery-budget-optimizer",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 151.7,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/everyday/grocery-budget",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 99,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 3
+    },
+    {
+      "query": "mifflin st jeor equation male 10 weight 6.25 height 5 age resting metabolic rate",
+      "decision": "D3",
+      "note": "guide links the calculator — guide↔tool split is by design",
+      "pages": [
+        {
+          "page": "/health/bmr-mifflin",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 23.3,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/guides/bmr",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 6,
+          "kind": "guide",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 3
+    },
+    {
+      "query": "miflenza jawformel",
+      "decision": "D3",
+      "note": "guide links the calculator — guide↔tool split is by design",
+      "pages": [
+        {
+          "page": "/health/bmr-mifflin",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 136.8,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/guides/bmr",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 46.5,
+          "kind": "guide",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 3
+    },
+    {
+      "query": "online reading speed calculator",
+      "decision": "D1",
+      "note": "same category, same intent — one page should own the query (owner decision)",
+      "pages": [
+        {
+          "page": "/education/reading-speed",
+          "impressions": 2,
+          "clicks": 0,
+          "position": 114.2,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/education/reading-time",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 121.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 3
+    },
+    {
+      "query": "auto rickshaw fare calculator",
+      "decision": "D2",
+      "note": "cross-category tools sharing one intent — differentiate wording + internal links",
+      "pages": [
+        {
+          "page": "/auto/auto-fare",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 64.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/rickshaw-fare",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 76.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "bandwidth calculator formula",
+      "decision": "D4",
+      "note": "",
+      "pages": [
+        {
+          "page": "/tech",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 67.5,
+          "kind": "category",
+          "inSitemap": true
+        },
+        {
+          "page": "/tech/latency-bandwidth",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 19.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "beep test vo2",
+      "decision": "D1",
+      "note": "same category, same intent — one page should own the query (owner decision)",
+      "pages": [
+        {
+          "page": "/fitness/beep-test",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 105,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/fitness/vo2-beep",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 121.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "bond valuation calculator",
+      "decision": "D1",
+      "note": "same category, same intent — one page should own the query (owner decision)",
+      "pages": [
+        {
+          "page": "/finance/bond-price",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 19.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/finance/ibond-value",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 141,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "calculate income tax",
+      "decision": "D1_LINKED",
+      "note": "clustered in js/cluster-map.js — the SSG/SPA related-links block already connects the pair",
+      "pages": [
+        {
+          "page": "/finance/canada-income-tax",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 45,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/finance/tax",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 126,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "calculator salary",
+      "decision": "D1",
+      "note": "same category, same intent — one page should own the query (owner decision)",
+      "pages": [
+        {
+          "page": "/regional/singapore-cpf",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 108,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/singapore-take-home-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 93,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "calculator training",
+      "decision": "D4",
+      "note": "",
+      "pages": [
+        {
+          "page": "/fitness",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 142.5,
+          "kind": "category",
+          "inSitemap": true
+        },
+        {
+          "page": "/hub/fitness",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 132,
+          "kind": "hub",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "calories burned deadlift calculator",
+      "decision": "D4",
+      "note": "",
+      "pages": [
+        {
+          "page": "/fitness",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 1.5,
+          "kind": "category",
+          "inSitemap": true
+        },
+        {
+          "page": "/hub/fitness",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 9,
+          "kind": "hub",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "carmax mpg calculator",
+      "decision": "D1",
+      "note": "same category, same intent — one page should own the query (owner decision)",
+      "pages": [
+        {
+          "page": "/auto/hybrid-savings",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 82.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/auto/mileage-calculator",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 63,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "devine formula ideal body weight",
+      "decision": "D3_LINK_MISSING",
+      "note": "guide ranks for this query but does not link /health/ideal-body-weight",
+      "pages": [
+        {
+          "page": "/guides/ideal-weight",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 102,
+          "kind": "guide",
+          "inSitemap": true
+        },
+        {
+          "page": "/health/ideal-body-weight",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 6,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "exercise value calculator",
+      "decision": "D4",
+      "note": "",
+      "pages": [
+        {
+          "page": "/fitness",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 150,
+          "kind": "category",
+          "inSitemap": true
+        },
+        {
+          "page": "/hub/fitness",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 141,
+          "kind": "hub",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "fam calculator",
+      "decision": "D4",
+      "note": "",
+      "pages": [
+        {
+          "page": "/family",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 106.5,
+          "kind": "category",
+          "inSitemap": true
+        },
+        {
+          "page": "/family/family-budget-simple",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 106.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "family calculator",
+      "decision": "D4",
+      "note": "",
+      "pages": [
+        {
+          "page": "/family",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 108,
+          "kind": "category",
+          "inSitemap": true
+        },
+        {
+          "page": "/family/family-budget-simple",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 124.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "free grocery calculator",
+      "decision": "D2",
+      "note": "cross-category tools sharing one intent — differentiate wording + internal links",
+      "pages": [
+        {
+          "page": "/everyday/grocery-budget",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 111,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/lifestyle/grocery-budget-optimizer",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 139.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "grocery list cost calculator",
+      "decision": "D2",
+      "note": "cross-category tools sharing one intent — differentiate wording + internal links",
+      "pages": [
+        {
+          "page": "/everyday/grocery-budget",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 130.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/lifestyle/grocery-budget-optimizer",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 135,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "how long is 5-8 business days",
+      "decision": "D3",
+      "note": "guide links the calculator — guide↔tool split is by design",
+      "pages": [
+        {
+          "page": "/everyday/business-days",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 117,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/guides/business-days",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 82.5,
+          "kind": "guide",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "how long is 5-8 business days from today",
+      "decision": "D3",
+      "note": "guide links the calculator — guide↔tool split is by design",
+      "pages": [
+        {
+          "page": "/everyday/business-days",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 109.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/guides/business-days",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 93,
+          "kind": "guide",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "how many business days this year so far",
+      "decision": "D3",
+      "note": "guide links the calculator — guide↔tool split is by design",
+      "pages": [
+        {
+          "page": "/everyday/business-days",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 88.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/guides/business-days",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 106.5,
+          "kind": "guide",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "how much is 2 to 3 business days",
+      "decision": "D3",
+      "note": "guide links the calculator — guide↔tool split is by design",
+      "pages": [
+        {
+          "page": "/everyday/business-days",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 64.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/guides/business-days",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 37.5,
+          "kind": "guide",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "how much is 30 business days",
+      "decision": "D3",
+      "note": "guide links the calculator — guide↔tool split is by design",
+      "pages": [
+        {
+          "page": "/everyday/business-days",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 64.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/guides/business-days",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 28.5,
+          "kind": "guide",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "how to calculate floor area",
+      "decision": "D2",
+      "note": "cross-category tools sharing one intent — differentiate wording + internal links",
+      "pages": [
+        {
+          "page": "/construction/flooring",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 108,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/homegarden/room-area",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 115.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "how to calculate prorated salary singapore",
+      "decision": "D1",
+      "note": "same category, same intent — one page should own the query (owner decision)",
+      "pages": [
+        {
+          "page": "/regional/singapore-cpf",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 108,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/singapore-take-home-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 105,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "intensity factor calculator",
+      "decision": "D4",
+      "note": "",
+      "pages": [
+        {
+          "page": "/fitness",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 117,
+          "kind": "category",
+          "inSitemap": true
+        },
+        {
+          "page": "/hub/fitness",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 132,
+          "kind": "hub",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "live streaming data calculation",
+      "decision": "D4",
+      "note": "",
+      "pages": [
+        {
+          "page": "/tech",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 132,
+          "kind": "category",
+          "inSitemap": true
+        },
+        {
+          "page": "/tech/data-usage-est",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 114,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "mifflin st jeor equation men 10 weight 6.25 height 5 age 5",
+      "decision": "D3",
+      "note": "guide links the calculator — guide↔tool split is by design",
+      "pages": [
+        {
+          "page": "/guides/bmr",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 9,
+          "kind": "guide",
+          "inSitemap": true
+        },
+        {
+          "page": "/health/bmr-mifflin",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 6,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "only meter calculator",
+      "decision": "D2",
+      "note": "cross-category tools sharing one intent — differentiate wording + internal links",
+      "pages": [
+        {
+          "page": "/auto/auto-fare",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 96,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/rickshaw-fare",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 99,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "plant estimator",
+      "decision": "D2",
+      "note": "cross-category tools sharing one intent — differentiate wording + internal links",
+      "pages": [
+        {
+          "page": "/everyday/garden",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 133.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/homegarden/plant-spacing",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 121.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "plant spacing formula",
+      "decision": "D2",
+      "note": "cross-category tools sharing one intent — differentiate wording + internal links",
+      "pages": [
+        {
+          "page": "/everyday/garden",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 7.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/homegarden/plant-spacing",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 109.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "post office rd calculator",
+      "decision": "D1",
+      "note": "same category, same intent — one page should own the query (owner decision)",
+      "pages": [
+        {
+          "page": "/regional/post-office-savings",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 117,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/rd-calculator",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 118.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "reading speed calculator",
+      "decision": "D1",
+      "note": "same category, same intent — one page should own the query (owner decision)",
+      "pages": [
+        {
+          "page": "/education/reading-speed",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 97.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/education/reading-time",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 138,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "reading words per minute test calculator",
+      "decision": "D1",
+      "note": "same category, same intent — one page should own the query (owner decision)",
+      "pages": [
+        {
+          "page": "/education/reading-speed",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 120,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/education/reading-time",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 138,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "room dimension calculator",
+      "decision": "D1",
+      "note": "same category, same intent — one page should own the query (owner decision)",
+      "pages": [
+        {
+          "page": "/homegarden/furniture-arrange",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 93,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/homegarden/room-area",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 99,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "room size calculator",
+      "decision": "D3",
+      "note": "guide links the calculator — guide↔tool split is by design",
+      "pages": [
+        {
+          "page": "/guides/room-area",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 88.5,
+          "kind": "guide",
+          "inSitemap": true
+        },
+        {
+          "page": "/homegarden/room-area",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 102,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "salary calculation singapore",
+      "decision": "D1",
+      "note": "same category, same intent — one page should own the query (owner decision)",
+      "pages": [
+        {
+          "page": "/regional/singapore-cpf",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 139.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/singapore-take-home-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 105,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "salary free online",
+      "decision": "D1",
+      "note": "same category, same intent — one page should own the query (owner decision)",
+      "pages": [
+        {
+          "page": "/regional/singapore-cpf",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 10.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/singapore-take-home-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 3,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "salary tax formula",
+      "decision": "D1",
+      "note": "same category, same intent — one page should own the query (owner decision)",
+      "pages": [
+        {
+          "page": "/finance/payroll-tax",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 37.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/finance/us-income-tax",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 33,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "subnet calculator formula",
+      "decision": "D1",
+      "note": "same category, same intent — one page should own the query (owner decision)",
+      "pages": [
+        {
+          "page": "/tech/ip-subnet",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 7.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/tech/subnet-cidr",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 16.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "take home salary calculator",
+      "decision": "D6",
+      "note": "region variants of one category — each page targets its own country query, split is by design",
+      "pages": [
+        {
+          "page": "/regional/ireland-take-home-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 127.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/regional/uk-take-home-salary",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 144,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "throughput calculator",
+      "decision": "D4",
+      "note": "",
+      "pages": [
+        {
+          "page": "/tech",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 120,
+          "kind": "category",
+          "inSitemap": true
+        },
+        {
+          "page": "/tech/wifi-throughput",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 100.5,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "vehicle wear and tear calculator",
+      "decision": "D4",
+      "note": "",
+      "pages": [
+        {
+          "page": "/auto/commute-cost",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 102,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/hub/auto",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 118.5,
+          "kind": "hub",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "what is 65 business days from today",
+      "decision": "D3",
+      "note": "guide links the calculator — guide↔tool split is by design",
+      "pages": [
+        {
+          "page": "/everyday/business-days",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 100.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/guides/business-days",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 117,
+          "kind": "guide",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "what is my network prefix length",
+      "decision": "D1",
+      "note": "same category, same intent — one page should own the query (owner decision)",
+      "pages": [
+        {
+          "page": "/tech/ip-subnet",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 111,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/tech/subnet-cidr",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 138,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    },
+    {
+      "query": "where to find network prefix length",
+      "decision": "D1",
+      "note": "same category, same intent — one page should own the query (owner decision)",
+      "pages": [
+        {
+          "page": "/tech/ip-subnet",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 115.5,
+          "kind": "tool",
+          "inSitemap": true
+        },
+        {
+          "page": "/tech/subnet-cidr",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 141,
+          "kind": "tool",
+          "inSitemap": true
+        }
+      ],
+      "weakerImpressions": 1,
+      "queryImpressions": 2
+    }
+  ]
+}

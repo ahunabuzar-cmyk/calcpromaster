@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How to Calculate Loan EMI — Formula &amp; Step-by-Step Example</title>
-  <meta name="description" content="How banks calculate your monthly loan payment: the EMI formula explained in plain words, a full worked example, and how interest rate and tenure change the…">
+  <meta name="description" content="How banks calculate your monthly loan payment: the EMI formula in plain words, a worked example, and how rate and tenure change the total.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
   <link rel="canonical" href="https://calcpromaster.netlify.app/guides/emi">
@@ -86,13 +86,13 @@
   <header>
     <a class="logo" href="/">CalcProMaster</a>
     <a href="/">Home</a>
-    <a href="/guides">Guides</a>
+    <a href="/guides/">Guides</a>
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
   </header>
   <main>
     <div class="legal-page">
-      <p class="legal-meta"><a href="/guides">← All guides</a></p>
+      <p class="legal-meta"><a href="/guides/">← All guides</a></p>
       <h1>How to Calculate Loan EMI — Formula &amp; Step-by-Step Example</h1>
       <p class="legal-meta">Finance · 6 min read · Last updated September 2026</p>
 
@@ -140,7 +140,7 @@
       <p>In month 1, <strong>45% of your payment is interest</strong>; by the final payment it's 1%. The interest column falls every single month because it is charged on the shrinking balance — that is the entire mechanism of amortization. Note also what the table shows about halfway: at month 30 you have paid roughly $66,700 of EMIs but retired only about $33,000 of principal. Your loan statement and your intuition will disagree for years; the table is right.</p>
 
       <h2>Prepayment: does one extra EMI a year actually matter?</h2>
-      <p>Run the same loan and add one extra EMI ($2,224.45) in month 12. The loan closes at <strong>month 59 instead of 60</strong>, and total interest drops from $33,467 to about <strong>$31,243 — a saving of one full EMI</strong>. That is the honest scale of the effect: one extra EMI per year removes roughly one month per year of tenure. On a 20-year home loan the compounding effect is much larger (early prepayments kill decades of future interest), on a 5-year loan it is modest but real. The <a href="/finance/amortization">amortization schedule calculator</a> lets you test your own loan's exact numbers.</p>
+      <p>Run the same loan and add one extra EMI ($2,224.45) in month 12. The loan closes at <strong>month 59 instead of 60</strong>, and total interest drops from $33,467 to about <strong>$31,243 — a saving of one full EMI</strong>. That is the honest scale of the effect: one extra EMI per year removes roughly one month per year of tenure. On a 20-year home loan the compounding effect is much larger (early prepayments kill decades of future interest), on a 5-year loan it is modest but real. The <a href="/finance/amortization/">amortization schedule calculator</a> lets you test your own loan's exact numbers.</p>
 
       <h2>Why your lender's statement differs by a few rupees or cents</h2>
       <ul>
@@ -166,15 +166,49 @@
       <p>That 0.89-point gap is the true annual cost of the fee, spread over the loan. Two lenders quoting 12% and 11.75% are not comparable until you compute both APRs — the lower-quote-with-bigger-fee pattern is common enough that regulators require APR disclosure. When comparing offers, match: same amount, same term, same fee assumptions, APR versus APR.</p>
 
       <h2>Try it instantly</h2>
-      <p>Run the numbers with the <a href="/finance/loan-emi">Loan EMI Calculator</a> — it shows the full amortization breakdown and total interest. Related tools:</p>
+      <p>Run the numbers with the <a href="/finance/loan-emi/">Loan EMI Calculator</a> — it shows the full amortization breakdown and total interest. Related tools:</p>
       <div class="related">
-        <a href="/finance/loan-emi">Loan EMI Calculator</a>
-        <a href="/finance/mortgage">Mortgage Calculator</a>
-        <a href="/finance/salary">Salary Calculator</a>
-        <a href="/guides">All Guides</a>
+        <a href="/finance/loan-emi/">Loan EMI Calculator</a>
+        <a href="/finance/mortgage/">Mortgage Calculator</a>
+        <a href="/finance/salary/">Salary Calculator</a>
+        <a href="/guides/">All Guides</a>
       </div>
 
-      <h2>Frequently asked questions</h2>
+<!-- guide-worked-example:start -->
+<h2>Worked example: Loan EMI Calculator at its default inputs</h2>
+<p>This is the answer <a href="/finance/loan-emi/">Loan EMI Calculator</a> gives before you touch anything — the defaults as shipped, computed live rather than copied from a sample.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Loan Amount</td><td>100000</td></tr><tr><td>Interest Rate (% per year)</td><td>8.5</td></tr><tr><td>Loan Term (years)</td><td>5</td></tr><tr><td>Payment per Period (for solve modes)</td><td>2000</td></tr><tr><td>Interest-Only Period (years)</td><td>2</td></tr></tbody></table>
+<p><strong>Result:</strong> Payment: $2,051.65 / monthly</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Solving for Payment (DCC: Actual/365)</li><li>Step 1: Rate per monthly = 8.5% → 0.7083% (Actual/365)</li><li>Step 2: Periods n = 5×12 = 60</li><li>Step 3: PMT = P×r×(1+r)^n / ((1+r)^n − 1)</li></ol>
+<h2>Sensitivity: Loan Amount from half to one-and-a-half times</h2>
+<p>The table below varies loan amount alone — half, the default, and half again.</p>
+<table><thead><tr><th>Loan Amount</th><th>Result</th></tr></thead><tbody><tr><td>50,000</td><td>Payment: $1,025.83 / monthly</td></tr><tr><td>100,000</td><td>Payment: $2,051.65 / monthly</td></tr><tr><td>150,000</td><td>Payment: $3,077.48 / monthly</td></tr></tbody></table>
+<p>Halve loan amount and the result moves one way; add half again and it moves the other. Watching that gap is quicker than guessing which field matters most.</p>
+<!-- guide-worked-example:end -->
+      
+<!-- guide-extra-depth:start -->
+<h2>Why the payment never changes</h2>
+<p>The EMI formula solves for a constant payment that clears both interest and principal over n months: payment = principal × r ÷ (1 − (1 + r)^−n), where r is the monthly rate. Because the payment is fixed, the interest share falls and the principal share rises every month without any input from you.</p>
+<p>That is also why the total interest is not simply principal × rate × years. Interest is charged on the declining balance, so the true cost sits lower than the naive multiplication, and the difference grows with the term.</p>
+<h2>The quoted rate is not the cost of borrowing</h2>
+<p>An 8.5% annual rate divided by twelve is 0.708% a month, which compounds to about 8.84% a year — the effective rate. Fees push it further: a processing fee deducted from disbursal means you receive less than the principal the EMI is calculated on, and the effective cost rises accordingly.</p>
+<p>When two lenders quote the same rate, compare the annual percentage rate and the fee schedule, not the headline number. A 0.25% rate difference over twenty years is worth more than most fee waivers.</p>
+<h2>Prepayment is worth most early</h2>
+<p>Every extra payment goes straight against principal, which removes all future interest that principal would have earned. In year two of a twenty-year loan that is a large amount; in year eighteen it is a few months of interest.</p>
+<p>Whether the lender allows it without charge is a separate question — some markets and loan types apply prepayment penalties, and floating-rate home loans are often treated differently from fixed personal loans.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/mortgage">How to Calculate a Mortgage Payment</a></li>
+    <li><a href="/guides/loans-mortgages">Loan & Mortgage Guides</a></li>
+    <li><a href="/guides/debt-payoff">Debt Snowball vs Avalanche</a></li>
+    <li><a href="/guides/debt-ratio">Debt-to-Income Ratio</a></li>
+  </ul>
+
+<h2>Frequently asked questions</h2>
       <h3>What is the EMI formula?</h3>
       <p>EMI = P × r × (1 + r)^n ÷ ((1 + r)^n − 1), where P is the loan amount, r is the monthly interest rate (annual rate ÷ 12 ÷ 100), and n is the number of monthly payments.</p>
       <h3>How do I convert an annual interest rate to monthly?</h3>
@@ -187,7 +221,7 @@
   </main>
   <footer>
     <a href="/">Home</a>
-    <a href="/guides">Guides</a>
+    <a href="/guides/">Guides</a>
     <a href="/about">About</a>
     <a href="/privacy">Privacy</a>
     <a href="/terms">Terms</a>

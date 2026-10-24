@@ -1,0 +1,11 @@
+# Cloudflare Pages deployment config.
+# The site is prebuilt locally into deploy/ by `node build-deploy.js`, so this
+# project uses DIRECT UPLOAD (no git-connected build). Deploy with:
+#   npm run deploy:cf
+# or:  npx wrangler pages deploy deploy --project-name=calcpromaster
+#
+# Cloudflare Pages reads the same _headers and _redirects files Netlify uses,
+# so CSP/HSTS/X-Frame-Options and the URL redirects carry over unchanged.
+name = "calcpromaster"
+pages_build_output_dir = "deploy"
+compatibility_date = "2026-01-01"

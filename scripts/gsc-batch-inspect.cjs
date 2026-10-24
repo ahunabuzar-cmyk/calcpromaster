@@ -21,7 +21,19 @@ const path = require('path');
 const { getAccessToken } = require('./lib/google-oauth.cjs');
 
 const API = 'searchconsole.googleapis.com';
-const SITE_URL = (process.env.GSC_SITE_URL || 'https://calcpromaster.netlify.app').replace(/[\\/]+$/, '');
+// Site URL — SINGLE SOURCE OF TRUTH: js/site-config.js (`domain:`), overridable
+// via GSC_SITE_URL. Previously hardcoded to the (now paused) netlify.app host,
+// which made the sitemap resubmit target the WRONG property after the
+// custom-domain cutover.
+let SITE_URL = (process.env.GSC_SITE_URL || '').replace(/[\\/]+$/, '');
+if (!SITE_URL) {
+  try {
+    const cfg = fs.readFileSync(path.join(__dirname, '..', 'js', 'site-config.js'), 'utf8');
+    const m = cfg.match(/domain:\s*'([^']+)'/);
+    if (m && m[1]) SITE_URL = 'https://' + m[1].replace(/^https?:\/\//, '');
+  } catch (e) { /* fall through */ }
+}
+if (!SITE_URL) SITE_URL = 'https://calcpromaster.com';
 const SITEMAP_URL = SITE_URL + '/sitemap.xml';
 const LIMIT = (() => {
   const i = process.argv.indexOf('--limit');
@@ -111,7 +123,9 @@ function pickPriority(locs, limit, skip) {
 
 (async () => {
   console.log('🔍 GSC Batch Inspection — ' + SITE_URL + ' (limit ' + LIMIT + ')\n');
-  const token = (await getAccessToken('https://www.googleapis.com/auth/webmasters.readonly')).access_token;
+  // Full `webmasters` scope — the sitemap resubmit below is a WRITE (PUT);
+  // a .readonly token returns 403 on it.
+  const token = (await getAccessToken('https://www.googleapis.com/auth/webmasters')).access_token;
 
   // [1/2] Sitemap resubmit (write action — the only recrawl signal available via API)
   // Property is registered WITH a trailing slash — path forms must match it exactly.

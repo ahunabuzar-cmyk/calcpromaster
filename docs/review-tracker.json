@@ -1,39 +1,109 @@
 {
-  "generated": "2026-09-21T14:27:29.980Z",
-  "total": 1206,
-  "pass": 1204,
-  "needsReview": 0,
+  "generated": "2026-10-17T16:35:13.340Z",
+  "total": 1285,
+  "pass": 1205,
+  "needsReview": 78,
   "notApplicable": 2,
-  "reviewable": 1204,
-  "progressPct": 100,
+  "reviewable": 1283,
+  "progressPct": 94,
   "remainingByCategory": [
     {
-      "category": "Auto & Transport",
-      "total": 46,
-      "pass": 46,
-      "review": 0,
-      "na": 0
-    },
-    {
-      "category": "business",
-      "total": 39,
-      "pass": 39,
-      "review": 0,
+      "category": "Regional (India/PK/UAE)",
+      "total": 82,
+      "pass": 47,
+      "review": 35,
       "na": 0
     },
     {
       "category": "Career & Freelance",
-      "total": 39,
+      "total": 46,
       "pass": 39,
-      "review": 0,
+      "review": 7,
+      "na": 0
+    },
+    {
+      "category": "finance",
+      "total": 218,
+      "pass": 210,
+      "review": 7,
+      "na": 1
+    },
+    {
+      "category": "business",
+      "total": 45,
+      "pass": 39,
+      "review": 6,
       "na": 0
     },
     {
       "category": "construction",
-      "total": 53,
+      "total": 57,
       "pass": 53,
-      "review": 0,
+      "review": 4,
       "na": 0
+    },
+    {
+      "category": "education",
+      "total": 42,
+      "pass": 38,
+      "review": 4,
+      "na": 0
+    },
+    {
+      "category": "Home & Garden",
+      "total": 52,
+      "pass": 49,
+      "review": 3,
+      "na": 0
+    },
+    {
+      "category": "engineering",
+      "total": 67,
+      "pass": 65,
+      "review": 2,
+      "na": 0
+    },
+    {
+      "category": "everyday",
+      "total": 50,
+      "pass": 48,
+      "review": 2,
+      "na": 0
+    },
+    {
+      "category": "Health & Fitness",
+      "total": 68,
+      "pass": 66,
+      "review": 2,
+      "na": 0
+    },
+    {
+      "category": "Lifestyle & Home",
+      "total": 49,
+      "pass": 47,
+      "review": 2,
+      "na": 0
+    },
+    {
+      "category": "Parenting & Family",
+      "total": 40,
+      "pass": 38,
+      "review": 2,
+      "na": 0
+    },
+    {
+      "category": "Auto & Transport",
+      "total": 47,
+      "pass": 46,
+      "review": 1,
+      "na": 0
+    },
+    {
+      "category": "math",
+      "total": 121,
+      "pass": 119,
+      "review": 1,
+      "na": 1
     },
     {
       "category": "Conversion",
@@ -41,34 +111,6 @@
       "pass": 36,
       "review": 0,
       "na": 0
-    },
-    {
-      "category": "education",
-      "total": 38,
-      "pass": 38,
-      "review": 0,
-      "na": 0
-    },
-    {
-      "category": "engineering",
-      "total": 65,
-      "pass": 65,
-      "review": 0,
-      "na": 0
-    },
-    {
-      "category": "everyday",
-      "total": 47,
-      "pass": 47,
-      "review": 0,
-      "na": 0
-    },
-    {
-      "category": "finance",
-      "total": 211,
-      "pass": 210,
-      "review": 0,
-      "na": 1
     },
     {
       "category": "Fitness & Exercise",
@@ -81,48 +123,6 @@
       "category": "Food & Nutrition",
       "total": 37,
       "pass": 37,
-      "review": 0,
-      "na": 0
-    },
-    {
-      "category": "Health & Fitness",
-      "total": 66,
-      "pass": 66,
-      "review": 0,
-      "na": 0
-    },
-    {
-      "category": "Home & Garden",
-      "total": 49,
-      "pass": 49,
-      "review": 0,
-      "na": 0
-    },
-    {
-      "category": "Lifestyle & Home",
-      "total": 47,
-      "pass": 47,
-      "review": 0,
-      "na": 0
-    },
-    {
-      "category": "math",
-      "total": 120,
-      "pass": 119,
-      "review": 0,
-      "na": 1
-    },
-    {
-      "category": "Parenting & Family",
-      "total": 38,
-      "pass": 38,
-      "review": 0,
-      "na": 0
-    },
-    {
-      "category": "Regional (India/PK/UAE)",
-      "total": 47,
-      "pass": 47,
       "review": 0,
       "na": 0
     },
@@ -148,5 +148,96 @@
       "na": 0
     }
   ],
-  "nextBatch": []
+  "nextBatch": [
+    {
+      "id": "peptide-reconstitution",
+      "name": "Peptide Reconstitution Calculator",
+      "category": "Health & Fitness",
+      "route": "/health/peptide-reconstitution"
+    },
+    {
+      "id": "pet-medication-dose",
+      "name": "Pet Medication Dosage Calculator",
+      "category": "Health & Fitness",
+      "route": "/health/pet-medication-dose"
+    },
+    {
+      "id": "alimony-estimator",
+      "name": "Alimony and Spousal Support Estimator",
+      "category": "Parenting & Family",
+      "route": "/parenting-family/alimony-estimator"
+    },
+    {
+      "id": "bereavement-checklist",
+      "name": "Bereavement Financial Runway Calculator",
+      "category": "Parenting & Family",
+      "route": "/parenting-family/bereavement-checklist"
+    },
+    {
+      "id": "abu-dhabi-cost-living",
+      "name": "Abu Dhabi Cost of Living Calculator",
+      "category": "Regional (India/PK/UAE)",
+      "route": "/regional/abu-dhabi-cost-living"
+    },
+    {
+      "id": "australia-take-home-salary",
+      "name": "Australia Take-Home Salary Calculator",
+      "category": "Regional (India/PK/UAE)",
+      "route": "/regional/australia-take-home-salary"
+    },
+    {
+      "id": "bangladesh-income-tax",
+      "name": "Bangladesh Income Tax Calculator",
+      "category": "Regional (India/PK/UAE)",
+      "route": "/regional/bangladesh-income-tax"
+    },
+    {
+      "id": "brazil-take-home-salary",
+      "name": "Brazil Take-Home Salary Calculator",
+      "category": "Regional (India/PK/UAE)",
+      "route": "/regional/brazil-take-home-salary"
+    },
+    {
+      "id": "chile-take-home-salary",
+      "name": "Chile Take-Home Salary Calculator",
+      "category": "Regional (India/PK/UAE)",
+      "route": "/regional/chile-take-home-salary"
+    },
+    {
+      "id": "colombia-take-home-salary",
+      "name": "Colombia Take-Home Salary Calculator",
+      "category": "Regional (India/PK/UAE)",
+      "route": "/regional/colombia-take-home-salary"
+    },
+    {
+      "id": "egypt-take-home-salary",
+      "name": "Egypt Take-Home Salary Calculator",
+      "category": "Regional (India/PK/UAE)",
+      "route": "/regional/egypt-take-home-salary"
+    },
+    {
+      "id": "gold-price",
+      "name": "Gold Price and Value Calculator",
+      "category": "Regional (India/PK/UAE)",
+      "route": "/regional/gold-price"
+    },
+    {
+      "id": "hijri-converter",
+      "name": "Hijri Gregorian Date Converter",
+      "category": "Regional (India/PK/UAE)",
+      "route": "/regional/hijri-converter"
+    },
+    {
+      "id": "hongkong-take-home-salary",
+      "name": "Hong Kong Take-Home Salary Calculator",
+      "category": "Regional (India/PK/UAE)",
+      "route": "/regional/hongkong-take-home-salary"
+    },
+    {
+      "id": "indonesia-take-home-salary",
+      "name": "Indonesia Take-Home Salary Calculator",
+      "category": "Regional (India/PK/UAE)",
+      "route": "/regional/indonesia-take-home-salary"
+    }
+  ]
 }

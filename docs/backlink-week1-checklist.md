@@ -12,7 +12,7 @@ Have these ready in a folder — every platform will ask for some subset:
 
 - [ ] **Logo:** 512×512 PNG (transparent background) + 180×180 for small thumbnails
 - [ ] **Screenshot:** clean capture of a calculator page mid-calculation (a tool showing a real result converts far better than a blank form). 1280×800 or 2400×1500 for retina
-- [ ] **Tagline (one line):** "1,201+ free online calculators that run in your browser"
+- [ ] **Tagline (one line):** "1,282+ free online calculators that run in your browser"
 - [ ] **Short description (~300 chars):** use the AlternativeTo description from the outreach pack — do not paste it anywhere else
 - [ ] **Category pick:** most directories use "Online Tools", "Web App", or "Utilities" — never "Finance" (this is a general calculator site, not a fintech product)
 - [ ] **Email you'll submit from:** a real address on a domain you control; directories using throwaway Gmail addresses get screened
@@ -39,7 +39,7 @@ Have these ready in a folder — every platform will ask for some subset:
 ## While you wait (zero-risk, not counted toward link velocity)
 
 - [ ] Set up a **GitHub issue template** on your repo so Awesome-list PRs later have a one-line description + URL format ready
-- [ ] Draft your **Indie Hackers build-log post** (don't post yet — that's Week 3): "How I built 1,201 calculators with zero funding" angle from the outreach pack
+- [ ] Draft your **Indie Hackers build-log post** (don't post yet — that's Week 3): "How I built 1,282 calculators with zero funding" angle from the outreach pack
 - [ ] Verify the **embed landing page** loads and the four widgets work: https://calcpromaster.com/embed/ — this is your best natural-link asset; every blogger who embeds creates a link you never asked for
 
 ---

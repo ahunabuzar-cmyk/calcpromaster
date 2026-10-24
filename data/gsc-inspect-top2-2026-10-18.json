@@ -1,0 +1,19 @@
+{
+  "ranAt": "2026-10-18T12:12:46.436Z",
+  "site": "https://calcpromaster.com",
+  "source": "data/top2-today.json",
+  "total": 2,
+  "count": 2,
+  "results": [
+    {
+      "url": "https://calcpromaster.com/about",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.com/editorial-policy",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed"
+    }
+  ]
+}

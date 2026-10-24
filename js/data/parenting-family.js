@@ -79,6 +79,77 @@ const FAMILY_TOOLS = [
   { id: 'child-support-split', name: 'Child Support Split Calculator', desc: 'Income-proportional share of a base support amount', kw: 'child support split calculator income share percentage parents', inputs: [{id:'mine',label:'Your Monthly Income ($)',type:'number',def:5000},{id:'other',label:'Other Parent Income ($)',type:'number',def:3000},{id:'base',label:'Base Support Need ($/mo)',type:'number',def:1200}], calc: function(v){ var tot=v.mine+v.other; if(tot<=0) return{result:'Incomes must be positive',chart:'',extra:''}; var share=v.base*v.mine/tot; return{result:'Your share: $'+share.toFixed(0)+' ('+(v.mine/tot*100).toFixed(0)+'%)',chart:Charts.bar([share,v.base-share],['Your share','Other parent']),extra:'This proportional model mirrors how most state guidelines start — actual orders add healthcare, childcare, and parenting-time adjustments'};}, steps: function(v){ var tot=v.mine+v.other; var share=v.base*v.mine/tot; return['Step 1: Combined income = $'+tot.toLocaleString(),'Step 2: Your share = '+v.mine+' ÷ '+tot+' = '+(v.mine/tot*100).toFixed(0)+'%','Step 3: × base need $'+v.base+' = $'+share.toFixed(0)+' per month','Courts use statutory worksheets — this estimates the proportional logic, not the legal order'];} },
 
   { id: 'family-tree-generation', name: 'Ancestor Count Calculator', desc: 'Ancestors at each generation back', kw: 'family tree ancestor count calculator generations genealogy doubling, free online Ancestor Count Calculator', inputs: [{id:'gen',label:'Generations Back',type:'number',def:5}], calc: function(v){ if(v.gen<0||v.gen>20) return{result:'Enter generations from 0 to 20',chart:'',extra:''}; var count=Math.pow(2,v.gen); var total=Math.pow(2,v.gen+1)-2; return{result:'Ancestors at generation '+v.gen+': '+count,chart:Charts.bar([count,total],['this gen','all gens']),extra:'Total across all generations back to here: '+total+' | Pedigree collapse means real numbers fall below the doubling — cousins marrying cousins is universal in deep trees'};}, steps: function(v){ var count=Math.pow(2,v.gen); return['Formula: ancestors = 2^generation','Step 1: 2^'+v.gen+' = '+count,'Each person has 2 parents, 4 grandparents, 8 great-grandparents — doubling each step back'];} }
+,
+  {
+    id: 'alimony-estimator',
+    name: 'Alimony and Spousal Support Estimator',
+    desc: 'Rough monthly spousal support estimate from the income gap, length of marriage and children.',
+    kw: 'alimony calculator, spousal support estimator, monthly alimony estimate, divorce support calculator',
+    inputs: [
+{ id: 'payerIncome', label: 'Higher earner monthly income', type: 'number', def: 6000 },
+      { id: 'recipientIncome', label: 'Lower earner monthly income', type: 'number', def: 2000 },
+      { id: 'years', label: 'Years married', type: 'number', def: 10 },
+      { id: 'children', label: 'Children', type: 'number', def: 0 }
+    ],
+    calc: function (v) {
+      var diff = v.payerIncome - v.recipientIncome;
+      if (diff <= 0) return { result: 'No support indicated: the payer does not earn more', chart: '', extra: 'These estimates assume the higher earner pays the lower earner' };
+      var rate = 0.2 + 0.02 * Math.min(v.years, 15);
+      var boost = v.children > 0 ? 1.1 : 1;
+      var monthly = diff * rate * boost;
+      var cap = 0.4 * v.payerIncome;
+      if (monthly > cap) monthly = cap;
+      var duration = Math.min(v.years, 15) * 0.4;
+      return {
+        result: 'Estimated monthly support: ' + monthly.toFixed(0),
+        chart: Charts.bar([diff, monthly], ['Income gap', 'Support']),
+        extra: 'Suggested duration about ' + duration.toFixed(1) + ' years | Capped at 40 percent of payer income | State and country rules vary widely, this is a rough guide only'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Find the income gap: ' + v.payerIncome + ' minus ' + v.recipientIncome + ' = ' + (v.payerIncome - v.recipientIncome) + '.',
+        'Step 2: A common guideline pays a share of that gap, rising with the length of the marriage: about 40 percent after ten years here.',
+        'Step 3: Add roughly a tenth when there are children.',
+        'Step 4: Cap the result at about 40 percent of the payer income for reasonableness.',
+        'Step 5: Duration is often set near 40 percent of the marriage length, but courts decide the real figure and every jurisdiction differs.'
+      ];
+    }
+  }
+,
+  {
+    id: 'bereavement-checklist',
+    name: 'Bereavement Financial Runway Calculator',
+    desc: 'Estimate the financial runway after losing a partner and the key items that must be reviewed and recalculated.',
+    kw: 'bereavement financial checklist, widowhood finance calculator, what to do financially after a death, survivor benefit runway',
+    inputs: [
+{ id: 'hasWill', label: 'A valid will exists', type: 'checkbox', def: true },
+      { id: 'lifeInsurance', label: 'Life insurance payout', type: 'number', def: 100000 },
+      { id: 'existingSavings', label: 'Existing savings', type: 'number', def: 20000 },
+      { id: 'monthlyExpenses', label: 'Monthly expenses', type: 'number', def: 3000 },
+      { id: 'receivesBenefit', label: 'Survivor benefit expected', type: 'checkbox', def: true },
+      { id: 'monthlyBenefit', label: 'Monthly survivor benefit', type: 'number', def: 1500 }
+    ],
+    calc: function (v) {
+      var net = v.monthlyExpenses - (v.receivesBenefit ? v.monthlyBenefit : 0);
+      var months = net <= 0 ? 999 : (v.lifeInsurance + v.existingSavings) / net;
+      var items = 8 + (v.hasWill ? 0 : 1);
+      return {
+        result: 'Financial runway: ' + (months >= 999 ? 'more than 80' : months.toFixed(1)) + ' months | Checklist: ' + items + ' steps',
+        chart: Charts.gauge(months >= 999 ? 120 : Math.min(months, 120), 120),
+        extra: 'Insurance and savings ' + (v.lifeInsurance + v.existingSavings).toFixed(0) + ' | Net monthly need ' + Math.max(0, net).toFixed(0) + ' | Review insurance, benefits, accounts, title, tax filing and pensions. Not financial advice.'
+      };
+    },
+    steps: function (v) {
+      return [
+        'Step 1: Add the life insurance payout to existing savings to get the total available cash.',
+        'Step 2: Work out the net monthly need: expenses minus any survivor benefit.',
+        'Step 3: Divide the available cash by the net monthly need for the runway in months.',
+        'Step 4: List the items to review: insurance, survivor benefits, bank accounts, property title, tax filing status, subscriptions and pensions.',
+        'Step 5: A professional adviser and a bereavement support service can help; this is a planning estimate only.'
+      ];
+    }
+  }
 ];
 if (typeof module !== 'undefined') module.exports = FAMILY_TOOLS;
 if (typeof window !== 'undefined') window.FAMILY_TOOLS = FAMILY_TOOLS;

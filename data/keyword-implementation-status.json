@@ -1,14 +1,14 @@
 {
-  "generatedFor": "2026-10-13",
+  "generatedFor": "2026-10-17",
   "source": "data/keyword-implementation-map.json (B/C/D rows)",
   "totals": {
-    "rows": 97,
+    "rows": 96,
     "byCode": {
       "B": {
         "COVERED": 34
       },
       "C": {
-        "COVERED": 54,
+        "COVERED": 53,
         "NO_OWNER": 2
       },
       "D": {
@@ -16,7 +16,7 @@
       }
     },
     "byStatus": {
-      "COVERED": 95,
+      "COVERED": 94,
       "NO_OWNER": 2
     },
     "pagesNeedingMeta": 0,
@@ -115,7 +115,7 @@
         "time card clock calculator"
       ],
       "why": "partial match with registry tool walking-transit (1/3 concept tokens) — resolve by internal linking/metadata first · resolved: a time card is a timesheet — /career/timesheet-hours/ works out hours from start/end times",
-      "pageTitle": "Timesheet Decimal Converter: Time entries",
+      "pageTitle": "Time Card Calculator: Hours, Minutes and Payroll",
       "pageFile": "deploy/career/timesheet-hours/index.html",
       "matchedTokens": [
         "time",
@@ -399,7 +399,7 @@
         "day count"
       ],
       "why": "partial match with registry tool discount-rate (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: counting days between dates is the date-difference tool",
-      "pageTitle": "Date Difference Calculator: Days Between Two",
+      "pageTitle": "Date Difference Calculator: Day Count Between Dates",
       "pageFile": "deploy/everyday/date-diff/index.html",
       "matchedTokens": [
         "day",
@@ -423,7 +423,7 @@
         "calendar calculator"
       ],
       "why": "the token heuristic attached this to /guides/age through the shared word \"calendar\" (from \"age calendar\"), but the calendar/date-arithmetic intent is served by /everyday/date-diff/ (verified in deploy/sitemap.xml) — improve that page instead",
-      "pageTitle": "Date Difference Calculator: Days Between Two",
+      "pageTitle": "Date Difference Calculator: Day Count Between Dates",
       "pageFile": "deploy/everyday/date-diff/index.html",
       "matchedTokens": [
         "calendar"
@@ -533,31 +533,6 @@
       "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
     },
     {
-      "code": "C",
-      "priority": "P2",
-      "keyword": "annual percentage calculator",
-      "volume": 27100,
-      "difficulty": 5,
-      "target": "/finance/apr-annual",
-      "conceptTokens": [
-        "annual",
-        "percentage"
-      ],
-      "cluster": [
-        "annual percentage calculator"
-      ],
-      "why": "partial match with registry tool grade-percentage (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: annual percentage rate = APR",
-      "pageTitle": "Loan APR Calculator: Loan Amount, Fees &amp; Points",
-      "pageFile": "deploy/finance/apr-annual/index.html",
-      "matchedTokens": [
-        "annual",
-        "percentage"
-      ],
-      "missingTokens": [],
-      "status": "COVERED",
-      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
-    },
-    {
       "code": "B",
       "priority": "P2",
       "keyword": "ot calculator",
@@ -595,7 +570,7 @@
         "time payroll calculator"
       ],
       "why": "partial match with registry tool walking-transit (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: payroll time = hours worked → the timesheet hours tool",
-      "pageTitle": "Timesheet Decimal Converter: Time entries",
+      "pageTitle": "Time Card Calculator: Hours, Minutes and Payroll",
       "pageFile": "deploy/career/timesheet-hours/index.html",
       "matchedTokens": [
         "time",
@@ -620,7 +595,7 @@
         "pay time calculator"
       ],
       "why": "an existing registry tool already covers every concept token — improve that page, do not create a duplicate · resolved: pay-for-time is the timesheet-hours calculation",
-      "pageTitle": "Timesheet Decimal Converter: Time entries",
+      "pageTitle": "Time Card Calculator: Hours, Minutes and Payroll",
       "pageFile": "deploy/career/timesheet-hours/index.html",
       "matchedTokens": [
         "salary",
@@ -768,7 +743,7 @@
         "time adder"
       ],
       "why": "the audit maps this to the live page /career/timesheet-hours — improve that page (metadata/content/functionality), no new URL · resolved: adding durations is what the timesheet tool does (start/end → total hours)",
-      "pageTitle": "Timesheet Decimal Converter: Time entries",
+      "pageTitle": "Time Card Calculator: Hours, Minutes and Payroll",
       "pageFile": "deploy/career/timesheet-hours/index.html",
       "matchedTokens": [
         "time",
@@ -991,7 +966,7 @@
         "hour counter"
       ],
       "why": "the audit maps this to the live page /everyday/distance-pace — improve that page (metadata/content/functionality), no new URL · resolved: the recorded target (/everyday/distance-pace) counts hours only as a by-product of pace; the hours tool is the real owner",
-      "pageTitle": "Timesheet Decimal Converter: Time entries",
+      "pageTitle": "Time Card Calculator: Hours, Minutes and Payroll",
       "pageFile": "deploy/career/timesheet-hours/index.html",
       "matchedTokens": [
         "hour",
@@ -1546,7 +1521,7 @@
         "mortgage calculator how much can i qualify for"
       ],
       "why": "partial match with registry tool ab-test-significance (2/4 concept tokens) — resolve by internal linking/metadata first · resolved: same intent as the other qualify row — the qualification tool",
-      "pageTitle": "Loan Qualification: Monthly Income, Monthly Debts &amp; Rate",
+      "pageTitle": "Loan Qualification Calculator: How Much Can I Borrow?",
       "pageFile": "deploy/finance/loan-qualify/index.html",
       "matchedTokens": [
         "mortgage",
@@ -1575,7 +1550,7 @@
         "mortgage calculator how much do i qualify for"
       ],
       "why": "partial match with registry tool remortgage-calc (2/4 concept tokens) — resolve by internal linking/metadata first · resolved: same intent as the other qualify row — the qualification tool",
-      "pageTitle": "Loan Qualification: Monthly Income, Monthly Debts &amp; Rate",
+      "pageTitle": "Loan Qualification Calculator: How Much Can I Borrow?",
       "pageFile": "deploy/finance/loan-qualify/index.html",
       "matchedTokens": [
         "mortgage",
@@ -1878,7 +1853,7 @@
         "work schedule calculator"
       ],
       "why": "partial match with registry tool working-capital (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: a work schedule is a set of timesheets — hours per day/week",
-      "pageTitle": "Timesheet Decimal Converter: Time entries",
+      "pageTitle": "Time Card Calculator: Hours, Minutes and Payroll",
       "pageFile": "deploy/career/timesheet-hours/index.html",
       "matchedTokens": [
         "work",
@@ -2079,7 +2054,7 @@
         "time and pay calculator"
       ],
       "why": "partial match with registry tool overtime-pay (2/3 concept tokens) — resolve by internal linking/metadata first · resolved: hours and pay → timesheet hours, then overtime page for the rate",
-      "pageTitle": "Timesheet Decimal Converter: Time entries",
+      "pageTitle": "Time Card Calculator: Hours, Minutes and Payroll",
       "pageFile": "deploy/career/timesheet-hours/index.html",
       "matchedTokens": [
         "time",
@@ -2378,7 +2353,7 @@
         "qualify for a mortgage calculator"
       ],
       "why": "partial match with registry tool remortgage-calc (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: affordability/qualification is the loan-qualify tool",
-      "pageTitle": "Loan Qualification: Monthly Income, Monthly Debts &amp; Rate",
+      "pageTitle": "Loan Qualification Calculator: How Much Can I Borrow?",
       "pageFile": "deploy/finance/loan-qualify/index.html",
       "matchedTokens": [
         "qualify",

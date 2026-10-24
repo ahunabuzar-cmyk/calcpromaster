@@ -230,6 +230,11 @@
   "file": "auto-transport.js"
  },
  {
+  "id": "ev-charger-roi",
+  "name": "EV Charger ROI Calculator",
+  "file": "auto-transport.js"
+ },
+ {
   "id": "business-roi",
   "name": "Business ROI",
   "file": "business.js"
@@ -425,6 +430,36 @@
   "file": "business.js"
  },
  {
+  "id": "sponsorship-rate",
+  "name": "Influencer Sponsorship Rate Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "brand-deal-value",
+  "name": "Brand Deal Value Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "podcast-ad-rate",
+  "name": "Podcast Ad Rate Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "newsletter-sponsorship-rate",
+  "name": "Newsletter Sponsorship Rate Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "tool-depreciation",
+  "name": "Tool and Equipment Depreciation Calculator",
+  "file": "business.js"
+ },
+ {
+  "id": "ev-charger-business-roi",
+  "name": "Business EV Charger ROI Calculator",
+  "file": "business.js"
+ },
+ {
   "id": "salary-converter",
   "name": "Salary Converter",
   "file": "career-freelance.js"
@@ -617,6 +652,41 @@
  {
   "id": "shift-differential",
   "name": "Shift Differential Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "canada-crs",
+  "name": "Canada CRS Score Estimator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "australia-pr-points",
+  "name": "Australia PR Points Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "career-break-runway",
+  "name": "Career Break Runway Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "ats-resume-score",
+  "name": "ATS Resume Score Checker",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "salary-negotiation-range",
+  "name": "Salary Negotiation Range Calculator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "us-priority-date",
+  "name": "US Visa Priority Date Wait Estimator",
+  "file": "career-freelance.js"
+ },
+ {
+  "id": "interview-to-offer-tracker",
+  "name": "Interview to Offer Conversion Tracker",
   "file": "career-freelance.js"
  },
  {
@@ -882,6 +952,26 @@
  {
   "id": "tile-boxes",
   "name": "Tile Boxes Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "conduit-fill",
+  "name": "Conduit Fill Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "rolling-offset",
+  "name": "Rolling Offset Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "pipe-cutback",
+  "name": "Pipe Cutback Calculator",
+  "file": "construction.js"
+ },
+ {
+  "id": "journeyman-wage-progression",
+  "name": "Journeyman Wage Progression Calculator",
   "file": "construction.js"
  },
  {
@@ -1255,6 +1345,26 @@
   "file": "education.js"
  },
  {
+  "id": "study-abroad-cost",
+  "name": "Study Abroad Cost Calculator",
+  "file": "education.js"
+ },
+ {
+  "id": "scholarship-gap",
+  "name": "Scholarship Funding Gap Calculator",
+  "file": "education.js"
+ },
+ {
+  "id": "student-loan-vs-scholarship",
+  "name": "Student Loan vs Scholarship Calculator",
+  "file": "education.js"
+ },
+ {
+  "id": "school-fee-inflation",
+  "name": "School Fee Inflation Calculator",
+  "file": "education.js"
+ },
+ {
   "id": "voltage-drop",
   "name": "Voltage Drop Calculator",
   "file": "engineering.js"
@@ -1580,6 +1690,16 @@
   "file": "engineering.js"
  },
  {
+  "id": "pipe-pressure-loss",
+  "name": "Pipe Pressure Loss Calculator",
+  "file": "engineering.js"
+ },
+ {
+  "id": "hvac-load",
+  "name": "HVAC Load Calculator",
+  "file": "engineering.js"
+ },
+ {
   "id": "age",
   "name": "Age Calculator",
   "file": "everyday.js"
@@ -1812,6 +1932,21 @@
  {
   "id": "heat-pump-savings",
   "name": "Heat Pump Savings Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "statute-of-limitations",
+  "name": "Statute of Limitations Date Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "cost-of-living-compare",
+  "name": "City Cost of Living Comparison Calculator",
+  "file": "everyday.js"
+ },
+ {
+  "id": "snow-day",
+  "name": "Snow Day Calculator",
   "file": "everyday.js"
  },
  {
@@ -2870,6 +3005,41 @@
   "file": "finance.js"
  },
  {
+  "id": "hajj-cost",
+  "name": "Hajj Cost Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "power-of-attorney-cost",
+  "name": "Power of Attorney and Will Cost Estimator",
+  "file": "finance.js"
+ },
+ {
+  "id": "divorce-cost",
+  "name": "Divorce Cost Estimator",
+  "file": "finance.js"
+ },
+ {
+  "id": "moving-abroad-cost",
+  "name": "Moving Abroad Cost Estimator",
+  "file": "finance.js"
+ },
+ {
+  "id": "cosigning-loan-risk",
+  "name": "Cosigning a Loan Risk Calculator",
+  "file": "finance.js"
+ },
+ {
+  "id": "inheritance-tax-uk-india",
+  "name": "Inheritance Tax Calculator (UK and India)",
+  "file": "finance.js"
+ },
+ {
+  "id": "rental-portfolio-tracker",
+  "name": "Rental Portfolio Cash Flow Tracker",
+  "file": "finance.js"
+ },
+ {
   "id": "running-pace",
   "name": "Running Pace & Split Times",
   "file": "fitness-exercise.js"
@@ -3595,6 +3765,16 @@
   "file": "health.js"
  },
  {
+  "id": "pet-medication-dose",
+  "name": "Pet Medication Dosage Calculator",
+  "file": "health.js"
+ },
+ {
+  "id": "peptide-reconstitution",
+  "name": "Peptide Reconstitution Calculator",
+  "file": "health.js"
+ },
+ {
   "id": "room-area",
   "name": "Room Area & Flooring Calculator",
   "file": "home-garden.js"
@@ -3840,6 +4020,21 @@
   "file": "home-garden.js"
  },
  {
+  "id": "solar-payback",
+  "name": "Solar Panel Payback Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "carbon-offset",
+  "name": "Household Carbon Footprint and Offset Calculator",
+  "file": "home-garden.js"
+ },
+ {
+  "id": "homeowner-first-year-budget",
+  "name": "First-Year Homeowner Cost Calculator",
+  "file": "home-garden.js"
+ },
+ {
   "id": "relocation-cost",
   "name": "Moving Cost Calculator",
   "file": "lifestyle.js"
@@ -4072,6 +4267,16 @@
  {
   "id": "quilt-fabric",
   "name": "Quilt Backing Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "pet-insurance-cost",
+  "name": "Pet Insurance Cost Calculator",
+  "file": "lifestyle.js"
+ },
+ {
+  "id": "pet-boarding-cost",
+  "name": "Pet Boarding Cost Calculator",
   "file": "lifestyle.js"
  },
  {
@@ -4675,6 +4880,11 @@
   "file": "math.js"
  },
  {
+  "id": "proportion",
+  "name": "Proportion Calculator",
+  "file": "math.js"
+ },
+ {
   "id": "baby-weight-gain",
   "name": "Baby Weight Percentile",
   "file": "parenting-family.js"
@@ -4862,6 +5072,16 @@
  {
   "id": "family-tree-generation",
   "name": "Ancestor Count Calculator",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "alimony-estimator",
+  "name": "Alimony and Spousal Support Estimator",
+  "file": "parenting-family.js"
+ },
+ {
+  "id": "bereavement-checklist",
+  "name": "Bereavement Financial Runway Calculator",
   "file": "parenting-family.js"
  },
  {
@@ -5115,7 +5335,7 @@
   "file": "regional.js"
  },
  {
-  "id": "abuDhabi-cost-living",
+  "id": "abu-dhabi-cost-living",
   "name": "Abu Dhabi Cost of Living Calculator",
   "file": "regional.js"
  },
@@ -5162,6 +5382,116 @@
  {
   "id": "south-africa-take-home-salary",
   "name": "South Africa Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "kenya-take-home-salary",
+  "name": "Kenya Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "nigeria-take-home-salary",
+  "name": "Nigeria Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "philippines-take-home-salary",
+  "name": "Philippines Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "bangladesh-income-tax",
+  "name": "Bangladesh Income Tax Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "egypt-take-home-salary",
+  "name": "Egypt Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "brazil-take-home-salary",
+  "name": "Brazil Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "mexico-isr-salary",
+  "name": "Mexico ISR Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "vietnam-take-home-salary",
+  "name": "Vietnam Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "indonesia-take-home-salary",
+  "name": "Indonesia Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "thailand-take-home-salary",
+  "name": "Thailand Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "colombia-take-home-salary",
+  "name": "Colombia Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "chile-take-home-salary",
+  "name": "Chile Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "peru-take-home-salary",
+  "name": "Peru Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "poland-take-home-salary",
+  "name": "Poland Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "romania-take-home-salary",
+  "name": "Romania Take-Home Salary Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "prayer-time",
+  "name": "Prayer Time Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "mirath-calculator",
+  "name": "Islamic Inheritance Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "hijri-converter",
+  "name": "Hijri Gregorian Date Converter",
+  "file": "regional.js"
+ },
+ {
+  "id": "gold-price",
+  "name": "Gold Price and Value Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "qurbani-cost",
+  "name": "Qurbani Cost Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "umrah-cost",
+  "name": "Umrah Cost Calculator",
+  "file": "regional.js"
+ },
+ {
+  "id": "remittance-fee",
+  "name": "Remittance Fee Calculator",
   "file": "regional.js"
  },
  {

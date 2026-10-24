@@ -148,10 +148,16 @@
     const track = o.track || 'rgba(100,116,139,.25)';
     const label = o.label != null ? String(o.label) : (Math.round(p) + '%');
     const sub = o.sub ? '<text x="50%" y="62%" text-anchor="middle" font-size="' + Math.round(size / 11) + '" fill="currentColor" opacity=".65">' + escXml(o.sub) + '</text>' : '';
+    // The rotate() inside an SVG transform ATTRIBUTE takes numbers only. Percentages
+    // are valid on cx/cy but not here, and Chrome logs
+    //   <circle> attribute transform: Expected number, "rotate(-90 50% 50%)"
+    // on every gauge render (which failed the axe E2E on /math/percentage).
+    // The viewBox is 0 0 size size, so the numeric centre is size / 2.
+    const mid = size / 2;
     return '<svg class="cpm-gauge" width="' + size + '" height="' + size + '" viewBox="0 0 ' + size + ' ' + size + '" role="img" aria-label="' + escXml(o.aria || (label + ' progress')) + '">' +
       '<circle cx="50%" cy="50%" r="' + r + '" fill="none" stroke="' + track + '" stroke-width="' + stroke + '"/>' +
       '<circle cx="50%" cy="50%" r="' + r + '" fill="none" stroke="' + color + '" stroke-width="' + stroke + '" stroke-linecap="round" ' +
-      'stroke-dasharray="' + c.toFixed(2) + '" stroke-dashoffset="' + off.toFixed(2) + '" transform="rotate(-90 50% 50%)"/>' +
+      'stroke-dasharray="' + c.toFixed(2) + '" stroke-dashoffset="' + off.toFixed(2) + '" transform="rotate(-90 ' + mid + ' ' + mid + ')"/>' +
       '<text x="50%" y="50%" dy=".35em" text-anchor="middle" font-size="' + Math.round(size / 5.5) + '" font-weight="700" fill="currentColor">' + escXml(label) + '</text>' +
       sub + '</svg>';
   }

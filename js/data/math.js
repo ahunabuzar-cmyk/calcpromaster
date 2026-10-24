@@ -460,7 +460,56 @@ const MATH_TOOLS = [
 
   { id: 'digital-root', name: 'Digital Root Calculator', desc: 'Repeated digit sum down to one digit', kw: 'digital root calculator digit sum casting out nines divisibility, free online Digital Root Calculator', inputs: [{id:'n',label:'Number',type:'number',def:98765}], calc: function(v){ var n=Math.abs(Math.floor(v.n)); if(!isFinite(n)) return{result:'Enter a valid integer',chart:'',extra:''}; var steps=[]; var x=n; while(x>=10){ var s=0; var t=x; while(t>0){s+=t%10;t=Math.floor(t/10);} steps.push(x+' → '+s); x=s; } return{result:'Digital Root: '+x,chart:Charts.bar([x],['root']),extra:steps.join(' | ')+' | Shortcut: digital root = 1 + (n−1) mod 9 — it is n mod 9, with 9 instead of 0'};}, steps: function(v){ var x=Math.abs(Math.floor(v.n)); var count=0; while(x>=10){ var s=0,t=x; while(t>0){s+=t%10;t=Math.floor(t/10);} x=s; count++; } return['Step 1: Add the digits of '+v.n,'Step 2: Repeat until a single digit remains ('+count+' pass'+(count===1?'':'es')+')','Step 3: Result: '+x,'Casting out nines uses this to check arithmetic: the root of a sum must match the sum of roots'];} },
 
-  { id: 'mixture-percent', name: 'Mixture Concentration', desc: 'Final strength after mixing two solutions', kw: 'mixture calculator concentration percent mixing solutions alligation, free online Mixture Concentration calculator', inputs: [{id:'v1',label:'Volume of Solution 1',type:'number',def:200},{id:'p1',label:'Concentration 1 (%)',type:'number',def:30},{id:'v2',label:'Volume of Solution 2',type:'number',def:300},{id:'p2',label:'Concentration 2 (%)',type:'number',def:10}], calc: function(v){ var tot=v.v1+v.v2; if(tot<=0) return{result:'Volumes must be positive',chart:'',extra:''}; var pure=v.v1*v.p1/100+v.v2*v.p2/100; var p=pure/tot*100; return{result:'Final: '+p.toFixed(2)+'%',chart:Charts.bar([v.v1*v.p1/100,v.v2*v.p2/100],['pure from 1','pure from 2']),extra:'Pure solute: '+(+pure.toFixed(2))+' in '+tot+' total — the result always lands between '+Math.min(v.p1,v.p2)+'% and '+Math.max(v.p1,v.p2)+'%'};}, steps: function(v){ var tot=v.v1+v.v2; var pure=v.v1*v.p1/100+v.v2*v.p2/100; var p=pure/tot*100; return['Step 1: Pure from 1 = '+v.v1+' × '+(v.p1/100)+' = '+(v.v1*v.p1/100),'Step 2: Pure from 2 = '+v.v2+' × '+(v.p2/100)+' = '+(v.v2*v.p2/100),'Step 3: '+(+pure.toFixed(2))+' ÷ '+tot+' × 100 = '+p.toFixed(2)+'%'];} }
+  { id: 'mixture-percent', name: 'Mixture Concentration', desc: 'Final strength after mixing two solutions', kw: 'mixture calculator concentration percent mixing solutions alligation, free online Mixture Concentration calculator', inputs: [{id:'v1',label:'Volume of Solution 1',type:'number',def:200},{id:'p1',label:'Concentration 1 (%)',type:'number',def:30},{id:'v2',label:'Volume of Solution 2',type:'number',def:300},{id:'p2',label:'Concentration 2 (%)',type:'number',def:10}], calc: function(v){ var tot=v.v1+v.v2; if(tot<=0) return{result:'Volumes must be positive',chart:'',extra:''}; var pure=v.v1*v.p1/100+v.v2*v.p2/100; var p=pure/tot*100; return{result:'Final: '+p.toFixed(2)+'%',chart:Charts.bar([v.v1*v.p1/100,v.v2*v.p2/100],['pure from 1','pure from 2']),extra:'Pure solute: '+(+pure.toFixed(2))+' in '+tot+' total — the result always lands between '+Math.min(v.p1,v.p2)+'% and '+Math.max(v.p1,v.p2)+'%'};}, steps: function(v){ var tot=v.v1+v.v2; var pure=v.v1*v.p1/100+v.v2*v.p2/100; var p=pure/tot*100; return['Step 1: Pure from 1 = '+v.v1+' × '+(v.p1/100)+' = '+(v.v1*v.p1/100),'Step 2: Pure from 2 = '+v.v2+' × '+(v.p2/100)+' = '+(v.v2*v.p2/100),'Step 3: '+(+pure.toFixed(2))+' ÷ '+tot+' × 100 = '+p.toFixed(2)+'%'];} },
+
+  // Proportion solver: a/b = c/d  ⇔  a·d = b·c. Any ONE of the four values can be
+  // the unknown (the value typed in that field is ignored, which the field label
+  // and the validation messages say out loud).
+  { id: 'proportion', name: 'Proportion Calculator', desc: 'Solve a proportion a/b = c/d for whichever of the four values is unknown by cross multiplication', kw: 'proportion calculator solve for x, cross multiplication calculator missing value, a/b = c/d solver, find the missing term in a proportion',
+    inputs: [{id:'a',label:'a (first numerator)',type:'number',def:3},{id:'b',label:'b (first denominator)',type:'number',def:4},{id:'c',label:'c (second numerator)',type:'number',def:9},{id:'d',label:'d (second denominator)',type:'number',def:12},{id:'unknown',label:'Solve for',type:'select',opts:[{v:'d',l:'d — the second denominator'},{v:'a',l:'a — the first numerator'},{v:'b',l:'b — the first denominator'},{v:'c',l:'c — the second numerator'}],def:'d'}],
+    calc: function(v) {
+      function fmt(x, n) { var s = x.toFixed(n); if (s.indexOf('.') < 0) return s; while (s.charAt(s.length - 1) === '0') s = s.slice(0, -1); if (s.charAt(s.length - 1) === '.') s = s.slice(0, -1); return s; }
+      var a = parseFloat(v.a), b = parseFloat(v.b), c = parseFloat(v.c), d = parseFloat(v.d), k = v.unknown;
+      var names = { a: 'a (first numerator)', b: 'b (first denominator)', c: 'c (second numerator)', d: 'd (second denominator)' };
+      if (!names[k]) return { result: 'Choose which of a, b, c or d is unknown', chart: '', extra: '' };
+      if ([a, b, c, d].some(function (x) { return !isFinite(x); })) return { result: 'Enter a number in each of the four value fields', chart: '', extra: 'Four numbers define the proportion; three of them are the known values and the one you pick under Solve for is the one the tool works out.' };
+      // a/b = c/d  ⇔  a·d = b·c. Denominator for the unknown, then the divisor it needs.
+      var num, den;
+      if (k === 'd') { num = b * c; den = a; }
+      else if (k === 'a') { num = b * c; den = d; }
+      else if (k === 'b') { num = a * d; den = c; }
+      else { num = a * d; den = b; }
+      var divisorName = k === 'd' ? 'a' : k === 'a' ? 'd' : k === 'b' ? 'c' : 'b';
+      if (den === 0) return { result: 'No unique solution — ' + divisorName + ' is 0', chart: '', extra: 'Cross multiplication turns a/b = c/d into a × d = b × c, so ' + k + ' can only be isolated when the value you divide by (' + divisorName + ') is not zero. A proportion with a zero numerator on both sides holds for every non-zero answer, which is not a unique solution either.' };
+      var val = num / den;
+      var nb = k === 'b' ? val : b, nd = k === 'd' ? val : d;
+      if (nb === 0 || nd === 0) return { result: 'No solution — a proportion cannot have a denominator of 0', chart: '', extra: 'Solving gives ' + k + ' = ' + fmt(val, 6) + ', but a/b = c/d is only defined while both b and d are non-zero, so these four values form no valid proportion.' };
+      var na = k === 'a' ? val : a, nc = k === 'c' ? val : c;
+      var left = na / nb, right = nc / nd;
+      return { result: k + ' = ' + fmt(val, 6), chart: Charts.bar([left, right], ['a ÷ b', 'c ÷ d']), extra: 'Cross products — a × d = ' + fmt(na * nd, 6) + ' and b × c = ' + fmt(nb * nc, 6) + ', equal, so the proportion holds. Both sides reduce to the same ratio: ' + fmt(left, 6) + ' = ' + fmt(right, 6) + '.' };
+    },
+    steps: function(v) {
+      function fmt(x, n) { var s = x.toFixed(n); if (s.indexOf('.') < 0) return s; while (s.charAt(s.length - 1) === '0') s = s.slice(0, -1); if (s.charAt(s.length - 1) === '.') s = s.slice(0, -1); return s; }
+      var a = parseFloat(v.a), b = parseFloat(v.b), c = parseFloat(v.c), d = parseFloat(v.d), k = v.unknown;
+      if (!{ a: 1, b: 1, c: 1, d: 1 }[k]) return ['Choose which of a, b, c or d is unknown, then the working appears here.'];
+      var out = ['Equation: a ÷ b = c ÷ d — with your numbers ' + a + ' ÷ ' + b + ' = ' + c + ' ÷ ' + d + ', and ' + k + ' unknown.'];
+      out.push('Step 1: Cross multiply — a × d = b × c, so ' + a + ' × ' + d + ' = ' + b + ' × ' + c + '.');
+      var num, den;
+      if (k === 'd') { num = b * c; den = a; }
+      else if (k === 'a') { num = b * c; den = d; }
+      else if (k === 'b') { num = a * d; den = c; }
+      else { num = a * d; den = b; }
+      out.push('Step 2: Rearrange for the unknown: ' + k + ' = ' + num + ' ÷ ' + den + '.');
+      if (den === 0) { out.push('Step 3: The divisor is 0, so there is no unique finite answer. Enter a non-zero value in that field.'); return out; }
+      var val = num / den;
+      out.push('Step 3: ' + k + ' = ' + fmt(val, 6) + '.');
+      var nb = k === 'b' ? val : b, nd = k === 'd' ? val : d;
+      if (nb === 0 || nd === 0) { out.push('Step 4: That answer puts a 0 in a denominator, and dividing by 0 is undefined — so no valid proportion exists for these numbers.'); return out; }
+      var na = k === 'a' ? val : a, nc = k === 'c' ? val : c;
+      out.push('Step 4: Check it — ' + na + ' ÷ ' + nb + ' = ' + fmt(na / nb, 6) + ' and ' + nc + ' ÷ ' + nd + ' = ' + fmt(nc / nd, 6) + '. The two sides match, so the proportion is exact.');
+      out.push('Two equal ratios are what make a proportion; cross multiplication is only the shortcut for finding a missing term.');
+      return out;
+    } }
 ];
 if (typeof window !== 'undefined') window.MATH_TOOLS = MATH_TOOLS;
 if (typeof module !== 'undefined') module.exports = MATH_TOOLS;

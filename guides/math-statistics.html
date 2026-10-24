@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Math &amp; Statistics Guides — Percentages, Statistics, Randomness</title>
+  <title>Math &amp; Statistics Guides — Percentages &amp; Randomness</title>
   <meta name="description" content="Guides for math and statistics questions: percentage formulas, mean/median/mode, standard deviation, and how random number generators actually work.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
@@ -45,16 +45,62 @@
     .cat-card p { margin: 0; color: #4b5563; font-size: 0.95rem; }
     .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
     .updated { color: #6b7280; font-size: 0.85rem; }
-  </style>
+/* guide-depth-css:start */
+.guide-lede{font-weight:600;border-left:3px solid #4f46e5;padding-left:12px;margin:10px 0 4px}
+    .guide-pitfalls{margin:8px 0 14px 20px}
+    .seo-faqs h3{margin:16px 0 4px}
+/* guide-depth-css:end */
+</style>
+
+<!-- guide-faq-schema:start -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which order of operations does the calculator use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Brackets first, then exponentiation, then multiplication and division left to right, then addition and subtraction left to right. That is the standard convention. Most disagreements with a spreadsheet come from an expression written without brackets that can honestly be read two ways — add the brackets and the ambiguity disappears."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which standard deviation should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the numbers are the whole population, divide by n. If they are a sample used to estimate a wider population, divide by n − 1. The sample version is larger, because it corrects for estimating the mean from the same data, and the gap shrinks as the sample grows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my calculator disagree with a spreadsheet at the last digit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rounding and floating-point representation. Spreadsheets hold a finite number of binary digits, so values such as 0.1 are stored approximately, and display rounding hides that until a comparison or a sum exposes it. For money, round to the smallest unit deliberately rather than relying on display."
+      }
+    }
+  ]
+}
+</script>
+<!-- guide-faq-schema:end -->
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Math &amp; Statistics</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Math &amp; Statistics</p>
   <h1>Math &amp; Statistics Guides</h1>
   <p class="updated">Part of the CalcProMaster guides library · Updated September 2026</p>
 
   <p>Math guides earn their keep when the mental shortcut matches the exact formula — and when you know where the shortcut breaks. These two cover the calculations with the widest everyday reach.</p>
 
-  <h2>How the math works</h2>
+
+<!-- guide-lede:start -->
+<p class="guide-lede">Maths answers are only wrong when a convention was assumed rather than stated: order of operations, whether a change is relative or absolute, and whether the spread is a range or a standard deviation.</p>
+<!-- guide-lede:end -->
+<h2>How the math works</h2>
   <p><strong>Percentages</strong> are one relationship, Percentage = Part ÷ Whole × 100, rearranged three ways for the three questions people actually ask (what percent, what part, what whole). The traps are all about the base: a 50% rise and 50% fall don't cancel (100 → 150 → 75), and a discount followed by another discount multiplies rather than adds — 30% then 20% off leaves 56% of the original price, a 44% total discount. The <a href="/guides/percentage">percentage guide</a> works each trap through with numbers.</p>
   <p><strong>Randomness</strong> is the other half: a uniform generator gives every value in the range identical odds, draws are independent (no memory — the gambler's fallacy is mathematically wrong, not just unlucky), and repeats are expected, not a malfunction. The <a href="/guides/random-numbers">random numbers guide</a> separates PRNGs from crypto-grade sources, explains seeds, and shows when unique-pick mode is the right tool.</p>
   <p>A practical habit ties both together: <strong>estimate before you calculate</strong>. A 15% tip on $46 is 10% ($4.60) plus half of that ($2.30) — about $6.90, done before the phone unlocks. Estimating first does two things: it catches input errors (a calculator answer of $69 for that tip means a slipped decimal), and it builds the number sense that makes the exact tools faster to use. Every guide here pairs the exact formula with the mental version that survives a checkout line.</p>
@@ -69,14 +115,53 @@
     <p>PRNG vs true randomness, seeds, and what crypto.getRandomValues actually gives you — plus the dice-roll example.</p>
   </div>
 
-  <h2>Try the matching calculators</h2>
+
+<!-- guide-extra-depth:start -->
+<h2>Mean, median and mode answer different questions</h2>
+<p>The mean adds every value and divides by the count, so a single extreme value pulls it. The median is the middle value and does not care how extreme the outlier is. The mode is the most frequent value, useful for categories rather than measurements.</p>
+<p>Income is the classic example: average income sits well above the typical income because a small number of very large incomes drag the mean up. When a headline says average, ask which one was computed.</p>
+<h2>Standard deviation versus standard error</h2>
+<p>Standard deviation describes how spread out the individual observations are. Standard error describes how uncertain the estimated mean is, and it shrinks as the sample grows. Reporting one as the other makes results look far more precise than they are.</p>
+<p>The rough rule: about two thirds of a normal distribution lies within one standard deviation of the mean, and about 95% within two. That is a description of the data, not a confidence claim about the mean.</p>
+<h2>Sample and population are not interchangeable</h2>
+<p>Population variance divides by n; sample variance divides by n minus one, because a sample mean is itself estimated and sits closer to its own data than the true mean would. With large samples the difference is negligible; with ten observations it is not.</p>
+<p>Most calculators let you choose. Choose based on what you have: all the values that exist, or a sample drawn from a larger group.</p>
+<p>Always report the sample size with the result. A mean of 12 with a standard error of 4 and a mean of 12 with a standard error of 0.5 are very different claims, and the mean on its own cannot tell the two apart.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/random-numbers">How Random Number Generators Work</a></li>
+    <li><a href="/guides/science">Science Guides</a></li>
+    <li><a href="/guides/gpa">How GPA Is Calculated (and Why Students Differ)</a></li>
+    <li><a href="/guides/grade-needed">What Do I Need on the Final? The Weighted-Grade Formula</a></li>
+  </ul>
+
+<!-- guide-depth:start -->
+<h2>Where these answers go wrong</h2><ul class="guide-pitfalls"><li>Evaluating an expression left to right, so 2 + 3 × 4 becomes 20 instead of 14.</li><li>Confusing percentage points with percentage change — going from 4% to 6% is 2 points but a 50% increase.</li><li>Rearranging an equation by moving terms without inverting the operation that connects them.</li><li>Using the population standard deviation for a sample, or the sample formula for a full population.</li></ul><h2>Frequently asked questions</h2><div class="seo-faqs"><h3>Which order of operations does the calculator use?</h3><p>Brackets first, then exponentiation, then multiplication and division left to right, then addition and subtraction left to right. That is the standard convention. Most disagreements with a spreadsheet come from an expression written without brackets that can honestly be read two ways — add the brackets and the ambiguity disappears.</p><h3>Which standard deviation should I use?</h3><p>If the numbers are the whole population, divide by n. If they are a sample used to estimate a wider population, divide by n − 1. The sample version is larger, because it corrects for estimating the mean from the same data, and the gap shrinks as the sample grows.</p><h3>Why does my calculator disagree with a spreadsheet at the last digit?</h3><p>Rounding and floating-point representation. Spreadsheets hold a finite number of binary digits, so values such as 0.1 are stored approximately, and display rounding hides that until a comparison or a sum exposes it. For money, round to the smallest unit deliberately rather than relying on display.</p></div>
+<!-- guide-depth:end -->
+<!-- guide-worked-example:start -->
+<h2>Worked example: Percentage Calculator at its default inputs</h2>
+<p>Open <a href="/math/percentage/">Percentage Calculator</a> and press calculate without editing a field. What comes back is the table and result below, so the math-statistics numbers here are checkable in one click.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Part</td><td>25</td></tr><tr><td>Whole</td><td>200</td></tr></tbody></table>
+<p><strong>Result:</strong> Percentage: 12.50%</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Formula: Percentage = (Part / Whole) × 100</li><li>Step 1: 25 / 200 = 0.1250</li><li>Step 2: × 100 = 12.50%</li></ol>
+<h2>Part — three values, three answers</h2>
+<p>Same calculator, same fields, one change: part.</p>
+<table><thead><tr><th>Part</th><th>Result</th></tr></thead><tbody><tr><td>12.5</td><td>Percentage: 6.25%</td></tr><tr><td>25</td><td>Percentage: 12.50%</td></tr><tr><td>37.5</td><td>Percentage: 18.75%</td></tr></tbody></table>
+<p>Halve part and the result moves one way; add half again and it moves the other. Watching that gap is quicker than guessing which field matters most.</p>
+<!-- guide-worked-example:end -->
+<h2>Try the matching calculators</h2>
   <p>
-    <a href="/math/percentage" class="cta">Percentage Calculator</a>
-    <a href="/math/statistics" class="cta">Statistics Calculator</a>
-    <a href="/math/random-generator" class="cta">Random Number Generator</a>
+    <a href="/math/percentage/" class="cta">Percentage Calculator</a>
+    <a href="/math/statistics/" class="cta">Statistics Calculator</a>
+    <a href="/math/random-generator/" class="cta">Random Number Generator</a>
   </p>
 
-  <p><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
+  <p><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

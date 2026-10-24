@@ -268,27 +268,33 @@ const CategoryHub = (function () {
           </div>
         </header>
     `;
-    
+
+    // Per-category methodology note: NOT rendered here any more. It is shared
+    // with all 1,282 tool pages and the category page, so the hub re-shipping it
+    // was pure duplication (docs/DUPLICATE-HUBS-FIX.md).
+    // Category-specific depth intro (same module the SSG prerenders, so the
+    // hydrated DOM matches the crawlable HTML exactly).
+    if (window.CategoryDepth && typeof CategoryDepth.introHtml === 'function') {
+      html += CategoryDepth.introHtml(catKey);
+    }
+
     if (cat.comparisonTable) {
       html += renderComparisonTable(cat.comparisonTable);
     }
-    
-    html += '<h2>' + Security.sanitizeHtml(cat.name) + ' Calculators</h2>';
-    html += '<div class="hub-tools-grid">';
-    cat.tools.forEach(t => {
-      html += `
-        <article class="tool-card hub-card reveal" onclick="App.navigateToTool('${Security.sanitizeJsString(t.id)}', '${Security.sanitizeJsString(catKey)}')">
-          <div class="tool-icon">${t.icon}</div>
-          <h3>${Security.sanitizeHtml(t.name)}</h3>
-          <p>${Security.sanitizeHtml(t.description)}</p>
-          <div class="tool-meta">
-            <span class="usage">👁 ${t.usage} uses</span>
-            <span class="go-btn">Open →</span>
-          </div>
-        </article>
-      `;
-    });
-    html += '</div></div>';
+
+    // DE-DUPLICATION: the hub no longer re-renders the category catalog grid
+    // (the biggest shared block), the methodology note or the category FAQ —
+    // each now has exactly one owner (the category page + tool pages). What is
+    // left is genuinely hub-shaped: the "what you can work out" block, the
+    // computed comparison table above, and the registry-driven table below
+    // (same shared block the SSG prerenders, so static HTML and hydrated DOM
+    // still agree). Every row links its tool page, so the crawl paths the old
+    // card grid carried are preserved.
+    if (window.CategoryDepth && typeof CategoryDepth.compareTableHtml === 'function') {
+      html += CategoryDepth.compareTableHtml(catKey, (CALC_DATA[catKey] && CALC_DATA[catKey].tools) || []);
+    }
+    html += '<div class="cat-guide-link"><p>Prefer the annotated list? <a href="/' + catKey + '/">Browse the full list with one line on what each calculator does</a>.</p></div>';
+    html += '</div>';
     
     return html;
   }

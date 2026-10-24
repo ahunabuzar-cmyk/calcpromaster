@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { createRequire } from 'module';
 
 const require = createRequire(import.meta.url);
-const { selectPanel, mergeFullQueue, panelRate, movementPair, tallyPanel, rankOf, pendingUrls, mapPool } = require('../../scripts/build-index-panel.cjs');
+const { selectPanel, mergeFullQueue, panelRate, movementPair, churnOf, churnAlert, emitChurnAlert, tallyPanel, rankOf, pendingUrls, mapPool } = require('../../scripts/build-index-panel.cjs');
 
 describe('index panel / rankOf', () => {
   it('orders Google’s crawl pipeline', () => {
@@ -205,6 +205,124 @@ describe('index panel / panelRate', () => {
     expect(r.span.days).toBe(14);
     // Over that span /c moved one ladder stage and nothing new got indexed.
     expect(r.indexedPerWeek).toBe(0);
+  });
+});
+
+describe('index panel / movementPair (both directions)', () => {
+  it('records the URLs that advanced and the URLs that slipped', () => {
+    const before = { date: '2026-10-04', checked: { '/a': 'URL is unknown to Google', '/b': 'Discovered - currently not indexed' } };
+    const after = { date: '2026-10-11', checked: { '/a': 'Discovered - currently not indexed', '/b': 'URL is unknown to Google' } };
+    const p = movementPair(before, after);
+    expect(p.urlsAdvanced).toBe(1);
+    expect(p.urlsSlipped).toBe(1);
+    expect(p.stages).toBe(1);
+    expect(p.slipped).toBe(1);
+  });
+
+  it('shows a traded pair as churn, not as progress', () => {
+    const before = { date: '2026-10-04', checked: { '/a': 'URL is unknown to Google', '/b': 'Discovered - currently not indexed' } };
+    const after = { date: '2026-10-11', checked: { '/a': 'Discovered - currently not indexed', '/b': 'URL is unknown to Google' } };
+    const p = movementPair(before, after);
+    expect(p.gainedBack).toBe(1); // the one advance was undone by the one backslide
+    expect(p.churnStages).toBe(2);
+    expect(p.netStages).toBe(0);
+  });
+});
+
+describe('index panel / churnOf', () => {
+  it('reports gainedBack as the advance that backslides cancel out', () => {
+    const c = churnOf({ stages: 105, slipped: 133, urlsAdvanced: 105, urlsSlipped: 133 });
+    expect(c.gainedBack).toBe(105);
+    expect(c.churnStages).toBe(238);
+    expect(c.netStages).toBe(-28);
+  });
+
+  it('is zero when movement only goes one way', () => {
+    expect(churnOf({ stages: 5, slipped: 0 }).gainedBack).toBe(0);
+    expect(churnOf({ stages: 0, slipped: 5 }).gainedBack).toBe(0);
+  });
+
+  it('caps gainedBack at the smaller side so it can never invent progress', () => {
+    expect(churnOf({ stages: 10, slipped: 3 }).gainedBack).toBe(3);
+  });
+
+  it('defaults to zeros instead of NaN when given nothing', () => {
+    expect(churnOf()).toEqual({ urlsAdvanced: 0, urlsSlipped: 0, churnStages: 0, gainedBack: 0, netStages: 0 });
+  });
+});
+
+describe('index panel / churnAlert', () => {
+  // The real window that motivated this: 105 stages of advance, 133 of backslide.
+  const tradedWindow = {
+    from: '2026-10-09', to: '2026-10-11',
+    stages: 105, slipped: 133,
+    ...churnOf({ stages: 105, slipped: 133, urlsAdvanced: 105, urlsSlipped: 133 }),
+  };
+
+  it('flags the window whose advance was entirely cancelled by backslides', () => {
+    const a = churnAlert(tradedWindow);
+    expect(a.severity).toBe('high'); // net is negative: nothing drained
+    expect(a.cancelledShare).toBe(1);
+    expect(a.churnStages).toBe(238);
+    expect(a.netStages).toBe(-28);
+    expect(a.from).toBe('2026-10-09');
+  });
+
+  it('says nothing about a window that only moved one way', () => {
+    expect(churnAlert({ stagesAdvanced: 105, slippedBack: 0 })).toBeNull();
+  });
+
+  it('still flags a queue that drained, when most of the advance was churn', () => {
+    const a = churnAlert({ stagesAdvanced: 100, slippedBack: 80 });
+    expect(a.severity).toBe('warn'); // net +20, but 80% of the advance was undone
+    expect(a.cancelledShare).toBe(0.8);
+    expect(a.netStages).toBe(20);
+  });
+
+  it('accepts both movement shapes (panel `stages` and burn-down `stagesAdvanced`)', () => {
+    const panelShape = { stages: 105, slipped: 133, gainedBack: 105, churnStages: 238, netStages: -28 };
+    const burndownShape = { stagesAdvanced: 105, slippedBack: 133, gainedBack: 105, churnStages: 238, netStages: -28 };
+    expect(churnAlert(panelShape)).toEqual(churnAlert(burndownShape));
+  });
+
+  it('stays quiet on samples too small for the ratio to mean anything', () => {
+    // A 4-URL pair changing its mind is not a churn-heavy week.
+    expect(churnAlert({ stagesAdvanced: 4, slippedBack: 4 })).toBeNull();
+    expect(churnAlert({ stagesAdvanced: 4, slippedBack: 4 }, { minStages: 3 })).not.toBeNull();
+  });
+
+  it('does not cry churn when nothing advanced at all', () => {
+    // Pure slippage is already visible as a negative net; there is no advance to hide.
+    expect(churnAlert({ stagesAdvanced: 0, slippedBack: 133 })).toBeNull();
+  });
+
+  it('handles a missing pair instead of throwing', () => {
+    expect(churnAlert(null)).toBeNull();
+    expect(churnAlert(undefined)).toBeNull();
+  });
+
+  it('prints the alert, and returns nothing to print when there is none', () => {
+    const lines = [];
+    const a = churnAlert(tradedWindow);
+    expect(emitChurnAlert(a, 'index panel', (l) => lines.push(l))).toBe(a);
+    expect(lines).toHaveLength(1);
+    expect(lines[0]).toContain('⚠ index panel: churn alert:');
+    expect(lines[0]).toContain('net -28');
+    expect(emitChurnAlert(null, 'index panel', (l) => lines.push(l))).toBeNull();
+    expect(lines).toHaveLength(1);
+  });
+
+  it('emits a GitHub Actions annotation, so the alert cannot sit only in a report', () => {
+    const prev = process.env.GITHUB_ACTIONS;
+    process.env.GITHUB_ACTIONS = 'true';
+    try {
+      const lines = [];
+      emitChurnAlert(churnAlert(tradedWindow), 'index burn-down', (l) => lines.push(l));
+      expect(lines[0]).toMatch(/^::warning::index burn-down: churn alert: /);
+    } finally {
+      if (prev === undefined) delete process.env.GITHUB_ACTIONS;
+      else process.env.GITHUB_ACTIONS = prev;
+    }
   });
 });
 

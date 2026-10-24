@@ -323,7 +323,103 @@ const HEALTH_TOOLS = [
   { id: 'pf-ratio', name: 'P/F Ratio Calculator', desc: 'PaO₂/FiO₂ ratio for oxygenation assessment', kw: 'pf ratio calculator pao2 fio2 oxygenation ards berlin criteria, free online P/F Ratio Calculator',
     inputs: [{id:'pao2',label:'PaO₂ (mmHg)',type:'number',def:100},{id:'fio2',label:'FiO₂ (%)',type:'number',def:50}],
     calc: function(v){ const r=v.pao2/(v.fio2/100); const cls=r<100?'Severe (ARDS Berlin <100)':r<200?'Moderate (100–200)':r<300?'Mild (200–300)':'Normal (>300)'; return { result: r.toFixed(2)+':1', chart: null, extra: 'Berlin classification: '+cls+'. Educational reference — clinical decisions need the full picture' }; },
-    steps: function(v){ return ['P/F = PaO₂ ÷ FiO₂ (as a fraction)']; } },
+    steps: function(v){ return ['P/F = PaO₂ ÷ FiO₂ (as a fraction)']; } }
+,
+  {
+    id: 'pet-medication-dose',
+    name: 'Pet Medication Dosage Calculator',
+    desc: 'Free pet medicine dose calculator: converts a weight-based mg per kg dose into the millilitres to draw, for common vet-prescribed drugs.',
+    kw: 'pet medication dosage calculator, dog dose calculator mg kg, cat medicine dose, pet medicine ml calculator',
+    inputs: [
+{ id: 'weight', label: 'Pet weight (kg)', type: 'number', def: 10 },
+      { id: 'drug', label: 'Medication', type: 'select', opts: [{v:'Meloxicam',l:'Meloxicam'},{v:'Metronidazole',l:'Metronidazole'},{v:'Amoxicillin',l:'Amoxicillin'},{v:'Gabapentin',l:'Gabapentin'}], def: 'Metronidazole' }
+    ],
+    calc: function (v) {
+      var T = { 'Meloxicam': [0.1, 1.5], 'Metronidazole': [10, 50], 'Amoxicillin': [10, 50], 'Gabapentin': [10, 50] };
+      var row = T[v.drug];
+      var mg = v.weight * row[0];
+      var ml = mg / row[1];
+      return {
+        result: 'Dose: ' + mg.toFixed(1) + ' mg (' + ml.toFixed(2) + ' mL)',
+        chart: Charts.bar([mg, ml], ['Milligrams', 'Millilitres']),
+        extra: 'At ' + row[0] + ' mg per kg and ' + row[1] + ' mg per mL | VET-PRESCRIBED ONLY: confirm every dose with your veterinarian before giving any medicine'
+      };
+    },
+    steps: function (v) {
+      var T = { 'Meloxicam': [0.1, 1.5], 'Metronidazole': [10, 50], 'Amoxicillin': [10, 50], 'Gabapentin': [10, 50] };
+      var row = T[v.drug];
+      var mg = v.weight * row[0];
+      var ml = mg / row[1];
+      return [
+        'Step 1: Look up the standard dose for ' + v.drug + ': ' + row[0] + ' mg per kg of body weight.',
+        'Step 2: Dose in milligrams = ' + v.weight + ' kg x ' + row[0] + ' mg per kg = ' + mg.toFixed(1) + ' mg.',
+        'Step 3: Look up the liquid concentration: ' + row[1] + ' mg per mL.',
+        'Step 4: Volume to draw = ' + mg.toFixed(1) + ' mg / ' + row[1] + ' mg per mL = ' + ml.toFixed(2) + ' mL.',
+        'Step 5: This is a reference figure only. Your vet sets the real dose, the frequency and any adjustment for kidney or liver health.',
+        'Step 6: Never give human medicine to a pet without veterinary instruction — several common drugs are toxic to cats and dogs.'
+      ];
+    }
+  },
+
+  // Peptide reconstitution arithmetic. Deliberately scope-limited: this tool ONLY
+  // converts between the three things a dose calculation needs — mass in the vial,
+  // the volume it is dissolved in, and the volume a syringe actually draws. It does
+  // NOT supply a dose, a schedule, or a safety judgment: no peptide dose is universal,
+  // and a syringe "unit" is a VOLUME mark (1/unitsPerMl of a mL), never a mass.
+  {
+    id: 'peptide-reconstitution',
+    name: 'Peptide Reconstitution Calculator',
+    desc: 'Calculate peptide concentration from vial amount and reconstitution volume, then the volume and syringe units for an amount per dose',
+    kw: 'peptide reconstitution calculator, peptide calculator mg to ml, peptide concentration calculator, how to reconstitute a peptide vial',
+    inputs: [
+      { id: 'vialMg', label: 'Vial amount (mg)', type: 'number', def: 5 },
+      { id: 'volumeMl', label: 'Reconstitution volume (mL)', type: 'number', def: 2 },
+      { id: 'amountMcg', label: 'Amount per dose (µg)', type: 'number', def: 250 },
+      { id: 'scale', label: 'Syringe scale', type: 'select', opts: [{ v: '100', l: 'U-100 (100 units per mL)' }, { v: '50', l: 'U-50 (50 units per mL)' }, { v: '40', l: 'U-40 (40 units per mL)' }], def: '100' }
+    ],
+    calc: function (v) {
+      function fmt(x, n) { var s = x.toFixed(n); if (s.indexOf('.') < 0) return s; while (s.charAt(s.length - 1) === '0') s = s.slice(0, -1); if (s.charAt(s.length - 1) === '.') s = s.slice(0, -1); return s; }
+      var vial = parseFloat(v.vialMg), vol = parseFloat(v.volumeMl), amount = parseFloat(v.amountMcg);
+      var unitsPerMl = parseFloat(v.scale) || 100;
+      if (!isFinite(vial) || !isFinite(vol) || vial <= 0 || vol <= 0) {
+        return { result: 'Enter a vial amount above 0 mg and a reconstitution volume above 0 mL', chart: '', extra: 'Concentration = vial amount ÷ reconstitution volume, so a zero or negative value has no answer and dividing by zero has none either. Amounts come from a prescriber and the product instructions, not from this calculator.' };
+      }
+      var mgPerMl = vial / vol, mcgPerMl = mgPerMl * 1000;
+      if (!isFinite(amount) || amount <= 0) {
+        return { result: 'Concentration: ' + fmt(mgPerMl, 4) + ' mg/mL', chart: Charts.bar([mgPerMl], ['mg per mL']), extra: 'That is ' + fmt(mcgPerMl, 1) + ' µg/mL: ' + vial + ' mg dissolved in ' + vol + ' mL. Enter an amount per dose above 0 µg to also get the solution volume and the syringe units. Arithmetic only — this tool does not state or endorse any dose, and it says nothing about whether a substance or route is safe.' };
+      }
+      var doseMg = amount / 1000;
+      var drawMl = doseMg / mgPerMl;
+      var drawUnits = drawMl * unitsPerMl;
+      return {
+        result: 'Draw ' + fmt(drawMl, 4) + ' mL (' + fmt(drawUnits, 1) + ' units)',
+        chart: Charts.bar([drawMl, vol], ['Volume to draw (mL)', 'Solution in vial (mL)']),
+        extra: 'Concentration: ' + fmt(mgPerMl, 4) + ' mg/mL = ' + fmt(mcgPerMl, 1) + ' µg/mL | Mass per dose: ' + fmt(amount, 3) + ' µg | Volume to draw: ' + fmt(drawMl, 4) + ' mL | On the U-' + fmt(unitsPerMl, 0) + ' scale that is ' + fmt(drawUnits, 1) + ' units, because 1 unit = 1/' + fmt(unitsPerMl, 0) + ' mL of solution — a syringe unit is a volume mark, not a mass | ARITHMETIC ONLY: the tool converts numbers you supply. It does not establish that a substance, an amount or a route is safe or appropriate, and it never recommends a dose.'
+      };
+    },
+    steps: function (v) {
+      function fmt(x, n) { var s = x.toFixed(n); if (s.indexOf('.') < 0) return s; while (s.charAt(s.length - 1) === '0') s = s.slice(0, -1); if (s.charAt(s.length - 1) === '.') s = s.slice(0, -1); return s; }
+      var vial = parseFloat(v.vialMg), vol = parseFloat(v.volumeMl), amount = parseFloat(v.amountMcg);
+      var unitsPerMl = parseFloat(v.scale) || 100;
+      if (!isFinite(vial) || !isFinite(vol) || vial <= 0 || vol <= 0) {
+        return ['Enter a vial amount above 0 mg and a reconstitution volume above 0 mL — the concentration is vial amount ÷ reconstitution volume, and neither field may be zero or negative.'];
+      }
+      var mgPerMl = vial / vol;
+      var out = ['Step 1: Concentration = vial amount ÷ reconstitution volume = ' + vial + ' mg ÷ ' + vol + ' mL = ' + fmt(mgPerMl, 4) + ' mg/mL, which is ' + fmt(mgPerMl * 1000, 1) + ' µg/mL.'];
+      if (!isFinite(amount) || amount <= 0) {
+        out.push('Step 2: Enter an amount per dose above 0 µg to convert that mass into a volume.');
+      } else {
+        var doseMg = amount / 1000;
+        var drawMl = doseMg / mgPerMl;
+        out.push('Step 2: Put the amount and the concentration in the same mass unit: ' + amount + ' µg ÷ 1000 = ' + fmt(doseMg, 6) + ' mg.');
+        out.push('Step 3: Volume to draw = mass ÷ concentration = ' + fmt(doseMg, 6) + ' mg ÷ ' + fmt(mgPerMl, 4) + ' mg per mL = ' + fmt(drawMl, 4) + ' mL.');
+        out.push('Step 4: Syringe units = volume × scale = ' + fmt(drawMl, 4) + ' mL × ' + fmt(unitsPerMl, 0) + ' units per mL = ' + fmt(drawMl * unitsPerMl, 1) + ' units on a U-' + fmt(unitsPerMl, 0) + ' syringe.');
+      }
+      out.push('Mass (mg, µg) and volume (mL, syringe units) are different quantities. Multiplying or dividing them is only valid because the concentration is known — never read a syringe unit as a mass.');
+      out.push('This is arithmetic, not clinical guidance: it cannot tell you whether a substance, an amount or a route is safe. Follow the product instructions, and have a qualified prescriber set any dose.');
+      return out;
+    }
+  }
 ];
 if (typeof window !== 'undefined') window.HEALTH_TOOLS = HEALTH_TOOLS;
 if (typeof module !== 'undefined') module.exports = HEALTH_TOOLS;

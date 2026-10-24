@@ -1,0 +1,143 @@
+{
+  "generatedAt": "2026-10-11T12:28:56.425Z",
+  "before": {
+    "file": "data/gsc-inspect-notindexed.json",
+    "ranAt": "2026-10-09T14:53:18.051Z",
+    "urls": 784
+  },
+  "after": {
+    "file": "data/index-panel-history.json",
+    "ranAt": "2026-10-11T10:17:19.939Z",
+    "urls": 590,
+    "failures": 0
+  },
+  "commonUrls": 590,
+  "discoveredAtStart": 192,
+  "transitions": [
+    {
+      "move": "Discovered - currently not indexed ➜ URL is unknown to Google",
+      "count": 133
+    },
+    {
+      "move": "URL is unknown to Google ➜ Discovered - currently not indexed",
+      "count": 105
+    }
+  ],
+  "groups": {
+    "fellToUnknown": {
+      "n": 133,
+      "inlinks": {
+        "n": 133,
+        "min": 11,
+        "median": 14,
+        "mean": 14.97,
+        "max": 68
+      },
+      "linkShare3": 1,
+      "linkShare10": 1,
+      "inSitemap": 133,
+      "requested": 3
+    },
+    "stayedDiscovered": {
+      "n": 59,
+      "inlinks": {
+        "n": 59,
+        "min": 12,
+        "median": 14,
+        "mean": 15,
+        "max": 40
+      },
+      "linkShare3": 1,
+      "linkShare10": 1,
+      "inSitemap": 59,
+      "requested": 0
+    },
+    "unknownToDiscovered": {
+      "n": 105,
+      "inlinks": {
+        "n": 105,
+        "min": 12,
+        "median": 14,
+        "mean": 44.19,
+        "max": 1508
+      },
+      "linkShare3": 1,
+      "linkShare10": 1,
+      "inSitemap": 105,
+      "requested": 5
+    },
+    "stillUnknown": {
+      "n": 288,
+      "inlinks": {
+        "n": 288,
+        "min": 5,
+        "median": 14,
+        "mean": 35.59,
+        "max": 1511
+      },
+      "linkShare3": 1,
+      "linkShare10": 0.9895833333333334,
+      "inSitemap": 288,
+      "requested": 15
+    }
+  },
+  "requestIndexingDocs": [
+    "REQUEST-INDEXING-TOP20.md",
+    "REQUEST-INDEXING-TOP40.md",
+    "REQUEST-INDEXING-WEEK-2.md"
+  ],
+  "requestIndexingUrls": 85,
+  "examples": {
+    "fellToUnknown": [
+      "https://calcpromaster.com/auto/car-maintenance/",
+      "https://calcpromaster.com/career/401k-match/",
+      "https://calcpromaster.com/math/exponent/",
+      "https://calcpromaster.com/science/acceleration/",
+      "https://calcpromaster.com/engineering/impedance/",
+      "https://calcpromaster.com/construction/tile-calculator/",
+      "https://calcpromaster.com/engineering/beam-load/",
+      "https://calcpromaster.com/auto/walking-transit/",
+      "https://calcpromaster.com/family/maternity-leave-finance/",
+      "https://calcpromaster.com/finance/inflation/",
+      "https://calcpromaster.com/conversion/torque-conv/",
+      "https://calcpromaster.com/food/sugar-intake/",
+      "https://calcpromaster.com/engineering/sound-level/",
+      "https://calcpromaster.com/business/working-capital/",
+      "https://calcpromaster.com/fitness/burpee-test/"
+    ],
+    "stayedDiscovered": [
+      "https://calcpromaster.com/education/test-score/",
+      "https://calcpromaster.com/science/momentum/",
+      "https://calcpromaster.com/homegarden/generator-size/",
+      "https://calcpromaster.com/engineering/wire-gauge/",
+      "https://calcpromaster.com/everyday/paint/",
+      "https://calcpromaster.com/family/maternity-leave/",
+      "https://calcpromaster.com/auto/car-insurance/",
+      "https://calcpromaster.com/health/calorie-deficit/",
+      "https://calcpromaster.com/career/self-employment-tax/",
+      "https://calcpromaster.com/engineering/concrete-mix/",
+      "https://calcpromaster.com/everyday/week-number/",
+      "https://calcpromaster.com/family/childcare-weekly/",
+      "https://calcpromaster.com/tech/ascii-table/",
+      "https://calcpromaster.com/math/law-of-sines/",
+      "https://calcpromaster.com/math/exponential-prob/"
+    ],
+    "unknownToDiscovered": [
+      "https://calcpromaster.com/health/bmi/",
+      "https://calcpromaster.com/math/percentage/",
+      "https://calcpromaster.com/homegarden/ac-size/",
+      "https://calcpromaster.com/math/combinations/",
+      "https://calcpromaster.com/utilities/uuid-gen/",
+      "https://calcpromaster.com/health/macros/",
+      "https://calcpromaster.com/business/freelance-rate/",
+      "https://calcpromaster.com/family/life-insurance/",
+      "https://calcpromaster.com/homegarden/grass-seed/",
+      "https://calcpromaster.com/conversion/force-conv/",
+      "https://calcpromaster.com/finance/irr/",
+      "https://calcpromaster.com/career/career-gap/",
+      "https://calcpromaster.com/business/saas-unit-metrics/",
+      "https://calcpromaster.com/career/tax-refund/",
+      "https://calcpromaster.com/construction/rebar-calculator/"
+    ]
+  }
+}

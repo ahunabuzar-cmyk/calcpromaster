@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Metric to Imperial Conversion Guide — Exact Factors &amp; How to</title>
+  <title>Metric to Imperial Conversion Guide: Exact Factors</title>
   <meta name="description" content="Exact metric-to-imperial conversion factors for length, weight, volume, temperature and data, plus the multiply-or-divide rule that never fails.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
@@ -13,7 +13,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Metric to Imperial Conversion Guide — Exact Factors & How to Convert",
+    "headline": "Metric to Imperial Conversion Guide: Exact Factors",
     "description": "Exact metric-to-imperial conversion factors for length, weight, volume, temperature and data, the multiply-or-divide rule, and why precise factors beat memorized approximations.",
     "url": "https://calcpromaster.netlify.app/guides/unit-conversion",
     "inLanguage": "en",
@@ -56,7 +56,9 @@
   </style>
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Unit Conversion</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Unit Conversion</p>
   <h1>Metric to Imperial Conversion: Exact Factors and How to Use Them</h1>
   <p class="updated">Last updated: September 2026 · Independently QA-tested formulas</p>
 
@@ -64,7 +66,7 @@
     <strong>Quick answer:</strong> To convert, multiply by the exact factor: cm→in ×0.393701, kg→lb ×2.20462, km→mi ×0.621371, l→gal(US) ×0.264172. To reverse, divide by the same factor. Temperature is different — it needs an offset formula, not a factor: °F = °C × 9/5 + 32.
   </div>
 
-  <p>Most conversion mistakes aren't math mistakes — they're <em>factor</em> mistakes: using a rounded 2.2 for kg→lb on a 90 kg shipment, or confusing US and imperial gallons. The <a href="/conversion/length">unit converters</a> on CalcProMaster use exact standard factors; this guide gives you the same numbers for hand work.</p>
+  <p>Most conversion mistakes aren't math mistakes — they're <em>factor</em> mistakes: using a rounded 2.2 for kg→lb on a 90 kg shipment, or confusing US and imperial gallons. The <a href="/conversion/length/">unit converters</a> on CalcProMaster use exact standard factors; this guide gives you the same numbers for hand work.</p>
 
   <h2>The one rule: multiply to convert, divide to reverse</h2>
   <div class="formula">imperial value = metric value × factor<br>metric value = imperial value ÷ factor</div>
@@ -106,16 +108,52 @@
   <p>Because the scales have different zero points, no single multiplier works. 37 °C → 37 × 1.8 + 32 = <strong>98.6 °F</strong>. −40 is the crossover: −40 °F = −40 °C exactly.</p>
 
   <h2>Why "close enough" factors cost money</h2>
-  <p>Rounding 2.20462 → 2.2 is a 0.2% error — invisible on a gym scale, meaningful on a 2-ton freight quote (4 kg off) or repeated through a bill of materials. Precision costs nothing when a <a href="/conversion/weight">converter</a> does the work; keep 6 significant figures until the final display, then round once.</p>
+  <p>Rounding 2.20462 → 2.2 is a 0.2% error — invisible on a gym scale, meaningful on a 2-ton freight quote (4 kg off) or repeated through a bill of materials. Precision costs nothing when a <a href="/conversion/weight/">converter</a> does the work; keep 6 significant figures until the final display, then round once.</p>
 
   <h2>Round-trip drift: a 10-second self-check</h2>
   <p>The fastest way to catch a bad factor is to convert there and back. Convert 10 m to feet: 10 ÷ 0.3048 = 32.8084 ft. Convert back: 32.8084 × 0.3048 = 10.000000 m — exact, because the factor is defined. If your chain returns 9.97 or 10.03, an intermediate rounding (or a US-vs-imperial gallon mix-up) is eating precision. Run the round-trip whenever a spreadsheet someone else built produces numbers you can't reproduce.</p>
 
-  <h2>Frequently Asked Questions</h2>
+  
+  
+<!-- guide-worked-example:start -->
+<h2>Worked example: Length Converter at its default inputs</h2>
+<p>A worked example is only useful if you can reproduce it. The defaults on <a href="/conversion/length/">Length Converter</a> give exactly the figures in this section, with no rounding done by us.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Value</td><td>1</td></tr></tbody></table>
+<p><strong>Result:</strong> 3.2808 ft</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Step 1: Convert to meters: 1 m = 1.0000 m</li><li>Step 2: Convert to ft: 1.0000 / 0.3048 = 3.2808 ft</li></ol>
+<h2>Sensitivity: Value from half to one-and-a-half times</h2>
+<p>Same calculator, same fields, one change: value.</p>
+<table><thead><tr><th>Value</th><th>Result</th></tr></thead><tbody><tr><td>0.5</td><td>1.6404 ft</td></tr><tr><td>1</td><td>3.2808 ft</td></tr><tr><td>1.5</td><td>4.9213 ft</td></tr></tbody></table>
+<p>Halve value and the result moves one way; add half again and it moves the other. Watching that gap is quicker than guessing which field matters most.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>Exact definitions and approximate factors</h2>
+<p>Some conversions are exact by definition: an inch is 25.4 millimetres, a pound is 0.45359237 kilograms. Others depend on the substance: a cup of flour and a cup of water do not weigh the same, and a US cup is not a metric cup.</p>
+<p>Use exact factors for length, mass and volume of liquids. Use a density table for anything dry and bulky, or weigh it.</p>
+<h2>Temperature is not a simple multiplication</h2>
+<p>Celsius and Fahrenheit have different zero points as well as different step sizes, so converting requires an offset: F equals C times 9/5 plus 32. Applying a multiplier alone is the most common conversion error there is.</p>
+<p>Kelvin shares the Celsius step size but starts at absolute zero, so it needs an offset of 273.15 and no multiplication.</p>
+<h2>Rounding after converting</h2>
+<p>Convert first, round second. Rounding an input and then converting compounds two errors, and it is easy to spot in a recipe or a specification where the tolerance is tight.</p>
+<p>Carry more digits than you need through the calculation, then round the final value to the precision the original measurement supported.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/zakat">How to Calculate Zakat</a></li>
+    <li><a href="/guides/percentage">How to Calculate Percentage</a></li>
+    <li><a href="/guides/discount">How to Calculate a Discount (Percent Off & Stacked)</a></li>
+    <li><a href="/guides/tip">How to Calculate a Tip (Rates & Splitting the Bill)</a></li>
+  </ul>
+
+<h2>Frequently Asked Questions</h2>
   <h3>Why are some factors "exact" and others not?</h3>
   <p>Since 1959 the inch is <em>defined</em> as 2.54 cm and the pound as 0.45359237 kg, so those are exact by treaty. Factors like km→mi derive from the exact inch/metre definitions and are exact too (1 mi = 1609.344 m); approximations only creep in when someone rounds early.</p>
   <h3>How many feet is 180 cm?</h3>
-  <p>180 × 0.393701 = 70.866 in = 5 ft 10.87 in — call it 5′11″. The <a href="/conversion/length">length converter</a> shows feet+inches directly.</p>
+  <p>180 × 0.393701 = 70.866 in = 5 ft 10.87 in — call it 5′11″. The <a href="/conversion/length/">length converter</a> shows feet+inches directly.</p>
   <h3>What's 100 km/h in mph?</h3>
   <p>100 × 0.621371 = 62.14 mph — the origin of the "62 mph ≈ 100 km/h" highway rule of thumb.</p>
   <h3>GB vs GiB — why does my 1 TB drive show 931 GB?</h3>
@@ -123,14 +161,15 @@
 
   <h2>Try the calculators</h2>
   <p class="related">
-    <a href="/conversion/length" class="cta">Length Converter</a>
-    <a href="/conversion/weight" class="cta">Weight Converter</a>
-    <a href="/conversion/volume" class="cta">Volume Converter</a>
-    <a href="/conversion/data-storage" class="cta">Data Storage Converter</a>
-    <a href="/conversion/temperature" class="cta">Temperature Converter</a>
+    <a href="/conversion/length/" class="cta">Length Converter</a>
+    <a href="/conversion/weight/" class="cta">Weight Converter</a>
+    <a href="/conversion/volume/" class="cta">Volume Converter</a>
+    <a href="/conversion/data-storage/" class="cta">Data Storage Converter</a>
+    <a href="/conversion/temperature/" class="cta">Temperature Converter</a>
   </p>
 
-  <p><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/about">Methodology</a></p>
+  <p><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/about">Methodology</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

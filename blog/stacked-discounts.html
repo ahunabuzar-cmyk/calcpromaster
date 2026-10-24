@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>&quot;Extra 20% Off&quot; Is Less Than You Think — Stacked Discount Math</title>
+  <title>"Extra 20% Off" Is Less Than You Think — Stacked Discounts</title>
   <meta name="description" content="Why 30% + 20% off equals 44%, not 50%. The multiplication rule behind stacked discounts, worked checkout examples, and how to compute your true final price.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
@@ -45,15 +45,50 @@
     th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; }
     th { background: #f9fafb; }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://calcpromaster.netlify.app/blog/stacked-discounts#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is 20% off then 10% off the same as 10% then 20%?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — the final price is identical (0.80 × 0.90 = 0.72 either way). Stores may apply them in a fixed order, but the result doesn't change."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I compare a 40% flat discount vs 25% + 20%?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Compute both keep-fractions: flat 40% → pay 0.60. Stacked: 0.75 × 0.80 = 0.60 — identical. Many \"stacked\" offers are engineered to look bigger than a flat cut that produces the same number."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does tax apply before or after discounts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Typically on the final discounted amount, but check your jurisdiction — some apply VAT to the pre-discount price. The difference is the tax rate times the discount amount."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="site">
     <a href="/">Calculators</a>
-    <a href="/guides">Guides</a>
-    <a href="/blog">Blog</a>
+    <a href="/guides/">Guides</a>
+    <a href="/blog/">Blog</a>
     <a href="/about">About</a>
   </header>
-  <p class="crumb"><a href="/">Home</a> › <a href="/blog">Blog</a> › Stacked Discounts</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/blog/">Blog</a> › Stacked Discounts</p>
   <h1>"Extra 20% off" is less than you think — the math of stacked discounts</h1>
   <p class="meta">Sep 15, 2026 · ~6 min read · Money</p>
 
@@ -90,12 +125,13 @@
 
   <h2>Try it on your own numbers</h2>
   <p>
-    <a href="/finance/discount" class="cta">Discount Calculator</a>
+    <a href="/finance/discount/" class="cta">Discount Calculator</a>
     <a href="/guides/discount" class="cta">Full discount guide</a>
-    <a href="/math/percentage" class="cta">Percentage Calculator</a>
+    <a href="/math/percentage/" class="cta">Percentage Calculator</a>
   </p>
 
-  <p><a href="/blog">← All blog posts</a> · <a href="/guides">Guides library</a></p>
+  <p><a href="/blog/">← All blog posts</a> · <a href="/guides/">Guides library</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

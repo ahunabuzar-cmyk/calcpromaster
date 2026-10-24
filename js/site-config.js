@@ -36,19 +36,20 @@ window.SITE_CONFIG = {
   // Build-time synced by scripts/sync-counts.cjs from the registry (js/data/*.js).
   // Runtime ALL_TOOLS is lazy per-category on calculator pages, so user-facing
   // counts must use this authoritative total instead of ALL_TOOLS.length.
-  totalCalculators: 1219,
+  totalCalculators: 1285,
   // Build-time synced per-category counts (registry truth). The homepage renders
   // category-card counts from this map so it never downloads the lazy category
   // data files just to display "N calculators" (that background load pushed TTI
   // to ~12s on throttled mobile).
-  catCounts: {finance:211,health:66,math:120,everyday:47,science:82,engineering:65,construction:53,conversion:36,business:39,education:38,utilities:32,lifestyle:47,regional:60,food:37,fitness:42,auto:46,career:39,homegarden:49,tech:72,family:38}
+  catCounts: {finance:218,health:68,math:121,everyday:50,science:82,engineering:67,construction:57,conversion:36,business:45,education:42,utilities:32,lifestyle:49,regional:82,food:37,fitness:42,auto:47,career:46,homegarden:52,tech:72,family:40}
 };
 
 // Helper: full origin ("https://domain") — sitemap/schema/canonical/og ke liye
 window.SITE_ORIGIN = 'https://' + window.SITE_CONFIG.domain;
 
 // Helper: kya GA4 real configured hai (placeholder ho to scripts load mat karo — zero broken requests)
-// NOTE: regex se 'G-XXXXXXXXXX' placeholder ko bhi exclude karna zaroori hai (10+ consecutive X).
+// NOTE: regex se placeholder id ko bhi exclude karna zaroori hai (10+ consecutive X),
+// warna placeholder ko real measurement id samajh liya jayega.
 window.SITE_GA4_READY = /^G-[A-Z0-9]{6,}$/.test(window.SITE_CONFIG.ga4Id) && window.SITE_CONFIG.ga4Id.indexOf('XXXXXXXX') === -1;
 
 // Dev reminder: analytics/verification tab tak on nahi hai — sirf console mein,

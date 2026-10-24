@@ -89,13 +89,13 @@
   <header>
     <a class="logo" href="/">CalcProMaster</a>
     <a href="/">Home</a>
-    <a href="/guides">Guides</a>
+    <a href="/guides/">Guides</a>
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
   </header>
   <main>
     <div class="legal-page">
-      <p class="legal-meta"><a href="/guides">← All guides</a></p>
+      <p class="legal-meta"><a href="/guides/">← All guides</a></p>
       <h1>How to Calculate Zakat — Nisab, Rates &amp; Worked Examples</h1>
       <p class="legal-meta">Islamic Finance · 6 min read · Last updated September 2026</p>
 
@@ -154,7 +154,43 @@
         <p><strong>Note:</strong> Zakat rulings have legitimate differences of opinion across schools of Islamic jurisprudence. This guide covers the mainstream method; for complex situations (business partnerships, agricultural produce at 5%/10%, livestock) consult a qualified scholar.</p>
       </div>
 
-      <h2>FAQ</h2>
+      
+  
+<!-- guide-worked-example:start -->
+<h2>Worked example: Zakat Calculator at its default inputs</h2>
+<p>This is the answer <a href="/regional/zakat-calculator/">Zakat Calculator</a> gives before you touch anything — the defaults as shipped, computed live rather than copied from a sample.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Cash &amp; Bank (PKR/AED)</td><td>500000</td></tr><tr><td>Gold/Silver Value</td><td>300000</td></tr><tr><td>Other Assets</td><td>100000</td></tr><tr><td>Debts Owed</td><td>50000</td></tr></tbody></table>
+<p><strong>Result:</strong> 21250 (2.5%)</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Net wealth = assets − debts = 850,000</li><li>Nisab applies (85g gold / 595g silver)</li><li>Zakat = net × 2.5% = 21250</li></ol>
+<h2>Cash &amp; Bank (PKR/AED): half, as given, and half again</h2>
+<p>Cash &amp; Bank (PKR/AED) is the first input worth testing, so here it is at three sizes.</p>
+<table><thead><tr><th>Cash &amp; Bank (PKR/AED)</th><th>Result</th></tr></thead><tbody><tr><td>250,000</td><td>15000 (2.5%)</td></tr><tr><td>500,000</td><td>21250 (2.5%)</td></tr><tr><td>750,000</td><td>27500 (2.5%)</td></tr></tbody></table>
+<p>The middle row is the default. The outer two show how far the answer drifts when cash &amp; bank (pkr/aed) is wrong by half or by a half in the other direction.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>What is counted, and what is not</h2>
+<p>Zakat is due on wealth that has been held for one lunar year above the nisab threshold: cash, bank balances, gold and silver, business inventory, and investments held for trade. A primary residence, personal vehicle and household furnishings are not zakatable.</p>
+<p>Debts you owe that are due now reduce the base. Debts owed to you are included if you expect to recover them. The details vary between schools of jurisprudence, so confirm the treatment of anything unusual.</p>
+<h2>The nisab and the lunar year</h2>
+<p>The nisab is the value of 87.48 grams of gold or 612.36 grams of silver, and most scholars recommend using the silver threshold because it is lower and includes more people in the obligation.</p>
+<p>The hawl is one lunar year, about 354 days, not a solar year. Fixing a date in the Islamic calendar each year avoids the drift that comes from using a Gregorian anniversary.</p>
+<h2>The rate and the timing</h2>
+<p>The rate is 2.5% of the net zakatable wealth, or one fortieth. It is calculated on the wealth at the end of the hawl, not on income during the year.</p>
+<p>Many people pay in Ramadan for convenience, which is permitted, but the amount still reflects the wealth at the due date. Choosing a date and keeping a simple annual record makes the calculation repeatable.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/percentage">How to Calculate Percentage</a></li>
+    <li><a href="/guides/discount">How to Calculate a Discount (Percent Off & Stacked)</a></li>
+    <li><a href="/guides/tip">How to Calculate a Tip (Rates & Splitting the Bill)</a></li>
+    <li><a href="/guides/break-even">Break-Even Analysis</a></li>
+  </ul>
+
+<h2>FAQ</h2>
       <h3>Is zakat due on retirement accounts?</h3>
       <p>Scholars differ: many treat funds you can withdraw as zakatable at full value; others apply zakat only on accessible portions. Choose a consistent approach, ideally with scholarly guidance.</p>
       <h3>Can zakat be paid in installments?</h3>
@@ -166,14 +202,14 @@
   <footer>
     <p>CalcProMaster — free online calculators.</p>
     <p>
-      <a href="/guides">Guides</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a>
+      <a href="/guides/">Guides</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a>
     </p>
   </footer>
   <div class="related" style="max-width:820px;margin:0 auto 40px;padding:0 24px;">
-    <a href="/regional/zakat-calculator">Zakat Calculator</a>
-    <a href="/regional/gold-rate-pk">Gold Rate PK</a>
-    <a href="/conversion/currency-conv">Currency Converter</a>
-    <a href="/guides">All Guides</a>
+    <a href="/regional/zakat-calculator/">Zakat Calculator</a>
+    <a href="/regional/gold-rate-pk/">Gold Rate PK</a>
+    <a href="/conversion/currency-conv/">Currency Converter</a>
+    <a href="/guides/">All Guides</a>
   </div>
   <script src="/guides/glossary-tooltips.js" defer></script>
 </body>

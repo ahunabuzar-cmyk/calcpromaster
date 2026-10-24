@@ -19,7 +19,7 @@ const NEW = [
    'Employee CPF 20% on the first S$7,400 of monthly wages (PR/Citizen); foreigners contribute 0; take-home = salary - CPF; income tax filed yearly, not withheld'],
   ['qatar-take-home-salary', 'Qatar Take-Home Salary Calculator', 'Monthly Basic Salary (QAR) (number); Allowances (QAR/mo) (number)',
    'Qatar levies no personal income tax; take-home = basic + allowances; end-of-service accrual shown as 21 days of basic per year (informational)'],
-  ['abuDhabi-cost-living', 'Abu Dhabi Cost of Living Calculator', 'Monthly Salary (AED) (number); Rent/Schooling (AED/yr); Transport/Utilities (AED/mo)',
+  ['abu-dhabi-cost-living', 'Abu Dhabi Cost of Living Calculator', 'Monthly Salary (AED) (number); Rent/Schooling (AED/yr); Transport/Utilities (AED/mo)',
    'Fixed monthly = (rent + schooling) / 12 + transport + utilities; discretionary estimate = 20% of salary; surplus = salary - fixed - discretionary (0% income tax)'],
   ['japan-take-home-salary', 'Japan Take-Home Salary Calculator', 'Annual Salary (yen) (number)',
    'Employment income deduction = 480,000 + 10% of salary; national income tax 5/10/20/23% brackets; resident tax ~10% flat + 5,000; shakai hoken 14.66% employee share (capped base)'],

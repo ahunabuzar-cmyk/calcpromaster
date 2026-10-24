@@ -1,0 +1,457 @@
+{
+  "ranAt": "2026-10-19T12:11:00.145Z",
+  "pages": 1515,
+  "ngram": 7,
+  "minDocumentFrequency": 6,
+  "siteDupSharePct": 58,
+  "pagesOver40Pct": 1439,
+  "pagesUnder400Words": 4,
+  "duplicateTitles": 0,
+  "duplicateMetaDescriptions": 0,
+  "worstBlocks": [
+    {
+      "pages": 1468,
+      "sharePct": 96.9,
+      "text": "your data never leaves your device reviewed october 2026 formula and worked example checked against the current rates.",
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "pages": 1468,
+      "sharePct": 96.9,
+      "text": "comparing scenarios side by side, and double-checking",
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "pages": 1468,
+      "sharePct": 96.9,
+      "text": "what do i need to use the",
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "pages": 1468,
+      "sharePct": 96.9,
+      "text": "or the page defaults if you just want to see the calculation work. each input maps directly to the formula, and changing any one of them recalculates the",
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "pages": 1468,
+      "sharePct": 96.9,
+      "text": "for your exact inputs, and the supporting figures and step list give it context.",
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "pages": 1468,
+      "sharePct": 96.9,
+      "text": "hand-checked against worked examples and covered by automated tests on every build.",
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "pages": 1447,
+      "sharePct": 95.5,
+      "text": "it asks for, or the page defaults if you",
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "pages": 1397,
+      "sharePct": 92.2,
+      "text": "assumptions and limits are summarized below. how does",
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "pages": 1375,
+      "sharePct": 90.8,
+      "text": "twice with deliberately low and high inputs the spread tells you how sensitive the",
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "pages": 1375,
+      "sharePct": 90.8,
+      "text": "is, which a single run never shows.",
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "pages": 1328,
+      "sharePct": 87.7,
+      "text": "applies the same steps to whatever you type, so substituting your own values produces your own answer instead of the example's. understanding the result",
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "pages": 1281,
+      "sharePct": 84.6,
+      "text": "our editorial policy for how content is written and verified. last reviewed 2026-10-19 methodology",
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    }
+  ],
+  "worstPages": [
+    {
+      "url": "/finance/amortization/10-years-150000/",
+      "words": 1497,
+      "dupShare": 100
+    },
+    {
+      "url": "/finance/amortization/15-years-200000/",
+      "words": 1497,
+      "dupShare": 100
+    },
+    {
+      "url": "/finance/amortization/20-years-350000/",
+      "words": 1497,
+      "dupShare": 100
+    },
+    {
+      "url": "/finance/amortization/30-years-300000/",
+      "words": 1497,
+      "dupShare": 100
+    },
+    {
+      "url": "/finance/amortization/5-years-100000/",
+      "words": 1497,
+      "dupShare": 100
+    },
+    {
+      "url": "/finance/annuity/10-years-100000/",
+      "words": 1138,
+      "dupShare": 100
+    },
+    {
+      "url": "/finance/annuity/15-years-250000/",
+      "words": 1138,
+      "dupShare": 100
+    },
+    {
+      "url": "/finance/annuity/20-years-50000/",
+      "words": 1138,
+      "dupShare": 100
+    },
+    {
+      "url": "/finance/annuity/25-years-100000/",
+      "words": 1138,
+      "dupShare": 100
+    },
+    {
+      "url": "/finance/annuity/5-years-75000/",
+      "words": 1138,
+      "dupShare": 100
+    },
+    {
+      "url": "/finance/auto-loan/2-years-15000/",
+      "words": 1150,
+      "dupShare": 100
+    },
+    {
+      "url": "/finance/auto-loan/3-years-20000/",
+      "words": 1150,
+      "dupShare": 100
+    },
+    {
+      "url": "/finance/auto-loan/4-years-30000/",
+      "words": 1150,
+      "dupShare": 100
+    },
+    {
+      "url": "/finance/auto-loan/5-years-25000-florida/",
+      "words": 1150,
+      "dupShare": 100
+    },
+    {
+      "url": "/finance/auto-loan/5-years-25000/",
+      "words": 1150,
+      "dupShare": 100
+    },
+    {
+      "url": "/finance/auto-loan/5-years-30000/",
+      "words": 1150,
+      "dupShare": 100
+    },
+    {
+      "url": "/finance/auto-loan/5-years-35000/",
+      "words": 1150,
+      "dupShare": 100
+    },
+    {
+      "url": "/finance/auto-loan/6-years-45000-texas/",
+      "words": 1150,
+      "dupShare": 100
+    },
+    {
+      "url": "/finance/auto-loan/6-years-45000/",
+      "words": 1150,
+      "dupShare": 100
+    },
+    {
+      "url": "/finance/auto-loan/7-years-50000/",
+      "words": 1150,
+      "dupShare": 100
+    }
+  ],
+  "shortestPages": [
+    {
+      "url": "/compare/",
+      "words": 30
+    },
+    {
+      "url": "/favorites/",
+      "words": 32
+    },
+    {
+      "url": "/history/",
+      "words": 32
+    },
+    {
+      "url": "/",
+      "words": 342
+    }
+  ],
+  "duplicateTitleExamples": [],
+  "duplicateDescExamples": [],
+  "topRepeatedBlocks": [
+    {
+      "gram": "your data never leaves your device reviewed",
+      "pages": 1468,
+      "sharePct": 96.9,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "data never leaves your device reviewed october",
+      "pages": 1468,
+      "sharePct": 96.9,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "never leaves your device reviewed october 2026",
+      "pages": 1468,
+      "sharePct": 96.9,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "leaves your device reviewed october 2026 formula",
+      "pages": 1468,
+      "sharePct": 96.9,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "your device reviewed october 2026 formula and",
+      "pages": 1468,
+      "sharePct": 96.9,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "device reviewed october 2026 formula and worked",
+      "pages": 1468,
+      "sharePct": 96.9,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "reviewed october 2026 formula and worked example",
+      "pages": 1468,
+      "sharePct": 96.9,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "october 2026 formula and worked example checked",
+      "pages": 1468,
+      "sharePct": 96.9,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "2026 formula and worked example checked against",
+      "pages": 1468,
+      "sharePct": 96.9,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "formula and worked example checked against the",
+      "pages": 1468,
+      "sharePct": 96.9,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "and worked example checked against the current",
+      "pages": 1468,
+      "sharePct": 96.9,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "worked example checked against the current rates.",
+      "pages": 1468,
+      "sharePct": 96.9,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "comparing scenarios side by side, and double-checking",
+      "pages": 1468,
+      "sharePct": 96.9,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "what do i need to use the",
+      "pages": 1468,
+      "sharePct": 96.9,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "or the page defaults if you just",
+      "pages": 1468,
+      "sharePct": 96.9,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "the page defaults if you just want",
+      "pages": 1468,
+      "sharePct": 96.9,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "page defaults if you just want to",
+      "pages": 1468,
+      "sharePct": 96.9,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "defaults if you just want to see",
+      "pages": 1468,
+      "sharePct": 96.9,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "if you just want to see the",
+      "pages": 1468,
+      "sharePct": 96.9,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    },
+    {
+      "gram": "you just want to see the calculation",
+      "pages": 1468,
+      "sharePct": 96.9,
+      "samples": [
+        "/auto/auto-fare/",
+        "/auto/bike-fuel/",
+        "/auto/bike-loan/"
+      ]
+    }
+  ]
+}

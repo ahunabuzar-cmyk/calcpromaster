@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GST &amp; Sales Tax Explained — Adding, Removing &amp; Reverse Tax Math</title>
+  <title>GST &amp; Sales Tax Explained — Adding &amp; Removing Tax</title>
   <meta name="description" content="How to add GST/sales tax to a price, how to remove tax from a tax-inclusive price (reverse calculation), with formulas, worked examples and country rates.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
@@ -89,14 +89,14 @@
   <header>
     <a class="logo" href="/">CalcProMaster</a>
     <a href="/">Home</a>
-    <a href="/guides">Guides</a>
+    <a href="/guides/">Guides</a>
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
   </header>
   <main>
     <div class="legal-page">
-      <p class="legal-meta"><a href="/guides">← All guides</a></p>
-      <h1>GST &amp; Sales Tax Explained — Adding, Removing &amp; Reverse Tax Math</h1>
+      <p class="legal-meta"><a href="/guides/">← All guides</a></p>
+      <h1>GST &amp; Sales Tax Explained (Add, Remove, Reverse)</h1>
       <p class="legal-meta">Tax · 5 min read · Last updated September 2026</p>
 
       <h2>Adding tax to a base price</h2>
@@ -135,7 +135,46 @@
       <h2>How the GST chain works across the supply chain</h2>
       <p>Because registered businesses claim input tax credits, the government effectively collects tax only on the value each stage adds. At 18% GST: a manufacturer sells components for ₹12,000 and remits ₹2,160. A wholesaler buys those components, sells assembled goods for ₹15,000 — charging ₹2,700 in tax but crediting the ₹2,160 already paid, so the wholesaler remits only ₹540. A retailer sells to you for ₹18,000 — charging ₹3,240, crediting ₹2,700, remitting ₹540. Total collected: 2,160 + 540 + 540 = <strong>₹3,240 = exactly 18% of the final ₹18,000 price</strong> — the same as taxing the final sale once. This is why GST is called a value-added tax in most of the world.</p>
 
-      <h2>FAQ</h2>
+      
+  
+<!-- guide-worked-example:start -->
+<h2>Worked example: GST/VAT Calculator at its default inputs</h2>
+<p>A worked example is only useful if you can reproduce it. The defaults on <a href="/everyday/gst/">GST/VAT Calculator</a> give exactly the figures in this section, with no rounding done by us.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Amount</td><td>100</td></tr><tr><td>Tax Rate (%)</td><td>18</td></tr></tbody></table>
+<p><strong>Result:</strong> Tax: $18.00 | Total: $118.00</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Step 1: Tax = $100 × 18% = $18.00</li><li>Step 2: Total = $100 + $18.00 = $118.00</li></ol>
+<h2>Sensitivity: Amount from half to one-and-a-half times</h2>
+<p>Same calculator, same fields, one change: amount.</p>
+<table><thead><tr><th>Amount</th><th>Result</th></tr></thead><tbody><tr><td>50</td><td>Tax: $9.00 | Total: $59.00</td></tr><tr><td>100</td><td>Tax: $18.00 | Total: $118.00</td></tr><tr><td>150</td><td>Tax: $27.00 | Total: $177.00</td></tr></tbody></table>
+<p>The middle row is the default. The outer two show how far the answer drifts when amount is wrong by half or by a half in the other direction.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>Inclusive and exclusive prices</h2>
+<p>A price quoted exclusive of tax needs the rate added; a price quoted inclusive already contains it, so the tax is the price multiplied by rate divided by one plus rate, not simply the rate. Mixing the two conventions on one invoice is the most common arithmetic error in small-business bookkeeping.</p>
+<p>If a customer is quoted 100 inclusive at 18%, the tax is 15.25 and the net is 84.75. Applying 18% to 100 would overstate the tax by nearly three points and understate the net.</p>
+<h2>Input credit changes the real cost</h2>
+<p>A registered business usually reclaims the tax it paid on purchases against the tax it collects on sales. For them, the tax is a cash-flow item rather than a cost. An unregistered consumer cannot reclaim anything, so the same rate is a real cost.</p>
+<p>That asymmetry explains why business-to-business pricing often quotes exclusive of tax while retail pricing must show the inclusive amount. It is also why comparing quotes from registered and unregistered suppliers needs care.</p>
+<h2>Multiple rates and mixed baskets</h2>
+<p>Where a jurisdiction applies different rates by category, a single basket can contain several. The right method is to apply each rate to its own line and sum the tax, not to average the rates across the basket.</p>
+<p>Bundled goods and services are the hard case: a package that includes a standard-rated item and an exempt one may need to be split on the invoice, depending on local rules. When in doubt, show the lines separately.</p>
+<h2>Rounding and invoice totals</h2>
+<p>Tax is usually rounded at the invoice level or per line, and the two can differ by a small amount on a long invoice. Pick the method your accounting system uses and stay consistent, because a mismatch between the invoice and the return is an audit question even when the amount is trivial.</p>
+<p>Keep the rate, the taxable base and the tax amount visible on every invoice. A total alone cannot be reconciled later, and reconstruction is where the errors appear.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/hourly-rate">Freelance Rates</a></li>
+    <li><a href="/guides/freelance-rate-card">The Freelance Rate Card</a></li>
+    <li><a href="/guides/business-days">Business Days</a></li>
+    <li><a href="/guides/profit-margin">Profit Margin</a></li>
+  </ul>
+
+<h2>FAQ</h2>
       <h3>Is GST calculated on discounted price?</h3>
       <p>Yes — tax applies to the actual transaction value after discounts, not the pre-discount tag.</p>
       <h3>Do businesses get GST back?</h3>
@@ -147,15 +186,15 @@
   <footer>
     <p>CalcProMaster — free online calculators.</p>
     <p>
-      <a href="/guides">Guides</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a>
+      <a href="/guides/">Guides</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a>
     </p>
   </footer>
   <div class="related" style="max-width:820px;margin:0 auto 40px;padding:0 24px;">
-    <a href="/everyday/gst">GST Calculator</a>
-    <a href="/regional/gst-india">GST India</a>
-    <a href="/regional/uae-vat">UAE VAT</a>
-    <a href="/finance/sales-tax">Sales Tax Calculator</a>
-    <a href="/guides">All Guides</a>
+    <a href="/everyday/gst/">GST Calculator</a>
+    <a href="/regional/gst-india/">GST India</a>
+    <a href="/regional/uae-vat/">UAE VAT</a>
+    <a href="/finance/sales-tax/">Sales Tax Calculator</a>
+    <a href="/guides/">All Guides</a>
   </div>
   <script src="/guides/glossary-tooltips.js" defer></script>
 </body>

@@ -15,6 +15,10 @@ const arg = (name, dflt) => {
 };
 const DAYS = arg('--days', 28);
 const ROWS = Math.min(arg('--rows', 100), 250);
+// The query→page join is the whole point of this export, so it asks for far more
+// rows than the console dump: a long-tail site's clicks live beyond row 100.
+const PAIR_ROWS = Math.min(arg('--pair-rows', 25000), 25000);
+const JSON_OUT = path.join(__dirname, '..', 'data', 'gsc-query-page.json');
 const API = 'searchconsole.googleapis.com';
 const SCOPE_READ = 'https://www.googleapis.com/auth/webmasters.readonly';
 
@@ -65,6 +69,33 @@ function fmt(rows) {
   const q = await api({ ...base, dimensions: ['query'] }, tok);
   const p = await api({ ...base, dimensions: ['page'] }, tok);
   const t = await api({ ...base, dimensions: [] }, tok);
+  const qp = await api({ ...base, dimensions: ['query', 'page'], rowLimit: PAIR_ROWS }, tok);
+
+  // Persist the join so opportunity ranking works from real data instead of
+  // structural guesses (word-count "volume" proxies, phrase-structure tiers).
+  const rows = (x) => (x.rows || []).map((r) => ({
+    keys: r.keys || [], clicks: r.clicks || 0, impressions: r.impressions || 0,
+    ctr: r.ctr || 0, position: r.position || 0,
+  }));
+  const totalsRow = (t.rows && t.rows[0]) || null;
+  const payload = {
+    ranAt: new Date().toISOString(), site: SITE_URL, days: DAYS, startDate: start, endDate: end,
+    rowLimits: { queries: ROWS, pages: ROWS, pairs: PAIR_ROWS },
+    // How much of the property the join actually covers. Anything short of
+    // ~100% is GSC's own truncation/anonymisation, not a bug here — recorded so
+    // the ranker's conclusions never get read as covering the whole site.
+    coverage: {
+      pairImpressions: rows(qp).reduce((s, r) => s + r.impressions, 0),
+      pairClicks: rows(qp).reduce((s, r) => s + r.clicks, 0),
+      totalImpressions: totalsRow ? totalsRow.impressions : null,
+      totalClicks: totalsRow ? totalsRow.clicks : null
+    },
+    totals: totalsRow ? { clicks: totalsRow.clicks, impressions: totalsRow.impressions, ctr: totalsRow.ctr, position: totalsRow.position } : null,
+    queries: rows(q).map((r) => ({ query: r.keys[0], ...r, keys: undefined })),
+    pages: rows(p).map((r) => ({ page: r.keys[0], ...r, keys: undefined })),
+    pairs: rows(qp).map((r) => ({ query: r.keys[0], page: r.keys[1], ...r, keys: undefined })),
+  };
+  fs.writeFileSync(JSON_OUT, JSON.stringify(payload, null, 2));
 
   console.log(`== ${DAYS}-day totals (dataState=all) ==`);
   if (t.rows && t.rows[0]) {
@@ -73,4 +104,13 @@ function fmt(rows) {
   }
   console.log(`\n== TOP QUERIES (rows=${(q.rows || []).length}) ==\n` + fmt(q.rows));
   console.log(`\n== TOP PAGES (rows=${(p.rows || []).length}) ==\n` + fmt(p.rows));
+  console.log('\n== QUERY→PAGE JOIN ==');
+  console.log('pairs stored      : ' + payload.pairs.length + ' (rowLimit ' + PAIR_ROWS + ')');
+  console.log('distinct pages    : ' + new Set(payload.pairs.map((p) => p.page)).size);
+  console.log('distinct queries  : ' + new Set(payload.pairs.map((p) => p.query)).size);
+  if (payload.totals) {
+    console.log('join coverage     : ' + payload.coverage.pairImpressions + '/' + payload.coverage.totalImpressions + ' impressions (' + (100 * payload.coverage.pairImpressions / Math.max(payload.coverage.totalImpressions, 1)).toFixed(1) + '%)');
+  }
+  console.log('property totals   : clicks=' + (payload.totals ? payload.totals.clicks : '?') + ' impressions=' + (payload.totals ? payload.totals.impressions : '?') + ' pos=' + (payload.totals ? payload.totals.position.toFixed(1) : '?'));
+  console.log('saved             : data/gsc-query-page.json');
 })().catch(e => { console.error('GSC queries failed:', e.message); process.exit(1); });

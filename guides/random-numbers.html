@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How Random Number Generators Work — True vs Pseudo, Seeds &amp;</title>
+  <title>How Random Number Generators Work — True vs Pseudo</title>
   <meta name="description" content="How a random number generator picks numbers in your range, why computers are pseudo-random, what a seed does, and how to roll fair dice.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
@@ -13,7 +13,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "How Random Number Generators Work — True vs Pseudo, Seeds & Ranges",
+    "headline": "How Random Number Generators Work — True vs Pseudo",
     "description": "How a random number generator picks numbers inside your range, why computer randomness is pseudo-random, what a seed does, and how to roll fair dice or pick lottery numbers.",
     "url": "https://calcpromaster.netlify.app/guides/random-numbers",
     "inLanguage": "en",
@@ -56,7 +56,9 @@
   </style>
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Random Numbers</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Random Numbers</p>
   <h1>How Random Number Generators Work</h1>
   <p class="updated">Last updated: September 2026 · Independently QA-tested formulas</p>
 
@@ -64,7 +66,7 @@
     <strong>Quick answer:</strong> A random number generator picks a number where every value in your range is equally likely. Online tools use a seeded pseudo-random algorithm — unpredictable in practice for games, draws and picks, though not cryptographic-grade.
   </div>
 
-  <p>Give me a number between 1 and 10, right now. Whatever you said, you didn't pick randomly — humans avoid round numbers, favor 7, and lean on recent memories. Computers are different: they produce sequences that pass statistical tests for randomness, which is exactly what a <a href="/math/random-generator">random number generator</a> does for picks, draws, dice and raffles.</p>
+  <p>Give me a number between 1 and 10, right now. Whatever you said, you didn't pick randomly — humans avoid round numbers, favor 7, and lean on recent memories. Computers are different: they produce sequences that pass statistical tests for randomness, which is exactly what a <a href="/math/random-generator/">random number generator</a> does for picks, draws, dice and raffles.</p>
 
   <h2>What is a random number generator?</h2>
   <p>An RNG is a procedure that outputs values with no usable pattern. Two families exist:</p>
@@ -104,7 +106,7 @@
   <p>Every tool on this page is a <em>uniform</em> generator: each number in the range has exactly the same chance. That is what raffles and dice need — but not everything. Some real picks are <strong>weighted</strong>:</p>
   <ul>
     <li><strong>Raffle with unequal entries:</strong> if A bought 3 tickets and B bought 1, don't generate 1–2 and pick a person. Number every <em>ticket</em> 1–4 and draw once — A's tickets occupy 3 of the 4 numbers, matching the real odds.</li>
-    <li><strong>Group assignments that feel random but must be balanced:</strong> pure randomness can deal 5 strong players to one team. First shuffle (random), then deal round-robin (structured) — the <a href="/utilities/random-name">team randomizer</a> does exactly this.</li>
+    <li><strong>Group assignments that feel random but must be balanced:</strong> pure randomness can deal 5 strong players to one team. First shuffle (random), then deal round-robin (structured) — the <a href="/utilities/random-name/">team randomizer</a> does exactly this.</li>
     <li><strong>Sampling:</strong> to survey 50 of 800 students, number the population and draw 50 <em>unique</em> values — unique mode matters here, duplicates would undercount.</li>
   </ul>
 
@@ -116,7 +118,7 @@
   </ul>
 
   <h2>A security boundary you should know</h2>
-  <p>PRNGs like <code>Math.random()</code> are ideal for dice, raffles and games — unpredictable enough that nobody can guess your next roll in practice. They are <strong>not</strong> designed to resist a determined attacker choosing passwords. Password generation needs a cryptographically secure source (CSPRNG), which is why our <a href="/tech/password-generator">password generator</a> exists separately from this one. The <a href="/guides/passwords">password entropy guide</a> explains the math of why a 16-character passphrase beats an 8-character string of symbols.</p>
+  <p>PRNGs like <code>Math.random()</code> are ideal for dice, raffles and games — unpredictable enough that nobody can guess your next roll in practice. They are <strong>not</strong> designed to resist a determined attacker choosing passwords. Password generation needs a cryptographically secure source (CSPRNG), which is why our <a href="/tech/password-generator/">password generator</a> exists separately from this one. The <a href="/guides/passwords">password entropy guide</a> explains the math of why a 16-character passphrase beats an 8-character string of symbols.</p>
 
   <h2>The 2d6 curve: why some dice totals are rarer than others</h2>
   <p>One honest limitation of "pick a number from 1 to 36" for dice replacement: it gives a <em>flat</em> distribution, while real two-dice throws are peaked. Every one of the 36 (die, die) combinations is equally likely, but a total of 7 has six of them (1+6, 2+5, 3+4, 4+3, 5+2, 6+1) while 2 or 12 have one each:</p>
@@ -124,31 +126,66 @@
     <thead><tr><th>Total</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th></tr></thead>
     <tbody><tr><td>Ways out of 36</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr></tbody>
   </table></div>
-  <p>So 7 comes up about 16.7% of the time — six times as often as snake eyes. Board games that "feel wrong" are usually just revealing this curve. For a dice game where the <em>shape</em> of the distribution matters, roll two dice separately (the <a href="/utilities/dice-roller">dice roller</a> does independent draws) rather than one uniform pick from the summed range.</p>
+  <p>So 7 comes up about 16.7% of the time — six times as often as snake eyes. Board games that "feel wrong" are usually just revealing this curve. For a dice game where the <em>shape</em> of the distribution matters, roll two dice separately (the <a href="/utilities/dice-roller/">dice roller</a> does independent draws) rather than one uniform pick from the summed range.</p>
 
   <h2>Unique picks: how the odds actually change</h2>
   <p>Drawing <em>with</em> replacement keeps every draw at the same odds; drawing <em>without</em> replacement shifts them as the pool shrinks. A 6/49 lottery is the classic case: the first ball is a 1-in-49 shot, but the jackpot needs all six — 49 × 48 × 47 × 46 × 45 × 44 ÷ 720 orders = <strong>1 in 13,983,816</strong>. That's C(49,6) — combinations, not permutations, because draw order doesn't matter.</p>
   <p>The same combinatorics runs a raffle fairly: 150 unique picks from 200 entrants leaves the last entrant facing odds that rose from 1/200 toward 1/51 as others were drawn. Not unfair — just not the constant 1/200 your intuition keeps quoting. When fairness must be <em>visible</em>, publish the method: numbered entrants, unique-mode draw, order ignored.</p>
 
-  <h2>Frequently Asked Questions</h2>
+<!-- guide-worked-example:start -->
+<h2>Worked example: Coin Flip Simulator at its default inputs</h2>
+<p>This is the answer <a href="/utilities/coin-flip/">Coin Flip Simulator</a> gives before you touch anything — the defaults as shipped, computed live rather than copied from a sample.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Number of Flips</td><td>100</td></tr></tbody></table>
+<p><strong>Result:</strong> Heads: 48 | Tails: 52</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Each flip is an independent 50/50 trial</li><li>With 100 flips expect ~50 heads</li><li>Results vary — that is randomness</li></ol>
+<h2>Number of Flips — three values, three answers</h2>
+<p>The table below varies number of flips alone — half, the default, and half again.</p>
+<table><thead><tr><th>Number of Flips</th><th>Result</th></tr></thead><tbody><tr><td>50</td><td>Heads: 20 | Tails: 30</td></tr><tr><td>100</td><td>Heads: 56 | Tails: 44</td></tr><tr><td>150</td><td>Heads: 81 | Tails: 69</td></tr></tbody></table>
+<p>Read the three rows as a range: the spread between them is how much the answer depends on number of flips alone, with everything else held still.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>Not every random number is safe to use</h2>
+<p>A general-purpose generator such as Math.random is fine for a raffle or a dice roll and unsuitable for passwords, tokens or anything an attacker can profit from guessing. Cryptographic generators are slower precisely because they resist prediction.</p>
+<p>The distinction is predictability, not appearance. A sequence can look random to a human and be fully determined by a seed an attacker can recover.</p>
+<h2>Watch the range mapping</h2>
+<p>Taking a raw random integer modulo a range introduces bias whenever the range does not divide the generator space evenly — the low values come up slightly more often. Rejection sampling avoids it.</p>
+<p>The bias is tiny for a game and meaningful for a lottery-sized draw. If the fairness of the draw matters, use a generator that handles the mapping for you.</p>
+<h2>Seeds, reproducibility and streaks</h2>
+<p>A seeded generator replays the same sequence every time, which is what makes simulations testable. An unseeded one gives a different run each time, which is what makes shuffles fair.</p>
+<p>Long streaks are not evidence of a broken generator. In a thousand coin flips, runs of six or seven in a row are ordinary — the intuition that they should not happen is the thing that is wrong.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/science">Science Guides</a></li>
+    <li><a href="/guides/gpa">How GPA Is Calculated (and Why Students Differ)</a></li>
+    <li><a href="/guides/grade-needed">What Do I Need on the Final? The Weighted-Grade Formula</a></li>
+    <li><a href="/guides/math-statistics">Math & Statistics Guides</a></li>
+  </ul>
+
+<h2>Frequently Asked Questions</h2>
   <h3>Is a 50/50 coin flip really 50/50?</h3>
-  <p>A simulated <a href="/utilities/coin-flip">coin flip</a> is — each draw is uniform. Physical flips are slightly biased toward the side that starts facing up, research suggests around 50.8% for a standard flip.</p>
+  <p>A simulated <a href="/utilities/coin-flip/">coin flip</a> is — each draw is uniform. Physical flips are slightly biased toward the side that starts facing up, research suggests around 50.8% for a standard flip.</p>
   <h3>Can I predict the next number?</h3>
   <p>Not without knowing the internal seed and state. For our tools' purposes (picks, dice, draws), the sequence is unpredictable.</p>
   <h3>Why do my dice rolls never total the average?</h3>
-  <p>Average results are <em>typical</em>, not guaranteed. Three d6s average 10.5, but any total from 3–18 is possible; extremes are simply rarer. Try the <a href="/utilities/dice-roller">dice roller</a> and watch the spread over many rolls.</p>
+  <p>Average results are <em>typical</em>, not guaranteed. Three d6s average 10.5, but any total from 3–18 is possible; extremes are simply rarer. Try the <a href="/utilities/dice-roller/">dice roller</a> and watch the spread over many rolls.</p>
   <h3>Is randomness fair for giveaways?</h3>
-  <p>Yes, provided every entrant maps to exactly one number and the range covers all of them — the <a href="/utilities/random-name">team randomizer</a> handles the grouping for you.</p>
+  <p>Yes, provided every entrant maps to exactly one number and the range covers all of them — the <a href="/utilities/random-name/">team randomizer</a> handles the grouping for you.</p>
 
   <h2>Try the calculators</h2>
   <p class="related">
-    <a href="/math/random-generator" class="cta">Random Number Generator</a>
-    <a href="/utilities/coin-flip" class="cta">Coin Flip</a>
-    <a href="/utilities/dice-roller" class="cta">Dice Roller</a>
-    <a href="/utilities/random-name" class="cta">Team Randomizer</a>
+    <a href="/math/random-generator/" class="cta">Random Number Generator</a>
+    <a href="/utilities/coin-flip/" class="cta">Coin Flip</a>
+    <a href="/utilities/dice-roller/" class="cta">Dice Roller</a>
+    <a href="/utilities/random-name/" class="cta">Team Randomizer</a>
   </p>
 
-  <p><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/about">Methodology</a></p>
+  <p><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/about">Methodology</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

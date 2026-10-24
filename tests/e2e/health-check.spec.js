@@ -67,7 +67,12 @@ test.describe('All calculators health check', () => {
       await expect(page.locator('#mainContent h1, #calc-form h1, #calc-form .tool-title')).toBeVisible({ timeout: 15_000 });
 
       const form = page.locator('#calc-form');
-      const inputs = form.locator('.calc-input, input, select');
+      // Visible controls only. SmartInput injects a paste-and-parse row at the top of
+      // the input panel, and its <textarea class="calc-input"> sits inside a hidden
+      // container — so the plain `.calc-input` selector matched a control no user can
+      // see and the sweep waited 15s on it. This assertion asks whether the form is
+      // usable, so it must look at what is actually rendered.
+      const inputs = form.locator('.calc-input:visible, input:visible, select:visible');
       // Auto-retrying locator assertion (NOT a plain value assert): under load the
       // h1 can render a beat before the form fields populate, and a one-shot
       // count() then flakily reads 0. expect(locator).toBeVisible() retries until

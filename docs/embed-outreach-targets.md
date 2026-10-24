@@ -14,7 +14,7 @@
 | # | Target type | Kisko dhoondo | Kaunsa tool offer karo | Kyun fit hai |
 |---|---|---|---|---|
 | 1 | Personal finance blogs (DA 40+) | "mortgage calculator" likhne wale blogs | loan-emi, mortgage | unke reader ka next step |
-| 2 | Expat/Gulf job blogs | dubai salary, UAE cost of living articles | dubai-salary, abuDhabi-cost-living, qatar-take-home-salary | unka #1 question: net salary |
+| 2 | Expat/Gulf job blogs | dubai salary, UAE cost of living articles | dubai-salary, abu-dhabi-cost-living, qatar-take-home-salary | unka #1 question: net salary |
 | 3 | Fitness/nutrition blogs | calorie deficit, macro guides | bmi, calorie, protein-intake | readers self-serve karte hain |
 | 4 | Student/edu sites | GPA, percentage marks pages | percentage, grade-needed, education tools | homework help traffic |
 | 5 | Freelancer blogs | rate card, invoice guides | freelance-rate-card, CAC, profit-margin | business tools fit |

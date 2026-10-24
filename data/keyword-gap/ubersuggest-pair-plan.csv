@@ -1,0 +1,57 @@
+family,pair_slug,phrasings,top_keyword,monthly_volume,min_kd,rival_url
+length,m-to-ft,43,"calculator meter to feet",165000,15,https://www.rapidtables.com/convert/length/meter-to-feet.html
+length,cm-to-in,96,"cm en inches",74000,16,https://www.rapidtables.com/convert/length/cm-to-inch.html
+length,mm-to-in,12,"mm to inches",49500,17,https://www.rapidtables.com/convert/length/mm-to-inch.html
+length,in-to-cm,103,"inch en cm",40500,12,https://www.rapidtables.com/convert/length/inch-to-cm.html
+length,ft-to-cm,61,"feet into cm",33100,6,https://www.rapidtables.com/convert/length/feet-to-cm.html
+length,cm-to-ft,126,"cm to ft",33100,16,https://www.rapidtables.com/convert/length/cm-to-feet.html
+weight,lb-to-kg,106,"pounds into kg",27100,16,https://www.rapidtables.com/convert/weight/pound-to-kg.html
+length,ft-to-m,31,"feet into meter",27100,17,https://www.rapidtables.com/convert/length/feet-to-meter.html
+length,in-to-ft,17,"feet inches to feet",27100,17,https://www.rapidtables.com/convert/length/feet-inch-to-feet.html
+length,ft-to-in,45,"foot into inch",27100,16,https://www.rapidtables.com/convert/length/feet-to-inch.html
+length,in-to-mm,3,"to inches to mm",18100,17,https://www.rapidtables.com/convert/length/inch-to-mm.html
+weight,kg-to-lb,45,"kg to pound",18100,16,https://www.rapidtables.com/convert/weight/kg-to-pound.html
+length,mm-to-ft,4,"mm convert to feet",18100,18,https://www.rapidtables.com/convert/length/mm-to-feet.html
+length,in-to-m,10,"inch to m m",18100,17,https://www.rapidtables.com/convert/length/feet-inch-to-meter.html
+length,ft-to-mm,2,"foot to mm",18100,17,https://www.rapidtables.com/convert/length/feet-to-mm.html
+length,mm-to-cm,5,"millimeter to cm",14800,21,https://www.rapidtables.com/convert/length/mm-to-cm.html
+length,mi-to-km,9,"mile to kilometer",14800,18,https://www.rapidtables.com/convert/length/mile-to-km.html
+length,m-to-cm,6,"m to cm",9900,15,https://www.calculator.net/conversion-calculator.html
+length,cm-to-m,5,"cm to m",9900,15,https://www.calculator.net/
+temperature,f-to-c,21,"fahrenheit to celsius",8100,17,https://www.calculatorsoup.com/calculators/conversions/fahrenheit-to-celsius.php
+temperature,c-to-f,31,"c to f",8100,16,https://www.calculatorsoup.com/calculators/conversions/celsius-to-fahrenheit.php
+weight,t-to-kg,4,"1 ton to kg",8100,7,https://www.rapidtables.com/convert/weight/ton-to-kg.html
+length,cm-to-mm,6,"cm to mm",6600,17,https://www.omnicalculator.com/conversion/cm-to-mm-conversion
+length,m-to-in,10,"m into inches",6600,19,https://www.rapidtables.com/convert/length/meter-to-inch.html
+weight,oz-to-g,2,"ounce to gram",6600,23,https://www.rapidtables.com/convert/weight/ounce-to-gram.html
+length,km-to-mi,7,"1 kilometer to miles",6600,14,https://www.rapidtables.com/convert/length/km-to-mile.html?x=1
+weight,g-to-kg,5,"g to kg",6600,19,https://www.rapidtables.com/convert/weight/gram-to-kg.html
+volume,gal-to-l,2,"1 gallon to liter",5400,19,https://www.omnicalculator.com/conversion/gallon
+length,km-to-m,5,"kilometer to meter",5400,21,https://www.omnicalculator.com/conversion/kilometer-meter-conversion
+weight,kg-to-g,5,"how many kg in g",5400,18,https://www.rapidtables.com/convert/weight/kg-to-gram.html
+length,m-to-km,3,"meter to kilometer",5400,21,https://www.rapidtables.com/convert/length/meter-to-km.html
+length,yd-to-m,4,"convert yard to meter",4400,16,https://www.omnicalculator.com/conversion/yards-to-meters
+data,gb-to-mb,5,"gb to mb",4400,18,https://www.omnicalculator.com/conversion/mb-to-gb-converter
+area,sqft-to-sqm,1,"sqft to sqm",4400,23,https://www.calculatorsoup.com/calculators/conversions/square-feet-to-square-meters.php
+volume,l-to-gal,4,"litre to gallon",3600,18,https://www.omnicalculator.com/conversion/l-to-gal
+time,s-to-min,1,"second to minute",3600,29,https://www.omnicalculator.com/conversion/seconds-to-minutes-converter
+area,sqm-to-sqft,3,"m2 to square feet",3600,22,https://www.calculatorsoup.com/calculators/conversions/square-meters-to-square-feet.php
+data,mb-to-gb,1,"mb to gb",2900,26,https://www.omnicalculator.com/conversion/mb-to-gb-converter
+length,mm-to-m,2,"mm to m",2900,20,https://www.omnicalculator.com/conversion/mm-to-m-conversion
+time,min-to-h,1,"minute to hour",2900,26,https://www.calculatorsoup.com/calculators/conversions/minutes-to-hours.php
+weight,oz-to-lb,5,"oz to lb",2900,20,https://www.rapidtables.com/convert/weight/ounce-to-pound.html
+length,m-to-yd,2,"m to yard",2400,19,https://www.rapidtables.com/convert/length/meter-to-yard.html
+area,sqft-to-acre,1,"sqft to acre",1900,20,https://www.calculatorsoup.com/calculators/conversions/square-feet-to-acres.php
+length,km-to-ft,3,"km to feet",1900,20,https://www.rapidtables.com/convert/length/km-to-feet.html
+weight,oz-to-kg,2,"oz to kg",1900,18,https://www.rapidtables.com/convert/weight/ounce-to-kg.html
+area,acre-to-sqft,3,"acre to sqft",1900,17,https://www.calculatorsoup.com/calculators/conversions/acres-to-square-feet.php
+weight,kg-to-oz,1,"kg to ounce",1900,24,https://www.rapidtables.com/convert/weight/kg-to-ounce.html
+weight,lb-to-oz,2,"lbs to oz",1900,21,https://www.rapidtables.com/convert/weight/pound-to-ounce.html
+weight,mg-to-g,4,"mg to gram",1900,23,https://www.rapidtables.com/convert/weight/mg-to-gram.html
+length,ft-to-km,2,"foot to km",1900,18,https://www.rapidtables.com/convert/length/feet-to-km.html
+time,wk-to-mo,4,"pregnancy week to month calculator",1300,30,https://www.calculator.net/pregnancy-calculator.html
+length,yd-to-ft,2,"yard to feet",1300,19,https://www.rapidtables.com/convert/length/yard-to-feet.html
+time,h-to-day,1,"hour to day",1000,27,https://www.calculator.net/hours-calculator.html
+length,ft-to-yd,1,"foot to yard",1000,23,https://www.rapidtables.com/convert/length/feet-to-yard.html
+time,s-to-h,1,"second to hour",880,24,https://www.calculator.net/time-calculator.html
+time,h-to-min,1,"hour to minute",720,26,https://www.calculator.net/time-calculator.html

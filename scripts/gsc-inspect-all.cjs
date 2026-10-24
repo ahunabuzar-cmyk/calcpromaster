@@ -49,10 +49,22 @@ function post(body, accessToken) {
   });
 }
 
-function streamSitemap() {
+// The netlify.app host now 301s to the apex domain, so a single https.get()
+// returned "sitemap HTTP 301" and the whole inspection run aborted before the
+// first request. Follow up to 4 hops instead of hard-coding one host: the
+// deployed host may change again, and the GSC property below is what the API
+// validates, not this URL.
+function streamSitemap(url, hops) {
+  url = url || 'https://calcpromaster.netlify.app/sitemap.xml';
+  hops = hops == null ? 0 : hops;
   return new Promise((resolve, reject) => {
-    https.get('https://calcpromaster.netlify.app/sitemap.xml', (res) => {
-      if (res.statusCode !== 200) return reject(new Error('sitemap HTTP ' + res.statusCode));
+    https.get(url, (res) => {
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location && hops < 4) {
+        res.resume();
+        const next = new URL(res.headers.location, url).toString();
+        return resolve(streamSitemap(next, hops + 1));
+      }
+      if (res.statusCode !== 200) return reject(new Error('sitemap HTTP ' + res.statusCode + ' (' + url + ')'));
       let buf = ''; res.setEncoding('utf8');
       res.on('data', (c) => (buf += c));
       res.on('end', () => resolve([...buf.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1])));
@@ -69,7 +81,10 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
   const fresh = has('--fresh');
   let conc = val('--concurrency', 6);
 
-  const siteUrl = 'https://calcpromaster.netlify.app/'; // NOTE: trailing slash REQUIRED (GSC property id form)
+  // GSC property id form: trailing slash REQUIRED. This must match the verified
+  // property exactly — data/gsc-coverage-report.json and gsc-aggregate-coverage.cjs
+  // both key on the apex domain, so the old netlify.app id was rejected.
+  const siteUrl = 'https://calcpromaster.com/';
   const urls = await streamSitemap();
   console.log('sitemap URLs:', urls.length);
 

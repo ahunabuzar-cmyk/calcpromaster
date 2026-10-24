@@ -35,10 +35,14 @@ const OUT = path.join(ROOT, 'sitemap.xml');
 const STATIC_PAGES = [
   ['', 'weekly', '1.0'],
   ['about', 'monthly', '0.5'],
+  ['stats', 'weekly', '0.8'],
+  ['changelog', 'weekly', '0.5'],
   ['privacy', 'monthly', '0.5'],
   ['terms', 'monthly', '0.5'],
   ['contact', 'monthly', '0.5'],
   ['editorial-policy', 'monthly', '0.5'],
+  ['graph', 'monthly', '0.6'],
+  ['geometry-lab', 'monthly', '0.6'],
   ['disclaimer-general', 'monthly', '0.5'],
   ['disclaimer-finance', 'monthly', '0.5'],
   ['disclaimer-health', 'monthly', '0.5'],
@@ -134,6 +138,69 @@ const STATIC_PAGES = [
 const LOCALES = ['en', 'es', 'hi', 'ur', 'fr', 'de', 'pt', 'ar', 'ru', 'ja', 'zh', 'ko', 'it', 'nl', 'tr', 'id', 'vi', 'th', 'bn'];
 
 const today = new Date().toISOString().slice(0, 10);
+
+// ====== Honest <lastmod> ======
+// A sitemap that stamps EVERY url with today's date on every rebuild teaches
+// Google to ignore <lastmod> entirely (its docs say the value is used only while
+// it stays "consistently and verifiably accurate"), and recrawl speed is exactly
+// what consolidates duplicated URLs. So the date is now content-derived:
+//
+//   data/sitemap-lastmod.json  { "/path": { "date": "YYYY-MM-DD", "hash": "<sha1>" } }
+//
+// The hash is taken from the SERVED html with build-varying noise removed
+// (?v=<build> asset URLs, the "Last reviewed" stamp and schema dateModified), so
+// a rebuild that changes nothing keeps every old date, and only a page whose
+// content actually changed gets today's. Without deploy/ (a fresh checkout) the
+// dates already in sitemap.xml are kept — no information means no date change.
+const LEDGER = path.join(ROOT, 'data', 'sitemap-lastmod.json');
+
+function normalizeBuildNoise(html) {
+  return String(html)
+    .replace(/\?v=[^"'&>]+/g, '?v=BUILD')
+    .replace(/"dateModified"\s*:\s*"[^"]*"/g, '"dateModified":"BUILD"')
+    .replace(/Last reviewed:\s*[^<]*/g, 'Last reviewed: BUILD');
+}
+
+function contentHash(html) {
+  return require('crypto').createHash('sha1').update(normalizeBuildNoise(html)).digest('hex').slice(0, 16);
+}
+
+function servedFileFor(urlPath) {
+  const clean = urlPath.replace(/^https?:\/\/[^/]+/, '');
+  if (clean === '/' || clean === '') return path.join(ROOT, 'deploy', 'index.html');
+  return clean.endsWith('/')
+    ? path.join(ROOT, 'deploy', clean.replace(/^\//, ''), 'index.html')
+    : path.join(ROOT, 'deploy', clean.replace(/^\//, '') + '.html');
+}
+
+function loadLedger() {
+  try {
+    const j = JSON.parse(fs.readFileSync(LEDGER, 'utf8'));
+    return j && typeof j === 'object' ? j : {};
+  } catch (e) { return {}; }
+}
+
+function previousDates() {
+  const out = {};
+  try {
+    const xml = fs.readFileSync(OUT, 'utf8');
+    for (const m of xml.matchAll(/<url>\s*<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>/g)) out[m[1]] = m[2];
+  } catch (e) { /* first build */ }
+  return out;
+}
+
+function lastmodFor(loc, ledger, prev) {
+  const p = loc.replace(/^https?:\/\/[^/]+/, '');
+  const file = servedFileFor(p);
+  if (!fs.existsSync(file)) {
+    // Not built here: keep what the committed sitemap said, else today.
+    return { date: prev[loc] || today, hash: ledger[p] && ledger[p].hash };
+  }
+  const hash = contentHash(fs.readFileSync(file, 'utf8'));
+  const known = ledger[p];
+  if (known && known.hash === hash && known.date) return { date: known.date, hash };
+  return { date: today, hash };
+}
 
 // ====== Long-tail virtual landing pages (programmatic SEO) ======
 // Format: [catKey, toolId, modifier]
@@ -415,11 +482,17 @@ function main() {
   xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"';
   if (withI18n) xml += ' xmlns:xhtml="http://www.w3.org/1999/xhtml"';
   xml += '>\n';
+  const ledger = loadLedger();
+  const prev = previousDates();
+  const nextLedger = {};
+
   urls.forEach(u => {
     const loc = canonical(u.loc);
+    const lm = lastmodFor(loc, ledger, prev);
+    nextLedger[loc.replace(/^https?:\/\/[^/]+/, '')] = { date: lm.date, hash: lm.hash };
     xml += '  <url>\n';
     xml += '    <loc>' + loc + '</loc>\n';
-    xml += '    <lastmod>' + today + '</lastmod>\n';
+    xml += '    <lastmod>' + lm.date + '</lastmod>\n';
     xml += '    <changefreq>' + u.freq + '</changefreq>\n';
     xml += '    <priority>' + u.prio + '</priority>\n';
     if (withI18n) {
@@ -434,7 +507,14 @@ function main() {
   xml += '</urlset>\n';
 
   fs.writeFileSync(OUT, xml, 'utf8');
+  fs.writeFileSync(LEDGER, JSON.stringify(nextLedger, null, 1) + '\n');
+  const bumped = Object.keys(nextLedger).filter((k) => !ledger[k] || ledger[k].date !== nextLedger[k].date).length;
   console.log('sitemap.xml regenerated: ' + urls.length + ' URLs (' + totalTools + ' tools across ' + files.length + ' categories)' + (withI18n ? ' + i18n alternates' : ''));
+  console.log('  lastmod: ' + bumped + ' URL(s) changed, ' + (urls.length - bumped) + ' kept their previous date');
 }
 
-main();
+module.exports = { normalizeBuildNoise, contentHash, servedFileFor, lastmodFor };
+
+// Only regenerate when run directly — requiring the module (unit tests) must not
+// rewrite sitemap.xml or the ledger as a side effect.
+if (require.main === module) main();

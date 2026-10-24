@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fuel Cost Calculator — Trip Cost Formula &amp; Efficiency Savings</title>
+  <title>Fuel Cost Calculator — Trip Cost &amp; Efficiency</title>
   <meta name="description" content="The fuel cost formula (distance ÷ efficiency × price), a worked 15,000 km example, and what a small efficiency difference saves over a year.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
@@ -56,7 +56,9 @@
   </style>
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Fuel Cost</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Fuel Cost</p>
   <h1>Fuel Cost: The Three-Variable Formula</h1>
   <p class="updated">Auto · 5 min read · Last updated September 2026</p>
 
@@ -78,16 +80,52 @@
   <p>The jump from 12 to 15 saves 25,000 a year; 15 to 18 saves 16,667. Efficiency improvements have diminishing returns — which is why the biggest lever is usually total distance driven, not the last km/L.</p>
 
   <h2>Where real-world numbers drift</h2>
-  <p>Manufacturer figures are lab-cycle numbers; city driving, short trips, roof racks and cold starts commonly cost 10–25% vs the brochure. Measure your own consumption over two or three full tanks (fill to the same point, note litres and km), then use <em>your</em> figure in the <a href="/auto/fuel-cost">Fuel Cost Calculator</a> — and the <a href="/auto/fuel-efficiency">efficiency converter</a> if you need to move between km/L, mpg and L/100km.</p>
+  <p>Manufacturer figures are lab-cycle numbers; city driving, short trips, roof racks and cold starts commonly cost 10–25% vs the brochure. Measure your own consumption over two or three full tanks (fill to the same point, note litres and km), then use <em>your</em> figure in the <a href="/auto/fuel-cost/">Fuel Cost Calculator</a> — and the <a href="/auto/fuel-efficiency/">efficiency converter</a> if you need to move between km/L, mpg and L/100km.</p>
 
   <h2>Try the calculators</h2>
   <p class="related">
-    <a href="/auto/fuel-cost" class="cta">Fuel Cost Calculator</a>
-    <a href="/auto/fuel-efficiency" class="cta">Efficiency Converter</a>
+    <a href="/auto/fuel-cost/" class="cta">Fuel Cost Calculator</a>
+    <a href="/auto/fuel-efficiency/" class="cta">Efficiency Converter</a>
     <a href="/guides/auto" class="cta">Auto Guides</a>
   </p>
 
-  <h2>Frequently asked questions</h2>
+<!-- guide-worked-example:start -->
+<h2>Worked example: Fuel Cost Calculator at its default inputs</h2>
+<p>Take the default setup on <a href="/auto/fuel-cost/">Fuel Cost Calculator</a>: no fields changed, nothing tuned to a nice round number. Run in the site's own engine, those values produce the answer below.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Distance (km)</td><td>500</td></tr><tr><td>Mileage (km/L)</td><td>15</td></tr><tr><td>Fuel Price ($/L)</td><td>1.5</td></tr><tr><td>Toll/Parking ($)</td><td>0</td></tr></tbody></table>
+<p><strong>Result:</strong> $50.00</p>
+<h2>Distance (km): half, as given, and half again</h2>
+<p>The table below varies distance (km) alone — half, the default, and half again.</p>
+<table><thead><tr><th>Distance (km)</th><th>Result</th></tr></thead><tbody><tr><td>250</td><td>$25.00</td></tr><tr><td>500</td><td>$50.00</td></tr><tr><td>750</td><td>$75.00</td></tr></tbody></table>
+<p>Read the three rows as a range: the spread between them is how much the answer depends on distance (km) alone, with everything else held still.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>Mileage is the input people guess wrong</h2>
+<p>Most drivers quote the figure from the brochure, not from their own car. Measure it at the pump: fill the tank, reset the trip meter, drive normally, fill again at the same pump, and divide distance by the litres (or gallons) it took to refill. Two or three tanks averaged is enough.</p>
+<p>City driving with short trips, air-conditioning and cold starts can be 20-30% worse than the highway number. If most of your driving is a school run, use the city figure or the calculation will understate the cost of every trip.</p>
+<h2>Price per litre is not the price you pay</h2>
+<p>The pump price changes weekly and varies by station, so a trip costed at last month's price is already stale. Cost the round trip at the highest price you have seen recently: the difference is a few percent, and it is the direction the error usually runs.</p>
+<p>For a recurring commute, calculate the monthly cost rather than the per-trip cost. Monthly fuel is a fixed line in most household budgets even though the underlying maths is variable, and seeing it that way makes carpooling or a route change comparable.</p>
+<h2>What the fuel number leaves out</h2>
+<p>Fuel is roughly a third to a half of what a car costs to run. Tolls, parking, servicing, tyres, insurance and depreciation do not appear in a fuel calculator, and on a long commute the depreciation per kilometre can exceed the fuel per kilometre.</p>
+<p>That does not make the fuel figure useless — it is the right number for "what will this trip cost me today". It is the wrong number for "can I afford this car", which needs the ownership total.</p>
+<h2>Idling and load are real costs</h2>
+<p>An engine idling in traffic burns fuel for zero distance, so a route with fewer stops often beats a shorter route. Air-conditioning adds a measurable load, more so in small engines and in stop-start traffic than on the highway.</p>
+<p>Roof racks, full boots and under-inflated tyres all raise consumption. None of them are inputs in a fuel calculator, which is why the tool is a good estimate and a poor substitute for your own three-tank measurement.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/ev-vs-petrol">EV vs Petrol</a></li>
+    <li><a href="/guides/gear-ratio">Gear Ratio</a></li>
+    <li><a href="/guides/auto">Auto & Vehicle Guides</a></li>
+    <li><a href="/guides/engineering">Engineering Guides</a></li>
+  </ul>
+
+<h2>Frequently asked questions</h2>
   <h3>How do I calculate the fuel cost of a trip?</h3>
   <p>Distance ÷ efficiency × fuel price. A 500 km trip at 15 km/L with fuel at 100/L: 500 ÷ 15 = 33.3 L × 100 = 3,333.</p>
   <h3>How much does driving 15,000 km a year cost in fuel?</h3>
@@ -97,7 +135,8 @@
   <h3>Why does my real fuel cost exceed the calculation?</h3>
   <p>Measured consumption is usually worse than brochure figures: idling, short trips, traffic and load all reduce efficiency. Meter your own tanks and use that number.</p>
 
-  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <p class="related"><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog/">Blog</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

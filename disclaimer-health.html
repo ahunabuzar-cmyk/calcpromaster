@@ -10,14 +10,24 @@
   <link rel="canonical" href="https://calcpromaster.netlify.app/disclaimer-health">
   <link rel="icon" type="image/svg+xml" href="icon.svg">
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Health Disclaimer",
-    "url": "https://calcpromaster.netlify.app/disclaimer-health",
-    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
-    "inLanguage": "en"
-  }
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Health Disclaimer",
+      "url": "https://calcpromaster.netlify.app/disclaimer-health",
+      "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+      "inLanguage": "en"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Health Disclaimer", "item": "https://calcpromaster.netlify.app/disclaimer-health" }
+      ]
+    }
+  ]
   </script>
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
@@ -96,6 +106,12 @@
       <h2>How Our Health Calculations Work (Methodology)</h2>
       <p>Our health tools use formulas published in peer-reviewed research and clinical practice — for example, Mifflin-St Jeor for basal metabolic rate, the standard BMI weight/height ratio, and established heart-rate zone percentages. Each calculator displays its formula, a worked example, and its assumptions on the page, and states its limits: the population ranges a formula was derived from, what activity multipliers assume, and when a result should be discussed with a clinician. All calculations run entirely in your browser — no health data is sent anywhere.</p>
 
+      <h2>What the Formulas Assume</h2>
+      <p>Most health formulas were derived from a specific population and inherit its assumptions. BMI was built for population screening, not for individuals with high muscle mass, and it says nothing about where fat sits. Basal metabolic rate equations assume a resting, fasted state and a typical body composition; activity multipliers then stretch that number by a fixed factor even though two people with the same step count can burn very different amounts. Heart-rate formulas estimate a maximum from age alone, which can be off by ten to fifteen beats per minute for any one person. Pregnancy, menopause, thyroid conditions and some medications move these numbers further than any calculator can follow.</p>
+
+      <h2>When to Ignore the Number</h2>
+      <p>Treat a health calculator result as a starting point for a conversation, not a target to hit. If a figure conflicts with how you feel, with a trend your clinician is tracking, or with advice you have already been given, the clinical advice wins. A single reading of weight, body fat or calories is noise; a trend over weeks is signal. Do not use these tools to adjust medication, to set a calorie floor below what a professional recommended, or to interpret symptoms.</p>
+
       <h2>Your Responsibility</h2>
       <p>You are solely responsible for:</p>
       <ul>
@@ -108,8 +124,10 @@
     </div>
   </main>
   <footer>
-    <a href="/">CalcProMaster</a> · 1219+ free online calculators · All calculations run in your browser
+    <a href="/">CalcProMaster</a> · 1285+ free online calculators · All calculations run in your browser
     <br><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+    <br><a href="https://fazier.com/launches/calcpromaster.com" target="_blank" rel="noopener"><img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&amp;theme=neutral" alt="Fazier badge" width="120" height="40" style="vertical-align:middle;border:0;width:120px;height:40px;object-fit:contain"></a>
+    <a href="https://startupfa.me/s/calcpromaster?utm_source=calcpromaster.com" target="_blank" rel="noopener"><img src="https://startupfa.me/badges/featured-badge.webp" alt="CalcProMaster - Featured on Startup Fame" width="171" height="54" style="vertical-align:middle;border:0"></a>
   </footer>
 </body>
 </html>

@@ -1,0 +1,46 @@
+[
+  {
+    "date": "2026-10-11",
+    "capturedAt": "2026-10-11T08:38:37.599Z",
+    "runRate7": 1241,
+    "runRate7PerMonth": 37767,
+    "windowFrom": "2026-09-28",
+    "windowTo": "2026-10-04",
+    "indexed": 952,
+    "notIndexed": 923,
+    "indexedPct": 50.8
+  },
+  {
+    "date": "2026-10-14",
+    "capturedAt": "2026-10-14T14:52:05.648Z",
+    "runRate7": 1241,
+    "runRate7PerMonth": 37767,
+    "windowFrom": "2026-09-28",
+    "windowTo": "2026-10-04",
+    "indexed": 952,
+    "notIndexed": 923,
+    "indexedPct": 50.8
+  },
+  {
+    "date": "2026-10-15",
+    "capturedAt": "2026-10-15T14:06:43.623Z",
+    "runRate7": 1241,
+    "runRate7PerMonth": 37767,
+    "windowFrom": "2026-09-28",
+    "windowTo": "2026-10-04",
+    "indexed": 952,
+    "notIndexed": 923,
+    "indexedPct": 50.8
+  },
+  {
+    "date": "2026-10-17",
+    "capturedAt": "2026-10-17T13:08:25.519Z",
+    "runRate7": 1241,
+    "runRate7PerMonth": 37767,
+    "windowFrom": "2026-09-28",
+    "windowTo": "2026-10-04",
+    "indexed": 952,
+    "notIndexed": 923,
+    "indexedPct": 50.8
+  }
+]

@@ -317,13 +317,49 @@ const ConfidenceNotes = (function () {
     const observer = new MutationObserver(function () {
       document.querySelectorAll('.result-section, .calc-result, [data-tool-id]').forEach(function (el) {
         const toolId = el.dataset.toolId || el.getAttribute('data-tool-id');
-        if (toolId && !el.querySelector('.confidence-panel')) {
-          const panelId = 'confidence-' + toolId + '-' + Date.now();
-          const div = document.createElement('div');
-          div.id = panelId;
-          el.appendChild(div);
-          renderConfidencePanel(toolId, panelId);
+        if (!toolId || el.querySelector('.confidence-panel')) return;
+        // Never attach inside a panel we just rendered: the panel's own markup
+        // carries data-tool-id links, so the observer saw them as fresh hosts and
+        // nested a second identical "Accuracy" card inside the first (two
+        // panels measured on the homepage cod card, one 236px wide inside the
+        // 320px one).
+        if (el.closest('.confidence-panel')) return;
+        if (el.getAttribute('data-confidence-done') === '1') return;
+        // One panel per card: the cod card carries THREE hosts with the same
+        // data-tool-id (its action button plus the share/favourite buttons), so
+        // the favourite button used to receive a second identical panel —
+        // inside the absolutely-positioned .cod-share, which grew to 568px and
+        // pushed the whole document 52px wider than the viewport (CLS 0.103).
+        // Scoping the check to the surrounding card keeps tool pages, where each
+        // result block is its own host, working.
+        const hostCard = el.closest('.calc-of-day-card, .tool-card, .result-section, .calc-result, article, section') || el.parentNode;
+        if (hostCard && hostCard.querySelector && hostCard.querySelector('.confidence-panel')) {
+          el.setAttribute('data-confidence-done', '1');
+          return;
         }
+
+        const panelId = 'confidence-' + toolId + '-' + Date.now();
+        const div = document.createElement('div');
+        div.id = panelId;
+
+        // A panel contains a <details><summary>, i.e. a focusable control. Holding
+        // it inside a <button>/<a> made the page fail axe's nested-interactive
+        // rule (serious; measured on the homepage cod card 2026-10-17, where the
+        // card's "Open Calculator" and favourite buttons both swallowed a panel).
+        // For interactive hosts, put the panel AFTER the control so it stays in
+        // the card but is reachable on its own.
+        var interactive = /^(BUTTON|A|SUMMARY|LABEL|INPUT|SELECT|TEXTAREA)$/.test(el.tagName);
+        if (interactive && el.parentNode) {
+          if (el.parentNode.querySelector('.confidence-panel')) { // card already has one
+            el.setAttribute('data-confidence-done', '1');
+            return;
+          }
+          el.insertAdjacentElement('afterend', div);
+        } else {
+          el.appendChild(div);
+        }
+        el.setAttribute('data-confidence-done', '1');
+        renderConfidencePanel(toolId, panelId);
       });
     });
     observer.observe(domTarget, { childList: true, subtree: true });

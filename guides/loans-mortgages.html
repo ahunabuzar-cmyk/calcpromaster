@@ -46,16 +46,62 @@
     .cat-card p { margin: 0; color: #4b5563; font-size: 0.95rem; }
     .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
     .updated { color: #6b7280; font-size: 0.85rem; }
-  </style>
+/* guide-depth-css:start */
+.guide-lede{font-weight:600;border-left:3px solid #4f46e5;padding-left:12px;margin:10px 0 4px}
+    .guide-pitfalls{margin:8px 0 14px 20px}
+    .seo-faqs h3{margin:16px 0 4px}
+/* guide-depth-css:end */
+</style>
+
+<!-- guide-faq-schema:start -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is almost all of my early payment interest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because interest is charged on the outstanding balance, and at the start the balance is at its largest. Each payment clears that period’s interest first, and only what remains reduces the principal. As the balance falls, the interest share falls with it and the principal share rises."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does prepaying always save money?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It always reduces the interest that principal would have accrued, so the saving is real — but whether it is worth it depends on fees and on what else the money would do. Some loans charge an early-repayment penalty, and an emergency fund or a higher-rate debt may be the better use of the same cash."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Fixed or variable — what does the calculator assume?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A fixed rate for the whole term, unless you change it. Real variable loans reset, so the projection is only as good as the rate path you enter. Run a scenario a couple of points higher to see whether the payment stays affordable, because that is the risk the fixed-versus-variable decision is really about."
+      }
+    }
+  ]
+}
+</script>
+<!-- guide-faq-schema:end -->
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Loans &amp; Mortgages</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Loans &amp; Mortgages</p>
   <h1>Loan &amp; Mortgage Guides</h1>
   <p class="updated">Part of the CalcProMaster guides library · Updated September 2026</p>
 
   <p>Every guide shows the formula, a worked example, the assumptions, and the honest limits of the math — then links the calculator that does it for you.</p>
 
-  <h2>How loan math actually works</h2>
+
+<!-- guide-lede:start -->
+<p class="guide-lede">Loan maths is an amortisation calculation rather than a multiplication: the payment is sized so the balance reaches zero, and the split between interest and principal changes in every single period.</p>
+<!-- guide-lede:end -->
+<h2>How loan math actually works</h2>
   <p>Three relationships drive every loan, mortgage and investment calculation in this section. First, <strong>amortization</strong>: a fixed payment splits each month into interest (charged on the remaining balance) and principal (the rest) — so the interest share is largest in month one and falls every month after. The <a href="/guides/emi">EMI guide's</a> computed table shows the split to the cent.</p>
   <p>Second, <strong>compounding</strong>: money grows by (1 + r/n)<sup>nt</sup> — the frequency n matters almost as much as the rate r. At 8% for 10 years, $10,000 becomes $21,589 compounded annually but $22,553 monthly; the <a href="/guides/compound-interest">compound interest guide</a> shows where that difference comes from and when it reverses for loans you owe.</p>
   <p>Third, <strong>total cost vs monthly comfort</strong>: a mortgage stretched to 30 years halves the payment but nearly triples lifetime interest versus 15 years at the same rate. Every guide here returns to that tension, because it is the decision lenders' ads quietly skip. When a number matters — a prepayment, a refinance, an extra principal payment — compute it with your own figures rather than trusting a rule of thumb; the matching calculators exist precisely so you never have to.</p>
@@ -80,15 +126,53 @@
     <p>Owning vs renting on every line — EMI, maintenance, tax, invested down payment — with the breakeven math and when renting wins on purpose.</p>
   </div>
 
-  <h2>Try the matching calculators</h2>
+
+<!-- guide-extra-depth:start -->
+<h2>What this category covers</h2>
+<p>EMI, amortisation, affordability, refinancing, prepayment and rent-versus-buy. They all rest on one structure: a payment that covers interest first and principal second, with the interest share falling over time.</p>
+<p>Understanding that schedule explains why early prepayment saves so much and why a small rate change moves the total by more than expected.</p>
+<h2>The rate is not the only cost</h2>
+<p>Processing fees, insurance, valuation charges, stamp duty and prepayment penalties all sit outside the quoted rate. An annual percentage rate is meant to include them; a headline rate is not.</p>
+<p>Compare the APR and the total cost over the term, not the monthly payment. A longer term lowers the payment and raises the total, which is the trade the lender is selling.</p>
+<h2>Fixed, floating and the risk you carry</h2>
+<p>A fixed rate transfers interest-rate risk to the lender and prices that transfer in. A floating rate is cheaper at the start and exposes you to repricing, which matters most when the loan is large relative to income.</p>
+<p>Affordability should be tested at the highest plausible rate, not the current one. A payment that only works at today's rate is a plan with a single point of failure.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/debt-payoff">Debt Snowball vs Avalanche</a></li>
+    <li><a href="/guides/debt-ratio">Debt-to-Income Ratio</a></li>
+    <li><a href="/guides/credit-card-minimum">The Minimum-Payment Trap, in Actual Numbers</a></li>
+    <li><a href="/guides/rent-vs-buy">Rent vs Buy</a></li>
+  </ul>
+
+<!-- guide-depth:start -->
+<h2>Where these answers go wrong</h2><ul class="guide-pitfalls"><li>Comparing offers on the headline rate when fees, repayment frequency and term all change the total cost.</li><li>Estimating total interest as payment × periods minus principal, which is close but ignores fees and any rate change.</li><li>Assuming an extra payment shortens the term by a fixed amount rather than removing the interest on the principal it clears.</li><li>Quoting an advertised rate without checking what the comparison figure includes and what it leaves out.</li></ul><h2>Frequently asked questions</h2><div class="seo-faqs"><h3>Why is almost all of my early payment interest?</h3><p>Because interest is charged on the outstanding balance, and at the start the balance is at its largest. Each payment clears that period’s interest first, and only what remains reduces the principal. As the balance falls, the interest share falls with it and the principal share rises.</p><h3>Does prepaying always save money?</h3><p>It always reduces the interest that principal would have accrued, so the saving is real — but whether it is worth it depends on fees and on what else the money would do. Some loans charge an early-repayment penalty, and an emergency fund or a higher-rate debt may be the better use of the same cash.</p><h3>Fixed or variable — what does the calculator assume?</h3><p>A fixed rate for the whole term, unless you change it. Real variable loans reset, so the projection is only as good as the rate path you enter. Run a scenario a couple of points higher to see whether the payment stays affordable, because that is the risk the fixed-versus-variable decision is really about.</p></div>
+<!-- guide-depth:end -->
+<!-- guide-worked-example:start -->
+<h2>Worked example: Loan EMI Calculator at its default inputs</h2>
+<p>This is the answer <a href="/finance/loan-emi/">Loan EMI Calculator</a> gives before you touch anything — the defaults as shipped, computed live rather than copied from a sample.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Loan Amount</td><td>100000</td></tr><tr><td>Interest Rate (% per year)</td><td>8.5</td></tr><tr><td>Loan Term (years)</td><td>5</td></tr><tr><td>Payment per Period (for solve modes)</td><td>2000</td></tr><tr><td>Interest-Only Period (years)</td><td>2</td></tr></tbody></table>
+<p><strong>Result:</strong> Payment: $2,051.65 / monthly</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Solving for Payment (DCC: Actual/365)</li><li>Step 1: Rate per monthly = 8.5% → 0.7083% (Actual/365)</li><li>Step 2: Periods n = 5×12 = 60</li><li>Step 3: PMT = P×r×(1+r)^n / ((1+r)^n − 1)</li></ol>
+<h2>Loan Amount — three values, three answers</h2>
+<p>Loan Amount is the first input worth testing, so here it is at three sizes.</p>
+<table><thead><tr><th>Loan Amount</th><th>Result</th></tr></thead><tbody><tr><td>50,000</td><td>Payment: $1,025.83 / monthly</td></tr><tr><td>100,000</td><td>Payment: $2,051.65 / monthly</td></tr><tr><td>150,000</td><td>Payment: $3,077.48 / monthly</td></tr></tbody></table>
+<p>If the rows barely differ, loan amount is not your lever — change a different input. If they swing widely, get that number right before trusting the total.</p>
+<!-- guide-worked-example:end -->
+<h2>Try the matching calculators</h2>
   <p>
-    <a href="/finance/loan-emi" class="cta">Loan EMI Calculator</a>
-    <a href="/finance/compound-interest" class="cta">Compound Interest Calculator</a>
-    <a href="/finance/mortgage" class="cta">Mortgage Calculator</a>
-    <a href="/finance/rent-vs-buy" class="cta">Rent vs Buy Calculator</a>
+    <a href="/finance/loan-emi/" class="cta">Loan EMI Calculator</a>
+    <a href="/finance/compound-interest/" class="cta">Compound Interest Calculator</a>
+    <a href="/finance/mortgage/" class="cta">Mortgage Calculator</a>
+    <a href="/finance/rent-vs-buy/" class="cta">Rent vs Buy Calculator</a>
   </p>
 
-  <p><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
+  <p><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

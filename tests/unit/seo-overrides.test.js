@@ -251,3 +251,80 @@ describe('apply-seo-overrides / CTR_OVERRIDES data quality', () => {
     }
   });
 });
+
+describe('apply-seo-overrides / TITLE_OVERRIDES (GSC push list)', () => {
+  const titles = Object.entries(S.TITLE_OVERRIDES);
+  const push = require('../../data/top10-push-list.json');
+  const allTools = (() => {
+    const file = path.join(process.cwd(), 'js', 'seo-content.js');
+    const sandbox = { window: {}, console: { log() {}, warn() {}, error() {} } };
+    vm.createContext(sandbox);
+    vm.runInContext(fs.readFileSync(file, 'utf8'), sandbox);
+    return sandbox.window.TOOL_SEO;
+  })();
+
+  it('names a page that exists', () => {
+    for (const [id] of titles) expect(allTools[id], id).toBeTruthy();
+  });
+
+  it('respects the build title gate and never starts with "Free "', () => {
+    for (const [id, title] of titles) {
+      expect(title.length, id).toBeGreaterThanOrEqual(30);
+      expect(title.length, id + ' title (build gate 30-60)').toBeLessThanOrEqual(60);
+      expect(title, id).not.toMatch(/^Free /);
+    }
+  });
+
+  it('keeps every title unique, against each other and against the CTR overrides', () => {
+    const all = [
+      ...titles.map(([id, t]) => [id, t]),
+      ...Object.entries(S.CTR_OVERRIDES).map(([id, o]) => [id, o.title])
+    ];
+    const seen = new Map();
+    const dups = [];
+    for (const [id, t] of all) {
+      const k = t.toLowerCase().replace(/\s+/g, ' ');
+      if (seen.has(k)) dups.push(seen.get(k) + ' == ' + id + ': ' + t);
+      seen.set(k, id);
+    }
+    expect(dups).toEqual([]);
+  });
+
+  it('is applied to the generated SEO source', () => {
+    const text = fs.readFileSync(path.join(process.cwd(), 'js', 'seo-content.js'), 'utf8');
+    for (const [id, title] of titles) {
+      expect(text, id).toContain(JSON.stringify(title));
+      expect(allTools[id].title, id).toBe(title);
+    }
+  });
+
+  // The point of the table is that the term the page's impressions actually
+  // arrive on now appears in its title. A row whose title omitted its own term
+  // would be the exact defect the push list reported, so it is asserted here:
+  // every entry must contain at least one of the terms its row was missing.
+  it('contains the missing term from each page\u2019s own push-list row', () => {
+    const rows = push.rows.filter((r) => r.verdict && r.verdict.verdict === 'add-term');
+    for (const [id, title] of titles) {
+      // Rows whose rewrite fixes a defective title without wearing the term
+      // (narration, count words) are listed explicitly instead of silently passing.
+      if (S.TITLE_OVERRIDE_NONTERM.includes(id)) continue;
+      const row = rows.find((r) => r.id === id);
+      if (!row) continue; // the one sitewide title defect (quartiles) is not a term row
+      const low = title.toLowerCase();
+      const present = (row.missing || []).filter((m) => low.includes(m.toLowerCase()));
+      expect(present.length, id + ' must state one of: ' + row.missing.join(', ') + ' \u2014 got "' + title + '"').toBeGreaterThan(0);
+    }
+  });
+
+  it('documents every add-term row it deliberately skipped', () => {
+    const rows = push.rows.filter((r) => r.verdict && r.verdict.verdict === 'add-term');
+    const answered = new Set([
+      ...Object.keys(S.TITLE_OVERRIDES),
+      ...S.TITLE_OVERRIDE_SKIPS,
+      ...S.TITLE_OVERRIDE_NONTERM
+    ]);
+    const unanswered = rows.filter((r) => !answered.has(r.id)).map((r) => r.id);
+    // Either a title override or an explicit, reasoned skip \u2014 never silence.
+    expect(unanswered).toEqual([]);
+  });
+});

@@ -2,7 +2,7 @@
 // PDF + EXPORT + MOBILE HEADER REGRESSION — production artifact
 // Verifies:
 //   1. PDF button exists and App.exportResultAsPdf() builds a report
-//      containing the CURRENT result (no stale data, count = 1206+).
+//      containing the CURRENT result (no stale data, count = the registry count).
 //   2. CSV export downloads the current result with A/B isolation.
 //   3. Mobile header (320-768): single-row logo+hamburger, controls
 //      hidden in dropdown, no horizontal overflow, menu toggles.
@@ -14,6 +14,11 @@ const { test, expect } = require('@playwright/test');
 // so this suite runs against the live CDN in CI; local runs default to the
 // artifact server like the other deploy specs.
 const BASE = process.env.PLAYWRIGHT_BASE_URL || process.env.E2E_BASE || 'http://localhost:3100';
+
+// The count printed in the export header must equal the registry total. It used
+// to be asserted as a hardcoded "1206+", which broke the suite the moment the
+// registry grew to 1282 (the export was correct, the expectation was stale).
+const TOOL_COUNT = require('../../all-tool-ids.json').length;
 
 function pdfReportText(page) {
   // Capture the REAL App.exportResultAsPdf() output without a print dialog
@@ -29,7 +34,7 @@ function pdfReportText(page) {
 }
 
 test.describe('PDF report', () => {
-  test('button exists and report contains current result + 1206+ count', async ({ page }) => {
+  test('button exists and report contains current result + the registry count', async ({ page }) => {
     await page.goto(BASE + '/finance/loan-emi?amount=50000&rate=6&years=3', { waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(2200);
     await expect(page.locator('button', { hasText: 'PDF' }).first()).toBeVisible();
@@ -37,7 +42,7 @@ test.describe('PDF report', () => {
     expect(txt).toContain('CalcProMaster');
     expect(txt).toMatch(/1,521|1521/);          // result B
     expect(txt).toContain('50000');             // input B
-    expect(txt).toContain('1206+');             // authoritative count
+    expect(txt).toContain(TOOL_COUNT + '+');    // authoritative count
     expect(txt).not.toContain('100000');        // no stale input A
   });
 });

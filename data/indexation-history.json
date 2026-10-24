@@ -1,0 +1,47 @@
+[
+  {
+    "date": "2026-10-04",
+    "indexed": 952,
+    "notIndexed": 923,
+    "known": 1875,
+    "pctIndexed": 50.8,
+    "issues": {
+      "Page with redirect": {
+        "pages": 208,
+        "source": "Website",
+        "validation": "Not Started"
+      },
+      "Excluded by ‘noindex’ tag": {
+        "pages": 54,
+        "source": "Website",
+        "validation": "Not Started"
+      },
+      "Alternate page with proper canonical tag": {
+        "pages": 9,
+        "source": "Website",
+        "validation": "Not Started"
+      },
+      "Server error (5xx)": {
+        "pages": 5,
+        "source": "Website",
+        "validation": "Not Started"
+      },
+      "Discovered - currently not indexed": {
+        "pages": 631,
+        "source": "Google systems",
+        "validation": "Not Started"
+      },
+      "Crawled - currently not indexed": {
+        "pages": 14,
+        "source": "Google systems",
+        "validation": "Not Started"
+      },
+      "Duplicate, Google chose different canonical than user": {
+        "pages": 2,
+        "source": "Google systems",
+        "validation": "Not Started"
+      }
+    },
+    "capturedAt": "2026-10-14T12:55:50.648Z"
+  }
+]

@@ -171,6 +171,26 @@ karne ki **zaroorat nahi** (Step 5 skip) — tumhara Google account hi owner hai
 Bas itna — ek baar login, token file save, phir hamesha ke liye kaam karta hai
 (token expire ho to dobara `npm run gsc:login`).
 
+### ⚠️ Plan B ka 7-din wala trap (root cause — 2026-10-14 ko confirm hua)
+
+OAuth consent screen agar **"Testing"** publishing status mein hai to Google
+**har refresh token ko 7 din** mein expire kar deta hai. Isi wajah se
+`gsc-refresh-token.json` (obtained `2026-10-05`) `2026-10-12` ko mar gaya aur
+`invalid_grant` dene laga — aur ye **har hafte repeat** hota rahega.
+
+Permanent fix (ek baar karna hai, 2 minute):
+
+> Google Cloud Console → **APIs & Services** → **OAuth consent screen** →
+> **Publishing status** → **PUBLISH APP**
+> <https://console.cloud.google.com/apis/credentials/consent>
+
+Publish karne ke baad bhi app *unverified* hi rehta hai — "Google hasn't verified
+this app" warning aata rahega, **Continue → Allow** se kaam chalta rahega. Farq
+sirf itna: refresh token 7 din par nahi marega.
+
+Consent screen **Testing** mein hi rehna ho to koi baat nahi — bas samajh lo ki
+**har 7 din** dobara `npm run gsc:login` chalan padega.
+
 ---
 
 ## Troubleshooting
@@ -183,4 +203,5 @@ Bas itna — ek baar login, token file save, phir hamesha ke liye kaam karta hai
 | `GA4 API HTTP 404` | `GA4_PROPERTY_ID` galat — numeric ID chahiye, G- nahi |
 | `NO_CREDENTIALS` | Plan A: `service-account.json` root mein nahi · Plan B: pehle `npm run gsc:login` chalao |
 | `refresh-token exchange failed` | Token revoke/expired — dobara `npm run gsc:login` |
+| `invalid_grant` ("Token has been expired or revoked") | Consent screen **"Testing"** mein hai → token har **7 din** mein marta hai. Permanent fix: Publishing status → **PUBLISH APP**. Turant: `npm run gsc:login` |
 | Script "0 events" | Normal — GA4 data 24-48h baad hi aata hai. Realtime abhi check karo. |

@@ -10,14 +10,24 @@
   <link rel="canonical" href="https://calcpromaster.netlify.app/privacy">
   <link rel="icon" type="image/svg+xml" href="icon.svg">
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Privacy Policy",
-    "url": "https://calcpromaster.netlify.app/privacy",
-    "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
-    "inLanguage": "en"
-  }
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Privacy Policy",
+      "url": "https://calcpromaster.netlify.app/privacy",
+      "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.netlify.app/" },
+      "inLanguage": "en"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://calcpromaster.netlify.app/privacy" }
+      ]
+    }
+  ]
   </script>
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
@@ -103,6 +113,12 @@
         <li><strong>Opt out of ads:</strong> Reject non-essential cookies or use an ad blocker.</li>
       </ul>
 
+      <h2>What Stays on Your Device</h2>
+      <p>Calculation history, favourites, theme choice and your cookie decision are stored in localStorage under this site's own key space. They survive a refresh, a browser restart and an offline session, and they disappear when you clear site data. Nothing in that store is transmitted: there is no account, no sync and no server-side copy to request or delete. On a shared computer, use the "Clear History" control before you leave, or open a private window so the store is discarded when you close it.</p>
+
+      <h2>Children's Privacy</h2>
+      <p>CalcProMaster is a general-audience reference site and does not knowingly collect personal information from children. Because there are no accounts, no profiles and no uploaded inputs, a child using the site creates no server-side record. Analytics and advertising scripts only load after a visitor accepts the cookie banner; declining leaves the calculators fully usable.</p>
+
       <h2>Data Security</h2>
       <p>Since all calculations run in your browser and no data is sent to our servers, your data is as secure as your device. We recommend:</p>
       <ul>
@@ -127,8 +143,10 @@
     </div>
   </main>
   <footer>
-    <a href="/">CalcProMaster</a> · 1219+ free online calculators · All calculations run in your browser
+    <a href="/">CalcProMaster</a> · 1285+ free online calculators · All calculations run in your browser
     <br><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+    <br><a href="https://fazier.com/launches/calcpromaster.com" target="_blank" rel="noopener"><img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&amp;theme=neutral" alt="Fazier badge" width="120" height="40" style="vertical-align:middle;border:0;width:120px;height:40px;object-fit:contain"></a>
+    <a href="https://startupfa.me/s/calcpromaster?utm_source=calcpromaster.com" target="_blank" rel="noopener"><img src="https://startupfa.me/badges/featured-badge.webp" alt="CalcProMaster - Featured on Startup Fame" width="171" height="54" style="vertical-align:middle;border:0"></a>
   </footer>
 </body>
 </html>

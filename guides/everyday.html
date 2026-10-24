@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Everyday Calculations Guides — Dates, bills &amp; quick daily math | CalcProMaster</title>
-  <meta name="description" content="The calculations nobody teaches: exact age in years-months-days, days between dates, an electricity bill decoded line by line, fuel split across a road tri">
+  <title>Everyday Calculations Guides — Dates, Bills &amp; Daily Math</title>
+  <meta name="description" content="The calculations nobody teaches: exact age, days between dates, an electricity bill decoded line by line, and fuel split across a road trip.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
   <link rel="canonical" href="https://calcpromaster.netlify.app/guides/everyday">
@@ -70,16 +70,63 @@
     .cat-card p { margin: 0; color: #4b5563; font-size: 0.95rem; }
     .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px 0; }
     .updated { color: #6b7280; font-size: 0.85rem; }
-  </style>
+/* guide-depth-css:start */
+.guide-lede{font-weight:600;border-left:3px solid #4f46e5;padding-left:12px;margin:10px 0 4px}
+    .guide-pitfalls{margin:8px 0 14px 20px}
+    .seo-faqs h3{margin:16px 0 4px}
+/* guide-depth-css:end */
+</style>
+
+<!-- guide-faq-schema:start -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is an age off by one day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because of whether the birthday itself counts. Age in years is whole years completed, so the day of birth completes the first year, while \"days lived\" counts elapsed time. Same dates, different convention. Check which one the question is asking before calling either answer wrong."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do working-day counts differ between tools?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They disagree on public holidays and on whether the end date is included. A pure Monday-to-Friday count of a full year gives 260 weekdays (261 in some years, when the year starts mid-week), and any tool that says otherwise is folding in holidays or counting an endpoint."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I just double a recipe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most ingredients yes, but watch three: leavening and salt, which do not always scale linearly with volume; pan size, because depth changes baking time; and strong spices, where doubling can overwhelm. Scaling the numbers is the easy part, reading the result is the skill."
+      }
+    }
+  ]
+}
+</script>
+<!-- guide-faq-schema:end -->
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Everyday Calculations</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Everyday Calculations</p>
   <h1>Everyday Calculations Guides</h1>
   <p class="updated">Part of the CalcProMaster guides library · Dates, bills &amp; quick daily math</p>
 
   <p>The calculations nobody teaches: exact age in years-months-days, days between dates, an electricity bill decoded line by line, fuel split across a road trip. Small math, daily use — these guides make each one take ten seconds.</p>
+  <p><strong>Methodology:</strong> Straightforward arithmetic, date and unit logic, using standard calendar and measurement conventions.</p>
 
-  <h2>How the math works</h2>
+
+<!-- guide-lede:start -->
+<p class="guide-lede">Everyday calculations fail on conventions rather than arithmetic: whether &quot;in three months&quot; means the same day number, whether the end date is counted, and whether a recipe actually scales linearly.</p>
+<!-- guide-lede:end -->
+<h2>How the math works</h2>
   <p>Date math has exactly two traps. Age: you completed whole years on your last birthday — the formula subtracts month and day before borrowing from the year, which is why it never overcounts. Leaplings (29 February birthdays) age on 28 Feb or 1 Mar depending on convention; pick one and stay consistent.</p>
   <p>Electricity bills decode to one formula: cost = kWh × tariff. A 1,500 W heater running 5 h/day for 30 days uses 225 kWh; at $0.15/kWh that’s $33.75 — which explains most “why is winter’s bill double” questions better than any theory. A photo of the meter at month start turns billing disputes into subtraction.</p>
 
@@ -104,14 +151,48 @@
   <h2>How is an electricity bill calculated?</h2>
   <p>Units consumed (kWh) × slab rate, where rate rises with consumption bands, plus fixed charges and duty. Reading your meter at the same date monthly keeps the slab math honest — the electricity bill calculator mirrors slab structure.</p>
 
-  <h2>Try the matching calculators</h2>
+
+<!-- guide-extra-depth:start -->
+<h2>What this category is for</h2>
+<p>These calculators handle the arithmetic that comes up weekly rather than once a year: splitting a bill, converting a recipe, working out a discount, checking a unit price. The maths is simple, which is exactly why an error is easy to make and hard to notice.</p>
+<p>The guides exist because the formula is rarely the hard part. Deciding which base to divide by, whether tax is already included, and which unit the answer should be in is where most mistakes happen.</p>
+<h2>The units trap</h2>
+<p>Everyday calculations mix units constantly: millilitres and cups, grams and ounces, kilometres and miles, per-hour and per-month. Converting after the calculation is not the same as converting the inputs first, especially where a rate is involved.</p>
+<p>Pick one unit system before you start and convert every input into it. A recipe scaled in cups but baked in millilitres will be wrong even if each individual conversion was correct.</p>
+<h2>Rounding at the right step</h2>
+<p>Round only at the end. Rounding a unit price to two decimals before multiplying by a large quantity can shift the total by more than the rounding itself, and the error grows with quantity.</p>
+<p>For money, keep the exact value through the calculation and round the final amount to the currency's smallest unit. For cooking, one decimal place is usually more precision than the measuring tools provide.</p>
+<p>Watch the currency as well. Some currencies round to whole units at the moment of payment, so a calculated 1,249.6 becomes 1,250 whether or not the underlying arithmetic was right.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/baby-cost">Baby Cost Calculator</a></li>
+    <li><a href="/guides/family">Family & Parenting Guides</a></li>
+    <li><a href="/guides/food">Food & Nutrition Guides</a></li>
+  </ul>
+
+<!-- guide-depth:start -->
+<h2>Where these answers go wrong</h2><ul class="guide-pitfalls"><li>Adding days across months without the calendar — months differ in length, so +30 days is not the same as +1 month.</li><li>Counting an end date as exclusive when the question meant inclusive (or the reverse), which shifts an age or deadline by a day.</li><li>Scaling leavening, salt and spice linearly with a recipe when the pan size did not change with the batch.</li><li>Splitting a bill before the tip, or adding the tip after the split, which changes what each person actually pays.</li></ul><h2>Frequently asked questions</h2><div class="seo-faqs"><h3>Why is an age off by one day?</h3><p>Because of whether the birthday itself counts. Age in years is whole years completed, so the day of birth completes the first year, while &quot;days lived&quot; counts elapsed time. Same dates, different convention. Check which one the question is asking before calling either answer wrong.</p><h3>Why do working-day counts differ between tools?</h3><p>They disagree on public holidays and on whether the end date is included. A pure Monday-to-Friday count of a full year gives 260 weekdays (261 in some years, when the year starts mid-week), and any tool that says otherwise is folding in holidays or counting an endpoint.</p><h3>Can I just double a recipe?</h3><p>For most ingredients yes, but watch three: leavening and salt, which do not always scale linearly with volume; pan size, because depth changes baking time; and strong spices, where doubling can overwhelm. Scaling the numbers is the easy part, reading the result is the skill.</p></div>
+<!-- guide-depth:end -->
+<!-- guide-worked-example:start -->
+<h2>Worked example: Age Calculator at its default inputs</h2>
+<p>Take the default setup on <a href="/everyday/age/">Age Calculator</a>: no fields changed, nothing tuned to a nice round number. Run in the site's own engine, those values produce the answer below.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Date of Birth</td><td>—</td></tr></tbody></table>
+<p><strong>Result:</strong> Enter date</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Enter date of birth</li></ol>
+<!-- guide-worked-example:end -->
+<h2>Try the matching calculators</h2>
   <p>
-    <a href="/everyday/age" class="cta">Age Calculator</a>
-    <a href="/everyday/date-diff" class="cta">Date Difference Calculator</a>
-    <a href="/everyday/trip-fuel-cost" class="cta">Trip Fuel Cost Calculator</a>
+    <a href="/everyday/age/" class="cta">Age Calculator</a>
+    <a href="/everyday/date-diff/" class="cta">Date Difference Calculator</a>
+    <a href="/everyday/trip-fuel-cost/" class="cta">Trip Fuel Cost Calculator</a>
   </p>
 
-  <p><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
+  <p><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

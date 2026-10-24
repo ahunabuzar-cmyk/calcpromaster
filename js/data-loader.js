@@ -49,6 +49,16 @@ window.DataLoader = (function () {
   var loaded = {};    // catKey -> true
   var failed = {};    // catKey -> true
 
+  // _headers serves /js/* as a year-long immutable asset, so an injected chunk
+  // needs the build's ?v= token (stamped on <html data-asset-version> by
+  // build-deploy.js). Without it a new deploy keeps serving the old category
+  // file from cache under the same URL.
+  function assetUrl(src) {
+    var v = document.documentElement && document.documentElement.getAttribute('data-asset-version');
+    if (!v || /[?&]v=/.test(src)) return src;
+    return src + (src.indexOf('?') === -1 ? '?' : '&') + 'v=' + v;
+  }
+
   function specFor(catKey) { return LAZY[catKey] || EAGER[catKey]; }
   function isLazy(catKey) { return !!specFor(catKey); }
   function isEager(catKey) { return !!EAGER[catKey]; }
@@ -73,7 +83,7 @@ window.DataLoader = (function () {
 
     loading[catKey] = new Promise(function (resolve) {
       var s = document.createElement('script');
-      s.src = 'js/data/' + spec.file + '.js';
+      s.src = assetUrl('js/data/' + spec.file + '.js');
       s.onload = function () {
         try {
           var arr = window[spec.constName];
@@ -127,5 +137,39 @@ window.DataLoader = (function () {
     }
   }
 
-  return { isLazy: isLazy, isEager: isEager, isLoaded: isLoaded, ensure: ensure, loadAll: loadAll, loadAllIdle: loadAllIdle };
+  // The four EAGER chunks are NO LONGER in the shell (index.html "HOMEPAGE LAZY
+  // DATA"): the homepage ships js/home-tools.js (names only) and pulls the real
+  // data for those four at idle. Deliberately NOT loadAll(): pulling all 20 chunks
+  // at boot is what saturated the throttled mobile pipe (~12s TTI). Returns a
+  // promise so the caller can re-render the blocks that needed names.
+  // Warm the four popular chunks NOW. Called from a first-user-interaction
+  // handler (see js/app.js "HOMEPAGE LAZY DATA"), never from bare page load: a
+  // homepage visitor who never opens a popular category must not download
+  // finance.js + math.js + health.js + everyday.js (~156 KiB gzip, of which
+  // finance+math alone are the 104 KiB a Lighthouse audit flagged). Every
+  // navigation goes through ensure() anyway, so this warm is a head start, not a
+  // correctness requirement.
+  function loadEager() {
+    return Promise.all(Object.keys(EAGER).map(function (k) {
+      return load(k).catch(function () { return false; });
+    }));
+  }
+
+  function loadEagerIdle() {
+    function warm() {
+      return loadEager();
+    }
+    if (typeof requestIdleCallback === 'function') {
+      return new Promise(function (resolve) {
+        requestIdleCallback(function () { warm().then(resolve); }, { timeout: 2500 });
+      });
+    }
+    return new Promise(function (resolve) { setTimeout(function () { warm().then(resolve); }, 1200); });
+  }
+
+  return {
+    isLazy: isLazy, isEager: isEager, isLoaded: isLoaded, ensure: ensure,
+    loadAll: loadAll, loadAllIdle: loadAllIdle,
+    loadEager: loadEager, loadEagerIdle: loadEagerIdle
+  };
 })();

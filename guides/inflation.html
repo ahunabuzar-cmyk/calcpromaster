@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How Inflation Is Calculated — CPI, Purchasing Power &amp; Real Values</title>
-  <meta name="description" content="What the inflation rate actually measures, how CPI works, the formula for converting money across years, and worked examples showing what $100 becomes over…">
+  <title>How Inflation Is Calculated — CPI &amp; Purchasing Power</title>
+  <meta name="description" content="What the inflation rate measures, how CPI works, the formula for converting money across years, and what $100 becomes over ten, twenty or thirty years.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
   <link rel="canonical" href="https://calcpromaster.netlify.app/guides/inflation">
@@ -89,13 +89,13 @@
   <header>
     <a class="logo" href="/">CalcProMaster</a>
     <a href="/">Home</a>
-    <a href="/guides">Guides</a>
+    <a href="/guides/">Guides</a>
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
   </header>
   <main>
     <div class="legal-page">
-      <p class="legal-meta"><a href="/guides">← All guides</a></p>
+      <p class="legal-meta"><a href="/guides/">← All guides</a></p>
       <h1>How Inflation Is Calculated — CPI, Purchasing Power &amp; Real Values</h1>
       <p class="legal-meta">Economics · 5 min read · Last updated September 2026</p>
 
@@ -144,7 +144,46 @@
         <p><strong>Note:</strong> Official CPI methodology is periodically revised (basket weights, quality adjustments). This guide explains the mechanics; for official statistics use your national statistics agency's publications.</p>
       </div>
 
-      <h2>FAQ</h2>
+      
+  
+<!-- guide-worked-example:start -->
+<h2>Worked example: Inflation Calculator at its default inputs</h2>
+<p>Take the default setup on <a href="/finance/inflation/">Inflation Calculator</a>: no fields changed, nothing tuned to a nice round number. Run in the site's own engine, those values produce the answer below.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Amount</td><td>1000</td></tr><tr><td>Inflation Rate (%)</td><td>3</td></tr><tr><td>Years</td><td>10</td></tr></tbody></table>
+<p><strong>Result:</strong> Future Value: $1343.92</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Step 1: Future value = $1000×(1+0.03)^10</li><li>Step 2: FV = $1343.92</li><li>Step 3: Real purchasing power = $744.09</li></ol>
+<h2>What Amount does to the answer</h2>
+<p>Hold every other field still and move only amount.</p>
+<table><thead><tr><th>Amount</th><th>Result</th></tr></thead><tbody><tr><td>500</td><td>Future Value: $671.96</td></tr><tr><td>1,000</td><td>Future Value: $1343.92</td></tr><tr><td>1,500</td><td>Future Value: $2015.87</td></tr></tbody></table>
+<p>If the rows barely differ, amount is not your lever — change a different input. If they swing widely, get that number right before trusting the total.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>The index is an average, not your basket</h2>
+<p>A consumer price index tracks a weighted basket that represents an average household. Your basket is different: rent, school fees, fuel, medical costs and imported electronics carry weights that may be far higher or lower than the national average.</p>
+<p>That is why personal inflation can run several points above or below the headline figure for years. If most of your spending is rent and food in a market where both rose faster than the index, the official number understates what happened to you.</p>
+<h2>Nominal, real and the difference that matters</h2>
+<p>A salary rise of 6% against 8% inflation is a pay cut in real terms. Nominal figures describe the number on the payslip; real figures describe what it buys. Comparing one to the other is how people conclude they are better off while their savings rate falls.</p>
+<p>The same applies to investment returns. A 10% return in a year of 9% inflation is roughly a 1% real gain before tax, which is why long-run planning should use real returns rather than headline ones.</p>
+<h2>Compounding works against you over decades</h2>
+<p>At 6% inflation, prices roughly double in twelve years and quadruple in twenty-four. A retirement target expressed in today's money has to be inflated to the year you will spend it, not compared directly with a corpus built in nominal terms.</p>
+<p>This is the single most common retirement planning error: a corpus that looks large today is measured against today's prices while being spent at tomorrow's.</p>
+<h2>Deflation and disinflation are not the same</h2>
+<p>Disinflation is a slower rate of increase, not a fall in prices. Headlines that say inflation fell from 8% to 5% still mean prices rose 5%. Deflation, an actual fall in the price level, is rarer and brings its own problems: deferred spending, debt that grows in real terms.</p>
+<p>Read the direction and the level separately. A falling rate is better than a rising one, but it is not the same as prices returning to where they were.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/compound-interest">How to Calculate Compound Interest</a></li>
+    <li><a href="/guides/cagr">CAGR</a></li>
+    <li><a href="/guides/sip">SIP Math</a></li>
+    <li><a href="/guides/fd-ppf-sip">FD vs PPF vs SIP</a></li>
+  </ul>
+
+<h2>FAQ</h2>
       <h3>What is the difference between CPI and core inflation?</h3>
       <p>Core inflation excludes volatile food and energy prices to reveal the underlying trend; headline CPI includes everything consumers buy.</p>
       <h3>Can inflation be negative?</h3>
@@ -156,15 +195,15 @@
   <footer>
     <p>CalcProMaster — free online calculators.</p>
     <p>
-      <a href="/guides">Guides</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a>
+      <a href="/guides/">Guides</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a>
     </p>
   </footer>
   <div class="related" style="max-width:820px;margin:0 auto 40px;padding:0 24px;">
-    <a href="/finance/inflation">Inflation Calculator</a>
-    <a href="/finance/retirement">Retirement Calculator</a>
-    <a href="/finance/compound-interest">Compound Interest</a>
+    <a href="/finance/inflation/">Inflation Calculator</a>
+    <a href="/finance/retirement/">Retirement Calculator</a>
+    <a href="/finance/compound-interest/">Compound Interest</a>
     <a href="/guides/compound-interest">Compound Interest Guide</a>
-    <a href="/guides">All Guides</a>
+    <a href="/guides/">All Guides</a>
   </div>
   <script src="/guides/glossary-tooltips.js" defer></script>
 </body>

@@ -87,7 +87,7 @@ function loadRefreshCreds() {
   try {
     const rt = JSON.parse(fs.readFileSync(rtPath, 'utf8'));
     if (!rt.refresh_token) return null;
-    return { ...client, refreshToken: rt.refresh_token, rtPath };
+    return { ...client, refreshToken: rt.refresh_token, rtPath, obtainedAt: rt.obtained_at || null };
   } catch (e) {
     return null;
   }
@@ -124,6 +124,49 @@ function postForm(url, formBody) {
   });
 }
 
+// ---------- Plan B: one-shot authorization-code exchange ----------
+// Exchanges an OAuth `code` (from ?code=... in the redirect callback) for a
+// refresh token. Used by scripts/gsc-oauth-login.cjs (server + paste modes)
+// and scripts/gsc-paste-token.cjs (one-command non-interactive helper).
+// Resolves to the raw token JSON ({ refresh_token, scope, ... }).
+async function exchangeAuthCode(code) {
+  const client = loadOAuthClient();
+  if (!client) {
+    const err = new Error('NO_OAUTH_CLIENT');
+    err.hint = 'gsc-client-secret.json (OAuth client) not found in the project root.\n' +
+      '   See docs/api-credentials-setup.md → Plan B → Step 2.';
+    throw err;
+  }
+  const res = await postForm('https://oauth2.googleapis.com/token', {
+    code,
+    client_id: client.clientId,
+    client_secret: client.clientSecret,
+    redirect_uri: OAUTH_REDIRECT_URI,
+    grant_type: 'authorization_code',
+  });
+  if (res.status !== 200 || !res.json.refresh_token) {
+    const err = new Error('Token exchange failed (HTTP ' + res.status + '): ' + JSON.stringify(res.json).slice(0, 300));
+    if (res.json && res.json.error === 'invalid_grant') {
+      err.hint = 'Authorization codes are single-use and expire in ~10 minutes.\n' +
+        '   Get a fresh consent URL: node scripts/gsc-oauth-login.cjs --paste';
+    }
+    throw err;
+  }
+  return res.json;
+}
+
+// Persists the refresh token to gsc-refresh-token.json (root, git-ignored).
+// Returns the absolute path written.
+function saveRefreshToken(json, fallbackScope) {
+  const out = {
+    obtained_at: new Date().toISOString(),
+    scope: json.scope || fallbackScope || '',
+    refresh_token: json.refresh_token,
+  };
+  fs.writeFileSync(REFRESH_TOKEN_FILE, JSON.stringify(out, null, 2));
+  return REFRESH_TOKEN_FILE;
+}
+
 // Returns { access_token, expires_in } for the given scope.
 async function getAccessToken(scope) {
   // Plan B first: user-OAuth refresh token. Org policies commonly block
@@ -138,7 +181,30 @@ async function getAccessToken(scope) {
     });
     if (res.status === 200 && res.json.access_token) return res.json;
     const err = new Error('OAuth refresh-token exchange failed (HTTP ' + res.status + '): ' + JSON.stringify(res.json).slice(0, 300));
-    err.hint = 'Refresh token expired/revoked — re-run: node scripts/gsc-oauth-login.cjs';
+    if (res.json && res.json.error === 'invalid_grant') {
+      // invalid_grant on the refresh-token grant has exactly one recurring cause on
+      // this project: an OAuth consent screen left in "Testing" publishing status,
+      // where Google caps EVERY refresh token at 7 days. Obtained 2026-10-05 → dead
+      // 2026-10-12, which is how it actually went down. Say so, loudly, with both
+      // the immediate and the permanent fix — otherwise it re-reads as a mystery
+      // every week (docs/GSC-STATUS-REPORT.md spent two audits with no root cause).
+      const age = ro.obtainedAt
+        ? '  (stored token obtained ' + ro.obtainedAt.slice(0, 10) + ')'
+        : '';
+      err.hint = 'invalid_grant — the stored refresh token is dead.' + age + '\n' +
+        '   Known cause on this project: the OAuth consent screen is in "Testing" publishing\n' +
+        '   status, where Google expires every refresh token after 7 days.\n' +
+        '   \u2022 Re-consent now (needs a browser, ?code= expires in ~10 min):\n' +
+        '       node scripts/gsc-oauth-login.cjs          # server mode — captures the callback\n' +
+        '       node scripts/gsc-oauth-login.cjs --paste  # fallback — paste the callback URL\n' +
+        '   \u2022 Permanent fix so this stops recurring every 7 days:\n' +
+        '       Google Cloud Console \u2192 APIs & Services \u2192 OAuth consent screen \u2192\n' +
+        '       Publishing status \u2192 "PUBLISH APP" (app stays unverified; the "not verified"\n' +
+        '       warning + Continue keep working for you).\n' +
+        '       https://console.cloud.google.com/apis/credentials/consent';
+    } else {
+      err.hint = 'Refresh token expired/revoked — re-run: node scripts/gsc-oauth-login.cjs';
+    }
     throw err;
   }
 
@@ -188,4 +254,4 @@ async function getAccessToken(scope) {
   return res.json;
 }
 
-module.exports = { getAccessToken, loadCredentials, findCredentialsPath, loadOAuthClient, loadRefreshCreds, OAUTH_REDIRECT_URI, REFRESH_TOKEN_FILE };
+module.exports = { getAccessToken, exchangeAuthCode, saveRefreshToken, loadCredentials, findCredentialsPath, loadOAuthClient, loadRefreshCreds, OAUTH_REDIRECT_URI, REFRESH_TOKEN_FILE };

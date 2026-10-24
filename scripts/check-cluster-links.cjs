@@ -21,14 +21,15 @@ const pass = (msg) => console.log('  ok   ' + msg);
 // ---------- 1. map ↔ sitemap ----------
 const sitemap = fs.readFileSync(path.join(DEPLOY, 'sitemap.xml'), 'utf8');
 const urls = new Set();
+const normPath = (s) => s.replace(/\/+$/, '');
 for (const m of sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)) {
-  urls.add(m[1].replace(/^https?:\/\/[^/]+/, ''));
+  urls.add(normPath(m[1].replace(/^https?:\/\/[^/]+/, '')));
 }
 let slugs = 0;
 for (const c of clusters) {
   for (const key of [c.hub, ...c.spokes]) {
     slugs++;
-    if (!urls.has('/' + key)) fail(`cluster ${c.id}: /${key} not found in sitemap.xml`);
+    if (!urls.has(normPath('/' + key))) fail(`cluster ${c.id}: /${key} not found in sitemap.xml`);
   }
 }
 if (!failures) pass(`all ${slugs} cluster slugs exist in sitemap.xml`);
@@ -47,7 +48,14 @@ const pageFile = (key) => {
   }
   return null;
 };
-const hasLink = (html, key) => html.includes('href="/' + key + '"');
+// Deploy tree do shakalein use karta hai: guide pages flat files hain
+// (`/guides/loans-mortgages` — no trailing slash) aur tool pages directories
+// (`/finance/loan-emi/` — trailing slash). Sirf ek shakal match karne se saare
+// tool-hub links "missing" lagte the (60+ jhooti failure), jab ke page par link
+// mojood tha. Ab dono shakalein qubool hain — ye check dheela nahi hua, bas
+// wahi URL shape maanta hai jo build khud banata hai.
+const hasLink = (html, key) =>
+  html.includes('href="/' + key + '"') || html.includes('href="/' + key + '/"');
 
 let spokeChecked = 0, hubChecked = 0;
 for (const c of clusters) {

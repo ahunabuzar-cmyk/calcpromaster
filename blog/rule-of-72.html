@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Rule of 72 — Where Doubling-Time Math Bends | CalcProMaster</title>
+  <title>The Rule of 72 — Where Doubling-Time Math Bends</title>
   <meta name="description" content="72 ÷ rate estimates doubling time, but the error swings from 2% to 23% across common rates. The exact table, the inflation flip side, and when to use which.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
@@ -45,15 +45,58 @@
     th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; }
     th { background: #f9fafb; }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://calcpromaster.netlify.app/blog/rule-of-72#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is the Rule of 72 accurate enough for planning?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For rates between 6% and 10%, yes — errors stay under about 2%. Outside that band, or for anything you'll act on, run the exact formula. The rule's job is to make compounding feel real in conversation, not to price an investment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why 72 and not 69 or 70?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tradition plus divisibility: 72 is divisible by 2, 3, 4, 6, 8, 9 and 12, which makes mental answers clean, and it happens to minimize error near the 8–10% rates where the rule was most used. 69.3 is the mathematically pure constant; 70 is a common middle-ground."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the rule work for losses and inflation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, with the same caveats. A −6% real return halves purchasing power in about 12 years. The rule is symmetric — it just describes doubling or halving time for any constant growth rate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate exact doubling time?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Divide ln(2) by ln(1 + rate): at 12%, ln(2) ÷ ln(1.12) = 6.12 years. Or skip the logarithms entirely — the compound interest calculator prints exact growth timelines for any rate and contribution schedule."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="site">
     <a href="/">Calculators</a>
-    <a href="/guides">Guides</a>
-    <a href="/blog">Blog</a>
+    <a href="/guides/">Guides</a>
+    <a href="/blog/">Blog</a>
     <a href="/about">About</a>
   </header>
-  <p class="crumb"><a href="/">Home</a> › <a href="/blog">Blog</a> › Rule of 72</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/blog/">Blog</a> › Rule of 72</p>
   <h1>The Rule of 72 — where doubling-time math bends</h1>
   <p class="meta">Sep 16, 2026 · ~6 min read · Money</p>
 
@@ -74,7 +117,7 @@
   <p>Two things worth noticing. First, the error changes sign around 8–9% — below that the rule overestimates doubling time (pessimistic), above it, the rule underestimates (optimistic). Second, at high rates the drift compounds: 24% is not 2% off but <strong>7.9%</strong> off (3.0 claimed vs 3.26 actual years), and the gap keeps widening as rates climb. Credit-card debt at 42% APR does not double "every 1.7 years" — it doubles every 1.96 years, which is worse.</p>
 
   <h2>Use 69.3 when precision matters</h2>
-  <p>The mathematically honest shortcut for continuous compounding is the Rule of <strong>69.3</strong> — because ln(2) = 0.693. For annual compounding, 69.3 ÷ rate is closer than 72 ÷ rate at low rates: at 3%, it gives 23.1 vs an exact 23.45 (1.5% error instead of 2.3%). The practical hierarchy: 69.3 when you're modeling, 72 when you're talking, and the <a href="/finance/compound-interest">compound interest calculator</a> when the answer actually moves money.</p>
+  <p>The mathematically honest shortcut for continuous compounding is the Rule of <strong>69.3</strong> — because ln(2) = 0.693. For annual compounding, 69.3 ÷ rate is closer than 72 ÷ rate at low rates: at 3%, it gives 23.1 vs an exact 23.45 (1.5% error instead of 2.3%). The practical hierarchy: 69.3 when you're modeling, 72 when you're talking, and the <a href="/finance/compound-interest/">compound interest calculator</a> when the answer actually moves money.</p>
 
   <h2>The flip side: inflation divides too</h2>
   <p>The same rule runs in reverse, and this is the version people skip. At 6% inflation, purchasing power <strong>halves</strong> in about 72 ÷ 6 = 12 years. Cash sitting at 3% while inflation runs 6% is not "safe" — it loses a third of its value in roughly 13.5 years (the exact half-life at −3% real is ln(2) ÷ ln(1.03) ≈ 23.4 years, but at −3% real rate the rule's error direction flips too — compute it). Your real return is approximately nominal minus inflation, and the doubling rule applies to that real number, not the headline rate.</p>
@@ -91,12 +134,13 @@
 
   <h2>Run your own numbers</h2>
   <p>
-    <a href="/finance/compound-interest" class="cta">Compound Interest Calculator</a>
+    <a href="/finance/compound-interest/" class="cta">Compound Interest Calculator</a>
     <a href="/guides/compound-interest" class="cta">Compound interest guide</a>
-    <a href="/finance/inflation" class="cta">Inflation Calculator</a>
+    <a href="/finance/inflation/" class="cta">Inflation Calculator</a>
   </p>
 
-  <p><a href="/blog">← All blog posts</a> · <a href="/guides">Guides library</a></p>
+  <p><a href="/blog/">← All blog posts</a> · <a href="/guides/">Guides library</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

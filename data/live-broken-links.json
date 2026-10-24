@@ -1,0 +1,113 @@
+{
+ "ranAt": "2026-10-21T12:10:56.394Z",
+ "site": "https://calcpromaster.com",
+ "sitemapUrls": 1420,
+ "pagesFetched": 1420,
+ "badPages": [
+  {
+   "error": "The operation was aborted due to timeout"
+  },
+  {
+   "error": "The operation was aborted due to timeout"
+  },
+  {
+   "error": "The operation was aborted due to timeout"
+  },
+  {
+   "error": "The operation was aborted due to timeout"
+  },
+  {
+   "error": "The operation was aborted due to timeout"
+  },
+  {
+   "error": "The operation was aborted due to timeout"
+  },
+  {
+   "error": "The operation was aborted due to timeout"
+  },
+  {
+   "error": "The operation was aborted due to timeout"
+  },
+  {
+   "error": "The operation was aborted due to timeout"
+  },
+  {
+   "error": "The operation was aborted due to timeout"
+  },
+  {
+   "error": "The operation was aborted due to timeout"
+  }
+ ],
+ "brokenTargets": [
+  {
+   "target": "/cdn-cgi/l/email-protection",
+   "status": 404,
+   "location": null,
+   "linkedFrom": [
+    "/",
+    "/privacy",
+    "/terms"
+   ]
+  }
+ ],
+ "redirectedTargets": [
+  {
+   "target": "/qa-dashboard.html",
+   "status": 308,
+   "location": "/qa-dashboard",
+   "linkedFrom": [
+    "/",
+    "/about",
+    "/editorial-policy"
+   ]
+  }
+ ],
+ "okOther": [
+  {
+   "target": "/favorites/",
+   "status": 200,
+   "location": null,
+   "linkedFrom": [
+    "/",
+    "/auto/",
+    "/hub/auto/"
+   ]
+  },
+  {
+   "target": "/history/",
+   "status": 200,
+   "location": null,
+   "linkedFrom": [
+    "/",
+    "/auto/",
+    "/hub/auto/"
+   ]
+  },
+  {
+   "target": "/compare/",
+   "status": 200,
+   "location": null,
+   "linkedFrom": [
+    "/",
+    "/auto/",
+    "/hub/auto/"
+   ]
+  },
+  {
+   "target": "/cookies",
+   "status": 200,
+   "location": null,
+   "linkedFrom": [
+    "/",
+    "/auto/",
+    "/hub/auto/"
+   ]
+  }
+ ],
+ "summary": {
+  "brokenTargets": 1,
+  "brokenLinks": 1320,
+  "redirectedTargets": 1,
+  "badPages": 11
+ }
+}

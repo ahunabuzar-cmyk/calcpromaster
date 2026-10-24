@@ -56,7 +56,9 @@
   </style>
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Paint Coverage</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Paint Coverage</p>
   <h1>Paint Coverage: Area × Coats ÷ Spread Rate</h1>
   <p class="updated">Home & Garden · 5 min read · Last updated September 2026</p>
 
@@ -76,18 +78,57 @@
     <tr><td>Dark → light</td><td>Tinted primer instead of 3rd coat</td></tr>
     <tr><td>Airless sprayer</td><td>+25% (overspray loss)</td></tr>
   </table></div>
-  <p>Ceilings add area separately (floor area × coats) and trim needs its own calculation by linear feet. The <a href="/everyday/paint">Paint Cost Estimator</a> computes area, coats and price together; the <a href="/homegarden/room-area">Room Area tool</a> handles irregular floor plans first.</p>
+  <p>Ceilings add area separately (floor area × coats) and trim needs its own calculation by linear feet. The <a href="/everyday/paint/">Paint Cost Estimator</a> computes area, coats and price together; the <a href="/homegarden/room-area/">Room Area tool</a> handles irregular floor plans first.</p>
 
   <div class="note"><strong>Tip:</strong> buy the full round-up in one batch — paint from different production lots can vary slightly in tint, and matching a later lot is harder than storing a spare litre.</div>
 
   <h2>Try the calculators</h2>
   <p class="related">
-    <a href="/everyday/paint" class="cta">Paint Cost Estimator</a>
-    <a href="/homegarden/room-area" class="cta">Room Area Calculator</a>
+    <a href="/everyday/paint/" class="cta">Paint Cost Estimator</a>
+    <a href="/homegarden/room-area/" class="cta">Room Area Calculator</a>
     <a href="/guides/homegarden" class="cta">Home & Garden Guides</a>
   </p>
 
-  <h2>Frequently asked questions</h2>
+  
+  
+<!-- guide-worked-example:start -->
+<h2>Worked example: Paint Calculator at its default inputs</h2>
+<p>This is the answer <a href="/everyday/paint/">Paint Calculator</a> gives before you touch anything — the defaults as shipped, computed live rather than copied from a sample.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Wall Area (m²)</td><td>50</td></tr><tr><td>Number of Coats</td><td>2</td></tr></tbody></table>
+<p><strong>Result:</strong> Paint needed: 10.0 L</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Step 1: Coverage = area × coats = 50 × 2 = 100 m²</li><li>Step 2: Paint = 100 / 10 m²/L = 10.0 L</li></ol>
+<h2>What Wall Area (m²) does to the answer</h2>
+<p>Same calculator, same fields, one change: wall area (m²).</p>
+<table><thead><tr><th>Wall Area (m²)</th><th>Result</th></tr></thead><tbody><tr><td>25</td><td>Paint needed: 5.0 L</td></tr><tr><td>50</td><td>Paint needed: 10.0 L</td></tr><tr><td>75</td><td>Paint needed: 15.0 L</td></tr></tbody></table>
+<p>If the rows barely differ, wall area (m²) is not your lever — change a different input. If they swing widely, get that number right before trusting the total.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>Measure wall area, then subtract openings</h2>
+<p>Perimeter times ceiling height gives gross wall area. Subtract doors (about 1.8 m² each) and windows (about 1.5 m²), then add the ceiling separately if it is being painted. Measure each room and sum, because a single average wall height across a house drifts badly with high-ceilinged rooms.</p>
+<p>Sloped ceilings, stairwells and gables are the usual source of a 10-15% underestimate. For those, measure the actual shapes rather than applying a rule of thumb — a staircase wall can be twice the area its footprint suggests.</p>
+<h2>Two coats is the standard, primer is separate</h2>
+<p>Coverage figures on a can describe one coat on a smooth, sealed surface. A colour change, a porous wall or a repairs-heavy wall needs primer plus two finish coats, which is roughly three times the paint a single-coat estimate implies.</p>
+<p>Deep colours and strong reds often need a tinted primer and three coats. Budget for that before choosing the colour, not after the first coat looks patchy.</p>
+<h2>Coverage varies with surface and application</h2>
+<p>Smooth sealed plaster can reach 12-14 m² per litre; textured, porous or previously unpainted surfaces can fall to 8-10. Roller versus spray, and how much the painter loads the roller, changes the number by another 10%.</p>
+<p>Use the manufacturer's coverage for the specific product, then subtract 10% as a working margin. Buying one extra can is cheaper than a second trip mid-job and a visible batch difference on the last wall.</p>
+<h2>Buy in the right can size</h2>
+<p>Paint is usually cheaper per litre in larger cans, but only if you will use it. Leftover paint stores for years if the lid is sealed and the can is kept from freezing, which makes a larger can sensible for a whole-house job and wasteful for one wall.</p>
+<p>Keep the batch code and a small amount of each colour for touch-ups. Colour matching a year later is approximate at best, and a labelled jar from the original batch is the only reliable repair.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/room-area">Room Area</a></li>
+    <li><a href="/guides/ac-size">AC Sizing</a></li>
+    <li><a href="/guides/electricity-bill">Your Electricity Bill, Decoded</a></li>
+    <li><a href="/guides/utilities">Utilities & Developer Tools Guides</a></li>
+  </ul>
+
+<h2>Frequently asked questions</h2>
   <h3>How much paint do I need for one room?</h3>
   <p>Perimeter × height minus doors and windows, times the number of coats, divided by the spread rate (usually ~350 sq ft per gallon). A 12×15 ft room with 9 ft ceilings and two coats needs about 2.5 gallons.</p>
   <h3>Do I really need two coats?</h3>
@@ -97,7 +138,8 @@
   <h3>Should doors and windows be subtracted?</h3>
   <p>Yes. A door is about 21 sq ft and a typical window about 12 — subtracting them keeps the estimate honest without materially changing the buy decision on small rooms.</p>
 
-  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <p class="related"><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog/">Blog</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

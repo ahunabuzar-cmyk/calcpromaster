@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profit Margin Calculator — Margin vs Markup, Formulas &amp; Worked</title>
+  <title>Profit Margin Calculator — Margin vs Markup</title>
   <meta name="description" content="Gross vs net margin formulas with a worked example, the margin-vs-markup mix-up that costs businesses money, and how to price from a target margin correctly.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#4f46e5">
@@ -56,7 +56,9 @@
   </style>
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Profit Margin</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Profit Margin</p>
   <h1>Profit Margin: The Formulas and the Markup Trap</h1>
   <p class="updated">Business · 6 min read · Last updated September 2026</p>
 
@@ -84,12 +86,51 @@
 
   <h2>Try the calculators</h2>
   <p class="related">
-    <a href="/business/profit-margin" class="cta">Profit Margin Calculator</a>
-    <a href="/finance/roi" class="cta">ROI Calculator</a>
+    <a href="/business/profit-margin/" class="cta">Profit Margin Calculator</a>
+    <a href="/finance/roi/" class="cta">ROI Calculator</a>
     <a href="/guides/break-even" class="cta">Break-Even Guide</a>
   </p>
 
-  <h2>Frequently asked questions</h2>
+  
+  
+<!-- guide-worked-example:start -->
+<h2>Worked example: Profit Margin Calculator at its default inputs</h2>
+<p>Open <a href="/business/profit-margin/">Profit Margin Calculator</a> and press calculate without editing a field. What comes back is the table and result below, so the profit-margin numbers here are checkable in one click.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Revenue</td><td>50000</td></tr><tr><td>Cost</td><td>35000</td></tr></tbody></table>
+<p><strong>Result:</strong> Margin: 30.00%</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Formula: Margin = (Revenue - Cost) / Revenue × 100</li><li>Step 1: Profit = $50000 - $35000 = $15000.00</li><li>Step 2: Margin = $15000.00 / $50000 × 100 = 30.00%</li></ol>
+<h2>Sensitivity: Revenue from half to one-and-a-half times</h2>
+<p>Same calculator, same fields, one change: revenue.</p>
+<table><thead><tr><th>Revenue</th><th>Result</th></tr></thead><tbody><tr><td>25,000</td><td>Margin: -40.00%</td></tr><tr><td>50,000</td><td>Margin: 30.00%</td></tr><tr><td>75,000</td><td>Margin: 53.33%</td></tr></tbody></table>
+<p>Read the three rows as a range: the spread between them is how much the answer depends on revenue alone, with everything else held still.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>Margin and markup are not the same percentage</h2>
+<p>Margin divides profit by the selling price; markup divides it by the cost. A 20% margin is a 25% markup, and a 50% markup is a 33% margin. The gap widens as the numbers grow, which is why a business that prices from cost and reports from revenue can look profitable on paper and run out of cash.</p>
+<p>The rule that prevents the confusion: to hit a target margin, divide cost by (1 minus the margin), not multiply cost by (1 plus the margin). A 30% margin on a 70 cost is 100, while a 30% markup gives 91 and quietly loses nine points of margin on every sale.</p>
+<h2>Gross margin hides the costs that sink businesses</h2>
+<p>Gross margin counts only the direct cost of the goods or hours sold. Rent, salaries, software, marketing and payment fees sit below it. A product at 60% gross margin can still lose money if the fixed base is large relative to volume.</p>
+<p>That is why break-even belongs next to margin: margin says how much each sale contributes, break-even says how many sales are needed to cover the fixed base. Either number alone leaves half the picture out.</p>
+<h2>Discounts cost more margin than they look</h2>
+<p>A 10% discount on a 30% margin product removes a third of the profit, not a tenth. The reason is that margin is calculated on the reduced price while cost is unchanged, so the percentage of profit falls faster than the percentage of price.</p>
+<p>Before discounting, compute the margin after the discount and the volume increase needed to hold profit. Most discounts do not generate that volume, which is why promotional pricing needs a target rather than a habit.</p>
+<h2>Taxes, returns and payment fees</h2>
+<p>Margin is normally calculated before tax on profit, but sales tax, card fees and returns all reduce what actually arrives. Card fees of 2-3% come straight off the top; a return costs the shipping twice and the payment fee usually stays with you.</p>
+<p>Include them when comparing channels. A marketplace that charges 15% commission can still beat your own store if your store loses 5% to fees, 3% to returns and a fixed cost to acquisition.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/business">Business Guides</a></li>
+    <li><a href="/guides/career">Career & Freelance Guides</a></li>
+    <li><a href="/guides/salary">Gross Salary vs In-Hand Salary</a></li>
+    <li><a href="/guides/tax-salary">Tax & Salary Guides</a></li>
+  </ul>
+
+<h2>Frequently asked questions</h2>
   <h3>How do I calculate profit margin?</h3>
   <p>Divide profit by revenue and multiply by 100. Gross margin uses revenue minus cost of goods; net margin subtracts operating costs too. Example: $50,000 revenue, $30,000 COGS → 40% gross margin.</p>
   <h3>What is the difference between margin and markup?</h3>
@@ -99,7 +140,8 @@
   <h3>What is a good profit margin?</h3>
   <p>It depends entirely on industry. Compare against sector norms: margins that are healthy in software would be impossible in grocery retail and vice versa. Trend over time matters more than any absolute number.</p>
 
-  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <p class="related"><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog/">Blog</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

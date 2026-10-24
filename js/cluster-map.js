@@ -4,8 +4,10 @@
  * paths (build-time SSG in scripts/ssg-pages.cjs and SPA in js/app.js).
  *
  * Derived from docs/INTENT-AUDIT.md (I1: 41 cross-category intent clusters);
- * only C1–C8 are wired. Every slug here is validated against sitemap.xml by
- * scripts/check-cluster-links.cjs — add a page there first, then here.
+ * C1–C8 come from that audit, C9–C10 from measured cannibalization pairs
+ * (docs/CANNIBALIZATION-REPORT.md). Every slug here is validated against
+ * sitemap.xml by scripts/check-cluster-links.cjs — add a page there first,
+ * then here.
  *
  * Dual-mode: required by Node (build scripts) and sets window.__CLUSTERS__
  * in the browser (loaded as a plain <script> before app.js uses it).
@@ -94,6 +96,25 @@
       label: 'Refinance & equity',
       hub: 'finance/refinance',
       spokes: ['finance/home-equity', 'finance/pmi-drop', 'career/remortgage-calc']
+    },
+    {
+      // Added from measured cannibalization evidence (docs/CANNIBALIZATION-REPORT.md):
+      // /finance/dividend-yield and /finance/dividend are both in the GSC query→page
+      // export for "savings account dividend calculator" (13 + 9 impressions), i.e.
+      // two pages of one category reaching for one intent with no link between them.
+      id: 'C9',
+      label: 'Dividend income',
+      hub: 'finance/dividend-yield',
+      spokes: ['finance/dividend', 'finance/dividend-discount']
+    },
+    {
+      // Same evidence, different cluster: "vacation cost calculator" splits across
+      // /lifestyle/vacation-savings (40 impr) and /family/vacation-with-kids (30 impr),
+      // with /everyday/vacation-budget carrying the plan-the-budget intent.
+      id: 'C10',
+      label: 'Vacation & trip budgets',
+      hub: 'family/vacation-with-kids',
+      spokes: ['lifestyle/vacation-savings', 'everyday/vacation-budget']
     }
   ];
 }));

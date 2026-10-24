@@ -66,7 +66,9 @@
   </style>
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Body Fat Percentage</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Body Fat Percentage</p>
   <h1>Body Fat Percentage: What the Tape Measure Can and Cannot See</h1>
   <p class="updated">Health · 6 min read · Last updated September 2026</p>
 
@@ -94,12 +96,48 @@
 
   <h2>Try the calculators</h2>
   <p class="related">
-    <a href="/health/body-fat" class="cta">Body Fat Calculator</a>
-    <a href="/health/bmi" class="cta">BMI Calculator</a>
-    <a href="/health/lean-body-mass" class="cta">Lean Body Mass Calculator</a>
+    <a href="/health/body-fat/" class="cta">Body Fat Calculator</a>
+    <a href="/health/bmi/" class="cta">BMI Calculator</a>
+    <a href="/health/lean-body-mass/" class="cta">Lean Body Mass Calculator</a>
   </p>
 
-  <h2>Frequently asked questions</h2>
+  
+  
+<!-- guide-worked-example:start -->
+<h2>Worked example: Body Fat Calculator at its default inputs</h2>
+<p>Take the default setup on <a href="/health/body-fat/">Body Fat Calculator</a>: no fields changed, nothing tuned to a nice round number. Run in the site's own engine, those values produce the answer below.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Weight (kg)</td><td>70</td></tr><tr><td>Waist (cm)</td><td>85</td></tr><tr><td>Neck (cm)</td><td>38</td></tr><tr><td>Height (cm)</td><td>170</td></tr></tbody></table>
+<p><strong>Result:</strong> Body Fat: 24.4%</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Formula (US Navy method):</li><li>Male: BF% = 86.01×log(waist-neck) - 70.041×log(height) + 36.76</li><li>Female: BF% = 163.205×log(waist) - 97.684×log(height) - 78.387</li><li>Step 1: Apply formula with your measurements</li></ol>
+<h2>What Waist (cm) does to the answer</h2>
+<p>Waist (cm) is the first input worth testing, so here it is at three sizes.</p>
+<table><thead><tr><th>Waist (cm)</th><th>Result</th></tr></thead><tbody><tr><td>42.5</td><td>Body Fat: -63.3%</td></tr><tr><td>85</td><td>Body Fat: 24.4%</td></tr><tr><td>127.5</td><td>Body Fat: 48.4%</td></tr></tbody></table>
+<p>Read the three rows as a range: the spread between them is how much the answer depends on waist (cm) alone, with everything else held still.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>Every field method has an error band</h2>
+<p>Skinfold calipers, bioelectrical impedance scales and tape-based formulas all estimate body fat indirectly, and each carries an error of several percentage points against a DEXA scan. The absolute number is less reliable than the trend.</p>
+<p>Measure under the same conditions each time: same time of day, same hydration, same device or caliper site. A change of three points measured consistently means more than an absolute value measured once.</p>
+<h2>Athletes break the formulas</h2>
+<p>Formulas built on general populations tend to overestimate body fat in muscular people and underestimate it in people with low muscle mass, because they infer composition from weight, height and a circumference.</p>
+<p>If you train seriously, compare your result against athletic ranges rather than general ones, and treat a single measurement as one data point in a series.</p>
+<h2>What the number is good for</h2>
+<p>Body fat percentage is useful for tracking change over months and for setting realistic composition goals. It is not a health diagnosis, and it does not capture fat distribution, which is what actually drives metabolic risk.</p>
+<p>Waist circumference and waist-to-height ratio are cruder but better validated for health risk. Use them alongside body fat rather than instead of it.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/ideal-weight">Ideal Weight</a></li>
+    <li><a href="/guides/calories">How to Calculate Calories for Weight Loss or Gain</a></li>
+    <li><a href="/guides/macro-calculator">Macros</a></li>
+    <li><a href="/guides/protein-intake">Protein Need</a></li>
+  </ul>
+
+<h2>Frequently asked questions</h2>
   <h3>How do I measure for the Navy method?</h3>
   <p>Use a flexible tape: measure the neck below the larynx, the waist at the navel (men) or at the narrowest point plus hips at the widest (women), keep the tape snug but not compressing skin, and measure at the same time of day — morning, before eating, is standard.</p>
   <h3>What body fat percentage is healthy?</h3>
@@ -110,7 +148,8 @@
   <p>Different formulas (Navy, Covert Bailey, YMCA) use different measurement sites and coefficients, and each carries its own error band. Pick one method and stay with it so your trend line means something.</p>
 
 <div class="review-block"><strong>About this guide:</strong> Written and maintained by CalcProMaster’s developer — an independent site, not a licensed financial advisor or medical professional. Every worked example below was computed by hand and cross-checked with the linked calculator; our <a href="/editorial-policy">editorial policy</a> explains how content is written, tested and corrected.</div>
-  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <p class="related"><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog/">Blog</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

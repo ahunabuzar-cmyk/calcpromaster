@@ -32,7 +32,10 @@
         { "@type": "Question", "name": "How do I calculate the area of a room?", "acceptedAnswer": { "@type": "Answer", "text": "Multiply length by width for rectangles. L-shaped rooms split into two rectangles and add. A 12×15 ft room is 180 sq ft." } },
         { "@type": "Question", "name": "How do I calculate area of an irregular room?", "acceptedAnswer": { "@type": "Answer", "text": "Decompose into rectangles (and circles for curves), compute each, then add. Sketch the floor plan with dimensions — five minutes of measuring beats guessing." } },
         { "@type": "Question", "name": "How much extra material should I order?", "acceptedAnswer": { "@type": "Answer", "text": "10% waste is the standard default: 7–10% for wood, 10–15% for tile (more if diagonal), 10–20% for carpet. Diagonal layouts and pattern repeats push higher." } },
-        { "@type": "Question", "name": "How do I convert square feet to square meters?", "acceptedAnswer": { "@type": "Answer", "text": "Divide sq ft by 10.764. A 180 sq ft room is about 16.7 sq m. The Area Converter does all direction conversions precisely." } }
+        { "@type": "Question", "name": "How do I convert square feet to square meters?", "acceptedAnswer": { "@type": "Answer", "text": "Divide sq ft by 10.764. A 180 sq ft room is about 16.7 sq m. The Area Converter does all direction conversions precisely." } },
+        { "@type": "Question", "name": "Should I measure a room in feet and inches or in decimals?", "acceptedAnswer": { "@type": "Answer", "text": "Decimals. Divide the inches by 12 first, so 3 in becomes 0.25 ft and 8 in becomes 0.667 ft, then multiply. Treating 14 ft 3 in as 14 × 3 × 11 mixes units and produces a figure far too small to order from." } },
+        { "@type": "Question", "name": "How do I work out the area of a bay window or angled alcove?", "acceptedAnswer": { "@type": "Answer", "text": "Split it into the rectangle of the opening plus a triangle for each angled panel, using ½ × base × perpendicular depth for the triangle. A 6 ft wide bay projecting 2 ft adds ½ × 6 × 2 = 6 sq ft for each angled side, plus the rectangle behind it." } },
+        { "@type": "Question", "name": "How many tiles do I need for 166 sq ft?", "acceptedAnswer": { "@type": "Answer", "text": "Add 10% for a straight lay: 166.25 × 1.10 = 182.9 sq ft. At 15 sq ft per box that is 12.19 boxes, so buy 13. A diagonal layout should use 15% instead of 10%, which gives 191.2 sq ft and 13 boxes with less spare." } }
       ]
     }
   }
@@ -56,7 +59,9 @@
   </style>
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Room Area</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Room Area</p>
   <h1>Room Area: Rectangles, L-Shapes and the Waste Rule</h1>
   <p class="updated">Home & Garden · 5 min read · Last updated September 2026</p>
 
@@ -76,16 +81,78 @@
     <tr><td>Wood flooring</td><td>+7–10%</td><td>Board-length staggering</td></tr>
     <tr><td>Carpet (broadloom)</td><td>+10–20%</td><td>Seam placement, nap direction</td></tr>
   </table></div>
-  <p>Ordering exactly 180 sq ft of tile for a 180 sq ft floor is how projects end one box short. The <a href="/homegarden/room-area">Room Area & Flooring Calculator</a> adds waste automatically; <a href="/conversion/area">Area Converter</a> handles sq ft ↔ sq m, and <a href="/everyday/paint">Paint Estimator</a> does the same math vertically for walls.</p>
+  <p>Ordering exactly 180 sq ft of tile for a 180 sq ft floor is how projects end one box short. The <a href="/homegarden/room-area/">Room Area & Flooring Calculator</a> adds waste automatically; <a href="/conversion/area/">Area Converter</a> handles sq ft ↔ sq m, and <a href="/everyday/paint/">Paint Estimator</a> does the same math vertically for walls.</p>
 
   <h2>Try the calculators</h2>
   <p class="related">
-    <a href="/homegarden/room-area" class="cta">Room Area Calculator</a>
-    <a href="/conversion/area" class="cta">Area Converter</a>
-    <a href="/everyday/paint" class="cta">Paint Estimator</a>
+    <a href="/homegarden/room-area/" class="cta">Room Area Calculator</a>
+    <a href="/conversion/area/" class="cta">Area Converter</a>
+    <a href="/everyday/paint/" class="cta">Paint Estimator</a>
   </p>
 
-  <h2>Frequently asked questions</h2>
+<!-- topic-depth:start -->
+<h2>Measuring a room so the number survives the order</h2>
+  <p>Measure at the widest point of each wall and convert to decimal feet before the first multiplication — 3 inches is 0.25 ft, 6 inches is 0.5 ft, 9 inches is 0.75 ft. A 14 ft 3 in wall is 14.25 ft, so 14.25 × 11.667 works while 14 × 3 × 11 does not. Measure twice, round the answer, never the inputs.</p>
+  <ul>
+    <li><strong>Doorways and alcoves:</strong> count the floor inside an alcove, but a door leaf's swing never changes the floor area.</li>
+    <li><strong>Fireplaces and chimney breasts:</strong> subtract the floor they occupy only when no tile or board will run underneath them.</li>
+    <li><strong>Bay windows:</strong> add the rectangle of the bay opening plus a triangle per angled panel (½ × base × perpendicular depth).</li>
+    <li><strong>Ceiling height:</strong> irrelevant to floor area. It matters only when you order paint or wallpaper, which are priced on wall area.</li>
+  </ul>
+
+  <h2>Worked example: tape measure to tile order</h2>
+  <p>A bedroom measures 14 ft 3 in by 11 ft 8 in. Convert first, then multiply: 14.25 × 11.667 = <strong>166.25 sq ft</strong>, which is 166.25 ÷ 10.764 = <strong>15.45 sq m</strong>.</p>
+  <div class="table-wrap"><table>
+    <tr><th>Step</th><th>Working</th><th>Result</th></tr>
+    <tr><td>Convert the inches</td><td>3 ÷ 12 = 0.25 · 8 ÷ 12 = 0.667</td><td>14.25 ft × 11.667 ft</td></tr>
+    <tr><td>Floor area</td><td>14.25 × 11.667</td><td>166.25 sq ft (15.45 sq m)</td></tr>
+    <tr><td>Add the 10% allowance</td><td>166.25 × 1.10</td><td>182.9 sq ft</td></tr>
+    <tr><td>Boxes at 15 sq ft each</td><td>182.9 ÷ 15 = 12.19</td><td>13 boxes</td></tr>
+  </table></div>
+  <p>Round the box count up and nothing else: 12.19 boxes means twelve full boxes plus a fifth of another, and offcuts left over from a cut pattern will not cover a whole extra box.</p>
+
+  <h2>Four ways room area goes wrong</h2>
+  <ul>
+    <li><strong>Mixing units inside one multiplication.</strong> Inches and feet are not interchangeable — convert every measurement before you multiply anything.</li>
+    <li><strong>Applying waste to a rounded area.</strong> Rounding 166.25 to 166 before multiplying changes the order, so keep the precise area and round only the final box count.</li>
+    <li><strong>Using floor area for wall paint.</strong> Paint needs perimeter × wall height minus doors and windows; floor area tells you nothing about it.</li>
+    <li><strong>Treating an L-shape as one rectangle.</strong> Split it into two rectangles and add, or the missing notch quietly gets charged to the waste allowance.</li>
+  </ul>
+<!-- topic-depth:end -->
+<!-- guide-worked-example:start -->
+<h2>Worked example: Room Area &amp; Flooring Calculator at its default inputs</h2>
+<p>Open <a href="/homegarden/room-area/">Room Area &amp; Flooring Calculator</a> and press calculate without editing a field. What comes back is the table and result below, so the room-area numbers here are checkable in one click.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Length (ft)</td><td>12</td></tr><tr><td>Width (ft)</td><td>14</td></tr><tr><td>Waste %</td><td>10</td></tr></tbody></table>
+<p><strong>Result:</strong> 168 sq ft</p>
+<h2>Length (ft) — three values, three answers</h2>
+<p>Hold every other field still and move only length (ft).</p>
+<table><thead><tr><th>Length (ft)</th><th>Result</th></tr></thead><tbody><tr><td>6</td><td>84 sq ft</td></tr><tr><td>12</td><td>168 sq ft</td></tr><tr><td>18</td><td>252 sq ft</td></tr></tbody></table>
+<p>The middle row is the default. The outer two show how far the answer drifts when length (ft) is wrong by half or by a half in the other direction.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>Floor area is not floorable area</h2>
+<p>Length times width gives the footprint, but flooring, paint and air conditioning all need slightly different numbers. Flooring adds a waste factor of five to ten percent for cuts and pattern matching; paint subtracts doors and windows; cooling depends on volume and heat gain, not area alone.</p>
+<p>Measure at the widest point of each wall, then note obstructions. A room that measures 4 by 5 metres rarely gives 20 square metres of usable floor once a chimney breast or a fitted cupboard is in the way.</p>
+<h2>Split irregular rooms into shapes</h2>
+<p>An L-shaped room is two rectangles; a bay window is a rectangle plus a triangle or a trapezium. Adding the pieces is more reliable than trying to average two long measurements, which is where most manual estimates drift.</p>
+<p>For a triangle the area is half the base times the perpendicular height, not half the product of two slanted sides. That distinction matters for attic rooms and angled alcoves.</p>
+<h2>Sloped ceilings and unit conversions</h2>
+<p>In an attic, the floor area includes space you cannot stand in. Estate agents often count floor area; usable area is usually measured where head height clears about 1.5 metres, which can cut the figure by a third.</p>
+<p>One square metre is 10.764 square feet, and one square foot is 0.0929 square metres. Convert once, at the end, and keep the units of the original measurements visible in your notes.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/ac-size">AC Sizing</a></li>
+    <li><a href="/guides/electricity-bill">Your Electricity Bill, Decoded</a></li>
+    <li><a href="/guides/utilities">Utilities & Developer Tools Guides</a></li>
+    <li><a href="/guides/homegarden">Home & Garden Guides</a></li>
+  </ul>
+
+<h2>Frequently asked questions</h2>
   <h3>How do I calculate the area of a room?</h3>
   <p>Multiply length by width for rectangles. L-shaped rooms split into two rectangles and add. A 12×15 ft room is 180 sq ft.</p>
   <h3>How do I calculate area of an irregular room?</h3>
@@ -95,7 +162,16 @@
   <h3>How do I convert square feet to square meters?</h3>
   <p>Divide sq ft by 10.764. A 180 sq ft room is about 16.7 sq m. The Area Converter does all direction conversions precisely.</p>
 
-  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+<!-- topic-faq:start -->
+  <h3>Should I measure a room in feet and inches or in decimals?</h3>
+  <p>Decimals. Divide the inches by 12 first, so 3 in becomes 0.25 ft and 8 in becomes 0.667 ft, then multiply. Treating 14 ft 3 in as 14 × 3 × 11 mixes units and produces a figure far too small to order from.</p>
+  <h3>How do I work out the area of a bay window or angled alcove?</h3>
+  <p>Split it into the rectangle of the opening plus a triangle for each angled panel, using ½ × base × perpendicular depth for the triangle. A 6 ft wide bay projecting 2 ft adds ½ × 6 × 2 = 6 sq ft for each angled side, plus the rectangle behind it.</p>
+  <h3>How many tiles do I need for 166 sq ft?</h3>
+  <p>Add 10% for a straight lay: 166.25 × 1.10 = 182.9 sq ft. At 15 sq ft per box that is 12.19 boxes, so buy 13. A diagonal layout should use 15% instead of 10%, which gives 191.2 sq ft and 13 boxes with less spare.</p>
+<!-- topic-faq:end -->
+  <p class="related"><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog/">Blog</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

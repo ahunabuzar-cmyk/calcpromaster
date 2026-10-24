@@ -66,7 +66,9 @@
   </style>
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Rent vs Buy</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Rent vs Buy</p>
   <h1>Rent vs Buy: Every Cost Line, Then the Verdict</h1>
   <p class="updated">Finance · 7 min read · Last updated September 2026</p>
 
@@ -100,12 +102,46 @@
 
   <h2>Try the calculators</h2>
   <p class="related">
-    <a href="/finance/rent-vs-buy" class="cta">Rent vs Buy Calculator</a>
-    <a href="/finance/mortgage" class="cta">Mortgage Calculator</a>
-    <a href="/finance/home-afford" class="cta">Home Affordability Calculator</a>
+    <a href="/finance/rent-vs-buy/" class="cta">Rent vs Buy Calculator</a>
+    <a href="/finance/mortgage/" class="cta">Mortgage Calculator</a>
+    <a href="/finance/home-afford/" class="cta">Home Affordability Calculator</a>
   </p>
 
-  <h2>Frequently asked questions</h2>
+<!-- guide-worked-example:start -->
+<h2>Worked example: Mortgage Calculator at its default inputs</h2>
+<p>Open <a href="/finance/mortgage/">Mortgage Calculator</a> and press calculate without editing a field. What comes back is the table and result below, so the rent-vs-buy numbers here are checkable in one click.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Home Price</td><td>300000</td></tr><tr><td>Down Payment</td><td>60000</td></tr><tr><td>Interest Rate (% per year)</td><td>6.5</td></tr><tr><td>Loan Term (years)</td><td>30</td></tr><tr><td>Monthly Payment (for solve modes)</td><td>2000</td></tr><tr><td>Interest-Only Period (years)</td><td>5</td></tr></tbody></table>
+<p><strong>Result:</strong> Payment: $1,516.96 / monthly</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Solving for Payment (DCC: Actual/365)</li><li>Step 1: Loan = $300000 - $60000 = $240000</li><li>Step 2: Rate per monthly = 0.5417% (Actual/365)</li><li>Step 3: Periods n = 30×12 = 360</li></ol>
+<h2>Home Price — three values, three answers</h2>
+<p>The table below varies home price alone — half, the default, and half again.</p>
+<table><thead><tr><th>Home Price</th><th>Result</th></tr></thead><tbody><tr><td>150,000</td><td>Payment: $568.86 / monthly</td></tr><tr><td>300,000</td><td>Payment: $1,516.96 / monthly</td></tr><tr><td>450,000</td><td>Payment: $2,465.07 / monthly</td></tr></tbody></table>
+<p>Halve home price and the result moves one way; add half again and it moves the other. Watching that gap is quicker than guessing which field matters most.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>The comparison is a horizon problem</h2>
+<p>Buying front-loads costs — down payment, fees, stamp duty — and builds equity slowly. Renting costs less upfront and invests nothing. The break-even horizon is where the accumulated equity overtakes the invested difference, and it is usually measured in years, not months.</p>
+<p>If you might move within three years, transaction costs alone often decide the answer. Model your realistic horizon, not the one you hope for.</p>
+<h2>The costs people leave out of owning</h2>
+<p>Maintenance of roughly 1% of property value a year, property tax, insurance, service charges and the opportunity cost of the down payment all belong on the owning side. Renters carry none of them directly.</p>
+<p>On the renting side, include rent inflation and the fact that rent is paid with after-tax money, exactly like a mortgage payment.</p>
+<h2>Leverage and risk</h2>
+<p>A mortgage is leverage: a 10% rise in property value on a 20% down payment is a 50% return on equity, and a 10% fall is a 50% loss. That asymmetry is the reason buying can be excellent or ruinous depending on timing.</p>
+<p>Renting is not throwing money away, and buying is not automatically an investment. The right answer depends on horizon, mobility and how much of your net worth the down payment represents.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/emi">How to Calculate Loan EMI</a></li>
+    <li><a href="/guides/mortgage">How to Calculate a Mortgage Payment</a></li>
+    <li><a href="/guides/loans-mortgages">Loan & Mortgage Guides</a></li>
+    <li><a href="/guides/debt-payoff">Debt Snowball vs Avalanche</a></li>
+  </ul>
+
+<h2>Frequently asked questions</h2>
   <h3>Is renting always throwing money away?</h3>
   <p>No — rent buys shelter with zero maintenance, tax and transaction costs, and it frees the down payment to earn returns elsewhere. Interest, maintenance and transaction costs are the "thrown away" parts of owning; every option has a sinking part.</p>
   <h3>What is the 5% rule for renting vs buying?</h3>
@@ -116,7 +152,8 @@
   <p>No — principal is forced savings that builds equity you recover on sale. Count interest, maintenance, tax and transaction costs; comparing only EMI vs rent (which counts principal as cost) overstates owning’s expense but also hides its savings discipline.</p>
 
 <div class="review-block"><strong>About this guide:</strong> Written and maintained by CalcProMaster’s developer — an independent site, not a licensed financial advisor or medical professional. Every worked example below was computed by hand and cross-checked with the linked calculator; our <a href="/editorial-policy">editorial policy</a> explains how content is written, tested and corrected.</div>
-  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <p class="related"><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog/">Blog</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

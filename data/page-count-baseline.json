@@ -1,0 +1,20 @@
+{
+  "generatedAt": "2026-10-17T13:44:11.474Z",
+  "counts": {
+    "sitemapUrls": 1420,
+    "duplicateSitemapLocs": 0,
+    "deployPages": 1620,
+    "contentlessPages": 0,
+    "toolIds": 1285,
+    "missingToolPages": 0,
+    "missingSitemapHtml": 0,
+    "inventoryRows": 1419,
+    "hundredsPages": 1,
+    "broadPages": 31,
+    "growingPages": 88,
+    "thinPages": 141,
+    "stuckPages": 208,
+    "backlogWrite": 17,
+    "backlogExpose": 8
+  }
+}

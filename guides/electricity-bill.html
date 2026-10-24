@@ -56,7 +56,9 @@
   </style>
 </head>
 <body>
-  <p class="crumb"><a href="/">Home</a> › <a href="/guides">Guides</a> › Electricity Bill</p>
+<!-- main-landmark -->
+<main>
+  <p class="crumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Electricity Bill</p>
   <h1>Your Electricity Bill, Decoded: Watts × Hours × Rate</h1>
   <p class="updated">Everyday · 6 min read · Last updated September 2026</p>
 
@@ -72,16 +74,53 @@
   <p>Many utilities price in slabs: the first 100 kWh cheap, the next band pricier, and so on. Your <em>average</em> rate is not the rate for the next kWh — crossing into a higher slab makes every additional AC hour more expensive than your bill average suggests. Check your bill's slab structure before estimating savings; shaving consumption below a slab boundary saves at the higher marginal rate.</p>
 
   <h2>Finding the big consumers</h2>
-  <p>Wattage × runtime ranks them honestly: ACs, water heaters and dryers dominate; fridges run constantly but at low power; phone chargers and idle electronics are rounding errors despite folklore. Measure suspects with the appliance's nameplate wattage and your usage pattern in the <a href="/everyday/electricity">Electricity Bill Calculator</a> — and compare appliance upgrades with the <a href="/homegarden/appliance-cost">Appliance Running Cost</a> tool.</p>
+  <p>Wattage × runtime ranks them honestly: ACs, water heaters and dryers dominate; fridges run constantly but at low power; phone chargers and idle electronics are rounding errors despite folklore. Measure suspects with the appliance's nameplate wattage and your usage pattern in the <a href="/everyday/electricity/">Electricity Bill Calculator</a> — and compare appliance upgrades with the <a href="/homegarden/appliance-cost/">Appliance Running Cost</a> tool.</p>
 
   <h2>Try the calculators</h2>
   <p class="related">
-    <a href="/everyday/electricity" class="cta">Electricity Bill Calculator</a>
-    <a href="/homegarden/appliance-cost" class="cta">Appliance Running Cost</a>
+    <a href="/everyday/electricity/" class="cta">Electricity Bill Calculator</a>
+    <a href="/homegarden/appliance-cost/" class="cta">Appliance Running Cost</a>
     <a href="/guides/everyday" class="cta">Everyday Guides</a>
   </p>
 
-  <h2>Frequently asked questions</h2>
+  
+  
+<!-- guide-worked-example:start -->
+<h2>Worked example: Electricity Bill Calculator at its default inputs</h2>
+<p>Take the default setup on <a href="/everyday/electricity/">Electricity Bill Calculator</a>: no fields changed, nothing tuned to a nice round number. Run in the site's own engine, those values produce the answer below.</p>
+<table><caption>Default inputs</caption><thead><tr><th>Input</th><th>Default</th></tr></thead><tbody><tr><td>Power (W)</td><td>100</td></tr><tr><td>Hours/Day</td><td>8</td></tr><tr><td>Days</td><td>30</td></tr><tr><td>Rate ($/kWh)</td><td>0.12</td></tr></tbody></table>
+<p><strong>Result:</strong> Cost: $2.88</p>
+<p class="steps-label"><strong>The steps behind that answer</strong></p><ol><li>Step 1: Energy = Power × Time = 100W × 8h × 30d / 1000 = 24.0 kWh</li><li>Step 2: Cost = 24.0 kWh × $0.12 = $2.88</li></ol>
+<h2>What Power (W) does to the answer</h2>
+<p>Hold every other field still and move only power (w).</p>
+<table><thead><tr><th>Power (W)</th><th>Result</th></tr></thead><tbody><tr><td>50</td><td>Cost: $1.44</td></tr><tr><td>100</td><td>Cost: $2.88</td></tr><tr><td>150</td><td>Cost: $4.32</td></tr></tbody></table>
+<p>If the rows barely differ, power (w) is not your lever — change a different input. If they swing widely, get that number right before trusting the total.</p>
+<!-- guide-worked-example:end -->
+  
+<!-- guide-extra-depth:start -->
+<h2>Units, slabs and the marginal rate</h2>
+<p>A unit is one kilowatt-hour: a 1,000-watt appliance running for one hour. Slab tariffs charge a different rate per unit depending on how much you use, so the bill is a sum of bands rather than units multiplied by one price.</p>
+<p>That structure makes the rate you pay for the last unit higher than your average rate. Adding a large appliance changes the last band, which is why the extra cost is often bigger than a simple per-unit estimate predicts.</p>
+<h2>Fixed charges and taxes</h2>
+<p>Most bills include a fixed monthly charge, a meter charge and a duty or tax on the total. These do not scale with usage, so a low-usage month still carries a floor, and they explain why halving consumption rarely halves the bill.</p>
+<p>Read the bill structure once and write down the fixed portion. It is the number to compare when deciding whether a small solar install or a tariff change is worth it.</p>
+<h2>Estimating an appliance honestly</h2>
+<p>Watts times hours gives watt-hours, then divide by 1,000 for units. The catch is that nameplate watts are a maximum: an air conditioner on inverter control, a fridge cycling on and off, or a laptop idling all draw less than the label.</p>
+<p>For anything with a duty cycle, use a plug-in energy meter for a week rather than the label. For small electronics, the label is close enough and the numbers are too small to matter.</p>
+<p>Standby load is the other hidden line: routers, televisions and chargers left plugged in can add 5-15 units a month across a household. Small per device, paid every month, and removable with a switched extension.</p>
+<!-- guide-extra-depth:end -->
+
+
+  <!-- related-guides -->
+  <h2>Related guides</h2>
+  <ul class="related related-guides">
+    <li><a href="/guides/utilities">Utilities & Developer Tools Guides</a></li>
+    <li><a href="/guides/homegarden">Home & Garden Guides</a></li>
+    <li><a href="/guides/construction">Construction Guides</a></li>
+    <li><a href="/guides/concrete">How to Calculate Concrete for Slabs, Footings and Pads</a></li>
+  </ul>
+
+<h2>Frequently asked questions</h2>
   <h3>How do I calculate my electricity bill?</h3>
   <p>For each appliance: watts × daily hours ÷ 1,000 = daily kWh. Multiply by 30 for monthly kWh, sum across appliances, then multiply by your rate (respecting slab tiers if your utility uses them).</p>
   <h3>How much does it cost to run an AC?</h3>
@@ -91,7 +130,8 @@
   <h3>Why is my bill higher than my kWh math?</h3>
   <p>Slab pricing (later units cost more), fixed charges, taxes and fuel-adjustment surcharges sit on top of the energy line. Check the bill’s non-energy lines before blaming the appliances.</p>
 
-  <p class="related"><a href="/guides">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog">Blog</a></p>
+  <p class="related"><a href="/guides/">← All guides</a> · <a href="/guides/glossary">Glossary</a> · <a href="/blog/">Blog</a></p>
   <script src="/guides/glossary-tooltips.js" defer></script>
+</main>
 </body>
 </html>

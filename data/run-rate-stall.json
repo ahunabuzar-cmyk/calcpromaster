@@ -1,0 +1,14 @@
+{
+  "ranAt": "2026-10-17T13:08:25.519Z",
+  "status": "insufficient-history",
+  "flatWeeks": 0,
+  "stalled": false,
+  "weeksInHistory": 1,
+  "weeksUntilDecidable": 2,
+  "runRate7": 1241,
+  "runRate7PerMonth": 37767,
+  "indexedPct": 50.8,
+  "indexedPctDelta": null,
+  "cause": null,
+  "reason": "abhi 2 hafte ka history nahi bana"
+}

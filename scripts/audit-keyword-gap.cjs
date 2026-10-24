@@ -36,7 +36,27 @@ const ROOT = path.join(__dirname, '..');
 const IN_DIR = path.join(ROOT, 'data', 'keyword-gap');
 const OUT_JSON = path.join(ROOT, 'data', 'keyword-gap.json');
 const OUT_MD = path.join(ROOT, 'docs', 'KEYWORD-GAP.md');
+// Per-keyword verdict for EVERY row that went through the classifier, one line
+// per keyword. The JSON above only carries the actionable slices (gap + weak),
+// so without this file the claim "every row of the 88-row keyword-volume export
+// was classified" cannot be checked — it can only be re-derived by re-running
+// the classifier against a built site. This is the analysis side of the
+// export↔analysis agreement asserted by tests/unit/keyword-gap-agreement.test.js.
+// NOTE: it deliberately lives OUTSIDE data/keyword-gap/ — that directory is the
+// input set (readInputs() reads every *.csv in it), so a verdict file in there
+// would be re-read as an input export on the next run.
+const OUT_VERDICTS = path.join(ROOT, 'data', 'keyword-gap-verdicts.csv');
 const DEPLOY = path.join(ROOT, 'deploy');
+
+// The 20 categories that actually host calculators. deploy/ contains other
+// top-level directories too (blog, guides, hub, embed, the disclaimer pages,
+// legal copy), and those must never be suggested as the home for a new tool —
+// see the note on the category vote below.
+const TOOL_CATS = new Set([
+  'finance', 'health', 'math', 'everyday', 'science', 'engineering', 'construction',
+  'conversion', 'business', 'education', 'utilities', 'lifestyle', 'regional', 'food',
+  'fitness', 'auto', 'career', 'homegarden', 'tech', 'family'
+]);
 
 const argNum = (name, dflt) => {
   const i = process.argv.indexOf(name);
@@ -121,7 +141,10 @@ function readInputs() {
       source: prev.source === k.source ? prev.source : prev.source + '+' + k.source
     });
   }
-  return { keywords: [...byKw.values()], files };
+  // inputRows is the pre-dedupe count: how many CSV data rows the classifier
+  // actually saw. Reporting it next to the unique count is what shows the
+  // duplicates instead of hiding them (608 rows → 604 unique keywords).
+  return { keywords: [...byKw.values()], files, inputRows: out.length };
 }
 
 // ---------- our site's pages as the coverage ground truth ----------
@@ -159,7 +182,14 @@ const SYN = new Map([
   // "hours worked" wording belongs to the hours/timesheet pages, not to a page
   // literally titled "worked".
   ['worked', 'hours'], ['working', 'hours'], ['worktime', 'hours'], ['timesheet', 'hours'],
-  ['deduction', 'deductions']
+  ['deduction', 'deductions'],
+  // "days" is four letters, so the plural stemmer (which only folds length >= 5)
+  // left it alone while the page said "Day" — and the audit then handed
+  // "snow days calculator" to /everyday/jet-lag (whose title says "Days") even
+  // though /everyday/snow-day states the keyword in its H1 and title. An explicit
+  // fold is safer than lowering the stemmer's floor, which would restem every
+  // four-letter plural in the corpus.
+  ['days', 'day']
 ]);
 const tokens = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9\s-]+/g, ' ').split(/[\s-]+/).filter(Boolean);
 // Light plural stemming, because "day count" and a page titled "Days Between
@@ -206,6 +236,13 @@ function buildIndex() {
       const file = entry.isDirectory() ? path.join(catDir, entry.name, 'index.html') : path.join(catDir, entry.name);
       if (!fs.existsSync(file) || !file.endsWith('.html')) continue;
       const html = fs.readFileSync(file, 'utf8');
+      // A noindex page is not a coverage owner. deploy/embed/* declares
+      // "noindex, follow" (its canonical is the real tool page), so counting it
+      // made "paycheck calculator" look covered by /embed/dubai-salary — an
+      // embeddable widget that is not in the sitemap. The page's own robots
+      // declaration decides, not a hardcoded directory list, so any future
+      // noindex variant is excluded the same way.
+      if (/<meta[^>]+name=["']robots["'][^>]+content=["'][^"']*noindex/i.test(html)) continue;
       const title = (html.match(/<title>([^<]*)<\/title>/) || [])[1] || '';
       const h1 = (html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i) || [])[1] || '';
       const slug = entry.isDirectory() ? '/' + dir.name + '/' + entry.name : '/' + dir.name + '/' + entry.name.replace(/\.html$/, '');
@@ -310,7 +347,7 @@ function classify(keyword, pages) {
 }
 
 function main() {
-  const { keywords, files } = readInputs();
+  const { keywords, files, inputRows } = readInputs();
   const pages = buildIndex();
 
   // --explain <keyword>: show the evidence behind one verdict (why a page did or
@@ -343,12 +380,21 @@ function main() {
     if (c.verdict === 'GAP' && c.head) {
       // Place the missing page by category vote: the category with the most
       // pages that already carry the head token is where this tool belongs.
+      //
+      // The vote is restricted to real tool categories. deploy/ also holds
+      // non-tool pages — the per-topic disclaimers, blog, guides, legal copy —
+      // and their paths carry tool-ish words ("financial", "cost", "time"),
+      // so an unrestricted vote produced nonsense like
+      // `/disclaimer-finance/financial-compound`: a legal notice offered as the
+      // home for a calculator. A suggestion that cannot host a tool is worse
+      // than no suggestion.
       const votes = new Map();
       for (const p of pages) {
         if (!distinctive(p, c.head)) continue;
         const cat = p.path.split('/')[1] || '';
         if (cat) votes.set(cat, (votes.get(cat) || 0) + 1);
       }
+      for (const cat of [...votes.keys()]) if (!TOOL_CATS.has(cat)) votes.delete(cat);
       const cat = [...votes.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))[0];
       const slug = k.keyword.replace(/\bcalculator?s?\b/g, '').trim().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-');
       if (cat && slug) suggest = '/' + cat[0] + '/' + slug;
@@ -360,17 +406,51 @@ function main() {
   const counts = { COVERED: 0, WEAK: 0, GAP: 0, IGNORE: 0 };
   for (const r of rows) counts[r.verdict]++;
   const byVerdict = (v) => rows.filter((r) => r.verdict === v);
+  // Which export each verdict came from, and which keywords appeared in more
+  // than one export. Both are cheap and make the export↔analysis agreement
+  // checkable without re-running the classifier (see OUT_VERDICTS note above).
+  const bySource = {};
+  const seenIn = new Map();
+  for (const r of rows) {
+    for (const src of String(r.source || '').split('+')) {
+      if (!src) continue;
+      const b = bySource[src] || (bySource[src] = { rows: 0, COVERED: 0, WEAK: 0, GAP: 0, IGNORE: 0 });
+      b.rows++;
+      b[r.verdict]++;
+      if (!seenIn.has(r.keyword)) seenIn.set(r.keyword, new Set());
+      seenIn.get(r.keyword).add(src);
+    }
+  }
+  const duplicateKeywords = [...seenIn.entries()]
+    .filter(([, s]) => s.size > 1)
+    .map(([kw, s]) => ({ keyword: kw, sources: [...s].sort() }))
+    .sort((a, b) => a.keyword.localeCompare(b.keyword));
+
   const report = {
     ranAt: new Date().toISOString(),
     inputs: files,
+    inputRows,
     pagesIndexed: pages.length,
     keywords: rows.length,
     counts,
+    bySource,
+    duplicateKeywords,
     gap: byVerdict('GAP').slice(0, 200),
     weak: byVerdict('WEAK').slice(0, 200)
   };
   fs.mkdirSync(path.dirname(OUT_JSON), { recursive: true });
   fs.writeFileSync(OUT_JSON, JSON.stringify(report, null, 2));
+
+  // One line per classified keyword, sorted by verdict then keyword so the file
+  // diffs readably when a single row changes verdict. `keyword` is quoted
+  // because several export keywords carry a comma ("celsius to fahrenheit, …").
+  const csvCell = (v) => {
+    const s = String(v == null ? '' : v);
+    return /[",\r\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+  };
+  const verdictRows = [...rows].sort((a, b) => a.verdict.localeCompare(b.verdict) || a.keyword.localeCompare(b.keyword));
+  fs.writeFileSync(OUT_VERDICTS, 'keyword,verdict,page,source,volume,difficulty\r\n'
+    + verdictRows.map((r) => [r.keyword, r.verdict, r.page || '', r.source || '', r.volume, r.difficulty].map(csvCell).join(',')).join('\r\n') + '\r\n');
 
   if (!JSON_ONLY) {
     const L = [];
@@ -430,6 +510,7 @@ function main() {
     L.push('- `GAP` means no page states the keyword in its title/slug — not that nothing similar exists. A "nearest page" column was tried and removed: a page sharing one incidental title word (an EV burn-rate page for "mortgage expense") reads like an answer and is not one. Check these by hand against the suggested path.');
     L.push('- `WEAK` is a hint to inspect, not a verdict: it means every token is on that page while the title names only part of the keyword.');
     L.push('- `COVERED` deliberately ignores SERP position: the site has pages for the head terms and still sits on page 3-5, so the bottleneck for those is authority/indexing, not another page.');
+    L.push('- A `GAP` verdict is about **slug/title wording**, and it is not by itself a licence to build a page: [KEYWORD-TARGET-RESOLUTION.md](KEYWORD-TARGET-RESOLUTION.md) holds the per-row decision (95 of the B/C/D rows are answered by an existing owner page, only 2 have no honest owner). Check that table before creating any URL listed here, and prefer improving the named owner.');
     L.push('- Difficulty columns come from two different vendors (SEO Difficulty vs Competition Index) and are therefore comparable within a file, not across files.');
     L.push('- Re-run after adding pages: `node scripts/audit-keyword-gap.cjs` (the CSVs are committed under `data/keyword-gap/`).');
     L.push('');
@@ -440,18 +521,21 @@ function main() {
     console.log('  pages indexed : ' + pages.length);
     // IGNORE is printed too: without it the three verdicts do not add up to the
     // keyword count and the gap looks like a bug in the classifier.
-    console.log('  keywords      : ' + rows.length + '  (COVERED ' + counts.COVERED + ' / WEAK ' + counts.WEAK + ' / GAP ' + counts.GAP + ' / IGNORE ' + counts.IGNORE + ')');
+    console.log('  keywords      : ' + rows.length + ' unique from ' + inputRows + ' input row(s)'
+      + (duplicateKeywords.length ? ' (' + duplicateKeywords.length + ' duplicate keyword(s) merged)' : '')
+      + '  (COVERED ' + counts.COVERED + ' / WEAK ' + counts.WEAK + ' / GAP ' + counts.GAP + ' / IGNORE ' + counts.IGNORE + ')');
     console.log('  top gaps:');
     for (const r of byVerdict('GAP').slice(0, 10)) console.log('    ' + String(r.volume).padStart(9) + '  ' + r.keyword + '  (diff ' + r.difficulty + ')');
     console.log('  top weak:');
     for (const r of byVerdict('WEAK').slice(0, 10)) console.log('    ' + String(r.volume).padStart(9) + '  ' + r.keyword + '  → ' + r.page);
-    console.log('  report: ' + path.relative(ROOT, OUT_MD) + ' · data: ' + path.relative(ROOT, OUT_JSON));
+    console.log('  report: ' + path.relative(ROOT, OUT_MD) + ' · data: ' + path.relative(ROOT, OUT_JSON)
+      + ' · verdicts: ' + path.relative(ROOT, OUT_VERDICTS));
   }
   return 0;
 }
 
 // Exported for tests: the classification rules are heuristics that were tuned
 // against real exports, so they need to stay pinned by unit tests.
-module.exports = { stem, canon, keyTokens, isBrandOnly, distinctive, classify, BOILER_DF };
+module.exports = { stem, canon, keyTokens, isBrandOnly, distinctive, classify, buildIndex, BOILER_DF };
 
 if (require.main === module) process.exit(main());

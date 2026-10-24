@@ -1,52 +1,81 @@
 {
-  "ranAt": "2026-10-14T16:17:24.084Z",
+  "ranAt": "2026-10-18T04:30:49.057Z",
   "inputs": [
     "calculator-net-gap.csv",
     "calculatorsoup-gap.csv",
     "keyword-planner.csv",
     "keyword-volume-difficulty.csv"
   ],
-  "pagesIndexed": 1436,
+  "inputRows": 608,
+  "pagesIndexed": 1425,
   "keywords": 604,
   "counts": {
-    "COVERED": 468,
+    "COVERED": 476,
     "WEAK": 26,
-    "GAP": 89,
+    "GAP": 81,
     "IGNORE": 21
   },
+  "bySource": {
+    "keyword-planner": {
+      "rows": 500,
+      "COVERED": 401,
+      "WEAK": 18,
+      "GAP": 65,
+      "IGNORE": 16
+    },
+    "keyword-volume-difficulty": {
+      "rows": 88,
+      "COVERED": 67,
+      "WEAK": 4,
+      "GAP": 15,
+      "IGNORE": 2
+    },
+    "calculatorsoup-gap": {
+      "rows": 10,
+      "COVERED": 6,
+      "WEAK": 0,
+      "GAP": 1,
+      "IGNORE": 3
+    },
+    "calculator-net-gap": {
+      "rows": 10,
+      "COVERED": 4,
+      "WEAK": 4,
+      "GAP": 0,
+      "IGNORE": 2
+    }
+  },
+  "duplicateKeywords": [
+    {
+      "keyword": "age calculator",
+      "sources": [
+        "calculatorsoup-gap",
+        "keyword-planner"
+      ]
+    },
+    {
+      "keyword": "calculator",
+      "sources": [
+        "calculator-net-gap",
+        "calculatorsoup-gap"
+      ]
+    },
+    {
+      "keyword": "calculators",
+      "sources": [
+        "calculator-net-gap",
+        "calculatorsoup-gap"
+      ]
+    },
+    {
+      "keyword": "concrete calculator",
+      "sources": [
+        "keyword-planner",
+        "keyword-volume-difficulty"
+      ]
+    }
+  ],
   "gap": [
-    {
-      "keyword": "snow day calculator",
-      "volume": 368000,
-      "difficulty": 17,
-      "cpc": 0,
-      "competitorPosition": null,
-      "competitorUrl": "",
-      "source": "keyword-volume-difficulty",
-      "verdict": "GAP",
-      "page": null,
-      "head": "snow",
-      "titleHits": 1,
-      "bodyHits": 1,
-      "opportunity": 305440,
-      "suggest": null
-    },
-    {
-      "keyword": "snow days calculator",
-      "volume": 368000,
-      "difficulty": 17,
-      "cpc": 0,
-      "competitorPosition": null,
-      "competitorUrl": "",
-      "source": "keyword-volume-difficulty",
-      "verdict": "GAP",
-      "page": null,
-      "head": "snow",
-      "titleHits": 1,
-      "bodyHits": 1,
-      "opportunity": 305440,
-      "suggest": null
-    },
     {
       "keyword": "polypeptide calculator",
       "volume": 301000,
@@ -224,22 +253,6 @@
       "suggest": "/finance/bank-certificate"
     },
     {
-      "keyword": "time card clock calculator",
-      "volume": 201000,
-      "difficulty": 20,
-      "cpc": 8.7,
-      "competitorPosition": null,
-      "competitorUrl": "",
-      "source": "keyword-volume-difficulty",
-      "verdict": "GAP",
-      "page": null,
-      "head": "clock",
-      "titleHits": 1,
-      "bodyHits": 2,
-      "opportunity": 160800,
-      "suggest": "/everyday/time-card-clock"
-    },
-    {
       "keyword": "ft2 calculator",
       "volume": 165000,
       "difficulty": 9,
@@ -304,22 +317,6 @@
       "suggest": null
     },
     {
-      "keyword": "day count",
-      "volume": 74000,
-      "difficulty": 0,
-      "cpc": 0.01,
-      "competitorPosition": null,
-      "competitorUrl": "",
-      "source": "keyword-planner",
-      "verdict": "GAP",
-      "page": null,
-      "head": "count",
-      "titleHits": 1,
-      "bodyHits": 1,
-      "opportunity": 74000,
-      "suggest": "/education/day-count"
-    },
-    {
       "keyword": "calendar calculator",
       "volume": 60500,
       "difficulty": 0,
@@ -365,7 +362,7 @@
       "titleHits": 1,
       "bodyHits": 1,
       "opportunity": 34830,
-      "suggest": "/disclaimer-finance/financial-compound"
+      "suggest": "/education/financial-compound"
     },
     {
       "keyword": "financial compounding calculator",
@@ -381,7 +378,7 @@
       "titleHits": 1,
       "bodyHits": 1,
       "opportunity": 34830,
-      "suggest": "/disclaimer-finance/financial-compounding"
+      "suggest": "/education/financial-compounding"
     },
     {
       "keyword": "interest percentage calculator",
@@ -400,22 +397,6 @@
       "suggest": "/finance/interest-percentage"
     },
     {
-      "keyword": "annual percentage calculator",
-      "volume": 27100,
-      "difficulty": 5,
-      "cpc": 0.84,
-      "competitorPosition": null,
-      "competitorUrl": "",
-      "source": "keyword-planner",
-      "verdict": "GAP",
-      "page": null,
-      "head": "percentage",
-      "titleHits": 1,
-      "bodyHits": 1,
-      "opportunity": 25745,
-      "suggest": "/guides/annual-percentage"
-    },
-    {
       "keyword": "ot calculator",
       "volume": 22200,
       "difficulty": 1,
@@ -430,38 +411,6 @@
       "bodyHits": 1,
       "opportunity": 21978,
       "suggest": "/career/ot"
-    },
-    {
-      "keyword": "time payroll calculator",
-      "volume": 22200,
-      "difficulty": 12,
-      "cpc": 1.48,
-      "competitorPosition": null,
-      "competitorUrl": "",
-      "source": "keyword-planner",
-      "verdict": "GAP",
-      "page": null,
-      "head": "salary",
-      "titleHits": 1,
-      "bodyHits": 1,
-      "opportunity": 19536,
-      "suggest": "/regional/time-payroll"
-    },
-    {
-      "keyword": "pay time calculator",
-      "volume": 22200,
-      "difficulty": 12,
-      "cpc": 1.48,
-      "competitorPosition": null,
-      "competitorUrl": "",
-      "source": "keyword-planner",
-      "verdict": "GAP",
-      "page": null,
-      "head": "salary",
-      "titleHits": 1,
-      "bodyHits": 1,
-      "opportunity": 19536,
-      "suggest": "/regional/pay-time"
     },
     {
       "keyword": "simplify calculator",
@@ -779,11 +728,11 @@
       "source": "keyword-planner",
       "verdict": "GAP",
       "page": null,
-      "head": "time",
+      "head": "over",
       "titleHits": 1,
       "bodyHits": 1,
       "opportunity": 2340,
-      "suggest": "/food/investment-over-time"
+      "suggest": null
     },
     {
       "keyword": "share return calculator",
@@ -815,7 +764,7 @@
       "titleHits": 0,
       "bodyHits": 1,
       "opportunity": 2156,
-      "suggest": "/index/smart"
+      "suggest": null
     },
     {
       "keyword": "calculator on this phone",
@@ -960,7 +909,7 @@
       "titleHits": 1,
       "bodyHits": 1,
       "opportunity": 1501,
-      "suggest": "/guides/loan-percentage"
+      "suggest": "/math/loan-percentage"
     },
     {
       "keyword": "figure out interest rate on loan",
@@ -1072,7 +1021,7 @@
       "titleHits": 1,
       "bodyHits": 1,
       "opportunity": 1197,
-      "suggest": "/disclaimer-finance/financial-planning"
+      "suggest": "/education/financial-planning"
     },
     {
       "keyword": "roi calculation formula",
@@ -1155,22 +1104,6 @@
       "suggest": "/finance/compound-investments"
     },
     {
-      "keyword": "time and pay calculator",
-      "volume": 1000,
-      "difficulty": 5,
-      "cpc": 0.95,
-      "competitorPosition": null,
-      "competitorUrl": "",
-      "source": "keyword-planner",
-      "verdict": "GAP",
-      "page": null,
-      "head": "salary",
-      "titleHits": 1,
-      "bodyHits": 1,
-      "opportunity": 950,
-      "suggest": "/regional/time-and-pay"
-    },
-    {
       "keyword": "future value of investment calculator",
       "volume": 1300,
       "difficulty": 30,
@@ -1200,7 +1133,7 @@
       "titleHits": 1,
       "bodyHits": 1,
       "opportunity": 890,
-      "suggest": "/guides/compound-loan"
+      "suggest": "/finance/compound-loan"
     },
     {
       "keyword": "savings percentage calculator",
@@ -1299,6 +1232,22 @@
       "suggest": "/finance/investment-account"
     },
     {
+      "keyword": "loan calculator monthly",
+      "volume": 1000,
+      "difficulty": 25,
+      "cpc": 0.15,
+      "competitorPosition": null,
+      "competitorUrl": "",
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "page": null,
+      "head": "loan",
+      "titleHits": 1,
+      "bodyHits": 1,
+      "opportunity": 750,
+      "suggest": "/finance/loan-monthly"
+    },
+    {
       "keyword": "compare loan calculator",
       "volume": 1000,
       "difficulty": 25,
@@ -1329,22 +1278,6 @@
       "bodyHits": 1,
       "opportunity": 695,
       "suggest": "/finance/compound-return"
-    },
-    {
-      "keyword": "mortgage calculator how much can i qualify for",
-      "volume": 1900,
-      "difficulty": 66,
-      "cpc": 0.91,
-      "competitorPosition": null,
-      "competitorUrl": "",
-      "source": "keyword-planner",
-      "verdict": "GAP",
-      "page": null,
-      "head": "qualify",
-      "titleHits": 1,
-      "bodyHits": 1,
-      "opportunity": 646,
-      "suggest": "/regional/mortgage-how-much-can-i-qualify-for"
     },
     {
       "keyword": "mortgage calculator how much do i qualify for",
@@ -1613,7 +1546,7 @@
       "competitorUrl": "",
       "source": "keyword-planner",
       "verdict": "WEAK",
-      "page": "/everyday/distance-pace",
+      "page": "/career/timesheet-hours",
       "head": "counter",
       "titleHits": 1,
       "bodyHits": 2,

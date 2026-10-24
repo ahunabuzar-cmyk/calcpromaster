@@ -275,7 +275,91 @@ const ENGINEERING_TOOLS = [
   { id: 'rcf-gforce', name: 'RCF (G-Force) Calculator', desc: 'Relative centrifugal force from rpm and rotor radius', kw: 'rcf calculator g force centrifuge rpm rotor radius relative, free online RCF (G-Force) Calculator',
     inputs: [{id:'rpm',label:'Rotor Speed (rpm)',type:'number',def:5000},{id:'r',label:'Rotor Radius (cm)',type:'number',def:8}],
     calc: function(v){ const rcf=1.118e-5*v.r*v.rpm*v.rpm; return { result: rcf.toFixed(0)+' × g', chart: null, extra: 'RCF = 1.118 × 10⁻⁵ × r(cm) × rpm² — protocols specify g-force, not rpm, because rotors differ' }; },
-    steps: function(v){ return ['RCF = 1.118×10⁻⁵ × r × rpm²']; } },
+    steps: function(v){ return ['RCF = 1.118×10⁻⁵ × r × rpm²']; } }
+,
+  {
+    id: 'pipe-pressure-loss',
+    name: 'Pipe Pressure Loss Calculator',
+    desc: 'Free pipe pressure loss calculator using the Hazen-Williams equation: head loss and PSI drop by pipe material, flow and diameter.',
+    kw: 'pipe pressure loss calculator, hazen williams calculator, head loss calculator, friction loss pipe',
+    inputs: [
+{ id: 'flow', label: 'Flow rate (gpm)', type: 'number', def: 100 },
+      { id: 'diameter', label: 'Internal diameter (in)', type: 'number', def: 4 },
+      { id: 'material', label: 'Pipe material', type: 'select', opts: [{v:'PVC',l:'PVC'},{v:'Copper',l:'Copper'},{v:'Steel',l:'Steel'},{v:'Cast iron',l:'Cast iron'}], def: 'PVC' },
+      { id: 'length', label: 'Pipe length (ft)', type: 'number', def: 100 }
+    ],
+    calc: function (v) {
+      var C = v.material === 'PVC' ? 150 : v.material === 'Copper' ? 130 : v.material === 'Steel' ? 120 : 100;
+      var d = v.diameter / 12;
+      var R = d / 4;
+      var A = Math.PI * d * d / 4;
+      var Q = v.flow / 448.831;
+      var V = Q / A;
+      var S = Math.pow(V / (1.318 * C * Math.pow(R, 0.63)), 1 / 0.54);
+      var hf = S * v.length;
+      var psi = hf * 0.433;
+      return {
+        result: 'Head loss: ' + hf.toFixed(2) + ' ft (' + psi.toFixed(2) + ' psi)',
+        chart: Charts.bar([hf, psi], ['Head (ft)', 'PSI']),
+        extra: 'Velocity: ' + V.toFixed(2) + ' ft/s | Friction slope ' + (S * 100).toFixed(3) + ' ft per 100 ft | Hazen-Williams C = ' + C + ' (' + v.material + ')'
+      };
+    },
+    steps: function (v) {
+      var C = v.material === 'PVC' ? 150 : v.material === 'Copper' ? 130 : v.material === 'Steel' ? 120 : 100;
+      var d = v.diameter / 12;
+      var R = d / 4;
+      var A = Math.PI * d * d / 4;
+      var Q = v.flow / 448.831;
+      var V = Q / A;
+      var S = Math.pow(V / (1.318 * C * Math.pow(R, 0.63)), 1 / 0.54);
+      var hf = S * v.length;
+      return [
+        'Step 1: Convert flow to cubic feet per second: ' + v.flow + ' gpm / 448.831 = ' + Q.toFixed(4) + ' cfs.',
+        'Step 2: Internal area = pi x (' + d.toFixed(4) + ' ft) squared / 4 = ' + A.toFixed(4) + ' sq ft.',
+        'Step 3: Velocity = ' + Q.toFixed(4) + ' / ' + A.toFixed(4) + ' = ' + V.toFixed(2) + ' ft/s.',
+        'Step 4: Hydraulic radius R = diameter / 4 = ' + R.toFixed(4) + ' ft; Hazen-Williams C = ' + C + ' for ' + v.material + '.',
+        'Step 5: Friction slope S = (V / (1.318 x C x R^0.63)) ^ (1 / 0.54) = ' + S.toFixed(6) + ' ft per ft.',
+        'Step 6: Head loss = S x ' + v.length + ' ft = ' + hf.toFixed(2) + ' ft, which is ' + (hf * 0.433).toFixed(2) + ' psi.'
+      ];
+    }
+  },
+  {
+    id: 'hvac-load',
+    name: 'HVAC Load Calculator',
+    desc: 'Free simplified HVAC cooling load calculator: BTU per hour and tons of cooling from floor area, climate, insulation and windows.',
+    kw: 'hvac load calculator, manual j calculator, cooling load calculator, btu per square foot air conditioner',
+    inputs: [
+{ id: 'area', label: 'Conditioned floor area (sq ft)', type: 'number', def: 1500 },
+      { id: 'climate', label: 'Climate', type: 'select', opts: [{v:'Hot',l:'Hot'},{v:'Moderate',l:'Moderate'},{v:'Cold',l:'Cold'}], def: 'Moderate' },
+      { id: 'insulation', label: 'Insulation quality', type: 'select', opts: [{v:'Good',l:'Good'},{v:'Average',l:'Average'},{v:'Poor',l:'Poor'}], def: 'Average' },
+      { id: 'windows', label: 'Number of windows', type: 'number', def: 10 }
+    ],
+    calc: function (v) {
+      var base = v.climate === 'Hot' ? 30 : v.climate === 'Cold' ? 20 : 25;
+      var fac = v.insulation === 'Good' ? 0.85 : v.insulation === 'Poor' ? 1.2 : 1.0;
+      var btu = v.area * base * fac + v.windows * 1000;
+      var tons = btu / 12000;
+      return {
+        result: 'Cooling load: ' + btu.toFixed(0) + ' BTU/h (' + tons.toFixed(1) + ' tons)',
+        chart: Charts.donut([v.area * base * fac, v.windows * 1000], ['Area load', 'Window load']),
+        extra: 'Equivalent ' + tons.toFixed(1) + ' tons of cooling | Base ' + base + ' BTU/sq ft (' + v.climate + ') x ' + fac + ' insulation factor | Windows add 1,000 BTU/h each | Simplified Manual-J estimate only'
+      };
+    },
+    steps: function (v) {
+      var base = v.climate === 'Hot' ? 30 : v.climate === 'Cold' ? 20 : 25;
+      var fac = v.insulation === 'Good' ? 0.85 : v.insulation === 'Poor' ? 1.2 : 1.0;
+      var btu = v.area * base * fac + v.windows * 1000;
+      var tons = btu / 12000;
+      return [
+        'Step 1: Start from a base load for the climate: ' + v.climate + ' = ' + base + ' BTU per sq ft.',
+        'Step 2: Adjust for insulation: ' + v.insulation + ' = factor ' + fac + '.',
+        'Step 3: Area load = ' + v.area + ' x ' + base + ' x ' + fac + ' = ' + (v.area * base * fac).toFixed(0) + ' BTU/h.',
+        'Step 4: Window load = ' + v.windows + ' x 1,000 = ' + (v.windows * 1000) + ' BTU/h.',
+        'Step 5: Total sensible load = ' + btu.toFixed(0) + ' BTU/h.',
+        'Step 6: Convert to tons = ' + btu.toFixed(0) + ' / 12,000 = ' + tons.toFixed(1) + ' tons. This is a rule-of-thumb estimate, not a full Manual-J room-by-room calculation.'
+      ];
+    }
+  }
 ];
 if (typeof module !== 'undefined') module.exports = ENGINEERING_TOOLS;
 if (typeof window !== 'undefined') window.ENGINEERING_TOOLS = ENGINEERING_TOOLS;

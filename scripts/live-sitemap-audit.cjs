@@ -22,8 +22,10 @@ function fetch(url, redirects) {
 }
 
 (async () => {
-  const sm = await fetch('https://calcpromaster.netlify.app/sitemap.xml');
-  const locs = [...sm.body.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
+  const BASE = (process.env.AUDIT_BASE || 'https://calcpromaster.netlify.app').replace(/\/$/, '');
+  console.log('audit base:', BASE);
+  const sm = await fetch(BASE + '/sitemap.xml');
+  const locs = [...sm.body.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1].replace(/^https?:\/\/[^/]+/, BASE));
   console.log('sitemap URLs:', locs.length);
   const results = { ok: 0, redirect: [], err4xx: [], err5xx: [], noindex: [], canonMismatch: [], noTitle: [] };
   const CONC = 12;
@@ -39,6 +41,8 @@ function fetch(url, redirects) {
       const noindex = /<meta name="robots" content="[^"]*noindex/i.test(r.body) || /x-robots-tag.*noindex/i.test(JSON.stringify(r.headers));
       if (noindex) results.noindex.push(finalUrl);
       const canon = (r.body.match(/<link rel="canonical" href="([^"]*)"/) || [])[1];
+      const titleOk = /<title>[^<]*<\/title>/i.test(r.body);
+      if (!titleOk) results.noTitle.push(finalUrl + ' (no title)');
       if (!canon) results.noTitle.push(finalUrl + ' (no canonical)');
       else if (decodeURIComponent(canon) !== decodeURIComponent(u)) results.canonMismatch.push(finalUrl + ' → ' + canon);
       if (r.status === 200) results.ok++;

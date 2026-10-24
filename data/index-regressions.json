@@ -1,0 +1,104 @@
+{
+  "ranAt": "2026-10-23T12:10:03.856Z",
+  "snapshots": [
+    {
+      "date": "2026-09-27",
+      "source": "gsc-inspect-batch.json",
+      "urls": 21
+    },
+    {
+      "date": "2026-10-05",
+      "source": "gsc-inspect-batch-2026-10-05.json",
+      "urls": 20
+    },
+    {
+      "date": "2026-10-08",
+      "source": "gsc-inspect-2026-10-08.json",
+      "urls": 20
+    },
+    {
+      "date": "2026-10-09",
+      "source": "gsc-inspect-batch-2026-10-09.json",
+      "urls": 20
+    },
+    {
+      "date": "2026-10-09",
+      "source": "gsc-inspect-notindexed.json",
+      "urls": 784
+    },
+    {
+      "date": "2026-10-11",
+      "source": "index-panel-history.json",
+      "urls": 590
+    },
+    {
+      "date": "2026-10-12",
+      "source": "gsc-inspect-batch-2026-10-12.json",
+      "urls": 40
+    },
+    {
+      "date": "2026-10-14",
+      "source": "gsc-inspect-batch-2026-10-14.json",
+      "urls": 100
+    },
+    {
+      "date": "2026-10-14",
+      "source": "index-panel-history.json",
+      "urls": 590
+    },
+    {
+      "date": "2026-10-15",
+      "source": "gsc-inspect-batch-2026-10-15.json",
+      "urls": 100
+    },
+    {
+      "date": "2026-10-15",
+      "source": "index-panel-history.json",
+      "urls": 590
+    },
+    {
+      "date": "2026-10-17",
+      "source": "gsc-inspect-batch-2026-10-17.json",
+      "urls": 100
+    },
+    {
+      "date": "2026-10-18",
+      "source": "gsc-inspect-batch-2026-10-18.json",
+      "urls": 40
+    },
+    {
+      "date": "2026-10-19",
+      "source": "gsc-inspect-batch-2026-10-19.json",
+      "urls": 30
+    }
+  ],
+  "scanned": 763,
+  "all": {
+    "regressions": [],
+    "notCandidates": [],
+    "duplicates": [],
+    "compared": 763
+  },
+  "current": {
+    "snapshot": {
+      "date": "2026-10-19",
+      "source": "gsc-inspect-batch-2026-10-19.json"
+    },
+    "items": []
+  },
+  "known": [
+    {
+      "url": "https://calcpromaster.com/finance/",
+      "kind": "duplicate-canonical",
+      "to": "Alternate page with proper canonical tag",
+      "window": "current state @ 2026-10-12",
+      "addedAt": "2026-10-12T16:20:00.000Z",
+      "note": "Known and addressed: Google consolidated the bare category page onto /hub/finance/ because the pair shared ~80% of their five-grams (same methodology note, same category FAQ, same 48-card catalog). The 2026-10-12 de-duplication gave every block exactly one owner (docs/DUPLICATE-HUBS-FIX.md) and added the check:category-dup gate that fails if it regresses. Re-arm this alert (delete this entry) after Google re-crawls both URLs; a second consecutive snapshot still reporting alternate-canonical would mean the canonical hint needs a stronger fix (301 or a canonical tag on /finance/)."
+    }
+  ],
+  "newRegressions": [],
+  "newNotCandidates": [],
+  "newDuplicateCanonicals": [],
+  "newCurrent": [],
+  "newCount": 0
+}

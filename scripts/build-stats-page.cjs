@@ -1,0 +1,233 @@
+#!/usr/bin/env node
+// ============================================================
+// CalcProMaster — public stats page
+// ------------------------------------------------------------
+// stats.html ko measured data se generate karta hai (hand-written nahi), taake
+// page apne aap update ho jaye jab bhi GSC numbers badlein.
+//
+// Page kn numbers dikhata hai: 7-day run-rate (aur uske saath 28-day average,
+// "lagging" label ke saath), indexing progress, aur us progress ka measured
+// rate. Guess kuch nahi — jo file mein hai wahi.
+//
+// Reads : data/growth-model.json · data/gsc-coverage-fresh.json
+//         data/index-burndown.json · data/run-rate-stall.json
+// Writes: stats.html  (root source page; build-deploy.js deploy/ mein copy karta hai)
+// Usage : node scripts/build-stats-page.cjs
+// ============================================================
+'use strict';
+const fs = require('fs');
+const path = require('path');
+
+const ROOT = path.join(__dirname, '..');
+const OUT = path.join(ROOT, 'stats.html');
+
+const readJson = (rel) => {
+  try { return JSON.parse(fs.readFileSync(path.join(ROOT, rel), 'utf8')); } catch (e) { return null; }
+};
+
+const n = (x, digits = 0) => (Number.isFinite(x)
+  ? x.toLocaleString('en-US', { minimumFractionDigits: digits, maximumFractionDigits: digits })
+  : '—');
+
+function main() {
+  const growth = readJson('data/growth-model.json');
+  const coverage = readJson('data/gsc-coverage-fresh.json');
+  const burndown = readJson('data/index-burndown.json');
+  const stall = readJson('data/run-rate-stall.json');
+
+  const rr7 = growth && growth.runRate7;
+  const rr3 = growth && growth.runRate3;
+  const api = growth && growth.api;
+  const latest = (coverage && coverage.latest) || growth && growth.indexation || null;
+  const known = latest ? (latest.indexed || 0) + (latest.notIndexed || 0) : null;
+  const pctIndexed = latest && known ? Math.round((100 * latest.indexed / known) * 10) / 10 : null;
+  const asOf = (rr7 && rr7.to) || '—';
+  const updated = growth && growth.generatedAt ? growth.generatedAt.slice(0, 10) : new Date().toISOString().slice(0, 10);
+
+  const rows = [];
+  if (rr7) rows.push(['7-day run-rate', n(rr7.perDay) + ' impressions/day', n(rr7.perMonth) + '/month', rr7.from + ' → ' + rr7.to]);
+  if (rr3) rows.push(['3-day run-rate', n(rr3.perDay) + ' impressions/day', n(rr3.perMonth) + '/month', rr3.from + ' → ' + rr3.to]);
+  if (api && api.impressions && api.days) {
+    const perDay = api.impressions / api.days;
+    rows.push(['28-day average', n(perDay) + ' impressions/day', n(perDay * 30.44) + '/month', api.startDate + ' → ' + api.endDate + ' (lagging)']);
+  }
+
+  const indexRows = [];
+  if (latest) {
+    indexRows.push(['Pages Google has indexed', n(latest.indexed), 'of ' + n(known) + ' known URLs']);
+    indexRows.push(['Share indexed', pctIndexed + '%', 'coverage snapshot ' + latest.date]);
+  }
+  if (burndown && burndown.state) {
+    indexRows.push(['Waiting to be crawled', n(burndown.state.waiting), 'technically sound, no fixable blocker']);
+    indexRows.push(['Not indexable by design', n(burndown.state.notCandidates), 'redirects, noindex and duplicate canonicals']);
+  }
+  if (burndown && Number.isFinite(burndown.measuredIndexedPerWeek)) {
+    indexRows.push(['Measured indexing rate', n(burndown.measuredIndexedPerWeek, 1) + ' pages/week', (burndown.longestSpan ? burndown.longestSpan.commonUrls + ' URLs tracked' : '')]);
+  }
+
+  const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CalcProMaster Stats: Impressions &amp; Indexing Progress</title>
+  <meta name="description" content="Live site stats for CalcProMaster: search impression run-rate, indexing progress and the measured crawl rate, with the date each figure was captured.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://calcpromaster.com/stats">
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "CalcProMaster Stats",
+      "url": "https://calcpromaster.com/stats",
+      "isPartOf": { "@type": "WebSite", "name": "CalcProMaster", "url": "https://calcpromaster.com/" },
+      "inLanguage": "en"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpromaster.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Stats", "item": "https://calcpromaster.com/stats" }
+      ]
+    }
+  ]
+  </script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{--bg:#f8fafc;--surface:#fff;--text:#1e293b;--text-light:#64748b;--border:#e2e8f0;--primary:#4f46e5;--radius:14px}
+    @media (prefers-color-scheme: dark){:root{--bg:#0f172a;--surface:#1e293b;--text:#f8fafc;--text-light:#94a3b8;--border:#334155}}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;-webkit-font-smoothing:antialiased}
+    header{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .logo{font-size:20px;font-weight:800;background:linear-gradient(135deg,#4f46e5,#7c3aed);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
+    header a{color:var(--text-light);text-decoration:none;font-size:13px}
+    header a:hover{color:var(--primary)}
+    main{max-width:820px;margin:0 auto;padding:32px 24px 64px}
+    h1{font-size:30px;font-weight:800;margin-bottom:8px}
+    h2{font-size:20px;font-weight:700;margin:26px 0 10px}
+    p{margin-bottom:10px}
+    .lede{font-size:15px;color:var(--text-light)}
+    .updated{font-size:13px;color:var(--text-light);margin-bottom:18px}
+    .big{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;margin:16px 0}
+    .big .value{font-size:32px;font-weight:800;line-height:1.2}
+    .big .label{font-size:13px;color:var(--text-light)}
+    table{width:100%;border-collapse:collapse;margin:12px 0 18px;font-size:14px}
+    caption{text-align:left;font-size:13px;color:var(--text-light);padding-bottom:6px}
+    th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:top}
+    th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--text-light)}
+    .note{font-size:13px;color:var(--text-light);background:var(--surface);border-left:4px solid #f59e0b;border-radius:8px;padding:12px 16px;margin:16px 0}
+    a{color:var(--primary)}
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:18px 24px;text-align:center;font-size:13px;color:var(--text-light)}
+    footer a{color:var(--text-light);text-decoration:none;margin:0 8px}
+    footer a:hover{color:var(--primary)}
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">CalcProMaster</a>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/stats">Stats</a>
+    <a href="/changelog">Changelog</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/contact">Contact</a>
+  </header>
+  <main>
+    <h1>Site stats: impressions and indexing</h1>
+    <p class="lede">CalcProMaster is a young site, so the honest numbers change every week. These are the ones we track, taken from Google Search Console rather than estimated, with the date each figure was captured.</p>
+    <p class="updated">Last updated <strong>${updated}</strong>${asOf !== '—' ? ' · impression data as of <strong>' + asOf + '</strong>' : ''}</p>
+${rr7 ? `    <div class="big">
+      <div class="value">${n(rr7.perDay)}</div>
+      <div class="label">search impressions per day (7-day run-rate, ${rr7.from} → ${rr7.to}) — about ${n(rr7.perMonth)} a month</div>
+    </div>
+` : ''}
+    <h2>Search impressions</h2>
+    <table>
+      <caption>Every window is shown separately because a growing site's 28-day average always reads lower than its current speed.</caption>
+      <thead><tr><th>Measure</th><th>Per day</th><th>Per month</th><th>Window</th></tr></thead>
+      <tbody>
+${rows.map((r) => '        <tr><td><strong>' + r[0] + '</strong></td><td>' + r[1] + '</td><td>' + r[2] + '</td><td>' + r[3] + '</td></tr>').join('\n')}
+      </tbody>
+    </table>
+${api ? `    <p>The 28-day figure is a lagging number, not today's speed: it still carries the days before the site's impressions started climbing. The 7-day window is the one to read for &ldquo;how fast is it going now&rdquo;.</p>` : ''}
+${api ? `    <table>
+      <caption>Other 28-day figures, for context.</caption>
+      <tbody>
+        <tr><td><strong>Clicks</strong></td><td>${n(api.clicks)}</td><td>search clicks in 28 days</td></tr>
+        <tr><td><strong>Click-through rate</strong></td><td>${api.ctr !== undefined && api.ctr !== null ? (Math.round(api.ctr * 10000) / 100) + '%' : '—'}</td><td>${api.impressions ? n(api.impressions) + ' impressions' : ''}</td></tr>
+        <tr><td><strong>Average position</strong></td><td>${api.position !== undefined && api.position !== null ? Math.round(api.position * 10) / 10 : '—'}</td><td>most impressions still sit on pages 2-5</td></tr>
+      </tbody>
+    </table>
+` : ''}
+    <h2>Indexing progress</h2>
+${indexRows.length ? `    <table>
+      <caption>Google Search Console coverage and URL Inspection data.</caption>
+      <tbody>
+${indexRows.map((r) => '        <tr><td><strong>' + r[0] + '</strong></td><td>' + r[1] + '</td><td>' + r[2] + '</td></tr>').join('\n')}
+      </tbody>
+    </table>
+` : ''}
+    <div class="note">
+      <strong>What this page does not claim.</strong> The rate above is measured from a tracked sample of URLs, not the whole site, so it is an observation rather than a forecast. Indexing is decided by Google — the calculators themselves have no technical blocker left; they wait for a crawl. Nothing here promises a traffic figure on a date.
+    </div>
+${stall ? `    <h2>Weekly health check</h2>
+    <p>Run-rate watch status: <strong>${stall.status}</strong>${stall.flatWeeks ? ' (' + stall.flatWeeks + ' flat week' + (stall.flatWeeks === 1 ? '' : 's') + ')' : ''}. ${stall.status === 'insufficient-history' ? 'The alert needs three weekly readings before it can call a stall, so it reports its own sample size rather than guessing.' : ''}</p>
+` : ''}
+    <h2>What these numbers do not measure</h2>
+    <p>Impressions count a result appearing on screen, not a person reading it. A page that ranks on page four can collect impressions for months without a single click, and a page that ranks first for a question already answered in the snippet can get plenty of impressions and few visits. Search Console also omits anonymised queries, so the long tail is undercounted. Nothing here measures whether a visitor found the answer useful: a session that ends in eight seconds after the number was read is a success for a calculator, and there is no metric on this page that would know the difference.</p>
+
+    <h2>How often this page updates</h2>
+    <p>The page is regenerated by the weekly refresh workflow, not edited by hand. Search Console data lags by roughly two to three days, coverage reports lag further, and URL Inspection is a snapshot of one moment for one URL. Each table states the window it covers; comparing two windows of different lengths is the fastest way to misread a young site, which is why the run-rate rows sit beside the 28-day average instead of replacing it.</p>
+
+    <h2>How to read this</h2>
+    <p>Two things move a new site: how many pages Google has indexed, and how high each indexed page ranks. Impressions respond to both, and clicks follow impressions at the position the page holds — so a growing impression line with a low click count simply means the pages are still on pages 2-5. The <a href="/about">about page</a> describes how the calculators themselves are verified.</p>
+    <p>Figures come from Google Search Console (performance and coverage exports) and from a weekly automated refresh. The repository keeps the raw exports, so any number on this page can be traced back to the file it came from. Copy changes are dated in the <a href="/changelog">changelog</a>, so a movement in these numbers can be tied back to a specific edit.</p>
+  </main>
+  <footer>
+    <a href="/">CalcProMaster</a> · all calculations run in your browser
+    <br><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/changelog">Changelog</a><a href="/contact">Contact</a>
+  </footer>
+</body>
+</html>
+`;
+
+  fs.writeFileSync(OUT, html);
+
+  // Homepage figure: the same numbers, patched into index.html between markers so
+  // the transparency number is visible without a second source of truth. The
+  // marker block is the contract — without it the generator refuses to guess where
+  // to insert and says so (a unit test asserts the block matches this data).
+  const heroBlock = rr7 ? [
+    '<!-- STATS:BEGIN — regenerated by scripts/build-stats-page.cjs; do not hand-edit -->',
+    '        <p class="hero-stats" style="font-size:14px;color:var(--text-light);margin:14px auto 0;max-width:640px">Search is showing these calculators for <strong>' + n(rr7.perDay) + '</strong> impressions a day (7-day average, ' + rr7.to + ') — <a href="/stats" style="color:var(--primary)">see the live numbers</a>.</p>',
+    '        <!-- STATS:END -->'
+  ].join('\n') : null;
+  const home = patchHomepage(path.join(ROOT, 'index.html'), heroBlock);
+
+  console.log('stats.html written (' + html.length + ' bytes)');
+  console.log('  homepage: ' + (home.patched ? (home.changed ? 'updated' : 'already current') : 'NOT patched — ' + home.reason));
+  console.log('  run-rate: ' + (rr7 ? n(rr7.perDay) + '/day ≈ ' + n(rr7.perMonth) + '/month' : '—'));
+  console.log('  indexed  : ' + (latest ? latest.indexed + '/' + known + ' (' + pctIndexed + '%)' : '—'));
+  console.log('  waiting  : ' + (burndown && burndown.state ? n(burndown.state.waiting) : '—'));
+}
+
+// Replace the block between the STATS markers. Idempotent: running twice leaves the
+// file byte-identical the second time, so build output stays stable.
+function patchHomepage(file, block) {
+  if (!block) return { patched: false, reason: 'no run-rate data' };
+  let src;
+  try { src = fs.readFileSync(file, 'utf8'); } catch (e) { return { patched: false, reason: 'index.html unreadable' }; }
+  const re = /<!-- STATS:BEGIN[^>]*-->[\s\S]*?<!-- STATS:END -->/;
+  if (!re.test(src)) return { patched: false, reason: 'STATS markers missing from index.html' };
+  const next = src.replace(re, block);
+  if (next === src) return { patched: true, changed: false };
+  fs.writeFileSync(file, next);
+  return { patched: true, changed: true };
+}
+
+module.exports = { n, patchHomepage };
+
+if (require.main === module) main();

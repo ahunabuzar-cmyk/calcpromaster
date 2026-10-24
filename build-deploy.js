@@ -41,6 +41,10 @@ const FILES = [
   'editorial-policy.html',
   'og-image.html',
   'qa-dashboard.html',
+  'stats.html',
+  'changelog.html',
+  'graph.html',
+  'geometry-lab.html',
   'styles.css',
   'sw.js',
   'manifest.json',
@@ -66,7 +70,7 @@ const FILES = [
   'googled1ac20b54b36e7cf.html',
 ];
 
-const DIRS = ['js', 'og', 'fonts', 'guides', 'blog', 'embed', 'icons']; // copyDir('js') recurses into data/ + workers/; 'og' holds per-tool share cards; 'fonts' = self-hosted latin woff2 (no third-party font fetch); 'guides' = static educational guide pages; 'blog' = static blog posts; 'embed' = linkable iframe widget pages (frame-able via /embed/* header override)
+const DIRS = ['js', 'og', 'fonts', 'guides', 'blog', 'embed', 'icons', '.well-known']; // copyDir('js') recurses into data/ + workers/; 'og' holds per-tool share cards; 'fonts' = self-hosted latin woff2 (no third-party font fetch); 'guides' = static educational guide pages; 'blog' = static blog posts; 'embed' = linkable iframe widget pages (frame-able via /embed/* header override)
 
 // Safety guard: refuse to deploy if any private/dev folders leak into OUTPUT dir.
 const FORBIDDEN_IN_DEPLOY = ['.freebuff', 'node_modules', '.git', 'tests', 'scripts', '.db', '.sqlite'];
@@ -109,13 +113,18 @@ function copyDir(src, dest) {
   }
 }
 
+// Every application/ld+json block must parse as valid JSON or the build fails.
+// The matcher is tolerant on purpose: the previous regex required the exact
+// attribute string `<script type="application/ld+json">`, so a block written
+// with single quotes or an extra id= attribute was never validated — the gap
+// that let Search Console's "Bad escape sequence in string" (2026-10-19 →) ship.
+const JSONLD_RE = /<script\b[^>]*\btype\s*=\s*["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
+
 function validateJsonLd(htmlPath) {
-  // Prevent silent structured-data breakage: every application/ld+json block
-  // must parse as valid JSON or the build fails (missing commas etc.).
   const html = fs.readFileSync(htmlPath, 'utf8');
-  const re = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/g;
   let m, count = 0;
-  while ((m = re.exec(html))) {
+  JSONLD_RE.lastIndex = 0;
+  while ((m = JSONLD_RE.exec(html))) {
     count++;
     try {
       JSON.parse(m[1]);
@@ -124,97 +133,134 @@ function validateJsonLd(htmlPath) {
       process.exit(1);
     }
   }
-  if (count > 0) console.log('  JSON-LD: ' + count + ' block(s) valid ✓');
+  return count;
 }
 
-// Minify deploy JS/CSS (whitespace + comments only — top-level identifiers
-// are PRESERVED so external wiring like data-tool attributes, global function
-// lookups and cross-file references stay byte-compatible). Verified by a
-// round-trip check: minified output must still contain every top-level
-// identifier found in the source; falls back to unminified on any doubt.
-function minifyDeployAssets() {
-  // Byte-safe "light minifier": strips comments and indentation while
-  // tracking string/template state character-by-character. Inline `//` after
-  // code is LEFT ALONE (regex-literal hazard), only full-line comments and
-  // block comments go. No quote normalization, no syntax transforms — a
-  // string-heavy data file survives byte-for-byte except for removed
-  // comments/whitespace. A strict guard additionally verifies every quoted
-  // string survived; any file failing the guard ships unminified.
-  const stripLines = (src, isCss) => {
-    const lines = src.split('\n');
-    const outL = [];
-    let inStr = null; // '", or `
-    let inBlock = false; // /* */ comment
-    for (const raw of lines) {
-      let line = '';
-      let i = 0;
-      while (i < raw.length) {
-        const c = raw[i];
-        if (inBlock) {
-          if (c === '*' && raw[i + 1] === '/') { inBlock = false; i += 2; }
-          else i++;
-          continue;
-        }
-        if (inStr) {
-          line += c;
-          if (c === '\\') { line += raw[i + 1] || ''; i += 2; continue; }
-          if (c === inStr) inStr = null;
-          i++;
-          continue;
-        }
-        if (!isCss && (c === '"' || c === "'" || c === '`')) { inStr = c; line += c; i++; continue; }
-        if (isCss && (c === '"' || c === "'")) { inStr = c; line += c; i++; continue; }
-        // JS: a COMMENT-ONLY line (only whitespace before //) is dropped —
-        // handles comment lines containing '/*'-like text such as (js/data/*.js)
-        // which falsely opened a block. Code lines with inline // are LEFT
-        // ALONE: a regex literal like /https?:\/\/./ would be truncated.
-        if (!isCss && c === '/' && raw[i + 1] === '/' && !line.trim()) break;
-        if (c === '/' && raw[i + 1] === '*') { inBlock = true; i += 2; continue; }
-        line += c;
-        i++;
-      }
-      const t = line.replace(/\s+$/, '');
-      if (!t) continue; // blank
-      if (!inBlock && !inStr && !isCss && /^\/\//.test(t.trim())) continue; // full-line comment
-      if (!inBlock && !inStr && isCss && /^\/\//.test(t.trim())) continue;
-      outL.push(t.replace(/^\s+/, ''));
+// Same check over the WHOLE built tree, run at the END of the build (after
+// stampReviewDates rewrites "dateModified" inside the blocks, so a mutation can
+// no longer break JSON after the only validation had already passed).
+function validateAllJsonLd() {
+  const files = [];
+  (function walk(dir) {
+    if (!fs.existsSync(dir)) return;
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const p = path.join(dir, e.name);
+      if (e.isDirectory()) walk(p);
+      else if (e.name.endsWith('.html')) files.push(p);
     }
-    return outL.join('\n');
+  })(OUT);
+  let blocks = 0, pages = 0;
+  for (const f of files) {
+    const n = validateJsonLd(f);
+    if (n) { blocks += n; pages++; }
+  }
+  console.log('  JSON-LD: ' + blocks + ' block(s) across ' + pages + ' page(s) valid ✓');
+}
+
+// Minify deploy JS/CSS with esbuild — real minification (whitespace, comments
+// and syntax), not just re-indentation. IDENTIFIERS are preserved on purpose:
+// the HTML wires into globals by name (onclick="App.foo()", data-tool lookups,
+// cross-file window.* references), so renaming them would break the app. Every
+// output is re-parsed by esbuild before it is written; a file that fails to
+// parse ships unminified rather than broken.
+function minifyDeployAssets() {
+  let esbuild = null;
+  try { esbuild = require('esbuild'); } catch (e) {
+    console.warn('  ! minify skipped: esbuild unavailable (' + e.message.slice(0, 60) + ')');
+    return;
+  }
+  // Several bundles are mostly HTML inside template literals (legal page copy,
+  // guide blocks). esbuild cannot shrink those bytes because template-literal
+  // content is semantic, so they used to ship unminified. Dropping the
+  // indentation after every newline is safe in both code and templates: the
+  // newline itself is kept, so no two tokens are ever joined and HTML collapses
+  // the remaining whitespace when rendered. <pre>/<textarea> bodies are never
+  // touched.
+  const deindent = (src) => (/<(pre|textarea)\b/i.test(src) ? src : src.replace(/\n[ \t]+/g, '\n'));
+  // Files that are mostly HTML inside template literals (legal copy, guide
+  // blocks) stay many lines long even after esbuild, because template content is
+  // string data. Collapse the whitespace INSIDE those literals — HTML renders
+  // collapsed whitespace identically — and verify the change is whitespace-only
+  // by comparing the tag-stripped, whitespace-normalized text before and after.
+  // <pre>/<textarea> content and interpolations with nested templates bail out.
+  const templateBodies = (src) => {
+    const bodies = [];
+    let i = 0;
+    while (i < src.length) {
+      if (src[i] !== '`') { i++; continue; }
+      let j = i + 1, depth = 0, end = -1;
+      while (j < src.length) {
+        const d = src[j];
+        if (d === '\\') { j += 2; continue; }
+        if (depth === 0 && d === '`') { end = j; break; }
+        if (d === '$' && src[j + 1] === '{') { depth++; j += 2; continue; }
+        if (depth > 0 && d === '}') { depth--; j++; continue; }
+        if (depth > 0 && d === '`') { return null; }
+        j++;
+      }
+      if (end === -1) return null;
+      bodies.push(src.slice(i + 1, end));
+      i = end + 1;
+    }
+    return bodies;
+  };
+  const visibleOf = (bodies) => bodies.join('\n')
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  const collapseTemplates = (src) => {
+    if (/<(pre|textarea)\b/i.test(src) || src.indexOf('`') === -1) return src;
+    const before = templateBodies(src);
+    if (!before) return src;
+    let i = 0;
+    let out = '';
+    while (i < src.length) {
+      if (src[i] !== '`') { out += src[i]; i++; continue; }
+      // Re-scan this literal the same way templateBodies did (bail on nesting).
+      let j = i + 1, depth = 0, end = -1;
+      while (j < src.length) {
+        const d = src[j];
+        if (d === '\\') { j += 2; continue; }
+        if (depth === 0 && d === '`') { end = j; break; }
+        if (d === '$' && src[j + 1] === '{') { depth++; j += 2; continue; }
+        if (depth > 0 && d === '}') { depth--; j++; continue; }
+        if (depth > 0 && d === '`') { return src; }
+        j++;
+      }
+      if (end === -1) return src;
+      const body = src.slice(i + 1, end);
+      out += '`' + (body.indexOf('<') === -1 ? body
+        : body.replace(/>\s*\n\s*</g, '><').replace(/\s*\n\s*/g, ' ').replace(/[ \t]{2,}/g, ' ')) + '`';
+      i = end + 1;
+    }
+    const after = templateBodies(out);
+    if (!after || visibleOf(before) !== visibleOf(after)) return src; // not whitespace-only → keep
+    return out;
+  };
+  const minify = (src, isCss) => {
+    if (!isCss) src = collapseTemplates(deindent(src));
+    const opts = isCss
+      ? { loader: 'css', minify: true, legalComments: 'none', charset: 'utf8', target: 'es2020' }
+      : { loader: 'js', minifyWhitespace: true, minifySyntax: true, minifyIdentifiers: false, legalComments: 'none', charset: 'utf8', target: 'es2020' };
+    const out = esbuild.transformSync(src, opts).code;
+    // Guard: the minified output must re-parse. (transformSync also parses
+    // ESM, which `new Function` cannot, so this covers every file we ship.)
+    esbuild.transformSync(out, { loader: isCss ? 'css' : 'js', target: 'es2020' });
+    return out;
   };
   let saved = 0, files = 0, failed = 0;
   const walk = (dir) => {
     for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
       const full = path.join(dir, e.name);
       if (e.isDirectory()) { walk(full); continue; }
+      // sw.js is registered by URL and keeps a readable CACHE_NAME — leave it.
       const isJs = e.name.endsWith('.js') && e.name !== 'sw.js';
       const isCss = e.name.endsWith('.css');
       if (!isJs && !isCss) continue;
       const src = fs.readFileSync(full, 'utf8');
-      // Skip files that look already-minified (single very long line)
-      const lines0 = src.split('\n');
-      const avgLen = src.length / Math.max(lines0.length, 1);
-      if (avgLen > 200) continue;
       try {
-        const min = stripLines(src, isCss);
-        if (min.length >= src.length) continue; // no win, keep original
-        // Guard: minified source must still be structurally valid —
-        // JS files must parse (new Function compiles without running),
-        // CSS must have balanced braces. Any failure ships unminified.
-        if (isCss) {
-          const open = (min.match(/{/g) || []).length;
-          const close = (min.match(/}/g) || []).length;
-          if (open !== close) {
-            console.warn('  ! minify guard: ' + e.name + ' unbalanced braces — kept original');
-            failed++;
-            continue;
-          }
-        } else {
-          try { new Function(min); } catch (err) {
-            console.warn('  ! minify guard: ' + e.name + ' parse failed — kept original');
-            failed++;
-            continue;
-          }
-        }
+        const min = minify(src, isCss);
+        if (!min || min.length >= src.length) continue; // no win, keep original
         fs.writeFileSync(full, min);
         saved += src.length - min.length;
         files++;
@@ -226,6 +272,81 @@ function minifyDeployAssets() {
   };
   walk(OUT);
   console.log('  minify: ' + files + ' files, ' + Math.round(saved / 1024) + 'KB saved' + (failed ? ', ' + failed + ' kept original' : ''));
+}
+
+// ── HTML minify pass (2026-10-17) ────────────────────────────────────────────
+// Audit findings fixed here: "HTML contains significant whitespace/indentation in
+// production" and "42 HTML comment(s) in the output". minifyDeployAssets() only
+// walked .js/.css, so every served .html shipped authoring comments and build
+// indentation.
+//
+// Conservative on purpose:
+//  * <script>, <style>, <pre> and <textarea> bodies are never rewritten — their
+//    whitespace is semantic (a CSS/JS byte change or a collapsed <pre> is a real
+//    bug, not a saving).
+//  * A whitespace run containing a newline collapses to a single newline, never
+//    to nothing, so the word separator between inline elements survives.
+//  * Conditional comments (<!--[if ...-->) are kept.
+//  * Every file is verified by a guard: the visible text of the minified page
+//    must equal the visible text of the original after whitespace collapsing.
+//    Any mismatch ships the ORIGINAL file untouched.
+function htmlVisibleText(html) {
+  return html
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<!--[\s\S]*?-->/g, ' ')
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function minifyHtml(html) {
+  const kept = [];
+  const stash = (m) => { kept.push(m); return '\u0000' + (kept.length - 1) + '\u0000'; };
+  let out = html
+    .replace(/<script[\s\S]*?<\/script>/gi, stash)
+    .replace(/<style[\s\S]*?<\/style>/gi, stash)
+    .replace(/<pre[\s\S]*?<\/pre>/gi, stash)
+    .replace(/<textarea[\s\S]*?<\/textarea>/gi, stash);
+  // Authoring comments go; conditional comments stay.
+  out = out.replace(/<!--(?!\[if|<!\[endif)[\s\S]*?-->/g, '');
+  // Indentation + blank lines only — a newline-bearing whitespace run shrinks to
+  // ONE newline (deleting it outright would glue two words together).
+  out = out.replace(/[ \t]+\n/g, '\n').replace(/(\r?\n){2,}/g, '\n');
+  out = out.trim();
+  return out.replace(/\u0000(\d+)\u0000/g, (_, i) => kept[Number(i)]);
+}
+
+function minifyHtmlFiles() {
+  const walk = (dir) => {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const p = path.join(dir, entry.name);
+      if (entry.isDirectory()) { walk(p); continue; }
+      if (!entry.name.endsWith('.html')) continue;
+      const original = fs.readFileSync(p, 'utf8');
+      let min;
+      try {
+        min = minifyHtml(original);
+      } catch (err) {
+        failed++; console.warn('  ! html minify failed for ' + entry.name + ': ' + err.message.slice(0, 60));
+        continue;
+      }
+      if (htmlVisibleText(min) !== htmlVisibleText(original)) {
+        failed++;
+        console.warn('  ! html minify guard: visible text differs in ' + path.relative(OUT, p) + ' — kept original');
+        continue;
+      }
+      if (min.length >= original.length) { continue; }
+      fs.writeFileSync(p, min);
+      files++; saved += original.length - min.length;
+    }
+  };
+  let files = 0;
+  let failed = 0;
+  let saved = 0;
+  walk(OUT);
+  console.log('  html: ' + files + ' files minified, ' + Math.round(saved / 1024) + 'KB saved'
+    + (failed ? ', ' + failed + ' kept original' : ''));
 }
 
 // Read the production domain from js/site-config.js — the SINGLE source of
@@ -434,13 +555,28 @@ function minifyCss(css) {
       while (i < n && /\s/.test(css[i])) i++;
       const prev = out[out.length - 1];
       const next = css[i] || '';
-      if (prev && next && !/[{};:,()]/.test(prev) && !/[{};:,()]/.test(next)) {
+      // Parentheses are NOT structural for whitespace purposes. Collapsing the
+      // space beside them turned
+      //   @media (min-width: 1025px) and (max-width: 1400px)
+      // into `@media (min-width:1025px)and(max-width:1400px)`, which is an
+      // INVALID media query: the browser parses it as `not all`, so every rule
+      // inside silently stopped applying in the built page (measured: the
+      // laptop-range header rules were dead and /laptop-1280 home/ overflowed
+      // by 18px). calc()/clamp() keep their spacing too — insignificant, and
+      // the minifier is not a CSS parser.
+      if (prev && next && !/[{};:,]/.test(prev) && !/[{};:,]/.test(next)) {
         out += ' ';
       }
       continue;
     }
     out += c;
     i++;
+  }
+  // Guard the exact failure above: a media query whose `and (` lost its space
+  // parses as `not all` in every browser, and nothing else in the pipeline would
+  // notice — the page still loads, just with those rules dead.
+  if (/\)and\(/.test(out)) {
+    throw new Error('minifyCss produced an invalid media query (")and(") — whitespace beside parens must be preserved');
   }
   return out;
 }
@@ -470,9 +606,195 @@ function inlineFullCss() {
   console.log('  css: styles.css inlined into index.html (' + raw.length + ' -> ' + css.length + ' bytes) ✓');
 }
 
+// ── Asset versioning (cache-bust) ────────────────────────────────────────────
+// Cloudflare Pages serves /js/* and styles.css at the same URL on every deploy,
+// so a 1-day edge/browser cache can keep running the previous build. The
+// filenames cannot be content-hashed without rewriting every inline handler, so
+// the build appends a ?v=<hash> token derived from the JS/CSS bytes it just
+// shipped. A new build = new token = a cache miss, and repeat loads still hit
+// the cache because the URL is stable until the code changes.
+function versionAssetUrls() {
+  const crypto = require('crypto');
+  const h = crypto.createHash('sha1');
+  let seen = 0;
+  (function walkAssets(dir) {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, e.name);
+      if (e.isDirectory()) { walkAssets(full); continue; }
+      if (!/\.(js|css)$/i.test(e.name)) continue;
+      // sw.js is registered by name; changing its URL would break the scope.
+      if (/^sw\.js$/i.test(e.name)) continue;
+      h.update(full.slice(OUT.length));
+      h.update(fs.readFileSync(full));
+      seen++;
+    }
+  })(OUT);
+  const v = h.digest('hex').slice(0, 10);
+  // NOTE the leading `\/?` must cover BOTH alternatives: it used to wrap only
+  // the js/css-directory branch, so the stylesheet — always written as
+  // href="/styles.css" — never got a ?v= token. That left the one un-hashed
+  // asset in the build on the edge's 4-hour/24-hour TTL, which is why a CSS fix
+  // (mobile tool-actions strip, 2026-10-21) was live on the edge but invisible
+  // in the browser until a hard refresh.
+  const attr = /((?:src|href)=")(\/?(?:(?:js|css)\/[^"?]+\.(?:js|css)|styles\.css))(?:\?[^"]*)?(")/g;
+  let files = 0;
+  let rewrites = 0;
+  (function walkHtml(dir) {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, e.name);
+      if (e.isDirectory()) { walkHtml(full); continue; }
+      if (!e.name.endsWith('.html')) continue;
+      const src = fs.readFileSync(full, 'utf8');
+      let n = 0;
+      let out = src.replace(attr, function (m, pre, url, post) {
+        n++;
+        return pre + url + '?v=' + v + post;
+      });
+      // Runtime-injected scripts (js/data-loader.js chunks, lazy feature
+      // modules) read this token and append the same ?v= — without it those
+      // URLs would be cached for a year under a name the next build never
+      // invalidates, because _headers now serves /js/* as immutable.
+      const before = out;
+      out = out.replace(/<html(?![^>]*\bdata-asset-version\b)/, '<html data-asset-version="' + v + '"');
+      const added = out !== before;
+      if (n || added) { fs.writeFileSync(full, out); files++; rewrites += n; }
+    }
+  })(OUT);
+  console.log('  cache-bust: v=' + v + ' on ' + rewrites + ' asset URL(s) across ' + files + ' page(s) (' + seen + ' assets hashed)');
+}
+
+// ── Font preloads (must exist on every page that inlines the stylesheet) ─────
+// The self-hosted woff2 files ARE the render-critical resource for text: the
+// head of every page carries the whole stylesheet inline, and the hero/body text
+// is set in these two faces. The hand-written <link rel="preload" as="font">
+// hints in index.html did not survive the build (the CSS-inlining step and the
+// per-page head rewrites both dropped them): measured on the built deploy/ with
+// slow-4G throttling, Inter only STARTED at 484ms and finished at 1.6s — after
+// first paint — so the swap re-wrapped the hero (CLS 0.172, +20px at 412px).
+// This pass is layout-independent and idempotent: it adds the preload to any
+// page that uses the fonts and does not already declare it.
+const SITE_FONTS = ['fonts/inter-latin.woff2', 'fonts/space-grotesk-latin.woff2'];
+function ensureFontPreloads() {
+  let pages = 0, added = 0;
+  (function walk(dir) {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, e.name);
+      if (e.isDirectory()) { walk(full); continue; }
+      if (!e.name.endsWith('.html')) continue;
+      const html = fs.readFileSync(full, 'utf8');
+      const headEnd = html.indexOf('</head>');
+      if (headEnd < 0) continue;
+      const head = html.slice(0, headEnd);
+      // Only pages that actually reference the fonts (the shell inlines the CSS;
+      // prerendered/static pages link the same stylesheet).
+      // Compare tag-by-tag instead of building a regex from the filename:
+      // escaping a path inside a character class is exactly the kind of thing
+      // that silently stops matching (first attempt here escaped so hard it
+      // never matched and the pass reported "0 added").
+      const linkTags = head.match(/<link\b[^>]*>/g) || [];
+      if (process.env.FONT_PRELOAD_DEBUG && full === path.join(OUT, 'index.html')) {
+        console.log('  [debug] walk index.html: headEnd=' + headEnd + ' interUrl=' + html.includes('fonts/inter-latin.woff2') + ' links=' + linkTags.length);
+      }
+      // Pages either inline the stylesheet (the shell) or link it externally
+      // (the 1,600 prerendered routes). Both use the same two faces, and on the
+      // external-CSS pages the font URL only appears in styles.css — so gate on
+      // "this page loads the site stylesheet", not on the literal font path.
+      const usesSiteCss = SITE_FONTS.some((f) => html.includes(f)) || /href="\/?styles\.css/.test(html);
+      const missing = SITE_FONTS.filter((f) => {
+        if (!usesSiteCss) return false;
+        return !linkTags.some((t) => t.indexOf('rel="preload"') !== -1 && t.indexOf('href="' + f + '"') !== -1);
+      });
+      if (!missing.length) continue;
+      const tags = missing.map((f) => '<link rel="preload" as="font" type="font/woff2" href="' + f + '" crossorigin fetchpriority="high">').join('');
+      fs.writeFileSync(full, html.slice(0, headEnd) + tags + html.slice(headEnd));
+      pages++; added += missing.length;
+    }
+  })(OUT);
+  if (process.env.FONT_PRELOAD_DEBUG) {
+    const probe = fs.readFileSync(path.join(OUT, 'index.html'), 'utf8');
+    console.log('  [debug] index.html has inter url: ' + probe.includes('fonts/inter-latin.woff2')
+      + ', preload tags: ' + (probe.match(/<link\b[^>]*rel="preload"[^>]*>/g) || []).length);
+  }
+  console.log('  fonts: ' + added + ' preload link(s) added across ' + pages + ' page(s)');
+}
+
+// ── Deferred-script bundling ──────────────────────────────────────────────────
+// The shell used to emit 58 separate <script defer src="js/…"> tags. Every one
+// of them is a request: on throttled mobile the HTTP queue, not the JS bytes, is
+// the bottleneck, and the LAST script in the list (app.js — the one that boots
+// the app) only started downloading after ~55 earlier request slots cleared.
+// Measured on the built deploy/ with Lighthouse mobile emulation:
+//   58 tags  → LCP 4.2s, TBT 320ms, Speed Index 1.6s, perf 85
+//   8 chunks → LCP 3.5s, TBT 160ms, Speed Index 1.2s, perf 89
+// (both with the same bytes and the same execution order).
+//
+// Bundles are CONTENT-ADDRESSED and order-preserving: pages that share a script
+// prefix share the bundle file, so the 1,600+ prerendered pages don't each ship
+// their own copy. Files are read from the already-minified deploy/ tree.
+const BUNDLE_CHUNK = Number(process.env.SCRIPT_BUNDLE_CHUNK || 8);
+function bundleDeferScripts() {
+  if (!BUNDLE_CHUNK || process.env.SCRIPT_BUNDLE === 'off') {
+    console.log('  scripts: bundling off (SCRIPT_BUNDLE=off)');
+    return;
+  }
+  const crypto = require('crypto');
+  const tagRe = /<script defer src="((?:\/)?js\/[^"?]+)(?:\?[^"]*)?"><\/script>/g;
+  const cache = new Map();
+  let pages = 0, tagsIn = 0, tagsOut = 0, bundles = 0;
+
+  (function walk(dir) {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, e.name);
+      if (e.isDirectory()) { walk(full); continue; }
+      if (!e.name.endsWith('.html')) continue;
+      const html = fs.readFileSync(full, 'utf8');
+      const matches = [...html.matchAll(tagRe)];
+      if (matches.length < 2) continue;
+      let out = '';
+      let cursor = 0;
+      let changed = false;
+      for (let i = 0; i < matches.length; i += BUNDLE_CHUNK) {
+        const group = matches.slice(i, i + BUNDLE_CHUNK);
+        const srcs = group.map((m) => m[1].replace(/^\//, ''));
+        // Any missing source file → leave this group as separate tags.
+        if (srcs.some((s) => !fs.existsSync(path.join(OUT, s)))) {
+          out += html.slice(cursor, group[group.length - 1].index + group[group.length - 1][0].length);
+          cursor = group[group.length - 1].index + group[group.length - 1][0].length;
+          continue;
+        }
+        const body = srcs.map((s) => '/* ' + s + ' */\n' + fs.readFileSync(path.join(OUT, s), 'utf8')).join('\n;\n');
+        const hash = crypto.createHash('sha256').update(body).digest('hex').slice(0, 10);
+        const name = 'js/b-' + hash + '.js';
+        if (!cache.has(name)) {
+          fs.writeFileSync(path.join(OUT, name), body);
+          cache.set(name, srcs.length);
+          bundles++;
+        }
+        out += html.slice(cursor, group[0].index) + '<script defer src="' + name + '"></script>';
+        cursor = group[group.length - 1].index + group[group.length - 1][0].length;
+        tagsIn += group.length;
+        tagsOut++;
+        changed = true;
+      }
+      out += html.slice(cursor);
+      if (changed) { fs.writeFileSync(full, out); pages++; }
+    }
+  })(OUT);
+
+  console.log('  scripts: ' + tagsIn + ' defer tag(s) → ' + tagsOut + ' bundle tag(s) in ' + pages
+    + ' page(s) (' + bundles + ' bundle file(s), chunk size ' + BUNDLE_CHUNK + ')');
+}
+
 function main() {
   console.log('Building deploy/ ...');
   validateJsonLd(path.join(ROOT, 'index.html'));
+  // Regenerate js/reviewers-data.js from data/reviewers.json BEFORE copying,
+  // so reviewer bylines (or their deliberate absence) stay in sync with the JSON.
+  try {
+    require('./scripts/apply-reviewers.cjs').run();
+  } catch (e) {
+    console.warn('  ! apply-reviewers failed: ' + e.message);
+  }
   // Phase 2: sync every hardcoded user-facing calculator count to the
   // registry BEFORE copying, so deploy/ never advertises a stale number
   // (index.html/ about.html/ og-image.html/ data.js/ tool-intros.js/ seo-*).
@@ -566,10 +888,31 @@ function main() {
   // Build-time SEO fixer (idempotent): inject OG/Twitter into static pages
   // missing them, noindex junk utility pages, sync legal-footer count.
   try { require('./scripts/fix-deploy-seo.cjs'); } catch (e) { console.warn('  ! fix-deploy-seo failed: ' + e.message); }
+  // Premium intro rewrite: replaces the shared four-paragraph template on the
+  // nine flagship pages with page-specific prose (largest editorial duplicate
+  // block left after the 2026-10-19 pass). Idempotent.
+  try { require('./scripts/apply-premium-intros.cjs'); } catch (e) { console.warn('  ! apply-premium-intros failed: ' + e.message); }
+  // Guide Article schema: add the datePublished/author/image Google requires.
+  try { require('./scripts/fix-article-schema.cjs'); } catch (e) { console.warn('  ! fix-article-schema failed: ' + e.message); }
+  // Crawl/a11y quality pass: add <caption> to bare tables, pad too-short titles.
+  try { require('./scripts/fix-crawl-quality.cjs'); } catch (e) { console.warn('  ! fix-crawl-quality failed: ' + e.message); }
+  // Site extras: give every static page the SPA's calculator search plus the
+  // reading preferences (text size / high contrast / readable font). Static
+  // pages carry no app bundle, so without this they had no search at all.
+  try { require('./scripts/apply-site-extras.cjs'); } catch (e) { console.warn('  ! apply-site-extras failed: ' + e.message); }
+  // Crawl-link boost: link NOT-INDEXED pages from already-INDEXED same-category
+  // pages (GSC coverage data) so crawl priority follows the pages Google trusts.
+  // Idempotent (marker-based) and uses served-form hrefs, so the internal-link
+  // audit below still passes. Runs BEFORE stampReviewDates so review stamps land.
+  try { require('./scripts/crawl-link-boost.cjs'); } catch (e) { console.warn('  ! crawl-link-boost failed: ' + e.message); }
 
   // E-E-A-T: stamp "Last reviewed" dates into prerendered review blocks (see
   // stampReviewDates above — only pages whose content changed get the new date).
   stampReviewDates();
+
+  // Structured-data gate: every JSON-LD block in the built tree must parse,
+  // including the ones stampReviewDates just rewrote.
+  validateAllJsonLd();
 
   // Auto-bump service-worker cache version from content hash of deploy bundle.
   // Removes manual sw.js edit before every deploy (old process was error-prone).
@@ -626,6 +969,167 @@ function main() {
     require('./scripts/perf-budgets.cjs');
   } catch (e) {
     console.warn('  ! perf-budgets skipped: ' + e.message);
+  }
+
+  // Title-length gate: every <title> must be 30-70 decoded characters so a
+  // crawl-report "title too short/long" warning cannot reappear. Exits 1 on a
+  // violation, aborting the build. (Runs BEFORE the internal-link audit because
+  // that audit calls process.exit(0) on success, which ends the process.)
+  try {
+    require('./scripts/audit-title-length.cjs');
+  } catch (e) {
+    console.warn('  ! title-length gate skipped: ' + e.message);
+  }
+
+  // Crawl-link gate: every NOT-INDEXED page must have >= 1 inlink from an
+  // INDEXED page (the crawl-link-boost guarantee). Exits 1 on any uncovered
+  // target, aborting the build. Set CRAWL_LINK_GATE=off to skip. Runs before
+  // the internal-link audit because that one calls process.exit(0).
+  try {
+    require('./scripts/audit-crawl-links.cjs');
+  } catch (e) {
+    console.warn('  ! crawl-link gate skipped: ' + e.message);
+  }
+
+  // Published-artifact staleness gate: a shipped report or page must never be
+  // older than the data file it was generated from (that is how a page ends up
+  // quietly quoting last week's numbers). Exits 1 on any stale artifact, which
+  // aborts the build. Runs before the internal-link audit, which ends the process.
+  if (process.env.STALENESS_GATE === 'off') {
+    console.log('  ! staleness gate skipped (STALENESS_GATE=off)');
+  } else {
+    try {
+      if (require('./scripts/audit-report-staleness.cjs').runGate() !== 0) {
+        console.error('\n✖ STALENESS GATE FAILED — a published report/page is older than the data it was made from.');
+        console.error('  Fix: npm run seo:weekly (rebuilds every artifact in order), or set STALENESS_GATE=off.');
+        process.exit(1);
+      }
+    } catch (e) {
+      console.warn('  ! staleness gate skipped: ' + e.message);
+    }
+  }
+
+  // Category/hub duplication gate: /<cat>/ and /hub/<cat>/ must not share a
+  // block (FAQ, methodology note, catalog grid) or drift back into the ~80%
+  // identical-5-gram state Google was consolidating. See
+  // docs/DUPLICATE-HUBS-FIX.md; threshold lives in the script.
+  try {
+    if (require('./scripts/check-category-duplication.cjs').run() !== 0) {
+      console.error('  ✗ category-duplication gate FAILED — build aborted');
+      process.exit(1);
+    }
+  } catch (e) {
+    // Fail closed: only a MISSING GATE SCRIPT is skippable (a checkout that does
+    // not have it yet). If the gate exists but cannot load one of its own
+    // dependencies (e.g. js/category-depth.js deleted), that is a real failure
+    // and must abort the build rather than silently pass it.
+    if (e && e.code === 'MODULE_NOT_FOUND' && /check-category-duplication/.test(String(e.message))) {
+      console.warn('  ! category-duplication gate skipped: ' + e.message);
+    } else {
+      console.error('  ✗ category-duplication gate threw: ' + (e && e.message));
+      process.exit(1);
+    }
+  }
+
+  // Build-time SEO gate: sitemap coverage (every <loc> has a real file, the
+  // _redirects contract holds, .htaccess mirrors the whitelist) plus index
+  // readiness on every sitemap URL (title, meta, canonical, robots, H1, word
+  // count, internal links, JSON-LD). These two used to run only in CI, so a
+  // local build could hand you a folder that CI rejected — after a full rebuild
+  // is exactly when a dropped page or renamed slug shows up. Fails closed:
+  // an error inside the gate aborts the build rather than shipping unchecked
+  // output. Runs BEFORE the minify/link passes because the link audit ends the
+  // process with process.exit(0).
+  {
+    const { spawnSync } = require('child_process');
+    const gate = spawnSync(process.execPath, [require('path').join(__dirname, 'scripts', 'seo-gate.cjs')], {
+      cwd: __dirname,
+      stdio: 'inherit',
+      env: process.env,
+    });
+    if (gate.error || gate.status !== 0) {
+      console.error('  ✗ SEO gate FAILED — build aborted');
+      process.exit(1);
+    }
+  }
+
+  // HTML minify pass — LAST content mutation before the link gate (the gate only
+  // reads hrefs, and it calls process.exit, so nothing may run after it).
+  // Cache-bust the JS/CSS URLs first: the deploy files carry no content hash, so
+  // a browser or an edge cache could serve last deploy's app.js for up to a day
+  // (that is how a shipped voice fix looked "still broken").
+  // Crawl-report fixer: editorial citations lose their nofollow token, and any
+  // static mailto: anchor becomes a /contact link carrying data-email (Cloudflare
+  // rewrites static mailto into /cdn-cgi/l/email-protection, which every crawler
+  // then counts as a broken internal link). Runs after all content passes and
+  // before the asset URLs are versioned.
+  try { require('./scripts/fix-audit-issues.cjs'); } catch (e) { console.warn('  ! audit-fixes failed: ' + e.message); }
+
+  // Bundle the deferred scripts BEFORE the URLs are versioned, so the bundle
+  // files pick up the same ?v= token as every other asset.
+  bundleDeferScripts();
+
+  versionAssetUrls();
+  minifyHtmlFiles();
+
+  // Font preloads go on LAST: the HTML minify/rewrite passes above drop the
+  // hand-written hints, so anything added earlier disappeared again (the pass
+  // reported "7 preloads present" at walk time and the shipped shell had 1).
+  // Nothing after this touches <head> except the read-only link audit.
+  ensureFontPreloads();
+
+  // Asset-existence gate: every local <script src>, <link href> and <img src>
+  // in the built HTML must point at a file that is actually in deploy/. A
+  // missing /og/<tool>.jpg is the expensive kind of 404 — it is the LCP hero on
+  // tool pages AND the preloaded fetchpriority=high request, so the browser
+  // downloads nothing, the hero is removed by the onerror fallback after paint,
+  // and the page takes a layout shift plus a console error. The registry had
+  // grown to 1,285 tools while og/ still held 1,284 cards, and nothing noticed.
+  // This gate makes that drift a build failure instead of a silent 404.
+  try {
+    const missing = new Map();
+    (function scanAssets(dir) {
+      for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+        const full = path.join(dir, e.name);
+        if (e.isDirectory()) { scanAssets(full); continue; }
+        if (!e.name.endsWith('.html')) continue;
+        const html = fs.readFileSync(full, 'utf8');
+        const re = /<(?:script[^>]*src|link[^>]*href|img[^>]*src)="([^"]+)"/g;
+        let m;
+        while ((m = re.exec(html))) {
+          const u = m[1];
+          if (!u.startsWith('/') && !u.startsWith('js/') && !u.startsWith('fonts/') && !u.startsWith('og/')) continue;
+          const clean = u.split(/[?#]/)[0];
+          const target = path.join(OUT, clean.replace(/^\//, ''));
+          if (fs.existsSync(target)) continue;
+          if (!missing.has(clean)) missing.set(clean, []);
+          if (missing.get(clean).length < 3) missing.get(clean).push(path.relative(OUT, full));
+        }
+      }
+    })(OUT);
+    if (missing.size) {
+      console.error('  ✗ asset gate FAILED — ' + missing.size + ' referenced file(s) missing from deploy/');
+      for (const [href, pages] of [...missing].slice(0, 10)) {
+        console.error('    MISSING ' + href + '  (on ' + pages.join(', ') + ')');
+      }
+      console.error('  Fix: re-run the generator that owns the file (e.g. SKIP_EXISTING=1 node scripts/generate-tool-og.cjs).');
+      process.exit(1);
+    }
+    console.log('  assets: every local script/link/img reference resolves ✓');
+  } catch (e) {
+    console.error('  ✗ asset gate threw: ' + (e && e.message));
+    process.exit(1);
+  }
+
+  // Internal-link gate: every internal href must resolve to the served form
+  // (directory → trailing slash, flat → none) with zero 404 targets. The audit
+  // calls process.exit(1) on any leak, which aborts this build — so a stale or
+  // wrong internal link can never reach the deploy folder. Keep this LAST: it
+  // calls process.exit(0) when clean.
+  try {
+    require('./scripts/audit-internal-links.cjs');
+  } catch (e) {
+    console.warn('  ! internal-link audit skipped: ' + e.message);
   }
 
   console.log('Done: deploy/ ready with ' + count + ' items.');

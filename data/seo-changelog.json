@@ -1,0 +1,2148 @@
+{
+  "generatedAt": "2026-10-24T04:21:04.175Z",
+  "note": "Append-only: purani entries kabhi rewrite nahi hoti; baseline har run par aaj ki copy ban jata hai.",
+  "headAvailable": true,
+  "baseline": {
+    "length": {
+      "title": "Length Converter: Meters to Feet and Inches",
+      "metaDesc": "Convert between metres, feet, inches, centimetres and kilometres. 1 metre is 3.2808 feet, and every step of the conversion is shown."
+    },
+    "pressure-conv": {
+      "title": "Pressure Converter: Pascal, Bar, PSI and kPa",
+      "metaDesc": "Convert pressure between pascal, bar, psi, kPa and atmosphere. 1 bar is 14.5038 psi and 1 psi is 6.895 kPa, with the working shown."
+    },
+    "temperature": {
+      "title": "Celsius to Fahrenheit Converter (and Kelvin)",
+      "metaDesc": "Convert Celsius to Fahrenheit and Kelvin, and back. 100 °C is 212 °F and 0 °C is 273.15 K, with the offset and the factor explained."
+    },
+    "time-conv": {
+      "title": "Time Converter: Hours, Minutes and Seconds",
+      "metaDesc": "Convert between seconds, minutes, hours and days. 3,600 seconds is 1 hour and 90 minutes is 1.5 hours, with each step of the working shown."
+    },
+    "cooking-conv": {
+      "title": "Cups to ml and tbsp to tsp: Cooking Converter",
+      "metaDesc": "Convert cups to millilitres, tablespoons to teaspoons and ounces to grams. 1 US cup is about 240 ml and 1 tbsp is exactly 3 tsp."
+    },
+    "clothing-size": {
+      "title": "Clothing Size Converter: US to EU, UK and IT",
+      "metaDesc": "Convert clothing sizes between US, EU, UK and international equivalents — a US women's 10 is about EU 40, with the comparison in one place."
+    },
+    "torque-conv": {
+      "title": "Torque Converter: Nm to lb-ft and Other Units",
+      "metaDesc": "Convert torque between newton-metres, pound-feet and kgf-m. 100 Nm is about 73.8 lb-ft, with the factor and the working shown."
+    },
+    "power-conv": {
+      "title": "Watts to Horsepower Converter: W, kW and hp",
+      "metaDesc": "Convert power between watts, kilowatts and horsepower. 100 kW is about 134 hp, and 1 hp is 745.7 watts, with each step shown."
+    },
+    "voltage-conv": {
+      "title": "Volts, Amps and Watts Converter: What Converts",
+      "metaDesc": "See what converts between volts, amps and watts, and what needs Ohm's law instead — voltage and current are different quantities and cannot be swapped directly."
+    },
+    "density-conv": {
+      "title": "Density Converter: kg/m3 to g/cm3 and g/mL",
+      "metaDesc": "Convert density between kg/m3, g/cm3, g/mL and lb/ft3. 1,000 kg/m3 is exactly 1 g/cm3, and the factor is applied to every step."
+    },
+    "child-height": {
+      "title": "Child Height Predictor: How Tall Will My Child Be?",
+      "metaDesc": "Enter both parents' heights and get your child's predicted adult height in cm and inches using the mid-parental method, as a range rather than a promise."
+    },
+    "baby-weight-gain": {
+      "title": "Baby Weight Percentile: Is My Baby on Track for Their Age?",
+      "metaDesc": "Compare your baby's weight with the average for their age and see the percentage above or below it, plus why a single number is not the whole growth picture."
+    },
+    "presentation-time": {
+      "title": "Presentation Time Calculator: How Long Will My Slides Take?",
+      "metaDesc": "Enter your slide count and minutes per slide to get the speaking time, with a buffer for overruns so a talk fits the slot it was given."
+    },
+    "tuition-cost": {
+      "title": "College Tuition Cost Calculator: Cost of a Degree",
+      "metaDesc": "Add up cost per credit, total credits and yearly fees to see the full price of a degree, not just the headline tuition figure."
+    },
+    "coffee-cost": {
+      "title": "Coffee Cost Calculator: What Your Daily Cup Costs Per Year",
+      "metaDesc": "Work out what a coffee habit costs per month and per year from cups per day, price per cup and days a week. A $3 cup five days a week is about $780 a year."
+    },
+    "gutter": {
+      "title": "Gutter Calculator: Sections, Length and Downspouts You Need",
+      "metaDesc": "Enter the roof perimeter, run length and corners to get the gutter sections and downspouts to order, ready to price against a quote."
+    },
+    "gift-wrap": {
+      "title": "How Much Wrapping Paper Do I Need? Box Size Calculator",
+      "metaDesc": "Enter the box length, width and height to get the paper area you need for the wrap, with the overlap included so the paper actually covers the box."
+    },
+    "drywall": {
+      "title": "Drywall Calculator: How Many Sheets You Need (With Waste)",
+      "metaDesc": "Enter the wall area and your sheet size to get the number of drywall sheets to buy, with a 10% waste allowance already included for cuts and mistakes."
+    },
+    "baby-feeding": {
+      "title": "Baby Feeding Schedule by Age and Weight: ml Per Feeding",
+      "metaDesc": "Estimate how much formula or expressed milk a baby needs per day and per feed from their weight and number of feeds, with the daily total shown."
+    },
+    "jet-lag": {
+      "title": "Jet Lag Calculator: Recovery Time, East vs West",
+      "metaDesc": "Enter the number of time zones crossed and the direction of travel to estimate how many days your body clock needs to adjust, east versus west."
+    },
+    "vacation-with-kids": {
+      "title": "Family Vacation Cost Calculator: Budget by Days and Level",
+      "metaDesc": "Estimate what a family holiday costs from the destination, family size, number of days and budget level, with a per-person daily figure to compare options."
+    },
+    "bmr-mifflin": {
+      "title": "BMR Calculator (Mifflin-St Jeor): Daily Calories",
+      "metaDesc": "Enter weight, height, age and sex to get your basal metabolic rate from the Mifflin-St Jeor equation, the one dietitians use most for healthy adults."
+    },
+    "pregnancy": {
+      "title": "Pregnancy Due Date Calculator: Last Menstrual Period",
+      "metaDesc": "Enter the first day of your last menstrual period to get your estimated due date, 40 weeks later by Naegele's rule, with the reasoning spelled out."
+    },
+    "deck-stain": {
+      "title": "Deck Stain Calculator: Gallons of Stain or Sealant",
+      "metaDesc": "Enter the deck length, width and number of coats to get the gallons of stain or sealant to buy, at about 250 sq ft per gallon per coat."
+    },
+    "carbon": {
+      "title": "Carbon Footprint Calculator: Home Energy, Gas and Driving",
+      "metaDesc": "Estimate your monthly CO2e from electricity, gas and driving, with each source shown separately so you can see which one dominates your footprint."
+    },
+    "tip": {
+      "title": "Tip Calculator: Tip Amount, Total and Split per Person",
+      "metaDesc": "Work out the tip on any bill and split it between people. Enter the bill, the tip percentage and the number of people to get each share."
+    },
+    "safe-withdrawal": {
+      "title": "Safe Withdrawal Rate Calculator: Retire on Your Savings",
+      "metaDesc": "Find the withdrawal rate a portfolio can sustain: enter your savings, the annual withdrawal and the return you expect to see the rate and the years it lasts."
+    },
+    "bullet-drop": {
+      "title": "Bullet Drop Calculator: Trajectory, Flight Time, Energy",
+      "metaDesc": "Estimate bullet drop over distance from muzzle velocity, ballistic coefficient and sight height, with the time of flight and the remaining energy."
+    },
+    "sweat-rate": {
+      "title": "Sweat Rate Calculator: Fluid Loss per Hour of Exercise",
+      "metaDesc": "Work out how much fluid you lose per hour of training from your pre- and post-exercise weight, the fluid you drank and the length of the session."
+    },
+    "rain-barrel": {
+      "title": "Rain Barrel Calculator: Roof Area to Gallons Harvested",
+      "metaDesc": "Work out how much rainwater a roof can harvest. Enter the roof area, the rainfall and the collection efficiency to size the barrel you actually need."
+    },
+    "sibling-age-gap": {
+      "title": "Sibling Age Gap Calculator: Months Between Children",
+      "metaDesc": "Work out the age gap between two children in years, months and days from their birth dates, with the school years they will share."
+    },
+    "url-encoder": {
+      "title": "URL Encoder / Decoder: Percent Encoding Online",
+      "metaDesc": "Encode or decode a URL or query string with percent-encoding. Paste the text, get the escaped result, and copy it straight back into your code."
+    },
+    "moon-phase": {
+      "title": "Moon Phase Calculator: Tonight's Phase and Illumination",
+      "metaDesc": "Find the moon phase for any date, plus the illumination percentage and the days to the next new or full moon, worked out from the lunar cycle."
+    },
+    "laundry-cost": {
+      "title": "Laundry Cost Calculator: Cost per Load and per Year",
+      "metaDesc": "Work out what washing costs: enter loads per week, washer and dryer energy, water and detergent prices to get the cost per load and per year."
+    },
+    "completing-square": {
+      "title": "Completing the Square Calculator: Steps to Vertex Form",
+      "metaDesc": "Turn a quadratic into vertex form by completing the square, with every step shown and the vertex and discriminant reported at the end."
+    },
+    "plagiarism-check": {
+      "title": "Citation Checker: Word Count and Citation Density",
+      "metaDesc": "Check a paper's word count against its citation count to see the citations per 1,000 words, with the range most markers expect."
+    },
+    "cap-rate-conv": {
+      "title": "Cap Rate to Value Calculator: NOI and Property Value",
+      "metaDesc": "Convert a cap rate into a property value from the net operating income, or work back from the price to the cap rate, with the formula shown."
+    },
+    "financial-need": {
+      "title": "Financial Need Calculator: Cost of Attendance vs EFC",
+      "metaDesc": "Work out a student's financial need from the cost of attendance and the expected family contribution, with the gap an aid office looks at."
+    },
+    "carpool-savings": {
+      "title": "Carpool Savings Calculator: Fuel, Tolls, Parking Split",
+      "metaDesc": "Work out what carpooling saves: enter the weekly commute cost, the number of riders and the days shared to get the saving per person per month."
+    },
+    "cidr-convert": {
+      "title": "CIDR to Subnet Mask Calculator: Hosts and Broadcast",
+      "metaDesc": "Convert CIDR notation into a subnet mask, the network and broadcast address, and the usable host range, for IPv4 prefixes."
+    },
+    "debt-consolidation": {
+      "title": "Debt Consolidation Calculator: One Payment vs Many",
+      "metaDesc": "Compare a single consolidation loan with your current debts: enter the balances, rates and terms to see the monthly payment and the total interest."
+    },
+    "data-center-pue": {
+      "title": "Data Center PUE Calculator: Power Usage Effectiveness",
+      "metaDesc": "Work out the power usage effectiveness of a data centre from the total facility power and the IT load, with the overhead split that drives it."
+    },
+    "cac-payback": {
+      "title": "CAC Payback Period Calculator: Months to Recover CAC",
+      "metaDesc": "Work out how many months it takes to recover customer acquisition cost from the gross margin each customer brings in, step by step."
+    },
+    "college-cost-planner": {
+      "title": "College Cost Planner: 4-Year Tuition, Room and Board",
+      "metaDesc": "Add up four years of tuition, room, board and fees with an inflation rate applied, to see what a degree will cost by graduation."
+    },
+    "grade-needed": {
+      "title": "Final Grade Calculator: Score Needed to Hit Your Target",
+      "metaDesc": "Work out the score you need on the final exam to reach your target grade, from your current grade, the exam weight and the grade you want."
+    },
+    "beam-deflection": {
+      "title": "Beam Deflection Calculator: Simply Supported Beam",
+      "metaDesc": "Work out the maximum deflection of a simply supported beam from the load and span, and the modulus and moment of inertia of the section."
+    },
+    "childcare-cost": {
+      "title": "Childcare Cost Comparison: Daycare vs Nanny per Year",
+      "metaDesc": "Compare daycare, a nanny and a childminder on annual cost from the weekly rate, the number of children and the days you need covered."
+    },
+    "appreciation-forecast": {
+      "title": "Property Appreciation Calculator: Future Value by Year",
+      "metaDesc": "Project a property's value forward from the current price and an annual appreciation rate, with the value and gain shown for each year."
+    },
+    "australia-income-tax": {
+      "title": "Australia Income Tax Calculator: Salary and Take-Home",
+      "metaDesc": "Work out Australian income tax, the Medicare levy and take-home pay from your salary, with the brackets and thresholds set out clearly."
+    },
+    "cash-on-cash": {
+      "title": "Cash-on-Cash Return Calculator: Rental Property ROI",
+      "metaDesc": "Work out the cash-on-cash return on a rental from the annual pre-tax cash flow and the cash you actually invested, with the formula shown."
+    },
+    "coupon-payment": {
+      "title": "Bond Coupon Payment Calculator: Annual and Semi-Annual",
+      "metaDesc": "Work out the coupon payment on a bond from its face value, coupon rate and payment frequency, with the annual total alongside it."
+    },
+    "haircut-annual": {
+      "title": "Haircut Cost Calculator: What a Year of Cuts Costs",
+      "metaDesc": "Work out the yearly cost of haircuts from the price per visit, how often you go and the tip percentage, with the monthly figure alongside."
+    },
+    "statistics": {
+      "title": "Statistics Calculator: Mean, Median & Standard Deviation",
+      "metaDesc": "Paste a data set and get the mean, median and standard deviation in one pass, with the count and sum shown and every step of the working laid out."
+    },
+    "mean-median-mode": {
+      "title": "Mean Median Mode Calculator: Averages From One Data Set",
+      "metaDesc": "Work out the mean, median and mode of a list of numbers together, with the sorted data shown. The defaults give a mean of 5.00, median 4.5 and mode 4."
+    },
+    "variance-sd": {
+      "title": "Variance & Standard Deviation Calculator: Data Set",
+      "metaDesc": "Calculate the variance and standard deviation of a data set as a population or a sample, with the mean, every squared deviation and each step shown."
+    },
+    "harmonic-mean": {
+      "title": "Harmonic Mean Calculator: Data Set & Reciprocals",
+      "metaDesc": "Find the harmonic mean of a data set by the reciprocal method, with every reciprocal and the final division shown. The defaults give 3.4286."
+    },
+    "standard-error": {
+      "title": "Standard Error of the Mean (SEM): Formula and Example",
+      "metaDesc": "Work out the standard error of the mean from a data set, with the standard deviation, the sample size and the final division all shown step by step."
+    },
+    "coefficient-of-variation": {
+      "title": "Coefficient of Variation Calculator: Relative Spread",
+      "metaDesc": "Work out the coefficient of variation from a data set, the standard deviation as a share of the mean, so the spread of two data sets can be compared."
+    },
+    "quartile": {
+      "title": "Quartile & IQR Calculator: Q1, Q2, Q3 and the Range",
+      "metaDesc": "Find Q1, Q2, Q3 and the interquartile range from a data set, with the sorted list and the position each quartile lands on shown step by step."
+    },
+    "password-gen": {
+      "title": "Password Generator: Strong Random Passwords",
+      "metaDesc": "Generate a strong random password at the length you choose, with symbols and numbers optional. Everything runs in the browser and nothing is sent anywhere."
+    },
+    "waist-height-ratio": {
+      "title": "Waist-to-Height Ratio Calculator (WHtR): Waist & Height",
+      "metaDesc": "Work out the waist-to-height ratio from a waist and height in centimetres, with the 0.5 cut-off explained. The page defaults give WHtR = 0.47."
+    },
+    "clean-dirty-price": {
+      "title": "Clean vs Dirty Bond Price: Clean Price & Accrued Interest",
+      "metaDesc": "Work out the clean price of a bond from its dirty (full) price and the accrued interest, with the defaults giving $1,016.50 and the subtraction shown."
+    },
+    "saudi-take-home-salary": {
+      "title": "Saudi Arabia (KSA) Take-Home Salary Calculator: Net Pay",
+      "metaDesc": "Work out Saudi net pay from gross salary, with GOSI contributions, zero income tax and a monthly take-home breakdown for expats and nationals."
+    },
+    "ideal-body-weight": {
+      "title": "Ideal Body Weight (IBW) Calculator: Devine Formula",
+      "metaDesc": "Estimate ideal body weight (IBW) from height with the Devine formula, shown beside the healthy weight range and every step of the working."
+    },
+    "total-body-water": {
+      "title": "Total Body Water (TBW) Calculator: Weight & Height",
+      "metaDesc": "Estimate total body water in litres from weight, height, age and sex, with the share of body weight and every step of the working shown."
+    },
+    "light-bulb-save": {
+      "title": "LED Light Bulb Savings Calculator: Watts & Annual Saving",
+      "metaDesc": "Compare the bulbs you run now with LEDs: running cost per year and the saving, from wattage, hours used and your electricity rate."
+    },
+    "proportion": {
+      "title": "Proportion Calculator: Solve a/b = c/d for the Unknown",
+      "metaDesc": "Proportion Calculator solves a ÷ b = c ÷ d for whichever term is missing, using cross multiplication and showing each step of the working."
+    },
+    "peptide-reconstitution": {
+      "title": "Peptide Reconstitution Calculator: Concentration & Units",
+      "metaDesc": "Work out peptide concentration from the vial amount and diluent volume, then the volume and syringe units for an amount per dose. Arithmetic only."
+    },
+    "pet-food-cost": {
+      "title": "Pet Food Cost Calculator: Monthly Food and Vet Costs",
+      "metaDesc": "Add up food, treats, vet care and supplies to see what a pet really costs each month, then the yearly and lifetime totals. Free, and nothing is uploaded."
+    },
+    "json-formatter": {
+      "title": "JSON Formatter: Pretty-Print, Minify and Validate",
+      "metaDesc": "Paste JSON to pretty-print, minify or validate it in your browser. You get clean indented output and any parse error named — nothing is uploaded."
+    },
+    "dew-point": {
+      "title": "Dew Point Calculator: When Will Condensation Form?",
+      "metaDesc": "Enter air temperature and relative humidity to get the dew point with the Magnus formula. At 30 °C and 70% humidity it is 23.9 °C, where condensation starts."
+    },
+    "auto-fare": {
+      "title": "Auto Fare Meaning: Base Fare Plus Per-km Rate",
+      "metaDesc": "An auto fare is a fixed base charge plus a rate for every kilometre. Enter distance, base fare and per-km rate to get the total, with the arithmetic shown."
+    },
+    "keyword-density": {
+      "title": "Keyword Density Formula: Occurrences ÷ Words × 100",
+      "metaDesc": "Density is keyword occurrences divided by total words, times 100. Paste text and a keyword to get the percentage and the 1-3% range usually cited."
+    },
+    "leap-year": {
+      "title": "How Is a Leap Year Calculated? The ÷4 Rule",
+      "metaDesc": "A year is a leap year if it divides by 4, except century years, which must divide by 400. Enter a year to see the rule applied step by step."
+    },
+    "weight": {
+      "title": "Weight Converter: kg to lbs and Other Units",
+      "metaDesc": "Convert weight between kilograms, pounds, ounces and grams. 1 kilogram is 2.20462 pounds, and the factor and the working are shown at each step."
+    },
+    "volume": {
+      "title": "Volume Converter: Litres to Gallons and More",
+      "metaDesc": "Convert volume between litres, millilitres, US gallons and fluid ounces. 1 litre is 0.2642 US gallons, with each conversion step shown."
+    },
+    "area": {
+      "title": "Area Converter: m² to ft² and Other Units",
+      "metaDesc": "Convert area between square metres, square feet, acres and hectares. 1 square metre is 10.7639 square feet, with the factor shown."
+    },
+    "speed": {
+      "title": "Speed Converter: km/h to mph and m/s",
+      "metaDesc": "Convert speed between km/h, mph, m/s and knots. 100 km/h is 62.14 mph, and 1 mph is about 1.609 km/h going the other way."
+    },
+    "data-storage": {
+      "title": "Data Storage Converter: GB to MB, KB and Bytes",
+      "metaDesc": "Convert data sizes between bytes, kilobytes, megabytes and gigabytes. 1 gigabyte is 1,024 megabytes on the binary scale most systems report."
+    },
+    "angle": {
+      "title": "Angle Converter: Degrees to Radians and Gradians",
+      "metaDesc": "Convert angles between degrees, radians, gradians and turns. 90 degrees is 1.5708 radians, and a full turn is 360 degrees or 2π radians."
+    },
+    "energy": {
+      "title": "Energy Converter: Joules, kWh, Calories and BTU",
+      "metaDesc": "Convert energy between joules, kilojoules, kilowatt-hours, calories and BTU. 1 kWh is 3.6 million joules, or about 3,412 BTU."
+    },
+    "frequency-conv": {
+      "title": "Frequency Converter: Hz, kHz, MHz and GHz",
+      "metaDesc": "Convert frequency between hertz, kilohertz, megahertz and gigahertz. 1 MHz is 1,000,000 Hz, and 1 GHz is 1,000 MHz."
+    },
+    "force-conv": {
+      "title": "Force Converter: Newtons to lbf and kgf",
+      "metaDesc": "Convert force between newtons, kilonewtons, pound-force and kilogram-force. 100 newtons is 22.48 lbf, because 1 N is 0.224809 lbf."
+    },
+    "fuel-efficiency-converter": {
+      "title": "Fuel Efficiency Converter: L/100km to MPG",
+      "metaDesc": "Convert fuel economy between litres per 100 km, miles per gallon (US and UK) and km per litre. 10 L/100 km is about 23.5 mpg US."
+    },
+    "radiation-conv": {
+      "title": "Radiation Converter: Sv, mSv, Gy and rem",
+      "metaDesc": "Convert radiation between sieverts, millisieverts, grays and rem. 1 sievert is 1,000 millisieverts, with absorbed and equivalent dose kept apart."
+    },
+    "bit-rate-conv": {
+      "title": "Bit Rate Converter: Mbps to kbps and Gbps",
+      "metaDesc": "Convert data transfer rates between bits, kilobits, megabits and gigabits per second. 1 megabit per second is 1,000 kilobits per second."
+    },
+    "luminance-conv": {
+      "title": "Luminance Converter: Lux to Foot-candles",
+      "metaDesc": "Convert light levels between lux and foot-candles. 1 foot-candle is 10.7639 lux, so 500 lux is about 46.5 foot-candles."
+    },
+    "molarity-conv": {
+      "title": "Molarity Converter: Molar to Millimolar",
+      "metaDesc": "Convert concentration between molar, millimolar and micromolar. 1 molar is 1,000 millimolar, and the same factor applies at every step."
+    },
+    "flow-rate-conv": {
+      "title": "Flow Rate Converter: L/s to m³/h and GPM",
+      "metaDesc": "Convert flow rate between litres per second, cubic metres per hour and gallons per minute. 1 litre per second is 3.6 m³/h."
+    },
+    "roman-numeral": {
+      "title": "Roman Numeral Converter: Numbers to Roman Numerals",
+      "metaDesc": "Convert between numbers and Roman numerals. 1,000 is M, 500 is D, 4 is IV and 9 is IX, with the subtractive rules applied in order."
+    },
+    "ppm-conv": {
+      "title": "PPM Converter: ppm to ppb and Percent",
+      "metaDesc": "Convert concentration between ppm, ppb, percent and parts per thousand. 1 ppm is 1,000 ppb, and 10,000 ppm is 1 percent."
+    },
+    "thermal-conductivity": {
+      "title": "Thermal Conductivity Converter: W/m·K to BTU",
+      "metaDesc": "Convert thermal conductivity between W/(m·K), BTU/(ft·h·°F) and kcal/(h·m·°C). 1 W/(m·K) is about 0.578 BTU/(ft·h·°F)."
+    },
+    "radiation-dose-conv": {
+      "title": "Radiation Dose Converter: Gray to Rad",
+      "metaDesc": "Convert absorbed radiation dose between gray, rad, sievert and rem. 1 gray is 100 rad, and 1 sievert is 100 rem."
+    },
+    "acceleration-conv": {
+      "title": "Acceleration Converter: m/s² to g-force",
+      "metaDesc": "Convert acceleration between m/s², g-force, ft/s² and Gal. 1 g is 9.80665 m/s², so 9.81 m/s² is very close to one g."
+    },
+    "dbm-watts": {
+      "title": "dBm to Watts Converter: dBm ↔ W and mW",
+      "metaDesc": "Convert between dBm and watts. 30 dBm is 1 watt and 0 dBm is 1 milliwatt, on the logarithmic scale used for radio and audio power."
+    },
+    "unit-converter": {
+      "title": "Universal Unit Converter: Length, Mass and More",
+      "metaDesc": "Convert between length, mass, volume, temperature and more in one place. 1 m is 3.2808 ft and 1 kg is 2.2046 lb, with each factor shown."
+    },
+    "fraction-percent": {
+      "title": "Fraction to Percent to Decimal Converter",
+      "metaDesc": "Convert between fractions, decimals and percentages. 3/4 is 0.75 and 75%, and the tool shows the numerator and denominator behind it."
+    },
+    "scientific-notation": {
+      "title": "Scientific Notation Converter: Decimal to Scientific",
+      "metaDesc": "Convert between decimal and scientific notation. 0.000123 is 1.23 × 10⁻⁴, and the converter keeps the significant figures you enter."
+    },
+    "polar-rect": {
+      "title": "Polar ↔ Rectangular Coordinates Converter",
+      "metaDesc": "Convert between polar and rectangular coordinates. A polar point of r = 5 at 30° is x = 4.3301 and y = 2.5 in rectangular form."
+    },
+    "annulus-area": {
+      "title": "Annulus (Ring) Area Calculator: Outer Radius & Inner Radius",
+      "metaDesc": "Find the area of a ring (annulus) from its outer and inner radius. An outer radius of 8 and an inner radius of 5 give about 122.52 square units."
+    },
+    "wavelength-freq": {
+      "title": "Wavelength ↔ Frequency: Light & Wave Physics",
+      "metaDesc": "Convert between wavelength and frequency using c = 3 × 10⁸ m/s. A 550 nm wave of light is about 5.45 × 10¹⁴ Hz."
+    },
+    "mole-conversion": {
+      "title": "Mole Conversion Calculator: Mass & Molar Mass",
+      "metaDesc": "Convert between mass, moles and molar mass using moles = mass ÷ molar mass. 18 g of water at 18 g/mol is 1 mole, with each step shown."
+    },
+    "currency-converter": {
+      "title": "Currency Converter — USD to PKR Exchange Rates",
+      "metaDesc": "Convert between currencies using live exchange rates covering 150+ pairs, from USD to PKR, EUR, GBP and more."
+    },
+    "salary-converter": {
+      "title": "Salary Converter: Hourly, Monthly and Annual Pay",
+      "metaDesc": "Convert a salary between hourly, monthly and annual figures. $50,000 a year is about $4,167 a month and $24.04 an hour at 40 hours a week."
+    },
+    "currency-conv": {
+      "title": "Currency Converter: Fixed Exchange Rate Calculator",
+      "metaDesc": "Convert between currencies at a fixed exchange rate you set. Enter an amount and the rate to get the converted figure with the working shown."
+    },
+    "paper-size-conv": {
+      "title": "Paper Size Converter: A4, A5, B5 Dimensions",
+      "metaDesc": "Convert between A, B and C series paper sizes. A4 is 210 × 297 mm and A5 is half that at 148 × 210 mm, with each step shown."
+    },
+    "cooking": {
+      "title": "Cooking Converter: Cups, ml, tbsp and tsp",
+      "metaDesc": "Convert cooking measurements between cups, millilitres, tablespoons and teaspoons. 1 US cup is about 240 ml and 1 tbsp is exactly 3 tsp."
+    },
+    "prime-factor": {
+      "title": "Prime Factorization Calculator: Factor Any Number",
+      "metaDesc": "Break any whole number into its prime factors. 360 is 2 × 2 × 2 × 3 × 3 × 5, and the tool shows each division of the working."
+    },
+    "significant-figures": {
+      "title": "Significant Figures Calculator: Rounding and Sig Figs",
+      "metaDesc": "Round a number to a chosen number of significant figures. 0.004567 to two significant figures is 0.0046, with the counting rule shown."
+    },
+    "digital-root": {
+      "title": "Digital Root Calculator: Repeated Digit Sum",
+      "metaDesc": "Find the digital root of a number by repeatedly summing its digits. The digital root of 9,876 is 3, since 9+8+7+6 = 30 and 3+0 = 3."
+    },
+    "gst-india": {
+      "title": "GST Calculator India: Add or Remove GST",
+      "metaDesc": "Add or remove GST at any rate. ₹10,000 plus 18% GST is ₹11,800, and the tool shows the base, the tax and the total separately."
+    },
+    "uae-vat": {
+      "title": "UAE VAT Calculator: Add or Remove 5% VAT",
+      "metaDesc": "Add or remove 5% VAT. AED 1,000 plus 5% VAT is AED 1,050, and the tool shows the base amount and the tax separately."
+    },
+    "maintenance-fluids": {
+      "title": "Maintenance Fluids Calculator (4-2-1 Rule)",
+      "metaDesc": "Calculate paediatric maintenance fluids with the 4-2-1 rule: 4 ml/kg/hr for the first 10 kg, 2 for the next 10 kg and 1 for each kg after that."
+    },
+    "vector-add": {
+      "title": "Vector Addition Calculator: Sum of Two Vectors",
+      "metaDesc": "Add two vectors component by component to get their sum. Enter the x, y and z components of each vector and the result is shown step by step."
+    },
+    "date-add": {
+      "title": "Date Add/Subtract: Start Date & Days",
+      "metaDesc": "Add or subtract days from a date. Starting from 15 January 2026 and adding 90 days gives 15 April 2026, with the day count shown."
+    },
+    "salary-hourly": {
+      "title": "Salary to Hourly Converter: Annual Salary & Hours/Week",
+      "metaDesc": "Convert an annual salary into an hourly rate. $80,000 a year at 40 hours a week for 52 weeks is about $38.46 an hour."
+    },
+    "protein-need": {
+      "title": "Daily Protein Intake Calculator: Grams per Day",
+      "metaDesc": "Work out a daily protein target in grams from your body weight and activity level, with the grams-per-kilogram rule shown."
+    },
+    "vegan-protein": {
+      "title": "Vegan Protein Sources: How Much You Need",
+      "metaDesc": "How much protein a plant-based diet needs, and which foods supply it. Enter your weight to get a daily gram target with the sources listed."
+    },
+    "carbon-dating": {
+      "title": "Carbon Dating Calculator: How Old Is Your Sample?",
+      "metaDesc": "Enter the share of carbon-14 remaining to get the sample age. C-14 has a 5,730-year half-life, and the decay maths is shown step by step."
+    },
+    "charging-time": {
+      "title": "Phone Charging Time Calculator: Minutes to Full",
+      "metaDesc": "Enter battery capacity, charger wattage and the charge range to get the time. A 5,000 mAh phone going from 20% to 80% on 18 W takes about 44 minutes."
+    },
+    "rgb-hex": {
+      "title": "RGB to Hex Converter: Pick a Colour, Copy the Code",
+      "metaDesc": "Convert RGB values to a hex code and back. Enter 79, 70 and 229 to get #4F46E5, with each channel hex pair explained along the way."
+    },
+    "wire-gauge-conv": {
+      "title": "AWG to mm Converter: Wire Gauge Diameter and Area",
+      "metaDesc": "Convert American Wire Gauge to diameter in millimetres and cross-section in mm². 14 AWG is 1.628 mm across and 2.08 mm², with the formula shown."
+    },
+    "solar-energy": {
+      "title": "Solar Panel Output Calculator: kWh per Day and Month",
+      "metaDesc": "Enter panel count, wattage, peak sun hours and system efficiency to see daily, monthly and yearly kWh. Twenty 350 W panels at 5 sun hours give 29.8 kWh a day."
+    },
+    "ip-subnet": {
+      "title": "IP Subnet Calculator: Network, Broadcast and Hosts",
+      "metaDesc": "Enter an IPv4 address and prefix length to get the network address, broadcast address, usable host range and mask. 192.168.1.10/24 sits in 192.168.1.0."
+    },
+    "prorated-rent": {
+      "title": "Prorated Rent Calculator: Pay Only for Days Used",
+      "metaDesc": "Work out rent for part of a month from monthly rent, days occupied and days in the month. Staying 15 of 30 days at $1,200 means $600, shown step by step."
+    },
+    "trigonometry": {
+      "title": "Trigonometry Calculator: Sin, Cos and Tan of an Angle",
+      "metaDesc": "Enter an angle in degrees to get its sine, cosine and tangent. At 45 degrees sin and cos are both 0.7071 and tan is 1, with the radian conversion shown first."
+    },
+    "wallpaper-rolls": {
+      "title": "Wallpaper Roll Calculator: How Many Rolls to Buy",
+      "metaDesc": "Enter total wall width, ceiling height, roll width and roll length to get how many rolls the room needs, with a 10% allowance for matching and cuts."
+    },
+    "vinyl-flooring": {
+      "title": "Vinyl Plank Calculator: Boxes and Planks You Need",
+      "metaDesc": "Enter room area, coverage per box and a waste allowance to get the boxes and planks needed, with the covered area and underlayment estimate alongside."
+    },
+    "dividend-yield": {
+      "title": "Dividend Yield Calculator: Income for Every Dollar",
+      "metaDesc": "Divide the annual dividend per share by the share price to get yield. A $3.50 payout on a $75 stock is 4.67%, and the tool shows the quarterly amount too."
+    },
+    "vacation-savings": {
+      "title": "Vacation Savings Calculator: Cost & Monthly Target",
+      "metaDesc": "Enter trip cost, what you have already saved and the months left to get the monthly and weekly amount to set aside. Adjust the date to see the plan change."
+    },
+    "steel-weight": {
+      "title": "Steel Weight Calculator: Plate, Bar and Tube Weight",
+      "metaDesc": "Pick a shape and enter its dimensions to get the weight at 7,850 kg/m³. A 1000 × 500 × 10 mm plate comes to 39.25 kg, with the volume shown first."
+    },
+    "eps-calculator": {
+      "title": "EPS Calculator: Earnings Per Share From Net Income",
+      "metaDesc": "Subtract preferred dividends from net income and divide by common shares outstanding. $1,000,000 less $50,000 across 200,000 shares is $4.75 per share."
+    },
+    "trade-in-value": {
+      "title": "Car Trade-In Value Calculator: What It Is Worth Now",
+      "metaDesc": "Enter the original price and the vehicle age to estimate trade-in value after depreciation. A $30,000 car at five years is about $13,311, a guide not an offer."
+    },
+    "situp-test": {
+      "title": "Sit-Up Test Calculator: Score Your Core Endurance",
+      "metaDesc": "Enter how many sit-ups you can do in one minute to see the rating: 45 or more is excellent, 35 to 44 good, 25 to 34 average, and under 25 needs work."
+    },
+    "moment-of-inertia": {
+      "title": "Moment of Inertia Calculator: Disk, Ring and Rod",
+      "metaDesc": "Get rotational inertia for a solid disk, hollow ring, solid sphere or rod from mass and radius or length, with the formula used for that shape written out."
+    },
+    "resistor-color-code": {
+      "title": "Resistor Color Code Calculator: Read 4-Band Values",
+      "metaDesc": "Pick the four band colours to read the resistor value and tolerance. Brown, black, red and gold is 1 kΩ ±5%, and the tool decodes the bands in order."
+    },
+    "closing-costs": {
+      "title": "Closing Costs Calculator: What to Budget at Closing",
+      "metaDesc": "Estimate closing costs from home price, down payment, mortgage rate and discount points, including title, appraisal and escrow. A planning figure, not a quote."
+    },
+    "uk-take-home-salary": {
+      "title": "UK Take-Home Pay Calculator: Salary After Tax",
+      "metaDesc": "Enter a gross salary, pension percentage and student loan plan to see monthly take-home pay after income tax and National Insurance at 2025-26 England rates."
+    },
+    "nps-calculator": {
+      "title": "NPS Calculator: Corpus and Monthly Pension at 60",
+      "metaDesc": "Estimate the National Pension System corpus from monthly contribution, expected return and annuity share, then the monthly pension the annuity could pay."
+    }
+  },
+  "baselineSource": "ledger",
+  "entries": [
+    {
+      "id": "length",
+      "field": "title",
+      "from": "Length Converter — Meters to Feet & Inches",
+      "to": "Length Converter: Meters to Feet and Inches",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "length",
+      "field": "metaDesc",
+      "from": "Free Length Converter: enter the Value and get a between length of 3.2808 ft. Every step shown, nothing leaves your browser.",
+      "to": "Convert between metres, feet, inches, centimetres and kilometres. 1 metre is 3.2808 feet, and every step of the conversion is shown.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "pressure-conv",
+      "field": "title",
+      "from": "Pressure Converter: Value",
+      "to": "Pressure Converter: Pascal, Bar, PSI and kPa",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "pressure-conv",
+      "field": "metaDesc",
+      "from": "Free Pressure Converter: enter the Value and get a between pressure of 14.5038 psi. Every step shown, nothing leaves your browser.",
+      "to": "Convert pressure between pascal, bar, psi, kPa and atmosphere. 1 bar is 14.5038 psi and 1 psi is 6.895 kPa, with the working shown.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "temperature",
+      "field": "title",
+      "from": "Temperature Converter: Temperature Value",
+      "to": "Celsius to Fahrenheit Converter (and Kelvin)",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "temperature",
+      "field": "metaDesc",
+      "from": "Free Temperature Converter: enter the Temperature Value and get between celsius of 212.00 °F. Every step shown, nothing leaves your browser.",
+      "to": "Convert Celsius to Fahrenheit and Kelvin, and back. 100 °C is 212 °F and 0 °C is 273.15 K, with the offset and the factor explained.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "time-conv",
+      "field": "title",
+      "from": "Time Converter: Value",
+      "to": "Time Converter: Hours, Minutes and Seconds",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "time-conv",
+      "field": "metaDesc",
+      "from": "Free Time Converter: enter the Value and get time units of 1.0000 h. Every step shown, nothing leaves your browser.",
+      "to": "Convert between seconds, minutes, hours and days. 3,600 seconds is 1 hour and 90 minutes is 1.5 hours, with each step of the working shown.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "cooking-conv",
+      "field": "title",
+      "from": "Cooking Measurement Converter: Amount",
+      "to": "Cups to ml and tbsp to tsp: Cooking Converter",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "cooking-conv",
+      "field": "metaDesc",
+      "from": "Free Cooking Measurement Converter: enter the Amount and get cooking measurements of 240.00 ml. Every step shown, nothing leaves your browser.",
+      "to": "Convert cups to millilitres, tablespoons to teaspoons and ounces to grams. 1 US cup is about 240 ml and 1 tbsp is exactly 3 tsp.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "clothing-size",
+      "field": "title",
+      "from": "Clothing Size Converter: US Size",
+      "to": "Clothing Size Converter: US to EU, UK and IT",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "clothing-size",
+      "field": "metaDesc",
+      "from": "Free Clothing Size Converter: enter the US Size and get a international clothing of EU: 40. Every step shown, nothing leaves your browser.",
+      "to": "Convert clothing sizes between US, EU, UK and international equivalents — a US women's 10 is about EU 40, with the comparison in one place.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "torque-conv",
+      "field": "title",
+      "from": "Torque Converter: Torque Value",
+      "to": "Torque Converter: Nm to lb-ft and Other Units",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "torque-conv",
+      "field": "metaDesc",
+      "from": "Free Torque Converter: enter the Torque Value and get torque units of 73.76 lbft. Every step shown, nothing leaves your browser.",
+      "to": "Convert torque between newton-metres, pound-feet and kgf-m. 100 Nm is about 73.8 lb-ft, with the factor and the working shown.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "power-conv",
+      "field": "title",
+      "from": "Power Converter: Power Value",
+      "to": "Watts to Horsepower Converter: W, kW and hp",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "power-conv",
+      "field": "metaDesc",
+      "from": "Free Power Converter: enter the Power Value and get power units of 134.1022 hp. Every step shown, nothing leaves your browser.",
+      "to": "Convert power between watts, kilowatts and horsepower. 100 kW is about 134 hp, and 1 hp is 745.7 watts, with each step shown.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "voltage-conv",
+      "field": "title",
+      "from": "Electrical Unit Converter: Value",
+      "to": "Volts, Amps and Watts Converter: What Converts",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "voltage-conv",
+      "field": "metaDesc",
+      "from": "Free Electrical Unit Converter: enter the Value and get the cannot directly convert instantly, with every step of the math shown in your browser.",
+      "to": "See what converts between volts, amps and watts, and what needs Ohm's law instead — voltage and current are different quantities and cannot be swapped directly.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "density-conv",
+      "field": "title",
+      "from": "Density Converter — kg/m³ to g/cm³ & More Units",
+      "to": "Density Converter: kg/m3 to g/cm3 and g/mL",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "density-conv",
+      "field": "metaDesc",
+      "from": "Free Density Converter: enter the Density Value and get density units of 1.0000 gcm3. Every step shown, nothing leaves your browser.",
+      "to": "Convert density between kg/m3, g/cm3, g/mL and lb/ft3. 1,000 kg/m3 is exactly 1 g/cm3, and the factor is applied to every step.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "child-height",
+      "field": "title",
+      "from": "Child Height Predictor: Father & Mother",
+      "to": "Child Height Predictor: How Tall Will My Child Be?",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "child-height",
+      "field": "metaDesc",
+      "from": "Free Child Height Predictor: enter the Father and Mother and get a predict adult height of 175 cm (69 in). Every step shown, nothing leaves your browser.",
+      "to": "Enter both parents' heights and get your child's predicted adult height in cm and inches using the mid-parental method, as a range rather than a promise.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "baby-weight-gain",
+      "field": "title",
+      "from": "Baby Weight Percentile: Age & Weight",
+      "to": "Baby Weight Percentile: Is My Baby on Track for Their Age?",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "baby-weight-gain",
+      "field": "metaDesc",
+      "from": "Free Baby Weight Percentile: enter the Age and Weight and get a track baby weight of -5% below avg. Every step shown, nothing leaves your browser.",
+      "to": "Compare your baby's weight with the average for their age and see the percentage above or below it, plus why a single number is not the whole growth picture.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "presentation-time",
+      "field": "title",
+      "from": "Presentation Time Calculator: Number of Slides",
+      "to": "Presentation Time Calculator: How Long Will My Slides Take?",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "presentation-time",
+      "field": "metaDesc",
+      "from": "Free Presentation Time Calculator: get the speaking time instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Enter your slide count and minutes per slide to get the speaking time, with a buffer for overruns so a talk fits the slot it was given.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "tuition-cost",
+      "field": "title",
+      "from": "Tuition Cost Calculator: Cost per Credit, Total Credits",
+      "to": "Tuition Cost Calculator: What a Degree Really Costs",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "tuition-cost",
+      "field": "metaDesc",
+      "from": "Free Tuition Cost Calculator: enter the Cost per Credit and Total Credits and get a total cost degree of $64,000. Every step shown, nothing leaves your browser.",
+      "to": "Add up cost per credit, total credits and yearly fees to see the full price of a degree, not just the headline tuition figure.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "coffee-cost",
+      "field": "title",
+      "from": "Coffee Habit Cost Calculator: Cups/Day, Cost per Cup",
+      "to": "Coffee Cost Calculator: What Your Daily Cup Costs Per Year",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "coffee-cost",
+      "field": "metaDesc",
+      "from": "Free Coffee Habit Cost Calculator: enter the Cups/Day and Cost per Cup and get a annual of $2600 | Monthly: $217. Every step shown, nothing leaves your browser.",
+      "to": "Work out what a coffee habit costs per month and per year from cups per day, price per cup and days a week. A $3 cup five days a week is about $780 a year.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "gutter",
+      "field": "title",
+      "from": "Gutter Length Calculator: Roof Perimeter, Section Length",
+      "to": "Gutter Calculator: Sections, Length and Downspouts You Need",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "gutter",
+      "field": "metaDesc",
+      "from": "Free Gutter Length Calculator: enter the Roof Perimeter and Section Length and get gutter sections of 20. Every step shown, nothing leaves your browser.",
+      "to": "Enter the roof perimeter, run length and corners to get the gutter sections and downspouts to order, ready to price against a quote.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "gift-wrap",
+      "field": "title",
+      "from": "Gift Wrap Calculator: Box Length, Box Width & Box Height",
+      "to": "How Much Wrapping Paper Do I Need? Box Size Calculator",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "gift-wrap",
+      "field": "metaDesc",
+      "from": "Free Gift Wrap Calculator: enter the Box Length and Box Width and get a paper of 0.63 sq m (6300 sq cm). Every step shown, nothing leaves your browser.",
+      "to": "Enter the box length, width and height to get the paper area you need for the wrap, with the overlap included so the paper actually covers the box.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "drywall",
+      "field": "title",
+      "from": "Drywall Calculator: Wall Area & Sheet Size",
+      "to": "Drywall Calculator: How Many Sheets You Need (With Waste)",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "drywall",
+      "field": "metaDesc",
+      "from": "Free Drywall Calculator: enter the Wall Area and Sheet Size and get a sheets needed of 19. Every step shown, nothing leaves your browser.",
+      "to": "Enter the wall area and your sheet size to get the number of drywall sheets to buy, with a 10% waste allowance already included for cuts and mistakes.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "baby-feeding",
+      "field": "title",
+      "from": "Baby Feeding Schedule: Age, Weight & Feedings/Day",
+      "to": "Baby Feeding Schedule by Age and Weight: ml Per Feeding",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "baby-feeding",
+      "field": "metaDesc",
+      "from": "Free Baby Feeding Schedule: enter the Age and Weight and get a result of 94 ml per feeding. Every step shown, nothing leaves your browser.",
+      "to": "Estimate how much formula or expressed milk a baby needs per day and per feed from their weight and number of feeds, with the daily total shown.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "jet-lag",
+      "field": "title",
+      "from": "Jet Lag Recovery Calculator: Time Zones Crossed & Direction",
+      "to": "Jet Lag Calculator: Days to Adjust, East vs West",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "jet-lag",
+      "field": "metaDesc",
+      "from": "Free Jet Lag Recovery Calculator: get the recovery instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Enter the number of time zones crossed and the direction of travel to estimate how many days your body clock needs to adjust, east versus west.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "vacation-with-kids",
+      "field": "title",
+      "from": "Family Vacation Cost: Family Size & Days",
+      "to": "Family Vacation Cost Calculator: Budget by Days and Level",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "vacation-with-kids",
+      "field": "metaDesc",
+      "from": "Free Family Vacation Cost: enter the Family Size and Days and get a budget vacation of $7,000 (5 days). Every step shown, nothing leaves your browser.",
+      "to": "Estimate what a family holiday costs from the destination, family size, number of days and budget level, with a per-person daily figure to compare options.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "bmr-mifflin",
+      "field": "title",
+      "from": "Mifflin-St Jeor BMR Calculator: Weight, Height & Age",
+      "to": "Mifflin-St Jeor BMR Calculator: Basal Metabolic Rate",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "bmr-mifflin",
+      "field": "metaDesc",
+      "from": "Free Mifflin-St Jeor BMR Calculator: enter the Weight and Height and get a bmr of 1618 kcal/day. Every step shown, nothing leaves your browser.",
+      "to": "Enter weight, height, age and sex to get your basal metabolic rate from the Mifflin-St Jeor equation, the one dietitians use most for healthy adults.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "pregnancy",
+      "field": "title",
+      "from": "Pregnancy Due Date: Last Menstrual Period",
+      "to": "Pregnancy Due Date Calculator: From Your Last Period",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "pregnancy",
+      "field": "metaDesc",
+      "from": "Free Pregnancy Due Date: enter the Last Menstrual Period and get the pregnancy due date instantly, with every step of the math shown in your browser.",
+      "to": "Enter the first day of your last menstrual period to get your estimated due date, 40 weeks later by Naegele's rule, with the reasoning spelled out.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "deck-stain",
+      "field": "title",
+      "from": "Deck Stain & Sealant Calculator: Deck Length, Deck Width",
+      "to": "Deck Stain Calculator: Gallons of Stain or Sealant",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "deck-stain",
+      "field": "metaDesc",
+      "from": "Free Deck Stain & Sealant Calculator: get the deck stain instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Enter the deck length, width and number of coats to get the gallons of stain or sealant to buy, at about 250 sq ft per gallon per coat.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "carbon",
+      "field": "title",
+      "from": "Carbon Footprint Calculator: Monthly Electricity",
+      "to": "Carbon Footprint Calculator: Home Energy, Gas and Driving",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "carbon",
+      "field": "metaDesc",
+      "from": "Free Carbon Footprint Calculator: get the carbon footprint instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Estimate your monthly CO2e from electricity, gas and driving, with each source shown separately so you can see which one dominates your footprint.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "tip",
+      "field": "title",
+      "from": "Tip Calculator: Bill Amount, Tip & Number of People",
+      "to": "Tip Calculator: Tip Amount, Total and Split per Person",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "tip",
+      "field": "metaDesc",
+      "from": "Free Tip Calculator: enter the Bill Amount, Tip, and Number of People and get the tip instantly, with every step of the math shown in your browser.",
+      "to": "Work out the tip on any bill and split it between people. Enter the bill, the tip percentage and the number of people to get each share.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "safe-withdrawal",
+      "field": "title",
+      "from": "Safe Withdrawal Rate Calculator: Portfolio Value",
+      "to": "Safe Withdrawal Rate Calculator: Retire on Your Savings",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "safe-withdrawal",
+      "field": "metaDesc",
+      "from": "Free Safe Withdrawal Rate Calculator: get the annual withdrawal instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Find the withdrawal rate a portfolio can sustain: enter your savings, the annual withdrawal and the return you expect to see the rate and the years it lasts.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "bullet-drop",
+      "field": "title",
+      "from": "Bullet Drop Calculator: Horizontal Distance",
+      "to": "Bullet Drop Calculator: Trajectory, Flight Time, Energy",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "bullet-drop",
+      "field": "metaDesc",
+      "from": "Free Bullet Drop Calculator: get the drop instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Estimate bullet drop over distance from muzzle velocity, ballistic coefficient and sight height, with the time of flight and the remaining energy.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "sweat-rate",
+      "field": "title",
+      "from": "Sweat Rate Calculator: Pre-exercise Weight",
+      "to": "Sweat Rate Calculator: Fluid Loss per Hour of Exercise",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "sweat-rate",
+      "field": "metaDesc",
+      "from": "Free Sweat Rate Calculator: get the fluid loss instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Work out how much fluid you lose per hour of training from your pre- and post-exercise weight, the fluid you drank and the length of the session.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "rain-barrel",
+      "field": "title",
+      "from": "Rain Barrel / Rainwater Harvesting Calculator: Roof",
+      "to": "Rain Barrel Calculator: Roof Area to Gallons Harvested",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "rain-barrel",
+      "field": "metaDesc",
+      "from": "Free Rain Barrel / Rainwater Harvesting Calculator: get the rainwater collection instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Work out how much rainwater a roof can harvest. Enter the roof area, the rainfall and the collection efficiency to size the barrel you actually need.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "sibling-age-gap",
+      "field": "title",
+      "from": "Sibling Age Gap: Older Child Birth & Younger Child Birth",
+      "to": "Sibling Age Gap Calculator: Months Between Children",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "sibling-age-gap",
+      "field": "metaDesc",
+      "from": "Free Sibling Age Gap: get the age gap between instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Work out the age gap between two children in years, months and days from their birth dates, with the school years they will share.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "url-encoder",
+      "field": "title",
+      "from": "URL Encoder / Decoder: Encode",
+      "to": "URL Encoder / Decoder: Percent Encoding Online",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "url-encoder",
+      "field": "metaDesc",
+      "from": "Free URL Encoder / Decoder: get the encode instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Encode or decode a URL or query string with percent-encoding. Paste the text, get the escaped result, and copy it straight back into your code.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "moon-phase",
+      "field": "title",
+      "from": "Moon Phase Calculator: Date",
+      "to": "Moon Phase Calculator: Tonight's Phase and Illumination",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "moon-phase",
+      "field": "metaDesc",
+      "from": "Free Moon Phase Calculator: enter the Date and get the lunar phase instantly, with every step of the math shown in your browser.",
+      "to": "Find the moon phase for any date, plus the illumination percentage and the days to the next new or full moon, worked out from the lunar cycle.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "laundry-cost",
+      "field": "title",
+      "from": "Laundry Cost Calculator: Loads/Week, Washer kWh/Load",
+      "to": "Laundry Cost Calculator: Cost per Load and per Year",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "laundry-cost",
+      "field": "metaDesc",
+      "from": "Free Laundry Cost Calculator: get the weekly instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Work out what washing costs: enter loads per week, washer and dryer energy, water and detergent prices to get the cost per load and per year.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "completing-square",
+      "field": "title",
+      "from": "Completing the Square Calculator: Coefficient of",
+      "to": "Completing the Square Calculator: Steps to Vertex Form",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "completing-square",
+      "field": "metaDesc",
+      "from": "Free Completing the Square Calculator: get the roots instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Turn a quadratic into vertex form by completing the square, with every step shown and the vertex and discriminant reported at the end.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "plagiarism-check",
+      "field": "title",
+      "from": "Citation Checker: Paper Word Count & Number of Citations",
+      "to": "Citation Checker: Word Count and Citation Density",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "plagiarism-check",
+      "field": "metaDesc",
+      "from": "Free Citation Checker: get the if paper more instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Check a paper's word count against its citation count to see the citations per 1,000 words, with the range most markers expect.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "cap-rate-conv",
+      "field": "title",
+      "from": "Cap Rate to Value Calculator: Net Operating Income",
+      "to": "Cap Rate to Value Calculator: NOI and Property Value",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "cap-rate-conv",
+      "field": "metaDesc",
+      "from": "Free Cap Rate to Value Calculator: get the property implied noi instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Convert a cap rate into a property value from the net operating income, or work back from the price to the cap rate, with the formula shown.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "financial-need",
+      "field": "title",
+      "from": "Financial Need Calculator: Cost of Attendance",
+      "to": "Financial Need Calculator: Cost of Attendance vs EFC",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "financial-need",
+      "field": "metaDesc",
+      "from": "Free Financial Need Calculator: get the financial cost attendance instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Work out a student's financial need from the cost of attendance and the expected family contribution, with the gap an aid office looks at.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "carpool-savings",
+      "field": "title",
+      "from": "Carpool Savings Calculator: Your Weekly Drive Cost",
+      "to": "Carpool Savings Calculator: Fuel, Tolls, Parking Split",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "carpool-savings",
+      "field": "metaDesc",
+      "from": "Free Carpool Savings Calculator: get the how much save instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Work out what carpooling saves: enter the weekly commute cost, the number of riders and the days shared to get the saving per person per month.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "cidr-convert",
+      "field": "title",
+      "from": "CIDR to Subnet Calculator: CIDR Prefix & Network Octet Check",
+      "to": "CIDR to Subnet Mask Calculator: Hosts and Broadcast",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "cidr-convert",
+      "field": "metaDesc",
+      "from": "Free CIDR to Subnet Calculator: get the mask instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Convert CIDR notation into a subnet mask, the network and broadcast address, and the usable host range, for IPv4 prefixes.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "debt-consolidation",
+      "field": "title",
+      "from": "Debt Consolidation Calculator: Current Debts",
+      "to": "Debt Consolidation Calculator: One Payment vs Many",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "debt-consolidation",
+      "field": "metaDesc",
+      "from": "Free Debt Consolidation Calculator: get the new payment instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Compare a single consolidation loan with your current debts: enter the balances, rates and terms to see the monthly payment and the total interest.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "data-center-pue",
+      "field": "title",
+      "from": "Data Center PUE Calculator: Total Facility Power",
+      "to": "Data Center PUE Calculator: Power Usage Effectiveness",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "data-center-pue",
+      "field": "metaDesc",
+      "from": "Free Data Center PUE Calculator: get the pue instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Work out the power usage effectiveness of a data centre from the total facility power and the IT load, with the overhead split that drives it.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "cac-payback",
+      "field": "title",
+      "from": "CAC Payback Period: Customer Acquisition & Gross Margin per",
+      "to": "CAC Payback Period Calculator: Months to Recover CAC",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "cac-payback",
+      "field": "metaDesc",
+      "from": "Free CAC Payback Period: get the months recover customer instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Work out how many months it takes to recover customer acquisition cost from the gross margin each customer brings in, step by step.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "college-cost-planner",
+      "field": "title",
+      "from": "College Cost Planner: Annual Tuition, Room & Board",
+      "to": "College Cost Planner: 4-Year Tuition, Room and Board",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "college-cost-planner",
+      "field": "metaDesc",
+      "from": "Free College Cost Planner: get the annual instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Add up four years of tuition, room, board and fees with an inflation rate applied, to see what a degree will cost by graduation.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "grade-needed",
+      "field": "title",
+      "from": "Final Grade Needed (Weighted): Current Grade",
+      "to": "Final Grade Calculator: Score Needed to Hit Your Target",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "grade-needed",
+      "field": "metaDesc",
+      "from": "Free Final Grade Needed (Weighted): get the weighted final grade instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Work out the score you need on the final exam to reach your target grade, from your current grade, the exam weight and the grade you want.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "beam-deflection",
+      "field": "title",
+      "from": "Beam Deflection (Simply Supported): Load, Length & EI",
+      "to": "Beam Deflection Calculator: Simply Supported Beam",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "beam-deflection",
+      "field": "metaDesc",
+      "from": "Free Beam Deflection (Simply Supported): get the max deflection uniformly instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Work out the maximum deflection of a simply supported beam from the load and span, and the modulus and moment of inertia of the section.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "childcare-cost",
+      "field": "title",
+      "from": "Childcare Cost Comparison: Children, Daycare/Child/Week",
+      "to": "Childcare Cost Comparison: Daycare vs Nanny per Year",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "childcare-cost",
+      "field": "metaDesc",
+      "from": "Free Childcare Cost Comparison: get the cheapest instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Compare daycare, a nanny and a childminder on annual cost from the weekly rate, the number of children and the days you need covered.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "appreciation-forecast",
+      "field": "title",
+      "from": "Property Appreciation Calculator: Current Value",
+      "to": "Property Appreciation Calculator: Future Value by Year",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "appreciation-forecast",
+      "field": "metaDesc",
+      "from": "Free Property Appreciation Calculator: get the projected value instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Project a property's value forward from the current price and an annual appreciation rate, with the value and gain shown for each year.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "australia-income-tax",
+      "field": "title",
+      "from": "Australia Income Tax Calculator: Annual Income",
+      "to": "Australia Income Tax Calculator: Salary and Take-Home",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "australia-income-tax",
+      "field": "metaDesc",
+      "from": "Free Australia Income Tax Calculator: get the take-home instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Work out Australian income tax, the Medicare levy and take-home pay from your salary, with the brackets and thresholds set out clearly.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "cash-on-cash",
+      "field": "title",
+      "from": "Cash-on-Cash Return: Annual Pre-Tax Cash Flow & Total",
+      "to": "Cash-on-Cash Return Calculator: Rental Property ROI",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "cash-on-cash",
+      "field": "metaDesc",
+      "from": "Free Cash-on-Cash Return: get the cash-on-cash instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Work out the cash-on-cash return on a rental from the annual pre-tax cash flow and the cash you actually invested, with the formula shown.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "coupon-payment",
+      "field": "title",
+      "from": "Bond Coupon Payment Calculator: Face Value, Annual",
+      "to": "Bond Coupon Payment Calculator: Annual and Semi-Annual",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "coupon-payment",
+      "field": "metaDesc",
+      "from": "Free Bond Coupon Payment Calculator: get the coupon payment instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Work out the coupon payment on a bond from its face value, coupon rate and payment frequency, with the annual total alongside it.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "haircut-annual",
+      "field": "title",
+      "from": "Haircut Annual Cost: Cost per Visit, Visits per Year & Tip %",
+      "to": "Haircut Cost Calculator: What a Year of Cuts Costs",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "haircut-annual",
+      "field": "metaDesc",
+      "from": "Free Haircut Annual Cost: get the yearly grooming expense instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Work out the yearly cost of haircuts from the price per visit, how often you go and the tip percentage, with the monthly figure alongside.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "statistics",
+      "field": "title",
+      "from": "Statistics Calculator: Data",
+      "to": "Statistics Calculator: Mean, Median & Standard Deviation",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "statistics",
+      "field": "metaDesc",
+      "from": "Free Statistics Calculator: enter the Data and get the mean instantly, with every step of the math shown in your browser.",
+      "to": "Paste a data set and get the mean, median and standard deviation in one pass, with the count and sum shown and every step of the working laid out.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "mean-median-mode",
+      "field": "title",
+      "from": "Mean Median Mode Calculator: Data",
+      "to": "Mean Median Mode Calculator: Averages From One Data Set",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "mean-median-mode",
+      "field": "metaDesc",
+      "from": "Free Mean Median Mode Calculator: enter the Data and get a breakdown of 5.00 | Med: 4.5 | Mode: 4. Every step shown, nothing leaves your browser.",
+      "to": "Work out the mean, median and mode of a list of numbers together, with the sorted data shown. The defaults give a mean of 5.00, median 4.5 and mode 4.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "variance-sd",
+      "field": "title",
+      "from": "Variance & Standard Deviation: Data",
+      "to": "Variance & Standard Deviation Calculator: Data Set",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "variance-sd",
+      "field": "metaDesc",
+      "from": "Free Variance & Standard Deviation: enter the Data and get a population of σ=2.5298 σ²=6.4000. Every step shown, nothing leaves your browser.",
+      "to": "Calculate the variance and standard deviation of a data set as a population or a sample, with the mean, every squared deviation and each step shown.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "harmonic-mean",
+      "field": "title",
+      "from": "Harmonic Mean: Data",
+      "to": "Harmonic Mean Calculator: Data Set & Reciprocals",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "harmonic-mean",
+      "field": "metaDesc",
+      "from": "Free Harmonic Mean: enter the Data and get a harmonic mean of 3.4286. Every step shown, nothing leaves your browser.",
+      "to": "Find the harmonic mean of a data set by the reciprocal method, with every reciprocal and the final division shown. The defaults give 3.4286.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "standard-error",
+      "field": "title",
+      "from": "Standard Error of the Mean: Data",
+      "to": "Standard Error of the Mean (SEM): Formula and Example",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "standard-error",
+      "field": "metaDesc",
+      "from": "Free Standard Error of the Mean: enter the Data and get a sem of SEM = 1.1547. Every step shown, nothing leaves your browser.",
+      "to": "Work out the standard error of the mean from a data set, with the standard deviation, the sample size and the final division all shown step by step.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "coefficient-of-variation",
+      "field": "title",
+      "from": "Coefficient of Variation Calculator: Data",
+      "to": "Coefficient of Variation Calculator: Relative Spread",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "coefficient-of-variation",
+      "field": "metaDesc",
+      "from": "Free Coefficient of Variation Calculator: enter the Data and get a relative dispersion: sd of CV = 20.20%. Every step shown, nothing leaves your browser.",
+      "to": "Work out the coefficient of variation from a data set, the standard deviation as a share of the mean, so the spread of two data sets can be compared.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "quartile",
+      "field": "title",
+      "from": "Quartile & IQR Calculator: Data",
+      "to": "Quartile & IQR Calculator: Q1, Q2, Q3 and the Range",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "quartile",
+      "field": "metaDesc",
+      "from": "Free Quartile & IQR Calculator: enter the Data and get a quartile iqr of Q1: 3 | Q3: 11. Every step shown, nothing leaves your browser.",
+      "to": "Find Q1, Q2, Q3 and the interquartile range from a data set, with the sorted list and the position each quartile lands on shown step by step.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "password-gen",
+      "field": "title",
+      "from": "Password Generator: Length",
+      "to": "Password Generator: Strong Random Passwords",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "password-gen",
+      "field": "metaDesc",
+      "from": "Free Password Generator: enter the Length and get strong passwords of ru-mzy*Z4{:KI{Md. Every step shown, nothing leaves your browser.",
+      "to": "Generate a strong random password at the length you choose, with symbols and numbers optional. Everything runs in the browser and nothing is sent anywhere.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "waist-height-ratio",
+      "field": "title",
+      "from": "Waist-to-Height Ratio Calculator: Whtr",
+      "to": "Waist-to-Height Ratio Calculator (WHtR): Waist & Height",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "waist-height-ratio",
+      "field": "metaDesc",
+      "from": "Free Waist-to-Height Ratio Calculator: enter the Waist and Height and get a result of WHtR = 0.47. Every step shown, nothing leaves your browser.",
+      "to": "Work out the waist-to-height ratio from a waist and height in centimetres, with the 0.5 cut-off explained. The page defaults give WHtR = 0.47.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "clean-dirty-price",
+      "field": "title",
+      "from": "Clean vs Dirty Bond Price: Dirty  Price & Accrued Interest",
+      "to": "Clean vs Dirty Bond Price: Clean Price & Accrued Interest",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "clean-dirty-price",
+      "field": "metaDesc",
+      "from": "Free Clean vs Dirty Bond Price: enter the Dirty  Price and Accrued Interest and get a clean price of $1016.50. Every step shown, nothing leaves your browser.",
+      "to": "Work out the clean price of a bond from its dirty (full) price and the accrued interest, with the defaults giving $1,016.50 and the subtraction shown.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "saudi-take-home-salary",
+      "field": "title",
+      "from": "Saudi Arabia Take-Home Salary Calculator: Net Pay",
+      "to": "Saudi Arabia (KSA) Take-Home Salary Calculator: Net Pay",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "saudi-take-home-salary",
+      "field": "metaDesc",
+      "from": "Estimate Saudi net salary from gross pay — GOSI contributions, zero income tax, a clear monthly take-home breakdown for expats and nationals.",
+      "to": "Work out Saudi net pay from gross salary, with GOSI contributions, zero income tax and a monthly take-home breakdown for expats and nationals.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "ideal-body-weight",
+      "field": "title",
+      "from": "Ideal Weight Calculator: Devine Formula",
+      "to": "Ideal Body Weight (IBW) Calculator: Devine Formula",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "ideal-body-weight",
+      "field": "metaDesc",
+      "from": "Free Ideal Weight Calculator: enter the Height and get a ideal weight of 65.9 kg. Every step shown, nothing leaves your browser.",
+      "to": "Estimate ideal body weight (IBW) from height with the Devine formula, shown beside the healthy weight range and every step of the working.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "total-body-water",
+      "field": "title",
+      "from": "Total Body Water Calculator: Weight, Height & Age",
+      "to": "Total Body Water (TBW) Calculator: Weight & Height",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "total-body-water",
+      "field": "metaDesc",
+      "from": "Free Total Body Water Calculator: enter the Weight and Height and get a body water via of 41.0 L. Every step shown, nothing leaves your browser.",
+      "to": "Estimate total body water in litres from weight, height, age and sex, with the share of body weight and every step of the working shown.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "light-bulb-save",
+      "field": "title",
+      "from": "LED Bulb Savings Calculator: Current Bulb Wattage",
+      "to": "LED Light Bulb Savings Calculator: Watts & Annual Saving",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "light-bulb-save",
+      "field": "metaDesc",
+      "from": "Free LED Bulb Savings Calculator: get the savings instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Compare the bulbs you run now with LEDs: running cost per year and the saving, from wattage, hours used and your electricity rate.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "weight",
+      "field": "title",
+      "from": "Weight Converter: Value",
+      "to": "Weight Converter: kg to lbs and Other Units",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "weight",
+      "field": "metaDesc",
+      "from": "Free Weight Converter: enter the Value and get a between weight of 2.2046 lb. Every step shown, nothing leaves your browser.",
+      "to": "Convert weight between kilograms, pounds, ounces and grams. 1 kilogram is 2.20462 pounds, and the factor and the working are shown at each step.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "volume",
+      "field": "title",
+      "from": "Volume Converter: Value",
+      "to": "Volume Converter: Litres to Gallons and More",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "volume",
+      "field": "metaDesc",
+      "from": "Free Volume Converter: enter the Value and get a between volume of 0.2642 gal. Every step shown, nothing leaves your browser.",
+      "to": "Convert volume between litres, millilitres, US gallons and fluid ounces. 1 litre is 0.2642 US gallons, with each conversion step shown.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "area",
+      "field": "title",
+      "from": "Area Converter: Value",
+      "to": "Area Converter: m² to ft² and Other Units",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "area",
+      "field": "metaDesc",
+      "from": "Free Area Converter: enter the Value and get a between area of 10.7639 ft2. Every step shown, nothing leaves your browser.",
+      "to": "Convert area between square metres, square feet, acres and hectares. 1 square metre is 10.7639 square feet, with the factor shown.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "speed",
+      "field": "title",
+      "from": "Speed Converter: Value",
+      "to": "Speed Converter: km/h to mph and m/s",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "speed",
+      "field": "metaDesc",
+      "from": "Free Speed Converter: enter the Value and get a between speed of 62.1372 mph. Every step shown, nothing leaves your browser.",
+      "to": "Convert speed between km/h, mph, m/s and knots. 100 km/h is 62.14 mph, and 1 mph is about 1.609 km/h going the other way.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "data-storage",
+      "field": "title",
+      "from": "Data Storage Converter: Value",
+      "to": "Data Storage Converter: GB to MB, KB and Bytes",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "data-storage",
+      "field": "metaDesc",
+      "from": "Free Data Storage Converter: enter the Value and get a between data of 1024.0000 MB. Every step shown, nothing leaves your browser.",
+      "to": "Convert data sizes between bytes, kilobytes, megabytes and gigabytes. 1 gigabyte is 1,024 megabytes on the binary scale most systems report.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "angle",
+      "field": "title",
+      "from": "Angle Converter: Value",
+      "to": "Angle Converter: Degrees to Radians and Gradians",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "angle",
+      "field": "metaDesc",
+      "from": "Free Angle Converter: enter the Value and get a between angle of 1.5708 rad. Every step shown, nothing leaves your browser.",
+      "to": "Convert angles between degrees, radians, gradians and turns. 90 degrees is 1.5708 radians, and a full turn is 360 degrees or 2π radians.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "energy",
+      "field": "title",
+      "from": "Energy Converter: Value",
+      "to": "Energy Converter: Joules, kWh, Calories and BTU",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "energy",
+      "field": "metaDesc",
+      "from": "Free Energy Converter: enter the Value and get a between energy of 3412.1282 BTU. Every step shown, nothing leaves your browser.",
+      "to": "Convert energy between joules, kilojoules, kilowatt-hours, calories and BTU. 1 kWh is 3.6 million joules, or about 3,412 BTU.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "frequency-conv",
+      "field": "title",
+      "from": "Frequency Converter: Hz, kHz, MHz & More Units",
+      "to": "Frequency Converter: Hz, kHz, MHz and GHz",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "frequency-conv",
+      "field": "metaDesc",
+      "from": "Free Frequency Converter: enter the Value and get a between frequency of 1000000.0000 Hz. Every step shown, nothing leaves your browser.",
+      "to": "Convert frequency between hertz, kilohertz, megahertz and gigahertz. 1 MHz is 1,000,000 Hz, and 1 GHz is 1,000 MHz.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "force-conv",
+      "field": "title",
+      "from": "Force Converter: Value",
+      "to": "Force Converter: Newtons to lbf and kgf",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "force-conv",
+      "field": "metaDesc",
+      "from": "Free Force Converter: enter the Value and get force units of 22.4809 lbf. Every step shown, nothing leaves your browser.",
+      "to": "Convert force between newtons, kilonewtons, pound-force and kilogram-force. 100 newtons is 22.48 lbf, because 1 N is 0.224809 lbf.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "fuel-efficiency-converter",
+      "field": "title",
+      "from": "Fuel Efficiency Converter: Value",
+      "to": "Fuel Efficiency Converter: L/100km to MPG",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "fuel-efficiency-converter",
+      "field": "metaDesc",
+      "from": "Free Fuel Efficiency Converter: enter the Value and get a fuel economy of 23.52 mpgus. Every step shown, nothing leaves your browser.",
+      "to": "Convert fuel economy between litres per 100 km, miles per gallon (US and UK) and km per litre. 10 L/100 km is about 23.5 mpg US.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "radiation-conv",
+      "field": "title",
+      "from": "Radiation Converter: Value",
+      "to": "Radiation Converter: Sv, mSv, Gy and rem",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "radiation-conv",
+      "field": "metaDesc",
+      "from": "Free Radiation Converter: enter the Value and get a radiation measurement of 1000.000000 mSv. Every step shown, nothing leaves your browser.",
+      "to": "Convert radiation between sieverts, millisieverts, grays and rem. 1 sievert is 1,000 millisieverts, with absorbed and equivalent dose kept apart.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "bit-rate-conv",
+      "field": "title",
+      "from": "Bit Rate Converter: Value",
+      "to": "Bit Rate Converter: Mbps to kbps and Gbps",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "bit-rate-conv",
+      "field": "metaDesc",
+      "from": "Free Bit Rate Converter: enter the Value and get data rates of 100000.0000 kbps. Every step shown, nothing leaves your browser.",
+      "to": "Convert data transfer rates between bits, kilobits, megabits and gigabits per second. 1 megabit per second is 1,000 kilobits per second.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "luminance-conv",
+      "field": "title",
+      "from": "Luminance Converter: Value",
+      "to": "Luminance Converter: Lux to Foot-candles",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "luminance-conv",
+      "field": "metaDesc",
+      "from": "Free Luminance Converter: enter the Value and get a between lux of 46.45 fc. Every step shown, nothing leaves your browser.",
+      "to": "Convert light levels between lux and foot-candles. 1 foot-candle is 10.7639 lux, so 500 lux is about 46.5 foot-candles.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "molarity-conv",
+      "field": "title",
+      "from": "Molarity Converter: Value",
+      "to": "Molarity Converter: Molar to Millimolar",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "molarity-conv",
+      "field": "metaDesc",
+      "from": "Free Molarity Converter: enter the Value and get a concentration between of 500.000000 mM. Every step shown, nothing leaves your browser.",
+      "to": "Convert concentration between molar, millimolar and micromolar. 1 molar is 1,000 millimolar, and the same factor applies at every step.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "flow-rate-conv",
+      "field": "title",
+      "from": "Flow Rate Converter: Value",
+      "to": "Flow Rate Converter: L/s to m³/h and GPM",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "flow-rate-conv",
+      "field": "metaDesc",
+      "from": "Free Flow Rate Converter: enter the Value and get between l/s of 0.600 m3h. Every step shown, nothing leaves your browser.",
+      "to": "Convert flow rate between litres per second, cubic metres per hour and gallons per minute. 1 litre per second is 3.6 m³/h.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "roman-numeral",
+      "field": "title",
+      "from": "Roman Numeral Converter: Value",
+      "to": "Roman Numeral Converter: Numbers to Roman Numerals",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "roman-numeral",
+      "field": "metaDesc",
+      "from": "Free Roman Numeral Converter: enter the Value and get the between arabic instantly, with every step of the math shown in your browser.",
+      "to": "Convert between numbers and Roman numerals. 1,000 is M, 500 is D, 4 is IV and 9 is IX, with the subtractive rules applied in order.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "ppm-conv",
+      "field": "title",
+      "from": "PPM / Concentration Converter: Value",
+      "to": "PPM Converter: ppm to ppb and Percent",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "ppm-conv",
+      "field": "metaDesc",
+      "from": "Free PPM / Concentration Converter: enter the Value and get a between ppm of 500000.0000 ppb. Every step shown, nothing leaves your browser.",
+      "to": "Convert concentration between ppm, ppb, percent and parts per thousand. 1 ppm is 1,000 ppb, and 10,000 ppm is 1 percent.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "thermal-conductivity",
+      "field": "title",
+      "from": "Thermal Conductivity Converter: Value",
+      "to": "Thermal Conductivity Converter: W/m·K to BTU",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "thermal-conductivity",
+      "field": "metaDesc",
+      "from": "Free Thermal Conductivity Converter: enter the Value and get a btufthf etc of 0.3467 BTU/(ft·h·°F). Every step shown, nothing leaves your browser.",
+      "to": "Convert thermal conductivity between W/(m·K), BTU/(ft·h·°F) and kcal/(h·m·°C). 1 W/(m·K) is about 0.578 BTU/(ft·h·°F).",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "radiation-dose-conv",
+      "field": "title",
+      "from": "Radiation Dose Converter: Value",
+      "to": "Radiation Dose Converter: Gray to Rad",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "radiation-dose-conv",
+      "field": "metaDesc",
+      "from": "Free Radiation Dose Converter: enter the Value and get a between gray of 100.0000 rad. Every step shown, nothing leaves your browser.",
+      "to": "Convert absorbed radiation dose between gray, rad, sievert and rem. 1 gray is 100 rad, and 1 sievert is 100 rem.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "acceleration-conv",
+      "field": "title",
+      "from": "Acceleration Converter: Value",
+      "to": "Acceleration Converter: m/s² to g-force",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "acceleration-conv",
+      "field": "metaDesc",
+      "from": "Free Acceleration Converter: enter the Value and get a m/s² of 9.8100 m/s². Every step shown, nothing leaves your browser.",
+      "to": "Convert acceleration between m/s², g-force, ft/s² and Gal. 1 g is 9.80665 m/s², so 9.81 m/s² is very close to one g.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "dbm-watts",
+      "field": "title",
+      "from": "dBm ↔ Watts Converter: Value",
+      "to": "dBm to Watts Converter: dBm ↔ W and mW",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "dbm-watts",
+      "field": "metaDesc",
+      "from": "Free dBm ↔ Watts Converter: enter the Value and get a between dbm of 1.0000 W. Every step shown, nothing leaves your browser.",
+      "to": "Convert between dBm and watts. 30 dBm is 1 watt and 0 dBm is 1 milliwatt, on the logarithmic scale used for radio and audio power.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "unit-converter",
+      "field": "title",
+      "from": "Universal Unit Converter: Value",
+      "to": "Universal Unit Converter: Length, Mass and More",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "unit-converter",
+      "field": "metaDesc",
+      "from": "Free Universal Unit Converter: enter the Value and get a between any of 1 m = 3.2808 ft. Every step shown, nothing leaves your browser.",
+      "to": "Convert between length, mass, volume, temperature and more in one place. 1 m is 3.2808 ft and 1 kg is 2.2046 lb, with each factor shown.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "fraction-percent",
+      "field": "title",
+      "from": "Fraction ↔ Percent ↔ Decimal: Numerator & Denominator",
+      "to": "Fraction to Percent to Decimal Converter",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "fraction-percent",
+      "field": "metaDesc",
+      "from": "Free Fraction ↔ Percent ↔ Decimal: enter the Numerator and Denominator and get a between fraction of 75.00%. Every step shown, nothing leaves your browser.",
+      "to": "Convert between fractions, decimals and percentages. 3/4 is 0.75 and 75%, and the tool shows the numerator and denominator behind it.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "scientific-notation",
+      "field": "title",
+      "from": "Scientific Notation Converter: Number",
+      "to": "Scientific Notation Converter: Decimal to Scientific",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "scientific-notation",
+      "field": "metaDesc",
+      "from": "Free Scientific Notation Converter: enter the Number and get a between decimal of 1.23e-4. Every step shown, nothing leaves your browser.",
+      "to": "Convert between decimal and scientific notation. 0.000123 is 1.23 × 10⁻⁴, and the converter keeps the significant figures you enter.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "polar-rect",
+      "field": "title",
+      "from": "Polar ↔ Rectangular: Between Polar",
+      "to": "Polar ↔ Rectangular Coordinates Converter",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "polar-rect",
+      "field": "metaDesc",
+      "from": "Free Polar ↔ Rectangular: enter the r and θ° and get a between polar of x=4.3301 y=2.5000. Every step shown, nothing leaves your browser.",
+      "to": "Convert between polar and rectangular coordinates. A polar point of r = 5 at 30° is x = 4.3301 and y = 2.5 in rectangular form.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "annulus-area",
+      "field": "metaDesc",
+      "from": "Free Annulus (Ring) Area Calculator: get the area between two instantly, with every step of the math shown. Nothing leaves your browser.",
+      "to": "Find the area of a ring (annulus) from its outer and inner radius. An outer radius of 8 and an inner radius of 5 give about 122.52 square units.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "wavelength-freq",
+      "field": "metaDesc",
+      "from": "Free Wavelength ↔ Frequency: enter the Value and get a between wavelength of f = 5.45e+14 Hz. Every step shown, nothing leaves your browser.",
+      "to": "Convert between wavelength and frequency using c = 3 × 10⁸ m/s. A 550 nm wave of light is about 5.45 × 10¹⁴ Hz.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "mole-conversion",
+      "field": "metaDesc",
+      "from": "Free Mole Conversion Calculator: enter the Mass and Molar Mass and get between mass of Moles = 1.0000 mol. Every step shown, nothing leaves your browser.",
+      "to": "Convert between mass, moles and molar mass using moles = mass ÷ molar mass. 18 g of water at 18 g/mol is 1 mole, with each step shown.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "rgb-hex",
+      "field": "metaDesc",
+      "from": "Free RGB ↔ Hex Converter: enter the Red and Green and get a between rgb of #4F46E5. Every step shown, nothing leaves your browser.",
+      "to": "Convert between RGB values and hex colour codes. #4F46E5 is rgb(79, 70, 229), and the tool accepts either direction of conversion.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "currency-converter",
+      "field": "metaDesc",
+      "from": "Free Currency Converter: enter the Amount and get the between 150+ instantly, with every step of the math shown in your browser.",
+      "to": "Convert between currencies using live exchange rates covering 150+ pairs, from USD to PKR, EUR, GBP and more.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "salary-converter",
+      "field": "title",
+      "from": "Salary Converter: Amount",
+      "to": "Salary Converter: Hourly, Monthly and Annual Pay",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "salary-converter",
+      "field": "metaDesc",
+      "from": "Free Salary Converter: enter the Amount and get a hourly of $24.04 | Monthly: $4167 | Annual: $50000. Every step shown, nothing leaves your browser.",
+      "to": "Convert a salary between hourly, monthly and annual figures. $50,000 a year is about $4,167 a month and $24.04 an hour at 40 hours a week.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "currency-conv",
+      "field": "title",
+      "from": "Currency Converter (Fixed Rate): Amount",
+      "to": "Currency Converter: Fixed Exchange Rate Calculator",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "currency-conv",
+      "field": "metaDesc",
+      "from": "Free Currency Converter (Fixed Rate): enter the Amount and get a currencies fixed of 91.00 EUR. Every step shown, nothing leaves your browser.",
+      "to": "Convert between currencies at a fixed exchange rate you set. Enter an amount and the rate to get the converted figure with the working shown.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "paper-size-conv",
+      "field": "title",
+      "from": "Paper Size Converter: Number",
+      "to": "Paper Size Converter: A4, A5, B5 Dimensions",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "paper-size-conv",
+      "field": "metaDesc",
+      "from": "Free Paper Size Converter: enter the Number and get a/b-series paper sizes of A4: 149 × 210 mm. Every step shown, nothing leaves your browser.",
+      "to": "Convert between A, B and C series paper sizes. A4 is 210 × 297 mm and A5 is half that at 148 × 210 mm, with each step shown.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "cooking",
+      "field": "title",
+      "from": "Cooking Converter: Amount",
+      "to": "Cooking Converter: Cups, ml, tbsp and tsp",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "cooking",
+      "field": "metaDesc",
+      "from": "Free Cooking Converter: enter the Amount and get cooking measurements of 240.00 ml. Every step shown, nothing leaves your browser.",
+      "to": "Convert cooking measurements between cups, millilitres, tablespoons and teaspoons. 1 US cup is about 240 ml and 1 tbsp is exactly 3 tsp.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "prime-factor",
+      "field": "title",
+      "from": "Prime Factorization: Number",
+      "to": "Prime Factorization Calculator: Factor Any Number",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "prime-factor",
+      "field": "metaDesc",
+      "from": "Free Prime Factorization: enter the Number and get the prime factors instantly, with every step of the math shown in your browser.",
+      "to": "Break any whole number into its prime factors. 360 is 2 × 2 × 2 × 3 × 3 × 5, and the tool shows each division of the working.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "significant-figures",
+      "field": "title",
+      "from": "Significant Figures: Number",
+      "to": "Significant Figures Calculator: Rounding and Sig Figs",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "significant-figures",
+      "field": "metaDesc",
+      "from": "Free Significant Figures: enter the Number and get a result of 3 significant figures. Every step shown, nothing leaves your browser.",
+      "to": "Round a number to a chosen number of significant figures. 0.004567 to two significant figures is 0.0046, with the counting rule shown.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "digital-root",
+      "field": "title",
+      "from": "Digital Root Calculator: Number",
+      "to": "Digital Root Calculator: Repeated Digit Sum",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "digital-root",
+      "field": "metaDesc",
+      "from": "Free Digital Root Calculator: enter the Number and get a digital root of 8. Every step shown, nothing leaves your browser.",
+      "to": "Find the digital root of a number by repeatedly summing its digits. The digital root of 9,876 is 3, since 9+8+7+6 = 30 and 3+0 = 3.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "gst-india",
+      "field": "title",
+      "from": "GST Calculator India: Amount",
+      "to": "GST Calculator India: Add or Remove GST",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "gst-india",
+      "field": "metaDesc",
+      "from": "Free GST Calculator India: enter the Amount and get a gst amount of Total (incl. GST): ₹11,800. Every step shown, nothing leaves your browser.",
+      "to": "Add or remove GST at any rate. ₹10,000 plus 18% GST is ₹11,800, and the tool shows the base, the tax and the total separately.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "uae-vat",
+      "field": "title",
+      "from": "UAE VAT Calculator: Amount",
+      "to": "UAE VAT Calculator: Add or Remove 5% VAT",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "uae-vat",
+      "field": "metaDesc",
+      "from": "Free UAE VAT Calculator: enter the Amount and get a add of 1050.00 AED. Every step shown, nothing leaves your browser.",
+      "to": "Add or remove 5% VAT. AED 1,000 plus 5% VAT is AED 1,050, and the tool shows the base amount and the tax separately.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "maintenance-fluids",
+      "field": "title",
+      "from": "Maintenance Fluids Calculator (4-2-1): Weight",
+      "to": "Maintenance Fluids Calculator (4-2-1 Rule)",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "maintenance-fluids",
+      "field": "metaDesc",
+      "from": "Free Maintenance Fluids Calculator (4-2-1): enter the Weight and get a hourly pediatric maintenance of 65 mL/hr. Every step shown, nothing leaves your browser.",
+      "to": "Calculate paediatric maintenance fluids with the 4-2-1 rule: 4 ml/kg/hr for the first 10 kg, 2 for the next 10 kg and 1 for each kg after that.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "vector-add",
+      "field": "title",
+      "from": "Vector Addition Calculator: Add",
+      "to": "Vector Addition Calculator: Sum of Two Vectors",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "vector-add",
+      "field": "metaDesc",
+      "from": "Free Vector Addition Calculator: enter the A x and A y and get a add of A+B = (4, 2, 0). Every step shown, nothing leaves your browser.",
+      "to": "Add two vectors component by component to get their sum. Enter the x, y and z components of each vector and the result is shown step by step.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "date-add",
+      "field": "metaDesc",
+      "from": "Free Date Add/Subtract: enter the Start Date and Days and get a add of Wed Apr 15 2026. Every step shown, nothing leaves your browser.",
+      "to": "Add or subtract days from a date. Starting from 15 January 2026 and adding 90 days gives 15 April 2026, with the day count shown.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "salary-hourly",
+      "field": "metaDesc",
+      "from": "Free Salary to Hourly Converter: enter the Annual Salary and Hours/Week and get a hourly rate of $38.46/hr. Every step shown, nothing leaves your browser.",
+      "to": "Convert an annual salary into an hourly rate. $80,000 a year at 40 hours a week for 52 weeks is about $38.46 an hour.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "protein-need",
+      "field": "title",
+      "from": "Daily Protein Need: Weight",
+      "to": "Daily Protein Intake Calculator: Grams per Day",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "protein-need",
+      "field": "metaDesc",
+      "from": "Free Daily Protein Need: enter the Weight and get a optimal protein intake of 112 g/day. Every step shown, nothing leaves your browser.",
+      "to": "Work out a daily protein target in grams from your body weight and activity level, with the grams-per-kilogram rule shown.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "vegan-protein",
+      "field": "title",
+      "from": "Vegan Protein Sources: Weight",
+      "to": "Vegan Protein Sources: How Much You Need",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "vegan-protein",
+      "field": "metaDesc",
+      "from": "Free Vegan Protein Sources: enter the Weight and get a plant-based protein of 126 g/day. Every step shown, nothing leaves your browser.",
+      "to": "How much protein a plant-based diet needs, and which foods supply it. Enter your weight to get a daily gram target with the sources listed.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "meat-cooking-time",
+      "field": "title",
+      "from": "Meat Cooking Time: Weight",
+      "to": "Meat Cooking Time Calculator: Minutes per kg",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "meat-cooking-time",
+      "field": "metaDesc",
+      "from": "Free Meat Cooking Time: enter the Weight and get a roasting time of 1 h 8 min. Every step shown, nothing leaves your browser.",
+      "to": "Calculate roasting time from the weight of the joint and the minutes per kilogram. Enter both and the total cooking time is shown.",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "tuition-cost",
+      "field": "title",
+      "from": "Tuition Cost Calculator: What a Degree Really Costs",
+      "to": "College Tuition Cost Calculator: Cost of a Degree",
+      "date": "2026-10-18"
+    },
+    {
+      "id": "bmr-mifflin",
+      "field": "title",
+      "from": "Mifflin-St Jeor BMR Calculator: Basal Metabolic Rate",
+      "to": "BMR Calculator (Mifflin-St Jeor): Daily Calories",
+      "date": "2026-10-18"
+    },
+    {
+      "id": "rgb-hex",
+      "field": "title",
+      "from": "RGB ↔ Hex Converter: Red, Green & Blue",
+      "to": "RGB to Hex Converter: Pick a Colour, Copy the Code",
+      "date": "2026-10-18"
+    },
+    {
+      "id": "rgb-hex",
+      "field": "metaDesc",
+      "from": "Convert between RGB values and hex colour codes. #4F46E5 is rgb(79, 70, 229), and the tool accepts either direction of conversion.",
+      "to": "Convert RGB values to a hex code and back. Enter 79, 70 and 229 to get #4F46E5, with each channel hex pair explained along the way.",
+      "date": "2026-10-18"
+    },
+    {
+      "id": "solar-energy",
+      "field": "metaDesc",
+      "from": "Enter panel count, wattage, peak sun hours and system efficiency to see daily, monthly and yearly kWh. Twenty 350 W panels at 5 sun hours give about 30 kWh a day.",
+      "to": "Enter panel count, wattage, peak sun hours and system efficiency to see daily, monthly and yearly kWh. Twenty 350 W panels at 5 sun hours give 29.8 kWh a day.",
+      "date": "2026-10-18"
+    },
+    {
+      "id": "proportion",
+      "field": "metaDesc",
+      "from": "Free Proportion Calculator: solve a ÷ b = c ÷ d for whichever term is missing using cross multiplication, with each step shown. Nothing is uploaded.",
+      "to": "Proportion Calculator solves a ÷ b = c ÷ d for whichever term is missing, using cross multiplication and showing each step of the working.",
+      "date": "2026-10-18"
+    },
+    {
+      "id": "vacation-savings",
+      "field": "title",
+      "from": "Vacation Savings Calculator: How Much to Save Monthly",
+      "to": "Vacation Savings Calculator: Cost & Monthly Target",
+      "date": "2026-10-24"
+    },
+    {
+      "id": "jet-lag",
+      "field": "title",
+      "from": "Jet Lag Calculator: Days to Adjust, East vs West",
+      "to": "Jet Lag Calculator: Recovery Time, East vs West",
+      "date": "2026-10-24"
+    },
+    {
+      "id": "pregnancy",
+      "field": "title",
+      "from": "Pregnancy Due Date Calculator: From Your Last Period",
+      "to": "Pregnancy Due Date Calculator: Last Menstrual Period",
+      "date": "2026-10-24"
+    }
+  ]
+}

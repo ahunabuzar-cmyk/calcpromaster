@@ -94,6 +94,8 @@ jobs:
           else
             echo "ready=0" >> "$GITHUB_OUTPUT"
             echo "⏭ GSC OAuth secrets not configured — skipping (see docs/api-credentials-setup.md → Plan B)."
+            # A silent skip is how the data goes stale unnoticed; surface it on the run.
+            echo "::warning title=GSC credentials missing::Weekly SEO refresh skipped — add the GSC_OAUTH_CLIENT_SECRET_B64 and GSC_REFRESH_TOKEN_B64 repo secrets."
           fi
       - name: Checkout
         if: steps.gate.outputs.ready == '1'
@@ -116,6 +118,16 @@ jobs:
         run: |
           node -e "const c=require('./gsc-client-secret.json'); const i=c.installed||c.web||c; if(!i.client_id||!i.client_secret) throw new Error('bad client secret')"
           node -e "const t=require('./gsc-refresh-token.json'); if(!t.refresh_token) throw new Error('bad refresh token')"
+      # Presence is not liveness: a Testing-status consent screen kills the refresh
+      # token every 7 days, and the file still looks valid. Without this step the
+      # death only shows up as a confusing failure deep inside the data pull — or,
+      # worse, as a week of reports quietly built from the previous export.
+      - name: Verify the refresh token is alive
+        if: steps.gate.outputs.ready == '1'
+        env:
+          GSC_OAUTH_CLIENT_SECRET: ${{ github.workspace }}/gsc-client-secret.json
+          GSC_SITE_URL: ${{ vars.GSC_SITE_URL || '' }}
+        run: node scripts/gsc-verify-access.cjs
       - name: Install dependencies
         if: steps.gate.outputs.ready == '1'
         run: npm ci --no-audit --no-fund

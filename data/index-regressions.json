@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-23T12:10:03.856Z",
+  "ranAt": "2026-10-26T10:40:57.752Z",
   "snapshots": [
     {
       "date": "2026-09-27",
@@ -70,6 +70,11 @@
       "date": "2026-10-19",
       "source": "gsc-inspect-batch-2026-10-19.json",
       "urls": 30
+    },
+    {
+      "date": "2026-10-26",
+      "source": "index-panel-history.json",
+      "urls": 590
     }
   ],
   "scanned": 763,
@@ -81,10 +86,19 @@
   },
   "current": {
     "snapshot": {
-      "date": "2026-10-19",
-      "source": "gsc-inspect-batch-2026-10-19.json"
+      "date": "2026-10-26",
+      "source": "index-panel-history.json"
     },
-    "items": []
+    "items": [
+      {
+        "url": "https://calcpromaster.com/guides/sleep-cycles/",
+        "from": "—",
+        "to": "Page with redirect",
+        "kind": "not-candidate",
+        "window": "current state @ 2026-10-26",
+        "curSnapshot": "index-panel-history.json#2026-10-26"
+      }
+    ]
   },
   "known": [
     {
@@ -99,6 +113,15 @@
   "newRegressions": [],
   "newNotCandidates": [],
   "newDuplicateCanonicals": [],
-  "newCurrent": [],
-  "newCount": 0
+  "newCurrent": [
+    {
+      "url": "https://calcpromaster.com/guides/sleep-cycles/",
+      "from": "—",
+      "to": "Page with redirect",
+      "kind": "not-candidate",
+      "window": "current state @ 2026-10-26",
+      "curSnapshot": "index-panel-history.json#2026-10-26"
+    }
+  ],
+  "newCount": 1
 }

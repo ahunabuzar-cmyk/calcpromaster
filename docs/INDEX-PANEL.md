@@ -9,30 +9,27 @@ Ek **fixed panel** jo har run mein wahi URLs inspect karta hai, taake speed ek h
 | panel mode | **poora queue** (`--all`) — sample nahi |
 | panel size | 590 URLs (5 already-indexed control pages included) |
 | chuna gaya | 2026-10-11 (us waqt queue 585) |
-| snapshots | 3 |
-| **measured rate (longest span)** | **0 pages/week indexed** |
-| **current speed (last 7d)** | **0 pages/week** indexed · 222.3 ladder-stages/week (114 slipped back, 114 gained back, net +13) — 2026-10-11 → 2026-10-15 (4d, 590 URLs) |
+| snapshots | 4 |
+| **measured rate (longest span)** | **0.6 pages/week indexed** |
+| **current speed (last 7d)** | abhi is window mein doosra snapshot nahi hai |
 
 | from | to | days | common URLs | stages advanced | slipped back | gained back | churn | net | URLs aage | URLs peeche | became indexed | left "unknown" |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 2026-10-11 | 2026-10-14 | 3 | 590 | 151 | 102 | 102 | 253 | +49 | 151 | 102 | 0 | 151 |
 | 2026-10-14 | 2026-10-15 | 1 | 590 | 100 | 136 | 100 | 236 | -36 | 100 | 136 | 0 | 100 |
+| 2026-10-15 | 2026-10-26 | 11 | 590 | 277 | 35 | 35 | 312 | +242 | 276 | 35 | 1 | 275 |
 
 `gained back` = min(advanced, slipped) — jitni movement wapas cancel ho gayi. `churn` = advanced + slipped (gross). Jab churn > net, headline "stages advanced" ko progress na padho, sirf **net** aur `became indexed` dekho.
 
-> ⚠️ **Churn alert — is window ka rate progress nahi hai**
->
-> - 2026-10-11 → 2026-10-15: 127 stages advance ka 90% (114 stages) isi window mein cancel ho gaya — gross 241, net +13. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain.
-> - 2026-10-11 → 2026-10-14: 151 stages advance ka 68% (102 stages) isi window mein cancel ho gaya — gross 253, net +49. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain.
-
-## Latest snapshot — 2026-10-15
+## Latest snapshot — 2026-10-26
 
 | crawl state | URLs |
 |---|---|
-| URL is unknown to Google | 408 |
-| Discovered - currently not indexed | 177 |
-| Submitted and indexed | 5 |
+| Discovered - currently not indexed | 416 |
+| URL is unknown to Google | 167 |
+| Submitted and indexed | 6 |
+| Page with redirect | 1 |
 
-Panel mein se **585/590** pages abhi bhi queue mein hain (baaki 5 index ho chuke). Control pages (already-indexed) isi panel mein hain: agar koi control gir jaye to samajh lo panel kisi aur cheez ko measure kar raha hai.
+Panel mein se **583/590** pages abhi bhi queue mein hain (baaki 6 index ho chuke). Control pages (already-indexed) isi panel mein hain: agar koi control gir jaye to samajh lo panel kisi aur cheez ko measure kar raha hai.
 
-Yeh snapshot **poore queue** ka hai (selection ke waqt 585 waiting URLs the), sample ka nahi — is liye "585 queue mein" ko seedha backlog ki halat samjho, extrapolation nahi.
+Yeh snapshot **poore queue** ka hai (selection ke waqt 585 waiting URLs the), sample ka nahi — is liye "583 queue mein" ko seedha backlog ki halat samjho, extrapolation nahi.

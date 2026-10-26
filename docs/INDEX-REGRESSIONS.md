@@ -1,6 +1,6 @@
 # Index-regression alert — per-URL transitions
 
-_Generated 2026-10-23T12:10:03.856Z by `scripts/check-index-regressions.cjs`._
+_Generated 2026-10-26T10:40:57.752Z by `scripts/check-index-regressions.cjs`._
 
 The burn-down reports net progress; this report is the per-URL view of the
 same snapshots, so a page that fell out of the index (or was consolidated
@@ -22,6 +22,7 @@ away as an alternate canonical) cannot hide behind the total.
 | 2026-10-17 | `gsc-inspect-batch-2026-10-17.json` | 100 |
 | 2026-10-18 | `gsc-inspect-batch-2026-10-18.json` | 40 |
 | 2026-10-19 | `gsc-inspect-batch-2026-10-19.json` | 30 |
+| 2026-10-26 | `index-panel-history.json` | 590 |
 
 ## New findings this run (not in the ledger)
 
@@ -37,9 +38,11 @@ _None._
 
 _None._
 
-### 4. Current state — non-candidates in the newest snapshot (gsc-inspect-batch-2026-10-19.json#2026-10-19)
+### 4. Current state — non-candidates in the newest snapshot (index-panel-history.json#2026-10-26)
 
-_No new non-candidate URLs in the newest snapshot._
+| URL | coverage now | note |
+|---|---|---|
+| `https://calcpromaster.com/guides/sleep-cycles/` | Page with redirect | left the index queue |
 
 _Current-state rows are not transitions: they say what the newest snapshot
 shows right now, which is what makes a targeted batch inspection useful._
@@ -52,9 +55,9 @@ shows right now, which is what makes a targeted batch inspection useful._
 | regressions found (all windows) | 0 |
 | new not-candidates found | 0 |
 | duplicate-canonical findings | 0 |
-| non-candidates in newest snapshot | 0 |
+| non-candidates in newest snapshot | 1 |
 | known (in ledger, not alerting) | 1 |
-| NEW this run | 0 |
+| NEW this run | 1 |
 
 ## What to do with a finding
 

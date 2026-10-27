@@ -9,24 +9,29 @@ Ek **fixed panel** jo har run mein wahi URLs inspect karta hai, taake speed ek h
 | panel mode | **poora queue** (`--all`) — sample nahi |
 | panel size | 590 URLs (5 already-indexed control pages included) |
 | chuna gaya | 2026-10-11 (us waqt queue 585) |
-| snapshots | 4 |
+| snapshots | 5 |
 | **measured rate (longest span)** | **0.6 pages/week indexed** |
-| **current speed (last 7d)** | abhi is window mein doosra snapshot nahi hai |
+| **current speed (last 7d)** | **0 pages/week** indexed · 504 ladder-stages/week (104 slipped back, 72 gained back, net -32) — 2026-10-26 → 2026-10-27 (1d, 590 URLs) |
 
 | from | to | days | common URLs | stages advanced | slipped back | gained back | churn | net | URLs aage | URLs peeche | became indexed | left "unknown" |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 2026-10-11 | 2026-10-14 | 3 | 590 | 151 | 102 | 102 | 253 | +49 | 151 | 102 | 0 | 151 |
 | 2026-10-14 | 2026-10-15 | 1 | 590 | 100 | 136 | 100 | 236 | -36 | 100 | 136 | 0 | 100 |
 | 2026-10-15 | 2026-10-26 | 11 | 590 | 277 | 35 | 35 | 312 | +242 | 276 | 35 | 1 | 275 |
+| 2026-10-26 | 2026-10-27 | 1 | 590 | 72 | 104 | 72 | 176 | -32 | 72 | 104 | 0 | 72 |
 
 `gained back` = min(advanced, slipped) — jitni movement wapas cancel ho gayi. `churn` = advanced + slipped (gross). Jab churn > net, headline "stages advanced" ko progress na padho, sirf **net** aur `became indexed` dekho.
 
-## Latest snapshot — 2026-10-26
+> ⚠️ **Churn alert — is window ka rate progress nahi hai**
+>
+> - 2026-10-26 → 2026-10-27: 72 stages advance ka 100% (72 stages) isi window mein cancel ho gaya — gross 176, net -32. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain.
+
+## Latest snapshot — 2026-10-27
 
 | crawl state | URLs |
 |---|---|
-| Discovered - currently not indexed | 416 |
-| URL is unknown to Google | 167 |
+| Discovered - currently not indexed | 384 |
+| URL is unknown to Google | 199 |
 | Submitted and indexed | 6 |
 | Page with redirect | 1 |
 

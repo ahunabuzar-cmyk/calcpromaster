@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-26T10:40:57.807Z",
-  "latest": "2026-10-26",
+  "generatedAt": "2026-10-27T10:12:24.041Z",
+  "latest": "2026-10-27",
   "daysSinceLatest": 0,
-  "snapshotCount": 4,
+  "snapshotCount": 5,
   "windowDays": 7,
   "state": {
     "checked": 590,
@@ -12,10 +12,50 @@
   },
   "verdict": {
     "status": "insufficient-history",
-    "reason": "do snapshots nahi hain — ek snapshot se speed banti hi nahi"
+    "reason": "window mein sirf 1 din hain — ek raat ka delta ×7 burst hota hai, rate nahi (kam az kam 3 din chahiye)"
   },
-  "velocity7d": null,
-  "velocity3d": null,
+  "velocity7d": {
+    "windowDays": 7,
+    "from": "2026-10-26",
+    "to": "2026-10-27",
+    "days": 1,
+    "snapshots": 2,
+    "common": 590,
+    "becameIndexed": 0,
+    "stagesAdvanced": 72,
+    "slippedBack": 104,
+    "leftUnknown": 72,
+    "urlsAdvanced": 72,
+    "urlsSlipped": 104,
+    "churnStages": 176,
+    "gainedBack": 72,
+    "netStages": -32,
+    "indexedPerDay": 0,
+    "indexedPerWeek": 0,
+    "stagesPerDay": 72,
+    "stagesPerWeek": 504
+  },
+  "velocity3d": {
+    "windowDays": 3,
+    "from": "2026-10-26",
+    "to": "2026-10-27",
+    "days": 1,
+    "snapshots": 2,
+    "common": 590,
+    "becameIndexed": 0,
+    "stagesAdvanced": 72,
+    "slippedBack": 104,
+    "leftUnknown": 72,
+    "urlsAdvanced": 72,
+    "urlsSlipped": 104,
+    "churnStages": 176,
+    "gainedBack": 72,
+    "netStages": -32,
+    "indexedPerDay": 0,
+    "indexedPerWeek": 0,
+    "stagesPerDay": 72,
+    "stagesPerWeek": 504
+  },
   "projection": {
     "days": null,
     "date": null,
@@ -94,6 +134,24 @@
       "leftUnknown": 275,
       "indexedPerDay": 0.09090909090909091,
       "stagesPerDay": 25.181818181818183
+    },
+    {
+      "date": "2026-10-27",
+      "checked": 590,
+      "indexed": 6,
+      "waiting": 583,
+      "notCandidates": 1,
+      "days": 1,
+      "common": 590,
+      "becameIndexed": 0,
+      "stagesAdvanced": 72,
+      "slippedBack": 104,
+      "gainedBack": 72,
+      "churnStages": 176,
+      "netStages": -32,
+      "leftUnknown": 72,
+      "indexedPerDay": 0,
+      "stagesPerDay": 72
     }
   ],
   "churnAlerts": [
@@ -108,6 +166,18 @@
       "netStages": 49,
       "cancelledShare": 0.675,
       "message": "151 stages advance ka 68% (102 stages) isi window mein cancel ho gaya — gross 253, net +49. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain."
+    },
+    {
+      "from": "2026-10-26",
+      "to": "2026-10-27",
+      "severity": "high",
+      "stagesAdvanced": 72,
+      "slippedBack": 104,
+      "churnStages": 176,
+      "gainedBack": 72,
+      "netStages": -32,
+      "cancelledShare": 1,
+      "message": "72 stages advance ka 100% (72 stages) isi window mein cancel ho gaya — gross 176, net -32. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain."
     }
   ]
 }

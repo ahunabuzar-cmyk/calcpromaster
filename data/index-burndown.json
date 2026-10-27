@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T10:40:57.689Z",
+  "generatedAt": "2026-10-27T10:12:23.902Z",
   "snapshotDate": "2026-10-19",
   "snapshotSource": "gsc-inspect-batch-2026-10-19.json",
   "state": {
@@ -11,8 +11,8 @@
     "notCandidateReasons": {}
   },
   "liveState": {
-    "date": "2026-10-26",
-    "source": "data/index-panel-history.json#2026-10-26",
+    "date": "2026-10-27",
+    "source": "data/index-panel-history.json#2026-10-27",
     "panelSize": 590,
     "total": 590,
     "candidates": 589,
@@ -191,8 +191,8 @@
       "notCandidateReasons": {}
     },
     {
-      "date": "2026-10-26",
-      "file": "data/index-panel-history.json#2026-10-26",
+      "date": "2026-10-27",
+      "file": "data/index-panel-history.json#2026-10-27",
       "urls": 590,
       "total": 590,
       "candidates": 589,
@@ -443,9 +443,9 @@
     },
     {
       "from": "2026-10-19",
-      "to": "2026-10-26",
-      "days": 7,
-      "elapsedDays": 6.8445562847222225,
+      "to": "2026-10-27",
+      "days": 8,
+      "elapsedDays": 7.824720601851852,
       "commonUrls": 0,
       "stagesAdvanced": 0,
       "slippedBack": 0,
@@ -485,6 +485,18 @@
   "measuredIndexedPerWeek": 0.6363636363636364,
   "measuredRateSource": "fixed panel (590 URLs, 11d span",
   "churnAlerts": [
+    {
+      "from": "2026-10-26",
+      "to": "2026-10-27",
+      "severity": "high",
+      "stagesAdvanced": 72,
+      "slippedBack": 104,
+      "churnStages": 176,
+      "gainedBack": 72,
+      "netStages": -32,
+      "cancelledShare": 1,
+      "message": "72 stages advance ka 100% (72 stages) isi window mein cancel ho gaya — gross 176, net -32. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain."
+    },
     {
       "from": "2026-10-14",
       "to": "2026-10-15",
@@ -535,7 +547,7 @@
       "sampled": true,
       "weeks": 16,
       "beyondHorizon": false,
-      "doneBy": "2027-02-15"
+      "doneBy": "2027-02-16"
     },
     {
       "key": "half",
@@ -544,7 +556,7 @@
       "sampled": true,
       "weeks": 32,
       "beyondHorizon": false,
-      "doneBy": "2027-06-07"
+      "doneBy": "2027-06-08"
     },
     {
       "key": "quota",
@@ -553,7 +565,7 @@
       "sampled": false,
       "weeks": 1,
       "beyondHorizon": false,
-      "doneBy": "2026-11-02"
+      "doneBy": "2026-11-03"
     }
   ],
   "horizons": [

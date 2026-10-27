@@ -25,7 +25,7 @@ Non-candidates ka breakdown: .
 
 Crawl-state breakdown: .
 
-Upar wala 30-URL dump 2026-10-19 ka hai; ye row **2026-10-26** ke inspection se hai aur poore waiting backlog ko cover karti hai — koi stride sample nahi. Rate bhi ab isi poore queue par build hoti hai, 20-URL batch par nahi.
+Upar wala 30-URL dump 2026-10-19 ka hai; ye row **2026-10-27** ke inspection se hai aur poore waiting backlog ko cover karti hai — koi stride sample nahi. Rate bhi ab isi poore queue par build hoti hai, 20-URL batch par nahi.
 
 ## 2. Measured rate (assumption nahi)
 
@@ -42,6 +42,7 @@ Jab **wahi URLs** do dates par inspect hue, tab unka index-ladder par movement:
 
 > ⚠️ **Churn alert — ye rate progress nahi hai**
 >
+> - 2026-10-26 → 2026-10-27: 72 stages advance ka 100% (72 stages) isi window mein cancel ho gaya — gross 176, net -32. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain.
 > - 2026-10-14 → 2026-10-15: 11 stages advance ka 100% (11 stages) isi window mein cancel ho gaya — gross 22, net +0. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain.
 > - 2026-10-15 → 2026-10-17: 15 stages advance ka 53% (8 stages) isi window mein cancel ho gaya — gross 23, net +7. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain.
 
@@ -69,13 +70,13 @@ Asli queue **10** pages. Neeche har scenario ka apna rate likha hai — number c
 
 | scenario | pages/week | hafte | mukammal ~ |
 |---|---|---|---|
-| Observed (measured, same URLs) | 0.6 | 16 | 2027-02-15 |
-| Half the observed rate (conservative) | 0.3 | 32 | 2027-06-07 |
-| GSC request-indexing ceiling (12/day) | 84 | 1 | 2026-11-02 |
+| Observed (measured, same URLs) | 0.6 | 16 | 2027-02-16 |
+| Half the observed rate (conservative) | 0.3 | 32 | 2027-06-08 |
+| GSC request-indexing ceiling (12/day) | 84 | 1 | 2026-11-03 |
 
 > **Observed-rate rows sample-scaled hain, forecast nahi.** Rate 20 URLs se aayi hai, aur wo bhi hub pages ka sample hai jismein zyadatar already indexed the. 10 pages par usay seedha multiply karna mathematical hai, realistic nahi — asli speed ke liye poore set ka do-snapshot comparison chahiye, jo har hafte ban raha hai.
 
-_Jo snapshot pairs rate ke liye use nahi ho sake:_ 2026-09-27→2026-10-05 (URL sets comparable nahi (alag size)) · 2026-10-09→2026-10-09 (URL sets comparable nahi (alag size)) · 2026-10-09→2026-10-12 (URL sets comparable nahi (alag size)) · 2026-10-12→2026-10-14 (URL sets comparable nahi (alag size)) · 2026-10-17→2026-10-18 (URL sets comparable nahi (alag size)) · 2026-10-18→2026-10-18 (same-day snapshot) · 2026-10-18→2026-10-18 (URL sets comparable nahi (alag size)) · 2026-10-18→2026-10-19 (URL sets comparable nahi (alag size)) · 2026-10-19→2026-10-26 (URL sets comparable nahi (alag size)).
+_Jo snapshot pairs rate ke liye use nahi ho sake:_ 2026-09-27→2026-10-05 (URL sets comparable nahi (alag size)) · 2026-10-09→2026-10-09 (URL sets comparable nahi (alag size)) · 2026-10-09→2026-10-12 (URL sets comparable nahi (alag size)) · 2026-10-12→2026-10-14 (URL sets comparable nahi (alag size)) · 2026-10-17→2026-10-18 (URL sets comparable nahi (alag size)) · 2026-10-18→2026-10-18 (same-day snapshot) · 2026-10-18→2026-10-18 (URL sets comparable nahi (alag size)) · 2026-10-18→2026-10-19 (URL sets comparable nahi (alag size)) · 2026-10-19→2026-10-27 (URL sets comparable nahi (alag size)).
 
 ## 5. Iska matlab kya hai
 

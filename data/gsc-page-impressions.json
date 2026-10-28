@@ -1,4956 +1,3778 @@
 {
-  "ranAt": "2026-10-24T12:11:08.677Z",
+  "ranAt": "2026-10-28T10:07:16.268Z",
   "site": "https://calcpromaster.com",
-  "source": "Pages.csv",
-  "days": null,
-  "startDate": "2026-09-24",
-  "endDate": "2026-10-21",
-  "count": 824,
-  "impressions": 21564,
+  "days": 120,
+  "startDate": "2026-06-27",
+  "endDate": "2026-10-25",
+  "count": 628,
   "pages": {
-    "https://calcpromaster.com/": {
+    "/": {
       "clicks": 3,
-      "impressions": 54,
-      "ctr": 0.0556,
-      "position": 14.3
+      "impressions": 58,
+      "ctr": 0.0517,
+      "position": 13.4
     },
-    "https://calcpromaster.com/finance/cost-of-debt/": {
+    "/finance/cost-of-debt": {
       "clicks": 2,
       "impressions": 19,
       "ctr": 0.1053,
       "position": 34.2
     },
-    "https://calcpromaster.com/regional/dubai-salary/": {
-      "clicks": 1,
-      "impressions": 388,
-      "ctr": 0.0026,
-      "position": 22.4
-    },
-    "https://calcpromaster.com/fitness/muscle-gain": {
-      "clicks": 1,
-      "impressions": 139,
-      "ctr": 0.0072,
-      "position": 9.4
-    },
-    "https://calcpromaster.com/health/pf-ratio/": {
-      "clicks": 1,
-      "impressions": 64,
-      "ctr": 0.0156,
-      "position": 55.6
-    },
-    "https://calcpromaster.com/regional/pk-salary": {
-      "clicks": 1,
-      "impressions": 51,
-      "ctr": 0.0196,
-      "position": 9.9
-    },
-    "https://calcpromaster.com/health/free-water-deficit": {
-      "clicks": 1,
-      "impressions": 51,
-      "ctr": 0.0196,
-      "position": 29.8
-    },
-    "https://calcpromaster.com/regional/canada-take-home-salary/": {
-      "clicks": 1,
-      "impressions": 43,
-      "ctr": 0.0233,
-      "position": 41.8
-    },
-    "https://calcpromaster.com/family/sibling-age-gap/": {
-      "clicks": 1,
-      "impressions": 40,
-      "ctr": 0.025,
-      "position": 7.3
-    },
-    "https://calcpromaster.com/regional/singapore-cpf/": {
-      "clicks": 1,
-      "impressions": 30,
-      "ctr": 0.0333,
-      "position": 55
-    },
-    "https://calcpromaster.com/regional/rickshaw-fare/": {
-      "clicks": 1,
-      "impressions": 28,
-      "ctr": 0.0357,
-      "position": 11.9
-    },
-    "https://calcpromaster.com/construction/insulation": {
-      "clicks": 1,
-      "impressions": 27,
-      "ctr": 0.037,
-      "position": 33.6
-    },
-    "https://calcpromaster.com/education/graduation-date/": {
-      "clicks": 1,
-      "impressions": 23,
-      "ctr": 0.0435,
-      "position": 6
-    },
-    "https://calcpromaster.com/tech/cron-validate/": {
-      "clicks": 1,
-      "impressions": 19,
-      "ctr": 0.0526,
-      "position": 27.3
-    },
-    "https://calcpromaster.com/tech/load-test-users/": {
-      "clicks": 1,
-      "impressions": 18,
-      "ctr": 0.0556,
-      "position": 30.1
-    },
-    "https://calcpromaster.com/auto/tire-replacement/": {
+    "/auto/tire-replacement": {
       "clicks": 1,
       "impressions": 15,
       "ctr": 0.0667,
       "position": 6.7
     },
-    "https://calcpromaster.com/geometry-lab": {
+    "/construction/insulation": {
+      "clicks": 1,
+      "impressions": 36,
+      "ctr": 0.0278,
+      "position": 31.4
+    },
+    "/education/graduation-date": {
+      "clicks": 1,
+      "impressions": 50,
+      "ctr": 0.02,
+      "position": 5.8
+    },
+    "/education/semester-gpa": {
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 1,
+      "position": 1
+    },
+    "/family/sibling-age-gap": {
+      "clicks": 1,
+      "impressions": 40,
+      "ctr": 0.025,
+      "position": 7.3
+    },
+    "/fitness/muscle-gain": {
+      "clicks": 1,
+      "impressions": 321,
+      "ctr": 0.0031,
+      "position": 8.5
+    },
+    "/geometry-lab": {
       "clicks": 1,
       "impressions": 6,
       "ctr": 0.1667,
       "position": 19.7
     },
-    "https://calcpromaster.com/education/semester-gpa/": {
+    "/health/free-water-deficit": {
       "clicks": 1,
-      "impressions": 1,
-      "ctr": 1,
-      "position": 1
+      "impressions": 62,
+      "ctr": 0.0161,
+      "position": 31.7
     },
-    "https://calcpromaster.com/tech/aspect-ratio/": {
+    "/health/pf-ratio": {
       "clicks": 1,
-      "impressions": 1,
-      "ctr": 1,
-      "position": 183
+      "impressions": 64,
+      "ctr": 0.0156,
+      "position": 55.6
     },
-    "https://calcpromaster.com/family/child-height/": {
-      "clicks": 0,
-      "impressions": 846,
-      "ctr": 0,
-      "position": 8.4
+    "/regional/canada-take-home-salary": {
+      "clicks": 1,
+      "impressions": 43,
+      "ctr": 0.0233,
+      "position": 41.8
     },
-    "https://calcpromaster.com/health/bmr-mifflin": {
-      "clicks": 0,
-      "impressions": 749,
-      "ctr": 0,
-      "position": 6.5
+    "/regional/dubai-salary": {
+      "clicks": 1,
+      "impressions": 388,
+      "ctr": 0.0026,
+      "position": 22.4
     },
-    "https://calcpromaster.com/finance/pmi-calculator/": {
-      "clicks": 0,
-      "impressions": 640,
-      "ctr": 0,
-      "position": 24.8
-    },
-    "https://calcpromaster.com/lifestyle/home-insurance/": {
-      "clicks": 0,
-      "impressions": 640,
-      "ctr": 0,
-      "position": 82
-    },
-    "https://calcpromaster.com/finance/fha-loan/": {
-      "clicks": 0,
-      "impressions": 443,
-      "ctr": 0,
-      "position": 15.7
-    },
-    "https://calcpromaster.com/guides/tip": {
-      "clicks": 0,
-      "impressions": 396,
-      "ctr": 0,
-      "position": 6.6
-    },
-    "https://calcpromaster.com/lifestyle/home-insurance": {
-      "clicks": 0,
-      "impressions": 372,
-      "ctr": 0,
-      "position": 63.1
-    },
-    "https://calcpromaster.com/health/bmr-mifflin/": {
-      "clicks": 0,
-      "impressions": 359,
-      "ctr": 0,
-      "position": 6.2
-    },
-    "https://calcpromaster.com/finance/apy-calculator/": {
-      "clicks": 0,
-      "impressions": 318,
-      "ctr": 0,
-      "position": 26.1
-    },
-    "https://calcpromaster.com/guides/bmr": {
-      "clicks": 0,
-      "impressions": 304,
-      "ctr": 0,
-      "position": 15.9
-    },
-    "https://calcpromaster.com/tech/internet-speed": {
-      "clicks": 0,
-      "impressions": 281,
-      "ctr": 0,
-      "position": 31.1
-    },
-    "https://calcpromaster.com/finance/credit-utilization/": {
-      "clicks": 0,
-      "impressions": 251,
-      "ctr": 0,
-      "position": 40.9
-    },
-    "https://calcpromaster.com/tech/internet-speed/": {
-      "clicks": 0,
-      "impressions": 226,
-      "ctr": 0,
+    "/regional/pk-salary": {
+      "clicks": 1,
+      "impressions": 96,
+      "ctr": 0.0104,
       "position": 25.1
     },
-    "https://calcpromaster.com/lifestyle/charging-time/": {
-      "clicks": 0,
-      "impressions": 201,
-      "ctr": 0,
-      "position": 9.1
-    },
-    "https://calcpromaster.com/math/weighted-average/": {
-      "clicks": 0,
-      "impressions": 193,
-      "ctr": 0,
-      "position": 54.4
-    },
-    "https://calcpromaster.com/fitness/muscle-gain/": {
-      "clicks": 0,
-      "impressions": 182,
-      "ctr": 0,
-      "position": 7.8
-    },
-    "https://calcpromaster.com/tech/rgb-hex/": {
-      "clicks": 0,
-      "impressions": 166,
-      "ctr": 0,
-      "position": 24.7
-    },
-    "https://calcpromaster.com/guides/business-days": {
-      "clicks": 0,
-      "impressions": 165,
-      "ctr": 0,
-      "position": 60.3
-    },
-    "https://calcpromaster.com/finance/rent-affordability/": {
-      "clicks": 0,
-      "impressions": 163,
-      "ctr": 0,
-      "position": 25.9
-    },
-    "https://calcpromaster.com/finance/wacc/": {
-      "clicks": 0,
-      "impressions": 158,
-      "ctr": 0,
-      "position": 75.3
-    },
-    "https://calcpromaster.com/regional/singapore-cpf": {
-      "clicks": 0,
-      "impressions": 157,
-      "ctr": 0,
-      "position": 68.7
-    },
-    "https://calcpromaster.com/guides/mortgage": {
-      "clicks": 0,
-      "impressions": 148,
-      "ctr": 0,
-      "position": 56.5
-    },
-    "https://calcpromaster.com/homegarden/wallpaper-rolls": {
-      "clicks": 0,
-      "impressions": 145,
-      "ctr": 0,
-      "position": 79.2
-    },
-    "https://calcpromaster.com/education/tuition-cost": {
-      "clicks": 0,
-      "impressions": 136,
-      "ctr": 0,
-      "position": 4.9
-    },
-    "https://calcpromaster.com/lifestyle/renters-insurance": {
-      "clicks": 0,
-      "impressions": 135,
-      "ctr": 0,
-      "position": 8
-    },
-    "https://calcpromaster.com/tech/raid-capacity/": {
-      "clicks": 0,
-      "impressions": 134,
-      "ctr": 0,
-      "position": 39.6
-    },
-    "https://calcpromaster.com/finance/va-loan/": {
-      "clicks": 0,
-      "impressions": 132,
-      "ctr": 0,
-      "position": 93.3
-    },
-    "https://calcpromaster.com/finance/royalty-payment": {
-      "clicks": 0,
-      "impressions": 131,
-      "ctr": 0,
-      "position": 5
-    },
-    "https://calcpromaster.com/science/carbon-dating/": {
-      "clicks": 0,
-      "impressions": 119,
-      "ctr": 0,
-      "position": 8.7
-    },
-    "https://calcpromaster.com/science/solar-energy/": {
-      "clicks": 0,
-      "impressions": 118,
-      "ctr": 0,
-      "position": 81.2
-    },
-    "https://calcpromaster.com/math/trigonometry/": {
-      "clicks": 0,
-      "impressions": 112,
-      "ctr": 0,
-      "position": 10.1
-    },
-    "https://calcpromaster.com/education/presentation-time/": {
-      "clicks": 0,
-      "impressions": 109,
-      "ctr": 0,
-      "position": 8.3
-    },
-    "https://calcpromaster.com/everyday/coffee-cost/": {
-      "clicks": 0,
-      "impressions": 108,
-      "ctr": 0,
-      "position": 10.5
-    },
-    "https://calcpromaster.com/family/baby-weight-gain/": {
-      "clicks": 0,
-      "impressions": 106,
-      "ctr": 0,
-      "position": 9
-    },
-    "https://calcpromaster.com/auto/parking-cost": {
-      "clicks": 0,
-      "impressions": 105,
-      "ctr": 0,
-      "position": 12.2
-    },
-    "https://calcpromaster.com/tech/raid-capacity": {
-      "clicks": 0,
-      "impressions": 104,
-      "ctr": 0,
-      "position": 33.6
-    },
-    "https://calcpromaster.com/tech/ip-subnet/": {
-      "clicks": 0,
-      "impressions": 103,
-      "ctr": 0,
-      "position": 71
-    },
-    "https://calcpromaster.com/guides/gear-ratio": {
-      "clicks": 0,
-      "impressions": 102,
-      "ctr": 0,
-      "position": 71
-    },
-    "https://calcpromaster.com/science/dew-point/": {
-      "clicks": 0,
-      "impressions": 100,
-      "ctr": 0,
-      "position": 20.4
-    },
-    "https://calcpromaster.com/guides/business-days/": {
-      "clicks": 0,
-      "impressions": 97,
-      "ctr": 0,
-      "position": 60
-    },
-    "https://calcpromaster.com/everyday/gift-wrap/": {
-      "clicks": 0,
-      "impressions": 95,
-      "ctr": 0,
-      "position": 9.1
-    },
-    "https://calcpromaster.com/regional/switzerland-take-home-salary/": {
-      "clicks": 0,
-      "impressions": 95,
-      "ctr": 0,
-      "position": 39.4
-    },
-    "https://calcpromaster.com/science/carbon-dating": {
-      "clicks": 0,
-      "impressions": 94,
-      "ctr": 0,
-      "position": 15.6
-    },
-    "https://calcpromaster.com/finance/dividend-yield/": {
-      "clicks": 0,
-      "impressions": 93,
-      "ctr": 0,
-      "position": 52.7
-    },
-    "https://calcpromaster.com/tech": {
-      "clicks": 0,
+    "/regional/rickshaw-fare": {
+      "clicks": 1,
       "impressions": 92,
-      "ctr": 0,
-      "position": 56.3
+      "ctr": 0.0109,
+      "position": 9.6
     },
-    "https://calcpromaster.com/regional/uk-take-home-salary/": {
-      "clicks": 0,
-      "impressions": 92,
-      "ctr": 0,
-      "position": 91.9
+    "/regional/singapore-cpf": {
+      "clicks": 1,
+      "impressions": 188,
+      "ctr": 0.0053,
+      "position": 66.1
     },
-    "https://calcpromaster.com/lifestyle/vacation-savings/": {
-      "clicks": 0,
-      "impressions": 90,
-      "ctr": 0,
-      "position": 17.3
+    "/tech/aspect-ratio": {
+      "clicks": 1,
+      "impressions": 27,
+      "ctr": 0.037,
+      "position": 46.2
     },
-    "https://calcpromaster.com/finance/eps-calculator/": {
-      "clicks": 0,
-      "impressions": 90,
-      "ctr": 0,
-      "position": 30.6
+    "/tech/cron-validate": {
+      "clicks": 1,
+      "impressions": 19,
+      "ctr": 0.0526,
+      "position": 27.3
     },
-    "https://calcpromaster.com/finance/prorated-rent": {
-      "clicks": 0,
-      "impressions": 89,
-      "ctr": 0,
-      "position": 15
+    "/tech/load-test-users": {
+      "clicks": 1,
+      "impressions": 18,
+      "ctr": 0.0556,
+      "position": 30.1
     },
-    "https://calcpromaster.com/guides/body-fat": {
-      "clicks": 0,
-      "impressions": 86,
-      "ctr": 0,
-      "position": 24.5
-    },
-    "https://calcpromaster.com/finance/closing-costs/": {
-      "clicks": 0,
-      "impressions": 84,
-      "ctr": 0,
-      "position": 28.2
-    },
-    "https://calcpromaster.com/fitness/situp-test/": {
-      "clicks": 0,
-      "impressions": 82,
-      "ctr": 0,
-      "position": 10.8
-    },
-    "https://calcpromaster.com/homegarden/vinyl-flooring": {
-      "clicks": 0,
-      "impressions": 82,
-      "ctr": 0,
-      "position": 27.7
-    },
-    "https://calcpromaster.com/hub/fitness": {
-      "clicks": 0,
-      "impressions": 82,
-      "ctr": 0,
-      "position": 39.4
-    },
-    "https://calcpromaster.com/science/moment-of-inertia/": {
-      "clicks": 0,
-      "impressions": 82,
-      "ctr": 0,
-      "position": 73.1
-    },
-    "https://calcpromaster.com/tech/resistor-color-code/": {
-      "clicks": 0,
-      "impressions": 80,
-      "ctr": 0,
-      "position": 75.7
-    },
-    "https://calcpromaster.com/lifestyle/resell-value": {
-      "clicks": 0,
-      "impressions": 77,
-      "ctr": 0,
-      "position": 8.1
-    },
-    "https://calcpromaster.com/engineering/steel-weight": {
-      "clicks": 0,
-      "impressions": 76,
-      "ctr": 0,
-      "position": 62.7
-    },
-    "https://calcpromaster.com/regional/saudi-take-home-salary/": {
-      "clicks": 0,
-      "impressions": 75,
-      "ctr": 0,
-      "position": 9.8
-    },
-    "https://calcpromaster.com/construction/pipe-volume/": {
-      "clicks": 0,
-      "impressions": 73,
-      "ctr": 0,
-      "position": 53.3
-    },
-    "https://calcpromaster.com/finance/canada-income-tax/": {
-      "clicks": 0,
-      "impressions": 72,
-      "ctr": 0,
-      "position": 52
-    },
-    "https://calcpromaster.com/food/meat-cooking-time/": {
-      "clicks": 0,
-      "impressions": 71,
-      "ctr": 0,
-      "position": 62
-    },
-    "https://calcpromaster.com/family/": {
-      "clicks": 0,
-      "impressions": 69,
-      "ctr": 0,
-      "position": 9.4
-    },
-    "https://calcpromaster.com/health/corrected-calcium/": {
-      "clicks": 0,
-      "impressions": 69,
-      "ctr": 0,
-      "position": 58.2
-    },
-    "https://calcpromaster.com/conversion/wire-gauge-conv": {
-      "clicks": 0,
-      "impressions": 69,
-      "ctr": 0,
-      "position": 70.5
-    },
-    "https://calcpromaster.com/lifestyle/renters-insurance/": {
-      "clicks": 0,
-      "impressions": 68,
-      "ctr": 0,
-      "position": 18.3
-    },
-    "https://calcpromaster.com/auto/trade-in-value": {
-      "clicks": 0,
-      "impressions": 68,
-      "ctr": 0,
-      "position": 75.2
-    },
-    "https://calcpromaster.com/health/pregnancy/": {
-      "clicks": 0,
-      "impressions": 67,
-      "ctr": 0,
-      "position": 9.3
-    },
-    "https://calcpromaster.com/finance/debt-to-equity/": {
-      "clicks": 0,
-      "impressions": 66,
-      "ctr": 0,
-      "position": 55
-    },
-    "https://calcpromaster.com/business/depreciation/": {
-      "clicks": 0,
-      "impressions": 65,
-      "ctr": 0,
-      "position": 33.7
-    },
-    "https://calcpromaster.com/education/gpa/": {
-      "clicks": 0,
-      "impressions": 65,
-      "ctr": 0,
-      "position": 34.7
-    },
-    "https://calcpromaster.com/career/australia-pr-points/": {
-      "clicks": 0,
-      "impressions": 65,
-      "ctr": 0,
-      "position": 90.9
-    },
-    "https://calcpromaster.com/education/tuition-cost/": {
-      "clicks": 0,
-      "impressions": 64,
-      "ctr": 0,
-      "position": 6.6
-    },
-    "https://calcpromaster.com/regional/rickshaw-fare": {
-      "clicks": 0,
-      "impressions": 64,
-      "ctr": 0,
-      "position": 8.6
-    },
-    "https://calcpromaster.com/auto/trip-time/": {
-      "clicks": 0,
-      "impressions": 64,
-      "ctr": 0,
-      "position": 16.5
-    },
-    "https://calcpromaster.com/homegarden/pool-chemicals": {
-      "clicks": 0,
-      "impressions": 64,
-      "ctr": 0,
-      "position": 65.2
-    },
-    "https://calcpromaster.com/tech/cable-length/": {
-      "clicks": 0,
-      "impressions": 64,
-      "ctr": 0,
-      "position": 68.3
-    },
-    "https://calcpromaster.com/conversion/wire-gauge-conv/": {
-      "clicks": 0,
-      "impressions": 64,
-      "ctr": 0,
-      "position": 70.1
-    },
-    "https://calcpromaster.com/auto/mileage-calculator/": {
-      "clicks": 0,
-      "impressions": 63,
-      "ctr": 0,
-      "position": 37.9
-    },
-    "https://calcpromaster.com/science/kinetic-energy/": {
-      "clicks": 0,
-      "impressions": 60,
-      "ctr": 0,
-      "position": 24.7
-    },
-    "https://calcpromaster.com/engineering/ups-sizing": {
-      "clicks": 0,
-      "impressions": 60,
-      "ctr": 0,
-      "position": 57
-    },
-    "https://calcpromaster.com/tech/cloud-storage/": {
-      "clicks": 0,
-      "impressions": 58,
-      "ctr": 0,
-      "position": 47.9
-    },
-    "https://calcpromaster.com/family/vacation-with-kids/": {
-      "clicks": 0,
-      "impressions": 57,
-      "ctr": 0,
-      "position": 6.9
-    },
-    "https://calcpromaster.com/health/serum-osmolality/": {
-      "clicks": 0,
-      "impressions": 57,
-      "ctr": 0,
-      "position": 75.1
-    },
-    "https://calcpromaster.com/lifestyle/wine-servings/": {
-      "clicks": 0,
-      "impressions": 56,
-      "ctr": 0,
-      "position": 7.6
-    },
-    "https://calcpromaster.com/tech/font-size-conv/": {
-      "clicks": 0,
-      "impressions": 56,
-      "ctr": 0,
-      "position": 19
-    },
-    "https://calcpromaster.com/finance/effective-tax-rate/": {
-      "clicks": 0,
-      "impressions": 56,
-      "ctr": 0,
-      "position": 50.3
-    },
-    "https://calcpromaster.com/homegarden/deck-stain": {
-      "clicks": 0,
-      "impressions": 55,
-      "ctr": 0,
-      "position": 13.6
-    },
-    "https://calcpromaster.com/math/harmonic-mean/": {
-      "clicks": 0,
-      "impressions": 55,
-      "ctr": 0,
-      "position": 14.3
-    },
-    "https://calcpromaster.com/regional/rd-calculator/": {
-      "clicks": 0,
-      "impressions": 55,
-      "ctr": 0,
-      "position": 45.4
-    },
-    "https://calcpromaster.com/health/chw/": {
-      "clicks": 0,
-      "impressions": 54,
-      "ctr": 0,
-      "position": 20.7
-    },
-    "https://calcpromaster.com/tech/subnet-cidr/": {
-      "clicks": 0,
-      "impressions": 52,
-      "ctr": 0,
-      "position": 28.9
-    },
-    "https://calcpromaster.com/health/ldl-calculator/": {
-      "clicks": 0,
-      "impressions": 52,
-      "ctr": 0,
-      "position": 38.3
-    },
-    "https://calcpromaster.com/regional/nps-calculator": {
-      "clicks": 0,
-      "impressions": 50,
-      "ctr": 0,
-      "position": 46
-    },
-    "https://calcpromaster.com/math/matrix-det/": {
-      "clicks": 0,
-      "impressions": 50,
-      "ctr": 0,
-      "position": 46.9
-    },
-    "https://calcpromaster.com/lifestyle/party-cost": {
-      "clicks": 0,
-      "impressions": 49,
-      "ctr": 0,
-      "position": 6.8
-    },
-    "https://calcpromaster.com/auto/auto-fare/": {
+    "/auto/auto-fare": {
       "clicks": 0,
       "impressions": 49,
       "ctr": 0,
       "position": 11.9
     },
-    "https://calcpromaster.com/health/winters-formula/": {
-      "clicks": 0,
-      "impressions": 47,
-      "ctr": 0,
-      "position": 27
-    },
-    "https://calcpromaster.com/homegarden/room-area": {
-      "clicks": 0,
-      "impressions": 47,
-      "ctr": 0,
-      "position": 77.4
-    },
-    "https://calcpromaster.com/math/lcm-gcd/": {
-      "clicks": 0,
-      "impressions": 46,
-      "ctr": 0,
-      "position": 27.7
-    },
-    "https://calcpromaster.com/regional/chit-fund/": {
-      "clicks": 0,
-      "impressions": 45,
-      "ctr": 0,
-      "position": 14.4
-    },
-    "https://calcpromaster.com/regional/pk-salary/": {
-      "clicks": 0,
-      "impressions": 45,
-      "ctr": 0,
-      "position": 42.4
-    },
-    "https://calcpromaster.com/lifestyle/road-trip-cost/": {
-      "clicks": 0,
-      "impressions": 45,
-      "ctr": 0,
-      "position": 56.2
-    },
-    "https://calcpromaster.com/health/maintenance-fluids/": {
-      "clicks": 0,
-      "impressions": 44,
-      "ctr": 0,
-      "position": 53.7
-    },
-    "https://calcpromaster.com/guides/water-intake": {
+    "/auto/bike-loan": {
       "clicks": 0,
       "impressions": 43,
       "ctr": 0,
-      "position": 79.7
+      "position": 58.7
     },
-    "https://calcpromaster.com/lifestyle/cigarette-cost": {
+    "/auto/car-affordability": {
       "clicks": 0,
-      "impressions": 42,
-      "ctr": 0,
-      "position": 13.2
-    },
-    "https://calcpromaster.com/finance/dividend-reinvestment/": {
-      "clicks": 0,
-      "impressions": 42,
-      "ctr": 0,
-      "position": 22.1
-    },
-    "https://calcpromaster.com/lifestyle/cleaning-time/": {
-      "clicks": 0,
-      "impressions": 41,
-      "ctr": 0,
-      "position": 11.2
-    },
-    "https://calcpromaster.com/finance/ev-ebitda/": {
-      "clicks": 0,
-      "impressions": 41,
-      "ctr": 0,
-      "position": 27.3
-    },
-    "https://calcpromaster.com/tech/data-usage-est/": {
-      "clicks": 0,
-      "impressions": 41,
-      "ctr": 0,
-      "position": 33.1
-    },
-    "https://calcpromaster.com/health/drug-dosage/": {
-      "clicks": 0,
-      "impressions": 41,
-      "ctr": 0,
-      "position": 55.3
-    },
-    "https://calcpromaster.com/lifestyle/cigarette-cost/": {
-      "clicks": 0,
-      "impressions": 40,
-      "ctr": 0,
-      "position": 8.1
-    },
-    "https://calcpromaster.com/lifestyle/lawn-mowing/": {
-      "clicks": 0,
-      "impressions": 40,
-      "ctr": 0,
-      "position": 12.1
-    },
-    "https://calcpromaster.com/fitness/cycling-speed/": {
-      "clicks": 0,
-      "impressions": 40,
-      "ctr": 0,
-      "position": 20.6
-    },
-    "https://calcpromaster.com/fitness/vo2max/": {
-      "clicks": 0,
-      "impressions": 40,
-      "ctr": 0,
-      "position": 25.9
-    },
-    "https://calcpromaster.com/regional/post-office-savings/": {
-      "clicks": 0,
-      "impressions": 40,
-      "ctr": 0,
-      "position": 27.1
-    },
-    "https://calcpromaster.com/auto/mileage-calculator": {
-      "clicks": 0,
-      "impressions": 40,
-      "ctr": 0,
-      "position": 30
-    },
-    "https://calcpromaster.com/construction/water-tank/": {
-      "clicks": 0,
-      "impressions": 40,
-      "ctr": 0,
-      "position": 63.9
-    },
-    "https://calcpromaster.com/finance/ibond-value/": {
-      "clicks": 0,
-      "impressions": 39,
-      "ctr": 0,
-      "position": 34.8
-    },
-    "https://calcpromaster.com/fitness/bench-standards": {
-      "clicks": 0,
-      "impressions": 38,
-      "ctr": 0,
-      "position": 21.4
-    },
-    "https://calcpromaster.com/finance/margin-call/": {
-      "clicks": 0,
-      "impressions": 38,
-      "ctr": 0,
-      "position": 22.5
-    },
-    "https://calcpromaster.com/health/glycemic-load/": {
-      "clicks": 0,
-      "impressions": 38,
-      "ctr": 0,
-      "position": 50.6
-    },
-    "https://calcpromaster.com/auto/tow-capacity": {
-      "clicks": 0,
-      "impressions": 38,
-      "ctr": 0,
-      "position": 73.7
-    },
-    "https://calcpromaster.com/career/salary-negotiation-range/": {
-      "clicks": 0,
-      "impressions": 37,
-      "ctr": 0,
-      "position": 10.1
-    },
-    "https://calcpromaster.com/education/citation-count/": {
-      "clicks": 0,
-      "impressions": 37,
-      "ctr": 0,
-      "position": 43.4
-    },
-    "https://calcpromaster.com/science/wave-speed/": {
-      "clicks": 0,
-      "impressions": 36,
-      "ctr": 0,
-      "position": 30.5
-    },
-    "https://calcpromaster.com/math/linear-regression/": {
-      "clicks": 0,
-      "impressions": 36,
-      "ctr": 0,
-      "position": 35.4
-    },
-    "https://calcpromaster.com/fitness/rowing-split/": {
-      "clicks": 0,
-      "impressions": 36,
-      "ctr": 0,
-      "position": 40.4
-    },
-    "https://calcpromaster.com/science/bullet-drop/": {
-      "clicks": 0,
-      "impressions": 35,
-      "ctr": 0,
-      "position": 16.1
-    },
-    "https://calcpromaster.com/tech/screen-ppi/": {
-      "clicks": 0,
-      "impressions": 35,
-      "ctr": 0,
-      "position": 31.9
-    },
-    "https://calcpromaster.com/finance/tax-equivalent-yield/": {
-      "clicks": 0,
-      "impressions": 35,
-      "ctr": 0,
-      "position": 35.9
-    },
-    "https://calcpromaster.com/regional/nsc-interest": {
-      "clicks": 0,
-      "impressions": 35,
-      "ctr": 0,
-      "position": 64.4
-    },
-    "https://calcpromaster.com/regional/leave-encashment/": {
-      "clicks": 0,
-      "impressions": 34,
-      "ctr": 0,
-      "position": 21.9
-    },
-    "https://calcpromaster.com/family/vacation-with-kids": {
-      "clicks": 0,
-      "impressions": 33,
-      "ctr": 0,
-      "position": 13.6
-    },
-    "https://calcpromaster.com/homegarden/firewood": {
-      "clicks": 0,
-      "impressions": 33,
-      "ctr": 0,
-      "position": 18.6
-    },
-    "https://calcpromaster.com/regional/home-loan-emi-india/": {
-      "clicks": 0,
-      "impressions": 33,
-      "ctr": 0,
-      "position": 78.5
-    },
-    "https://calcpromaster.com/guides/baby-cost": {
-      "clicks": 0,
-      "impressions": 32,
-      "ctr": 0,
-      "position": 7.8
-    },
-    "https://calcpromaster.com/math/scientific-notation/": {
-      "clicks": 0,
-      "impressions": 32,
-      "ctr": 0,
-      "position": 10
-    },
-    "https://calcpromaster.com/guides/screen-time": {
-      "clicks": 0,
-      "impressions": 32,
-      "ctr": 0,
-      "position": 14.2
-    },
-    "https://calcpromaster.com/finance/auto-lease-vs-buy": {
-      "clicks": 0,
-      "impressions": 32,
-      "ctr": 0,
-      "position": 60.6
-    },
-    "https://calcpromaster.com/family/baby-name/": {
-      "clicks": 0,
-      "impressions": 32,
-      "ctr": 0,
-      "position": 66.3
-    },
-    "https://calcpromaster.com/lifestyle/resell-value/": {
-      "clicks": 0,
-      "impressions": 31,
-      "ctr": 0,
-      "position": 13.3
-    },
-    "https://calcpromaster.com/construction/carpet/": {
-      "clicks": 0,
-      "impressions": 31,
-      "ctr": 0,
-      "position": 17.8
-    },
-    "https://calcpromaster.com/tech/wattage-psu/": {
-      "clicks": 0,
-      "impressions": 31,
-      "ctr": 0,
-      "position": 51.1
-    },
-    "https://calcpromaster.com/auto/bike-loan/": {
-      "clicks": 0,
-      "impressions": 31,
-      "ctr": 0,
-      "position": 54.2
-    },
-    "https://calcpromaster.com/construction/gutter/": {
-      "clicks": 0,
-      "impressions": 30,
-      "ctr": 0,
-      "position": 9.7
-    },
-    "https://calcpromaster.com/guides/ideal-weight": {
-      "clicks": 0,
-      "impressions": 30,
-      "ctr": 0,
-      "position": 17.5
-    },
-    "https://calcpromaster.com/finance/dividend/": {
-      "clicks": 0,
-      "impressions": 30,
-      "ctr": 0,
-      "position": 36.9
-    },
-    "https://calcpromaster.com/health/total-body-water/": {
-      "clicks": 0,
-      "impressions": 30,
-      "ctr": 0,
-      "position": 42.3
-    },
-    "https://calcpromaster.com/engineering/pump-power": {
-      "clicks": 0,
-      "impressions": 30,
-      "ctr": 0,
-      "position": 68
-    },
-    "https://calcpromaster.com/fitness/": {
-      "clicks": 0,
-      "impressions": 29,
-      "ctr": 0,
-      "position": 15.2
-    },
-    "https://calcpromaster.com/tech/screen-ppi": {
-      "clicks": 0,
-      "impressions": 29,
-      "ctr": 0,
-      "position": 37.1
-    },
-    "https://calcpromaster.com/auto/taxi-fare/": {
-      "clicks": 0,
-      "impressions": 29,
-      "ctr": 0,
-      "position": 43.9
-    },
-    "https://calcpromaster.com/engineering/pump-power/": {
-      "clicks": 0,
-      "impressions": 29,
-      "ctr": 0,
-      "position": 44.4
-    },
-    "https://calcpromaster.com/science/wavelength-freq/": {
-      "clicks": 0,
-      "impressions": 29,
-      "ctr": 0,
-      "position": 49
-    },
-    "https://calcpromaster.com/lifestyle/gym-cost-per-visit/": {
-      "clicks": 0,
-      "impressions": 28,
-      "ctr": 0,
-      "position": 7.6
-    },
-    "https://calcpromaster.com/homegarden/": {
-      "clicks": 0,
-      "impressions": 28,
-      "ctr": 0,
-      "position": 10.9
-    },
-    "https://calcpromaster.com/math/complex/": {
-      "clicks": 0,
-      "impressions": 28,
-      "ctr": 0,
-      "position": 14.4
-    },
-    "https://calcpromaster.com/science/friction/": {
-      "clicks": 0,
-      "impressions": 28,
-      "ctr": 0,
-      "position": 19.5
-    },
-    "https://calcpromaster.com/everyday/vacation-budget": {
-      "clicks": 0,
-      "impressions": 28,
-      "ctr": 0,
-      "position": 21.5
-    },
-    "https://calcpromaster.com/finance/investment": {
-      "clicks": 0,
-      "impressions": 28,
-      "ctr": 0,
-      "position": 40
-    },
-    "https://calcpromaster.com/regional/singapore-take-home-salary/": {
-      "clicks": 0,
-      "impressions": 28,
-      "ctr": 0,
-      "position": 40.8
-    },
-    "https://calcpromaster.com/engineering/orifice-flow/": {
-      "clicks": 0,
-      "impressions": 28,
-      "ctr": 0,
-      "position": 58.1
-    },
-    "https://calcpromaster.com/education/graduation-date": {
-      "clicks": 0,
-      "impressions": 27,
-      "ctr": 0,
-      "position": 5.7
-    },
-    "https://calcpromaster.com/regional/germany-take-home-salary/": {
-      "clicks": 0,
-      "impressions": 27,
-      "ctr": 0,
-      "position": 13
-    },
-    "https://calcpromaster.com/business/": {
-      "clicks": 0,
-      "impressions": 27,
-      "ctr": 0,
-      "position": 18.2
-    },
-    "https://calcpromaster.com/hub/auto/": {
-      "clicks": 0,
-      "impressions": 27,
-      "ctr": 0,
-      "position": 34.9
-    },
-    "https://calcpromaster.com/regional/electricity-bill-india": {
-      "clicks": 0,
-      "impressions": 27,
-      "ctr": 0,
-      "position": 84.3
-    },
-    "https://calcpromaster.com/science/free-fall/": {
-      "clicks": 0,
-      "impressions": 26,
-      "ctr": 0,
-      "position": 26.9
-    },
-    "https://calcpromaster.com/tech/aspect-ratio": {
-      "clicks": 0,
-      "impressions": 26,
+      "impressions": 21,
       "ctr": 0,
       "position": 40.9
     },
-    "https://calcpromaster.com/regional/nsc-interest/": {
+    "/auto/car-depreciation": {
       "clicks": 0,
-      "impressions": 26,
+      "impressions": 11,
       "ctr": 0,
-      "position": 70.9
+      "position": 12.5
     },
-    "https://calcpromaster.com/lifestyle/gift-budget/": {
+    "/auto/car-rental": {
       "clicks": 0,
-      "impressions": 25,
+      "impressions": 10,
       "ctr": 0,
-      "position": 7.4
+      "position": 5
     },
-    "https://calcpromaster.com/finance/dso/": {
+    "/auto/carpool-savings": {
       "clicks": 0,
-      "impressions": 25,
+      "impressions": 6,
       "ctr": 0,
-      "position": 18.2
+      "position": 7.8
     },
-    "https://calcpromaster.com/auto/taxi-fare": {
-      "clicks": 0,
-      "impressions": 25,
-      "ctr": 0,
-      "position": 28.6
-    },
-    "https://calcpromaster.com/fitness": {
-      "clicks": 0,
-      "impressions": 25,
-      "ctr": 0,
-      "position": 43.4
-    },
-    "https://calcpromaster.com/finance/property-tax/": {
-      "clicks": 0,
-      "impressions": 25,
-      "ctr": 0,
-      "position": 58.8
-    },
-    "https://calcpromaster.com/regional/australia-super": {
-      "clicks": 0,
-      "impressions": 25,
-      "ctr": 0,
-      "position": 61.3
-    },
-    "https://calcpromaster.com/finance/market-cap": {
-      "clicks": 0,
-      "impressions": 24,
-      "ctr": 0,
-      "position": 10.9
-    },
-    "https://calcpromaster.com/education/attendance-rate/": {
-      "clicks": 0,
-      "impressions": 24,
-      "ctr": 0,
-      "position": 11.4
-    },
-    "https://calcpromaster.com/tech/typing-speed/": {
-      "clicks": 0,
-      "impressions": 24,
-      "ctr": 0,
-      "position": 11.6
-    },
-    "https://calcpromaster.com/finance/roommate-rent-split/": {
-      "clicks": 0,
-      "impressions": 24,
-      "ctr": 0,
-      "position": 13
-    },
-    "https://calcpromaster.com/fitness/sweat-rate": {
-      "clicks": 0,
-      "impressions": 24,
-      "ctr": 0,
-      "position": 20
-    },
-    "https://calcpromaster.com/tech/storage-need/": {
-      "clicks": 0,
-      "impressions": 24,
-      "ctr": 0,
-      "position": 22
-    },
-    "https://calcpromaster.com/auto/commute-cost/": {
+    "/auto/commute-cost": {
       "clicks": 0,
       "impressions": 24,
       "ctr": 0,
       "position": 31
     },
-    "https://calcpromaster.com/education/gpa-target/": {
-      "clicks": 0,
-      "impressions": 24,
-      "ctr": 0,
-      "position": 31.5
-    },
-    "https://calcpromaster.com/tech/screen-size": {
-      "clicks": 0,
-      "impressions": 24,
-      "ctr": 0,
-      "position": 51
-    },
-    "https://calcpromaster.com/business": {
-      "clicks": 0,
-      "impressions": 24,
-      "ctr": 0,
-      "position": 59.5
-    },
-    "https://calcpromaster.com/homegarden/paint-cost/": {
-      "clicks": 0,
-      "impressions": 24,
-      "ctr": 0,
-      "position": 77.9
-    },
-    "https://calcpromaster.com/auto/fuel-tank-range/": {
-      "clicks": 0,
-      "impressions": 23,
-      "ctr": 0,
-      "position": 18.6
-    },
-    "https://calcpromaster.com/auto/toll-cost/": {
-      "clicks": 0,
-      "impressions": 23,
-      "ctr": 0,
-      "position": 25.7
-    },
-    "https://calcpromaster.com/fitness/squat-standards": {
-      "clicks": 0,
-      "impressions": 23,
-      "ctr": 0,
-      "position": 28.3
-    },
-    "https://calcpromaster.com/everyday/business-days/": {
-      "clicks": 0,
-      "impressions": 23,
-      "ctr": 0,
-      "position": 45.2
-    },
-    "https://calcpromaster.com/tech/cloud-storage": {
-      "clicks": 0,
-      "impressions": 23,
-      "ctr": 0,
-      "position": 63.2
-    },
-    "https://calcpromaster.com/education/reading-time/": {
-      "clicks": 0,
-      "impressions": 23,
-      "ctr": 0,
-      "position": 65
-    },
-    "https://calcpromaster.com/everyday/": {
-      "clicks": 0,
-      "impressions": 22,
-      "ctr": 0,
-      "position": 7.2
-    },
-    "https://calcpromaster.com/construction/carpet": {
-      "clicks": 0,
-      "impressions": 22,
-      "ctr": 0,
-      "position": 9.1
-    },
-    "https://calcpromaster.com/math/coefficient-of-variation/": {
-      "clicks": 0,
-      "impressions": 22,
-      "ctr": 0,
-      "position": 19.1
-    },
-    "https://calcpromaster.com/fitness/vo2max": {
-      "clicks": 0,
-      "impressions": 22,
-      "ctr": 0,
-      "position": 21.3
-    },
-    "https://calcpromaster.com/guides/electricity-bill": {
-      "clicks": 0,
-      "impressions": 22,
-      "ctr": 0,
-      "position": 28.6
-    },
-    "https://calcpromaster.com/everyday/blood-alcohol/": {
-      "clicks": 0,
-      "impressions": 22,
-      "ctr": 0,
-      "position": 37.1
-    },
-    "https://calcpromaster.com/regional/nps-calculator/": {
-      "clicks": 0,
-      "impressions": 22,
-      "ctr": 0,
-      "position": 69.9
-    },
-    "https://calcpromaster.com/guides/paint-coverage": {
-      "clicks": 0,
-      "impressions": 22,
-      "ctr": 0,
-      "position": 79.5
-    },
-    "https://calcpromaster.com/finance/safe-withdrawal/": {
-      "clicks": 0,
-      "impressions": 21,
-      "ctr": 0,
-      "position": 7.1
-    },
-    "https://calcpromaster.com/regional/brazil-take-home-salary/": {
-      "clicks": 0,
-      "impressions": 21,
-      "ctr": 0,
-      "position": 7.5
-    },
-    "https://calcpromaster.com/finance/geometric-mean/": {
-      "clicks": 0,
-      "impressions": 21,
-      "ctr": 0,
-      "position": 16.6
-    },
-    "https://calcpromaster.com/science/projectile/": {
-      "clicks": 0,
-      "impressions": 21,
-      "ctr": 0,
-      "position": 17.2
-    },
-    "https://calcpromaster.com/math/root/": {
-      "clicks": 0,
-      "impressions": 21,
-      "ctr": 0,
-      "position": 20.9
-    },
-    "https://calcpromaster.com/guides/calories": {
-      "clicks": 0,
-      "impressions": 21,
-      "ctr": 0,
-      "position": 57.9
-    },
-    "https://calcpromaster.com/math/cubic-equation/": {
-      "clicks": 0,
-      "impressions": 21,
-      "ctr": 0,
-      "position": 59.1
-    },
-    "https://calcpromaster.com/science/power/": {
-      "clicks": 0,
-      "impressions": 21,
-      "ctr": 0,
-      "position": 66.4
-    },
-    "https://calcpromaster.com/homegarden/deck-stain/": {
-      "clicks": 0,
-      "impressions": 20,
-      "ctr": 0,
-      "position": 6.1
-    },
-    "https://calcpromaster.com/everyday/jet-lag": {
-      "clicks": 0,
-      "impressions": 20,
-      "ctr": 0,
-      "position": 7.2
-    },
-    "https://calcpromaster.com/health/iron-intake/": {
-      "clicks": 0,
-      "impressions": 20,
-      "ctr": 0,
-      "position": 7.4
-    },
-    "https://calcpromaster.com/homegarden/tile-grout/": {
-      "clicks": 0,
-      "impressions": 20,
-      "ctr": 0,
-      "position": 25.5
-    },
-    "https://calcpromaster.com/finance/us-income-tax/": {
-      "clicks": 0,
-      "impressions": 20,
-      "ctr": 0,
-      "position": 35.7
-    },
-    "https://calcpromaster.com/health/ideal-body-weight/": {
-      "clicks": 0,
-      "impressions": 20,
-      "ctr": 0,
-      "position": 39.5
-    },
-    "https://calcpromaster.com/education/study-break/": {
-      "clicks": 0,
-      "impressions": 19,
-      "ctr": 0,
-      "position": 7.1
-    },
-    "https://calcpromaster.com/auto/quarter-mile/": {
-      "clicks": 0,
-      "impressions": 19,
-      "ctr": 0,
-      "position": 29.4
-    },
-    "https://calcpromaster.com/fitness/treadmill-pace": {
-      "clicks": 0,
-      "impressions": 19,
-      "ctr": 0,
-      "position": 30
-    },
-    "https://calcpromaster.com/family/family-budget-simple/": {
-      "clicks": 0,
-      "impressions": 19,
-      "ctr": 0,
-      "position": 36.2
-    },
-    "https://calcpromaster.com/health/fasting-calculator/": {
-      "clicks": 0,
-      "impressions": 19,
-      "ctr": 0,
-      "position": 38.4
-    },
-    "https://calcpromaster.com/tech/ip-subnet": {
-      "clicks": 0,
-      "impressions": 19,
-      "ctr": 0,
-      "position": 40.7
-    },
-    "https://calcpromaster.com/homegarden/room-area/": {
-      "clicks": 0,
-      "impressions": 19,
-      "ctr": 0,
-      "position": 80.4
-    },
-    "https://calcpromaster.com/everyday/poker-flush": {
-      "clicks": 0,
-      "impressions": 18,
-      "ctr": 0,
-      "position": 10.9
-    },
-    "https://calcpromaster.com/graph": {
-      "clicks": 0,
-      "impressions": 18,
-      "ctr": 0,
-      "position": 20.1
-    },
-    "https://calcpromaster.com/finance/factoring-fee/": {
-      "clicks": 0,
-      "impressions": 18,
-      "ctr": 0,
-      "position": 23.2
-    },
-    "https://calcpromaster.com/lifestyle/home-renovation/": {
-      "clicks": 0,
-      "impressions": 18,
-      "ctr": 0,
-      "position": 25.2
-    },
-    "https://calcpromaster.com/guides/room-area": {
-      "clicks": 0,
-      "impressions": 18,
-      "ctr": 0,
-      "position": 25.5
-    },
-    "https://calcpromaster.com/finance/emergency-fund": {
-      "clicks": 0,
-      "impressions": 18,
-      "ctr": 0,
-      "position": 26.6
-    },
-    "https://calcpromaster.com/auto/car-affordability/": {
-      "clicks": 0,
-      "impressions": 18,
-      "ctr": 0,
-      "position": 36.9
-    },
-    "https://calcpromaster.com/finance/tax": {
-      "clicks": 0,
-      "impressions": 18,
-      "ctr": 0,
-      "position": 42.6
-    },
-    "https://calcpromaster.com/regional/gold-rate": {
-      "clicks": 0,
-      "impressions": 18,
-      "ctr": 0,
-      "position": 70.4
-    },
-    "https://calcpromaster.com/homegarden/lighting-rooms": {
-      "clicks": 0,
-      "impressions": 18,
-      "ctr": 0,
-      "position": 72.8
-    },
-    "https://calcpromaster.com/embed/": {
-      "clicks": 0,
-      "impressions": 17,
-      "ctr": 0,
-      "position": 2.1
-    },
-    "https://calcpromaster.com/homegarden/garden-fence/": {
-      "clicks": 0,
-      "impressions": 17,
-      "ctr": 0,
-      "position": 7.9
-    },
-    "https://calcpromaster.com/conversion/": {
-      "clicks": 0,
-      "impressions": 17,
-      "ctr": 0,
-      "position": 8.8
-    },
-    "https://calcpromaster.com/homegarden/raised-bed-soil/": {
-      "clicks": 0,
-      "impressions": 17,
-      "ctr": 0,
-      "position": 9.7
-    },
-    "https://calcpromaster.com/construction/drywall-screws": {
-      "clicks": 0,
-      "impressions": 17,
-      "ctr": 0,
-      "position": 12.3
-    },
-    "https://calcpromaster.com/finance/tax-loss-harvest/": {
-      "clicks": 0,
-      "impressions": 17,
-      "ctr": 0,
-      "position": 16.3
-    },
-    "https://calcpromaster.com/health/waist-height-ratio/": {
-      "clicks": 0,
-      "impressions": 17,
-      "ctr": 0,
-      "position": 19.1
-    },
-    "https://calcpromaster.com/math/inverse-variation/": {
-      "clicks": 0,
-      "impressions": 17,
-      "ctr": 0,
-      "position": 24
-    },
-    "https://calcpromaster.com/fitness/swim-pace": {
-      "clicks": 0,
-      "impressions": 17,
-      "ctr": 0,
-      "position": 29.8
-    },
-    "https://calcpromaster.com/construction/roof-pitch/": {
-      "clicks": 0,
-      "impressions": 17,
-      "ctr": 0,
-      "position": 31.9
-    },
-    "https://calcpromaster.com/auto/trade-in-value/": {
-      "clicks": 0,
-      "impressions": 17,
-      "ctr": 0,
-      "position": 46.3
-    },
-    "https://calcpromaster.com/everyday/grocery-budget": {
-      "clicks": 0,
-      "impressions": 17,
-      "ctr": 0,
-      "position": 46.5
-    },
-    "https://calcpromaster.com/fitness/grip-strength": {
-      "clicks": 0,
-      "impressions": 17,
-      "ctr": 0,
-      "position": 67.2
-    },
-    "https://calcpromaster.com/finance/risk-reward-ratio/": {
-      "clicks": 0,
-      "impressions": 17,
-      "ctr": 0,
-      "position": 80.5
-    },
-    "https://calcpromaster.com/everyday/laundry-cost/": {
-      "clicks": 0,
-      "impressions": 16,
-      "ctr": 0,
-      "position": 12.1
-    },
-    "https://calcpromaster.com/homegarden/plant-spacing/": {
-      "clicks": 0,
-      "impressions": 16,
-      "ctr": 0,
-      "position": 15.6
-    },
-    "https://calcpromaster.com/homegarden/rain-barrel/": {
-      "clicks": 0,
-      "impressions": 16,
-      "ctr": 0,
-      "position": 15.6
-    },
-    "https://calcpromaster.com/construction/post-hole-concrete": {
-      "clicks": 0,
-      "impressions": 16,
-      "ctr": 0,
-      "position": 30.5
-    },
-    "https://calcpromaster.com/homegarden/countertop-sqft": {
-      "clicks": 0,
-      "impressions": 16,
-      "ctr": 0,
-      "position": 33.8
-    },
-    "https://calcpromaster.com/health/calorie/": {
-      "clicks": 0,
-      "impressions": 16,
-      "ctr": 0,
-      "position": 34.4
-    },
-    "https://calcpromaster.com/guides/currency-conversion": {
-      "clicks": 0,
-      "impressions": 16,
-      "ctr": 0,
-      "position": 52.4
-    },
-    "https://calcpromaster.com/tech/wifi-throughput/": {
-      "clicks": 0,
-      "impressions": 16,
-      "ctr": 0,
-      "position": 54.3
-    },
-    "https://calcpromaster.com/tech/data-transfer-cost/": {
-      "clicks": 0,
-      "impressions": 16,
-      "ctr": 0,
-      "position": 61.6
-    },
-    "https://calcpromaster.com/engineering/ups-sizing/": {
-      "clicks": 0,
-      "impressions": 16,
-      "ctr": 0,
-      "position": 65.6
-    },
-    "https://calcpromaster.com/engineering/kva-kw/": {
-      "clicks": 0,
-      "impressions": 16,
-      "ctr": 0,
-      "position": 71.6
-    },
-    "https://calcpromaster.com/homegarden/light-bulb-save/": {
-      "clicks": 0,
-      "impressions": 15,
-      "ctr": 0,
-      "position": 5.9
-    },
-    "https://calcpromaster.com/health/chw": {
-      "clicks": 0,
-      "impressions": 15,
-      "ctr": 0,
-      "position": 7.3
-    },
-    "https://calcpromaster.com/auto/delivery-cost/": {
+    "/auto/delivery-cost": {
       "clicks": 0,
       "impressions": 15,
       "ctr": 0,
       "position": 8.3
     },
-    "https://calcpromaster.com/homegarden/plant-spacing": {
-      "clicks": 0,
-      "impressions": 15,
-      "ctr": 0,
-      "position": 8.5
-    },
-    "https://calcpromaster.com/regional/senior-savings-scheme": {
-      "clicks": 0,
-      "impressions": 15,
-      "ctr": 0,
-      "position": 8.8
-    },
-    "https://calcpromaster.com/fitness/situp-test": {
-      "clicks": 0,
-      "impressions": 15,
-      "ctr": 0,
-      "position": 10
-    },
-    "https://calcpromaster.com/finance/dca-calculator": {
-      "clicks": 0,
-      "impressions": 15,
-      "ctr": 0,
-      "position": 11.5
-    },
-    "https://calcpromaster.com/health/sleep-debt": {
-      "clicks": 0,
-      "impressions": 15,
-      "ctr": 0,
-      "position": 14.9
-    },
-    "https://calcpromaster.com/homegarden/light-bulb-save": {
-      "clicks": 0,
-      "impressions": 15,
-      "ctr": 0,
-      "position": 15.9
-    },
-    "https://calcpromaster.com/science/solar-energy": {
-      "clicks": 0,
-      "impressions": 15,
-      "ctr": 0,
-      "position": 19.9
-    },
-    "https://calcpromaster.com/tech/code-line-count/": {
-      "clicks": 0,
-      "impressions": 15,
-      "ctr": 0,
-      "position": 28.4
-    },
-    "https://calcpromaster.com/math/taylor-series/": {
-      "clicks": 0,
-      "impressions": 15,
-      "ctr": 0,
-      "position": 36.2
-    },
-    "https://calcpromaster.com/tech/hash-generator/": {
-      "clicks": 0,
-      "impressions": 15,
-      "ctr": 0,
-      "position": 54.2
-    },
-    "https://calcpromaster.com/family/baby-feeding": {
-      "clicks": 0,
-      "impressions": 14,
-      "ctr": 0,
-      "position": 4.3
-    },
-    "https://calcpromaster.com/finance/coupon-payment": {
-      "clicks": 0,
-      "impressions": 14,
-      "ctr": 0,
-      "position": 8.2
-    },
-    "https://calcpromaster.com/regional/saudi-take-home-salary": {
-      "clicks": 0,
-      "impressions": 14,
-      "ctr": 0,
-      "position": 8.2
-    },
-    "https://calcpromaster.com/science/combined-gas-law/": {
-      "clicks": 0,
-      "impressions": 14,
-      "ctr": 0,
-      "position": 15.5
-    },
-    "https://calcpromaster.com/health/ldl-calculator": {
-      "clicks": 0,
-      "impressions": 14,
-      "ctr": 0,
-      "position": 19
-    },
-    "https://calcpromaster.com/hub/construction/": {
-      "clicks": 0,
-      "impressions": 14,
-      "ctr": 0,
-      "position": 26.1
-    },
-    "https://calcpromaster.com/regional/us-fica/": {
-      "clicks": 0,
-      "impressions": 14,
-      "ctr": 0,
-      "position": 37.4
-    },
-    "https://calcpromaster.com/engineering/inductor/": {
-      "clicks": 0,
-      "impressions": 14,
-      "ctr": 0,
-      "position": 50.1
-    },
-    "https://calcpromaster.com/finance/cost-basis-avg/": {
-      "clicks": 0,
-      "impressions": 14,
-      "ctr": 0,
-      "position": 50.9
-    },
-    "https://calcpromaster.com/science/specific-heat": {
-      "clicks": 0,
-      "impressions": 14,
-      "ctr": 0,
-      "position": 58.9
-    },
-    "https://calcpromaster.com/finance/bond-price/": {
-      "clicks": 0,
-      "impressions": 14,
-      "ctr": 0,
-      "position": 60.4
-    },
-    "https://calcpromaster.com/everyday/grocery-budget/": {
-      "clicks": 0,
-      "impressions": 14,
-      "ctr": 0,
-      "position": 63.4
-    },
-    "https://calcpromaster.com/science/ohms-law/": {
-      "clicks": 0,
-      "impressions": 14,
-      "ctr": 0,
-      "position": 69.6
-    },
-    "https://calcpromaster.com/lifestyle/haircut-annual/": {
-      "clicks": 0,
-      "impressions": 13,
-      "ctr": 0,
-      "position": 6.5
-    },
-    "https://calcpromaster.com/construction/drywall/": {
-      "clicks": 0,
-      "impressions": 13,
-      "ctr": 0,
-      "position": 7.1
-    },
-    "https://calcpromaster.com/math/logarithm/": {
-      "clicks": 0,
-      "impressions": 13,
-      "ctr": 0,
-      "position": 7.3
-    },
-    "https://calcpromaster.com/lifestyle/haircut-annual": {
-      "clicks": 0,
-      "impressions": 13,
-      "ctr": 0,
-      "position": 7.5
-    },
-    "https://calcpromaster.com/family/baby-feeding/": {
-      "clicks": 0,
-      "impressions": 13,
-      "ctr": 0,
-      "position": 9.3
-    },
-    "https://calcpromaster.com/math/binomial-theorem/": {
-      "clicks": 0,
-      "impressions": 13,
-      "ctr": 0,
-      "position": 13.2
-    },
-    "https://calcpromaster.com/hub/fitness/": {
-      "clicks": 0,
-      "impressions": 13,
-      "ctr": 0,
-      "position": 13.3
-    },
-    "https://calcpromaster.com/construction/formwork/": {
-      "clicks": 0,
-      "impressions": 13,
-      "ctr": 0,
-      "position": 14.3
-    },
-    "https://calcpromaster.com/health/health-insurance-copay": {
-      "clicks": 0,
-      "impressions": 13,
-      "ctr": 0,
-      "position": 19.6
-    },
-    "https://calcpromaster.com/construction/drywall-screws/": {
-      "clicks": 0,
-      "impressions": 13,
-      "ctr": 0,
-      "position": 28.2
-    },
-    "https://calcpromaster.com/homegarden/vinyl-flooring/": {
-      "clicks": 0,
-      "impressions": 13,
-      "ctr": 0,
-      "position": 45.3
-    },
-    "https://calcpromaster.com/construction/post-hole-concrete/": {
-      "clicks": 0,
-      "impressions": 13,
-      "ctr": 0,
-      "position": 46.9
-    },
-    "https://calcpromaster.com/homegarden/tv-mount-height": {
-      "clicks": 0,
-      "impressions": 13,
-      "ctr": 0,
-      "position": 59.4
-    },
-    "https://calcpromaster.com/business/employee-cost": {
-      "clicks": 0,
-      "impressions": 13,
-      "ctr": 0,
-      "position": 63
-    },
-    "https://calcpromaster.com/business/project-bid": {
-      "clicks": 0,
-      "impressions": 13,
-      "ctr": 0,
-      "position": 85.6
-    },
-    "https://calcpromaster.com/everyday/jet-lag/": {
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 3.4
-    },
-    "https://calcpromaster.com/finance/zero-coupon-bond": {
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 5.9
-    },
-    "https://calcpromaster.com/tech/ad-revenue": {
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 7.3
-    },
-    "https://calcpromaster.com/education/percentile-rank/": {
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 12.3
-    },
-    "https://calcpromaster.com/science/coulomb/": {
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 12.7
-    },
-    "https://calcpromaster.com/everyday/laundry-cost": {
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 12.8
-    },
-    "https://calcpromaster.com/science/kepler-third/": {
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 14.3
-    },
-    "https://calcpromaster.com/tech/keyword-density": {
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 16.9
-    },
-    "https://calcpromaster.com/everyday/vacation-budget/": {
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 17
-    },
-    "https://calcpromaster.com/fitness/resting-metabolic/": {
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 19.6
-    },
-    "https://calcpromaster.com/everyday/moving-truck/": {
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 20.7
-    },
-    "https://calcpromaster.com/construction/fence/": {
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 21.3
-    },
-    "https://calcpromaster.com/health/maffetone-hr/": {
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 21.9
-    },
-    "https://calcpromaster.com/fitness/weight-loss": {
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 26.1
-    },
-    "https://calcpromaster.com/finance/cap-rate-conv/": {
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 29.3
-    },
-    "https://calcpromaster.com/construction/siding-squares/": {
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 37.2
-    },
-    "https://calcpromaster.com/lifestyle/streaming-value/": {
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 46.1
-    },
-    "https://calcpromaster.com/fitness/swim-pace/": {
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 47.7
-    },
-    "https://calcpromaster.com/health/cholesterol-ratio/": {
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 49.8
-    },
-    "https://calcpromaster.com/business/payback": {
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 62.4
-    },
-    "https://calcpromaster.com/auto/bike-loan": {
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 70.6
-    },
-    "https://calcpromaster.com/health/maintenance-fluids": {
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 72.8
-    },
-    "https://calcpromaster.com/lifestyle/takeout-budget/": {
-      "clicks": 0,
-      "impressions": 11,
-      "ctr": 0,
-      "position": 6
-    },
-    "https://calcpromaster.com/finance/dividend": {
-      "clicks": 0,
-      "impressions": 11,
-      "ctr": 0,
-      "position": 7.1
-    },
-    "https://calcpromaster.com/lifestyle/vacation-savings": {
-      "clicks": 0,
-      "impressions": 11,
-      "ctr": 0,
-      "position": 7.7
-    },
-    "https://calcpromaster.com/science/ideal-gas/": {
-      "clicks": 0,
-      "impressions": 11,
-      "ctr": 0,
-      "position": 8.6
-    },
-    "https://calcpromaster.com/finance/duration-bond": {
-      "clicks": 0,
-      "impressions": 11,
-      "ctr": 0,
-      "position": 12.3
-    },
-    "https://calcpromaster.com/homegarden/humidifier-size/": {
-      "clicks": 0,
-      "impressions": 11,
-      "ctr": 0,
-      "position": 12.5
-    },
-    "https://calcpromaster.com/finance/peg-ratio/": {
-      "clicks": 0,
-      "impressions": 11,
-      "ctr": 0,
-      "position": 24.2
-    },
-    "https://calcpromaster.com/construction/wall-area/": {
-      "clicks": 0,
-      "impressions": 11,
-      "ctr": 0,
-      "position": 30.6
-    },
-    "https://calcpromaster.com/regional/tds-calculator/": {
-      "clicks": 0,
-      "impressions": 11,
-      "ctr": 0,
-      "position": 31.6
-    },
-    "https://calcpromaster.com/health/free-water-deficit/": {
-      "clicks": 0,
-      "impressions": 11,
-      "ctr": 0,
-      "position": 40.3
-    },
-    "https://calcpromaster.com/engineering/steel-weight/": {
-      "clicks": 0,
-      "impressions": 11,
-      "ctr": 0,
-      "position": 46.4
-    },
-    "https://calcpromaster.com/education/class-rank/": {
-      "clicks": 0,
-      "impressions": 11,
-      "ctr": 0,
-      "position": 50.5
-    },
-    "https://calcpromaster.com/tech/ssd-vs-hdd/": {
-      "clicks": 0,
-      "impressions": 11,
-      "ctr": 0,
-      "position": 54.6
-    },
-    "https://calcpromaster.com/construction/concrete-slab": {
-      "clicks": 0,
-      "impressions": 11,
-      "ctr": 0,
-      "position": 57.6
-    },
-    "https://calcpromaster.com/tech/reading-grade/": {
-      "clicks": 0,
-      "impressions": 11,
-      "ctr": 0,
-      "position": 60.1
-    },
-    "https://calcpromaster.com/finance/sharpe-ratio/": {
-      "clicks": 0,
-      "impressions": 11,
-      "ctr": 0,
-      "position": 65.5
-    },
-    "https://calcpromaster.com/tech/screen-resolution/": {
-      "clicks": 0,
-      "impressions": 11,
-      "ctr": 0,
-      "position": 68.3
-    },
-    "https://calcpromaster.com/finance/prorated-rent/": {
-      "clicks": 0,
-      "impressions": 11,
-      "ctr": 0,
-      "position": 75.7
-    },
-    "https://calcpromaster.com/health/ovulation": {
-      "clicks": 0,
-      "impressions": 10,
-      "ctr": 0,
-      "position": 5
-    },
-    "https://calcpromaster.com/lifestyle/gift-split/": {
-      "clicks": 0,
-      "impressions": 10,
-      "ctr": 0,
-      "position": 6.3
-    },
-    "https://calcpromaster.com/math/law-of-cosines/": {
-      "clicks": 0,
-      "impressions": 10,
-      "ctr": 0,
-      "position": 6.3
-    },
-    "https://calcpromaster.com/lifestyle/gift-budget": {
-      "clicks": 0,
-      "impressions": 10,
-      "ctr": 0,
-      "position": 7.4
-    },
-    "https://calcpromaster.com/health/maffetone-hr": {
-      "clicks": 0,
-      "impressions": 10,
-      "ctr": 0,
-      "position": 7.6
-    },
-    "https://calcpromaster.com/regional/stamp-duty/": {
-      "clicks": 0,
-      "impressions": 10,
-      "ctr": 0,
-      "position": 18.6
-    },
-    "https://calcpromaster.com/auto/hybrid-savings/": {
-      "clicks": 0,
-      "impressions": 10,
-      "ctr": 0,
-      "position": 19.1
-    },
-    "https://calcpromaster.com/health/burn-severity/": {
-      "clicks": 0,
-      "impressions": 10,
-      "ctr": 0,
-      "position": 26
-    },
-    "https://calcpromaster.com/tech/audio-file-size": {
-      "clicks": 0,
-      "impressions": 10,
-      "ctr": 0,
-      "position": 27.1
-    },
-    "https://calcpromaster.com/tech/password-time/": {
-      "clicks": 0,
-      "impressions": 10,
-      "ctr": 0,
-      "position": 27.8
-    },
-    "https://calcpromaster.com/finance/roommate-rent-split": {
-      "clicks": 0,
-      "impressions": 10,
-      "ctr": 0,
-      "position": 32.7
-    },
-    "https://calcpromaster.com/regional/senior-savings-scheme/": {
-      "clicks": 0,
-      "impressions": 10,
-      "ctr": 0,
-      "position": 33
-    },
-    "https://calcpromaster.com/lifestyle/candle-wax": {
-      "clicks": 0,
-      "impressions": 10,
-      "ctr": 0,
-      "position": 34.9
-    },
-    "https://calcpromaster.com/tech/ad-revenue/": {
-      "clicks": 0,
-      "impressions": 10,
-      "ctr": 0,
-      "position": 39.5
-    },
-    "https://calcpromaster.com/auto/tow-capacity/": {
-      "clicks": 0,
-      "impressions": 10,
-      "ctr": 0,
-      "position": 46.6
-    },
-    "https://calcpromaster.com/everyday/currency-exchange": {
-      "clicks": 0,
-      "impressions": 10,
-      "ctr": 0,
-      "position": 51.8
-    },
-    "https://calcpromaster.com/math/ratio/": {
-      "clicks": 0,
-      "impressions": 10,
-      "ctr": 0,
-      "position": 52.4
-    },
-    "https://calcpromaster.com/regional/gold-silver": {
-      "clicks": 0,
-      "impressions": 10,
-      "ctr": 0,
-      "position": 53
-    },
-    "https://calcpromaster.com/health/ideal-weight/": {
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 7.6
-    },
-    "https://calcpromaster.com/finance/appreciation-forecast": {
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 9.2
-    },
-    "https://calcpromaster.com/homegarden/deck-post/": {
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 9.2
-    },
-    "https://calcpromaster.com/guides/random-numbers": {
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 9.7
-    },
-    "https://calcpromaster.com/everyday/gst": {
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 11.9
-    },
-    "https://calcpromaster.com/science/grahams-law/": {
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 12.7
-    },
-    "https://calcpromaster.com/math/completing-square/": {
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 13.7
-    },
-    "https://calcpromaster.com/tech/storage-need": {
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 15.3
-    },
-    "https://calcpromaster.com/math/quadratic/": {
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 17.8
-    },
-    "https://calcpromaster.com/finance/payroll-tax/": {
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 21.9
-    },
-    "https://calcpromaster.com/construction/insulation/": {
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 24.7
-    },
-    "https://calcpromaster.com/health/qtc/": {
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 25.7
-    },
-    "https://calcpromaster.com/homegarden/firewood/": {
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 34.2
-    },
-    "https://calcpromaster.com/guides/auto": {
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 40.1
-    },
-    "https://calcpromaster.com/homegarden/lawn-watering": {
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 41.2
-    },
-    "https://calcpromaster.com/business/employee-cost/": {
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 57
-    },
-    "https://calcpromaster.com/health/anion-gap/": {
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 57.2
-    },
-    "https://calcpromaster.com/education/reading-speed/": {
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 58.1
-    },
-    "https://calcpromaster.com/education/reading-time": {
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 59.3
-    },
-    "https://calcpromaster.com/guides/sleep-cycles": {
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 60
-    },
-    "https://calcpromaster.com/everyday/fitness-age/": {
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 67
-    },
-    "https://calcpromaster.com/lifestyle/paint-coverage": {
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 69.2
-    },
-    "https://calcpromaster.com/engineering/thermal/": {
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 77.2
-    },
-    "https://calcpromaster.com/auto/car-rental/": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 4.9
-    },
-    "https://calcpromaster.com/everyday/carbon/": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 5.5
-    },
-    "https://calcpromaster.com/auto/car-depreciation/": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 6.8
-    },
-    "https://calcpromaster.com/hub/education/": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 8.1
-    },
-    "https://calcpromaster.com/tech/streaming-bitrate/": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 8.1
-    },
-    "https://calcpromaster.com/everyday/moon-phase/": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 11.5
-    },
-    "https://calcpromaster.com/education/course-load/": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 12.1
-    },
-    "https://calcpromaster.com/math/mean-median-mode/": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 12.9
-    },
-    "https://calcpromaster.com/guides/age": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 18
-    },
-    "https://calcpromaster.com/math/matrix-inverse/": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 18
-    },
-    "https://calcpromaster.com/fitness/squat-standards/": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 18.4
-    },
-    "https://calcpromaster.com/construction/formwork": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 25.9
-    },
-    "https://calcpromaster.com/hub/business/": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 30
-    },
-    "https://calcpromaster.com/finance/insurance-surrender-value/": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 33.4
-    },
-    "https://calcpromaster.com/fitness/calories-burned": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 35.3
-    },
-    "https://calcpromaster.com/auto/ev-charger-roi/": {
+    "/auto/ev-charger-roi": {
       "clicks": 0,
       "impressions": 8,
       "ctr": 0,
       "position": 37.6
     },
-    "https://calcpromaster.com/homegarden/cabinet-door/": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 40.4
-    },
-    "https://calcpromaster.com/fitness/steps-to-distance/": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 40.6
-    },
-    "https://calcpromaster.com/homegarden/tv-mount-height/": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 40.9
-    },
-    "https://calcpromaster.com/conversion/data-storage": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 42.9
-    },
-    "https://calcpromaster.com/construction/flooring": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 44.3
-    },
-    "https://calcpromaster.com/homegarden/fertilizer/": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 59.5
-    },
-    "https://calcpromaster.com/science/potential-energy/": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 63.5
-    },
-    "https://calcpromaster.com/auto/hybrid-savings": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 73.1
-    },
-    "https://calcpromaster.com/regional/esic-calculator/": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 80
-    },
-    "https://calcpromaster.com/construction/conduit-fill/": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 83.1
-    },
-    "https://calcpromaster.com/finance/amortization/": {
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 87.5
-    },
-    "https://calcpromaster.com/guides/sip": {
-      "clicks": 0,
-      "impressions": 7,
-      "ctr": 0,
-      "position": 7
-    },
-    "https://calcpromaster.com/auto/scooter-cost/": {
-      "clicks": 0,
-      "impressions": 7,
-      "ctr": 0,
-      "position": 8.6
-    },
-    "https://calcpromaster.com/lifestyle/candle-wax/": {
-      "clicks": 0,
-      "impressions": 7,
-      "ctr": 0,
-      "position": 9.7
-    },
-    "https://calcpromaster.com/science/debroglie/": {
-      "clicks": 0,
-      "impressions": 7,
-      "ctr": 0,
-      "position": 10
-    },
-    "https://calcpromaster.com/everyday/electricity": {
-      "clicks": 0,
-      "impressions": 7,
-      "ctr": 0,
-      "position": 18.4
-    },
-    "https://calcpromaster.com/regional/gratuity/": {
-      "clicks": 0,
-      "impressions": 7,
-      "ctr": 0,
-      "position": 18.9
-    },
-    "https://calcpromaster.com/tech/monitor-refresh/": {
-      "clicks": 0,
-      "impressions": 7,
-      "ctr": 0,
-      "position": 28
-    },
-    "https://calcpromaster.com/health/fatigue-score/": {
-      "clicks": 0,
-      "impressions": 7,
-      "ctr": 0,
-      "position": 28.3
-    },
-    "https://calcpromaster.com/math/rms/": {
-      "clicks": 0,
-      "impressions": 7,
-      "ctr": 0,
-      "position": 28.3
-    },
-    "https://calcpromaster.com/health/vaccination-schedule/": {
-      "clicks": 0,
-      "impressions": 7,
-      "ctr": 0,
-      "position": 32
-    },
-    "https://calcpromaster.com/science/centripetal/": {
-      "clicks": 0,
-      "impressions": 7,
-      "ctr": 0,
-      "position": 32.6
-    },
-    "https://calcpromaster.com/health/vitamin-d-dosage/": {
-      "clicks": 0,
-      "impressions": 7,
-      "ctr": 0,
-      "position": 33.9
-    },
-    "https://calcpromaster.com/food/fiber-need": {
-      "clicks": 0,
-      "impressions": 7,
-      "ctr": 0,
-      "position": 41
-    },
-    "https://calcpromaster.com/construction/concrete-slab/": {
-      "clicks": 0,
-      "impressions": 7,
-      "ctr": 0,
-      "position": 50.1
-    },
-    "https://calcpromaster.com/tech/uptime-calculator/": {
-      "clicks": 0,
-      "impressions": 7,
-      "ctr": 0,
-      "position": 70.7
-    },
-    "https://calcpromaster.com/finance/debt-ratio/": {
-      "clicks": 0,
-      "impressions": 7,
-      "ctr": 0,
-      "position": 82
-    },
-    "https://calcpromaster.com/homegarden/home-sqft": {
-      "clicks": 0,
-      "impressions": 7,
-      "ctr": 0,
-      "position": 91.6
-    },
-    "https://calcpromaster.com/construction/asphalt-quantity": {
-      "clicks": 0,
-      "impressions": 7,
-      "ctr": 0,
-      "position": 100.6
-    },
-    "https://calcpromaster.com/tech/typing-speed": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 5.8
-    },
-    "https://calcpromaster.com/family/family-meal-cost/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 6
-    },
-    "https://calcpromaster.com/construction/scaffolding/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 6.2
-    },
-    "https://calcpromaster.com/tech/url-encoder/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 6.8
-    },
-    "https://calcpromaster.com/finance/t-bill": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 7.7
-    },
-    "https://calcpromaster.com/tech/wifi-channels/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 7.7
-    },
-    "https://calcpromaster.com/everyday/poker-flush/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 7.8
-    },
-    "https://calcpromaster.com/finance/seller-net": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 7.8
-    },
-    "https://calcpromaster.com/fitness/sports-calories/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 8.2
-    },
-    "https://calcpromaster.com/math/binomial-prob/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 8.2
-    },
-    "https://calcpromaster.com/guides/lifestyle": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 8.3
-    },
-    "https://calcpromaster.com/education/plagiarism-check/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 8.8
-    },
-    "https://calcpromaster.com/education/financial-need/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 9.7
-    },
-    "https://calcpromaster.com/finance/social-security/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 11.7
-    },
-    "https://calcpromaster.com/science/freezing-depression/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 16.8
-    },
-    "https://calcpromaster.com/lifestyle/french-press-ratio/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 17
-    },
-    "https://calcpromaster.com/finance/quick-ratio/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 18
-    },
-    "https://calcpromaster.com/finance/market-cap/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 18.5
-    },
-    "https://calcpromaster.com/homegarden/deck-post": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 18.7
-    },
-    "https://calcpromaster.com/fitness/pushup-test/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 19.7
-    },
-    "https://calcpromaster.com/construction/sod": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 21.2
-    },
-    "https://calcpromaster.com/health/trimester-date/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 21.2
-    },
-    "https://calcpromaster.com/homegarden/kitchen-remodel": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 22.8
-    },
-    "https://calcpromaster.com/regional/epf-calculator/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 27.8
-    },
-    "https://calcpromaster.com/regional/uae-vat/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 28
-    },
-    "https://calcpromaster.com/guides/fuel-cost": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 28.7
-    },
-    "https://calcpromaster.com/homegarden/kitchen-remodel/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 29.3
-    },
-    "https://calcpromaster.com/health/sleep-debt/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 29.7
-    },
-    "https://calcpromaster.com/regional/fd-calculator": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 34
-    },
-    "https://calcpromaster.com/finance/payback-period": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 34.8
-    },
-    "https://calcpromaster.com/tech/latency-bandwidth/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 36.3
-    },
-    "https://calcpromaster.com/health/iron-intake": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 40.8
-    },
-    "https://calcpromaster.com/career/us-priority-date/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 47.2
-    },
-    "https://calcpromaster.com/regional/zakat-calculator": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 61.7
-    },
-    "https://calcpromaster.com/regional/ireland-take-home-salary/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 65.2
-    },
-    "https://calcpromaster.com/science/energy-mass/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 66.2
-    },
-    "https://calcpromaster.com/construction/water-tank": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 68
-    },
-    "https://calcpromaster.com/homegarden/sprinkler-heads/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 71.3
-    },
-    "https://calcpromaster.com/finance/cost-basis-avg": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 72.8
-    },
-    "https://calcpromaster.com/homegarden/lighting-rooms/": {
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 79.8
-    },
-    "https://calcpromaster.com/finance/loan-qualify": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 2.8
-    },
-    "https://calcpromaster.com/family/school-supplies/": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 4.2
-    },
-    "https://calcpromaster.com/finance/tip": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 4.4
-    },
-    "https://calcpromaster.com/hub/math": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 5.2
-    },
-    "https://calcpromaster.com/blog/": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 5.8
-    },
-    "https://calcpromaster.com/hub/math/": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 5.8
-    },
-    "https://calcpromaster.com/finance/eps-calculator": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 6.6
-    },
-    "https://calcpromaster.com/fitness/race-predictor/": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 6.8
-    },
-    "https://calcpromaster.com/health/total-body-water": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 8
-    },
-    "https://calcpromaster.com/blog/how-emi-works": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 8.4
-    },
-    "https://calcpromaster.com/lifestyle/rental-deposit/": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 12.4
-    },
-    "https://calcpromaster.com/fitness/beep-test": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 13.2
-    },
-    "https://calcpromaster.com/everyday/leap-year/": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 14
-    },
-    "https://calcpromaster.com/regional/lpg-cost/": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 14.2
-    },
-    "https://calcpromaster.com/fitness/overhead-standards": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 15
-    },
-    "https://calcpromaster.com/food/unit-converter-food": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 17.6
-    },
-    "https://calcpromaster.com/regional/gold-rate-pk/": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 18.6
-    },
-    "https://calcpromaster.com/finance/ibond-value": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 19.4
-    },
-    "https://calcpromaster.com/fitness/rpe-load/": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 21.2
-    },
-    "https://calcpromaster.com/finance/margin-call": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 21.6
-    },
-    "https://calcpromaster.com/fitness/plank-test/": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 33
-    },
-    "https://calcpromaster.com/regional/gst-india/": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 33.4
-    },
-    "https://calcpromaster.com/homegarden/water-heater": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 34.8
-    },
-    "https://calcpromaster.com/regional/gold-silver-ratio/": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 35.8
-    },
-    "https://calcpromaster.com/utilities/dice-roller/": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 35.8
-    },
-    "https://calcpromaster.com/everyday/currency-exchange/": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 36
-    },
-    "https://calcpromaster.com/finance/529-plan": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 36.4
-    },
-    "https://calcpromaster.com/everyday/garden": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 38
-    },
-    "https://calcpromaster.com/lifestyle/grocery-budget-optimizer": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 42.6
-    },
-    "https://calcpromaster.com/everyday/day-of-week/": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 44.4
-    },
-    "https://calcpromaster.com/everyday/easter-date/": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 49.8
-    },
-    "https://calcpromaster.com/science/wavelength/": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 51.2
-    },
-    "https://calcpromaster.com/construction/block-wall/": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 58.2
-    },
-    "https://calcpromaster.com/regional/capital-gains-india/": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 58.6
-    },
-    "https://calcpromaster.com/business/cac-payback": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 73.2
-    },
-    "https://calcpromaster.com/tech/website-cost/": {
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 94
-    },
-    "https://calcpromaster.com/math/factorial/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 4
-    },
-    "https://calcpromaster.com/fitness/treadmill-pace/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 5.3
-    },
-    "https://calcpromaster.com/guides/gpa": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 5.3
-    },
-    "https://calcpromaster.com/lifestyle/wine-servings": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 5.3
-    },
-    "https://calcpromaster.com/tech/cidr-convert/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 5.5
-    },
-    "https://calcpromaster.com/construction/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 6
-    },
-    "https://calcpromaster.com/everyday/timezone/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 6.5
-    },
-    "https://calcpromaster.com/lifestyle/gym-cost-per-visit": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 6.8
-    },
-    "https://calcpromaster.com/fitness/race-predictor": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 7
-    },
-    "https://calcpromaster.com/finance/529-plan/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 7.5
-    },
-    "https://calcpromaster.com/finance/ebitda": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 7.8
-    },
-    "https://calcpromaster.com/lifestyle/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 8
-    },
-    "https://calcpromaster.com/family/child-support-split/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 8.5
-    },
-    "https://calcpromaster.com/family/diaper-cost/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 8.5
-    },
-    "https://calcpromaster.com/finance/rent-increase/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 9
-    },
-    "https://calcpromaster.com/fitness/pullup-test": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 9
-    },
-    "https://calcpromaster.com/finance/staking-rewards": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 9.3
-    },
-    "https://calcpromaster.com/lifestyle/party-cost/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 9.8
-    },
-    "https://calcpromaster.com/guides/utilities": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 13.5
-    },
-    "https://calcpromaster.com/finance/graduated-payment": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 14.8
-    },
-    "https://calcpromaster.com/everyday/pomodoro-planner/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 19.3
-    },
-    "https://calcpromaster.com/fitness/calories-burned/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 20
-    },
-    "https://calcpromaster.com/science/latent-heat/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 20.3
-    },
-    "https://calcpromaster.com/lifestyle/baking-scale/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 22.3
-    },
-    "https://calcpromaster.com/fitness/flexibility-score/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 22.8
-    },
-    "https://calcpromaster.com/finance/rule-of-40": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 23.5
-    },
-    "https://calcpromaster.com/everyday/garden/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 25.8
-    },
-    "https://calcpromaster.com/science/bernoulli/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 26.3
-    },
-    "https://calcpromaster.com/guides/engineering": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 26.5
-    },
-    "https://calcpromaster.com/finance/bond-duration": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 26.8
-    },
-    "https://calcpromaster.com/homegarden/appliance-cost/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 30.8
-    },
-    "https://calcpromaster.com/finance/cd-ladder/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 33.5
-    },
-    "https://calcpromaster.com/lifestyle/rental-deposit": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 37.3
-    },
-    "https://calcpromaster.com/lifestyle/cocktail-dilution/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 39.3
-    },
-    "https://calcpromaster.com/math/circle-through-points/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 39.8
-    },
-    "https://calcpromaster.com/hub/finance/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 40.3
-    },
-    "https://calcpromaster.com/health/lean-body-mass/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 46
-    },
-    "https://calcpromaster.com/career/interview-to-offer-tracker/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 46.8
-    },
-    "https://calcpromaster.com/homegarden/furniture-arrange/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 55
-    },
-    "https://calcpromaster.com/homegarden/solar-payback/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 60
-    },
-    "https://calcpromaster.com/health/heart-rate-zones": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 62.8
-    },
-    "https://calcpromaster.com/math/distance-formula/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 64.3
-    },
-    "https://calcpromaster.com/homegarden/home-sqft/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 67.8
-    },
-    "https://calcpromaster.com/fitness/beep-test/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 70.3
-    },
-    "https://calcpromaster.com/fitness/calories-exercise/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 72.8
-    },
-    "https://calcpromaster.com/guides/break-even/": {
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 78.8
-    },
-    "https://calcpromaster.com/health/nap-planner/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 4
-    },
-    "https://calcpromaster.com/math/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 4.3
-    },
-    "https://calcpromaster.com/guides/passwords": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 4.7
-    },
-    "https://calcpromaster.com/construction/lumber-calculator/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 5
-    },
-    "https://calcpromaster.com/regional/zakat-calculator/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 5
-    },
-    "https://calcpromaster.com/auto/fuel-price-compare/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 5.7
-    },
-    "https://calcpromaster.com/guides/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 5.7
-    },
-    "https://calcpromaster.com/finance/effective-tax-rate": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 6
-    },
-    "https://calcpromaster.com/math/nth-root/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 6
-    },
-    "https://calcpromaster.com/education/school-fee-inflation/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 6.3
-    },
-    "https://calcpromaster.com/food/caffeine-daily/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 6.3
-    },
-    "https://calcpromaster.com/hub/utilities/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 6.3
-    },
-    "https://calcpromaster.com/math/scientific/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 6.3
-    },
-    "https://calcpromaster.com/food/alcohol-calories/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 6.7
-    },
-    "https://calcpromaster.com/auto/carpool-savings/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 7
-    },
-    "https://calcpromaster.com/guides/calories/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 7
-    },
-    "https://calcpromaster.com/lifestyle": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 7
-    },
-    "https://calcpromaster.com/career/career-break-runway/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 7.3
-    },
-    "https://calcpromaster.com/everyday/distance-pace/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 7.3
-    },
-    "https://calcpromaster.com/lifestyle/streaming-value": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 7.3
-    },
-    "https://calcpromaster.com/finance/price-to-earnings": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 7.7
-    },
-    "https://calcpromaster.com/construction": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 8
-    },
-    "https://calcpromaster.com/construction/gravel/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 8
-    },
-    "https://calcpromaster.com/guides/regional": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 8
-    },
-    "https://calcpromaster.com/auto/scooter-cost": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 8.3
-    },
-    "https://calcpromaster.com/construction/fence": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 8.3
-    },
-    "https://calcpromaster.com/auto/carpool-savings": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 8.7
-    },
-    "https://calcpromaster.com/business/payback/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 9
-    },
-    "https://calcpromaster.com/finance/stock-split": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 9
-    },
-    "https://calcpromaster.com/guides/break-even": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 9
-    },
-    "https://calcpromaster.com/regional/lpg-cost": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 9
-    },
-    "https://calcpromaster.com/hub/food/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 9.3
-    },
-    "https://calcpromaster.com/education/act-sat-compare/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 9.7
-    },
-    "https://calcpromaster.com/engineering/inductor-energy/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 10.7
-    },
-    "https://calcpromaster.com/guides/retirement": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 11.3
-    },
-    "https://calcpromaster.com/homegarden/appliance-cost": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 14
-    },
-    "https://calcpromaster.com/hub/homegarden/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 14.3
-    },
-    "https://calcpromaster.com/education/quiz-score/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 18.7
-    },
-    "https://calcpromaster.com/food/meat-cooking-time": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 24.7
-    },
-    "https://calcpromaster.com/conversion/data-storage/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 25.7
-    },
-    "https://calcpromaster.com/education/test-average/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 26
-    },
-    "https://calcpromaster.com/everyday/walking-steps/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 26.3
-    },
-    "https://calcpromaster.com/auto/car-depreciation": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 27.7
-    },
-    "https://calcpromaster.com/construction/concrete-column": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 28
-    },
-    "https://calcpromaster.com/math/linear-system/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 28.3
-    },
-    "https://calcpromaster.com/health/target-heart-rate/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 28.7
-    },
-    "https://calcpromaster.com/regional/australia-super/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 28.7
-    },
-    "https://calcpromaster.com/science/cloud-base-lcl/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 28.7
-    },
-    "https://calcpromaster.com/engineering/beam-deflection/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 29.7
-    },
-    "https://calcpromaster.com/everyday/carbon": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 31.7
-    },
-    "https://calcpromaster.com/fitness/vo2-beep/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 31.7
-    },
-    "https://calcpromaster.com/auto/registration-cost/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 32
-    },
-    "https://calcpromaster.com/health/sleep-quality/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 32
-    },
-    "https://calcpromaster.com/guides/food": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 34.3
-    },
-    "https://calcpromaster.com/auto/fuel-tank-range": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 36.3
-    },
-    "https://calcpromaster.com/business/business-roi/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 39.3
-    },
-    "https://calcpromaster.com/regional/malaysia-take-home-salary/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 47
-    },
-    "https://calcpromaster.com/engineering/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 50.3
-    },
-    "https://calcpromaster.com/conversion/thermal-conductivity": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 51.3
-    },
-    "https://calcpromaster.com/regional/electricity-bill-india/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 54.7
-    },
-    "https://calcpromaster.com/family/alimony-estimator/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 55.7
-    },
-    "https://calcpromaster.com/lifestyle/home-renovation": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 55.7
-    },
-    "https://calcpromaster.com/lifestyle/quilt-fabric": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 58
-    },
-    "https://calcpromaster.com/finance/savings-comparison/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 61.3
-    },
-    "https://calcpromaster.com/guides/construction": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 64.3
-    },
-    "https://calcpromaster.com/auto/car-affordability": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 65
-    },
-    "https://calcpromaster.com/lifestyle/road-trip-cost": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 67
-    },
-    "https://calcpromaster.com/everyday/calorie-counter": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 77
-    },
-    "https://calcpromaster.com/math/fibonacci-seq/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 82.3
-    },
-    "https://calcpromaster.com/construction/concrete-column/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 83
-    },
-    "https://calcpromaster.com/finance/free-cash-flow/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 85.3
-    },
-    "https://calcpromaster.com/lifestyle/paint-coverage/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 86.7
-    },
-    "https://calcpromaster.com/tech/token-cost/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 87.3
-    },
-    "https://calcpromaster.com/guides/profit-margin": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 91.3
-    },
-    "https://calcpromaster.com/lifestyle/grocery-budget-optimizer/": {
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 91.7
-    },
-    "https://calcpromaster.com/everyday/gst/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 1
-    },
-    "https://calcpromaster.com/construction/journeyman-wage-progression/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 2
-    },
-    "https://calcpromaster.com/health/ovulation/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 2
-    },
-    "https://calcpromaster.com/finance/forex-pip/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 2.5
-    },
-    "https://calcpromaster.com/guides/debt-ratio": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 2.5
-    },
-    "https://calcpromaster.com/utilities/dice-roller": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 2.5
-    },
-    "https://calcpromaster.com/health/nap-planner": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 3
-    },
-    "https://calcpromaster.com/lifestyle/pet-cost/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 3
-    },
-    "https://calcpromaster.com/conversion/shoe-size/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 4
-    },
-    "https://calcpromaster.com/guides/protein-intake": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 4
-    },
-    "https://calcpromaster.com/finance/net-worth-calculator": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 4.5
-    },
-    "https://calcpromaster.com/education/sat-score": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 5
-    },
-    "https://calcpromaster.com/finance/cash-on-cash/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 5
-    },
-    "https://calcpromaster.com/math/permutation/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 5
-    },
-    "https://calcpromaster.com/science/hooke-law/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 5
-    },
-    "https://calcpromaster.com/auto/car-rental": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 5.5
-    },
-    "https://calcpromaster.com/fitness/training-volume": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 6
-    },
-    "https://calcpromaster.com/regional/tds-calculator": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 6
-    },
-    "https://calcpromaster.com/auto/public-transport": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 6.5
-    },
-    "https://calcpromaster.com/health/ovulation-calculator/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 6.5
-    },
-    "https://calcpromaster.com/conversion": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 7
-    },
-    "https://calcpromaster.com/lifestyle/gift-split": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 7
-    },
-    "https://calcpromaster.com/utilities/base-converter/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 7
-    },
-    "https://calcpromaster.com/finance/growing-perpetuity": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 8
-    },
-    "https://calcpromaster.com/regional/gold-silver/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 8
-    },
-    "https://calcpromaster.com/finance/operating-margin": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 8.5
-    },
-    "https://calcpromaster.com/homegarden/garden-soil/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 8.5
-    },
-    "https://calcpromaster.com/hub/health": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 8.5
-    },
-    "https://calcpromaster.com/lifestyle/baby-cost/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 8.5
-    },
-    "https://calcpromaster.com/lifestyle/travel-daily": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 8.5
-    },
-    "https://calcpromaster.com/regional/pk-income-tax/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 8.5
-    },
-    "https://calcpromaster.com/finance/dca": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 9
-    },
-    "https://calcpromaster.com/fitness/deload-week": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 9
-    },
-    "https://calcpromaster.com/tech/data-center-pue/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 9
-    },
-    "https://calcpromaster.com/conversion/energy/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 9.5
-    },
-    "https://calcpromaster.com/engineering/orifice-flow": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 9.5
-    },
-    "https://calcpromaster.com/finance/recast-mortgage": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 9.5
-    },
-    "https://calcpromaster.com/lifestyle/french-press-ratio": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 9.5
-    },
-    "https://calcpromaster.com/lifestyle/knit-gauge/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 9.5
-    },
-    "https://calcpromaster.com/auto/ride-share-cost/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 10
-    },
-    "https://calcpromaster.com/regional/income-tax-india/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 10
-    },
-    "https://calcpromaster.com/everyday/coffee-cost": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 10.5
-    },
-    "https://calcpromaster.com/finance/late-fee-interest": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 10.5
-    },
-    "https://calcpromaster.com/finance/mortgage-payoff": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 10.5
-    },
-    "https://calcpromaster.com/finance/rent-affordability": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 10.5
-    },
-    "https://calcpromaster.com/finance/reverse-mortgage": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 10.5
-    },
-    "https://calcpromaster.com/health/vitamin-d-dosage": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 10.5
-    },
-    "https://calcpromaster.com/finance/fire/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 11.5
-    },
-    "https://calcpromaster.com/math/triangle/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 12.5
-    },
-    "https://calcpromaster.com/health/sleep": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 13
-    },
-    "https://calcpromaster.com/finance/lump-sum-vs-sip": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 13.5
-    },
-    "https://calcpromaster.com/health/heart-rate-zones/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 22.5
-    },
-    "https://calcpromaster.com/homegarden/garden-soil": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 24
-    },
-    "https://calcpromaster.com/guides/percentage": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 27
-    },
-    "https://calcpromaster.com/conversion/radiation-dose-conv/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 30.5
-    },
-    "https://calcpromaster.com/regional/fd-calculator/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 37
-    },
-    "https://calcpromaster.com/finance/currency-arbitrage/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 37.5
-    },
-    "https://calcpromaster.com/finance/currency-arbitrage": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 39
-    },
-    "https://calcpromaster.com/tech/battery-life-estimator/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 41.5
-    },
-    "https://calcpromaster.com/auto/parking-cost/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 43.5
-    },
-    "https://calcpromaster.com/regional/gold-rate/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 44.5
-    },
-    "https://calcpromaster.com/health/sleep-quality": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 45.5
-    },
-    "https://calcpromaster.com/health/waist-hip/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 46
-    },
-    "https://calcpromaster.com/family/family-budget/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 47
-    },
-    "https://calcpromaster.com/science/wavelength": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 47
-    },
-    "https://calcpromaster.com/guides/ac-size": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 48.5
-    },
-    "https://calcpromaster.com/construction/sod/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 64
-    },
-    "https://calcpromaster.com/education/exam-score-needed/": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 75
-    },
-    "https://calcpromaster.com/regional/stamp-duty-india": {
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 79.5
-    },
-    "https://calcpromaster.com/auto/ev-range/": {
+    "/auto/ev-range": {
       "clicks": 0,
       "impressions": 2,
       "ctr": 0,
       "position": 88.5
     },
-    "https://calcpromaster.com/homegarden/solar-battery/": {
+    "/auto/fuel-price-compare": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 5.3
+    },
+    "/auto/fuel-tank-range": {
+      "clicks": 0,
+      "impressions": 26,
+      "ctr": 0,
+      "position": 20.6
+    },
+    "/auto/hybrid-savings": {
+      "clicks": 0,
+      "impressions": 18,
+      "ctr": 0,
+      "position": 43.1
+    },
+    "/auto/mileage-calculator": {
+      "clicks": 0,
+      "impressions": 103,
+      "ctr": 0,
+      "position": 34.8
+    },
+    "/auto/parking-cost": {
+      "clicks": 0,
+      "impressions": 107,
+      "ctr": 0,
+      "position": 12.8
+    },
+    "/auto/public-transport": {
       "clicks": 0,
       "impressions": 2,
       "ctr": 0,
-      "position": 95.5
+      "position": 6.5
     },
-    "https://calcpromaster.com/education/act-score/": {
+    "/auto/quarter-mile": {
+      "clicks": 0,
+      "impressions": 19,
+      "ctr": 0,
+      "position": 29.4
+    },
+    "/auto/registration-cost": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 32
+    },
+    "/auto/ride-share-cost": {
       "clicks": 0,
       "impressions": 2,
       "ctr": 0,
-      "position": 113
+      "position": 10
     },
-    "https://calcpromaster.com/construction/flooring/": {
+    "/auto/scooter-cost": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 10,
       "ctr": 0,
-      "position": 1
+      "position": 8.5
     },
-    "https://calcpromaster.com/science/specific-heat/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 1
-    },
-    "https://calcpromaster.com/auto/speed-conv/": {
+    "/auto/speed-conv": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 2
     },
-    "https://calcpromaster.com/construction/concrete-bags": {
+    "/auto/taxi-fare": {
+      "clicks": 0,
+      "impressions": 54,
+      "ctr": 0,
+      "position": 36.8
+    },
+    "/auto/toll-cost": {
+      "clicks": 0,
+      "impressions": 23,
+      "ctr": 0,
+      "position": 25.7
+    },
+    "/auto/tow-capacity": {
+      "clicks": 0,
+      "impressions": 48,
+      "ctr": 0,
+      "position": 68.1
+    },
+    "/auto/trade-in-value": {
+      "clicks": 0,
+      "impressions": 85,
+      "ctr": 0,
+      "position": 69.4
+    },
+    "/auto/trip-time": {
+      "clicks": 0,
+      "impressions": 64,
+      "ctr": 0,
+      "position": 16.5
+    },
+    "/blog": {
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 5.8
+    },
+    "/blog/ev-vs-petrol-tco": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    "/blog/how-emi-works": {
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 8.4
+    },
+    "/business": {
+      "clicks": 0,
+      "impressions": 55,
+      "ctr": 0,
+      "position": 35.5
+    },
+    "/business/business-roi": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 39.3
+    },
+    "/business/cac": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    "/business/cac-payback": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 62.2
+    },
+    "/business/depreciation": {
+      "clicks": 0,
+      "impressions": 65,
+      "ctr": 0,
+      "position": 33.7
+    },
+    "/business/employee-cost": {
+      "clicks": 0,
+      "impressions": 22,
+      "ctr": 0,
+      "position": 60.5
+    },
+    "/business/payback": {
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0,
+      "position": 51.7
+    },
+    "/business/project-bid": {
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 85.6
+    },
+    "/business/roas": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    "/career": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 51
+    },
+    "/career/ats-resume-score": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    "/career/australia-pr-points": {
+      "clicks": 0,
+      "impressions": 65,
+      "ctr": 0,
+      "position": 90.9
+    },
+    "/career/career-break-runway": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 7.3
+    },
+    "/career/interview-to-offer-tracker": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 46.8
+    },
+    "/career/salary-negotiation-range": {
+      "clicks": 0,
+      "impressions": 37,
+      "ctr": 0,
+      "position": 10.1
+    },
+    "/career/us-priority-date": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 47.2
+    },
+    "/construction": {
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 7.2
+    },
+    "/construction/asphalt-quantity": {
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 100.6
+    },
+    "/construction/block-wall": {
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 58.2
+    },
+    "/construction/carpet": {
+      "clicks": 0,
+      "impressions": 53,
+      "ctr": 0,
+      "position": 14.2
+    },
+    "/construction/concrete-bags": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 2
     },
-    "https://calcpromaster.com/everyday/moon-phase": {
+    "/construction/concrete-column": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 6,
       "ctr": 0,
-      "position": 2
+      "position": 55.5
     },
-    "https://calcpromaster.com/finance/debt-consolidation": {
+    "/construction/concrete-slab": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 19,
       "ctr": 0,
-      "position": 2
+      "position": 52.3
     },
-    "https://calcpromaster.com/lifestyle/travel-daily/": {
+    "/construction/conduit-fill": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 8,
       "ctr": 0,
-      "position": 2
+      "position": 83.1
     },
-    "https://calcpromaster.com/science/": {
+    "/construction/drywall-screws": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 30,
       "ctr": 0,
-      "position": 3
+      "position": 19.2
     },
-    "https://calcpromaster.com/auto/fuel-price-compare": {
+    "/construction/drywall": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 13,
       "ctr": 0,
-      "position": 4
+      "position": 7.1
     },
-    "https://calcpromaster.com/business/roas/": {
+    "/construction/fence": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 15,
       "ctr": 0,
-      "position": 4
+      "position": 18.7
     },
-    "https://calcpromaster.com/everyday/weather/": {
+    "/construction/flooring": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 9,
       "ctr": 0,
-      "position": 4
+      "position": 39.5
     },
-    "https://calcpromaster.com/family/childcare-cost": {
+    "/construction/formwork": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 21,
       "ctr": 0,
-      "position": 4
+      "position": 18.7
     },
-    "https://calcpromaster.com/finance/risk-reward-ratio": {
+    "/construction/gravel": {
       "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 4
-    },
-    "https://calcpromaster.com/fitness/overhead-standards/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 4
-    },
-    "https://calcpromaster.com/fitness/training-max": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 4
-    },
-    "https://calcpromaster.com/lifestyle/hourly-annual-salary/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 4
-    },
-    "https://calcpromaster.com/science/electric-field/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 4
-    },
-    "https://calcpromaster.com/utilities/simple-tax": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 4
-    },
-    "https://calcpromaster.com/blog/ev-vs-petrol-tco": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 5
-    },
-    "https://calcpromaster.com/career/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 5
-    },
-    "https://calcpromaster.com/education/grade-needed/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 5
-    },
-    "https://calcpromaster.com/fitness/max-heart-rate/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 5
-    },
-    "https://calcpromaster.com/food/unit-converter-food/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 5
-    },
-    "https://calcpromaster.com/health/waist-hip": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 5
-    },
-    "https://calcpromaster.com/lifestyle/takeout-budget": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 5
-    },
-    "https://calcpromaster.com/regional/pk-income-tax": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 5
-    },
-    "https://calcpromaster.com/science/radioactive-decay/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 5
-    },
-    "https://calcpromaster.com/everyday/weather": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 6
-    },
-    "https://calcpromaster.com/fitness/pushup-test": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 6
-    },
-    "https://calcpromaster.com/hub/career": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 6
-    },
-    "https://calcpromaster.com/hub/lifestyle": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 6
-    },
-    "https://calcpromaster.com/math/random-generator/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 6
-    },
-    "https://calcpromaster.com/regional/sip-return/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 6
-    },
-    "https://calcpromaster.com/business/cac": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 7
-    },
-    "https://calcpromaster.com/business/cac-payback/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 7
-    },
-    "https://calcpromaster.com/education/college-cost-planner": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 7
-    },
-    "https://calcpromaster.com/everyday/electricity/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 7
-    },
-    "https://calcpromaster.com/family/baby-formula": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 7
-    },
-    "https://calcpromaster.com/finance/quick-ratio": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 7
-    },
-    "https://calcpromaster.com/health/vaccination-schedule": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 7
-    },
-    "https://calcpromaster.com/homegarden": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 7
-    },
-    "https://calcpromaster.com/lifestyle/pet-boarding-cost/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 7
-    },
-    "https://calcpromaster.com/regional/qurbani-cost/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 7
-    },
-    "https://calcpromaster.com/science/speed-of-sound": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 7
-    },
-    "https://calcpromaster.com/tech/device-charge-time/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 7
-    },
-    "https://calcpromaster.com/fitness/one-rep-max/": {
-      "clicks": 0,
-      "impressions": 1,
+      "impressions": 3,
       "ctr": 0,
       "position": 8
     },
-    "https://calcpromaster.com/tech/text-counter/": {
+    "/construction/gutter": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 30,
       "ctr": 0,
-      "position": 8
+      "position": 9.7
     },
-    "https://calcpromaster.com/career/ats-resume-score/": {
+    "/construction/journeyman-wage-progression": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 9
+      "position": 2
     },
-    "https://calcpromaster.com/construction/retaining-wall/": {
+    "/construction/lumber-calculator": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 3,
       "ctr": 0,
-      "position": 9
+      "position": 5
     },
-    "https://calcpromaster.com/everyday/easter-date": {
+    "/construction/pipe-volume": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 73,
       "ctr": 0,
-      "position": 9
+      "position": 53.3
     },
-    "https://calcpromaster.com/everyday/event-countdown": {
+    "/construction/post-hole-concrete": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 29,
       "ctr": 0,
-      "position": 9
+      "position": 37.8
     },
-    "https://calcpromaster.com/finance/australia-income-tax/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 9
-    },
-    "https://calcpromaster.com/finance/esop": {
+    "/construction/retaining-wall": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 9
     },
-    "https://calcpromaster.com/finance/position-size": {
+    "/construction/roof-pitch": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 17,
       "ctr": 0,
-      "position": 9
+      "position": 31.9
     },
-    "https://calcpromaster.com/fitness/bench-standards/": {
+    "/construction/scaffolding": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 6,
       "ctr": 0,
-      "position": 9
+      "position": 6.2
     },
-    "https://calcpromaster.com/fitness/rpe-load": {
+    "/construction/siding-squares": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 12,
       "ctr": 0,
-      "position": 9
+      "position": 37.2
     },
-    "https://calcpromaster.com/guides/career": {
+    "/construction/sod": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 8,
       "ctr": 0,
-      "position": 9
+      "position": 31.9
     },
-    "https://calcpromaster.com/math/linear-system": {
+    "/construction/wall-area": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 11,
       "ctr": 0,
-      "position": 9
+      "position": 30.5
     },
-    "https://calcpromaster.com/math/variance-sd/": {
+    "/construction/water-tank": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 46,
       "ctr": 0,
-      "position": 9
+      "position": 64.4
     },
-    "https://calcpromaster.com/tech/wifi-channels": {
+    "/conversion": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 19,
       "ctr": 0,
-      "position": 9
+      "position": 8.6
     },
-    "https://calcpromaster.com/everyday/event-countdown/": {
+    "/conversion/data-storage": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 11,
       "ctr": 0,
-      "position": 10
+      "position": 38.2
     },
-    "https://calcpromaster.com/finance/bonds": {
+    "/conversion/energy": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 10
+      "position": 9.5
     },
-    "https://calcpromaster.com/finance/cagr/": {
+    "/conversion/radiation-dose-conv": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 10
+      "position": 30.5
     },
-    "https://calcpromaster.com/finance/savings-comparison": {
+    "/conversion/shoe-size": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 10
+      "position": 4
     },
-    "https://calcpromaster.com/food/recipe-scaler/": {
+    "/conversion/thermal-conductivity": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 3,
       "ctr": 0,
-      "position": 10
+      "position": 51.3
     },
-    "https://calcpromaster.com/health/winters-formula": {
+    "/conversion/wire-gauge-conv": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 133,
       "ctr": 0,
-      "position": 10
+      "position": 70.3
     },
-    "https://calcpromaster.com/science/orbital-velocity/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 10
-    },
-    "https://calcpromaster.com/fitness/pullup-test/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 11
-    },
-    "https://calcpromaster.com/food/fiber-need/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 11
-    },
-    "https://calcpromaster.com/health/calorie-burn": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 11
-    },
-    "https://calcpromaster.com/math/prime-factor/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 12
-    },
-    "https://calcpromaster.com/homegarden/porch-light/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 13
-    },
-    "https://calcpromaster.com/hub/health/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 13
-    },
-    "https://calcpromaster.com/regional/epf-calculator": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 13
-    },
-    "https://calcpromaster.com/finance/pension-lump-sum": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 15
-    },
-    "https://calcpromaster.com/hub/engineering/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 18
-    },
-    "https://calcpromaster.com/finance/wacc": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 24
-    },
-    "https://calcpromaster.com/tech/docker-resource/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 24
-    },
-    "https://calcpromaster.com/finance/uk-income-tax/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 26
-    },
-    "https://calcpromaster.com/finance/convexity/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 28
-    },
-    "https://calcpromaster.com/everyday/pet-age": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 29
-    },
-    "https://calcpromaster.com/hub/lifestyle/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 29
-    },
-    "https://calcpromaster.com/finance/discounted-payback/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 33
-    },
-    "https://calcpromaster.com/lifestyle/date-night-cost/": {
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 34
-    },
-    "https://calcpromaster.com/disclaimer-finance": {
+    "/disclaimer-finance": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 36
     },
-    "https://calcpromaster.com/fitness/deload-week/": {
+    "/education/act-sat-compare": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9.7
+    },
+    "/education/act-score": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 113
+    },
+    "/education/attendance-rate": {
+      "clicks": 0,
+      "impressions": 24,
+      "ctr": 0,
+      "position": 11.4
+    },
+    "/education/citation-count": {
+      "clicks": 0,
+      "impressions": 37,
+      "ctr": 0,
+      "position": 43.4
+    },
+    "/education/class-rank": {
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 50.5
+    },
+    "/education/college-cost-planner": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 40
+      "position": 7
     },
-    "https://calcpromaster.com/everyday/business-days": {
+    "/education/course-load": {
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 12.1
+    },
+    "/education/exam-score-needed": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 75
+    },
+    "/education/financial-need": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 9.7
+    },
+    "/education/gpa-target": {
+      "clicks": 0,
+      "impressions": 24,
+      "ctr": 0,
+      "position": 31.5
+    },
+    "/education/gpa": {
+      "clicks": 0,
+      "impressions": 65,
+      "ctr": 0,
+      "position": 34.7
+    },
+    "/education/grade-needed": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 41
+      "position": 5
     },
-    "https://calcpromaster.com/utilities/timer-calc": {
+    "/education/percentile-rank": {
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 12.3
+    },
+    "/education/plagiarism-check": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 8.8
+    },
+    "/education/presentation-time": {
+      "clicks": 0,
+      "impressions": 109,
+      "ctr": 0,
+      "position": 8.3
+    },
+    "/education/quiz-score": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 18.7
+    },
+    "/education/reading-speed": {
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 58.1
+    },
+    "/education/reading-time": {
+      "clicks": 0,
+      "impressions": 32,
+      "ctr": 0,
+      "position": 63.4
+    },
+    "/education/sat-score": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5
+    },
+    "/education/school-fee-inflation": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 6.3
+    },
+    "/education/study-break": {
+      "clicks": 0,
+      "impressions": 19,
+      "ctr": 0,
+      "position": 7.1
+    },
+    "/education/test-average": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 26
+    },
+    "/education/tuition-cost": {
+      "clicks": 0,
+      "impressions": 200,
+      "ctr": 0,
+      "position": 5.5
+    },
+    "/embed": {
+      "clicks": 0,
+      "impressions": 21,
+      "ctr": 0,
+      "position": 2
+    },
+    "/engineering": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 50.3
+    },
+    "/engineering/beam-deflection": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 29.7
+    },
+    "/engineering/inductor-energy": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 10.7
+    },
+    "/engineering/inductor": {
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0,
+      "position": 50.1
+    },
+    "/engineering/kva-kw": {
+      "clicks": 0,
+      "impressions": 16,
+      "ctr": 0,
+      "position": 71.6
+    },
+    "/engineering/orifice-flow": {
+      "clicks": 0,
+      "impressions": 30,
+      "ctr": 0,
+      "position": 54.8
+    },
+    "/engineering/pump-power": {
+      "clicks": 0,
+      "impressions": 59,
+      "ctr": 0,
+      "position": 56.4
+    },
+    "/engineering/steel-weight": {
+      "clicks": 0,
+      "impressions": 87,
+      "ctr": 0,
+      "position": 60.6
+    },
+    "/engineering/thermal": {
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 77.2
+    },
+    "/engineering/ups-sizing": {
+      "clicks": 0,
+      "impressions": 76,
+      "ctr": 0,
+      "position": 58.8
+    },
+    "/everyday": {
+      "clicks": 0,
+      "impressions": 26,
+      "ctr": 0,
+      "position": 7.3
+    },
+    "/everyday/blood-alcohol": {
+      "clicks": 0,
+      "impressions": 22,
+      "ctr": 0,
+      "position": 37.1
+    },
+    "/everyday/business-days": {
+      "clicks": 0,
+      "impressions": 24,
+      "ctr": 0,
+      "position": 45
+    },
+    "/everyday/calorie-counter": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 76.3
+    },
+    "/everyday/carbon": {
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 12.6
+    },
+    "/everyday/coffee-cost": {
+      "clicks": 0,
+      "impressions": 110,
+      "ctr": 0,
+      "position": 10.5
+    },
+    "/everyday/currency-exchange": {
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0,
+      "position": 46.5
+    },
+    "/everyday/day-of-week": {
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 44.4
+    },
+    "/everyday/distance-pace": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 7.3
+    },
+    "/everyday/easter-date": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 43
+    },
+    "/everyday/electricity": {
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 17
+    },
+    "/everyday/event-countdown": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9.5
+    },
+    "/everyday/fitness-age": {
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 67
+    },
+    "/everyday/garden": {
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 32.6
+    },
+    "/everyday/gift-wrap": {
+      "clicks": 0,
+      "impressions": 95,
+      "ctr": 0,
+      "position": 9.1
+    },
+    "/everyday/grocery-budget": {
+      "clicks": 0,
+      "impressions": 31,
+      "ctr": 0,
+      "position": 54.1
+    },
+    "/everyday/gst": {
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 9.9
+    },
+    "/everyday/jet-lag": {
+      "clicks": 0,
+      "impressions": 32,
+      "ctr": 0,
+      "position": 5.8
+    },
+    "/everyday/laundry-cost": {
+      "clicks": 0,
+      "impressions": 28,
+      "ctr": 0,
+      "position": 12.4
+    },
+    "/everyday/leap-year": {
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 14
+    },
+    "/everyday/moon-phase": {
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 10.4
+    },
+    "/everyday/moving-truck": {
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 20.7
+    },
+    "/everyday/pet-age": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 52
+      "position": 29
     },
-    "https://calcpromaster.com/everyday/trip-fuel-cost/": {
+    "/everyday/poker-flush": {
+      "clicks": 0,
+      "impressions": 24,
+      "ctr": 0,
+      "position": 10.1
+    },
+    "/everyday/pomodoro-planner": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 19.3
+    },
+    "/everyday/timezone": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 6.5
+    },
+    "/everyday/trip-fuel-cost": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 57
     },
-    "https://calcpromaster.com/finance/apy-calculator": {
+    "/everyday/vacation-budget": {
+      "clicks": 0,
+      "impressions": 40,
+      "ctr": 0,
+      "position": 20.1
+    },
+    "/everyday/walking-steps": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 26.3
+    },
+    "/everyday/weather": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5
+    },
+    "/family": {
+      "clicks": 0,
+      "impressions": 73,
+      "ctr": 0,
+      "position": 9
+    },
+    "/family/alimony-estimator": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 55.7
+    },
+    "/family/baby-feeding": {
+      "clicks": 0,
+      "impressions": 27,
+      "ctr": 0,
+      "position": 6.7
+    },
+    "/family/baby-formula": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 37
+    },
+    "/family/baby-name": {
+      "clicks": 0,
+      "impressions": 32,
+      "ctr": 0,
+      "position": 66.3
+    },
+    "/family/baby-weight-gain": {
+      "clicks": 0,
+      "impressions": 106,
+      "ctr": 0,
+      "position": 9
+    },
+    "/family/child-height": {
+      "clicks": 0,
+      "impressions": 846,
+      "ctr": 0,
+      "position": 8.4
+    },
+    "/family/child-support-split": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 8.5
+    },
+    "/family/childcare-cost": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 60
+      "position": 4
     },
-    "https://calcpromaster.com/food/baking-converter/": {
+    "/family/diaper-cost": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 8.5
+    },
+    "/family/family-budget-simple": {
+      "clicks": 0,
+      "impressions": 19,
+      "ctr": 0,
+      "position": 36.2
+    },
+    "/family/family-budget": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 47
+    },
+    "/family/family-meal-cost": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 6
+    },
+    "/family/school-supplies": {
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 4.2
+    },
+    "/family/vacation-with-kids": {
+      "clicks": 0,
+      "impressions": 90,
+      "ctr": 0,
+      "position": 9.4
+    },
+    "/finance/529-plan": {
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 23.6
+    },
+    "/finance/amortization": {
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 87.5
+    },
+    "/finance/appreciation-forecast": {
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 9.2
+    },
+    "/finance/apy-calculator": {
+      "clicks": 0,
+      "impressions": 319,
+      "ctr": 0,
+      "position": 26.2
+    },
+    "/finance/australia-income-tax": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 61
+      "position": 9
     },
-    "https://calcpromaster.com/finance/biweekly-mortgage": {
+    "/finance/auto-lease-vs-buy": {
+      "clicks": 0,
+      "impressions": 32,
+      "ctr": 0,
+      "position": 60.6
+    },
+    "/finance/biweekly-mortgage": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 62
     },
-    "https://calcpromaster.com/tech/audio-file-size/": {
+    "/finance/bond-duration": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 26.8
+    },
+    "/finance/bond-price": {
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0,
+      "position": 60.4
+    },
+    "/finance/bonds": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 62
+      "position": 10
     },
-    "https://calcpromaster.com/finance/payout-ratio": {
+    "/finance/cagr": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    "/finance/canada-income-tax": {
+      "clicks": 0,
+      "impressions": 72,
+      "ctr": 0,
+      "position": 52
+    },
+    "/finance/cap-rate-conv": {
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 29.3
+    },
+    "/finance/cash-on-cash": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5
+    },
+    "/finance/cd-ladder": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 33.5
+    },
+    "/finance/closing-costs": {
+      "clicks": 0,
+      "impressions": 85,
+      "ctr": 0,
+      "position": 27.9
+    },
+    "/finance/convexity": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 28
+    },
+    "/finance/cost-basis-avg": {
+      "clicks": 0,
+      "impressions": 20,
+      "ctr": 0,
+      "position": 57.5
+    },
+    "/finance/coupon-payment": {
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0,
+      "position": 8.2
+    },
+    "/finance/credit-utilization": {
+      "clicks": 0,
+      "impressions": 252,
+      "ctr": 0,
+      "position": 41
+    },
+    "/finance/currency-arbitrage": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 38.3
+    },
+    "/finance/dca": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9
+    },
+    "/finance/dca-calculator": {
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0,
+      "position": 11.5
+    },
+    "/finance/debt-consolidation": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    "/finance/debt-ratio": {
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 82
+    },
+    "/finance/debt-to-equity": {
+      "clicks": 0,
+      "impressions": 66,
+      "ctr": 0,
+      "position": 55
+    },
+    "/finance/discounted-payback": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 33
+    },
+    "/finance/dividend": {
+      "clicks": 0,
+      "impressions": 41,
+      "ctr": 0,
+      "position": 28.9
+    },
+    "/finance/dividend-reinvestment": {
+      "clicks": 0,
+      "impressions": 42,
+      "ctr": 0,
+      "position": 22.1
+    },
+    "/finance/dividend-yield": {
+      "clicks": 0,
+      "impressions": 93,
+      "ctr": 0,
+      "position": 52.7
+    },
+    "/finance/dso": {
+      "clicks": 0,
+      "impressions": 25,
+      "ctr": 0,
+      "position": 18.2
+    },
+    "/finance/duration-bond": {
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 12.3
+    },
+    "/finance/ebitda": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 7.8
+    },
+    "/finance/effective-tax-rate": {
+      "clicks": 0,
+      "impressions": 59,
+      "ctr": 0,
+      "position": 48.1
+    },
+    "/finance/emergency-fund": {
+      "clicks": 0,
+      "impressions": 18,
+      "ctr": 0,
+      "position": 26.6
+    },
+    "/finance/eps-calculator": {
+      "clicks": 0,
+      "impressions": 95,
+      "ctr": 0,
+      "position": 29.3
+    },
+    "/finance/esop": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    "/finance/ev-ebitda": {
+      "clicks": 0,
+      "impressions": 42,
+      "ctr": 0,
+      "position": 26.8
+    },
+    "/finance/factoring-fee": {
+      "clicks": 0,
+      "impressions": 18,
+      "ctr": 0,
+      "position": 23.2
+    },
+    "/finance/fha-loan": {
+      "clicks": 0,
+      "impressions": 443,
+      "ctr": 0,
+      "position": 15.7
+    },
+    "/finance/fire": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 11.5
+    },
+    "/finance/forex-pip": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 2.5
+    },
+    "/finance/free-cash-flow": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 85.3
+    },
+    "/finance/geometric-mean": {
+      "clicks": 0,
+      "impressions": 21,
+      "ctr": 0,
+      "position": 16.6
+    },
+    "/finance/graduated-payment": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 14.8
+    },
+    "/finance/growing-perpetuity": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 8
+    },
+    "/finance/ibond-value": {
+      "clicks": 0,
+      "impressions": 44,
+      "ctr": 0,
+      "position": 33.1
+    },
+    "/finance/insurance-surrender-value": {
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 33.4
+    },
+    "/finance/investment": {
+      "clicks": 0,
+      "impressions": 28,
+      "ctr": 0,
+      "position": 40
+    },
+    "/finance/late-fee-interest": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 10.5
+    },
+    "/finance/loan-qualify": {
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 2.8
+    },
+    "/finance/lump-sum-vs-sip": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 13.5
+    },
+    "/finance/margin-call": {
+      "clicks": 0,
+      "impressions": 43,
+      "ctr": 0,
+      "position": 22.4
+    },
+    "/finance/market-cap": {
+      "clicks": 0,
+      "impressions": 30,
+      "ctr": 0,
+      "position": 12.4
+    },
+    "/finance/mortgage-payoff": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 10.5
+    },
+    "/finance/net-worth-calculator": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 4.5
+    },
+    "/finance/operating-margin": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 8.5
+    },
+    "/finance/payback-period": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 34.8
+    },
+    "/finance/payout-ratio": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 64
     },
-    "https://calcpromaster.com/finance/credit-utilization": {
+    "/finance/payroll-tax": {
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 21.9
+    },
+    "/finance/peg-ratio": {
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 24.2
+    },
+    "/finance/pension-lump-sum": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 66
+      "position": 15
     },
-    "https://calcpromaster.com/family/baby-formula/": {
+    "/finance/pmi-calculator": {
+      "clicks": 0,
+      "impressions": 640,
+      "ctr": 0,
+      "position": 24.8
+    },
+    "/finance/position-size": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 67
+      "position": 9
     },
-    "https://calcpromaster.com/fitness/plank-test": {
+    "/finance/price-to-earnings": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 7.7
+    },
+    "/finance/property-tax": {
+      "clicks": 0,
+      "impressions": 25,
+      "ctr": 0,
+      "position": 58.8
+    },
+    "/finance/prorated-rent": {
+      "clicks": 0,
+      "impressions": 100,
+      "ctr": 0,
+      "position": 21.7
+    },
+    "/finance/quick-ratio": {
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 16.4
+    },
+    "/finance/recast-mortgage": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9.5
+    },
+    "/finance/rent-affordability": {
+      "clicks": 0,
+      "impressions": 165,
+      "ctr": 0,
+      "position": 25.7
+    },
+    "/finance/rent-increase": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 9
+    },
+    "/finance/reverse-mortgage": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 10.5
+    },
+    "/finance/risk-reward-ratio": {
+      "clicks": 0,
+      "impressions": 18,
+      "ctr": 0,
+      "position": 76.2
+    },
+    "/finance/roommate-rent-split": {
+      "clicks": 0,
+      "impressions": 34,
+      "ctr": 0,
+      "position": 18.8
+    },
+    "/finance/royalty-payment": {
+      "clicks": 0,
+      "impressions": 131,
+      "ctr": 0,
+      "position": 5
+    },
+    "/finance/rule-of-40": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 23.5
+    },
+    "/finance/safe-withdrawal": {
+      "clicks": 0,
+      "impressions": 21,
+      "ctr": 0,
+      "position": 7.1
+    },
+    "/finance/savings-comparison": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 48.5
+    },
+    "/finance/seller-net": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 7.8
+    },
+    "/finance/sharpe-ratio": {
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 65.5
+    },
+    "/finance/social-security": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 11.7
+    },
+    "/finance/staking-rewards": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 9.3
+    },
+    "/finance/stock-split": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9
+    },
+    "/finance/t-bill": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 7.7
+    },
+    "/finance/tax": {
+      "clicks": 0,
+      "impressions": 18,
+      "ctr": 0,
+      "position": 42.6
+    },
+    "/finance/tax-equivalent-yield": {
+      "clicks": 0,
+      "impressions": 35,
+      "ctr": 0,
+      "position": 35.9
+    },
+    "/finance/tax-loss-harvest": {
+      "clicks": 0,
+      "impressions": 17,
+      "ctr": 0,
+      "position": 16.3
+    },
+    "/finance/tip": {
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 4.4
+    },
+    "/finance/uk-income-tax": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 67
+      "position": 26
     },
-    "https://calcpromaster.com/fitness/recovery-hr/": {
+    "/finance/us-income-tax": {
+      "clicks": 0,
+      "impressions": 21,
+      "ctr": 0,
+      "position": 38.8
+    },
+    "/finance/va-loan": {
+      "clicks": 0,
+      "impressions": 132,
+      "ctr": 0,
+      "position": 93.3
+    },
+    "/finance/wacc": {
+      "clicks": 0,
+      "impressions": 159,
+      "ctr": 0,
+      "position": 75
+    },
+    "/finance/zero-coupon-bond": {
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 5.9
+    },
+    "/fitness": {
+      "clicks": 0,
+      "impressions": 58,
+      "ctr": 0,
+      "position": 26.6
+    },
+    "/fitness/beep-test": {
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 38.6
+    },
+    "/fitness/bench-standards": {
+      "clicks": 0,
+      "impressions": 39,
+      "ctr": 0,
+      "position": 21.1
+    },
+    "/fitness/calories-burned": {
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 30.2
+    },
+    "/fitness/calories-exercise": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 72.8
+    },
+    "/fitness/cycling-speed": {
+      "clicks": 0,
+      "impressions": 40,
+      "ctr": 0,
+      "position": 20.6
+    },
+    "/fitness/deload-week": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 19.3
+    },
+    "/fitness/flexibility-score": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 22.8
+    },
+    "/fitness/grip-strength": {
+      "clicks": 0,
+      "impressions": 17,
+      "ctr": 0,
+      "position": 67.2
+    },
+    "/fitness/max-heart-rate": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    "/fitness/one-rep-max": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    "/fitness/overhead-standards": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 13.2
+    },
+    "/fitness/plank-test": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 38.7
+    },
+    "/fitness/pullup-test": {
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 9.4
+    },
+    "/fitness/pushup-test": {
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 16.4
+    },
+    "/fitness/race-predictor": {
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 6.9
+    },
+    "/fitness/recovery-hr": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 71
     },
-    "https://calcpromaster.com/homegarden/ev-charger-home/": {
+    "/fitness/resting-metabolic": {
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 25
+    },
+    "/fitness/rowing-split": {
+      "clicks": 0,
+      "impressions": 36,
+      "ctr": 0,
+      "position": 40.4
+    },
+    "/fitness/rpe-load": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 19.2
+    },
+    "/fitness/situp-test": {
+      "clicks": 0,
+      "impressions": 97,
+      "ctr": 0,
+      "position": 10.7
+    },
+    "/fitness/sports-calories": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 8.2
+    },
+    "/fitness/squat-standards": {
+      "clicks": 0,
+      "impressions": 31,
+      "ctr": 0,
+      "position": 25.7
+    },
+    "/fitness/steps-to-distance": {
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 40.6
+    },
+    "/fitness/sweat-rate": {
+      "clicks": 0,
+      "impressions": 24,
+      "ctr": 0,
+      "position": 20
+    },
+    "/fitness/swim-pace": {
+      "clicks": 0,
+      "impressions": 29,
+      "ctr": 0,
+      "position": 37.2
+    },
+    "/fitness/training-max": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 72
+      "position": 4
     },
-    "https://calcpromaster.com/everyday/calorie-counter/": {
+    "/fitness/training-volume": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 6
+    },
+    "/fitness/treadmill-pace": {
+      "clicks": 0,
+      "impressions": 23,
+      "ctr": 0,
+      "position": 25.7
+    },
+    "/fitness/vo2-beep": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 31.7
+    },
+    "/fitness/vo2max": {
+      "clicks": 0,
+      "impressions": 62,
+      "ctr": 0,
+      "position": 24.3
+    },
+    "/fitness/weight-loss": {
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 26.1
+    },
+    "/food/alcohol-calories": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 6.7
+    },
+    "/food/baking-converter": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 74
+      "position": 61
     },
-    "https://calcpromaster.com/food/intermittent-fasting/": {
+    "/food/caffeine-daily": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 6.3
+    },
+    "/food/fiber-need": {
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 37.3
+    },
+    "/food/intermittent-fasting": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 76
     },
-    "https://calcpromaster.com/science/buoyancy/": {
+    "/food/meat-cooking-time": {
+      "clicks": 0,
+      "impressions": 74,
+      "ctr": 0,
+      "position": 60.4
+    },
+    "/food/recipe-scaler": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 77
+      "position": 10
     },
-    "https://calcpromaster.com/health/apgar/": {
+    "/food/unit-converter-food": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 15.5
+    },
+    "/graph": {
+      "clicks": 0,
+      "impressions": 18,
+      "ctr": 0,
+      "position": 20.1
+    },
+    "/guides": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 5.7
+    },
+    "/guides/ac-size": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 48.5
+    },
+    "/guides/age": {
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 18
+    },
+    "/guides/auto": {
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 40.1
+    },
+    "/guides/baby-cost": {
+      "clicks": 0,
+      "impressions": 32,
+      "ctr": 0,
+      "position": 7.8
+    },
+    "/guides/bmr": {
+      "clicks": 0,
+      "impressions": 304,
+      "ctr": 0,
+      "position": 15.9
+    },
+    "/guides/body-fat": {
+      "clicks": 0,
+      "impressions": 86,
+      "ctr": 0,
+      "position": 24.5
+    },
+    "/guides/break-even": {
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 44
+    },
+    "/guides/business-days": {
+      "clicks": 0,
+      "impressions": 262,
+      "ctr": 0,
+      "position": 60.2
+    },
+    "/guides/calories": {
+      "clicks": 0,
+      "impressions": 24,
+      "ctr": 0,
+      "position": 51.5
+    },
+    "/guides/career": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    "/guides/construction": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 64.3
+    },
+    "/guides/currency-conversion": {
+      "clicks": 0,
+      "impressions": 16,
+      "ctr": 0,
+      "position": 52.4
+    },
+    "/guides/debt-ratio": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 2.5
+    },
+    "/guides/electricity-bill": {
+      "clicks": 0,
+      "impressions": 22,
+      "ctr": 0,
+      "position": 28.6
+    },
+    "/guides/engineering": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 26.5
+    },
+    "/guides/food": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 34.3
+    },
+    "/guides/fuel-cost": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 28.7
+    },
+    "/guides/gear-ratio": {
+      "clicks": 0,
+      "impressions": 102,
+      "ctr": 0,
+      "position": 71
+    },
+    "/guides/gpa": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 5.3
+    },
+    "/guides/ideal-weight": {
+      "clicks": 0,
+      "impressions": 30,
+      "ctr": 0,
+      "position": 17.5
+    },
+    "/guides/lifestyle": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 8.3
+    },
+    "/guides/mortgage": {
+      "clicks": 0,
+      "impressions": 148,
+      "ctr": 0,
+      "position": 56.5
+    },
+    "/guides/paint-coverage": {
+      "clicks": 0,
+      "impressions": 22,
+      "ctr": 0,
+      "position": 79.5
+    },
+    "/guides/passwords": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 4.7
+    },
+    "/guides/percentage": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 27
+    },
+    "/guides/profit-margin": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 91.3
+    },
+    "/guides/protein-intake": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 4
+    },
+    "/guides/random-numbers": {
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 9.7
+    },
+    "/guides/regional": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 8
+    },
+    "/guides/retirement": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 11.3
+    },
+    "/guides/room-area": {
+      "clicks": 0,
+      "impressions": 18,
+      "ctr": 0,
+      "position": 25.5
+    },
+    "/guides/screen-time": {
+      "clicks": 0,
+      "impressions": 32,
+      "ctr": 0,
+      "position": 14.2
+    },
+    "/guides/sip": {
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 7
+    },
+    "/guides/sleep-cycles": {
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 60
+    },
+    "/guides/tax-salary": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 100
+    },
+    "/guides/tip": {
+      "clicks": 0,
+      "impressions": 396,
+      "ctr": 0,
+      "position": 6.6
+    },
+    "/guides/utilities": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 13.5
+    },
+    "/guides/water-intake": {
+      "clicks": 0,
+      "impressions": 44,
+      "ctr": 0,
+      "position": 79.8
+    },
+    "/health/anion-gap": {
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 57.2
+    },
+    "/health/apgar": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 79
     },
-    "https://calcpromaster.com/guides/water-intake/": {
+    "/health/bmr-mifflin": {
+      "clicks": 0,
+      "impressions": 1108,
+      "ctr": 0,
+      "position": 6.4
+    },
+    "/health/burn-severity": {
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 26
+    },
+    "/health/calorie-burn": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 84
+      "position": 11
     },
-    "https://calcpromaster.com/science/work-calculator/": {
+    "/health/calorie": {
+      "clicks": 0,
+      "impressions": 16,
+      "ctr": 0,
+      "position": 34.4
+    },
+    "/health/cholesterol-ratio": {
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 49.8
+    },
+    "/health/chw": {
+      "clicks": 0,
+      "impressions": 69,
+      "ctr": 0,
+      "position": 17.8
+    },
+    "/health/corrected-calcium": {
+      "clicks": 0,
+      "impressions": 69,
+      "ctr": 0,
+      "position": 58.2
+    },
+    "/health/drug-dosage": {
+      "clicks": 0,
+      "impressions": 41,
+      "ctr": 0,
+      "position": 55.3
+    },
+    "/health/fasting-calculator": {
+      "clicks": 0,
+      "impressions": 19,
+      "ctr": 0,
+      "position": 38.4
+    },
+    "/health/fatigue-score": {
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 28.3
+    },
+    "/health/glycemic-load": {
+      "clicks": 0,
+      "impressions": 38,
+      "ctr": 0,
+      "position": 50.6
+    },
+    "/health/health-insurance-copay": {
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 19.6
+    },
+    "/health/heart-rate-zones": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 49.4
+    },
+    "/health/ideal-body-weight": {
+      "clicks": 0,
+      "impressions": 20,
+      "ctr": 0,
+      "position": 39.5
+    },
+    "/health/ideal-weight": {
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 7.6
+    },
+    "/health/iron-intake": {
+      "clicks": 0,
+      "impressions": 26,
+      "ctr": 0,
+      "position": 15.1
+    },
+    "/health/ldl-calculator": {
+      "clicks": 0,
+      "impressions": 66,
+      "ctr": 0,
+      "position": 34.2
+    },
+    "/health/lean-body-mass": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 46
+    },
+    "/health/maffetone-hr": {
+      "clicks": 0,
+      "impressions": 22,
+      "ctr": 0,
+      "position": 15.4
+    },
+    "/health/maintenance-fluids": {
+      "clicks": 0,
+      "impressions": 56,
+      "ctr": 0,
+      "position": 57.8
+    },
+    "/health/nap-planner": {
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 3.6
+    },
+    "/health/ovulation": {
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 4.5
+    },
+    "/health/ovulation-calculator": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 6.5
+    },
+    "/health/pregnancy": {
+      "clicks": 0,
+      "impressions": 67,
+      "ctr": 0,
+      "position": 9.3
+    },
+    "/health/qtc": {
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 25.7
+    },
+    "/health/serum-osmolality": {
+      "clicks": 0,
+      "impressions": 57,
+      "ctr": 0,
+      "position": 75.1
+    },
+    "/health/sleep": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 13
+    },
+    "/health/sleep-debt": {
+      "clicks": 0,
+      "impressions": 21,
+      "ctr": 0,
+      "position": 19.1
+    },
+    "/health/sleep-quality": {
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 37.4
+    },
+    "/health/target-heart-rate": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 28.7
+    },
+    "/health/total-body-water": {
+      "clicks": 0,
+      "impressions": 35,
+      "ctr": 0,
+      "position": 37.4
+    },
+    "/health/trimester-date": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 21.2
+    },
+    "/health/vaccination-schedule": {
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 28.9
+    },
+    "/health/vitamin-d-dosage": {
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 28.7
+    },
+    "/health/waist-height-ratio": {
+      "clicks": 0,
+      "impressions": 17,
+      "ctr": 0,
+      "position": 19.1
+    },
+    "/health/waist-hip": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 32.3
+    },
+    "/health/winters-formula": {
+      "clicks": 0,
+      "impressions": 48,
+      "ctr": 0,
+      "position": 26.6
+    },
+    "/homegarden": {
+      "clicks": 0,
+      "impressions": 33,
+      "ctr": 0,
+      "position": 10
+    },
+    "/homegarden/appliance-cost": {
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 23.6
+    },
+    "/homegarden/cabinet-door": {
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 40.4
+    },
+    "/homegarden/countertop-sqft": {
+      "clicks": 0,
+      "impressions": 16,
+      "ctr": 0,
+      "position": 33.8
+    },
+    "/homegarden/deck-post": {
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0,
+      "position": 13
+    },
+    "/homegarden/deck-stain": {
+      "clicks": 0,
+      "impressions": 75,
+      "ctr": 0,
+      "position": 11.6
+    },
+    "/homegarden/ev-charger-home": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 84
+      "position": 72
     },
-    "https://calcpromaster.com/lifestyle/relocation-cost": {
+    "/homegarden/fertilizer": {
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 59.5
+    },
+    "/homegarden/firewood": {
+      "clicks": 0,
+      "impressions": 42,
+      "ctr": 0,
+      "position": 21.9
+    },
+    "/homegarden/furniture-arrange": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 55
+    },
+    "/homegarden/garden-fence": {
+      "clicks": 0,
+      "impressions": 17,
+      "ctr": 0,
+      "position": 7.9
+    },
+    "/homegarden/garden-soil": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 16.3
+    },
+    "/homegarden/home-sqft": {
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 82.9
+    },
+    "/homegarden/humidifier-size": {
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 12.5
+    },
+    "/homegarden/kitchen-remodel": {
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 26.1
+    },
+    "/homegarden/lawn-watering": {
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 41.2
+    },
+    "/homegarden/light-bulb-save": {
+      "clicks": 0,
+      "impressions": 30,
+      "ctr": 0,
+      "position": 10.9
+    },
+    "/homegarden/lighting-rooms": {
+      "clicks": 0,
+      "impressions": 24,
+      "ctr": 0,
+      "position": 74.6
+    },
+    "/homegarden/paint-cost": {
+      "clicks": 0,
+      "impressions": 24,
+      "ctr": 0,
+      "position": 77.9
+    },
+    "/homegarden/plant-spacing": {
+      "clicks": 0,
+      "impressions": 31,
+      "ctr": 0,
+      "position": 12.1
+    },
+    "/homegarden/pool-chemicals": {
+      "clicks": 0,
+      "impressions": 64,
+      "ctr": 0,
+      "position": 65.2
+    },
+    "/homegarden/porch-light": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 88
+      "position": 13
     },
-    "https://calcpromaster.com/homegarden/roof-sqft/": {
+    "/homegarden/rain-barrel": {
+      "clicks": 0,
+      "impressions": 16,
+      "ctr": 0,
+      "position": 15.6
+    },
+    "/homegarden/raised-bed-soil": {
+      "clicks": 0,
+      "impressions": 17,
+      "ctr": 0,
+      "position": 9.6
+    },
+    "/homegarden/roof-sqft": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 89
     },
-    "https://calcpromaster.com/fitness/resting-metabolic": {
+    "/homegarden/room-area": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 66,
       "ctr": 0,
-      "position": 90
+      "position": 78.3
     },
-    "https://calcpromaster.com/career": {
+    "/homegarden/solar-battery": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 97
+      "position": 95.5
     },
-    "https://calcpromaster.com/finance/us-income-tax": {
+    "/homegarden/solar-payback": {
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 4,
       "ctr": 0,
-      "position": 100
+      "position": 60
     },
-    "https://calcpromaster.com/guides/tax-salary": {
+    "/homegarden/sprinkler-heads": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 71.3
+    },
+    "/homegarden/tile-grout": {
+      "clicks": 0,
+      "impressions": 20,
+      "ctr": 0,
+      "position": 25.5
+    },
+    "/homegarden/tv-mount-height": {
+      "clicks": 0,
+      "impressions": 21,
+      "ctr": 0,
+      "position": 52.3
+    },
+    "/homegarden/vinyl-flooring": {
+      "clicks": 0,
+      "impressions": 95,
+      "ctr": 0,
+      "position": 30.1
+    },
+    "/homegarden/wallpaper-rolls": {
+      "clicks": 0,
+      "impressions": 145,
+      "ctr": 0,
+      "position": 79.2
+    },
+    "/homegarden/water-heater": {
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 34.8
+    },
+    "/hub/auto": {
+      "clicks": 0,
+      "impressions": 27,
+      "ctr": 0,
+      "position": 34.9
+    },
+    "/hub/business": {
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 30
+    },
+    "/hub/career": {
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 100
+      "position": 6
+    },
+    "/hub/construction": {
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0,
+      "position": 26.1
+    },
+    "/hub/education": {
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 8.1
+    },
+    "/hub/engineering": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 18
+    },
+    "/hub/finance": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 40.3
+    },
+    "/hub/fitness": {
+      "clicks": 0,
+      "impressions": 95,
+      "ctr": 0,
+      "position": 35.8
+    },
+    "/hub/food": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9.3
+    },
+    "/hub/health": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 10
+    },
+    "/hub/homegarden": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 14.3
+    },
+    "/hub/lifestyle": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 17.5
+    },
+    "/hub/math": {
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 5.5
+    },
+    "/hub/utilities": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 6.3
+    },
+    "/lifestyle": {
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 7
+    },
+    "/lifestyle/baby-cost": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 8.5
+    },
+    "/lifestyle/baking-scale": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 22.3
+    },
+    "/lifestyle/candle-wax": {
+      "clicks": 0,
+      "impressions": 17,
+      "ctr": 0,
+      "position": 24.5
+    },
+    "/lifestyle/charging-time": {
+      "clicks": 0,
+      "impressions": 201,
+      "ctr": 0,
+      "position": 9.1
+    },
+    "/lifestyle/cigarette-cost": {
+      "clicks": 0,
+      "impressions": 82,
+      "ctr": 0,
+      "position": 10.7
+    },
+    "/lifestyle/cleaning-time": {
+      "clicks": 0,
+      "impressions": 41,
+      "ctr": 0,
+      "position": 11.2
+    },
+    "/lifestyle/cocktail-dilution": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 39.3
+    },
+    "/lifestyle/date-night-cost": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 34
+    },
+    "/lifestyle/french-press-ratio": {
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 15.1
+    },
+    "/lifestyle/gift-budget": {
+      "clicks": 0,
+      "impressions": 35,
+      "ctr": 0,
+      "position": 7.4
+    },
+    "/lifestyle/gift-split": {
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 6.4
+    },
+    "/lifestyle/grocery-budget-optimizer": {
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 61
+    },
+    "/lifestyle/gym-cost-per-visit": {
+      "clicks": 0,
+      "impressions": 32,
+      "ctr": 0,
+      "position": 7.5
+    },
+    "/lifestyle/haircut-annual": {
+      "clicks": 0,
+      "impressions": 26,
+      "ctr": 0,
+      "position": 7
+    },
+    "/lifestyle/home-insurance": {
+      "clicks": 0,
+      "impressions": 1012,
+      "ctr": 0,
+      "position": 75.1
+    },
+    "/lifestyle/home-renovation": {
+      "clicks": 0,
+      "impressions": 21,
+      "ctr": 0,
+      "position": 29.6
+    },
+    "/lifestyle/hourly-annual-salary": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    "/lifestyle/knit-gauge": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9.5
+    },
+    "/lifestyle/lawn-mowing": {
+      "clicks": 0,
+      "impressions": 40,
+      "ctr": 0,
+      "position": 12.1
+    },
+    "/lifestyle/paint-coverage": {
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 73.6
+    },
+    "/lifestyle/party-cost": {
+      "clicks": 0,
+      "impressions": 53,
+      "ctr": 0,
+      "position": 7
+    },
+    "/lifestyle/pet-boarding-cost": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    "/lifestyle/pet-cost": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 3
+    },
+    "/lifestyle/quilt-fabric": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 58
+    },
+    "/lifestyle/relocation-cost": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 88
+    },
+    "/lifestyle/rental-deposit": {
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 23.5
+    },
+    "/lifestyle/renters-insurance": {
+      "clicks": 0,
+      "impressions": 203,
+      "ctr": 0,
+      "position": 11.4
+    },
+    "/lifestyle/resell-value": {
+      "clicks": 0,
+      "impressions": 115,
+      "ctr": 0,
+      "position": 9.4
+    },
+    "/lifestyle/road-trip-cost": {
+      "clicks": 0,
+      "impressions": 48,
+      "ctr": 0,
+      "position": 56.9
+    },
+    "/lifestyle/streaming-value": {
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0,
+      "position": 38.3
+    },
+    "/lifestyle/takeout-budget": {
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 5.9
+    },
+    "/lifestyle/travel-daily": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 6.3
+    },
+    "/lifestyle/vacation-savings": {
+      "clicks": 0,
+      "impressions": 101,
+      "ctr": 0,
+      "position": 16.3
+    },
+    "/lifestyle/wine-servings": {
+      "clicks": 0,
+      "impressions": 60,
+      "ctr": 0,
+      "position": 7.4
+    },
+    "/math": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 4.3
+    },
+    "/math/binomial-prob": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 8.2
+    },
+    "/math/binomial-theorem": {
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 13.2
+    },
+    "/math/circle-through-points": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 39.8
+    },
+    "/math/coefficient-of-variation": {
+      "clicks": 0,
+      "impressions": 22,
+      "ctr": 0,
+      "position": 19.1
+    },
+    "/math/completing-square": {
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 13.7
+    },
+    "/math/complex": {
+      "clicks": 0,
+      "impressions": 28,
+      "ctr": 0,
+      "position": 14.4
+    },
+    "/math/cubic-equation": {
+      "clicks": 0,
+      "impressions": 21,
+      "ctr": 0,
+      "position": 59.1
+    },
+    "/math/distance-formula": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 64.3
+    },
+    "/math/factorial": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 4
+    },
+    "/math/fibonacci-seq": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 82.3
+    },
+    "/math/harmonic-mean": {
+      "clicks": 0,
+      "impressions": 55,
+      "ctr": 0,
+      "position": 14.3
+    },
+    "/math/inverse-variation": {
+      "clicks": 0,
+      "impressions": 17,
+      "ctr": 0,
+      "position": 24
+    },
+    "/math/law-of-cosines": {
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 6.3
+    },
+    "/math/lcm-gcd": {
+      "clicks": 0,
+      "impressions": 46,
+      "ctr": 0,
+      "position": 27.7
+    },
+    "/math/linear-regression": {
+      "clicks": 0,
+      "impressions": 36,
+      "ctr": 0,
+      "position": 35.4
+    },
+    "/math/linear-system": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 23.5
+    },
+    "/math/logarithm": {
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 7.3
+    },
+    "/math/matrix-det": {
+      "clicks": 0,
+      "impressions": 50,
+      "ctr": 0,
+      "position": 46.9
+    },
+    "/math/matrix-inverse": {
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 18
+    },
+    "/math/mean-median-mode": {
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 12.9
+    },
+    "/math/nth-root": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 6
+    },
+    "/math/permutation": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5
+    },
+    "/math/prime-factor": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 12
+    },
+    "/math/quadratic": {
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 17.8
+    },
+    "/math/random-generator": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    "/math/ratio": {
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 52.4
+    },
+    "/math/rms": {
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 28.3
+    },
+    "/math/root": {
+      "clicks": 0,
+      "impressions": 22,
+      "ctr": 0,
+      "position": 20.2
+    },
+    "/math/scientific-notation": {
+      "clicks": 0,
+      "impressions": 32,
+      "ctr": 0,
+      "position": 10
+    },
+    "/math/scientific": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 6.3
+    },
+    "/math/taylor-series": {
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0,
+      "position": 36.2
+    },
+    "/math/triangle": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 12.5
+    },
+    "/math/trigonometry": {
+      "clicks": 0,
+      "impressions": 112,
+      "ctr": 0,
+      "position": 10.1
+    },
+    "/math/variance-sd": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    "/math/weighted-average": {
+      "clicks": 0,
+      "impressions": 193,
+      "ctr": 0,
+      "position": 54.4
+    },
+    "/regional/australia-super": {
+      "clicks": 0,
+      "impressions": 28,
+      "ctr": 0,
+      "position": 57.8
+    },
+    "/regional/brazil-take-home-salary": {
+      "clicks": 0,
+      "impressions": 21,
+      "ctr": 0,
+      "position": 7.5
+    },
+    "/regional/capital-gains-india": {
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 58.6
+    },
+    "/regional/chit-fund": {
+      "clicks": 0,
+      "impressions": 45,
+      "ctr": 0,
+      "position": 14.4
+    },
+    "/regional/electricity-bill-india": {
+      "clicks": 0,
+      "impressions": 30,
+      "ctr": 0,
+      "position": 81.3
+    },
+    "/regional/epf-calculator": {
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 25.7
+    },
+    "/regional/esic-calculator": {
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 80
+    },
+    "/regional/fd-calculator": {
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 34.8
+    },
+    "/regional/germany-take-home-salary": {
+      "clicks": 0,
+      "impressions": 27,
+      "ctr": 0,
+      "position": 13
+    },
+    "/regional/gold-rate": {
+      "clicks": 0,
+      "impressions": 20,
+      "ctr": 0,
+      "position": 67.8
+    },
+    "/regional/gold-rate-pk": {
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 18.6
+    },
+    "/regional/gold-silver": {
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 45.5
+    },
+    "/regional/gold-silver-ratio": {
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 35.8
+    },
+    "/regional/gratuity": {
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 18.9
+    },
+    "/regional/gst-india": {
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 33.4
+    },
+    "/regional/home-loan-emi-india": {
+      "clicks": 0,
+      "impressions": 33,
+      "ctr": 0,
+      "position": 78.5
+    },
+    "/regional/income-tax-india": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 10
+    },
+    "/regional/ireland-take-home-salary": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 65.2
+    },
+    "/regional/leave-encashment": {
+      "clicks": 0,
+      "impressions": 34,
+      "ctr": 0,
+      "position": 21.9
+    },
+    "/regional/lpg-cost": {
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 12.3
+    },
+    "/regional/malaysia-take-home-salary": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 47
+    },
+    "/regional/nps-calculator": {
+      "clicks": 0,
+      "impressions": 72,
+      "ctr": 0,
+      "position": 53.3
+    },
+    "/regional/nsc-interest": {
+      "clicks": 0,
+      "impressions": 61,
+      "ctr": 0,
+      "position": 67.1
+    },
+    "/regional/pk-income-tax": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 7.3
+    },
+    "/regional/post-office-savings": {
+      "clicks": 0,
+      "impressions": 40,
+      "ctr": 0,
+      "position": 27.1
+    },
+    "/regional/qurbani-cost": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 7.5
+    },
+    "/regional/rd-calculator": {
+      "clicks": 0,
+      "impressions": 55,
+      "ctr": 0,
+      "position": 45.4
+    },
+    "/regional/saudi-take-home-salary": {
+      "clicks": 0,
+      "impressions": 89,
+      "ctr": 0,
+      "position": 9.5
+    },
+    "/regional/senior-savings-scheme": {
+      "clicks": 0,
+      "impressions": 25,
+      "ctr": 0,
+      "position": 18.5
+    },
+    "/regional/singapore-take-home-salary": {
+      "clicks": 0,
+      "impressions": 28,
+      "ctr": 0,
+      "position": 40.8
+    },
+    "/regional/sip-return": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    "/regional/stamp-duty-india": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 79.5
+    },
+    "/regional/stamp-duty": {
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 18.6
+    },
+    "/regional/switzerland-take-home-salary": {
+      "clicks": 0,
+      "impressions": 95,
+      "ctr": 0,
+      "position": 39.4
+    },
+    "/regional/tds-calculator": {
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 27.7
+    },
+    "/regional/uae-vat": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 28
+    },
+    "/regional/uk-take-home-salary": {
+      "clicks": 0,
+      "impressions": 92,
+      "ctr": 0,
+      "position": 91.9
+    },
+    "/regional/us-fica": {
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0,
+      "position": 37.4
+    },
+    "/regional/zakat-calculator": {
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 42.8
+    },
+    "/science": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    "/science/bernoulli": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 26.3
+    },
+    "/science/bullet-drop": {
+      "clicks": 0,
+      "impressions": 36,
+      "ctr": 0,
+      "position": 15.7
+    },
+    "/science/buoyancy": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 77
+    },
+    "/science/carbon-dating": {
+      "clicks": 0,
+      "impressions": 213,
+      "ctr": 0,
+      "position": 11.7
+    },
+    "/science/centripetal": {
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 32.6
+    },
+    "/science/cloud-base-lcl": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 28.7
+    },
+    "/science/combined-gas-law": {
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0,
+      "position": 15.5
+    },
+    "/science/coulomb": {
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 12.7
+    },
+    "/science/debroglie": {
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 10
+    },
+    "/science/dew-point": {
+      "clicks": 0,
+      "impressions": 100,
+      "ctr": 0,
+      "position": 20.4
+    },
+    "/science/electric-field": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    "/science/energy-mass": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 66.2
+    },
+    "/science/free-fall": {
+      "clicks": 0,
+      "impressions": 26,
+      "ctr": 0,
+      "position": 26.8
+    },
+    "/science/freezing-depression": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 16.8
+    },
+    "/science/friction": {
+      "clicks": 0,
+      "impressions": 28,
+      "ctr": 0,
+      "position": 19.5
+    },
+    "/science/grahams-law": {
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 12.7
+    },
+    "/science/hooke-law": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5
+    },
+    "/science/ideal-gas": {
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 8.5
+    },
+    "/science/kepler-third": {
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 14.3
+    },
+    "/science/kinetic-energy": {
+      "clicks": 0,
+      "impressions": 61,
+      "ctr": 0,
+      "position": 24.4
+    },
+    "/science/latent-heat": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 20.3
+    },
+    "/science/moment-of-inertia": {
+      "clicks": 0,
+      "impressions": 82,
+      "ctr": 0,
+      "position": 73.1
+    },
+    "/science/ohms-law": {
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0,
+      "position": 69.6
+    },
+    "/science/orbital-velocity": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    "/science/potential-energy": {
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 63.5
+    },
+    "/science/power": {
+      "clicks": 0,
+      "impressions": 21,
+      "ctr": 0,
+      "position": 66.4
+    },
+    "/science/projectile": {
+      "clicks": 0,
+      "impressions": 21,
+      "ctr": 0,
+      "position": 17.2
+    },
+    "/science/radioactive-decay": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    "/science/solar-energy": {
+      "clicks": 0,
+      "impressions": 133,
+      "ctr": 0,
+      "position": 74.3
+    },
+    "/science/specific-heat": {
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0,
+      "position": 55
+    },
+    "/science/speed-of-sound": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    "/science/wave-speed": {
+      "clicks": 0,
+      "impressions": 36,
+      "ctr": 0,
+      "position": 30.5
+    },
+    "/science/wavelength": {
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 50
+    },
+    "/science/wavelength-freq": {
+      "clicks": 0,
+      "impressions": 29,
+      "ctr": 0,
+      "position": 49
+    },
+    "/science/work-calculator": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 84
+    },
+    "/tech": {
+      "clicks": 0,
+      "impressions": 96,
+      "ctr": 0,
+      "position": 54.4
+    },
+    "/tech/ad-revenue": {
+      "clicks": 0,
+      "impressions": 22,
+      "ctr": 0,
+      "position": 21.9
+    },
+    "/tech/audio-file-size": {
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 30.3
+    },
+    "/tech/battery-life-estimator": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 41.5
+    },
+    "/tech/cable-length": {
+      "clicks": 0,
+      "impressions": 64,
+      "ctr": 0,
+      "position": 68.3
+    },
+    "/tech/cidr-convert": {
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 5.5
+    },
+    "/tech/cloud-storage": {
+      "clicks": 0,
+      "impressions": 81,
+      "ctr": 0,
+      "position": 52.2
+    },
+    "/tech/code-line-count": {
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0,
+      "position": 28.4
+    },
+    "/tech/data-center-pue": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9
+    },
+    "/tech/data-transfer-cost": {
+      "clicks": 0,
+      "impressions": 16,
+      "ctr": 0,
+      "position": 61.6
+    },
+    "/tech/data-usage-est": {
+      "clicks": 0,
+      "impressions": 41,
+      "ctr": 0,
+      "position": 33
+    },
+    "/tech/device-charge-time": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    "/tech/docker-resource": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 24
+    },
+    "/tech/font-size-conv": {
+      "clicks": 0,
+      "impressions": 56,
+      "ctr": 0,
+      "position": 18.9
+    },
+    "/tech/hash-generator": {
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0,
+      "position": 54.2
+    },
+    "/tech/internet-speed": {
+      "clicks": 0,
+      "impressions": 508,
+      "ctr": 0,
+      "position": 28.4
+    },
+    "/tech/ip-subnet": {
+      "clicks": 0,
+      "impressions": 122,
+      "ctr": 0,
+      "position": 66.3
+    },
+    "/tech/keyword-density": {
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 16.9
+    },
+    "/tech/latency-bandwidth": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 36.3
+    },
+    "/tech/monitor-refresh": {
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 28
+    },
+    "/tech/password-time": {
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 27.8
+    },
+    "/tech/raid-capacity": {
+      "clicks": 0,
+      "impressions": 238,
+      "ctr": 0,
+      "position": 37
+    },
+    "/tech/reading-grade": {
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 60.1
+    },
+    "/tech/resistor-color-code": {
+      "clicks": 0,
+      "impressions": 80,
+      "ctr": 0,
+      "position": 75.7
+    },
+    "/tech/rgb-hex": {
+      "clicks": 0,
+      "impressions": 166,
+      "ctr": 0,
+      "position": 24.7
+    },
+    "/tech/screen-ppi": {
+      "clicks": 0,
+      "impressions": 64,
+      "ctr": 0,
+      "position": 34.3
+    },
+    "/tech/screen-resolution": {
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 68.3
+    },
+    "/tech/screen-size": {
+      "clicks": 0,
+      "impressions": 24,
+      "ctr": 0,
+      "position": 51
+    },
+    "/tech/ssd-vs-hdd": {
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 54.6
+    },
+    "/tech/storage-need": {
+      "clicks": 0,
+      "impressions": 33,
+      "ctr": 0,
+      "position": 20.2
+    },
+    "/tech/streaming-bitrate": {
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 8.1
+    },
+    "/tech/subnet-cidr": {
+      "clicks": 0,
+      "impressions": 52,
+      "ctr": 0,
+      "position": 28.9
+    },
+    "/tech/text-counter": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    "/tech/token-cost": {
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 87.3
+    },
+    "/tech/typing-speed": {
+      "clicks": 0,
+      "impressions": 30,
+      "ctr": 0,
+      "position": 10.4
+    },
+    "/tech/uptime-calculator": {
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 70.7
+    },
+    "/tech/url-encoder": {
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 6.8
+    },
+    "/tech/wattage-psu": {
+      "clicks": 0,
+      "impressions": 31,
+      "ctr": 0,
+      "position": 51.1
+    },
+    "/tech/website-cost": {
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 94
+    },
+    "/tech/wifi-channels": {
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 7.9
+    },
+    "/tech/wifi-throughput": {
+      "clicks": 0,
+      "impressions": 16,
+      "ctr": 0,
+      "position": 54.3
+    },
+    "/utilities/base-converter": {
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 7
+    },
+    "/utilities/dice-roller": {
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 26.3
+    },
+    "/utilities/simple-tax": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    "/utilities/timer-calc": {
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 52
     }
   }
 }

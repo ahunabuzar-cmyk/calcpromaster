@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T13:44:11.474Z",
+  "generatedAt": "2026-10-26T14:14:07.179Z",
   "counts": {
     "sitemapUrls": 1420,
     "duplicateSitemapLocs": 0,
@@ -9,12 +9,12 @@
     "missingToolPages": 0,
     "missingSitemapHtml": 0,
     "inventoryRows": 1419,
-    "hundredsPages": 1,
-    "broadPages": 31,
-    "growingPages": 88,
-    "thinPages": 141,
-    "stuckPages": 208,
-    "backlogWrite": 17,
-    "backlogExpose": 8
+    "hundredsPages": 2,
+    "broadPages": 32,
+    "growingPages": 93,
+    "thinPages": 136,
+    "stuckPages": 214,
+    "backlogWrite": 16,
+    "backlogExpose": 9
   }
 }

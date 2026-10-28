@@ -1,0 +1,520 @@
+{
+  "ranAt": "2026-10-27T16:43:44.584Z",
+  "origin": "http://localhost:3210",
+  "deployBuilt": true,
+  "thresholds": {
+    "lcp": 2500,
+    "cls": 0.1,
+    "tbt": 200,
+    "fcp": 1800
+  },
+  "audited": 12,
+  "poorCount": 10,
+  "results": [
+    {
+      "url": "/",
+      "label": "home (heaviest: hero canvas + search)",
+      "form": "desktop",
+      "perfScore": 83,
+      "metrics": {
+        "lcp": 3783.5083,
+        "cls": 0,
+        "tbt": 256.08195,
+        "fcp": 1833.6722,
+        "si": 1833.6722,
+        "tti": 3891.0181550000007,
+        "lcpDisplay": "3.8 s",
+        "clsDisplay": "0",
+        "tbtDisplay": "260 ms"
+      },
+      "verdict": "POOR",
+      "poorBecause": [
+        "LCP 3784ms",
+        "TBT 256ms",
+        "FCP 1834ms"
+      ],
+      "totalBytes": 390223,
+      "requests": 19,
+      "opportunities": [
+        {
+          "id": "unused-javascript",
+          "label": "Unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 85 KiB",
+          "savingsMs": 600,
+          "savingsBytes": 87358
+        },
+        {
+          "id": "unused-css-rules",
+          "label": "Unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 14 KiB",
+          "savingsMs": 150,
+          "savingsBytes": 14528
+        }
+      ]
+    },
+    {
+      "url": "/",
+      "label": "home (heaviest: hero canvas + search)",
+      "form": "mobile",
+      "perfScore": 75,
+      "metrics": {
+        "lcp": 3957.34,
+        "cls": 0,
+        "tbt": 469.99999999999955,
+        "fcp": 1949.56,
+        "si": 1949.56,
+        "tti": 4116.12,
+        "lcpDisplay": "4.0 s",
+        "clsDisplay": "0",
+        "tbtDisplay": "470 ms"
+      },
+      "verdict": "POOR",
+      "poorBecause": [
+        "LCP 3957ms",
+        "TBT 470ms",
+        "FCP 1950ms"
+      ],
+      "totalBytes": 390222,
+      "requests": 19,
+      "opportunities": [
+        {
+          "id": "unused-javascript",
+          "label": "Unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 85 KiB",
+          "savingsMs": 930,
+          "savingsBytes": 87313
+        },
+        {
+          "id": "unused-css-rules",
+          "label": "Unused CSS",
+          "score": 0.5,
+          "displayValue": "Est savings of 14 KiB",
+          "savingsMs": null,
+          "savingsBytes": 14528
+        },
+        {
+          "id": "mainthread-work-breakdown",
+          "label": "Main-thread work",
+          "score": 0,
+          "displayValue": "2.2 s",
+          "savingsMs": null,
+          "savingsBytes": null
+        }
+      ]
+    },
+    {
+      "url": "/finance/loan-emi/",
+      "label": "tool page (calculator + chart)",
+      "form": "desktop",
+      "perfScore": 79,
+      "metrics": {
+        "lcp": 4398.8378,
+        "cls": 0.01857295346869837,
+        "tbt": 241,
+        "fcp": 1918.2252,
+        "si": 1981.4243667354308,
+        "tti": 4541.937800000001,
+        "lcpDisplay": "4.4 s",
+        "clsDisplay": "0.019",
+        "tbtDisplay": "240 ms"
+      },
+      "verdict": "POOR",
+      "poorBecause": [
+        "LCP 4399ms",
+        "TBT 241ms",
+        "FCP 1918ms"
+      ],
+      "totalBytes": 579956,
+      "requests": 23,
+      "opportunities": [
+        {
+          "id": "unused-javascript",
+          "label": "Unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 117 KiB",
+          "savingsMs": 490,
+          "savingsBytes": 120117
+        },
+        {
+          "id": "unused-css-rules",
+          "label": "Unused CSS",
+          "score": 0.5,
+          "displayValue": "Est savings of 12 KiB",
+          "savingsMs": null,
+          "savingsBytes": 12088
+        },
+        {
+          "id": "mainthread-work-breakdown",
+          "label": "Main-thread work",
+          "score": 0,
+          "displayValue": "3.2 s",
+          "savingsMs": null,
+          "savingsBytes": null
+        }
+      ]
+    },
+    {
+      "url": "/finance/loan-emi/",
+      "label": "tool page (calculator + chart)",
+      "form": "mobile",
+      "perfScore": 76,
+      "metrics": {
+        "lcp": 4389.5316,
+        "cls": 0.04456224518789803,
+        "tbt": 366.0000000000001,
+        "fcp": 1022.1772,
+        "si": 1496.0791622914141,
+        "tti": 4402.731600000001,
+        "lcpDisplay": "4.4 s",
+        "clsDisplay": "0.045",
+        "tbtDisplay": "370 ms"
+      },
+      "verdict": "POOR",
+      "poorBecause": [
+        "LCP 4390ms",
+        "TBT 366ms"
+      ],
+      "totalBytes": 578471,
+      "requests": 23,
+      "opportunities": [
+        {
+          "id": "unused-javascript",
+          "label": "Unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 115 KiB",
+          "savingsMs": 640,
+          "savingsBytes": 118044
+        },
+        {
+          "id": "unused-css-rules",
+          "label": "Unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 12 KiB",
+          "savingsMs": 150,
+          "savingsBytes": 12061
+        },
+        {
+          "id": "mainthread-work-breakdown",
+          "label": "Main-thread work",
+          "score": 0,
+          "displayValue": "3.3 s",
+          "savingsMs": null,
+          "savingsBytes": null
+        }
+      ]
+    },
+    {
+      "url": "/guides/tip",
+      "label": "editorial guide",
+      "form": "desktop",
+      "perfScore": 99,
+      "metrics": {
+        "lcp": 903.3489,
+        "cls": 0.06555381505885619,
+        "tbt": 0,
+        "fcp": 747.67445,
+        "si": 747.67445,
+        "tti": 903.3489,
+        "lcpDisplay": "0.9 s",
+        "clsDisplay": "0.066",
+        "tbtDisplay": "0 ms"
+      },
+      "verdict": "GOOD",
+      "poorBecause": [],
+      "totalBytes": 14274,
+      "requests": 4,
+      "opportunities": []
+    },
+    {
+      "url": "/guides/tip",
+      "label": "editorial guide",
+      "form": "mobile",
+      "perfScore": 99,
+      "metrics": {
+        "lcp": 902.7192,
+        "cls": 0.06555381505885619,
+        "tbt": 0,
+        "fcp": 751.3596,
+        "si": 751.3596,
+        "tti": 902.7192,
+        "lcpDisplay": "0.9 s",
+        "clsDisplay": "0.066",
+        "tbtDisplay": "0 ms"
+      },
+      "verdict": "GOOD",
+      "poorBecause": [],
+      "totalBytes": 14276,
+      "requests": 4,
+      "opportunities": []
+    },
+    {
+      "url": "/health/bmi/",
+      "label": "tool page (second category)",
+      "form": "desktop",
+      "perfScore": 81,
+      "metrics": {
+        "lcp": 4121.8685000000005,
+        "cls": 0.023915252310234513,
+        "tbt": 258.0000000000001,
+        "fcp": 992.2895,
+        "si": 1365.2906519298633,
+        "tti": 4131.3685000000005,
+        "lcpDisplay": "4.1 s",
+        "clsDisplay": "0.024",
+        "tbtDisplay": "260 ms"
+      },
+      "verdict": "POOR",
+      "poorBecause": [
+        "LCP 4122ms",
+        "TBT 258ms"
+      ],
+      "totalBytes": 567069,
+      "requests": 23,
+      "opportunities": [
+        {
+          "id": "unused-javascript",
+          "label": "Unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 131 KiB",
+          "savingsMs": 580,
+          "savingsBytes": 134421
+        },
+        {
+          "id": "unused-css-rules",
+          "label": "Unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 12 KiB",
+          "savingsMs": 150,
+          "savingsBytes": 12165
+        },
+        {
+          "id": "mainthread-work-breakdown",
+          "label": "Main-thread work",
+          "score": 0,
+          "displayValue": "2.9 s",
+          "savingsMs": null,
+          "savingsBytes": null
+        }
+      ]
+    },
+    {
+      "url": "/health/bmi/",
+      "label": "tool page (second category)",
+      "form": "mobile",
+      "perfScore": 82,
+      "metrics": {
+        "lcp": 4130.3115,
+        "cls": 0.023915252310234513,
+        "tbt": 254.9999999999999,
+        "fcp": 1011.7705,
+        "si": 1403.305498347024,
+        "tti": 4139.5115000000005,
+        "lcpDisplay": "4.1 s",
+        "clsDisplay": "0.024",
+        "tbtDisplay": "250 ms"
+      },
+      "verdict": "POOR",
+      "poorBecause": [
+        "LCP 4130ms",
+        "TBT 255ms"
+      ],
+      "totalBytes": 565523,
+      "requests": 23,
+      "opportunities": [
+        {
+          "id": "unused-javascript",
+          "label": "Unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 131 KiB",
+          "savingsMs": 580,
+          "savingsBytes": 133859
+        },
+        {
+          "id": "unused-css-rules",
+          "label": "Unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 12 KiB",
+          "savingsMs": 150,
+          "savingsBytes": 12173
+        },
+        {
+          "id": "mainthread-work-breakdown",
+          "label": "Main-thread work",
+          "score": 0,
+          "displayValue": "2.9 s",
+          "savingsMs": null,
+          "savingsBytes": null
+        }
+      ]
+    },
+    {
+      "url": "/hub/math/",
+      "label": "hub page",
+      "form": "desktop",
+      "perfScore": 87,
+      "metrics": {
+        "lcp": 3934.21325,
+        "cls": 0.03426703751415809,
+        "tbt": 106.99999999999989,
+        "fcp": 992.04265,
+        "si": 1142.2362409875736,
+        "tti": 3934.21325,
+        "lcpDisplay": "3.9 s",
+        "clsDisplay": "0.034",
+        "tbtDisplay": "110 ms"
+      },
+      "verdict": "POOR",
+      "poorBecause": [
+        "LCP 3934ms"
+      ],
+      "totalBytes": 420779,
+      "requests": 18,
+      "opportunities": [
+        {
+          "id": "unused-javascript",
+          "label": "Unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 88 KiB",
+          "savingsMs": 450,
+          "savingsBytes": 90271
+        },
+        {
+          "id": "unused-css-rules",
+          "label": "Unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 15 KiB",
+          "savingsMs": 150,
+          "savingsBytes": 15316
+        }
+      ]
+    },
+    {
+      "url": "/hub/math/",
+      "label": "hub page",
+      "form": "mobile",
+      "perfScore": 88,
+      "metrics": {
+        "lcp": 3935.5779999999995,
+        "cls": 0.03426703751415809,
+        "tbt": 62.5,
+        "fcp": 964.9156,
+        "si": 1118.4579168499472,
+        "tti": 4018.0779999999995,
+        "lcpDisplay": "3.9 s",
+        "clsDisplay": "0.034",
+        "tbtDisplay": "60 ms"
+      },
+      "verdict": "POOR",
+      "poorBecause": [
+        "LCP 3936ms"
+      ],
+      "totalBytes": 419137,
+      "requests": 19,
+      "opportunities": [
+        {
+          "id": "unused-javascript",
+          "label": "Unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 88 KiB",
+          "savingsMs": 450,
+          "savingsBytes": 90271
+        },
+        {
+          "id": "unused-css-rules",
+          "label": "Unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 15 KiB",
+          "savingsMs": 150,
+          "savingsBytes": 15324
+        }
+      ]
+    },
+    {
+      "url": "/math/",
+      "label": "category page",
+      "form": "desktop",
+      "perfScore": 93,
+      "metrics": {
+        "lcp": 3019.19385,
+        "cls": 0,
+        "tbt": 129.00000000000045,
+        "fcp": 951.39795,
+        "si": 1016.6922978123349,
+        "tti": 4134.989750000001,
+        "lcpDisplay": "3.0 s",
+        "clsDisplay": "0",
+        "tbtDisplay": "130 ms"
+      },
+      "verdict": "POOR",
+      "poorBecause": [
+        "LCP 3019ms"
+      ],
+      "totalBytes": 420788,
+      "requests": 20,
+      "opportunities": [
+        {
+          "id": "unused-javascript",
+          "label": "Unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 108 KiB",
+          "savingsMs": 440,
+          "savingsBytes": 110353
+        },
+        {
+          "id": "unused-css-rules",
+          "label": "Unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 15 KiB",
+          "savingsMs": 150,
+          "savingsBytes": 15105
+        }
+      ]
+    },
+    {
+      "url": "/math/",
+      "label": "category page",
+      "form": "mobile",
+      "perfScore": 79,
+      "metrics": {
+        "lcp": 4221.0125,
+        "cls": 0,
+        "tbt": 282,
+        "fcp": 1901.805,
+        "si": 1901.805,
+        "tti": 4371.012500000001,
+        "lcpDisplay": "4.2 s",
+        "clsDisplay": "0",
+        "tbtDisplay": "280 ms"
+      },
+      "verdict": "POOR",
+      "poorBecause": [
+        "LCP 4221ms",
+        "TBT 282ms",
+        "FCP 1902ms"
+      ],
+      "totalBytes": 419161,
+      "requests": 20,
+      "opportunities": [
+        {
+          "id": "unused-javascript",
+          "label": "Unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 108 KiB",
+          "savingsMs": 610,
+          "savingsBytes": 110353
+        },
+        {
+          "id": "unused-css-rules",
+          "label": "Unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 15 KiB",
+          "savingsMs": 150,
+          "savingsBytes": 15113
+        }
+      ]
+    }
+  ]
+}

@@ -1,9 +1,9 @@
 {
-  "ranAt": "2026-10-23T12:06:36.588Z",
+  "ranAt": "2026-10-27T16:35:50.194Z",
   "window": {
     "days": 28,
-    "startDate": "2026-09-16",
-    "endDate": "2026-10-14"
+    "startDate": "2026-09-24",
+    "endDate": "2026-10-22"
   },
   "thresholds": {
     "minMachineImpressions": 20,
@@ -32,13 +32,13 @@
     }
   ],
   "summary": {
-    "pagesInJoin": 469,
-    "pairRows": 4465,
-    "impressionsInJoin": 11567,
+    "pagesInJoin": 477,
+    "pairRows": 4674,
+    "impressionsInJoin": 12224,
     "machineRows": 71,
-    "machineImpressions": 193,
+    "machineImpressions": 194,
     "machineClicks": 0,
-    "machineShareOfJoin": 0.0167,
+    "machineShareOfJoin": 0.0159,
     "flaggedPages": 1,
     "knownPages": 1,
     "newPages": 0

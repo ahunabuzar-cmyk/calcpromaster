@@ -1,0 +1,397 @@
+{
+ "ranAt": "2026-10-28T10:20:27.871Z",
+ "results": [
+  {
+   "url": "https://calcpromaster.com/family/child-height/",
+   "verdict": "PASS",
+   "coverageState": "Submitted and indexed",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-09-25T13:23:42Z",
+   "googleCanonical": "https://calcpromaster.com/family/child-height/",
+   "userCanonical": "https://calcpromaster.com/family/child-height",
+   "referringUrls": [
+    "https://calcpromaster.com/sitemap.xml"
+   ]
+  },
+  {
+   "url": "https://calcpromaster.com/health/bmr-mifflin/",
+   "verdict": "PASS",
+   "coverageState": "Submitted and indexed",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-10-21T05:13:48Z",
+   "googleCanonical": "https://calcpromaster.com/health/bmr-mifflin/",
+   "userCanonical": "https://calcpromaster.com/health/bmr-mifflin",
+   "referringUrls": [
+    "https://calcpromaster.com/guides/bmr"
+   ]
+  },
+  {
+   "url": "https://calcpromaster.com/health/bmr-mifflin",
+   "verdict": "NEUTRAL",
+   "coverageState": "Page with redirect",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-10-21T05:13:48Z",
+   "googleCanonical": "https://calcpromaster.com/health/bmr-mifflin/",
+   "userCanonical": "https://calcpromaster.com/health/bmr-mifflin",
+   "referringUrls": [
+    "https://calcpromaster.com/health/bmr-mifflin/",
+    "https://calcpromaster.netlify.app/qa-dashboard",
+    "https://calcpromaster.com/health/tdee-macro/"
+   ]
+  },
+  {
+   "url": "https://calcpromaster.com/finance/pmi-calculator/",
+   "verdict": "PASS",
+   "coverageState": "Submitted and indexed",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-10-22T17:25:41Z",
+   "googleCanonical": "https://calcpromaster.com/finance/pmi-calculator/",
+   "userCanonical": "https://calcpromaster.com/finance/pmi-calculator",
+   "referringUrls": [
+    "https://calcpromaster.com/guides/mortgage"
+   ]
+  },
+  {
+   "url": "https://calcpromaster.com/lifestyle/home-insurance/",
+   "verdict": "PASS",
+   "coverageState": "Submitted and indexed",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-09-26T14:59:01Z",
+   "googleCanonical": "https://calcpromaster.com/lifestyle/home-insurance/",
+   "userCanonical": "https://calcpromaster.com/lifestyle/home-insurance"
+  },
+  {
+   "url": "https://calcpromaster.com/finance/fha-loan/",
+   "verdict": "PASS",
+   "coverageState": "Submitted and indexed",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-10-20T20:01:01Z",
+   "googleCanonical": "https://calcpromaster.com/finance/fha-loan/",
+   "userCanonical": "https://calcpromaster.com/finance/fha-loan"
+  },
+  {
+   "url": "https://calcpromaster.com/guides/tip",
+   "verdict": "PASS",
+   "coverageState": "Submitted and indexed",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-10-02T07:06:49Z",
+   "googleCanonical": "https://calcpromaster.com/guides/tip",
+   "userCanonical": "https://calcpromaster.com/guides/tip",
+   "referringUrls": [
+    "https://calcpromaster.netlify.app/guides/"
+   ]
+  },
+  {
+   "url": "https://calcpromaster.com/regional/dubai-salary/",
+   "verdict": "NEUTRAL",
+   "coverageState": "Page with redirect",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-10-20T06:39:08Z",
+   "googleCanonical": "https://calcpromaster.netlify.app/regional/dubai-salary/",
+   "userCanonical": "https://calcpromaster.com/regional/dubai-salary",
+   "referringUrls": [
+    "https://calcpromaster.netlify.app/regional/dubai-salary/"
+   ]
+  },
+  {
+   "url": "https://calcpromaster.com/health/bmr-mifflin/",
+   "verdict": "PASS",
+   "coverageState": "Submitted and indexed",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-10-21T05:13:48Z",
+   "googleCanonical": "https://calcpromaster.com/health/bmr-mifflin/",
+   "userCanonical": "https://calcpromaster.com/health/bmr-mifflin",
+   "referringUrls": [
+    "https://calcpromaster.com/guides/bmr"
+   ]
+  },
+  {
+   "url": "https://calcpromaster.com/finance/apy-calculator/",
+   "verdict": "PASS",
+   "coverageState": "Submitted and indexed",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-10-19T04:57:22Z",
+   "googleCanonical": "https://calcpromaster.com/finance/apy-calculator/",
+   "userCanonical": "https://calcpromaster.com/finance/apy-calculator"
+  },
+  {
+   "url": "https://calcpromaster.com/guides/bmr",
+   "verdict": "PASS",
+   "coverageState": "Submitted and indexed",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-10-20T05:34:11Z",
+   "googleCanonical": "https://calcpromaster.com/guides/bmr",
+   "userCanonical": "https://calcpromaster.com/guides/bmr",
+   "referringUrls": [
+    "https://calcpromaster.netlify.app/guides/"
+   ]
+  },
+  {
+   "url": "https://calcpromaster.com/tech/internet-speed",
+   "verdict": "NEUTRAL",
+   "coverageState": "Page with redirect",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-10-20T18:45:49Z",
+   "googleCanonical": "https://calcpromaster.com/tech/internet-speed/",
+   "userCanonical": "https://calcpromaster.com/tech/internet-speed",
+   "referringUrls": [
+    "https://calcpromaster.com/tech/internet-speed/",
+    "https://calcpromaster.com/tech/code-line-count/",
+    "https://calcpromaster.com/tech/storage-array/"
+   ]
+  },
+  {
+   "url": "https://calcpromaster.com/finance/credit-utilization/",
+   "verdict": "PASS",
+   "coverageState": "Submitted and indexed",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-10-20T23:05:57Z",
+   "googleCanonical": "https://calcpromaster.com/finance/credit-utilization/",
+   "userCanonical": "https://calcpromaster.com/finance/credit-utilization"
+  },
+  {
+   "url": "https://calcpromaster.com/lifestyle/charging-time/",
+   "verdict": "PASS",
+   "coverageState": "Submitted and indexed",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-10-19T09:54:49Z",
+   "googleCanonical": "https://calcpromaster.com/lifestyle/charging-time/",
+   "userCanonical": "https://calcpromaster.com/lifestyle/charging-time",
+   "referringUrls": [
+    "https://calcpromaster.com/lifestyle/"
+   ]
+  },
+  {
+   "url": "https://calcpromaster.com/math/weighted-average/",
+   "verdict": "PASS",
+   "coverageState": "Submitted and indexed",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-10-24T14:11:14Z",
+   "googleCanonical": "https://calcpromaster.com/math/weighted-average/",
+   "userCanonical": "https://calcpromaster.com/math/weighted-average/",
+   "referringUrls": [
+    "https://calcpromaster.com/math/scientific/"
+   ]
+  },
+  {
+   "url": "https://calcpromaster.com/fitness/muscle-gain/",
+   "verdict": "PASS",
+   "coverageState": "Submitted and indexed",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-10-24T06:34:45Z",
+   "googleCanonical": "https://calcpromaster.com/fitness/muscle-gain/",
+   "userCanonical": "https://calcpromaster.com/fitness/muscle-gain/",
+   "referringUrls": [
+    "https://calcpromaster.com/sitemap.xml"
+   ]
+  },
+  {
+   "url": "https://calcpromaster.com/tech/rgb-hex/",
+   "verdict": "PASS",
+   "coverageState": "Submitted and indexed",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-09-28T21:12:01Z",
+   "googleCanonical": "https://calcpromaster.com/tech/rgb-hex/",
+   "userCanonical": "https://calcpromaster.com/tech/rgb-hex"
+  },
+  {
+   "url": "https://calcpromaster.com/finance/rent-affordability/",
+   "verdict": "PASS",
+   "coverageState": "Submitted and indexed",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-10-21T18:09:05Z",
+   "googleCanonical": "https://calcpromaster.com/finance/rent-affordability/",
+   "userCanonical": "https://calcpromaster.com/finance/rent-affordability"
+  },
+  {
+   "url": "https://calcpromaster.com/finance/wacc/",
+   "verdict": "PASS",
+   "coverageState": "Submitted and indexed",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-10-25T23:05:35Z",
+   "googleCanonical": "https://calcpromaster.com/finance/wacc/",
+   "userCanonical": "https://calcpromaster.com/finance/wacc/"
+  },
+  {
+   "url": "https://calcpromaster.com/regional/singapore-cpf/",
+   "verdict": "PASS",
+   "coverageState": "Submitted and indexed",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-10-24T08:24:28Z",
+   "googleCanonical": "https://calcpromaster.com/regional/singapore-cpf/",
+   "userCanonical": "https://calcpromaster.com/regional/singapore-cpf/"
+  },
+  {
+   "url": "https://calcpromaster.com/finance/loan-emi/",
+   "verdict": "PASS",
+   "coverageState": "Submitted and indexed",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-10-02T01:25:58Z",
+   "googleCanonical": "https://calcpromaster.com/finance/loan-emi/",
+   "userCanonical": "https://calcpromaster.com/finance/loan-emi",
+   "referringUrls": [
+    "https://calcpromaster.com/"
+   ]
+  },
+  {
+   "url": "https://calcpromaster.com/math/percentage/",
+   "verdict": "NEUTRAL",
+   "coverageState": "URL is unknown to Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED"
+  },
+  {
+   "url": "https://calcpromaster.com/health/bmi/",
+   "verdict": "NEUTRAL",
+   "coverageState": "Crawled - currently not indexed",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-10-28T06:55:03Z",
+   "googleCanonical": "https://calcpromaster.com/health/bmi/",
+   "userCanonical": "https://calcpromaster.com/health/bmi/",
+   "referringUrls": [
+    "https://calcpromaster.com/guides/calories",
+    "https://calcpromaster.com/health/pregnancy/"
+   ]
+  },
+  {
+   "url": "https://calcpromaster.com/family/child-height",
+   "verdict": "NEUTRAL",
+   "coverageState": "URL is unknown to Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED"
+  },
+  {
+   "url": "https://calcpromaster.com/finance/pmi-calculator",
+   "verdict": "NEUTRAL",
+   "coverageState": "Page with redirect",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-10-21T18:40:50Z",
+   "googleCanonical": "https://calcpromaster.com/finance/pmi-calculator/",
+   "userCanonical": "https://calcpromaster.com/finance/pmi-calculator",
+   "referringUrls": [
+    "https://calcpromaster.com/finance/pmi-calculator/",
+    "https://calcpromaster.com/guides/mortgage",
+    "https://calcpromaster.netlify.app/qa-dashboard"
+   ]
+  },
+  {
+   "url": "https://calcpromaster.com/",
+   "verdict": "PASS",
+   "coverageState": "Submitted and indexed",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-10-27T12:11:08Z",
+   "googleCanonical": "https://calcpromaster.com/",
+   "userCanonical": "https://calcpromaster.com/",
+   "referringUrls": [
+    "https://calcpromaster.netlify.app/guides/",
+    "https://calcpromaster.com/qa-dashboard",
+    "https://calcpromaster.netlify.app/ar/education/gpa"
+   ]
+  },
+  {
+   "url": "https://calcpromaster.com/tech/",
+   "verdict": "PASS",
+   "coverageState": "Submitted and indexed",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-10-26T12:00:47Z",
+   "googleCanonical": "https://calcpromaster.com/tech/",
+   "userCanonical": "https://calcpromaster.com/tech",
+   "referringUrls": [
+    "https://calcpromaster.com/tech"
+   ]
+  },
+  {
+   "url": "https://calcpromaster.com/business/",
+   "verdict": "PASS",
+   "coverageState": "Submitted and indexed",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "crawledAs": "MOBILE",
+   "lastCrawlTime": "2026-10-25T20:03:32Z",
+   "googleCanonical": "https://calcpromaster.com/business/",
+   "userCanonical": "https://calcpromaster.com/business",
+   "referringUrls": [
+    "https://calcpromaster.com/business",
+    "https://calcpromaster.com/"
+   ]
+  }
+ ]
+}

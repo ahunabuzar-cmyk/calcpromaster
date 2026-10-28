@@ -1,0 +1,19 @@
+{
+  "ranAt": "2026-10-26T16:15:52.632Z",
+  "site": "https://calcpromaster.com",
+  "source": "data/tmp-inspect-two.json",
+  "total": 2,
+  "count": 2,
+  "results": [
+    {
+      "url": "https://calcpromaster.com/math/mean-median-mode/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/business/newsletter-sponsorship-rate/",
+      "verdict": "NEUTRAL",
+      "coverage": "Crawled - currently not indexed"
+    }
+  ]
+}

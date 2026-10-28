@@ -1,9 +1,9 @@
 {
-  "ranAt": "2026-10-09T14:53:18.051Z",
+  "ranAt": "2026-10-26T16:14:59.658Z",
   "site": "https://calcpromaster.com",
   "source": "data\\not-indexed-audit.json",
-  "total": 784,
-  "count": 784,
+  "total": 631,
+  "count": 794,
   "results": [
     {
       "url": "https://calcpromaster.com/health/bmi/",
@@ -3924,6 +3924,56 @@
       "url": "https://calcpromaster.com/finance/cost-of-delay/",
       "verdict": "NEUTRAL",
       "coverage": "Page with redirect"
+    },
+    {
+      "url": "https://calcpromaster.com/regional/rd-calculator/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed"
+    },
+    {
+      "url": "https://calcpromaster.com/auto/mileage-calculator/",
+      "verdict": "NEUTRAL",
+      "coverage": "Page with redirect"
+    },
+    {
+      "url": "https://calcpromaster.com/terms/",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.com/privacy/",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.com/about/",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.com/guides/compound-interest/",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.com/blog/concrete-patio-math/",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.com/business/churn/",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.com/career/contractor-rate/",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
+    },
+    {
+      "url": "https://calcpromaster.com/construction/roofing/",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google"
     }
   ]
 }

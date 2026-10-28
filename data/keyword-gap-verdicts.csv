@@ -6,7 +6,7 @@ age calculator,COVERED,/guides/age,calculatorsoup-gap+keyword-planner,673000,25
 age calculator calculator,COVERED,/guides/age,calculatorsoup-gap,301000,49
 age checker,COVERED,/guides/age,keyword-planner,2400,5
 age counter,COVERED,/everyday/calorie-counter,keyword-planner,1300,1
-age height and weight calculator,COVERED,/food/daily-calorie,keyword-planner,1900,6
+age height and weight calculator,COVERED,/food/keto-macro,keyword-planner,1900,6
 algebra calculator,COVERED,/math/index,keyword-planner,90500,10
 algebra solver,COVERED,/math/index,keyword-planner,90500,0
 amortisation schedule calculator,COVERED,/finance/amortization,keyword-volume-difficulty,246000,24
@@ -14,10 +14,10 @@ amortization calculator,COVERED,/blog/how-emi-works,keyword-volume-difficulty,24
 amortization schedule payment calculator,COVERED,/finance/amortization,keyword-volume-difficulty,246000,24
 annual calculator,COVERED,/guides/cagr,keyword-planner,880,2
 annual compound interest calculator,COVERED,/finance/compound-interest,keyword-planner,2400,27
-annual income calculator,COVERED,/finance/tax,keyword-planner,49500,1
+annual income calculator,COVERED,/career/mortgage-afford,keyword-planner,49500,1
 annual interest calculator,COVERED,/finance/compound-interest,keyword-planner,1000,10
 annual interest rate calculator,COVERED,/finance/compound-interest,keyword-planner,880,11
-annual net income calculator,COVERED,/finance/tax,keyword-planner,1600,4
+annual net income calculator,COVERED,/career/mortgage-afford,keyword-planner,1600,4
 annual pay calculator,COVERED,/utilities/salary-hourly,keyword-planner,1600,5
 annual payment calculator,COVERED,/family/home-buying,keyword-planner,1600,5
 annual percentage calculator,COVERED,/finance/apy-calculator,keyword-planner,27100,5
@@ -25,28 +25,28 @@ annual percentage rate calculator,COVERED,/finance/apy-calculator,keyword-planne
 annual percentage yield calculator,COVERED,/finance/apy-calculator,keyword-planner,40500,20
 annual rate of return calculator,COVERED,/finance/savings-goal,keyword-planner,1900,6
 annual salary calculator,COVERED,/utilities/salary-hourly,keyword-planner,9900,2
-apr calculator,COVERED,/finance/apr-annual,keyword-planner,27100,5
+apr calculator,COVERED,/finance/staking-rewards,keyword-planner,27100,5
 area calculator,COVERED,/guides/paint-coverage,keyword-planner,110000,0
-average calculator,COVERED,/education/test-average,keyword-planner,74000,0
-basic calculator,COVERED,/regional/gratuity,keyword-planner,14800,67
-basic calculator online free,COVERED,/regional/gratuity,keyword-planner,1900,3
+average calculator,COVERED,/math/moving-average,keyword-planner,74000,0
+basic calculator,COVERED,/regional/leave-encashment,keyword-planner,14800,67
+basic calculator online free,COVERED,/regional/leave-encashment,keyword-planner,1900,3
 bills calculator,COVERED,/guides/electricity-bill,keyword-planner,1600,21
 birth calculator,COVERED,/everyday/age,keyword-planner,3600,7
 birth date calculator,COVERED,/everyday/age,keyword-planner,14800,1
 bmi bmi calculator,COVERED,/guides/ideal-weight,calculatorsoup-gap,110000,54
 bmi calculator by age,COVERED,/family/child-bmi,keyword-planner,5400,10
-bond calculator,COVERED,/finance/zero-coupon-bond,keyword-planner,6600,2
+bond calculator,COVERED,/finance/bonds,keyword-planner,6600,2
 bring home pay calculator,COVERED,/guides/tax-salary,keyword-planner,60500,1
 budget calculator,COVERED,/guides/wedding-budget,keyword-planner,22200,23
 budget calculator free,COVERED,/guides/wedding-budget,keyword-planner,2400,57
 business calculator,COVERED,/guides/business,keyword-planner,1900,56
 calculate age,COVERED,/guides/age,calculatorsoup-gap,301000,47
 calculate age calculator,COVERED,/guides/age,keyword-volume-difficulty,673000,25
-calculate body weight,COVERED,/health/ideal-weight,keyword-planner,8100,9
+calculate body weight,COVERED,/health/bsa,keyword-planner,8100,9
 calculate compound interest calculator,COVERED,/guides/compound-interest,keyword-planner,823000,4
 calculate interest on loan,COVERED,/guides/loans-mortgages,keyword-planner,22200,19
 calculate loan payment with interest,COVERED,/guides/loans-mortgages,keyword-planner,2400,28
-calculate mobile home mortgage,COVERED,/finance/mortgage,keyword-planner,6600,32
+calculate mobile home mortgage,COVERED,/finance/reverse-mortgage,keyword-planner,6600,32
 calculate my age,COVERED,/guides/age,keyword-planner,2900,2
 calculate my income,COVERED,/guides/tax-salary,keyword-planner,880,2
 calculate my pay,COVERED,/guides/tax-salary,keyword-planner,1300,7
@@ -56,21 +56,21 @@ calculate my salary,COVERED,/guides/tax-salary,keyword-planner,880,2
 calculate my take home pay,COVERED,/guides/tax-salary,keyword-planner,880,1
 calculate my work hours,COVERED,/everyday/work-hours-weekly,keyword-planner,135000,2
 calculate ovulation calculator,COVERED,/health/ovulation,keyword-volume-difficulty,301000,25
-calculate percentage of a number,COVERED,/guides/body-fat,keyword-planner,8100,1
+calculate percentage of a number,COVERED,/guides/percentage,keyword-planner,8100,1
 calculate sales tax,COVERED,/guides/gst-sales-tax,keyword-planner,110000,1
 calculate savings growth,COVERED,/everyday/compound-savings,keyword-planner,1000,8
 calculate square footage calculator,COVERED,/homegarden/home-sqft,keyword-volume-difficulty,165000,9
-calculate time calculator,COVERED,/guides/screen-time,keyword-volume-difficulty,673000,27
+calculate time calculator,COVERED,/blog/rule-of-72,keyword-volume-difficulty,673000,27
 calculate tip calculator,COVERED,/guides/tip,keyword-volume-difficulty,450000,18
 calculate your age,COVERED,/guides/age,keyword-planner,673000,0
 calculate your work hours,COVERED,/everyday/work-hours-weekly,keyword-planner,135000,2
-calculator application,COVERED,/homegarden/fertilizer,keyword-planner,1000,31
+calculator application,COVERED,/career/interview-to-offer-tracker,keyword-planner,1000,31
 calculator car finance,COVERED,/finance/car-lease-calculator,keyword-planner,60500,41
-calculator cd,COVERED,/finance/cd-ladder,keyword-volume-difficulty,165000,2
+calculator cd,COVERED,/finance/cd-calculator,keyword-volume-difficulty,165000,2
 calculator concrete,COVERED,/blog/concrete-patio-math,keyword-volume-difficulty,550000,24
 calculator concrete calculator,COVERED,/blog/concrete-patio-math,keyword-volume-difficulty,550000,24
 calculator for amortization,COVERED,/blog/how-emi-works,keyword-volume-difficulty,246000,24
-calculator for cd,COVERED,/finance/cd-ladder,keyword-volume-difficulty,165000,2
+calculator for cd,COVERED,/finance/cd-calculator,keyword-volume-difficulty,165000,2
 calculator for cement,COVERED,/blog/concrete-patio-math,keyword-volume-difficulty,550000,24
 calculator for concrete,COVERED,/blog/concrete-patio-math,keyword-volume-difficulty,550000,24
 calculator for grades,COVERED,/guides/grade-needed,keyword-volume-difficulty,1000000,23
@@ -85,20 +85,19 @@ calculator for square footage,COVERED,/homegarden/home-sqft,keyword-volume-diffi
 calculator gpa,COVERED,/guides/gpa,keyword-volume-difficulty,823000,30
 calculator grader,COVERED,/guides/grade-needed,keyword-volume-difficulty,1000000,23
 calculator grades,COVERED,/guides/grade-needed,keyword-volume-difficulty,1000000,23
-calculator home,COVERED,/guides/tax-salary,keyword-planner,4400,54
+calculator home,COVERED,/guides/homegarden,keyword-planner,4400,54
 calculator of ovulation,COVERED,/health/ovulation,keyword-volume-difficulty,301000,25
 calculator on phone,COVERED,/lifestyle/charging-time,keyword-planner,2400,13
 calculator on the phone,COVERED,/lifestyle/charging-time,keyword-planner,2400,13
 calculator ovulation,COVERED,/health/ovulation,keyword-volume-difficulty,301000,25
 calculator ovulation date,COVERED,/health/ovulation,keyword-volume-difficulty,301000,25
-calculator real estate,COVERED,/finance/diversification,keyword-planner,2400,44
 calculator scientific,COVERED,/math/scientific,keyword-planner,8100,40
 calculator tax calculator,COVERED,/guides/gst-sales-tax,keyword-planner,246000,0
 calculator with fractions,COVERED,/conversion/fraction-percent,keyword-volume-difficulty,368000,27
-calculator with screen,COVERED,/guides/screen-time,keyword-planner,1300,28
+calculator with screen,COVERED,/blog/bmi-honest-look,keyword-planner,1300,28
 car finance interest calculator,COVERED,/finance/car-lease-calculator,keyword-planner,8100,21
 cash on cash calculator,COVERED,/finance/irr,keyword-planner,1600,6
-cd calculator,COVERED,/finance/cd-ladder,keyword-volume-difficulty,165000,2
+cd calculator,COVERED,/finance/cd-calculator,keyword-volume-difficulty,165000,2
 cd term calculator,COVERED,/finance/cd-calculator,keyword-volume-difficulty,165000,2
 cds calculator,COVERED,/finance/cd-ladder,keyword-volume-difficulty,165000,4
 certificate of deposit cd calculator,COVERED,/finance/cd-calculator,keyword-volume-difficulty,165000,2
@@ -141,7 +140,7 @@ credit calculator,COVERED,/guides/credit-card-minimum,keyword-planner,1900,26
 daily compound interest calculator,COVERED,/guides/compound-interest,keyword-planner,14800,3
 date calculator,COVERED,/guides/everyday,keyword-planner,673000,0
 dating time calculator,COVERED,/regional/prayer-time,keyword-volume-difficulty,201000,0
-day count,COVERED,/everyday/date-diff,keyword-planner,74000,0
+day count,COVERED,/education/flashcard-count,keyword-planner,74000,0
 days calculator,COVERED,/guides/age,keyword-planner,135000,0
 digital calculator,COVERED,/math/digital-root,keyword-planner,1900,51
 dilution calculator,COVERED,/science/dilution,keyword-planner,14800,0
@@ -155,26 +154,26 @@ estimate my retirement income,COVERED,/finance/retirement-income,keyword-planner
 estimate payment calculator,COVERED,/guides/credit-card-minimum,keyword-planner,880,25
 estimate retirement income,COVERED,/finance/retirement-income,keyword-planner,8100,19
 estimate retirement income calculator,COVERED,/finance/retirement-income,keyword-planner,8100,19
-estimate retirement savings,COVERED,/finance/retirement,keyword-planner,27100,9
-estimate retirement savings calculator,COVERED,/finance/retirement,keyword-planner,27100,9
+estimate retirement savings,COVERED,/finance/retirement-income,keyword-planner,27100,9
+estimate retirement savings calculator,COVERED,/finance/retirement-income,keyword-planner,27100,9
 estimate return on investment,COVERED,/finance/investment,keyword-planner,1000,14
 estimate take home pay,COVERED,/guides/tax-salary,keyword-planner,60500,1
 exchange rate calculator xe,COVERED,/finance/currency-converter,calculator-net-gap,1300,59
 exchange rate xe converter,COVERED,/finance/currency-converter,calculator-net-gap,246000,58
 fast calculator,COVERED,/food/fast-food-calories,keyword-planner,6600,0
 figuring sales tax,COVERED,/guides/gst-sales-tax,keyword-planner,110000,1
-finance home calculator,COVERED,/finance/va-loan,keyword-planner,1000,67
+finance home calculator,COVERED,/finance/rent-vs-buy,keyword-planner,1000,67
 finance loan calculator,COVERED,/finance/index,keyword-planner,880,28
 financial calculator,COVERED,/disclaimer-finance,keyword-planner,74000,40
 financial calculator online,COVERED,/disclaimer-finance,keyword-planner,6600,10
 financial calculator online free,COVERED,/disclaimer-finance,keyword-planner,880,10
-find a percentage of a number,COVERED,/guides/body-fat,keyword-planner,5400,2
-find percentage,COVERED,/guides/body-fat,keyword-planner,5400,1
+find a percentage of a number,COVERED,/guides/percentage,keyword-planner,5400,2
+find percentage,COVERED,/guides/percentage,keyword-planner,5400,1
 find square feet calculator,COVERED,/construction/sod,keyword-volume-difficulty,165000,9
-food cost calculator,COVERED,/food/meal-prep,keyword-planner,2400,32
-formula calculator,COVERED,/guides/grade-needed,keyword-planner,6600,4
+food cost calculator,COVERED,/food/coffee-cost-per-cup,keyword-planner,2400,32
+formula calculator,COVERED,/qa-dashboard,keyword-planner,6600,4
 formula for compound interest annually,COVERED,/guides/compound-interest,keyword-planner,2400,2
-fraction math calculator,COVERED,/math/index,keyword-volume-difficulty,368000,28
+fraction math calculator,COVERED,/math/continued-fraction,keyword-volume-difficulty,368000,28
 fractions calculator,COVERED,/conversion/fraction-percent,keyword-volume-difficulty,368000,27
 free hourly paycheck calculator,COVERED,/utilities/salary-hourly,keyword-planner,1000,14
 free hourly payroll calculator,COVERED,/utilities/salary-hourly,keyword-planner,1000,14
@@ -192,14 +191,14 @@ future value,COVERED,/guides/sip,keyword-planner,2400,2
 future value calculator,COVERED,/guides/sip,keyword-planner,40500,4
 future value formula,COVERED,/guides/sip,keyword-planner,8100,1
 geometry calculator,COVERED,/geometry-lab,keyword-planner,9900,36
-goal weight calculator,COVERED,/food/weight-loss-time,keyword-planner,1300,12
+goal weight calculator,COVERED,/fitness/weight-loss,keyword-planner,1300,12
 graphical calculators,COVERED,/graph,keyword-planner,450000,36
 graphing calculator online,COVERED,/graph,keyword-planner,18100,2
 gross pay calculator,COVERED,/guides/salary,keyword-planner,6600,1
 growth calculator,COVERED,/guides/cagr,keyword-planner,6600,5
 growth rate calculator,COVERED,/guides/cagr,keyword-planner,2400,2
-height age weight calculator,COVERED,/food/daily-calorie,keyword-planner,1900,6
-height and weight calculator,COVERED,/food/daily-calorie,keyword-planner,4400,5
+height age weight calculator,COVERED,/food/keto-macro,keyword-planner,1900,6
+height and weight calculator,COVERED,/food/keto-macro,keyword-planner,4400,5
 home buying calculator,COVERED,/finance/rent-vs-buy,keyword-planner,6600,68
 home cost calculator,COVERED,/food/coffee-cost-per-cup,keyword-planner,1900,50
 home loan calculator free,COVERED,/finance/va-loan,keyword-planner,1000,53
@@ -213,9 +212,9 @@ hourly paycheck calculator,COVERED,/utilities/salary-hourly,keyword-planner,2220
 hourly payroll calculator,COVERED,/utilities/salary-hourly,keyword-planner,8100,17
 hourly payroll tax calculator,COVERED,/utilities/salary-hourly,keyword-planner,14800,0
 hourly salary calculator,COVERED,/utilities/salary-hourly,keyword-planner,49500,1
-hours calculator,COVERED,/guides/screen-time,keyword-planner,368000,0
-hours worked calculator,COVERED,/guides/screen-time,keyword-planner,135000,2
-i need a calculator,COVERED,/food/daily-calorie,keyword-planner,1900,22
+hours calculator,COVERED,/guides/hourly-rate,keyword-planner,368000,0
+hours worked calculator,COVERED,/guides/hourly-rate,keyword-planner,135000,2
+i need a calculator,COVERED,/education/financial-need,keyword-planner,1900,22
 income and tax calculator,COVERED,/guides/tax-salary,keyword-planner,90500,1
 income calculator,COVERED,/guides/tax-salary,keyword-planner,18100,1
 income pay calculator,COVERED,/guides/tax-salary,keyword-planner,1600,3
@@ -229,7 +228,7 @@ interest compounded monthly,COVERED,/finance/fixed-deposit-vs-recurring,keyword-
 interest paid on loan calculator,COVERED,/guides/loans-mortgages,keyword-planner,2400,28
 interest payment,COVERED,/finance/heloc-payment,keyword-planner,1300,1
 interest payment calculator,COVERED,/finance/heloc-payment,keyword-planner,5400,14
-interest per day calculator,COVERED,/tech/streaming-quality,keyword-planner,4400,1
+interest per day calculator,COVERED,/everyday/work-hours-weekly,keyword-planner,4400,1
 interest rate calculator,COVERED,/finance/interest-only,keyword-planner,33100,10
 interest rate calculator for home loan,COVERED,/finance/va-loan,keyword-planner,880,43
 interest rate formula,COVERED,/guides/compound-interest,keyword-planner,3600,1
@@ -251,11 +250,12 @@ loan amount calculator,COVERED,/finance/interest-only,keyword-planner,1300,29
 loan amount estimator,COVERED,/finance/interest-only,keyword-planner,1300,29
 loan and interest calculator,COVERED,/guides/loans-mortgages,keyword-planner,22200,19
 loan and interest rate calculator,COVERED,/finance/interest-only,keyword-planner,1900,21
-loan and monthly payment calculator,COVERED,/finance/balloon-payment,keyword-planner,5400,28
+loan and monthly payment calculator,COVERED,/finance/fha-loan,keyword-planner,5400,28
 loan and payment calculator,COVERED,/finance/balloon-payment,keyword-planner,110000,20
 loan calculator,COVERED,/guides/loans-mortgages,keyword-planner,673000,12
 loan calculator business loan,COVERED,/guides/loans-mortgages,keyword-planner,14800,42
 loan calculator loan calculator,COVERED,/guides/loans-mortgages,keyword-planner,673000,12
+loan calculator monthly,COVERED,/finance/fha-loan,keyword-planner,1000,25
 loan calculators loan payments,COVERED,/finance/balloon-payment,keyword-planner,110000,20
 loan cost calculator,COVERED,/finance/payday-loan-cost,keyword-planner,1000,25
 loan cost estimator,COVERED,/finance/payday-loan-cost,keyword-planner,1000,25
@@ -273,45 +273,44 @@ loan payment formula,COVERED,/finance/balloon-payment,keyword-planner,2400,4
 loan payment with interest calculator,COVERED,/guides/loans-mortgages,keyword-planner,2400,28
 loan payoff,COVERED,/finance/mortgage-payoff,keyword-planner,1000,8
 loan payoff calculator,COVERED,/finance/mortgage-payoff,keyword-planner,27100,9
-loan percentage rate calculator,COVERED,/finance/apy-calculator,keyword-planner,3600,30
+loan percentage rate calculator,COVERED,/finance/interest-only,keyword-planner,3600,30
 loan rate calculator,COVERED,/finance/interest-only,keyword-planner,3600,30
 loan value calculator,COVERED,/guides/loans-mortgages,keyword-planner,2400,10
-maintenance calculator,COVERED,/health/maintenance-fluids,keyword-planner,2400,6
+maintenance calculator,COVERED,/auto/car-maintenance,keyword-planner,2400,6
 math calculator,COVERED,/blog/rule-of-72,keyword-planner,90500,9
 math calculator online,COVERED,/blog/rule-of-72,keyword-planner,3600,1
 math formula calculator,COVERED,/math/standard-error,keyword-planner,4400,10
 math step by step calculator,COVERED,/math/angle-between-vectors,keyword-planner,9900,9
 mathematical calculator,COVERED,/blog/rule-of-72,keyword-planner,90500,9
 mifflin st jeor,COVERED,/guides/bmr,keyword-planner,4400,1
-mobile home calculator for mortgage,COVERED,/finance/mortgage,keyword-planner,6600,32
+mobile home calculator for mortgage,COVERED,/finance/reverse-mortgage,keyword-planner,6600,32
 mobile home loan calculator,COVERED,/finance/va-loan,keyword-planner,6600,32
 mobile home loan estimator,COVERED,/finance/va-loan,keyword-planner,6600,32
-mobile home loan payment calculator,COVERED,/finance/fha-loan,keyword-planner,6600,32
-mobile home mortgage calculator,COVERED,/finance/mortgage,keyword-planner,6600,32
+mobile home mortgage calculator,COVERED,/finance/reverse-mortgage,keyword-planner,6600,32
 mobile home mortgage payment calculator,COVERED,/finance/mortgage,keyword-planner,6600,32
 money calculator,COVERED,/guides/lifestyle,keyword-planner,40500,0
 monthly budget calculator,COVERED,/family/family-budget-simple,keyword-planner,1900,28
 monthly budget estimator,COVERED,/family/family-budget-simple,keyword-planner,1900,28
 monthly calculator,COVERED,/family/family-budget-simple,keyword-planner,2900,1
-monthly gross income calculator,COVERED,/finance/rent-affordability,keyword-planner,6600,2
-monthly income calculator,COVERED,/family/family-budget,keyword-planner,14800,2
+monthly gross income calculator,COVERED,/finance/gross-rent-multiplier,keyword-planner,6600,2
+monthly income calculator,COVERED,/finance/cash-flow,keyword-planner,14800,2
 monthly interest calculator,COVERED,/finance/fixed-deposit-vs-recurring,keyword-planner,4400,5
-monthly loan calculator payment,COVERED,/finance/credit-card-payoff,keyword-planner,5400,28
-monthly loan payment calculator,COVERED,/finance/credit-card-payoff,keyword-planner,5400,28
+monthly loan calculator payment,COVERED,/finance/fha-loan,keyword-planner,5400,28
+monthly loan payment calculator,COVERED,/finance/fha-loan,keyword-planner,5400,28
 monthly pay calculator,COVERED,/regional/thailand-take-home-salary,keyword-planner,14800,2
-monthly payment,COVERED,/finance/credit-card-payoff,keyword-planner,6600,2
-monthly payment calculator,COVERED,/finance/credit-card-payoff,keyword-planner,27100,21
-monthly payment estimator,COVERED,/finance/credit-card-payoff,keyword-planner,27100,21
-monthly payment for a loan calculator,COVERED,/finance/credit-card-payoff,keyword-planner,5400,28
-monthly payment formula,COVERED,/finance/credit-card-payoff,keyword-planner,1900,1
-monthly payment home calculator,COVERED,/finance/credit-card-payoff,keyword-planner,2400,60
-monthly payment loan,COVERED,/finance/credit-card-payoff,keyword-planner,880,41
+monthly payment,COVERED,/finance/fha-loan,keyword-planner,6600,2
+monthly payment calculator,COVERED,/finance/fha-loan,keyword-planner,27100,21
+monthly payment estimator,COVERED,/finance/fha-loan,keyword-planner,27100,21
+monthly payment for a loan calculator,COVERED,/finance/fha-loan,keyword-planner,5400,28
+monthly payment formula,COVERED,/finance/fha-loan,keyword-planner,1900,1
+monthly payment home calculator,COVERED,/finance/fha-loan,keyword-planner,2400,60
+monthly payment loan,COVERED,/finance/fha-loan,keyword-planner,880,41
 monthly retirement income calculator,COVERED,/finance/retirement-income,keyword-planner,1300,49
-monthly savings calculator,COVERED,/family/college-savings-monthly,keyword-planner,880,20
+monthly savings calculator,COVERED,/everyday/budget-allocator,keyword-planner,880,20
 monthly take home pay calculator,COVERED,/regional/thailand-take-home-salary,keyword-planner,1300,2
-mortgage calculator for a mobile home,COVERED,/finance/mortgage,keyword-planner,6600,32
+mortgage calculator for a mobile home,COVERED,/finance/reverse-mortgage,keyword-planner,6600,32
 mortgage calculator how much can i qualify for,COVERED,/finance/loan-qualify,keyword-planner,1900,66
-mortgage calculator on mobile home,COVERED,/finance/mortgage,keyword-planner,6600,32
+mortgage calculator on mobile home,COVERED,/finance/reverse-mortgage,keyword-planner,6600,32
 mortgage calculators,COVERED,/guides/loans-mortgages,keyword-planner,2740000,26
 mortgage income calculator,COVERED,/career/mortgage-afford,keyword-planner,1900,34
 mortgage loan calculator monthly payment,COVERED,/finance/graduated-payment,keyword-planner,1000,56
@@ -321,7 +320,7 @@ mortgage monthly rate calculator,COVERED,/finance/interest-only,keyword-planner,
 my calculator on my phone,COVERED,/lifestyle/charging-time,keyword-planner,2900,30
 my paycheck calculator,COVERED,/guides/tax-salary,keyword-planner,1300,1
 net income calculator,COVERED,/guides/tax-salary,keyword-planner,18100,1
-net monthly income calculator,COVERED,/family/family-budget,keyword-planner,1600,4
+net monthly income calculator,COVERED,/finance/cash-flow,keyword-planner,1600,4
 net paycheck calculator,COVERED,/guides/tax-salary,keyword-planner,2900,2
 net present value calculator,COVERED,/finance/annuity,keyword-planner,2400,1
 net salary calculator,COVERED,/guides/tax-salary,keyword-planner,2900,2
@@ -335,7 +334,7 @@ online investment calculator,COVERED,/guides/npv-vs-irr,keyword-planner,1600,13
 online loan calculator,COVERED,/guides/loans-mortgages,keyword-planner,27100,6
 online loan payment calculator,COVERED,/finance/balloon-payment,keyword-planner,3600,4
 online payment calculator,COVERED,/guides/credit-card-minimum,keyword-planner,1600,12
-online saving calculator,COVERED,/finance/retirement,keyword-planner,2400,4
+online saving calculator,COVERED,/everyday/savings-goal-date,keyword-planner,2400,4
 online statistics calculator,COVERED,/guides/math-statistics,keyword-planner,1000,4
 online wage calculator,COVERED,/guides/tax-salary,keyword-planner,1900,0
 online work hours calculator,COVERED,/everyday/work-hours-weekly,keyword-planner,4400,0
@@ -362,11 +361,11 @@ peptide calculator,COVERED,/health/peptide-reconstitution,keyword-volume-difficu
 peptides calculator,COVERED,/health/peptide-reconstitution,keyword-volume-difficulty,301000,6
 percent of percentage calculator,COVERED,/math/percent-change,keyword-volume-difficulty,550000,17
 percent of what calculator,COVERED,/guides/discount,keyword-volume-difficulty,550000,20
-percentage calculator,COVERED,/guides/body-fat,keyword-planner,550000,0
-percentage calculator app,COVERED,/guides/body-fat,keyword-planner,1000,0
-percentage formula,COVERED,/guides/body-fat,keyword-planner,14800,1
-percentage of a number,COVERED,/guides/body-fat,keyword-planner,4400,1
-percentage table calculator,COVERED,/guides/body-fat,keyword-volume-difficulty,550000,27
+percentage calculator,COVERED,/guides/percentage,keyword-planner,550000,0
+percentage calculator app,COVERED,/guides/percentage,keyword-planner,1000,0
+percentage formula,COVERED,/guides/percentage,keyword-planner,14800,1
+percentage of a number,COVERED,/guides/percentage,keyword-planner,4400,1
+percentage table calculator,COVERED,/guides/percentage,keyword-volume-difficulty,550000,27
 percentile calculator,COVERED,/family/child-bmi,keyword-planner,8100,1
 power calculator,COVERED,/guides/ohms-law,keyword-planner,3600,1
 present value calculator,COVERED,/finance/annuity,keyword-planner,9900,1
@@ -377,33 +376,31 @@ principal interest calculator,COVERED,/finance/compound-interest,keyword-planner
 profit calculator,COVERED,/guides/profit-margin,keyword-planner,4400,9
 proportion calculator,COVERED,/math/proportion,keyword-planner,90500,0
 qualify for a home loan calculator,COVERED,/finance/loan-qualify,keyword-planner,880,66
-rate calculator,COVERED,/guides/freelance-rate-card,keyword-planner,3600,9
+rate calculator,COVERED,/guides/hourly-rate,keyword-planner,3600,9
 rate of return calculator,COVERED,/finance/inflation-adjusted,keyword-planner,6600,7
 ratio calculator,COVERED,/guides/gear-ratio,keyword-planner,110000,0
-real estate investment calculator,COVERED,/finance/diversification,keyword-planner,1000,40
 rental income calculator,COVERED,/finance/net-operating-income,keyword-planner,2400,17
 repayment calculator with interest,COVERED,/finance/student-loan-repayment,keyword-planner,5400,14
 retirement calculator with compound interest,COVERED,/guides/compound-interest,keyword-planner,1600,21
 retirement calculators,COVERED,/guides/retirement,keyword-planner,368000,15
 retirement income calculator,COVERED,/finance/retirement-income,keyword-planner,8100,19
-retirement salary calculator,COVERED,/career/retirement-contrib,keyword-planner,8100,19
-retirement savings calculator,COVERED,/finance/retirement,keyword-planner,27100,9
+retirement savings calculator,COVERED,/finance/retirement-income,keyword-planner,27100,9
 retirement taxable income calculator,COVERED,/finance/retirement-income,keyword-planner,1300,18
 return calculator,COVERED,/finance/savings-goal,keyword-planner,2900,9
-roi calculator,COVERED,/auto/ev-charger-roi,keyword-planner,18100,9
+roi calculator,COVERED,/business/business-roi,keyword-planner,18100,9
 salary after tax calculator,COVERED,/regional/canada-take-home-salary,keyword-planner,18100,1
 salary calculator,COVERED,/guides/tax-salary,keyword-planner,301000,0
 salary converter,COVERED,/utilities/salary-hourly,keyword-planner,3600,0
 salary income tax calculator,COVERED,/guides/tax-salary,keyword-planner,4400,2
 salary pay calculator,COVERED,/guides/tax-salary,keyword-planner,1600,3
 salary paycheck calculator,COVERED,/guides/tax-salary,keyword-planner,33100,0
-saving estimator,COVERED,/finance/retirement,keyword-planner,49500,6
+saving estimator,COVERED,/everyday/savings-goal-date,keyword-planner,49500,6
 saving with interest calculator,COVERED,/finance/fixed-deposit-vs-recurring,keyword-planner,18100,26
 savings account calculator,COVERED,/finance/savings-comparison,keyword-planner,8100,23
 savings account interest calculator,COVERED,/finance/savings-comparison,keyword-planner,6600,30
 savings and interest calculator,COVERED,/finance/fixed-deposit-vs-recurring,keyword-planner,18100,26
-savings and retirement calculator,COVERED,/finance/retirement,keyword-planner,27100,9
-savings calculator,COVERED,/finance/retirement,keyword-planner,49500,6
+savings and retirement calculator,COVERED,/finance/retirement-income,keyword-planner,27100,9
+savings calculator,COVERED,/everyday/savings-goal-date,keyword-planner,49500,6
 savings deposit calculator,COVERED,/finance/savings-comparison,keyword-planner,8100,23
 savings goal calculator,COVERED,/everyday/savings-goal-date,keyword-planner,3600,1
 savings interest rate calculator,COVERED,/finance/fixed-deposit-vs-recurring,keyword-planner,1900,30
@@ -422,32 +419,31 @@ size calculator,COVERED,/guides/ac-size,keyword-planner,880,1
 snow day calculator,COVERED,/everyday/snow-day,keyword-volume-difficulty,368000,17
 snow days calculator,COVERED,/everyday/snow-day,keyword-volume-difficulty,368000,17
 solving maths,COVERED,/blog/rule-of-72,calculatorsoup-gap,110000,46
-speed calculator,COVERED,/education/reading-speed,keyword-planner,9900,0
+speed calculator,COVERED,/conversion/speed,keyword-planner,9900,0
 split bill calculator,COVERED,/guides/tip,keyword-planner,1900,2
 sq ft calculator,COVERED,/construction/sod,keyword-volume-difficulty,165000,10
 square feet conversion calculator,COVERED,/construction/sod,keyword-volume-difficulty,165000,9
 square foot estimate calculator,COVERED,/construction/sod,keyword-volume-difficulty,165000,9
 square footage conversion calculator,COVERED,/homegarden/home-sqft,keyword-volume-difficulty,165000,9
-standard calculator,COVERED,/math/standard-error,keyword-planner,1600,73
+standard calculator,COVERED,/fitness/pushup-test,keyword-planner,1600,73
 statistics calculator,COVERED,/guides/math-statistics,keyword-planner,90500,2
 step by step calculator,COVERED,/guides/gpa,keyword-planner,1600,2
 step calculator,COVERED,/guides/gpa,keyword-planner,6600,3
-stock calculator,COVERED,/career/stock-options,keyword-planner,14800,4
+stock calculator,COVERED,/finance/esop,keyword-planner,14800,4
 take home calculator,COVERED,/guides/tax-salary,keyword-planner,2900,1
 take home pay calculator,COVERED,/guides/tax-salary,keyword-planner,60500,1
 take home salary calculator,COVERED,/guides/tax-salary,keyword-planner,2400,1
-target calculators,COVERED,/guides/protein-intake,keyword-planner,1900,97
+target calculators,COVERED,/guides/business,keyword-planner,1900,97
 tax calculator online,COVERED,/guides/gst-sales-tax,keyword-planner,9900,3
-taxable calculator,COVERED,/regional/gst-calculator,keyword-planner,1000,3
 term loan calculator,COVERED,/finance/loan-comparison,keyword-planner,1000,14
 time and pay calculator,COVERED,/career/timesheet-hours,keyword-planner,1000,5
-time calculator,COVERED,/guides/screen-time,keyword-planner,673000,0
+time calculator,COVERED,/blog/rule-of-72,keyword-planner,673000,0
 time calculator for work hours,COVERED,/guides/screen-time,keyword-planner,135000,2
 time calculator hours,COVERED,/guides/screen-time,keyword-planner,6600,0
 time card clock calculator,COVERED,/career/timesheet-hours,keyword-volume-difficulty,201000,20
 time payroll calculator,COVERED,/career/timesheet-hours,keyword-planner,22200,12
 time schedule calculator,COVERED,/food/intermittent-fasting,keyword-planner,880,4
-time value calculator,COVERED,/guides/screen-time,keyword-planner,12100,5
+time value calculator,COVERED,/blog/rule-of-72,keyword-planner,12100,5
 tip calculator,COVERED,/guides/tip,keyword-volume-difficulty,450000,18
 tip-calculator,COVERED,/guides/tip,keyword-volume-difficulty,450000,18
 tipping calculator,COVERED,/guides/tip,keyword-volume-difficulty,450000,18
@@ -460,24 +456,23 @@ volume calculator,COVERED,/conversion/volume,keyword-planner,110000,0
 wage calculator hourly,COVERED,/utilities/salary-hourly,keyword-planner,18100,3
 wages calculator with tax,COVERED,/guides/tax-salary,keyword-planner,1900,4
 water calculator,COVERED,/guides/water-intake,keyword-planner,9900,1
-weekly pay calculator,COVERED,/family/maternity-leave,keyword-planner,4400,5
-weekly paycheck calculator,COVERED,/family/maternity-leave,keyword-planner,4400,5
 weekly time calculator,COVERED,/guides/screen-time,keyword-planner,880,1
 weekly work hours calculator,COVERED,/everyday/work-hours-weekly,keyword-planner,8100,1
 weight calculator,COVERED,/guides/ideal-weight,keyword-planner,27100,2
-weight height calculator,COVERED,/food/daily-calorie,keyword-planner,4400,5
+weight height calculator,COVERED,/food/keto-macro,keyword-planner,4400,5
 wise currency converter,COVERED,/conversion/currency-conv,calculatorsoup-gap,12100,28
-work calculator,COVERED,/guides/currency-conversion,keyword-planner,27100,0
+work calculator,COVERED,/blog/how-emi-works,keyword-planner,27100,0
 work hours calculator free,COVERED,/everyday/work-hours-weekly,keyword-planner,4400,2
 work time calculator,COVERED,/science/power,keyword-planner,33100,2
 xe currency converter,COVERED,/finance/currency-converter,calculator-net-gap,60500,58
 yard calculator,COVERED,/homegarden/compost-bin,keyword-planner,3600,2
-year calculator,COVERED,/guides/age,keyword-planner,5400,0
+year calculator,COVERED,/blog/ev-vs-petrol-tco,keyword-planner,5400,0
 yearly compound interest calculator,COVERED,/guides/compound-interest,keyword-planner,2400,27
 your age,COVERED,/guides/age,keyword-planner,2900,0
 bank certificate calculator,GAP,,keyword-volume-difficulty,165000,2
 bmi calculator body mass index,GAP,,calculatorsoup-gap,110000,53
 calculator on this phone,GAP,,keyword-planner,2400,13
+calculator real estate,GAP,,keyword-planner,2400,44
 calculator that prints,GAP,,keyword-planner,1600,100
 calculator that shows work,GAP,,keyword-planner,1000,21
 calendar calculator,GAP,,keyword-planner,60500,0
@@ -524,8 +519,8 @@ interest percentage calculator,GAP,,keyword-planner,33100,10
 investment account calculator,GAP,,keyword-planner,1000,25
 investment calculator over time,GAP,,keyword-planner,3600,35
 loan calculator for business,GAP,,keyword-planner,14800,42
-loan calculator monthly,GAP,,keyword-planner,1000,25
 loan percentage calculator,GAP,,keyword-planner,1900,21
+mobile home loan payment calculator,GAP,,keyword-planner,6600,32
 monthly investment calculator,GAP,,keyword-planner,1000,39
 mortgage and tax calculator,GAP,,keyword-planner,9900,40
 mortgage calculator how much do i qualify for,GAP,,keyword-planner,1900,66
@@ -539,11 +534,13 @@ polypeptide calculator,GAP,,keyword-volume-difficulty,301000,6
 pricing generator,GAP,,keyword-planner,8100,100
 pv calculator,GAP,,keyword-planner,1900,1
 qualify for a mortgage calculator,GAP,,keyword-planner,880,66
+real estate investment calculator,GAP,,keyword-planner,1000,40
 retirement budget calculator,GAP,,keyword-planner,1900,24
 retirement calculator growth,GAP,,keyword-planner,1300,36
 retirement financial calculator,GAP,,keyword-planner,880,52
 retirement plan estimator,GAP,,keyword-planner,5400,6
 retirement planner calculator,GAP,,keyword-planner,2400,36
+retirement salary calculator,GAP,,keyword-planner,8100,19
 reverse tax calculator,GAP,,keyword-planner,4400,0
 roi calculation formula,GAP,,keyword-planner,1300,8
 savings calculator simple,GAP,,keyword-planner,6600,1
@@ -554,6 +551,9 @@ simple loan calculator,GAP,,keyword-planner,14800,13
 simple retirement calculator,GAP,,keyword-planner,3600,47
 simplify calculator,GAP,,keyword-planner,18100,2
 smart calculator,GAP,,keyword-planner,4400,51
+taxable calculator,GAP,,keyword-planner,1000,3
+weekly pay calculator,GAP,,keyword-planner,4400,5
+weekly paycheck calculator,GAP,,keyword-planner,4400,5
 work schedule calculator,GAP,,keyword-planner,1300,9
 yearly payment calculator,GAP,,keyword-planner,880,5
 a/g calculator,IGNORE,,keyword-volume-difficulty,673000,0
@@ -594,7 +594,7 @@ housing cost calculator,WEAK,/guides/baby-cost,keyword-planner,1900,50
 housing cost estimator,WEAK,/guides/baby-cost,keyword-planner,1900,50
 interest accrual calculator,WEAK,/finance/loan-emi,keyword-planner,1600,7
 mortgage expense calculator,WEAK,/finance/mortgage,keyword-planner,201000,35
-paycheck deduction calculator,WEAK,/guides/career,keyword-planner,1900,10
+paycheck deduction calculator,WEAK,/guides/tax-salary,keyword-planner,1900,10
 projected retirement calculator,WEAK,/finance/retirement,keyword-planner,880,49
 retirement expenditure calculator,WEAK,/finance/retirement-withdrawal,keyword-planner,1900,33
 spending calculator retirement,WEAK,/guides/retirement,keyword-planner,1900,33

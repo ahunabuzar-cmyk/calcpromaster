@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-24T12:33:53.173Z",
+  "generatedAt": "2026-10-28T14:34:44.587Z",
   "pagesScanned": 1620,
-  "sourcePool": 373,
-  "sourcePoolIndexed": 373,
-  "notIndexedExcluded": 0,
+  "sourcePool": 323,
+  "sourcePoolIndexed": 313,
+  "notIndexedExcluded": 10,
   "targets": 270,
   "plan": [
     {
@@ -20,7 +20,23 @@
         "/finance/credit-utilization/",
         "/finance/dividend-reinvestment/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/rent-affordability/",
+          "impressions": 165,
+          "anchor": "pmi calculator"
+        },
+        {
+          "path": "/finance/wacc/",
+          "impressions": 159,
+          "anchor": "pmi calculator"
+        },
+        {
+          "path": "/finance/va-loan/",
+          "impressions": 132,
+          "anchor": "pmi calculator"
+        }
+      ]
     },
     {
       "path": "/finance/fha-loan/",
@@ -36,7 +52,23 @@
         "/finance/debt-snowball/",
         "/finance/dividend-yield/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "fha loan calculator"
+        },
+        {
+          "path": "/finance/credit-utilization/",
+          "impressions": 252,
+          "anchor": "fha loan calculator"
+        },
+        {
+          "path": "/finance/rent-affordability/",
+          "impressions": 165,
+          "anchor": "fha loan calculator"
+        }
+      ]
     },
     {
       "path": "/tech/internet-speed/",
@@ -68,7 +100,23 @@
         "/finance/currency-arbitrage/",
         "/finance/debt-consolidation/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "calculate annual percentage yield"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "calculate annual percentage yield"
+        },
+        {
+          "path": "/finance/rent-affordability/",
+          "impressions": 165,
+          "anchor": "calculate annual percentage yield"
+        }
+      ]
     },
     {
       "path": "/tech/raid-capacity/",
@@ -84,7 +132,23 @@
         "/tech/hosting-cost/",
         "/tech/image-file-size/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/tech/internet-speed/",
+          "impressions": 508,
+          "anchor": "raid capacity calculator"
+        },
+        {
+          "path": "/tech/ip-subnet/",
+          "impressions": 122,
+          "anchor": "raid capacity calculator"
+        },
+        {
+          "path": "/tech/cloud-storage/",
+          "impressions": 81,
+          "anchor": "raid capacity calculator"
+        }
+      ]
     },
     {
       "path": "/finance/credit-utilization/",
@@ -100,7 +164,23 @@
         "/finance/debt-to-equity/",
         "/finance/discounted-payback/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "credit utilization calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "credit utilization calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "credit utilization calculator"
+        }
+      ]
     },
     {
       "path": "/lifestyle/renters-insurance/",
@@ -116,7 +196,23 @@
         "/lifestyle/hobby-cost/",
         "/lifestyle/home-insurance/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/lifestyle/charging-time/",
+          "impressions": 201,
+          "anchor": "renters insurance calculator"
+        },
+        {
+          "path": "/lifestyle/resell-value/",
+          "impressions": 115,
+          "anchor": "renters insurance calculator"
+        },
+        {
+          "path": "/lifestyle/vacation-savings/",
+          "impressions": 101,
+          "anchor": "renters insurance calculator"
+        }
+      ]
     },
     {
       "path": "/science/carbon-dating/",
@@ -132,7 +228,23 @@
         "/science/hooke-law/",
         "/science/ideal-gas/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/science/solar-energy/",
+          "impressions": 133,
+          "anchor": "dating range calculator"
+        },
+        {
+          "path": "/science/dew-point/",
+          "impressions": 100,
+          "anchor": "dating range calculator"
+        },
+        {
+          "path": "/science/moment-of-inertia/",
+          "impressions": 82,
+          "anchor": "dating range calculator"
+        }
+      ]
     },
     {
       "path": "/finance/rent-affordability/",
@@ -148,7 +260,23 @@
         "/finance/currency-arbitrage/",
         "/finance/debt-consolidation/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "rent affordability calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "rent affordability calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "rent affordability calculator"
+        }
+      ]
     },
     {
       "path": "/tech/rgb-hex/",
@@ -164,7 +292,23 @@
         "/tech/code-line-count/",
         "/tech/device-charge-time/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/tech/internet-speed/",
+          "impressions": 508,
+          "anchor": "rgb to hex"
+        },
+        {
+          "path": "/tech/raid-capacity/",
+          "impressions": 238,
+          "anchor": "rgb to hex"
+        },
+        {
+          "path": "/tech/ip-subnet/",
+          "impressions": 122,
+          "anchor": "rgb to hex"
+        }
+      ]
     },
     {
       "path": "/auto/parking-cost/",
@@ -180,7 +324,23 @@
         "/auto/commute-cost/",
         "/auto/delivery-cost/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/auto/mileage-calculator/",
+          "impressions": 103,
+          "anchor": "parking lot cost calculator"
+        },
+        {
+          "path": "/auto/trade-in-value/",
+          "impressions": 85,
+          "anchor": "parking lot cost calculator"
+        },
+        {
+          "path": "/auto/taxi-fare/",
+          "impressions": 54,
+          "anchor": "parking lot cost calculator"
+        }
+      ]
     },
     {
       "path": "/finance/prorated-rent/",
@@ -196,7 +356,23 @@
         "/finance/credit-utilization/",
         "/finance/eps-calculator/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "prorated rent calculator"
+        },
+        {
+          "path": "/finance/rent-affordability/",
+          "impressions": 165,
+          "anchor": "prorated rent calculator"
+        },
+        {
+          "path": "/finance/wacc/",
+          "impressions": 159,
+          "anchor": "prorated rent calculator"
+        }
+      ]
     },
     {
       "path": "/science/dew-point/",
@@ -212,7 +388,23 @@
         "/science/bullet-drop/",
         "/science/cloud-base-lcl/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/science/carbon-dating/",
+          "impressions": 213,
+          "anchor": "how is dew point calculated"
+        },
+        {
+          "path": "/science/solar-energy/",
+          "impressions": 133,
+          "anchor": "how is dew point calculated"
+        },
+        {
+          "path": "/science/moment-of-inertia/",
+          "impressions": 82,
+          "anchor": "how is dew point calculated"
+        }
+      ]
     },
     {
       "path": "/homegarden/vinyl-flooring/",
@@ -228,7 +420,23 @@
         "/homegarden/ev-charger-home/",
         "/homegarden/firewood/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/homegarden/wallpaper-rolls/",
+          "impressions": 145,
+          "anchor": "laminate flooring calculator"
+        },
+        {
+          "path": "/homegarden/room-area/",
+          "impressions": 66,
+          "anchor": "laminate flooring calculator"
+        },
+        {
+          "path": "/homegarden/plant-spacing/",
+          "impressions": 31,
+          "anchor": "laminate flooring calculator"
+        }
+      ]
     },
     {
       "path": "/auto/mileage-calculator/",
@@ -260,7 +468,23 @@
         "/lifestyle/baby-cost/",
         "/lifestyle/charging-time/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/lifestyle/home-insurance/",
+          "impressions": 1012,
+          "anchor": "vacation cost calculator"
+        },
+        {
+          "path": "/lifestyle/renters-insurance/",
+          "impressions": 203,
+          "anchor": "vacation cost calculator"
+        },
+        {
+          "path": "/lifestyle/resell-value/",
+          "impressions": 115,
+          "anchor": "vacation cost calculator"
+        }
+      ]
     },
     {
       "path": "/finance/eps-calculator/",
@@ -276,7 +500,23 @@
         "/finance/dividend-reinvestment/",
         "/finance/espp/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "earnings per share calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "earnings per share calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "earnings per share calculator"
+        }
+      ]
     },
     {
       "path": "/regional/switzerland-take-home-salary/",
@@ -292,7 +532,23 @@
         "/regional/gratuity/",
         "/regional/income-tax-india/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/regional/dubai-salary/",
+          "impressions": 388,
+          "anchor": "swiss salary calculator"
+        },
+        {
+          "path": "/regional/singapore-cpf/",
+          "impressions": 188,
+          "anchor": "swiss salary calculator"
+        },
+        {
+          "path": "/regional/pk-salary/",
+          "impressions": 96,
+          "anchor": "swiss salary calculator"
+        }
+      ]
     },
     {
       "path": "/fitness/situp-test/",
@@ -308,7 +564,23 @@
         "/fitness/grip-strength/",
         "/fitness/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/fitness/cycling-speed/",
+          "impressions": 40,
+          "anchor": "average sit ups per minute"
+        },
+        {
+          "path": "/fitness/squat-standards/",
+          "impressions": 31,
+          "anchor": "average sit ups per minute"
+        },
+        {
+          "path": "/fitness/swim-pace/",
+          "impressions": 29,
+          "anchor": "average sit ups per minute"
+        }
+      ]
     },
     {
       "path": "/finance/closing-costs/",
@@ -324,7 +596,23 @@
         "/finance/emergency-fund-rate/",
         "/finance/enterprise-value/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "downpaymentandclosingcost"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "downpaymentandclosingcost"
+        },
+        {
+          "path": "/finance/credit-utilization/",
+          "impressions": 252,
+          "anchor": "downpaymentandclosingcost"
+        }
+      ]
     },
     {
       "path": "/hub/fitness/",
@@ -340,7 +628,23 @@
         "/fitness/bodyweight-ratio/",
         "/fitness/burpee-test/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/hub/auto/",
+          "impressions": 27,
+          "anchor": "workout calculator"
+        },
+        {
+          "path": "/hub/construction/",
+          "impressions": 14,
+          "anchor": "workout calculator"
+        },
+        {
+          "path": "/hub/math/",
+          "impressions": 10,
+          "anchor": "workout calculator"
+        }
+      ]
     },
     {
       "path": "/homegarden/deck-stain/",
@@ -372,7 +676,23 @@
         "/lifestyle/furniture-assembly/",
         "/lifestyle/gift-budget/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/lifestyle/renters-insurance/",
+          "impressions": 203,
+          "anchor": "packs per year calculator"
+        },
+        {
+          "path": "/lifestyle/resell-value/",
+          "impressions": 115,
+          "anchor": "packs per year calculator"
+        },
+        {
+          "path": "/lifestyle/vacation-savings/",
+          "impressions": 101,
+          "anchor": "packs per year calculator"
+        }
+      ]
     },
     {
       "path": "/education/gpa/",
@@ -404,7 +724,23 @@
         "/health/health-insurance-copay/",
         "/health/heart-rate/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/health/bmr-mifflin/",
+          "impressions": 1108,
+          "anchor": "ldl calculated"
+        },
+        {
+          "path": "/health/chw/",
+          "impressions": 69,
+          "anchor": "ldl calculated"
+        },
+        {
+          "path": "/health/corrected-calcium/",
+          "impressions": 69,
+          "anchor": "ldl calculated"
+        }
+      ]
     },
     {
       "path": "/tech/screen-ppi/",
@@ -420,7 +756,23 @@
         "/tech/click-through-rate/",
         "/tech/data-center-pue/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/tech/internet-speed/",
+          "impressions": 508,
+          "anchor": "ppi calculator"
+        },
+        {
+          "path": "/tech/raid-capacity/",
+          "impressions": 238,
+          "anchor": "ppi calculator"
+        },
+        {
+          "path": "/tech/rgb-hex/",
+          "impressions": 166,
+          "anchor": "ppi calculator"
+        }
+      ]
     },
     {
       "path": "/health/chw/",
@@ -436,7 +788,23 @@
         "/health/bmr-mifflin/",
         "/health/body-fat-navy/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/health/corrected-calcium/",
+          "impressions": 69,
+          "anchor": "adjusted body weight calculator"
+        },
+        {
+          "path": "/health/pregnancy/",
+          "impressions": 67,
+          "anchor": "adjusted body weight calculator"
+        },
+        {
+          "path": "/health/ldl-calculator/",
+          "impressions": 66,
+          "anchor": "adjusted body weight calculator"
+        }
+      ]
     },
     {
       "path": "/fitness/vo2max/",
@@ -468,7 +836,23 @@
         "/math/ellipse-perimeter/",
         "/math/linear-regression/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/math/weighted-average/",
+          "impressions": 193,
+          "anchor": "harmonic mean calculator"
+        },
+        {
+          "path": "/math/trigonometry/",
+          "impressions": 112,
+          "anchor": "harmonic mean calculator"
+        },
+        {
+          "path": "/math/matrix-det/",
+          "impressions": 50,
+          "anchor": "harmonic mean calculator"
+        }
+      ]
     },
     {
       "path": "/regional/rd-calculator/",
@@ -500,7 +884,23 @@
         "/tech/awg-reference/",
         "/tech/backup-size/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/tech/internet-speed/",
+          "impressions": 508,
+          "anchor": "px to em calculator"
+        },
+        {
+          "path": "/tech/raid-capacity/",
+          "impressions": 238,
+          "anchor": "px to em calculator"
+        },
+        {
+          "path": "/tech/rgb-hex/",
+          "impressions": 166,
+          "anchor": "px to em calculator"
+        }
+      ]
     },
     {
       "path": "/construction/carpet/",
@@ -516,7 +916,23 @@
         "/construction/gravel/",
         "/construction/gravel-driveway/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/construction/water-tank/",
+          "impressions": 46,
+          "anchor": "online carpet calculator"
+        },
+        {
+          "path": "/construction/drywall-screws/",
+          "impressions": 30,
+          "anchor": "online carpet calculator"
+        },
+        {
+          "path": "/construction/gutter/",
+          "impressions": 30,
+          "anchor": "online carpet calculator"
+        }
+      ]
     },
     {
       "path": "/auto/taxi-fare/",
@@ -532,7 +948,23 @@
         "/auto/car-affordability/",
         "/auto/car-rental/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/auto/parking-cost/",
+          "impressions": 107,
+          "anchor": "タクシー 金額 計算"
+        },
+        {
+          "path": "/auto/mileage-calculator/",
+          "impressions": 103,
+          "anchor": "タクシー 金額 計算"
+        },
+        {
+          "path": "/auto/trip-time/",
+          "impressions": 64,
+          "anchor": "タクシー 金額 計算"
+        }
+      ]
     },
     {
       "path": "/business/depreciation/",
@@ -548,7 +980,18 @@
         "/business/depreciation/10-years-50000/",
         "/business/depreciation/5-years-10000/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/business/employee-cost/",
+          "impressions": 22,
+          "anchor": "salvage value calculator"
+        },
+        {
+          "path": "/business/project-bid/",
+          "impressions": 13,
+          "anchor": "salvage value calculator"
+        }
+      ]
     },
     {
       "path": "/tech/subnet-cidr/",
@@ -564,7 +1007,23 @@
         "/tech/cloud-storage/",
         "/tech/image-size-calc/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/tech/internet-speed/",
+          "impressions": 508,
+          "anchor": "ip address calculator cidr"
+        },
+        {
+          "path": "/tech/raid-capacity/",
+          "impressions": 238,
+          "anchor": "ip address calculator cidr"
+        },
+        {
+          "path": "/tech/rgb-hex/",
+          "impressions": 166,
+          "anchor": "ip address calculator cidr"
+        }
+      ]
     },
     {
       "path": "/auto/trip-time/",
@@ -580,7 +1039,23 @@
         "/auto/commute-cost/",
         "/auto/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/auto/parking-cost/",
+          "impressions": 107,
+          "anchor": "calculate driving and rest time"
+        },
+        {
+          "path": "/auto/trade-in-value/",
+          "impressions": 85,
+          "anchor": "calculate driving and rest time"
+        },
+        {
+          "path": "/auto/auto-fare/",
+          "impressions": 49,
+          "anchor": "calculate driving and rest time"
+        }
+      ]
     },
     {
       "path": "/finance/debt-to-equity/",
@@ -596,7 +1071,23 @@
         "/finance/currency-arbitrage/",
         "/finance/dcf/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "liabilities to equity ratio"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "liabilities to equity ratio"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "liabilities to equity ratio"
+        }
+      ]
     },
     {
       "path": "/math/matrix-det/",
@@ -612,7 +1103,23 @@
         "/math/combinations/",
         "/math/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/math/weighted-average/",
+          "impressions": 193,
+          "anchor": "det calculator"
+        },
+        {
+          "path": "/math/trigonometry/",
+          "impressions": 112,
+          "anchor": "det calculator"
+        },
+        {
+          "path": "/math/harmonic-mean/",
+          "impressions": 55,
+          "anchor": "det calculator"
+        }
+      ]
     },
     {
       "path": "/auto/auto-fare/",
@@ -628,7 +1135,23 @@
         "/auto/car-rental/",
         "/auto/carbon-footprint-car/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/auto/parking-cost/",
+          "impressions": 107,
+          "anchor": "auto fare meaning"
+        },
+        {
+          "path": "/auto/mileage-calculator/",
+          "impressions": 103,
+          "anchor": "auto fare meaning"
+        },
+        {
+          "path": "/auto/trade-in-value/",
+          "impressions": 85,
+          "anchor": "auto fare meaning"
+        }
+      ]
     },
     {
       "path": "/fitness/",
@@ -660,7 +1183,23 @@
         "/health/chw/",
         "/health/corrected-calcium/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/health/bmr-mifflin/",
+          "impressions": 1108,
+          "anchor": "winters formula"
+        },
+        {
+          "path": "/health/ldl-calculator/",
+          "impressions": 66,
+          "anchor": "winters formula"
+        },
+        {
+          "path": "/health/pf-ratio/",
+          "impressions": 64,
+          "anchor": "winters formula"
+        }
+      ]
     },
     {
       "path": "/business/",
@@ -708,7 +1247,23 @@
         "/regional/electricity-bill-india/",
         "/regional/germany-take-home-salary/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/regional/singapore-cpf/",
+          "impressions": 188,
+          "anchor": "50000 chit for 10 months"
+        },
+        {
+          "path": "/regional/pk-salary/",
+          "impressions": 96,
+          "anchor": "50000 chit for 10 months"
+        },
+        {
+          "path": "/regional/switzerland-take-home-salary/",
+          "impressions": 95,
+          "anchor": "50000 chit for 10 months"
+        }
+      ]
     },
     {
       "path": "/finance/margin-call/",
@@ -724,7 +1279,23 @@
         "/finance/fha-loan/",
         "/finance/house-affordability/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "margin call calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "margin call calculator"
+        },
+        {
+          "path": "/finance/credit-utilization/",
+          "impressions": 252,
+          "anchor": "margin call calculator"
+        }
+      ]
     },
     {
       "path": "/math/lcm-gcd/",
@@ -740,7 +1311,23 @@
         "/math/circle/",
         "/math/collatz/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/math/weighted-average/",
+          "impressions": 193,
+          "anchor": "gcd calculator"
+        },
+        {
+          "path": "/math/trigonometry/",
+          "impressions": 112,
+          "anchor": "gcd calculator"
+        },
+        {
+          "path": "/math/matrix-det/",
+          "impressions": 50,
+          "anchor": "gcd calculator"
+        }
+      ]
     },
     {
       "path": "/finance/dividend-reinvestment/",
@@ -756,7 +1343,23 @@
         "/finance/growing-perpetuity/",
         "/finance/home-equity/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "dividend reinvestment calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "dividend reinvestment calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "dividend reinvestment calculator"
+        }
+      ]
     },
     {
       "path": "/tech/data-usage-est/",
@@ -772,7 +1375,23 @@
         "/tech/hosting-cost/",
         "/tech/load-test-users/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/tech/internet-speed/",
+          "impressions": 508,
+          "anchor": "data streaming usage"
+        },
+        {
+          "path": "/tech/raid-capacity/",
+          "impressions": 238,
+          "anchor": "data streaming usage"
+        },
+        {
+          "path": "/tech/rgb-hex/",
+          "impressions": 166,
+          "anchor": "data streaming usage"
+        }
+      ]
     },
     {
       "path": "/lifestyle/lawn-mowing/",
@@ -788,7 +1407,23 @@
         "/lifestyle/electricity-bill-saving/",
         "/lifestyle/flight-cost-per-hour/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/lifestyle/home-insurance/",
+          "impressions": 1012,
+          "anchor": "lawn mowing cost calculator"
+        },
+        {
+          "path": "/lifestyle/renters-insurance/",
+          "impressions": 203,
+          "anchor": "lawn mowing cost calculator"
+        },
+        {
+          "path": "/lifestyle/charging-time/",
+          "impressions": 201,
+          "anchor": "lawn mowing cost calculator"
+        }
+      ]
     },
     {
       "path": "/everyday/vacation-budget/",
@@ -804,7 +1439,23 @@
         "/everyday/day-of-year/",
         "/everyday/fitness-age/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/everyday/coffee-cost/",
+          "impressions": 110,
+          "anchor": "vacation expense calculator"
+        },
+        {
+          "path": "/everyday/gift-wrap/",
+          "impressions": 95,
+          "anchor": "vacation expense calculator"
+        },
+        {
+          "path": "/everyday/jet-lag/",
+          "impressions": 32,
+          "anchor": "vacation expense calculator"
+        }
+      ]
     },
     {
       "path": "/tech/",
@@ -836,7 +1487,23 @@
         "/finance/amortization/30-years-300000/",
         "/finance/amortization/5-years-100000/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "savings account dividend calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "savings account dividend calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "savings account dividend calculator"
+        }
+      ]
     },
     {
       "path": "/finance/ibond-value/",
@@ -852,7 +1519,23 @@
         "/finance/diversification/",
         "/finance/fico-simulator/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "i savings bond calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "i savings bond calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "i savings bond calculator"
+        }
+      ]
     },
     {
       "path": "/regional/post-office-savings/",
@@ -868,7 +1551,23 @@
         "/regional/chile-take-home-salary/",
         "/regional/egypt-take-home-salary/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/regional/dubai-salary/",
+          "impressions": 388,
+          "anchor": "post office calculator"
+        },
+        {
+          "path": "/regional/singapore-cpf/",
+          "impressions": 188,
+          "anchor": "post office calculator"
+        },
+        {
+          "path": "/regional/pk-salary/",
+          "impressions": 96,
+          "anchor": "post office calculator"
+        }
+      ]
     },
     {
       "path": "/education/citation-count/",
@@ -884,7 +1583,23 @@
         "/education/course-load/",
         "/education/financial-need/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/education/tuition-cost/",
+          "impressions": 200,
+          "anchor": "h index calculator"
+        },
+        {
+          "path": "/education/presentation-time/",
+          "impressions": 109,
+          "anchor": "h index calculator"
+        },
+        {
+          "path": "/education/gpa/",
+          "impressions": 65,
+          "anchor": "h index calculator"
+        }
+      ]
     },
     {
       "path": "/fitness/bench-standards/",
@@ -900,7 +1615,23 @@
         "/fitness/one-rep-max/",
         "/fitness/pushup-test/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/fitness/vo2max/",
+          "impressions": 62,
+          "anchor": "max bench press calculator"
+        },
+        {
+          "path": "/fitness/cycling-speed/",
+          "impressions": 40,
+          "anchor": "max bench press calculator"
+        },
+        {
+          "path": "/fitness/rowing-split/",
+          "impressions": 36,
+          "anchor": "max bench press calculator"
+        }
+      ]
     },
     {
       "path": "/fitness/rowing-split/",
@@ -916,7 +1647,23 @@
         "/fitness/cycling-speed/",
         "/fitness/deload-week/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/fitness/situp-test/",
+          "impressions": 97,
+          "anchor": "rowing split calculator"
+        },
+        {
+          "path": "/fitness/vo2max/",
+          "impressions": 62,
+          "anchor": "rowing split calculator"
+        },
+        {
+          "path": "/fitness/bench-standards/",
+          "impressions": 39,
+          "anchor": "rowing split calculator"
+        }
+      ]
     },
     {
       "path": "/math/linear-regression/",
@@ -932,7 +1679,23 @@
         "/math/exponential-prob/",
         "/math/matrix-multiply/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/math/weighted-average/",
+          "impressions": 193,
+          "anchor": "linear regression solver"
+        },
+        {
+          "path": "/math/trigonometry/",
+          "impressions": 112,
+          "anchor": "linear regression solver"
+        },
+        {
+          "path": "/math/harmonic-mean/",
+          "impressions": 55,
+          "anchor": "linear regression solver"
+        }
+      ]
     },
     {
       "path": "/finance/ev-ebitda/",
@@ -948,7 +1711,23 @@
         "/finance/fixed-deposit-vs-recurring/",
         "/finance/kelly-criterion/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "enterprise%2bseo%2broi%2bcalculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "enterprise%2bseo%2broi%2bcalculator"
+        },
+        {
+          "path": "/finance/credit-utilization/",
+          "impressions": 252,
+          "anchor": "enterprise%2bseo%2broi%2bcalculator"
+        }
+      ]
     },
     {
       "path": "/finance/tax-equivalent-yield/",
@@ -964,7 +1743,23 @@
         "/finance/college-cost/",
         "/finance/dividend-yield/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "municipal bonds calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "municipal bonds calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "municipal bonds calculator"
+        }
+      ]
     },
     {
       "path": "/fitness/cycling-speed/",
@@ -980,7 +1775,23 @@
         "/fitness/calories-burned/",
         "/fitness/grip-strength/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/fitness/muscle-gain/",
+          "impressions": 321,
+          "anchor": "40 km cycling time"
+        },
+        {
+          "path": "/fitness/rowing-split/",
+          "impressions": 36,
+          "anchor": "40 km cycling time"
+        },
+        {
+          "path": "/fitness/squat-standards/",
+          "impressions": 31,
+          "anchor": "40 km cycling time"
+        }
+      ]
     },
     {
       "path": "/finance/roommate-rent-split/",
@@ -996,7 +1807,23 @@
         "/finance/hsa-growth/",
         "/finance/market-cap/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "rent split calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "rent split calculator"
+        },
+        {
+          "path": "/finance/credit-utilization/",
+          "impressions": 252,
+          "anchor": "rent split calculator"
+        }
+      ]
     },
     {
       "path": "/lifestyle/cleaning-time/",
@@ -1012,7 +1839,23 @@
         "/lifestyle/coffee-habit/",
         "/lifestyle/gift-split/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/lifestyle/home-insurance/",
+          "impressions": 1012,
+          "anchor": "how to calculate cleaning times"
+        },
+        {
+          "path": "/lifestyle/renters-insurance/",
+          "impressions": 203,
+          "anchor": "how to calculate cleaning times"
+        },
+        {
+          "path": "/lifestyle/resell-value/",
+          "impressions": 115,
+          "anchor": "how to calculate cleaning times"
+        }
+      ]
     },
     {
       "path": "/homegarden/firewood/",
@@ -1028,7 +1871,23 @@
         "/homegarden/garden-fence/",
         "/homegarden/grass-seed/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/homegarden/wallpaper-rolls/",
+          "impressions": 145,
+          "anchor": "firewood calculator"
+        },
+        {
+          "path": "/homegarden/vinyl-flooring/",
+          "impressions": 95,
+          "anchor": "firewood calculator"
+        },
+        {
+          "path": "/homegarden/deck-stain/",
+          "impressions": 75,
+          "anchor": "firewood calculator"
+        }
+      ]
     },
     {
       "path": "/homegarden/plant-spacing/",
@@ -1044,7 +1903,23 @@
         "/homegarden/garden-soil/",
         "/homegarden/generator-size/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/homegarden/wallpaper-rolls/",
+          "impressions": 145,
+          "anchor": "plant spacing calculator"
+        },
+        {
+          "path": "/homegarden/vinyl-flooring/",
+          "impressions": 95,
+          "anchor": "plant spacing calculator"
+        },
+        {
+          "path": "/homegarden/deck-stain/",
+          "impressions": 75,
+          "anchor": "plant spacing calculator"
+        }
+      ]
     },
     {
       "path": "/construction/drywall-screws/",
@@ -1060,7 +1935,23 @@
         "/construction/footing-size/",
         "/construction/gravel-tonnage/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/construction/pipe-volume/",
+          "impressions": 73,
+          "anchor": "drywall screw calculator"
+        },
+        {
+          "path": "/construction/carpet/",
+          "impressions": 53,
+          "anchor": "drywall screw calculator"
+        },
+        {
+          "path": "/construction/water-tank/",
+          "impressions": 46,
+          "anchor": "drywall screw calculator"
+        }
+      ]
     },
     {
       "path": "/finance/effective-tax-rate/",
@@ -1076,7 +1967,23 @@
         "/finance/ev-ebitda/",
         "/finance/free-cash-flow/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "estimate effective tax rate"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "estimate effective tax rate"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "estimate effective tax rate"
+        }
+      ]
     },
     {
       "path": "/science/wave-speed/",
@@ -1092,7 +1999,23 @@
         "/science/combined-gas-law/",
         "/science/dilution/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/science/carbon-dating/",
+          "impressions": 213,
+          "anchor": "wavelength calculator"
+        },
+        {
+          "path": "/science/solar-energy/",
+          "impressions": 133,
+          "anchor": "wavelength calculator"
+        },
+        {
+          "path": "/science/dew-point/",
+          "impressions": 100,
+          "anchor": "wavelength calculator"
+        }
+      ]
     },
     {
       "path": "/science/bullet-drop/",
@@ -1108,7 +2031,23 @@
         "/science/calorimetry/",
         "/science/carbon-dating/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/science/solar-energy/",
+          "impressions": 133,
+          "anchor": "bullet drop calculator"
+        },
+        {
+          "path": "/science/dew-point/",
+          "impressions": 100,
+          "anchor": "bullet drop calculator"
+        },
+        {
+          "path": "/science/moment-of-inertia/",
+          "impressions": 82,
+          "anchor": "bullet drop calculator"
+        }
+      ]
     },
     {
       "path": "/construction/post-hole-concrete/",
@@ -1124,7 +2063,23 @@
         "/construction/concrete-column/",
         "/construction/gutter/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/construction/carpet/",
+          "impressions": 53,
+          "anchor": "concrete calculator for fence posts"
+        },
+        {
+          "path": "/construction/water-tank/",
+          "impressions": 46,
+          "anchor": "concrete calculator for fence posts"
+        },
+        {
+          "path": "/construction/insulation/",
+          "impressions": 36,
+          "anchor": "concrete calculator for fence posts"
+        }
+      ]
     },
     {
       "path": "/fitness/swim-pace/",
@@ -1140,7 +2095,23 @@
         "/fitness/",
         "/fitness/overhead-standards/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/fitness/muscle-gain/",
+          "impressions": 321,
+          "anchor": "swim pace calculator"
+        },
+        {
+          "path": "/fitness/vo2max/",
+          "impressions": 62,
+          "anchor": "swim pace calculator"
+        },
+        {
+          "path": "/fitness/cycling-speed/",
+          "impressions": 40,
+          "anchor": "swim pace calculator"
+        }
+      ]
     },
     {
       "path": "/science/wavelength-freq/",
@@ -1156,7 +2127,23 @@
         "/science/dilution/",
         "/science/electric-field/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/science/carbon-dating/",
+          "impressions": 213,
+          "anchor": "wavelength frequency"
+        },
+        {
+          "path": "/science/solar-energy/",
+          "impressions": 133,
+          "anchor": "wavelength frequency"
+        },
+        {
+          "path": "/science/dew-point/",
+          "impressions": 100,
+          "anchor": "wavelength frequency"
+        }
+      ]
     },
     {
       "path": "/regional/leave-encashment/",
@@ -1172,7 +2159,23 @@
         "/regional/gold-silver/",
         "/regional/gratuity/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/regional/pk-salary/",
+          "impressions": 96,
+          "anchor": "leave encashment calculation"
+        },
+        {
+          "path": "/regional/switzerland-take-home-salary/",
+          "impressions": 95,
+          "anchor": "leave encashment calculation"
+        },
+        {
+          "path": "/regional/rickshaw-fare/",
+          "impressions": 92,
+          "anchor": "leave encashment calculation"
+        }
+      ]
     },
     {
       "path": "/fitness/squat-standards/",
@@ -1188,7 +2191,23 @@
         "/fitness/muscle-gain/",
         "/fitness/one-rep-max/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/fitness/situp-test/",
+          "impressions": 97,
+          "anchor": "averagesquatweightformale"
+        },
+        {
+          "path": "/fitness/vo2max/",
+          "impressions": 62,
+          "anchor": "averagesquatweightformale"
+        },
+        {
+          "path": "/fitness/cycling-speed/",
+          "impressions": 40,
+          "anchor": "averagesquatweightformale"
+        }
+      ]
     },
     {
       "path": "/regional/germany-take-home-salary/",
@@ -1204,7 +2223,23 @@
         "/regional/electricity-bill-india/",
         "/regional/gst-india/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/regional/dubai-salary/",
+          "impressions": 388,
+          "anchor": "brutto netto calculator"
+        },
+        {
+          "path": "/regional/pk-salary/",
+          "impressions": 96,
+          "anchor": "brutto netto calculator"
+        },
+        {
+          "path": "/regional/switzerland-take-home-salary/",
+          "impressions": 95,
+          "anchor": "brutto netto calculator"
+        }
+      ]
     },
     {
       "path": "/science/friction/",
@@ -1220,7 +2255,23 @@
         "/science/carbon-dating/",
         "/science/hooke-law/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/science/solar-energy/",
+          "impressions": 133,
+          "anchor": "coefficient of friction calculator"
+        },
+        {
+          "path": "/science/dew-point/",
+          "impressions": 100,
+          "anchor": "coefficient of friction calculator"
+        },
+        {
+          "path": "/science/moment-of-inertia/",
+          "impressions": 82,
+          "anchor": "coefficient of friction calculator"
+        }
+      ]
     },
     {
       "path": "/health/total-body-water/",
@@ -1236,7 +2287,23 @@
         "/health/corrected-calcium/",
         "/health/free-water-deficit/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/health/chw/",
+          "impressions": 69,
+          "anchor": "tbw calculator"
+        },
+        {
+          "path": "/health/pregnancy/",
+          "impressions": 67,
+          "anchor": "tbw calculator"
+        },
+        {
+          "path": "/health/ldl-calculator/",
+          "impressions": 66,
+          "anchor": "tbw calculator"
+        }
+      ]
     },
     {
       "path": "/hub/auto/",
@@ -1252,7 +2319,23 @@
         "/auto/bus-vs-car/",
         "/auto/car-affordability/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/hub/fitness/",
+          "impressions": 95,
+          "anchor": "average bike calculator"
+        },
+        {
+          "path": "/hub/construction/",
+          "impressions": 14,
+          "anchor": "average bike calculator"
+        },
+        {
+          "path": "/hub/math/",
+          "impressions": 10,
+          "anchor": "average bike calculator"
+        }
+      ]
     },
     {
       "path": "/math/complex/",
@@ -1268,7 +2351,23 @@
         "/math/distance/",
         "/math/expected-value/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/math/weighted-average/",
+          "impressions": 193,
+          "anchor": "imaginary number calculator"
+        },
+        {
+          "path": "/math/matrix-det/",
+          "impressions": 50,
+          "anchor": "imaginary number calculator"
+        },
+        {
+          "path": "/math/lcm-gcd/",
+          "impressions": 46,
+          "anchor": "imaginary number calculator"
+        }
+      ]
     },
     {
       "path": "/auto/fuel-tank-range/",
@@ -1284,7 +2383,23 @@
         "/auto/carbon-footprint-car/",
         "/auto/delivery-cost/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/auto/parking-cost/",
+          "impressions": 107,
+          "anchor": "diesel tank calculation"
+        },
+        {
+          "path": "/auto/mileage-calculator/",
+          "impressions": 103,
+          "anchor": "diesel tank calculation"
+        },
+        {
+          "path": "/auto/trade-in-value/",
+          "impressions": 85,
+          "anchor": "diesel tank calculation"
+        }
+      ]
     },
     {
       "path": "/finance/dso/",
@@ -1300,7 +2415,23 @@
         "/finance/dcf/",
         "/finance/diversification/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "dso calc"
+        },
+        {
+          "path": "/finance/rent-affordability/",
+          "impressions": 165,
+          "anchor": "dso calc"
+        },
+        {
+          "path": "/finance/wacc/",
+          "impressions": 159,
+          "anchor": "dso calc"
+        }
+      ]
     },
     {
       "path": "/regional/senior-savings-scheme/",
@@ -1316,7 +2447,23 @@
         "/regional/colombia-take-home-salary/",
         "/regional/esic-calculator/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/regional/dubai-salary/",
+          "impressions": 388,
+          "anchor": "senior citizen saving scheme calculator"
+        },
+        {
+          "path": "/regional/singapore-cpf/",
+          "impressions": 188,
+          "anchor": "senior citizen saving scheme calculator"
+        },
+        {
+          "path": "/regional/pk-salary/",
+          "impressions": 96,
+          "anchor": "senior citizen saving scheme calculator"
+        }
+      ]
     },
     {
       "path": "/education/attendance-rate/",
@@ -1332,7 +2479,23 @@
         "/education/graduation-date/",
         "/education/homework-time/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/education/tuition-cost/",
+          "impressions": 200,
+          "anchor": "attendance rate calculation"
+        },
+        {
+          "path": "/education/presentation-time/",
+          "impressions": 109,
+          "anchor": "attendance rate calculation"
+        },
+        {
+          "path": "/education/gpa/",
+          "impressions": 65,
+          "anchor": "attendance rate calculation"
+        }
+      ]
     },
     {
       "path": "/auto/commute-cost/",
@@ -1348,7 +2511,23 @@
         "/auto/car-maintenance/",
         "/auto/ev-range/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/auto/mileage-calculator/",
+          "impressions": 103,
+          "anchor": "commute cost calculator"
+        },
+        {
+          "path": "/auto/trade-in-value/",
+          "impressions": 85,
+          "anchor": "commute cost calculator"
+        },
+        {
+          "path": "/auto/trip-time/",
+          "impressions": 64,
+          "anchor": "commute cost calculator"
+        }
+      ]
     },
     {
       "path": "/everyday/business-days/",
@@ -1364,7 +2543,23 @@
         "/everyday/concrete/",
         "/everyday/date-diff/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/everyday/gift-wrap/",
+          "impressions": 95,
+          "anchor": "80 business days from today"
+        },
+        {
+          "path": "/everyday/vacation-budget/",
+          "impressions": 40,
+          "anchor": "80 business days from today"
+        },
+        {
+          "path": "/everyday/jet-lag/",
+          "impressions": 32,
+          "anchor": "80 business days from today"
+        }
+      ]
     },
     {
       "path": "/science/free-fall/",
@@ -1380,7 +2575,23 @@
         "/science/doppler/",
         "/science/gravitational-force/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/science/carbon-dating/",
+          "impressions": 213,
+          "anchor": "rate of falling"
+        },
+        {
+          "path": "/science/solar-energy/",
+          "impressions": 133,
+          "anchor": "rate of falling"
+        },
+        {
+          "path": "/science/dew-point/",
+          "impressions": 100,
+          "anchor": "rate of falling"
+        }
+      ]
     },
     {
       "path": "/everyday/laundry-cost/",
@@ -1396,7 +2607,23 @@
         "/everyday/fitness-age/",
         "/everyday/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/everyday/coffee-cost/",
+          "impressions": 110,
+          "anchor": "laundry weight calculator"
+        },
+        {
+          "path": "/everyday/gift-wrap/",
+          "impressions": 95,
+          "anchor": "laundry weight calculator"
+        },
+        {
+          "path": "/everyday/jet-lag/",
+          "impressions": 32,
+          "anchor": "laundry weight calculator"
+        }
+      ]
     },
     {
       "path": "/finance/market-cap/",
@@ -1412,7 +2639,23 @@
         "/finance/dso/",
         "/finance/lump-sum-vs-sip/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "calculate market cap"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "calculate market cap"
+        },
+        {
+          "path": "/finance/rent-affordability/",
+          "impressions": 165,
+          "anchor": "calculate market cap"
+        }
+      ]
     },
     {
       "path": "/auto/toll-cost/",
@@ -1428,7 +2671,23 @@
         "/auto/delivery-cost/",
         "/auto/ebike-range/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/auto/mileage-calculator/",
+          "impressions": 103,
+          "anchor": "howmanytollsonmy"
+        },
+        {
+          "path": "/auto/trade-in-value/",
+          "impressions": 85,
+          "anchor": "howmanytollsonmy"
+        },
+        {
+          "path": "/auto/trip-time/",
+          "impressions": 64,
+          "anchor": "howmanytollsonmy"
+        }
+      ]
     },
     {
       "path": "/fitness/treadmill-pace/",
@@ -1444,7 +2703,23 @@
         "/fitness/cycling-speed/",
         "/fitness/deload-week/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/fitness/muscle-gain/",
+          "impressions": 321,
+          "anchor": "howmanystepsisspeed"
+        },
+        {
+          "path": "/fitness/situp-test/",
+          "impressions": 97,
+          "anchor": "howmanystepsisspeed"
+        },
+        {
+          "path": "/fitness/vo2max/",
+          "impressions": 62,
+          "anchor": "howmanystepsisspeed"
+        }
+      ]
     },
     {
       "path": "/tech/storage-need/",
@@ -1460,7 +2735,23 @@
         "/tech/awg-reference/",
         "/tech/color-contrast/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/tech/internet-speed/",
+          "impressions": 508,
+          "anchor": "howtodecidehowmuch"
+        },
+        {
+          "path": "/tech/raid-capacity/",
+          "impressions": 238,
+          "anchor": "howtodecidehowmuch"
+        },
+        {
+          "path": "/tech/rgb-hex/",
+          "impressions": 166,
+          "anchor": "howtodecidehowmuch"
+        }
+      ]
     },
     {
       "path": "/fitness/sweat-rate/",
@@ -1476,7 +2767,23 @@
         "/fitness/flexibility-score/",
         "/fitness/grip-strength/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/fitness/muscle-gain/",
+          "impressions": 321,
+          "anchor": "sweat rate calculator"
+        },
+        {
+          "path": "/fitness/situp-test/",
+          "impressions": 97,
+          "anchor": "sweat rate calculator"
+        },
+        {
+          "path": "/fitness/vo2max/",
+          "impressions": 62,
+          "anchor": "sweat rate calculator"
+        }
+      ]
     },
     {
       "path": "/math/coefficient-of-variation/",
@@ -1492,7 +2799,23 @@
         "/math/law-of-cosines/",
         "/math/law-of-sines/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/math/trigonometry/",
+          "impressions": 112,
+          "anchor": "coefficient of variation calculator"
+        },
+        {
+          "path": "/math/harmonic-mean/",
+          "impressions": 55,
+          "anchor": "coefficient of variation calculator"
+        },
+        {
+          "path": "/math/matrix-det/",
+          "impressions": 50,
+          "anchor": "coefficient of variation calculator"
+        }
+      ]
     },
     {
       "path": "/education/gpa-target/",
@@ -1508,7 +2831,23 @@
         "/education/exam-score-needed/",
         "/education/gpa/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/education/presentation-time/",
+          "impressions": 109,
+          "anchor": "goal gpa calculator"
+        },
+        {
+          "path": "/education/graduation-date/",
+          "impressions": 50,
+          "anchor": "goal gpa calculator"
+        },
+        {
+          "path": "/education/citation-count/",
+          "impressions": 37,
+          "anchor": "goal gpa calculator"
+        }
+      ]
     },
     {
       "path": "/construction/formwork/",
@@ -1524,7 +2863,23 @@
         "/construction/",
         "/construction/insulation/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/construction/pipe-volume/",
+          "impressions": 73,
+          "anchor": "formwork estimator"
+        },
+        {
+          "path": "/construction/carpet/",
+          "impressions": 53,
+          "anchor": "formwork estimator"
+        },
+        {
+          "path": "/construction/water-tank/",
+          "impressions": 46,
+          "anchor": "formwork estimator"
+        }
+      ]
     },
     {
       "path": "/finance/geometric-mean/",
@@ -1540,7 +2895,23 @@
         "/finance/ebitda/",
         "/finance/enterprise-value/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "investopedia cagr calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "investopedia cagr calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "investopedia cagr calculator"
+        }
+      ]
     },
     {
       "path": "/health/sleep-debt/",
@@ -1556,7 +2927,23 @@
         "/health/calorie-deficit/",
         "/health/fasting-calculator/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/health/bmr-mifflin/",
+          "impressions": 1108,
+          "anchor": "sleep debt calculator"
+        },
+        {
+          "path": "/health/chw/",
+          "impressions": 69,
+          "anchor": "sleep debt calculator"
+        },
+        {
+          "path": "/health/corrected-calcium/",
+          "impressions": 69,
+          "anchor": "sleep debt calculator"
+        }
+      ]
     },
     {
       "path": "/science/projectile/",
@@ -1572,7 +2959,23 @@
         "/science/freezing-depression/",
         "/science/hydrostatic-pressure/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/science/carbon-dating/",
+          "impressions": 213,
+          "anchor": "launch velocity"
+        },
+        {
+          "path": "/science/dew-point/",
+          "impressions": 100,
+          "anchor": "launch velocity"
+        },
+        {
+          "path": "/science/kinetic-energy/",
+          "impressions": 61,
+          "anchor": "launch velocity"
+        }
+      ]
     },
     {
       "path": "/auto/car-affordability/",
@@ -1604,7 +3007,23 @@
         "/everyday/fitness-age/",
         "/everyday/heat-pump-savings/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/everyday/coffee-cost/",
+          "impressions": 110,
+          "anchor": "bac by weight"
+        },
+        {
+          "path": "/everyday/gift-wrap/",
+          "impressions": 95,
+          "anchor": "bac by weight"
+        },
+        {
+          "path": "/everyday/vacation-budget/",
+          "impressions": 40,
+          "anchor": "bac by weight"
+        }
+      ]
     },
     {
       "path": "/finance/us-income-tax/",
@@ -1620,7 +3039,23 @@
         "/finance/australia-income-tax/",
         "/finance/canada-income-tax/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "myusfinance com tax calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "myusfinance com tax calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "myusfinance com tax calculator"
+        }
+      ]
     },
     {
       "path": "/lifestyle/home-renovation/",
@@ -1636,7 +3071,23 @@
         "/lifestyle/gift-budget/",
         "/lifestyle/grocery-budget-optimizer/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/lifestyle/home-insurance/",
+          "impressions": 1012,
+          "anchor": "renovation calculators"
+        },
+        {
+          "path": "/lifestyle/renters-insurance/",
+          "impressions": 203,
+          "anchor": "renovation calculators"
+        },
+        {
+          "path": "/lifestyle/charging-time/",
+          "impressions": 201,
+          "anchor": "renovation calculators"
+        }
+      ]
     },
     {
       "path": "/health/ideal-body-weight/",
@@ -1652,7 +3103,18 @@
         "/health/bmi/",
         "/health/bmr/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/health/bmr-mifflin/",
+          "impressions": 1108,
+          "anchor": "devine formula ibw"
+        },
+        {
+          "path": "/health/total-body-water/",
+          "impressions": 35,
+          "anchor": "devine formula ibw"
+        }
+      ]
     },
     {
       "path": "/homegarden/tile-grout/",
@@ -1668,7 +3130,23 @@
         "/homegarden/closet-organizer/",
         "/homegarden/countertop-sqft/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/homegarden/wallpaper-rolls/",
+          "impressions": 145,
+          "anchor": "thinset calculator"
+        },
+        {
+          "path": "/homegarden/vinyl-flooring/",
+          "impressions": 95,
+          "anchor": "thinset calculator"
+        },
+        {
+          "path": "/homegarden/deck-stain/",
+          "impressions": 75,
+          "anchor": "thinset calculator"
+        }
+      ]
     },
     {
       "path": "/tech/ad-revenue/",
@@ -1684,7 +3162,23 @@
         "/tech/code-line-count/",
         "/tech/dbm-watts/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/tech/internet-speed/",
+          "impressions": 508,
+          "anchor": "revenue calculator for squarespace"
+        },
+        {
+          "path": "/tech/raid-capacity/",
+          "impressions": 238,
+          "anchor": "revenue calculator for squarespace"
+        },
+        {
+          "path": "/tech/rgb-hex/",
+          "impressions": 166,
+          "anchor": "revenue calculator for squarespace"
+        }
+      ]
     },
     {
       "path": "/health/iron-intake/",
@@ -1700,7 +3194,23 @@
         "/health/heart-rate-zones/",
         "/health/ideal-body-weight/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/health/bmr-mifflin/",
+          "impressions": 1108,
+          "anchor": "iron calculator"
+        },
+        {
+          "path": "/health/chw/",
+          "impressions": 69,
+          "anchor": "iron calculator"
+        },
+        {
+          "path": "/health/pregnancy/",
+          "impressions": 67,
+          "anchor": "iron calculator"
+        }
+      ]
     },
     {
       "path": "/health/maffetone-hr/",
@@ -1716,7 +3226,23 @@
         "/health/chw/",
         "/health/creatinine-clearance/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/health/bmr-mifflin/",
+          "impressions": 1108,
+          "anchor": "maf 180"
+        },
+        {
+          "path": "/health/corrected-calcium/",
+          "impressions": 69,
+          "anchor": "maf 180"
+        },
+        {
+          "path": "/health/ldl-calculator/",
+          "impressions": 66,
+          "anchor": "maf 180"
+        }
+      ]
     },
     {
       "path": "/auto/quarter-mile/",
@@ -1732,7 +3258,23 @@
         "/auto/hybrid-savings/",
         "/auto/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/auto/parking-cost/",
+          "impressions": 107,
+          "anchor": "quarter mile calculator"
+        },
+        {
+          "path": "/auto/trade-in-value/",
+          "impressions": 85,
+          "anchor": "quarter mile calculator"
+        },
+        {
+          "path": "/auto/trip-time/",
+          "impressions": 64,
+          "anchor": "quarter mile calculator"
+        }
+      ]
     },
     {
       "path": "/family/family-budget-simple/",
@@ -1748,7 +3290,23 @@
         "/family/baby-sleep/",
         "/family/childcare-cost-annual/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/family/child-height/",
+          "impressions": 846,
+          "anchor": "family budget estimator"
+        },
+        {
+          "path": "/family/baby-weight-gain/",
+          "impressions": 106,
+          "anchor": "family budget estimator"
+        },
+        {
+          "path": "/family/vacation-with-kids/",
+          "impressions": 90,
+          "anchor": "family budget estimator"
+        }
+      ]
     },
     {
       "path": "/finance/emergency-fund/",
@@ -1764,7 +3322,23 @@
         "/finance/debt-ratio/",
         "/finance/graduated-payment/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "6 month emergency fund calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "6 month emergency fund calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "6 month emergency fund calculator"
+        }
+      ]
     },
     {
       "path": "/finance/factoring-fee/",
@@ -1780,7 +3354,23 @@
         "/finance/interest-coverage/",
         "/finance/late-fee-interest/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "invoice factoring calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "invoice factoring calculator"
+        },
+        {
+          "path": "/finance/credit-utilization/",
+          "impressions": 252,
+          "anchor": "invoice factoring calculator"
+        }
+      ]
     },
     {
       "path": "/health/waist-height-ratio/",
@@ -1796,7 +3386,23 @@
         "/health/gfr/",
         "/health/glycemic-load/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/health/chw/",
+          "impressions": 69,
+          "anchor": "waist to height ratio calculator"
+        },
+        {
+          "path": "/health/corrected-calcium/",
+          "impressions": 69,
+          "anchor": "waist to height ratio calculator"
+        },
+        {
+          "path": "/health/pregnancy/",
+          "impressions": 67,
+          "anchor": "waist to height ratio calculator"
+        }
+      ]
     },
     {
       "path": "/auto/hybrid-savings/",
@@ -1812,7 +3418,23 @@
         "/auto/ebike-range/",
         "/auto/ev-charger-roi/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/auto/parking-cost/",
+          "impressions": 107,
+          "anchor": "hybrid car savings calculator"
+        },
+        {
+          "path": "/auto/mileage-calculator/",
+          "impressions": 103,
+          "anchor": "hybrid car savings calculator"
+        },
+        {
+          "path": "/auto/trade-in-value/",
+          "impressions": 85,
+          "anchor": "hybrid car savings calculator"
+        }
+      ]
     },
     {
       "path": "/lifestyle/candle-wax/",
@@ -1828,7 +3450,23 @@
         "/lifestyle/cocktail-dilution/",
         "/lifestyle/french-press-ratio/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/lifestyle/renters-insurance/",
+          "impressions": 203,
+          "anchor": "wax calculator"
+        },
+        {
+          "path": "/lifestyle/resell-value/",
+          "impressions": 115,
+          "anchor": "wax calculator"
+        },
+        {
+          "path": "/lifestyle/vacation-savings/",
+          "impressions": 101,
+          "anchor": "wax calculator"
+        }
+      ]
     },
     {
       "path": "/math/inverse-variation/",
@@ -1844,7 +3482,23 @@
         "/math/direct-variation/",
         "/math/euler-totient/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/math/weighted-average/",
+          "impressions": 193,
+          "anchor": "inverse variation calculator"
+        },
+        {
+          "path": "/math/trigonometry/",
+          "impressions": 112,
+          "anchor": "inverse variation calculator"
+        },
+        {
+          "path": "/math/harmonic-mean/",
+          "impressions": 55,
+          "anchor": "inverse variation calculator"
+        }
+      ]
     },
     {
       "path": "/finance/tax-loss-harvest/",
@@ -1860,7 +3514,23 @@
         "/finance/cd-calculator/",
         "/finance/dividend-discount/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "tax loss harvesting calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "tax loss harvesting calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "tax loss harvesting calculator"
+        }
+      ]
     },
     {
       "path": "/homegarden/rain-barrel/",
@@ -1876,7 +3546,23 @@
         "/homegarden/firepit-size/",
         "/homegarden/garden-soil/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/homegarden/wallpaper-rolls/",
+          "impressions": 145,
+          "anchor": "rainwater collection calculator"
+        },
+        {
+          "path": "/homegarden/vinyl-flooring/",
+          "impressions": 95,
+          "anchor": "rainwater collection calculator"
+        },
+        {
+          "path": "/homegarden/deck-stain/",
+          "impressions": 75,
+          "anchor": "rainwater collection calculator"
+        }
+      ]
     },
     {
       "path": "/finance/tax/",
@@ -1892,7 +3578,23 @@
         "/finance/australia-income-tax/",
         "/finance/auto-loan/2-years-15000/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "income tax calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "income tax calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "income tax calculator"
+        }
+      ]
     },
     {
       "path": "/homegarden/countertop-sqft/",
@@ -1908,7 +3610,23 @@
         "/homegarden/garden-soil/",
         "/homegarden/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/homegarden/wallpaper-rolls/",
+          "impressions": 145,
+          "anchor": "countertop calculator"
+        },
+        {
+          "path": "/homegarden/vinyl-flooring/",
+          "impressions": 95,
+          "anchor": "countertop calculator"
+        },
+        {
+          "path": "/homegarden/deck-stain/",
+          "impressions": 75,
+          "anchor": "countertop calculator"
+        }
+      ]
     },
     {
       "path": "/math/root/",
@@ -1924,7 +3642,23 @@
         "/math/fibonacci-seq/",
         "/math/hypergeometric/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/math/weighted-average/",
+          "impressions": 193,
+          "anchor": "root calculator"
+        },
+        {
+          "path": "/math/trigonometry/",
+          "impressions": 112,
+          "anchor": "root calculator"
+        },
+        {
+          "path": "/math/harmonic-mean/",
+          "impressions": 55,
+          "anchor": "root calculator"
+        }
+      ]
     },
     {
       "path": "/construction/fence/",
@@ -1940,7 +3674,23 @@
         "/construction/",
         "/construction/mulch/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/construction/pipe-volume/",
+          "impressions": 73,
+          "anchor": "online fence calculator"
+        },
+        {
+          "path": "/construction/water-tank/",
+          "impressions": 46,
+          "anchor": "online fence calculator"
+        },
+        {
+          "path": "/construction/insulation/",
+          "impressions": 36,
+          "anchor": "online fence calculator"
+        }
+      ]
     },
     {
       "path": "/graph/",
@@ -1972,7 +3722,23 @@
         "/homegarden/grass-seed/",
         "/homegarden/homeowner-first-year-budget/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/homegarden/wallpaper-rolls/",
+          "impressions": 145,
+          "anchor": "deck post spacing calculator"
+        },
+        {
+          "path": "/homegarden/vinyl-flooring/",
+          "impressions": 95,
+          "anchor": "deck post spacing calculator"
+        },
+        {
+          "path": "/homegarden/deck-stain/",
+          "impressions": 75,
+          "anchor": "deck post spacing calculator"
+        }
+      ]
     },
     {
       "path": "/construction/roof-pitch/",
@@ -1988,7 +3754,23 @@
         "/construction/formwork/",
         "/construction/gravel-driveway/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/construction/pipe-volume/",
+          "impressions": 73,
+          "anchor": "rise run calculator"
+        },
+        {
+          "path": "/construction/carpet/",
+          "impressions": 53,
+          "anchor": "rise run calculator"
+        },
+        {
+          "path": "/construction/insulation/",
+          "impressions": 36,
+          "anchor": "rise run calculator"
+        }
+      ]
     },
     {
       "path": "/finance/investment/",
@@ -2004,7 +3786,23 @@
         "/finance/auto-loan/5-years-25000/",
         "/finance/auto-loan/5-years-25000-florida/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "initial investment formula"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "initial investment formula"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "initial investment formula"
+        }
+      ]
     },
     {
       "path": "/lifestyle/streaming-value/",
@@ -2020,7 +3818,23 @@
         "/lifestyle/cleaning-time/",
         "/lifestyle/flight-cost-per-hour/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/lifestyle/home-insurance/",
+          "impressions": 1012,
+          "anchor": "live streaming cost calculator"
+        },
+        {
+          "path": "/lifestyle/renters-insurance/",
+          "impressions": 203,
+          "anchor": "live streaming cost calculator"
+        },
+        {
+          "path": "/lifestyle/charging-time/",
+          "impressions": 201,
+          "anchor": "live streaming cost calculator"
+        }
+      ]
     },
     {
       "path": "/math/taylor-series/",
@@ -2036,7 +3850,23 @@
         "/math/completing-square/",
         "/math/cubic-equation/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/math/weighted-average/",
+          "impressions": 193,
+          "anchor": "taylor series approximation"
+        },
+        {
+          "path": "/math/trigonometry/",
+          "impressions": 112,
+          "anchor": "taylor series approximation"
+        },
+        {
+          "path": "/math/harmonic-mean/",
+          "impressions": 55,
+          "anchor": "taylor series approximation"
+        }
+      ]
     },
     {
       "path": "/regional/singapore-take-home-salary/",
@@ -2052,7 +3882,23 @@
         "/regional/home-loan-emi-india/",
         "/regional/india-take-home-salary/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/regional/dubai-salary/",
+          "impressions": 388,
+          "anchor": "calculator for salary"
+        },
+        {
+          "path": "/regional/singapore-cpf/",
+          "impressions": 188,
+          "anchor": "calculator for salary"
+        },
+        {
+          "path": "/regional/pk-salary/",
+          "impressions": 96,
+          "anchor": "calculator for salary"
+        }
+      ]
     },
     {
       "path": "/science/combined-gas-law/",
@@ -2068,7 +3914,23 @@
         "/science/heat-transfer/",
         "/science/impulse/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/science/carbon-dating/",
+          "impressions": 213,
+          "anchor": "combined gas law calculator"
+        },
+        {
+          "path": "/science/solar-energy/",
+          "impressions": 133,
+          "anchor": "combined gas law calculator"
+        },
+        {
+          "path": "/science/dew-point/",
+          "impressions": 100,
+          "anchor": "combined gas law calculator"
+        }
+      ]
     },
     {
       "path": "/everyday/currency-exchange/",
@@ -2084,7 +3946,23 @@
         "/everyday/cooking/",
         "/everyday/event-countdown/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/everyday/coffee-cost/",
+          "impressions": 110,
+          "anchor": "cost conversion calculator"
+        },
+        {
+          "path": "/everyday/gift-wrap/",
+          "impressions": 95,
+          "anchor": "cost conversion calculator"
+        },
+        {
+          "path": "/everyday/jet-lag/",
+          "impressions": 32,
+          "anchor": "cost conversion calculator"
+        }
+      ]
     },
     {
       "path": "/regional/us-fica/",
@@ -2100,7 +3978,23 @@
         "/regional/gst-calculator/",
         "/regional/income-tax-india/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/regional/dubai-salary/",
+          "impressions": 388,
+          "anchor": "fica tax calculator"
+        },
+        {
+          "path": "/regional/singapore-cpf/",
+          "impressions": 188,
+          "anchor": "fica tax calculator"
+        },
+        {
+          "path": "/regional/pk-salary/",
+          "impressions": 96,
+          "anchor": "fica tax calculator"
+        }
+      ]
     },
     {
       "path": "/health/health-insurance-copay/",
@@ -2116,7 +4010,23 @@
         "/health/cholesterol-ratio/",
         "/health/drug-dosage/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/health/bmr-mifflin/",
+          "impressions": 1108,
+          "anchor": "deductible calculator health insurance"
+        },
+        {
+          "path": "/health/chw/",
+          "impressions": 69,
+          "anchor": "deductible calculator health insurance"
+        },
+        {
+          "path": "/health/corrected-calcium/",
+          "impressions": 69,
+          "anchor": "deductible calculator health insurance"
+        }
+      ]
     },
     {
       "path": "/math/binomial-theorem/",
@@ -2132,7 +4042,23 @@
         "/math/eigenvalue-2x2/",
         "/math/ellipse-perimeter/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/math/weighted-average/",
+          "impressions": 193,
+          "anchor": "binomial expansion calculator"
+        },
+        {
+          "path": "/math/trigonometry/",
+          "impressions": 112,
+          "anchor": "binomial expansion calculator"
+        },
+        {
+          "path": "/math/harmonic-mean/",
+          "impressions": 55,
+          "anchor": "binomial expansion calculator"
+        }
+      ]
     },
     {
       "path": "/fitness/resting-metabolic/",
@@ -2148,7 +4074,23 @@
         "/fitness/one-rep-max/",
         "/fitness/row-standards/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/fitness/muscle-gain/",
+          "impressions": 321,
+          "anchor": "rmr calculator"
+        },
+        {
+          "path": "/fitness/situp-test/",
+          "impressions": 97,
+          "anchor": "rmr calculator"
+        },
+        {
+          "path": "/fitness/cycling-speed/",
+          "impressions": 40,
+          "anchor": "rmr calculator"
+        }
+      ]
     },
     {
       "path": "/hub/construction/",
@@ -2164,7 +4106,23 @@
         "/construction/carpet/",
         "/construction/ceiling-tile/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/hub/fitness/",
+          "impressions": 95,
+          "anchor": "floor load calculator"
+        },
+        {
+          "path": "/hub/auto/",
+          "impressions": 27,
+          "anchor": "floor load calculator"
+        },
+        {
+          "path": "/hub/math/",
+          "impressions": 10,
+          "anchor": "floor load calculator"
+        }
+      ]
     },
     {
       "path": "/regional/tds-calculator/",
@@ -2180,7 +4138,23 @@
         "/regional/epf-calculator/",
         "/regional/esic-calculator/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/regional/dubai-salary/",
+          "impressions": 388,
+          "anchor": "salary tds calculator"
+        },
+        {
+          "path": "/regional/singapore-cpf/",
+          "impressions": 188,
+          "anchor": "salary tds calculator"
+        },
+        {
+          "path": "/regional/pk-salary/",
+          "impressions": 96,
+          "anchor": "salary tds calculator"
+        }
+      ]
     },
     {
       "path": "/education/percentile-rank/",
@@ -2196,7 +4170,23 @@
         "/education/gpa/",
         "/education/grade-needed/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/education/tuition-cost/",
+          "impressions": 200,
+          "anchor": "howdoicalculatemy"
+        },
+        {
+          "path": "/education/citation-count/",
+          "impressions": 37,
+          "anchor": "howdoicalculatemy"
+        },
+        {
+          "path": "/education/attendance-rate/",
+          "impressions": 24,
+          "anchor": "howdoicalculatemy"
+        }
+      ]
     },
     {
       "path": "/science/coulomb/",
@@ -2212,7 +4202,23 @@
         "/science/free-fall/",
         "/science/frequency/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/science/carbon-dating/",
+          "impressions": 213,
+          "anchor": "coulomb's law calculator"
+        },
+        {
+          "path": "/science/solar-energy/",
+          "impressions": 133,
+          "anchor": "coulomb's law calculator"
+        },
+        {
+          "path": "/science/dew-point/",
+          "impressions": 100,
+          "anchor": "coulomb's law calculator"
+        }
+      ]
     },
     {
       "path": "/tech/keyword-density/",
@@ -2228,7 +4234,23 @@
         "/tech/code-line-count/",
         "/tech/dbm-watts/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/tech/internet-speed/",
+          "impressions": 508,
+          "anchor": "keyword density formula"
+        },
+        {
+          "path": "/tech/raid-capacity/",
+          "impressions": 238,
+          "anchor": "keyword density formula"
+        },
+        {
+          "path": "/tech/rgb-hex/",
+          "impressions": 166,
+          "anchor": "keyword density formula"
+        }
+      ]
     },
     {
       "path": "/construction/siding-squares/",
@@ -2244,7 +4266,23 @@
         "/construction/gutter/",
         "/construction/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/construction/pipe-volume/",
+          "impressions": 73,
+          "anchor": "estimate wall square footage"
+        },
+        {
+          "path": "/construction/carpet/",
+          "impressions": 53,
+          "anchor": "estimate wall square footage"
+        },
+        {
+          "path": "/construction/water-tank/",
+          "impressions": 46,
+          "anchor": "estimate wall square footage"
+        }
+      ]
     },
     {
       "path": "/everyday/moving-truck/",
@@ -2260,7 +4298,23 @@
         "/everyday/gift-wrap/",
         "/everyday/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/everyday/coffee-cost/",
+          "impressions": 110,
+          "anchor": "moving truck size calculator"
+        },
+        {
+          "path": "/everyday/jet-lag/",
+          "impressions": 32,
+          "anchor": "moving truck size calculator"
+        },
+        {
+          "path": "/everyday/grocery-budget/",
+          "impressions": 31,
+          "anchor": "moving truck size calculator"
+        }
+      ]
     },
     {
       "path": "/fitness/calories-burned/",
@@ -2276,7 +4330,23 @@
         "/fitness/",
         "/fitness/pullup-test/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/fitness/muscle-gain/",
+          "impressions": 321,
+          "anchor": "bmr calories burned"
+        },
+        {
+          "path": "/fitness/cycling-speed/",
+          "impressions": 40,
+          "anchor": "bmr calories burned"
+        },
+        {
+          "path": "/fitness/bench-standards/",
+          "impressions": 39,
+          "anchor": "bmr calories burned"
+        }
+      ]
     },
     {
       "path": "/health/cholesterol-ratio/",
@@ -2292,7 +4362,23 @@
         "/health/drug-dosage/",
         "/health/ideal-body-weight/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/health/bmr-mifflin/",
+          "impressions": 1108,
+          "anchor": "cholesterol hdl ratio calculator"
+        },
+        {
+          "path": "/health/chw/",
+          "impressions": 69,
+          "anchor": "cholesterol hdl ratio calculator"
+        },
+        {
+          "path": "/health/pregnancy/",
+          "impressions": 67,
+          "anchor": "cholesterol hdl ratio calculator"
+        }
+      ]
     },
     {
       "path": "/homegarden/kitchen-remodel/",
@@ -2308,7 +4394,23 @@
         "/homegarden/countertop-sqft/",
         "/homegarden/grout-calc/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/homegarden/vinyl-flooring/",
+          "impressions": 95,
+          "anchor": "remodel budget calculator"
+        },
+        {
+          "path": "/homegarden/deck-stain/",
+          "impressions": 75,
+          "anchor": "remodel budget calculator"
+        },
+        {
+          "path": "/homegarden/room-area/",
+          "impressions": 66,
+          "anchor": "remodel budget calculator"
+        }
+      ]
     },
     {
       "path": "/auto/car-depreciation/",
@@ -2324,7 +4426,23 @@
         "/auto/",
         "/auto/parking-cost/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/auto/mileage-calculator/",
+          "impressions": 103,
+          "anchor": "auto depreciation calculator"
+        },
+        {
+          "path": "/auto/trade-in-value/",
+          "impressions": 85,
+          "anchor": "auto depreciation calculator"
+        },
+        {
+          "path": "/auto/taxi-fare/",
+          "impressions": 54,
+          "anchor": "auto depreciation calculator"
+        }
+      ]
     },
     {
       "path": "/everyday/carbon/",
@@ -2340,7 +4458,13 @@
         "/everyday/coffee-cost/",
         "/everyday/compound-savings/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/everyday/vacation-budget/",
+          "impressions": 40,
+          "anchor": "carbon footprint calculator electricity"
+        }
+      ]
     },
     {
       "path": "/homegarden/humidifier-size/",
@@ -2356,7 +4480,23 @@
         "/homegarden/deck-post/",
         "/homegarden/fence-material/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/homegarden/wallpaper-rolls/",
+          "impressions": 145,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/homegarden/vinyl-flooring/",
+          "impressions": 95,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/homegarden/deck-stain/",
+          "impressions": 75,
+          "anchor": "calculator"
+        }
+      ]
     },
     {
       "path": "/science/kepler-third/",
@@ -2372,7 +4512,23 @@
         "/science/electric-field/",
         "/science/impulse/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/science/carbon-dating/",
+          "impressions": 213,
+          "anchor": "kepler's third law calculator"
+        },
+        {
+          "path": "/science/solar-energy/",
+          "impressions": 133,
+          "anchor": "kepler's third law calculator"
+        },
+        {
+          "path": "/science/dew-point/",
+          "impressions": 100,
+          "anchor": "kepler's third law calculator"
+        }
+      ]
     },
     {
       "path": "/conversion/data-storage/",
@@ -2404,7 +4560,23 @@
         "/fitness/flexibility-score/",
         "/fitness/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/fitness/muscle-gain/",
+          "impressions": 321,
+          "anchor": "weight loss time calculator"
+        },
+        {
+          "path": "/fitness/situp-test/",
+          "impressions": 97,
+          "anchor": "weight loss time calculator"
+        },
+        {
+          "path": "/fitness/bench-standards/",
+          "impressions": 39,
+          "anchor": "weight loss time calculator"
+        }
+      ]
     },
     {
       "path": "/regional/gold-silver/",
@@ -2420,7 +4592,23 @@
         "/regional/electricity-bill-india/",
         "/regional/gold-rate-pk/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/regional/singapore-cpf/",
+          "impressions": 188,
+          "anchor": "gold silver ratio calculator"
+        },
+        {
+          "path": "/regional/pk-salary/",
+          "impressions": 96,
+          "anchor": "gold silver ratio calculator"
+        },
+        {
+          "path": "/regional/uk-take-home-salary/",
+          "impressions": 92,
+          "anchor": "gold silver ratio calculator"
+        }
+      ]
     },
     {
       "path": "/tech/audio-file-size/",
@@ -2436,7 +4624,23 @@
         "/tech/dbm-watts/",
         "/tech/download-time/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/tech/internet-speed/",
+          "impressions": 508,
+          "anchor": "audio bitrate calculator"
+        },
+        {
+          "path": "/tech/raid-capacity/",
+          "impressions": 238,
+          "anchor": "audio bitrate calculator"
+        },
+        {
+          "path": "/tech/rgb-hex/",
+          "impressions": 166,
+          "anchor": "audio bitrate calculator"
+        }
+      ]
     },
     {
       "path": "/regional/stamp-duty/",
@@ -2452,7 +4656,23 @@
         "/regional/income-tax-india/",
         "/regional/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/regional/dubai-salary/",
+          "impressions": 388,
+          "anchor": "stamp duty and registration calculator"
+        },
+        {
+          "path": "/regional/singapore-cpf/",
+          "impressions": 188,
+          "anchor": "stamp duty and registration calculator"
+        },
+        {
+          "path": "/regional/pk-salary/",
+          "impressions": 96,
+          "anchor": "stamp duty and registration calculator"
+        }
+      ]
     },
     {
       "path": "/construction/wall-area/",
@@ -2484,7 +4704,23 @@
         "/education/citation-count/",
         "/education/college-cost-planner/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/education/tuition-cost/",
+          "impressions": 200,
+          "anchor": "how to calculate class rank"
+        },
+        {
+          "path": "/education/presentation-time/",
+          "impressions": 109,
+          "anchor": "how to calculate class rank"
+        },
+        {
+          "path": "/education/gpa/",
+          "impressions": 65,
+          "anchor": "how to calculate class rank"
+        }
+      ]
     },
     {
       "path": "/finance/cap-rate-conv/",
@@ -2500,7 +4736,23 @@
         "/finance/coupon-payment/",
         "/finance/dca-calculator/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "net operating income calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "net operating income calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "net operating income calculator"
+        }
+      ]
     },
     {
       "path": "/health/burn-severity/",
@@ -2516,7 +4768,23 @@
         "/health/calorie-goal/",
         "/health/free-water-deficit/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/health/bmr-mifflin/",
+          "impressions": 1108,
+          "anchor": "burn calculation"
+        },
+        {
+          "path": "/health/chw/",
+          "impressions": 69,
+          "anchor": "burn calculation"
+        },
+        {
+          "path": "/health/corrected-calcium/",
+          "impressions": 69,
+          "anchor": "burn calculation"
+        }
+      ]
     },
     {
       "path": "/health/calorie/",
@@ -2548,7 +4816,23 @@
         "/math/exponential-prob/",
         "/math/mean-median-mode/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/math/weighted-average/",
+          "impressions": 193,
+          "anchor": "completing the square calculator"
+        },
+        {
+          "path": "/math/trigonometry/",
+          "impressions": 112,
+          "anchor": "completing the square calculator"
+        },
+        {
+          "path": "/math/harmonic-mean/",
+          "impressions": 55,
+          "anchor": "completing the square calculator"
+        }
+      ]
     },
     {
       "path": "/math/quadratic/",
@@ -2580,7 +4864,23 @@
         "/science/cloud-base-lcl/",
         "/science/coulomb/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/science/carbon-dating/",
+          "impressions": 213,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/science/solar-energy/",
+          "impressions": 133,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/science/moment-of-inertia/",
+          "impressions": 82,
+          "anchor": "calculator"
+        }
+      ]
     },
     {
       "path": "/tech/code-line-count/",
@@ -2596,7 +4896,23 @@
         "/tech/data-center-pue/",
         "/tech/data-usage-est/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/tech/internet-speed/",
+          "impressions": 508,
+          "anchor": "codecalculator"
+        },
+        {
+          "path": "/tech/raid-capacity/",
+          "impressions": 238,
+          "anchor": "codecalculator"
+        },
+        {
+          "path": "/tech/rgb-hex/",
+          "impressions": 166,
+          "anchor": "codecalculator"
+        }
+      ]
     },
     {
       "path": "/construction/flooring/",
@@ -2628,7 +4944,23 @@
         "/finance/cd-calculator/",
         "/finance/dividend-yield/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "529 compound interest calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "529 compound interest calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "529 compound interest calculator"
+        }
+      ]
     },
     {
       "path": "/finance/payroll-tax/",
@@ -2644,7 +4976,23 @@
         "/finance/coverage-ratio/",
         "/finance/debt-consolidation/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "wages tax calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "wages tax calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "wages tax calculator"
+        }
+      ]
     },
     {
       "path": "/fitness/beep-test/",
@@ -2660,7 +5008,23 @@
         "/fitness/",
         "/fitness/max-heart-rate/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/fitness/muscle-gain/",
+          "impressions": 321,
+          "anchor": "vo2 beep test"
+        },
+        {
+          "path": "/fitness/situp-test/",
+          "impressions": 97,
+          "anchor": "vo2 beep test"
+        },
+        {
+          "path": "/fitness/vo2max/",
+          "impressions": 62,
+          "anchor": "vo2 beep test"
+        }
+      ]
     },
     {
       "path": "/regional/zakat-calculator/",
@@ -2676,7 +5040,23 @@
         "/regional/capital-gains-india/",
         "/regional/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/regional/dubai-salary/",
+          "impressions": 388,
+          "anchor": "zakat calculator pkr"
+        },
+        {
+          "path": "/regional/singapore-cpf/",
+          "impressions": 188,
+          "anchor": "zakat calculator pkr"
+        },
+        {
+          "path": "/regional/pk-salary/",
+          "impressions": 96,
+          "anchor": "zakat calculator pkr"
+        }
+      ]
     },
     {
       "path": "/education/course-load/",
@@ -2692,7 +5072,23 @@
         "/education/graduation-date/",
         "/education/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/education/gpa/",
+          "impressions": 65,
+          "anchor": "course load calculator"
+        },
+        {
+          "path": "/education/citation-count/",
+          "impressions": 37,
+          "anchor": "course load calculator"
+        },
+        {
+          "path": "/education/attendance-rate/",
+          "impressions": 24,
+          "anchor": "course load calculator"
+        }
+      ]
     },
     {
       "path": "/everyday/electricity/",
@@ -2708,7 +5104,13 @@
         "/everyday/carbon/",
         "/everyday/coffee-cost/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/everyday/vacation-budget/",
+          "impressions": 40,
+          "anchor": "energy bill calculator"
+        }
+      ]
     },
     {
       "path": "/math/matrix-inverse/",
@@ -2724,7 +5126,23 @@
         "/math/hypergeometric/",
         "/math/moving-average/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/math/weighted-average/",
+          "impressions": 193,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/math/trigonometry/",
+          "impressions": 112,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/math/harmonic-mean/",
+          "impressions": 55,
+          "anchor": "calculator"
+        }
+      ]
     },
     {
       "path": "/math/mean-median-mode/",
@@ -2740,7 +5158,23 @@
         "/math/continued-fraction/",
         "/math/eigenvalue-2x2/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/math/weighted-average/",
+          "impressions": 193,
+          "anchor": "mode median and mean calculator"
+        },
+        {
+          "path": "/math/trigonometry/",
+          "impressions": 112,
+          "anchor": "mode median and mean calculator"
+        },
+        {
+          "path": "/math/harmonic-mean/",
+          "impressions": 55,
+          "anchor": "mode median and mean calculator"
+        }
+      ]
     },
     {
       "path": "/regional/lpg-cost/",
@@ -2756,7 +5190,23 @@
         "/regional/gold-rate/",
         "/regional/gold-rate-pk/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/regional/dubai-salary/",
+          "impressions": 388,
+          "anchor": "cylinder cost"
+        },
+        {
+          "path": "/regional/singapore-cpf/",
+          "impressions": 188,
+          "anchor": "cylinder cost"
+        },
+        {
+          "path": "/regional/switzerland-take-home-salary/",
+          "impressions": 95,
+          "anchor": "cylinder cost"
+        }
+      ]
     },
     {
       "path": "/auto/ev-charger-roi/",
@@ -2772,7 +5222,23 @@
         "/auto/hybrid-savings/",
         "/auto/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/auto/parking-cost/",
+          "impressions": 107,
+          "anchor": "ev charger roi"
+        },
+        {
+          "path": "/auto/mileage-calculator/",
+          "impressions": 103,
+          "anchor": "ev charger roi"
+        },
+        {
+          "path": "/auto/trade-in-value/",
+          "impressions": 85,
+          "anchor": "ev charger roi"
+        }
+      ]
     },
     {
       "path": "/construction/sod/",
@@ -2788,7 +5254,23 @@
         "/construction/gutter/",
         "/construction/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/construction/pipe-volume/",
+          "impressions": 73,
+          "anchor": "sod square foot calculator"
+        },
+        {
+          "path": "/construction/carpet/",
+          "impressions": 53,
+          "anchor": "sod square foot calculator"
+        },
+        {
+          "path": "/construction/water-tank/",
+          "impressions": 46,
+          "anchor": "sod square foot calculator"
+        }
+      ]
     },
     {
       "path": "/everyday/garden/",
@@ -2804,7 +5286,23 @@
         "/everyday/concrete/",
         "/everyday/days-between/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/everyday/gift-wrap/",
+          "impressions": 95,
+          "anchor": "garden size calculator"
+        },
+        {
+          "path": "/everyday/vacation-budget/",
+          "impressions": 40,
+          "anchor": "garden size calculator"
+        },
+        {
+          "path": "/everyday/jet-lag/",
+          "impressions": 32,
+          "anchor": "garden size calculator"
+        }
+      ]
     },
     {
       "path": "/finance/insurance-surrender-value/",
@@ -2820,7 +5318,23 @@
         "/finance/debt-to-equity/",
         "/finance/fixed-deposit-vs-recurring/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "surrender value calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "surrender value calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "surrender value calculator"
+        }
+      ]
     },
     {
       "path": "/fitness/steps-to-distance/",
@@ -2868,7 +5382,23 @@
         "/health/heart-rate-zones/",
         "/health/iv-drip-rate/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/health/bmr-mifflin/",
+          "impressions": 1108,
+          "anchor": "bazett"
+        },
+        {
+          "path": "/health/chw/",
+          "impressions": 69,
+          "anchor": "bazett"
+        },
+        {
+          "path": "/health/corrected-calcium/",
+          "impressions": 69,
+          "anchor": "bazett"
+        }
+      ]
     },
     {
       "path": "/health/vaccination-schedule/",
@@ -2884,7 +5414,23 @@
         "/health/calorie-goal/",
         "/health/chw/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/health/corrected-calcium/",
+          "impressions": 69,
+          "anchor": "immunization catch up schedule calculator"
+        },
+        {
+          "path": "/health/pregnancy/",
+          "impressions": 67,
+          "anchor": "immunization catch up schedule calculator"
+        },
+        {
+          "path": "/health/ldl-calculator/",
+          "impressions": 66,
+          "anchor": "immunization catch up schedule calculator"
+        }
+      ]
     },
     {
       "path": "/health/vitamin-d-dosage/",
@@ -2900,7 +5446,23 @@
         "/health/heart-rate/",
         "/health/ideal-weight/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/health/bmr-mifflin/",
+          "impressions": 1108,
+          "anchor": "calculator vitamin d"
+        },
+        {
+          "path": "/health/chw/",
+          "impressions": 69,
+          "anchor": "calculator vitamin d"
+        },
+        {
+          "path": "/health/corrected-calcium/",
+          "impressions": 69,
+          "anchor": "calculator vitamin d"
+        }
+      ]
     },
     {
       "path": "/hub/business/",
@@ -2916,7 +5478,23 @@
         "/business/break-even-point/",
         "/business/break-even-revenue/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/hub/fitness/",
+          "impressions": 95,
+          "anchor": "calculator b2b"
+        },
+        {
+          "path": "/hub/auto/",
+          "impressions": 27,
+          "anchor": "calculator b2b"
+        },
+        {
+          "path": "/hub/construction/",
+          "impressions": 14,
+          "anchor": "calculator b2b"
+        }
+      ]
     },
     {
       "path": "/lifestyle/rental-deposit/",
@@ -2964,7 +5542,23 @@
         "/regional/chit-fund/",
         "/regional/dubai-salary/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/regional/singapore-cpf/",
+          "impressions": 188,
+          "anchor": "gratuity calculator"
+        },
+        {
+          "path": "/regional/pk-salary/",
+          "impressions": 96,
+          "anchor": "gratuity calculator"
+        },
+        {
+          "path": "/regional/switzerland-take-home-salary/",
+          "impressions": 95,
+          "anchor": "gratuity calculator"
+        }
+      ]
     },
     {
       "path": "/health/fatigue-score/",
@@ -2980,7 +5574,23 @@
         "/health/gfr/",
         "/health/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/health/bmr-mifflin/",
+          "impressions": 1108,
+          "anchor": "fatigue calculator"
+        },
+        {
+          "path": "/health/chw/",
+          "impressions": 69,
+          "anchor": "fatigue calculator"
+        },
+        {
+          "path": "/health/corrected-calcium/",
+          "impressions": 69,
+          "anchor": "fatigue calculator"
+        }
+      ]
     },
     {
       "path": "/homegarden/appliance-cost/",
@@ -2996,7 +5606,23 @@
         "/homegarden/deck-post/",
         "/homegarden/grout-calc/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/homegarden/wallpaper-rolls/",
+          "impressions": 145,
+          "anchor": "appliance electricity cost calculator"
+        },
+        {
+          "path": "/homegarden/vinyl-flooring/",
+          "impressions": 95,
+          "anchor": "appliance electricity cost calculator"
+        },
+        {
+          "path": "/homegarden/deck-stain/",
+          "impressions": 75,
+          "anchor": "appliance electricity cost calculator"
+        }
+      ]
     },
     {
       "path": "/homegarden/cabinet-door/",
@@ -3012,7 +5638,23 @@
         "/homegarden/grass-seed/",
         "/homegarden/home-sqft/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/homegarden/wallpaper-rolls/",
+          "impressions": 145,
+          "anchor": "cabinet calculator"
+        },
+        {
+          "path": "/homegarden/vinyl-flooring/",
+          "impressions": 95,
+          "anchor": "cabinet calculator"
+        },
+        {
+          "path": "/homegarden/deck-stain/",
+          "impressions": 75,
+          "anchor": "cabinet calculator"
+        }
+      ]
     },
     {
       "path": "/math/rms/",
@@ -3028,7 +5670,23 @@
         "/math/distance/",
         "/math/law-of-cosines/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/math/trigonometry/",
+          "impressions": 112,
+          "anchor": "howtofindrootmean"
+        },
+        {
+          "path": "/math/harmonic-mean/",
+          "impressions": 55,
+          "anchor": "howtofindrootmean"
+        },
+        {
+          "path": "/math/matrix-det/",
+          "impressions": 50,
+          "anchor": "howtofindrootmean"
+        }
+      ]
     },
     {
       "path": "/regional/epf-calculator/",
@@ -3044,7 +5702,23 @@
         "/regional/colombia-take-home-salary/",
         "/regional/dubai-salary/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/regional/singapore-cpf/",
+          "impressions": 188,
+          "anchor": "epf return calculator"
+        },
+        {
+          "path": "/regional/pk-salary/",
+          "impressions": 96,
+          "anchor": "epf return calculator"
+        },
+        {
+          "path": "/regional/switzerland-take-home-salary/",
+          "impressions": 95,
+          "anchor": "epf return calculator"
+        }
+      ]
     },
     {
       "path": "/science/centripetal/",
@@ -3060,7 +5734,23 @@
         "/science/kepler-third/",
         "/science/mirror-equation/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/science/carbon-dating/",
+          "impressions": 213,
+          "anchor": "centripetal acceleration calculator"
+        },
+        {
+          "path": "/science/solar-energy/",
+          "impressions": 133,
+          "anchor": "centripetal acceleration calculator"
+        },
+        {
+          "path": "/science/dew-point/",
+          "impressions": 100,
+          "anchor": "centripetal acceleration calculator"
+        }
+      ]
     },
     {
       "path": "/science/wavelength/",
@@ -3076,7 +5766,23 @@
         "/science/doppler/",
         "/science/frequency/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/science/carbon-dating/",
+          "impressions": 213,
+          "anchor": "de broglie wavelength calculator"
+        },
+        {
+          "path": "/science/solar-energy/",
+          "impressions": 133,
+          "anchor": "de broglie wavelength calculator"
+        },
+        {
+          "path": "/science/dew-point/",
+          "impressions": 100,
+          "anchor": "de broglie wavelength calculator"
+        }
+      ]
     },
     {
       "path": "/tech/password-time/",
@@ -3092,7 +5798,23 @@
         "/tech/cable-length/",
         "/tech/data-usage-est/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/tech/internet-speed/",
+          "impressions": 508,
+          "anchor": "howlongwillittake"
+        },
+        {
+          "path": "/tech/rgb-hex/",
+          "impressions": 166,
+          "anchor": "howlongwillittake"
+        },
+        {
+          "path": "/tech/ip-subnet/",
+          "impressions": 122,
+          "anchor": "howlongwillittake"
+        }
+      ]
     },
     {
       "path": "/utilities/dice-roller/",
@@ -3124,7 +5846,23 @@
         "/finance/ev-ebitda/",
         "/finance/insurance-surrender-value/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "p/e ratio calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "p/e ratio calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "p/e ratio calculator"
+        }
+      ]
     },
     {
       "path": "/finance/quick-ratio/",
@@ -3140,7 +5878,23 @@
         "/finance/dividend-yield/",
         "/finance/inflation-adjusted/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "quick ratio calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "quick ratio calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "quick ratio calculator"
+        }
+      ]
     },
     {
       "path": "/fitness/overhead-standards/",
@@ -3156,7 +5910,23 @@
         "/fitness/deadlift-standards/",
         "/fitness/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/fitness/situp-test/",
+          "impressions": 97,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/fitness/vo2max/",
+          "impressions": 62,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/fitness/cycling-speed/",
+          "impressions": 40,
+          "anchor": "calculator"
+        }
+      ]
     },
     {
       "path": "/food/unit-converter-food/",
@@ -3172,7 +5942,13 @@
         "/food/cooking-time/",
         "/food/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/food/meat-cooking-time/",
+          "impressions": 74,
+          "anchor": "food convert"
+        }
+      ]
     },
     {
       "path": "/lifestyle/french-press-ratio/",
@@ -3188,7 +5964,23 @@
         "/lifestyle/furniture-assembly/",
         "/lifestyle/gift-budget/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/lifestyle/home-insurance/",
+          "impressions": 1012,
+          "anchor": "frenchpresscoffeetowater"
+        },
+        {
+          "path": "/lifestyle/charging-time/",
+          "impressions": 201,
+          "anchor": "frenchpresscoffeetowater"
+        },
+        {
+          "path": "/lifestyle/resell-value/",
+          "impressions": 115,
+          "anchor": "frenchpresscoffeetowater"
+        }
+      ]
     },
     {
       "path": "/science/freezing-depression/",
@@ -3204,7 +5996,23 @@
         "/science/cloud-base-lcl/",
         "/science/coulomb-law/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/science/solar-energy/",
+          "impressions": 133,
+          "anchor": "calculate freezing point depression"
+        },
+        {
+          "path": "/science/dew-point/",
+          "impressions": 100,
+          "anchor": "calculate freezing point depression"
+        },
+        {
+          "path": "/science/moment-of-inertia/",
+          "impressions": 82,
+          "anchor": "calculate freezing point depression"
+        }
+      ]
     },
     {
       "path": "/career/us-priority-date/",
@@ -3236,7 +6044,23 @@
         "/everyday/day-of-year/",
         "/everyday/gift-wrap/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/everyday/coffee-cost/",
+          "impressions": 110,
+          "anchor": "calculate easter date"
+        },
+        {
+          "path": "/everyday/vacation-budget/",
+          "impressions": 40,
+          "anchor": "calculate easter date"
+        },
+        {
+          "path": "/everyday/jet-lag/",
+          "impressions": 32,
+          "anchor": "calculate easter date"
+        }
+      ]
     },
     {
       "path": "/finance/payback-period/",
@@ -3252,7 +6076,23 @@
         "/finance/currency-arbitrage/",
         "/finance/debt-consolidation/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "payback years"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "payback years"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "payback years"
+        }
+      ]
     },
     {
       "path": "/fitness/plank-test/",
@@ -3268,7 +6108,23 @@
         "/fitness/deload-week/",
         "/fitness/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/fitness/rowing-split/",
+          "impressions": 36,
+          "anchor": "plank test"
+        },
+        {
+          "path": "/fitness/swim-pace/",
+          "impressions": 29,
+          "anchor": "plank test"
+        },
+        {
+          "path": "/fitness/sweat-rate/",
+          "impressions": 24,
+          "anchor": "plank test"
+        }
+      ]
     },
     {
       "path": "/health/heart-rate-zones/",
@@ -3284,7 +6140,23 @@
         "/health/fatigue-score/",
         "/health/gfr/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/health/bmr-mifflin/",
+          "impressions": 1108,
+          "anchor": "normal resting heart rate zones"
+        },
+        {
+          "path": "/health/chw/",
+          "impressions": 69,
+          "anchor": "normal resting heart rate zones"
+        },
+        {
+          "path": "/health/corrected-calcium/",
+          "impressions": 69,
+          "anchor": "normal resting heart rate zones"
+        }
+      ]
     },
     {
       "path": "/regional/uae-vat/",
@@ -3300,7 +6172,23 @@
         "/regional/capital-gains-india/",
         "/regional/hra-exemption/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/regional/dubai-salary/",
+          "impressions": 388,
+          "anchor": "vat calculator uae"
+        },
+        {
+          "path": "/regional/singapore-cpf/",
+          "impressions": 188,
+          "anchor": "vat calculator uae"
+        },
+        {
+          "path": "/regional/pk-salary/",
+          "impressions": 96,
+          "anchor": "vat calculator uae"
+        }
+      ]
     },
     {
       "path": "/tech/monitor-refresh/",
@@ -3316,7 +6204,23 @@
         "/tech/data-transfer-cost/",
         "/tech/hosting-cost/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/tech/internet-speed/",
+          "impressions": 508,
+          "anchor": "frames per second monitor"
+        },
+        {
+          "path": "/tech/raid-capacity/",
+          "impressions": 238,
+          "anchor": "frames per second monitor"
+        },
+        {
+          "path": "/tech/rgb-hex/",
+          "impressions": 166,
+          "anchor": "frames per second monitor"
+        }
+      ]
     },
     {
       "path": "/everyday/leap-year/",
@@ -3332,7 +6236,23 @@
         "/everyday/days-between/",
         "/everyday/electricity/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/everyday/coffee-cost/",
+          "impressions": 110,
+          "anchor": "howisaleapyear"
+        },
+        {
+          "path": "/everyday/gift-wrap/",
+          "impressions": 95,
+          "anchor": "howisaleapyear"
+        },
+        {
+          "path": "/everyday/vacation-budget/",
+          "impressions": 40,
+          "anchor": "howisaleapyear"
+        }
+      ]
     },
     {
       "path": "/finance/social-security/",
@@ -3348,7 +6268,23 @@
         "/finance/amortization/30-years-300000/",
         "/finance/amortization/5-years-100000/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "calculator"
+        }
+      ]
     },
     {
       "path": "/regional/gold-rate-pk/",
@@ -3364,7 +6300,23 @@
         "/regional/canada-cpp/",
         "/regional/capital-gains-india/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/regional/dubai-salary/",
+          "impressions": 388,
+          "anchor": "gold calculator pakistan"
+        },
+        {
+          "path": "/regional/singapore-cpf/",
+          "impressions": 188,
+          "anchor": "gold calculator pakistan"
+        },
+        {
+          "path": "/regional/switzerland-take-home-salary/",
+          "impressions": 95,
+          "anchor": "gold calculator pakistan"
+        }
+      ]
     },
     {
       "path": "/everyday/day-of-week/",
@@ -3380,7 +6332,23 @@
         "/everyday/days-between/",
         "/everyday/easter-date/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/everyday/coffee-cost/",
+          "impressions": 110,
+          "anchor": "day of the week calculator"
+        },
+        {
+          "path": "/everyday/gift-wrap/",
+          "impressions": 95,
+          "anchor": "day of the week calculator"
+        },
+        {
+          "path": "/everyday/vacation-budget/",
+          "impressions": 40,
+          "anchor": "day of the week calculator"
+        }
+      ]
     },
     {
       "path": "/fitness/rpe-load/",
@@ -3396,7 +6364,23 @@
         "/fitness/",
         "/fitness/max-heart-rate/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/fitness/muscle-gain/",
+          "impressions": 321,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/fitness/situp-test/",
+          "impressions": 97,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/fitness/vo2max/",
+          "impressions": 62,
+          "anchor": "calculator"
+        }
+      ]
     },
     {
       "path": "/health/sleep-quality/",
@@ -3412,7 +6396,23 @@
         "/health/calorie-burn/",
         "/health/gfr/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/health/bmr-mifflin/",
+          "impressions": 1108,
+          "anchor": "how to calculate sleep score"
+        },
+        {
+          "path": "/health/chw/",
+          "impressions": 69,
+          "anchor": "how to calculate sleep score"
+        },
+        {
+          "path": "/health/corrected-calcium/",
+          "impressions": 69,
+          "anchor": "how to calculate sleep score"
+        }
+      ]
     },
     {
       "path": "/health/trimester-date/",
@@ -3428,7 +6428,23 @@
         "/health/calorie-goal/",
         "/health/drug-dosage/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/health/bmr-mifflin/",
+          "impressions": 1108,
+          "anchor": "how to calculate trimester"
+        },
+        {
+          "path": "/health/chw/",
+          "impressions": 69,
+          "anchor": "how to calculate trimester"
+        },
+        {
+          "path": "/health/corrected-calcium/",
+          "impressions": 69,
+          "anchor": "how to calculate trimester"
+        }
+      ]
     },
     {
       "path": "/regional/gold-silver-ratio/",
@@ -3444,7 +6460,23 @@
         "/regional/",
         "/regional/indonesia-take-home-salary/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/regional/dubai-salary/",
+          "impressions": 388,
+          "anchor": "gold silver ratio calculator"
+        },
+        {
+          "path": "/regional/singapore-cpf/",
+          "impressions": 188,
+          "anchor": "gold silver ratio calculator"
+        },
+        {
+          "path": "/regional/pk-salary/",
+          "impressions": 96,
+          "anchor": "gold silver ratio calculator"
+        }
+      ]
     },
     {
       "path": "/regional/gst-india/",
@@ -3460,7 +6492,23 @@
         "/regional/gratuity-calculator/",
         "/regional/hongkong-take-home-salary/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/regional/dubai-salary/",
+          "impressions": 388,
+          "anchor": "gst calculator india"
+        },
+        {
+          "path": "/regional/pk-salary/",
+          "impressions": 96,
+          "anchor": "gst calculator india"
+        },
+        {
+          "path": "/regional/switzerland-take-home-salary/",
+          "impressions": 95,
+          "anchor": "gst calculator india"
+        }
+      ]
     },
     {
       "path": "/tech/latency-bandwidth/",
@@ -3476,7 +6524,23 @@
         "/tech/awg-reference/",
         "/tech/color-contrast/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/tech/internet-speed/",
+          "impressions": 508,
+          "anchor": "bandwidth calculator formula"
+        },
+        {
+          "path": "/tech/raid-capacity/",
+          "impressions": 238,
+          "anchor": "bandwidth calculator formula"
+        },
+        {
+          "path": "/tech/rgb-hex/",
+          "impressions": 166,
+          "anchor": "bandwidth calculator formula"
+        }
+      ]
     },
     {
       "path": "/everyday/pomodoro-planner/",
@@ -3492,7 +6556,23 @@
         "/everyday/day-of-week/",
         "/everyday/day-of-year/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/everyday/coffee-cost/",
+          "impressions": 110,
+          "anchor": "pomodoro calculator"
+        },
+        {
+          "path": "/everyday/gift-wrap/",
+          "impressions": 95,
+          "anchor": "pomodoro calculator"
+        },
+        {
+          "path": "/everyday/vacation-budget/",
+          "impressions": 40,
+          "anchor": "pomodoro calculator"
+        }
+      ]
     },
     {
       "path": "/finance/graduated-payment/",
@@ -3508,7 +6588,23 @@
         "/finance/dividend/",
         "/finance/home-afford/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "graduated mortgage"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "graduated mortgage"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "graduated mortgage"
+        }
+      ]
     },
     {
       "path": "/homegarden/garden-soil/",
@@ -3524,7 +6620,23 @@
         "/homegarden/home-sqft/",
         "/homegarden/homeowner-first-year-budget/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/homegarden/wallpaper-rolls/",
+          "impressions": 145,
+          "anchor": "formula for mulch coverage"
+        },
+        {
+          "path": "/homegarden/vinyl-flooring/",
+          "impressions": 95,
+          "anchor": "formula for mulch coverage"
+        },
+        {
+          "path": "/homegarden/deck-stain/",
+          "impressions": 75,
+          "anchor": "formula for mulch coverage"
+        }
+      ]
     },
     {
       "path": "/career/interview-to-offer-tracker/",
@@ -3556,7 +6668,23 @@
         "/finance/estimated-tax/",
         "/finance/market-cap/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "calculator for cds"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "calculator for cds"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "calculator for cds"
+        }
+      ]
     },
     {
       "path": "/finance/currency-arbitrage/",
@@ -3572,7 +6700,23 @@
         "/finance/diversification/",
         "/finance/estimated-tax/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "calculator"
+        }
+      ]
     },
     {
       "path": "/finance/rule-of-40/",
@@ -3588,7 +6732,23 @@
         "/finance/cap-rate-conv/",
         "/finance/clean-dirty-price/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "calculator"
+        }
+      ]
     },
     {
       "path": "/fitness/flexibility-score/",
@@ -3604,7 +6764,23 @@
         "/fitness/",
         "/fitness/max-heart-rate/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/fitness/situp-test/",
+          "impressions": 97,
+          "anchor": "sitandreachtestresults"
+        },
+        {
+          "path": "/fitness/cycling-speed/",
+          "impressions": 40,
+          "anchor": "sitandreachtestresults"
+        },
+        {
+          "path": "/fitness/bench-standards/",
+          "impressions": 39,
+          "anchor": "sitandreachtestresults"
+        }
+      ]
     },
     {
       "path": "/fitness/pushup-test/",
@@ -3620,7 +6796,23 @@
         "/fitness/",
         "/fitness/muscle-gain/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/fitness/situp-test/",
+          "impressions": 97,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/fitness/vo2max/",
+          "impressions": 62,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/fitness/cycling-speed/",
+          "impressions": 40,
+          "anchor": "calculator"
+        }
+      ]
     },
     {
       "path": "/health/lean-body-mass/",
@@ -3636,7 +6828,23 @@
         "/health/gfr/",
         "/health/gfr-estimate/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/health/bmr-mifflin/",
+          "impressions": 1108,
+          "anchor": "lean body mass"
+        },
+        {
+          "path": "/health/chw/",
+          "impressions": 69,
+          "anchor": "lean body mass"
+        },
+        {
+          "path": "/health/corrected-calcium/",
+          "impressions": 69,
+          "anchor": "lean body mass"
+        }
+      ]
     },
     {
       "path": "/homegarden/water-heater/",
@@ -3652,7 +6860,23 @@
         "/homegarden/",
         "/homegarden/lighting-rooms/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/homegarden/wallpaper-rolls/",
+          "impressions": 145,
+          "anchor": "waterheaterfirsthourrating"
+        },
+        {
+          "path": "/homegarden/vinyl-flooring/",
+          "impressions": 95,
+          "anchor": "waterheaterfirsthourrating"
+        },
+        {
+          "path": "/homegarden/room-area/",
+          "impressions": 66,
+          "anchor": "waterheaterfirsthourrating"
+        }
+      ]
     },
     {
       "path": "/hub/finance/",
@@ -3668,7 +6892,23 @@
         "/finance/amortization/15-years-200000/",
         "/finance/amortization/20-years-350000/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/hub/fitness/",
+          "impressions": 95,
+          "anchor": "yield maintenance calculator"
+        },
+        {
+          "path": "/hub/auto/",
+          "impressions": 27,
+          "anchor": "yield maintenance calculator"
+        },
+        {
+          "path": "/hub/construction/",
+          "impressions": 14,
+          "anchor": "yield maintenance calculator"
+        }
+      ]
     },
     {
       "path": "/lifestyle/baking-scale/",
@@ -3684,7 +6924,23 @@
         "/lifestyle/cleaning-time/",
         "/lifestyle/cocktail-dilution/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/lifestyle/home-insurance/",
+          "impressions": 1012,
+          "anchor": "flour calculator"
+        },
+        {
+          "path": "/lifestyle/renters-insurance/",
+          "impressions": 203,
+          "anchor": "flour calculator"
+        },
+        {
+          "path": "/lifestyle/charging-time/",
+          "impressions": 201,
+          "anchor": "flour calculator"
+        }
+      ]
     },
     {
       "path": "/lifestyle/cocktail-dilution/",
@@ -3700,7 +6956,23 @@
         "/lifestyle/cigarette-cost/",
         "/lifestyle/french-press-ratio/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/lifestyle/home-insurance/",
+          "impressions": 1012,
+          "anchor": "abv dilution calculator"
+        },
+        {
+          "path": "/lifestyle/renters-insurance/",
+          "impressions": 203,
+          "anchor": "abv dilution calculator"
+        },
+        {
+          "path": "/lifestyle/charging-time/",
+          "impressions": 201,
+          "anchor": "abv dilution calculator"
+        }
+      ]
     },
     {
       "path": "/math/circle-through-points/",
@@ -3716,7 +6988,23 @@
         "/math/negative-binomial/",
         "/math/norm-dist-range/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/math/weighted-average/",
+          "impressions": 193,
+          "anchor": "circumradius calculator"
+        },
+        {
+          "path": "/math/trigonometry/",
+          "impressions": 112,
+          "anchor": "circumradius calculator"
+        },
+        {
+          "path": "/math/harmonic-mean/",
+          "impressions": 55,
+          "anchor": "circumradius calculator"
+        }
+      ]
     },
     {
       "path": "/math/linear-system/",
@@ -3732,7 +7020,23 @@
         "/math/binomial-prob/",
         "/math/continued-fraction/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/math/weighted-average/",
+          "impressions": 193,
+          "anchor": "linear system calculator"
+        },
+        {
+          "path": "/math/trigonometry/",
+          "impressions": 112,
+          "anchor": "linear system calculator"
+        },
+        {
+          "path": "/math/harmonic-mean/",
+          "impressions": 55,
+          "anchor": "linear system calculator"
+        }
+      ]
     },
     {
       "path": "/science/bernoulli/",
@@ -3748,7 +7052,23 @@
         "/science/combined-gas-law/",
         "/science/hydrostatic-pressure/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/science/carbon-dating/",
+          "impressions": 213,
+          "anchor": "bernoulli calculator"
+        },
+        {
+          "path": "/science/dew-point/",
+          "impressions": 100,
+          "anchor": "bernoulli calculator"
+        },
+        {
+          "path": "/science/kinetic-energy/",
+          "impressions": 61,
+          "anchor": "bernoulli calculator"
+        }
+      ]
     },
     {
       "path": "/science/latent-heat/",
@@ -3764,7 +7084,23 @@
         "/science/heat-transfer/",
         "/science/molality/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/science/carbon-dating/",
+          "impressions": 213,
+          "anchor": "latent heat calculator"
+        },
+        {
+          "path": "/science/dew-point/",
+          "impressions": 100,
+          "anchor": "latent heat calculator"
+        },
+        {
+          "path": "/science/moment-of-inertia/",
+          "impressions": 82,
+          "anchor": "latent heat calculator"
+        }
+      ]
     },
     {
       "path": "/education/quiz-score/",
@@ -3780,7 +7116,23 @@
         "/education/flashcard-count/",
         "/education/grade/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/education/tuition-cost/",
+          "impressions": 200,
+          "anchor": "score predictor"
+        },
+        {
+          "path": "/education/presentation-time/",
+          "impressions": 109,
+          "anchor": "score predictor"
+        },
+        {
+          "path": "/education/gpa/",
+          "impressions": 65,
+          "anchor": "score predictor"
+        }
+      ]
     },
     {
       "path": "/hub/homegarden/",
@@ -3796,7 +7148,23 @@
         "/homegarden/carbon-offset/",
         "/homegarden/ceiling-fan-size/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/hub/fitness/",
+          "impressions": 95,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/hub/auto/",
+          "impressions": 27,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/hub/construction/",
+          "impressions": 14,
+          "anchor": "calculator"
+        }
+      ]
     },
     {
       "path": "/business/business-roi/",
@@ -3828,7 +7196,23 @@
         "/education/exam-score-needed/",
         "/education/gpa-target/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/education/gpa/",
+          "impressions": 65,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/education/graduation-date/",
+          "impressions": 50,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/education/study-break/",
+          "impressions": 19,
+          "anchor": "calculator"
+        }
+      ]
     },
     {
       "path": "/engineering/beam-deflection/",
@@ -3844,7 +7228,23 @@
         "/engineering/hydraulic-power/",
         "/engineering/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/engineering/steel-weight/",
+          "impressions": 87,
+          "anchor": "length to beam ratio calculator"
+        },
+        {
+          "path": "/engineering/pump-power/",
+          "impressions": 59,
+          "anchor": "length to beam ratio calculator"
+        },
+        {
+          "path": "/engineering/orifice-flow/",
+          "impressions": 30,
+          "anchor": "length to beam ratio calculator"
+        }
+      ]
     },
     {
       "path": "/fitness/vo2-beep/",
@@ -3860,7 +7260,23 @@
         "/fitness/",
         "/fitness/recovery-hr/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/fitness/muscle-gain/",
+          "impressions": 321,
+          "anchor": "beep test vo2"
+        },
+        {
+          "path": "/fitness/vo2max/",
+          "impressions": 62,
+          "anchor": "beep test vo2"
+        },
+        {
+          "path": "/fitness/cycling-speed/",
+          "impressions": 40,
+          "anchor": "beep test vo2"
+        }
+      ]
     },
     {
       "path": "/health/target-heart-rate/",
@@ -3876,7 +7292,23 @@
         "/health/calorie-burn/",
         "/health/drug-dosage/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/health/bmr-mifflin/",
+          "impressions": 1108,
+          "anchor": "restingheartratecalculatorby"
+        },
+        {
+          "path": "/health/chw/",
+          "impressions": 69,
+          "anchor": "restingheartratecalculatorby"
+        },
+        {
+          "path": "/health/corrected-calcium/",
+          "impressions": 69,
+          "anchor": "restingheartratecalculatorby"
+        }
+      ]
     },
     {
       "path": "/health/waist-hip/",
@@ -3892,7 +7324,23 @@
         "/health/gcs/",
         "/health/hba1c-eag/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/health/bmr-mifflin/",
+          "impressions": 1108,
+          "anchor": "formulaforwaisttohip"
+        },
+        {
+          "path": "/health/chw/",
+          "impressions": 69,
+          "anchor": "formulaforwaisttohip"
+        },
+        {
+          "path": "/health/corrected-calcium/",
+          "impressions": 69,
+          "anchor": "formulaforwaisttohip"
+        }
+      ]
     },
     {
       "path": "/regional/malaysia-take-home-salary/",
@@ -3908,7 +7356,23 @@
         "/regional/indonesia-take-home-salary/",
         "/regional/japan-take-home-salary/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/regional/dubai-salary/",
+          "impressions": 388,
+          "anchor": "salary deduction calculator"
+        },
+        {
+          "path": "/regional/singapore-cpf/",
+          "impressions": 188,
+          "anchor": "salary deduction calculator"
+        },
+        {
+          "path": "/regional/pk-salary/",
+          "impressions": 96,
+          "anchor": "salary deduction calculator"
+        }
+      ]
     },
     {
       "path": "/science/cloud-base-lcl/",
@@ -3924,7 +7388,23 @@
         "/science/bullet-drop/",
         "/science/coulomb-law/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/science/carbon-dating/",
+          "impressions": 213,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/science/solar-energy/",
+          "impressions": 133,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/science/moment-of-inertia/",
+          "impressions": 82,
+          "anchor": "calculator"
+        }
+      ]
     },
     {
       "path": "/finance/fire/",
@@ -3940,7 +7420,23 @@
         "/finance/amortization/30-years-300000/",
         "/finance/amortization/5-years-100000/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "calculator"
+        }
+      ]
     },
     {
       "path": "/health/sleep/",
@@ -3956,7 +7452,23 @@
         "/health/calorie-burn/",
         "/health/calorie-goal/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/health/bmr-mifflin/",
+          "impressions": 1108,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/health/chw/",
+          "impressions": 69,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/health/corrected-calcium/",
+          "impressions": 69,
+          "anchor": "calculator"
+        }
+      ]
     },
     {
       "path": "/hub/lifestyle/",
@@ -3972,7 +7484,23 @@
         "/lifestyle/candle-wax/",
         "/lifestyle/car-wash-annual/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/hub/fitness/",
+          "impressions": 95,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/hub/auto/",
+          "impressions": 27,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/hub/construction/",
+          "impressions": 14,
+          "anchor": "calculator"
+        }
+      ]
     },
     {
       "path": "/math/triangle/",
@@ -4004,7 +7532,23 @@
         "/auto/carpool-savings/",
         "/auto/ebike-range/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/auto/parking-cost/",
+          "impressions": 107,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/auto/mileage-calculator/",
+          "impressions": 103,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/auto/trade-in-value/",
+          "impressions": 85,
+          "anchor": "calculator"
+        }
+      ]
     },
     {
       "path": "/conversion/radiation-dose-conv/",
@@ -4020,7 +7564,18 @@
         "/conversion/fraction-percent/",
         "/conversion/fuel-efficiency-converter/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/conversion/wire-gauge-conv/",
+          "impressions": 133,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/conversion/data-storage/",
+          "impressions": 11,
+          "anchor": "calculator"
+        }
+      ]
     },
     {
       "path": "/everyday/walking-steps/",
@@ -4036,7 +7591,23 @@
         "/everyday/currency-exchange/",
         "/everyday/days-between/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/everyday/vacation-budget/",
+          "impressions": 40,
+          "anchor": "howmanystepsdidi"
+        },
+        {
+          "path": "/everyday/jet-lag/",
+          "impressions": 32,
+          "anchor": "howmanystepsdidi"
+        },
+        {
+          "path": "/everyday/grocery-budget/",
+          "impressions": 31,
+          "anchor": "howmanystepsdidi"
+        }
+      ]
     },
     {
       "path": "/family/baby-formula/",
@@ -4052,7 +7623,23 @@
         "/family/diaper-needs/",
         "/family/family-budget/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/family/child-height/",
+          "impressions": 846,
+          "anchor": "infant formula calculator"
+        },
+        {
+          "path": "/family/baby-weight-gain/",
+          "impressions": 106,
+          "anchor": "infant formula calculator"
+        },
+        {
+          "path": "/family/sibling-age-gap/",
+          "impressions": 40,
+          "anchor": "infant formula calculator"
+        }
+      ]
     },
     {
       "path": "/family/family-budget/",
@@ -4068,7 +7655,23 @@
         "/family/baby-weight-gain/",
         "/family/bereavement-checklist/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/family/vacation-with-kids/",
+          "impressions": 90,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/family/sibling-age-gap/",
+          "impressions": 40,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/family/baby-name/",
+          "impressions": 32,
+          "anchor": "calculator"
+        }
+      ]
     },
     {
       "path": "/fitness/deload-week/",
@@ -4084,7 +7687,23 @@
         "/fitness/cadence-calc/",
         "/fitness/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/fitness/muscle-gain/",
+          "impressions": 321,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/fitness/situp-test/",
+          "impressions": 97,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/fitness/cycling-speed/",
+          "impressions": 40,
+          "anchor": "calculator"
+        }
+      ]
     },
     {
       "path": "/tech/battery-life-estimator/",
@@ -4100,7 +7719,23 @@
         "/tech/",
         "/tech/json-formatter/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/tech/internet-speed/",
+          "impressions": 508,
+          "anchor": "battery estimator"
+        },
+        {
+          "path": "/tech/raid-capacity/",
+          "impressions": 238,
+          "anchor": "battery estimator"
+        },
+        {
+          "path": "/tech/rgb-hex/",
+          "impressions": 166,
+          "anchor": "battery estimator"
+        }
+      ]
     },
     {
       "path": "/finance/mortgage-payoff/",
@@ -4116,7 +7751,23 @@
         "/finance/fire/30-years-75000/",
         "/finance/fire/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "calculator"
+        }
+      ]
     },
     {
       "path": "/finance/pension-lump-sum/",
@@ -4132,7 +7783,23 @@
         "/finance/credit-utilization/",
         "/finance/current-ratio-finance/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/finance/rent-affordability/",
+          "impressions": 165,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/finance/wacc/",
+          "impressions": 159,
+          "anchor": "calculator"
+        }
+      ]
     },
     {
       "path": "/health/calorie-burn/",
@@ -4148,7 +7815,23 @@
         "/health/corrected-calcium/",
         "/health/heart-rate-zones/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/health/bmr-mifflin/",
+          "impressions": 1108,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/health/chw/",
+          "impressions": 69,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/health/pregnancy/",
+          "impressions": 67,
+          "anchor": "calculator"
+        }
+      ]
     },
     {
       "path": "/homegarden/porch-light/",
@@ -4164,7 +7847,23 @@
         "/homegarden/firepit-size/",
         "/homegarden/garden-fence/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/homegarden/wallpaper-rolls/",
+          "impressions": 145,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/homegarden/vinyl-flooring/",
+          "impressions": 95,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/homegarden/deck-stain/",
+          "impressions": 75,
+          "anchor": "calculator"
+        }
+      ]
     },
     {
       "path": "/hub/engineering/",
@@ -4180,7 +7879,23 @@
         "/engineering/bearing-load/",
         "/engineering/belt-length/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/hub/fitness/",
+          "impressions": 95,
+          "anchor": "load testing calculator"
+        },
+        {
+          "path": "/hub/auto/",
+          "impressions": 27,
+          "anchor": "load testing calculator"
+        },
+        {
+          "path": "/hub/construction/",
+          "impressions": 14,
+          "anchor": "load testing calculator"
+        }
+      ]
     },
     {
       "path": "/math/prime-factor/",
@@ -4196,7 +7911,23 @@
         "/math/fraction/",
         "/math/golden-ratio/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/math/weighted-average/",
+          "impressions": 193,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/math/trigonometry/",
+          "impressions": 112,
+          "anchor": "calculator"
+        },
+        {
+          "path": "/math/harmonic-mean/",
+          "impressions": 55,
+          "anchor": "calculator"
+        }
+      ]
     },
     {
       "path": "/disclaimer-finance/",
@@ -4228,7 +7959,23 @@
         "/everyday/day-of-week/",
         "/everyday/distance-pace/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/everyday/coffee-cost/",
+          "impressions": 110,
+          "anchor": "humanstepstodogsteps"
+        },
+        {
+          "path": "/everyday/gift-wrap/",
+          "impressions": 95,
+          "anchor": "humanstepstodogsteps"
+        },
+        {
+          "path": "/everyday/vacation-budget/",
+          "impressions": 40,
+          "anchor": "humanstepstodogsteps"
+        }
+      ]
     },
     {
       "path": "/finance/convexity/",
@@ -4244,7 +7991,23 @@
         "/finance/coupon-payment/",
         "/finance/escrow-analysis/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "bond convexity formula"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "bond convexity formula"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "bond convexity formula"
+        }
+      ]
     },
     {
       "path": "/finance/discounted-payback/",
@@ -4260,7 +8023,23 @@
         "/finance/ebitda/",
         "/finance/emergency-fund-rate/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "discounted payback period equation"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "discounted payback period equation"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "discounted payback period equation"
+        }
+      ]
     },
     {
       "path": "/finance/lump-sum-vs-sip/",
@@ -4276,7 +8055,23 @@
         "/finance/eps-calculator/",
         "/finance/fixed-deposit-vs-recurring/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "lump sum plus sip calculator"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "lump sum plus sip calculator"
+        },
+        {
+          "path": "/finance/wacc/",
+          "impressions": 159,
+          "anchor": "lump sum plus sip calculator"
+        }
+      ]
     },
     {
       "path": "/finance/uk-income-tax/",
@@ -4292,7 +8087,23 @@
         "/finance/discount/",
         "/finance/dividend/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/finance/pmi-calculator/",
+          "impressions": 640,
+          "anchor": "quick tax calculator uk"
+        },
+        {
+          "path": "/finance/fha-loan/",
+          "impressions": 443,
+          "anchor": "quick tax calculator uk"
+        },
+        {
+          "path": "/finance/apy-calculator/",
+          "impressions": 319,
+          "anchor": "quick tax calculator uk"
+        }
+      ]
     },
     {
       "path": "/lifestyle/date-night-cost/",
@@ -4308,7 +8119,23 @@
         "/lifestyle/gift-split/",
         "/lifestyle/haircut-annual/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/lifestyle/home-insurance/",
+          "impressions": 1012,
+          "anchor": "entertainment cost per month"
+        },
+        {
+          "path": "/lifestyle/renters-insurance/",
+          "impressions": 203,
+          "anchor": "entertainment cost per month"
+        },
+        {
+          "path": "/lifestyle/resell-value/",
+          "impressions": 115,
+          "anchor": "entertainment cost per month"
+        }
+      ]
     },
     {
       "path": "/tech/docker-resource/",
@@ -4324,7 +8151,23 @@
         "/tech/gpu-comparison-perf/",
         "/tech/hash-rate/"
       ],
-      "suggestions": []
+      "suggestions": [
+        {
+          "path": "/tech/raid-capacity/",
+          "impressions": 238,
+          "anchor": "pods calculator"
+        },
+        {
+          "path": "/tech/rgb-hex/",
+          "impressions": 166,
+          "anchor": "pods calculator"
+        },
+        {
+          "path": "/tech/ip-subnet/",
+          "impressions": 122,
+          "anchor": "pods calculator"
+        }
+      ]
     }
   ]
 }

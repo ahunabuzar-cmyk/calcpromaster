@@ -1,5 +1,5 @@
 {
- "ranAt": "2026-10-18T08:42:56.180Z",
+ "ranAt": "2026-10-27T12:39:53.908Z",
  "sources": [
   "backlinks-calculatorio.csv",
   "backlinks-rapidtables.csv",
@@ -1826,28 +1826,28 @@
   ]
  },
  "gsc": {
-  "ranAt": "2026-10-17T10:48:24.148Z",
+  "ranAt": "2026-10-25T16:35:08.647Z",
   "window": {
-   "start": "2026-09-16",
-   "end": "2026-10-14",
+   "start": "2026-09-24",
+   "end": "2026-10-22",
    "days": 28
   },
   "totals": {
-   "clicks": 21,
-   "impressions": 18917,
-   "ctr": 0.0011101125971348523,
-   "position": 33.143415975048896
+   "clicks": 22,
+   "impressions": 20954,
+   "ctr": 0.0010499188699055074,
+   "position": 32.52472081702777
   },
   "coverage": {
-   "pairImpressions": 11567,
+   "pairImpressions": 12224,
    "pairClicks": 8,
-   "totalImpressions": 18917,
-   "totalClicks": 21
+   "totalImpressions": 20954,
+   "totalClicks": 22
   },
-  "anonymisedImpressions": 7350,
-  "urlsWithImpressions": 581,
-  "duplicateUrlForms": 112,
-  "duplicateFormImpressions": 4967,
+  "anonymisedImpressions": 8730,
+  "urlsWithImpressions": 594,
+  "duplicateUrlForms": 117,
+  "duplicateFormImpressions": 5398,
   "duplicateFormExamples": [
    {
     "key": "https://calcpromaster.com/lifestyle/home-insurance",
@@ -1857,10 +1857,24 @@
     "clicks": 0
    },
    {
+    "key": "https://calcpromaster.com/tech/internet-speed",
+    "slash": 1,
+    "noSlash": 1,
+    "impressions": 268,
+    "clicks": 0
+   },
+   {
     "key": "https://calcpromaster.com/health/bmr-mifflin",
     "slash": 1,
     "noSlash": 1,
     "impressions": 261,
+    "clicks": 0
+   },
+   {
+    "key": "https://calcpromaster.com/finance/credit-utilization",
+    "slash": 1,
+    "noSlash": 1,
+    "impressions": 239,
     "clicks": 0
    },
    {
@@ -1878,17 +1892,17 @@
     "clicks": 0
    },
    {
-    "key": "https://calcpromaster.com/tech/internet-speed",
-    "slash": 1,
-    "noSlash": 1,
-    "impressions": 218,
-    "clicks": 0
-   },
-   {
     "key": "https://calcpromaster.com/lifestyle/renters-insurance",
     "slash": 1,
     "noSlash": 1,
     "impressions": 199,
+    "clicks": 0
+   },
+   {
+    "key": "https://calcpromaster.com/regional/singapore-cpf",
+    "slash": 1,
+    "noSlash": 1,
+    "impressions": 164,
     "clicks": 0
    },
    {
@@ -1904,20 +1918,6 @@
     "noSlash": 1,
     "impressions": 118,
     "clicks": 0
-   },
-   {
-    "key": "https://calcpromaster.com/regional/singapore-cpf",
-    "slash": 1,
-    "noSlash": 1,
-    "impressions": 111,
-    "clicks": 0
-   },
-   {
-    "key": "https://calcpromaster.com/tech/ip-subnet",
-    "slash": 1,
-    "noSlash": 1,
-    "impressions": 96,
-    "clicks": 0
    }
   ],
   "zeroClickTop10": [
@@ -1928,18 +1928,18 @@
    },
    {
     "url": "https://calcpromaster.com/finance/pmi-calculator/",
-    "impressions": 561,
+    "impressions": 590,
     "best": 5
    },
    {
     "url": "https://calcpromaster.com/finance/fha-loan/",
-    "impressions": 416,
+    "impressions": 424,
     "best": 2
    },
    {
     "url": "https://calcpromaster.com/guides/tip",
-    "impressions": 327,
-    "best": 7.03
+    "impressions": 385,
+    "best": 6.52
    },
    {
     "url": "https://calcpromaster.com/finance/apy-calculator/",
@@ -1948,7 +1948,7 @@
    },
    {
     "url": "https://calcpromaster.com/finance/credit-utilization/",
-    "impressions": 224,
+    "impressions": 238,
     "best": 4
    },
    {
@@ -1957,8 +1957,23 @@
     "best": 1
    },
    {
+    "url": "https://calcpromaster.com/tech/rgb-hex/",
+    "impressions": 156,
+    "best": 7
+   },
+   {
+    "url": "https://calcpromaster.com/tech/internet-speed/",
+    "impressions": 152,
+    "best": 3
+   },
+   {
     "url": "https://calcpromaster.com/finance/wacc/",
     "impressions": 152,
+    "best": 6
+   },
+   {
+    "url": "https://calcpromaster.com/regional/singapore-cpf",
+    "impressions": 145,
     "best": 6
    },
    {
@@ -1972,46 +1987,31 @@
     "best": 6.76
    },
    {
-    "url": "https://calcpromaster.com/tech/rgb-hex/",
-    "impressions": 130,
+    "url": "https://calcpromaster.com/math/weighted-average/",
+    "impressions": 131,
     "best": 7
-   },
-   {
-    "url": "https://calcpromaster.com/tech/raid-capacity/",
-    "impressions": 126,
-    "best": 4
    },
    {
     "url": "https://calcpromaster.com/finance/rent-affordability/",
-    "impressions": 122,
+    "impressions": 126,
     "best": 2
-   },
-   {
-    "url": "https://calcpromaster.com/math/weighted-average/",
-    "impressions": 112,
-    "best": 7
-   },
-   {
-    "url": "https://calcpromaster.com/science/solar-energy/",
-    "impressions": 105,
-    "best": 6.4
    }
   ],
-  "zeroClickTop10Forms": 279,
-  "zeroClickTop10Count": 241,
-  "zeroClickTop10Impressions": 8109,
-  "strikingCount": 833,
-  "strikingImpressions": 3694,
+  "zeroClickTop10Forms": 297,
+  "zeroClickTop10Count": 254,
+  "zeroClickTop10Impressions": 8802,
+  "strikingCount": 867,
+  "strikingImpressions": 3856,
   "strikingClicks": 5,
-  "strikingMeaningfulCount": 32,
+  "strikingMeaningfulCount": 31,
   "strikingMeaningful": [
    {
     "query": "how to calculate tip",
     "page": "https://calcpromaster.com/guides/tip",
     "clicks": 0,
-    "impressions": 327,
+    "impressions": 385,
     "ctr": 0,
-    "position": 7.027522935779817
+    "position": 6.5168831168831165
    },
    {
     "query": "fha loan calculator",
@@ -2025,9 +2025,9 @@
     "query": "pmi calculator",
     "page": "https://calcpromaster.com/finance/pmi-calculator/",
     "clicks": 0,
-    "impressions": 142,
+    "impressions": 143,
     "ctr": 0,
-    "position": 9.852112676056338
+    "position": 10.006993006993007
    },
    {
     "query": "renters insurance calculator",
@@ -2038,20 +2038,20 @@
     "position": 6.76
    },
    {
-    "query": "rgb to hex",
-    "page": "https://calcpromaster.com/tech/rgb-hex/",
-    "clicks": 0,
-    "impressions": 76,
-    "ctr": 0,
-    "position": 13.026315789473685
-   },
-   {
     "query": "if you spend $3 on coffee per school/work day, how much are you spending per year? under $100 between $100 and $250 between $250 and $750 more than $750",
     "page": "https://calcpromaster.com/everyday/coffee-cost/",
     "clicks": 0,
-    "impressions": 68,
+    "impressions": 84,
     "ctr": 0,
-    "position": 8.514705882352942
+    "position": 8.69047619047619
+   },
+   {
+    "query": "rgb to hex",
+    "page": "https://calcpromaster.com/tech/rgb-hex/",
+    "clicks": 0,
+    "impressions": 84,
+    "ctr": 0,
+    "position": 12.345238095238095
    },
    {
     "query": "prorated rent calculator",
@@ -2126,20 +2126,20 @@
     "position": 14.714285714285714
    }
   ],
-  "pagesRanking": 581
+  "pagesRanking": 594
  },
  "overlap": {
-  "checkedQueries": 250,
+  "checkedQueries": 100,
   "checkedKeywords": 605,
   "exactMatches": 0,
   "examples": []
  },
  "opportunity": {
-  "measuredCapture": 0.00001720059439579809,
+  "measuredCapture": 0.000017909897257480487,
   "matchedCount": 15,
   "matchedVolume": 16918020,
-  "matchedImpressions": 291,
-  "currentPerDay": 675.6071428571429,
+  "matchedImpressions": 303,
+  "currentPerDay": 748.3571428571429,
   "answeredCount": 14,
   "silentCount": 12,
   "silent": [
@@ -2224,16 +2224,16 @@
    {
     "target": 200000,
     "perDay": 6667,
-    "multiple": 9.867667530087575,
+    "multiple": 8.908402532531577,
     "captureNeeded": 0.030175379304517858,
-    "xCapture": 1754.3218920323684
+    "xCapture": 1684.8437972984132
    },
    {
     "target": 300000,
     "perDay": 10000,
-    "multiple": 14.801501295131363,
+    "multiple": 13.362603798797364,
     "captureNeeded": 0.045263068956776786,
-    "xCapture": 2631.482838048553
+    "xCapture": 2527.2656959476194
    }
   ],
   "answered": [

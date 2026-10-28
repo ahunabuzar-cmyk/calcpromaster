@@ -1,23 +1,25 @@
 {
-  "generatedFor": "2026-10-17",
+  "generatedFor": "2026-10-24",
   "source": "data/keyword-implementation-map.json (B/C/D rows)",
   "totals": {
-    "rows": 96,
+    "rows": 97,
     "byCode": {
       "B": {
-        "COVERED": 34
+        "COVERED": 35
       },
       "C": {
-        "COVERED": 53,
-        "NO_OWNER": 2
+        "COVERED": 51,
+        "NO_OWNER": 2,
+        "NO_TARGET": 2
       },
       "D": {
         "COVERED": 7
       }
     },
     "byStatus": {
-      "COVERED": 94,
-      "NO_OWNER": 2
+      "COVERED": 93,
+      "NO_OWNER": 2,
+      "NO_TARGET": 2
     },
     "pagesNeedingMeta": 0,
     "keywordsNeedingMeta": 0
@@ -94,33 +96,6 @@
       "matchedTokens": [
         "xe",
         "currency"
-      ],
-      "missingTokens": [],
-      "status": "COVERED",
-      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
-    },
-    {
-      "code": "C",
-      "priority": "P2",
-      "keyword": "time card clock calculator",
-      "volume": 201000,
-      "difficulty": 20,
-      "target": "/career/timesheet-hours",
-      "conceptTokens": [
-        "time",
-        "card",
-        "clock"
-      ],
-      "cluster": [
-        "time card clock calculator"
-      ],
-      "why": "partial match with registry tool walking-transit (1/3 concept tokens) — resolve by internal linking/metadata first · resolved: a time card is a timesheet — /career/timesheet-hours/ works out hours from start/end times",
-      "pageTitle": "Time Card Calculator: Hours, Minutes and Payroll",
-      "pageFile": "deploy/career/timesheet-hours/index.html",
-      "matchedTokens": [
-        "time",
-        "card",
-        "clock"
       ],
       "missingTokens": [],
       "status": "COVERED",
@@ -385,31 +360,6 @@
       "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
     },
     {
-      "code": "C",
-      "priority": "P2",
-      "keyword": "day count",
-      "volume": 74000,
-      "difficulty": 0,
-      "target": "/everyday/date-diff",
-      "conceptTokens": [
-        "day",
-        "count"
-      ],
-      "cluster": [
-        "day count"
-      ],
-      "why": "partial match with registry tool discount-rate (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: counting days between dates is the date-difference tool",
-      "pageTitle": "Date Difference Calculator: Day Count Between Dates",
-      "pageFile": "deploy/everyday/date-diff/index.html",
-      "matchedTokens": [
-        "day",
-        "count"
-      ],
-      "missingTokens": [],
-      "status": "COVERED",
-      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
-    },
-    {
       "code": "B",
       "priority": "P1",
       "keyword": "calendar calculator",
@@ -550,56 +500,6 @@
       "pageFile": "deploy/career/overtime-pay/index.html",
       "matchedTokens": [
         "ot"
-      ],
-      "missingTokens": [],
-      "status": "COVERED",
-      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
-    },
-    {
-      "code": "C",
-      "priority": "P2",
-      "keyword": "time payroll calculator",
-      "volume": 22200,
-      "difficulty": 12,
-      "target": "/career/timesheet-hours",
-      "conceptTokens": [
-        "time",
-        "salary"
-      ],
-      "cluster": [
-        "time payroll calculator"
-      ],
-      "why": "partial match with registry tool walking-transit (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: payroll time = hours worked → the timesheet hours tool",
-      "pageTitle": "Time Card Calculator: Hours, Minutes and Payroll",
-      "pageFile": "deploy/career/timesheet-hours/index.html",
-      "matchedTokens": [
-        "time",
-        "salary"
-      ],
-      "missingTokens": [],
-      "status": "COVERED",
-      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
-    },
-    {
-      "code": "B",
-      "priority": "P2",
-      "keyword": "pay time calculator",
-      "volume": 22200,
-      "difficulty": 12,
-      "target": "/career/timesheet-hours",
-      "conceptTokens": [
-        "salary",
-        "time"
-      ],
-      "cluster": [
-        "pay time calculator"
-      ],
-      "why": "an existing registry tool already covers every concept token — improve that page, do not create a duplicate · resolved: pay-for-time is the timesheet-hours calculation",
-      "pageTitle": "Time Card Calculator: Hours, Minutes and Payroll",
-      "pageFile": "deploy/career/timesheet-hours/index.html",
-      "matchedTokens": [
-        "salary",
-        "time"
       ],
       "missingTokens": [],
       "status": "COVERED",
@@ -829,6 +729,31 @@
     {
       "code": "C",
       "priority": "P2",
+      "keyword": "retirement salary calculator",
+      "volume": 8100,
+      "difficulty": 19,
+      "target": "/career/retirement-contrib",
+      "conceptTokens": [
+        "retirement",
+        "salary"
+      ],
+      "cluster": [
+        "retirement salary calculator"
+      ],
+      "why": "partial match with registry tool salary-converter (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: the contribution-impact page takes a salary and shows what a retirement contribution does to it — the salary-based retirement calculation",
+      "pageTitle": "Retirement Contribution Impact Calculator",
+      "pageFile": "deploy/career/retirement-contrib/index.html",
+      "matchedTokens": [
+        "retirement",
+        "salary"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
       "keyword": "pricing generator",
       "volume": 8100,
       "difficulty": 100,
@@ -929,6 +854,35 @@
     {
       "code": "C",
       "priority": "P2",
+      "keyword": "mobile home loan payment calculator",
+      "volume": 6600,
+      "difficulty": 32,
+      "target": "/finance/fha-loan",
+      "conceptTokens": [
+        "mobile",
+        "home",
+        "loan",
+        "payment"
+      ],
+      "cluster": [
+        "mobile home loan payment calculator"
+      ],
+      "why": "partial match with registry tool student-loan-repayment (2/4 concept tokens) — resolve by internal linking/metadata first · resolved: FHA is the standard financing route for manufactured/mobile homes and the page computes the monthly payment including MIP — improve that page, do not add a mobile-home duplicate",
+      "pageTitle": "FHA Loan Calculator: Monthly Payment With MIP",
+      "pageFile": "deploy/finance/fha-loan/index.html",
+      "matchedTokens": [
+        "mobile",
+        "home",
+        "loan",
+        "payment"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
       "keyword": "retirement plan estimator",
       "volume": 5400,
       "difficulty": 6,
@@ -965,7 +919,7 @@
       "cluster": [
         "hour counter"
       ],
-      "why": "the audit maps this to the live page /everyday/distance-pace — improve that page (metadata/content/functionality), no new URL · resolved: the recorded target (/everyday/distance-pace) counts hours only as a by-product of pace; the hours tool is the real owner",
+      "why": "the audit maps this to the live page /career/timesheet-hours — improve that page (metadata/content/functionality), no new URL · resolved: the recorded target (/everyday/distance-pace) counts hours only as a by-product of pace; the hours tool is the real owner",
       "pageTitle": "Time Card Calculator: Hours, Minutes and Payroll",
       "pageFile": "deploy/career/timesheet-hours/index.html",
       "matchedTokens": [
@@ -1046,6 +1000,56 @@
       "matchedTokens": [
         "daily",
         "interest"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "weekly paycheck calculator",
+      "volume": 4400,
+      "difficulty": 5,
+      "target": "/finance/paycheck",
+      "conceptTokens": [
+        "weekly",
+        "salary"
+      ],
+      "cluster": [
+        "weekly paycheck calculator"
+      ],
+      "why": "partial match with registry tool work-hours-weekly (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: same intent as the weekly-pay row, wording only — one paycheck page owns both",
+      "pageTitle": "Paycheck Calculator: Gross Annual, Tax Rate",
+      "pageFile": "deploy/finance/paycheck/index.html",
+      "matchedTokens": [
+        "weekly",
+        "salary"
+      ],
+      "missingTokens": [],
+      "status": "COVERED",
+      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "weekly pay calculator",
+      "volume": 4400,
+      "difficulty": 5,
+      "target": "/finance/paycheck",
+      "conceptTokens": [
+        "weekly",
+        "salary"
+      ],
+      "cluster": [
+        "weekly pay calculator"
+      ],
+      "why": "an existing registry tool already covers every concept token — improve that page, do not create a duplicate · resolved: the Paycheck Calculator takes the pay frequency (including weekly), so weekly pay is the same calculation run weekly",
+      "pageTitle": "Paycheck Calculator: Gross Annual, Tax Rate",
+      "pageFile": "deploy/finance/paycheck/index.html",
+      "matchedTokens": [
+        "weekly",
+        "salary"
       ],
       "missingTokens": [],
       "status": "COVERED",
@@ -1351,6 +1355,48 @@
       "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
     },
     {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "calculator real estate",
+      "volume": 2400,
+      "difficulty": 44,
+      "target": null,
+      "conceptTokens": [
+        "real",
+        "estate"
+      ],
+      "cluster": [
+        "calculator real estate"
+      ],
+      "why": "partial match with registry tool inheritance-estate (1/2 concept tokens) — resolve by internal linking/metadata first",
+      "candidates": [
+        {
+          "route": "/family/birthday-party-cost/",
+          "title": "Kids Birthday Party Cost: Kids Invited, Venue Cost",
+          "hits": 2,
+          "of": 2
+        },
+        {
+          "route": "/family/child-height/",
+          "title": "Child Height Predictor: How Tall Will My Child Be?",
+          "hits": 2,
+          "of": 2
+        },
+        {
+          "route": "/family/college-savings-monthly/",
+          "title": "College Savings Calculator: Child Age, Annual College",
+          "hits": 2,
+          "of": 2
+        }
+      ],
+      "status": "NO_TARGET",
+      "note": "no target recorded; 3 built page(s) already name every concept token — best is /family/birthday-party-cost/ (2/2) — needs confirmation, not assumed",
+      "missingTokens": [
+        "real",
+        "estate"
+      ]
+    },
+    {
       "code": "B",
       "priority": "P2",
       "keyword": "compounding calculator yearly",
@@ -1507,35 +1553,6 @@
     {
       "code": "C",
       "priority": "P2",
-      "keyword": "mortgage calculator how much can i qualify for",
-      "volume": 1900,
-      "difficulty": 66,
-      "target": "/finance/loan-qualify",
-      "conceptTokens": [
-        "mortgage",
-        "much",
-        "can",
-        "qualify"
-      ],
-      "cluster": [
-        "mortgage calculator how much can i qualify for"
-      ],
-      "why": "partial match with registry tool ab-test-significance (2/4 concept tokens) — resolve by internal linking/metadata first · resolved: same intent as the other qualify row — the qualification tool",
-      "pageTitle": "Loan Qualification Calculator: How Much Can I Borrow?",
-      "pageFile": "deploy/finance/loan-qualify/index.html",
-      "matchedTokens": [
-        "mortgage",
-        "much",
-        "can",
-        "qualify"
-      ],
-      "missingTokens": [],
-      "status": "COVERED",
-      "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
-    },
-    {
-      "code": "C",
-      "priority": "P2",
       "keyword": "mortgage calculator how much do i qualify for",
       "volume": 1900,
       "difficulty": 66,
@@ -1568,7 +1585,7 @@
       "keyword": "paycheck deduction calculator",
       "volume": 1900,
       "difficulty": 10,
-      "target": "/guides/career",
+      "target": "/finance/paycheck",
       "conceptTokens": [
         "salary",
         "deductions"
@@ -1576,9 +1593,9 @@
       "cluster": [
         "paycheck deduction calculator"
       ],
-      "why": "the audit maps this to the live page /guides/career — improve that page (metadata/content/functionality), no new URL",
-      "pageTitle": "Career &amp; Freelance Guides — Salary, Rates &amp; Negotiation",
-      "pageFile": "deploy/guides/career.html",
+      "why": "the audit maps this to the live page /guides/tax-salary — improve that page (metadata/content/functionality), no new URL · resolved: the audit pointed at the /guides/tax-salary hub; a deduction is a calculator intent, and /finance/paycheck/ is the page that takes gross pay and shows the deductions",
+      "pageTitle": "Paycheck Calculator: Gross Annual, Tax Rate",
+      "pageFile": "deploy/finance/paycheck/index.html",
       "matchedTokens": [
         "salary",
         "deductions"
@@ -1803,7 +1820,7 @@
         "cash back calculator"
       ],
       "why": "partial match with registry tool payback (1/2 concept tokens) — resolve by internal linking/metadata first · resolved: cash back is a card reward — the card page is the closest honest owner",
-      "pageTitle": "Credit Card Payoff: Current Balance, APR &amp; Monthly Payment",
+      "pageTitle": "Credit Card Payoff Calculator: Current Balance &amp; APR",
       "pageFile": "deploy/finance/credit-card-payoff/index.html",
       "matchedTokens": [
         "cash",
@@ -2040,25 +2057,23 @@
       "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
     },
     {
-      "code": "C",
+      "code": "B",
       "priority": "P2",
-      "keyword": "time and pay calculator",
+      "keyword": "taxable calculator",
       "volume": 1000,
-      "difficulty": 5,
-      "target": "/career/timesheet-hours",
+      "difficulty": 3,
+      "target": "/career/tax-bracket",
       "conceptTokens": [
-        "time",
-        "salary"
+        "taxable"
       ],
       "cluster": [
-        "time and pay calculator"
+        "taxable calculator"
       ],
-      "why": "partial match with registry tool overtime-pay (2/3 concept tokens) — resolve by internal linking/metadata first · resolved: hours and pay → timesheet hours, then overtime page for the rate",
-      "pageTitle": "Time Card Calculator: Hours, Minutes and Payroll",
-      "pageFile": "deploy/career/timesheet-hours/index.html",
+      "why": "the taxable-amount → tax calculation is what /career/tax-bracket/ (\"Income Tax Bracket Calculator\") already does; the query is generic wording, not a new tool, so improve that page (metadata, FAQ, internal links) and do not build /<category>/taxable-calculator · resolved: taxable amount → income tax is what the Income Tax Bracket page computes; the GST page is an indirect tax and does not answer the income-tax reading of the query",
+      "pageTitle": "Income Tax Bracket Calculator: Annual Income &amp; Deductions",
+      "pageFile": "deploy/career/tax-bracket/index.html",
       "matchedTokens": [
-        "time",
-        "salary"
+        "taxable"
       ],
       "missingTokens": [],
       "status": "COVERED",
@@ -2212,6 +2227,50 @@
       "missingTokens": [],
       "status": "COVERED",
       "note": "every concept token already appears in the built page (title/meta/h1/slug or rendered body copy)"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "real estate investment calculator",
+      "volume": 1000,
+      "difficulty": 40,
+      "target": null,
+      "conceptTokens": [
+        "real",
+        "estate",
+        "investment"
+      ],
+      "cluster": [
+        "real estate investment calculator"
+      ],
+      "why": "partial match with registry tool investment (1/3 concept tokens) — resolve by internal linking/metadata first",
+      "candidates": [
+        {
+          "route": "/family/birthday-party-cost/",
+          "title": "Kids Birthday Party Cost: Kids Invited, Venue Cost",
+          "hits": 3,
+          "of": 3
+        },
+        {
+          "route": "/family/child-height/",
+          "title": "Child Height Predictor: How Tall Will My Child Be?",
+          "hits": 3,
+          "of": 3
+        },
+        {
+          "route": "/family/college-savings-monthly/",
+          "title": "College Savings Calculator: Child Age, Annual College",
+          "hits": 3,
+          "of": 3
+        }
+      ],
+      "status": "NO_TARGET",
+      "note": "no target recorded; 3 built page(s) already name every concept token — best is /family/birthday-party-cost/ (3/3) — needs confirmation, not assumed",
+      "missingTokens": [
+        "real",
+        "estate",
+        "investment"
+      ]
     },
     {
       "code": "B",

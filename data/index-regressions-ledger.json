@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12T16:20:00.000Z",
+  "updatedAt": "2026-10-27T14:32:16.870Z",
   "note": "Accepted/known index findings. A finding listed here stops alerting; remove an entry to start alerting on it again. Every entry carries its own reason in `note`.",
   "known": [
     {
@@ -9,6 +9,718 @@
       "window": "current state @ 2026-10-12",
       "addedAt": "2026-10-12T16:20:00.000Z",
       "note": "Known and addressed: Google consolidated the bare category page onto /hub/finance/ because the pair shared ~80% of their five-grams (same methodology note, same category FAQ, same 48-card catalog). The 2026-10-12 de-duplication gave every block exactly one owner (docs/DUPLICATE-HUBS-FIX.md) and added the check:category-dup gate that fails if it regresses. Re-arm this alert (delete this entry) after Google re-crawls both URLs; a second consecutive snapshot still reporting alternate-canonical would mean the canonical hint needs a stronger fix (301 or a canonical tag on /finance/)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/home-afford/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.869Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/construction/concrete-bags/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/loan-qualify/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/markup/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/discount/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/fitness/sweat-rate/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/tech/download-time/",
+      "kind": "not-candidate",
+      "to": "Excluded by ‘noindex’ tag",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/investment-growth/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/interest-only/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/emergency-fund/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/tech/docker-resource/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/rule-of-72/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/inflation-adjusted/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/times-interest-earned/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/ebitda/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/enterprise-value/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/va-loan/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/house-affordability/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/price-to-earnings/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/dividend-discount/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/debt-consolidation/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/home-equity/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/diversification/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/payback-period/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/capm/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/biweekly-mortgage/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/stock-split/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/book-value-share/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/payout-ratio/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/max-drawdown/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/cd-ladder/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/position-size/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/dca-calculator/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/staking-rewards/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/rent-vs-sell/",
+      "kind": "duplicate-canonical",
+      "to": "Alternate page with proper canonical tag",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/investment/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/tax/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/tech/ppi-calc/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/fitness/weight-loss/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/tip/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/salary/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/homegarden/pool-chemicals/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/bonds/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/net-worth-calculator/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/paycheck/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/health/met-calories/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/tech/aspect-ratio/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/loan-comparison/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/tech/screen-size/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/mortgage-payoff/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/graduated-payment/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/balloon-payment/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/tech/keyword-density/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/dca/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/esop/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/cd-calculator/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/tech/wifi-throughput/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/tax-equivalent-yield/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/geometric-mean/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/payday-loan-cost/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/emergency-fund-rate/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/reverse-mortgage/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/black-scholes/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/bond-duration/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/growing-perpetuity/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/cost-of-living/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/accounts-receivable-turnover/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/operating-margin/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/loan-balance/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/discounted-payback/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/fixed-deposit-vs-recurring/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/recast-mortgage/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/lump-sum-vs-sip/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/pension-lump-sum/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/zero-coupon-bond/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/kelly-criterion/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/runway-months/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/late-fee-interest/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/factoring-fee/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/royalty-payment/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/yield-to-worst/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/coupon-payment/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/clean-dirty-price/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/duration-bond/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/appreciation-forecast/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/seller-net/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/rule-of-40/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/finance/cost-of-delay/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/auto/mileage-calculator/",
+      "kind": "not-candidate",
+      "to": "Page with redirect",
+      "window": "current state @ 2026-10-26",
+      "addedAt": "2026-10-27T14:32:16.870Z",
+      "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
     }
   ]
 }

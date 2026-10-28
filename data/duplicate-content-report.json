@@ -1,11 +1,11 @@
 {
-  "ranAt": "2026-10-23T12:07:10.877Z",
+  "ranAt": "2026-10-27T16:36:21.071Z",
   "pages": 1329,
   "noindexPages": 186,
   "ngram": 7,
   "minDocumentFrequency": 6,
-  "siteDupSharePct": 40.6,
-  "pagesOver40Pct": 949,
+  "siteDupSharePct": 40.2,
+  "pagesOver40Pct": 906,
   "pagesUnder400Words": 1,
   "duplicateTitles": 0,
   "duplicateMetaDescriptions": 0,
@@ -43,7 +43,7 @@
     {
       "pages": 1285,
       "sharePct": 96.7,
-      "text": "see our editorial policy . last reviewed 2026-10-23 methodology",
+      "text": "see our editorial policy . last reviewed 2026-10-27 methodology",
       "samples": [
         "/auto/auto-fare/",
         "/auto/bike-fuel/",
@@ -121,8 +121,8 @@
       ]
     },
     {
-      "pages": 743,
-      "sharePct": 55.9,
+      "pages": 741,
+      "sharePct": 55.8,
       "text": "moves before trusting any single run. similar calculators",
       "samples": [
         "/auto/bike-loan/",
@@ -134,128 +134,128 @@
   "worstPages": [
     {
       "url": "/math/percentage/",
-      "words": 2297,
-      "dupShare": 56.1
+      "words": 2292,
+      "dupShare": 55.8
     },
     {
       "url": "/regional/egypt-take-home-salary/",
-      "words": 1165,
-      "dupShare": 54.5
+      "words": 1167,
+      "dupShare": 53.8
     },
     {
       "url": "/regional/romania-take-home-salary/",
-      "words": 1149,
-      "dupShare": 54.4
-    },
-    {
-      "url": "/regional/japan-take-home-salary/",
-      "words": 1114,
-      "dupShare": 53.6
-    },
-    {
-      "url": "/regional/netherlands-take-home-salary/",
-      "words": 1122,
-      "dupShare": 53.5
+      "words": 1150,
+      "dupShare": 53.8
     },
     {
       "url": "/health/bmi/",
-      "words": 2416,
-      "dupShare": 53.3
-    },
-    {
-      "url": "/regional/qatar-take-home-salary/",
-      "words": 1175,
+      "words": 2410,
       "dupShare": 53.2
     },
     {
-      "url": "/regional/australia-take-home-salary/",
-      "words": 1156,
-      "dupShare": 52.6
+      "url": "/regional/netherlands-take-home-salary/",
+      "words": 1123,
+      "dupShare": 52.8
     },
     {
-      "url": "/regional/singapore-take-home-salary/",
-      "words": 1106,
-      "dupShare": 52.3
+      "url": "/regional/qatar-take-home-salary/",
+      "words": 1173,
+      "dupShare": 52.8
+    },
+    {
+      "url": "/regional/japan-take-home-salary/",
+      "words": 1115,
+      "dupShare": 52.7
     },
     {
       "url": "/career/salary-converter/",
-      "words": 2557,
-      "dupShare": 52.1
+      "words": 2553,
+      "dupShare": 52.2
     },
     {
-      "url": "/regional/brazil-take-home-salary/",
-      "words": 1204,
-      "dupShare": 52.1
+      "url": "/regional/australia-take-home-salary/",
+      "words": 1157,
+      "dupShare": 51.9
     },
     {
       "url": "/regional/poland-take-home-salary/",
-      "words": 1174,
-      "dupShare": 52.1
-    },
-    {
-      "url": "/regional/hongkong-take-home-salary/",
-      "words": 1177,
-      "dupShare": 51.7
-    },
-    {
-      "url": "/regional/philippines-take-home-salary/",
-      "words": 1204,
-      "dupShare": 51.7
-    },
-    {
-      "url": "/finance/tax/",
-      "words": 1065,
+      "words": 1172,
       "dupShare": 51.6
     },
     {
+      "url": "/regional/singapore-take-home-salary/",
+      "words": 1112,
+      "dupShare": 51.6
+    },
+    {
+      "url": "/regional/hongkong-take-home-salary/",
+      "words": 1172,
+      "dupShare": 51.5
+    },
+    {
+      "url": "/finance/tax/",
+      "words": 1059,
+      "dupShare": 51.4
+    },
+    {
+      "url": "/regional/brazil-take-home-salary/",
+      "words": 1201,
+      "dupShare": 51.4
+    },
+    {
+      "url": "/regional/philippines-take-home-salary/",
+      "words": 1202,
+      "dupShare": 51.3
+    },
+    {
       "url": "/construction/gravel/",
-      "words": 1033,
-      "dupShare": 51.5
-    },
-    {
-      "url": "/conversion/volume/",
-      "words": 933,
-      "dupShare": 51.5
-    },
-    {
-      "url": "/math/lcm-gcd/",
-      "words": 989,
-      "dupShare": 51.4
-    },
-    {
-      "url": "/regional/colombia-take-home-salary/",
-      "words": 1203,
-      "dupShare": 51.4
-    },
-    {
-      "url": "/regional/kenya-take-home-salary/",
-      "words": 1176,
-      "dupShare": 51.4
-    },
-    {
-      "url": "/regional/indonesia-take-home-salary/",
-      "words": 1182,
-      "dupShare": 51.1
-    },
-    {
-      "url": "/construction/soil/",
-      "words": 1023,
+      "words": 1028,
       "dupShare": 51
     },
     {
-      "url": "/regional/canada-take-home-salary/",
-      "words": 1178,
+      "url": "/conversion/volume/",
+      "words": 930,
+      "dupShare": 51
+    },
+    {
+      "url": "/regional/colombia-take-home-salary/",
+      "words": 1201,
       "dupShare": 51
     },
     {
       "url": "/regional/vietnam-take-home-salary/",
-      "words": 1194,
-      "dupShare": 51
+      "words": 1189,
+      "dupShare": 50.8
+    },
+    {
+      "url": "/regional/kenya-take-home-salary/",
+      "words": 1177,
+      "dupShare": 50.7
+    },
+    {
+      "url": "/math/lcm-gcd/",
+      "words": 990,
+      "dupShare": 50.5
     },
     {
       "url": "/regional/chile-take-home-salary/",
-      "words": 1147,
-      "dupShare": 50.9
+      "words": 1145,
+      "dupShare": 50.5
+    },
+    {
+      "url": "/regional/indonesia-take-home-salary/",
+      "words": 1183,
+      "dupShare": 50.4
+    },
+    {
+      "url": "/construction/soil/",
+      "words": 1020,
+      "dupShare": 50.3
+    },
+    {
+      "url": "/regional/saudi-take-home-salary/",
+      "words": 1151,
+      "dupShare": 50.1
     }
   ],
   "shortestPages": [
@@ -473,7 +473,7 @@
       ]
     },
     {
-      "gram": "our editorial policy . last reviewed 2026-10-23",
+      "gram": "our editorial policy . last reviewed 2026-10-27",
       "pages": 1285,
       "sharePct": 96.7,
       "samples": [
@@ -483,7 +483,7 @@
       ]
     },
     {
-      "gram": "editorial policy . last reviewed 2026-10-23 methodology",
+      "gram": "editorial policy . last reviewed 2026-10-27 methodology",
       "pages": 1285,
       "sharePct": 96.7,
       "samples": [

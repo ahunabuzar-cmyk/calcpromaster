@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-20T16:37:15.842Z",
+  "ranAt": "2026-10-27T10:53:20.142Z",
   "guides": 17,
   "pages": [
     {
@@ -39,8 +39,8 @@
     },
     {
       "guide": "tax-salary",
-      "before": 982,
-      "after": 982
+      "before": 1018,
+      "after": 1018
     },
     {
       "guide": "homegarden",
@@ -88,7 +88,7 @@
       "after": 1056
     }
   ],
-  "totalBefore": 16713,
-  "totalAfter": 16713,
+  "totalBefore": 16749,
+  "totalAfter": 16749,
   "minAfter": 927
 }

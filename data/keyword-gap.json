@@ -1,26 +1,27 @@
 {
-  "ranAt": "2026-10-18T04:30:49.057Z",
+  "ranAt": "2026-10-27T16:15:14.031Z",
   "inputs": [
     "calculator-net-gap.csv",
     "calculatorsoup-gap.csv",
     "keyword-planner.csv",
-    "keyword-volume-difficulty.csv"
+    "keyword-volume-difficulty.csv",
+    "ubersuggest-pair-plan.csv"
   ],
   "inputRows": 608,
   "pagesIndexed": 1425,
   "keywords": 604,
   "counts": {
-    "COVERED": 476,
+    "COVERED": 470,
     "WEAK": 26,
-    "GAP": 81,
+    "GAP": 87,
     "IGNORE": 21
   },
   "bySource": {
     "keyword-planner": {
       "rows": 500,
-      "COVERED": 401,
+      "COVERED": 395,
       "WEAK": 18,
-      "GAP": 65,
+      "GAP": 71,
       "IGNORE": 16
     },
     "keyword-volume-difficulty": {
@@ -525,6 +526,22 @@
       "suggest": "/business/loan-for-business"
     },
     {
+      "keyword": "retirement salary calculator",
+      "volume": 8100,
+      "difficulty": 19,
+      "cpc": 0.92,
+      "competitorPosition": null,
+      "competitorUrl": "",
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "page": null,
+      "head": "salary",
+      "titleHits": 1,
+      "bodyHits": 1,
+      "opportunity": 6561,
+      "suggest": "/regional/retirement-salary"
+    },
+    {
       "keyword": "savings calculator simple",
       "volume": 6600,
       "difficulty": 1,
@@ -606,6 +623,22 @@
       "suggest": "/finance/retirement-plan-estimator"
     },
     {
+      "keyword": "mobile home loan payment calculator",
+      "volume": 6600,
+      "difficulty": 32,
+      "cpc": 0.53,
+      "competitorPosition": null,
+      "competitorUrl": "",
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "page": null,
+      "head": "mobile",
+      "titleHits": 2,
+      "bodyHits": 2,
+      "opportunity": 4488,
+      "suggest": null
+    },
+    {
       "keyword": "reverse tax calculator",
       "volume": 4400,
       "difficulty": 0,
@@ -652,6 +685,38 @@
       "bodyHits": 1,
       "opportunity": 4356,
       "suggest": "/food/daily-interest"
+    },
+    {
+      "keyword": "weekly paycheck calculator",
+      "volume": 4400,
+      "difficulty": 5,
+      "cpc": 1.24,
+      "competitorPosition": null,
+      "competitorUrl": "",
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "page": null,
+      "head": "weekly",
+      "titleHits": 1,
+      "bodyHits": 1,
+      "opportunity": 4180,
+      "suggest": "/everyday/weekly-paycheck"
+    },
+    {
+      "keyword": "weekly pay calculator",
+      "volume": 4400,
+      "difficulty": 5,
+      "cpc": 1.24,
+      "competitorPosition": null,
+      "competitorUrl": "",
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "page": null,
+      "head": "weekly",
+      "titleHits": 1,
+      "bodyHits": 1,
+      "opportunity": 4180,
+      "suggest": "/everyday/weekly-pay"
     },
     {
       "keyword": "inflation salary calculator",
@@ -905,11 +970,11 @@
       "source": "keyword-planner",
       "verdict": "GAP",
       "page": null,
-      "head": "percentage",
+      "head": "loan",
       "titleHits": 1,
       "bodyHits": 1,
       "opportunity": 1501,
-      "suggest": "/math/loan-percentage"
+      "suggest": "/finance/loan-percentage"
     },
     {
       "keyword": "figure out interest rate on loan",
@@ -925,7 +990,7 @@
       "titleHits": 3,
       "bodyHits": 3,
       "opportunity": 1501,
-      "suggest": "/engineering/figure-out-interest-rate-on-loan"
+      "suggest": "/food/figure-out-interest-rate-on-loan"
     },
     {
       "keyword": "retirement budget calculator",
@@ -958,6 +1023,22 @@
       "bodyHits": 1,
       "opportunity": 1360,
       "suggest": "/education/free-online-retirement-planner"
+    },
+    {
+      "keyword": "calculator real estate",
+      "volume": 2400,
+      "difficulty": 44,
+      "cpc": 0.09,
+      "competitorPosition": null,
+      "competitorUrl": "",
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "page": null,
+      "head": "estate",
+      "titleHits": 1,
+      "bodyHits": 1,
+      "opportunity": 1344,
+      "suggest": "/family/real-estate"
     },
     {
       "keyword": "cash back calculator",
@@ -1104,6 +1185,22 @@
       "suggest": "/finance/compound-investments"
     },
     {
+      "keyword": "taxable calculator",
+      "volume": 1000,
+      "difficulty": 3,
+      "cpc": 0.24,
+      "competitorPosition": null,
+      "competitorUrl": "",
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "page": null,
+      "head": "taxable",
+      "titleHits": 0,
+      "bodyHits": 1,
+      "opportunity": 970,
+      "suggest": "/regional/taxable"
+    },
+    {
       "keyword": "future value of investment calculator",
       "volume": 1300,
       "difficulty": 30,
@@ -1129,7 +1226,7 @@
       "source": "keyword-planner",
       "verdict": "GAP",
       "page": null,
-      "head": "compound",
+      "head": "loan",
       "titleHits": 1,
       "bodyHits": 1,
       "opportunity": 890,
@@ -1232,22 +1329,6 @@
       "suggest": "/finance/investment-account"
     },
     {
-      "keyword": "loan calculator monthly",
-      "volume": 1000,
-      "difficulty": 25,
-      "cpc": 0.15,
-      "competitorPosition": null,
-      "competitorUrl": "",
-      "source": "keyword-planner",
-      "verdict": "GAP",
-      "page": null,
-      "head": "loan",
-      "titleHits": 1,
-      "bodyHits": 1,
-      "opportunity": 750,
-      "suggest": "/finance/loan-monthly"
-    },
-    {
       "keyword": "compare loan calculator",
       "volume": 1000,
       "difficulty": 25,
@@ -1257,11 +1338,11 @@
       "source": "keyword-planner",
       "verdict": "GAP",
       "page": null,
-      "head": "compare",
+      "head": "loan",
       "titleHits": 1,
       "bodyHits": 1,
       "opportunity": 750,
-      "suggest": "/auto/compare-loan"
+      "suggest": "/finance/compare-loan"
     },
     {
       "keyword": "compound return calculator",
@@ -1310,6 +1391,22 @@
       "bodyHits": 1,
       "opportunity": 610,
       "suggest": "/finance/monthly-investment"
+    },
+    {
+      "keyword": "real estate investment calculator",
+      "volume": 1000,
+      "difficulty": 40,
+      "cpc": 1.31,
+      "competitorPosition": null,
+      "competitorUrl": "",
+      "source": "keyword-planner",
+      "verdict": "GAP",
+      "page": null,
+      "head": "estate",
+      "titleHits": 1,
+      "bodyHits": 1,
+      "opportunity": 600,
+      "suggest": "/family/real-estate-investment"
     },
     {
       "keyword": "retirement financial calculator",
@@ -1610,7 +1707,7 @@
       "competitorUrl": "",
       "source": "keyword-planner",
       "verdict": "WEAK",
-      "page": "/guides/career",
+      "page": "/guides/tax-salary",
       "head": "deductions",
       "titleHits": 1,
       "bodyHits": 2,

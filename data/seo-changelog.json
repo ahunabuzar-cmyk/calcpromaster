@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T04:21:04.175Z",
+  "generatedAt": "2026-10-27T16:32:29.736Z",
   "note": "Append-only: purani entries kabhi rewrite nahi hoti; baseline har run par aaj ki copy ban jata hai.",
   "headAvailable": true,
   "baseline": {

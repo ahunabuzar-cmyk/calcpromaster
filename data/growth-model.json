@@ -1,182 +1,657 @@
 {
-  "generatedAt": "2026-10-24T12:17:23.001Z",
+  "generatedAt": "2026-10-28T16:47:28.141Z",
   "series": [
+    {
+      "date": "2026-06-27",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-25"
+    },
+    {
+      "date": "2026-06-28",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-26"
+    },
+    {
+      "date": "2026-06-29",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-26"
+    },
+    {
+      "date": "2026-06-30",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-01",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-02",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-03",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-04",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-05",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-06",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-07",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-08",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-09",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-10",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-11",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-12",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-13",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-14",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-15",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-16",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-17",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-18",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-19",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-20",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-21",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-22",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-23",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-24",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-25",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-26",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-27",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-28",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-29",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-30",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-07-31",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-01",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-02",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-03",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-04",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-05",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-06",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-07",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-08",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-09",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-10",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-11",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-12",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-13",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-14",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-15",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-16",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-17",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-18",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-19",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-20",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-21",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-22",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-23",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-24",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-25",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-26",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-27",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-28",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-29",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-30",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-08-31",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-09-01",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-09-02",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-09-03",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-09-04",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-09-05",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-09-06",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-09-07",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-09-08",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-09-09",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-09-10",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-09-11",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-09-12",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-09-13",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-09-14",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-09-15",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-09-16",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-09-17",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-09-18",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-09-19",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-09-20",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-09-21",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-09-22",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-09-23",
+      "impressions": 0,
+      "source": "gsc-performance-export-2026-10-28"
+    },
     {
       "date": "2026-09-24",
       "impressions": 0,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
     },
     {
       "date": "2026-09-25",
       "impressions": 63,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
     },
     {
       "date": "2026-09-26",
       "impressions": 1114,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
     },
     {
       "date": "2026-09-27",
       "impressions": 1554,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
     },
     {
       "date": "2026-09-28",
       "impressions": 1044,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
     },
     {
       "date": "2026-09-29",
       "impressions": 1126,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
     },
     {
       "date": "2026-09-30",
       "impressions": 1191,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
     },
     {
       "date": "2026-10-01",
       "impressions": 1183,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
     },
     {
       "date": "2026-10-02",
       "impressions": 1325,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
     },
     {
       "date": "2026-10-03",
       "impressions": 1473,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
     },
     {
       "date": "2026-10-04",
       "impressions": 1343,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
     },
     {
       "date": "2026-10-05",
       "impressions": 1057,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
     },
     {
       "date": "2026-10-06",
       "impressions": 972,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
     },
     {
       "date": "2026-10-07",
       "impressions": 893,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
     },
     {
       "date": "2026-10-08",
       "impressions": 848,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
     },
     {
       "date": "2026-10-09",
       "impressions": 695,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
     },
     {
       "date": "2026-10-10",
       "impressions": 587,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
     },
     {
       "date": "2026-10-11",
       "impressions": 522,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
     },
     {
       "date": "2026-10-12",
       "impressions": 590,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
     },
     {
       "date": "2026-10-13",
       "impressions": 705,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
     },
     {
       "date": "2026-10-14",
       "impressions": 632,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
     },
     {
       "date": "2026-10-15",
       "impressions": 578,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
     },
     {
       "date": "2026-10-16",
       "impressions": 681,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
     },
     {
       "date": "2026-10-17",
       "impressions": 419,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
     },
     {
       "date": "2026-10-18",
       "impressions": 345,
-      "source": "gsc-performance-export-2026-10-23"
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-10-19",
+      "impressions": 2,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-10-20",
+      "impressions": 4,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-10-21",
+      "impressions": 1,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-10-22",
+      "impressions": 7,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-10-23",
+      "impressions": 3,
+      "source": "gsc-performance-export-2026-10-28"
+    },
+    {
+      "date": "2026-10-24",
+      "impressions": 1,
+      "source": "gsc-performance-export-2026-10-28"
     }
   ],
   "runRate7": {
-    "perDay": 564.2857142857143,
-    "perMonth": 17176.857142857145,
-    "from": "2026-10-12",
-    "to": "2026-10-18",
+    "perDay": 51.857142857142854,
+    "perMonth": 1578.5314285714285,
+    "from": "2026-10-18",
+    "to": "2026-10-24",
     "days": 7,
     "windowRequested": 7
   },
   "runRate3": {
-    "perDay": 481.6666666666667,
-    "perMonth": 14661.933333333334,
-    "from": "2026-10-16",
-    "to": "2026-10-18",
+    "perDay": 3.6666666666666665,
+    "perMonth": 111.61333333333333,
+    "from": "2026-10-22",
+    "to": "2026-10-24",
     "days": 3,
     "windowRequested": 3
   },
   "runRateAll": {
-    "perDay": 837.6,
-    "perMonth": 25496.544,
-    "from": "2026-09-24",
-    "to": "2026-10-18",
-    "days": 25,
-    "windowRequested": 25
+    "perDay": 174.65,
+    "perMonth": 5316.3460000000005,
+    "from": "2026-06-27",
+    "to": "2026-10-24",
+    "days": 120,
+    "windowRequested": 120
   },
   "api": {
-    "clicks": 21,
-    "impressions": 18917,
-    "ctr": 0.0011101125971348523,
-    "position": 33.143415975048896,
-    "startDate": "2026-09-16",
-    "endDate": "2026-10-14",
+    "clicks": 22,
+    "impressions": 20954,
+    "ctr": 0.0010499188699055074,
+    "position": 32.52472081702777,
+    "startDate": "2026-09-24",
+    "endDate": "2026-10-22",
     "days": 28,
-    "ranAt": "2026-10-17T10:48:24.148Z",
+    "ranAt": "2026-10-25T16:35:08.647Z",
     "site": "https://calcpromaster.com",
     "coverage": {
-      "pairImpressions": 11567,
+      "pairImpressions": 12224,
       "pairClicks": 8,
-      "totalImpressions": 18917,
-      "totalClicks": 21
+      "totalImpressions": 20954,
+      "totalClicks": 22
     },
     "sources": [
       "data/gsc-query-page.json"
     ]
   },
   "reconcile": {
-    "apiImpressions": 18917,
+    "apiImpressions": 20954,
     "apiDays": 28,
-    "apiPerDay": 676,
-    "runRatePerDay": 564,
-    "ratio": 0.8352275730824127
+    "apiPerDay": 748,
+    "runRatePerDay": 52,
+    "ratio": 0.06929464541376347
   },
   "indexation": {
     "date": "2026-10-04",
@@ -188,5 +663,5 @@
     "fixable": 0,
     "waitingCrawl": 631
   },
-  "base": 17176.857142857145
+  "base": 1578.5314285714285
 }

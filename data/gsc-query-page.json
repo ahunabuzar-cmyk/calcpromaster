@@ -1,25 +1,25 @@
 {
-  "ranAt": "2026-10-17T10:48:24.148Z",
+  "ranAt": "2026-10-25T16:35:08.647Z",
   "site": "https://calcpromaster.com",
   "days": 28,
-  "startDate": "2026-09-16",
-  "endDate": "2026-10-14",
+  "startDate": "2026-09-24",
+  "endDate": "2026-10-22",
   "rowLimits": {
-    "queries": 250,
-    "pages": 250,
+    "queries": 100,
+    "pages": 100,
     "pairs": 25000
   },
   "coverage": {
-    "pairImpressions": 11567,
+    "pairImpressions": 12224,
     "pairClicks": 8,
-    "totalImpressions": 18917,
-    "totalClicks": 21
+    "totalImpressions": 20954,
+    "totalClicks": 22
   },
   "totals": {
-    "clicks": 21,
-    "impressions": 18917,
-    "ctr": 0.0011101125971348523,
-    "position": 33.143415975048896
+    "clicks": 22,
+    "impressions": 20954,
+    "ctr": 0.0010499188699055074,
+    "position": 32.52472081702777
   },
   "queries": [
     {
@@ -721,1079 +721,29 @@
       "impressions": 1,
       "ctr": 0,
       "position": 34
-    },
-    {
-      "query": "1px to rem",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 55.5
-    },
-    {
-      "query": "2 apy calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 4
-    },
-    {
-      "query": "2 awg in mm",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 72
-    },
-    {
-      "query": "2 awg to mm",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 78
-    },
-    {
-      "query": "2 business days from today",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 65
-    },
-    {
-      "query": "2 pipe volume per foot",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 91
-    },
-    {
-      "query": "2 to 3 business days",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 57
-    },
-    {
-      "query": "2 wheeler emi calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 75
-    },
-    {
-      "query": "2 wheeler finance calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 70
-    },
-    {
-      "query": "2 wheeler loan calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 65
-    },
-    {
-      "query": "2-3 business days",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 52
-    },
-    {
-      "query": "2.998e+8 in standard form",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 6
-    },
-    {
-      "query": "20 awg in mm",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 82
-    },
-    {
-      "query": "20 awg to mm",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 70
-    },
-    {
-      "query": "20 business days from today",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 65
-    },
-    {
-      "query": "20 gauge wire in mm",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 87
-    },
-    {
-      "query": "20 work days from today",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 68
-    },
-    {
-      "query": "2015 income tax calculator",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 67
-    },
-    {
-      "query": "20awg in mm",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 80
-    },
-    {
-      "query": "20awg wire in mm",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 93
-    },
-    {
-      "query": "22 awg to mm",
-      "clicks": 0,
-      "impressions": 10,
-      "ctr": 0,
-      "position": 69.1
-    },
-    {
-      "query": "23 awg to mm",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 80
-    },
-    {
-      "query": "24 awg to mm",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 73
-    },
-    {
-      "query": "25 lakh home loan emi calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 32
-    },
-    {
-      "query": "25 lakh home loan emi for 10 years",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 94
-    },
-    {
-      "query": "26 lakh home loan emi",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 89
-    },
-    {
-      "query": "27 business days from today",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 66
-    },
-    {
-      "query": "28 awg in mm",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 74
-    },
-    {
-      "query": "28 lakh home loan emi",
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 82.25
-    },
-    {
-      "query": "28 lakh home loan emi calculator",
-      "clicks": 0,
-      "impressions": 7,
-      "ctr": 0,
-      "position": 98.14285714285714
-    },
-    {
-      "query": "282 ppi",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 4
-    },
-    {
-      "query": "28awg in mm",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 81
-    },
-    {
-      "query": "3 4 business days",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 62
-    },
-    {
-      "query": "3 5 working days",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 80
-    },
-    {
-      "query": "3 a and 2 b gpa",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 76
-    },
-    {
-      "query": "3 business day",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 81
-    },
-    {
-      "query": "3 business days",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 79
-    },
-    {
-      "query": "3 business days from today",
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 66.25
-    },
-    {
-      "query": "3 business days from yesterday",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 41
-    },
-    {
-      "query": "3 to 5 business days",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 77.5
-    },
-    {
-      "query": "3 working days from tuesday",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 74
-    },
-    {
-      "query": "3-5 business days from now",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 70
-    },
-    {
-      "query": "3-7 business days from today",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 68
-    },
-    {
-      "query": "3.00 apy on 1000",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 78
-    },
-    {
-      "query": "3.25 apy on 10000",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 65
-    },
-    {
-      "query": "3.35 apy",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 86
-    },
-    {
-      "query": "3.4 apy on 10000",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 76
-    },
-    {
-      "query": "3.80 apy calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 72
-    },
-    {
-      "query": "3.9 apy calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 57
-    },
-    {
-      "query": "30 awg in mm",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 88
-    },
-    {
-      "query": "30 percent credit utilization calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 73
-    },
-    {
-      "query": "30ga to mm",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 81
-    },
-    {
-      "query": "31 business days from today",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 69
-    },
-    {
-      "query": "32 bpm cardio recovery",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 71
-    },
-    {
-      "query": "32 cidr",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 90
-    },
-    {
-      "query": "32 ip range",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 89.5
-    },
-    {
-      "query": "32 lakh home loan emi for 25 years",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 87
-    },
-    {
-      "query": "32000/52/40",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 7
-    },
-    {
-      "query": "34 lakh home loan emi",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 32
-    },
-    {
-      "query": "350000/1000",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 89
-    },
-    {
-      "query": "360 value estimator tool free",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 87
-    },
-    {
-      "query": "365 minus weekends",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 5.5
-    },
-    {
-      "query": "38awg to mm",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 72
-    },
-    {
-      "query": "4 2 1 rule iv fluids",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 17
-    },
-    {
-      "query": "4 awg to mm",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 80
-    },
-    {
-      "query": "4 band resistor code",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 74
-    },
-    {
-      "query": "4 band resistor color code",
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 72.4
-    },
-    {
-      "query": "4 band resistor color code calculator",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 76.66666666666667
-    },
-    {
-      "query": "4-2-1 rule fluids",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 29
-    },
-    {
-      "query": "4-5 business days from today",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 62
-    },
-    {
-      "query": "4-8 business days",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 48
-    },
-    {
-      "query": "4-band resistor color code",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 74
-    },
-    {
-      "query": "4.00 apy on 1000",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 85
-    },
-    {
-      "query": "4.05 apy",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 81
-    },
-    {
-      "query": "4.10 apy on 10000",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 82.5
-    },
-    {
-      "query": "4.25 apy on $10000",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 78
-    },
-    {
-      "query": "4.5% apy on 10000",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 4
-    },
-    {
-      "query": "4.7k resistor color code",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 26.5
-    },
-    {
-      "query": "40 20 10 rule fluids",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 29
-    },
-    {
-      "query": "40 km cycling time",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 11
-    },
-    {
-      "query": "421 calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 72
-    },
-    {
-      "query": "44k take home pay",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 87
-    },
-    {
-      "query": "45 business days from today",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 67
-    },
-    {
-      "query": "489 visa points calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 86
-    },
-    {
-      "query": "4f46e5",
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 8
-    },
-    {
-      "query": "4mm to awg",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 66
-    },
-    {
-      "query": "5 apy calculator",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 7
-    },
-    {
-      "query": "5 business day",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 68
-    },
-    {
-      "query": "5 business days.",
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 81.75
-    },
-    {
-      "query": "5 point scale gpa calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 11
-    },
-    {
-      "query": "5.0 apy calculator",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 37
-    },
-    {
-      "query": "5.64km in miles",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 10
-    },
-    {
-      "query": "50000 chit for 10 months",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 59.333333333333336
-    },
-    {
-      "query": "50kbps",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 30
-    },
-    {
-      "query": "50mm to awg",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 65
-    },
-    {
-      "query": "529 compound interest calculator",
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 8.2
-    },
-    {
-      "query": "529000000",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 79
-    },
-    {
-      "query": "6 awg in mm",
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 87
-    },
-    {
-      "query": "6 awg to mm",
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 77.25
-    },
-    {
-      "query": "6 business days from today",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 71
-    },
-    {
-      "query": "6 month emergency fund calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 87
-    },
-    {
-      "query": "60 working days",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 68
-    },
-    {
-      "query": "6awg to mm",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 66
-    },
-    {
-      "query": "6mm wire to awg",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 63
-    },
-    {
-      "query": "7 business days from now",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 74
-    },
-    {
-      "query": "70-80 business days from today",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 2
-    },
-    {
-      "query": "70k in monthly salary",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 15
-    },
-    {
-      "query": "739 how much is pmi 5000 55 3.00 8",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 14
-    },
-    {
-      "query": "75000/12500",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 7
-    },
-    {
-      "query": "78 working days from today",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 8
-    },
-    {
-      "query": "8 month emergency fund calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 11
-    },
-    {
-      "query": "8.9km l to l 100km",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 8
-    },
-    {
-      "query": "8.9km/l",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 8
-    },
-    {
-      "query": "80 business days from today",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 6.666666666666667
-    },
-    {
-      "query": "80 lakh home loan emi calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 91
-    },
-    {
-      "query": "80 lakh home loan emi for 20 years",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 95
-    },
-    {
-      "query": "8awg to mm",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 75
-    },
-    {
-      "query": "90 min sleep cycle",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 9
-    },
-    {
-      "query": "90 minute sleep cycle",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 75.5
-    },
-    {
-      "query": "[income tax refund calculator canada 2021]",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 28.5
-    },
-    {
-      "query": "abv dilution calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 73
-    },
-    {
-      "query": "act score calculator",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 113
-    },
-    {
-      "query": "activity depreciation calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 11
-    },
-    {
-      "query": "ad revenue calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 73
-    },
-    {
-      "query": "add business days",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 79
-    },
-    {
-      "query": "address ip calculator",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 84
-    },
-    {
-      "query": "adjusted body weight calculation",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 7
-    },
-    {
-      "query": "adjusted body weight calculator",
-      "clicks": 0,
-      "impressions": 13,
-      "ctr": 0,
-      "position": 4.769230769230769
-    },
-    {
-      "query": "adjusted body weight for amputations",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 20
-    },
-    {
-      "query": "adjusted body weight formula",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 10.5
-    },
-    {
-      "query": "adjusted calcium",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 84
-    },
-    {
-      "query": "adjusted calcium biomarker test",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 62
-    },
-    {
-      "query": "adjusted calcium calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 3
-    },
-    {
-      "query": "adjusted ideal body weight calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 7
-    },
-    {
-      "query": "adjusted weight calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 6
-    },
-    {
-      "query": "adjusted weight formula",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 6
-    },
-    {
-      "query": "affordability calculator auto",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 61
-    },
-    {
-      "query": "affordability calculator for rent",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 8
-    },
-    {
-      "query": "affordability calculator rent",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 9
-    },
-    {
-      "query": "after tax calculator salary",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 87
-    },
-    {
-      "query": "after tax cost of debt calculator",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 14
-    },
-    {
-      "query": "after tax income calculator",
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 85
-    },
-    {
-      "query": "after tax take home pay calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 96
-    },
-    {
-      "query": "agap calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 71
-    },
-    {
-      "query": "age and weight percentile calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 6
-    },
-    {
-      "query": "ai token cost calculator",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 86
-    },
-    {
-      "query": "air flow through orifice calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 83
-    },
-    {
-      "query": "albumin-corrected calcium biomarker test",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 26
-    },
-    {
-      "query": "alimony calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 39
-    },
-    {
-      "query": "alimony spousal support calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 98
     }
   ],
   "pages": [
     {
       "page": "https://calcpromaster.com/",
       "clicks": 3,
-      "impressions": 44,
-      "ctr": 0.06818181818181818,
-      "position": 16.272727272727273
+      "impressions": 54,
+      "ctr": 0.05555555555555555,
+      "position": 14.333333333333334
     },
     {
       "page": "https://calcpromaster.com/finance/cost-of-debt/",
       "clicks": 2,
-      "impressions": 17,
-      "ctr": 0.11764705882352941,
-      "position": 37.64705882352941
+      "impressions": 19,
+      "ctr": 0.10526315789473684,
+      "position": 34.1578947368421
     },
     {
       "page": "https://calcpromaster.com/auto/tire-replacement/",
       "clicks": 1,
-      "impressions": 12,
-      "ctr": 0.08333333333333333,
-      "position": 7.083333333333333
+      "impressions": 15,
+      "ctr": 0.06666666666666667,
+      "position": 6.666666666666667
     },
     {
       "page": "https://calcpromaster.com/construction/insulation",
@@ -1801,6 +751,13 @@
       "impressions": 27,
       "ctr": 0.037037037037037035,
       "position": 33.592592592592595
+    },
+    {
+      "page": "https://calcpromaster.com/education/graduation-date/",
+      "clicks": 1,
+      "impressions": 23,
+      "ctr": 0.043478260869565216,
+      "position": 6
     },
     {
       "page": "https://calcpromaster.com/education/semester-gpa/",
@@ -1812,23 +769,23 @@
     {
       "page": "https://calcpromaster.com/family/sibling-age-gap/",
       "clicks": 1,
-      "impressions": 17,
-      "ctr": 0.058823529411764705,
-      "position": 7.0588235294117645
+      "impressions": 40,
+      "ctr": 0.025,
+      "position": 7.3
     },
     {
       "page": "https://calcpromaster.com/fitness/muscle-gain",
       "clicks": 1,
-      "impressions": 88,
-      "ctr": 0.011363636363636364,
-      "position": 10.738636363636363
+      "impressions": 139,
+      "ctr": 0.007194244604316547,
+      "position": 9.39568345323741
     },
     {
       "page": "https://calcpromaster.com/geometry-lab",
       "clicks": 1,
-      "impressions": 5,
-      "ctr": 0.2,
-      "position": 21.8
+      "impressions": 6,
+      "ctr": 0.16666666666666666,
+      "position": 19.666666666666668
     },
     {
       "page": "https://calcpromaster.com/health/free-water-deficit",
@@ -1847,37 +804,37 @@
     {
       "page": "https://calcpromaster.com/regional/canada-take-home-salary/",
       "clicks": 1,
-      "impressions": 39,
-      "ctr": 0.02564102564102564,
-      "position": 43.61538461538461
+      "impressions": 43,
+      "ctr": 0.023255813953488372,
+      "position": 41.81395348837209
     },
     {
       "page": "https://calcpromaster.com/regional/dubai-salary/",
       "clicks": 1,
-      "impressions": 299,
-      "ctr": 0.0033444816053511705,
-      "position": 26.933110367892976
+      "impressions": 388,
+      "ctr": 0.002577319587628866,
+      "position": 22.38659793814433
     },
     {
       "page": "https://calcpromaster.com/regional/pk-salary",
       "clicks": 1,
-      "impressions": 34,
-      "ctr": 0.029411764705882353,
-      "position": 11.176470588235293
+      "impressions": 51,
+      "ctr": 0.0196078431372549,
+      "position": 9.882352941176471
     },
     {
       "page": "https://calcpromaster.com/regional/rickshaw-fare/",
       "clicks": 1,
-      "impressions": 23,
-      "ctr": 0.043478260869565216,
-      "position": 13.043478260869565
+      "impressions": 28,
+      "ctr": 0.03571428571428571,
+      "position": 11.892857142857142
     },
     {
       "page": "https://calcpromaster.com/regional/singapore-cpf/",
       "clicks": 1,
-      "impressions": 23,
-      "ctr": 0.043478260869565216,
-      "position": 60.56521739130435
+      "impressions": 30,
+      "ctr": 0.03333333333333333,
+      "position": 54.96666666666667
     },
     {
       "page": "https://calcpromaster.com/tech/aspect-ratio/",
@@ -1889,9 +846,9 @@
     {
       "page": "https://calcpromaster.com/tech/cron-validate/",
       "clicks": 1,
-      "impressions": 17,
-      "ctr": 0.058823529411764705,
-      "position": 26.88235294117647
+      "impressions": 19,
+      "ctr": 0.05263157894736842,
+      "position": 27.31578947368421
     },
     {
       "page": "https://calcpromaster.com/tech/load-test-users/",
@@ -1959,9 +916,9 @@
     {
       "page": "https://calcpromaster.com/auto/car-rental/",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 8,
       "ctr": 0,
-      "position": 4.142857142857142
+      "position": 4.875
     },
     {
       "page": "https://calcpromaster.com/auto/carpool-savings",
@@ -2043,23 +1000,23 @@
     {
       "page": "https://calcpromaster.com/auto/hybrid-savings/",
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 10,
       "ctr": 0,
-      "position": 13.444444444444445
+      "position": 19.1
     },
     {
       "page": "https://calcpromaster.com/auto/mileage-calculator",
       "clicks": 0,
-      "impressions": 36,
+      "impressions": 40,
       "ctr": 0,
-      "position": 32.52777777777778
+      "position": 29.975
     },
     {
       "page": "https://calcpromaster.com/auto/mileage-calculator/",
       "clicks": 0,
-      "impressions": 58,
+      "impressions": 63,
       "ctr": 0,
-      "position": 39.36206896551724
+      "position": 37.87301587301587
     },
     {
       "page": "https://calcpromaster.com/auto/parking-cost",
@@ -2092,9 +1049,9 @@
     {
       "page": "https://calcpromaster.com/auto/registration-cost/",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 44
+      "position": 32
     },
     {
       "page": "https://calcpromaster.com/auto/ride-share-cost/",
@@ -2134,9 +1091,9 @@
     {
       "page": "https://calcpromaster.com/auto/taxi-fare/",
       "clicks": 0,
-      "impressions": 28,
+      "impressions": 29,
       "ctr": 0,
-      "position": 45.142857142857146
+      "position": 43.86206896551724
     },
     {
       "page": "https://calcpromaster.com/auto/toll-cost/",
@@ -2155,16 +1112,16 @@
     {
       "page": "https://calcpromaster.com/auto/tow-capacity/",
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 10,
       "ctr": 0,
-      "position": 45.22222222222222
+      "position": 46.6
     },
     {
       "page": "https://calcpromaster.com/auto/trade-in-value",
       "clicks": 0,
-      "impressions": 66,
+      "impressions": 68,
       "ctr": 0,
-      "position": 76.31818181818181
+      "position": 75.17647058823529
     },
     {
       "page": "https://calcpromaster.com/auto/trade-in-value/",
@@ -2176,9 +1133,9 @@
     {
       "page": "https://calcpromaster.com/auto/trip-time/",
       "clicks": 0,
-      "impressions": 50,
+      "impressions": 64,
       "ctr": 0,
-      "position": 18.98
+      "position": 16.515625
     },
     {
       "page": "https://calcpromaster.com/blog/",
@@ -2211,9 +1168,9 @@
     {
       "page": "https://calcpromaster.com/business/",
       "clicks": 0,
-      "impressions": 21,
+      "impressions": 27,
       "ctr": 0,
-      "position": 20.666666666666668
+      "position": 18.185185185185187
     },
     {
       "page": "https://calcpromaster.com/business/business-roi/",
@@ -2246,9 +1203,9 @@
     {
       "page": "https://calcpromaster.com/business/depreciation/",
       "clicks": 0,
-      "impressions": 52,
+      "impressions": 65,
       "ctr": 0,
-      "position": 31.884615384615383
+      "position": 33.66153846153846
     },
     {
       "page": "https://calcpromaster.com/business/employee-cost",
@@ -2337,9 +1294,9 @@
     {
       "page": "https://calcpromaster.com/career/salary-negotiation-range/",
       "clicks": 0,
-      "impressions": 35,
+      "impressions": 37,
       "ctr": 0,
-      "position": 10.17142857142857
+      "position": 10.135135135135135
     },
     {
       "page": "https://calcpromaster.com/career/us-priority-date/",
@@ -2347,6 +1304,13 @@
       "impressions": 6,
       "ctr": 0,
       "position": 47.166666666666664
+    },
+    {
+      "page": "https://calcpromaster.com/construction",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 8
     },
     {
       "page": "https://calcpromaster.com/construction/",
@@ -2407,16 +1371,16 @@
     {
       "page": "https://calcpromaster.com/construction/concrete-slab",
       "clicks": 0,
-      "impressions": 10,
+      "impressions": 11,
       "ctr": 0,
-      "position": 61.8
+      "position": 57.63636363636363
     },
     {
       "page": "https://calcpromaster.com/construction/concrete-slab/",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 8,
       "ctr": 0,
-      "position": 36
+      "position": 45
     },
     {
       "page": "https://calcpromaster.com/construction/conduit-fill/",
@@ -2459,1070 +1423,6 @@
       "impressions": 12,
       "ctr": 0,
       "position": 21.25
-    },
-    {
-      "page": "https://calcpromaster.com/construction/flooring",
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 44.25
-    },
-    {
-      "page": "https://calcpromaster.com/construction/flooring/",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 1
-    },
-    {
-      "page": "https://calcpromaster.com/construction/formwork",
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 25.875
-    },
-    {
-      "page": "https://calcpromaster.com/construction/formwork/",
-      "clicks": 0,
-      "impressions": 13,
-      "ctr": 0,
-      "position": 14.307692307692308
-    },
-    {
-      "page": "https://calcpromaster.com/construction/gravel/",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 8
-    },
-    {
-      "page": "https://calcpromaster.com/construction/gutter/",
-      "clicks": 0,
-      "impressions": 30,
-      "ctr": 0,
-      "position": 9.733333333333333
-    },
-    {
-      "page": "https://calcpromaster.com/construction/insulation/",
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 24.666666666666668
-    },
-    {
-      "page": "https://calcpromaster.com/construction/journeyman-wage-progression/",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 2
-    },
-    {
-      "page": "https://calcpromaster.com/construction/lumber-calculator/",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 5
-    },
-    {
-      "page": "https://calcpromaster.com/construction/pipe-volume/",
-      "clicks": 0,
-      "impressions": 73,
-      "ctr": 0,
-      "position": 53.3013698630137
-    },
-    {
-      "page": "https://calcpromaster.com/construction/post-hole-concrete",
-      "clicks": 0,
-      "impressions": 16,
-      "ctr": 0,
-      "position": 30.5
-    },
-    {
-      "page": "https://calcpromaster.com/construction/post-hole-concrete/",
-      "clicks": 0,
-      "impressions": 13,
-      "ctr": 0,
-      "position": 46.84615384615385
-    },
-    {
-      "page": "https://calcpromaster.com/construction/retaining-wall/",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 9
-    },
-    {
-      "page": "https://calcpromaster.com/construction/roof-pitch/",
-      "clicks": 0,
-      "impressions": 15,
-      "ctr": 0,
-      "position": 26.333333333333332
-    },
-    {
-      "page": "https://calcpromaster.com/construction/scaffolding/",
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 6.166666666666667
-    },
-    {
-      "page": "https://calcpromaster.com/construction/siding-squares/",
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 37.166666666666664
-    },
-    {
-      "page": "https://calcpromaster.com/construction/sod",
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 21.166666666666668
-    },
-    {
-      "page": "https://calcpromaster.com/construction/sod/",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 64
-    },
-    {
-      "page": "https://calcpromaster.com/construction/wall-area/",
-      "clicks": 0,
-      "impressions": 10,
-      "ctr": 0,
-      "position": 32.7
-    },
-    {
-      "page": "https://calcpromaster.com/construction/water-tank",
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 68
-    },
-    {
-      "page": "https://calcpromaster.com/construction/water-tank/",
-      "clicks": 0,
-      "impressions": 40,
-      "ctr": 0,
-      "position": 63.9
-    },
-    {
-      "page": "https://calcpromaster.com/conversion",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 7
-    },
-    {
-      "page": "https://calcpromaster.com/conversion/",
-      "clicks": 0,
-      "impressions": 14,
-      "ctr": 0,
-      "position": 8.5
-    },
-    {
-      "page": "https://calcpromaster.com/conversion/data-storage",
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 42.875
-    },
-    {
-      "page": "https://calcpromaster.com/conversion/data-storage/",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 25.666666666666668
-    },
-    {
-      "page": "https://calcpromaster.com/conversion/energy/",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 9.5
-    },
-    {
-      "page": "https://calcpromaster.com/conversion/radiation-dose-conv/",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 30.5
-    },
-    {
-      "page": "https://calcpromaster.com/conversion/shoe-size/",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 4
-    },
-    {
-      "page": "https://calcpromaster.com/conversion/thermal-conductivity",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 51.333333333333336
-    },
-    {
-      "page": "https://calcpromaster.com/conversion/wire-gauge-conv",
-      "clicks": 0,
-      "impressions": 69,
-      "ctr": 0,
-      "position": 70.52173913043478
-    },
-    {
-      "page": "https://calcpromaster.com/conversion/wire-gauge-conv/",
-      "clicks": 0,
-      "impressions": 64,
-      "ctr": 0,
-      "position": 70.078125
-    },
-    {
-      "page": "https://calcpromaster.com/disclaimer-finance",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 36
-    },
-    {
-      "page": "https://calcpromaster.com/education/act-sat-compare/",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 9.666666666666666
-    },
-    {
-      "page": "https://calcpromaster.com/education/act-score/",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 113
-    },
-    {
-      "page": "https://calcpromaster.com/education/attendance-rate/",
-      "clicks": 0,
-      "impressions": 24,
-      "ctr": 0,
-      "position": 11.375
-    },
-    {
-      "page": "https://calcpromaster.com/education/citation-count/",
-      "clicks": 0,
-      "impressions": 37,
-      "ctr": 0,
-      "position": 43.351351351351354
-    },
-    {
-      "page": "https://calcpromaster.com/education/class-rank/",
-      "clicks": 0,
-      "impressions": 10,
-      "ctr": 0,
-      "position": 47.5
-    },
-    {
-      "page": "https://calcpromaster.com/education/college-cost-planner",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 7
-    },
-    {
-      "page": "https://calcpromaster.com/education/course-load/",
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 12.125
-    },
-    {
-      "page": "https://calcpromaster.com/education/exam-score-needed/",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 75
-    },
-    {
-      "page": "https://calcpromaster.com/education/financial-need/",
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 9.666666666666666
-    },
-    {
-      "page": "https://calcpromaster.com/education/gpa-target/",
-      "clicks": 0,
-      "impressions": 22,
-      "ctr": 0,
-      "position": 34.09090909090909
-    },
-    {
-      "page": "https://calcpromaster.com/education/gpa/",
-      "clicks": 0,
-      "impressions": 65,
-      "ctr": 0,
-      "position": 34.723076923076924
-    },
-    {
-      "page": "https://calcpromaster.com/education/grade-needed/",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 5
-    },
-    {
-      "page": "https://calcpromaster.com/education/graduation-date",
-      "clicks": 0,
-      "impressions": 25,
-      "ctr": 0,
-      "position": 5.88
-    },
-    {
-      "page": "https://calcpromaster.com/education/graduation-date/",
-      "clicks": 0,
-      "impressions": 20,
-      "ctr": 0,
-      "position": 6.3
-    },
-    {
-      "page": "https://calcpromaster.com/education/percentile-rank/",
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 12.25
-    },
-    {
-      "page": "https://calcpromaster.com/education/plagiarism-check/",
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 9
-    },
-    {
-      "page": "https://calcpromaster.com/education/presentation-time/",
-      "clicks": 0,
-      "impressions": 106,
-      "ctr": 0,
-      "position": 8.29245283018868
-    },
-    {
-      "page": "https://calcpromaster.com/education/quiz-score/",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 18.666666666666668
-    },
-    {
-      "page": "https://calcpromaster.com/education/reading-speed/",
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 58.111111111111114
-    },
-    {
-      "page": "https://calcpromaster.com/education/reading-time",
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 59.333333333333336
-    },
-    {
-      "page": "https://calcpromaster.com/education/reading-time/",
-      "clicks": 0,
-      "impressions": 23,
-      "ctr": 0,
-      "position": 65.04347826086956
-    },
-    {
-      "page": "https://calcpromaster.com/education/sat-score",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 5
-    },
-    {
-      "page": "https://calcpromaster.com/education/school-fee-inflation/",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 5
-    },
-    {
-      "page": "https://calcpromaster.com/education/study-break/",
-      "clicks": 0,
-      "impressions": 16,
-      "ctr": 0,
-      "position": 7.4375
-    },
-    {
-      "page": "https://calcpromaster.com/education/test-average/",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 26
-    },
-    {
-      "page": "https://calcpromaster.com/education/tuition-cost",
-      "clicks": 0,
-      "impressions": 114,
-      "ctr": 0,
-      "position": 4.824561403508772
-    },
-    {
-      "page": "https://calcpromaster.com/education/tuition-cost/",
-      "clicks": 0,
-      "impressions": 45,
-      "ctr": 0,
-      "position": 5.933333333333334
-    },
-    {
-      "page": "https://calcpromaster.com/embed/",
-      "clicks": 0,
-      "impressions": 11,
-      "ctr": 0,
-      "position": 2.090909090909091
-    },
-    {
-      "page": "https://calcpromaster.com/engineering/",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 50.333333333333336
-    },
-    {
-      "page": "https://calcpromaster.com/engineering/beam-deflection/",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 29.666666666666668
-    },
-    {
-      "page": "https://calcpromaster.com/engineering/inductor-energy/",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 10.666666666666666
-    },
-    {
-      "page": "https://calcpromaster.com/engineering/inductor/",
-      "clicks": 0,
-      "impressions": 14,
-      "ctr": 0,
-      "position": 50.07142857142857
-    },
-    {
-      "page": "https://calcpromaster.com/engineering/kva-kw/",
-      "clicks": 0,
-      "impressions": 16,
-      "ctr": 0,
-      "position": 71.5625
-    },
-    {
-      "page": "https://calcpromaster.com/engineering/orifice-flow",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 9.5
-    },
-    {
-      "page": "https://calcpromaster.com/engineering/orifice-flow/",
-      "clicks": 0,
-      "impressions": 22,
-      "ctr": 0,
-      "position": 54.72727272727273
-    },
-    {
-      "page": "https://calcpromaster.com/engineering/pump-power",
-      "clicks": 0,
-      "impressions": 30,
-      "ctr": 0,
-      "position": 67.96666666666667
-    },
-    {
-      "page": "https://calcpromaster.com/engineering/pump-power/",
-      "clicks": 0,
-      "impressions": 29,
-      "ctr": 0,
-      "position": 44.41379310344828
-    },
-    {
-      "page": "https://calcpromaster.com/engineering/steel-weight",
-      "clicks": 0,
-      "impressions": 76,
-      "ctr": 0,
-      "position": 62.6578947368421
-    },
-    {
-      "page": "https://calcpromaster.com/engineering/steel-weight/",
-      "clicks": 0,
-      "impressions": 11,
-      "ctr": 0,
-      "position": 46.36363636363637
-    },
-    {
-      "page": "https://calcpromaster.com/engineering/thermal/",
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 77.22222222222223
-    },
-    {
-      "page": "https://calcpromaster.com/engineering/ups-sizing",
-      "clicks": 0,
-      "impressions": 60,
-      "ctr": 0,
-      "position": 57
-    },
-    {
-      "page": "https://calcpromaster.com/engineering/ups-sizing/",
-      "clicks": 0,
-      "impressions": 16,
-      "ctr": 0,
-      "position": 65.5625
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/",
-      "clicks": 0,
-      "impressions": 15,
-      "ctr": 0,
-      "position": 6.933333333333334
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/blood-alcohol/",
-      "clicks": 0,
-      "impressions": 21,
-      "ctr": 0,
-      "position": 38.666666666666664
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/business-days",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 41
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/business-days/",
-      "clicks": 0,
-      "impressions": 23,
-      "ctr": 0,
-      "position": 45.21739130434783
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/calorie-counter",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 77
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/calorie-counter/",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 74
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/carbon",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 31.666666666666668
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/carbon/",
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 5.5
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/coffee-cost",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 10.5
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/coffee-cost/",
-      "clicks": 0,
-      "impressions": 89,
-      "ctr": 0,
-      "position": 10.213483146067416
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/currency-exchange",
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 56.888888888888886
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/currency-exchange/",
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 36
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/day-of-week/",
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 44.4
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/distance-pace/",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 7.333333333333333
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/easter-date",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 9
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/easter-date/",
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 49.8
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/electricity",
-      "clicks": 0,
-      "impressions": 7,
-      "ctr": 0,
-      "position": 18.428571428571427
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/electricity/",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 7
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/event-countdown",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 9
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/event-countdown/",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 10
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/fitness-age/",
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 74.5
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/garden",
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 45.75
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/garden/",
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 25.75
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/gift-wrap/",
-      "clicks": 0,
-      "impressions": 72,
-      "ctr": 0,
-      "position": 9.444444444444445
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/grocery-budget",
-      "clicks": 0,
-      "impressions": 16,
-      "ctr": 0,
-      "position": 49
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/grocery-budget/",
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 73.25
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/gst",
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 11.88888888888889
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/gst/",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 1
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/jet-lag",
-      "clicks": 0,
-      "impressions": 20,
-      "ctr": 0,
-      "position": 7.15
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/jet-lag/",
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 3.4166666666666665
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/laundry-cost",
-      "clicks": 0,
-      "impressions": 10,
-      "ctr": 0,
-      "position": 14
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/laundry-cost/",
-      "clicks": 0,
-      "impressions": 13,
-      "ctr": 0,
-      "position": 13.307692307692308
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/leap-year/",
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 14
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/moon-phase",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 2
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/moon-phase/",
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 11.5
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/moving-truck/",
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 20.666666666666668
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/pet-age",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 29
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/poker-flush",
-      "clicks": 0,
-      "impressions": 18,
-      "ctr": 0,
-      "position": 10.944444444444445
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/poker-flush/",
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 7.833333333333333
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/pomodoro-planner/",
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 19.25
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/timezone/",
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 6.5
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/trip-fuel-cost/",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 57
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/vacation-budget",
-      "clicks": 0,
-      "impressions": 28,
-      "ctr": 0,
-      "position": 21.5
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/vacation-budget/",
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 17
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/walking-steps/",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 34
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/weather",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 6
-    },
-    {
-      "page": "https://calcpromaster.com/everyday/weather/",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 4
-    },
-    {
-      "page": "https://calcpromaster.com/family/",
-      "clicks": 0,
-      "impressions": 55,
-      "ctr": 0,
-      "position": 10.218181818181819
-    },
-    {
-      "page": "https://calcpromaster.com/family/alimony-estimator/",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 55.666666666666664
-    },
-    {
-      "page": "https://calcpromaster.com/family/baby-feeding",
-      "clicks": 0,
-      "impressions": 14,
-      "ctr": 0,
-      "position": 4.285714285714286
-    },
-    {
-      "page": "https://calcpromaster.com/family/baby-feeding/",
-      "clicks": 0,
-      "impressions": 13,
-      "ctr": 0,
-      "position": 9.307692307692308
-    },
-    {
-      "page": "https://calcpromaster.com/family/baby-formula",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 7
-    },
-    {
-      "page": "https://calcpromaster.com/family/baby-formula/",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 67
-    },
-    {
-      "page": "https://calcpromaster.com/family/baby-name/",
-      "clicks": 0,
-      "impressions": 31,
-      "ctr": 0,
-      "position": 68.03225806451613
-    },
-    {
-      "page": "https://calcpromaster.com/family/baby-weight-gain/",
-      "clicks": 0,
-      "impressions": 106,
-      "ctr": 0,
-      "position": 9
-    },
-    {
-      "page": "https://calcpromaster.com/family/child-height/",
-      "clicks": 0,
-      "impressions": 615,
-      "ctr": 0,
-      "position": 8.419512195121952
-    },
-    {
-      "page": "https://calcpromaster.com/family/child-support-split/",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 10
-    },
-    {
-      "page": "https://calcpromaster.com/family/childcare-cost",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 4
-    },
-    {
-      "page": "https://calcpromaster.com/family/diaper-cost/",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 7.666666666666667
-    },
-    {
-      "page": "https://calcpromaster.com/family/family-budget-simple/",
-      "clicks": 0,
-      "impressions": 19,
-      "ctr": 0,
-      "position": 36.21052631578947
-    },
-    {
-      "page": "https://calcpromaster.com/family/family-budget/",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 47
-    },
-    {
-      "page": "https://calcpromaster.com/family/family-meal-cost/",
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 6.75
-    },
-    {
-      "page": "https://calcpromaster.com/family/school-supplies/",
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 4.2
-    },
-    {
-      "page": "https://calcpromaster.com/family/vacation-with-kids",
-      "clicks": 0,
-      "impressions": 32,
-      "ctr": 0,
-      "position": 14
-    },
-    {
-      "page": "https://calcpromaster.com/family/vacation-with-kids/",
-      "clicks": 0,
-      "impressions": 37,
-      "ctr": 0,
-      "position": 7.486486486486487
-    },
-    {
-      "page": "https://calcpromaster.com/finance/529-plan",
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 36.4
-    },
-    {
-      "page": "https://calcpromaster.com/finance/529-plan/",
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 7.5
-    },
-    {
-      "page": "https://calcpromaster.com/finance/amortization/",
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 87.5
-    },
-    {
-      "page": "https://calcpromaster.com/finance/appreciation-forecast",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 8.333333333333332
-    },
-    {
-      "page": "https://calcpromaster.com/finance/apy-calculator",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 60
-    },
-    {
-      "page": "https://calcpromaster.com/finance/apy-calculator/",
-      "clicks": 0,
-      "impressions": 318,
-      "ctr": 0,
-      "position": 26.11949685534591
-    },
-    {
-      "page": "https://calcpromaster.com/finance/australia-income-tax/",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 9
-    },
-    {
-      "page": "https://calcpromaster.com/finance/auto-lease-vs-buy",
-      "clicks": 0,
-      "impressions": 32,
-      "ctr": 0,
-      "position": 60.5625
-    },
-    {
-      "page": "https://calcpromaster.com/finance/biweekly-mortgage",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 62
-    },
-    {
-      "page": "https://calcpromaster.com/finance/bond-duration",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 6
-    },
-    {
-      "page": "https://calcpromaster.com/finance/bond-price/",
-      "clicks": 0,
-      "impressions": 14,
-      "ctr": 0,
-      "position": 60.357142857142854
-    },
-    {
-      "page": "https://calcpromaster.com/finance/bonds",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 10
-    },
-    {
-      "page": "https://calcpromaster.com/finance/cagr/",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 10
     }
   ],
   "pairs": [
@@ -4634,9 +2534,9 @@
       "query": "2015 income tax calculator",
       "page": "https://calcpromaster.com/finance/canada-income-tax/",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 67
+      "position": 67.25
     },
     {
       "query": "20awg in mm",
@@ -4730,9 +2630,9 @@
       "query": "28 lakh home loan emi",
       "page": "https://calcpromaster.com/regional/home-loan-emi-india/",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 5,
       "ctr": 0,
-      "position": 82.25
+      "position": 82.8
     },
     {
       "query": "28 lakh home loan emi calculator",
@@ -4917,6 +2817,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 73
+    },
+    {
+      "query": "300 earned leave encashment calculator",
+      "page": "https://calcpromaster.com/regional/leave-encashment/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 42
     },
     {
       "query": "30ga to mm",
@@ -5653,6 +3561,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 6
+    },
+    {
+      "query": "aerobic decoupling calculator",
+      "page": "https://calcpromaster.com/hub/fitness",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 70
     },
     {
       "query": "affordability calculator auto",
@@ -6714,7 +4630,7 @@
       "query": "average calculator with weighting",
       "page": "https://calcpromaster.com/math/weighted-average/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
       "position": 65
     },
@@ -6773,6 +4689,22 @@
       "impressions": 1,
       "ctr": 0,
       "position": 88
+    },
+    {
+      "query": "average pmi",
+      "page": "https://calcpromaster.com/finance/pmi-calculator/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 76
+    },
+    {
+      "query": "average pmi cost",
+      "page": "https://calcpromaster.com/finance/pmi-calculator/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 84
     },
     {
       "query": "average sit ups per minute",
@@ -7098,9 +5030,9 @@
       "query": "backup bandwidth calculator",
       "page": "https://calcpromaster.com/tech",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 5,
       "ctr": 0,
-      "position": 72.5
+      "position": 75
     },
     {
       "query": "backup battery calculator",
@@ -7109,6 +5041,22 @@
       "impressions": 1,
       "ctr": 0,
       "position": 71
+    },
+    {
+      "query": "balance to credit limit ratio",
+      "page": "https://calcpromaster.com/finance/credit-utilization/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 100
+    },
+    {
+      "query": "balance to limit ratio calculator",
+      "page": "https://calcpromaster.com/finance/credit-utilization",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 66
     },
     {
       "query": "band color code resistor",
@@ -7130,9 +5078,9 @@
       "query": "bandwidth calculator",
       "page": "https://calcpromaster.com/tech",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 12,
       "ctr": 0,
-      "position": 66.16666666666667
+      "position": 65.91666666666667
     },
     {
       "query": "bandwidth calculator formula",
@@ -7154,9 +5102,25 @@
       "query": "bandwidth calculator software",
       "page": "https://calcpromaster.com/tech",
       "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 71
+    },
+    {
+      "query": "bandwidth cap calculator",
+      "page": "https://calcpromaster.com/tech",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 82.5
+    },
+    {
+      "query": "bandwidth download calculator",
+      "page": "https://calcpromaster.com/tech/internet-speed/",
+      "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 70
+      "position": 66
     },
     {
       "query": "bandwidth storage calculator",
@@ -7237,6 +5201,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 50
+    },
+    {
+      "query": "bc closing costs calculator",
+      "page": "https://calcpromaster.com/finance/closing-costs/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 54
     },
     {
       "query": "bedroom tv height calculator",
@@ -7517,6 +5489,14 @@
       "impressions": 2,
       "ctr": 0,
       "position": 6
+    },
+    {
+      "query": "bit rate calculator",
+      "page": "https://calcpromaster.com/tech",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 88
     },
     {
       "query": "bitrate streaming calculator",
@@ -7815,6 +5795,22 @@
       "position": 19
     },
     {
+      "query": "break even margin of safety formula",
+      "page": "https://calcpromaster.com/guides/break-even/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 95
+    },
+    {
+      "query": "breakeven margin of safety",
+      "page": "https://calcpromaster.com/guides/break-even/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 79
+    },
+    {
       "query": "bring home income calculator",
       "page": "https://calcpromaster.com/regional/uk-take-home-salary/",
       "clicks": 0,
@@ -7877,6 +5873,14 @@
       "impressions": 12,
       "ctr": 0,
       "position": 4.333333333333334
+    },
+    {
+      "query": "bullet drop data",
+      "page": "https://calcpromaster.com/science/bullet-drop/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 67
     },
     {
       "query": "bullet drop formula",
@@ -8210,17 +6214,17 @@
       "query": "cable length calculation",
       "page": "https://calcpromaster.com/tech/cable-length/",
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 9,
       "ctr": 0,
-      "position": 88.375
+      "position": 87.88888888888889
     },
     {
       "query": "cable length calculator",
       "page": "https://calcpromaster.com/tech/cable-length/",
       "clicks": 0,
-      "impressions": 24,
+      "impressions": 27,
       "ctr": 0,
-      "position": 83.25
+      "position": 83.22222222222223
     },
     {
       "query": "calc ip",
@@ -8631,6 +6635,14 @@
       "position": 15
     },
     {
+      "query": "calculate bullet drop",
+      "page": "https://calcpromaster.com/science/bullet-drop/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
+    },
+    {
       "query": "calculate business days",
       "page": "https://calcpromaster.com/guides/business-days",
       "clicks": 0,
@@ -8727,12 +6739,28 @@
       "position": 64
     },
     {
+      "query": "calculate depreciation equivalent",
+      "page": "https://calcpromaster.com/business/depreciation/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 22
+    },
+    {
       "query": "calculate determinant of matrix",
       "page": "https://calcpromaster.com/math/matrix-det/",
       "clicks": 0,
       "impressions": 2,
       "ctr": 0,
       "position": 74
+    },
+    {
+      "query": "calculate dew point",
+      "page": "https://calcpromaster.com/science/dew-point/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 55
     },
     {
       "query": "calculate dew point from relative humidity and temperature",
@@ -8810,9 +6838,9 @@
       "query": "calculate download time",
       "page": "https://calcpromaster.com/tech/internet-speed/",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 21.5
+      "position": 29.666666666666668
     },
     {
       "query": "calculate driving and rest time",
@@ -8879,6 +6907,14 @@
       "position": 80.5
     },
     {
+      "query": "calculate federal income tax",
+      "page": "https://calcpromaster.com/finance/canada-income-tax/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 53
+    },
+    {
       "query": "calculate federal income tax return",
       "page": "https://calcpromaster.com/finance/us-income-tax/",
       "clicks": 0,
@@ -8898,9 +6934,17 @@
       "query": "calculate fha mortgage",
       "page": "https://calcpromaster.com/finance/fha-loan/",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 5,
       "ctr": 0,
-      "position": 81.66666666666667
+      "position": 86.6
+    },
+    {
+      "query": "calculate fha mortgage levittown pa",
+      "page": "https://calcpromaster.com/finance/fha-loan/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
     },
     {
       "query": "calculate fibonacci sequence",
@@ -8935,6 +6979,22 @@
       "position": 92
     },
     {
+      "query": "calculate fortnightly pay",
+      "page": "https://calcpromaster.com/regional/singapore-cpf/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "query": "calculate fortnightly pay",
+      "page": "https://calcpromaster.com/regional/singapore-take-home-salary/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 31
+    },
+    {
       "query": "calculate free water deficit",
       "page": "https://calcpromaster.com/health/free-water-deficit",
       "clicks": 0,
@@ -8957,6 +7017,30 @@
       "impressions": 2,
       "ctr": 0,
       "position": 58
+    },
+    {
+      "query": "calculate gear ratio",
+      "page": "https://calcpromaster.com/guides/gear-ratio",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 81
+    },
+    {
+      "query": "calculate gear ratios",
+      "page": "https://calcpromaster.com/guides/gear-ratio",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 78
+    },
+    {
+      "query": "calculate gearbox ratio",
+      "page": "https://calcpromaster.com/guides/gear-ratio",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 77
     },
     {
       "query": "calculate gi index",
@@ -9127,6 +7211,14 @@
       "position": 84
     },
     {
+      "query": "calculate income tax canada",
+      "page": "https://calcpromaster.com/finance/canada-income-tax/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
       "query": "calculate infant weight percentile",
       "page": "https://calcpromaster.com/family/baby-weight-gain/",
       "clicks": 0,
@@ -9165,6 +7257,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 57
+    },
+    {
+      "query": "calculate kinetic energy formula",
+      "page": "https://calcpromaster.com/science/kinetic-energy/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
     },
     {
       "query": "calculate kitchen remodel",
@@ -9351,6 +7451,14 @@
       "position": 73
     },
     {
+      "query": "calculate mortgage insurance",
+      "page": "https://calcpromaster.com/finance/pmi-calculator/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 49
+    },
+    {
       "query": "calculate mortgage payment formula",
       "page": "https://calcpromaster.com/guides/mortgage",
       "clicks": 0,
@@ -9450,9 +7558,9 @@
       "query": "calculate pmi",
       "page": "https://calcpromaster.com/finance/pmi-calculator/",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 8,
       "ctr": 0,
-      "position": 28.5
+      "position": 30.375
     },
     {
       "query": "calculate pmi payment",
@@ -9647,6 +7755,14 @@
       "position": 89.5
     },
     {
+      "query": "calculate rpm gear ratio",
+      "page": "https://calcpromaster.com/guides/gear-ratio",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 91
+    },
+    {
       "query": "calculate salary",
       "page": "https://calcpromaster.com/regional/singapore-cpf",
       "clicks": 0,
@@ -9815,12 +7931,20 @@
       "position": 47
     },
     {
-      "query": "calculate the earnings per share",
-      "page": "https://calcpromaster.com/finance/eps-calculator/",
+      "query": "calculate the dew point",
+      "page": "https://calcpromaster.com/science/dew-point/",
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 67
+      "position": 58
+    },
+    {
+      "query": "calculate the earnings per share",
+      "page": "https://calcpromaster.com/finance/eps-calculator/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 72.5
     },
     {
       "query": "calculate the moment of inertia",
@@ -9938,9 +8062,9 @@
       "query": "calculate utilization",
       "page": "https://calcpromaster.com/finance/credit-utilization/",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 8,
       "ctr": 0,
-      "position": 88.57142857142857
+      "position": 89.125
     },
     {
       "query": "calculate utilization rate",
@@ -10015,6 +8139,14 @@
       "position": 84
     },
     {
+      "query": "calculate wallpaper rolls",
+      "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 75
+    },
+    {
       "query": "calculate weight",
       "page": "https://calcpromaster.com/health/ideal-body-weight/",
       "clicks": 0,
@@ -10050,15 +8182,15 @@
       "query": "calculate weighted average",
       "page": "https://calcpromaster.com/math/weighted-average/",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 6,
       "ctr": 0,
-      "position": 70.4
+      "position": 70.66666666666667
     },
     {
       "query": "calculate weighted average calculator",
       "page": "https://calcpromaster.com/math/weighted-average/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 5,
       "ctr": 0,
       "position": 55
     },
@@ -10282,9 +8414,9 @@
       "query": "calculating kinetic energy",
       "page": "https://calcpromaster.com/science/kinetic-energy/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 14
+      "position": 13
     },
     {
       "query": "calculating latency",
@@ -10301,6 +8433,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 83
+    },
+    {
+      "query": "calculating mortgage payments formula",
+      "page": "https://calcpromaster.com/guides/mortgage",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 93.5
     },
     {
       "query": "calculating osmolarity",
@@ -10338,9 +8478,9 @@
       "query": "calculating pmi",
       "page": "https://calcpromaster.com/finance/pmi-calculator/",
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 10,
       "ctr": 0,
-      "position": 23.875
+      "position": 24.4
     },
     {
       "query": "calculating reading level",
@@ -10442,9 +8582,9 @@
       "query": "calculating weighted average",
       "page": "https://calcpromaster.com/math/weighted-average/",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 78
+      "position": 77.75
     },
     {
       "query": "calculation dividend yield",
@@ -10498,9 +8638,9 @@
       "query": "calculation of ev",
       "page": "https://calcpromaster.com/finance/ev-ebitda/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 96
+      "position": 95.5
     },
     {
       "query": "calculation of free water deficit",
@@ -10594,9 +8734,9 @@
       "query": "calculation weighted average",
       "page": "https://calcpromaster.com/math/weighted-average/",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 81.5
+      "position": 80.66666666666667
     },
     {
       "query": "calculator b2b",
@@ -10759,6 +8899,14 @@
       "position": 75.6923076923077
     },
     {
+      "query": "calculator for wallpaper",
+      "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 67
+    },
+    {
       "query": "calculator home insurance",
       "page": "https://calcpromaster.com/lifestyle/home-insurance/",
       "clicks": 0,
@@ -10802,9 +8950,9 @@
       "query": "calculator kinetic energy",
       "page": "https://calcpromaster.com/science/kinetic-energy/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 63
+      "position": 38.5
     },
     {
       "query": "calculator master",
@@ -10890,7 +9038,7 @@
       "query": "calculator salary switzerland",
       "page": "https://calcpromaster.com/regional/switzerland-take-home-salary/",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
       "position": 54
     },
@@ -10949,6 +9097,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 64
+    },
+    {
+      "query": "calculator wallpaper",
+      "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
     },
     {
       "query": "calculator zonnepanelen",
@@ -11087,12 +9243,20 @@
       "position": 7
     },
     {
+      "query": "canada income tax calc",
+      "page": "https://calcpromaster.com/finance/canada-income-tax/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 68
+    },
+    {
       "query": "canada income tax calculator",
       "page": "https://calcpromaster.com/finance/canada-income-tax/",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 4,
       "ctr": 0,
-      "position": 61
+      "position": 68.75
     },
     {
       "query": "canada tax calculator 2025",
@@ -11117,6 +9281,14 @@
       "impressions": 2,
       "ctr": 0,
       "position": 59.5
+    },
+    {
+      "query": "canadian tax return calculator",
+      "page": "https://calcpromaster.com/finance/canada-income-tax/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
     },
     {
       "query": "candle wax calculator",
@@ -11458,9 +9630,9 @@
       "query": "cdac calculator",
       "page": "https://calcpromaster.com/regional/singapore-cpf",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 15,
       "ctr": 0,
-      "position": 73.85714285714286
+      "position": 69.8
     },
     {
       "query": "cds calculator",
@@ -11501,6 +9673,22 @@
       "impressions": 2,
       "ctr": 0,
       "position": 41.5
+    },
+    {
+      "query": "cfpb mortgage payment calculation principal and interest formula",
+      "page": "https://calcpromaster.com/guides/mortgage",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 31
+    },
+    {
+      "query": "cfpb mortgage payment principal and interest calculation formula",
+      "page": "https://calcpromaster.com/guides/mortgage",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 26
     },
     {
       "query": "charging time",
@@ -11802,9 +9990,9 @@
       "query": "closing cost and down payment calculator",
       "page": "https://calcpromaster.com/finance/closing-costs/",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 8,
       "ctr": 0,
-      "position": 14.571428571428571
+      "position": 23.75
     },
     {
       "query": "closing cost calculator",
@@ -11834,9 +10022,9 @@
       "query": "cloud backup cost",
       "page": "https://calcpromaster.com/tech/cloud-storage/",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 92.5
+      "position": 93
     },
     {
       "query": "cloud based transfer pricing",
@@ -11863,6 +10051,14 @@
       "position": 96
     },
     {
+      "query": "cloud storage calculator",
+      "page": "https://calcpromaster.com/tech/cloud-storage/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 73
+    },
+    {
       "query": "cloud storage cost",
       "page": "https://calcpromaster.com/tech/cloud-storage/",
       "clicks": 0,
@@ -11874,9 +10070,9 @@
       "query": "cloud storage cost calculator",
       "page": "https://calcpromaster.com/tech/cloud-storage/",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 5,
       "ctr": 0,
-      "position": 52.666666666666664
+      "position": 52
     },
     {
       "query": "cloud storage pricing",
@@ -11890,9 +10086,9 @@
       "query": "cloud storage pricing calculator",
       "page": "https://calcpromaster.com/tech/cloud-storage/",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 58
+      "position": 46.75
     },
     {
       "query": "cloud storage storage capacity",
@@ -11981,6 +10177,14 @@
       "impressions": 16,
       "ctr": 0,
       "position": 8.3125
+    },
+    {
+      "query": "cole and son wallpaper calculator",
+      "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 78
     },
     {
       "query": "color code resistor",
@@ -12234,9 +10438,9 @@
       "query": "compute weighted average",
       "page": "https://calcpromaster.com/math/weighted-average/",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 67.66666666666667
+      "position": 71.5
     },
     {
       "query": "computer power requirements calculator",
@@ -12453,6 +10657,14 @@
       "impressions": 6,
       "ctr": 0,
       "position": 24
+    },
+    {
+      "query": "contractor pay calculator",
+      "page": "https://calcpromaster.com/regional/singapore-take-home-salary/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 70
     },
     {
       "query": "contractor take home pay calculator",
@@ -12911,6 +11123,14 @@
       "position": 75
     },
     {
+      "query": "cost per gb calculator",
+      "page": "https://calcpromaster.com/tech/cloud-storage/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
       "query": "cost per kilometre of car",
       "page": "https://calcpromaster.com/guides/auto",
       "clicks": 0,
@@ -13002,17 +11222,25 @@
       "query": "cpf board calculator",
       "page": "https://calcpromaster.com/regional/singapore-cpf",
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 12,
       "ctr": 0,
-      "position": 70.5
+      "position": 74
+    },
+    {
+      "query": "cpf cal",
+      "page": "https://calcpromaster.com/regional/singapore-cpf",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 82
     },
     {
       "query": "cpf calculate",
       "page": "https://calcpromaster.com/regional/singapore-cpf",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 9,
       "ctr": 0,
-      "position": 81.6
+      "position": 80.77777777777777
     },
     {
       "query": "cpf calculate",
@@ -13026,9 +11254,9 @@
       "query": "cpf calculator",
       "page": "https://calcpromaster.com/regional/singapore-cpf",
       "clicks": 0,
-      "impressions": 20,
+      "impressions": 29,
       "ctr": 0,
-      "position": 79.6
+      "position": 77.41379310344827
     },
     {
       "query": "cpf calculator",
@@ -13082,17 +11310,17 @@
       "query": "cpf calculator for pr",
       "page": "https://calcpromaster.com/regional/singapore-cpf",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 75
+      "position": 77.5
     },
     {
       "query": "cpf calculator singapore",
       "page": "https://calcpromaster.com/regional/singapore-cpf",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 80
+      "position": 79
     },
     {
       "query": "cpf contribution 2024 calculator",
@@ -13106,17 +11334,17 @@
       "query": "cpf contribution calculator",
       "page": "https://calcpromaster.com/regional/singapore-cpf",
       "clicks": 0,
-      "impressions": 21,
+      "impressions": 30,
       "ctr": 0,
-      "position": 81.33333333333333
+      "position": 79.76666666666667
     },
     {
       "query": "cpf contribution rate calculator",
       "page": "https://calcpromaster.com/regional/singapore-cpf",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 84
+      "position": 83.5
     },
     {
       "query": "cpf contributions calculator",
@@ -13226,9 +11454,9 @@
       "query": "credit card utilization calculator",
       "page": "https://calcpromaster.com/finance/credit-utilization/",
       "clicks": 0,
-      "impressions": 26,
+      "impressions": 29,
       "ctr": 0,
-      "position": 40.92307692307692
+      "position": 42.41379310344828
     },
     {
       "query": "credit card utilization percentage calculator",
@@ -13263,6 +11491,14 @@
       "position": 64
     },
     {
+      "query": "credit usage percentage calculator",
+      "page": "https://calcpromaster.com/finance/credit-utilization/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 60
+    },
+    {
       "query": "credit utilization calculation",
       "page": "https://calcpromaster.com/finance/credit-utilization/",
       "clicks": 0,
@@ -13274,9 +11510,9 @@
       "query": "credit utilization calculator",
       "page": "https://calcpromaster.com/finance/credit-utilization/",
       "clicks": 0,
-      "impressions": 90,
+      "impressions": 95,
       "ctr": 0,
-      "position": 38.98888888888889
+      "position": 41.02105263157895
     },
     {
       "query": "credit utilization formula",
@@ -13306,9 +11542,9 @@
       "query": "cron validator",
       "page": "https://calcpromaster.com/tech/cron-validate/",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 6,
       "ctr": 0,
-      "position": 43
+      "position": 39
     },
     {
       "query": "crontab validate",
@@ -13610,9 +11846,9 @@
       "query": "data storage costs",
       "page": "https://calcpromaster.com/tech/cloud-storage/",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 96.5
+      "position": 94.66666666666667
     },
     {
       "query": "data streaming usage",
@@ -13735,6 +11971,14 @@
       "position": 95
     },
     {
+      "query": "debt/equity formula",
+      "page": "https://calcpromaster.com/finance/debt-to-equity/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 90
+    },
+    {
       "query": "deck paint calculator",
       "page": "https://calcpromaster.com/homegarden/deck-stain",
       "clicks": 0,
@@ -13818,9 +12062,9 @@
       "query": "depreciation calculator",
       "page": "https://calcpromaster.com/business/depreciation/",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 75.66666666666667
+      "position": 74.5
     },
     {
       "query": "depreciation calculator online",
@@ -14034,9 +12278,9 @@
       "query": "dew point calculator uk",
       "page": "https://calcpromaster.com/science/dew-point/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 11
+      "position": 9
     },
     {
       "query": "dew point conversion calculator",
@@ -14061,6 +12305,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 9
+    },
+    {
+      "query": "dew point temperature calculator",
+      "page": "https://calcpromaster.com/science/dew-point/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 54
     },
     {
       "query": "dew point 計算",
@@ -14359,6 +12611,14 @@
       "position": 89.66666666666667
     },
     {
+      "query": "dl speed calculator",
+      "page": "https://calcpromaster.com/tech/internet-speed/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 19
+    },
+    {
       "query": "dosage calculations calculator",
       "page": "https://calcpromaster.com/health/drug-dosage/",
       "clicks": 0,
@@ -14447,6 +12707,14 @@
       "position": 13.2
     },
     {
+      "query": "download cal",
+      "page": "https://calcpromaster.com/tech/internet-speed/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 54
+    },
+    {
       "query": "download calculator speed",
       "page": "https://calcpromaster.com/tech/internet-speed/",
       "clicks": 0,
@@ -14490,17 +12758,17 @@
       "query": "download rate calculator",
       "page": "https://calcpromaster.com/tech/internet-speed/",
       "clicks": 0,
-      "impressions": 16,
+      "impressions": 19,
       "ctr": 0,
-      "position": 29
+      "position": 28.68421052631579
     },
     {
       "query": "download speed",
       "page": "https://calcpromaster.com/tech/internet-speed",
       "clicks": 0,
-      "impressions": 17,
+      "impressions": 18,
       "ctr": 0,
-      "position": 65.23529411764706
+      "position": 63.27777777777778
     },
     {
       "query": "download speed cal",
@@ -14514,33 +12782,41 @@
       "query": "download speed calc",
       "page": "https://calcpromaster.com/tech/internet-speed/",
       "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 47
+    },
+    {
+      "query": "download speed calculate",
+      "page": "https://calcpromaster.com/tech/internet-speed",
+      "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 48
+      "position": 67
     },
     {
       "query": "download speed calculator",
       "page": "https://calcpromaster.com/tech/internet-speed",
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 9,
       "ctr": 0,
-      "position": 60.625
+      "position": 61.111111111111114
     },
     {
       "query": "download speed calculator",
       "page": "https://calcpromaster.com/tech/internet-speed/",
       "clicks": 0,
-      "impressions": 42,
+      "impressions": 48,
       "ctr": 0,
-      "position": 34.642857142857146
+      "position": 33.854166666666664
     },
     {
       "query": "download speed calculator mbps",
       "page": "https://calcpromaster.com/tech/internet-speed/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 42
+      "position": 41.5
     },
     {
       "query": "download speed calculator test",
@@ -14554,9 +12830,9 @@
       "query": "download speed converter",
       "page": "https://calcpromaster.com/tech/internet-speed",
       "clicks": 0,
-      "impressions": 10,
+      "impressions": 14,
       "ctr": 0,
-      "position": 68.1
+      "position": 69.64285714285714
     },
     {
       "query": "download speed estimate",
@@ -14578,9 +12854,9 @@
       "query": "download speed estimator",
       "page": "https://calcpromaster.com/tech/internet-speed/",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 46
+      "position": 46.333333333333336
     },
     {
       "query": "download speed time",
@@ -14626,33 +12902,33 @@
       "query": "download time calc",
       "page": "https://calcpromaster.com/tech/internet-speed",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 68
+      "position": 66.66666666666667
     },
     {
       "query": "download time calc",
       "page": "https://calcpromaster.com/tech/internet-speed/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 13
+      "position": 7
     },
     {
       "query": "download time calculator",
       "page": "https://calcpromaster.com/tech/internet-speed",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 69.5
+      "position": 69.33333333333333
     },
     {
       "query": "download time calculator",
       "page": "https://calcpromaster.com/tech/internet-speed/",
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 15,
       "ctr": 0,
-      "position": 15.071428571428571
+      "position": 14.133333333333333
     },
     {
       "query": "download time estimate",
@@ -14674,9 +12950,9 @@
       "query": "download timer calculator",
       "page": "https://calcpromaster.com/tech/internet-speed/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 3,
       "ctr": 0,
-      "position": 15
+      "position": 15.666666666666666
     },
     {
       "query": "downloading speed",
@@ -14690,9 +12966,9 @@
       "query": "downloadmbps",
       "page": "https://calcpromaster.com/tech/internet-speed",
       "clicks": 0,
-      "impressions": 19,
+      "impressions": 27,
       "ctr": 0,
-      "position": 83.3157894736842
+      "position": 82.70370370370371
     },
     {
       "query": "downlod time calculator",
@@ -14866,9 +13142,9 @@
       "query": "earnings per share calculator",
       "page": "https://calcpromaster.com/finance/eps-calculator/",
       "clicks": 0,
-      "impressions": 58,
+      "impressions": 60,
       "ctr": 0,
-      "position": 17.344827586206897
+      "position": 19.683333333333334
     },
     {
       "query": "easter calculator",
@@ -14911,6 +13187,14 @@
       "position": 29
     },
     {
+      "query": "effective rate tax calculator",
+      "page": "https://calcpromaster.com/finance/effective-tax-rate/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 70
+    },
+    {
       "query": "effective tax",
       "page": "https://calcpromaster.com/finance/effective-tax-rate/",
       "clicks": 0,
@@ -14930,9 +13214,9 @@
       "query": "effective tax rate calculator",
       "page": "https://calcpromaster.com/finance/effective-tax-rate/",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 4,
       "ctr": 0,
-      "position": 53.5
+      "position": 56.75
     },
     {
       "query": "effective tax rate equation",
@@ -14949,6 +13233,14 @@
       "impressions": 2,
       "ctr": 0,
       "position": 88
+    },
+    {
+      "query": "eip3 calculator",
+      "page": "https://calcpromaster.com/finance/ev-ebitda/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 40
     },
     {
       "query": "electric meter reading calculator",
@@ -15210,9 +13502,9 @@
       "query": "enterprise%2bseo%2broi%2bcalculator",
       "page": "https://calcpromaster.com/finance/ev-ebitda/",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 6,
       "ctr": 0,
-      "position": 10.6
+      "position": 10.333333333333334
     },
     {
       "query": "entertainment cost per month",
@@ -15258,9 +13550,9 @@
       "query": "eps calculator",
       "page": "https://calcpromaster.com/finance/eps-calculator/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 88
+      "position": 89
     },
     {
       "query": "erg split calculator",
@@ -15274,9 +13566,9 @@
       "query": "esi calculator online",
       "page": "https://calcpromaster.com/regional/esic-calculator/",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 5,
       "ctr": 0,
-      "position": 78.66666666666667
+      "position": 80.4
     },
     {
       "query": "esi contribution calculation",
@@ -15312,6 +13604,14 @@
     },
     {
       "query": "estimate download speed",
+      "page": "https://calcpromaster.com/tech/internet-speed",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 51
+    },
+    {
+      "query": "estimate download speed",
       "page": "https://calcpromaster.com/tech/internet-speed/",
       "clicks": 0,
       "impressions": 1,
@@ -15319,12 +13619,28 @@
       "position": 61
     },
     {
+      "query": "estimate download time",
+      "page": "https://calcpromaster.com/tech/internet-speed/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 12
+    },
+    {
+      "query": "estimate download time calculator",
+      "page": "https://calcpromaster.com/tech/internet-speed/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
       "query": "estimate effective tax rate",
       "page": "https://calcpromaster.com/finance/effective-tax-rate/",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 5,
       "ctr": 0,
-      "position": 69
+      "position": 71.2
     },
     {
       "query": "estimate for home insurance",
@@ -15431,6 +13747,14 @@
       "position": 99
     },
     {
+      "query": "estimate income tax canada",
+      "page": "https://calcpromaster.com/finance/canada-income-tax/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 76
+    },
+    {
       "query": "estimate paint cost",
       "page": "https://calcpromaster.com/homegarden/paint-cost/",
       "clicks": 0,
@@ -15469,6 +13793,14 @@
       "impressions": 5,
       "ctr": 0,
       "position": 16
+    },
+    {
+      "query": "estimate resale",
+      "page": "https://calcpromaster.com/lifestyle/resell-value",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 99
     },
     {
       "query": "estimate salary",
@@ -15711,6 +14043,14 @@
       "position": 80
     },
     {
+      "query": "event per second calculator",
+      "page": "https://calcpromaster.com/tech",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
+    },
+    {
       "query": "exam calculator",
       "page": "https://calcpromaster.com/education/exam-score-needed/",
       "clicks": 0,
@@ -15754,9 +14094,9 @@
       "query": "exercise value calculator",
       "page": "https://calcpromaster.com/hub/fitness",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 94
+      "position": 89.5
     },
     {
       "query": "expand each binomial calculator",
@@ -15999,6 +14339,14 @@
       "position": 9
     },
     {
+      "query": "federal tax effective rate calculator",
+      "page": "https://calcpromaster.com/finance/effective-tax-rate/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 78
+    },
+    {
       "query": "fertilizer calculator",
       "page": "https://calcpromaster.com/homegarden/fertilizer/",
       "clicks": 0,
@@ -16061,6 +14409,22 @@
       "impressions": 1,
       "ctr": 0,
       "position": 97
+    },
+    {
+      "query": "fha loan calculator louisiana",
+      "page": "https://calcpromaster.com/finance/fha-loan/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 85
+    },
+    {
+      "query": "fha loan calculator massachusetts",
+      "page": "https://calcpromaster.com/finance/fha-loan/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 62
     },
     {
       "query": "fha loan calculator mortgage",
@@ -16170,9 +14534,9 @@
       "query": "fha mortgage calculator",
       "page": "https://calcpromaster.com/finance/fha-loan/",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 93.33333333333333
+      "position": 92.75
     },
     {
       "query": "fha mortgage payment calculator",
@@ -16186,9 +14550,9 @@
       "query": "fha payment calculator",
       "page": "https://calcpromaster.com/finance/fha-loan/",
       "clicks": 0,
-      "impressions": 32,
+      "impressions": 33,
       "ctr": 0,
-      "position": 13.0625
+      "position": 15.454545454545455
     },
     {
       "query": "fha plus mortgage calculator",
@@ -16213,6 +14577,14 @@
       "impressions": 2,
       "ctr": 0,
       "position": 80.5
+    },
+    {
+      "query": "fibre speed calculator",
+      "page": "https://calcpromaster.com/tech",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 62
     },
     {
       "query": "fica calculator",
@@ -16421,6 +14793,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 13
+    },
+    {
+      "query": "fixed rate mortgage monthly payment formula",
+      "page": "https://calcpromaster.com/guides/mortgage",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 82
     },
     {
       "query": "floor area calculator",
@@ -16751,12 +15131,28 @@
       "position": 74
     },
     {
-      "query": "formula for calculating mortgage payments",
+      "query": "formula for calculating mortgage",
       "page": "https://calcpromaster.com/guides/mortgage",
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 92
+      "position": 99
+    },
+    {
+      "query": "formula for calculating mortgage payment",
+      "page": "https://calcpromaster.com/guides/mortgage",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 94
+    },
+    {
+      "query": "formula for calculating mortgage payments",
+      "page": "https://calcpromaster.com/guides/mortgage",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 88
     },
     {
       "query": "formula for carbon dating",
@@ -16813,6 +15209,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 8
+    },
+    {
+      "query": "formula for investment",
+      "page": "https://calcpromaster.com/finance/investment",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 76
     },
     {
       "query": "formula for mortgage",
@@ -16893,6 +15297,22 @@
       "impressions": 1,
       "ctr": 0,
       "position": 11
+    },
+    {
+      "query": "formula to calculate mortgage payment",
+      "page": "https://calcpromaster.com/guides/mortgage",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 86
+    },
+    {
+      "query": "formula to calculate mortgage repayments",
+      "page": "https://calcpromaster.com/guides/mortgage",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 100
     },
     {
       "query": "formula to calculate my weight",
@@ -17082,9 +15502,9 @@
       "query": "free payroll calculator",
       "page": "https://calcpromaster.com/regional/singapore-cpf",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 21
+      "position": 14.5
     },
     {
       "query": "free pmi calculator",
@@ -17178,9 +15598,9 @@
       "query": "french press coffee to water ratio calculator",
       "page": "https://calcpromaster.com/lifestyle/french-press-ratio/",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 27.5
+      "position": 29.333333333333332
     },
     {
       "query": "freq wavelength",
@@ -17431,6 +15851,14 @@
       "position": 2
     },
     {
+      "query": "gear ratio calc",
+      "page": "https://calcpromaster.com/guides/gear-ratio",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 76
+    },
+    {
       "query": "gear ratio calculation",
       "page": "https://calcpromaster.com/guides/gear-ratio",
       "clicks": 0,
@@ -17450,9 +15878,9 @@
       "query": "gear ratio formula",
       "page": "https://calcpromaster.com/guides/gear-ratio",
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 18,
       "ctr": 0,
-      "position": 77.71428571428571
+      "position": 79.72222222222223
     },
     {
       "query": "gear ratio formula rpm",
@@ -17469,6 +15897,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 77
+    },
+    {
+      "query": "gear ratio math",
+      "page": "https://calcpromaster.com/guides/gear-ratio",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 78
     },
     {
       "query": "gear ratio rpm speed calculator",
@@ -17506,7 +15942,7 @@
       "query": "gear torque calculator",
       "page": "https://calcpromaster.com/guides/gear-ratio",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
       "position": 85
     },
@@ -17522,17 +15958,17 @@
       "query": "gearbox ratio",
       "page": "https://calcpromaster.com/guides/gear-ratio",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 87
+      "position": 82.5
     },
     {
       "query": "gearbox ratio calculator",
       "page": "https://calcpromaster.com/guides/gear-ratio",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 75
+      "position": 82.5
     },
     {
       "query": "gearbox ratio calculator rpm",
@@ -17927,6 +16363,14 @@
       "position": 23
     },
     {
+      "query": "greatest common divisor calculator",
+      "page": "https://calcpromaster.com/math/lcm-gcd/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 82
+    },
+    {
       "query": "greatest common divisor finder",
       "page": "https://calcpromaster.com/math/lcm-gcd/",
       "clicks": 0,
@@ -18141,6 +16585,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 68
+    },
+    {
+      "query": "gross pay estimator",
+      "page": "https://calcpromaster.com/regional/singapore-take-home-salary/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 64
     },
     {
       "query": "gross salary",
@@ -19079,6 +17531,14 @@
       "position": 40
     },
     {
+      "query": "how do you calculate a gear ratio",
+      "page": "https://calcpromaster.com/guides/gear-ratio",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 83
+    },
+    {
       "query": "how do you calculate a monthly mortgage payment",
       "page": "https://calcpromaster.com/guides/mortgage",
       "clicks": 0,
@@ -19215,6 +17675,14 @@
       "position": 20
     },
     {
+      "query": "how is monthly mortgage payment calculated",
+      "page": "https://calcpromaster.com/guides/mortgage",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 24
+    },
+    {
       "query": "how is mortgage monthly payment calculated",
       "page": "https://calcpromaster.com/guides/mortgage",
       "clicks": 0,
@@ -19226,9 +17694,9 @@
       "query": "how is mortgage payment calculated",
       "page": "https://calcpromaster.com/guides/mortgage",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 5,
       "ctr": 0,
-      "position": 20.666666666666668
+      "position": 42.2
     },
     {
       "query": "how is pmi calculated",
@@ -19647,12 +18115,28 @@
       "position": 70
     },
     {
+      "query": "how long would it take to download the entire internet",
+      "page": "https://calcpromaster.com/tech/internet-speed",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 56
+    },
+    {
       "query": "how many 5 oz servings in a bottle of wine",
       "page": "https://calcpromaster.com/lifestyle/wine-servings/",
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 2
+    },
+    {
+      "query": "how many boards do i need to cover a wall",
+      "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 52
     },
     {
       "query": "how many boxes of vinyl flooring do i need",
@@ -19799,6 +18283,14 @@
       "position": 85
     },
     {
+      "query": "how many calories should i eat to lose weight tdee?",
+      "page": "https://calcpromaster.com/guides/calories",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 84
+    },
+    {
       "query": "how many days are in business days",
       "page": "https://calcpromaster.com/guides/business-days",
       "clicks": 0,
@@ -19871,6 +18363,14 @@
       "position": 89
     },
     {
+      "query": "how many lengths in a roll of wallpaper",
+      "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 100
+    },
+    {
       "query": "how many lumens do i need for each room in the house",
       "page": "https://calcpromaster.com/homegarden/lighting-rooms",
       "clicks": 0,
@@ -19927,6 +18427,14 @@
       "position": 84
     },
     {
+      "query": "how many ml of water should i drink a day",
+      "page": "https://calcpromaster.com/guides/water-intake",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 90
+    },
+    {
       "query": "how many ml should you drink of water a day",
       "page": "https://calcpromaster.com/guides/water-intake",
       "clicks": 0,
@@ -19962,9 +18470,9 @@
       "query": "how many rolls of wallpaper",
       "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 93
+      "position": 89
     },
     {
       "query": "how many rolls of wallpaper do i need",
@@ -19975,12 +18483,28 @@
       "position": 88
     },
     {
+      "query": "how many rolls of wallpaper for one wall",
+      "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 94
+    },
+    {
       "query": "how many rolls of wallpaper will i need",
       "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 73
+    },
+    {
+      "query": "how many rolls of wallpaper will i need calculator",
+      "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 70
     },
     {
       "query": "how many rolls wallpaper",
@@ -20103,6 +18627,14 @@
       "position": 51.5
     },
     {
+      "query": "how many waking hours are in a year",
+      "page": "https://calcpromaster.com/guides/screen-time",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
       "query": "how many wallpaper rolls for one wall",
       "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
       "clicks": 0,
@@ -20218,9 +18750,9 @@
       "query": "how much chlorine to add to pool calculator australia",
       "page": "https://calcpromaster.com/homegarden/pool-chemicals",
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 10,
       "ctr": 0,
-      "position": 84.22222222222223
+      "position": 84.5
     },
     {
       "query": "how much chlorine to raise 1 ppm",
@@ -20471,6 +19003,14 @@
       "position": 43
     },
     {
+      "query": "how much is pmi on a $500 000 loan",
+      "page": "https://calcpromaster.com/finance/pmi-calculator/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 27
+    },
+    {
       "query": "how much is pmi on a 600k house",
       "page": "https://calcpromaster.com/finance/pmi-calculator/",
       "clicks": 0,
@@ -20530,9 +19070,9 @@
       "query": "how much liquid chlorine to add to pool calculator australia",
       "page": "https://calcpromaster.com/homegarden/pool-chemicals",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 7,
       "ctr": 0,
-      "position": 84.5
+      "position": 84.42857142857143
     },
     {
       "query": "how much lvp do i need",
@@ -20642,7 +19182,7 @@
       "query": "how much rent can i afford chart",
       "page": "https://calcpromaster.com/finance/rent-affordability/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
       "position": 14
     },
@@ -20711,20 +19251,28 @@
       "position": 57
     },
     {
+      "query": "how much wallpaper calculator",
+      "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 78
+    },
+    {
       "query": "how much wallpaper do i need",
       "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 6,
       "ctr": 0,
-      "position": 96.8
+      "position": 96.5
     },
     {
       "query": "how much wallpaper do i need calculator",
       "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 6,
       "ctr": 0,
-      "position": 80
+      "position": 77.66666666666667
     },
     {
       "query": "how much wallpaper do i need for one wall",
@@ -20778,17 +19326,17 @@
       "query": "how much water should i drink",
       "page": "https://calcpromaster.com/guides/water-intake",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 99
+      "position": 99.5
     },
     {
       "query": "how much water should i drink daily",
       "page": "https://calcpromaster.com/guides/water-intake",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 89
+      "position": 87.5
     },
     {
       "query": "how much water should you drink a day in millilitres",
@@ -21143,6 +19691,14 @@
       "position": 86
     },
     {
+      "query": "how to calculate caloric expenditure",
+      "page": "https://calcpromaster.com/guides/calories",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 77
+    },
+    {
       "query": "how to calculate calories burned at rest",
       "page": "https://calcpromaster.com/fitness/calories-burned",
       "clicks": 0,
@@ -21255,6 +19811,14 @@
       "position": 86
     },
     {
+      "query": "how to calculate credit card utilization",
+      "page": "https://calcpromaster.com/finance/credit-utilization/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 93
+    },
+    {
       "query": "how to calculate currency conversion rate",
       "page": "https://calcpromaster.com/guides/currency-conversion",
       "clicks": 0,
@@ -21285,6 +19849,14 @@
       "impressions": 2,
       "ctr": 0,
       "position": 17.5
+    },
+    {
+      "query": "how to calculate depreciation with salvage value",
+      "page": "https://calcpromaster.com/business/depreciation/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 78
     },
     {
       "query": "how to calculate dietary fiber",
@@ -21354,9 +19926,9 @@
       "query": "how to calculate download speed",
       "page": "https://calcpromaster.com/tech/internet-speed/",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 27.5
+      "position": 33.333333333333336
     },
     {
       "query": "how to calculate download time",
@@ -21381,6 +19953,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 19
+    },
+    {
+      "query": "how to calculate effective tax rate from 1040",
+      "page": "https://calcpromaster.com/finance/effective-tax-rate/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 72
     },
     {
       "query": "how to calculate electricity bill",
@@ -21530,9 +20110,9 @@
       "query": "how to calculate gear ratios",
       "page": "https://calcpromaster.com/guides/gear-ratio",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 6,
       "ctr": 0,
-      "position": 73.6
+      "position": 73.66666666666667
     },
     {
       "query": "how to calculate glycemic index",
@@ -21583,6 +20163,22 @@
       "position": 79
     },
     {
+      "query": "how to calculate gross salary singapore",
+      "page": "https://calcpromaster.com/regional/singapore-cpf/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 68
+    },
+    {
+      "query": "how to calculate gross salary singapore",
+      "page": "https://calcpromaster.com/regional/singapore-take-home-salary/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 64
+    },
+    {
       "query": "how to calculate guaranteed surrender value",
       "page": "https://calcpromaster.com/finance/insurance-surrender-value/",
       "clicks": 0,
@@ -21610,9 +20206,9 @@
       "query": "how to calculate home loan payment formula",
       "page": "https://calcpromaster.com/guides/mortgage",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 3,
       "ctr": 0,
-      "position": 21
+      "position": 38
     },
     {
       "query": "how to calculate homeowners insurance",
@@ -21629,6 +20225,22 @@
       "impressions": 1,
       "ctr": 0,
       "position": 86
+    },
+    {
+      "query": "how to calculate how much of mortgage payment is principal",
+      "page": "https://calcpromaster.com/guides/mortgage",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 94
+    },
+    {
+      "query": "how to calculate how much wallpaper you need",
+      "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 98
     },
     {
       "query": "how to calculate ideal body weight formula",
@@ -21778,9 +20390,9 @@
       "query": "how to calculate monthly mortgage payments formula",
       "page": "https://calcpromaster.com/guides/mortgage",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 4,
       "ctr": 0,
-      "position": 38.5
+      "position": 58.25
     },
     {
       "query": "how to calculate mortgage payment equation",
@@ -21802,17 +20414,17 @@
       "query": "how to calculate mortgage payments",
       "page": "https://calcpromaster.com/guides/mortgage",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 8,
       "ctr": 0,
-      "position": 43.6
+      "position": 30.875
     },
     {
       "query": "how to calculate mortgage payments by hand",
       "page": "https://calcpromaster.com/guides/mortgage",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 3,
       "ctr": 0,
-      "position": 59
+      "position": 35.666666666666664
     },
     {
       "query": "how to calculate mortgage payments formula",
@@ -21829,6 +20441,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 88
+    },
+    {
+      "query": "how to calculate my effective tax rate",
+      "page": "https://calcpromaster.com/finance/effective-tax-rate/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 60
     },
     {
       "query": "how to calculate my electricity bill",
@@ -21922,9 +20542,9 @@
       "query": "how to calculate pmi on mortgage",
       "page": "https://calcpromaster.com/finance/pmi-calculator/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 87
+      "position": 67.5
     },
     {
       "query": "how to calculate pmi percentage",
@@ -21949,6 +20569,14 @@
       "impressions": 8,
       "ctr": 0,
       "position": 41
+    },
+    {
+      "query": "how to calculate profit earned per share",
+      "page": "https://calcpromaster.com/finance/eps-calculator/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 70
     },
     {
       "query": "how to calculate prorated salary singapore",
@@ -22071,6 +20699,14 @@
       "position": 70
     },
     {
+      "query": "how to calculate slab area",
+      "page": "https://calcpromaster.com/construction/concrete-slab/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 80
+    },
+    {
       "query": "how to calculate sleep debt",
       "page": "https://calcpromaster.com/health/sleep-debt",
       "clicks": 0,
@@ -22101,6 +20737,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 89
+    },
+    {
+      "query": "how to calculate speed of wavelength",
+      "page": "https://calcpromaster.com/science/wave-speed/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 64
     },
     {
       "query": "how to calculate steel weight",
@@ -22175,6 +20819,14 @@
       "position": 92
     },
     {
+      "query": "how to calculate the interest portion of a mortgage payment",
+      "page": "https://calcpromaster.com/guides/mortgage",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 91
+    },
+    {
       "query": "how to calculate thermal expansion",
       "page": "https://calcpromaster.com/engineering/thermal/",
       "clicks": 0,
@@ -22186,9 +20838,9 @@
       "query": "how to calculate tip",
       "page": "https://calcpromaster.com/guides/tip",
       "clicks": 0,
-      "impressions": 327,
+      "impressions": 385,
       "ctr": 0,
-      "position": 7.027522935779817
+      "position": 6.5168831168831165
     },
     {
       "query": "how to calculate torque from gear ratio",
@@ -22349,6 +21001,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 56
+    },
+    {
+      "query": "how to count leave encashment",
+      "page": "https://calcpromaster.com/regional/leave-encashment/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 68
     },
     {
       "query": "how to decide how much storage you need",
@@ -22743,6 +21403,22 @@
       "position": 84
     },
     {
+      "query": "how wide is a roll of wallpaper",
+      "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 93
+    },
+    {
+      "query": "how wide is a standard roll of wallpaper",
+      "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 87
+    },
+    {
       "query": "human steps to dog steps calculator",
       "page": "https://calcpromaster.com/everyday/pet-age",
       "clicks": 0,
@@ -23007,6 +21683,14 @@
       "position": 61
     },
     {
+      "query": "if i sell this",
+      "page": "https://calcpromaster.com/lifestyle/resell-value",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
       "query": "if you spend $3 on coffee per school/work day, how much are you spending per year? under $100 between $100 and $250 between $250 and $750 more than $750",
       "page": "https://calcpromaster.com/everyday/coffee-cost",
       "clicks": 0,
@@ -23018,9 +21702,9 @@
       "query": "if you spend $3 on coffee per school/work day, how much are you spending per year? under $100 between $100 and $250 between $250 and $750 more than $750",
       "page": "https://calcpromaster.com/everyday/coffee-cost/",
       "clicks": 0,
-      "impressions": 68,
+      "impressions": 84,
       "ctr": 0,
-      "position": 8.514705882352942
+      "position": 8.69047619047619
     },
     {
       "query": "imaginary number calculator",
@@ -23082,9 +21766,9 @@
       "query": "income tax calculator",
       "page": "https://calcpromaster.com/finance/canada-income-tax/",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 32.66666666666667
+      "position": 33.5
     },
     {
       "query": "income tax calculator",
@@ -23119,6 +21803,14 @@
       "position": 4
     },
     {
+      "query": "income tax calculators",
+      "page": "https://calcpromaster.com/finance/canada-income-tax/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 39
+    },
+    {
       "query": "income tax canada",
       "page": "https://calcpromaster.com/finance/canada-income-tax/",
       "clicks": 0,
@@ -23130,9 +21822,9 @@
       "query": "income tax canada calculator",
       "page": "https://calcpromaster.com/finance/canada-income-tax/",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 5,
       "ctr": 0,
-      "position": 62
+      "position": 69.6
     },
     {
       "query": "income tax estimator",
@@ -23149,6 +21841,22 @@
       "impressions": 1,
       "ctr": 0,
       "position": 40
+    },
+    {
+      "query": "income tax return calculator canada",
+      "page": "https://calcpromaster.com/finance/canada-income-tax/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 70
+    },
+    {
+      "query": "income tax return ontario calculator",
+      "page": "https://calcpromaster.com/finance/canada-income-tax/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 91
     },
     {
       "query": "income to rent calculator",
@@ -23282,9 +21990,9 @@
       "query": "initial investment formula",
       "page": "https://calcpromaster.com/finance/investment",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 6,
       "ctr": 0,
-      "position": 60
+      "position": 55.333333333333336
     },
     {
       "query": "inj dose calculation",
@@ -23415,6 +22123,14 @@
       "position": 80
     },
     {
+      "query": "internet download calculator",
+      "page": "https://calcpromaster.com/tech/internet-speed/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9
+    },
+    {
       "query": "internet download speed calculator",
       "page": "https://calcpromaster.com/tech/internet-speed/",
       "clicks": 0,
@@ -23485,6 +22201,22 @@
       "impressions": 1,
       "ctr": 0,
       "position": 93
+    },
+    {
+      "query": "investment formula",
+      "page": "https://calcpromaster.com/finance/investment",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 35
+    },
+    {
+      "query": "investment value formula",
+      "page": "https://calcpromaster.com/finance/investment",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 64
     },
     {
       "query": "investopedia cagr calculator",
@@ -23679,6 +22411,14 @@
       "position": 88
     },
     {
+      "query": "is rent affordability based on gross income",
+      "page": "https://calcpromaster.com/finance/rent-affordability/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 75
+    },
+    {
       "query": "iso r value calculator",
       "page": "https://calcpromaster.com/construction/insulation/",
       "clicks": 0,
@@ -23834,9 +22574,9 @@
       "query": "kei calculator",
       "page": "https://calcpromaster.com/science/kinetic-energy/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 7,
       "ctr": 0,
-      "position": 3
+      "position": 5.571428571428571
     },
     {
       "query": "kepler's 3rd law calculator",
@@ -23887,6 +22627,14 @@
       "position": 46
     },
     {
+      "query": "kinetic energy cal",
+      "page": "https://calcpromaster.com/science/kinetic-energy/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 56
+    },
+    {
       "query": "kinetic energy calculation",
       "page": "https://calcpromaster.com/science/kinetic-energy/",
       "clicks": 0,
@@ -23898,9 +22646,9 @@
       "query": "kinetic energy calculator",
       "page": "https://calcpromaster.com/science/kinetic-energy/",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 7,
       "ctr": 0,
-      "position": 5.5
+      "position": 10.142857142857142
     },
     {
       "query": "kinetic energy formula calculator",
@@ -24551,6 +23299,14 @@
       "position": 83
     },
     {
+      "query": "length of roll of wallpaper",
+      "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 76
+    },
+    {
       "query": "length to beam ratio calculator",
       "page": "https://calcpromaster.com/engineering/beam-deflection/",
       "clicks": 0,
@@ -24570,9 +23326,9 @@
       "query": "liabilities to equity ratio",
       "page": "https://calcpromaster.com/finance/debt-to-equity/",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 7,
       "ctr": 0,
-      "position": 75.66666666666667
+      "position": 77.85714285714286
     },
     {
       "query": "liabilities to equity ratio calculator",
@@ -24594,17 +23350,17 @@
       "query": "liability to equity ratio",
       "page": "https://calcpromaster.com/finance/debt-to-equity/",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 6,
       "ctr": 0,
-      "position": 96.66666666666667
+      "position": 98
     },
     {
       "query": "liability to equity ratio formula",
       "page": "https://calcpromaster.com/finance/debt-to-equity/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 72
+      "position": 81.5
     },
     {
       "query": "life insurance surrender value calculator",
@@ -24695,6 +23451,14 @@
       "position": 82
     },
     {
+      "query": "line of code calculator",
+      "page": "https://calcpromaster.com/tech/code-line-count/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 78.5
+    },
+    {
       "query": "line regression calculator",
       "page": "https://calcpromaster.com/math/linear-regression/",
       "clicks": 0,
@@ -24778,9 +23542,9 @@
       "query": "link bandwidth calculator",
       "page": "https://calcpromaster.com/tech",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 62
+      "position": 57.5
     },
     {
       "query": "liquid chlorine calculator for pool",
@@ -24837,6 +23601,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 18
+    },
+    {
+      "query": "loam calculator",
+      "page": "https://calcpromaster.com/homegarden/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 79
     },
     {
       "query": "loan calculator with pmi",
@@ -25223,6 +23995,14 @@
       "position": 96
     },
     {
+      "query": "mas wage calculator",
+      "page": "https://calcpromaster.com/regional/singapore-take-home-salary/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
       "query": "mass inertia calculator",
       "page": "https://calcpromaster.com/science/moment-of-inertia/",
       "clicks": 0,
@@ -25237,6 +24017,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 77
+    },
+    {
+      "query": "master calculator online",
+      "page": "https://calcpromaster.com/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 35
     },
     {
       "query": "mastercard currency conversion rates calculator explanation",
@@ -25322,9 +24110,9 @@
       "query": "maximum cable length calculator",
       "page": "https://calcpromaster.com/tech/cable-length/",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 5,
       "ctr": 0,
-      "position": 79
+      "position": 79.6
     },
     {
       "query": "md5 calc",
@@ -25514,9 +24302,9 @@
       "query": "memory bandwidth calculator",
       "page": "https://calcpromaster.com/tech",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 77
+      "position": 77.5
     },
     {
       "query": "meter bill calculator",
@@ -25592,6 +24380,14 @@
     },
     {
       "query": "mifflin st jeor",
+      "page": "https://calcpromaster.com/guides/bmr",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 85
+    },
+    {
+      "query": "mifflin st jeor",
       "page": "https://calcpromaster.com/health/bmr-mifflin",
       "clicks": 0,
       "impressions": 6,
@@ -25658,9 +24454,9 @@
       "query": "mifflin st jeor calculator",
       "page": "https://calcpromaster.com/guides/bmr",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 9,
       "ctr": 0,
-      "position": 64.66666666666666
+      "position": 62.44444444444444
     },
     {
       "query": "mifflin st jeor calculator",
@@ -25711,6 +24507,22 @@
       "position": 2
     },
     {
+      "query": "mifflin st jeor equation authoritative source resting metabolic rate",
+      "page": "https://calcpromaster.com/guides/bmr",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 35
+    },
+    {
+      "query": "mifflin st jeor equation bmr calculator",
+      "page": "https://calcpromaster.com/guides/bmr",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 64.5
+    },
+    {
       "query": "mifflin st jeor equation calorie calculator",
       "page": "https://calcpromaster.com/guides/bmr",
       "clicks": 0,
@@ -25725,6 +24537,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 10
+    },
+    {
+      "query": "mifflin st jeor equation female bmr formula",
+      "page": "https://calcpromaster.com/guides/bmr",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 85
     },
     {
       "query": "mifflin st jeor equation for bmr",
@@ -25807,12 +24627,52 @@
       "position": 9
     },
     {
+      "query": "mifflin st jeor equation resting metabolic rate men",
+      "page": "https://calcpromaster.com/guides/bmr",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 74
+    },
+    {
       "query": "mifflin st jeor equation resting metabolic rate men 10 weight 6.25 height 5 age",
       "page": "https://calcpromaster.com/guides/bmr",
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 2
+    },
+    {
+      "query": "mifflin st jeor equation resting metabolic rate men formula",
+      "page": "https://calcpromaster.com/guides/bmr",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 99
+    },
+    {
+      "query": "mifflin st jeor equation resting metabolic rate source",
+      "page": "https://calcpromaster.com/guides/bmr",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 89
+    },
+    {
+      "query": "mifflin st jeor equation resting metabolic rate women",
+      "page": "https://calcpromaster.com/guides/bmr",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 85
+    },
+    {
+      "query": "mifflin st jeor equation resting metabolic rate women formula",
+      "page": "https://calcpromaster.com/guides/bmr",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 79
     },
     {
       "query": "mifflin st jeor equation sex age height weight calorie needs official",
@@ -25855,6 +24715,30 @@
       "position": 7
     },
     {
+      "query": "mifflin st jeor equation women bmr authoritative",
+      "page": "https://calcpromaster.com/guides/bmr",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 27
+    },
+    {
+      "query": "mifflin st jeor equation women bmr authoritative source",
+      "page": "https://calcpromaster.com/guides/bmr",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "query": "mifflin st jeor equation women formula authoritative",
+      "page": "https://calcpromaster.com/guides/bmr",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 36
+    },
+    {
       "query": "mifflin st jeor formel rechner",
       "page": "https://calcpromaster.com/health/bmr-mifflin",
       "clicks": 0,
@@ -25885,6 +24769,14 @@
       "impressions": 2,
       "ctr": 0,
       "position": 54.5
+    },
+    {
+      "query": "mifflin-st jeor",
+      "page": "https://calcpromaster.com/guides/bmr",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 81
     },
     {
       "query": "mifflin-st jeor",
@@ -25922,9 +24814,9 @@
       "query": "mifflin-st jeor bmr calculator formula",
       "page": "https://calcpromaster.com/guides/bmr",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 8
+      "position": 28.333333333333332
     },
     {
       "query": "mifflin-st jeor bmr calculator formula men",
@@ -25962,9 +24854,17 @@
       "query": "mifflin-st jeor bmr formula for men",
       "page": "https://calcpromaster.com/guides/bmr",
       "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 33
+    },
+    {
+      "query": "mifflin-st jeor bmr formula for women",
+      "page": "https://calcpromaster.com/guides/bmr",
+      "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 2
+      "position": 73
     },
     {
       "query": "mifflin-st jeor bmr formula women",
@@ -25981,6 +24881,22 @@
       "impressions": 1,
       "ctr": 0,
       "position": 59
+    },
+    {
+      "query": "mifflin-st jeor equation bmr calculator",
+      "page": "https://calcpromaster.com/guides/bmr",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 69
+    },
+    {
+      "query": "mifflin-st jeor equation calculator",
+      "page": "https://calcpromaster.com/guides/bmr",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 81
     },
     {
       "query": "mifflin-st jeor equation uses weight height age sex",
@@ -26199,6 +25115,14 @@
       "position": 65
     },
     {
+      "query": "modeled dollar estimate",
+      "page": "https://calcpromaster.com/finance/dca-calculator",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 75
+    },
+    {
       "query": "mom salary calculator",
       "page": "https://calcpromaster.com/regional/singapore-cpf/",
       "clicks": 0,
@@ -26271,6 +25195,22 @@
       "position": 10
     },
     {
+      "query": "monthly gross income calculator",
+      "page": "https://calcpromaster.com/regional/singapore-cpf",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 61
+    },
+    {
+      "query": "monthly gross income calculator",
+      "page": "https://calcpromaster.com/regional/singapore-take-home-salary/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 51
+    },
+    {
       "query": "monthly home insurance calculator",
       "page": "https://calcpromaster.com/lifestyle/home-insurance",
       "clicks": 0,
@@ -26287,12 +25227,20 @@
       "position": 30
     },
     {
+      "query": "monthly mortgage payment calculation formula",
+      "page": "https://calcpromaster.com/guides/mortgage",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 100
+    },
+    {
       "query": "monthly mortgage payment formula",
       "page": "https://calcpromaster.com/guides/mortgage",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 63
+      "position": 71.33333333333333
     },
     {
       "query": "monthly pmi calculator",
@@ -26487,6 +25435,14 @@
       "position": 100
     },
     {
+      "query": "mortgage formula",
+      "page": "https://calcpromaster.com/guides/mortgage",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 99
+    },
+    {
       "query": "mortgage insurance calculator",
       "page": "https://calcpromaster.com/finance/pmi-calculator/",
       "clicks": 0,
@@ -26498,9 +25454,25 @@
       "query": "mortgage insurance premium calculator",
       "page": "https://calcpromaster.com/finance/pmi-calculator/",
       "clicks": 0,
-      "impressions": 15,
+      "impressions": 16,
       "ctr": 0,
-      "position": 9.933333333333334
+      "position": 13.0625
+    },
+    {
+      "query": "mortgage payment calc formula",
+      "page": "https://calcpromaster.com/guides/mortgage",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 94
+    },
+    {
+      "query": "mortgage payment calculator formula principal interest taxes insurance",
+      "page": "https://calcpromaster.com/guides/mortgage",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 84
     },
     {
       "query": "mortgage payment calculator pmi",
@@ -26530,9 +25502,25 @@
       "query": "mortgage payment formula",
       "page": "https://calcpromaster.com/guides/mortgage",
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 22,
       "ctr": 0,
-      "position": 84.11111111111111
+      "position": 87.9090909090909
+    },
+    {
+      "query": "mortgage payment formula fixed rate",
+      "page": "https://calcpromaster.com/guides/mortgage",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 90
+    },
+    {
+      "query": "mortgage payment formula principal interest taxes insurance",
+      "page": "https://calcpromaster.com/guides/mortgage",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 94
     },
     {
       "query": "mortgage plus pmi calculator",
@@ -26554,9 +25542,17 @@
       "query": "mortgage pmi insurance calculator",
       "page": "https://calcpromaster.com/finance/pmi-calculator/",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 6,
       "ctr": 0,
-      "position": 11
+      "position": 34.333333333333336
+    },
+    {
+      "query": "mortgage rate formulas",
+      "page": "https://calcpromaster.com/guides/mortgage",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 97
     },
     {
       "query": "mortgage va calculator",
@@ -26858,9 +25854,9 @@
       "query": "my internet speed calculator",
       "page": "https://calcpromaster.com/tech/internet-speed",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 88
+      "position": 86
     },
     {
       "query": "myusfinance com tax calculator",
@@ -26983,6 +25979,22 @@
       "position": 22.5
     },
     {
+      "query": "net pay calculator singapore",
+      "page": "https://calcpromaster.com/regional/singapore-cpf",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 73
+    },
+    {
+      "query": "net pay calculator singapore",
+      "page": "https://calcpromaster.com/regional/singapore-take-home-salary/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 59
+    },
+    {
       "query": "net salary calculator switzerland",
       "page": "https://calcpromaster.com/regional/switzerland-take-home-salary/",
       "clicks": 0,
@@ -27045,6 +26057,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 92
+    },
+    {
+      "query": "normal fluid intake and output",
+      "page": "https://calcpromaster.com/guides/water-intake",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 39
     },
     {
       "query": "normal force calculator",
@@ -27359,6 +26379,14 @@
       "position": 65
     },
     {
+      "query": "one wallpaper roll size",
+      "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 79.5
+    },
+    {
       "query": "online cable calculator",
       "page": "https://calcpromaster.com/tech/cable-length/",
       "clicks": 0,
@@ -27434,9 +26462,9 @@
       "query": "online credit card utilization calculator",
       "page": "https://calcpromaster.com/finance/credit-utilization/",
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 9,
       "ctr": 0,
-      "position": 25
+      "position": 25.555555555555557
     },
     {
       "query": "online depreciation calculator",
@@ -27551,6 +26579,14 @@
       "position": 5
     },
     {
+      "query": "online tax calculator",
+      "page": "https://calcpromaster.com/finance/canada-income-tax/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
       "query": "online trigonometry calculator",
       "page": "https://calcpromaster.com/math/trigonometry/",
       "clicks": 0,
@@ -27599,6 +26635,14 @@
       "position": 66
     },
     {
+      "query": "ontario income tax return calculator",
+      "page": "https://calcpromaster.com/finance/canada-income-tax/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 92.5
+    },
+    {
       "query": "operating cash flow calculator",
       "page": "https://calcpromaster.com/finance/free-cash-flow/",
       "clicks": 0,
@@ -27642,9 +26686,9 @@
       "query": "orifice calculator",
       "page": "https://calcpromaster.com/engineering/orifice-flow/",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 5,
       "ctr": 0,
-      "position": 87.33333333333333
+      "position": 79.2
     },
     {
       "query": "orifice design calculator",
@@ -27661,6 +26705,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 81
+    },
+    {
+      "query": "orifice flow calculation",
+      "page": "https://calcpromaster.com/engineering/orifice-flow/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 90
     },
     {
       "query": "orifice flow calculator",
@@ -28199,6 +27251,14 @@
       "position": 84.5
     },
     {
+      "query": "payroll calculator",
+      "page": "https://calcpromaster.com/regional/singapore-take-home-salary/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 44
+    },
+    {
       "query": "payroll percentage calculator",
       "page": "https://calcpromaster.com/finance/payroll-tax/",
       "clicks": 0,
@@ -28229,6 +27289,14 @@
       "impressions": 3,
       "ctr": 0,
       "position": 68.33333333333333
+    },
+    {
+      "query": "pcie bandwidth calculator",
+      "page": "https://calcpromaster.com/tech",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 64
     },
     {
       "query": "pdi calculator",
@@ -28293,6 +27361,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 5
+    },
+    {
+      "query": "per km cost of running a car",
+      "page": "https://calcpromaster.com/guides/auto",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 95
     },
     {
       "query": "percentage depreciation calculator",
@@ -28583,6 +27659,14 @@
       "position": 100
     },
     {
+      "query": "pl leave encashment formula",
+      "page": "https://calcpromaster.com/regional/leave-encashment/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 54
+    },
+    {
       "query": "plank flooring layout calculator",
       "page": "https://calcpromaster.com/homegarden/vinyl-flooring/",
       "clicks": 0,
@@ -28698,25 +27782,25 @@
       "query": "pmi amount calculator",
       "page": "https://calcpromaster.com/finance/pmi-calculator/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 39
+      "position": 34
     },
     {
       "query": "pmi calculate",
       "page": "https://calcpromaster.com/finance/pmi-calculator/",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 6,
       "ctr": 0,
-      "position": 11.8
+      "position": 13.333333333333334
     },
     {
       "query": "pmi calculation",
       "page": "https://calcpromaster.com/finance/pmi-calculator/",
       "clicks": 0,
-      "impressions": 57,
+      "impressions": 58,
       "ctr": 0,
-      "position": 44.228070175438596
+      "position": 44.44827586206897
     },
     {
       "query": "pmi calculation formula",
@@ -28738,9 +27822,9 @@
       "query": "pmi calculator",
       "page": "https://calcpromaster.com/finance/pmi-calculator/",
       "clicks": 0,
-      "impressions": 142,
+      "impressions": 143,
       "ctr": 0,
-      "position": 9.852112676056338
+      "position": 10.006993006993007
     },
     {
       "query": "pmi calculator arizona",
@@ -28794,9 +27878,9 @@
       "query": "pmi calculators",
       "page": "https://calcpromaster.com/finance/pmi-calculator/",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 9,
       "ctr": 0,
-      "position": 29.285714285714285
+      "position": 30.444444444444443
     },
     {
       "query": "pmi cost",
@@ -28810,9 +27894,9 @@
       "query": "pmi cost calculator",
       "page": "https://calcpromaster.com/finance/pmi-calculator/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 34
+      "position": 48.5
     },
     {
       "query": "pmi elimination calculator",
@@ -28826,9 +27910,9 @@
       "query": "pmi estimate",
       "page": "https://calcpromaster.com/finance/pmi-calculator/",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 4,
       "ctr": 0,
-      "position": 56
+      "position": 51.25
     },
     {
       "query": "pmi estimator",
@@ -28882,9 +27966,9 @@
       "query": "pmi payment calculator",
       "page": "https://calcpromaster.com/finance/pmi-calculator/",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 6,
       "ctr": 0,
-      "position": 32.2
+      "position": 31.833333333333332
     },
     {
       "query": "pmi payoff calculator",
@@ -28930,9 +28014,9 @@
       "query": "pmi rate calculator",
       "page": "https://calcpromaster.com/finance/pmi-calculator/",
       "clicks": 0,
-      "impressions": 31,
+      "impressions": 33,
       "ctr": 0,
-      "position": 6.935483870967742
+      "position": 9.151515151515152
     },
     {
       "query": "pmi rates 2015",
@@ -29122,9 +28206,9 @@
       "query": "pool chemical calculator",
       "page": "https://calcpromaster.com/homegarden/pool-chemicals",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 6,
       "ctr": 0,
-      "position": 65.2
+      "position": 65.16666666666667
     },
     {
       "query": "pool chemical calculator australia",
@@ -29626,9 +28710,9 @@
       "query": "private mortgage insurance calculator",
       "page": "https://calcpromaster.com/finance/pmi-calculator/",
       "clicks": 0,
-      "impressions": 15,
+      "impressions": 17,
       "ctr": 0,
-      "position": 46
+      "position": 45.470588235294116
     },
     {
       "query": "private mortgage insurance cost calculator",
@@ -29813,6 +28897,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 62
+    },
+    {
+      "query": "prores data rate calculator",
+      "page": "https://calcpromaster.com/tech",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 68
     },
     {
       "query": "provincial income tax calculator",
@@ -30042,9 +29134,9 @@
       "query": "px to em calculator",
       "page": "https://calcpromaster.com/tech/font-size-conv/",
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 10,
       "ctr": 0,
-      "position": 18.555555555555557
+      "position": 22.9
     },
     {
       "query": "px to em converter",
@@ -30706,9 +29798,9 @@
       "query": "rbg to hex",
       "page": "https://calcpromaster.com/tech/rgb-hex/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 9
+      "position": 48.5
     },
     {
       "query": "rd account calculator",
@@ -30922,9 +30014,9 @@
       "query": "red green blue to hex",
       "page": "https://calcpromaster.com/tech/rgb-hex/",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 10,
       "ctr": 0,
-      "position": 85
+      "position": 84.6
     },
     {
       "query": "red to hex",
@@ -31082,9 +30174,9 @@
       "query": "rent budget calculator",
       "page": "https://calcpromaster.com/finance/rent-affordability/",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 5,
       "ctr": 0,
-      "position": 48.25
+      "position": 51
     },
     {
       "query": "rent calculator (how much rent can i afford?)",
@@ -31223,6 +30315,14 @@
       "position": 79
     },
     {
+      "query": "rent vs salary calculator",
+      "page": "https://calcpromaster.com/finance/rent-affordability/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 41
+    },
+    {
       "query": "rental deposit calculator",
       "page": "https://calcpromaster.com/lifestyle/rental-deposit",
       "clicks": 0,
@@ -31309,6 +30409,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 15
+    },
+    {
+      "query": "requests per second calculator",
+      "page": "https://calcpromaster.com/tech",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 68
     },
     {
       "query": "resell value",
@@ -31562,9 +30670,9 @@
       "query": "rgb color to hex",
       "page": "https://calcpromaster.com/tech/rgb-hex/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 3,
       "ctr": 0,
-      "position": 70
+      "position": 29.666666666666668
     },
     {
       "query": "rgb convert hex",
@@ -31607,12 +30715,36 @@
       "position": 73
     },
     {
+      "query": "rgb in hexadecimal",
+      "page": "https://calcpromaster.com/tech/rgb-hex/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
       "query": "rgb into hex",
       "page": "https://calcpromaster.com/tech/rgb-hex/",
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 10
+    },
+    {
+      "query": "rgb o hex",
+      "page": "https://calcpromaster.com/tech/rgb-hex/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "rgb ot hex",
+      "page": "https://calcpromaster.com/tech/rgb-hex/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
     },
     {
       "query": "rgb ti hex",
@@ -31626,9 +30758,9 @@
       "query": "rgb to hex",
       "page": "https://calcpromaster.com/tech/rgb-hex/",
       "clicks": 0,
-      "impressions": 76,
+      "impressions": 84,
       "ctr": 0,
-      "position": 13.026315789473685
+      "position": 12.345238095238095
     },
     {
       "query": "rgb to hex calculator",
@@ -31645,6 +30777,30 @@
       "impressions": 1,
       "ctr": 0,
       "position": 10
+    },
+    {
+      "query": "rgb to hex code converter",
+      "page": "https://calcpromaster.com/tech/rgb-hex/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "rgb to hex color",
+      "page": "https://calcpromaster.com/tech/rgb-hex/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "query": "rgb to hex color converter",
+      "page": "https://calcpromaster.com/tech/rgb-hex/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
     },
     {
       "query": "rgb to hex colour converter",
@@ -31666,9 +30822,9 @@
       "query": "rgb to hex converter",
       "page": "https://calcpromaster.com/tech/rgb-hex/",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 9,
       "ctr": 0,
-      "position": 27.857142857142858
+      "position": 22.77777777777778
     },
     {
       "query": "rgb to hex translator",
@@ -31690,9 +30846,9 @@
       "query": "rgb to hexadecimal",
       "page": "https://calcpromaster.com/tech/rgb-hex/",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 4,
       "ctr": 0,
-      "position": 12
+      "position": 10
     },
     {
       "query": "rickshaw fare calculator",
@@ -32111,6 +31267,14 @@
       "position": 68.33333333333333
     },
     {
+      "query": "rpm change with gear ratio",
+      "page": "https://calcpromaster.com/guides/gear-ratio",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 83
+    },
+    {
       "query": "rpm gear ratio formula",
       "page": "https://calcpromaster.com/guides/gear-ratio",
       "clicks": 0,
@@ -32130,9 +31294,9 @@
       "query": "rpm to gear ratio calculator",
       "page": "https://calcpromaster.com/guides/gear-ratio",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 80
+      "position": 78.5
     },
     {
       "query": "rumus pf ratio",
@@ -32202,17 +31366,17 @@
       "query": "salary calculation singapore",
       "page": "https://calcpromaster.com/regional/singapore-cpf",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 93
+      "position": 85.5
     },
     {
       "query": "salary calculation singapore",
       "page": "https://calcpromaster.com/regional/singapore-take-home-salary/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 70
+      "position": 65.5
     },
     {
       "query": "salary calculato",
@@ -32258,9 +31422,9 @@
       "query": "salary calculator",
       "page": "https://calcpromaster.com/regional/singapore-cpf",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 8,
       "ctr": 0,
-      "position": 73
+      "position": 14.625
     },
     {
       "query": "salary calculator",
@@ -32314,9 +31478,9 @@
       "query": "salary calculator singapore",
       "page": "https://calcpromaster.com/regional/singapore-cpf",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 55.666666666666664
+      "position": 57.75
     },
     {
       "query": "salary calculator singapore",
@@ -32338,9 +31502,9 @@
       "query": "salary calculator switzerland",
       "page": "https://calcpromaster.com/regional/switzerland-take-home-salary/",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 8,
       "ctr": 0,
-      "position": 60.57142857142857
+      "position": 61.5
     },
     {
       "query": "salary calculator take home",
@@ -32439,6 +31603,22 @@
       "position": 77
     },
     {
+      "query": "salary pay calculator",
+      "page": "https://calcpromaster.com/regional/singapore-cpf",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 67
+    },
+    {
+      "query": "salary pay calculator",
+      "page": "https://calcpromaster.com/regional/singapore-take-home-salary/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 46
+    },
+    {
       "query": "salary post tax",
       "page": "https://calcpromaster.com/regional/uk-take-home-salary/",
       "clicks": 0,
@@ -32530,9 +31710,9 @@
       "query": "salvage value calculator",
       "page": "https://calcpromaster.com/business/depreciation/",
       "clicks": 0,
-      "impressions": 13,
+      "impressions": 16,
       "ctr": 0,
-      "position": 40.76923076923077
+      "position": 38.375
     },
     {
       "query": "saudi salary",
@@ -32919,6 +32099,14 @@
       "position": 30
     },
     {
+      "query": "simple mortgage formula",
+      "page": "https://calcpromaster.com/guides/mortgage",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 29
+    },
+    {
       "query": "simulador de raid",
       "page": "https://calcpromaster.com/tech/raid-capacity/",
       "clicks": 0,
@@ -32941,6 +32129,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 91
+    },
+    {
+      "query": "singapore salary calculator",
+      "page": "https://calcpromaster.com/regional/singapore-take-home-salary/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 67
     },
     {
       "query": "single line depreciation calculator",
@@ -33015,6 +32211,206 @@
       "position": 9
     },
     {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/business/",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 9.6
+    },
+    {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/construction",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/construction/concrete-slab/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 8.5
+    },
+    {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/conversion/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/education/gpa-target/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/embed/",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/everyday/",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 8.2
+    },
+    {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/family/",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/finance/closing-costs/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/finance/ev-ebitda/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5.5
+    },
+    {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/finance/fha-loan/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/fitness/",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/fitness/pushup-test",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 6.5
+    },
+    {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/guides/break-even",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9.5
+    },
+    {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/homegarden/",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/lifestyle",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/lifestyle/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/lifestyle/resell-value/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/regional/pk-salary/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/regional/qurbani-cost/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 7.5
+    },
+    {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/science/bullet-drop/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/science/kinetic-energy/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 3.5
+    },
+    {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/tech",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "site:calcpromaster.com",
+      "page": "https://calcpromaster.com/tech/internet-speed",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 2.5
+    },
+    {
       "query": "sizing a ups battery backup",
       "page": "https://calcpromaster.com/engineering/ups-sizing",
       "clicks": 0,
@@ -33050,9 +32446,17 @@
       "query": "slab calculation",
       "page": "https://calcpromaster.com/construction/concrete-slab",
       "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 17
+    },
+    {
+      "query": "slab measurement calculator",
+      "page": "https://calcpromaster.com/construction/concrete-slab/",
+      "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 18
+      "position": 90
     },
     {
       "query": "sleep 90 minute cycles",
@@ -33514,9 +32918,9 @@
       "query": "solvecalcpro",
       "page": "https://calcpromaster.com/hub/math/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 9
+      "position": 9.5
     },
     {
       "query": "speed calculator cycling",
@@ -33621,6 +33025,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 83
+    },
+    {
+      "query": "sprinkler head calculator",
+      "page": "https://calcpromaster.com/homegarden/sprinkler-heads/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 67
     },
     {
       "query": "sprinkler heads per zone",
@@ -33749,6 +33161,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 61
+    },
+    {
+      "query": "ssid overhead calculator",
+      "page": "https://calcpromaster.com/tech",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 67
     },
     {
       "query": "stain calculator",
@@ -33999,6 +33419,14 @@
       "position": 67
     },
     {
+      "query": "stillman weight calculator",
+      "page": "https://calcpromaster.com/hub/fitness",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
       "query": "stock average cost basis calculator",
       "page": "https://calcpromaster.com/finance/cost-basis-avg/",
       "clicks": 0,
@@ -34058,17 +33486,17 @@
       "query": "storage cost",
       "page": "https://calcpromaster.com/tech/cloud-storage/",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 5,
       "ctr": 0,
-      "position": 15.333333333333334
+      "position": 13.4
     },
     {
       "query": "storage cost calculator",
       "page": "https://calcpromaster.com/tech/cloud-storage/",
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 13,
       "ctr": 0,
-      "position": 68.66666666666667
+      "position": 71.76923076923077
     },
     {
       "query": "storage costs",
@@ -34077,6 +33505,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 74
+    },
+    {
+      "query": "storage costs",
+      "page": "https://calcpromaster.com/tech/cloud-storage/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 32.5
     },
     {
       "query": "stream calculator",
@@ -34215,6 +33651,14 @@
       "position": 3.25
     },
     {
+      "query": "suggested resell calculator",
+      "page": "https://calcpromaster.com/lifestyle/resell-value",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 84
+    },
+    {
       "query": "super calc",
       "page": "https://calcpromaster.com/regional/australia-super",
       "clicks": 0,
@@ -34274,9 +33718,9 @@
       "query": "sweat rate calculator",
       "page": "https://calcpromaster.com/fitness/sweat-rate",
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 15,
       "ctr": 0,
-      "position": 15.857142857142858
+      "position": 19.733333333333334
     },
     {
       "query": "sweat rate formula",
@@ -34386,9 +33830,9 @@
       "query": "swiss salary calculator",
       "page": "https://calcpromaster.com/regional/switzerland-take-home-salary/",
       "clicks": 0,
-      "impressions": 13,
+      "impressions": 16,
       "ctr": 0,
-      "position": 69.76923076923077
+      "position": 72.25
     },
     {
       "query": "swiss wage calculator",
@@ -34405,6 +33849,14 @@
       "impressions": 3,
       "ctr": 0,
       "position": 52.666666666666664
+    },
+    {
+      "query": "ta calculator",
+      "page": "https://calcpromaster.com/finance/effective-tax-rate/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 87
     },
     {
       "query": "take gome.pay calculator",
@@ -34703,6 +34155,22 @@
       "position": 26
     },
     {
+      "query": "tax effective",
+      "page": "https://calcpromaster.com/finance/effective-tax-rate/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 88
+    },
+    {
+      "query": "tax efficiency calculator",
+      "page": "https://calcpromaster.com/finance/effective-tax-rate/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 26
+    },
+    {
       "query": "tax equivalent yield for municipal bonds",
       "page": "https://calcpromaster.com/finance/tax-equivalent-yield/",
       "clicks": 0,
@@ -34759,6 +34227,14 @@
       "position": 47
     },
     {
+      "query": "tax income tax calculator",
+      "page": "https://calcpromaster.com/finance/canada-income-tax/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 39
+    },
+    {
       "query": "tax income usa",
       "page": "https://calcpromaster.com/finance/us-income-tax/",
       "clicks": 0,
@@ -34773,6 +34249,14 @@
       "impressions": 8,
       "ctr": 0,
       "position": 15.5
+    },
+    {
+      "query": "tax refund calculator 2017",
+      "page": "https://calcpromaster.com/finance/canada-income-tax/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 25
     },
     {
       "query": "tax return calculator",
@@ -35162,9 +34646,9 @@
       "query": "throughput calculator",
       "page": "https://calcpromaster.com/tech",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 80
+      "position": 77.5
     },
     {
       "query": "throughput calculator",
@@ -35226,9 +34710,9 @@
       "query": "time for download calculator",
       "page": "https://calcpromaster.com/tech/internet-speed/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 28
+      "position": 30
     },
     {
       "query": "time to crack password",
@@ -35410,9 +34894,9 @@
       "query": "total debt to equity",
       "page": "https://calcpromaster.com/finance/debt-to-equity/",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 5,
       "ctr": 0,
-      "position": 97.5
+      "position": 97.8
     },
     {
       "query": "total debt to equity ratio",
@@ -35421,6 +34905,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 98
+    },
+    {
+      "query": "total debt/total equity",
+      "page": "https://calcpromaster.com/finance/debt-to-equity/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 95
     },
     {
       "query": "tow truck weight",
@@ -37290,9 +36782,9 @@
       "query": "wallpaper amount calculator",
       "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 73
+      "position": 76
     },
     {
       "query": "wallpaper calculation",
@@ -37306,9 +36798,25 @@
       "query": "wallpaper calculator",
       "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
       "clicks": 0,
-      "impressions": 34,
+      "impressions": 38,
       "ctr": 0,
-      "position": 88.1470588235294
+      "position": 88.10526315789474
+    },
+    {
+      "query": "wallpaper calculator by the yard",
+      "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 94
+    },
+    {
+      "query": "wallpaper calculator in cm",
+      "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 81
     },
     {
       "query": "wallpaper calculator in inches",
@@ -37383,12 +36891,20 @@
       "position": 14
     },
     {
+      "query": "wallpaper quantity calculator",
+      "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 80
+    },
+    {
       "query": "wallpaper roll calculator",
       "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 7,
       "ctr": 0,
-      "position": 74.33333333333333
+      "position": 74
     },
     {
       "query": "wallpaper roll length",
@@ -37402,17 +36918,25 @@
       "query": "wallpaper roll size",
       "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
       "position": 90
+    },
+    {
+      "query": "wallpaper roll sizes",
+      "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 88.66666666666667
     },
     {
       "query": "wallpaper square foot calculator",
       "page": "https://calcpromaster.com/homegarden/wallpaper-rolls",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 93
+      "position": 85
     },
     {
       "query": "wallpaper square footage calculator",
@@ -37754,9 +37278,9 @@
       "query": "weight average",
       "page": "https://calcpromaster.com/math/weighted-average/",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 7,
       "ctr": 0,
-      "position": 85.6
+      "position": 84.28571428571429
     },
     {
       "query": "weight average calculator",
@@ -37903,12 +37427,20 @@
       "position": 4.5
     },
     {
+      "query": "weightage calculation",
+      "page": "https://calcpromaster.com/math/weighted-average/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 67
+    },
+    {
       "query": "weighted average",
       "page": "https://calcpromaster.com/math/weighted-average/",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 87.33333333333333
+      "position": 89.25
     },
     {
       "query": "weighted average calc",
@@ -37922,17 +37454,17 @@
       "query": "weighted average calculation",
       "page": "https://calcpromaster.com/math/weighted-average/",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 81.66666666666667
+      "position": 79.5
     },
     {
       "query": "weighted average calculator",
       "page": "https://calcpromaster.com/math/weighted-average/",
       "clicks": 0,
-      "impressions": 31,
+      "impressions": 35,
       "ctr": 0,
-      "position": 57.67741935483871
+      "position": 58.17142857142857
     },
     {
       "query": "weighted average cost of capital calculator",
@@ -37957,6 +37489,14 @@
       "impressions": 5,
       "ctr": 0,
       "position": 90.6
+    },
+    {
+      "query": "weighted average percentage calculator",
+      "page": "https://calcpromaster.com/math/weighted-average/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 63
     },
     {
       "query": "weighted average position",
@@ -38098,9 +37638,9 @@
       "query": "what calculator shows how a transfer affects my utilisation ratio?",
       "page": "https://calcpromaster.com/finance/credit-utilization/",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 5,
       "ctr": 0,
-      "position": 8.25
+      "position": 8
     },
     {
       "query": "what does current gpa mean",
@@ -38271,6 +37811,14 @@
       "position": 76
     },
     {
+      "query": "what is effective tax rate calculator",
+      "page": "https://calcpromaster.com/finance/effective-tax-rate/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 56
+    },
+    {
       "query": "what is kinetic energy formula",
       "page": "https://calcpromaster.com/science/kinetic-energy/",
       "clicks": 0,
@@ -38285,6 +37833,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 43
+    },
+    {
+      "query": "what is my download speed",
+      "page": "https://calcpromaster.com/tech/internet-speed",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 91
     },
     {
       "query": "what is my network prefix length",
@@ -38402,9 +37958,9 @@
       "query": "what is the current pmi rate",
       "page": "https://calcpromaster.com/finance/pmi-calculator/",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 33.5
+      "position": 45.666666666666664
     },
     {
       "query": "what is the monthly payment formula",
@@ -38501,6 +38057,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 94
+    },
+    {
+      "query": "what would closing costs be on a 300k house",
+      "page": "https://calcpromaster.com/finance/closing-costs/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 95
     },
     {
       "query": "when is 5 business days from today",
@@ -38661,6 +38225,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 3
+    },
+    {
+      "query": "wifi throughput calculation",
+      "page": "https://calcpromaster.com/tech",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 89.5
     },
     {
       "query": "wine servings per bottle",
@@ -38986,9 +38558,9 @@
       "query": "workout calculator",
       "page": "https://calcpromaster.com/hub/fitness",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 11,
       "ctr": 0,
-      "position": 93.57142857142857
+      "position": 93
     },
     {
       "query": "workout calculator to gain muscle",
@@ -39138,9 +38710,9 @@
       "query": "πώς μπορώ να δω την τιμή του ταξί πριν το καλέσω;",
       "page": "https://calcpromaster.com/auto/taxi-fare/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 7
+      "position": 7.5
     },
     {
       "query": "υπολογισμοσ ldl",

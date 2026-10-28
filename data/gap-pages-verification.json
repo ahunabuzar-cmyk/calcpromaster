@@ -1,237 +1,12 @@
 {
-  "generated": "2026-10-23T12:16:55.862Z",
+  "generated": "2026-10-26T14:51:05.486Z",
   "source": "tests/e2e/gap-pages.spec.js",
   "base": "http://localhost:3100",
   "projects": {
-    "mobile-chromium": {
-      "pages": 50,
+    "deploy-chromium": {
+      "pages": 48,
       "allHttp200": true,
       "pages_detail": [
-        {
-          "id": "qurbani-cost",
-          "path": "/regional/qurbani-cost",
-          "item": "P1-8 regional strength",
-          "status": 200,
-          "canonical": "http://localhost:3100/regional/qurbani-cost/",
-          "resultChars": 586,
-          "thirdPartyFails": 0
-        },
-        {
-          "id": "remittance-fee",
-          "path": "/regional/remittance-fee",
-          "item": "P1-8 regional strength",
-          "status": 200,
-          "canonical": "http://localhost:3100/regional/remittance-fee/",
-          "resultChars": 544,
-          "thirdPartyFails": 1
-        },
-        {
-          "id": "school-fee-inflation",
-          "path": "/education/school-fee-inflation",
-          "item": "P1-8 regional strength",
-          "status": 200,
-          "canonical": "http://localhost:3100/education/school-fee-inflation/",
-          "resultChars": 571,
-          "thirdPartyFails": 0
-        },
-        {
-          "id": "ats-resume-score",
-          "path": "/career/ats-resume-score",
-          "item": "P1-9 resume/salary",
-          "status": 200,
-          "canonical": "http://localhost:3100/career/ats-resume-score/",
-          "resultChars": 682,
-          "thirdPartyFails": 0
-        },
-        {
-          "id": "salary-negotiation-range",
-          "path": "/career/salary-negotiation-range",
-          "item": "P1-9 resume/salary",
-          "status": 200,
-          "canonical": "http://localhost:3100/career/salary-negotiation-range/",
-          "resultChars": 631,
-          "thirdPartyFails": 1
-        },
-        {
-          "id": "interview-to-offer-tracker",
-          "path": "/career/interview-to-offer-tracker",
-          "item": "P1-9 resume/salary",
-          "status": 200,
-          "canonical": "http://localhost:3100/career/interview-to-offer-tracker/",
-          "resultChars": 614,
-          "thirdPartyFails": 0
-        },
-        {
-          "id": "divorce-cost",
-          "path": "/finance/divorce-cost",
-          "item": "P2 divorce/moving",
-          "status": 200,
-          "canonical": "http://localhost:3100/finance/divorce-cost/",
-          "resultChars": 606,
-          "thirdPartyFails": 1
-        },
-        {
-          "id": "moving-abroad-cost",
-          "path": "/finance/moving-abroad-cost",
-          "item": "P2 divorce/moving",
-          "status": 200,
-          "canonical": "http://localhost:3100/finance/moving-abroad-cost/",
-          "resultChars": 600,
-          "thirdPartyFails": 1
-        },
-        {
-          "id": "career-break-runway",
-          "path": "/career/career-break-runway",
-          "item": "P2 career break",
-          "status": 200,
-          "canonical": "http://localhost:3100/career/career-break-runway/",
-          "resultChars": 632,
-          "thirdPartyFails": 1
-        },
-        {
-          "id": "bereavement-checklist",
-          "path": "/family/bereavement-checklist",
-          "item": "P2 bereavement",
-          "status": 200,
-          "canonical": "http://localhost:3100/family/bereavement-checklist/",
-          "resultChars": 762,
-          "thirdPartyFails": 0
-        },
-        {
-          "id": "cosigning-loan-risk",
-          "path": "/finance/cosigning-loan-risk",
-          "item": "P2 co-signing risk",
-          "status": 200,
-          "canonical": "http://localhost:3100/finance/cosigning-loan-risk/",
-          "resultChars": 587,
-          "thirdPartyFails": 1
-        },
-        {
-          "id": "inheritance-tax-uk-india",
-          "path": "/finance/inheritance-tax-uk-india",
-          "item": "P2 inheritance tax",
-          "status": 200,
-          "canonical": "http://localhost:3100/finance/inheritance-tax-uk-india/",
-          "resultChars": 658,
-          "thirdPartyFails": 0
-        },
-        {
-          "id": "journeyman-wage-progression",
-          "path": "/construction/journeyman-wage-progression",
-          "item": "P2 journeyman wage",
-          "status": 200,
-          "canonical": "http://localhost:3100/construction/journeyman-wage-progression/",
-          "resultChars": 647,
-          "thirdPartyFails": 0
-        },
-        {
-          "id": "tool-depreciation",
-          "path": "/business/tool-depreciation",
-          "item": "P2 tool depreciation",
-          "status": 200,
-          "canonical": "http://localhost:3100/business/tool-depreciation/",
-          "resultChars": 562,
-          "thirdPartyFails": 1
-        },
-        {
-          "id": "cost-of-living-compare",
-          "path": "/everyday/cost-of-living-compare",
-          "item": "P2 cost of living",
-          "status": 200,
-          "canonical": "http://localhost:3100/everyday/cost-of-living-compare/",
-          "resultChars": 601,
-          "thirdPartyFails": 0
-        },
-        {
-          "id": "solar-payback",
-          "path": "/homegarden/solar-payback",
-          "item": "P2 solar payback",
-          "status": 200,
-          "canonical": "http://localhost:3100/homegarden/solar-payback/",
-          "resultChars": 628,
-          "thirdPartyFails": 1
-        },
-        {
-          "id": "ev-charger-business-roi",
-          "path": "/business/ev-charger-business-roi",
-          "item": "P2 EV charger ROI",
-          "status": 200,
-          "canonical": "http://localhost:3100/business/ev-charger-business-roi/",
-          "resultChars": 702,
-          "thirdPartyFails": 0
-        },
-        {
-          "id": "ev-charger-roi",
-          "path": "/auto/ev-charger-roi",
-          "item": "P2 EV charger ROI",
-          "status": 200,
-          "canonical": "http://localhost:3100/auto/ev-charger-roi/",
-          "resultChars": 611,
-          "thirdPartyFails": 1
-        },
-        {
-          "id": "carbon-offset",
-          "path": "/homegarden/carbon-offset",
-          "item": "P2 carbon offset",
-          "status": 200,
-          "canonical": "http://localhost:3100/homegarden/carbon-offset/",
-          "resultChars": 651,
-          "thirdPartyFails": 1
-        },
-        {
-          "id": "homeowner-first-year-budget",
-          "path": "/homegarden/homeowner-first-year-budget",
-          "item": "P2 homeowner budget",
-          "status": 200,
-          "canonical": "http://localhost:3100/homegarden/homeowner-first-year-budget/",
-          "resultChars": 664,
-          "thirdPartyFails": 1
-        },
-        {
-          "id": "study-abroad-cost",
-          "path": "/education/study-abroad-cost",
-          "item": "P2 study abroad",
-          "status": 200,
-          "canonical": "http://localhost:3100/education/study-abroad-cost/",
-          "resultChars": 564,
-          "thirdPartyFails": 0
-        },
-        {
-          "id": "scholarship-gap",
-          "path": "/education/scholarship-gap",
-          "item": "P2 scholarship gap",
-          "status": 200,
-          "canonical": "http://localhost:3100/education/scholarship-gap/",
-          "resultChars": 697,
-          "thirdPartyFails": 0
-        },
-        {
-          "id": "student-loan-vs-scholarship",
-          "path": "/education/student-loan-vs-scholarship",
-          "item": "P2 loan vs scholarship",
-          "status": 200,
-          "canonical": "http://localhost:3100/education/student-loan-vs-scholarship/",
-          "resultChars": 564,
-          "thirdPartyFails": 0
-        },
-        {
-          "id": "/graph",
-          "path": "/graph",
-          "item": "CG-1 function grapher",
-          "status": 200,
-          "canonical": "https://calcpromaster.com/graph",
-          "resultChars": 4725,
-          "thirdPartyFails": 0
-        },
-        {
-          "id": "/geometry-lab",
-          "path": "/geometry-lab",
-          "item": "CG-3 geometry lab",
-          "status": 200,
-          "canonical": "https://calcpromaster.com/geometry-lab",
-          "resultChars": 4916,
-          "thirdPartyFails": 0
-        },
         {
           "id": "conduit-fill",
           "path": "/construction/conduit-fill",
@@ -248,7 +23,7 @@
           "status": 200,
           "canonical": "http://localhost:3100/construction/rolling-offset/",
           "resultChars": 514,
-          "thirdPartyFails": 1
+          "thirdPartyFails": 0
         },
         {
           "id": "pipe-cutback",
@@ -266,7 +41,7 @@
           "status": 200,
           "canonical": "http://localhost:3100/engineering/hvac-load/",
           "resultChars": 696,
-          "thirdPartyFails": 0
+          "thirdPartyFails": 1
         },
         {
           "id": "pipe-pressure-loss",
@@ -311,7 +86,7 @@
           "status": 200,
           "canonical": "http://localhost:3100/lifestyle/pet-boarding-cost/",
           "resultChars": 518,
-          "thirdPartyFails": 1
+          "thirdPartyFails": 0
         },
         {
           "id": "prayer-time",
@@ -338,7 +113,7 @@
           "status": 200,
           "canonical": "http://localhost:3100/regional/hijri-converter/",
           "resultChars": 598,
-          "thirdPartyFails": 1
+          "thirdPartyFails": 0
         },
         {
           "id": "hajj-cost",
@@ -356,7 +131,7 @@
           "status": 200,
           "canonical": "http://localhost:3100/regional/umrah-cost/",
           "resultChars": 610,
-          "thirdPartyFails": 1
+          "thirdPartyFails": 0
         },
         {
           "id": "alimony-estimator",
@@ -374,7 +149,7 @@
           "status": 200,
           "canonical": "http://localhost:3100/everyday/statute-of-limitations/",
           "resultChars": 367,
-          "thirdPartyFails": 1
+          "thirdPartyFails": 0
         },
         {
           "id": "power-of-attorney-cost",
@@ -383,7 +158,7 @@
           "status": 200,
           "canonical": "http://localhost:3100/finance/power-of-attorney-cost/",
           "resultChars": 618,
-          "thirdPartyFails": 1
+          "thirdPartyFails": 0
         },
         {
           "id": "sponsorship-rate",
@@ -401,7 +176,7 @@
           "status": 200,
           "canonical": "http://localhost:3100/business/brand-deal-value/",
           "resultChars": 574,
-          "thirdPartyFails": 1
+          "thirdPartyFails": 0
         },
         {
           "id": "podcast-ad-rate",
@@ -410,7 +185,7 @@
           "status": 200,
           "canonical": "http://localhost:3100/business/podcast-ad-rate/",
           "resultChars": 535,
-          "thirdPartyFails": 0
+          "thirdPartyFails": 1
         },
         {
           "id": "newsletter-sponsorship-rate",
@@ -419,7 +194,7 @@
           "status": 200,
           "canonical": "http://localhost:3100/business/newsletter-sponsorship-rate/",
           "resultChars": 601,
-          "thirdPartyFails": 1
+          "thirdPartyFails": 0
         },
         {
           "id": "canada-crs",
@@ -428,7 +203,7 @@
           "status": 200,
           "canonical": "http://localhost:3100/career/canada-crs/",
           "resultChars": 672,
-          "thirdPartyFails": 1
+          "thirdPartyFails": 0
         },
         {
           "id": "australia-pr-points",
@@ -446,7 +221,7 @@
           "status": 200,
           "canonical": "http://localhost:3100/career/us-priority-date/",
           "resultChars": 736,
-          "thirdPartyFails": 1
+          "thirdPartyFails": 0
         },
         {
           "id": "gold-price",
@@ -455,14 +230,221 @@
           "status": 200,
           "canonical": "http://localhost:3100/regional/gold-price/",
           "resultChars": 536,
+          "thirdPartyFails": 0
+        },
+        {
+          "id": "qurbani-cost",
+          "path": "/regional/qurbani-cost",
+          "item": "P1-8 regional strength",
+          "status": 200,
+          "canonical": "http://localhost:3100/regional/qurbani-cost/",
+          "resultChars": 586,
+          "thirdPartyFails": 0
+        },
+        {
+          "id": "remittance-fee",
+          "path": "/regional/remittance-fee",
+          "item": "P1-8 regional strength",
+          "status": 200,
+          "canonical": "http://localhost:3100/regional/remittance-fee/",
+          "resultChars": 544,
           "thirdPartyFails": 1
+        },
+        {
+          "id": "school-fee-inflation",
+          "path": "/education/school-fee-inflation",
+          "item": "P1-8 regional strength",
+          "status": 200,
+          "canonical": "http://localhost:3100/education/school-fee-inflation/",
+          "resultChars": 571,
+          "thirdPartyFails": 1
+        },
+        {
+          "id": "ats-resume-score",
+          "path": "/career/ats-resume-score",
+          "item": "P1-9 resume/salary",
+          "status": 200,
+          "canonical": "http://localhost:3100/career/ats-resume-score/",
+          "resultChars": 682,
+          "thirdPartyFails": 0
+        },
+        {
+          "id": "salary-negotiation-range",
+          "path": "/career/salary-negotiation-range",
+          "item": "P1-9 resume/salary",
+          "status": 200,
+          "canonical": "http://localhost:3100/career/salary-negotiation-range/",
+          "resultChars": 631,
+          "thirdPartyFails": 0
+        },
+        {
+          "id": "interview-to-offer-tracker",
+          "path": "/career/interview-to-offer-tracker",
+          "item": "P1-9 resume/salary",
+          "status": 200,
+          "canonical": "http://localhost:3100/career/interview-to-offer-tracker/",
+          "resultChars": 614,
+          "thirdPartyFails": 1
+        },
+        {
+          "id": "divorce-cost",
+          "path": "/finance/divorce-cost",
+          "item": "P2 divorce/moving",
+          "status": 200,
+          "canonical": "http://localhost:3100/finance/divorce-cost/",
+          "resultChars": 606,
+          "thirdPartyFails": 0
+        },
+        {
+          "id": "moving-abroad-cost",
+          "path": "/finance/moving-abroad-cost",
+          "item": "P2 divorce/moving",
+          "status": 200,
+          "canonical": "http://localhost:3100/finance/moving-abroad-cost/",
+          "resultChars": 600,
+          "thirdPartyFails": 0
+        },
+        {
+          "id": "career-break-runway",
+          "path": "/career/career-break-runway",
+          "item": "P2 career break",
+          "status": 200,
+          "canonical": "http://localhost:3100/career/career-break-runway/",
+          "resultChars": 632,
+          "thirdPartyFails": 0
+        },
+        {
+          "id": "bereavement-checklist",
+          "path": "/family/bereavement-checklist",
+          "item": "P2 bereavement",
+          "status": 200,
+          "canonical": "http://localhost:3100/family/bereavement-checklist/",
+          "resultChars": 762,
+          "thirdPartyFails": 0
+        },
+        {
+          "id": "cosigning-loan-risk",
+          "path": "/finance/cosigning-loan-risk",
+          "item": "P2 co-signing risk",
+          "status": 200,
+          "canonical": "http://localhost:3100/finance/cosigning-loan-risk/",
+          "resultChars": 587,
+          "thirdPartyFails": 0
+        },
+        {
+          "id": "inheritance-tax-uk-india",
+          "path": "/finance/inheritance-tax-uk-india",
+          "item": "P2 inheritance tax",
+          "status": 200,
+          "canonical": "http://localhost:3100/finance/inheritance-tax-uk-india/",
+          "resultChars": 658,
+          "thirdPartyFails": 1
+        },
+        {
+          "id": "journeyman-wage-progression",
+          "path": "/construction/journeyman-wage-progression",
+          "item": "P2 journeyman wage",
+          "status": 200,
+          "canonical": "http://localhost:3100/construction/journeyman-wage-progression/",
+          "resultChars": 647,
+          "thirdPartyFails": 1
+        },
+        {
+          "id": "tool-depreciation",
+          "path": "/business/tool-depreciation",
+          "item": "P2 tool depreciation",
+          "status": 200,
+          "canonical": "http://localhost:3100/business/tool-depreciation/",
+          "resultChars": 562,
+          "thirdPartyFails": 0
+        },
+        {
+          "id": "cost-of-living-compare",
+          "path": "/everyday/cost-of-living-compare",
+          "item": "P2 cost of living",
+          "status": 200,
+          "canonical": "http://localhost:3100/everyday/cost-of-living-compare/",
+          "resultChars": 601,
+          "thirdPartyFails": 0
+        },
+        {
+          "id": "solar-payback",
+          "path": "/homegarden/solar-payback",
+          "item": "P2 solar payback",
+          "status": 200,
+          "canonical": "http://localhost:3100/homegarden/solar-payback/",
+          "resultChars": 628,
+          "thirdPartyFails": 0
+        },
+        {
+          "id": "ev-charger-business-roi",
+          "path": "/business/ev-charger-business-roi",
+          "item": "P2 EV charger ROI",
+          "status": 200,
+          "canonical": "http://localhost:3100/business/ev-charger-business-roi/",
+          "resultChars": 702,
+          "thirdPartyFails": 1
+        },
+        {
+          "id": "ev-charger-roi",
+          "path": "/auto/ev-charger-roi",
+          "item": "P2 EV charger ROI",
+          "status": 200,
+          "canonical": "http://localhost:3100/auto/ev-charger-roi/",
+          "resultChars": 611,
+          "thirdPartyFails": 0
+        },
+        {
+          "id": "carbon-offset",
+          "path": "/homegarden/carbon-offset",
+          "item": "P2 carbon offset",
+          "status": 200,
+          "canonical": "http://localhost:3100/homegarden/carbon-offset/",
+          "resultChars": 651,
+          "thirdPartyFails": 1
+        },
+        {
+          "id": "homeowner-first-year-budget",
+          "path": "/homegarden/homeowner-first-year-budget",
+          "item": "P2 homeowner budget",
+          "status": 200,
+          "canonical": "http://localhost:3100/homegarden/homeowner-first-year-budget/",
+          "resultChars": 664,
+          "thirdPartyFails": 1
+        },
+        {
+          "id": "study-abroad-cost",
+          "path": "/education/study-abroad-cost",
+          "item": "P2 study abroad",
+          "status": 200,
+          "canonical": "http://localhost:3100/education/study-abroad-cost/",
+          "resultChars": 564,
+          "thirdPartyFails": 1
+        },
+        {
+          "id": "scholarship-gap",
+          "path": "/education/scholarship-gap",
+          "item": "P2 scholarship gap",
+          "status": 200,
+          "canonical": "http://localhost:3100/education/scholarship-gap/",
+          "resultChars": 697,
+          "thirdPartyFails": 1
+        },
+        {
+          "id": "student-loan-vs-scholarship",
+          "path": "/education/student-loan-vs-scholarship",
+          "item": "P2 loan vs scholarship",
+          "status": 200,
+          "canonical": "http://localhost:3100/education/student-loan-vs-scholarship/",
+          "resultChars": 564,
+          "thirdPartyFails": 0
         }
       ]
     }
   },
   "summary": {
-    "distinct_pages": 50,
-    "http_200": 50,
+    "distinct_pages": 48,
+    "http_200": 48,
     "min_result_chars": 367,
     "missing_canonical": 0
   }

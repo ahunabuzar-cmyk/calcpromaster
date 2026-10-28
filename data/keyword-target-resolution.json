@@ -1,13 +1,13 @@
 {
-  "generatedFor": "2026-10-17",
+  "generatedFor": "2026-10-24",
   "totals": {
-    "rows": 91,
-    "improved": 80,
-    "already": 9,
+    "rows": 97,
+    "improved": 87,
+    "already": 8,
     "noOwner": 2,
     "other": 0,
-    "addedFaqs": 80,
-    "addedLsi": 80,
+    "addedFaqs": 87,
+    "addedLsi": 87,
     "guideEdits": 0
   },
   "rows": [
@@ -378,6 +378,19 @@
     {
       "code": "C",
       "priority": "P2",
+      "keyword": "retirement salary calculator",
+      "volume": 8100,
+      "recordedTarget": "/career/retirement-contrib/",
+      "resolvedTarget": "/career/retirement-contrib/",
+      "source": "reviewed-table",
+      "note": "the contribution-impact page takes a salary and shows what a retirement contribution does to it — the salary-based retirement calculation",
+      "answer": "Retirement Contribution Impact handles that: set the Annual Salary, Current Contribution %, Increase to % and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "retirement-contrib"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
       "keyword": "pricing generator",
       "volume": 8100,
       "recordedTarget": "/business/pricing/",
@@ -424,6 +437,19 @@
       "answer": "ROI Calculator handles that: set the Investment Cost, Current Value and the result updates instantly, with the working shown.",
       "status": "IMPROVED",
       "tool": "roi"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "mobile home loan payment calculator",
+      "volume": 6600,
+      "recordedTarget": "/finance/fha-loan/",
+      "resolvedTarget": "/finance/fha-loan/",
+      "source": "reviewed-table",
+      "note": "FHA is the standard financing route for manufactured/mobile homes and the page computes the monthly payment including MIP — improve that page, do not add a mobile-home duplicate",
+      "answer": "FHA Loan Calculator handles that: set the Home Price, Down Payment, Interest Rate and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "fha-loan"
     },
     {
       "code": "C",
@@ -489,6 +515,32 @@
       "answer": "Simple Interest Calculator handles that: set the Solve For, Principal, Rate and the result updates instantly, with the working shown.",
       "status": "IMPROVED",
       "tool": "simple-interest"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "weekly paycheck calculator",
+      "volume": 4400,
+      "recordedTarget": "/finance/paycheck/",
+      "resolvedTarget": "/finance/paycheck/",
+      "source": "reviewed-table",
+      "note": "same intent as the weekly-pay row, wording only — one paycheck page owns both",
+      "answer": "Paycheck Calculator handles that: set the Gross Annual, Tax Rate, Benefits/Deductions and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "paycheck"
+    },
+    {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "weekly pay calculator",
+      "volume": 4400,
+      "recordedTarget": "/finance/paycheck/",
+      "resolvedTarget": "/finance/paycheck/",
+      "source": "reviewed-table",
+      "note": "the Paycheck Calculator takes the pay frequency (including weekly), so weekly pay is the same calculation run weekly",
+      "answer": "Paycheck Calculator handles that: set the Gross Annual, Tax Rate, Benefits/Deductions and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "paycheck"
     },
     {
       "code": "B",
@@ -643,6 +695,19 @@
       "tool": "retirement"
     },
     {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "calculator real estate",
+      "volume": 2400,
+      "recordedTarget": null,
+      "resolvedTarget": "/finance/net-operating-income/",
+      "source": "registry-match",
+      "note": "strict all-token registry match: net-operating-income",
+      "answer": "NOI Calculator handles that: set the Gross Rental Income, Vacancy & Losses, Operating Expenses and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "net-operating-income"
+    },
+    {
       "code": "B",
       "priority": "P2",
       "keyword": "compounding calculator yearly",
@@ -736,11 +801,13 @@
       "priority": "P2",
       "keyword": "paycheck deduction calculator",
       "volume": 1900,
-      "recordedTarget": "/guides/career/",
-      "resolvedTarget": "/guides/career/",
-      "source": "map",
-      "note": "",
-      "status": "ALREADY"
+      "recordedTarget": "/finance/paycheck/",
+      "resolvedTarget": "/finance/paycheck/",
+      "source": "reviewed-table",
+      "note": "the audit pointed at the /guides/tax-salary hub; a deduction is a calculator intent, and /finance/paycheck/ is the page that takes gross pay and shows the deductions",
+      "answer": "Paycheck Calculator handles that: set the Gross Annual, Tax Rate, Benefits/Deductions and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "paycheck"
     },
     {
       "code": "B",
@@ -969,6 +1036,19 @@
       "tool": "raise-calculator"
     },
     {
+      "code": "B",
+      "priority": "P2",
+      "keyword": "taxable calculator",
+      "volume": 1000,
+      "recordedTarget": "/career/tax-bracket/",
+      "resolvedTarget": "/career/tax-bracket/",
+      "source": "reviewed-table",
+      "note": "taxable amount → income tax is what the Income Tax Bracket page computes; the GST page is an indirect tax and does not answer the income-tax reading of the query",
+      "answer": "Income Tax Bracket Calculator handles that: set the Annual Income, Deductions and the result updates instantly.",
+      "status": "IMPROVED",
+      "tool": "tax-bracket"
+    },
+    {
       "code": "C",
       "priority": "P2",
       "keyword": "compound loan calculator",
@@ -1021,19 +1101,6 @@
     {
       "code": "C",
       "priority": "P2",
-      "keyword": "loan calculator monthly",
-      "volume": 1000,
-      "recordedTarget": null,
-      "resolvedTarget": "/finance/loan-emi/",
-      "source": "registry-match",
-      "note": "strict all-token registry match: loan-emi",
-      "answer": "Loan EMI Calculator handles that: set the Solve For, Loan Amount, Interest Rate and the result updates instantly, with the working shown.",
-      "status": "IMPROVED",
-      "tool": "loan-emi"
-    },
-    {
-      "code": "C",
-      "priority": "P2",
       "keyword": "compare loan calculator",
       "volume": 1000,
       "recordedTarget": "/finance/loan-comparison/",
@@ -1056,6 +1123,19 @@
       "answer": "Investment Growth Comparison handles that: set the Initial Investment, Conservative, Moderate and the result updates instantly, with the working shown.",
       "status": "IMPROVED",
       "tool": "investment-growth"
+    },
+    {
+      "code": "C",
+      "priority": "P2",
+      "keyword": "real estate investment calculator",
+      "volume": 1000,
+      "recordedTarget": null,
+      "resolvedTarget": "/finance/cash-on-cash/",
+      "source": "registry-match",
+      "note": "strict all-token registry match: cash-on-cash",
+      "answer": "Cash-on-Cash Return handles that: set the Annual Pre-Tax Cash Flow, Total Cash Invested and the result updates instantly, with the working shown.",
+      "status": "IMPROVED",
+      "tool": "cash-on-cash"
     },
     {
       "code": "B",

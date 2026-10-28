@@ -1,50 +1,50 @@
 {
-  "generatedAt": "2026-10-24T14:15:19.083Z",
+  "generatedAt": "2026-10-25T16:47:05.004Z",
   "source": "data/gsc-query-page.json",
   "window": {
     "days": 28,
-    "startDate": "2026-09-16",
-    "endDate": "2026-10-14"
+    "startDate": "2026-09-24",
+    "endDate": "2026-10-22"
   },
   "minImpressions": 5,
   "totals": {
-    "canonicalPages": 469,
-    "rawVariantPages": 581,
-    "distinctQueries": 4141,
-    "pairImpressions": 11567,
-    "propertyImpressions": 18917,
-    "joinCoverage": 0.611,
-    "avgQueriesPerPage": 9,
-    "avgQueriesTop25": 38.3
+    "canonicalPages": 477,
+    "rawVariantPages": 594,
+    "distinctQueries": 4316,
+    "pairImpressions": 12224,
+    "propertyImpressions": 20954,
+    "joinCoverage": 0.583,
+    "avgQueriesPerPage": 9.3,
+    "avgQueriesTop25": 42.4
   },
   "target": {
-    "measuredImpressions": 18917,
+    "measuredImpressions": 20954,
     "windowDays": 28,
-    "perDay": 675.6,
-    "perMonth": 20268,
+    "perDay": 748.4,
+    "perMonth": 22451,
     "targets": [
       {
         "monthly": 200000,
         "perDay": 6666.7,
-        "multiple": 9.87
+        "multiple": 8.91
       },
       {
         "monthly": 300000,
         "perDay": 10000,
-        "multiple": 14.8
+        "multiple": 13.36
       }
     ],
-    "runRateMonthly": 17177,
+    "runRateMonthly": 8828,
     "targetsFromRunRate": [
       {
         "monthly": 200000,
         "perDay": 6666.7,
-        "multiple": 11.64
+        "multiple": 22.66
       },
       {
         "monthly": 300000,
         "perDay": 10000,
-        "multiple": 17.47
+        "multiple": 33.98
       }
     ]
   },
@@ -52,35 +52,103 @@
     {
       "tier": "hundreds",
       "range": "100+",
-      "pages": 1,
-      "impressions": 97
+      "pages": 2,
+      "impressions": 902
     },
     {
       "tier": "broad",
       "range": "30–99",
-      "pages": 31,
-      "impressions": 3979
+      "pages": 32,
+      "impressions": 6800
     },
     {
       "tier": "growing",
       "range": "10–29",
-      "pages": 88,
-      "impressions": 3231
+      "pages": 93,
+      "impressions": 5132
     },
     {
       "tier": "thin",
       "range": "4–9",
-      "pages": 141,
-      "impressions": 2497
+      "pages": 136,
+      "impressions": 3932
     },
     {
       "tier": "stuck",
       "range": "0–3",
-      "pages": 208,
-      "impressions": 3125
+      "pages": 214,
+      "impressions": 3874
     }
   ],
   "topPages": [
+    {
+      "path": "/health/bmr-mifflin",
+      "distinctQueries": 77,
+      "tier": "broad",
+      "impressions": 1108,
+      "pairImpressions": 261,
+      "clicks": 0,
+      "impressionsPerQuery": 14.39,
+      "headQuery": "mifflin st jeor calculator",
+      "headImpressions": 34,
+      "top3Share": 0.067,
+      "longTailQueries": 48,
+      "longTailShare": 0.623,
+      "longTailImpressions": 59,
+      "positions": {
+        "p1to3": 12,
+        "p4to10": 53,
+        "p11to20": 5,
+        "p21plus": 7
+      },
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/health/bmr-mifflin",
+          "impressions": 175
+        },
+        {
+          "url": "https://calcpromaster.com/health/bmr-mifflin/",
+          "impressions": 86
+        }
+      ],
+      "splitSignal": true,
+      "minorityImpressions": 86
+    },
+    {
+      "path": "/lifestyle/home-insurance",
+      "distinctQueries": 75,
+      "tier": "broad",
+      "impressions": 1012,
+      "pairImpressions": 1003,
+      "clicks": 0,
+      "impressionsPerQuery": 13.49,
+      "headQuery": "home insurance calculator",
+      "headImpressions": 460,
+      "top3Share": 0.523,
+      "longTailQueries": 39,
+      "longTailShare": 0.52,
+      "longTailImpressions": 51,
+      "positions": {
+        "p1to3": 0,
+        "p4to10": 2,
+        "p11to20": 5,
+        "p21plus": 68
+      },
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/lifestyle/home-insurance/",
+          "impressions": 637
+        },
+        {
+          "url": "https://calcpromaster.com/lifestyle/home-insurance",
+          "impressions": 366
+        }
+      ],
+      "splitSignal": true,
+      "minorityImpressions": 366
+    },
     {
       "path": "/family/child-height",
       "distinctQueries": 3,
@@ -113,59 +181,93 @@
     },
     {
       "path": "/finance/pmi-calculator",
-      "distinctQueries": 96,
-      "tier": "broad",
+      "distinctQueries": 100,
+      "tier": "hundreds",
       "impressions": 640,
-      "pairImpressions": 561,
+      "pairImpressions": 590,
       "clicks": 0,
-      "impressionsPerQuery": 6.67,
+      "impressionsPerQuery": 6.4,
       "headQuery": "pmi calculator",
-      "headImpressions": 142,
-      "top3Share": 0.359,
-      "longTailQueries": 64,
-      "longTailShare": 0.667,
-      "longTailImpressions": 81,
+      "headImpressions": 143,
+      "top3Share": 0.366,
+      "longTailQueries": 66,
+      "longTailShare": 0.66,
+      "longTailImpressions": 85,
       "positions": {
         "p1to3": 0,
-        "p4to10": 16,
-        "p11to20": 21,
-        "p21plus": 59
+        "p4to10": 14,
+        "p11to20": 22,
+        "p21plus": 64
       },
       "variantCount": 1,
       "variants": [
         {
           "url": "https://calcpromaster.com/finance/pmi-calculator/",
-          "impressions": 561
+          "impressions": 590
         }
       ],
       "splitSignal": false,
       "minorityImpressions": 0
     },
     {
-      "path": "/finance/fha-loan",
-      "distinctQueries": 30,
+      "path": "/tech/internet-speed",
+      "distinctQueries": 63,
       "tier": "broad",
-      "impressions": 443,
-      "pairImpressions": 416,
+      "impressions": 508,
+      "pairImpressions": 268,
       "clicks": 0,
-      "impressionsPerQuery": 14.77,
-      "headQuery": "fha loan calculator",
-      "headImpressions": 223,
-      "top3Share": 0.722,
-      "longTailQueries": 17,
-      "longTailShare": 0.567,
-      "longTailImpressions": 24,
+      "impressionsPerQuery": 8.06,
+      "headQuery": "download speed calculator",
+      "headImpressions": 57,
+      "top3Share": 0.203,
+      "longTailQueries": 43,
+      "longTailShare": 0.683,
+      "longTailImpressions": 56,
       "positions": {
         "p1to3": 2,
-        "p4to10": 9,
+        "p4to10": 3,
+        "p11to20": 12,
+        "p21plus": 46
+      },
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/tech/internet-speed/",
+          "impressions": 152
+        },
+        {
+          "url": "https://calcpromaster.com/tech/internet-speed",
+          "impressions": 116
+        }
+      ],
+      "splitSignal": true,
+      "minorityImpressions": 116
+    },
+    {
+      "path": "/finance/fha-loan",
+      "distinctQueries": 34,
+      "tier": "broad",
+      "impressions": 443,
+      "pairImpressions": 424,
+      "clicks": 0,
+      "impressionsPerQuery": 13.03,
+      "headQuery": "fha loan calculator",
+      "headImpressions": 223,
+      "top3Share": 0.725,
+      "longTailQueries": 21,
+      "longTailShare": 0.618,
+      "longTailImpressions": 28,
+      "positions": {
+        "p1to3": 3,
+        "p4to10": 10,
         "p11to20": 8,
-        "p21plus": 11
+        "p21plus": 13
       },
       "variantCount": 1,
       "variants": [
         {
           "url": "https://calcpromaster.com/finance/fha-loan/",
-          "impressions": 416
+          "impressions": 424
         }
       ],
       "splitSignal": false,
@@ -176,12 +278,12 @@
       "distinctQueries": 1,
       "tier": "stuck",
       "impressions": 396,
-      "pairImpressions": 327,
+      "pairImpressions": 385,
       "clicks": 0,
       "impressionsPerQuery": 396,
       "headQuery": "how to calculate tip",
-      "headImpressions": 327,
-      "top3Share": 0.826,
+      "headImpressions": 385,
+      "top3Share": 0.972,
       "longTailQueries": 0,
       "longTailShare": 0,
       "longTailImpressions": 0,
@@ -195,7 +297,7 @@
       "variants": [
         {
           "url": "https://calcpromaster.com/guides/tip",
-          "impressions": 327
+          "impressions": 385
         }
       ],
       "splitSignal": false,
@@ -232,136 +334,268 @@
       "minorityImpressions": 0
     },
     {
-      "path": "/lifestyle/home-insurance",
-      "distinctQueries": 75,
-      "tier": "broad",
-      "impressions": 372,
-      "pairImpressions": 1003,
-      "clicks": 0,
-      "impressionsPerQuery": 4.96,
-      "headQuery": "home insurance calculator",
-      "headImpressions": 460,
-      "top3Share": 1.422,
-      "longTailQueries": 39,
-      "longTailShare": 0.52,
-      "longTailImpressions": 51,
+      "path": "/fitness/muscle-gain",
+      "distinctQueries": 5,
+      "tier": "thin",
+      "impressions": 321,
+      "pairImpressions": 9,
+      "clicks": 1,
+      "impressionsPerQuery": 64.2,
+      "headQuery": "muscle gain calculator",
+      "headImpressions": 3,
+      "top3Share": 0.022,
+      "longTailQueries": 3,
+      "longTailShare": 0.6,
+      "longTailImpressions": 3,
       "positions": {
         "p1to3": 0,
-        "p4to10": 2,
-        "p11to20": 5,
-        "p21plus": 68
+        "p4to10": 0,
+        "p11to20": 0,
+        "p21plus": 5
       },
       "variantCount": 2,
       "variants": [
         {
-          "url": "https://calcpromaster.com/lifestyle/home-insurance/",
-          "impressions": 637
+          "url": "https://calcpromaster.com/fitness/muscle-gain",
+          "impressions": 6
         },
         {
-          "url": "https://calcpromaster.com/lifestyle/home-insurance",
-          "impressions": 366
+          "url": "https://calcpromaster.com/fitness/muscle-gain/",
+          "impressions": 3
         }
       ],
       "splitSignal": true,
-      "minorityImpressions": 366
+      "minorityImpressions": 3
     },
     {
-      "path": "/health/bmr-mifflin",
-      "distinctQueries": 77,
+      "path": "/finance/apy-calculator",
+      "distinctQueries": 67,
       "tier": "broad",
-      "impressions": 359,
-      "pairImpressions": 261,
+      "impressions": 319,
+      "pairImpressions": 252,
       "clicks": 0,
-      "impressionsPerQuery": 4.66,
-      "headQuery": "mifflin st jeor calculator",
-      "headImpressions": 34,
-      "top3Share": 0.206,
-      "longTailQueries": 48,
-      "longTailShare": 0.623,
-      "longTailImpressions": 59,
+      "impressionsPerQuery": 4.76,
+      "headQuery": "calculate annual percentage yield",
+      "headImpressions": 52,
+      "top3Share": 0.326,
+      "longTailQueries": 53,
+      "longTailShare": 0.791,
+      "longTailImpressions": 64,
       "positions": {
-        "p1to3": 12,
-        "p4to10": 53,
-        "p11to20": 5,
-        "p21plus": 7
-      },
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/health/bmr-mifflin",
-          "impressions": 175
-        },
-        {
-          "url": "https://calcpromaster.com/health/bmr-mifflin/",
-          "impressions": 86
-        }
-      ],
-      "splitSignal": true,
-      "minorityImpressions": 86
-    },
-    {
-      "path": "/guides/bmr",
-      "distinctQueries": 36,
-      "tier": "broad",
-      "impressions": 304,
-      "pairImpressions": 53,
-      "clicks": 0,
-      "impressionsPerQuery": 8.44,
-      "headQuery": "mifflin st jeor calculator",
-      "headImpressions": 6,
-      "top3Share": 0.043,
-      "longTailQueries": 32,
-      "longTailShare": 0.889,
-      "longTailImpressions": 37,
-      "positions": {
-        "p1to3": 4,
-        "p4to10": 13,
-        "p11to20": 1,
-        "p21plus": 18
+        "p1to3": 1,
+        "p4to10": 12,
+        "p11to20": 8,
+        "p21plus": 46
       },
       "variantCount": 1,
       "variants": [
         {
-          "url": "https://calcpromaster.com/guides/bmr",
-          "impressions": 53
+          "url": "https://calcpromaster.com/finance/apy-calculator/",
+          "impressions": 252
         }
       ],
       "splitSignal": false,
       "minorityImpressions": 0
     },
     {
-      "path": "/tech/internet-speed",
-      "distinctQueries": 53,
+      "path": "/guides/bmr",
+      "distinctQueries": 52,
       "tier": "broad",
-      "impressions": 226,
-      "pairImpressions": 218,
+      "impressions": 304,
+      "pairImpressions": 75,
       "clicks": 0,
-      "impressionsPerQuery": 4.26,
-      "headQuery": "download speed calculator",
-      "headImpressions": 50,
-      "top3Share": 0.381,
-      "longTailQueries": 37,
-      "longTailShare": 0.698,
-      "longTailImpressions": 47,
+      "impressionsPerQuery": 5.85,
+      "headQuery": "mifflin st jeor calculator",
+      "headImpressions": 9,
+      "top3Share": 0.053,
+      "longTailQueries": 47,
+      "longTailShare": 0.904,
+      "longTailImpressions": 53,
+      "positions": {
+        "p1to3": 3,
+        "p4to10": 12,
+        "p11to20": 1,
+        "p21plus": 36
+      },
+      "variantCount": 1,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/guides/bmr",
+          "impressions": 75
+        }
+      ],
+      "splitSignal": false,
+      "minorityImpressions": 0
+    },
+    {
+      "path": "/guides/business-days",
+      "distinctQueries": 165,
+      "tier": "hundreds",
+      "impressions": 262,
+      "pairImpressions": 219,
+      "clicks": 0,
+      "impressionsPerQuery": 1.59,
+      "headQuery": "business days calculator",
+      "headImpressions": 5,
+      "top3Share": 0.05,
+      "longTailQueries": 152,
+      "longTailShare": 0.921,
+      "longTailImpressions": 175,
       "positions": {
         "p1to3": 0,
-        "p4to10": 2,
-        "p11to20": 10,
-        "p21plus": 41
+        "p4to10": 3,
+        "p11to20": 1,
+        "p21plus": 161
       },
       "variantCount": 2,
       "variants": [
         {
-          "url": "https://calcpromaster.com/tech/internet-speed/",
-          "impressions": 125
+          "url": "https://calcpromaster.com/guides/business-days",
+          "impressions": 137
         },
         {
-          "url": "https://calcpromaster.com/tech/internet-speed",
-          "impressions": 93
+          "url": "https://calcpromaster.com/guides/business-days/",
+          "impressions": 82
         }
       ],
       "splitSignal": true,
-      "minorityImpressions": 93
+      "minorityImpressions": 82
+    },
+    {
+      "path": "/finance/credit-utilization",
+      "distinctQueries": 34,
+      "tier": "broad",
+      "impressions": 252,
+      "pairImpressions": 239,
+      "clicks": 0,
+      "impressionsPerQuery": 7.41,
+      "headQuery": "credit utilization calculator",
+      "headImpressions": 95,
+      "top3Share": 0.631,
+      "longTailQueries": 22,
+      "longTailShare": 0.647,
+      "longTailImpressions": 27,
+      "positions": {
+        "p1to3": 0,
+        "p4to10": 3,
+        "p11to20": 4,
+        "p21plus": 27
+      },
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/finance/credit-utilization/",
+          "impressions": 238
+        },
+        {
+          "url": "https://calcpromaster.com/finance/credit-utilization",
+          "impressions": 1
+        }
+      ],
+      "splitSignal": true,
+      "minorityImpressions": 1
+    },
+    {
+      "path": "/tech/raid-capacity",
+      "distinctQueries": 48,
+      "tier": "broad",
+      "impressions": 238,
+      "pairImpressions": 224,
+      "clicks": 0,
+      "impressionsPerQuery": 4.96,
+      "headQuery": "raid capacity calculator",
+      "headImpressions": 59,
+      "top3Share": 0.45,
+      "longTailQueries": 30,
+      "longTailShare": 0.625,
+      "longTailImpressions": 37,
+      "positions": {
+        "p1to3": 0,
+        "p4to10": 7,
+        "p11to20": 4,
+        "p21plus": 37
+      },
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/tech/raid-capacity/",
+          "impressions": 126
+        },
+        {
+          "url": "https://calcpromaster.com/tech/raid-capacity",
+          "impressions": 98
+        }
+      ],
+      "splitSignal": true,
+      "minorityImpressions": 98
+    },
+    {
+      "path": "/science/carbon-dating",
+      "distinctQueries": 8,
+      "tier": "thin",
+      "impressions": 213,
+      "pairImpressions": 11,
+      "clicks": 0,
+      "impressionsPerQuery": 26.63,
+      "headQuery": "dating range calculator",
+      "headImpressions": 2,
+      "top3Share": 0.028,
+      "longTailQueries": 8,
+      "longTailShare": 1,
+      "longTailImpressions": 11,
+      "positions": {
+        "p1to3": 0,
+        "p4to10": 2,
+        "p11to20": 1,
+        "p21plus": 5
+      },
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/science/carbon-dating",
+          "impressions": 9
+        },
+        {
+          "url": "https://calcpromaster.com/science/carbon-dating/",
+          "impressions": 2
+        }
+      ],
+      "splitSignal": true,
+      "minorityImpressions": 2
+    },
+    {
+      "path": "/lifestyle/renters-insurance",
+      "distinctQueries": 14,
+      "tier": "growing",
+      "impressions": 203,
+      "pairImpressions": 199,
+      "clicks": 0,
+      "impressionsPerQuery": 14.5,
+      "headQuery": "renters insurance calculator",
+      "headImpressions": 135,
+      "top3Share": 0.911,
+      "longTailQueries": 11,
+      "longTailShare": 0.786,
+      "longTailImpressions": 14,
+      "positions": {
+        "p1to3": 0,
+        "p4to10": 4,
+        "p11to20": 3,
+        "p21plus": 7
+      },
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/lifestyle/renters-insurance",
+          "impressions": 133
+        },
+        {
+          "url": "https://calcpromaster.com/lifestyle/renters-insurance/",
+          "impressions": 66
+        }
+      ],
+      "splitSignal": true,
+      "minorityImpressions": 66
     },
     {
       "path": "/lifestyle/charging-time",
@@ -394,94 +628,60 @@
       "minorityImpressions": 0
     },
     {
-      "path": "/math/weighted-average",
-      "distinctQueries": 49,
-      "tier": "broad",
-      "impressions": 193,
-      "pairImpressions": 112,
+      "path": "/education/tuition-cost",
+      "distinctQueries": 1,
+      "tier": "stuck",
+      "impressions": 200,
+      "pairImpressions": 1,
       "clicks": 0,
-      "impressionsPerQuery": 3.94,
-      "headQuery": "weighted average calculator",
-      "headImpressions": 31,
-      "top3Share": 0.223,
-      "longTailQueries": 39,
-      "longTailShare": 0.796,
-      "longTailImpressions": 43,
+      "impressionsPerQuery": 200,
+      "headQuery": "التكلفة",
+      "headImpressions": 1,
+      "top3Share": 0.005,
+      "longTailQueries": 1,
+      "longTailShare": 1,
+      "longTailImpressions": 1,
       "positions": {
         "p1to3": 0,
-        "p4to10": 2,
+        "p4to10": 1,
         "p11to20": 0,
-        "p21plus": 47
+        "p21plus": 0
       },
       "variantCount": 1,
       "variants": [
         {
-          "url": "https://calcpromaster.com/math/weighted-average/",
-          "impressions": 112
+          "url": "https://calcpromaster.com/education/tuition-cost",
+          "impressions": 1
         }
       ],
       "splitSignal": false,
       "minorityImpressions": 0
     },
     {
-      "path": "/fitness/muscle-gain",
-      "distinctQueries": 5,
-      "tier": "thin",
-      "impressions": 182,
-      "pairImpressions": 9,
-      "clicks": 1,
-      "impressionsPerQuery": 36.4,
-      "headQuery": "muscle gain calculator",
-      "headImpressions": 3,
-      "top3Share": 0.038,
-      "longTailQueries": 3,
-      "longTailShare": 0.6,
-      "longTailImpressions": 3,
-      "positions": {
-        "p1to3": 0,
-        "p4to10": 0,
-        "p11to20": 0,
-        "p21plus": 5
-      },
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/fitness/muscle-gain",
-          "impressions": 6
-        },
-        {
-          "url": "https://calcpromaster.com/fitness/muscle-gain/",
-          "impressions": 3
-        }
-      ],
-      "splitSignal": true,
-      "minorityImpressions": 3
-    },
-    {
-      "path": "/tech/rgb-hex",
-      "distinctQueries": 27,
-      "tier": "growing",
-      "impressions": 166,
-      "pairImpressions": 130,
+      "path": "/math/weighted-average",
+      "distinctQueries": 51,
+      "tier": "broad",
+      "impressions": 193,
+      "pairImpressions": 131,
       "clicks": 0,
-      "impressionsPerQuery": 6.15,
-      "headQuery": "rgb to hex",
-      "headImpressions": 76,
-      "top3Share": 0.536,
-      "longTailQueries": 19,
-      "longTailShare": 0.704,
-      "longTailImpressions": 21,
+      "impressionsPerQuery": 3.78,
+      "headQuery": "weighted average calculator",
+      "headImpressions": 35,
+      "top3Share": 0.254,
+      "longTailQueries": 39,
+      "longTailShare": 0.765,
+      "longTailImpressions": 43,
       "positions": {
         "p1to3": 0,
-        "p4to10": 7,
-        "p11to20": 5,
-        "p21plus": 15
+        "p4to10": 2,
+        "p11to20": 0,
+        "p21plus": 49
       },
       "variantCount": 1,
       "variants": [
         {
-          "url": "https://calcpromaster.com/tech/rgb-hex/",
-          "impressions": 130
+          "url": "https://calcpromaster.com/math/weighted-average/",
+          "impressions": 131
         }
       ],
       "splitSignal": false,
@@ -489,63 +689,153 @@
     },
     {
       "path": "/regional/singapore-cpf",
-      "distinctQueries": 36,
+      "distinctQueries": 42,
       "tier": "broad",
-      "impressions": 157,
-      "pairImpressions": 111,
+      "impressions": 187,
+      "pairImpressions": 164,
       "clicks": 0,
-      "impressionsPerQuery": 4.36,
+      "impressionsPerQuery": 4.45,
       "headQuery": "cpf calculator",
-      "headImpressions": 25,
-      "top3Share": 0.344,
-      "longTailQueries": 29,
-      "longTailShare": 0.806,
-      "longTailImpressions": 34,
+      "headImpressions": 34,
+      "top3Share": 0.422,
+      "longTailQueries": 34,
+      "longTailShare": 0.81,
+      "longTailImpressions": 44,
       "positions": {
         "p1to3": 0,
         "p4to10": 2,
-        "p11to20": 1,
-        "p21plus": 33
+        "p11to20": 3,
+        "p21plus": 37
       },
       "variantCount": 2,
       "variants": [
         {
           "url": "https://calcpromaster.com/regional/singapore-cpf",
-          "impressions": 94
+          "impressions": 145
         },
         {
           "url": "https://calcpromaster.com/regional/singapore-cpf/",
-          "impressions": 17
+          "impressions": 19
         }
       ],
       "splitSignal": true,
-      "minorityImpressions": 17
+      "minorityImpressions": 19
+    },
+    {
+      "path": "/tech/rgb-hex",
+      "distinctQueries": 33,
+      "tier": "broad",
+      "impressions": 166,
+      "pairImpressions": 156,
+      "clicks": 0,
+      "impressionsPerQuery": 5.03,
+      "headQuery": "rgb to hex",
+      "headImpressions": 84,
+      "top3Share": 0.62,
+      "longTailQueries": 23,
+      "longTailShare": 0.697,
+      "longTailImpressions": 26,
+      "positions": {
+        "p1to3": 0,
+        "p4to10": 12,
+        "p11to20": 5,
+        "p21plus": 16
+      },
+      "variantCount": 1,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/tech/rgb-hex/",
+          "impressions": 156
+        }
+      ],
+      "splitSignal": false,
+      "minorityImpressions": 0
+    },
+    {
+      "path": "/finance/rent-affordability",
+      "distinctQueries": 41,
+      "tier": "broad",
+      "impressions": 165,
+      "pairImpressions": 126,
+      "clicks": 0,
+      "impressionsPerQuery": 4.02,
+      "headQuery": "rent affordability calculator",
+      "headImpressions": 61,
+      "top3Share": 0.442,
+      "longTailQueries": 36,
+      "longTailShare": 0.878,
+      "longTailImpressions": 45,
+      "positions": {
+        "p1to3": 1,
+        "p4to10": 5,
+        "p11to20": 6,
+        "p21plus": 29
+      },
+      "variantCount": 1,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/finance/rent-affordability/",
+          "impressions": 126
+        }
+      ],
+      "splitSignal": false,
+      "minorityImpressions": 0
+    },
+    {
+      "path": "/finance/wacc",
+      "distinctQueries": 15,
+      "tier": "growing",
+      "impressions": 159,
+      "pairImpressions": 152,
+      "clicks": 0,
+      "impressionsPerQuery": 10.6,
+      "headQuery": "cost of capital calculator",
+      "headImpressions": 42,
+      "top3Share": 0.547,
+      "longTailQueries": 7,
+      "longTailShare": 0.467,
+      "longTailImpressions": 9,
+      "positions": {
+        "p1to3": 0,
+        "p4to10": 1,
+        "p11to20": 0,
+        "p21plus": 14
+      },
+      "variantCount": 1,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/finance/wacc/",
+          "impressions": 152
+        }
+      ],
+      "splitSignal": false,
+      "minorityImpressions": 0
     },
     {
       "path": "/guides/mortgage",
-      "distinctQueries": 39,
+      "distinctQueries": 58,
       "tier": "broad",
       "impressions": 148,
-      "pairImpressions": 75,
+      "pairImpressions": 122,
       "clicks": 0,
-      "impressionsPerQuery": 3.79,
-      "headQuery": "compute mortgage payment formula",
-      "headImpressions": 14,
-      "top3Share": 0.189,
-      "longTailQueries": 33,
-      "longTailShare": 0.846,
-      "longTailImpressions": 37,
+      "impressionsPerQuery": 2.55,
+      "headQuery": "mortgage payment formula",
+      "headImpressions": 22,
+      "top3Share": 0.297,
+      "longTailQueries": 48,
+      "longTailShare": 0.828,
+      "longTailImpressions": 53,
       "positions": {
         "p1to3": 0,
         "p4to10": 0,
         "p11to20": 4,
-        "p21plus": 35
+        "p21plus": 54
       },
       "variantCount": 1,
       "variants": [
         {
           "url": "https://calcpromaster.com/guides/mortgage",
-          "impressions": 75
+          "impressions": 122
         }
       ],
       "splitSignal": false,
@@ -553,307 +843,29 @@
     },
     {
       "path": "/homegarden/wallpaper-rolls",
-      "distinctQueries": 31,
+      "distinctQueries": 49,
       "tier": "broad",
       "impressions": 145,
-      "pairImpressions": 77,
+      "pairImpressions": 113,
       "clicks": 0,
-      "impressionsPerQuery": 4.68,
+      "impressionsPerQuery": 2.96,
       "headQuery": "wallpaper calculator",
-      "headImpressions": 34,
-      "top3Share": 0.31,
-      "longTailQueries": 27,
-      "longTailShare": 0.871,
-      "longTailImpressions": 29,
+      "headImpressions": 38,
+      "top3Share": 0.352,
+      "longTailQueries": 44,
+      "longTailShare": 0.898,
+      "longTailImpressions": 53,
       "positions": {
         "p1to3": 0,
         "p4to10": 0,
         "p11to20": 1,
-        "p21plus": 30
+        "p21plus": 48
       },
       "variantCount": 1,
       "variants": [
         {
           "url": "https://calcpromaster.com/homegarden/wallpaper-rolls",
-          "impressions": 77
-        }
-      ],
-      "splitSignal": false,
-      "minorityImpressions": 0
-    },
-    {
-      "path": "/finance/va-loan",
-      "distinctQueries": 52,
-      "tier": "broad",
-      "impressions": 132,
-      "pairImpressions": 132,
-      "clicks": 0,
-      "impressionsPerQuery": 2.54,
-      "headQuery": "va loan calculator",
-      "headImpressions": 10,
-      "top3Share": 0.174,
-      "longTailQueries": 31,
-      "longTailShare": 0.596,
-      "longTailImpressions": 44,
-      "positions": {
-        "p1to3": 0,
-        "p4to10": 0,
-        "p11to20": 1,
-        "p21plus": 51
-      },
-      "variantCount": 1,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/finance/va-loan/",
-          "impressions": 132
-        }
-      ],
-      "splitSignal": false,
-      "minorityImpressions": 0
-    },
-    {
-      "path": "/math/trigonometry",
-      "distinctQueries": 3,
-      "tier": "stuck",
-      "impressions": 112,
-      "pairImpressions": 4,
-      "clicks": 0,
-      "impressionsPerQuery": 37.33,
-      "headQuery": "online calculator trigonometry",
-      "headImpressions": 2,
-      "top3Share": 0.036,
-      "longTailQueries": 3,
-      "longTailShare": 1,
-      "longTailImpressions": 4,
-      "positions": {
-        "p1to3": 1,
-        "p4to10": 2,
-        "p11to20": 0,
-        "p21plus": 0
-      },
-      "variantCount": 1,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/math/trigonometry/",
-          "impressions": 4
-        }
-      ],
-      "splitSignal": false,
-      "minorityImpressions": 0
-    },
-    {
-      "path": "/family/baby-weight-gain",
-      "distinctQueries": 26,
-      "tier": "growing",
-      "impressions": 106,
-      "pairImpressions": 103,
-      "clicks": 0,
-      "impressionsPerQuery": 4.08,
-      "headQuery": "baby weight percentile calculator",
-      "headImpressions": 20,
-      "top3Share": 0.406,
-      "longTailQueries": 14,
-      "longTailShare": 0.538,
-      "longTailImpressions": 17,
-      "positions": {
-        "p1to3": 3,
-        "p4to10": 17,
-        "p11to20": 3,
-        "p21plus": 3
-      },
-      "variantCount": 1,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/family/baby-weight-gain/",
-          "impressions": 103
-        }
-      ],
-      "splitSignal": false,
-      "minorityImpressions": 0
-    },
-    {
-      "path": "/tech/raid-capacity",
-      "distinctQueries": 48,
-      "tier": "broad",
-      "impressions": 104,
-      "pairImpressions": 224,
-      "clicks": 0,
-      "impressionsPerQuery": 2.17,
-      "headQuery": "raid capacity calculator",
-      "headImpressions": 59,
-      "top3Share": 1.029,
-      "longTailQueries": 30,
-      "longTailShare": 0.625,
-      "longTailImpressions": 37,
-      "positions": {
-        "p1to3": 0,
-        "p4to10": 7,
-        "p11to20": 4,
-        "p21plus": 37
-      },
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/tech/raid-capacity/",
-          "impressions": 126
-        },
-        {
-          "url": "https://calcpromaster.com/tech/raid-capacity",
-          "impressions": 98
-        }
-      ],
-      "splitSignal": true,
-      "minorityImpressions": 98
-    },
-    {
-      "path": "/guides/gear-ratio",
-      "distinctQueries": 34,
-      "tier": "broad",
-      "impressions": 102,
-      "pairImpressions": 63,
-      "clicks": 0,
-      "impressionsPerQuery": 3,
-      "headQuery": "gear ratio formula",
-      "headImpressions": 14,
-      "top3Share": 0.216,
-      "longTailQueries": 29,
-      "longTailShare": 0.853,
-      "longTailImpressions": 35,
-      "positions": {
-        "p1to3": 0,
-        "p4to10": 2,
-        "p11to20": 0,
-        "p21plus": 32
-      },
-      "variantCount": 1,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/guides/gear-ratio",
-          "impressions": 63
-        }
-      ],
-      "splitSignal": false,
-      "minorityImpressions": 0
-    },
-    {
-      "path": "/science/dew-point",
-      "distinctQueries": 26,
-      "tier": "growing",
-      "impressions": 100,
-      "pairImpressions": 81,
-      "clicks": 0,
-      "impressionsPerQuery": 3.85,
-      "headQuery": "how is dew point calculated",
-      "headImpressions": 18,
-      "top3Share": 0.46,
-      "longTailQueries": 21,
-      "longTailShare": 0.808,
-      "longTailImpressions": 25,
-      "positions": {
-        "p1to3": 2,
-        "p4to10": 11,
-        "p11to20": 4,
-        "p21plus": 9
-      },
-      "variantCount": 1,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/science/dew-point/",
-          "impressions": 81
-        }
-      ],
-      "splitSignal": false,
-      "minorityImpressions": 0
-    },
-    {
-      "path": "/guides/business-days",
-      "distinctQueries": 165,
-      "tier": "hundreds",
-      "impressions": 97,
-      "pairImpressions": 219,
-      "clicks": 0,
-      "impressionsPerQuery": 0.59,
-      "headQuery": "business days calculator",
-      "headImpressions": 5,
-      "top3Share": 0.134,
-      "longTailQueries": 152,
-      "longTailShare": 0.921,
-      "longTailImpressions": 175,
-      "positions": {
-        "p1to3": 0,
-        "p4to10": 3,
-        "p11to20": 1,
-        "p21plus": 161
-      },
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/guides/business-days",
-          "impressions": 137
-        },
-        {
-          "url": "https://calcpromaster.com/guides/business-days/",
-          "impressions": 82
-        }
-      ],
-      "splitSignal": true,
-      "minorityImpressions": 82
-    },
-    {
-      "path": "/regional/switzerland-take-home-salary",
-      "distinctQueries": 21,
-      "tier": "growing",
-      "impressions": 95,
-      "pairImpressions": 47,
-      "clicks": 0,
-      "impressionsPerQuery": 4.52,
-      "headQuery": "swiss salary calculator",
-      "headImpressions": 13,
-      "top3Share": 0.242,
-      "longTailQueries": 17,
-      "longTailShare": 0.81,
-      "longTailImpressions": 21,
-      "positions": {
-        "p1to3": 0,
-        "p4to10": 3,
-        "p11to20": 0,
-        "p21plus": 18
-      },
-      "variantCount": 1,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/regional/switzerland-take-home-salary/",
-          "impressions": 47
-        }
-      ],
-      "splitSignal": false,
-      "minorityImpressions": 0
-    },
-    {
-      "path": "/everyday/gift-wrap",
-      "distinctQueries": 1,
-      "tier": "stuck",
-      "impressions": 95,
-      "pairImpressions": 1,
-      "clicks": 0,
-      "impressionsPerQuery": 95,
-      "headQuery": "how much wrapping paper do i need",
-      "headImpressions": 1,
-      "top3Share": 0.011,
-      "longTailQueries": 1,
-      "longTailShare": 1,
-      "longTailImpressions": 1,
-      "positions": {
-        "p1to3": 0,
-        "p4to10": 0,
-        "p11to20": 0,
-        "p21plus": 1
-      },
-      "variantCount": 1,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/everyday/gift-wrap/",
-          "impressions": 1
+          "impressions": 113
         }
       ],
       "splitSignal": false,
@@ -861,36 +873,16 @@
     }
   ],
   "splitLeak": {
-    "paths": 112,
-    "impressions": 1410,
+    "paths": 117,
+    "impressions": 1457,
     "configMismatch": 0,
-    "consolidationLag": 112,
+    "consolidationLag": 117,
     "notInSitemap": 0
   },
   "splits": [
     {
-      "path": "/lifestyle/home-insurance",
-      "impressions": 372,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/lifestyle/home-insurance/",
-          "impressions": 637
-        },
-        {
-          "url": "https://calcpromaster.com/lifestyle/home-insurance",
-          "impressions": 366
-        }
-      ],
-      "minorityImpressions": 366,
-      "minorityShare": 0.365,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
       "path": "/health/bmr-mifflin",
-      "impressions": 359,
+      "impressions": 1108,
       "variantCount": 2,
       "variants": [
         {
@@ -909,28 +901,48 @@
       "winnerMatchesConfig": false
     },
     {
+      "path": "/lifestyle/home-insurance",
+      "impressions": 1012,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/lifestyle/home-insurance/",
+          "impressions": 637
+        },
+        {
+          "url": "https://calcpromaster.com/lifestyle/home-insurance",
+          "impressions": 366
+        }
+      ],
+      "minorityImpressions": 366,
+      "minorityShare": 0.365,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
       "path": "/tech/internet-speed",
-      "impressions": 226,
+      "impressions": 508,
       "variantCount": 2,
       "variants": [
         {
           "url": "https://calcpromaster.com/tech/internet-speed/",
-          "impressions": 125
+          "impressions": 152
         },
         {
           "url": "https://calcpromaster.com/tech/internet-speed",
-          "impressions": 93
+          "impressions": 116
         }
       ],
-      "minorityImpressions": 93,
-      "minorityShare": 0.427,
+      "minorityImpressions": 116,
+      "minorityShare": 0.433,
       "verdict": "consolidation-lag",
       "sitemapForm": "slash",
       "winnerMatchesConfig": true
     },
     {
       "path": "/fitness/muscle-gain",
-      "impressions": 182,
+      "impressions": 321,
       "variantCount": 2,
       "variants": [
         {
@@ -949,48 +961,8 @@
       "winnerMatchesConfig": false
     },
     {
-      "path": "/regional/singapore-cpf",
-      "impressions": 157,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/regional/singapore-cpf",
-          "impressions": 94
-        },
-        {
-          "url": "https://calcpromaster.com/regional/singapore-cpf/",
-          "impressions": 17
-        }
-      ],
-      "minorityImpressions": 17,
-      "minorityShare": 0.153,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/tech/raid-capacity",
-      "impressions": 104,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/tech/raid-capacity/",
-          "impressions": 126
-        },
-        {
-          "url": "https://calcpromaster.com/tech/raid-capacity",
-          "impressions": 98
-        }
-      ],
-      "minorityImpressions": 98,
-      "minorityShare": 0.438,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
       "path": "/guides/business-days",
-      "impressions": 97,
+      "impressions": 262,
       "variantCount": 2,
       "variants": [
         {
@@ -1009,8 +981,48 @@
       "winnerMatchesConfig": true
     },
     {
+      "path": "/finance/credit-utilization",
+      "impressions": 252,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/finance/credit-utilization/",
+          "impressions": 238
+        },
+        {
+          "url": "https://calcpromaster.com/finance/credit-utilization",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.004,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/tech/raid-capacity",
+      "impressions": 238,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/tech/raid-capacity/",
+          "impressions": 126
+        },
+        {
+          "url": "https://calcpromaster.com/tech/raid-capacity",
+          "impressions": 98
+        }
+      ],
+      "minorityImpressions": 98,
+      "minorityShare": 0.438,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
       "path": "/science/carbon-dating",
-      "impressions": 94,
+      "impressions": 213,
       "variantCount": 2,
       "variants": [
         {
@@ -1030,7 +1042,7 @@
     },
     {
       "path": "/lifestyle/renters-insurance",
-      "impressions": 68,
+      "impressions": 203,
       "variantCount": 2,
       "variants": [
         {
@@ -1049,8 +1061,28 @@
       "winnerMatchesConfig": false
     },
     {
+      "path": "/regional/singapore-cpf",
+      "impressions": 187,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/regional/singapore-cpf",
+          "impressions": 145
+        },
+        {
+          "url": "https://calcpromaster.com/regional/singapore-cpf/",
+          "impressions": 19
+        }
+      ],
+      "minorityImpressions": 19,
+      "minorityShare": 0.116,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
       "path": "/conversion/wire-gauge-conv",
-      "impressions": 64,
+      "impressions": 133,
       "variantCount": 2,
       "variants": [
         {
@@ -1069,448 +1101,8 @@
       "winnerMatchesConfig": false
     },
     {
-      "path": "/regional/rickshaw-fare",
-      "impressions": 64,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/regional/rickshaw-fare/",
-          "impressions": 4
-        },
-        {
-          "url": "https://calcpromaster.com/regional/rickshaw-fare",
-          "impressions": 3
-        }
-      ],
-      "minorityImpressions": 3,
-      "minorityShare": 0.429,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/regional/pk-salary",
-      "impressions": 45,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/regional/pk-salary/",
-          "impressions": 21
-        },
-        {
-          "url": "https://calcpromaster.com/regional/pk-salary",
-          "impressions": 2
-        }
-      ],
-      "minorityImpressions": 2,
-      "minorityShare": 0.087,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/auto/mileage-calculator",
-      "impressions": 40,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/auto/mileage-calculator/",
-          "impressions": 41
-        },
-        {
-          "url": "https://calcpromaster.com/auto/mileage-calculator",
-          "impressions": 15
-        }
-      ],
-      "minorityImpressions": 15,
-      "minorityShare": 0.268,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/family/vacation-with-kids",
-      "impressions": 33,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/family/vacation-with-kids",
-          "impressions": 30
-        },
-        {
-          "url": "https://calcpromaster.com/family/vacation-with-kids/",
-          "impressions": 3
-        }
-      ],
-      "minorityImpressions": 3,
-      "minorityShare": 0.091,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/lifestyle/resell-value",
-      "impressions": 31,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/lifestyle/resell-value/",
-          "impressions": 3
-        },
-        {
-          "url": "https://calcpromaster.com/lifestyle/resell-value",
-          "impressions": 2
-        }
-      ],
-      "minorityImpressions": 2,
-      "minorityShare": 0.4,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/tech/screen-ppi",
-      "impressions": 29,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/tech/screen-ppi",
-          "impressions": 22
-        },
-        {
-          "url": "https://calcpromaster.com/tech/screen-ppi/",
-          "impressions": 18
-        }
-      ],
-      "minorityImpressions": 18,
-      "minorityShare": 0.45,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/engineering/pump-power",
-      "impressions": 29,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/engineering/pump-power",
-          "impressions": 28
-        },
-        {
-          "url": "https://calcpromaster.com/engineering/pump-power/",
-          "impressions": 9
-        }
-      ],
-      "minorityImpressions": 9,
-      "minorityShare": 0.243,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/regional/nsc-interest",
-      "impressions": 26,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/regional/nsc-interest",
-          "impressions": 34
-        },
-        {
-          "url": "https://calcpromaster.com/regional/nsc-interest/",
-          "impressions": 26
-        }
-      ],
-      "minorityImpressions": 26,
-      "minorityShare": 0.433,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/auto/taxi-fare",
-      "impressions": 25,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/auto/taxi-fare/",
-          "impressions": 19
-        },
-        {
-          "url": "https://calcpromaster.com/auto/taxi-fare",
-          "impressions": 10
-        }
-      ],
-      "minorityImpressions": 10,
-      "minorityShare": 0.345,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/fitness",
-      "impressions": 25,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/fitness",
-          "impressions": 11
-        },
-        {
-          "url": "https://calcpromaster.com/fitness/",
-          "impressions": 4
-        }
-      ],
-      "minorityImpressions": 4,
-      "minorityShare": 0.267,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/business",
-      "impressions": 24,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/business",
-          "impressions": 18
-        },
-        {
-          "url": "https://calcpromaster.com/business/",
-          "impressions": 4
-        }
-      ],
-      "minorityImpressions": 4,
-      "minorityShare": 0.182,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/tech/cloud-storage",
-      "impressions": 23,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/tech/cloud-storage/",
-          "impressions": 30
-        },
-        {
-          "url": "https://calcpromaster.com/tech/cloud-storage",
-          "impressions": 19
-        }
-      ],
-      "minorityImpressions": 19,
-      "minorityShare": 0.388,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/regional/nps-calculator",
-      "impressions": 22,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/regional/nps-calculator",
-          "impressions": 29
-        },
-        {
-          "url": "https://calcpromaster.com/regional/nps-calculator/",
-          "impressions": 20
-        }
-      ],
-      "minorityImpressions": 20,
-      "minorityShare": 0.408,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/construction/carpet",
-      "impressions": 22,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/construction/carpet/",
-          "impressions": 28
-        },
-        {
-          "url": "https://calcpromaster.com/construction/carpet",
-          "impressions": 21
-        }
-      ],
-      "minorityImpressions": 21,
-      "minorityShare": 0.429,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/fitness/vo2max",
-      "impressions": 22,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/fitness/vo2max/",
-          "impressions": 9
-        },
-        {
-          "url": "https://calcpromaster.com/fitness/vo2max",
-          "impressions": 6
-        }
-      ],
-      "minorityImpressions": 6,
-      "minorityShare": 0.4,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/homegarden/deck-stain",
-      "impressions": 20,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/homegarden/deck-stain",
-          "impressions": 42
-        },
-        {
-          "url": "https://calcpromaster.com/homegarden/deck-stain/",
-          "impressions": 12
-        }
-      ],
-      "minorityImpressions": 12,
-      "minorityShare": 0.222,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/tech/ip-subnet",
-      "impressions": 19,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/tech/ip-subnet/",
-          "impressions": 84
-        },
-        {
-          "url": "https://calcpromaster.com/tech/ip-subnet",
-          "impressions": 12
-        }
-      ],
-      "minorityImpressions": 12,
-      "minorityShare": 0.125,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/homegarden/room-area",
-      "impressions": 19,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/homegarden/room-area",
-          "impressions": 36
-        },
-        {
-          "url": "https://calcpromaster.com/homegarden/room-area/",
-          "impressions": 17
-        }
-      ],
-      "minorityImpressions": 17,
-      "minorityShare": 0.321,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/auto/trade-in-value",
-      "impressions": 17,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/auto/trade-in-value",
-          "impressions": 65
-        },
-        {
-          "url": "https://calcpromaster.com/auto/trade-in-value/",
-          "impressions": 15
-        }
-      ],
-      "minorityImpressions": 15,
-      "minorityShare": 0.188,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/engineering/ups-sizing",
-      "impressions": 16,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/engineering/ups-sizing",
-          "impressions": 52
-        },
-        {
-          "url": "https://calcpromaster.com/engineering/ups-sizing/",
-          "impressions": 13
-        }
-      ],
-      "minorityImpressions": 13,
-      "minorityShare": 0.2,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/health/chw",
-      "impressions": 15,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/health/chw/",
-          "impressions": 36
-        },
-        {
-          "url": "https://calcpromaster.com/health/chw",
-          "impressions": 2
-        }
-      ],
-      "minorityImpressions": 2,
-      "minorityShare": 0.053,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/fitness/situp-test",
-      "impressions": 15,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/fitness/situp-test/",
-          "impressions": 6
-        },
-        {
-          "url": "https://calcpromaster.com/fitness/situp-test",
-          "impressions": 1
-        }
-      ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.143,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
       "path": "/science/solar-energy",
-      "impressions": 15,
+      "impressions": 133,
       "variantCount": 2,
       "variants": [
         {
@@ -1529,348 +1121,108 @@
       "winnerMatchesConfig": true
     },
     {
-      "path": "/homegarden/plant-spacing",
-      "impressions": 15,
+      "path": "/tech/ip-subnet",
+      "impressions": 122,
       "variantCount": 2,
       "variants": [
         {
-          "url": "https://calcpromaster.com/homegarden/plant-spacing",
-          "impressions": 15
+          "url": "https://calcpromaster.com/tech/ip-subnet/",
+          "impressions": 84
         },
         {
-          "url": "https://calcpromaster.com/homegarden/plant-spacing/",
-          "impressions": 10
-        }
-      ],
-      "minorityImpressions": 10,
-      "minorityShare": 0.4,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/homegarden/light-bulb-save",
-      "impressions": 15,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/homegarden/light-bulb-save",
-          "impressions": 15
-        },
-        {
-          "url": "https://calcpromaster.com/homegarden/light-bulb-save/",
-          "impressions": 11
-        }
-      ],
-      "minorityImpressions": 11,
-      "minorityShare": 0.423,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/everyday/grocery-budget",
-      "impressions": 14,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/everyday/grocery-budget",
-          "impressions": 11
-        },
-        {
-          "url": "https://calcpromaster.com/everyday/grocery-budget/",
-          "impressions": 9
-        }
-      ],
-      "minorityImpressions": 9,
-      "minorityShare": 0.45,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/health/ldl-calculator",
-      "impressions": 14,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/health/ldl-calculator/",
-          "impressions": 40
-        },
-        {
-          "url": "https://calcpromaster.com/health/ldl-calculator",
-          "impressions": 7
-        }
-      ],
-      "minorityImpressions": 7,
-      "minorityShare": 0.149,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/hub/fitness",
-      "impressions": 13,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/hub/fitness",
-          "impressions": 23
-        },
-        {
-          "url": "https://calcpromaster.com/hub/fitness/",
-          "impressions": 1
-        }
-      ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.042,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/construction/post-hole-concrete",
-      "impressions": 13,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/construction/post-hole-concrete",
-          "impressions": 14
-        },
-        {
-          "url": "https://calcpromaster.com/construction/post-hole-concrete/",
-          "impressions": 8
-        }
-      ],
-      "minorityImpressions": 8,
-      "minorityShare": 0.364,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/homegarden/vinyl-flooring",
-      "impressions": 13,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/homegarden/vinyl-flooring",
-          "impressions": 67
-        },
-        {
-          "url": "https://calcpromaster.com/homegarden/vinyl-flooring/",
-          "impressions": 6
-        }
-      ],
-      "minorityImpressions": 6,
-      "minorityShare": 0.082,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/construction/drywall-screws",
-      "impressions": 13,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/construction/drywall-screws/",
-          "impressions": 12
-        },
-        {
-          "url": "https://calcpromaster.com/construction/drywall-screws",
-          "impressions": 11
-        }
-      ],
-      "minorityImpressions": 11,
-      "minorityShare": 0.478,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/family/baby-feeding",
-      "impressions": 13,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/family/baby-feeding",
-          "impressions": 14
-        },
-        {
-          "url": "https://calcpromaster.com/family/baby-feeding/",
-          "impressions": 5
-        }
-      ],
-      "minorityImpressions": 5,
-      "minorityShare": 0.263,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/auto/bike-loan",
-      "impressions": 12,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/auto/bike-loan/",
-          "impressions": 27
-        },
-        {
-          "url": "https://calcpromaster.com/auto/bike-loan",
-          "impressions": 11
-        }
-      ],
-      "minorityImpressions": 11,
-      "minorityShare": 0.289,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/health/maintenance-fluids",
-      "impressions": 12,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/health/maintenance-fluids/",
-          "impressions": 38
-        },
-        {
-          "url": "https://calcpromaster.com/health/maintenance-fluids",
-          "impressions": 11
-        }
-      ],
-      "minorityImpressions": 11,
-      "minorityShare": 0.224,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/everyday/vacation-budget",
-      "impressions": 12,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/everyday/vacation-budget",
-          "impressions": 25
-        },
-        {
-          "url": "https://calcpromaster.com/everyday/vacation-budget/",
-          "impressions": 5
-        }
-      ],
-      "minorityImpressions": 5,
-      "minorityShare": 0.167,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/everyday/jet-lag",
-      "impressions": 12,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/everyday/jet-lag",
-          "impressions": 19
-        },
-        {
-          "url": "https://calcpromaster.com/everyday/jet-lag/",
-          "impressions": 11
-        }
-      ],
-      "minorityImpressions": 11,
-      "minorityShare": 0.367,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/everyday/laundry-cost",
-      "impressions": 12,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/everyday/laundry-cost",
-          "impressions": 1
-        },
-        {
-          "url": "https://calcpromaster.com/everyday/laundry-cost/",
-          "impressions": 1
-        }
-      ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.5,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/fitness/swim-pace",
-      "impressions": 12,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/fitness/swim-pace",
-          "impressions": 15
-        },
-        {
-          "url": "https://calcpromaster.com/fitness/swim-pace/",
+          "url": "https://calcpromaster.com/tech/ip-subnet",
           "impressions": 12
         }
       ],
       "minorityImpressions": 12,
+      "minorityShare": 0.125,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/lifestyle/resell-value",
+      "impressions": 114,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/lifestyle/resell-value",
+          "impressions": 5
+        },
+        {
+          "url": "https://calcpromaster.com/lifestyle/resell-value/",
+          "impressions": 4
+        }
+      ],
+      "minorityImpressions": 4,
       "minorityShare": 0.444,
       "verdict": "consolidation-lag",
       "sitemapForm": "slash",
       "winnerMatchesConfig": false
     },
     {
-      "path": "/health/free-water-deficit",
-      "impressions": 11,
+      "path": "/everyday/coffee-cost",
+      "impressions": 110,
       "variantCount": 2,
       "variants": [
         {
-          "url": "https://calcpromaster.com/health/free-water-deficit",
-          "impressions": 35
+          "url": "https://calcpromaster.com/everyday/coffee-cost/",
+          "impressions": 85
         },
         {
-          "url": "https://calcpromaster.com/health/free-water-deficit/",
-          "impressions": 6
+          "url": "https://calcpromaster.com/everyday/coffee-cost",
+          "impressions": 2
         }
       ],
-      "minorityImpressions": 6,
-      "minorityShare": 0.146,
+      "minorityImpressions": 2,
+      "minorityShare": 0.023,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/auto/parking-cost",
+      "impressions": 107,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/auto/parking-cost",
+          "impressions": 13
+        },
+        {
+          "url": "https://calcpromaster.com/auto/parking-cost/",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.071,
       "verdict": "consolidation-lag",
       "sitemapForm": "slash",
       "winnerMatchesConfig": false
     },
     {
-      "path": "/engineering/steel-weight",
-      "impressions": 11,
+      "path": "/auto/mileage-calculator",
+      "impressions": 103,
       "variantCount": 2,
       "variants": [
         {
-          "url": "https://calcpromaster.com/engineering/steel-weight",
-          "impressions": 63
+          "url": "https://calcpromaster.com/auto/mileage-calculator/",
+          "impressions": 41
         },
         {
-          "url": "https://calcpromaster.com/engineering/steel-weight/",
-          "impressions": 6
+          "url": "https://calcpromaster.com/auto/mileage-calculator",
+          "impressions": 15
         }
       ],
-      "minorityImpressions": 6,
-      "minorityShare": 0.087,
+      "minorityImpressions": 15,
+      "minorityShare": 0.268,
       "verdict": "consolidation-lag",
       "sitemapForm": "slash",
-      "winnerMatchesConfig": false
+      "winnerMatchesConfig": true
     },
     {
       "path": "/lifestyle/vacation-savings",
-      "impressions": 11,
+      "impressions": 101,
       "variantCount": 2,
       "variants": [
         {
@@ -1890,7 +1242,7 @@
     },
     {
       "path": "/finance/prorated-rent",
-      "impressions": 11,
+      "impressions": 100,
       "variantCount": 2,
       "variants": [
         {
@@ -1909,8 +1261,568 @@
       "winnerMatchesConfig": false
     },
     {
+      "path": "/fitness/situp-test",
+      "impressions": 97,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/fitness/situp-test/",
+          "impressions": 6
+        },
+        {
+          "url": "https://calcpromaster.com/fitness/situp-test",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.143,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/regional/pk-salary",
+      "impressions": 96,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/regional/pk-salary/",
+          "impressions": 22
+        },
+        {
+          "url": "https://calcpromaster.com/regional/pk-salary",
+          "impressions": 2
+        }
+      ],
+      "minorityImpressions": 2,
+      "minorityShare": 0.083,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/hub/fitness",
+      "impressions": 95,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/hub/fitness",
+          "impressions": 30
+        },
+        {
+          "url": "https://calcpromaster.com/hub/fitness/",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.032,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/homegarden/vinyl-flooring",
+      "impressions": 95,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/homegarden/vinyl-flooring",
+          "impressions": 67
+        },
+        {
+          "url": "https://calcpromaster.com/homegarden/vinyl-flooring/",
+          "impressions": 6
+        }
+      ],
+      "minorityImpressions": 6,
+      "minorityShare": 0.082,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/regional/rickshaw-fare",
+      "impressions": 92,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/regional/rickshaw-fare/",
+          "impressions": 4
+        },
+        {
+          "url": "https://calcpromaster.com/regional/rickshaw-fare",
+          "impressions": 3
+        }
+      ],
+      "minorityImpressions": 3,
+      "minorityShare": 0.429,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/family/vacation-with-kids",
+      "impressions": 90,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/family/vacation-with-kids",
+          "impressions": 30
+        },
+        {
+          "url": "https://calcpromaster.com/family/vacation-with-kids/",
+          "impressions": 3
+        }
+      ],
+      "minorityImpressions": 3,
+      "minorityShare": 0.091,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/engineering/steel-weight",
+      "impressions": 87,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/engineering/steel-weight",
+          "impressions": 63
+        },
+        {
+          "url": "https://calcpromaster.com/engineering/steel-weight/",
+          "impressions": 6
+        }
+      ],
+      "minorityImpressions": 6,
+      "minorityShare": 0.087,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/auto/trade-in-value",
+      "impressions": 85,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/auto/trade-in-value",
+          "impressions": 65
+        },
+        {
+          "url": "https://calcpromaster.com/auto/trade-in-value/",
+          "impressions": 15
+        }
+      ],
+      "minorityImpressions": 15,
+      "minorityShare": 0.188,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/tech/cloud-storage",
+      "impressions": 81,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/tech/cloud-storage/",
+          "impressions": 45
+        },
+        {
+          "url": "https://calcpromaster.com/tech/cloud-storage",
+          "impressions": 19
+        }
+      ],
+      "minorityImpressions": 19,
+      "minorityShare": 0.297,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/engineering/ups-sizing",
+      "impressions": 76,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/engineering/ups-sizing",
+          "impressions": 52
+        },
+        {
+          "url": "https://calcpromaster.com/engineering/ups-sizing/",
+          "impressions": 13
+        }
+      ],
+      "minorityImpressions": 13,
+      "minorityShare": 0.2,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/homegarden/deck-stain",
+      "impressions": 75,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/homegarden/deck-stain",
+          "impressions": 42
+        },
+        {
+          "url": "https://calcpromaster.com/homegarden/deck-stain/",
+          "impressions": 12
+        }
+      ],
+      "minorityImpressions": 12,
+      "minorityShare": 0.222,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/food/meat-cooking-time",
+      "impressions": 74,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/food/meat-cooking-time/",
+          "impressions": 65
+        },
+        {
+          "url": "https://calcpromaster.com/food/meat-cooking-time",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.015,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/regional/nps-calculator",
+      "impressions": 72,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/regional/nps-calculator",
+          "impressions": 29
+        },
+        {
+          "url": "https://calcpromaster.com/regional/nps-calculator/",
+          "impressions": 20
+        }
+      ],
+      "minorityImpressions": 20,
+      "minorityShare": 0.408,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/health/chw",
+      "impressions": 69,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/health/chw/",
+          "impressions": 36
+        },
+        {
+          "url": "https://calcpromaster.com/health/chw",
+          "impressions": 2
+        }
+      ],
+      "minorityImpressions": 2,
+      "minorityShare": 0.053,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/health/ldl-calculator",
+      "impressions": 66,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/health/ldl-calculator/",
+          "impressions": 40
+        },
+        {
+          "url": "https://calcpromaster.com/health/ldl-calculator",
+          "impressions": 7
+        }
+      ],
+      "minorityImpressions": 7,
+      "minorityShare": 0.149,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/homegarden/room-area",
+      "impressions": 66,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/homegarden/room-area",
+          "impressions": 36
+        },
+        {
+          "url": "https://calcpromaster.com/homegarden/room-area/",
+          "impressions": 17
+        }
+      ],
+      "minorityImpressions": 17,
+      "minorityShare": 0.321,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/tech/screen-ppi",
+      "impressions": 64,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/tech/screen-ppi",
+          "impressions": 22
+        },
+        {
+          "url": "https://calcpromaster.com/tech/screen-ppi/",
+          "impressions": 18
+        }
+      ],
+      "minorityImpressions": 18,
+      "minorityShare": 0.45,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/health/free-water-deficit",
+      "impressions": 62,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/health/free-water-deficit",
+          "impressions": 35
+        },
+        {
+          "url": "https://calcpromaster.com/health/free-water-deficit/",
+          "impressions": 6
+        }
+      ],
+      "minorityImpressions": 6,
+      "minorityShare": 0.146,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/fitness/vo2max",
+      "impressions": 62,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/fitness/vo2max/",
+          "impressions": 9
+        },
+        {
+          "url": "https://calcpromaster.com/fitness/vo2max",
+          "impressions": 6
+        }
+      ],
+      "minorityImpressions": 6,
+      "minorityShare": 0.4,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/regional/nsc-interest",
+      "impressions": 61,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/regional/nsc-interest",
+          "impressions": 34
+        },
+        {
+          "url": "https://calcpromaster.com/regional/nsc-interest/",
+          "impressions": 26
+        }
+      ],
+      "minorityImpressions": 26,
+      "minorityShare": 0.433,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/lifestyle/wine-servings",
+      "impressions": 60,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/lifestyle/wine-servings/",
+          "impressions": 9
+        },
+        {
+          "url": "https://calcpromaster.com/lifestyle/wine-servings",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.1,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/engineering/pump-power",
+      "impressions": 59,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/engineering/pump-power",
+          "impressions": 28
+        },
+        {
+          "url": "https://calcpromaster.com/engineering/pump-power/",
+          "impressions": 9
+        }
+      ],
+      "minorityImpressions": 9,
+      "minorityShare": 0.243,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/health/maintenance-fluids",
+      "impressions": 56,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/health/maintenance-fluids/",
+          "impressions": 38
+        },
+        {
+          "url": "https://calcpromaster.com/health/maintenance-fluids",
+          "impressions": 11
+        }
+      ],
+      "minorityImpressions": 11,
+      "minorityShare": 0.224,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/auto/taxi-fare",
+      "impressions": 54,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/auto/taxi-fare/",
+          "impressions": 20
+        },
+        {
+          "url": "https://calcpromaster.com/auto/taxi-fare",
+          "impressions": 10
+        }
+      ],
+      "minorityImpressions": 10,
+      "minorityShare": 0.333,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/fitness",
+      "impressions": 54,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/fitness",
+          "impressions": 11
+        },
+        {
+          "url": "https://calcpromaster.com/fitness/",
+          "impressions": 9
+        }
+      ],
+      "minorityImpressions": 9,
+      "minorityShare": 0.45,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/construction/carpet",
+      "impressions": 53,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/construction/carpet/",
+          "impressions": 28
+        },
+        {
+          "url": "https://calcpromaster.com/construction/carpet",
+          "impressions": 21
+        }
+      ],
+      "minorityImpressions": 21,
+      "minorityShare": 0.429,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/business",
+      "impressions": 51,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/business",
+          "impressions": 18
+        },
+        {
+          "url": "https://calcpromaster.com/business/",
+          "impressions": 9
+        }
+      ],
+      "minorityImpressions": 9,
+      "minorityShare": 0.333,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/lifestyle/road-trip-cost",
+      "impressions": 48,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/lifestyle/road-trip-cost/",
+          "impressions": 39
+        },
+        {
+          "url": "https://calcpromaster.com/lifestyle/road-trip-cost",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.025,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
       "path": "/auto/tow-capacity",
-      "impressions": 10,
+      "impressions": 48,
       "variantCount": 2,
       "variants": [
         {
@@ -1929,208 +1841,8 @@
       "winnerMatchesConfig": false
     },
     {
-      "path": "/finance/roommate-rent-split",
-      "impressions": 10,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/finance/roommate-rent-split/",
-          "impressions": 23
-        },
-        {
-          "url": "https://calcpromaster.com/finance/roommate-rent-split",
-          "impressions": 9
-        }
-      ],
-      "minorityImpressions": 9,
-      "minorityShare": 0.281,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/construction/insulation",
-      "impressions": 9,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/construction/insulation",
-          "impressions": 20
-        },
-        {
-          "url": "https://calcpromaster.com/construction/insulation/",
-          "impressions": 6
-        }
-      ],
-      "minorityImpressions": 6,
-      "minorityShare": 0.231,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/business/employee-cost",
-      "impressions": 9,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/business/employee-cost",
-          "impressions": 12
-        },
-        {
-          "url": "https://calcpromaster.com/business/employee-cost/",
-          "impressions": 9
-        }
-      ],
-      "minorityImpressions": 9,
-      "minorityShare": 0.429,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/education/reading-time",
-      "impressions": 9,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/education/reading-time/",
-          "impressions": 21
-        },
-        {
-          "url": "https://calcpromaster.com/education/reading-time",
-          "impressions": 5
-        }
-      ],
-      "minorityImpressions": 5,
-      "minorityShare": 0.192,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/tech/storage-need",
-      "impressions": 9,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/tech/storage-need/",
-          "impressions": 4
-        },
-        {
-          "url": "https://calcpromaster.com/tech/storage-need",
-          "impressions": 1
-        }
-      ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.2,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/homegarden/firewood",
-      "impressions": 9,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/homegarden/firewood",
-          "impressions": 10
-        },
-        {
-          "url": "https://calcpromaster.com/homegarden/firewood/",
-          "impressions": 3
-        }
-      ],
-      "minorityImpressions": 3,
-      "minorityShare": 0.231,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/fitness/squat-standards",
-      "impressions": 8,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/fitness/squat-standards",
-          "impressions": 9
-        },
-        {
-          "url": "https://calcpromaster.com/fitness/squat-standards/",
-          "impressions": 1
-        }
-      ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.1,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/homegarden/tv-mount-height",
-      "impressions": 8,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/homegarden/tv-mount-height",
-          "impressions": 10
-        },
-        {
-          "url": "https://calcpromaster.com/homegarden/tv-mount-height/",
-          "impressions": 6
-        }
-      ],
-      "minorityImpressions": 6,
-      "minorityShare": 0.375,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/auto/hybrid-savings",
-      "impressions": 8,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/auto/hybrid-savings",
-          "impressions": 7
-        },
-        {
-          "url": "https://calcpromaster.com/auto/hybrid-savings/",
-          "impressions": 3
-        }
-      ],
-      "minorityImpressions": 3,
-      "minorityShare": 0.3,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/construction/formwork",
-      "impressions": 8,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/construction/formwork/",
-          "impressions": 3
-        },
-        {
-          "url": "https://calcpromaster.com/construction/formwork",
-          "impressions": 3
-        }
-      ],
-      "minorityImpressions": 3,
-      "minorityShare": 0.5,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
       "path": "/construction/water-tank",
-      "impressions": 6,
+      "impressions": 46,
       "variantCount": 2,
       "variants": [
         {
@@ -2149,148 +1861,48 @@
       "winnerMatchesConfig": true
     },
     {
-      "path": "/finance/cost-basis-avg",
-      "impressions": 6,
+      "path": "/guides/water-intake",
+      "impressions": 44,
       "variantCount": 2,
       "variants": [
         {
-          "url": "https://calcpromaster.com/finance/cost-basis-avg/",
-          "impressions": 14
+          "url": "https://calcpromaster.com/guides/water-intake",
+          "impressions": 29
         },
         {
-          "url": "https://calcpromaster.com/finance/cost-basis-avg",
-          "impressions": 6
-        }
-      ],
-      "minorityImpressions": 6,
-      "minorityShare": 0.3,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/homegarden/kitchen-remodel",
-      "impressions": 6,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/homegarden/kitchen-remodel/",
-          "impressions": 6
-        },
-        {
-          "url": "https://calcpromaster.com/homegarden/kitchen-remodel",
-          "impressions": 6
-        }
-      ],
-      "minorityImpressions": 6,
-      "minorityShare": 0.5,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/finance/market-cap",
-      "impressions": 6,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/finance/market-cap",
-          "impressions": 1
-        },
-        {
-          "url": "https://calcpromaster.com/finance/market-cap/",
+          "url": "https://calcpromaster.com/guides/water-intake/",
           "impressions": 1
         }
       ],
       "minorityImpressions": 1,
-      "minorityShare": 0.5,
+      "minorityShare": 0.033,
       "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/health/sleep-debt",
-      "impressions": 6,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/health/sleep-debt",
-          "impressions": 6
-        },
-        {
-          "url": "https://calcpromaster.com/health/sleep-debt/",
-          "impressions": 4
-        }
-      ],
-      "minorityImpressions": 4,
-      "minorityShare": 0.4,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/tech/typing-speed",
-      "impressions": 6,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/tech/typing-speed/",
-          "impressions": 19
-        },
-        {
-          "url": "https://calcpromaster.com/tech/typing-speed",
-          "impressions": 1
-        }
-      ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.05,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
+      "sitemapForm": "noslash",
       "winnerMatchesConfig": true
     },
     {
-      "path": "/homegarden/lighting-rooms",
-      "impressions": 6,
+      "path": "/auto/bike-loan",
+      "impressions": 43,
       "variantCount": 2,
       "variants": [
         {
-          "url": "https://calcpromaster.com/homegarden/lighting-rooms",
-          "impressions": 15
+          "url": "https://calcpromaster.com/auto/bike-loan/",
+          "impressions": 27
         },
         {
-          "url": "https://calcpromaster.com/homegarden/lighting-rooms/",
-          "impressions": 4
+          "url": "https://calcpromaster.com/auto/bike-loan",
+          "impressions": 11
         }
       ],
-      "minorityImpressions": 4,
-      "minorityShare": 0.211,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/homegarden/deck-post",
-      "impressions": 6,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/homegarden/deck-post/",
-          "impressions": 9
-        },
-        {
-          "url": "https://calcpromaster.com/homegarden/deck-post",
-          "impressions": 4
-        }
-      ],
-      "minorityImpressions": 4,
-      "minorityShare": 0.308,
+      "minorityImpressions": 11,
+      "minorityShare": 0.289,
       "verdict": "consolidation-lag",
       "sitemapForm": "slash",
       "winnerMatchesConfig": true
     },
     {
       "path": "/finance/margin-call",
-      "impressions": 5,
+      "impressions": 43,
       "variantCount": 2,
       "variants": [
         {
@@ -2309,8 +1921,708 @@
       "winnerMatchesConfig": true
     },
     {
+      "path": "/homegarden/firewood",
+      "impressions": 42,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/homegarden/firewood",
+          "impressions": 10
+        },
+        {
+          "url": "https://calcpromaster.com/homegarden/firewood/",
+          "impressions": 3
+        }
+      ],
+      "minorityImpressions": 3,
+      "minorityShare": 0.231,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/everyday/vacation-budget",
+      "impressions": 40,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/everyday/vacation-budget",
+          "impressions": 25
+        },
+        {
+          "url": "https://calcpromaster.com/everyday/vacation-budget/",
+          "impressions": 5
+        }
+      ],
+      "minorityImpressions": 5,
+      "minorityShare": 0.167,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/construction/insulation",
+      "impressions": 36,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/construction/insulation",
+          "impressions": 20
+        },
+        {
+          "url": "https://calcpromaster.com/construction/insulation/",
+          "impressions": 6
+        }
+      ],
+      "minorityImpressions": 6,
+      "minorityShare": 0.231,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/finance/roommate-rent-split",
+      "impressions": 34,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/finance/roommate-rent-split/",
+          "impressions": 23
+        },
+        {
+          "url": "https://calcpromaster.com/finance/roommate-rent-split",
+          "impressions": 9
+        }
+      ],
+      "minorityImpressions": 9,
+      "minorityShare": 0.281,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/tech/storage-need",
+      "impressions": 33,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/tech/storage-need/",
+          "impressions": 4
+        },
+        {
+          "url": "https://calcpromaster.com/tech/storage-need",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.2,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/education/reading-time",
+      "impressions": 32,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/education/reading-time/",
+          "impressions": 21
+        },
+        {
+          "url": "https://calcpromaster.com/education/reading-time",
+          "impressions": 5
+        }
+      ],
+      "minorityImpressions": 5,
+      "minorityShare": 0.192,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/everyday/jet-lag",
+      "impressions": 32,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/everyday/jet-lag",
+          "impressions": 19
+        },
+        {
+          "url": "https://calcpromaster.com/everyday/jet-lag/",
+          "impressions": 11
+        }
+      ],
+      "minorityImpressions": 11,
+      "minorityShare": 0.367,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/fitness/squat-standards",
+      "impressions": 31,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/fitness/squat-standards",
+          "impressions": 9
+        },
+        {
+          "url": "https://calcpromaster.com/fitness/squat-standards/",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.1,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/everyday/grocery-budget",
+      "impressions": 31,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/everyday/grocery-budget",
+          "impressions": 11
+        },
+        {
+          "url": "https://calcpromaster.com/everyday/grocery-budget/",
+          "impressions": 9
+        }
+      ],
+      "minorityImpressions": 9,
+      "minorityShare": 0.45,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/homegarden/plant-spacing",
+      "impressions": 31,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/homegarden/plant-spacing",
+          "impressions": 15
+        },
+        {
+          "url": "https://calcpromaster.com/homegarden/plant-spacing/",
+          "impressions": 10
+        }
+      ],
+      "minorityImpressions": 10,
+      "minorityShare": 0.4,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/regional/electricity-bill-india",
+      "impressions": 30,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/regional/electricity-bill-india",
+          "impressions": 25
+        },
+        {
+          "url": "https://calcpromaster.com/regional/electricity-bill-india/",
+          "impressions": 2
+        }
+      ],
+      "minorityImpressions": 2,
+      "minorityShare": 0.074,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/finance/market-cap",
+      "impressions": 30,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/finance/market-cap",
+          "impressions": 1
+        },
+        {
+          "url": "https://calcpromaster.com/finance/market-cap/",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.5,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/tech/typing-speed",
+      "impressions": 30,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/tech/typing-speed/",
+          "impressions": 19
+        },
+        {
+          "url": "https://calcpromaster.com/tech/typing-speed",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.05,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/construction/drywall-screws",
+      "impressions": 30,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/construction/drywall-screws/",
+          "impressions": 12
+        },
+        {
+          "url": "https://calcpromaster.com/construction/drywall-screws",
+          "impressions": 11
+        }
+      ],
+      "minorityImpressions": 11,
+      "minorityShare": 0.478,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/homegarden/light-bulb-save",
+      "impressions": 30,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/homegarden/light-bulb-save",
+          "impressions": 15
+        },
+        {
+          "url": "https://calcpromaster.com/homegarden/light-bulb-save/",
+          "impressions": 11
+        }
+      ],
+      "minorityImpressions": 11,
+      "minorityShare": 0.423,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/construction/post-hole-concrete",
+      "impressions": 29,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/construction/post-hole-concrete",
+          "impressions": 14
+        },
+        {
+          "url": "https://calcpromaster.com/construction/post-hole-concrete/",
+          "impressions": 8
+        }
+      ],
+      "minorityImpressions": 8,
+      "minorityShare": 0.364,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/homegarden",
+      "impressions": 29,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/homegarden/",
+          "impressions": 9
+        },
+        {
+          "url": "https://calcpromaster.com/homegarden",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.1,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/fitness/swim-pace",
+      "impressions": 29,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/fitness/swim-pace",
+          "impressions": 15
+        },
+        {
+          "url": "https://calcpromaster.com/fitness/swim-pace/",
+          "impressions": 12
+        }
+      ],
+      "minorityImpressions": 12,
+      "minorityShare": 0.444,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/everyday/laundry-cost",
+      "impressions": 28,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/everyday/laundry-cost",
+          "impressions": 1
+        },
+        {
+          "url": "https://calcpromaster.com/everyday/laundry-cost/",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.5,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/family/baby-feeding",
+      "impressions": 27,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/family/baby-feeding",
+          "impressions": 14
+        },
+        {
+          "url": "https://calcpromaster.com/family/baby-feeding/",
+          "impressions": 5
+        }
+      ],
+      "minorityImpressions": 5,
+      "minorityShare": 0.263,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/auto/fuel-tank-range",
+      "impressions": 26,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/auto/fuel-tank-range/",
+          "impressions": 4
+        },
+        {
+          "url": "https://calcpromaster.com/auto/fuel-tank-range",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.2,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/everyday/business-days",
+      "impressions": 24,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/everyday/business-days/",
+          "impressions": 19
+        },
+        {
+          "url": "https://calcpromaster.com/everyday/business-days",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.05,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/homegarden/lighting-rooms",
+      "impressions": 24,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/homegarden/lighting-rooms",
+          "impressions": 15
+        },
+        {
+          "url": "https://calcpromaster.com/homegarden/lighting-rooms/",
+          "impressions": 4
+        }
+      ],
+      "minorityImpressions": 4,
+      "minorityShare": 0.211,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/fitness/treadmill-pace",
+      "impressions": 23,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/fitness/treadmill-pace",
+          "impressions": 7
+        },
+        {
+          "url": "https://calcpromaster.com/fitness/treadmill-pace/",
+          "impressions": 3
+        }
+      ],
+      "minorityImpressions": 3,
+      "minorityShare": 0.3,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/business/employee-cost",
+      "impressions": 22,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/business/employee-cost",
+          "impressions": 12
+        },
+        {
+          "url": "https://calcpromaster.com/business/employee-cost/",
+          "impressions": 9
+        }
+      ],
+      "minorityImpressions": 9,
+      "minorityShare": 0.429,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/auto/car-affordability",
+      "impressions": 21,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/auto/car-affordability/",
+          "impressions": 11
+        },
+        {
+          "url": "https://calcpromaster.com/auto/car-affordability",
+          "impressions": 3
+        }
+      ],
+      "minorityImpressions": 3,
+      "minorityShare": 0.214,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/homegarden/tv-mount-height",
+      "impressions": 21,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/homegarden/tv-mount-height",
+          "impressions": 10
+        },
+        {
+          "url": "https://calcpromaster.com/homegarden/tv-mount-height/",
+          "impressions": 6
+        }
+      ],
+      "minorityImpressions": 6,
+      "minorityShare": 0.375,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/finance/us-income-tax",
+      "impressions": 21,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/finance/us-income-tax/",
+          "impressions": 15
+        },
+        {
+          "url": "https://calcpromaster.com/finance/us-income-tax",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.063,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/lifestyle/home-renovation",
+      "impressions": 21,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/lifestyle/home-renovation/",
+          "impressions": 18
+        },
+        {
+          "url": "https://calcpromaster.com/lifestyle/home-renovation",
+          "impressions": 2
+        }
+      ],
+      "minorityImpressions": 2,
+      "minorityShare": 0.1,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/health/sleep-debt",
+      "impressions": 21,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/health/sleep-debt",
+          "impressions": 6
+        },
+        {
+          "url": "https://calcpromaster.com/health/sleep-debt/",
+          "impressions": 4
+        }
+      ],
+      "minorityImpressions": 4,
+      "minorityShare": 0.4,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/construction/formwork",
+      "impressions": 21,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/construction/formwork/",
+          "impressions": 3
+        },
+        {
+          "url": "https://calcpromaster.com/construction/formwork",
+          "impressions": 3
+        }
+      ],
+      "minorityImpressions": 3,
+      "minorityShare": 0.5,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/finance/cost-basis-avg",
+      "impressions": 20,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/finance/cost-basis-avg/",
+          "impressions": 14
+        },
+        {
+          "url": "https://calcpromaster.com/finance/cost-basis-avg",
+          "impressions": 6
+        }
+      ],
+      "minorityImpressions": 6,
+      "minorityShare": 0.3,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/regional/gold-rate",
+      "impressions": 20,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/regional/gold-rate",
+          "impressions": 17
+        },
+        {
+          "url": "https://calcpromaster.com/regional/gold-rate/",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.056,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/construction/concrete-slab",
+      "impressions": 19,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/construction/concrete-slab",
+          "impressions": 8
+        },
+        {
+          "url": "https://calcpromaster.com/construction/concrete-slab/",
+          "impressions": 4
+        }
+      ],
+      "minorityImpressions": 4,
+      "minorityShare": 0.333,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/auto/hybrid-savings",
+      "impressions": 18,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/auto/hybrid-savings",
+          "impressions": 7
+        },
+        {
+          "url": "https://calcpromaster.com/auto/hybrid-savings/",
+          "impressions": 3
+        }
+      ],
+      "minorityImpressions": 3,
+      "minorityShare": 0.3,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
       "path": "/everyday/currency-exchange",
-      "impressions": 5,
+      "impressions": 15,
       "variantCount": 2,
       "variants": [
         {
@@ -2329,8 +2641,188 @@
       "winnerMatchesConfig": false
     },
     {
+      "path": "/homegarden/deck-post",
+      "impressions": 15,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/homegarden/deck-post/",
+          "impressions": 9
+        },
+        {
+          "url": "https://calcpromaster.com/homegarden/deck-post",
+          "impressions": 4
+        }
+      ],
+      "minorityImpressions": 4,
+      "minorityShare": 0.308,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/construction/fence",
+      "impressions": 15,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/construction/fence/",
+          "impressions": 6
+        },
+        {
+          "url": "https://calcpromaster.com/construction/fence",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.143,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/fitness/resting-metabolic",
+      "impressions": 13,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/fitness/resting-metabolic/",
+          "impressions": 4
+        },
+        {
+          "url": "https://calcpromaster.com/fitness/resting-metabolic",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.2,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/lifestyle/paint-coverage",
+      "impressions": 12,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/lifestyle/paint-coverage",
+          "impressions": 7
+        },
+        {
+          "url": "https://calcpromaster.com/lifestyle/paint-coverage/",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.125,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/fitness/calories-burned",
+      "impressions": 12,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/fitness/calories-burned",
+          "impressions": 4
+        },
+        {
+          "url": "https://calcpromaster.com/fitness/calories-burned/",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.2,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/homegarden/kitchen-remodel",
+      "impressions": 12,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/homegarden/kitchen-remodel/",
+          "impressions": 6
+        },
+        {
+          "url": "https://calcpromaster.com/homegarden/kitchen-remodel",
+          "impressions": 6
+        }
+      ],
+      "minorityImpressions": 6,
+      "minorityShare": 0.5,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/tech/audio-file-size",
+      "impressions": 11,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/tech/audio-file-size",
+          "impressions": 4
+        },
+        {
+          "url": "https://calcpromaster.com/tech/audio-file-size/",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.2,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/homegarden/home-sqft",
+      "impressions": 11,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/homegarden/home-sqft",
+          "impressions": 6
+        },
+        {
+          "url": "https://calcpromaster.com/homegarden/home-sqft/",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.143,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/conversion/data-storage",
+      "impressions": 11,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/conversion/data-storage",
+          "impressions": 6
+        },
+        {
+          "url": "https://calcpromaster.com/conversion/data-storage/",
+          "impressions": 3
+        }
+      ],
+      "minorityImpressions": 3,
+      "minorityShare": 0.333,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
       "path": "/finance/529-plan",
-      "impressions": 4,
+      "impressions": 9,
       "variantCount": 2,
       "variants": [
         {
@@ -2350,7 +2842,7 @@
     },
     {
       "path": "/fitness/beep-test",
-      "impressions": 4,
+      "impressions": 9,
       "variantCount": 2,
       "variants": [
         {
@@ -2369,68 +2861,8 @@
       "winnerMatchesConfig": true
     },
     {
-      "path": "/fitness/calories-burned",
-      "impressions": 4,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/fitness/calories-burned",
-          "impressions": 4
-        },
-        {
-          "url": "https://calcpromaster.com/fitness/calories-burned/",
-          "impressions": 1
-        }
-      ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.2,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/lifestyle/wine-servings",
-      "impressions": 4,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/lifestyle/wine-servings/",
-          "impressions": 9
-        },
-        {
-          "url": "https://calcpromaster.com/lifestyle/wine-servings",
-          "impressions": 1
-        }
-      ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.1,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/homegarden/home-sqft",
-      "impressions": 4,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/homegarden/home-sqft",
-          "impressions": 6
-        },
-        {
-          "url": "https://calcpromaster.com/homegarden/home-sqft/",
-          "impressions": 1
-        }
-      ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.143,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
       "path": "/everyday/garden",
-      "impressions": 4,
+      "impressions": 9,
       "variantCount": 2,
       "variants": [
         {
@@ -2449,28 +2881,8 @@
       "winnerMatchesConfig": false
     },
     {
-      "path": "/fitness/treadmill-pace",
-      "impressions": 4,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/fitness/treadmill-pace",
-          "impressions": 7
-        },
-        {
-          "url": "https://calcpromaster.com/fitness/treadmill-pace/",
-          "impressions": 3
-        }
-      ],
-      "minorityImpressions": 3,
-      "minorityShare": 0.3,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
       "path": "/lifestyle/rental-deposit",
-      "impressions": 4,
+      "impressions": 9,
       "variantCount": 2,
       "variants": [
         {
@@ -2489,268 +2901,8 @@
       "winnerMatchesConfig": false
     },
     {
-      "path": "/regional/electricity-bill-india",
-      "impressions": 3,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/regional/electricity-bill-india",
-          "impressions": 25
-        },
-        {
-          "url": "https://calcpromaster.com/regional/electricity-bill-india/",
-          "impressions": 2
-        }
-      ],
-      "minorityImpressions": 2,
-      "minorityShare": 0.074,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/auto/car-affordability",
-      "impressions": 3,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/auto/car-affordability/",
-          "impressions": 11
-        },
-        {
-          "url": "https://calcpromaster.com/auto/car-affordability",
-          "impressions": 3
-        }
-      ],
-      "minorityImpressions": 3,
-      "minorityShare": 0.214,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/homegarden/appliance-cost",
-      "impressions": 3,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/homegarden/appliance-cost/",
-          "impressions": 4
-        },
-        {
-          "url": "https://calcpromaster.com/homegarden/appliance-cost",
-          "impressions": 2
-        }
-      ],
-      "minorityImpressions": 2,
-      "minorityShare": 0.333,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/lifestyle/paint-coverage",
-      "impressions": 3,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/lifestyle/paint-coverage",
-          "impressions": 7
-        },
-        {
-          "url": "https://calcpromaster.com/lifestyle/paint-coverage/",
-          "impressions": 1
-        }
-      ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.125,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/food/meat-cooking-time",
-      "impressions": 3,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/food/meat-cooking-time/",
-          "impressions": 65
-        },
-        {
-          "url": "https://calcpromaster.com/food/meat-cooking-time",
-          "impressions": 1
-        }
-      ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.015,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/lifestyle/road-trip-cost",
-      "impressions": 3,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/lifestyle/road-trip-cost/",
-          "impressions": 39
-        },
-        {
-          "url": "https://calcpromaster.com/lifestyle/road-trip-cost",
-          "impressions": 1
-        }
-      ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.025,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/lifestyle/home-renovation",
-      "impressions": 3,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/lifestyle/home-renovation/",
-          "impressions": 18
-        },
-        {
-          "url": "https://calcpromaster.com/lifestyle/home-renovation",
-          "impressions": 2
-        }
-      ],
-      "minorityImpressions": 2,
-      "minorityShare": 0.1,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/construction/concrete-column",
-      "impressions": 3,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/construction/concrete-column",
-          "impressions": 3
-        },
-        {
-          "url": "https://calcpromaster.com/construction/concrete-column/",
-          "impressions": 2
-        }
-      ],
-      "minorityImpressions": 2,
-      "minorityShare": 0.4,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/regional/lpg-cost",
-      "impressions": 3,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/regional/lpg-cost/",
-          "impressions": 3
-        },
-        {
-          "url": "https://calcpromaster.com/regional/lpg-cost",
-          "impressions": 2
-        }
-      ],
-      "minorityImpressions": 2,
-      "minorityShare": 0.4,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/conversion/data-storage",
-      "impressions": 3,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/conversion/data-storage",
-          "impressions": 6
-        },
-        {
-          "url": "https://calcpromaster.com/conversion/data-storage/",
-          "impressions": 3
-        }
-      ],
-      "minorityImpressions": 3,
-      "minorityShare": 0.333,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/auto/fuel-tank-range",
-      "impressions": 3,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/auto/fuel-tank-range/",
-          "impressions": 4
-        },
-        {
-          "url": "https://calcpromaster.com/auto/fuel-tank-range",
-          "impressions": 1
-        }
-      ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.2,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/lifestyle/grocery-budget-optimizer",
-      "impressions": 3,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/lifestyle/grocery-budget-optimizer/",
-          "impressions": 3
-        },
-        {
-          "url": "https://calcpromaster.com/lifestyle/grocery-budget-optimizer",
-          "impressions": 3
-        }
-      ],
-      "minorityImpressions": 3,
-      "minorityShare": 0.5,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/construction/fence",
-      "impressions": 3,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/construction/fence/",
-          "impressions": 6
-        },
-        {
-          "url": "https://calcpromaster.com/construction/fence",
-          "impressions": 1
-        }
-      ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.143,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
       "path": "/regional/zakat-calculator",
-      "impressions": 3,
+      "impressions": 9,
       "variantCount": 2,
       "variants": [
         {
@@ -2769,88 +2921,48 @@
       "winnerMatchesConfig": false
     },
     {
-      "path": "/health/heart-rate-zones",
-      "impressions": 2,
+      "path": "/guides/break-even",
+      "impressions": 8,
       "variantCount": 2,
       "variants": [
         {
-          "url": "https://calcpromaster.com/health/heart-rate-zones",
-          "impressions": 4
+          "url": "https://calcpromaster.com/guides/break-even/",
+          "impressions": 2
         },
         {
-          "url": "https://calcpromaster.com/health/heart-rate-zones/",
-          "impressions": 1
-        }
-      ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.2,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/regional/gold-rate",
-      "impressions": 2,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/regional/gold-rate",
-          "impressions": 17
-        },
-        {
-          "url": "https://calcpromaster.com/regional/gold-rate/",
-          "impressions": 1
-        }
-      ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.056,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/science/wavelength",
-      "impressions": 2,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/science/wavelength/",
-          "impressions": 5
-        },
-        {
-          "url": "https://calcpromaster.com/science/wavelength",
+          "url": "https://calcpromaster.com/guides/break-even",
           "impressions": 2
         }
       ],
       "minorityImpressions": 2,
-      "minorityShare": 0.286,
+      "minorityShare": 0.5,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "noslash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/regional/lpg-cost",
+      "impressions": 8,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/regional/lpg-cost/",
+          "impressions": 3
+        },
+        {
+          "url": "https://calcpromaster.com/regional/lpg-cost",
+          "impressions": 2
+        }
+      ],
+      "minorityImpressions": 2,
+      "minorityShare": 0.4,
       "verdict": "consolidation-lag",
       "sitemapForm": "slash",
       "winnerMatchesConfig": true
     },
     {
-      "path": "/auto/parking-cost",
-      "impressions": 2,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/auto/parking-cost",
-          "impressions": 13
-        },
-        {
-          "url": "https://calcpromaster.com/auto/parking-cost/",
-          "impressions": 1
-        }
-      ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.071,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
       "path": "/regional/fd-calculator",
-      "impressions": 2,
+      "impressions": 8,
       "variantCount": 2,
       "variants": [
         {
@@ -2869,48 +2981,28 @@
       "winnerMatchesConfig": false
     },
     {
-      "path": "/homegarden/garden-soil",
-      "impressions": 2,
+      "path": "/lifestyle/grocery-budget-optimizer",
+      "impressions": 8,
       "variantCount": 2,
       "variants": [
         {
-          "url": "https://calcpromaster.com/homegarden/garden-soil/",
-          "impressions": 1
+          "url": "https://calcpromaster.com/lifestyle/grocery-budget-optimizer/",
+          "impressions": 3
         },
         {
-          "url": "https://calcpromaster.com/homegarden/garden-soil",
-          "impressions": 1
+          "url": "https://calcpromaster.com/lifestyle/grocery-budget-optimizer",
+          "impressions": 3
         }
       ],
-      "minorityImpressions": 1,
+      "minorityImpressions": 3,
       "minorityShare": 0.5,
       "verdict": "consolidation-lag",
       "sitemapForm": "slash",
       "winnerMatchesConfig": true
     },
     {
-      "path": "/everyday/coffee-cost",
-      "impressions": 2,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/everyday/coffee-cost/",
-          "impressions": 69
-        },
-        {
-          "url": "https://calcpromaster.com/everyday/coffee-cost",
-          "impressions": 2
-        }
-      ],
-      "minorityImpressions": 2,
-      "minorityShare": 0.028,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
       "path": "/construction/sod",
-      "impressions": 2,
+      "impressions": 8,
       "variantCount": 2,
       "variants": [
         {
@@ -2929,148 +3021,48 @@
       "winnerMatchesConfig": false
     },
     {
-      "path": "/everyday/business-days",
-      "impressions": 1,
+      "path": "/homegarden/appliance-cost",
+      "impressions": 7,
       "variantCount": 2,
       "variants": [
         {
-          "url": "https://calcpromaster.com/everyday/business-days/",
-          "impressions": 19
-        },
-        {
-          "url": "https://calcpromaster.com/everyday/business-days",
-          "impressions": 1
-        }
-      ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.05,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/tech/audio-file-size",
-      "impressions": 1,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/tech/audio-file-size",
+          "url": "https://calcpromaster.com/homegarden/appliance-cost/",
           "impressions": 4
         },
         {
-          "url": "https://calcpromaster.com/tech/audio-file-size/",
-          "impressions": 1
+          "url": "https://calcpromaster.com/homegarden/appliance-cost",
+          "impressions": 2
         }
       ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.2,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/finance/us-income-tax",
-      "impressions": 1,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/finance/us-income-tax/",
-          "impressions": 15
-        },
-        {
-          "url": "https://calcpromaster.com/finance/us-income-tax",
-          "impressions": 1
-        }
-      ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.063,
+      "minorityImpressions": 2,
+      "minorityShare": 0.333,
       "verdict": "consolidation-lag",
       "sitemapForm": "slash",
       "winnerMatchesConfig": true
     },
     {
-      "path": "/fitness/resting-metabolic",
-      "impressions": 1,
+      "path": "/science/wavelength",
+      "impressions": 7,
       "variantCount": 2,
       "variants": [
         {
-          "url": "https://calcpromaster.com/fitness/resting-metabolic/",
-          "impressions": 4
+          "url": "https://calcpromaster.com/science/wavelength/",
+          "impressions": 5
         },
         {
-          "url": "https://calcpromaster.com/fitness/resting-metabolic",
-          "impressions": 1
+          "url": "https://calcpromaster.com/science/wavelength",
+          "impressions": 2
         }
       ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.2,
+      "minorityImpressions": 2,
+      "minorityShare": 0.286,
       "verdict": "consolidation-lag",
       "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/everyday/calorie-counter",
-      "impressions": 1,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/everyday/calorie-counter",
-          "impressions": 3
-        },
-        {
-          "url": "https://calcpromaster.com/everyday/calorie-counter/",
-          "impressions": 1
-        }
-      ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.25,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/homegarden",
-      "impressions": 1,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/homegarden/",
-          "impressions": 3
-        },
-        {
-          "url": "https://calcpromaster.com/homegarden",
-          "impressions": 1
-        }
-      ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.25,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
-    },
-    {
-      "path": "/guides/water-intake",
-      "impressions": 1,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/guides/water-intake",
-          "impressions": 25
-        },
-        {
-          "url": "https://calcpromaster.com/guides/water-intake/",
-          "impressions": 1
-        }
-      ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.038,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "noslash",
       "winnerMatchesConfig": true
     },
     {
       "path": "/regional/epf-calculator",
-      "impressions": 1,
+      "impressions": 7,
       "variantCount": 2,
       "variants": [
         {
@@ -3089,8 +3081,88 @@
       "winnerMatchesConfig": true
     },
     {
+      "path": "/construction",
+      "impressions": 7,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/construction",
+          "impressions": 3
+        },
+        {
+          "url": "https://calcpromaster.com/construction/",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.25,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/lifestyle",
+      "impressions": 7,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/lifestyle",
+          "impressions": 3
+        },
+        {
+          "url": "https://calcpromaster.com/lifestyle/",
+          "impressions": 2
+        }
+      ],
+      "minorityImpressions": 2,
+      "minorityShare": 0.4,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/health/heart-rate-zones",
+      "impressions": 6,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/health/heart-rate-zones",
+          "impressions": 4
+        },
+        {
+          "url": "https://calcpromaster.com/health/heart-rate-zones/",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.2,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/construction/concrete-column",
+      "impressions": 6,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/construction/concrete-column",
+          "impressions": 3
+        },
+        {
+          "url": "https://calcpromaster.com/construction/concrete-column/",
+          "impressions": 2
+        }
+      ],
+      "minorityImpressions": 2,
+      "minorityShare": 0.4,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
       "path": "/fitness/plank-test",
-      "impressions": 1,
+      "impressions": 6,
       "variantCount": 2,
       "variants": [
         {
@@ -3107,17 +3179,77 @@
       "verdict": "consolidation-lag",
       "sitemapForm": "slash",
       "winnerMatchesConfig": true
+    },
+    {
+      "path": "/everyday/calorie-counter",
+      "impressions": 4,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/everyday/calorie-counter",
+          "impressions": 3
+        },
+        {
+          "url": "https://calcpromaster.com/everyday/calorie-counter/",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.25,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/homegarden/garden-soil",
+      "impressions": 4,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/homegarden/garden-soil/",
+          "impressions": 1
+        },
+        {
+          "url": "https://calcpromaster.com/homegarden/garden-soil",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.5,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
     }
   ],
   "backlogSummary": {
     "pages": 25,
-    "write": 17,
-    "expose": 8,
+    "write": 16,
+    "expose": 9,
     "fine": 0,
-    "writeBuckets": 26,
-    "exposeBuckets": 115
+    "writeBuckets": 27,
+    "exposeBuckets": 106
   },
   "backlog": [
+    {
+      "path": "/tech/internet-speed",
+      "distinctQueries": 63,
+      "impressions": 508,
+      "queryCoverage": 0.125,
+      "contentCoverage": 0.75,
+      "htmlFound": true,
+      "action": "write",
+      "writeLabels": [
+        "Table / chart",
+        "Region / year variant"
+      ],
+      "exposeLabels": [
+        "Formula / method",
+        "Worked example",
+        "Comparison",
+        "Free / online / best",
+        "Period variant (per day/month/year)"
+      ]
+    },
     {
       "path": "/guides/tip",
       "distinctQueries": 1,
@@ -3158,8 +3290,28 @@
       ]
     },
     {
+      "path": "/fitness/muscle-gain",
+      "distinctQueries": 5,
+      "impressions": 321,
+      "queryCoverage": 0.125,
+      "contentCoverage": 0.75,
+      "htmlFound": true,
+      "action": "write",
+      "writeLabels": [
+        "Table / chart"
+      ],
+      "exposeLabels": [
+        "Sawal (how/what/why…)",
+        "Formula / method",
+        "Worked example",
+        "Comparison",
+        "Free / online / best",
+        "Period variant (per day/month/year)"
+      ]
+    },
+    {
       "path": "/guides/bmr",
-      "distinctQueries": 36,
+      "distinctQueries": 52,
       "impressions": 304,
       "queryCoverage": 0.125,
       "contentCoverage": 0.75,
@@ -3178,9 +3330,62 @@
       ]
     },
     {
-      "path": "/tech/internet-speed",
-      "distinctQueries": 53,
-      "impressions": 226,
+      "path": "/finance/credit-utilization",
+      "distinctQueries": 34,
+      "impressions": 252,
+      "queryCoverage": 0.5,
+      "contentCoverage": 0.75,
+      "htmlFound": true,
+      "action": "write",
+      "writeLabels": [
+        "Table / chart"
+      ],
+      "exposeLabels": [
+        "Worked example",
+        "Comparison",
+        "Period variant (per day/month/year)"
+      ]
+    },
+    {
+      "path": "/tech/raid-capacity",
+      "distinctQueries": 48,
+      "impressions": 238,
+      "queryCoverage": 0.5,
+      "contentCoverage": 0.75,
+      "htmlFound": true,
+      "action": "write",
+      "writeLabels": [
+        "Table / chart"
+      ],
+      "exposeLabels": [
+        "Worked example",
+        "Comparison",
+        "Period variant (per day/month/year)"
+      ]
+    },
+    {
+      "path": "/science/carbon-dating",
+      "distinctQueries": 8,
+      "impressions": 213,
+      "queryCoverage": 0.25,
+      "contentCoverage": 0.75,
+      "htmlFound": true,
+      "action": "write",
+      "writeLabels": [
+        "Table / chart",
+        "Region / year variant"
+      ],
+      "exposeLabels": [
+        "Worked example",
+        "Comparison",
+        "Free / online / best",
+        "Period variant (per day/month/year)"
+      ]
+    },
+    {
+      "path": "/lifestyle/renters-insurance",
+      "distinctQueries": 14,
+      "impressions": 203,
       "queryCoverage": 0.125,
       "contentCoverage": 0.75,
       "htmlFound": true,
@@ -3218,8 +3423,29 @@
       ]
     },
     {
+      "path": "/education/tuition-cost",
+      "distinctQueries": 1,
+      "impressions": 200,
+      "queryCoverage": 0,
+      "contentCoverage": 0.75,
+      "htmlFound": true,
+      "action": "write",
+      "writeLabels": [
+        "Table / chart",
+        "Region / year variant"
+      ],
+      "exposeLabels": [
+        "Sawal (how/what/why…)",
+        "Formula / method",
+        "Worked example",
+        "Comparison",
+        "Free / online / best",
+        "Period variant (per day/month/year)"
+      ]
+    },
+    {
       "path": "/math/weighted-average",
-      "distinctQueries": 49,
+      "distinctQueries": 51,
       "impressions": 193,
       "queryCoverage": 0.25,
       "contentCoverage": 0.75,
@@ -3237,28 +3463,24 @@
       ]
     },
     {
-      "path": "/fitness/muscle-gain",
-      "distinctQueries": 5,
-      "impressions": 182,
-      "queryCoverage": 0.125,
-      "contentCoverage": 0.75,
+      "path": "/regional/singapore-cpf",
+      "distinctQueries": 42,
+      "impressions": 187,
+      "queryCoverage": 0.625,
+      "contentCoverage": 0.875,
       "htmlFound": true,
       "action": "write",
       "writeLabels": [
         "Table / chart"
       ],
       "exposeLabels": [
-        "Sawal (how/what/why…)",
-        "Formula / method",
         "Worked example",
-        "Comparison",
-        "Free / online / best",
-        "Period variant (per day/month/year)"
+        "Comparison"
       ]
     },
     {
       "path": "/tech/rgb-hex",
-      "distinctQueries": 27,
+      "distinctQueries": 33,
       "impressions": 166,
       "queryCoverage": 0.125,
       "contentCoverage": 0.75,
@@ -3277,17 +3499,19 @@
       ]
     },
     {
-      "path": "/regional/singapore-cpf",
-      "distinctQueries": 36,
-      "impressions": 157,
-      "queryCoverage": 0.5,
-      "contentCoverage": 0.875,
+      "path": "/finance/wacc",
+      "distinctQueries": 15,
+      "impressions": 159,
+      "queryCoverage": 0.25,
+      "contentCoverage": 0.75,
       "htmlFound": true,
       "action": "write",
       "writeLabels": [
-        "Table / chart"
+        "Table / chart",
+        "Region / year variant"
       ],
       "exposeLabels": [
+        "Sawal (how/what/why…)",
         "Worked example",
         "Comparison",
         "Period variant (per day/month/year)"
@@ -3295,7 +3519,7 @@
     },
     {
       "path": "/homegarden/wallpaper-rolls",
-      "distinctQueries": 31,
+      "distinctQueries": 49,
       "impressions": 145,
       "queryCoverage": 0.25,
       "contentCoverage": 0.75,
@@ -3313,55 +3537,16 @@
       ]
     },
     {
-      "path": "/finance/va-loan",
-      "distinctQueries": 52,
-      "impressions": 132,
-      "queryCoverage": 0.5,
-      "contentCoverage": 0.75,
+      "path": "/health/bmr-mifflin",
+      "distinctQueries": 77,
+      "impressions": 1108,
+      "queryCoverage": 0.25,
+      "contentCoverage": 0.875,
       "htmlFound": true,
-      "action": "write",
-      "writeLabels": [
-        "Table / chart"
-      ],
-      "exposeLabels": [
-        "Formula / method",
-        "Worked example",
-        "Free / online / best"
-      ]
-    },
-    {
-      "path": "/math/trigonometry",
-      "distinctQueries": 3,
-      "impressions": 112,
-      "queryCoverage": 0.125,
-      "contentCoverage": 0.75,
-      "htmlFound": true,
-      "action": "write",
-      "writeLabels": [
-        "Table / chart",
-        "Region / year variant"
-      ],
+      "action": "expose",
+      "writeLabels": [],
       "exposeLabels": [
         "Sawal (how/what/why…)",
-        "Formula / method",
-        "Worked example",
-        "Comparison",
-        "Period variant (per day/month/year)"
-      ]
-    },
-    {
-      "path": "/family/baby-weight-gain",
-      "distinctQueries": 26,
-      "impressions": 106,
-      "queryCoverage": 0.125,
-      "contentCoverage": 0.875,
-      "htmlFound": true,
-      "action": "write",
-      "writeLabels": [
-        "Region / year variant"
-      ],
-      "exposeLabels": [
-        "Formula / method",
         "Table / chart",
         "Worked example",
         "Comparison",
@@ -3370,79 +3555,19 @@
       ]
     },
     {
-      "path": "/tech/raid-capacity",
-      "distinctQueries": 48,
-      "impressions": 104,
+      "path": "/lifestyle/home-insurance",
+      "distinctQueries": 75,
+      "impressions": 1012,
       "queryCoverage": 0.5,
-      "contentCoverage": 0.75,
+      "contentCoverage": 1,
       "htmlFound": true,
-      "action": "write",
-      "writeLabels": [
-        "Table / chart"
-      ],
-      "exposeLabels": [
-        "Worked example",
-        "Comparison",
-        "Period variant (per day/month/year)"
-      ]
-    },
-    {
-      "path": "/guides/gear-ratio",
-      "distinctQueries": 34,
-      "impressions": 102,
-      "queryCoverage": 0.25,
-      "contentCoverage": 0.75,
-      "htmlFound": true,
-      "action": "write",
-      "writeLabels": [
-        "Period variant (per day/month/year)",
-        "Region / year variant"
-      ],
-      "exposeLabels": [
-        "Table / chart",
-        "Worked example",
-        "Comparison",
-        "Free / online / best"
-      ]
-    },
-    {
-      "path": "/regional/switzerland-take-home-salary",
-      "distinctQueries": 21,
-      "impressions": 95,
-      "queryCoverage": 0.125,
-      "contentCoverage": 0.875,
-      "htmlFound": true,
-      "action": "write",
-      "writeLabels": [
-        "Table / chart"
-      ],
-      "exposeLabels": [
-        "Formula / method",
-        "Worked example",
-        "Comparison",
-        "Free / online / best",
-        "Period variant (per day/month/year)",
-        "Region / year variant"
-      ]
-    },
-    {
-      "path": "/everyday/gift-wrap",
-      "distinctQueries": 1,
-      "impressions": 95,
-      "queryCoverage": 0.125,
-      "contentCoverage": 0.875,
-      "htmlFound": true,
-      "action": "write",
-      "writeLabels": [
-        "Region / year variant"
-      ],
+      "action": "expose",
+      "writeLabels": [],
       "exposeLabels": [
         "Formula / method",
         "Table / chart",
         "Worked example",
-        "Comparison",
-        "Free / online / best",
-        "Period variant (per day/month/year)"
+        "Comparison"
       ]
     },
     {
@@ -3466,7 +3591,7 @@
     },
     {
       "path": "/finance/pmi-calculator",
-      "distinctQueries": 96,
+      "distinctQueries": 100,
       "impressions": 640,
       "queryCoverage": 0.75,
       "contentCoverage": 1,
@@ -3480,7 +3605,7 @@
     },
     {
       "path": "/finance/fha-loan",
-      "distinctQueries": 30,
+      "distinctQueries": 34,
       "impressions": 443,
       "queryCoverage": 0.375,
       "contentCoverage": 1,
@@ -3496,74 +3621,23 @@
       ]
     },
     {
-      "path": "/lifestyle/home-insurance",
-      "distinctQueries": 75,
-      "impressions": 372,
-      "queryCoverage": 0.5,
+      "path": "/finance/apy-calculator",
+      "distinctQueries": 67,
+      "impressions": 319,
+      "queryCoverage": 0.75,
       "contentCoverage": 1,
       "htmlFound": true,
       "action": "expose",
       "writeLabels": [],
       "exposeLabels": [
-        "Formula / method",
-        "Table / chart",
-        "Worked example",
-        "Comparison"
-      ]
-    },
-    {
-      "path": "/health/bmr-mifflin",
-      "distinctQueries": 77,
-      "impressions": 359,
-      "queryCoverage": 0.25,
-      "contentCoverage": 0.875,
-      "htmlFound": true,
-      "action": "expose",
-      "writeLabels": [],
-      "exposeLabels": [
-        "Sawal (how/what/why…)",
-        "Table / chart",
-        "Worked example",
         "Comparison",
-        "Free / online / best",
-        "Period variant (per day/month/year)"
-      ]
-    },
-    {
-      "path": "/guides/mortgage",
-      "distinctQueries": 39,
-      "impressions": 148,
-      "queryCoverage": 0.625,
-      "contentCoverage": 0.875,
-      "htmlFound": true,
-      "action": "expose",
-      "writeLabels": [],
-      "exposeLabels": [
-        "Table / chart",
-        "Worked example",
-        "Comparison"
-      ]
-    },
-    {
-      "path": "/science/dew-point",
-      "distinctQueries": 26,
-      "impressions": 100,
-      "queryCoverage": 0.5,
-      "contentCoverage": 0.875,
-      "htmlFound": true,
-      "action": "expose",
-      "writeLabels": [],
-      "exposeLabels": [
-        "Table / chart",
-        "Worked example",
-        "Comparison",
-        "Period variant (per day/month/year)"
+        "Region / year variant"
       ]
     },
     {
       "path": "/guides/business-days",
       "distinctQueries": 165,
-      "impressions": 97,
+      "impressions": 262,
       "queryCoverage": 0.5,
       "contentCoverage": 1,
       "htmlFound": true,
@@ -3574,6 +3648,35 @@
         "Worked example",
         "Comparison",
         "Free / online / best"
+      ]
+    },
+    {
+      "path": "/finance/rent-affordability",
+      "distinctQueries": 41,
+      "impressions": 165,
+      "queryCoverage": 0.75,
+      "contentCoverage": 0.75,
+      "htmlFound": true,
+      "action": "expose",
+      "writeLabels": [],
+      "exposeLabels": [
+        "Formula / method",
+        "Worked example"
+      ]
+    },
+    {
+      "path": "/guides/mortgage",
+      "distinctQueries": 58,
+      "impressions": 148,
+      "queryCoverage": 0.625,
+      "contentCoverage": 0.875,
+      "htmlFound": true,
+      "action": "expose",
+      "writeLabels": [],
+      "exposeLabels": [
+        "Table / chart",
+        "Worked example",
+        "Comparison"
       ]
     }
   ]

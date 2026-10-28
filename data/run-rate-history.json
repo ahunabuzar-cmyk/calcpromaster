@@ -23,5 +23,33 @@
     "sourceExport": "gsc-performance-export-2026-10-23",
     "sourceLatestDate": "2026-10-18",
     "droppedUnfinalizedDays": 3
+  },
+  {
+    "date": "2026-10-25",
+    "capturedAt": "2026-10-25T16:31:20.080Z",
+    "runRate7": 290,
+    "runRate7PerMonth": 8828,
+    "windowFrom": "2026-10-15",
+    "windowTo": "2026-10-21",
+    "indexed": 952,
+    "notIndexed": 923,
+    "indexedPct": 50.8,
+    "sourceExport": "gsc-performance-export-2026-10-25",
+    "sourceLatestDate": "2026-10-21",
+    "droppedUnfinalizedDays": 3
+  },
+  {
+    "date": "2026-10-28",
+    "capturedAt": "2026-10-28T16:46:46.272Z",
+    "runRate7": 52,
+    "runRate7PerMonth": 1579,
+    "windowFrom": "2026-10-18",
+    "windowTo": "2026-10-24",
+    "indexed": 952,
+    "notIndexed": 923,
+    "indexedPct": 50.8,
+    "sourceExport": "gsc-performance-export-2026-10-28",
+    "sourceLatestDate": "2026-10-24",
+    "droppedUnfinalizedDays": 3
   }
 ]

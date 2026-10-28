@@ -1,27 +1,24 @@
 {
-  "generatedAt": "2026-10-26T16:54:07.532Z",
-  "snapshotDate": "2026-10-26",
-  "snapshotSource": "gsc-inspect-batch-2026-10-26.json",
+  "generatedAt": "2026-10-28T10:58:33.469Z",
+  "snapshotDate": "2026-10-19",
+  "snapshotSource": "gsc-inspect-batch-2026-10-19.json",
   "state": {
-    "total": 90,
-    "candidates": 86,
-    "indexed": 51,
-    "notCandidates": 4,
-    "waiting": 35,
-    "notCandidateReasons": {
-      "Alternate page with proper canonical tag": 2,
-      "Page with redirect": 2
-    }
+    "total": 30,
+    "candidates": 30,
+    "indexed": 20,
+    "notCandidates": 0,
+    "waiting": 10,
+    "notCandidateReasons": {}
   },
   "liveState": {
-    "date": "2026-10-25",
-    "source": "data/index-panel-history.json#2026-10-25",
+    "date": "2026-10-28",
+    "source": "data/index-panel-history.json#2026-10-28",
     "panelSize": 590,
     "total": 590,
     "candidates": 589,
-    "indexed": 6,
+    "indexed": 4,
     "notCandidates": 1,
-    "waiting": 583,
+    "waiting": 585,
     "notCandidateReasons": {
       "Page with redirect": 1
     }
@@ -75,6 +72,21 @@
       "notCandidates": 0,
       "waiting": 6,
       "notCandidateReasons": {}
+    },
+    {
+      "date": "2026-10-09",
+      "file": "gsc-inspect-notindexed.json",
+      "urls": 784,
+      "total": 784,
+      "candidates": 696,
+      "indexed": 111,
+      "notCandidates": 88,
+      "waiting": 585,
+      "notCandidateReasons": {
+        "Page with redirect": 86,
+        "Excluded by ‘noindex’ tag": 1,
+        "Alternate page with proper canonical tag": 1
+      }
     },
     {
       "date": "2026-10-12",
@@ -179,70 +191,16 @@
       "notCandidateReasons": {}
     },
     {
-      "date": "2026-10-25",
-      "file": "gsc-inspect-batch-2026-10-25.json",
-      "urls": 100,
-      "total": 100,
-      "candidates": 96,
-      "indexed": 56,
-      "notCandidates": 4,
-      "waiting": 40,
-      "notCandidateReasons": {
-        "Alternate page with proper canonical tag": 2,
-        "Page with redirect": 2
-      }
-    },
-    {
-      "date": "2026-10-25",
-      "file": "data/index-panel-history.json#2026-10-25",
+      "date": "2026-10-28",
+      "file": "data/index-panel-history.json#2026-10-28",
       "urls": 590,
       "total": 590,
       "candidates": 589,
-      "indexed": 6,
+      "indexed": 4,
       "notCandidates": 1,
-      "waiting": 583,
+      "waiting": 585,
       "notCandidateReasons": {
         "Page with redirect": 1
-      }
-    },
-    {
-      "date": "2026-10-26",
-      "file": "gsc-inspect-notindexed.json",
-      "urls": 794,
-      "total": 794,
-      "candidates": 705,
-      "indexed": 112,
-      "notCandidates": 89,
-      "waiting": 593,
-      "notCandidateReasons": {
-        "Page with redirect": 87,
-        "Excluded by ‘noindex’ tag": 1,
-        "Alternate page with proper canonical tag": 1
-      }
-    },
-    {
-      "date": "2026-10-26",
-      "file": "gsc-inspect-two-2026-10-26.json",
-      "urls": 2,
-      "total": 2,
-      "candidates": 2,
-      "indexed": 1,
-      "notCandidates": 0,
-      "waiting": 1,
-      "notCandidateReasons": {}
-    },
-    {
-      "date": "2026-10-26",
-      "file": "gsc-inspect-batch-2026-10-26.json",
-      "urls": 90,
-      "total": 90,
-      "candidates": 86,
-      "indexed": 51,
-      "notCandidates": 4,
-      "waiting": 35,
-      "notCandidateReasons": {
-        "Alternate page with proper canonical tag": 2,
-        "Page with redirect": 2
       }
     }
   ],
@@ -307,22 +265,43 @@
     },
     {
       "from": "2026-10-09",
-      "to": "2026-10-12",
-      "days": 3,
-      "elapsedDays": 3.1716677199074073,
-      "commonUrls": 20,
+      "to": "2026-10-09",
+      "days": 0,
+      "elapsedDays": 0.18580457175925927,
+      "commonUrls": 0,
       "stagesAdvanced": 0,
-      "slippedBack": 1,
+      "slippedBack": 0,
       "urlsAdvanced": 0,
-      "urlsSlipped": 1,
-      "churnStages": 1,
+      "urlsSlipped": 0,
+      "churnStages": 0,
       "gainedBack": 0,
-      "netStages": -1,
+      "netStages": 0,
       "becameIndexed": 0,
       "leftUnknown": 0,
       "stagesPerDay": 0,
       "indexedPerDay": 0,
-      "usable": true
+      "usable": false,
+      "skipReason": "URL sets comparable nahi (alag size)"
+    },
+    {
+      "from": "2026-10-09",
+      "to": "2026-10-12",
+      "days": 3,
+      "elapsedDays": 2.985863148148148,
+      "commonUrls": 0,
+      "stagesAdvanced": 0,
+      "slippedBack": 0,
+      "urlsAdvanced": 0,
+      "urlsSlipped": 0,
+      "churnStages": 0,
+      "gainedBack": 0,
+      "netStages": 0,
+      "becameIndexed": 0,
+      "leftUnknown": 0,
+      "stagesPerDay": 0,
+      "indexedPerDay": 0,
+      "usable": false,
+      "skipReason": "URL sets comparable nahi (alag size)"
     },
     {
       "from": "2026-10-12",
@@ -464,88 +443,9 @@
     },
     {
       "from": "2026-10-19",
-      "to": "2026-10-25",
-      "days": 6,
-      "elapsedDays": 6.07718943287037,
-      "commonUrls": 30,
-      "stagesAdvanced": 3,
-      "slippedBack": 1,
-      "urlsAdvanced": 3,
-      "urlsSlipped": 1,
-      "churnStages": 4,
-      "gainedBack": 1,
-      "netStages": 2,
-      "becameIndexed": 0,
-      "leftUnknown": 3,
-      "stagesPerDay": 0.4936492490712181,
-      "indexedPerDay": 0,
-      "usable": false,
-      "skipReason": "URL sets comparable nahi (alag size)"
-    },
-    {
-      "from": "2026-10-25",
-      "to": "2026-10-25",
-      "days": 0,
-      "elapsedDays": 0.007738310185185185,
-      "commonUrls": 5,
-      "stagesAdvanced": 0,
-      "slippedBack": 0,
-      "urlsAdvanced": 0,
-      "urlsSlipped": 0,
-      "churnStages": 0,
-      "gainedBack": 0,
-      "netStages": 0,
-      "becameIndexed": 0,
-      "leftUnknown": 0,
-      "stagesPerDay": 0,
-      "indexedPerDay": 0,
-      "usable": false,
-      "skipReason": "URL sets comparable nahi (alag size)"
-    },
-    {
-      "from": "2026-10-25",
-      "to": "2026-10-26",
-      "days": 1,
-      "elapsedDays": 0.9915966898148149,
-      "commonUrls": 590,
-      "stagesAdvanced": 143,
-      "slippedBack": 108,
-      "urlsAdvanced": 143,
-      "urlsSlipped": 106,
-      "churnStages": 251,
-      "gainedBack": 108,
-      "netStages": 35,
-      "becameIndexed": 0,
-      "leftUnknown": 143,
-      "stagesPerDay": 144.2118569664708,
-      "indexedPerDay": 0,
-      "usable": true
-    },
-    {
-      "from": "2026-10-26",
-      "to": "2026-10-26",
-      "days": 0,
-      "elapsedDays": 0.000613125,
-      "commonUrls": 1,
-      "stagesAdvanced": 0,
-      "slippedBack": 0,
-      "urlsAdvanced": 0,
-      "urlsSlipped": 0,
-      "churnStages": 0,
-      "gainedBack": 0,
-      "netStages": 0,
-      "becameIndexed": 0,
-      "leftUnknown": 0,
-      "stagesPerDay": 0,
-      "indexedPerDay": 0,
-      "usable": false,
-      "skipReason": "URL sets comparable nahi (alag size)"
-    },
-    {
-      "from": "2026-10-26",
-      "to": "2026-10-26",
-      "days": 0,
-      "elapsedDays": 0.026491921296296295,
+      "to": "2026-10-28",
+      "days": 9,
+      "elapsedDays": 8.856776041666667,
       "commonUrls": 0,
       "stagesAdvanced": 0,
       "slippedBack": 0,
@@ -582,9 +482,21 @@
     "usable": true
   },
   "sampleNote": "20 URLs",
-  "measuredIndexedPerWeek": 0.7000000000000001,
-  "measuredRateSource": "fixed panel (590 URLs, 10d span",
+  "measuredIndexedPerWeek": 0.6363636363636364,
+  "measuredRateSource": "fixed panel (590 URLs, 11d span",
   "churnAlerts": [
+    {
+      "from": "2026-10-26",
+      "to": "2026-10-28",
+      "severity": "warn",
+      "stagesAdvanced": 87,
+      "slippedBack": 76,
+      "churnStages": 163,
+      "gainedBack": 76,
+      "netStages": 11,
+      "cancelledShare": 0.874,
+      "message": "87 stages advance ka 87% (76 stages) isi window mein cancel ho gaya — gross 163, net +11. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain."
+    },
     {
       "from": "2026-10-14",
       "to": "2026-10-15",
@@ -608,55 +520,43 @@
       "netStages": 7,
       "cancelledShare": 0.533,
       "message": "15 stages advance ka 53% (8 stages) isi window mein cancel ho gaya — gross 23, net +7. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain."
-    },
-    {
-      "from": "2026-10-25",
-      "to": "2026-10-26",
-      "severity": "warn",
-      "stagesAdvanced": 143,
-      "slippedBack": 108,
-      "churnStages": 251,
-      "gainedBack": 108,
-      "netStages": 35,
-      "cancelledShare": 0.755,
-      "message": "143 stages advance ka 76% (108 stages) isi window mein cancel ho gaya — gross 251, net +35. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain."
     }
   ],
   "panelSpan": {
     "from": "2026-10-15",
-    "to": "2026-10-25",
-    "days": 10,
+    "to": "2026-10-26",
+    "days": 11,
     "common": 590,
-    "stages": 101,
-    "slipped": 121,
-    "urlsAdvanced": 100,
-    "urlsSlipped": 121,
+    "stages": 277,
+    "slipped": 35,
+    "urlsAdvanced": 276,
+    "urlsSlipped": 35,
     "becameIndexed": 1,
-    "leftUnknown": 99,
-    "churnStages": 222,
-    "gainedBack": 101,
-    "netStages": -20
+    "leftUnknown": 275,
+    "churnStages": 312,
+    "gainedBack": 35,
+    "netStages": 242
   },
-  "measuredStagesPerWeek": 70.7,
+  "measuredStagesPerWeek": 176.27272727272728,
   "quotaPerWeek": 84,
   "scenarios": [
     {
       "key": "observed",
       "label": "Observed (measured, same URLs)",
-      "perWeek": 0.7000000000000001,
+      "perWeek": 0.6363636363636364,
       "sampled": true,
-      "weeks": 50,
+      "weeks": 16,
       "beyondHorizon": false,
-      "doneBy": "2027-10-11"
+      "doneBy": "2027-02-17"
     },
     {
       "key": "half",
       "label": "Half the observed rate (conservative)",
-      "perWeek": 0.35000000000000003,
+      "perWeek": 0.3181818181818182,
       "sampled": true,
-      "weeks": 100,
+      "weeks": 32,
       "beyondHorizon": false,
-      "doneBy": "2028-09-25"
+      "doneBy": "2027-06-09"
     },
     {
       "key": "quota",
@@ -665,23 +565,23 @@
       "sampled": false,
       "weeks": 1,
       "beyondHorizon": false,
-      "doneBy": "2026-11-02"
+      "doneBy": "2026-11-04"
     }
   ],
   "horizons": [
     {
       "weeks": 8,
-      "perWeek": 5,
+      "perWeek": 2,
       "perDay": 1
     },
     {
       "weeks": 12,
-      "perWeek": 3,
+      "perWeek": 1,
       "perDay": 1
     },
     {
       "weeks": 26,
-      "perWeek": 2,
+      "perWeek": 1,
       "perDay": 1
     },
     {

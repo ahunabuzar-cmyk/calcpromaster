@@ -112,6 +112,28 @@ jobs:
       - name: Whole-site bug audit (ids, links, canonicals, JSON-LD, alts)
         run: npm run audit:site-bugs
 
+      - name: Hacked-site / injected-content scan of the built artifact
+        run: |
+          # Reads the finished deploy/ tree for the artefacts a compromise leaves
+          # behind: hidden link blocks, spam vocabulary, foreign-script title
+          # spam, injected iframes, off-allowlist JS redirects, unexpected
+          # meta-refresh, and files that must never ship (.php, .exe, .zip …).
+          # Fails on any of those; off-allowlist OUTBOUND hosts are printed as
+          # review leads instead, because a new citation (irs.gov, cdc.gov) is a
+          # legitimate reason to appear there. The allowlist documents every host
+          # the site is expected to talk to. Run `npm run audit:security` locally
+          # for the readable report; it writes data/site-security-audit.json.
+          npm run audit:security:check
+
+      - name: Upload site-security audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-security-${{ github.run_id }}
+          path: data/site-security-audit.json
+          if-no-files-found: ignore
+          retention-days: 14
+
       - name: Thin content audit (no page under 500 words)
         run: npm run audit:thin
 

@@ -56,7 +56,26 @@ const STEPS = [
   // regen that skips this step silently drops them (measured 2026-10-17: all
   // 85 improved rows lost their rendered FAQ until this step was added).
   ['keyword-target answers (B/C/D rows)', 'apply-keyword-targets.cjs'],
-  ['per-category chunks (js/seo/*.js)', 'split-seo.cjs']
+  // The keyword-target step re-emits the engine's copy for every row it patches,
+  // so it puts the engine's generic headings back and undoes step 2 for those
+  // entries: measured 2026-10-27, `seo:overrides:check` failed on 12 entries and
+  // 11 tool pages had lost their name-carrying <h2> (site-wide identical
+  // headings on those pages, which is the duplicate-boilerplate problem the
+  // naming exists to remove). Both passes are idempotent, so re-asserting the
+  // overrides after the keyword rows leaves the CTR overrides, the label repairs
+  // and the named headings all in place, and makes the checked-in file the file
+  // the gate expects.
+  ['CTR overrides re-applied (so the keyword rows cannot undo step 2)', 'apply-seo-overrides.cjs'],
+  ['per-category chunks (js/seo/*.js)', 'split-seo.cjs'],
+  // Two artefacts are built FROM js/seo-content.js (the public changelog and the
+  // Top-10 push list) and build-deploy's staleness gate fails the build when
+  // either is older than it (measured 2026-10-27: BUILD_EXIT=1 after a clean
+  // regen, "2 published artifact(s) older than their data"). Refreshing them used
+  // to be a manual follow-up nobody could guess from the chain's own output, so
+  // the chain that rewrites seo-content.js now refreshes everything derived from
+  // it and the next command is just `node build-deploy.js`.
+  ['public changelog (derived from seo-content.js)', 'build-changelog.cjs'],
+  ['Top-10 push list (derived from seo-content.js)', 'build-top10-push-list.cjs']
 ];
 
 const before = loadSeo(SRC);

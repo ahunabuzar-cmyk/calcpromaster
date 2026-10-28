@@ -146,17 +146,6 @@
   <p>Metre (length), kilogram (mass), second (time), ampere (current), kelvin (temperature), mole (amount), and candela (luminous intensity). Every derived unit — newtons, joules, pascals — is built from these.</p>
 
 
-<!-- guide-extra-depth:start -->
-<h2>What this category covers</h2>
-<p>Physics and chemistry calculations: motion, energy, concentration, molarity, gas laws and half-life. The formulas are exact; the answers depend entirely on consistent units and on whether the model applies to the situation.</p>
-<p>Use them for coursework and for quick estimates, and check the assumptions in the guide before trusting a number in a real system.</p>
-<h2>Significant figures and rounding</h2>
-<p>A result cannot be more precise than its inputs. Reporting 4.7382 from inputs given to two significant figures is a claim about measurement precision that the data does not support.</p>
-<p>Carry full precision through the calculation and round only the final answer, to the precision of the least precise input. That is the convention most exam boards and journals expect.</p>
-<h2>When the model stops applying</h2>
-<p>Ideal gas behaviour fails at high pressure and low temperature. Simple projectile motion ignores drag, which matters beyond short ranges. Half-life assumes first-order kinetics, which not every reaction follows.</p>
-<p>Knowing the boundary of a model is part of using it. An answer outside the model is not wrong arithmetic; it is the wrong tool.</p>
-<!-- guide-extra-depth:end -->
 
 
   <!-- related-guides -->
@@ -168,6 +157,17 @@
     <li><a href="/guides/random-numbers">How Random Number Generators Work</a></li>
   </ul>
 
+<!-- guide-extra-depth:start -->
+<h2>What this category covers</h2>
+<p>Physics and chemistry calculations: motion, energy, concentration, molarity, gas laws and half-life. The formulas are exact; the answers depend entirely on consistent units and on whether the model applies to the situation.</p>
+<p>Use them for coursework and for quick estimates, and check the assumptions in the guide before trusting a number in a real system.</p>
+<h2>Significant figures and rounding</h2>
+<p>A result cannot be more precise than its inputs. Reporting 4.7382 from inputs given to two significant figures is a claim about measurement precision that the data does not support.</p>
+<p>Carry full precision through the calculation and round only the final answer, to the precision of the least precise input. That is the convention most exam boards and journals expect.</p>
+<h2>When the model stops applying</h2>
+<p>Ideal gas behaviour fails at high pressure and low temperature. Simple projectile motion ignores drag, which matters beyond short ranges. Half-life assumes first-order kinetics, which not every reaction follows.</p>
+<p>Knowing the boundary of a model is part of using it. An answer outside the model is not wrong arithmetic; it is the wrong tool.</p>
+<!-- guide-extra-depth:end -->
 <!-- guide-depth:start -->
 <h2>Where these answers go wrong</h2><ul class="guide-pitfalls"><li>Entering temperatures in Celsius where the equation requires kelvin — every gas-law style formula needs absolute temperature.</li><li>Pairing grams with a molar mass and then reporting the result as if it were a concentration per litre.</li><li>Rounding at each intermediate step, so error accumulates before the final significant figures are chosen.</li><li>Applying a formula outside the range it was derived for, such as an ideal-gas estimate near condensation.</li></ul><h2>Frequently asked questions</h2><div class="seo-faqs"><h3>How many significant figures should I report?</h3><p>As many as the least precise input supports. If one measurement is 2.1 (two figures) and another is 12.35, the answer carries two. Round only at the end — rounding in the middle is what makes a hand calculation disagree with the calculator by more than the measurement error.</p><h3>Why does temperature have to be in kelvin?</h3><p>Because the gas laws are proportional to absolute temperature: halving the kelvin value halves the volume at constant pressure, which is only true on a scale that starts at absolute zero. Celsius has an arbitrary zero, so using it produces answers that are wrong by a fixed offset.</p><h3>When do the standard approximations stop working?</h3><p>Each formula has conditions printed with it for a reason. Ideal-gas estimates drift as pressure rises or as a gas approaches condensation; small-angle approximations fail past roughly fifteen degrees; frictionless and massless assumptions fail as soon as real hardware is involved. Check the condition before trusting the number.</p></div>
 <!-- guide-depth:end -->

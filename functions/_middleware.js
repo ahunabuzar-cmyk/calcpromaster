@@ -90,6 +90,25 @@ const SPA_PREFIXES = [
 ];
 const SPA_RE = new RegExp('^/(' + SPA_PREFIXES.join('|') + ')(/|$)');
 
+// Localized paths are CLIENT-rendered: /es/finance/loan-emi answers with the
+// English shell (canonical "/", lang="en", no hreflang) and only becomes
+// Spanish after JS boots. A crawler therefore sees 18 prefixes × 1,422 pages of
+// near-duplicate English home pages — measured 2026-10-25. The switcher keeps
+// working for users, but the URLs are not offered to search: X-Robots-Tag
+// noindex, follow (noindex, not a redirect, so a shared localized link still
+// opens in the reader's language).
+const LOCALE_RE = new RegExp('^/(' + [
+  'es', 'hi', 'ur', 'fr', 'de', 'pt', 'ar', 'ru', 'ja', 'zh', 'ko', 'it', 'nl',
+  'tr', 'id', 'vi', 'th', 'bn',
+].join('|') + ')(/|$)');
+
+function withLocaleNoindex(response, pathname) {
+  if (!response || !LOCALE_RE.test(pathname || '')) return response;
+  const tagged = new Response(response.body, response);
+  tagged.headers.set('X-Robots-Tag', 'noindex, follow');
+  return tagged;
+}
+
 // ---------------------------------------------------------------------------
 // One canonical URL per page — the two variants Cloudflare does NOT fix.
 // ---------------------------------------------------------------------------
@@ -209,7 +228,7 @@ export async function onRequest(context) {
   ) {
     try {
       const shell = await serveShell(context, new URL(context.request.url));
-      if (shell) return shell;
+      if (shell) return withLocaleNoindex(shell, pathname);
     } catch (e) {
       // Fall through to the real 404.
     }
@@ -222,11 +241,11 @@ export async function onRequest(context) {
   // generated page (/, /guides/*, /blog/*, hubs, tools) is covered.
   const isHtml = /text\/html/i.test(response.headers.get('content-type') || '');
   const policy = isHtml ? 'no-cache' : (pathname ? cachePolicy(pathname) : null);
-  if (!policy) return response;
+  if (!policy) return withLocaleNoindex(response, pathname);
   // Only successful document/asset responses are worth re-headering; a 404 or a
   // redirect must keep its own headers.
   if (!response || response.status >= 400) return response;
   const patched = new Response(response.body, response);
   patched.headers.set('Cache-Control', policy);
-  return patched;
+  return withLocaleNoindex(patched, pathname);
 }

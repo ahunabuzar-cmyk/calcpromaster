@@ -51,6 +51,14 @@ const MD_OUT = path.join(ROOT, 'docs', 'KEYWORD-RESEARCH.md');
 const NA = 'Not available';
 const PROBE_DATE = '2026-10-12';
 
+// Search operators are not keywords. `site:calcpromaster.com` shows up in the GSC
+// join as a real query with impressions (it is what an operator search returns),
+// but it names no searcher demand and no page can target it — it used to land in
+// the CSV as a keyword with an empty target URL and broke the table's own
+// "every keyword has a target" contract.
+const SEARCH_OPERATOR_RE = /^\s*(site|inurl|intitle|intext|filetype|allinurl|allintitle|related|cache|define|link|images|source):/i;
+const isOperatorQuery = (q) => SEARCH_OPERATOR_RE.test(String(q || ''));
+
 const argv = process.argv.slice(2);
 const minIdx = argv.indexOf('--min');
 const MIN_IMPRESSIONS = minIdx >= 0 ? Number(argv[minIdx + 1]) : 3;
@@ -195,7 +203,7 @@ const gscWindow = `${gsc.startDate} → ${gsc.endDate} (${gsc.days} days)`;
 const byQuery = new Map();
 for (const p of gsc.pairs || []) {
   const key = String(p.query || '').trim().toLowerCase();
-  if (!key) continue;
+  if (!key || isOperatorQuery(key)) continue;
   const cur = byQuery.get(key);
   if (!cur || p.impressions > cur.impressions) byQuery.set(key, p);
 }

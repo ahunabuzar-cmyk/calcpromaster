@@ -1783,7 +1783,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-24.
 
 **/everyday/cost-of-living-compare — City Cost of Living Comparison Calculator**
 - Title: City Cost of Living Comparison Calculator: Current salary
-- Keywords: cost of living calculator [MEDIUM/3] · compare cities cost of living [MEDIUM/3] · equivalent salary calculator [MEDIUM/4] · relocation salary comparison [MEDIUM/4]
+- Keywords: cost of living calculator [MEDIUM/3] · compare cities cost of living [MEDIUM/3] · free online City Cost of Living Comparison Calculator [EASY/2]
 
 **/everyday/snow-day — Snow Day Calculator**
 - Title: Snow Day Calculator: Expected Snowfall, District Closing
@@ -2653,7 +2653,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-24.
 
 **/finance/cosigning-loan-risk — Cosigning a Loan Risk Calculator**
 - Title: Cosigning a Loan Risk Calculator: Outstanding
-- Keywords: cosigning a loan calculator [MEDIUM/4] · cosigner risk [MEDIUM/3] · should i cosign a loan [MEDIUM/4] · loan default exposure [MEDIUM/4]
+- Keywords: cosigning a loan calculator [MEDIUM/4] · cosigner risk [MEDIUM/3] · should i cosign a loan [MEDIUM/4] · free online Cosigning a Loan Risk Calculator [EASY/2]
 
 **/finance/inheritance-tax-uk-india — Inheritance Tax Calculator (UK and India)**
 - Title: Inheritance Tax Calculator (UK and India): Estate value
@@ -4569,7 +4569,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-24.
 
 **/regional/bangladesh-income-tax — Bangladesh Income Tax Calculator**
 - Title: Bangladesh Income Tax Calculator: Annual Income
-- Keywords: bangladesh income tax calculator [MEDIUM/4] · nbr tax calculator 2025-26 [MEDIUM/4] · income tax slab bangladesh [MEDIUM/4]
+- Keywords: bangladesh income tax calculator [MEDIUM/4] · nbr tax calculator [MEDIUM/4] · income tax slab bangladesh [MEDIUM/4]
 
 **/regional/egypt-take-home-salary — Egypt Take-Home Salary Calculator**
 - Title: Egypt Take-Home Salary Calculator: Gross Monthly Salary
@@ -4581,7 +4581,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-24.
 
 **/regional/mexico-isr-salary — Mexico ISR Salary Calculator**
 - Title: Mexico ISR Salary Calculator: Gross Monthly Salary
-- Keywords: mexico isr calculator [MEDIUM/3] · calculadora isr 2026 [MEDIUM/3] · impuesto sobre la renta nomina [MEDIUM/3]
+- Keywords: mexico isr calculator [MEDIUM/3] · calculadora isr [MEDIUM/3] · impuesto sobre la renta nomina [MEDIUM/3]
 
 **/regional/vietnam-take-home-salary — Vietnam Take-Home Salary Calculator**
 - Title: Vietnam Take-Home Salary Calculator: Gross Monthly Salary
@@ -4625,7 +4625,7 @@ _Machine-extracted from the deploy tree + calculator data modules on 2026-10-24.
 
 **/regional/hijri-converter — Hijri Gregorian Date Converter**
 - Title: Hijri Gregorian Date Converter: Gregorian date, Hijri
-- Keywords: hijri date converter [MEDIUM/4] · gregorian to hijri [MEDIUM/3] · islamic calendar converter [MEDIUM/3] · hijri to gregorian [MEDIUM/3]
+- Keywords: gregorian to hijri [MEDIUM/3] · islamic calendar converter [MEDIUM/3] · hijri to gregorian [MEDIUM/3] · free online Hijri Gregorian Date Converter [EASY/2]
 
 **/regional/gold-price — Gold Price and Value Calculator**
 - Title: Gold Price and Value Calculator: Weight, Gold price

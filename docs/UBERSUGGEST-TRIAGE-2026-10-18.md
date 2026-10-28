@@ -1,8 +1,8 @@
 # UberSuggest export triage — 2026-10-18
 
-**Generated:** 2026-10-18 · by `node scripts/ubersuggest-triage.cjs`
+**Generated:** 2026-10-27 · by `node scripts/ubersuggest-triage.cjs`
 **Inputs:** `backlinks-calculatorio.csv`, `backlinks-rapidtables.csv`, `keywords-currency.csv`, `keywords-head.csv`, `keywords-modifiers.csv`, `refdomains-calculatorio.csv`, `refdomains-omnicalculator.csv`, `refdomains-rapidtables.csv`
-**Joined against:** `deploy/sitemap.xml` (1,420 URLs) and `data/gsc-query-page.json` (2026-09-16 → 2026-10-14).
+**Joined against:** `deploy/sitemap.xml` (1,420 URLs) and `data/gsc-query-page.json` (2026-09-24 → 2026-10-22).
 
 Every figure below is recomputed by the script; nothing is hand-typed.
 
@@ -118,16 +118,16 @@ Union of the three referring-domain exports: 1,310 domains. Shared by 2+: 179; a
 
 | Metric | Value |
 |---|---|
-| Clicks | 21 |
-| Impressions | 18,917 |
+| Clicks | 22 |
+| Impressions | 20,954 |
 | CTR | 0.1% |
-| Average position | 33.1 |
-| URLs with at least one impression | 581 |
-| Impressions not attributable to a query-page pair | 7,350 |
+| Average position | 32.5 |
+| URLs with at least one impression | 594 |
+| Impressions not attributable to a query-page pair | 8,730 |
 
 ### The CTR problem is bigger than the ranking problem
 
-241 pages (279 URL forms, because of the slash split below) have a best position of 10 or better and **zero clicks**, holding 8,109 impressions. At the industry CTR for position 5–8 that should be hundreds of clicks. Two candidates, and they need different fixes:
+254 pages (297 URL forms, because of the slash split below) have a best position of 10 or better and **zero clicks**, holding 8,802 impressions. At the industry CTR for position 5–8 that should be hundreds of clicks. Two candidates, and they need different fixes:
 
 1. **The SERP has an instant answer.** For `how to calculate tip`, `rgb to hex`, `harmonic mean calculator` Google answers inline above the organic results — ranking 7th there is worth ~0 clicks no matter how good the title is.
 2. **The snippet is not being clicked.** Fixable in an afternoon: rewrite the title/meta to lead with the number, city, or state the query implies.
@@ -135,28 +135,28 @@ Union of the three referring-domain exports: 1,310 domains. Shared by 2+: 179; a
 | URL | Impressions | Best position |
 |---|---|---|
 | `/lifestyle/home-insurance/` | 637 | 2 |
-| `/finance/pmi-calculator/` | 561 | 5 |
-| `/finance/fha-loan/` | 416 | 2 |
-| `/guides/tip` | 327 | 7.03 |
+| `/finance/pmi-calculator/` | 590 | 5 |
+| `/finance/fha-loan/` | 424 | 2 |
+| `/guides/tip` | 385 | 6.52 |
 | `/finance/apy-calculator/` | 252 | 2 |
-| `/finance/credit-utilization/` | 224 | 4 |
+| `/finance/credit-utilization/` | 238 | 4 |
 | `/health/bmr-mifflin` | 175 | 1 |
+| `/tech/rgb-hex/` | 156 | 7 |
+| `/tech/internet-speed/` | 152 | 3 |
 | `/finance/wacc/` | 152 | 6 |
-| `/guides/business-days` | 137 | 5.5 |
-| `/lifestyle/renters-insurance` | 133 | 6.76 |
 
 ### Striking distance is where fast wins live
 
-833 query-page pairs sit at position 3–15, carrying 3,694 impressions and 5 clicks. 32 of those have ≥20 impressions — these are the pages where one on-page change moves real traffic, and none of them came from the UberSuggest exports.
+867 query-page pairs sit at position 3–15, carrying 3,856 impressions and 5 clicks. 31 of those have ≥20 impressions — these are the pages where one on-page change moves real traffic, and none of them came from the UberSuggest exports.
 
 | Query | Page | Impressions | Position |
 |---|---|---|---|
-| `how to calculate tip` | `/guides/tip` | 327 | 7.0 |
+| `how to calculate tip` | `/guides/tip` | 385 | 6.5 |
 | `fha loan calculator` | `/finance/fha-loan/` | 223 | 11.1 |
-| `pmi calculator` | `/finance/pmi-calculator/` | 142 | 9.9 |
+| `pmi calculator` | `/finance/pmi-calculator/` | 143 | 10.0 |
 | `renters insurance calculator` | `/lifestyle/renters-insurance` | 100 | 6.8 |
-| `rgb to hex` | `/tech/rgb-hex/` | 76 | 13.0 |
-| `if you spend $3 on coffee per school/work day, how much are you spending per year? under $100 between $100 and $250 between $250 and $750 more than $750` | `/everyday/coffee-cost/` | 68 | 8.5 |
+| `if you spend $3 on coffee per school/work day, how much are you spending per year? under $100 between $100 and $250 between $250 and $750 more than $750` | `/everyday/coffee-cost/` | 84 | 8.7 |
+| `rgb to hex` | `/tech/rgb-hex/` | 84 | 12.3 |
 | `prorated rent calculator` | `/finance/prorated-rent` | 66 | 13.3 |
 | `fha home loan calculator` | `/finance/fha-loan/` | 65 | 6.9 |
 | `rent affordability calculator` | `/finance/rent-affordability/` | 61 | 13.3 |
@@ -166,7 +166,7 @@ Union of the three referring-domain exports: 1,310 domains. Shared by 2+: 179; a
 
 ### Legacy URL forms still split the data
 
-112 pages appear in GSC under **both** `/path` and `/path/`, together accounting for 4,967 impressions (26.3% of the property). The server now 308s each family to one canonical (tools → `/path/`, guides → `/path`), so these are stale index entries from before the redirect went in, not a live defect — `data/url-format-audit.json` reports 0 FAILs across 1,420 URLs. Until Google recrawls, any per-URL report reads roughly half the true number.
+117 pages appear in GSC under **both** `/path` and `/path/`, together accounting for 5,398 impressions (25.8% of the property). The server now 308s each family to one canonical (tools → `/path/`, guides → `/path`), so these are stale index entries from before the redirect went in, not a live defect — `data/url-format-audit.json` reports 0 FAILs across 1,420 URLs. Until Google recrawls, any per-URL report reads roughly half the true number.
 
 ### Manual check: the head tags are not the problem
 
@@ -213,9 +213,9 @@ Two numbers decide whether a keyword list can move a traffic target, and neither
 
 ### a. What this site converts stated volume into today
 
-`15` of the 47 covered clusters map onto a page that appears in the per-URL GSC export. Those pages carry **16,918,020** of UberSuggest volume and earned **291 impressions in 28 days** — a capture of **0.0017%**.
+`15` of the 47 covered clusters map onto a page that appears in the per-URL GSC export. Those pages carry **16,918,020** of UberSuggest volume and earned **303 impressions in 28 days** — a capture of **0.0018%**.
 
-That is the multiplier to apply to any new page: stated volume × 0.0017% ≈ the impressions it can be expected to add at today's ranking strength.
+That is the multiplier to apply to any new page: stated volume × 0.0018% ≈ the impressions it can be expected to add at today's ranking strength.
 
 ### b. How many “uncovered” clusters already touch an existing tool
 
@@ -285,24 +285,24 @@ This is the answer to “will building a page for this keyword bring impressions
 
 ### d. What the target costs on these keywords
 
-| Target / month | Impressions / day | × the 28-day average (676/day) | Share of the 6,627,920 list volume needed | × the measured capture |
+| Target / month | Impressions / day | × the 28-day average (748/day) | Share of the 6,627,920 list volume needed | × the measured capture |
 |---|---:|---:|---:|---:|
-| 200,000 | 6,667 | 9.9x | 3.0% | 1,754x |
-| 300,000 | 10,000 | 14.8x | 4.5% | 2,631x |
+| 200,000 | 6,667 | 8.9x | 3.0% | 1,685x |
+| 300,000 | 10,000 | 13.4x | 4.5% | 2,527x |
 
-Read the last two columns together. Hitting the target from **this list alone** means earning a capture rate about *2,631x* today's — which is a ranking/authority change on the same URLs, not more keywords. A new page does not carry that multiplier with it.
+Read the last two columns together. Hitting the target from **this list alone** means earning a capture rate about *2,527x* today's — which is a ranking/authority change on the same URLs, not more keywords. A new page does not carry that multiplier with it.
 
 ## 7. Will any of this make us rank fast?
 
 Judgement, not measurement — but it follows from the four sections above:
 
-- **0 of the 605 exported keyword phrasings appear among the 250 queries in the GSC export.** Not one of them overlaps. Every fast win in this data set is already on the site: the striking-distance pairs in §4. (The GSC export is capped at 250 query rows, so this rules out overlap with the queries we have data for, not with every query we appear on.)
+- **0 of the 605 exported keyword phrasings appear among the 100 queries in the GSC export.** Not one of them overlaps. Every fast win in this data set is already on the site: the striking-distance pairs in §4. (The GSC export is capped at 250 query rows, so this rules out overlap with the queries we have data for, not with every query we appear on.)
 - The 7 PKR pairs are the worst possible test case for "rank fast". A currency conversion is the canonical instant-answer SERP: Google puts its own converter above the results. The 241 zero-click pages are the proof — that is what ranking inside the top 10 on an answerable query looks like.
-- What the site actually lacks is not keywords. It is 581 URLs with impressions, 21 clicks in 28 days, and average position 33. No keyword list moves that; sub-10 positions on queries with no instant answer do.
+- What the site actually lacks is not keywords. It is 594 URLs with impressions, 21 clicks in 28 days, and average position 33. No keyword list moves that; sub-10 positions on queries with no instant answer do.
 
 ## 8. What to do, in order
 
-**P0 — start with what already ranks.** 241 pages are inside the top 10 with zero clicks. Pick the ten with real impressions, check the SERP by hand for an instant answer, and either rewrite the snippet or drop the query. This is the only work here with a measurable payoff inside two weeks.
+**P0 — start with what already ranks.** 254 pages are inside the top 10 with zero clicks. Pick the ten with real impressions, check the SERP by hand for an instant answer, and either rewrite the snippet or drop the query. This is the only work here with a measurable payoff inside two weeks.
 
 **P1 — one PKR page, aimed at what Google cannot answer inline.** Not the head `usd to pkr` query (widget), and not seven doorway pages. §6c settles the argument: `/finance/currency-converter/` already carries `dollar pkr` in its keyword field and has 0 impressions in 28 days, so a second URL for the same intent does not start from a better place. The open intents are the ones the widget does not cover: a rate-history table, "why did the rupee fall", and worked conversions for round amounts.
 
@@ -315,7 +315,7 @@ Current rate is already available — `js/currency.js` tries `open.er-api.com` a
 ## Limits of this analysis
 
 - The capture rate in §6 is a ratio of unlike quantities: the numerator is a page's impressions from *all* its queries, the denominator is one cluster's max-phrasing volume. It is a direction, not a forecast. What it does establish is the order of magnitude — the site converts its stated volume at far below 1%, so volume is not the scarce input.
-- GSC query rows are anonymised for low-volume queries: 7,350 impressions cannot be attributed to a query-page pair.
+- GSC query rows are anonymised for low-volume queries: 8,730 impressions cannot be attributed to a query-page pair.
 - The backlink exports are one competitor's top 500, which is a sample of the tail, not the full profile.
 - The currency API was read from source, not exercised wholesale: live fetch, caching and the static fallback are in the code, but this run did not verify that either upstream serves PKR today or returns a free 12-month series.
 - Nothing here was deployed. No page, registry entry, canonical or sitemap was modified.

@@ -1,6 +1,6 @@
 # Index-regression alert — per-URL transitions
 
-_Generated 2026-10-23T12:10:03.856Z by `scripts/check-index-regressions.cjs`._
+_Generated 2026-10-27T16:38:47.617Z by `scripts/check-index-regressions.cjs`._
 
 The burn-down reports net progress; this report is the per-URL view of the
 same snapshots, so a page that fell out of the index (or was consolidated
@@ -12,7 +12,6 @@ away as an alternate canonical) cannot hide behind the total.
 | 2026-10-05 | `gsc-inspect-batch-2026-10-05.json` | 20 |
 | 2026-10-08 | `gsc-inspect-2026-10-08.json` | 20 |
 | 2026-10-09 | `gsc-inspect-batch-2026-10-09.json` | 20 |
-| 2026-10-09 | `gsc-inspect-notindexed.json` | 784 |
 | 2026-10-11 | `index-panel-history.json` | 590 |
 | 2026-10-12 | `gsc-inspect-batch-2026-10-12.json` | 40 |
 | 2026-10-14 | `gsc-inspect-batch-2026-10-14.json` | 100 |
@@ -22,6 +21,10 @@ away as an alternate canonical) cannot hide behind the total.
 | 2026-10-17 | `gsc-inspect-batch-2026-10-17.json` | 100 |
 | 2026-10-18 | `gsc-inspect-batch-2026-10-18.json` | 40 |
 | 2026-10-19 | `gsc-inspect-batch-2026-10-19.json` | 30 |
+| 2026-10-25 | `gsc-inspect-batch-2026-10-25.json` | 100 |
+| 2026-10-25 | `index-panel-history.json` | 590 |
+| 2026-10-26 | `gsc-inspect-batch-2026-10-26.json` | 100 |
+| 2026-10-26 | `gsc-inspect-notindexed.json` | 794 |
 
 ## New findings this run (not in the ledger)
 
@@ -37,7 +40,7 @@ _None._
 
 _None._
 
-### 4. Current state — non-candidates in the newest snapshot (gsc-inspect-batch-2026-10-19.json#2026-10-19)
+### 4. Current state — non-candidates in the newest snapshot (gsc-inspect-notindexed.json#2026-10-26)
 
 _No new non-candidate URLs in the newest snapshot._
 
@@ -48,12 +51,12 @@ shows right now, which is what makes a targeted batch inspection useful._
 
 | measure | value |
 |---|---|
-| transitions scanned | 763 |
+| transitions scanned | 220 |
 | regressions found (all windows) | 0 |
 | new not-candidates found | 0 |
 | duplicate-canonical findings | 0 |
-| non-candidates in newest snapshot | 0 |
-| known (in ledger, not alerting) | 1 |
+| non-candidates in newest snapshot | 89 |
+| known (in ledger, not alerting) | 90 |
 | NEW this run | 0 |
 
 ## What to do with a finding

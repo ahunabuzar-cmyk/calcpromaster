@@ -1,6 +1,6 @@
 # URL-format audit
 
-**Generated:** 2026-10-23 · by `node scripts/audit-url-format.cjs`
+**Generated:** 2026-10-27 · by `node scripts/audit-url-format.cjs`
 **Scope:** every URL in the built `deploy/sitemap.xml` (~1420 URLs).
 
 Third-party panels report "pages with a poorly formatted URL" as a count with no stated rule,

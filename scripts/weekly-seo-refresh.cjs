@@ -8,6 +8,9 @@
 //
 //   A. Data (GSC se)
 //   1. Per-page impressions                    (gsc-export-pages.cjs)
+//  1b. Daily clicks/impressions series         (gsc-export-daily.cjs)
+//       — the run-rate source. It used to be a hand-downloaded Performance
+//       export, so with a live token the run-rate still read "stale source".
 //   2. Sitemap resubmit + URL inspection batch  (gsc-batch-inspect.cjs)
 //   3. Index panel: wahi 100 URLs dobara       (build-index-panel.cjs)
 //   4. Query→page join                          (gsc-queries.cjs)
@@ -24,8 +27,9 @@
 //
 //   C. Build + gates
 //  11. Deploy rebuild (crawl-link-boost + gates)(build-deploy.js)
-//  12. Crawl-link gate                          (audit-crawl-links.cjs)
-//  13. Link-equity plan (built link graph se)   (build-link-equity-plan.cjs)
+//  12. Crawl-link gate                          (audit-crawl-links.cjs)//  13. Link-equity plan (built link graph se)  (build-link-equity-plan.cjs)
+// 13b. UberSuggest triage — recomputed from the new GSC dump + built sitemap,
+//      else the staleness gate fails every week on a report nobody regenerated
 //  14. Host-consolidation check                 (check-host-redirects.cjs)
 //  15. Staleness gate — FATAL: koi published artifact apne data se purana nahi
 //
@@ -92,6 +96,12 @@ function run(script, args) {
   } else {
     step(1, 'GSC per-page impressions (' + DAYS + 'd)');
     run('gsc-export-pages.cjs', ['--days', String(DAYS)]);
+
+    // Daily series = the run-rate input. Without it the growth model reads the
+    // last hand-downloaded export and the run-rate is a week (or a month) old.
+    step('1b', 'GSC daily series (run-rate source)');
+    const dailyOk = run('gsc-export-daily.cjs', []);
+    if (!dailyOk) console.error('  ⚠  Daily series pull failed — growth model / run-rate will read the previous export.');
 
     if (!SKIP_INSPECT) {
       step(2, 'Sitemap resubmit + URL inspection (' + LIMIT + ' URLs)');
@@ -209,6 +219,13 @@ function run(script, args) {
   step(13, 'Link-equity plan');
   const equityOk = run('build-link-equity-plan.cjs', []);
   if (!equityOk) console.error('  ⚠  Link-equity plan failed — docs/LINK-EQUITY-PLAN.md purana reh gaya.');
+
+  // Triage verdicts are recomputed from the raw exports AND the current GSC
+  // dump, so a fresh pull makes them stale by definition. Regenerating here is
+  // what lets step 15 pass; the artifacts are dated, so nothing is rewritten.
+  step('13b', 'UberSuggest triage (recomputed against this pull)');
+  const triageOk = run('ubersuggest-triage.cjs', []);
+  if (!triageOk) console.error('  ⚠  Triage failed — its reports stay older than data/gsc-query-page.json.');
 
   // Host consolidation (non-fatal): apex 200, www + pages.dev 301 -> apex.
   if (!SKIP_HOSTS && !SKIP_DATA) {

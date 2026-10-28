@@ -88,10 +88,23 @@ for (const f of fs.readdirSync(DATA_DIR).filter((x) => x.endsWith('.js')).sort()
     for (const p of segments) {
       let np = p;
 
-      // Q1: drop bare year tokens
-      if (/\b20\d{2}\b/.test(np)) {
-        const t = np.replace(/\b20\d{2}\b/g, '').replace(/\s+/g, ' ').trim();
-        if (t && t !== np) { np = t; stats.q1++; touched = true; fixLog.push(`Q1 [${L.id}] ${p} -> ${t}`); }
+      // Q1: drop stale year tokens — a bare year AND a whole range/FY form.
+      // Dropping only the bare year left "nbr tax calculator 2025-26" as
+      // "nbr tax calculator -26", which still reads as a year and stayed flagged
+      // by the audit (measured 2026-10-27: Q1 stuck at 2). Ranges are consumed
+      // whole, before bare years, so no stray separator survives; the page copy
+      // keeps the tax year, only the target drops it.
+      if (/\b(19|20)\d{2}\b/.test(np)) {
+        const t = np
+          .replace(/\bFY\s*(19|20)\d{2}(\s*[-–/]\s*\d{2,4})?/gi, ' ')
+          .replace(/\b(19|20)\d{2}\s*[-–/]\s*\d{2,4}\b/g, ' ')
+          .replace(/\b(19|20)\d{2}\b/g, ' ')
+          .replace(/\s+/g, ' ')
+          .trim();
+        // A phrase that was nothing but the year has no target left: drop the
+        // segment instead of keeping a stale one that would be flagged forever.
+        if (!t) { stats.q1++; touched = true; fixLog.push(`Q1 [${L.id}] ${p} -> (dropped, was only a year)`); continue; }
+        if (t !== np) { np = t; stats.q1++; touched = true; fixLog.push(`Q1 [${L.id}] ${p} -> ${t}`); }
       }
 
       // S2: single generic word -> intent phrase

@@ -345,15 +345,40 @@ catch (e) { console.error('deploy/index.html missing — run build-deploy.js fir
 // the already-inlined rules made 81% redundant). Snapshot it BEFORE the strip.
 const SHELL_HOME = SHELL;
 
-// 4b. Strip the FULL inlined CSS (build-deploy.js inlines ~70KB of minified CSS
-// into deploy/index.html for the critical path). Per-route pages don't need it
-// inline — deploy/styles.css exists and is cacheable, so reference it externally
-// to keep 769 static pages small (~54KB each instead of ~124KB).
-SHELL = SHELL.replace(/<!-- Critical CSS[\s\S]*?<\/style>\n?/, '<link rel="stylesheet" href="/styles.css">\n');
-// Fallback: if the marker changed, strip any giant inline <style> that follows it.
-if (SHELL.indexOf('<style>') !== -1 && SHELL.indexOf('/* Critical CSS') !== -1) {
-  SHELL = SHELL.replace(/<style>\s*\/\* Critical CSS[\s\S]*?<\/style>/, '<link rel="stylesheet" href="/styles.css">');
+// 4b. Replace the shell's above-the-fold CSS with ONE external stylesheet link.
+// The shell (deploy/index.html, written by build-deploy.js — which no longer
+// inlines the full sheet, see the note above `minifyCss` there) carries a small
+// critical-CSS block plus `preload as="style"` and a <noscript> fallback. A
+// prerendered page is its own document, so it does not need the critical block
+// twice: it gets the same cacheable /styles.css the other 1,500 pages use, as a
+// single link. Consuming the preload + noscript lines too keeps that at exactly
+// one stylesheet reference per page instead of three.
+SHELL = SHELL.replace(
+  /\s*<!-- Critical CSS inline for instant first paint -->[\s\S]*?<\/noscript>\n?/,
+  '\n  <link rel="stylesheet" href="/styles.css">\n'
+);
+// Fallback for an older shell shape: strip whatever inline CSS block follows
+// the marker and leave one external link.
+if (/<!-- Critical CSS/.test(SHELL)) {
+  SHELL = SHELL.replace(/<!-- Critical CSS[\s\S]*?<\/style>\n?/, '<link rel="stylesheet" href="/styles.css">\n');
 }
+
+// 4c. Drop the homepage's FAQ from every generated page.
+// The shell (deploy/index.html) carries the site FAQ — 16 questions, ~617 words.
+// Every page that inherits the shell was therefore shipping that same text
+// verbatim: measured 2026-10-27, 1,512 generated pages (1,492 tool/category +
+// 20 hubs), ~617 of a tool page's ~2,285 visible words — 27% of the page was
+// byte-identical to 1,511 other URLs. Its "Frequently asked questions" heading
+// also duplicated the tool's own FAQ heading on the same document. Google
+// discounts site-wide boilerplate, but it is the single largest block of
+// internal duplicate content on the site, and it inflates every page's word
+// count without adding anything page-specific.
+// Nothing unique is lost: the homepage keeps the FAQ (and the FAQPage JSON-LD
+// that describes those questions lives there too), and every tool/category page
+// keeps its own FAQ, worked example and formula blocks. The two links the site
+// block carried (/finance/loan-emi/, /health/bmi/) stay in home-about and the
+// footer, so no crawl path is removed.
+SHELL = SHELL.replace(/\s*<section class="home-faq">[\s\S]*?<\/section>/, '\n');
 
 // ---------- 5. Helpers ----------
 function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
@@ -457,7 +482,14 @@ function buildToolContent(tool, catKey) {
   // hydration — served from cache, no second request. Same onerror fallback.
   // No inline onerror: the fallback is a delegated capture-phase listener in
   // js/app.js (inline event handlers are a CSP-hardening audit failure).
-  html += '<div class="tool-hero-wrap"><img class="tool-hero-img" src="/og/' + encodeURIComponent(tool.id) + '.jpg" alt="' + escAttr(tool.name + ' calculator — free online tool') + '" loading="eager" fetchpriority="high" decoding="async" width="1200" height="630"></div>';
+  // Alt text must name the tool without stuttering: the names already carry
+  // their product noun ("Loan EMI Calculator"), so appending another one shipped
+  // "Loan EMI Calculator calculator — free online tool" on the 940 pages whose
+  // tool name ends in Calculator/Converter (measured 2026-10-27).
+  const heroNoun = /\b(calculator|converter|estimator|planner|checker|tracker|comparison|generator|solver|finder|builder|maker|simulator)s?\b/i.test(tool.name)
+    ? tool.name + ' — free online tool'
+    : tool.name + ' calculator — free online tool';
+  html += '<div class="tool-hero-wrap"><img class="tool-hero-img" src="/og/' + encodeURIComponent(tool.id) + '.jpg" alt="' + escAttr(heroNoun) + '" loading="eager" fetchpriority="high" decoding="async" width="1200" height="630"></div>';
   html += '<div class="privacy-badge" role="note" aria-label="Privacy">🔒 <span>Your data never leaves your device</span></div>';
   // Visible + machine-readable freshness (matches JSON-LD dateModified above).
   // Just the machine-readable date. The old trailing sentence ("formula and

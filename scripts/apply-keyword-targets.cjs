@@ -236,7 +236,16 @@ function main() {
     return;
   }
 
-  fs.writeFileSync(SRC, text);
+  // A no-op run must leave js/seo-content.js alone. Writing it unconditionally
+  // bumped its mtime, and build-deploy.js's report-staleness gate then flagged
+  // every artifact generated FROM it (the top10 push list, the changelog) as
+  // "older than its source" even though not one byte changed — a re-run of an
+  // already-applied table failed the build for no reason.
+  if (text !== original) {
+    fs.writeFileSync(SRC, text);
+  } else {
+    console.log('  seo-content: unchanged — not rewritten (mtime left alone)');
+  }
   for (const file of guideDrift) fs.writeFileSync(file, guideState.get(path.basename(file, '.html')));
   fs.writeFileSync(OUT_JSON, JSON.stringify(report, null, 2) + '\n');
   fs.writeFileSync(OUT_MD, renderMd(report));

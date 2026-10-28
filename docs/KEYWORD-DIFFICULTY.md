@@ -25,12 +25,12 @@ _Generated 2026-10-24 by `scripts/build-difficulty-report.cjs` (deterministic; r
 
 | Tier | Phrases | Meaning |
 |---|---|---|
-| **EASY** (go after now) | 1189 | 4+ words with intent qualifier — few strong brands in top-10 |
-| **MEDIUM** (secondary) | 1654 | 3+ words — mixed SERPs, needs some links |
+| **EASY** (go after now) | 1192 | 4+ words with intent qualifier — few strong brands in top-10 |
+| **MEDIUM** (secondary) | 1650 | 3+ words — mixed SERPs, needs some links |
 | **HARD** (park) | 0 | head terms — brand wall (calculator.net, omnicalculator, Khan Academy…) |
 | **BRAND** (own) | 0 | CalcProMaster brand queries — must own #1 |
 
-Total distinct targeted phrases: **2843** across 1421 indexable pages.
+Total distinct targeted phrases: **2842** across 1421 indexable pages.
 
 ## 3. GO list — highest-value EASY targets (difficulty 2, best-volume first, sample of 60)
 

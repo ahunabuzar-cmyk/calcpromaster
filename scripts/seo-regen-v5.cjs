@@ -168,6 +168,29 @@ function buildExPhrase(resText, fallbackMetric) {
     || /^(units?|feet|inches|people|hours|days|years|calories|grams|pounds|ounces|square|cubic)\b/i.test(m)
     || /\b(matrix|vector|array|coefficients?)\b/i.test(m)
     || /\d/.test(m)) return `a result of ${val}`;
+  // A label that cannot be the noun in "a <label> of <value>". Every shape below
+  // shipped a real snippet into deploy/ (audited 2026-10-26: 54 pages):
+  //   "Work out a current of $17920"            attribute adjective, no noun
+  //   "a needed of 10", "a weekly of $1375"     same
+  //   "a ltv of $1200", "an aov of $50"         an abbreviation read as a word
+  //   "current assets minus of $80,000"         a fragment ending in a function word
+  //   "a net raise over of +$3675/yr"           same
+  //   "what carpooling saves: enter the …"      a clause, not a noun phrase
+  //   "a drag-strip of ET: 13.78 s @ 98.9 mph"  the value carries its own label
+  // Dropping the label but keeping the value stays concrete and always reads as
+  // English — the same fallback the guards above already use.
+  const ADJECTIVE_ONLY = /^(current|needed|weekly|monthly|annual|daily|nominal|real|effective|expected|required|adjusted|payback|net|gross|total)$/i;
+  const ABBREVIATION = /^(ltv|aov|csat|cac|roi|apr|apy|npv|irr|tdee|bmr|bmi|emi|dti|pmi|wacc|ebitda)$/i;
+  const FRAGMENT_TAIL = /\b(minus|plus|over|under|when|where|from|to|of|and|or|vs|versus|per|after|before|between|than)$/i;
+  // A value that carries its own label ("ET: 13.78 s", "Ride: $36.00/day") is a
+  // composite, so the label in front of it is the wrong noun. The currency sign
+  // matters: "Ride: $36.00" has no digit directly after the colon.
+  const VALUE_LABELLED = /\b[a-z]{1,8}\s*:\s*[$€£¥₹\d]/i;
+  if (ABBREVIATION.test(m.trim())
+    || FRAGMENT_TAIL.test(m.trim())
+    || /:/.test(m)
+    || ADJECTIVE_ONLY.test(m.trim())
+    || VALUE_LABELLED.test(val)) return `a result of ${val}`;
   // Article agreement. The old fixed "a " shipped "a offer rate", "a estimated
   // remaining wait" and "a ats score" into the meta description, the answer
   // block, the long-form copy and the FAQs of every affected page.
@@ -596,7 +619,13 @@ function buildEntry(b) {
   // string, which is already human-formatted, instead of a vague "breakdown".
   // A pipe-joined result ("P:$1500 | D:$1167 | EV:$405") never belongs in a
   // snippet, so those pages state the shape of the answer instead.
+  // The fallback is only a fallback if it reads as a snippet itself: a tool whose
+  // own result string is a sentence ("what carpooling saves: enter the weekly
+  // commute cost, the number of riders and the days shared to get the saving")
+  // was passed straight through, so the meta description inherited the whole
+  // sentence. Test it with the same readability rule the phrase already uses.
   const fallbackOutcome = b.resultMain && !/\|/.test(b.resultMain) && !/\b[A-Z]{1,4}\s*:/.test(b.resultMain)
+    && !unreadable(b.resultMain) && !/[a-z]\s*:\s*[$€£¥₹\d]/i.test(b.resultMain)
     ? b.resultMain
     : 'a line-by-line breakdown';
   const rawOutcome = !b.exPhrase

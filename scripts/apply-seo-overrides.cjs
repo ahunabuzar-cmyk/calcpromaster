@@ -1637,6 +1637,30 @@ function replaceValue(text, oldValue, newValue) {
   return { text: text.slice(0, i) + JSON.stringify(newValue) + text.slice(i + needle.length), replaced: true };
 }
 
+// ---------- 3d. heading coverage helper ----------
+// id -> display name from the live registry, so the heading repair below names the
+// tool exactly the way its H1, title and intro already do. Same sandbox technique
+// as scripts/build-keyword-implementation-map.cjs (the data files assign to
+// window.<CAT>_TOOLS).
+function loadToolNames() {
+  const names = new Map();
+  const ctx = { window: {}, console: { log() {}, warn() {}, error() {} } };
+  ctx.window.window = ctx.window;
+  vm.createContext(ctx);
+  const dir = path.join(ROOT, 'js', 'data');
+  for (const f of fs.readdirSync(dir).filter((x) => x.endsWith('.js'))) {
+    try {
+      vm.runInContext(fs.readFileSync(path.join(dir, f), 'utf8'), ctx, { filename: f });
+    } catch (e) { /* a data file that needs the app runtime is skipped, not fatal */ }
+  }
+  for (const k of Object.keys(ctx.window)) {
+    if (/_TOOLS$/.test(k) && Array.isArray(ctx.window[k])) {
+      for (const t of ctx.window[k]) if (t && t.id) names.set(t.id, String(t.name || t.id));
+    }
+  }
+  return names;
+}
+
 function main() {
   const original = fs.readFileSync(SRC, 'utf8');
   // Read the object model from whichever source the needles are matched against.
@@ -1798,6 +1822,66 @@ function main() {
   }
   text = lines.join('\n');
 
+  // ---------- 4. heading coverage: every tool page states its own name in an <h2> ----------
+  // The engine emitted "<h2>What does this calculator do?</h2>" (or a bare
+  // "<h2>How does it work?</h2>") on 127 of 1,285 tool pages, so those pages
+  // carried their name in the H1, <title>, intro paragraph and hero alt — but in
+  // no <h2>. Measured by the on-page placement audit before this repair:
+  // 1,158/1,285 pages had a name-carrying heading
+  // (node scripts/audit-onpage-placement.cjs). The repair names the tool in the
+  // heading that already asks the question, which is what the other 1,158 pages
+  // do ("What does the Fuel Cost Calculator do?").
+  //
+  // Idempotent: the rule only fires while the generic heading string is still
+  // in the entry, so a second run is a no-op and `--check` stays honest.
+  //
+  // 2026-10-27 pass: the first version also skipped any entry that already had
+  // SOME name-carrying <h2>, which left the generic question heading behind it
+  // on 718 + 569 pages (measured by node scripts/audit-onpage-placement.cjs —
+  // "How does it work?" on 718 tool pages, "What does this calculator do?" on
+  // 569). Sitewide
+  // identical section headings are duplicate boilerplate on every page, and
+  // naming the tool makes each one unique. The skip is therefore now only a
+  // report field, not a reason to leave the generic heading in place.
+  const headingReport = [];
+  {
+    const names = loadToolNames();
+    const escHeading = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const fold = (s) => String(s).toLowerCase().replace(/&amp;/g, '&').replace(/&#39;/g, "'")
+      .replace(/&[a-z]+;/g, ' ').replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
+    for (const [id, e] of Object.entries(TOOL_SEO)) {
+      if (!e || (!e.aeo && !e.desc)) continue;
+      const name = names.get(id);
+      if (!name) continue;
+      const h2s = [...(String(e.aeo || '') + String(e.desc || '')).matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>/g)]
+        .map((m) => fold(m[1].replace(/<[^>]*>/g, ' ')));
+      const alreadyNamed = h2s.some((h) => h.includes(fold(name)));
+      const aeo = String(e.aeo || '');
+      // Both generic question headings are named in the SAME run, and every
+      // occurrence within the block is replaced: String.replace() with a string
+      // needle only rewrites the first one, so an entry that asked the generic
+      // question twice needed a second run — the in-memory `--check` then saw a
+      // file it would still change and reported "stale" (254 entries, measured
+      // 2026-10-27). split/join is all-occurrence and keeps the run idempotent.
+      const GENERIC_HEADINGS = [
+        ['<h2>What does this calculator do?</h2>', () => '<h2>What does the ' + escHeading(name) + ' do?</h2>'],
+        ['<h2>How does it work?</h2>', () => '<h2>How does the ' + escHeading(name) + ' work?</h2>'],
+      ];
+      let next = aeo;
+      const hows = [];
+      for (const [from, to] of GENERIC_HEADINGS) {
+        if (!next.includes(from)) continue;
+        next = next.split(from).join(to());
+        hows.push('named ' + from.slice(4, -5));
+      }
+      const how = hows.join(', ');
+      if (next === aeo) { headingReport.push({ id, skipped: 'no generic heading to name', alreadyNamed }); continue; }
+      const r = replaceValue(text, aeo, next);
+      text = r.text;
+      headingReport.push({ id, name, how, changed: r.replaced });
+    }
+  }
+
   // A field counts as done when it changed OR when the generated copy already
   // matched the written override (some titles were already good; the snippet
   // and answer-first block were the broken parts).
@@ -1838,7 +1922,8 @@ function main() {
     }
     console.log('✔ seo content up to date (' + Object.keys(CTR_OVERRIDES).length + ' CTR overrides, '
       + Object.keys(TITLE_OVERRIDES).length + ' title term overrides, '
-      + Object.keys(LABEL_REPAIRS).length + ' label repairs, 0 undefined placeholders)');
+      + Object.keys(LABEL_REPAIRS).length + ' label repairs, 0 undefined placeholders, '
+      + headingReport.filter((r) => r.changed).length + ' heading(s) to name)');
     return;
   }
 
@@ -1850,6 +1935,8 @@ function main() {
   console.log('CTR overrides applied  : ' + report.filter((r) => r.changed && r.changed.title).length + '/' + Object.keys(CTR_OVERRIDES).length);
   console.log('title term overrides   : ' + titleReport.filter((r) => r.changed || r.already).length + '/' + Object.keys(TITLE_OVERRIDES).length);
   console.log('label repairs applied  : ' + labelReport.filter((r) => r.changed && (r.changed.fields >= 1 || !r.needsFix)).length + '/' + Object.keys(LABEL_REPAIRS).length);
+  console.log('name-carrying <h2>     : ' + headingReport.filter((r) => r.changed).length + ' heading(s) named'
+    + (headingReport.some((r) => r.skipped) ? ' · ' + headingReport.filter((r) => r.skipped).length + ' skipped' : ''));
   console.log('');
   for (const r of report) {
     console.log('  ' + (r.error ? '✖ ' : '✔ ') + r.id);
@@ -1875,4 +1962,4 @@ if (require.main === module) {
   try { main(); } catch (e) { console.error('FAIL', e.message); process.exit(1); }
 }
 
-module.exports = { UNDEFINED_FIXES, SHAPE_RESTORES, CTR_OVERRIDES, TITLE_OVERRIDES, TITLE_OVERRIDE_SKIPS, TITLE_OVERRIDE_NONTERM, LABEL_REPAIRS, labelFix, applyFixText, repairUndefined, rewriteAeo, replaceValue };
+module.exports = { UNDEFINED_FIXES, SHAPE_RESTORES, CTR_OVERRIDES, TITLE_OVERRIDES, TITLE_OVERRIDE_SKIPS, TITLE_OVERRIDE_NONTERM, LABEL_REPAIRS, labelFix, applyFixText, repairUndefined, rewriteAeo, replaceValue, loadToolNames };

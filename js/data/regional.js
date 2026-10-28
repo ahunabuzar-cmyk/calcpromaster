@@ -506,7 +506,7 @@ const REGIONAL_TOOLS = [
     id: 'bangladesh-income-tax',
     name: 'Bangladesh Income Tax Calculator',
     desc: 'Free Bangladesh income tax calculator: FY 2025-26 individual slabs with the tax-free threshold and minimum tax, every step shown.',
-    kw: 'bangladesh income tax calculator, nbr tax calculator 2025-26, income tax slab bangladesh',
+    kw: 'bangladesh income tax calculator, nbr tax calculator, income tax slab bangladesh',
     inputs: [
       { id: 'income', label: 'Annual Income (BDT)', type: 'number', def: 1200000 },
       { id: 'category', label: 'Taxpayer Category', type: 'select', opts: [{v:'General',l:'General'},{v:'Woman or senior 65+',l:'Woman or senior 65+'},{v:'Physically challenged',l:'Physically challenged'},{v:'War-wounded freedom fighter',l:'War-wounded freedom fighter'}], def: 'General' }
@@ -630,7 +630,7 @@ const REGIONAL_TOOLS = [
     id: 'mexico-isr-salary',
     name: 'Mexico ISR Salary Calculator',
     desc: 'Free Mexico ISR calculator: the 2026 Article 96 monthly withholding table with fixed quota and marginal rate, every step shown.',
-    kw: 'mexico isr calculator, calculadora isr 2026, impuesto sobre la renta nomina',
+    kw: 'mexico isr calculator, calculadora isr, impuesto sobre la renta nomina',
     inputs: [
       { id: 'salary', label: 'Gross Monthly Salary (MXN)', type: 'number', def: 25000 }
     ],
@@ -1117,7 +1117,7 @@ const REGIONAL_TOOLS = [
     id: 'hijri-converter',
     name: 'Hijri Gregorian Date Converter',
     desc: 'Convert between the Gregorian and Hijri (Islamic) calendars using the tabular arithmetic calendar.',
-    kw: 'hijri date converter, gregorian to hijri, islamic calendar converter, hijri to gregorian',
+    kw: 'gregorian to hijri, islamic calendar converter, hijri to gregorian, free online Hijri Gregorian Date Converter',
     inputs: [
 { id: 'direction', label: 'Direction', type: 'select', opts: [{v:'Gregorian to Hijri',l:'Gregorian to Hijri'},{v:'Hijri to Gregorian',l:'Hijri to Gregorian'}], def: 'Gregorian to Hijri' },
       { id: 'date', label: 'Gregorian date', type: 'date', def: '' },

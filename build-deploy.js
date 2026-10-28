@@ -12,9 +12,11 @@
 // ============================================================
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 const ROOT = __dirname;
 const OUT = path.join(ROOT, 'deploy');
+const REVIEW_DATES_FILE = path.join(ROOT, 'data', 'review-dates.json');
 
 // Regenerate the Formula QA dashboard from current contracts/tracker so the
 // shipped snapshot is never stale (root qa-dashboard.html feeds FILES below).
@@ -371,13 +373,41 @@ function readSiteConfig() {
 
 // E-E-A-T review-date stamp: every prerendered page carries a "Last reviewed"
 // line inside its tool-review-block so users AND search engines can see the
-// content was checked at a known time. Stamp = build date, but ONLY when the
-// page's content actually changed — files keep their mtime from the copy/SSG
-// step, so an unchanged page keeps its previous date on rebuilds (no cosmetic
-// redating). Editorial policy forbids redating without a content change.
+// content was checked at a known time. Editorial policy forbids redating
+// without a content change, so the stamp is driven by a CONTENT HASH, not by
+// the clock.
+//
+// Why the hash and not mtime: deploy/ is deleted and rebuilt on every run
+// (`rmSync` above), so every file is "freshly written" and the old mtime guard
+// therefore redated all 1,620 pages on every single build. Measured
+// 2026-10-25: every page said "Last reviewed: 2026-10-25" after a build that
+// changed three files — a freshness signal Google has no reason to trust.
+// data/review-dates.json remembers each page's hash + date, so unchanged
+// content keeps its original date across builds and only real edits move it.
+function pageContentHash(html) {
+  // Strip the parts that change on every build without any content change:
+  // the stamp itself, schema dateModified and the cache-busted asset version
+  // (same three the sitemap builder normalises away).
+  // The HTML is minified before this runs, so attribute quotes are gone
+  // (<span class=review-date>). Matching the quoted form only left the date
+  // text inside the hash — the stamp then changed its own hash on every build,
+  // which is exactly the cosmetic redating this function exists to stop.
+  const stable = html
+    .replace(/<span[^>]*class=["']?review-date["']?[^>]*>[\s\S]*?<\/span>/g, '')
+    .replace(/Last reviewed:\s*\d{4}-\d{2}-\d{2}/g, '')
+    .replace(/"dateModified":"[^"]*"/g, '')
+    .replace(/data-asset-version=["']?[^"'\s>]*["']?/g, '')
+    .replace(/\?v=[0-9a-zA-Z._-]+/g, '');
+  return crypto.createHash('sha256').update(stable).digest('hex').slice(0, 16);
+}
+
 function stampReviewDates() {
   const buildDate = new Date().toISOString().slice(0, 10);
-  let files = 0, stamped = 0, kept = 0;
+  let previous = { pages: {} };
+  try { previous = JSON.parse(fs.readFileSync(REVIEW_DATES_FILE, 'utf8')); } catch (e) { /* first run */ }
+  const prevPages = (previous && previous.pages) || {};
+  const nextPages = {};
+  let files = 0, stamped = 0, kept = 0, created = 0;
   (function walk(dir) {
     for (const e of fs.readdirSync(dir)) {
       const p = path.join(dir, e);
@@ -388,6 +418,15 @@ function stampReviewDates() {
       try { s = fs.readFileSync(p, 'utf8'); } catch (err) { continue; }
       if (!s.includes('tool-review-block')) continue;
       const orig = s;
+      const key = '/' + path.relative(OUT, p).split(path.sep).join('/');
+      const hash = pageContentHash(s);
+      const prev = prevPages[key];
+      const date = prev && prev.hash === hash ? prev.date : buildDate;
+      if (process.env.DEBUG_REVIEW && created < 3) {
+        console.log('  [debug] ' + key + ' hash=' + hash + ' prev=' + (prev ? prev.hash : 'none') + ' date=' + date);
+      }
+      if (!prev) created++;
+      nextPages[key] = { hash, date };
       const anchor = s.indexOf('class="tool-review-block"');
       // Schema freshness: keep ld+json WebApplication dateModified in lockstep
       // with the visible review-date stamp — same build date, same change rules
@@ -404,29 +443,34 @@ function stampReviewDates() {
         // block's closing </div> (the block ends right before the disclaimer).
         const closeIdx = s.indexOf('</div>', anchor);
         if (closeIdx >= 0) {
-          s = s.slice(0, closeIdx) + ' <span class="review-date">Last reviewed: ' + buildDate + '</span>' + s.slice(closeIdx);
-          s = setSchemaDate(s, buildDate);
-          stamped++;
+          s = s.slice(0, closeIdx) + ' <span class="review-date">Last reviewed: ' + date + '</span>' + s.slice(closeIdx);
         }
       } else if (s.includes('class="review-date"')) {
-        // Already stamped (rebuild over an existing deploy tree): update the
-        // date only when the file was freshly written this build (mtime is
-        // fresh from the copy/SSG step) — otherwise keep the old date.
-        const mtime = fs.statSync(p).mtime;
-        const isFresh = (Date.now() - mtime.getTime()) < 120000;
-        const cur = (s.match(/Last reviewed: ([0-9]{4}-[0-9]{2}-[0-9]{2})/) || [])[1];
-        if (isFresh && cur !== buildDate) {
-          s = s.replace(/Last reviewed: ([0-9]{4}-[0-9]{2}-[0-9]{2})/, 'Last reviewed: ' + buildDate);
-          s = setSchemaDate(s, buildDate);
-          stamped++;
-        } else {
-          kept++;
-        }
+        s = s.replace(/Last reviewed: [0-9]{4}-[0-9]{2}-[0-9]{2}/, 'Last reviewed: ' + date);
       }
-      if (s !== orig) { fs.writeFileSync(p, s); files++; }
+      s = setSchemaDate(s, date);
+      if (s !== orig) {
+        if (process.env.DEBUG_REVIEW && files < 2) {
+          let i = 0;
+          while (i < s.length && s[i] === orig[i]) i++;
+          console.log('  [debug-diff] ' + key + '\n    was: ' + JSON.stringify(orig.slice(Math.max(0, i - 90), i + 110)) +
+            '\n    now: ' + JSON.stringify(s.slice(Math.max(0, i - 90), i + 110)));
+        }
+        fs.writeFileSync(p, s); files++; stamped++;
+      } else { kept++; }
     }
   })(OUT);
-  console.log('  review-dates: ' + stamped + ' stamped, ' + kept + ' kept, ' + files + ' files written (' + buildDate + ')');
+
+  // Persist the hash→date ledger only when something actually moved.
+  const nextJson = JSON.stringify({ version: 1, updatedAt: buildDate, pages: nextPages }, null, 2) + '\n';
+  let prevJson = '';
+  try { prevJson = fs.readFileSync(REVIEW_DATES_FILE, 'utf8'); } catch (e) { /* first run */ }
+  if (nextJson !== prevJson) {
+    fs.mkdirSync(path.dirname(REVIEW_DATES_FILE), { recursive: true });
+    fs.writeFileSync(REVIEW_DATES_FILE, nextJson);
+  }
+  console.log('  review-dates: ' + stamped + ' restamped, ' + kept + ' kept, ' + created +
+    ' first-seen, ' + files + ' files written (' + buildDate + ')');
 }
 
 function substituteDomain() {
@@ -581,30 +625,28 @@ function minifyCss(css) {
   return out;
 }
 
-// Full styles.css inlined at build (no external request on the critical path, no
-// async-CSS race: widgets are styled at append time) and minified to cut HTML
-// parse cost on throttled mobile (~88KB -> ~70KB).
-function inlineFullCss() {
-  const htmlPath = path.join(OUT, 'index.html');
-  const cssPath = path.join(OUT, 'styles.css');
-  if (!fs.existsSync(htmlPath) || !fs.existsSync(cssPath)) return;
-  const raw = fs.readFileSync(cssPath, 'utf8');
-  const css = minifyCss(raw);
-  const html = fs.readFileSync(htmlPath, 'utf8');
-  const startMark = '<!-- Critical CSS inline for instant first paint -->';
-  const si = html.indexOf(startMark);
-  if (si < 0) { console.warn('  ! css inline: critical-CSS marker not found — skipping'); return; }
-  const endMark = '</noscript>';
-  const ei = html.indexOf(endMark, si);
-  if (ei < 0) { console.warn('  ! css inline: closing noscript not found — skipping'); return; }
-  const head = html.slice(0, si)
-    + '<!-- Critical CSS: FULL styles.css inlined (minified) at build — no external\n'
-    + '     request on the critical path, no async-CSS race. -->\n'
-    + '<style>\n' + css + '\n</style>\n'
-    + html.slice(ei + endMark.length);
-  fs.writeFileSync(htmlPath, head);
-  console.log('  css: styles.css inlined into index.html (' + raw.length + ' -> ' + css.length + ' bytes) ✓');
-}
+// ── styles.css is NOT inlined into the shell (removed 2026-10-26) ─────────────
+// This used to be `inlineFullCss()`: it matched the `<!-- Critical CSS inline for
+// instant first paint -->` marker through the closing `</noscript>` and replaced
+// that whole region with the FULL minified stylesheet. It was added 2026-08-16
+// (commit f3a69b4) when the shell had a plain render-blocking <link>, and it did
+// remove that blocking round trip.
+//
+// But index.html has since grown the better fix itself — a small critical-CSS
+// block inline plus `preload as="style"` swapped to rel=stylesheet by an inline
+// handler — and the build step was deleting it. Measured on the built shell:
+//
+//   with the full sheet inlined   document 164KB raw / 37KB gzip, 92.5KB of it
+//                                 CSS that is re-sent on EVERY client-rendered
+//                                 route and can never be cached across pages
+//   with the source design        document ~72KB raw / ~19KB gzip, and the one
+//                                 stylesheet is the SAME cacheable file the
+//                                 1,512 prerendered pages already use
+//
+// So the shell paid ~92KB of render-path weight per route to avoid one cached
+// request. Removing the step restores the design the source already documents
+// (critical CSS + async swap, CLS verified ~0.004 — docs/CLS-FIX-PROOF-2026-10-22.md).
+// Re-verified 2026-10-26 with scripts/cwv-audit.cjs on mobile + desktop.
 
 // ── Asset versioning (cache-bust) ────────────────────────────────────────────
 // Cloudflare Pages serves /js/* and styles.css at the same URL on every deploy,
@@ -832,10 +874,9 @@ function main() {
     count++;
   }
 
-  // Inline the site config + full stylesheet (removes both render-blocking
-  // requests from the critical path and the async-CSS race).
+  // Inline the site config (one render-blocking request removed). styles.css is
+  // deliberately NOT inlined — see the note above `minifyCss`.
   inlineSiteConfig();
-  inlineFullCss();
 
   // Minify deploy JS/CSS (whitespace + comments only — top-level identifiers
   // are PRESERVED so external wiring like data-tool attributes, global

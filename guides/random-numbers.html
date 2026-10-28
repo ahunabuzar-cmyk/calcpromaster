@@ -144,17 +144,6 @@
 <p>Read the three rows as a range: the spread between them is how much the answer depends on number of flips alone, with everything else held still.</p>
 <!-- guide-worked-example:end -->
   
-<!-- guide-extra-depth:start -->
-<h2>Not every random number is safe to use</h2>
-<p>A general-purpose generator such as Math.random is fine for a raffle or a dice roll and unsuitable for passwords, tokens or anything an attacker can profit from guessing. Cryptographic generators are slower precisely because they resist prediction.</p>
-<p>The distinction is predictability, not appearance. A sequence can look random to a human and be fully determined by a seed an attacker can recover.</p>
-<h2>Watch the range mapping</h2>
-<p>Taking a raw random integer modulo a range introduces bias whenever the range does not divide the generator space evenly — the low values come up slightly more often. Rejection sampling avoids it.</p>
-<p>The bias is tiny for a game and meaningful for a lottery-sized draw. If the fairness of the draw matters, use a generator that handles the mapping for you.</p>
-<h2>Seeds, reproducibility and streaks</h2>
-<p>A seeded generator replays the same sequence every time, which is what makes simulations testable. An unseeded one gives a different run each time, which is what makes shuffles fair.</p>
-<p>Long streaks are not evidence of a broken generator. In a thousand coin flips, runs of six or seven in a row are ordinary — the intuition that they should not happen is the thing that is wrong.</p>
-<!-- guide-extra-depth:end -->
 
 
   <!-- related-guides -->
@@ -166,6 +155,17 @@
     <li><a href="/guides/math-statistics">Math & Statistics Guides</a></li>
   </ul>
 
+<!-- guide-extra-depth:start -->
+<h2>Not every random number is safe to use</h2>
+<p>A general-purpose generator such as Math.random is fine for a raffle or a dice roll and unsuitable for passwords, tokens or anything an attacker can profit from guessing. Cryptographic generators are slower precisely because they resist prediction.</p>
+<p>The distinction is predictability, not appearance. A sequence can look random to a human and be fully determined by a seed an attacker can recover.</p>
+<h2>Watch the range mapping</h2>
+<p>Taking a raw random integer modulo a range introduces bias whenever the range does not divide the generator space evenly — the low values come up slightly more often. Rejection sampling avoids it.</p>
+<p>The bias is tiny for a game and meaningful for a lottery-sized draw. If the fairness of the draw matters, use a generator that handles the mapping for you.</p>
+<h2>Seeds, reproducibility and streaks</h2>
+<p>A seeded generator replays the same sequence every time, which is what makes simulations testable. An unseeded one gives a different run each time, which is what makes shuffles fair.</p>
+<p>Long streaks are not evidence of a broken generator. In a thousand coin flips, runs of six or seven in a row are ordinary — the intuition that they should not happen is the thing that is wrong.</p>
+<!-- guide-extra-depth:end -->
 <h2>Frequently Asked Questions</h2>
   <h3>Is a 50/50 coin flip really 50/50?</h3>
   <p>A simulated <a href="/utilities/coin-flip/">coin flip</a> is — each draw is uniform. Physical flips are slightly biased toward the side that starts facing up, research suggests around 50.8% for a standard flip.</p>

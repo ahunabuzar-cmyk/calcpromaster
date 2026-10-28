@@ -7,8 +7,8 @@ Crawl-link gate har page ko *kisi* indexed page se link de deta hai. Lekin jo pa
 | | |
 |---|---|
 | pages scanned | 1620 |
-| source pool (indexed, ≥10 impressions) | 373 |
-| withheld from the pool (still not indexed) | 0 |
+| source pool (indexed, ≥10 impressions) | 313 |
+| withheld from the pool (still not indexed) | 10 |
 | targets (impressions, 0 clicks, pos 11-50) | 270 |
 
 ## Top targets aur unke liye best sources
@@ -17,13 +17,19 @@ Crawl-link gate har page ko *kisi* indexed page se link de deta hai. Lekin jo pa
 
 - best query: **pmi calculator**
 - existing inlinks: 15 (e.g. `/finance/apy-calculator/`, `/finance/book-value-share/`, `/finance/cash-on-cash/`)
-- suggested sources: _same category mein koi bara source available nahi_
+- suggested sources:
+  - `/finance/rent-affordability/` (165 impressions) — anchor: “pmi calculator”
+  - `/finance/wacc/` (159 impressions) — anchor: “pmi calculator”
+  - `/finance/va-loan/` (132 impressions) — anchor: “pmi calculator”
 
 ### `/finance/fha-loan/` — pos 13.6, 426 impressions, 0 clicks
 
 - best query: **fha loan calculator**
 - existing inlinks: 14 (e.g. `/finance/cap-rate/`, `/finance/closing-costs/`, `/finance/cost-of-debt/`)
-- suggested sources: _same category mein koi bara source available nahi_
+- suggested sources:
+  - `/finance/apy-calculator/` (319 impressions) — anchor: “fha loan calculator”
+  - `/finance/credit-utilization/` (252 impressions) — anchor: “fha loan calculator”
+  - `/finance/rent-affordability/` (165 impressions) — anchor: “fha loan calculator”
 
 ### `/tech/internet-speed/` — pos 27, 415 impressions, 0 clicks
 
@@ -35,67 +41,100 @@ Crawl-link gate har page ko *kisi* indexed page se link de deta hai. Lekin jo pa
 
 - best query: **calculate annual percentage yield**
 - existing inlinks: 14 (e.g. `/finance/book-value-share/`, `/finance/coverage-ratio/`, `/finance/credit-utilization/`)
-- suggested sources: _same category mein koi bara source available nahi_
+- suggested sources:
+  - `/finance/pmi-calculator/` (640 impressions) — anchor: “calculate annual percentage yield”
+  - `/finance/fha-loan/` (443 impressions) — anchor: “calculate annual percentage yield”
+  - `/finance/rent-affordability/` (165 impressions) — anchor: “calculate annual percentage yield”
 
 ### `/tech/raid-capacity/` — pos 37, 238 impressions, 0 clicks
 
 - best query: **raid capacity calculator**
 - existing inlinks: 13 (e.g. `/hub/tech/`, `/tech/awg-reference/`, `/tech/base64-encode/`)
-- suggested sources: _same category mein koi bara source available nahi_
+- suggested sources:
+  - `/tech/internet-speed/` (508 impressions) — anchor: “raid capacity calculator”
+  - `/tech/ip-subnet/` (122 impressions) — anchor: “raid capacity calculator”
+  - `/tech/cloud-storage/` (81 impressions) — anchor: “raid capacity calculator”
 
 ### `/finance/credit-utilization/` — pos 39.5, 236 impressions, 0 clicks
 
 - best query: **credit utilization calculator**
 - existing inlinks: 13 (e.g. `/finance/biweekly-mortgage/`, `/finance/book-value-share/`, `/finance/cost-of-living/`)
-- suggested sources: _same category mein koi bara source available nahi_
+- suggested sources:
+  - `/finance/pmi-calculator/` (640 impressions) — anchor: “credit utilization calculator”
+  - `/finance/fha-loan/` (443 impressions) — anchor: “credit utilization calculator”
+  - `/finance/apy-calculator/` (319 impressions) — anchor: “credit utilization calculator”
 
 ### `/lifestyle/renters-insurance/` — pos 11.4, 203 impressions, 0 clicks
 
 - best query: **renters insurance calculator**
 - existing inlinks: 13 (e.g. `/hub/lifestyle/`, `/lifestyle/cleaning-time/`, `/lifestyle/date-night-cost/`)
-- suggested sources: _same category mein koi bara source available nahi_
+- suggested sources:
+  - `/lifestyle/charging-time/` (201 impressions) — anchor: “renters insurance calculator”
+  - `/lifestyle/resell-value/` (115 impressions) — anchor: “renters insurance calculator”
+  - `/lifestyle/vacation-savings/` (101 impressions) — anchor: “renters insurance calculator”
 
 ### `/science/carbon-dating/` — pos 11.9, 200 impressions, 0 clicks
 
 - best query: **dating range calculator**
 - existing inlinks: 12 (e.g. `/science/calorimetry/`, `/science/coulomb-law/`, `/science/debroglie/`)
-- suggested sources: _same category mein koi bara source available nahi_
+- suggested sources:
+  - `/science/solar-energy/` (133 impressions) — anchor: “dating range calculator”
+  - `/science/dew-point/` (100 impressions) — anchor: “dating range calculator”
+  - `/science/moment-of-inertia/` (82 impressions) — anchor: “dating range calculator”
 
 ### `/finance/rent-affordability/` — pos 24.4, 156 impressions, 0 clicks
 
 - best query: **rent affordability calculator**
 - existing inlinks: 12 (e.g. `/finance/biweekly-mortgage/`, `/finance/bond-duration/`, `/finance/coverage-ratio/`)
-- suggested sources: _same category mein koi bara source available nahi_
+- suggested sources:
+  - `/finance/pmi-calculator/` (640 impressions) — anchor: “rent affordability calculator”
+  - `/finance/fha-loan/` (443 impressions) — anchor: “rent affordability calculator”
+  - `/finance/apy-calculator/` (319 impressions) — anchor: “rent affordability calculator”
 
 ### `/tech/rgb-hex/` — pos 25.7, 136 impressions, 0 clicks
 
 - best query: **rgb to hex**
 - existing inlinks: 13 (e.g. `/hub/tech/`, `/tech/base64-decode/`, `/tech/case-converter/`)
-- suggested sources: _same category mein koi bara source available nahi_
+- suggested sources:
+  - `/tech/internet-speed/` (508 impressions) — anchor: “rgb to hex”
+  - `/tech/raid-capacity/` (238 impressions) — anchor: “rgb to hex”
+  - `/tech/ip-subnet/` (122 impressions) — anchor: “rgb to hex”
 
 ### `/auto/parking-cost/` — pos 12.8, 107 impressions, 0 clicks
 
 - best query: **parking lot cost calculator**
 - existing inlinks: 13 (e.g. `/auto/bike-fuel/`, `/auto/car-loan-emi/`, `/auto/carpool-savings/`)
-- suggested sources: _same category mein koi bara source available nahi_
+- suggested sources:
+  - `/auto/mileage-calculator/` (103 impressions) — anchor: “parking lot cost calculator”
+  - `/auto/trade-in-value/` (85 impressions) — anchor: “parking lot cost calculator”
+  - `/auto/taxi-fare/` (54 impressions) — anchor: “parking lot cost calculator”
 
 ### `/finance/prorated-rent/` — pos 21.8, 99 impressions, 0 clicks
 
 - best query: **prorated rent calculator**
 - existing inlinks: 13 (e.g. `/finance/accounts-receivable-turnover/`, `/finance/apy-calculator/`, `/finance/capm/`)
-- suggested sources: _same category mein koi bara source available nahi_
+- suggested sources:
+  - `/finance/fha-loan/` (443 impressions) — anchor: “prorated rent calculator”
+  - `/finance/rent-affordability/` (165 impressions) — anchor: “prorated rent calculator”
+  - `/finance/wacc/` (159 impressions) — anchor: “prorated rent calculator”
 
 ### `/science/dew-point/` — pos 19.4, 96 impressions, 0 clicks
 
 - best query: **how is dew point calculated**
 - existing inlinks: 12 (e.g. `/science/air-density/`, `/science/angular-momentum/`, `/science/buffer-ph/`)
-- suggested sources: _same category mein koi bara source available nahi_
+- suggested sources:
+  - `/science/carbon-dating/` (213 impressions) — anchor: “how is dew point calculated”
+  - `/science/solar-energy/` (133 impressions) — anchor: “how is dew point calculated”
+  - `/science/moment-of-inertia/` (82 impressions) — anchor: “how is dew point calculated”
 
 ### `/homegarden/vinyl-flooring/` — pos 30.1, 95 impressions, 0 clicks
 
 - best query: **laminate flooring calculator**
 - existing inlinks: 13 (e.g. `/homegarden/cabinet-door/`, `/homegarden/deck-post/`, `/homegarden/deck-stain/`)
-- suggested sources: _same category mein koi bara source available nahi_
+- suggested sources:
+  - `/homegarden/wallpaper-rolls/` (145 impressions) — anchor: “laminate flooring calculator”
+  - `/homegarden/room-area/` (66 impressions) — anchor: “laminate flooring calculator”
+  - `/homegarden/plant-spacing/` (31 impressions) — anchor: “laminate flooring calculator”
 
 ### `/auto/mileage-calculator/` — pos 36.7, 94 impressions, 0 clicks
 
@@ -107,37 +146,55 @@ Crawl-link gate har page ko *kisi* indexed page se link de deta hai. Lekin jo pa
 
 - best query: **vacation cost calculator**
 - existing inlinks: 15 (e.g. `/everyday/vacation-budget/`, `/family/vacation-with-kids/`, `/hub/lifestyle/`)
-- suggested sources: _same category mein koi bara source available nahi_
+- suggested sources:
+  - `/lifestyle/home-insurance/` (1012 impressions) — anchor: “vacation cost calculator”
+  - `/lifestyle/renters-insurance/` (203 impressions) — anchor: “vacation cost calculator”
+  - `/lifestyle/resell-value/` (115 impressions) — anchor: “vacation cost calculator”
 
 ### `/finance/eps-calculator/` — pos 24.9, 87 impressions, 0 clicks
 
 - best query: **earnings per share calculator**
 - existing inlinks: 12 (e.g. `/finance/biweekly-mortgage/`, `/finance/cagr/`, `/finance/current-ratio-finance/`)
-- suggested sources: _same category mein koi bara source available nahi_
+- suggested sources:
+  - `/finance/pmi-calculator/` (640 impressions) — anchor: “earnings per share calculator”
+  - `/finance/fha-loan/` (443 impressions) — anchor: “earnings per share calculator”
+  - `/finance/apy-calculator/` (319 impressions) — anchor: “earnings per share calculator”
 
 ### `/regional/switzerland-take-home-salary/` — pos 39.1, 85 impressions, 0 clicks
 
 - best query: **swiss salary calculator**
 - existing inlinks: 12 (e.g. `/regional/abu-dhabi-cost-living/`, `/regional/australia-take-home-salary/`, `/regional/germany-take-home-salary/`)
-- suggested sources: _same category mein koi bara source available nahi_
+- suggested sources:
+  - `/regional/dubai-salary/` (388 impressions) — anchor: “swiss salary calculator”
+  - `/regional/singapore-cpf/` (188 impressions) — anchor: “swiss salary calculator”
+  - `/regional/pk-salary/` (96 impressions) — anchor: “swiss salary calculator”
 
 ### `/fitness/situp-test/` — pos 11.5, 83 impressions, 0 clicks
 
 - best query: **average sit ups per minute**
 - existing inlinks: 14 (e.g. `/fitness/bench-standards/`, `/fitness/burpee-test/`, `/fitness/deadlift-standards/`)
-- suggested sources: _same category mein koi bara source available nahi_
+- suggested sources:
+  - `/fitness/cycling-speed/` (40 impressions) — anchor: “average sit ups per minute”
+  - `/fitness/squat-standards/` (31 impressions) — anchor: “average sit ups per minute”
+  - `/fitness/swim-pace/` (29 impressions) — anchor: “average sit ups per minute”
 
 ### `/finance/closing-costs/` — pos 24.9, 79 impressions, 0 clicks
 
 - best query: **down payment and closing cost calculator**
 - existing inlinks: 13 (e.g. `/finance/australia-income-tax/`, `/finance/dca/`, `/finance/debt-snowball/`)
-- suggested sources: _same category mein koi bara source available nahi_
+- suggested sources:
+  - `/finance/pmi-calculator/` (640 impressions) — anchor: “downpaymentandclosingcost”
+  - `/finance/apy-calculator/` (319 impressions) — anchor: “downpaymentandclosingcost”
+  - `/finance/credit-utilization/` (252 impressions) — anchor: “downpaymentandclosingcost”
 
 ### `/hub/fitness/` — pos 29.9, 76 impressions, 0 clicks
 
 - best query: **workout calculator**
 - existing inlinks: 43 (e.g. `/fitness/beep-test/`, `/fitness/bench-standards/`, `/fitness/body-fat-fitness/`)
-- suggested sources: _same category mein koi bara source available nahi_
+- suggested sources:
+  - `/hub/auto/` (27 impressions) — anchor: “workout calculator”
+  - `/hub/construction/` (14 impressions) — anchor: “workout calculator”
+  - `/hub/math/` (10 impressions) — anchor: “workout calculator”
 
 ### `/homegarden/deck-stain/` — pos 11.6, 75 impressions, 0 clicks
 
@@ -149,7 +206,10 @@ Crawl-link gate har page ko *kisi* indexed page se link de deta hai. Lekin jo pa
 
 - best query: **packs per year calculator**
 - existing inlinks: 13 (e.g. `/hub/lifestyle/`, `/lifestyle/charging-time/`, `/lifestyle/food-delivery-vs-cooking/`)
-- suggested sources: _same category mein koi bara source available nahi_
+- suggested sources:
+  - `/lifestyle/renters-insurance/` (203 impressions) — anchor: “packs per year calculator”
+  - `/lifestyle/resell-value/` (115 impressions) — anchor: “packs per year calculator”
+  - `/lifestyle/vacation-savings/` (101 impressions) — anchor: “packs per year calculator”
 
 ### `/education/gpa/` — pos 34.7, 65 impressions, 0 clicks
 
@@ -161,7 +221,10 @@ Crawl-link gate har page ko *kisi* indexed page se link de deta hai. Lekin jo pa
 
 - best query: **ldl calculated**
 - existing inlinks: 14 (e.g. `/health/gfr-estimate/`, `/health/glycemic-load/`, `/health/hba1c-eag/`)
-- suggested sources: _same category mein koi bara source available nahi_
+- suggested sources:
+  - `/health/bmr-mifflin/` (1108 impressions) — anchor: “ldl calculated”
+  - `/health/chw/` (69 impressions) — anchor: “ldl calculated”
+  - `/health/corrected-calcium/` (69 impressions) — anchor: “ldl calculated”
 
 ## Kaise istemal karein
 

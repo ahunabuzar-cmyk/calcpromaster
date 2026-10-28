@@ -68,28 +68,23 @@ describe('stats page / the committed stats.html', () => {
   });
 });
 
-describe('stats page / the home-page figure', () => {
+describe('stats page / the home page carries no traffic claim', () => {
   const home = read('index.html');
-  const growth = JSON.parse(read('data/growth-model.json'));
 
-  const block = () => {
-    const m = home.match(/<!-- STATS:BEGIN[^>]*-->([\s\S]*?)<!-- STATS:END -->/);
-    return m ? m[1] : null;
-  };
-
-  it('marks the generated region so the generator never guesses where to write', () => {
-    expect(block()).not.toBeNull();
+  // Removed 2026-10-28: the homepage printed "Search is showing these calculators
+  // for N impressions a day". N was a 7-day average, so it was stale within a day
+  // (290/day on the page while the real rate was 2/day). The numbers belong on
+  // /stats, where the window and source are printed next to them.
+  it('has no STATS block left to be regenerated', () => {
+    expect(home).not.toMatch(/<!-- STATS:BEGIN/);
   });
 
-  it('states the same run-rate figure as the data file, and links to /stats', () => {
-    const b = block();
-    expect(b).toContain(n(growth.runRate7.perDay));
-    expect(b).toContain(growth.runRate7.to);
-    expect(b).toContain('href="/stats"');
+  it('does not print an impressions-per-day number above the fold', () => {
+    expect(home).not.toMatch(/impressions a day/i);
   });
 
-  it('does not claim a click or traffic number it cannot measure', () => {
-    expect(block()).not.toMatch(/clicks|visitors|traffic/i);
+  it('still links to /stats from the shell so the numbers stay reachable', () => {
+    expect(home).toContain('href="/stats"');
   });
 });
 

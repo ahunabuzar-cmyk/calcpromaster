@@ -209,3 +209,50 @@ describe('cache policy', () => {
     expect(res.headers.get('cache-control')).toBeNull();
   });
 });
+
+// A localized URL is the English shell client-rendered into another language
+// (canonical "/", lang="en", no hreflang). 18 prefixes × 1,422 pages of
+// near-duplicate home pages is a duplicate-content surface, so these URLs must
+// carry X-Robots-Tag noindex while still opening for users.
+describe('locale paths are noindex', () => {
+  const html = () => new Response('<html lang="en"></html>', {
+    status: 200,
+    headers: { 'content-type': 'text/html; charset=utf-8' },
+  });
+
+  it('tags a locale deep link and the bare locale home', async () => {
+    for (const url of [
+      'https://calcpromaster.com/es/finance/loan-emi/',
+      'https://calcpromaster.com/hi/health/bmi/',
+      'https://calcpromaster.com/es',
+    ]) {
+      const res = await onRequest(ctx(url, { onNext: html }));
+      expect(res.headers.get('x-robots-tag'), url).toBe('noindex, follow');
+      expect(res.headers.get('cache-control'), url).toBe('no-cache');
+    }
+  });
+
+  it('tags a locale page served by the SPA fallback', async () => {
+    const shell = () => new Response('<html></html>', { status: 200, headers: { 'content-type': 'text/html' } });
+    const fetchSpy = vi.fn(() => Promise.resolve(shell()));
+    vi.stubGlobal('fetch', fetchSpy);
+    const res = await onRequest(ctx('https://calcpromaster.com/ur/finance/tax/', {
+      onNext: () => new Response('nope', { status: 404 }),
+    }));
+    expect(res.status).toBe(200);
+    expect(res.headers.get('x-robots-tag')).toBe('noindex, follow');
+    vi.unstubAllGlobals();
+  });
+
+  it('leaves English pages and look-alike prefixes alone', async () => {
+    for (const url of [
+      'https://calcpromaster.com/finance/loan-emi/',
+      'https://calcpromaster.com/',
+      'https://calcpromaster.com/espanol/finance/',
+      'https://calcpromaster.com/estimate/',
+    ]) {
+      const res = await onRequest(ctx(url, { onNext: html }));
+      expect(res.headers.get('x-robots-tag'), url).toBeNull();
+    }
+  });
+});

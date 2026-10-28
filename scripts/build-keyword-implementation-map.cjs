@@ -125,7 +125,16 @@ const CONCEPT_OVERRIDES = {
   // The token heuristic mapped "calendar calculator" to /guides/age via the
   // shared word "calendar" (from "age calendar"). The date-arithmetic intent is
   // served by a real date tool, which is the closer match.
-  'calendar calculator': { page: '/everyday/date-diff/', why: 'the token heuristic attached this to /guides/age through the shared word "calendar" (from "age calendar"), but the calendar/date-arithmetic intent is served by /everyday/date-diff/ (verified in deploy/sitemap.xml) — improve that page instead' }
+  'calendar calculator': { page: '/everyday/date-diff/', why: 'the token heuristic attached this to /guides/age through the shared word "calendar" (from "age calendar"), but the calendar/date-arithmetic intent is served by /everyday/date-diff/ (verified in deploy/sitemap.xml) — improve that page instead' },
+
+  // ---- 2026-10-27: the one code-A row left by the gap re-audit ----
+  // Rule A fires when no title/slug states the keyword. It fired for "taxable
+  // calculator" only because the wording is generic: the calculation it asks for
+  // (tax on a taxable amount) is the Income Tax Bracket tool, which already ships
+  // and is verified in deploy/sitemap.xml. A standalone /<category>/taxable-
+  // calculator would state nothing new and duplicate that page's intent, so the
+  // row points at the existing owner instead of ordering a build.
+  'taxable calculator': { page: '/career/tax-bracket/', why: 'the taxable-amount → tax calculation is what /career/tax-bracket/ ("Income Tax Bracket Calculator") already does; the query is generic wording, not a new tool, so improve that page (metadata, FAQ, internal links) and do not build /<category>/taxable-calculator' }
 };
 
 // ---------- intent clustering ----------

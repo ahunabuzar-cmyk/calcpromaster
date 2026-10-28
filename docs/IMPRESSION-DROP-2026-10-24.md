@@ -97,3 +97,39 @@ Permanent fix, one time, ~2 minutes:
 
 Details and the full checklist: [`docs/api-credentials-setup.md`](api-credentials-setup.md) — section
 “Plan B ka 7-din wala trap”, plus the troubleshooting table for `invalid_grant`.
+
+## 6. Update — 2026-10-25: the tail did not fill in, so §3 no longer holds
+
+Section 3 called 19–21 Oct unfinished data. Re-measured two days later with a live
+token (`data/gsc-performance-export-2026-10-25/Chart.csv`, pulled 16:04 UTC), those
+same days are **still empty**, and two more days joined them:
+
+| Day | 10-16 | 10-17 | 10-18 | 10-19 | 10-20 | 10-21 | 10-22 | 10-23 |
+|---|---|---|---|---|---|---|---|---|
+| impressions | 681 | 419 | 345 | 2 | 4 | 1 | 7 | 3 |
+
+Five settled days at 1–7 impressions each is not a pipeline artefact. What the same
+pull adds, and what it rules out:
+
+- **Run-rate:** 290/day over 2026-10-15 → 2026-10-21 (`data/run-rate-history.json`),
+  with the trailing 3-day rate at **2/day**. The week before it was 564/day.
+- **The only query left is an operator.** GSC 19–23 Oct returns exactly one query —
+  `site:calcpromaster.com` (6 impressions) — spread over 27 pages at 1–4 impressions
+  each. Demand-shaped queries stopped being served entirely.
+- **The pages are still crawlable.** Homepage inspects as `PASS` / “Submitted and
+  indexed”, `lastCrawlTime` 2026-10-23, canonical self; apex 200, `robots.txt` allows
+  Googlebot, sitemap 1,420 URLs, resubmit returned HTTP 204 today. So this is not
+  blocking, DNS or serving.
+- **The sitemap has nothing indexed.** `sitemaps.list` reports submitted 1,420 /
+  indexed **0** (that field is historically unreliable, but it agrees with the API
+  inspection panel below).
+- **Index panel (2026-10-25, 590 tracked URLs):** 6 “Submitted and indexed”, 429 “URL
+  is unknown to Google”, 154 “Discovered”, 1 redirect. Over the 10 days since
+  2026-10-15 exactly **1 page became indexed while 99 fell back to “unknown”**
+  (`docs/INDEX-PANEL.md`).
+
+Together that is the shape of a **site-level visibility loss**, not a crawl-rate
+problem: Google has the URLs, returns them for nothing, and new ones do not enter.
+The two things that would still distinguish algorithmic demotion from a manual
+action are UI-only — Search Console → **Manual actions** and **Security issues**
+(there is no API for either), plus the query-level diff of what stopped appearing.

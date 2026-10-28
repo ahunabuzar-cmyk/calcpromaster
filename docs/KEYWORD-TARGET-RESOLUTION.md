@@ -1,6 +1,6 @@
 # Keyword target resolution (B / C / D)
 
-_Generated for the 2026-10-17 sitemap tree by `scripts/apply-keyword-targets.cjs`. Do not edit by hand — regenerate with `npm run seo:targets`._
+_Generated for the 2026-10-24 sitemap tree by `scripts/apply-keyword-targets.cjs`. Do not edit by hand — regenerate with `npm run seo:targets`._
 
 Every B/C/D row from [KEYWORD-IMPLEMENTATION-MAP.md](KEYWORD-IMPLEMENTATION-MAP.md) resolved to a real owner page,
 then improved: the keyword is answered by a rendered FAQ on that page (tool pages also get it in their `lsi` target list).
@@ -8,10 +8,10 @@ A row is left `NO_OWNER` only when no page can honestly answer it — never mapp
 
 | Result | Rows |
 |---|---:|
-| improved (FAQ + lsi added) | 80 |
-| already applied | 9 |
+| improved (FAQ + lsi added) | 87 |
+| already applied | 8 |
 | no honest owner | 2 |
-| **total** | **91** |
+| **total** | **97** |
 
 Nothing was invented: every answer is built from the tool's own registry row (name, input labels, steps flag),
 and every route is re-checked against the live `js/seo-content.js` canonical paths before use.
@@ -48,15 +48,19 @@ and every route is re-checked against the live `js/seo-content.js` canonical pat
 | C | `payment planner` | 12,100 | IMPROVED | /finance/loan-emi/ | reviewed-table — a payment planner schedules loan payments; the EMI page is the payment schedule calculator |
 | B | `fv calculator` | 9,900 | IMPROVED | /finance/future-value/ | map |
 | C | `mortgage and tax calculator` | 9,900 | IMPROVED | /finance/mortgage/ | reviewed-table — mortgage payment + tax/escrow is the mortgage page |
+| C | `retirement salary calculator` | 8,100 | IMPROVED | /career/retirement-contrib/ | reviewed-table — the contribution-impact page takes a salary and shows what a retirement contribution does to it — the salary-based retirement calculation |
 | C | `pricing generator` | 8,100 | IMPROVED | /business/pricing/ | reviewed-table — the Pricing Calculator generates a selling price from unit cost + target margin — the arithmetic intent; the price-list-software intent is not claimed |
 | B | `yearly income calculator` | 8,100 | ALREADY | /guides/income-tax/ | map |
 | C | `savings calculator simple` | 6,600 | IMPROVED | /finance/savings-goal/ | reviewed-table — simple saving towards a target is the savings-goal tool |
 | C | `percentage return calculator` | 6,600 | IMPROVED | /finance/roi/ | reviewed-table — percentage return = ROI |
+| C | `mobile home loan payment calculator` | 6,600 | IMPROVED | /finance/fha-loan/ | reviewed-table — FHA is the standard financing route for manufactured/mobile homes and the page computes the monthly payment including MIP — improve that page, do not add a mobile-home duplicate |
 | C | `retirement plan estimator` | 5,400 | IMPROVED | /finance/retirement/ | reviewed-table — a retirement plan estimate is the retirement tool |
 | B | `hour counter` | 5,400 | IMPROVED | /career/timesheet-hours/ | reviewed-table — the recorded target (/everyday/distance-pace) counts hours only as a by-product of pace; the hours tool is the real owner |
 | C | `reverse tax calculator` | 4,400 | IMPROVED | /finance/sales-tax/ | reviewed-table — reverse tax = working back from a gross amount; the sales-tax page does gross/net |
 | C | `percentage discount calculator` | 4,400 | IMPROVED | /finance/discount/ | reviewed-table — discount as a percentage is the discount tool |
 | C | `daily interest calculator` | 4,400 | IMPROVED | /finance/simple-interest/ | reviewed-table — per-day interest is the simple-interest page with a daily term |
+| C | `weekly paycheck calculator` | 4,400 | IMPROVED | /finance/paycheck/ | reviewed-table — same intent as the weekly-pay row, wording only — one paycheck page owns both |
+| B | `weekly pay calculator` | 4,400 | IMPROVED | /finance/paycheck/ | reviewed-table — the Paycheck Calculator takes the pay frequency (including weekly), so weekly pay is the same calculation run weekly |
 | B | `calculate age by birthday` | 4,400 | ALREADY | /guides/age/ | map |
 | C | `inflation salary calculator` | 3,600 | IMPROVED | /career/raise-calculator/ | reviewed-table — same intent as the wage row — real versus nominal salary |
 | B | `dob calculator` | 3,600 | IMPROVED | /utilities/age-exact/ | map |
@@ -69,6 +73,7 @@ and every route is re-checked against the live `js/seo-content.js` canonical pat
 | C | `credit rate calculator` | 2,400 | IMPROVED | /finance/apr-annual/ | reviewed-table — the credit rate = APR; the annual-rate tool is the owner |
 | B | `compounded annually calculator` | 2,400 | IMPROVED | /regional/post-office-savings/ | map |
 | D | `retirement planner calculator` | 2,400 | IMPROVED | /finance/retirement/ | reviewed-table — code D cluster with "free online retirement planner" — one page owns both |
+| C | `calculator real estate` | 2,400 | IMPROVED | /finance/net-operating-income/ | registry-match — strict all-token registry match: net-operating-income |
 | B | `compounding calculator yearly` | 2,400 | ALREADY | /guides/cagr/ | map |
 | B | `pv calculator` | 1,900 | IMPROVED | /finance/present-value/ | reviewed-table — PV is the standard finance abbreviation for present value |
 | C | `loan percentage calculator` | 1,900 | IMPROVED | /finance/apr-annual/ | reviewed-table — the percentage on a loan is the APR |
@@ -76,7 +81,7 @@ and every route is re-checked against the live `js/seo-content.js` canonical pat
 | C | `retirement budget calculator` | 1,900 | IMPROVED | /finance/retirement-withdrawal/ | reviewed-table — spending in retirement is the withdrawal tool |
 | C | `financial planning calculator` | 1,900 | IMPROVED | /finance/retirement/ | reviewed-table — long-horizon financial planning is the retirement tool |
 | C | `mortgage calculator how much do i qualify for` | 1,900 | IMPROVED | /finance/loan-qualify/ | reviewed-table — same intent as the other qualify row — the qualification tool |
-| B | `paycheck deduction calculator` | 1,900 | ALREADY | /guides/career/ | map |
+| B | `paycheck deduction calculator` | 1,900 | IMPROVED | /finance/paycheck/ | reviewed-table — the audit pointed at the /guides/tax-salary hub; a deduction is a calculator intent, and /finance/paycheck/ is the page that takes gross pay and shows the deductions |
 | B | `spending calculator retirement` | 1,900 | ALREADY | /guides/retirement/ | map |
 | B | `retirement expenditure calculator` | 1,900 | IMPROVED | /finance/retirement-withdrawal/ | reviewed-table — retirement spending is the withdrawal tool |
 | B | `housing cost calculator` | 1,900 | ALREADY | /guides/baby-cost/ | map |
@@ -95,13 +100,14 @@ and every route is re-checked against the live `js/seo-content.js` canonical pat
 | B | `age calendar` | 1,300 | ALREADY | /guides/age/ | map |
 | B | `currency calculator xe` | 1,300 | IMPROVED | /finance/currency-converter/ | reviewed-table — same generic currency-conversion intent; brand not targeted |
 | C | `inflation wage calculator` | 1,000 | IMPROVED | /career/raise-calculator/ | reviewed-table — wage vs inflation is the real-terms raise the raise tool computes |
+| B | `taxable calculator` | 1,000 | IMPROVED | /career/tax-bracket/ | reviewed-table — taxable amount → income tax is what the Income Tax Bracket page computes; the GST page is an indirect tax and does not answer the income-tax reading of the query |
 | C | `compound loan calculator` | 1,000 | IMPROVED | /finance/loan-emi/ | reviewed-table — a loan is amortised, not compounded; the loan page is the honest owner and explains the difference |
 | C | `formula discount` | 1,000 | IMPROVED | /finance/discount/ | reviewed-table — the discount formula lives on the discount page |
 | C | `calculator that shows work` | 1,000 | NO_OWNER | — | reviewed-table — cross-cutting feature (every tool shows its working via the steps panel), not one page's intent |
 | C | `investment account calculator` | 1,000 | IMPROVED | /finance/investment/ | reviewed-table — account balance over time is the investment tool |
-| C | `loan calculator monthly` | 1,000 | IMPROVED | /finance/loan-emi/ | registry-match — strict all-token registry match: loan-emi |
 | C | `compare loan calculator` | 1,000 | IMPROVED | /finance/loan-comparison/ | reviewed-table — side-by-side loan comparison is the dedicated page |
 | C | `monthly investment calculator` | 1,000 | IMPROVED | /finance/investment-growth/ | reviewed-table — monthly contributions with growth is the investment-growth tool |
+| C | `real estate investment calculator` | 1,000 | IMPROVED | /finance/cash-on-cash/ | registry-match — strict all-token registry match: cash-on-cash |
 | B | `yearly interest calculator` | 1,000 | ALREADY | /guides/compound-interest/ | map |
 | C | `savings percentage calculator` | 880 | IMPROVED | /finance/savings-goal/ | reviewed-table — savings as a percentage of income sits on the savings-goal page |
 | C | `yearly payment calculator` | 880 | IMPROVED | /finance/loan-emi/ | reviewed-table — the annual payment on a loan is the loan page run over 12 months |

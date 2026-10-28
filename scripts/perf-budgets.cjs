@@ -12,19 +12,25 @@ const D = path.join(__dirname, '..', 'deploy');
 const KB = n => (n / 1024).toFixed(0) + 'KB';
 
 const BUDGETS = [
-  { id: 'eager-js-total', max: 1600 * 1024, get: () => {
+  // 900KB = the 2026-10-26 measured baseline (841KB) + ~7% headroom. The old
+  // 1600KB limit was never exercised against a real number because the metric
+  // was broken (see below), so it could not have caught any regression.
+  { id: 'eager-js-total', max: 900 * 1024, get: () => {
       const idx = fs.readFileSync(path.join(D, 'index.html'), 'utf8');
+      // Strip the build's ?v=<hash> cache-bust token BEFORE resolving the path:
+      // `js/app.js?v=0adf8e00c6` is not a file on disk, so existsSync() rejected
+      // every entry and this budget reported 0KB / 1600KB on every run — a gate
+      // that could never fire, on the one resource the CWV numbers are about.
       return [...idx.matchAll(/<script[^>]*src="([^"]+)"/g)]
-        .map(m => path.join(D, m[1].replace(/^\//, '')))
+        .map(m => path.join(D, m[1].replace(/^\//, '').split('?')[0]))
         .filter(p => fs.existsSync(p))
         .reduce((s, p) => s + fs.statSync(p).size, 0);
     } },
-  // GZIPPED html, not raw bytes: the homepage carries the FULL stylesheet inline
-  // (build-deploy.js inlineFullCss), so raw size grew by ~86KB while the wire
-  // cost stayed the same — the same CSS was previously a separate 17KB-gzip file
-  // plus a render-blocking round trip. Budget on transfer size measures what a
-  // visitor actually pays; the old 90KB raw limit only passed because a
-  // prerender step was accidentally stripping the inline CSS again.
+  // GZIPPED html, not raw bytes — transfer size is what a visitor pays. The
+  // stylesheet is no longer inlined into the shell (removed 2026-10-26): the
+  // source's own critical-CSS block + `preload as=style` swap is the better
+  // fix, and the full stylesheet is now the same cacheable /styles.css the
+  // prerendered pages already link.
   { id: 'index-html (gzip)', max: 50 * 1024, get: () => zlib.gzipSync(fs.readFileSync(path.join(D, 'index.html'))).length },
   { id: 'styles-css', max: 110 * 1024, get: () => fs.statSync(path.join(D, 'styles.css')).size },
   { id: 'fonts-total', max: 120 * 1024, get: () => {

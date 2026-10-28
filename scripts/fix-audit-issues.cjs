@@ -29,6 +29,23 @@ const ROOT = path.join(__dirname, '..');
 const DEPLOY = path.join(ROOT, 'deploy');
 const DRY = process.argv.includes('--dry');
 
+// Reciprocal launch-directory links (footer badges + the "Featured On" credits).
+// These are NOT the editorial citations rule 1 is about: the site that awards the
+// badge is the same site the badge links back to, which is the "badge / embedded
+// link" pattern Google lists as a link scheme. Removing nofollow from those turned
+// a legitimate badge into a followed reciprocal link on 1,512 pages (measured
+// 2026-10-27). Citations to IRS/BLS/Investopedia keep losing the token — that part
+// of the crawler complaint is correct.
+const PROGRAM_HOSTS = new Set(['twelve.tools', 'startupfa.me', 'fazier.com']);
+function isProgramLink(href, attrs) {
+  if (/\bbadge-link\b/.test(attrs)) return true;
+  try {
+    return PROGRAM_HOSTS.has(new URL(href).hostname.replace(/^www\./i, '').toLowerCase());
+  } catch (e) {
+    return false;
+  }
+}
+
 // Split a page into script/style blocks and the rest, so an <a> inside inline
 // JavaScript (a template string) is never rewritten.
 function mapOutsideCode(html, fn) {
@@ -44,6 +61,7 @@ const attrOf = (attrs, name) => {
 };
 
 let nofollowRemoved = 0;
+let programNofollowKept = 0;
 let mailtoRewritten = 0;
 let filesTouched = 0;
 
@@ -56,7 +74,9 @@ function fixAnchors(html) {
 
     // ---- 1. editorial nofollow ----
     const rel = attrOf(attrs, 'rel');
-    if (rel && /^https?:\/\//i.test(href.value) && /\bnofollow\b/i.test(rel.value) && !/\bsponsored\b/i.test(rel.value)) {
+    if (rel && /\bnofollow\b/i.test(rel.value) && isProgramLink(href.value, attrs)) {
+      programNofollowKept++;
+    } else if (rel && /^https?:\/\//i.test(href.value) && /\bnofollow\b/i.test(rel.value) && !/\bsponsored\b/i.test(rel.value)) {
       const tokens = rel.value.split(/\s+/).filter((t) => t && !/^nofollow$/i.test(t));
       next = tokens.length
         ? next.replace(rel.raw, 'rel="' + tokens.join(' ') + '"')
@@ -98,4 +118,5 @@ if (!fs.existsSync(DEPLOY)) {
 }
 walk(DEPLOY);
 console.log('  audit-fixes: ' + nofollowRemoved + ' editorial nofollow removed, ' +
+  programNofollowKept + ' badge/program nofollow kept, ' +
   mailtoRewritten + ' mailto link(s) rewritten, ' + filesTouched + ' page(s) touched' + (DRY ? ' (dry)' : ''));

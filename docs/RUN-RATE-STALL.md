@@ -6,25 +6,23 @@
 
 | | |
 |---|---|
-| 7-day run-rate | 564/day ≈ 17,177/month |
-| 3-day | 482/day |
-| window | 2026-10-12 → 2026-10-18 |
-| dropped (GSC not finalised) | last 3 day(s) — raw chart ends 2026-10-21, counted through 2026-10-18 |
+| 7-day run-rate | 52/day ≈ 1,579/month |
+| 3-day | 4/day |
+| window | 2026-10-18 → 2026-10-24 |
+| dropped (GSC not finalised) | last 3 day(s) — raw chart ends 2026-10-27, counted through 2026-10-24 |
 | indexed | 952/1875 (50.8%) |
 
-## Stall status: **stale-source**
+## Stall status: **insufficient-history**
 
-- ⚠ **Koi naya finalised din nahi aaya.** Window 2026-10-12 → 2026-10-18 ka sample **2026-10-24** ko record ho chuka hai; export `gsc-performance-export-2026-10-23` raw chart **2026-10-21** tak hai aur wo din abhi GSC bhar raha hai — is liye 2026-10-18 ke baad ka koi finalised din nahi hai.
-- Is liye koi naya sample record **nahi** hua, aur koi stall/cause verdict **nahi** diya gaya. Purana number naye din ke naam par likhna hi "impressions gir gaye" wali galti paida karta hai.
-- Fix: naya export chahiye — GSC Performance → Export (ya `npm run seo:weekly` jab token zinda ho), `data/gsc-performance-export-<date>/` me rakho, phir ye script dobara chalao.
-- Ye number **7-day** hai. Isko 28-day average se compare mat karo: 7-day best-week aur 28-day average do alag measures hain, aur unka farq girna nahi, window ka farq hai.
+- History mein **2 hafta** hai; 2 lagataar flat hafte detect karne ke liye **3** chahiye.
+- Yani ye alert **1 weekly run** baad asli jawab dega. Abhi ke liye ye sirf run-rate record kar raha hai.
 
 ## History (weekly observations)
 
 | date | 7-day run-rate | /month | indexed% |
 |---|---|---|---|
 | 2026-10-11 | 1,241/day | 37,767 | 50.8% |
-| 2026-10-24 | 564/day | 17,177 | 50.8% |
+| 2026-10-28 | 52/day | 1,579 | 50.8% |
 
 ## Jab stall ho to kya karo
 

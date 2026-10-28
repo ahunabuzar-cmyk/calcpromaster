@@ -6,21 +6,19 @@ _Generated 2026-10-24 by `scripts/build-hard-keywords-doc.cjs` (deterministic; d
 
 | Count | Meaning |
 |---|---|
-| **2529** | total curated keywords targeted across **1285 tool pages** (deterministic count from js/data) |
-| **1268** | 🟢 EASY — long-tail (4+ words + intent qualifier); live probes (docs/KEYWORD-DIFFICULTY.md §1) is pattern par top-10 mein **0–1 strong brands** dikhaate hain — microsites rank karti hain |
-| **1261** | 🟡 MEDIUM — 3-word ya qualified 2-word; thodi links chahiye |
+| **2528** | total curated keywords targeted across **1285 tool pages** (deterministic count from js/data) |
+| **1271** | 🟢 EASY — long-tail (4+ words + intent qualifier); live probes (docs/KEYWORD-DIFFICULTY.md §1) is pattern par top-10 mein **0–1 strong brands** dikhaate hain — microsites rank karti hain |
+| **1257** | 🟡 MEDIUM — 3-word ya qualified 2-word; thodi links chahiye |
 | **0** | 🔴 HARD — head terms; top-10 = brand wall (calculator.net, omnicalculator, Groww, Khan Academy… DR 70–90) |
 | 0 | BRAND — site ke apne queries |
 
-**Pages with at least one hard keyword: 7** — inme se **7 pages ke paas pehle se hi apna EASY keyword mojood hai** (hard wala side-keyword hai, primary nahi). **Sirf 3 pages sirf hard par khade hain** — unke liye §2 mein ek-ek EASY replacement attached hai (same-category sibling).
+**Pages with at least one hard keyword: 5** — inme se **5 pages ke paas pehle se hi apna EASY keyword mojood hai** (hard wala side-keyword hai, primary nahi). **Sirf 1 pages sirf hard par khade hain** — unke liye §2 mein ek-ek EASY replacement attached hai (same-category sibling).
 
 ## 1. HARD list — ranked (sabse pehle: in par waqt MAT lagao)
 
 | Tool | Page | Hard keywords (why: brand wall) |
 |---|---|---|
-| City Cost of Living Comparison Calculator | `/everyday/cost-of-living-compare` | `equivalent salary calculator` · `relocation salary comparison` |
-| Cosigning a Loan Risk Calculator | `/finance/cosigning-loan-risk` | `loan default exposure` |
-| Hijri Gregorian Date Converter | `/regional/hijri-converter` | `hijri date converter` |
+| Bangladesh Income Tax Calculator | `/regional/bangladesh-income-tax` | `nbr tax calculator` |
 
 ### Mixed pages (hard keyword rakha hai lekin EASY bhi maujood — koi kaam nahi bacha)
 
@@ -37,9 +35,7 @@ Ye pages abhi sirf brand-wall keyword target karte hain. Replacement jaan-boojh 
 
 | Tool | Page | Abhi (hard) | Target karo (easy) |
 |---|---|---|---|
-| City Cost of Living Comparison Calculator | `/everyday/cost-of-living-compare` | `equivalent salary calculator` · `relocation salary comparison` | `free online City Cost of Living Comparison Calculator` (derived — unique, claim-free) |
-| Cosigning a Loan Risk Calculator | `/finance/cosigning-loan-risk` | `loan default exposure` | `free online Cosigning a Loan Risk Calculator` (derived — unique, claim-free) |
-| Hijri Gregorian Date Converter | `/regional/hijri-converter` | `hijri date converter` | `free online Hijri Gregorian Date Converter` (derived — unique, claim-free) |
+| Bangladesh Income Tax Calculator | `/regional/bangladesh-income-tax` | `nbr tax calculator` | `free online Bangladesh Income Tax Calculator` (derived — unique, claim-free) |
 
 ## 3. Rules (probes se derive — docs/EASY-KEYWORD-LIST.md)
 

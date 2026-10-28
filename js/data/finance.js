@@ -1777,7 +1777,7 @@ const FINANCE_TOOLS = [
     id: 'cosigning-loan-risk',
     name: 'Cosigning a Loan Risk Calculator',
     desc: 'Estimate the financial exposure from cosigning a loan given the balance and the chance the borrower defaults.',
-    kw: 'cosigning a loan calculator, cosigner risk, should i cosign a loan, loan default exposure',
+    kw: 'cosigning a loan calculator, cosigner risk, should i cosign a loan, free online Cosigning a Loan Risk Calculator',
     inputs: [
 { id: 'loanAmount', label: 'Outstanding balance', type: 'number', def: 20000 },
       { id: 'defaultProbabilityPct', label: 'Chance borrower defaults (percent)', type: 'number', def: 10 },

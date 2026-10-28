@@ -113,6 +113,22 @@ const MANUAL_TARGETS = {
   // claimed anywhere — the page cannot answer it and does not pretend to.
   'pricing generator': { route: '/business/pricing/', note: 'the Pricing Calculator generates a selling price from unit cost + target margin — the arithmetic intent; the price-list-software intent is not claimed' },
 
+  // ---- tax / payroll rows surfaced by the 2026-10-27 gap re-audit ----
+  // These six were reported COVERED before the intro/on-page rewrite changed the
+  // body text of every tool page, which moved the audit's best-match page and
+  // exposed them as GAP/WEAK. The new verdicts are the honest ones: no page stated
+  // the keyword in its title/slug. Each is answered by the tool below, so the
+  // keyword is targeted on that page (FAQ + LSI) instead of on a new URL.
+  'taxable calculator': { route: '/career/tax-bracket/', note: 'taxable amount → income tax is what the Income Tax Bracket page computes; the GST page is an indirect tax and does not answer the income-tax reading of the query' },
+  'retirement salary calculator': { route: '/career/retirement-contrib/', note: 'the contribution-impact page takes a salary and shows what a retirement contribution does to it — the salary-based retirement calculation' },
+  'mobile home loan payment calculator': { route: '/finance/fha-loan/', note: 'FHA is the standard financing route for manufactured/mobile homes and the page computes the monthly payment including MIP — improve that page, do not add a mobile-home duplicate' },
+  'weekly pay calculator': { route: '/finance/paycheck/', note: 'the Paycheck Calculator takes the pay frequency (including weekly), so weekly pay is the same calculation run weekly' },
+  'weekly paycheck calculator': { route: '/finance/paycheck/', note: 'same intent as the weekly-pay row, wording only — one paycheck page owns both' },
+  // The audit mapped this to the /guides/tax-salary hub because the tokens matched a
+  // guide title. A hub page cannot answer a calculator query, so the recorded target
+  // is corrected to the tool that computes gross-to-net with deductions.
+  'paycheck deduction calculator': { route: '/finance/paycheck/', note: 'the audit pointed at the /guides/tax-salary hub; a deduction is a calculator intent, and /finance/paycheck/ is the page that takes gross pay and shows the deductions' },
+
   // ---- no honest single-page owner: recorded, not faked ----
   'calculator on this phone': { route: null, note: 'navigational/device intent (the phone\'s own calculator app) — no calculation to own' },
   'calculator that shows work': { route: null, note: 'cross-cutting feature (every tool shows its working via the steps panel), not one page\'s intent' }

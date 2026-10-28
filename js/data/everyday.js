@@ -244,7 +244,7 @@ const EVERYDAY_TOOLS = [
     id: 'cost-of-living-compare',
     name: 'City Cost of Living Comparison Calculator',
     desc: 'Compare the salary you need to keep the same standard of living between two cities using cost indices.',
-    kw: 'cost of living calculator, compare cities cost of living, equivalent salary calculator, relocation salary comparison',
+    kw: 'cost of living calculator, compare cities cost of living, free online City Cost of Living Comparison Calculator',
     inputs: [
 { id: 'cityA', label: 'Current city', type: 'select', opts: [{v:'Karachi',l:'Karachi'},{v:'Lahore',l:'Lahore'},{v:'Delhi',l:'Delhi'},{v:'Mumbai',l:'Mumbai'},{v:'Dubai',l:'Dubai'},{v:'London',l:'London'},{v:'Manchester',l:'Manchester'},{v:'New York',l:'New York'},{v:'Toronto',l:'Toronto'},{v:'Sydney',l:'Sydney'},{v:'Berlin',l:'Berlin'},{v:'Houston',l:'Houston'}], def: 'Karachi' },
       { id: 'cityB', label: 'New city', type: 'select', opts: [{v:'Karachi',l:'Karachi'},{v:'Lahore',l:'Lahore'},{v:'Delhi',l:'Delhi'},{v:'Mumbai',l:'Mumbai'},{v:'Dubai',l:'Dubai'},{v:'London',l:'London'},{v:'Manchester',l:'Manchester'},{v:'New York',l:'New York'},{v:'Toronto',l:'Toronto'},{v:'Sydney',l:'Sydney'},{v:'Berlin',l:'Berlin'},{v:'Houston',l:'Houston'}], def: 'London' },

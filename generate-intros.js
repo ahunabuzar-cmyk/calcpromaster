@@ -94,6 +94,14 @@ global.Security = {
 };
 global.AdvancedCalc = global.AdvancedCalc || {};
 
+// The tool's own name without its trailing product noun ("Loan EMI Calculator"
+// → "Loan EMI"). Used from the second sentence on (see destuff below).
+const NAME_NOUN = /\s+(?:calculator|converter|estimator|planner|checker|tracker|comparison|generator|solver|finder|builder|maker|simulator)$/i;
+function shortName(name) {
+  const s = String(name || '').replace(NAME_NOUN, '').trim();
+  return s || String(name || '');
+}
+
 function loadAllTools() {
   const files = fs.readdirSync(DATA_DIR).filter((f) => f.endsWith('.js') && !['data.js', 'data-loader.js'].includes(f));
   const tools = [];
@@ -105,6 +113,7 @@ function loadAllTools() {
       tools.push({
         id: t.id,
         name: t.name || t.id,
+        short: shortName(t.name || t.id),
         desc: t.desc || '',
         kw: t.kw || '',
         inputs: t.inputs || [],
@@ -371,6 +380,24 @@ const SLOTS = {
 };
 const SLOT_ORDER = ['inputs', 'result', 'usecase', 'privacy', 'keywords', 'extra', 'cta'];
 
+// DE-STUFFING (2026-10-27): every sentence used to carry the FULL tool name so
+// that each sentence stayed unique across the site. That fixed cross-page
+// n-gram sharing but overshot into keyword stuffing: measured on
+// /finance/loan-emi, "Loan EMI Calculator" appeared 8 times in a 110-word
+// paragraph (~7% density) and the sentence's real point sat buried behind the
+// repeated subject. The opener keeps the full name (the on-page rule and the
+// unit test both require it in the opening sentence); later mentions use the
+// tool's short form, which is still specific to this tool, so uniqueness is
+// preserved while the exact phrase drops to a natural density.
+function destuff(text, tool) {
+  if (!tool.short || tool.short === tool.name) return text;
+  const cut = text.indexOf('. ');
+  if (cut < 0) return text;
+  const head = text.slice(0, cut + 1);
+  const tail = text.slice(cut + 1).split(tool.name).join(tool.short);
+  return head + tail;
+}
+
 function buildIntro(tool, seed) {
   const rand = mulberry32(seed);
   // Sentences are tracked by slot so the length cap can drop the least
@@ -391,7 +418,7 @@ function buildIntro(tool, seed) {
   if (intro.split(/\s+/).length > 132) { drop('extra'); intro = join(); }
   if (intro.split(/\s+/).length > 138) { drop('usecase'); intro = join(); }
   if (intro.split(/\s+/).length > 138) { drop('cta'); intro = join(); }
-  return intro;
+  return destuff(intro, tool);
 }
 
 // ---------- main ----------

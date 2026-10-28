@@ -1,6 +1,6 @@
 # Keyword implementation status (B / C / D)
 
-_Generated for the 2026-10-17 sitemap tree by `scripts/audit-keyword-implementation.cjs` from
+_Generated for the 2026-10-24 sitemap tree by `scripts/audit-keyword-implementation.cjs` from
 `data/keyword-implementation-map.json`. Do not edit by hand — regenerate with `npm run seo:kw-impl`._
 
 The implementation map decides **which page owns which keyword**. This audit checks whether that
@@ -11,14 +11,15 @@ page, or with the wrong page, is visible instead of sitting in the plan looking 
 
 | Status | Rows | Meaning |
 |---|---:|---|
-| COVERED | 94 | page already names the keyword — nothing to change |
+| COVERED | 93 | page already names the keyword — nothing to change |
 | NO_OWNER | 2 |  |
-| **total** | **96** | |
+| NO_TARGET | 2 | no target page was recorded — needs a decision first |
+| **total** | **97** | |
 
 | Code | Rows | COVERED | NEEDS_META | WRONG_OWNER | NO_TARGET | PAGE_MISSING |
 |---|---:|---:|---:|---:|---:|---:|
-| B | 34 | 34 | 0 | 0 | 0 | 0 |
-| C | 55 | 53 | 0 | 0 | 0 | 0 |
+| B | 35 | 35 | 0 | 0 | 0 | 0 |
+| C | 55 | 51 | 0 | 0 | 2 | 0 |
 | D | 7 | 7 | 0 | 0 | 0 | 0 |
 
 ## Work queue — pages that are the right owner but under-describe it
@@ -27,7 +28,12 @@ Nothing to change.
 
 ## Rows whose recorded decision cannot be implemented as written
 
-None.
+2 row(s). These are **not** improvable by editing the named page — the map points at a page that cannot own the keyword, or at no page. Each needs a corrected target or an explicit `no implementation` decision.
+
+| Code | Keyword | Vol | Recorded target | Best existing candidate | Status |
+|---|---|---:|---|---|---|
+| C | `calculator real estate` | 2,400 | — | `/family/birthday-party-cost/` (2/2 tokens) | NO_TARGET |
+| C | `real estate investment calculator` | 1,000 | — | `/family/birthday-party-cost/` (3/3 tokens) | NO_TARGET |
 
 ## Every row (nothing skipped)
 
@@ -36,7 +42,6 @@ None.
 | B | COVERED | `polypeptide calculator` | 301,000 | polypeptide | `/health/peptide-reconstitution/` | — |
 | B | COVERED | `convert currency xe` | 246,000 | currency xe | `/finance/currency-converter/` | — |
 | B | COVERED | `convert xe currency` | 246,000 | xe currency | `/finance/currency-converter/` | — |
-| C | COVERED | `time card clock calculator` | 201,000 | time card clock | `/career/timesheet-hours` | — |
 | B | COVERED | `mortgage expense calculator` | 201,000 | mortgage expense | `/finance/mortgage` | — |
 | C | COVERED | `cd bank calculator` | 165,000 | cd bank | `/finance/cd-calculator` | — |
 | B | COVERED | `bank certificate calculator` | 165,000 | bank certificate | `/finance/cd-calculator` | — |
@@ -47,15 +52,12 @@ None.
 | D | COVERED | `deposit certificate calculator` | 165,000 | deposit certificate | `/finance/cd-calculator` | — |
 | D | COVERED | `certificate deposit calculator` | 165,000 | certificate deposit | `/finance/cd-calculator` | — |
 | C | COVERED | `bmi calculator body mass index` | 110,000 | bmi body mass index | `/health/bmi` | — |
-| C | COVERED | `day count` | 74,000 | day count | `/everyday/date-diff` | — |
 | B | COVERED | `calendar calculator` | 60,500 | calendar | `/everyday/date-diff/` | — |
 | B | COVERED | `yearly salary calculator` | 49,500 | yearly salary | `/lifestyle/parental-leave` | — |
 | C | COVERED | `financial compound calculator` | 40,500 | financial compound | `/finance/compound-interest` | — |
 | C | COVERED | `financial compounding calculator` | 40,500 | financial compound | `/finance/compound-interest` | — |
 | C | COVERED | `interest percentage calculator` | 33,100 | interest percentage | `/finance/simple-interest` | — |
 | B | COVERED | `ot calculator` | 22,200 | ot | `/career/overtime-pay` | — |
-| C | COVERED | `time payroll calculator` | 22,200 | time salary | `/career/timesheet-hours` | — |
-| B | COVERED | `pay time calculator` | 22,200 | salary time | `/career/timesheet-hours` | — |
 | B | COVERED | `simplify calculator` | 18,100 | simplify | `/utilities/ratio-simplifier/` | — |
 | C | COVERED | `compounded daily calculator` | 14,800 | compounded daily | `/finance/compound-interest` | — |
 | C | COVERED | `desired weight calculator` | 14,800 | desired weight | `/health/ideal-body-weight` | — |
@@ -65,15 +67,19 @@ None.
 | C | COVERED | `payment planner` | 12,100 | payment planner | `/finance/loan-emi` | — |
 | B | COVERED | `fv calculator` | 9,900 | fv | `/finance/future-value/` | — |
 | C | COVERED | `mortgage and tax calculator` | 9,900 | mortgage tax | `/finance/mortgage` | — |
+| C | COVERED | `retirement salary calculator` | 8,100 | retirement salary | `/career/retirement-contrib` | — |
 | C | COVERED | `pricing generator` | 8,100 | price generator | `/business/pricing` | — |
 | B | COVERED | `yearly income calculator` | 8,100 | yearly income | `/guides/income-tax` | — |
 | C | COVERED | `savings calculator simple` | 6,600 | sav simple | `/finance/savings-goal` | — |
 | C | COVERED | `percentage return calculator` | 6,600 | percentage return | `/finance/roi` | — |
+| C | COVERED | `mobile home loan payment calculator` | 6,600 | mobile home loan payment | `/finance/fha-loan` | — |
 | C | COVERED | `retirement plan estimator` | 5,400 | retirement plan | `/finance/retirement` | — |
 | B | COVERED | `hour counter` | 5,400 | hour counter | `/career/timesheet-hours` | — |
 | C | COVERED | `reverse tax calculator` | 4,400 | reverse tax | `/finance/sales-tax` | — |
 | C | COVERED | `percentage discount calculator` | 4,400 | percentage discount | `/finance/discount` | — |
 | C | COVERED | `daily interest calculator` | 4,400 | daily interest | `/finance/simple-interest` | — |
+| C | COVERED | `weekly paycheck calculator` | 4,400 | weekly salary | `/finance/paycheck` | — |
+| B | COVERED | `weekly pay calculator` | 4,400 | weekly salary | `/finance/paycheck` | — |
 | B | COVERED | `calculate age by birthday` | 4,400 | age birthday | `/guides/age` | — |
 | C | COVERED | `inflation salary calculator` | 3,600 | inflation salary | `/career/raise-calculator` | — |
 | B | COVERED | `dob calculator` | 3,600 | dob | `/utilities/age-exact/` | — |
@@ -86,15 +92,15 @@ None.
 | C | COVERED | `credit rate calculator` | 2,400 | credit rate | `/finance/apr-annual` | — |
 | B | COVERED | `compounded annually calculator` | 2,400 | compounded annually | `/regional/post-office-savings` | — |
 | D | COVERED | `retirement planner calculator` | 2,400 | retirement planner | `/finance/retirement` | — |
+| C | NO_TARGET | `calculator real estate` | 2,400 | real estate | — | real estate |
 | B | COVERED | `compounding calculator yearly` | 2,400 | compound yearly | `/guides/cagr` | — |
 | B | COVERED | `pv calculator` | 1,900 | pv | `/finance/present-value` | — |
 | C | COVERED | `loan percentage calculator` | 1,900 | loan percentage | `/finance/apr-annual` | — |
 | C | COVERED | `figure out interest rate on loan` | 1,900 | figure out interest rate loan | `/finance/apr-annual` | — |
 | C | COVERED | `retirement budget calculator` | 1,900 | retirement budget | `/finance/retirement-withdrawal` | — |
 | C | COVERED | `financial planning calculator` | 1,900 | financial plan | `/finance/retirement` | — |
-| C | COVERED | `mortgage calculator how much can i qualify for` | 1,900 | mortgage much can qualify | `/finance/loan-qualify` | — |
 | C | COVERED | `mortgage calculator how much do i qualify for` | 1,900 | mortgage much do qualify | `/finance/loan-qualify` | — |
-| B | COVERED | `paycheck deduction calculator` | 1,900 | salary deductions | `/guides/career` | — |
+| B | COVERED | `paycheck deduction calculator` | 1,900 | salary deductions | `/finance/paycheck` | — |
 | B | COVERED | `spending calculator retirement` | 1,900 | spend retirement | `/guides/retirement` | — |
 | B | COVERED | `retirement expenditure calculator` | 1,900 | retirement expenditure | `/finance/retirement-withdrawal` | — |
 | B | COVERED | `housing cost calculator` | 1,900 | hous cost | `/guides/baby-cost` | — |
@@ -113,13 +119,14 @@ None.
 | B | COVERED | `age calendar` | 1,300 | age calendar | `/guides/age` | — |
 | B | COVERED | `currency calculator xe` | 1,300 | currency xe | `/finance/currency-converter` | — |
 | C | COVERED | `inflation wage calculator` | 1,000 | inflation salary | `/career/raise-calculator` | — |
-| C | COVERED | `time and pay calculator` | 1,000 | time salary | `/career/timesheet-hours` | — |
+| B | COVERED | `taxable calculator` | 1,000 | taxable | `/career/tax-bracket` | — |
 | C | COVERED | `compound loan calculator` | 1,000 | compound loan | `/finance/loan-emi` | — |
 | C | COVERED | `formula discount` | 1,000 | formula discount | `/finance/discount` | — |
 | C | NO_OWNER | `calculator that shows work` | 1,000 | that show work | — | that show work |
 | C | COVERED | `investment account calculator` | 1,000 | investment account | `/finance/investment` | — |
 | C | COVERED | `compare loan calculator` | 1,000 | compare loan | `/finance/loan-comparison` | — |
 | C | COVERED | `monthly investment calculator` | 1,000 | monthly investment | `/finance/investment-growth` | — |
+| C | NO_TARGET | `real estate investment calculator` | 1,000 | real estate investment | — | real estate investment |
 | B | COVERED | `yearly interest calculator` | 1,000 | yearly interest | `/guides/compound-interest` | — |
 | C | COVERED | `savings percentage calculator` | 880 | sav percentage | `/finance/savings-goal` | — |
 | C | COVERED | `yearly payment calculator` | 880 | yearly payment | `/finance/loan-emi` | — |

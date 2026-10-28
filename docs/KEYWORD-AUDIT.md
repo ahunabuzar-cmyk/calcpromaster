@@ -2,7 +2,7 @@
 
 _Deterministic audit over the same extraction as docs/KEYWORD-TARGETS.md. Nothing hand-added. Re-run with: `npm run keywords:audit`._
 
-**Inventory:** 1421 indexable pages · 1285 tools · 2529 curated phrases.
+**Inventory:** 1421 indexable pages · 1285 tools · 2528 curated phrases.
 
 ## Verdict at a glance
 
@@ -11,22 +11,13 @@ _Deterministic audit over the same extraction as docs/KEYWORD-TARGETS.md. Nothin
 | C1 · Title cannibalization | ✅ none |
 | C2 · Phrase cannibalization (2+ pages target same phrase) | ✅ none |
 | C3 · Duplicate phrase inside one tool | ✅ none |
-| Q1 · Year-stamped phrases | ⚠️ 2 |
+| Q1 · Year-stamped phrases | ✅ none |
 | Q2 · App/download-intent phrases on web tools | ✅ none |
-| Q3 · Phrases sharing no word with tool name | ℹ️ 134 (review, not always wrong) |
+| Q3 · Phrases sharing no word with tool name | ℹ️ 133 (review, not always wrong) |
 | S1 · Overlong phrases (>70 chars) | ✅ none |
 | S2 · Single generic word | ✅ none |
 
-**Modifier coverage:** 40 phrases use feature modifiers ("with …", "solve for …"), 69 carry locale/currency intent, 1018 say "free".
-
-## Q1 — Year-stamped phrases (stale by next year)
-
-Hard years inside evergreen keywords guarantee staleness. Drop the year — the page can mention recency without baking it into the target.
-
-| Page | Phrase |
-|---|---|
-| `/regional/bangladesh-income-tax` | nbr tax calculator 2025-26 |
-| `/regional/mexico-isr-salary` | calculadora isr 2026 |
+**Modifier coverage:** 40 phrases use feature modifiers ("with …", "solve for …"), 69 carry locale/currency intent, 1021 say "free".
 
 ## Q3 — Phrases sharing no word with the tool name (review list)
 
@@ -78,13 +69,13 @@ Often legitimate (synonyms, problem-space queries like "how many bags of concret
 | `/everyday/statute-of-limitations` | claim deadline calculator |
 | `/everyday/statute-of-limitations` | time limit to sue |
 | `/everyday/statute-of-limitations` | legal filing deadline |
-| `/everyday/cost-of-living-compare` | equivalent salary calculator |
 | `/finance/loan-emi` | day count convention |
 | `/finance/mortgage` | fha vs conventional loan comparison calculator |
 | `/finance/mortgage` | home loan affordability calculator with property tax |
 | `/finance/compound-interest` | investment growth calculator with monthly sip |
 | `/finance/compound-interest` | solve for rate |
-| … | +84 more |
+| `/finance/credit-card-payoff` | solve for payment |
+| … | +83 more |
 
 ## Method & honest limits
 

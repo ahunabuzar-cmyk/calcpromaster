@@ -146,17 +146,6 @@
   <p>It is driven-teeth ÷ driver-teeth: a 4:1 ratio cuts speed to a quarter while multiplying torque fourfold (minus friction losses). The gear ratio calculator converts ratio, RPM and torque in both directions.</p>
 
 
-<!-- guide-extra-depth:start -->
-<h2>What this category covers</h2>
-<p>Beam loading, torque, power, pressure, flow, gear ratios and electrical relationships. These are design aids, not substitutes for a code check: every real structure or machine has safety factors, material limits and local regulations behind it.</p>
-<p>Use the calculator to size a first estimate, then verify against the governing standard. A number from a web tool is a starting point, not a certification.</p>
-<h2>Units are the first failure mode</h2>
-<p>Engineering formulas assume consistent units: newtons and metres, or kilonewtons and millimetres, but rarely a mixture. Mixing them produces an answer that is wrong by a factor of a thousand and looks entirely plausible.</p>
-<p>Convert every input before substituting, and write the unit next to the result. If the unit does not make sense, the number does not either.</p>
-<h2>Safety factors are not padding</h2>
-<p>A safety factor covers uncertainty in loads, material properties, workmanship and consequences of failure. It is chosen by code or by a qualified engineer, and reducing it to save material is how structures fail.</p>
-<p>The same applies to electrical and thermal work: the margin is part of the design, not an inefficiency to be optimised away.</p>
-<!-- guide-extra-depth:end -->
 
 
   <!-- related-guides -->
@@ -168,6 +157,17 @@
     <li><a href="/guides/auto">Auto & Vehicle Guides</a></li>
   </ul>
 
+<!-- guide-extra-depth:start -->
+<h2>What this category covers</h2>
+<p>Beam loading, torque, power, pressure, flow, gear ratios and electrical relationships. These are design aids, not substitutes for a code check: every real structure or machine has safety factors, material limits and local regulations behind it.</p>
+<p>Use the calculator to size a first estimate, then verify against the governing standard. A number from a web tool is a starting point, not a certification.</p>
+<h2>Units are the first failure mode</h2>
+<p>Engineering formulas assume consistent units: newtons and metres, or kilonewtons and millimetres, but rarely a mixture. Mixing them produces an answer that is wrong by a factor of a thousand and looks entirely plausible.</p>
+<p>Convert every input before substituting, and write the unit next to the result. If the unit does not make sense, the number does not either.</p>
+<h2>Safety factors are not padding</h2>
+<p>A safety factor covers uncertainty in loads, material properties, workmanship and consequences of failure. It is chosen by code or by a qualified engineer, and reducing it to save material is how structures fail.</p>
+<p>The same applies to electrical and thermal work: the margin is part of the design, not an inefficiency to be optimised away.</p>
+<!-- guide-extra-depth:end -->
 <!-- guide-depth:start -->
 <h2>Where these answers go wrong</h2><ul class="guide-pitfalls"><li>Using a nominal load or capacity and ignoring the safety factor the applicable code requires.</li><li>Applying a three-phase current formula to a single-phase circuit, or the reverse.</li><li>Ignoring temperature and grouping derating, which lowers a cable’s real capacity below its table value.</li><li>Treating a simplifying assumption — point load, uniform section, ideal behaviour — as if it were exact.</li></ul><h2>Frequently asked questions</h2><div class="seo-faqs"><h3>Why do calculators and code tables disagree?</h3><p>Tables are conservative by construction: they already include installation conditions, derating and required safety margins for a range of situations. A calculator solving the ideal case will therefore give a different number. Design to the standard, and use the calculator to understand the relationship between the inputs.</p><h3>What is a safety factor for?</h3><p>It covers what the calculation cannot: material variation, construction tolerance, fatigue, unexpected loads and the consequences of failure. It is chosen by standard or by engineering judgement, not by the calculator, and it is the reason a component is specified well above the theoretical minimum.</p><h3>How do I know my units are consistent?</h3><p>Write the units into the equation and cancel them. Ohm’s law works with volts, amps and ohms; a length used in the same formula must be in the matching base unit, not switched between millimetres and metres. If the units of the result are not what you expected, the inputs are inconsistent.</p></div>
 <!-- guide-depth:end -->

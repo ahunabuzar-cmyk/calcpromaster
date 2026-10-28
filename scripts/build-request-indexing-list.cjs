@@ -37,9 +37,36 @@ if (fs.existsSync(COVERAGE)) {
   for (const r of (rep.lists.INDEXED || [])) indexedSet.add(stripSlash(r.url));
 }
 
+// Pages GSC last crawled as a non-candidate ("Page with redirect", noindex,
+// alternate canonical) are just as un-indexed as DISCOVERED/UNKNOWN ones — and
+// they are the ones that will NOT come back on their own, because Google needs
+// to re-crawl the URL before it can see the fix. Source: the newest snapshot's
+// non-candidates in data/index-regressions.json, which `npm run
+// seo:index-regressions` re-derives from every GSC inspection batch and which
+// the live-verification pass (ledger notes) checks return 200 + index,follow +
+// self-canonical on the real domain.
+//
+// Real redirects are deliberately NOT added: a renamed tool's old URL still
+// 301s to its successor, so requesting indexing for it would spend the daily
+// quota on a URL Google already handles correctly.
+const recrawl = new Set();
+const REG = path.join(ROOT, 'data', 'index-regressions.json');
+if (fs.existsSync(REG)) {
+  try {
+    const reg = JSON.parse(fs.readFileSync(REG, 'utf8'));
+    for (const it of ((reg.current && reg.current.items) || [])) {
+      const p = stripSlash(String(it.url || '').replace(SITE, ''));
+      if (!p) continue;
+      if (indexedSet.has(p)) continue;
+      notIndexed.add(p);
+      recrawl.add(p);
+    }
+  } catch (e) { /* no regression snapshot yet — the DISCOVERED/UNKNOWN lists still work */ }
+}
+
 // Candidates = not-indexed pages with impressions (real demand), impressions desc.
 const rows = Object.entries(imp)
-  .map(([p, v]) => ({ path: stripSlash(p), impressions: v.impressions || 0, clicks: v.clicks || 0, position: v.position || 0 }))
+  .map(([p, v]) => ({ path: stripSlash(p), impressions: v.impressions || 0, clicks: v.clicks || 0, position: v.position || 0, recrawl: recrawl.has(stripSlash(p)) }))
   .filter((r) => notIndexed.size === 0 || notIndexed.has(r.path))
   .sort((a, b) => b.impressions - a.impressions || b.position - a.position);
 
@@ -97,7 +124,8 @@ picked.forEach((r, i) => {
     : r.path.startsWith('/guides/') || r.path.startsWith('/blog/') || segs.length === 1
       ? SITE + r.path
       : SITE + r.path + '/';
-  const note = r.strategic ? 'evergreen/strategic' : (r.impressions >= 20 ? 'high demand' : 'demand');
+  const note = r.recrawl ? 're-crawl: stale non-candidate status'
+    : r.strategic ? 'evergreen/strategic' : (r.impressions >= 20 ? 'high demand' : 'demand');
   lines.push('| ' + (i + 1) + ' | ' + url + ' | ' + (r.impressions || '—') + ' | ' + (r.position ? r.position.toFixed(0) : '—') + ' | ' + note + ' |');
 });
 lines.push('');

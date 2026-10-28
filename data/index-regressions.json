@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-27T10:12:23.977Z",
+  "ranAt": "2026-10-28T10:58:33.528Z",
   "snapshots": [
     {
       "date": "2026-09-27",
@@ -80,18 +80,42 @@
       "date": "2026-10-27",
       "source": "index-panel-history.json",
       "urls": 590
+    },
+    {
+      "date": "2026-10-28",
+      "source": "index-panel-history.json",
+      "urls": 590
     }
   ],
-  "scanned": 1353,
+  "scanned": 1943,
   "all": {
-    "regressions": [],
+    "regressions": [
+      {
+        "url": "https://calcpromaster.com/math/scientific/",
+        "from": "Submitted and indexed",
+        "to": "Crawled - currently not indexed",
+        "window": "2026-10-27→2026-10-28",
+        "prevSnapshot": "index-panel-history.json#2026-10-27",
+        "curSnapshot": "index-panel-history.json#2026-10-28",
+        "kind": "index-regression"
+      },
+      {
+        "url": "https://calcpromaster.com/business/cac/",
+        "from": "Submitted and indexed",
+        "to": "Crawled - currently not indexed",
+        "window": "2026-10-27→2026-10-28",
+        "prevSnapshot": "index-panel-history.json#2026-10-27",
+        "curSnapshot": "index-panel-history.json#2026-10-28",
+        "kind": "index-regression"
+      }
+    ],
     "notCandidates": [],
     "duplicates": [],
-    "compared": 1353
+    "compared": 1943
   },
   "current": {
     "snapshot": {
-      "date": "2026-10-27",
+      "date": "2026-10-28",
       "source": "index-panel-history.json"
     },
     "items": [
@@ -100,8 +124,8 @@
         "from": "—",
         "to": "Page with redirect",
         "kind": "not-candidate",
-        "window": "current state @ 2026-10-27",
-        "curSnapshot": "index-panel-history.json#2026-10-27"
+        "window": "current state @ 2026-10-28",
+        "curSnapshot": "index-panel-history.json#2026-10-28"
       }
     ]
   },
@@ -115,7 +139,26 @@
       "note": "Known and addressed: Google consolidated the bare category page onto /hub/finance/ because the pair shared ~80% of their five-grams (same methodology note, same category FAQ, same 48-card catalog). The 2026-10-12 de-duplication gave every block exactly one owner (docs/DUPLICATE-HUBS-FIX.md) and added the check:category-dup gate that fails if it regresses. Re-arm this alert (delete this entry) after Google re-crawls both URLs; a second consecutive snapshot still reporting alternate-canonical would mean the canonical hint needs a stronger fix (301 or a canonical tag on /finance/)."
     }
   ],
-  "newRegressions": [],
+  "newRegressions": [
+    {
+      "url": "https://calcpromaster.com/math/scientific/",
+      "from": "Submitted and indexed",
+      "to": "Crawled - currently not indexed",
+      "window": "2026-10-27→2026-10-28",
+      "prevSnapshot": "index-panel-history.json#2026-10-27",
+      "curSnapshot": "index-panel-history.json#2026-10-28",
+      "kind": "index-regression"
+    },
+    {
+      "url": "https://calcpromaster.com/business/cac/",
+      "from": "Submitted and indexed",
+      "to": "Crawled - currently not indexed",
+      "window": "2026-10-27→2026-10-28",
+      "prevSnapshot": "index-panel-history.json#2026-10-27",
+      "curSnapshot": "index-panel-history.json#2026-10-28",
+      "kind": "index-regression"
+    }
+  ],
   "newNotCandidates": [],
   "newDuplicateCanonicals": [],
   "newCurrent": [
@@ -124,9 +167,9 @@
       "from": "—",
       "to": "Page with redirect",
       "kind": "not-candidate",
-      "window": "current state @ 2026-10-27",
-      "curSnapshot": "index-panel-history.json#2026-10-27"
+      "window": "current state @ 2026-10-28",
+      "curSnapshot": "index-panel-history.json#2026-10-28"
     }
   ],
-  "newCount": 1
+  "newCount": 3
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T10:12:23.902Z",
+  "generatedAt": "2026-10-28T10:58:33.469Z",
   "snapshotDate": "2026-10-19",
   "snapshotSource": "gsc-inspect-batch-2026-10-19.json",
   "state": {
@@ -11,14 +11,14 @@
     "notCandidateReasons": {}
   },
   "liveState": {
-    "date": "2026-10-27",
-    "source": "data/index-panel-history.json#2026-10-27",
+    "date": "2026-10-28",
+    "source": "data/index-panel-history.json#2026-10-28",
     "panelSize": 590,
     "total": 590,
     "candidates": 589,
-    "indexed": 6,
+    "indexed": 4,
     "notCandidates": 1,
-    "waiting": 583,
+    "waiting": 585,
     "notCandidateReasons": {
       "Page with redirect": 1
     }
@@ -191,14 +191,14 @@
       "notCandidateReasons": {}
     },
     {
-      "date": "2026-10-27",
-      "file": "data/index-panel-history.json#2026-10-27",
+      "date": "2026-10-28",
+      "file": "data/index-panel-history.json#2026-10-28",
       "urls": 590,
       "total": 590,
       "candidates": 589,
-      "indexed": 6,
+      "indexed": 4,
       "notCandidates": 1,
-      "waiting": 583,
+      "waiting": 585,
       "notCandidateReasons": {
         "Page with redirect": 1
       }
@@ -443,9 +443,9 @@
     },
     {
       "from": "2026-10-19",
-      "to": "2026-10-27",
-      "days": 8,
-      "elapsedDays": 7.824720601851852,
+      "to": "2026-10-28",
+      "days": 9,
+      "elapsedDays": 8.856776041666667,
       "commonUrls": 0,
       "stagesAdvanced": 0,
       "slippedBack": 0,
@@ -487,15 +487,15 @@
   "churnAlerts": [
     {
       "from": "2026-10-26",
-      "to": "2026-10-27",
-      "severity": "high",
-      "stagesAdvanced": 72,
-      "slippedBack": 104,
-      "churnStages": 176,
-      "gainedBack": 72,
-      "netStages": -32,
-      "cancelledShare": 1,
-      "message": "72 stages advance ka 100% (72 stages) isi window mein cancel ho gaya — gross 176, net -32. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain."
+      "to": "2026-10-28",
+      "severity": "warn",
+      "stagesAdvanced": 87,
+      "slippedBack": 76,
+      "churnStages": 163,
+      "gainedBack": 76,
+      "netStages": 11,
+      "cancelledShare": 0.874,
+      "message": "87 stages advance ka 87% (76 stages) isi window mein cancel ho gaya — gross 163, net +11. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain."
     },
     {
       "from": "2026-10-14",
@@ -547,7 +547,7 @@
       "sampled": true,
       "weeks": 16,
       "beyondHorizon": false,
-      "doneBy": "2027-02-16"
+      "doneBy": "2027-02-17"
     },
     {
       "key": "half",
@@ -556,7 +556,7 @@
       "sampled": true,
       "weeks": 32,
       "beyondHorizon": false,
-      "doneBy": "2027-06-08"
+      "doneBy": "2027-06-09"
     },
     {
       "key": "quota",
@@ -565,7 +565,7 @@
       "sampled": false,
       "weeks": 1,
       "beyondHorizon": false,
-      "doneBy": "2026-11-03"
+      "doneBy": "2026-11-04"
     }
   ],
   "horizons": [

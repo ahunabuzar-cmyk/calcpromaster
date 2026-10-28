@@ -1,6 +1,6 @@
 # Index-regression alert — per-URL transitions
 
-_Generated 2026-10-27T10:12:23.977Z by `scripts/check-index-regressions.cjs`._
+_Generated 2026-10-28T10:58:33.528Z by `scripts/check-index-regressions.cjs`._
 
 The burn-down reports net progress; this report is the per-URL view of the
 same snapshots, so a page that fell out of the index (or was consolidated
@@ -24,12 +24,16 @@ away as an alternate canonical) cannot hide behind the total.
 | 2026-10-19 | `gsc-inspect-batch-2026-10-19.json` | 30 |
 | 2026-10-26 | `index-panel-history.json` | 590 |
 | 2026-10-27 | `index-panel-history.json` | 590 |
+| 2026-10-28 | `index-panel-history.json` | 590 |
 
 ## New findings this run (not in the ledger)
 
-### 1. Regression — was indexed, no longer indexed — 0
+### 1. Regression — was indexed, no longer indexed — 2
 
-_None._
+| URL | was | now | window |
+|---|---|---|---|
+| `https://calcpromaster.com/math/scientific/` | Submitted and indexed | Crawled - currently not indexed | 2026-10-27→2026-10-28 |
+| `https://calcpromaster.com/business/cac/` | Submitted and indexed | Crawled - currently not indexed | 2026-10-27→2026-10-28 |
 
 ### 2. New not-candidate — left the indexing queue (redirect / noindex / other) — 0
 
@@ -39,7 +43,7 @@ _None._
 
 _None._
 
-### 4. Current state — non-candidates in the newest snapshot (index-panel-history.json#2026-10-27)
+### 4. Current state — non-candidates in the newest snapshot (index-panel-history.json#2026-10-28)
 
 | URL | coverage now | note |
 |---|---|---|
@@ -52,13 +56,13 @@ shows right now, which is what makes a targeted batch inspection useful._
 
 | measure | value |
 |---|---|
-| transitions scanned | 1353 |
-| regressions found (all windows) | 0 |
+| transitions scanned | 1943 |
+| regressions found (all windows) | 2 |
 | new not-candidates found | 0 |
 | duplicate-canonical findings | 0 |
 | non-candidates in newest snapshot | 1 |
 | known (in ledger, not alerting) | 1 |
-| NEW this run | 1 |
+| NEW this run | 3 |
 
 ## What to do with a finding
 

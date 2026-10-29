@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-27T14:32:16.870Z",
-  "note": "Accepted/known index findings. A finding listed here stops alerting; remove an entry to start alerting on it again. Every entry carries its own reason in `note`.",
+  "updatedAt": "2026-10-29T10:09:05.318Z",
+  "note": "Accepted/known index findings. A finding listed here stops alerting; remove an entry to start alerting on it again.",
   "known": [
     {
       "url": "https://calcpromaster.com/finance/",
@@ -721,6 +721,22 @@
       "window": "current state @ 2026-10-26",
       "addedAt": "2026-10-27T14:32:16.870Z",
       "note": "Live-verified 2026-10-27: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com (the slash-less form 308s to this URL by design). Not a real redirect/noindex — Google’s recorded status predates the current deploy, so this URL is queued for a re-crawl request (docs/REQUEST-INDEXING-TOP40.md)."
+    },
+    {
+      "url": "https://calcpromaster.com/math/scientific/",
+      "kind": "index-regression",
+      "to": "Crawled - currently not indexed",
+      "window": "2026-10-27→2026-10-28",
+      "addedAt": "2026-10-29T10:09:05.318Z",
+      "note": "Live-verified 2026-10-29: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com, 4,302 words — no technical defect, Google crawled and declined the page. Triage belongs to content (it is a math reference page competing with stronger hosts), not the build. Re-arm (delete this entry) after the 2026-10-28 content/sitemap changes are re-crawled; a second consecutive snapshot still dropping it means the page needs a rewrite or an internal-link boost, not another recrawl request."
+    },
+    {
+      "url": "https://calcpromaster.com/business/cac/",
+      "kind": "index-regression",
+      "to": "Crawled - currently not indexed",
+      "window": "2026-10-27→2026-10-28",
+      "addedAt": "2026-10-29T10:09:05.318Z",
+      "note": "Live-verified 2026-10-29: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com, 4,478 words — no technical defect, Google crawled and declined the page. Same triage as /math/scientific/: content competition, not a build regression. Re-arm after the 2026-10-28 changes are re-crawled."
     }
   ]
 }

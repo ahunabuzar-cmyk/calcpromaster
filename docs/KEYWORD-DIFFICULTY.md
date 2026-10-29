@@ -1,6 +1,6 @@
 # Keyword Difficulty Report — CalcProMaster
 
-_Generated 2026-10-24 by `scripts/build-difficulty-report.cjs` (deterministic; re-run with `npm run keywords:fresh`). Difficulty model: `scripts/keyword-difficulty.cjs`._
+_Generated 2026-10-28 by `scripts/build-difficulty-report.cjs` (deterministic; re-run with `npm run keywords:fresh`). Difficulty model: `scripts/keyword-difficulty.cjs`._
 
 ## 0. Honest scope — read this first
 

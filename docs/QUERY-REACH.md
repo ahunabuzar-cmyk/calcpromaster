@@ -12,26 +12,26 @@ Do base hamesha saath dikhte hain, warna ek number doosre se takra jata hai (det
 | Base | Window | Impressions | /day | /month |
 |---|---|---|---|---|
 | GSC API window (28-din average) | 2026-09-24 → 2026-10-22 | 20,954 | 748.4 | 22,451 |
-| 7-din run-rate (aaj ki speed) | last 7d | — | 294.267 | 8,828 |
+| 7-din run-rate (aaj ki speed) | last 7d | — | 52.633 | 1,579 |
 
 > Join coverage: is window ki **12,224** impressions query→page pairs tak trace hoti hain (58.3%) — baaki GSC ki apni truncation hai, site ka bug nahi. Reach ke per-page numbers isi traced hisse se bante hain, is liye wo **floor** hain.
 
 | Target / month | Impressions / day | Multiple (28-d average) | Multiple (7-d run-rate) |
 |---|---|---|---|
-| 200,000 | 6,666.7 | **8.91x** | **22.66x** |
-| 300,000 | 10,000 | **13.36x** | **33.98x** |
+| 200,000 | 6,666.7 | **8.91x** | **126.66x** |
+| 300,000 | 10,000 | **13.36x** | **189.99x** |
 
-**Seedhi baat:** 200,000/month ke liye **6,666.7/din** chahiye. 28-din average base par wo **8.91x**, aur aaj ke 7-din run-rate par **22.66x**. Ye guarantee nahi hai — ye sirf arithmetic hai. 30 din mein doubling bhi 2x hai, is liye ye ek month ka kaam nahi. Har din ka multiple reach, position aur indexing teeno se banta hai, ek lever se nahi.
+**Seedhi baat:** 200,000/month ke liye **6,666.7/din** chahiye. 28-din average base par wo **8.91x**, aur aaj ke 7-din run-rate par **126.66x**. Ye guarantee nahi hai — ye sirf arithmetic hai. 30 din mein doubling bhi 2x hai, is liye ye ek month ka kaam nahi. Har din ka multiple reach, position aur indexing teeno se banta hai, ek lever se nahi.
 
 ## 2. Reach tiers — kitne pages kitni queries par hain
 
 | Tier | Distinct queries | Pages | Impressions |
 |---|---|---|---|
 | `hundreds` | 100+ | 2 | 902 |
-| `broad` | 30–99 | 32 | 6,800 |
-| `growing` | 10–29 | 93 | 5,132 |
-| `thin` | 4–9 | 136 | 3,932 |
-| `stuck` | 0–3 | 214 | 3,874 |
+| `broad` | 30–99 | 32 | 6,801 |
+| `growing` | 10–29 | 93 | 5,144 |
+| `thin` | 4–9 | 136 | 3,941 |
+| `stuck` | 0–3 | 214 | 3,894 |
 
 Property par **477** canonical pages, **4,316** distinct queries, average **9.3 queries/page**. Top 25 pages ka average **42.4** hai — matlab reach bahut uneven hai: kuch pages sainkdon queries par hain, baaki 1-3 par atke.
 
@@ -58,7 +58,7 @@ Property par **477** canonical pages, **4,316** distinct queries, average **9.3 
 | 17 | `/lifestyle/charging-time` | **2** | 201 | 100.5 | stuck | charging time | 1 | 100.0% |
 | 18 | `/education/tuition-cost` | **1** | 200 | 200 | stuck | التكلفة | 1 | 100.0% |
 | 19 | `/math/weighted-average` | **51** | 193 | 3.78 | broad | weighted average calculator | 2 | 76.5% |
-| 20 | `/regional/singapore-cpf` | **42** | 187 | 4.45 | broad | cpf calculator | 2 | 81.0% |
+| 20 | `/regional/singapore-cpf` | **42** | 188 | 4.48 | broad | cpf calculator | 2 | 81.0% |
 | 21 | `/tech/rgb-hex` | **33** | 166 | 5.03 | broad | rgb to hex | 12 | 69.7% |
 | 22 | `/finance/rent-affordability` | **41** | 165 | 4.02 | broad | rent affordability calculator | 6 | 87.8% |
 | 23 | `/finance/wacc` | **15** | 159 | 10.6 | growing | cost of capital calculator | 1 | 46.7% |
@@ -93,11 +93,11 @@ Ye section ek trap se bachata hai: split dekh kar 301 add karna **ghalat** hota 
 | `/tech/raid-capacity` | /tech/raid-capacity/ (126) · /tech/raid-capacity (98) | 238 | 43.8% | consolidation-lag |
 | `/science/carbon-dating` | /science/carbon-dating (9) · /science/carbon-dating/ (2) | 213 | 18.2% | consolidation-lag |
 | `/lifestyle/renters-insurance` | /lifestyle/renters-insurance (133) · /lifestyle/renters-insurance/ (66) | 203 | 33.2% | consolidation-lag |
-| `/regional/singapore-cpf` | /regional/singapore-cpf (145) · /regional/singapore-cpf/ (19) | 187 | 11.6% | consolidation-lag |
+| `/regional/singapore-cpf` | /regional/singapore-cpf (145) · /regional/singapore-cpf/ (19) | 188 | 11.6% | consolidation-lag |
 | `/conversion/wire-gauge-conv` | /conversion/wire-gauge-conv (62) · /conversion/wire-gauge-conv/ (58) | 133 | 48.3% | consolidation-lag |
 | `/science/solar-energy` | /science/solar-energy/ (105) · /science/solar-energy (13) | 133 | 11.0% | consolidation-lag |
 | `/tech/ip-subnet` | /tech/ip-subnet/ (84) · /tech/ip-subnet (12) | 122 | 12.5% | consolidation-lag |
-| `/lifestyle/resell-value` | /lifestyle/resell-value (5) · /lifestyle/resell-value/ (4) | 114 | 44.4% | consolidation-lag |
+| `/lifestyle/resell-value` | /lifestyle/resell-value (5) · /lifestyle/resell-value/ (4) | 115 | 44.4% | consolidation-lag |
 | `/everyday/coffee-cost` | /everyday/coffee-cost/ (85) · /everyday/coffee-cost (2) | 110 | 2.3% | consolidation-lag |
 
 
@@ -111,31 +111,31 @@ Ek page "semantically poor" lagta hai jab uski queries sirf ek shakal mein aati 
 | `expose` | content maujood hai, query nahi | kuch mat likho — section ko copy mein upar lao, exact query wording use karo, andar se link do; page already eligible hai |
 | `fine` | query already aa rahi hai | kuch mat karo |
 
-Top 25 pages par: **16 `write`** · **9 `expose`** · **0 `fine`** — kul 27 buckets likhne hain aur 106 sirf expose karne hain.
+Top 25 pages par: **19 `write`** · **6 `expose`** · **0 `fine`** — kul 39 buckets likhne hain aur 94 sirf expose karne hain.
 
 | Path | Reach | Query coverage | Content coverage | Action | Buckets |
 |---|---|---|---|---|---|
+| `/health/bmr-mifflin` | 77 q · 1,108 impr | 25.0% | 75.0% | **write** | Comparison |
+| `/lifestyle/home-insurance` | 75 q · 1,012 impr | 50.0% | 87.5% | **write** | Comparison |
 | `/tech/internet-speed` | 63 q · 508 impr | 12.5% | 75.0% | **write** | Table / chart, Region / year variant |
+| `/finance/fha-loan` | 34 q · 443 impr | 37.5% | 87.5% | **write** | Comparison |
 | `/guides/tip` | 1 q · 396 impr | 12.5% | 75.0% | **write** | Comparison, Period variant (per day/month/year) |
-| `/regional/dubai-salary` | 22 q · 388 impr | 25.0% | 87.5% | **write** | Table / chart |
-| `/fitness/muscle-gain` | 5 q · 321 impr | 12.5% | 75.0% | **write** | Table / chart |
+| `/regional/dubai-salary` | 22 q · 388 impr | 25.0% | 75.0% | **write** | Table / chart, Comparison |
+| `/fitness/muscle-gain` | 5 q · 321 impr | 12.5% | 62.5% | **write** | Table / chart, Comparison |
 | `/guides/bmr` | 52 q · 304 impr | 12.5% | 75.0% | **write** | Free / online / best, Region / year variant |
 | `/finance/credit-utilization` | 34 q · 252 impr | 50.0% | 75.0% | **write** | Table / chart |
 | `/tech/raid-capacity` | 48 q · 238 impr | 50.0% | 75.0% | **write** | Table / chart |
-| `/science/carbon-dating` | 8 q · 213 impr | 25.0% | 75.0% | **write** | Table / chart, Region / year variant |
-| `/lifestyle/renters-insurance` | 14 q · 203 impr | 12.5% | 75.0% | **write** | Table / chart, Region / year variant |
-| `/lifestyle/charging-time` | 2 q · 201 impr | 12.5% | 75.0% | **write** | Table / chart, Region / year variant |
+| `/science/carbon-dating` | 8 q · 213 impr | 25.0% | 62.5% | **write** | Table / chart, Comparison, Region / year variant |
+| `/lifestyle/renters-insurance` | 14 q · 203 impr | 12.5% | 62.5% | **write** | Table / chart, Comparison, Region / year variant |
+| `/lifestyle/charging-time` | 2 q · 201 impr | 12.5% | 62.5% | **write** | Table / chart, Comparison, Region / year variant |
 | `/education/tuition-cost` | 1 q · 200 impr | 0.0% | 75.0% | **write** | Table / chart, Region / year variant |
-| `/math/weighted-average` | 51 q · 193 impr | 25.0% | 75.0% | **write** | Table / chart, Region / year variant |
-| `/regional/singapore-cpf` | 42 q · 187 impr | 62.5% | 87.5% | **write** | Table / chart |
+| `/math/weighted-average` | 51 q · 193 impr | 25.0% | 62.5% | **write** | Table / chart, Comparison, Region / year variant |
+| `/regional/singapore-cpf` | 42 q · 188 impr | 62.5% | 75.0% | **write** | Table / chart, Comparison |
 | `/tech/rgb-hex` | 33 q · 166 impr | 12.5% | 75.0% | **write** | Table / chart, Region / year variant |
-| `/finance/wacc` | 15 q · 159 impr | 25.0% | 75.0% | **write** | Table / chart, Region / year variant |
-| `/homegarden/wallpaper-rolls` | 49 q · 145 impr | 25.0% | 75.0% | **write** | Table / chart, Region / year variant |
-| `/health/bmr-mifflin` | 77 q · 1,108 impr | 25.0% | 87.5% | **expose** | Sawal (how/what/why…), Table / chart, Worked example, Comparison (+2) |
-| `/lifestyle/home-insurance` | 75 q · 1,012 impr | 50.0% | 100.0% | **expose** | Formula / method, Table / chart, Worked example, Comparison |
+| `/finance/wacc` | 15 q · 159 impr | 25.0% | 62.5% | **write** | Table / chart, Comparison, Region / year variant |
+| `/homegarden/wallpaper-rolls` | 49 q · 145 impr | 25.0% | 62.5% | **write** | Table / chart, Comparison, Region / year variant |
 | `/family/child-height` | 3 q · 846 impr | 12.5% | 100.0% | **expose** | Formula / method, Table / chart, Worked example, Comparison (+3) |
 | `/finance/pmi-calculator` | 100 q · 640 impr | 75.0% | 100.0% | **expose** | Worked example, Comparison |
-| `/finance/fha-loan` | 34 q · 443 impr | 37.5% | 100.0% | **expose** | Formula / method, Table / chart, Worked example, Comparison (+1) |
 | `/finance/apy-calculator` | 67 q · 319 impr | 75.0% | 100.0% | **expose** | Comparison, Region / year variant |
 | `/guides/business-days` | 165 q · 262 impr | 50.0% | 100.0% | **expose** | Table / chart, Worked example, Comparison, Free / online / best |
 | `/finance/rent-affordability` | 41 q · 165 impr | 75.0% | 75.0% | **expose** | Formula / method, Worked example |

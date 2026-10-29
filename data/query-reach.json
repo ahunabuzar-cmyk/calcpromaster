@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T16:47:05.004Z",
+  "generatedAt": "2026-10-29T10:11:43.732Z",
   "source": "data/gsc-query-page.json",
   "window": {
     "days": 28,
@@ -34,17 +34,17 @@
         "multiple": 13.36
       }
     ],
-    "runRateMonthly": 8828,
+    "runRateMonthly": 1579,
     "targetsFromRunRate": [
       {
         "monthly": 200000,
         "perDay": 6666.7,
-        "multiple": 22.66
+        "multiple": 126.66
       },
       {
         "monthly": 300000,
         "perDay": 10000,
-        "multiple": 33.98
+        "multiple": 189.99
       }
     ]
   },
@@ -59,25 +59,25 @@
       "tier": "broad",
       "range": "30–99",
       "pages": 32,
-      "impressions": 6800
+      "impressions": 6801
     },
     {
       "tier": "growing",
       "range": "10–29",
       "pages": 93,
-      "impressions": 5132
+      "impressions": 5144
     },
     {
       "tier": "thin",
       "range": "4–9",
       "pages": 136,
-      "impressions": 3932
+      "impressions": 3941
     },
     {
       "tier": "stuck",
       "range": "0–3",
       "pages": 214,
-      "impressions": 3874
+      "impressions": 3894
     }
   ],
   "topPages": [
@@ -691,13 +691,13 @@
       "path": "/regional/singapore-cpf",
       "distinctQueries": 42,
       "tier": "broad",
-      "impressions": 187,
+      "impressions": 188,
       "pairImpressions": 164,
       "clicks": 0,
-      "impressionsPerQuery": 4.45,
+      "impressionsPerQuery": 4.48,
       "headQuery": "cpf calculator",
       "headImpressions": 34,
-      "top3Share": 0.422,
+      "top3Share": 0.42,
       "longTailQueries": 34,
       "longTailShare": 0.81,
       "longTailImpressions": 44,
@@ -1062,7 +1062,7 @@
     },
     {
       "path": "/regional/singapore-cpf",
-      "impressions": 187,
+      "impressions": 188,
       "variantCount": 2,
       "variants": [
         {
@@ -1142,7 +1142,7 @@
     },
     {
       "path": "/lifestyle/resell-value",
-      "impressions": 114,
+      "impressions": 115,
       "variantCount": 2,
       "variants": [
         {
@@ -1701,6 +1701,26 @@
       "winnerMatchesConfig": false
     },
     {
+      "path": "/fitness",
+      "impressions": 58,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/fitness",
+          "impressions": 11
+        },
+        {
+          "url": "https://calcpromaster.com/fitness/",
+          "impressions": 9
+        }
+      ],
+      "minorityImpressions": 9,
+      "minorityShare": 0.45,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
       "path": "/health/maintenance-fluids",
       "impressions": 56,
       "variantCount": 2,
@@ -1719,6 +1739,26 @@
       "verdict": "consolidation-lag",
       "sitemapForm": "slash",
       "winnerMatchesConfig": true
+    },
+    {
+      "path": "/business",
+      "impressions": 55,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/business",
+          "impressions": 18
+        },
+        {
+          "url": "https://calcpromaster.com/business/",
+          "impressions": 9
+        }
+      ],
+      "minorityImpressions": 9,
+      "minorityShare": 0.333,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
     },
     {
       "path": "/auto/taxi-fare",
@@ -1741,26 +1781,6 @@
       "winnerMatchesConfig": true
     },
     {
-      "path": "/fitness",
-      "impressions": 54,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/fitness",
-          "impressions": 11
-        },
-        {
-          "url": "https://calcpromaster.com/fitness/",
-          "impressions": 9
-        }
-      ],
-      "minorityImpressions": 9,
-      "minorityShare": 0.45,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
       "path": "/construction/carpet",
       "impressions": 53,
       "variantCount": 2,
@@ -1779,26 +1799,6 @@
       "verdict": "consolidation-lag",
       "sitemapForm": "slash",
       "winnerMatchesConfig": true
-    },
-    {
-      "path": "/business",
-      "impressions": 51,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/business",
-          "impressions": 18
-        },
-        {
-          "url": "https://calcpromaster.com/business/",
-          "impressions": 9
-        }
-      ],
-      "minorityImpressions": 9,
-      "minorityShare": 0.333,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
     },
     {
       "path": "/lifestyle/road-trip-cost",
@@ -2016,6 +2016,26 @@
       ],
       "minorityImpressions": 1,
       "minorityShare": 0.2,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": true
+    },
+    {
+      "path": "/homegarden",
+      "impressions": 33,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/homegarden/",
+          "impressions": 9
+        },
+        {
+          "url": "https://calcpromaster.com/homegarden",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.1,
       "verdict": "consolidation-lag",
       "sitemapForm": "slash",
       "winnerMatchesConfig": true
@@ -2239,26 +2259,6 @@
       "verdict": "consolidation-lag",
       "sitemapForm": "slash",
       "winnerMatchesConfig": false
-    },
-    {
-      "path": "/homegarden",
-      "impressions": 29,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/homegarden/",
-          "impressions": 9
-        },
-        {
-          "url": "https://calcpromaster.com/homegarden",
-          "impressions": 1
-        }
-      ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.1,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": true
     },
     {
       "path": "/fitness/swim-pace",
@@ -2821,6 +2821,46 @@
       "winnerMatchesConfig": false
     },
     {
+      "path": "/construction",
+      "impressions": 11,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/construction",
+          "impressions": 3
+        },
+        {
+          "url": "https://calcpromaster.com/construction/",
+          "impressions": 1
+        }
+      ],
+      "minorityImpressions": 1,
+      "minorityShare": 0.25,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
+      "path": "/lifestyle",
+      "impressions": 11,
+      "variantCount": 2,
+      "variants": [
+        {
+          "url": "https://calcpromaster.com/lifestyle",
+          "impressions": 3
+        },
+        {
+          "url": "https://calcpromaster.com/lifestyle/",
+          "impressions": 2
+        }
+      ],
+      "minorityImpressions": 2,
+      "minorityShare": 0.4,
+      "verdict": "consolidation-lag",
+      "sitemapForm": "slash",
+      "winnerMatchesConfig": false
+    },
+    {
       "path": "/finance/529-plan",
       "impressions": 9,
       "variantCount": 2,
@@ -3081,46 +3121,6 @@
       "winnerMatchesConfig": true
     },
     {
-      "path": "/construction",
-      "impressions": 7,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/construction",
-          "impressions": 3
-        },
-        {
-          "url": "https://calcpromaster.com/construction/",
-          "impressions": 1
-        }
-      ],
-      "minorityImpressions": 1,
-      "minorityShare": 0.25,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
-      "path": "/lifestyle",
-      "impressions": 7,
-      "variantCount": 2,
-      "variants": [
-        {
-          "url": "https://calcpromaster.com/lifestyle",
-          "impressions": 3
-        },
-        {
-          "url": "https://calcpromaster.com/lifestyle/",
-          "impressions": 2
-        }
-      ],
-      "minorityImpressions": 2,
-      "minorityShare": 0.4,
-      "verdict": "consolidation-lag",
-      "sitemapForm": "slash",
-      "winnerMatchesConfig": false
-    },
-    {
       "path": "/health/heart-rate-zones",
       "impressions": 6,
       "variantCount": 2,
@@ -3223,13 +3223,49 @@
   ],
   "backlogSummary": {
     "pages": 25,
-    "write": 16,
-    "expose": 9,
+    "write": 19,
+    "expose": 6,
     "fine": 0,
-    "writeBuckets": 27,
-    "exposeBuckets": 106
+    "writeBuckets": 39,
+    "exposeBuckets": 94
   },
   "backlog": [
+    {
+      "path": "/health/bmr-mifflin",
+      "distinctQueries": 77,
+      "impressions": 1108,
+      "queryCoverage": 0.25,
+      "contentCoverage": 0.75,
+      "htmlFound": true,
+      "action": "write",
+      "writeLabels": [
+        "Comparison"
+      ],
+      "exposeLabels": [
+        "Sawal (how/what/why…)",
+        "Table / chart",
+        "Worked example",
+        "Free / online / best",
+        "Period variant (per day/month/year)"
+      ]
+    },
+    {
+      "path": "/lifestyle/home-insurance",
+      "distinctQueries": 75,
+      "impressions": 1012,
+      "queryCoverage": 0.5,
+      "contentCoverage": 0.875,
+      "htmlFound": true,
+      "action": "write",
+      "writeLabels": [
+        "Comparison"
+      ],
+      "exposeLabels": [
+        "Formula / method",
+        "Table / chart",
+        "Worked example"
+      ]
+    },
     {
       "path": "/tech/internet-speed",
       "distinctQueries": 63,
@@ -3247,6 +3283,24 @@
         "Worked example",
         "Comparison",
         "Free / online / best",
+        "Period variant (per day/month/year)"
+      ]
+    },
+    {
+      "path": "/finance/fha-loan",
+      "distinctQueries": 34,
+      "impressions": 443,
+      "queryCoverage": 0.375,
+      "contentCoverage": 0.875,
+      "htmlFound": true,
+      "action": "write",
+      "writeLabels": [
+        "Comparison"
+      ],
+      "exposeLabels": [
+        "Formula / method",
+        "Table / chart",
+        "Worked example",
         "Period variant (per day/month/year)"
       ]
     },
@@ -3275,16 +3329,16 @@
       "distinctQueries": 22,
       "impressions": 388,
       "queryCoverage": 0.25,
-      "contentCoverage": 0.875,
+      "contentCoverage": 0.75,
       "htmlFound": true,
       "action": "write",
       "writeLabels": [
-        "Table / chart"
+        "Table / chart",
+        "Comparison"
       ],
       "exposeLabels": [
         "Formula / method",
         "Worked example",
-        "Comparison",
         "Free / online / best",
         "Region / year variant"
       ]
@@ -3294,17 +3348,17 @@
       "distinctQueries": 5,
       "impressions": 321,
       "queryCoverage": 0.125,
-      "contentCoverage": 0.75,
+      "contentCoverage": 0.625,
       "htmlFound": true,
       "action": "write",
       "writeLabels": [
-        "Table / chart"
+        "Table / chart",
+        "Comparison"
       ],
       "exposeLabels": [
         "Sawal (how/what/why…)",
         "Formula / method",
         "Worked example",
-        "Comparison",
         "Free / online / best",
         "Period variant (per day/month/year)"
       ]
@@ -3368,16 +3422,16 @@
       "distinctQueries": 8,
       "impressions": 213,
       "queryCoverage": 0.25,
-      "contentCoverage": 0.75,
+      "contentCoverage": 0.625,
       "htmlFound": true,
       "action": "write",
       "writeLabels": [
         "Table / chart",
+        "Comparison",
         "Region / year variant"
       ],
       "exposeLabels": [
         "Worked example",
-        "Comparison",
         "Free / online / best",
         "Period variant (per day/month/year)"
       ]
@@ -3387,17 +3441,17 @@
       "distinctQueries": 14,
       "impressions": 203,
       "queryCoverage": 0.125,
-      "contentCoverage": 0.75,
+      "contentCoverage": 0.625,
       "htmlFound": true,
       "action": "write",
       "writeLabels": [
         "Table / chart",
+        "Comparison",
         "Region / year variant"
       ],
       "exposeLabels": [
         "Formula / method",
         "Worked example",
-        "Comparison",
         "Free / online / best",
         "Period variant (per day/month/year)"
       ]
@@ -3407,17 +3461,17 @@
       "distinctQueries": 2,
       "impressions": 201,
       "queryCoverage": 0.125,
-      "contentCoverage": 0.75,
+      "contentCoverage": 0.625,
       "htmlFound": true,
       "action": "write",
       "writeLabels": [
         "Table / chart",
+        "Comparison",
         "Region / year variant"
       ],
       "exposeLabels": [
         "Formula / method",
         "Worked example",
-        "Comparison",
         "Free / online / best",
         "Period variant (per day/month/year)"
       ]
@@ -3448,16 +3502,16 @@
       "distinctQueries": 51,
       "impressions": 193,
       "queryCoverage": 0.25,
-      "contentCoverage": 0.75,
+      "contentCoverage": 0.625,
       "htmlFound": true,
       "action": "write",
       "writeLabels": [
         "Table / chart",
+        "Comparison",
         "Region / year variant"
       ],
       "exposeLabels": [
         "Worked example",
-        "Comparison",
         "Free / online / best",
         "Period variant (per day/month/year)"
       ]
@@ -3465,17 +3519,17 @@
     {
       "path": "/regional/singapore-cpf",
       "distinctQueries": 42,
-      "impressions": 187,
+      "impressions": 188,
       "queryCoverage": 0.625,
-      "contentCoverage": 0.875,
+      "contentCoverage": 0.75,
       "htmlFound": true,
       "action": "write",
       "writeLabels": [
-        "Table / chart"
+        "Table / chart",
+        "Comparison"
       ],
       "exposeLabels": [
-        "Worked example",
-        "Comparison"
+        "Worked example"
       ]
     },
     {
@@ -3503,17 +3557,17 @@
       "distinctQueries": 15,
       "impressions": 159,
       "queryCoverage": 0.25,
-      "contentCoverage": 0.75,
+      "contentCoverage": 0.625,
       "htmlFound": true,
       "action": "write",
       "writeLabels": [
         "Table / chart",
+        "Comparison",
         "Region / year variant"
       ],
       "exposeLabels": [
         "Sawal (how/what/why…)",
         "Worked example",
-        "Comparison",
         "Period variant (per day/month/year)"
       ]
     },
@@ -3522,52 +3576,18 @@
       "distinctQueries": 49,
       "impressions": 145,
       "queryCoverage": 0.25,
-      "contentCoverage": 0.75,
+      "contentCoverage": 0.625,
       "htmlFound": true,
       "action": "write",
       "writeLabels": [
         "Table / chart",
+        "Comparison",
         "Region / year variant"
       ],
       "exposeLabels": [
         "Worked example",
-        "Comparison",
         "Free / online / best",
         "Period variant (per day/month/year)"
-      ]
-    },
-    {
-      "path": "/health/bmr-mifflin",
-      "distinctQueries": 77,
-      "impressions": 1108,
-      "queryCoverage": 0.25,
-      "contentCoverage": 0.875,
-      "htmlFound": true,
-      "action": "expose",
-      "writeLabels": [],
-      "exposeLabels": [
-        "Sawal (how/what/why…)",
-        "Table / chart",
-        "Worked example",
-        "Comparison",
-        "Free / online / best",
-        "Period variant (per day/month/year)"
-      ]
-    },
-    {
-      "path": "/lifestyle/home-insurance",
-      "distinctQueries": 75,
-      "impressions": 1012,
-      "queryCoverage": 0.5,
-      "contentCoverage": 1,
-      "htmlFound": true,
-      "action": "expose",
-      "writeLabels": [],
-      "exposeLabels": [
-        "Formula / method",
-        "Table / chart",
-        "Worked example",
-        "Comparison"
       ]
     },
     {
@@ -3601,23 +3621,6 @@
       "exposeLabels": [
         "Worked example",
         "Comparison"
-      ]
-    },
-    {
-      "path": "/finance/fha-loan",
-      "distinctQueries": 34,
-      "impressions": 443,
-      "queryCoverage": 0.375,
-      "contentCoverage": 1,
-      "htmlFound": true,
-      "action": "expose",
-      "writeLabels": [],
-      "exposeLabels": [
-        "Formula / method",
-        "Table / chart",
-        "Worked example",
-        "Comparison",
-        "Period variant (per day/month/year)"
       ]
     },
     {

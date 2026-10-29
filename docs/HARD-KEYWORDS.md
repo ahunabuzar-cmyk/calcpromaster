@@ -1,6 +1,6 @@
 # Hard Keywords — Full List + Easy Replacement for Every Page
 
-_Generated 2026-10-24 by `scripts/build-hard-keywords-doc.cjs` (deterministic; data: `js/data/*.js` curated `kw` fields + `.keywords.jsonl`). Tiering model: `scripts/keyword-difficulty.cjs`._
+_Generated 2026-10-28 by `scripts/build-hard-keywords-doc.cjs` (deterministic; data: `js/data/*.js` curated `kw` fields + `.keywords.jsonl`). Tiering model: `scripts/keyword-difficulty.cjs`._
 
 ## 0. Direct answer — kitne keywords target hue, kitne easy
 

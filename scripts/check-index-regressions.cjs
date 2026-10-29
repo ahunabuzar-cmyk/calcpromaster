@@ -28,6 +28,13 @@
 // karti; naya item aane par exit code 1 hota hai. Isi wajah se ye CI mein
 // bhi gate ki tarah chal sakta hai.
 //
+// Ek exception: "Page with redirect" jab URL ka doosra slash-form sitemap mein
+// serve ho raha ho. Guide pages bina trailing slash ke serve hote hain, is liye
+// /guides/x/ → 308 /guides/x sahi behaviour hai; GSC purane slash-form ko
+// hamesha "Page with redirect" hi batayega. Aisa alias finding nahi hai —
+// warna gate ek permanent, fix-na-hone-wali row par red rehta hai aur asli
+// regression us shor mein chhup jati hai.
+//
 // Usage:
 //   node scripts/check-index-regressions.cjs            # report + exit 1 on NEW findings
 //   node scripts/check-index-regressions.cjs --report    # kabhi fail na karo
@@ -66,6 +73,34 @@ function rankOf(coverage) {
 
 function isDuplicateCanonical(coverage) {
   return DUPLICATE_CANONICAL.test(String(coverage || ''));
+}
+
+// ---------- served URL forms ----------
+// Raw <loc> values, no normalisation: the point is to know exactly which form
+// the sitemap advertises. Reads the committed sitemap.xml, so the answer is a
+// property of the repo and not of whatever page happens to be deployed.
+function sitemapLocs(root) {
+  const set = new Set();
+  let xml = '';
+  try {
+    xml = fs.readFileSync(path.join(root || ROOT, 'sitemap.xml'), 'utf8');
+  } catch (e) {
+    return set;
+  }
+  for (const m of xml.matchAll(/<loc>([^<]+)<\/loc>/g)) set.add(m[1].trim());
+  return set;
+}
+
+// A redirect on one slash-form is expected when the other form is the one the
+// sitemap serves (that redirect is the fix, not the bug). A redirect on the
+// sitemap's own form stays a finding — that means we advertise a URL that
+// immediately moves.
+function isExpectedAliasRedirect(url, coverage, served) {
+  if (!served || !/page with redirect/i.test(String(coverage || ''))) return false;
+  if (served.has(url)) return false;
+  const u = String(url).replace(/\/+$/, '');
+  const twin = url.endsWith('/') ? u : u + '/';
+  return served.has(twin);
 }
 
 // ---------- snapshots ----------
@@ -112,12 +147,13 @@ function allSnapshots() {
 }
 
 // ---------- transitions ----------
-function detect(snaps) {
+function detect(snaps, served) {
   const regressions = [];
   const notCandidates = [];
   const duplicates = [];
   const seen = new Set();
   let compared = 0;
+  let aliases = 0;
 
   for (let i = 1; i < snaps.length; i++) {
     const prev = snaps[i - 1];
@@ -130,6 +166,7 @@ function detect(snaps) {
       const before = prev.checked[url];
       const after = cur.checked[url];
       if (before === after) continue;
+      if (isExpectedAliasRedirect(url, after, served)) { aliases++; continue; }
       const beforeRank = rankOf(before);
       const afterRank = rankOf(after);
       const item = {
@@ -156,7 +193,7 @@ function detect(snaps) {
       }
     }
   }
-  return { regressions, notCandidates, duplicates, compared };
+  return { regressions, notCandidates, duplicates, compared, aliases };
 }
 
 // Current-state view: what the NEWEST snapshot says about non-candidates.
@@ -164,12 +201,14 @@ function detect(snaps) {
 // targeted batch inspection (like data/gsc-inspect-batch-<date>.json) usually
 // covers URLs the queue snapshots never held — so without this section the
 // duplicate-canonical situation that started it all would stay invisible.
-function currentNonCandidates(snaps) {
+function currentNonCandidates(snaps, served) {
   const newest = snaps[snaps.length - 1];
-  if (!newest) return { snapshot: null, items: [] };
+  if (!newest) return { snapshot: null, items: [], aliases: 0 };
   const items = [];
+  let aliases = 0;
   for (const [url, coverage] of Object.entries(newest.checked)) {
     if (rankOf(coverage) !== null) continue;
+    if (isExpectedAliasRedirect(url, coverage, served)) { aliases++; continue; }
     items.push({
       url,
       from: '—',
@@ -179,7 +218,7 @@ function currentNonCandidates(snaps) {
       curSnapshot: newest.source + '#' + newest.date,
     });
   }
-  return { snapshot: { date: newest.date, source: newest.source }, items };
+  return { snapshot: { date: newest.date, source: newest.source }, items, aliases };
 }
 
 function ledgerKey(item) {
@@ -258,6 +297,7 @@ function renderDoc(res, snaps) {
   L.push('| new not-candidates found | ' + res.all.notCandidates.length + ' |');
   L.push('| duplicate-canonical findings | ' + res.all.duplicates.length + ' |');
   L.push('| non-candidates in newest snapshot | ' + res.current.items.length + ' |');
+  L.push('| alias redirects ignored (served form is in the sitemap) | ' + (res.aliasesSkipped || 0) + ' |');
   L.push('| known (in ledger, not alerting) | ' + res.known.length + ' |');
   L.push('| NEW this run | ' + res.newCount + ' |');
   L.push('');
@@ -290,7 +330,7 @@ function run() {
     return 0;
   }
 
-  const all = detect(snaps);
+  const all = detect(snaps, sitemapLocs());
   const ledger = readLedger();
   const knownKeys = new Set(ledger.map(ledgerKey));
   const fresh = (arr) => arr.filter((it) => !knownKeys.has(ledgerKey(it)));
@@ -299,7 +339,7 @@ function run() {
   const newNotCandidates = fresh(all.notCandidates);
   const newDuplicateCanonicals = fresh(all.duplicates);
 
-  const current = currentNonCandidates(snaps);
+  const current = currentNonCandidates(snaps, sitemapLocs());
   const newCurrent = current.items.filter((it) => !knownKeys.has(ledgerKey(it)));
 
   const res = {
@@ -308,6 +348,7 @@ function run() {
     scanned: all.compared,
     all,
     current,
+    aliasesSkipped: (all.aliases || 0) + (current.aliases || 0),
     known: ledger,
     newRegressions,
     newNotCandidates,
@@ -324,7 +365,7 @@ function run() {
       url: it.url, kind: it.kind, to: it.to, window: it.window, addedAt: new Date().toISOString(),
     }))];
     writeLedger(merged);
-    console.log('  ledger updated: +' + newCount + ' known finding(s) → data/index-regressions-ledger.json');
+    console.log('  ledger updated: +' + res.newCount + ' known finding(s) → data/index-regressions-ledger.json');
   }
 
   if (jsonOut) {
@@ -352,4 +393,4 @@ function run() {
 }
 
 if (require.main === module) process.exit(run());
-module.exports = { run, detect, rankOf, isDuplicateCanonical, allSnapshots };
+module.exports = { run, detect, rankOf, isDuplicateCanonical, allSnapshots, sitemapLocs, isExpectedAliasRedirect };

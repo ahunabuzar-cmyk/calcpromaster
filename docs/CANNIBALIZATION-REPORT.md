@@ -1,6 +1,6 @@
 # Cannibalization report — measured from Search Console query→page data
 
-**Generated:** 2026-10-27 · by `node scripts/audit-cannibalization.cjs`
+**Generated:** 2026-10-29 · by `node scripts/audit-cannibalization.cjs`
 **Window:** 2026-09-24 → 2026-10-22 (28 days, GSC query→page export)
 
 A pair appears here only when **two distinct pages of this site collected impressions for the same query**.

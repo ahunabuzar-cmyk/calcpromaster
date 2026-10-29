@@ -79,6 +79,41 @@ describe('index-regression alert', () => {
     expect(res.duplicates).toHaveLength(0);
   });
 
+  it('treats a redirect on the unserved slash-form as an expected alias, not a finding', () => {
+    // Guides are served without the trailing slash, directory pages with it —
+    // so each form redirects to the other by design.
+    const served = new Set([
+      'https://x.test/guides/sleep-cycles',
+      'https://x.test/math/scientific/',
+    ]);
+    expect(IR.isExpectedAliasRedirect('https://x.test/guides/sleep-cycles/', 'Page with redirect', served)).toBe(true);
+    expect(IR.isExpectedAliasRedirect('https://x.test/math/scientific', 'Page with redirect', served)).toBe(true);
+    // The form the sitemap advertises redirecting is a real defect, not an alias.
+    expect(IR.isExpectedAliasRedirect('https://x.test/guides/sleep-cycles', 'Page with redirect', served)).toBe(false);
+    // Alias handling is about redirects only; a noindex still deserves a look.
+    expect(IR.isExpectedAliasRedirect('https://x.test/guides/sleep-cycles/', 'Excluded by ‘noindex’ tag', served)).toBe(false);
+    // Unknown URL: nothing to compare against, so keep the finding.
+    expect(IR.isExpectedAliasRedirect('https://x.test/other/', 'Page with redirect', served)).toBe(false);
+    expect(IR.isExpectedAliasRedirect('https://x.test/guides/sleep-cycles/', 'Page with redirect', new Set())).toBe(false);
+  });
+
+  it('skips alias redirects while still reporting the real transitions', () => {
+    const served = new Set(['https://x.test/guides/alias']);
+    const res = IR.detect([
+      { date: '2026-03-01', source: 'a', checked: {
+        'https://x.test/guides/alias/': 'URL is unknown to Google',
+        'https://x.test/dropped/': 'Submitted and indexed',
+      } },
+      { date: '2026-03-02', source: 'b', checked: {
+        'https://x.test/guides/alias/': 'Page with redirect',
+        'https://x.test/dropped/': 'Crawled - currently not indexed',
+      } },
+    ], served);
+    expect(res.notCandidates.map((r) => r.url)).toEqual([]);
+    expect(res.aliases).toBe(1);
+    expect(res.regressions.map((r) => r.url)).toEqual(['https://x.test/dropped/']);
+  });
+
   it('keeps findings unique across overlapping windows', () => {
     const a = { date: '2026-03-01', source: 'a', checked: { 'https://x.test/p/': 'Submitted and indexed' } };
     const b = { date: '2026-03-02', source: 'b', checked: { 'https://x.test/p/': 'Crawled - currently not indexed' } };

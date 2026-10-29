@@ -1,6 +1,6 @@
 # Keyword Targeting Map — CalcProMaster (complete inventory)
 
-_Machine-extracted from the deploy tree + calculator data modules on 2026-10-24. Nothing hand-added, nothing omitted._
+_Machine-extracted from the deploy tree + calculator data modules on 2026-10-28. Nothing hand-added, nothing omitted._
 
 **How to read this document**
 

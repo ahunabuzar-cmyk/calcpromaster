@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T14:14:07.179Z",
+  "generatedAt": "2026-10-29T10:18:04.271Z",
   "counts": {
     "sitemapUrls": 1420,
     "duplicateSitemapLocs": 0,
@@ -14,7 +14,7 @@
     "growingPages": 93,
     "thinPages": 136,
     "stuckPages": 214,
-    "backlogWrite": 16,
-    "backlogExpose": 9
+    "backlogWrite": 19,
+    "backlogExpose": 6
   }
 }

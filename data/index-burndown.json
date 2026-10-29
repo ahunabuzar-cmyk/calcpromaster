@@ -1,24 +1,27 @@
 {
-  "generatedAt": "2026-10-28T10:58:33.469Z",
-  "snapshotDate": "2026-10-19",
-  "snapshotSource": "gsc-inspect-batch-2026-10-19.json",
+  "generatedAt": "2026-10-29T11:15:30.601Z",
+  "snapshotDate": "2026-10-26",
+  "snapshotSource": "gsc-inspect-batch-2026-10-26.json",
   "state": {
-    "total": 30,
-    "candidates": 30,
-    "indexed": 20,
-    "notCandidates": 0,
-    "waiting": 10,
-    "notCandidateReasons": {}
+    "total": 100,
+    "candidates": 96,
+    "indexed": 56,
+    "notCandidates": 4,
+    "waiting": 40,
+    "notCandidateReasons": {
+      "Alternate page with proper canonical tag": 2,
+      "Page with redirect": 2
+    }
   },
   "liveState": {
-    "date": "2026-10-28",
-    "source": "data/index-panel-history.json#2026-10-28",
-    "panelSize": 590,
-    "total": 590,
-    "candidates": 589,
+    "date": "2026-10-29",
+    "source": "data/index-panel-history.json#2026-10-29",
+    "panelSize": 598,
+    "total": 598,
+    "candidates": 597,
     "indexed": 4,
     "notCandidates": 1,
-    "waiting": 585,
+    "waiting": 593,
     "notCandidateReasons": {
       "Page with redirect": 1
     }
@@ -27,17 +30,17 @@
     {
       "date": "2026-09-27",
       "file": "gsc-inspect-batch.json",
-      "urls": 2713,
-      "total": 2713,
+      "urls": 3689,
+      "total": 3689,
       "candidates": 21,
       "indexed": 7,
-      "notCandidates": 2692,
+      "notCandidates": 3668,
       "waiting": 14,
       "notCandidateReasons": {
-        "indexed": 707,
-        "unknown": 1285,
-        "discovered": 698,
-        "crawled": 2
+        "indexed": 1109,
+        "unknown": 1680,
+        "discovered": 855,
+        "crawled": 24
       }
     },
     {
@@ -72,21 +75,6 @@
       "notCandidates": 0,
       "waiting": 6,
       "notCandidateReasons": {}
-    },
-    {
-      "date": "2026-10-09",
-      "file": "gsc-inspect-notindexed.json",
-      "urls": 784,
-      "total": 784,
-      "candidates": 696,
-      "indexed": 111,
-      "notCandidates": 88,
-      "waiting": 585,
-      "notCandidateReasons": {
-        "Page with redirect": 86,
-        "Excluded by ‘noindex’ tag": 1,
-        "Alternate page with proper canonical tag": 1
-      }
     },
     {
       "date": "2026-10-12",
@@ -191,14 +179,68 @@
       "notCandidateReasons": {}
     },
     {
-      "date": "2026-10-28",
-      "file": "data/index-panel-history.json#2026-10-28",
-      "urls": 590,
-      "total": 590,
-      "candidates": 589,
+      "date": "2026-10-25",
+      "file": "gsc-inspect-batch-2026-10-25.json",
+      "urls": 100,
+      "total": 100,
+      "candidates": 96,
+      "indexed": 56,
+      "notCandidates": 4,
+      "waiting": 40,
+      "notCandidateReasons": {
+        "Alternate page with proper canonical tag": 2,
+        "Page with redirect": 2
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "file": "gsc-inspect-notindexed.json",
+      "urls": 794,
+      "total": 794,
+      "candidates": 705,
+      "indexed": 112,
+      "notCandidates": 89,
+      "waiting": 593,
+      "notCandidateReasons": {
+        "Page with redirect": 87,
+        "Excluded by ‘noindex’ tag": 1,
+        "Alternate page with proper canonical tag": 1
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "file": "gsc-inspect-two-2026-10-26.json",
+      "urls": 2,
+      "total": 2,
+      "candidates": 2,
+      "indexed": 1,
+      "notCandidates": 0,
+      "waiting": 1,
+      "notCandidateReasons": {}
+    },
+    {
+      "date": "2026-10-26",
+      "file": "gsc-inspect-batch-2026-10-26.json",
+      "urls": 100,
+      "total": 100,
+      "candidates": 96,
+      "indexed": 56,
+      "notCandidates": 4,
+      "waiting": 40,
+      "notCandidateReasons": {
+        "Alternate page with proper canonical tag": 2,
+        "Page with redirect": 2
+      }
+    },
+    {
+      "date": "2026-10-29",
+      "file": "data/index-panel-history.json#2026-10-29",
+      "urls": 598,
+      "total": 598,
+      "candidates": 597,
       "indexed": 4,
       "notCandidates": 1,
-      "waiting": 585,
+      "waiting": 593,
       "notCandidateReasons": {
         "Page with redirect": 1
       }
@@ -265,43 +307,22 @@
     },
     {
       "from": "2026-10-09",
-      "to": "2026-10-09",
-      "days": 0,
-      "elapsedDays": 0.18580457175925927,
-      "commonUrls": 0,
-      "stagesAdvanced": 0,
-      "slippedBack": 0,
-      "urlsAdvanced": 0,
-      "urlsSlipped": 0,
-      "churnStages": 0,
-      "gainedBack": 0,
-      "netStages": 0,
-      "becameIndexed": 0,
-      "leftUnknown": 0,
-      "stagesPerDay": 0,
-      "indexedPerDay": 0,
-      "usable": false,
-      "skipReason": "URL sets comparable nahi (alag size)"
-    },
-    {
-      "from": "2026-10-09",
       "to": "2026-10-12",
       "days": 3,
-      "elapsedDays": 2.985863148148148,
-      "commonUrls": 0,
+      "elapsedDays": 3.1716677199074073,
+      "commonUrls": 20,
       "stagesAdvanced": 0,
-      "slippedBack": 0,
+      "slippedBack": 1,
       "urlsAdvanced": 0,
-      "urlsSlipped": 0,
-      "churnStages": 0,
+      "urlsSlipped": 1,
+      "churnStages": 1,
       "gainedBack": 0,
-      "netStages": 0,
+      "netStages": -1,
       "becameIndexed": 0,
       "leftUnknown": 0,
       "stagesPerDay": 0,
       "indexedPerDay": 0,
-      "usable": false,
-      "skipReason": "URL sets comparable nahi (alag size)"
+      "usable": true
     },
     {
       "from": "2026-10-12",
@@ -443,9 +464,69 @@
     },
     {
       "from": "2026-10-19",
-      "to": "2026-10-28",
-      "days": 9,
-      "elapsedDays": 8.856776041666667,
+      "to": "2026-10-25",
+      "days": 6,
+      "elapsedDays": 6.07718943287037,
+      "commonUrls": 30,
+      "stagesAdvanced": 3,
+      "slippedBack": 1,
+      "urlsAdvanced": 3,
+      "urlsSlipped": 1,
+      "churnStages": 4,
+      "gainedBack": 1,
+      "netStages": 2,
+      "becameIndexed": 0,
+      "leftUnknown": 3,
+      "stagesPerDay": 0.4936492490712181,
+      "indexedPerDay": 0,
+      "usable": false,
+      "skipReason": "URL sets comparable nahi (alag size)"
+    },
+    {
+      "from": "2026-10-25",
+      "to": "2026-10-26",
+      "days": 1,
+      "elapsedDays": 0.999335,
+      "commonUrls": 7,
+      "stagesAdvanced": 1,
+      "slippedBack": 0,
+      "urlsAdvanced": 1,
+      "urlsSlipped": 0,
+      "churnStages": 1,
+      "gainedBack": 0,
+      "netStages": 1,
+      "becameIndexed": 0,
+      "leftUnknown": 1,
+      "stagesPerDay": 1.0006654425192754,
+      "indexedPerDay": 0,
+      "usable": false,
+      "skipReason": "URL sets comparable nahi (alag size)"
+    },
+    {
+      "from": "2026-10-26",
+      "to": "2026-10-26",
+      "days": 0,
+      "elapsedDays": 0.000613125,
+      "commonUrls": 1,
+      "stagesAdvanced": 0,
+      "slippedBack": 0,
+      "urlsAdvanced": 0,
+      "urlsSlipped": 0,
+      "churnStages": 0,
+      "gainedBack": 0,
+      "netStages": 0,
+      "becameIndexed": 0,
+      "leftUnknown": 0,
+      "stagesPerDay": 0,
+      "indexedPerDay": 0,
+      "usable": false,
+      "skipReason": "URL sets comparable nahi (alag size)"
+    },
+    {
+      "from": "2026-10-26",
+      "to": "2026-10-26",
+      "days": 0,
+      "elapsedDays": 0.027300752314814814,
       "commonUrls": 0,
       "stagesAdvanced": 0,
       "slippedBack": 0,
@@ -457,6 +538,26 @@
       "becameIndexed": 0,
       "leftUnknown": 0,
       "stagesPerDay": 0,
+      "indexedPerDay": 0,
+      "usable": false,
+      "skipReason": "URL sets comparable nahi (alag size)"
+    },
+    {
+      "from": "2026-10-26",
+      "to": "2026-10-29",
+      "days": 3,
+      "elapsedDays": 2.7641102083333333,
+      "commonUrls": 5,
+      "stagesAdvanced": 3,
+      "slippedBack": 1,
+      "urlsAdvanced": 3,
+      "urlsSlipped": 1,
+      "churnStages": 4,
+      "gainedBack": 1,
+      "netStages": 2,
+      "becameIndexed": 0,
+      "leftUnknown": 2,
+      "stagesPerDay": 1.085340226650695,
       "indexedPerDay": 0,
       "usable": false,
       "skipReason": "URL sets comparable nahi (alag size)"
@@ -482,20 +583,20 @@
     "usable": true
   },
   "sampleNote": "20 URLs",
-  "measuredIndexedPerWeek": 0.6363636363636364,
-  "measuredRateSource": "fixed panel (590 URLs, 11d span",
+  "measuredIndexedPerWeek": 0,
+  "measuredRateSource": "full-queue panel — trailing 3d window (2026-10-26 → 2026-10-29, 590 URLs)",
   "churnAlerts": [
     {
       "from": "2026-10-26",
-      "to": "2026-10-28",
-      "severity": "warn",
-      "stagesAdvanced": 87,
-      "slippedBack": 76,
-      "churnStages": 163,
-      "gainedBack": 76,
-      "netStages": 11,
-      "cancelledShare": 0.874,
-      "message": "87 stages advance ka 87% (76 stages) isi window mein cancel ho gaya — gross 163, net +11. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain."
+      "to": "2026-10-29",
+      "severity": "high",
+      "stagesAdvanced": 54,
+      "slippedBack": 180,
+      "churnStages": 234,
+      "gainedBack": 54,
+      "netStages": -126,
+      "cancelledShare": 1,
+      "message": "54 stages advance ka 100% (54 stages) isi window mein cancel ho gaya — gross 234, net -126. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain."
     },
     {
       "from": "2026-10-14",
@@ -537,26 +638,26 @@
     "gainedBack": 35,
     "netStages": 242
   },
-  "measuredStagesPerWeek": 176.27272727272728,
+  "measuredStagesPerWeek": 126,
   "quotaPerWeek": 84,
   "scenarios": [
     {
       "key": "observed",
       "label": "Observed (measured, same URLs)",
-      "perWeek": 0.6363636363636364,
+      "perWeek": 0,
       "sampled": true,
-      "weeks": 16,
-      "beyondHorizon": false,
-      "doneBy": "2027-02-17"
+      "weeks": null,
+      "beyondHorizon": true,
+      "doneBy": null
     },
     {
       "key": "half",
       "label": "Half the observed rate (conservative)",
-      "perWeek": 0.3181818181818182,
+      "perWeek": 0,
       "sampled": true,
-      "weeks": 32,
-      "beyondHorizon": false,
-      "doneBy": "2027-06-09"
+      "weeks": null,
+      "beyondHorizon": true,
+      "doneBy": null
     },
     {
       "key": "quota",
@@ -565,23 +666,23 @@
       "sampled": false,
       "weeks": 1,
       "beyondHorizon": false,
-      "doneBy": "2026-11-04"
+      "doneBy": "2026-11-05"
     }
   ],
   "horizons": [
     {
       "weeks": 8,
-      "perWeek": 2,
+      "perWeek": 5,
       "perDay": 1
     },
     {
       "weeks": 12,
-      "perWeek": 1,
+      "perWeek": 4,
       "perDay": 1
     },
     {
       "weeks": 26,
-      "perWeek": 1,
+      "perWeek": 2,
       "perDay": 1
     },
     {

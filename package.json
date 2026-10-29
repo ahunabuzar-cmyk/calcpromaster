@@ -40,7 +40,7 @@
     "perf:cwv": "node scripts/cwv-audit.cjs",
     "perf:cwv:mobile": "node scripts/cwv-audit.cjs --form mobile",
     "deploy:build": "node build-deploy.js",
-    "deploy:cf": "node build-deploy.js && npx --yes wrangler@latest pages deploy deploy --project-name=calcpromaster",
+    "deploy:cf": "node build-deploy.js && npx --yes wrangler@latest pages deploy deploy --project-name=calcpromaster --branch=main --commit-dirty=true",
     "deploy": "npm run deploy:build && echo 'Upload the deploy/ folder to Netlify'",
     "cluster:check": "node scripts/check-cluster-links.cjs",
     "sitemap": "node generate-sitemap.js",

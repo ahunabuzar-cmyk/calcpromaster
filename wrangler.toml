@@ -2,7 +2,12 @@
 # The site is prebuilt locally into deploy/ by `node build-deploy.js`, so this
 # project uses DIRECT UPLOAD (no git-connected build). Deploy with:
 #   npm run deploy:cf
-# or:  npx wrangler pages deploy deploy --project-name=calcpromaster
+# or:  npx wrangler pages deploy deploy --project-name=calcpromaster --branch=main
+#
+# --branch=main is not optional. Without it wrangler publishes the CURRENT git
+# branch, so a deploy from seo/daily-index-panel succeeds with a preview alias
+# and production keeps serving the old build — which is how the 28 Oct fix pass
+# sat unpublished while `npm run deploy:cf` reported success.
 #
 # Cloudflare Pages reads the same _headers and _redirects files Netlify uses,
 # so CSP/HSTS/X-Frame-Options and the URL redirects carry over unchanged.

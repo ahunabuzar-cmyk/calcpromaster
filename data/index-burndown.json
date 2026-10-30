@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T11:15:30.601Z",
+  "generatedAt": "2026-10-30T11:10:53.530Z",
   "snapshotDate": "2026-10-26",
   "snapshotSource": "gsc-inspect-batch-2026-10-26.json",
   "state": {
@@ -14,14 +14,14 @@
     }
   },
   "liveState": {
-    "date": "2026-10-29",
-    "source": "data/index-panel-history.json#2026-10-29",
+    "date": "2026-10-30",
+    "source": "data/index-panel-history.json#2026-10-30",
     "panelSize": 598,
     "total": 598,
     "candidates": 597,
-    "indexed": 4,
+    "indexed": 3,
     "notCandidates": 1,
-    "waiting": 593,
+    "waiting": 594,
     "notCandidateReasons": {
       "Page with redirect": 1
     }
@@ -233,14 +233,14 @@
       }
     },
     {
-      "date": "2026-10-29",
-      "file": "data/index-panel-history.json#2026-10-29",
+      "date": "2026-10-30",
+      "file": "data/index-panel-history.json#2026-10-30",
       "urls": 598,
       "total": 598,
       "candidates": 597,
-      "indexed": 4,
+      "indexed": 3,
       "notCandidates": 1,
-      "waiting": 593,
+      "waiting": 594,
       "notCandidateReasons": {
         "Page with redirect": 1
       }
@@ -544,9 +544,9 @@
     },
     {
       "from": "2026-10-26",
-      "to": "2026-10-29",
-      "days": 3,
-      "elapsedDays": 2.7641102083333333,
+      "to": "2026-10-30",
+      "days": 4,
+      "elapsedDays": 3.760903125,
       "commonUrls": 5,
       "stagesAdvanced": 3,
       "slippedBack": 1,
@@ -557,7 +557,7 @@
       "netStages": 2,
       "becameIndexed": 0,
       "leftUnknown": 2,
-      "stagesPerDay": 1.085340226650695,
+      "stagesPerDay": 0.7976807432390325,
       "indexedPerDay": 0,
       "usable": false,
       "skipReason": "URL sets comparable nahi (alag size)"
@@ -584,19 +584,19 @@
   },
   "sampleNote": "20 URLs",
   "measuredIndexedPerWeek": 0,
-  "measuredRateSource": "full-queue panel — trailing 3d window (2026-10-26 → 2026-10-29, 590 URLs)",
+  "measuredRateSource": "full-queue panel — trailing 4d window (2026-10-26 → 2026-10-30, 590 URLs)",
   "churnAlerts": [
     {
       "from": "2026-10-26",
-      "to": "2026-10-29",
-      "severity": "high",
-      "stagesAdvanced": 54,
-      "slippedBack": 180,
-      "churnStages": 234,
-      "gainedBack": 54,
-      "netStages": -126,
-      "cancelledShare": 1,
-      "message": "54 stages advance ka 100% (54 stages) isi window mein cancel ho gaya — gross 234, net -126. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain."
+      "to": "2026-10-30",
+      "severity": "warn",
+      "stagesAdvanced": 88,
+      "slippedBack": 83,
+      "churnStages": 171,
+      "gainedBack": 83,
+      "netStages": 5,
+      "cancelledShare": 0.943,
+      "message": "88 stages advance ka 94% (83 stages) isi window mein cancel ho gaya — gross 171, net +5. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain."
     },
     {
       "from": "2026-10-14",
@@ -638,7 +638,7 @@
     "gainedBack": 35,
     "netStages": 242
   },
-  "measuredStagesPerWeek": 126,
+  "measuredStagesPerWeek": 154,
   "quotaPerWeek": 84,
   "scenarios": [
     {
@@ -666,7 +666,7 @@
       "sampled": false,
       "weeks": 1,
       "beyondHorizon": false,
-      "doneBy": "2026-11-05"
+      "doneBy": "2026-11-06"
     }
   ],
   "horizons": [

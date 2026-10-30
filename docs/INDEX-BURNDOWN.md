@@ -20,12 +20,12 @@ Non-candidates ka breakdown: `Alternate page with proper canonical tag` 2 · `Pa
 | | pages |
 |---|---|
 | panel mein total URLs | 598 |
-| **abhi bhi waiting** | **593** |
-| index ho chuke | 4 |
+| **abhi bhi waiting** | **594** |
+| index ho chuke | 3 |
 
 Crawl-state breakdown: .
 
-Upar wala 100-URL dump 2026-10-26 ka hai; ye row **2026-10-29** ke inspection se hai aur poore waiting backlog ko cover karti hai — koi stride sample nahi. Rate bhi ab isi poore queue par build hoti hai, 20-URL batch par nahi.
+Upar wala 100-URL dump 2026-10-26 ka hai; ye row **2026-10-30** ke inspection se hai aur poore waiting backlog ko cover karti hai — koi stride sample nahi. Rate bhi ab isi poore queue par build hoti hai, 20-URL batch par nahi.
 
 ## 2. Measured rate (assumption nahi)
 
@@ -43,7 +43,7 @@ Jab **wahi URLs** do dates par inspect hue, tab unka index-ladder par movement:
 
 > ⚠️ **Churn alert — ye rate progress nahi hai**
 >
-> - 2026-10-26 → 2026-10-29: 54 stages advance ka 100% (54 stages) isi window mein cancel ho gaya — gross 234, net -126. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain.
+> - 2026-10-26 → 2026-10-30: 88 stages advance ka 94% (83 stages) isi window mein cancel ho gaya — gross 171, net +5. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain.
 > - 2026-10-14 → 2026-10-15: 11 stages advance ka 100% (11 stages) isi window mein cancel ho gaya — gross 22, net +0. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain.
 > - 2026-10-15 → 2026-10-17: 15 stages advance ka 53% (8 stages) isi window mein cancel ho gaya — gross 23, net +7. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain.
 
@@ -51,10 +51,10 @@ Jab **wahi URLs** do dates par inspect hue, tab unka index-ladder par movement:
 - Sabse **bara sample** (aur isi liye sabse bharosay-wala): 2026-10-14 → 2026-10-15 — 100 URLs, 0.9 din mein **11 stages aage, 11 peeche**. Yani 11 URLs upar gaye aur **11 neeche** — gross 22 stages, jismein **11 wapas cancel** ho gaye (net +0), aur 0 index hue.
 - Is liye is sample ka headline **"11 stages aage" nahi hai** — woh churn ka adha hissa hai. Jo number progress batata hai woh **net +0** aur **0 became indexed** hai. (Detail: `docs/DISCOVERED-FALLBACK-ANALYSIS.md` — 11 backslides mein se zyadatar "Discovered ➜ unknown" the, aur page-side kuch nahi badla.)
 - Usmein **11** pages "unknown" se nikal kar "discovered" tak pahunchi — magar poore queue ki ginti dekho: "unknown" kam nahi hua. Yani "discovered" bank hua progress nahi hai; kuch pages wapas "unknown" mein gir jate hain. Isi liye neeche wala projection queue ke *unknown* hissay par hai, staged par nahi.
-- Us par measured: **0 pages/week** indexed hue (126 ladder-stages/week).
-- Source: **full-queue panel — trailing 3d window (2026-10-26 → 2026-10-29, 590 URLs)**.
+- Us par measured: **0 pages/week** indexed hue (154 ladder-stages/week).
+- Source: **full-queue panel — trailing 4d window (2026-10-26 → 2026-10-30, 590 URLs)**.
 
-_Caveat:_ rate ka source **full-queue panel — trailing 3d window (2026-10-26 → 2026-10-29, 590 URLs)** hai. Panel wahi URLs har run mein check karta hai (aur `--all` ke saath poora queue), is liye wo sabse saaf measurement hai; ad-hoc pairs sirf tab use hote hain jab panel ke 2 snapshots nahi hue. Trailing window ko 3 din chahiye — ek raat ka delta × 7 burst hota hai, rate nahi, is liye pehle 2 din headline purane span se aati hai.
+_Caveat:_ rate ka source **full-queue panel — trailing 4d window (2026-10-26 → 2026-10-30, 590 URLs)** hai. Panel wahi URLs har run mein check karta hai (aur `--all` ke saath poora queue), is liye wo sabse saaf measurement hai; ad-hoc pairs sirf tab use hote hain jab panel ke 2 snapshots nahi hue. Trailing window ko 3 din chahiye — ek raat ka delta × 7 burst hota hai, rate nahi, is liye pehle 2 din headline purane span se aati hai.
 
 ## 3. Har hafte ka target (jo aap control karte hain)
 
@@ -73,11 +73,11 @@ Asli queue **40** pages. Neeche har scenario ka apna rate likha hai — number c
 |---|---|---|---|
 | Observed (measured, same URLs) | 0 | —+ | 2 saal+ |
 | Half the observed rate (conservative) | 0 | —+ | 2 saal+ |
-| GSC request-indexing ceiling (12/day) | 84 | 1 | 2026-11-05 |
+| GSC request-indexing ceiling (12/day) | 84 | 1 | 2026-11-06 |
 
 > **Observed-rate rows sample-scaled hain, forecast nahi.** Rate 20 URLs se aayi hai, aur wo bhi hub pages ka sample hai jismein zyadatar already indexed the. 40 pages par usay seedha multiply karna mathematical hai, realistic nahi — asli speed ke liye poore set ka do-snapshot comparison chahiye, jo har hafte ban raha hai.
 
-_Jo snapshot pairs rate ke liye use nahi ho sake:_ 2026-09-27→2026-10-05 (URL sets comparable nahi (alag size)) · 2026-10-12→2026-10-14 (URL sets comparable nahi (alag size)) · 2026-10-17→2026-10-18 (URL sets comparable nahi (alag size)) · 2026-10-18→2026-10-18 (same-day snapshot) · 2026-10-18→2026-10-18 (URL sets comparable nahi (alag size)) · 2026-10-18→2026-10-19 (URL sets comparable nahi (alag size)) · 2026-10-19→2026-10-25 (URL sets comparable nahi (alag size)) · 2026-10-25→2026-10-26 (URL sets comparable nahi (alag size)) · 2026-10-26→2026-10-26 (URL sets comparable nahi (alag size)) · 2026-10-26→2026-10-26 (URL sets comparable nahi (alag size)) · 2026-10-26→2026-10-29 (URL sets comparable nahi (alag size)).
+_Jo snapshot pairs rate ke liye use nahi ho sake:_ 2026-09-27→2026-10-05 (URL sets comparable nahi (alag size)) · 2026-10-12→2026-10-14 (URL sets comparable nahi (alag size)) · 2026-10-17→2026-10-18 (URL sets comparable nahi (alag size)) · 2026-10-18→2026-10-18 (same-day snapshot) · 2026-10-18→2026-10-18 (URL sets comparable nahi (alag size)) · 2026-10-18→2026-10-19 (URL sets comparable nahi (alag size)) · 2026-10-19→2026-10-25 (URL sets comparable nahi (alag size)) · 2026-10-25→2026-10-26 (URL sets comparable nahi (alag size)) · 2026-10-26→2026-10-26 (URL sets comparable nahi (alag size)) · 2026-10-26→2026-10-26 (URL sets comparable nahi (alag size)) · 2026-10-26→2026-10-30 (URL sets comparable nahi (alag size)).
 
 ## 5. Iska matlab kya hai
 

@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-29T11:15:30.653Z",
+  "ranAt": "2026-10-30T11:10:53.597Z",
   "snapshots": [
     {
       "date": "2026-09-27",
@@ -100,9 +100,14 @@
       "date": "2026-10-29",
       "source": "index-panel-history.json",
       "urls": 598
+    },
+    {
+      "date": "2026-10-30",
+      "source": "index-panel-history.json",
+      "urls": 598
     }
   ],
-  "scanned": 2670,
+  "scanned": 3268,
   "all": {
     "regressions": [
       {
@@ -122,16 +127,25 @@
         "prevSnapshot": "index-panel-history.json#2026-10-27",
         "curSnapshot": "index-panel-history.json#2026-10-28",
         "kind": "index-regression"
+      },
+      {
+        "url": "https://calcpromaster.com/tech/screen-resolution/",
+        "from": "Submitted and indexed",
+        "to": "Crawled - currently not indexed",
+        "window": "2026-10-29→2026-10-30",
+        "prevSnapshot": "index-panel-history.json#2026-10-29",
+        "curSnapshot": "index-panel-history.json#2026-10-30",
+        "kind": "index-regression"
       }
     ],
     "notCandidates": [],
     "duplicates": [],
-    "compared": 2670,
+    "compared": 3268,
     "aliases": 1
   },
   "current": {
     "snapshot": {
-      "date": "2026-10-29",
+      "date": "2026-10-30",
       "source": "index-panel-history.json"
     },
     "items": [],
@@ -876,9 +890,19 @@
       "note": "Live-verified 2026-10-29: HTTP 200, meta robots index,follow, self-canonical on calcpromaster.com, 4,478 words — no technical defect, Google crawled and declined the page. Same triage as /math/scientific/: content competition, not a build regression. Re-arm after the 2026-10-28 changes are re-crawled."
     }
   ],
-  "newRegressions": [],
+  "newRegressions": [
+    {
+      "url": "https://calcpromaster.com/tech/screen-resolution/",
+      "from": "Submitted and indexed",
+      "to": "Crawled - currently not indexed",
+      "window": "2026-10-29→2026-10-30",
+      "prevSnapshot": "index-panel-history.json#2026-10-29",
+      "curSnapshot": "index-panel-history.json#2026-10-30",
+      "kind": "index-regression"
+    }
+  ],
   "newNotCandidates": [],
   "newDuplicateCanonicals": [],
   "newCurrent": [],
-  "newCount": 0
+  "newCount": 1
 }

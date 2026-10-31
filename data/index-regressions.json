@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-30T11:10:53.597Z",
+  "ranAt": "2026-10-31T10:45:20.350Z",
   "snapshots": [
     {
       "date": "2026-09-27",
@@ -105,9 +105,14 @@
       "date": "2026-10-30",
       "source": "index-panel-history.json",
       "urls": 598
+    },
+    {
+      "date": "2026-10-31",
+      "source": "index-panel-history.json",
+      "urls": 598
     }
   ],
-  "scanned": 3268,
+  "scanned": 3866,
   "all": {
     "regressions": [
       {
@@ -140,12 +145,12 @@
     ],
     "notCandidates": [],
     "duplicates": [],
-    "compared": 3268,
+    "compared": 3866,
     "aliases": 1
   },
   "current": {
     "snapshot": {
-      "date": "2026-10-30",
+      "date": "2026-10-31",
       "source": "index-panel-history.json"
     },
     "items": [],

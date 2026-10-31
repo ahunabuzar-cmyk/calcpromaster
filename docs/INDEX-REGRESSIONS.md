@@ -1,6 +1,6 @@
 # Index-regression alert — per-URL transitions
 
-_Generated 2026-10-30T11:10:53.597Z by `scripts/check-index-regressions.cjs`._
+_Generated 2026-10-31T10:45:20.350Z by `scripts/check-index-regressions.cjs`._
 
 The burn-down reports net progress; this report is the per-URL view of the
 same snapshots, so a page that fell out of the index (or was consolidated
@@ -29,6 +29,7 @@ away as an alternate canonical) cannot hide behind the total.
 | 2026-10-28 | `index-panel-history.json` | 590 |
 | 2026-10-29 | `index-panel-history.json` | 598 |
 | 2026-10-30 | `index-panel-history.json` | 598 |
+| 2026-10-31 | `index-panel-history.json` | 598 |
 
 ## New findings this run (not in the ledger)
 
@@ -46,7 +47,7 @@ _None._
 
 _None._
 
-### 4. Current state — non-candidates in the newest snapshot (index-panel-history.json#2026-10-30)
+### 4. Current state — non-candidates in the newest snapshot (index-panel-history.json#2026-10-31)
 
 _No new non-candidate URLs in the newest snapshot._
 
@@ -57,7 +58,7 @@ shows right now, which is what makes a targeted batch inspection useful._
 
 | measure | value |
 |---|---|
-| transitions scanned | 3268 |
+| transitions scanned | 3866 |
 | regressions found (all windows) | 3 |
 | new not-candidates found | 0 |
 | duplicate-canonical findings | 0 |

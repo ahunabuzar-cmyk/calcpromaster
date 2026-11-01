@@ -1,6 +1,6 @@
 # Index-regression alert — per-URL transitions
 
-_Generated 2026-10-31T10:45:20.350Z by `scripts/check-index-regressions.cjs`._
+_Generated 2026-11-01T11:38:26.867Z by `scripts/check-index-regressions.cjs`._
 
 The burn-down reports net progress; this report is the per-URL view of the
 same snapshots, so a page that fell out of the index (or was consolidated
@@ -30,14 +30,16 @@ away as an alternate canonical) cannot hide behind the total.
 | 2026-10-29 | `index-panel-history.json` | 598 |
 | 2026-10-30 | `index-panel-history.json` | 598 |
 | 2026-10-31 | `index-panel-history.json` | 598 |
+| 2026-11-01 | `index-panel-history.json` | 598 |
 
 ## New findings this run (not in the ledger)
 
-### 1. Regression — was indexed, no longer indexed — 1
+### 1. Regression — was indexed, no longer indexed — 2
 
 | URL | was | now | window |
 |---|---|---|---|
 | `https://calcpromaster.com/tech/screen-resolution/` | Submitted and indexed | Crawled - currently not indexed | 2026-10-29→2026-10-30 |
+| `https://calcpromaster.com/tech/battery-life-estimator/` | Submitted and indexed | Crawled - currently not indexed | 2026-10-31→2026-11-01 |
 
 ### 2. New not-candidate — left the indexing queue (redirect / noindex / other) — 0
 
@@ -47,7 +49,7 @@ _None._
 
 _None._
 
-### 4. Current state — non-candidates in the newest snapshot (index-panel-history.json#2026-10-31)
+### 4. Current state — non-candidates in the newest snapshot (index-panel-history.json#2026-11-01)
 
 _No new non-candidate URLs in the newest snapshot._
 
@@ -58,14 +60,14 @@ shows right now, which is what makes a targeted batch inspection useful._
 
 | measure | value |
 |---|---|
-| transitions scanned | 3866 |
-| regressions found (all windows) | 3 |
+| transitions scanned | 4464 |
+| regressions found (all windows) | 4 |
 | new not-candidates found | 0 |
 | duplicate-canonical findings | 0 |
 | non-candidates in newest snapshot | 0 |
 | alias redirects ignored (served form is in the sitemap) | 2 |
 | known (in ledger, not alerting) | 92 |
-| NEW this run | 1 |
+| NEW this run | 2 |
 
 ## What to do with a finding
 

@@ -1,60 +1,60 @@
 {
-  "generatedAt": "2026-10-31T10:45:20.424Z",
-  "latest": "2026-10-31",
+  "generatedAt": "2026-11-01T11:38:26.918Z",
+  "latest": "2026-11-01",
   "daysSinceLatest": 0,
-  "snapshotCount": 9,
+  "snapshotCount": 10,
   "windowDays": 7,
   "state": {
     "checked": 598,
-    "indexed": 3,
-    "waiting": 594,
+    "indexed": 2,
+    "waiting": 595,
     "notCandidates": 1
   },
   "verdict": {
     "status": "stalled",
-    "reason": "5 din mein (590 URLs) koi page index nahi hua — ladder hil bhi rahi ho to queue convert nahi ho rahi"
+    "reason": "6 din mein (590 URLs) koi page index nahi hua — ladder hil bhi rahi ho to queue convert nahi ho rahi"
   },
   "velocity7d": {
     "windowDays": 7,
     "from": "2026-10-26",
-    "to": "2026-10-31",
-    "days": 5,
-    "snapshots": 6,
+    "to": "2026-11-01",
+    "days": 6,
+    "snapshots": 7,
     "common": 590,
     "becameIndexed": 0,
     "stagesAdvanced": 3,
-    "slippedBack": 416,
+    "slippedBack": 417,
     "leftUnknown": 0,
     "urlsAdvanced": 3,
-    "urlsSlipped": 416,
-    "churnStages": 419,
+    "urlsSlipped": 417,
+    "churnStages": 420,
     "gainedBack": 3,
-    "netStages": -413,
+    "netStages": -414,
     "indexedPerDay": 0,
     "indexedPerWeek": 0,
-    "stagesPerDay": 0.6,
-    "stagesPerWeek": 4.2
+    "stagesPerDay": 0.5,
+    "stagesPerWeek": 3.5
   },
   "velocity3d": {
     "windowDays": 3,
-    "from": "2026-10-28",
-    "to": "2026-10-31",
+    "from": "2026-10-29",
+    "to": "2026-11-01",
     "days": 3,
     "snapshots": 4,
-    "common": 590,
+    "common": 598,
     "becameIndexed": 0,
-    "stagesAdvanced": 1,
-    "slippedBack": 425,
+    "stagesAdvanced": 0,
+    "slippedBack": 289,
     "leftUnknown": 0,
-    "urlsAdvanced": 1,
-    "urlsSlipped": 425,
-    "churnStages": 426,
-    "gainedBack": 1,
-    "netStages": -424,
+    "urlsAdvanced": 0,
+    "urlsSlipped": 289,
+    "churnStages": 289,
+    "gainedBack": 0,
+    "netStages": -289,
     "indexedPerDay": 0,
     "indexedPerWeek": 0,
-    "stagesPerDay": 0.3333333333333333,
-    "stagesPerWeek": 2.333333333333333
+    "stagesPerDay": 0,
+    "stagesPerWeek": 0
   },
   "projection": {
     "days": null,
@@ -224,6 +224,24 @@
       "leftUnknown": 0,
       "indexedPerDay": 0,
       "stagesPerDay": 0
+    },
+    {
+      "date": "2026-11-01",
+      "checked": 598,
+      "indexed": 2,
+      "waiting": 595,
+      "notCandidates": 1,
+      "days": 1,
+      "common": 598,
+      "becameIndexed": 0,
+      "stagesAdvanced": 0,
+      "slippedBack": 1,
+      "gainedBack": 0,
+      "churnStages": 1,
+      "netStages": -1,
+      "leftUnknown": 0,
+      "indexedPerDay": 0,
+      "stagesPerDay": 0
     }
   ],
   "churnAlerts": [
@@ -240,28 +258,16 @@
       "message": "151 stages advance ka 68% (102 stages) isi window mein cancel ho gaya — gross 253, net +49. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain."
     },
     {
-      "from": "2026-10-28",
-      "to": "2026-10-31",
-      "severity": "high",
-      "stagesAdvanced": 1,
-      "slippedBack": 425,
-      "churnStages": 426,
-      "gainedBack": 1,
-      "netStages": -424,
-      "cancelledShare": 1,
-      "message": "1 stages advance ka 100% (1 stages) isi window mein cancel ho gaya — gross 426, net -424. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain."
-    },
-    {
       "from": "2026-10-26",
-      "to": "2026-10-31",
+      "to": "2026-11-01",
       "severity": "high",
       "stagesAdvanced": 3,
-      "slippedBack": 416,
-      "churnStages": 419,
+      "slippedBack": 417,
+      "churnStages": 420,
       "gainedBack": 3,
-      "netStages": -413,
+      "netStages": -414,
       "cancelledShare": 1,
-      "message": "3 stages advance ka 100% (3 stages) isi window mein cancel ho gaya — gross 419, net -413. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain."
+      "message": "3 stages advance ka 100% (3 stages) isi window mein cancel ho gaya — gross 420, net -414. Ye rate progress nahi, churn hai; sirf net aur became indexed progress hain."
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-31T10:45:20.350Z",
+  "ranAt": "2026-11-01T11:38:26.867Z",
   "snapshots": [
     {
       "date": "2026-09-27",
@@ -110,9 +110,14 @@
       "date": "2026-10-31",
       "source": "index-panel-history.json",
       "urls": 598
+    },
+    {
+      "date": "2026-11-01",
+      "source": "index-panel-history.json",
+      "urls": 598
     }
   ],
-  "scanned": 3866,
+  "scanned": 4464,
   "all": {
     "regressions": [
       {
@@ -141,16 +146,25 @@
         "prevSnapshot": "index-panel-history.json#2026-10-29",
         "curSnapshot": "index-panel-history.json#2026-10-30",
         "kind": "index-regression"
+      },
+      {
+        "url": "https://calcpromaster.com/tech/battery-life-estimator/",
+        "from": "Submitted and indexed",
+        "to": "Crawled - currently not indexed",
+        "window": "2026-10-31→2026-11-01",
+        "prevSnapshot": "index-panel-history.json#2026-10-31",
+        "curSnapshot": "index-panel-history.json#2026-11-01",
+        "kind": "index-regression"
       }
     ],
     "notCandidates": [],
     "duplicates": [],
-    "compared": 3866,
+    "compared": 4464,
     "aliases": 1
   },
   "current": {
     "snapshot": {
-      "date": "2026-10-31",
+      "date": "2026-11-01",
       "source": "index-panel-history.json"
     },
     "items": [],
@@ -904,10 +918,19 @@
       "prevSnapshot": "index-panel-history.json#2026-10-29",
       "curSnapshot": "index-panel-history.json#2026-10-30",
       "kind": "index-regression"
+    },
+    {
+      "url": "https://calcpromaster.com/tech/battery-life-estimator/",
+      "from": "Submitted and indexed",
+      "to": "Crawled - currently not indexed",
+      "window": "2026-10-31→2026-11-01",
+      "prevSnapshot": "index-panel-history.json#2026-10-31",
+      "curSnapshot": "index-panel-history.json#2026-11-01",
+      "kind": "index-regression"
     }
   ],
   "newNotCandidates": [],
   "newDuplicateCanonicals": [],
   "newCurrent": [],
-  "newCount": 1
+  "newCount": 2
 }
